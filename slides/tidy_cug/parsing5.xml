@@ -6,7 +6,7 @@
     <bullet>%TIDY_NODETYPE_ROOT%  - The root node of the tree</bullet>
     <bullet>%TIDY_NODETYPE_DOCTYPE% - The DOCTYPE of the tree</bullet>
     <bullet>%TIDY_NODETYPE_COMMENT% - A comment</bullet>
-    <bullet>%TIDY_NODETYPE_PROCINS% - ????</bullet>
+    <bullet>%TIDY_NODETYPE_PROCINS% - XML Processing Instructions</bullet>
     <bullet>%TIDY_NODETYPE_TEXT% - A text element of the tree</bullet>
     <bullet>*%TIDY_NODETYPE_START%* - The start of a markup tag</bullet>
     <bullet>*%TIDY_NODETYPE_END%* - The end of a markup tag</bullet>
