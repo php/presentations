@@ -1,20 +1,20 @@
 <slide title="Inserting Data">
-<example result="1" title="INSERT Query" fontsize="1.5em"><![CDATA[<?
-  function add_user($id, $pass, $name, $email) {
-	$result = mysql_query(
-    "insert into users values ('$id',ENCRYPT('$pass'),'$name','$email',NULL)");
-	if($result) {
-		echo "Row inserted<br />";
-	} else {
-		echo mysql_error()."<br />";
-	}
+<example result="1" title="INSERT Query" fontsize="1.5em"><![CDATA[<?php
+function add_user($id, $pass, $name, $email) {
+  $result=mysql_query("insert into users values 
+                     ('$id',ENCRYPT('$pass'),'$name','$email',NULL)");
+  if($result) {
+    echo "Row inserted<br />";
+  } else {
+    echo mysql_error()."<br />";
   }
+}
 
-  mysql_connect('localhost');
-  mysql_select_db('foo');
+mysql_connect('localhost');
+mysql_select_db('foo');
 
-  add_user('rasmus','foobar','Rasmus Lerdorf','rasmus@php.net');
-  add_user('carl','carlspass','Carl AlexandeR Lerdorf','carl@lerdorf.com');
+add_user('rasmus','foobar','Rasmus Lerdorf','rasmus@php.net');
+add_user('carl','carlspass','Carl AlexandeR Lerdorf','carl@lerdorf.com');
 ?>]]></example>
 
 </slide>

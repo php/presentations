@@ -16,7 +16,7 @@ you can also specify the color directly.
 
 <example title="For example:" type="genimage" result="1" filename="image_colors_ex3.php" rwidth="455"/>
 
-<example title="This example could also be written like this:"><![CDATA[<?php
+<example fontsize="1.7em" title="This example could also be written like this:"><![CDATA[<?php
 $im  = ImageCreateTruecolor(400,300);
 $white = ImageColorAllocate($im,255,255,255);
 ImageFilledRectangle($im,0,0,399,299,$white);

@@ -1,18 +1,18 @@
 <slide title="Dealing with timestamps">
-<example title="Using DATE_FORMAT" result="1"><![CDATA[<?
-  mysql_connect('localhost');
-  mysql_select_db('foo');
-  $result = mysql_query(
-	"select id, email, 
-	 date_format(ts,'%W %M %D, %Y %r') as d 
-	 from users order by ts");
-  if($result) {
-	while($row = mysql_fetch_assoc($result)) {
-		echo "$row[id] - $row[email] - $row[d]<br />\n";
-	}
-  } else {
-	echo mysql_error();
+<example title="Using DATE_FORMAT" result="1" marginleft="1em" marginright="1em"><![CDATA[<?
+mysql_connect('localhost');
+mysql_select_db('foo');
+$result = mysql_query(
+  "select id, email, 
+   date_format(ts,'%W %M %D, %Y %r') as d 
+   from users order by ts");
+if($result) {
+  while($row = mysql_fetch_assoc($result)) {
+    echo "$row[id] - $row[email] - $row[d]<br />\n";
   }
+} else {
+  echo mysql_error();
+}
 ?>]]></example>
 
 </slide>

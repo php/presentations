@@ -2,6 +2,7 @@
 <example 
 	title="Reading EXIF Headers from a JPEG"
 	result="1"
+	fontsize="1.7em"
 ><![CDATA[<?php
 $data = exif_read_data('presentations/slides/intro/img_resize.jpg'); 
 foreach($data as $key=>$val) {

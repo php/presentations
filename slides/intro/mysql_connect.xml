@@ -5,7 +5,7 @@ $conn = mysql_connect('localhost');
 echo $conn;
 ?>]]></example>
 
-<example title="Other variations"><![CDATA[<?
+<example title="Other variations" fontsize="1.8em"><![CDATA[<?
 mysql_connect('db.domain.com:33306','rasmus','foobar');
 mysql_connect('localhost:/tmp/mysql.sock');
 mysql_connect('localhost','rasmus','foobar',
