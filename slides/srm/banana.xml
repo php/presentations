@@ -2,14 +2,12 @@
 <slide fontsize="6em">
 	<title>Bananas</title>
 
-	<blurb> </blurb>
-	<blurb> </blurb>
-	<blurb> </blurb>
 	<list effect="slide" fontsize="5em">
 		<bullet>Persistent</bullet>
-		<bullet>Like J**a beans</bullet>
+		<bullet>A bit like Java beans</bullet>
 		<bullet>Compiled only once</bullet>
 	</list>
+	<break lines="4"/>
 
-	<image align="center" filename="banana.jpg" />
+	<image align="center" filename="banana.png" />
 </slide>

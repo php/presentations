@@ -11,7 +11,7 @@
 <topic>Performance</topic>
 <title>Speeding up PHP applications</title>
 <event>OSCOM 4</event>
-<location>Zürich, Switserland</location>
+<location>Zürich, Switzerland</location>
 <date>October 1st, 2004</date>
 <speaker>Derick Rethans</speaker>
 <email>derick@php.net</email>
@@ -47,11 +47,13 @@
 <slide>slides/phpperform/visitation3.xml</slide>
 -->
 <!-- OPTIMIZING APPLICATIONS -->
+<!--
 <slide>slides/perf/cpuusage.xml</slide>
 <slide>slides/perf/xdebug.xml</slide>
 <slide>slides/perf/xdebug-trace.xml</slide>
 <slide>slides/perf/xdebug-trace-xgui.xml</slide>
 <slide>slides/perf/xdebug-profile.xml</slide>
+-->
 <slide>slides/perf/prf_fileio.xml</slide>
 <slide>slides/perf/regex.xml</slide>
 

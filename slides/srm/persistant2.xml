@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Persistent objects</title>
+	<subtitle>Examples - Before SRM</subtitle>
 
 	<blurb>__sleep and __wakeup example:</blurb>
+	<break/>
 	<example fontsize="1.5em"><![CDATA[// example1.php
 <?php
     require 'file.class.php';
@@ -13,6 +15,7 @@
 
     $_SESSION['f'] = $f;
 ? >]]></example>
+	<break/>
 	<example fontsize="1.5em"><![CDATA[// example2.php
 <?php
     require 'file.class.php';

@@ -22,7 +22,6 @@
 <slide>slides/i18nl10n/latin.xml</slide> <!-- latin charsets -->
 <slide>slides/i18nl10n/convert.xml</slide> <!-- converting charsets (single byte) -->
 <slide>slides/i18nl10n/asian.xml</slide> <!-- asian charsets -->
-<slide>slides/i18nl10n/unicode.xml</slide> <!-- unicode and ucs2, ucs4 -->
 <slide>slides/i18nl10n/utf8.xml</slide> <!-- what does utf8 solve? -->
 
 <!-- PROBLEMS and SOLUTIONS -->
@@ -49,18 +48,17 @@
 <!-- TRANSLATIONS IN WEBSITES -->
 <slide>slides/i18nl10n/trans-intro.xml</slide> <!-- intro -->
 <slide>slides/i18nl10n/trans-define1.xml</slide> <!-- with define -->
-<slide>slides/i18nl10n/trans-define2.xml</slide> <!-- with define -->
-<slide>slides/i18nl10n/trans-array2.xml</slide> <!-- with array -->
+<slide>slides/i18nl10n/trans-array1.xml</slide> <!-- with array -->
 <slide>slides/i18nl10n/trans-gettext1.xml</slide> <!-- with gettext -->
 <slide>slides/i18nl10n/trans-gettext2.xml</slide> <!-- with gettext -->
 <slide>slides/i18nl10n/trans-qt1.xml</slide> <!-- xml based definition -->
 <slide>slides/i18nl10n/trans-linguist.xml</slide> <!-- Qt Linguist -->
-<slide>slides/i18nl10n/trans-qt2.xml</slide> <!-- xml based definition  -->
 
 <!-- EXIT -->
 <slide>slides/i18nl10n/resources-oscom4.xml</slide> <!-- resources -->
 
 <!-- BONUS -->
+<slide>slides/i18nl10n/unicode.xml</slide> <!-- unicode and ucs2, ucs4 -->
 <slide>slides/i18nl10n/utf8-encoding.xml</slide> <!-- how does the encoding work? -->
 <slide>slides/i18nl10n/iconv-ob-buffer-multiple.xml</slide> <!-- multiple charsets and iconv conversion -->
 </presentation>

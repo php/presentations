@@ -1,55 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>The Past: Trees</title>
+	<title>Trees</title>
+	<subtitle>Before SRM</subtitle>
 
-	<example fontsize="1.25em"><![CDATA[// binsearch.class.php
-<?php
-    class node {
-        var $key;
-        var $value;
-        var $left;
-        var $right;
-    }
-
-    class binsearch {
-        var $root = NULL;
-
-        function binsearch($elements) {
-            foreach ($elements as $key => $value) {
-                $this->add_value($key, $value);
-            }
-            var_export($this->root);
-        }   
-
-        function add_value($key, $value) {
-            $ptr = &$this->root; 
-
-            while ($ptr != NULL) {
-                if ($key < $ptr->key) {
-                    $ptr = &$ptr->left;
-                } else { 
-                    $ptr = &$ptr->right;
-                }   
-            }   
-            $ptr = new node;
-            $ptr->key = $key;
-            $ptr->value = $value;
-            $ptr->left = NULL;
-            $ptr->right = NULL;
-        }   
-
-        function get_value($key) {
-            $ptr = &$this->root; 
-            
-            while ($key != $ptr->key && $ptr != NULL) {
-                if ($key < $ptr->key) { 
-                    $ptr = &$ptr->left; 
-                } else { 
-                    $ptr = &$ptr->right;
-                }   
-            }   
-            return $ptr ? $ptr->value : FALSE;
-        }
-    }
-? >]]></example>
+	<example class="code_small" filename="binsearch.class.php" fontsize="1.25em"/>
 </slide>

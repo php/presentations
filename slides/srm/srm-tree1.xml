@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Persistent Tree</title>
+	<subtitle>Bananized Class</subtitle>
 
 	<example fontsize="1.4em"><![CDATA[<?php
 	class node {
-		var $key;
-		var $value;
-		var $left;
-		var $right;
+		var $key; var $value; var $left; var $right;
 	}
 
 	class binsearch extends Banana {
@@ -17,48 +15,22 @@
 			foreach ($elements as $key => $value) {
 				$this->add_value($key, $value);
 			}
-			var_export($this->root);
 		}
 
 		function add_value($key, $value) {
-			$ptr = &$this->root;
-
-			while ($ptr != NULL) {
-				if ($key < $ptr->key) {
-					$ptr = &$ptr->left;
-				} else {
-					$ptr = &$ptr->right;
-				}
-			}
-			$ptr = new node;
-			$ptr->key = $key;
-			$ptr->value = $value;
-			$ptr->left = NULL;
-			$ptr->right = NULL;
-			var_dump(func_get_args());
+			/* Same as before */
 		}
 
 		function get_value($key) {
-			$ptr = &$this->root;
-
-			while ($key != $ptr->key && $ptr != NULL) {
-				if ($key < $ptr->key) {
-					$ptr = &$ptr->left;
-				} else {
-					$ptr = &$ptr->right;
-				}
-			}
-			var_dump(func_get_args());
-			return $ptr ? $ptr->value : FALSE;
+			/* Same as before */
 		}
 
 		function get_all() {
-			var_dump(func_get_args());
 			return $this->root;
 		}
 	}
 
 	$tree =& new binsearch(array());
 	$tree->run();
-? >]]></example>
+?>]]></example>
 </slide>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>The Past: Users on-line</title>
+	<title>Users on-line</title>
+	<subtitle>Before SRM</subtitle>
 
 	<blurb fontsize="4em">Typical script to count the users 'online': </blurb>
+	<break/>
 	<example fontsize="1.25em"><![CDATA[<?php
 $timeoutseconds = 300;
 
@@ -13,14 +15,14 @@ mysql_connect();
 mysql_select_db('users');
 
 $insert = mysql_query(
-	"INSERT INTO online VALUES ('$timestamp', '$REMOTE_ADDR', '$PHP_SELF')");
+  "INSERT INTO online VALUES ('$timestamp', '$REMOTE_ADDR', '$PHP_SELF')");
 
 $delete = mysql_query(
-	"DELETE FROM online WHERE timestamp < $timeout");
+  "DELETE FROM online WHERE timestamp < $timeout");
 
 $result = mysql_query(
-	"SELECT DISTINCT ip FROM online WHERE file = '$PHP_SELF'");
+  "SELECT DISTINCT ip FROM online WHERE file = '$PHP_SELF'");
 
 $users = mysql_num_rows($result);
-? >]]></example>
+?>]]></example>
 </slide>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Persistent objects</title>
+	<subtitle>File Class - Before SRM</subtitle>
 
 	<blurb>__sleep and __wakeup:</blurb>
+	<break/>
 	<example fontsize="1.25em"><![CDATA[// file.class.php
 <?php
     class File {
