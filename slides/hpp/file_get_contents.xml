@@ -1,0 +1,15 @@
+<slide title="file_get_contents()">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/>]]></blurb>
+<example><![CDATA[<?php
+$str = file_get_contents($file);
+?>]]></example>
+<blurb align="center" fontsize="4.0em">vs.</blurb>
+<example><![CDATA[<?php
+$fp = fopen($file, 'r');
+while (($line = fgets($fp)) !== false) {
+	$str .= $line;
+}
+fclose($fp);
+?>]]></example>
+</slide>

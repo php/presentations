@@ -1,0 +1,12 @@
+<slide title="Pros and Cons of Caching">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/>]]></blurb>
+<list title="Pros">
+<bullet>Potentially Immense speedup</bullet>
+<bullet>Decreased Resource Consumption</bullet>
+</list>
+<list title="Cons">
+<bullet>Increase in Arch. Complexity</bullet>
+<bullet>Potential for stale or inconsistent data.</bullet>
+</list>
+</slide>

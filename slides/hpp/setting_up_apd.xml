@@ -1,0 +1,7 @@
+<slide title="Setting up APD">
+<blurb>Setting up APD</blurb>
+<blurb>> pear install apd</blurb>
+<blurb>> cp apd.so </blurb>
+<blurb>/absolute/path/to/php_apd.so</blurb>
+<blurb>In php.ini add</blurb>
+</slide>

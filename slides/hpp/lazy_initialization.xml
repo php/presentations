@@ -1,0 +1,5 @@
+<slide title="Lazy Initialization">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb>Initialize large 'constant' arrays or expensive database information only when needed.</blurb>
+<example title="Bad" filename="pre_initialization.php" fontsize="1.7em"/>
+</slide>

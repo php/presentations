@@ -1,0 +1,10 @@
+<slide title="Output Buffering">
+<image filename="10000000000000610000006B74D8AABB.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<list>
+<bullet>Efficient</bullet>
+<bullet>Flexible</bullet>
+<bullet>In your script with %ob_start()%</bullet>
+<bullet>Everywhere with %output_buffering = On% (~php.ini~)</bullet>
+</list>
+</slide>

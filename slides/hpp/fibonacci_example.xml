@@ -1,0 +1,7 @@
+<slide title="Fibonacci Example">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb>By stashing data in a global variable, we can speed both initial computations (since %fib()% is recursive) as well as future invocations in the same process.</blurb>
+<example filename="Fibonacci_v1.php" title="Neive Fib()" fontsize="1.8em"/>
+<example filename="Fibonacci_v2.php" title="Fib() with Caching" fontsize="1.8em"/>
+<example filename="Fibonacci_v2.php5" title="PHP5 Fib()" fontsize="1.8em"/>
+</slide>

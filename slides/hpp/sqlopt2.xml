@@ -1,0 +1,5 @@
+<slide title="SQL Optimization">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb>Especially when querying tables with large fields, only select the columns you really need.</blurb>
+<example filename="bad_sql2.php" fontsize="1.7em" />
+</slide>

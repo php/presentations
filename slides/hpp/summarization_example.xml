@@ -1,0 +1,10 @@
+<slide title="Summarization Example">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb fontsize="3.2em">Instead of calling</blurb>
+<blurb>
+</blurb>
+<example type="sql" fontsize="1.8em" filename="summarization1.sql" />
+<blurb fontsize="3.2em">If you frequently need that count, try storing the count in a separate table</blurb>
+<example fontsize="1.8em" type="sql" filename="summarization2.sql" />
+<blurb fontsize="3.2em">Keep this value current with either a trigger, a co-executed statement, or via an external job (if some delay is acceptable)</blurb>
+</slide>

@@ -1,0 +1,6 @@
+<slide title="hexencode()">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb>Need to hex encode data for non-8 Bit Clean safe transport.</blurb>
+<blurb>For even moderately large data this can expend an immense amount of effort.</blurb>
+<example filename="hexencode.php" fontsize="1.7em" />
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Using ErrorDocument">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb>Change caching to write into your document root</blurb>
+<blurb>
+</blurb>
+<example filename="third.php" fontsize="1.7em"/>
+<blurb>Always link to %third.html% and set:</blurb>
+<example>ErrorDocument 404 /third/third.php</example>
+<blurb>In an appropriate place (%Directory% stanza or %.htaccess% file)</blurb>
+</slide>

@@ -1,0 +1,7 @@
+<slide title="Network Buffer Sizing">
+<image align="right" filename="10000000000000610000006B74D8AABB.jpg" />
+<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<blurb fontsize="3.5em">Idea is to hand off entire page to the kernel without blocking</blurb>
+<blurb fontsize="3.5em">Apache: </blurb>
+<blurb fontsize="3.5em" marginleft="2.0em">%SendBufferSize = PageSize%</blurb>
+</slide>
