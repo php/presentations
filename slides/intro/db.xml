@@ -1,0 +1,17 @@
+<slide title="DB Abstraction">
+<blurb>A database abstraction layer is bundled with PHP 4.  In the
+example below, the only thing you would need to change to use a different
+database is the odbc word on the third line.</blurb>
+<example><![CDATA[<?php
+  require_once 'DB.php';
+  $db = DB::connect('odbc://user:pw@host/mydb');
+  $stmt = $db->prepare('SELECT * FROM comments');
+  $result = $db->execute($stmt);
+  while($row = $db->fetchrow($result)) {
+     while($row as $field => $value ) {
+        echo "$field: $value<br>\n";
+     }
+  }
+  $db->disconnect();
+?>]]></example>
+</slide>

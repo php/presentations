@@ -1,0 +1,21 @@
+<slide title="HTTP Headers">
+<blurb title="Sending HTTP Headers">
+You can add headers to the HTTP response in PHP using the 
+Header() function.  Since the response
+headers are sent before any of the actual response data, you have to send these
+headers before outputting any data.  So, put any such header calls at the top
+of your script.
+</blurb>
+<example title="Redirection"><![CDATA[<?header('Location: http://www.php.net')?>]]></example>
+
+<h3>Setting a Last-Modified Header</h3>
+<example title="Setting a Last-Modified Header"><![CDATA[<?header('Last-Modified: '.
+         gmdate('D, d M Y H:i:s',getlastmod()).' GMT')?>]]></example>
+
+<example title="Avoid all Cacheing"><![CDATA[<?php
+Header('Cache-Control: no-cache, must-revalidate');
+Header('Pragma: no-cache');
+Header('Expires: Mon,26 Jul 1980 05:00:00 GMT');
+?>]]></example>
+
+</slide>
