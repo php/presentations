@@ -13,7 +13,7 @@ Bounding Boxes for a given PostScript string/font is done using the %imagepsbbox
 
     $font = imagepsloadfont('/usr/share/fonts/default/Type1/n019003l.pfb');
     $text = "PHP Developer's Handbook";
-    $size = 40;
+    $size = 10;
     
     echo "<PRE>";
     print_r(imagepsbbox($text, $font, $size));

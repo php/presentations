@@ -4,6 +4,6 @@
 </blurb>
 <blurb>%imagestring($img, $font, $x, $y, $s, $color);%</blurb>
 <blurb>Where $font can be a font resource of a loaded font, or a built in font can be used by specifying an integer 1 - 5</blurb>
+<image filename="imagestring.php" align="center" width="450"/>
 <example filename="imagestring.php" fontsize="1.6em" title="Using the imagestring() function with built in fonts"/>
-<image filename="imagestring.php" align="center"/>
 </slide>

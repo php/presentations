@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="PHP Unit Testing: Creating a Test Suite">
+    <blurb>
+        Once each individual test case is created a suite can be created
+    </blurb>
+    <example title="Creating a test suite"><![CDATA[<?php
+    $suite = new PHPUnit_TestSuite();
+ 
+    $test[] = new EmailAddressTestCase('testLocalPart');
+    $test[] = new EmailAddressTestCase('testDomain');
+    
+    $suite->addTest($test[0]);
+    $suite->addTest($test[1]);
+ 
+    $result = PHPUnit::run($suite);
+ 
+    echo $result->toString();
+ ?>]]>
+    </example>
+    <example title="Creating a test suite automatically"><![CDATA[<?php
+    $suite = new PHPUnit_TestSuite('EmailAddressTestCase');
+    
+    $result = PHPUnit::run($suite);
+    
+    echo $result->toString();
+?>]]>
+    </example>
+</slide>
+

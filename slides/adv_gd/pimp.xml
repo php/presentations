@@ -1,0 +1,14 @@
+<slide title="Looking into the Future">
+<blurb title="PHP5 / PIMP">
+    PIMP is the next wave of graphics technology for PHP 5 based on the libpimp library
+    written by Pierre-Alain Joye.
+</blurb>
+<list>
+    <bullet>Vector Graphics</bullet>
+    <bullet>Filters (Embossing, etc.)</bullet>
+    <bullet>Splines, curved geometric shapes</bullet>
+    <bullet>Plugins (for filters, formats, etc.)</bullet>
+    <bullet>Compatibility with PHP-GTK</bullet>
+    <bullet>Will have a backward-compatibility layer for PHP 4 / GD scripts</bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Open Season!">
+<blurb title="Open season on the speaker">
+    The reality of the situation is that there are way too many PEAR and PECL
+    modules that have some very interesting uses in practical applications. So
+    instead of trying to guess what seems interesting, I'm asking you.
+</blurb>
+<list>
+    <bullet>Curious about a particular PECL or PEAR package? Fire away!</bullet>
+</list>
+<blurb title="Possibilities..."/>
+<list>
+    <bullet>Benchmarking</bullet>
+    <bullet>Command-line parameter parsing</bullet>
+    <bullet>Sending HTTP Requests</bullet>
+    <bullet>SQLite</bullet>
+    <bullet>%cd pear; ls%</bullet>
+</list>
+</slide>

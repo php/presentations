@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="PHP Unit Testing: Example">
+    <example title="A simple PHP class to test"><![CDATA[<?php
+    class EmailAddress {
+        var $localPart;
+        var $domain;
+        var $address;
+        function EmailAddress($address = null) {
+          if($address) {
+            $this->address = $address;
+            $this->extract();
+          }
+        }
+  
+        function extract() {
+          list($this->localPart, $this->domain) =
+          explode("@", $this->address);
+        }
+    }
+?>]]>
+    </example>
+</slide>
+

@@ -1,6 +1,6 @@
 <?php
-    define("WIDTH", 200);
-    define("HEIGHT", 200);
+    define("WIDTH", 450);
+    define("HEIGHT", 450);
     define("B_WIDTH", 20);
     define("B_HEIGHT",20);
 

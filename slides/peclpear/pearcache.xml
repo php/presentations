@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Implementing PEAR::Cache">
+    <blurb>
+        PEAR Cache is an excellent package that allows you to cache function calls, output, and more
+    </blurb>
+    <list>
+        <bullet>Consists of a generic caching class %Cache% with specialized subclasses for specific tasks</bullet>
+        <bullet>Supports a multitude of "containers" that store the cached output</bullet>
+    </list>
+    <example title="Simple Output caching using PEAR::Cache" fontsize="1.3em"><![CDATA[<?php
+    require_once('Cache/Output.php');
+
+    /* Create a new instance of the output cache,
+       storing as a file in the /tmp directory */    
+    $cache = new Cache_Output('file',
+                              array('cache_dir' => '/tmp'));
+    
+    /* Generate the ID for the cached content based on the
+       values which effect the output of the page. */
+    $cache_id = $cache->generateID(array('url' => $_SERVER['REQUEST_URI'],
+                                         'post' => $_POST));
+                                         
+    /* Begin the cache by checking if this version of the
+       content has already been cached or not. */
+    if($content = $cache->start($cache_id)) {
+    
+        echo $content;
+        exit;
+    
+    }
+    
+    /* Generate the content to be cached */
+    
+    /* Cache the content and display it for this request */
+    echo $cache->end();    
+?>]]>
+    </example>
+</slide>
+

@@ -1,0 +1,66 @@
+<presentation
+	template="php" 
+	navmode="html"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
+<topic>PHP</topic>
+<title>Advanced Graphics in PHP</title>
+<copyright>(c) Copyright 2003 John Coggeshall</copyright>
+<event>Int. PHP Conference 2003</event>
+<location>Frankfurt, Germany</location>
+<date>Nov. 4th, 2003</date>
+<speaker>John Coggeshall</speaker>
+<url>http://www.coggeshall.org/</url>
+<navmode>html</navmode>
+<slide>slides/adv_gd/titlepage.xml</slide>
+<!-- <slide>slides/adv_gd/outline.xml</slide>//-->
+<slide>slides/adv_gd/gettingstarted.xml</slide>
+<slide>slides/adv_gd/howgdworks.xml</slide>
+<slide>slides/adv_gd/palette.xml</slide>
+<slide>slides/adv_gd/basics.xml</slide>
+<slide>slides/adv_gd/basics2.xml</slide>
+<slide>slides/adv_gd/basics3.xml</slide>
+<slide>slides/adv_gd/getcolors.xml</slide>
+<slide>slides/adv_gd/paletteadj.xml</slide>
+<slide>slides/adv_gd/basic_drawing.xml</slide>
+<slide>slides/adv_gd/basic_drawing2.xml</slide>
+<slide>slides/adv_gd/filling2a.xml</slide>
+<slide>slides/adv_gd/filling2b.xml</slide>
+<slide>slides/adv_gd/filling2.xml</slide>
+<slide>slides/adv_gd/filling3.xml</slide>
+<slide>slides/adv_gd/gen_manip.xml</slide>
+<slide>slides/adv_gd/copying2.xml</slide>
+<slide>slides/adv_gd/copying3.xml</slide>
+<slide>slides/adv_gd/copying4.xml</slide>
+<slide>slides/adv_gd/resize.xml</slide>
+<slide>slides/adv_gd/resample.xml</slide>
+<slide>slides/adv_gd/renderingtext.xml</slide>
+<slide>slides/adv_gd/renderingtext2.xml</slide>
+<slide>slides/adv_gd/renderingtext3.xml</slide>
+<slide>slides/adv_gd/ttf.xml</slide>
+<slide>slides/adv_gd/ttf2.xml</slide>
+<slide>slides/adv_gd/ps.xml</slide>
+<slide>slides/adv_gd/ps2.xml</slide>
+<slide>slides/adv_gd/ps3.xml</slide>
+<slide>slides/adv_gd/ps5.xml</slide>
+<slide>slides/adv_gd/ps6.xml</slide>
+<slide>slides/adv_gd/alpha.xml</slide>
+<slide>slides/adv_gd/alpha2.xml</slide>
+<slide>slides/adv_gd/brushes2.xml</slide>
+<slide>slides/adv_gd/styles.xml</slide>
+<slide>slides/adv_gd/styles2.xml</slide>
+<slide>slides/adv_gd/custom_brush.xml</slide>
+<slide>slides/adv_gd/custom_brush2.xml</slide>
+<slide>slides/adv_gd/custom_brush_style.xml</slide>
+<slide>slides/adv_gd/custom_brush_style2.xml</slide>
+<slide>slides/adv_gd/custom_fill.xml</slide>
+<slide>slides/adv_gd/stereogram.xml</slide>
+<slide>slides/adv_gd/stereogram2.xml</slide>
+<slide>slides/adv_gd/stereogram3.xml</slide>
+<slide>slides/adv_gd/stereogram4.xml</slide>
+<slide>slides/adv_gd/jpgraph.xml</slide>
+<slide>slides/adv_gd/jpgraph2.xml</slide>
+<slide>slides/adv_gd/pimp.xml</slide>
+<slide>slides/adv_gd/thankyou.xml</slide>
+</presentation>

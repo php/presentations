@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Using PEAR in your PHP Scripts">
+<blurb title="Using installed PEAR classes">
+    Once you have installed a PEAR class, they must be loaded at run-time using a %require% statement. By default
+    installed packages are stored in the %/usr/local/lib/php/% directory
+</blurb>
+<list>
+    <bullet>%include_path = .:/usr/local/lib/php%</bullet>
+    <bullet>%require_once('Cache.php');%</bullet>
+</list>
+<blurb title="... and you're done!"/>
+</slide>
+

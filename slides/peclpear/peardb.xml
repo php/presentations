@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Database Abstraction">
+    <blurb title="PEAR DB">
+        PEAR DB is a database abstraction layer for PHP.
+    </blurb>
+    <list>
+	<bullet>Supports most major SQL databases</bullet>
+	<bullet>Easy to use</bullet>
+    </list>
+    <example title="Creating a new Tarball" fontsize="1.3em"><![CDATA[<?php
+	require_once('DB.php');
+	
+	$username = "john";
+	$password = "foobar";
+	$host = "localhost";
+	$db_name = "mydb";
+
+	$dsn = "mysql://$user:$pass@$host/$db_name";
+	
+	$db = DB::Connect($dsn);
+
+	if(DB::isError($db)) {
+		die($db->getMessage());
+	}
+
+	$result = $db->query("SELECT * FROM clients");
+	if(DB::isError($result)) {
+		die($db->getMessage());
+	}
+
+	/* Fetch as an indexed array... */
+
+	$row = $res->fetchRow(DB_FETCHMODE_ORDERED);
+
+	/* Fetch as an associative array... */
+	
+	$row = $res->fetchRow(DB_FETCHMODE_ASSOC);
+
+	/* Fetch as an object... */
+
+	$row = $res->fetchRow(DB_FETCHMODE_OBJECT);
+
+	$result->free();
+
+	$db->disconnect();
+?>]]>
+    </example>
+</slide>
+

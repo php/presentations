@@ -1,7 +1,7 @@
 <?php
 
-    define("WIDTH", 200);
-    define("HEIGHT", 200);
+    define("WIDTH", 450);
+    define("HEIGHT", 450);
 
     $piegraph_data = array (10, 5, 20, 40, 10, 15);
     
@@ -26,8 +26,8 @@
                        HEIGHT-20,
                        $last_angle,
                        ($last_angle + $arclen),
-                       $black,
-                       IMG_ARC_EDGED | IMG_ARC_NOFILL);
+                       imagecolorallocate($img, rand(0, 0xFF), rand(0, 0xFF), rand(0, 0xFF)),
+                       IMG_ARC_PIE);
         $last_angle += $arclen;
     }
 

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Using Tidy">
+    <blurb title="Validate and repair your HTML and XHTML documents">
+        Tidy for PHP is an extension based on the technology found in the %tidy% command line tool which
+        offers a great deal of power when working with HTML or XHTML markup.
+    </blurb>
+    <blurb title="With tidy you can..."/>
+    <list>
+        <bullet>Automatically fix malformed HTML and XHTML documents</bullet>
+        <bullet>Remove unnecessary whitespace in HTML to save bandwidth</bullet>
+        <bullet>Convert outdated &lt;FONT&gt; tags into inline stylesheets</bullet>
+        <bullet>Traverse the document tree using an object-based interface (PHP 5 online)</bullet>
+    </list>
+</slide>
+

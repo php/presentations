@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="PHP Unit Testing: Creating a tests">
+    <example title="Creating a PHPUnit test case"><![CDATA[<?php
+    class EmailAddressTest extends PHPUnit_TestCase{
+        
+        function EmailAddressTest($name) {
+            PHPUnit_TestCase::PHPUnit_TestCase($name);
+        }
+    
+            
+        function testLocalPart() {
+            $email = new EmailAddress("john@php.net");
+            
+            // check that the local part of the address 
+            // is equal to 'john'
+            $this->assertTrue($email->localPart == 'john');
+        }
+ 
+        function testDomain() {
+            
+            $email = new EmailAddress("john@php.net");
+            $this->assertTrue($email->domain == 'php.net');
+        }
+    }
+?>]]>
+    </example>
+</slide>
+

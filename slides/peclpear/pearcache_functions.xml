@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Implementing PEAR::Cache">
+    <blurb title="Caching function calls">
+        PEAR::Cache can cache more than just output. It also can cache the results of a function call:
+    </blurb>
+    <example title="Caching function results" fontsize="1.3em"><![CDATA[<?php
+    require_once('Cache/Function.php');
+    
+    $fcache = new Cache_Function();
+    
+    /* Caching the result of a standard PHP function */
+    $result = $fcache->call('myfunction');
+    $result = $fcache->call('anotherfunction', 'parameter');
+    
+    /* Caching the result of a static method in a class */
+    $result = $fcache->call('myclass::mymethod', 'parameter');
+    
+    /* Caching the results of method being called against a specific instance. In
+       this case, calling the method $mymethod of the $bar object */
+    $result = $fcache->call('bar->mymethod');
+    
+?>]]>
+    </example>
+</slide>
+

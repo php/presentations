@@ -11,5 +11,13 @@ Both functions return a resource representing the canvas for that image.
 	$img2 = imagecreatefromjpeg("/path/to/my/jpeg");
 ?>]]>
 </example>
+<blurb title="GD can support the loading of a number of formats:"/>
+<list>
+        <bullet>%imagecreate($width, $height)% - Creates an empty canvas</bullet>
+        <bullet>%imagecreatetruecolor($width, $height)% - Creates an empty 24-bit color canvas</bullet>
+        <bullet>%imagecreatefromjpeg($filename)% - Creates a canvas based on a Jpeg image</bullet>
+        <bullet>%imagecreatefrompng($filename)% - Creates a canvas based on a PNG image</bullet>
+        <bullet>Similar functions for XPM, WBMP, XBM, and GIF files</bullet>
+    </list>
 </slide>
 

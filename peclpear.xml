@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation
+    jskeyboard="1"
+    template="php"
+    navsize="1.3em">
+<title>Making the Most of PECL and PEAR</title>
+<topic>PECL</topic>
+<event>ApacheCon 2003</event>
+<location>Las Vegas, Nevada</location>
+<date>Nov. 19th, 2003</date>
+<speaker>John Coggeshall</speaker>
+<email>john@coggeshall.org</email>
+<url>http://www.coggeshall.org/</url>
+<slide>slides/peclpear/titlepage.xml</slide>
+<slide>slides/peclpear/whattoexpect.xml</slide>
+<slide>slides/peclpear/whatispear.xml</slide>
+<slide>slides/peclpear/pfc.xml</slide>
+<slide>slides/peclpear/whatispecl.xml</slide>
+<slide>slides/peclpear/installation.xml</slide>
+<slide>slides/peclpear/usingpear.xml</slide>
+<slide>slides/peclpear/pearcache.xml</slide>
+<slide>slides/peclpear/pearcache_functions.xml</slide>
+<slide>slides/peclpear/peartar.xml</slide>
+<slide>slides/peclpear/pearunit1.xml</slide>
+<slide>slides/peclpear/pearunit2.xml</slide>
+<slide>slides/peclpear/pearunit3.xml</slide>
+<slide>slides/peclpear/pearunit4.xml</slide>
+<slide>slides/peclpear/pearsoap1.xml</slide>
+<slide>slides/peclpear/peardb.xml</slide>
+<slide>slides/peclpear/pearpager.xml</slide>
+<slide>slides/peclpear/pecl.xml</slide>
+<slide>slides/peclpear/tidy.xml</slide>
+<slide>slides/tidy/basictidy.xml</slide>
+<slide>slides/tidy/tidyasaparser.xml</slide>
+<slide>slides/tidy/tidyasaparser2.xml</slide>
+<slide>slides/tidy/parsing_ex.xml</slide>
+<slide>slides/peclpear/openseason.xml</slide>
+<slide>slides/peclpear/thankyou.xml</slide>
+
+</presentation>

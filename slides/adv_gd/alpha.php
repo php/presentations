@@ -1,7 +1,7 @@
 <?php
 
-    define("WIDTH", 300);
-    define("HEIGHT", 300);
+    define("WIDTH", 450);
+    define("HEIGHT", 450);
 
     $img = imagecreatetruecolor(WIDTH, HEIGHT);
 

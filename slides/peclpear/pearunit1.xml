@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="PHP Unit Testing">
+    <blurb title="What is Unit Testing?">
+        Unit Testing is a method of developing test suites to your scripts work correctly. It consists
+        of developing large quantities of focused test cases.
+    </blurb>
+    <blurb>
+        PEAR provides the PHPUnit class, a framework which is extremely useful for developing test suites
+        for your PHP applications.
+    </blurb>
+</slide>
+

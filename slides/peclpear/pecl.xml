@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="From PEAR to PECL">
+    <blurb title="Moving on from PEAR to PECL">
+        Although we have barely scratched the surface of the code in PEAR, PECL has some
+        even more interesting technologies for PHP.
+    </blurb>
+    <blurb>
+        Ultimately, it is likely all "standard" PHP extensions will be moved into PECL, and
+        future PHP releases will come with the latest stable version of selected PECL extensions.
+    </blurb>
+    <blurb>
+        Let's look at some of the more interesting extensions currently in PECL.
+    </blurb>
+</slide>
+

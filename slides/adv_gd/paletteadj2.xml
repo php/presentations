@@ -1,0 +1,12 @@
+<slide title="Adjusting Palettes">
+<blurb>
+Every color within an image's palette is assigned an index (0,1, 2, 3, etc.) This indexes are used to identify the hue of the
+color displayed. Thus, you can change the hue of a particular palette index and change the rendered color quickly:
+</blurb>
+<blurb>
+    Adjusting a particular color in the palette is done using %imagecolorset()%
+</blurb>
+<example fontsize="1.6em" filename="paletteadj_ex.php"/>
+<image filename="paletteadj_ex.php" align="center"/>
+</slide>
+

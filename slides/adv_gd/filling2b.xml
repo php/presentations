@@ -1,0 +1,9 @@
+<slide title="Filled Geometric Shapes">
+<blurb title="GD also supports automatically filled shapes"/>
+<list>
+    <bullet>%imagefilledrectange()%</bullet>
+    <bullet>%imagefilledellipse()%</bullet>
+</list>
+<example fontsize="1.6em" filename="filled_geo_ex.php"/>
+<image filename="filled_geo_ex.php" align="center"/>
+</slide>

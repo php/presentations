@@ -1,11 +1,11 @@
 <?php
 
-    define("WIDTH", 300);
+    define("WIDTH", 450);
     define("HEIGHT", 100);
 
     define("F_SIZE", 40);
     define("F_ANGLE", 0);
-    define("F_FONT", "myfont.ttf");
+    define("F_FONT", "verdana.ttf");
     
     $img = imagecreate(WIDTH, HEIGHT);
 

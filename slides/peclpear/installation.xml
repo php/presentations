@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Getting Started">
+<blurb title="Getting Started using PEAR/PECL">
+    PEAR and PECL packages are installed using the %pear% command line tool that automates
+    the process by communicating with the repository via remote procedures.
+</blurb>
+<list>
+    <bullet>Installation, Upgrading, and uninstalling packages</bullet>
+    <bullet>Mass upgrades of all installed packages</bullet>
+    <bullet>Creation, signing, and release of new PEAR/PECL packages</bullet>
+    <bullet>Repository searching</bullet>
+</list>
+<example title="Installing the Cache PEAR package"><![CDATA[[john@coggeshall.org ]# pear install Cache
+downloading Cache-1.5.3.tgz ...
+Starting to download Cache-1.5.3.tgz (32,242 bytes)
+.........done: 32,242 bytes
+install ok: Cache 1.5.3
+]]>
+</example>
+</slide>
+

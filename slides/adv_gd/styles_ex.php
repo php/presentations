@@ -1,7 +1,7 @@
 <?php
 
-    define("WIDTH", 200);
-    define("HEIGHT", 200);
+    define("WIDTH", 450);
+    define("HEIGHT", 450);
 
     $img = imagecreate(WIDTH, HEIGHT);
     

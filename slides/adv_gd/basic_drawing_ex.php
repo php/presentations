@@ -1,7 +1,7 @@
 <?php
 
-    define("WIDTH", 256);
-    define("HEIGHT", 256);
+    define("WIDTH", 450);
+    define("HEIGHT", 450);
     
     $img = imagecreate(WIDTH, HEIGHT);
     $white = imagecolorallocate($img, 0xFF, 0xFF, 0xFF);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Creating Compressed Tarballs">
+    <blurb title="Archive_Tar">
+        The Archive_Tar PEAR class allows you to create and work with tarballs from within your PHP scripts.
+    </blurb>
+    <example title="Creating a new Tarball" fontsize="1.3em"><![CDATA[<?php
+    require_once('Archive/Tar.php');
+
+    /* Create a new tarball */    
+    $tar = new Archive_Tar('mytarball.tar.gz', true);
+    $filelist = array('file1.txt', 'file2.txt', 'file3.txt');
+    $tar->add($filelist);
+    
+?>]]>
+    </example>
+</slide>
+

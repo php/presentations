@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="What is PEAR?">
+<blurb title="So what is PEAR, anyway?"/>
+<list>
+    <bullet>The *P*HP *E*xtension and *A*pplication *R*epository</bullet>
+    <bullet>An object-based code repository</bullet>
+    <bullet>Code must meet quality and versioning standards</bullet>
+    <bullet>Quick and easy installation, upgrade of packages</bullet>
+</list>
+<blurb title="Types of Packages found in the PEAR Repository"/>
+<list>
+    <bullet>Output, function, etc. caching</bullet>
+    <bullet>Database abstraction</bullet>
+    <bullet>Web service tools (i.e. SOAP, XML-RPC)</bullet>
+    <bullet>JavaDoc-style documentation generation</bullet>
+</list>
+</slide>

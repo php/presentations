@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="What is PECL?">
+<blurb title="What is PECL?"/>
+<list>
+    <bullet>*P*HP *E*xtension *C*ode *L*ibrary</bullet>
+    <bullet>A collection of PHP extensions (C/C++)</bullet>
+    <bullet>Future home of all PHP Extensions</bullet>
+    <bullet>Sister to PEAR</bullet>
+    <bullet>Uses the existing PEAR framework for package handling</bullet>
+</list>
+<blurb title="Interesting packages in PECL"/>
+<list>
+    <bullet>tidy -- HTML parsing and cleaning</bullet>
+    <bullet>apc -- PHP compiler cache</bullet>
+    <bullet>bcompiler -- PHP bytecode compiler</bullet>
+</list>s
+</slide>
+

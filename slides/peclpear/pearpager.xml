@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Paging DB Results">
+    <blurb title="Paging database results">
+	The PEAR Pager class allows you to work with the PEAR database abstraction layer to created "pages" out of your results with little efoort.
+    </blurb>
+    <example title="Creating a new Tarball" fontsize="1.3em"><![CDATA[<?php
+	require_once('DB.php');
+	require_once('Pager.php');
+
+	$dsn = "mysql://john:password@localhost/mydatabase";
+	$db = DB::Connect($dsn);
+
+	if(DB::isError($db)) {
+		die($db->getMessage());
+	}
+
+	$sql = "SELECT * FROM bigtable";
+	$result = $db->query($sql);
+
+	if(DB::isError($result)) {
+		die($db->getMessage());
+	}
+
+	$pager = new Pager($result, $from, $limit);
+
+	$data = $pager->build();
+
+	if(!$data) {
+		die("No Results");
+	}
+
+	while($row = $pager->fetchRow(DB_FETCHMODE_ASSOC)) {
+
+		/* Display content for page */
+
+	}
+
+?>]]>
+    </example>
+</slide>
+

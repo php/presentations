@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="PFC">
+<blurb title="PFC: PHP Foundation Classes">
+    PHP comes standard with a number of PEAR classes which represent the PHP Foundation Classes.
+    PEAR classes which are part of PFC are of higher quality with focuses on:
+</blurb>
+<list>
+    <bullet>Interoperability</bullet>
+    <bullet>Integration Testing</bullet>
+    <bullet>Strong QA</bullet>
+    <bullet>API Design</bullet>
+</list>
+<blurb title="PFC is unofficial">
+    Although many useful PFC-ready PEAR classes are bundled in PHP, currently the concept of PFC
+    is still unofficial
+</blurb>
+</slide>

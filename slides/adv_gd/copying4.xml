@@ -7,6 +7,6 @@
 <blurb>
     %imagecopymergegray($dest_r, $src_r, $dest_x, $dest_y, $src_x, $src_y, $src_w, $src_h, $percent);%
 </blurb>
+<image filename="copymergegray_ex.php" align="center" width="450"/>
 <example filename="copymergegray_ex.php" fontsize="1.6em"/>
-<image filename="copymergegray_ex.php" align="center"/>
 </slide>

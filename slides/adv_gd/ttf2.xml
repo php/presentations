@@ -6,5 +6,4 @@
     %imagettftext($img_r, $size, $angle, $x, $y, $color, $fontfile, $string);%
 </blurb>
 <example filename="ttf.php" fontsize="1.6em" title="Using True Type Fonts in PHP"/>
-<image filename="ttf.php" align="center"/>
 </slide>
