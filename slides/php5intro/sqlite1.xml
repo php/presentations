@@ -2,12 +2,12 @@
 <title>SQLite</title>
 <blurb>Now there is always a DB fall back from script libraries or packages</blurb>
 <list>
-<bullet>Embeded flat file SQL database</bullet>
+<bullet>Embedded flat file SQL database</bullet>
 <bullet>No more flat file databases</bullet>
 <bullet>Enabled by default</bullet>
 <bullet>Function or OO interface</bullet>
 <bullet>Cool memory DB capability</bullet>
-<bullet>Excelent SQL standards support</bullet>
+<bullet>Excellent SQL standards support</bullet>
 </list>
 <example title="Memory Database" fontsize="1.4em" filename="sqlite1.php" type="php" result="1"/>
 </slide>
