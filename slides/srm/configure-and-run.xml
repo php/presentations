@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Configuring and Running SRM</title>
+
+	<blurb>/etc/srm.ini:</blurb>
+	<example><![CDATA[modules {
+    path =  "/usr/local/srm/libexec/";
+    load    "php4";
+}
+
+banana {
+    class_path       = "/usr/local/srm/banana";
+    function_library = "/usr/local/srm/banana/lib/library.php";
+}
+]]></example>
+
+	<break lines="4"/>
+
+	<blurb>Running the daemon:</blurb>
+	<example><![CDATA[Usage:  srmd [-S] [-L] [-X]
+             [-v|-V|-h]
+Options:
+        -S  Disable signal handling
+        -L  Log to screen instead of the logfile
+        -X  Do not fork into background
+
+        -v  Display version information and exit
+        -V  Display detailed version information and exit
+        -h  Display this help message and exit
+]]></example>
+</slide>

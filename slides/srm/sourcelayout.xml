@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Compiling</title>
+	<subtitle>Setting up the sources</subtitle>
+
+	<blurb>Download sources:</blurb>
+	<example><![CDATA[$ mkdir -p /dat/dev/php/srm
+$ cd /dat/dev/php/srm
+$ wget http://www.php.net/distributions/php-4.3.7.tar.bz2
+
+$ cvs -d :pserver:srmread@cvs.xdebug.org:/repository login
+Password: srmread
+$ cvs -d :pserver:srmread@cvs.xdebug.org:/repository co srm
+$ cvs -d :pserver:srmread@cvs.xdebug.org:/repository co sapi_srm
+$ cvs -d :pserver:srmread@cvs.xdebug.org:/repository co php_srm]]></example>
+
+	<break/>
+
+	<blurb>Preparing sources:</blurb>
+	<example><![CDATA[$ tar -xvjf php-4.3.7.tar.bz2
+$ cp -R php-4.3.7 php-4.3.7-sapi
+
+$ cd srm
+$ ./buildconf
+
+$ cd php-4.3.7-sapi/sapi
+$ ln -s ../../sapi_srm srm
+$ cd ../ext
+$ ln -s ../../php_srm srm
+$ cd ..
+$ rm configure && ./buildconf
+
+$ cd ../php-4.3.7/ext
+$ ln -s ../../php_srm srm
+$ cd ..
+$ rm configure && ./buildconf
+$ cd ..]]></example>
+</slide>

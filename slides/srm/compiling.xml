@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Compiling</title>
+	<subtitle>Three Parts: Daemon, PHP Client and PHP SAPI</subtitle>
+
+	<blurb>Daemon:</blurb>
+	<example><![CDATA[$ ./configure
+$ make
+$ sudo make install]]></example>
+	<break/>
+
+	<blurb>SAPI for PHP:</blurb>
+	<example><![CDATA[$ cd php-4.3.7-sapi
+$ ./configure --with-srm-sapi --disable-cli --disable-pear --with-srm
+$ make clean
+$ rm ext/srm/*.o
+$ rm ext/srm/*.lo
+$ rm sapi/srm/*.o
+$ rm sapi/srm/*.lo
+$ make
+$ sudo make install-sapi]]></example>
+	<break/>
+
+	<blurb>Client in PHP:</blurb>
+	<example><![CDATA[$ cd php-4.3.7
+$ ../configure --with-srm ..other options..
+$ make clean
+$ rm ext/srm/*.o
+$ rm ext/srm/*.lo
+$ rm sapi/srm/*.o
+$ rm sapi/srm/*.lo
+$ make
+$ sudo make install]]></example>
+</slide>

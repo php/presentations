@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Future</title>
+
+	<list fontsize="5em">
+		<bullet>Periodic calling of functions</bullet>
+		<bullet>Support for PHP 5 / Zend Engine 2 (exceptions...)</bullet>
+		<bullet>Automatic saving of state</bullet>
+		<bullet>ACLs to Bananas</bullet>
+		<bullet>Load balancing</bullet>
+		<bullet>...</bullet>
+	</list>
+</slide>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Moving Objects</title>
+
+	<blurb fontsize="3em">foo.class.php:</blurb>
+	<example fontsize="2em"><![CDATA[<?php
+	class foo {
+		var $bar = '';
+
+		function foo() {
+			$this->bar = 'foo';
+			return func_get_args();
+		}
+
+		function echo_bar() {
+			echo $this->bar;
+		}
+	}
+?>]]></example>
+	<break lines="2"/>
+
+	<blurb fontsize="3em">Script (objmove.php):</blurb>
+	<example fontsize="2em"><![CDATA[<?php
+	include '/usr/local/srm/banana/lib/foo.class.php';
+
+	$f = new foo;
+	$s = new SRM('127.0.0.1', 7777);
+	$f = new SRMApp($s, $f, 'key2');
+
+	var_dump($f->foo(1, 2, 'bar', 3, 4));
+
+	/* Properties don't work yet */
+	echo $f->bar;
+?>]]></example>
+</slide>
