@@ -3,11 +3,22 @@
 Used to display simple paragraphs optionally with a title in a larger font.  
 The default value for each attribute is listed first.
 </blurb>
-<example><![CDATA[<blurb title="Blurb Title"
-       talign="left|center|right"
-       align="left|center|right">
+<example><![CDATA[<blurb title="Blurb Title">
 
 Paragraph of text.
 
 </blurb>]]></example>
+
+<table title="_Available attributes_" columns="2" fontsize="2.5em" width="50%">
+<cell>talign (title align)</cell><cell>left|center|right</cell>
+<cell>align</cell><cell>left|center|right</cell>
+<cell>fontsize</cell><cell>2.66em</cell>
+<cell>marginleft</cell><cell>1em</cell>
+<cell>marginright</cell><cell>1em</cell>
+<cell>margintop</cell><cell>0.2em</cell>
+<cell>marginbottom</cell><cell>0em</cell>
+<cell>titlecolor</cell><cell>#000000</cell>
+<cell>textcolor</cell><cell>#000000</cell>
+<cell>effect</cell><cell></cell>
+</table>
 </slide>

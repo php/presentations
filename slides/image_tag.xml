@@ -1,0 +1,19 @@
+<slide title="The IMAGE tag">
+<blurb>
+Used to display images.
+</blurb>
+<example><![CDATA[<image title="Baby Carl" 
+       filename="slides/intro/carl.jpg" 
+       align="center"
+/>]]></example>
+
+<table title="_Available attributes_" columns="2" fontsize="2.5em" width="50%">
+<cell>align</cell><cell>left|center|right</cell>
+<cell>marginleft</cell><cell>1em</cell>
+<cell>marginright</cell><cell>1em</cell>
+<cell>effect</cell><cell></cell>
+</table>
+
+<image align="center" title="Baby Carl" filename="slides/intro/carl.jpg" />
+
+</slide>
