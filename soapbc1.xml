@@ -1,10 +1,10 @@
 <presentation
     jskeyboard="1"
     template="php"
-    logo2="slides/soap/activestate_logo.gif"
+    logo2="/pres2/presentations/slides/soap/activestate_logo.gif"
     navbarbackground="#A68C53"
     backgroundfixed="true"
-    backgroundimage = "slides/soap/activestate_background.jpg"
+    backgroundimage = "/pres2/presentations/slides/soap/activestate_background.jpg"
     backgroundcol="#EFECDD"
     navsize="1.4em">
 <title>Web Services for PHP</title>
