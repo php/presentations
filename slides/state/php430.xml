@@ -1,6 +1,6 @@
 <slide title="PHP 4.3 Changes">
 
-<list title="MySQL-Related" fontsize="4em">
+<list title="MySQL-Related" fontsize="3em">
 <bullet>%mysql_ping()%</bullet>
 <bullet>%mysql_real_escape_string()%</bullet>
 <bullet>%mysql_character_set_name()%</bullet>
@@ -17,12 +17,12 @@
 	result="1"
 ><![CDATA[<? echo mysql_stat(); ?>]]></example>
 
-<list title="GD-Related" fontsize="4em">
+<list title="GD-Related" fontsize="3em">
 <bullet>Fork and bundle GD2 with PHP</bullet>
 <bullet>Anti-aliased TTF fonts will now work in TrueColor images</bullet>
 </list>
 
-<list title="New Streams code" fontsize="4em">
+<list title="New Streams code" fontsize="3em">
 <bullet>Allows things like %fopen('https://www.domain.com','r')%</bullet>
 <bullet>%copy()% works on URLs now</bullet>
 <bullet>Support for ssl:// and tls:// in %fsockopen()%</bullet>
@@ -31,15 +31,16 @@
 <bullet>Support for memory streams</bullet>
 </list>
 
-<list title="Miscellaneous" fontsize="4em">
+<list title="Miscellaneous" fontsize="3em">
 <bullet>New and improved build system - replaced automake</bullet>
-<bullet>IMAP performance improvements</bullet>
+<bullet>IMAP and string function performance improvements</bullet>
 <bullet>Multibyte string support for Simplified Chinese, Traditional Chinese and Korean encodings</bullet>
 <bullet>Multibyte string support enabled by default</bullet>
 <bullet>new %glob()% function</bullet>
 <bullet>new %apache_request_headers()% function</bullet>
 <bullet>make %shuffle()% really shuffle</bullet>
-<bullet>add %pg_fetch_all()% function</bullet>
+<bullet>new %pg_fetch_all()% function</bullet>
+<bullet>new %debug_backtrace()% function</bullet>
 </list>
 
 </slide>
