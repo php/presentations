@@ -3,9 +3,9 @@
 	<title>Private</title>
 
 	<list marginleft="3em" effect="slide" fontsize="3.5em">
-		<bullet>'Strengste' access level</bullet>
-		<bullet>Alleen toegankelijk voor eigen class.</bullet>
-		<bullet>Afdwingen gebruik get()/set() functies</bullet>
+		<bullet>'Strongest' access level</bullet>
+		<bullet>Can only be called from the same class</bullet>
+		<bullet>Force use of get()/set() functions</bullet>
 	</list>
 	<break lines="1" />
 

@@ -3,15 +3,15 @@
 	<title>CLI Tricks</title>
 
 	<break />
-	<image marginleft="4em" align="right" filename="asp.png" />
-	<list marginleft="2em" fontsize="3.5em" effect="slide">
-		<bullet>Dit is nieuw in PHP 5</bullet>
-		<bullet>Bewerken van stdin</bullet>
+	<image marginleft="4em" marginright="0.5em" align="right" filename="asp.png" />
+	<list marginleft="0em" fontsize="3.5em" effect="slide">
+		<bullet>New in PHP 5</bullet>
+		<bullet>Processing from the commandline</bullet>
 	</list>
 
 	<break lines="3" />
 
-	<example fontsize="1.1em"><![CDATA[-B <begin_code>  Run PHP <begin_code> before processing input lines
+	<example fontsize="0.9em"><![CDATA[-B <begin_code>  Run PHP <begin_code> before processing input lines
 -R <code>        Run PHP <code> for every input line
 -F <file>        Parse and execute <file> for every input line
 -E <end_code>    Run PHP <end_code> after processing all input lines]]></example>

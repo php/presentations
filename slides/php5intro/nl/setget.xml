@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>__set() en __get()</title>
+	<title>__set() and __get()</title>
 
-	<list marginleft="3em" effect="slide" fontsize="2.5em">
-		<bullet>Afvangen van gebruik properties</bullet>
-		<bullet>In combinatie met private</bullet>
-		<bullet>Als vervanging voor 'dynamic properties'</bullet>
+	<list marginleft="3em" margintop="0em" effect="slide" fontsize="2.5em">
+		<bullet>Property access handlers</bullet>
+		<bullet>In combination with private</bullet>
+		<bullet>As replacement for 'dynamic properties'</bullet>
 	</list>
 
 	<break />
 
-    <example fontsize="1em"><![CDATA[<?php
+    <example fontsize="0.9em"><![CDATA[<?php
 	class OSses {
 		private $names = array();
 
 		public function __set($name, $value) {
-			if (!in_array($name, array('windows', 'dos'))) {
+			if (!in_array($name, array('windows', 'dos')))
 				$this->names[$name] = $value;
-			}
 		}
 
 		public function getNames() {

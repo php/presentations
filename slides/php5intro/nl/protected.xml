@@ -3,8 +3,8 @@
 	<title>Protected</title>
 
 	<list marginleft="1em" effect="slide" fontsize="3.3em">
-		<bullet>Alleen toegankelijk voor eigen class en afgeleidde classes.</bullet>
-		<bullet>Handig in packages.</bullet>
+		<bullet>Only callable by the same, or an inherited class</bullet>
+		<bullet>Useful for 'packages'</bullet>
 	</list>
 	<break lines="1" />
 

@@ -2,13 +2,13 @@
 <slide fontsize="6em">
 	<title>PECL</title>
 
-	<image align="right" filename="pecl.gif" />
-	<list marginleft="2em" fontsize="3.5em" effect="slide">
+	<image marginright="1em" align="right" filename="pecl.png" />
+
+	<list marginleft="0em" fontsize="3.5em" effect="slide">
 		<bullet>PHP Extension Code Library</bullet>
-		<bullet>Siberia</bullet>
 		<bullet>Shared extensions</bullet>
-		<bullet>Zelfde tool als voor PEAR</bullet>
-		<bullet>Toekomstig thuis voor alle extensies</bullet>
+		<bullet>Makes use of the 'pear' tool</bullet>
+		<bullet>Future home for all extensions</bullet>
 	</list>
 	<break />
 

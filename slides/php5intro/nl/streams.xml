@@ -4,9 +4,9 @@
 
 	<list effect="slide" fontsize="4.5em">
 		<bullet>Streams?</bullet>
-		<bullet marginleft="2em">php://</bullet>
-		<bullet marginleft="2em">http://, https://, ftp://, ftps://</bullet>
-		<bullet marginleft="2em">compression.gzip://, compression.bz2://</bullet>
+		<bullet marginleft="1em">php://</bullet>
+		<bullet marginleft="1em">http://, https://, ftp://, ftps://</bullet>
+		<bullet marginleft="1em">compression.gzip://, compression.bz2://</bullet>
 		<bullet>User streams (register_streams() )</bullet>
 		<bullet>Filters (php://filter)</bullet>
 	</list>
