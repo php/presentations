@@ -2,7 +2,7 @@
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
 <blurb><![CDATA[<br/><br/><br/>]]></blurb>
 <list title="Use Stored Procedures For DML">
-<bullet>Combining multiple DML statements in a single stored procedure can reduce the number of soft parses.</bulllet>
+<bullet>Combining multiple DML statements in a single stored procedure can reduce the number of soft parses.</bullet>
 <bullet>Isolating your DML is also nice to separate out the implementation.</bullet>
 </list>
 </slide>
