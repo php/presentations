@@ -1,0 +1,93 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>High Performance PHP</title>
+<event>PHP Conference</event>
+<location>Amsterdam</location>
+<url>http://talks.php.net/</url>
+<date>May 7, 2003</date>
+<speaker>George Schlossnagle &amp; Sterling Hughes</speaker>
+
+<slide>slides/hpp/titlepage.xml</slide>
+<slide>slides/hpp/what_perf.xml</slide>
+<slide>slides/hpp/when_optimize.xml</slide>
+<slide>slides/hpp/compiler_caches.xml</slide>
+<slide>slides/hpp/lifecycle.xml</slide>
+<slide>slides/hpp/how_ccache.xml</slide>
+<slide>slides/hpp/io_sizes.xml</slide>
+<slide>slides/hpp/data_path.xml</slide>
+<slide>slides/hpp/sys_ob.xml</slide>
+<slide>slides/hpp/os_client.xml</slide>
+<slide>slides/hpp/final_picture.xml</slide>
+<slide>slides/hpp/ob.xml</slide>
+<slide>slides/hpp/netbuf.xml</slide>
+<slide>slides/hpp/netbuf_ii.xml</slide>
+<slide>slides/hpp/compress.xml</slide>
+<slide>slides/hpp/modgzip.xml</slide>
+<slide>slides/hpp/phpzlib.xml</slide>
+<slide>slides/hpp/external_cacheability.xml</slide>
+<slide>slides/hpp/bottom_drawer.xml</slide>
+<slide>slides/hpp/mastering.xml</slide>
+<slide>slides/hpp/driving.xml</slide>
+<slide>slides/hpp/macro_subst.xml</slide>
+<slide>slides/hpp/macro_subst2.xml</slide>
+<slide>slides/hpp/macro_subst3.xml</slide>
+<slide>slides/hpp/macro_subst4.xml</slide>
+<slide>slides/hpp/sqlopt1.xml</slide>
+<slide>slides/hpp/sqlopt2.xml</slide>
+<slide>slides/hpp/sqlopt3.xml</slide>
+<slide>slides/hpp/sqlopt4.xml</slide>
+<slide>slides/hpp/normalization.xml</slide>
+<slide>slides/hpp/denormalization.xml</slide>
+<slide>slides/hpp/summarizations.xml</slide>
+<slide>slides/hpp/summarization_example.xml</slide>
+<slide>slides/hpp/idiosyncrasies.xml</slide>
+<slide>slides/hpp/lazy_initialization.xml</slide>
+<slide>slides/hpp/lazy_initialization1.xml</slide>
+<slide>slides/hpp/internal_functions.xml</slide>
+<slide>slides/hpp/hexencode.xml</slide>
+<slide>slides/hpp/file_get_contents.xml</slide>
+<slide>slides/hpp/perfect_fit.xml</slide>
+<slide>slides/hpp/antiexample.xml</slide>
+<slide>slides/hpp/content_caching.xml</slide>
+<slide>slides/hpp/what_caching.xml</slide>
+<slide>slides/hpp/how_caching_works.xml</slide>
+<slide>slides/hpp/caching_eval.xml</slide>
+<slide>slides/hpp/first_shot.xml</slide>
+<slide>slides/hpp/problems.xml</slide>
+<slide>slides/hpp/gen_library.xml</slide>
+<slide>slides/hpp/reimplementation.xml</slide>
+<slide>slides/hpp/total_page_caching.xml</slide>
+<slide>slides/hpp/404.xml</slide>
+<slide>slides/hpp/fibonacci_example.xml</slide>
+<slide>slides/hpp/textstatistics_example.xml</slide>
+<slide>slides/hpp/persistent_cache_for_raw_data.xml</slide>
+<slide>slides/hpp/page62.xml</slide>
+<slide>slides/hpp/session_extension.xml</slide>
+<slide>slides/hpp/caching_for_textstatistics.xml</slide>
+<slide>slides/hpp/recoding_c.xml</slide>
+<slide>slides/hpp/advice.xml</slide>
+<slide>slides/hpp/targetting_your_efforts.xml</slide>
+<slide>slides/hpp/some_truisms.xml</slide>
+<slide>slides/hpp/profiling.xml</slide>
+<slide>slides/hpp/tools_for_profiling.xml</slide>
+<slide>slides/hpp/profiler_diagram_apd.xml</slide>
+<slide>slides/hpp/setting_up_apd.xml</slide>
+<slide>slides/hpp/generating_a_trace.xml</slide>
+<slide>slides/hpp/interpreting_a_trace.xml</slide>
+<slide>slides/hpp/serendipity_example.xml</slide>
+<slide>slides/hpp/dynamic_activation.xml</slide>
+<slide>slides/hpp/benchmarking.xml</slide>
+<slide>slides/hpp/setting_up_benchmarkiterate.xml</slide>
+<slide>slides/hpp/simple_example.xml</slide>
+<slide>slides/hpp/a_bad_example.xml</slide>
+<slide>slides/hpp/extending_benchmarkiterate.xml</slide>
+<slide>slides/hpp/shameless_book_plug.xml</slide>
+
+</presentation>
