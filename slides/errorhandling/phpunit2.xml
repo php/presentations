@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<slide fontsize="6em" title="Running Testsuite">
+<slide fontsize="6em">
+	<title>Running Testsuite</title>
 
 	<example fontsize="0.8em"><![CDATA[<?php
 class CropString {
@@ -12,7 +13,7 @@ class CropString {
 			$this->result = $str;
 		}
 	}
-?>]]></example>
+? >]]></example>
 
 	<example fontsize="0.8em"><![CDATA[<?php
 	require_once 'crop_string.class.php';
@@ -42,5 +43,5 @@ class CropString {
 	$suite->addTest(new CropStringTest('helloWorldTest'));
 	$result = PHPUnit::run($suite);
 	echo $result->toString();
-?>]]></example>
+? >]]></example>
 </slide>

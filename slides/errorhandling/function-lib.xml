@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<slide fontsize="6em" title="Testing">
+<slide fontsize="6em">
+	<title>Testing</title>
 	<image align="right" filename="monkey_typing.png" />
 
 	<example fontsize="0.7em"><![CDATA[<?php
@@ -12,7 +13,7 @@
 			return $str;
 		}
 	}
-?>]]></example>
+? >]]></example>
 
 	<example fontsize="0.7em"><![CDATA[<?php
 	include 'lib.php';
@@ -51,5 +52,5 @@
 			}
 		}
 	}
-?>]]></example>
+? >]]></example>
 </slide>
