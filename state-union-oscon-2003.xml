@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation
+    jskeyboard="1"
+    template="php"
+    logo1="/pres2/images/animated_elephant.gif"
+    logo2="/pres2/presentations/slides/soap/activestate_logo.gif"
+    navbarbackground="#A68C53"
+    backgroundfixed="true"
+    backgroundimage = "/pres2/presentations/slides/soap/activestate_background.jpg"
+    backgroundcol="#EFECDD"
+    navsize="1.4em">
+<title>State of the Elephant</title>
+<topic>PHP</topic>
+<event>ActiveState Corporation</event>
+<location>OSCON, Portland</location>
+<date>July 8, 2003</date>
+<speaker>Shane Caraveo</speaker>
+<company>ActiveState Corporation</company>
+<email>shanec@ActiveState.com</email>
+<url>talks.php.net</url>
+<slide>slides/state2003/titlepage.xml</slide>
+<slide>slides/state2003/usage.xml</slide>
+<slide>slides/state2003/timeline.xml</slide>
+<slide>slides/state2003/changes.xml</slide>
+<slide>slides/state2003/pear.xml</slide>
+<slide>slides/state2003/changes5.xml</slide>
+<slide>slides/state2003/changes5-2.xml</slide>
+<slide>slides/state2003/neverchanges.xml</slide>
+<slide>slides/state2003/future.xml</slide>
+<slide>slides/state2003/resources.xml</slide>
+</presentation>
