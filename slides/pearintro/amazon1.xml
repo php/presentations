@@ -1,11 +1,8 @@
 <slide title="Jungle Fever">
  <list fontsize="4em">
   <bullet>An Amazon interface using PEAR</bullet>
-  <bullet>HTML Templating</bullet>
+  <bullet>Relies on a handfull of PEAR classes</bullet>
   <bullet>SOAP Interface</bullet>
-  <bullet>Unit Testing</bullet>
-  <bullet>Benchmarking</bullet>
-  <bullet>Page Cacheing</bullet>
  </list>
 </slide>
 
