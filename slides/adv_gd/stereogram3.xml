@@ -1,9 +1,9 @@
 <slide title="Getting Crosseyed">
-<image filename="depth2.gif" align="center"/>
+<image filename="depth2.png" align="center"/>
 <blurb>
     By starting off with a set of random pixels, then organizing those pixels in such a way
     that for any given point they are the same color at the appropiate intersection points, you
     can fool your mind into precieving a flat image as having depth. 
 </blurb>
-<image filename="depth3.gif" align="center"/>
+<image filename="depth3.png" align="center"/>
 </slide>
