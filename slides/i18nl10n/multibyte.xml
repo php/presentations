@@ -1,0 +1,14 @@
+<slide title="Multibyte Strings">
+<blurb>
+To deal with multibyte characters and encodings (such as Japanese and Korean) 
+you may use the %mbstring% extension.
+</blurb>
+
+<list title="What does Mbstring provide?">
+<bullet effect="hide">Support for ASCII, JIS, Shift-JIS, EUC-(JP|CN|TW|KR), UTF8, Big5, CP866, CP936, CP1251, Koi8r encodings</bullet>
+<bullet effect="hide">Replacement for many of PHP's standard string handling 
+functions.</bullet>
+<bullet effect="hide">Multibyte regular expressions</bullet>
+<bullet effect="hide">Transparent encoding handlers via PHP's output handling mechanism</bullet>
+</list>
+</slide>

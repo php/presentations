@@ -1,0 +1,13 @@
+<slide title="Default Translations">
+<blurb>
+What happens when a translation is out of date?
+</blurb>
+
+<list title="Solutions">
+<bullet effect="slide">Create a custom %define()% function, that checks for constant definitions, and 
+uses the default definitions if available</bullet>
+<bullet effect="slide">Pregenerate your language definition files, substituting untranslated definitions
+with their replacements</bullet>
+<bullet effect="slide">Use a more advanced solution, ala gettext</bullet>
+</list>
+</slide>

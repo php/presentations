@@ -1,0 +1,11 @@
+<slide title="HTTP Features">
+<blurb title="Accept-Languages">
+The %Accept-Languages% header is sent by the browser, and informs the website
+what languages (and the order in which) the user wishes to recieve information.
+
+<example title="Sample Accept-Languages Header" fontsize="1.2em" type="http">
+Accept-Languages: en, de
+</example>
+</blurb>
+
+</slide>

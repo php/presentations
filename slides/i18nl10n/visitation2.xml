@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Visitation model 2</title>
+
+	<blurb fontsize="4em">Tree structure:</blurb>
+	<image align="center" filename="tree1.png" />
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb fontsize="4em">Visitation:</blurb>
+	<image align="center" filename="tree2.png" />
+
+	<blurb fontsize="4em">Stored as:
+	<![CDATA[<table class="db" border="1" align="center" cellspacing="0">
+<tr>
+	<th>Id</th><th>Parent</th><th>Name</th><th>Left</th><th>Right</th>
+</tr>
+<tr>
+	<td>3</td><td>1</td><td class="left">Countries</td><td>1</td><td>12</td>
+</tr>
+<tr>
+	<td>4</td><td>3</td><td class="left">Belgium</td><td>2</td><td>3</td>
+</tr>
+<tr>
+	<td>5</td><td>3</td><td class="left">Netherlands</td><td>4</td><td>9</td>
+</tr>
+<tr>
+	<td>6</td><td>3</td><td class="left">Germany</td><td>10</td><td>11</td>
+</tr>
+<tr>
+	<td>7</td><td>5</td><td class="left">Business</td><td>5</td><td>6</td>
+</tr>
+<tr>
+	<td>8</td><td>5</td><td class="left">Economy</td><td>7</td><td>8</td>
+</tr>
+</table>
+	]]></blurb>
+</slide>

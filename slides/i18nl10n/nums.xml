@@ -1,0 +1,22 @@
+<slide title="Numbers and Currencies">
+<blurb>
+Every country has a different way of displaying numbers and currencies, even if
+you will be displaying the same number.
+</blurb>
+
+<blurb title="localeconv()">
+The %localconv()% function will give you all necessary information about the 
+current locale.
+</blurb>
+
+<example filename="locales.php" fontsize="1.2em" type="php"/>
+
+<blurb title="number_format()">
+The %number_format()% function along with %localeconv()% will allow you to 
+get locale specific information.
+</blurb>
+
+<example filename="numfmt.php" fontsize="1.2em" type="php"/>
+
+
+</slide>

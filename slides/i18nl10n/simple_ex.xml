@@ -1,0 +1,29 @@
+<slide title="Simple i18n Example">
+<blurb>
+First create a default definition file.
+</blurb>
+<example filename="simple_defs_en.php" fontsize="1.2em" type="php"/>
+
+<blurb>
+Then create your PHP script which utilizes those defines.
+</blurb>
+
+<example filename="simple_defs_ex.php" fontsize="1.2em" type="php"/>
+
+<blurb>
+Then copy over your english translation to the language translation you wish 
+to make (in this case German).
+</blurb>
+
+<example fontsize="1.2em" type="shell">
+]$ cp sample_defs_en.php sample_defs_de.php
+</example>
+
+<blurb>
+And then edit the file, with the desired translations.
+</blurb>
+
+<example filename="simple_defs_de.php" fontsize="1.2em" type="php"/>
+
+
+</slide>

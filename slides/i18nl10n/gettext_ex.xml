@@ -1,0 +1,38 @@
+<slide title="Gettext Example">
+<blurb>
+Write your PHP code.
+</blurb>
+<example filename="gettext_ex.php" fontsize="1.2em" type="php"/>
+
+<blurb>
+Extract the strings from the file, using the %xgettext(1)% program.
+</blurb>
+<example fontsize="1.2em" type="shell">
+]$ xgettext -a gettext_ex.php
+</example>
+
+<blurb>
+Create the appropriate subdirectories, and place your portable object 
+files there.
+</blurb>
+
+<example fontsize="1.2em" type="shell">
+]$ mkdir -p en/LC_MESSAGES/
+]$ mv messages.po en/LC_MESSAGES/
+]$ mkdir -p de/LC_MESSAGES/
+]$ cp en/LC_MESSAGES/messages.po de/LC_MESSAGES/messages.po
+</example>
+
+<blurb>
+Translate it! 
+</blurb>
+
+<blurb>
+Now compile all of your translations with %msgfmt(1)%
+</blurb>
+
+<example fontsize="1.2em" type="shell">
+]$ msgfmt messages.po -o messages.mo
+</example>
+
+</slide>

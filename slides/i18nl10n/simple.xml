@@ -1,0 +1,16 @@
+<slide title="Simple i18n">
+<blurb>
+Use a set of defines that represent the textual portions of your website.
+</blurb>
+<list title="Pros">
+<bullet effect="hide">Extremely Simple</bullet>
+<bullet effect="hide">Requires very little overhead</bullet>
+<bullet effect="hide">Good For Sites with Little Predefined Text</bullet>
+</list>
+
+<list title="Cons">
+<bullet effect="hide">Having non technical translators is hard</bullet>
+<bullet effect="hide">Large Portions of text are nearly impossible</bullet>
+<bullet effect="hide">Full translations are required</bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Gettext">
+<blurb>
+Gettext is a LGPL library that attempts to solve the problem of internationalization 
+in a manner that allows translators and developers to work together.
+</blurb>
+
+<list title="Pros">
+<bullet effect="hide">Simple for both developers and programmers</bullet>
+<bullet effect="hide">Excellent in architecture size for small to medium translations</bullet>
+<bullet effect="hide">Very well integrated into the Unix system</bullet>
+<bullet effect="hide">Cross-platform</bullet>
+<bullet effect="hide">"Free" License</bullet>
+</list>
+<list title="Cons">
+<bullet effect="hide">Still not good for large translations</bullet>
+<bullet effect="hide">Requires a bit of legwork, such as compiling translations</bullet>
+<bullet effect="hide">L*GPL*</bullet>
+</list>
+</slide>
