@@ -1,0 +1,30 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Securing PHP Sessions</title>
+<event>OSCON 2004</event>
+<location>Portland, Oregon</location>
+<date>July 30, 2004</date>
+<speaker>Chris Shiflett</speaker>
+<email>shiflett@php.net</email>
+<url>http://shiflett.org/talks/oscon2004/securing-php-sessions</url>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/titlepage.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/outline.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-fixation.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-fixation-example.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-fixation-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-fixation-defense-improved.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-hijacking.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-hijacking-http.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-hijacking-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-hijacking-fingerprint.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/session-hijacking-token.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/more-information.xml</slide>
+<slide>slides/shiflett/oscon2004/securing-php-sessions/thankyou.xml</slide>
+</presentation>
