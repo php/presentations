@@ -1,10 +1,10 @@
 <slide title="About prototyping">
 <list fontsize="3.5em">
-<bullet effect="slide">Constant customer feedback</bullet>
-<bullet marginleft="2.0em" effect="hide">Involve them in the design process</bullet>
-<bullet marginleft="2.0em" effect="hide">Make smaller internal releases where customers can overview progress</bullet>
-<bullet effect="slide">Write it hacky</bullet>
-<bullet marginleft="2.0em" effect="hide" type="none">... Fix the hacks ...</bullet>
-<bullet effect="slide">Needs based development</bullet>
+<bullet>Constant customer feedback</bullet>
+<bullet marginleft="2.0em">Involve them in the design process</bullet>
+<bullet marginleft="2.0em">Make smaller internal releases where customers can overview progress</bullet>
+<bullet>Write it hacky</bullet>
+<bullet marginleft="2.0em" type="none">... Fix the hacks ...</bullet>
+<bullet>Needs based development</bullet>
 </list>
 </slide>

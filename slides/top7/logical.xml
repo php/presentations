@@ -1,10 +1,10 @@
 <slide title="Logic">
 <list>
-<bullet effect="slide">Data Access &amp; Manipulation</bullet>
-<bullet marginleft="2.0em" effect="hide">Database Connections</bullet>
-<bullet marginleft="2.0em" effect="hide">Parsing and Regenerating</bullet>
-<bullet effect="slide">Calculations (Mathematical, Monetary)</bullet>
-<bullet effect="slide">IPC (Sockets, pipes)</bullet>
+<bullet>Data Access &amp; Manipulation</bullet>
+<bullet marginleft="2.0em">Database Connections</bullet>
+<bullet marginleft="2.0em">Parsing and Regenerating</bullet>
+<bullet>Calculations (Mathematical, Monetary)</bullet>
+<bullet>IPC (Sockets, pipes)</bullet>
 </list>
 
 </slide>

@@ -1,10 +1,9 @@
-<?  
-include_once("./presentations/slides/top7/funcdisp.php"); 
+<?php 
 commonHeader("Hello World"); 
 ?>
 <table border="0" width="100%">
 <tr>
-<? dispnames(); ?>
+<?php dispnames(); ?>
 </tr>
 </table>
-<? commonFooter(); ?>
+<?php commonFooter(); ?>

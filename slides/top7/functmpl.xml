@@ -2,6 +2,10 @@
 <blurb>
 Code it in html with a set of functions which serve to output/format dynamic blocks.
 </blurb>
+<php><![CDATA[<?php
+include_once("./presentations/slides/top7/funcdisp.php");
+]]>
+</php>
 <example filename="functmpl.tpl" result="1" title="Template File"/>
 <blurb>
 <![CDATA[<br /><br />]]>

@@ -1,4 +1,4 @@
-<?
+<?php
 global $names;
 $names = array("betty", "johnny", "sue");
 

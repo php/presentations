@@ -1,5 +1,6 @@
 <slide title="Objects are Types">
 <blurb>
 </blurb>
-<example filename="objects_ex.php" result="1"/>
+<example filename="objects_ex.php" />
+<example filename="objects_ex_run.php" hide="1" result="1" />
 </slide>

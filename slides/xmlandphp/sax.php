@@ -30,5 +30,9 @@ while (!feof($fp)) {
 }
 fclose($fp);
 
-var_dump($w->items);
+foreach ($w->items as $item) {
+	echo $item->title . "\n";
+}
+
+// var_dump($w->items);
 ?>

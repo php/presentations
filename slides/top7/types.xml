@@ -1,5 +1,11 @@
 <slide title="PHP Types">
 <blurb>
 </blurb>
+<php><![CDATA[<?php
+// XXX: Presentation system hack
+chdir(getcwd() . "/presentations/slides/top7");
+
+?>]]>
+</php>
 <example result="1" filename="types_ex.php"/>
 </slide>
