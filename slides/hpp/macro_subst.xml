@@ -1,6 +1,6 @@
 <slide title="Macro Substitution">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<break lines="5"/>
 <example><![CDATA[%{SALUTATION}% %{NAME}%,
 Your friend %{FRIENDNAME}% has sent you an e-card. In order to view it, please click below:
 %{ECARD}%]]></example>

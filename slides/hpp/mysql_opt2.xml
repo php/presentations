@@ -1,6 +1,6 @@
 <slide title="MySQL Table Types">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb><![CDATA[<br/>]]></blurb>
+<break lines="3"/>
 <list title="MyISAM">
 <bullet>Efficient For *either* High Volume writes *or* reads</bullet>
 <bullet>Table level locking</bullet>

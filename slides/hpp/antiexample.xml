@@ -1,8 +1,6 @@
 <slide title="Anti-Example">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb>
-<![CDATA[<br/>]]>
-</blurb>
+<break lines="4"/>
 <example fontsize="1.7em" title="O(n^2) Copies"><![CDATA[<?php
 $cat = create_function('$a,$b', 
                        'return $a . $b;');

@@ -1,6 +1,6 @@
 <slide title="Databases Idiosyncrasies (Oracle)">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<break lines="5"/>
 <example>SELECT * FROM table where field = ?</example>
 <blurb>versus</blurb>
 <example>SELECT * FROM table where field = '$name'</example>

@@ -1,6 +1,6 @@
 <slide title="Matching Your IO Sizes">
 <image filename="10000000000000610000006B74D8AABB.jpg" align="right"/>
-<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<break lines="5"/>
 <list>
 <bullet>The goal is to pass off as much work to the kernel as efficiently as possible.</bullet>
 <bullet>Optimizes PHP &lt;--> OS Communication</bullet>

@@ -1,7 +1,6 @@
 <slide title="Macro Substitution (II)">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb>
-</blurb>
+<break lines="2"/>
 <blurb>First implementation.</blurb>
 <example fontsize="1.7em" filename="macro_v1.inc" />
 <blurb>It's %O(n*m)%.</blurb>

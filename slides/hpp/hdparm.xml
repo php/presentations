@@ -3,7 +3,7 @@
 <blurb>
 %hdparm% can be used to query and set hard drive parameters.
 </blurb>
-<blurb><![CDATA[<br/>]]></blurb>
+<break lines="3"/>
 <example fontsize="1.8em" type="shell"><![CDATA[ % hdparm /dev/hda
   /dev/hda:
    multcount    = 16 (on)

@@ -1,6 +1,6 @@
 <slide title="MySQL Optimization">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<break lines="5"/>
 <list>
 <bullet effect="slide">Use the %LIMIT% statement</bullet>
 <bullet effect="slide">Use the %mysql_unbuffered_query()% function</bullet>

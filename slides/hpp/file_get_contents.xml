@@ -1,6 +1,6 @@
 <slide title="file_get_contents()">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb><![CDATA[<br/><br/>]]></blurb>
+<break lines="4"/>
 <example><![CDATA[<?php
 $str = file_get_contents($file);
 ?>]]></example>
