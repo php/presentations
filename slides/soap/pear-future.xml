@@ -1,0 +1,13 @@
+<slide title="PEAR::SOAP">
+<list title="In the future">
+<bullet>PHP 5 primary focus</bullet>
+<bullet>Less script, more C</bullet>
+<bullet>libXML for the backend parsing</bullet>
+<bullet>libXML for Schema support</bullet>
+<bullet>SOAP 1.2 support</bullet>
+<bullet>PEAR::SOAP::Lite</bullet>
+<bullet>Finish WSDL Support</bullet>
+<bullet>WSDL extension support with plugable extensions</bullet>
+<bullet>DIME through streams</bullet>
+</list>
+</slide>

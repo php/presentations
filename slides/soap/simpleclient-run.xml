@@ -2,7 +2,7 @@
 
 <example 
 	title="BabelFish Client"
-	filename="examples\client-babelfish.php"
+	filename="examples/client-babelfish.php"
 	type="php"
         fontsize='1.4em'
 />
@@ -38,7 +38,7 @@ END;
 
 <example 
 	title="BabelFish Says..."
-	filename="examples\client-babelfish-real.php"
+	filename="examples/client-babelfish-real.php"
 	hide="1"
 	result="1"
 	type="html"
