@@ -1,0 +1,32 @@
+<slide title="Extensions" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  PHP-GTK is actually a mini-PHP: it provides the core functionality and API,
+  and a set of extensions for additional features. The Glade support is
+  implemented via an extension. Some other ones in the main distribution are:
+ </blurb>
+ <list fontsize="2.5ex">
+  <bullet>
+   |d04a21|gdkpixbuf| - provides image loading and rendering functionality
+  </bullet>
+  <bullet>
+   |d04a21|scintilla| - a source code editing widget with syntax highlighting,
+   code completion, and much more
+  </bullet>
+  <bullet>
+   |d04a21|gtkhtml| - makes HTML rendering and editing possible
+  </bullet>
+  <bullet>
+   |d04a21|canvas| - antialiased vector graphics rendering and manipulation
+  </bullet>
+  <bullet>
+   |d04a21|extra| - additional widgets for plotting, spreadsheets, etc
+  </bullet>
+ </list>
+
+ <blurb>
+  There are some other extensions created by users, such as GLArea (for OpenGL
+  rendering).
+ </blurb>
+
+</slide>

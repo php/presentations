@@ -1,0 +1,31 @@
+<slide title="Windows" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb fontsize="2ex">
+  ~Windows~ are toplevel container widgets that are affected by the window manager
+  parameters, e.g. dialog boxes, popups, application windows, etc.
+ </blurb>
+ <blurb fontsize="2ex">
+  To set a window's title:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php $window->set_title('My App'); ?>]]></example>
+ <blurb fontsize="2ex">
+  To set the focus widget in the window:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php $window->set_focus($name_entry); ?>]]></example>
+ <blurb fontsize="2ex">
+  To set the default widget in the window (note that the widget has to call
+  %can_default()% first):
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php $window->set_default($ok_button); ?>]]></example>
+ <blurb fontsize="2ex">
+  To inhibit interaction with other windows in the same app, make it ~modal~,
+  disallow lowering it below the parent window, and run a new main loop:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  $dialog->set_modal(true);
+  $dialog->set_transient_for($parent);
+  gtk::main();
+?>]]></example>
+
+
+</slide>

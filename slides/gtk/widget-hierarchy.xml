@@ -1,0 +1,102 @@
+<slide title="Widget Hierarchy" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Gtk toolkit has an extensive widget class hierarchy. Each widget class
+  inherits its parents methods, properties, signals, etc.
+ </blurb>
+ <example fontsize="1ex"><![CDATA[GtkObject
+  +GtkWidget
+  | +GtkMisc
+  | | +GtkLabel
+  | | | +GtkAccelLabel
+  | | | `GtkTipsQuery
+  | | +GtkArrow
+  | | +GtkImage
+  | | `GtkPixmap
+  | +GtkContainer
+  | | +GtkBin
+  | | | +GtkAlignment
+  | | | +GtkFrame
+  | | | | `GtkAspectFrame
+  | | | +GtkButton
+  | | | | +GtkToggleButton
+  | | | | | `GtkCheckButton
+  | | | | |   `GtkRadioButton
+  | | | | `GtkOptionMenu
+  | | | +GtkItem
+  | | | | +GtkMenuItem
+  | | | | | +GtkCheckMenuItem
+  | | | | | | `GtkRadioMenuItem
+  | | | | | `GtkTearoffMenuItem
+  | | | | +GtkListItem
+  | | | | `GtkTreeItem
+  | | | +GtkWindow
+  | | | | +GtkColorSelectionDialog
+  | | | | +GtkDialog
+  | | | | | `GtkInputDialog
+  | | | | +GtkDrawWindow
+  | | | | +GtkFileSelection
+  | | | | +GtkFontSelectionDialog
+  | | | | `GtkPlug
+  | | | +GtkEventBox
+  | | | +GtkHandleBox
+  | | | +GtkScrolledWindow
+  | | | `GtkViewport
+  | | +GtkBox
+  | | | +GtkButtonBox
+  | | | | +GtkHButtonBox
+  | | | | `GtkVButtonBox
+  | | | +GtkVBox
+  | | | | +GtkColorSelection
+  | | | | `GtkGammaCurve
+  | | | `GtkHBox
+  | | |   +GtkCombo
+  | | |   `GtkStatusbar
+  | | +GtkCList
+  | | | `GtkCTree
+  | | +GtkFixed
+  | | +GtkNotebook
+  | | | `GtkFontSelection
+  | | +GtkPaned
+  | | | +GtkHPaned
+  | | | `GtkVPaned
+  | | +GtkLayout
+  | | +GtkList
+  | | +GtkMenuShell
+  | | | +GtkMenuBar
+  | | | `GtkMenu
+  | | +GtkPacker
+  | | +GtkSocket
+  | | +GtkTable
+  | | +GtkToolbar
+  | | `GtkTree
+  | +GtkCalendar
+  | +GtkDrawingArea
+  | | `GtkCurve
+  | +GtkEditable
+  | | +GtkEntry
+  | | | `GtkSpinButton
+  | | `GtkText
+  | +GtkRuler
+  | | +GtkHRuler
+  | | `GtkVRuler
+  | +GtkRange
+  | | +GtkScale
+  | | | +GtkHScale
+  | | | `GtkVScale
+  | | `GtkScrollbar
+  | |   +GtkHScrollbar
+  | |   `GtkVScrollbar
+  | +GtkSeparator
+  | | +GtkHSeparator
+  | | `GtkVSeparator
+  | +GtkPreview
+  | `GtkProgress
+  |   `GtkProgressBar
+  +GtkData
+  | +GtkAdjustment
+  | `GtkTooltips
+  `GtkItemFactory
+]]></example>
+
+</slide>

@@ -1,0 +1,21 @@
+<slide title="Size/Position" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  In a majority of cases, it is not advisable to set the size or position of the
+  widget explicitly. The reason is that this disregards any external constraints
+  that might be imposed on a widget, such as user's preference for the font
+  size, resizing of the dialog box, the length of the button label in another
+  language. It is best to let the containers chooise the sizing and placement of
+  their children.
+ </blurb>
+ <blurb>
+  That said, a few widgets should have their size and position set manually.
+  This includes *GtkWindow*, *GtkCTree*, *GtkCList*, and a couple of others.
+  To accomplish this, use these methods:
+ </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php
+  $window->set_usize($width, $height);
+  $window->set_uposition($x, $y);
+?>]]></example>
+
+</slide>

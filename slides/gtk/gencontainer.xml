@@ -1,0 +1,28 @@
+<slide title="Containers Overview" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Remember that containers are widgets that can contain other widgets. The
+  simplest type of container is *GtkBin* - it can only hold one child widget. An
+  example of this container is a regular button.
+ </blurb>
+ <blurb>
+  To add to or remove a widget from a container:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  $container->add($widget);
+  $container->remove($widget);
+?>]]></example>
+ <blurb>
+  To obtain all the widgets in a container, use one of the following approaches.
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  $child_widgets = $container->children();
+  $child_widgets = $container->children;
+?>]]></example>
+ <blurb>
+  In either case %$child_widgets% will be an array of widgets, but the second
+  approach lets you access a specific child directly, e.g.
+  %$container->children[0]%.
+ </blurb>
+
+</slide>

@@ -1,16 +1,22 @@
 <slide title="Creating and Destroying" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
 
  <blurb>
-  To create a widget, use %&amp;new% operator instead of %new%. Some
-  widgets take constructor parameters to initialize themselves to some
-  state.
+  To create a widget, use |0033aa|%&amp;new%| operator instead of
+  |0033aa|%new%|. Some widgets take constructor parameters to initialize
+  themselves to some state.
  </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php $vbox =& new GtkVBox(false, 5); ?>]]></example>
  <blurb>
-  To destroy a widget, use %destroy()% method. This is rarely used because all
+  Some widgets may be created by factories or other static methods:
+ </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php list($pixmap, $mask) = gdk::pixmap_create_from_xpm(...); ?>]]></example>
+ <blurb>
+  To destroy a widget, call its %destroy()% method. This is rarely used because all
   widgets are destroyed automatically upon the application's exit.
  </blurb>
  <blurb>
-  Destroying a widget will not 
+  Note that simply unsetting the widget variable will not work in PHP 4 due to
+  Zend Engine limitations.
  </blurb>
 
 </slide>

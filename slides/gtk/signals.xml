@@ -7,7 +7,9 @@
  <blurb>The passing of control is implemented via ~signals~. When a widget
   experiences an event, it ~emits~ a signal. Every signal is uniquely
   identified by name, but two different widgets may have the signal of the
-  same name but different meaning.</blurb>
+  same name but different meaning. Signals are inherited by widgets from up the
+  widget hierarchy, i.e. *GtkButton* will have all the signals that *GtkWidget*
+  has.</blurb>
 
  <blurb>Signals present a way to customize application's behavior according
   to the developer's needs and user's actions. Each signal has a default

@@ -1,0 +1,42 @@
+<slide title="PHP-GTK 2" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <example fontsize="1ex"><![CDATA[From:    Benjamin Smith
+Subject: PHP5, PHP-GTK, and SQLite
+Groups:  php.gtk.general
+
+Maybe I'm just a bit weird, but I just read
+about (and started playing with) SQLite on PHP5 beta. 
+
+Wow. 
+
+Combine SQLite and PHP-GTK, and you have an INCREDIBLE development environment
+for client-side or client-server development! 
+
+Wow. 
+
+I spent the last year putting together a 50,000 line software package, and did 
+it all with data arrays because using SQL would be too "heavy" and a pain to 
+write an installer for all the various releases of Windows, MacOS, Linux, 
+etc. to be supported. 
+
+So many loops, so many painful recursive functions... 
+foreach($clients as $key => $client)... 
+
+But, if SQLite is BUILT IN... 
+select clients from clienttable... 
+
+I could probably re-write this in 30k lines or less with SQL support. 
+
+Wow. PHP-GTK2, Glade, SQLite. It's like LAMP all over again, only on Windows, 
+OSX, Linux, Sparc, and god knows what else. This is truly a platform for 
+quick, powerful, multi-platform, client-side GUI development under 
+development... 
+
+I CAN'T WAIT UNTIL PHP-GTK2 IS OUT!!!!!!! 
+
+W00t! 
+
+-Ben 
+]]></example>
+
+</slide>

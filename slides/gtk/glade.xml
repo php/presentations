@@ -1,0 +1,12 @@
+<slide title="Glade" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Building complicated interfaces by hand is tedious. Thankfully, there is
+  Glade. You can visually drag-n-drop widgets, set properties, connect signals,
+  and then just load the resulting XML file into PHP-GTK.
+ </blurb>
+ <link align="center" text="Temperature Conversion (Glade variant)" href="presentations/slides/gtk/tempconv-g.php" />
+
+ <example fontsize="1ex" filename="tempconv-g.php"  />
+
+</slide>

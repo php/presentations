@@ -1,0 +1,12 @@
+<slide title="Main Loop" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Once you set up your application, you have to give control over to Gtk's ~main loop~.
+  This is where all the events are processed and dispatched.
+ </blurb>
+ <example fontsize="1.3ex"><![CDATA[<?php
+  gtk::main(); // start the main loop
+  gtk::main_quit() // end the main loop
+?>]]></example>
+
+</slide>

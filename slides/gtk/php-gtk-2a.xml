@@ -1,0 +1,35 @@
+<slide title="PHP-GTK 2" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Gtk+ 2 is a substantial change from the first version.
+ </blurb>
+ <list fontsize="2.5ex">
+  <bullet>
+   generalized type system
+  </bullet>
+  <bullet>
+   fully internationalized, all text is UTF-8
+  </bullet>
+  <bullet>
+   Pango-based Text widget can render any text in any language in the same box,
+   and provides enough visual and navigation features to make a reasonable code editor
+  </bullet>
+  <bullet>
+   GdkPixbuf is integrated
+  </bullet>
+  <bullet>
+   GDK is no longer an orphan child, as far as objects are concerned and has
+   double-buffering for smoooooth rendering
+  </bullet>
+  <bullet>
+   Powerful new tree widget based on model-view approach
+  </bullet>
+  <bullet>
+   Accessibility support for disabled users
+  </bullet>
+  <bullet>
+   lots of cleanup and simplification
+  </bullet>
+ </list>
+
+</slide>

@@ -1,0 +1,26 @@
+<slide title="Visibility" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>Creating a widget is not enough. You also have to make it appear on the
+  screen. In order to do this use the %show()% or %show_all()% methods. There is
+  a difference between these methods if the widget is a container.
+ </blurb>
+
+ <blurb>
+  This will display the window, but not any of its contained children:
+ </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php $window->show(); ?>]]></example>
+ <blurb>
+  This will display the window and all of its contained children:
+ </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php $window->show_all(); ?>]]></example>
+
+ <blurb>
+  If a widget is inside a container and you call %show()% on it, it will not
+  appear on screen until the container itself has been shown.
+ </blurb>
+
+ <blurb>
+  Corresponding functions for hiding a widget are %hide()% and %hide_all()%.
+ </blurb>
+
+</slide>

@@ -1,0 +1,30 @@
+<slide title="Windows" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb fontsize="2ex">
+  You can set a window's default size with:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php $window->set_default_size($width, $height); ?>]]></example>
+ <blurb fontsize="2ex">
+  And to set a window's initial position:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php $window->set_position($position); ?>]]></example>
+ <blurb fontsize="2ex">
+  Where %$position% can be %'center'% (center of screen), %'mouse'% (under the
+  cursor), or %'none'% (let window manager place it).
+ </blurb>
+ <blurb fontsize="2ex">
+  If you want to make window respond to resizing in a certain way, you have to
+  set its ~policy~.
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php $window->set_policy($allow_shrink, $allow_grow, $auto_shrink); ?>]]></example>
+ <blurb fontsize="2ex">
+  While each argument is a boolean, there are only two useful combinations of
+  them: one to allow the window to be resized by a user, and one to disallow
+  resizing.
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  $window->set_policy(false, true, false); // allow user resizing
+  $window->set_policy(false, false, true); // disallow user resizing
+?>]]></example>
+
+</slide>

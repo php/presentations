@@ -1,0 +1,22 @@
+<slide title="Sensitivity" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  A disabled, or ~insensitive~, widget does not respond to input and has a
+  different visual appearance in order to indicate such state. To enable or
+  disable a widget:
+ </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php $button->set_sensitive($state); ?>]]></example>
+ <blurb>
+  where %$state% is %TRUE% or %FALSE%. If the widget is enabled, but its parent
+  is not, then it is considered disabled as well. To test a widget's state:
+ </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php
+  $state = $button->sensitive();
+  $state = $button->is_sensitive();
+?>]]></example>
+ <blurb>
+  The first method tests just the widget itself, while the second one takes into
+  account its parent's state as well.
+ </blurb>
+
+</slide>

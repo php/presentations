@@ -16,6 +16,7 @@
  <slide>slides/gtk/phpmole.xml</slide>
  <slide>slides/gtk/agata.xml</slide>
 
+ <slide>slides/gtk/widget-hierarchy.xml</slide>
  <slide>slides/gtk/widgets.xml</slide>
  <slide>slides/gtk/containers.xml</slide>
  <slide>slides/gtk/signals.xml</slide>
@@ -24,7 +25,6 @@
 
  <slide>slides/gtk/gensteps.xml</slide>
  <slide>slides/gtk/creating.xml</slide>
- <!--
  <slide>slides/gtk/showing.xml</slide>
  <slide>slides/gtk/focus.xml</slide>
  <slide>slides/gtk/sensitivity.xml</slide>
@@ -33,10 +33,28 @@
  <slide>slides/gtk/gencontainer.xml</slide>
  <slide>slides/gtk/boxes.xml</slide>
  <slide>slides/gtk/windows.xml</slide>
+ <slide>slides/gtk/windows2.xml</slide>
 
  <slide>slides/gtk/connecting.xml</slide>
- <slide>slides/gtk/disconnecting.xml</slide>
- <slide>slides/gtk/disabling.xml</slide>
- -->
+ <slide>slides/gtk/connecting2.xml</slide>
+
+ <slide>slides/gtk/mainloop.xml</slide>
+
+ <slide>slides/gtk/mainloop.xml</slide>
+
+ <slide>slides/gtk/tempconv.xml</slide>
+
+ <slide>slides/gtk/glade.xml</slide>
+
+ <slide>slides/gtk/extensions.xml</slide>
+
+ <slide>slides/gtk/problems.xml</slide>
+
+ <slide>slides/gtk/php-gtk-2.xml</slide>
+ <slide>slides/gtk/php-gtk-2a.xml</slide>
+ <slide>slides/gtk/php-gtk-2b.xml</slide>
+
+ <slide>slides/gtk/resources.xml</slide>
+ <slide>slides/gtk/thankyou.xml</slide>
 
 </presentation>

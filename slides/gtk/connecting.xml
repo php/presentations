@@ -1,0 +1,26 @@
+<slide title="Connecting Signals" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  The most basic way of connecting a signal to a callback with with
+  %connect()% method. For example, to respond to a %'clicked'% signal on
+  a *GtkButton* widget, you would do this:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  function on_ok_clicked($button) {  }
+  $ok_button->connect('clicked', 'on_ok_clicked');
+?>]]></example>
+ <blurb>
+  If you wanted to connect to a class method or an object method, you have to use
+  a special syntax for denoting that:
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  class A {
+    function on_ok_clicked($button) { }
+  }
+  $ok_button->connect('clicked', array('A', 'on_ok_clicked')); // connect to a class method
+
+  $a_obj = new A();
+  $ok_button->connect('clicked', array(&$a_obj, 'on_ok_clicked')); // connect to an instance method
+?>]]></example>
+
+</slide>

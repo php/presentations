@@ -1,0 +1,25 @@
+<slide title="Focus" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Widgets can grab the keyboard focus if needed, but it only makes sense for
+  those that interact with keyboard with some way. So, *GtkEntry* will work for
+  example, while *GtkArrow* won't.
+ </blurb>
+
+ <example fontsize="1.5ex"><![CDATA[<?php $entry->grab_focus(); ?>]]></example>
+
+ <blurb>
+ </blurb>
+ <blurb>
+ </blurb>
+ <blurb>
+  It is possible to specify which widget should be activated when the user
+  presses the *Enter* key in a dialog box. Such a widget is called a ~default~
+  one.
+ </blurb>
+ <example fontsize="1.5ex"><![CDATA[<?php
+  $ok_button->can_default(TRUE);
+  $ok_button->grab_default();
+?>]]></example>
+
+</slide>

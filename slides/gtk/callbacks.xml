@@ -2,14 +2,17 @@
 
  <blurb>The user-defined signal handlers are called ~callbacks~.</blurb>
 
- <blurb>The first parameter normally passed to callbacks is the widget that
+ <blurb>The first parameter the callback receives is the widget that
  emitted the signal. The rest are signal-dependent. For example, the callback
- for 'switch_page' signal of GtkNotebook class would look like this:</blurb>
+ for %switch_page% signal of *GtkNotebook* class would look like this:</blurb>
  <example fontsize="1.5ex"><![CDATA[<?php function on_switch_page($notebook, $page, page_num) { } ?>]]></example>
 
- <blurb>The low-level event callbacks receive an additional parameter object
- describing the event. It has fields for event type, button number if it was a
- mouse click, key code if it was a key press, etc.</blurb>
+ <blurb>where %$page% is the object representing the page that was switched to,
+  and %$page_num% is its page number.</blurb>
+
+ <blurb>The low-level event callbacks receive an additional object describing
+  the event. It has properties for event type, button number if it was a mouse
+  click, key code if it was a key press, etc.</blurb>
 
  <blurb>It is possible to connect more than one callback to the same signal.
  They will be run in the order they are connected. It is also possible to

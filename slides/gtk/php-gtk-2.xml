@@ -1,0 +1,30 @@
+<slide title="PHP-GTK 2" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  PHP-GTK 2 (currently under development) is based on PHP 5 and Gtk+ 2.
+ </blurb>
+
+ <blurb>
+  PHP 5 has a brand new object model that solves all the lingering technical
+  issues and allows for much more powerful control of the Gtk+ 2 interface.
+ </blurb>
+ <list fontsize="2.5ex">
+  <bullet>
+   objects are no longer glorified arrays - they are always passed by reference
+  </bullet>
+  <bullet>
+   since objects have destructors, memory is properly cleaned up
+  </bullet>
+  <bullet>
+   no problems with method invocation (even something like %$button->get_child()->set_text()% is possible)
+  </bullet>
+ </list>
+
+ <blurb>
+  PHP 5 also adds a number of features to aid OO programming: abstract classes,
+  interface, private and protected methods and variables, exceptions, and much
+  more.
+ </blurb>
+
+</slide>
+

@@ -1,0 +1,41 @@
+<slide title="What's bad?" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Due to limitations of Zend Engine in PHP 4, PHP-GTK has some problematic
+  issues.
+ </blurb>
+
+ <list fontsize="2.5ex">
+  <bullet>
+   byref constructor (using %&amp;new% instead of %new%, and not consistently at that)
+  </bullet>
+  <bullet>
+   method invocation on properties (%$button->child->set_text()% will not work)
+  </bullet>
+  <bullet>
+   memory deallocation (object destructors are never called)
+  </bullet>
+  <bullet>
+   a couple of other minor ones
+  </bullet>
+ </list>
+
+ <blurb>
+  Since it is such a large codebase and API, the documentation is lagging. We
+  only have one active person working on the English version of documentation
+  and a couple of translators for other languages.
+ </blurb>
+
+ <blurb>
+  The applications have to be distributed with their source code, which may be
+  beneficial or disadvantageous depending on your point of view. Some attemps
+  have been made to encode the source, but the solution is not quite there yet.
+ </blurb>
+
+ <blurb>
+  Finally, it would be nice to have a better way to install PHP-GTK applications
+  on the desktop. There are some custom installers but a standard, professional
+  one is still needed. 
+ </blurb>
+
+</slide>

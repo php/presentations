@@ -1,0 +1,23 @@
+<slide title="Connecting Signals" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Sometimes the callbacks needs access to program data or other information. To
+  avoid messing with global variables, you can pass the additional data to the
+  callback when you connect it.
+ </blurb>
+ <example fontsize="1.3ex"><![CDATA[<?php
+  function on_ok_clicked($button, $window, $my_data) { }
+  $ok_button->connect('clicked', 'on_ok_clicked', $window, 'some data');
+?>]]></example>
+ <blurb>%connect()% returns an number that uniquely identifies the connection
+  made. This can be useful if you want to disable or remove the callback during
+  the execution.
+ </blurb>
+ <example fontsize="1.3ex"><![CDATA[<?php
+  $conn_id = $ok_button->connect('clicked', 'on_ok_clicked');
+  $ok_button->signal_handler_block($conn_id); // disable callback
+  $ok_button->signal_handler_unblock($conn_id); // re-enable callback
+  $ok_button->disconnect($conn_id); // remove callback
+?>]]></example>
+
+</slide>

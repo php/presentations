@@ -1,0 +1,29 @@
+<slide title="Boxes" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  A more sophisticated container is a ~box~. It allows you to place, or ~pack~,
+  more than one widget inside a simple container. There are horizontal
+  (*GtkHBox*) and vertical (*GtkVBox*) boxes that pack their widgets
+  correspondingly. First, create a new box:
+ </blurb>
+ <example fontsize="1.3ex"><![CDATA[<?php $box =& new GtkHBox($homogenous = false, $spacing = 0); ?>]]></example>
+
+ <blurb>
+ </blurb>
+ <blurb>
+  Then place some widgets into it using either %pack_start()% method (packs
+  left-to-right for HBox and top-to-bottom for VBox) or %pack_end()% method
+  (vice versa).
+ </blurb>
+ <example fontsize="1.3ex"><![CDATA[<?php
+  $box->pack_start($child, $expand = true, $fill = true, $padding = 0);
+?>]]></example>
+
+ <blurb>
+ </blurb>
+ <blurb>
+  You can nest the boxes to any degree, thus creating complex containment
+  patterns.
+ </blurb>
+
+</slide>
