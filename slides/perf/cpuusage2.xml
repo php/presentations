@@ -1,0 +1,13 @@
+<slide>
+	<title>CPU Usage (2)</title>
+
+	<list>
+		<bullet>Everything has a cost: include_path, open_basedir, variables_order, magic_quotes, always_populate_raw_post_data</bullet>
+		<bullet>Cache expensive operations, like generating images</bullet>
+		<bullet>Function calls are expensive</bullet>
+		<bullet>User defined functions are more expensive</bullet>
+		<bullet>Passing parameters take time</bullet>
+	</list>
+
+</slide>
+

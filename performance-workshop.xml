@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="0" >
+<topic>Performance</topic>
+<title>Performance Workshop</title>
+<event>PHP Quebec</event>
+<location>Montréal, Canada</location>
+<date>March 30th, 2005</date>
+<speaker>Derick Rethans and Marcus Börger</speaker>
+<email>internals@php.net</email>
+
+<slide>slides/perf/title.xml</slide>
+<slide>slides/xdebug/questions.xml</slide>
+
+<slide>slides/perf/groups2.xml</slide>
+
+<!-- CACHING OPTIMIZATION -->
+<slide>slides/perf/caching-title.xml</slide>
+<slide>slides/perf/what_caching.xml</slide>
+<slide>slides/perf/how_caching_works.xml</slide>
+<slide>slides/perf/pear_cache.xml</slide>
+<slide>slides/perf/caching_eval.xml</slide>
+<slide>slides/perf/total_page_caching.xml</slide>
+<slide>slides/perf/livedocs.xml</slide>
+
+<slide>slides/perf/static-und-squid.xml</slide>
+<slide>slides/perf/extern_squid.xml</slide>
+<slide>slides/perf/ezpublish-static.xml</slide>
+
+<!-- SERVER OPTIMIZATION -->
+<slide>slides/perf/server-tuning-title.xml</slide>
+<slide>slides/perf/lifecycle.xml</slide>
+<slide>slides/perf/how_ccache.xml</slide>
+<slide>slides/perf/accelerators.xml</slide> <!-- Accelerators -->
+<slide>slides/perf/dso-nodso.xml</slide>
+<slide>slides/perf/squeeze.xml</slide>
+
+<!-- OPTIMIZING APPLICATIONS -->
+<slide>slides/perf/app-tuning-title.xml</slide>
+<slide>slides/perf/cpuusage.xml</slide>
+<slide>slides/perf/cpuusage2.xml</slide>
+<slide>slides/perf/htmloptimize.xml</slide>
+<slide>slides/perf/prf_fileio.xml</slide>
+<slide>slides/perf/xdebug.xml</slide>
+<slide>slides/perf/xdebug-trace.xml</slide>
+<slide>slides/perf/xdebug-trace-xgui.xml</slide>
+<slide>slides/perf/xdebug-profile.xml</slide>
+<slide>slides/perf/regex.xml</slide>
+<slide>slides/perf/prf_fileio.xml</slide>
+
+<slide>slides/perf/break.xml</slide>
+
+<!-- SQL OPTIMIZATION -->
+<slide>slides/perf/database-tuning-title.xml</slide>
+<slide>slides/hpp/mysql_opt2.xml</slide>
+<slide>slides/phpperform/visitation1.xml</slide>
+<slide>slides/phpperform/visitation2.xml</slide>
+<slide>slides/phpperform/visitation3.xml</slide>
+<slide>slides/phpperform/visitation4.xml</slide>
+<slide>slides/phpperform/visitation5.xml</slide>
+<slide>slides/phpperform/path1.xml</slide>
+
+<slide>slides/perf/break.xml</slide>
+
+<slide>slides/php5intro/nl/p5pp.xml</slide>
+
+</presentation>
