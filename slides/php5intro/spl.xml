@@ -1,0 +1,8 @@
+<slide>
+<title>SPL</title>
+<blurb>
+SPL is a standard extension by Marcus Börger that allows you to register
+a set of standard engine level interfaces.
+</blurb>
+<example filename="spl.php" title="Database Mapping" />
+</slide>
