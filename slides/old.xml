@@ -1,0 +1,70 @@
+<slide title="The Good Old Days">
+<example fontsize="1.75em">
+<title>Handling simple data coming from a form took something like this
+to do in C:</title>
+<text><![CDATA[#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+#define ishex(x) (((x) >= '0' && (x) <= '9') || ((x) >= 'a' && 
+                   (x) <= 'f') || ((x) >= 'A' && (x) <= 'F'))
+
+int htoi(char *s) {
+	int     value;
+	char    c;
+
+	c = s[0];
+	if(isupper(c)) c = tolower(c);
+	value=(c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10) * 16;
+
+	c = s[1];
+	if(isupper(c)) c = tolower(c);
+	value += c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10;
+
+	return(value);
+}
+
+void main(int argc, char *argv[]) {
+	char *params, *data, *dest, *s, *tmp;
+	char *name, *age;
+
+	puts("Content-type: text/html\r\n");
+	puts("<html><head><title>Form Example</title></head>");
+	puts("<body><h1>My Example Form</h1>");
+	puts("<form action=\"form.cgi\" method=\"GET\">");
+	puts("Name: <input type=\"text\" name=\"name\">");
+	puts("Age: <input type=\"text\" name=\"age\">");
+	puts("<br><input type=\"submit\">");
+	puts("</form>");
+
+	data = getenv("QUERY_STRING");
+	if(data && *data) {
+		params = data; dest = data;
+    	while(*data) {
+			if(*data=='+') *dest=' ';
+			else if(*data == '%' && ishex(*(data+1))&&ishex(*(data+2))) {
+				*dest = (char) htoi(data + 1);
+				data+=2;
+			} else *dest = *data;
+			data++;
+			dest++;
+		}
+		*dest = '\0';
+		s = strtok(params,"&");
+		do {
+			tmp = strchr(s,'=');
+			if(tmp) {
+				*tmp = '\0';
+				if(!strcmp(s,"name")) name = tmp+1;
+				else if(!strcmp(s,"age")) age = tmp+1;
+			}
+		} while(s=strtok(NULL,"&"));
+
+		printf("Hi %s, you are %s years old\n",name,age);
+	}
+	puts("</body></html>");
+}
+]]></text>
+</example>
+</slide>
