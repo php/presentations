@@ -1,10 +1,10 @@
 <slide title="Data Validation">
 <break/>
 <image filename="bb-small.jpg" align="right" marginright="1.0em"/>
-<break lines="4"/>
+<break lines="1"/>
 <list fontsize="4.0em">
 <bullet>Turn *off* %register_globals%.  Access variables via %$_GET%, %$_POST%, %$_COOKIE%, etc.</bullet>
-<bullet type="none" marginleft="5.0em" effect="slide">... Dude, its faster! Heh! Hehe!</bullet>
+<bullet type="none" marginleft="1.0em">... Dude, its faster! Heh! Hehe!</bullet>
 <bullet>Create specific parameters for input data, and make sure they match only that data</bullet>
 </list>
 <example><![CDATA[<?php

@@ -5,7 +5,7 @@
 <list fontsize="4.0em">
 <bullet>*Never* rely on the value of %magic_quotes_gpc%</bullet>
 <bullet>Escape SQL query variables with the native database functions when available</bullet>
-<bullet marginleft="2.0em">Use %AddSlashes()% when no better alternative exists</bullet>
+<bullet marginleft="1.0em">Use %AddSlashes()% when no better alternative exists</bullet>
 <bullet>Escape shell commands with %EscapeShellArg()% and %EscapeShellCmd()%</bullet>
 </list>
 </slide>

@@ -1,16 +1,12 @@
 <slide title="Finding Race Conditions">
 <image filename="testing.jpg" align="right"/>
-<break lines="2"/>
-<blurb fontsize="4.5em">Use %cherry%!</blurb>
+<break lines="3"/>
+<blurb fontsize="4.0em">%cherry% is a command line program that runs 
+a large number of requests against a given webserver and makes sure all
+the results are equal.
+</blurb>
 <break/>
-<example><![CDATA[% cherry -c 100 -n 10000 -v --similar http://localhost/
-getting initial data from http://localhost/... done
-generating rabin 64 checksums... done
-stress testing...
-   100
-   200
-   300
-   [..]
-done
+<example><![CDATA[% cherry -c 100 -n 10000 http://localhost/
+Request 10 doesn't match!
 %]]></example>
 </slide>

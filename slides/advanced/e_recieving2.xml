@@ -3,6 +3,6 @@
 <image filename="stonehenge.jpg" align="right" marginright="right"/>
 <break lines="5" />
 <blurb fontsize="4.0em">Exceptions allow you to catch errors and change your flow control</blurb>
-<blurb fontsize="4.0em">They are incredibly useful when it comes to error handling</blurb>
+<blurb fontsize="4.0em">They are for *exceptional* circumstances.</blurb>
 <blurb fontsize="4.0em">They are PHP *5* only</blurb>
 </slide>

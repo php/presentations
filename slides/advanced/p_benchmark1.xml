@@ -1,7 +1,7 @@
 <slide title="Benchmarking">
 <break/>
 <image filename="ninja.gif" align="right"/>
-<break lines="4"/>
+<break lines="1"/>
 <blurb fontsize="4.0em">
 The two classes you need for benchmarking are %Benchmark_Timer% and %Benchmark_Iterate%
 </blurb>

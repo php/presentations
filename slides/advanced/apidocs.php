@@ -39,7 +39,7 @@ class Thneed
 	function getReasoning($name) 
 	{
 		if ($this->isLorax($name)) {
-			return 'piss off you bloody bugger';
+			return 'piss off you bugger';
 		} else {
 			return 'because thneeds are what everyone needs!';
 		}

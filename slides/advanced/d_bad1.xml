@@ -1,12 +1,12 @@
 <slide title="Bad Documentation">
 <break/>
 <image filename="doi.jpg" align="right" marginright="1.0em"/>
-<break lines="8"/>
+<break lines="5"/>
 <list fontsize="4.5em">
 <bullet>Code is documentation</bullet>
 <bullet>Document the abstract algorithms, not the programmatical constructs</bullet>
 <bullet>If you can't figure out what a piece of code does by looking at it, chances are the code is wrong</bullet>
-<bullet type="none" effect="slide" marginleft="4.0em">... Its the web stupid!</bullet>
+<bullet type="none" marginleft="1.0em">... Its the web stupid!</bullet>
 </list>
 
 </slide>
