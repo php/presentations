@@ -5,9 +5,10 @@
 
 	<break />
 	<example fontsize="1.7em">xdebug.auto_trace=1               ; enable tracing
-xdebug.auto_trace_file=/tmp/trace ; configure tracefile
+xdebug.trace_output_dir=/tmp      ; configure trace output directory
+xdebug.trace_output_name=crc32    ; configure tracefile extension
 xdebug.collect_params=0           ; disable parameter collection
-xdebug.collect_include_files=1    ; enable collecting filenames to include
+xdebug.collect_includes=1         ; enable collecting filenames to include
 xdebug.extended_info=0            ; disable 'extended' code generation
 xdebug.show_mem_delta=1           ; show difference in memory usage before
                                   ; and after call</example>

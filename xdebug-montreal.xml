@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
 <presentation 
 	template="php" 
 	navmode="html"
@@ -10,7 +11,7 @@
 <title>Xdebug in a nutshell</title>
 <event>Conférence PHP Québec</event>
 <location>Montreal, Canada</location>
-<date>March 25th, 2004</date>
+<date>March 26th, 2004</date>
 <speaker>Derick Rethans</speaker>
 <email>derick@php.net</email>
 <url>http://pres.derickrethans.nl/xdebug-montreal</url>
@@ -41,6 +42,10 @@
 <slide>slides/xdebug/stacktrace.xml</slide>
 <slide>slides/xdebug/local-vars.xml</slide>
 <slide>slides/xdebug/functiontrace-file.xml</slide>
+<slide>slides/xdebug/vim.xml</slide>
+
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
 
 <slide>slides/xdebug/gathering-data.xml</slide>
 <slide>slides/xdebug/gathering1.xml</slide>
@@ -51,8 +56,6 @@
 <slide>slides/xdebug/gdb.xml</slide>
 <slide>slides/xdebug/gdb-xml.xml</slide>
 <slide>slides/xdebug/dbgp.xml</slide>
-
-<!-- <slide>slides/xdebug/vim.xml</slide> -->
 
 <slide>slides/xdebug/resources.xml</slide>
 
