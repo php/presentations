@@ -46,6 +46,13 @@ ul.pres {
 list-style: circle;
 font-size: 24pt;
 }
+
+ul.level2 {
+	list-style: circle;
+	font-size: 20pt;
+	margin-left: 40px;
+}
+
 li.pres_bullet {
 font-size: 24pt;
 }
@@ -58,10 +65,17 @@ div.shadow, code {
 	font-size: 18px; width: 640px;
 }
 
-div.code-small {
+div.code_small {
 	background: #ccc;
 }
-div.code-small code {
+div.code_small code {
 	font-size: 12px;
+}
+
+div.code_large {
+	background: #ccc;
+}
+div.code_large code {
+	font-size: 24px;
 }
 </style>
