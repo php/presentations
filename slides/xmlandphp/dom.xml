@@ -1,4 +1,10 @@
 <slide>
 <title>DOM</title>
-<example filename="dom.php" />
+<list>
+<bullet>Document Object Model</bullet>
+<bullet>Standard XML Structure</bullet>
+<bullet>Designed for Java, Cross-Language Standard</bullet>
+<bullet>PHP Extension uses %libXML% by Daniel Veillard</bullet>
+</list>
+
 </slide>
