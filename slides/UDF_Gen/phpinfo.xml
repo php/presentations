@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>A fancy %phpinfo()%</title>
+ <blurb>
+  Lets start by adding some more stuff to our %phpinfo()% entry:
+ </blurb>
+ <example filename="examples/x2.xml" linenumbers="1" type="xml" fontsize="1em"/>
+</slide>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>%&amp;lt;code&amp;gt;%</title>
+ <blurb>
+  The actual function code is put into %&amp;lt;code&amp;gt;% tags.
+ </blurb>
+ <blurb>
+  XML encoding the code can be avoided using %&amp;lt;![CDATA ... ]]&amp;gt;%
+  sections.
+ </blurb>
+
+ <example type="xml" linenumbers="true" filename="examples/tag_code.xml" fontsize="1em"/>
+
+ 
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Whats next?</title>
+ <blurb>
+  See %ora_funcs.xml% in the UDF_Gen tar archive for a working
+  example that uses all currently supported features of UDF_Gen.
+ </blurb>
+ <blurb>
+  Additional features will be added soon, especially:
+ </blurb>
+ <list>
+  <li>library and header file detection for %configure%</li>
+  <li>improved support for returning data</li>
+  <li>constant and optional parameter support</li>
+  <li>documentation stub generation</li>
+  <li>maybe test case generation</li>
+  <li>...</li>
+ </list>
+</slide>

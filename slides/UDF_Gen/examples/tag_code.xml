@@ -1,0 +1,12 @@
+<code>
+  // XML entity encoding (hard to read)
+  if (i &lt; 1) p = &amp;1;
+</code>
+
+<code>
+<![CDATA[
+  // CDATA syntax is harder to remember 
+  // but the code within is far more readable
+  if (i < 1) p = &1;
+]]>
+</code>

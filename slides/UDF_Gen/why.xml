@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>UDF</title>
+ <list title="User Defined Functions">
+  <li>add SQL functions to MySQL servers</li>
+  <li>functions are imported from shared libraries</li>
+  <li>to be implemented in C/C++</li> 
+  <li>wrapper libraries for other languages exist</li> 
+ </list>
+
+ <list title="why UDFs?">
+  <li>add missing functionality</li>
+  <li>gain performance</li>
+  <li>interface to existing libraries</li>
+ </list>
+</slide>

@@ -1,0 +1,12 @@
+$ udf-gen x1.xml
+
+Creating 'x1' extension in '/home/hartmut/examples/x1'
+
+Running 'aclocal'
+
+Running 'autoconf'
+
+Running 'automake'
+
+Your extension has been created in directory x1.
+See x1/README amd x1/INSTALL for further instructions.

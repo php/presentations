@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>returning results</title>
+ <blurb>
+  For now there is no special support for returning values
+  although it may be added at a later version.
+ </blurb>
+ <blurb>
+  To return an *int* or *real* result you just use a plain
+  C return statement with the appropriate return value.
+ </blurb>
+ <blurb>
+  To return a *%NULL%* value from any function you have to
+  set the variable pointed to by the *%is_null%* function
+  parameter to *1*.
+ </blurb>
+ <blurb>
+  For strings up to 255 characters long you have to copy
+  the string to the location pointed to by the *%result%*
+  paramter and store its length in the varibale pointed
+  to by the *%length%* parameter. Returning longer strings
+  requires memory allocation within the UDF and is not yet
+  supported.
+ </blurb>
+ <blurb>
+  *%datetime*% values need to be returned as strings for now.
+ </blurb>
+
+ <example type="xml" linenumbers="true" filename="examples/return_result.c" fontsize="1em"/>
+
+ 
+</slide>

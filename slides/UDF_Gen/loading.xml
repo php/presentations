@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Loading the Extension</title>
+ <blurb>
+	You have now successfully created your new UDF shared extension.
+	To activate it you have to load the extension into a mysql server.
+    This is done using %CREATE FUNCTION ...%
+ </blurb> 
+ <blurb>
+    When you open the generated code file %x3.cpp% you'll see
+    a comment block at the top showing the %CREATE% statements
+    needed to install all functions provided by this extension.
+ </blurb> 
+ <example filename="examples/x3.create" fontsize="1em"/>
+ <example filename="examples/x3.txt" fontsize="1em"/>
+</slide>

@@ -1,0 +1,7 @@
+/*
+register the functions provided by this UDF module using
+CREATE FUNCTION ex_sqr RETURNS REAL SONAME "example.so";
+
+register the functions provided by this UDF module using
+DROP FUNCTION ex_sqr;
+*/

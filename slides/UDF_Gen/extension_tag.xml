@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>%&amp;lt;udf&amp;gt;%</title>
+ <blurb> 
+  An UDF_Gen description file specifies anything down to the
+  actual function code (including parameter passing) in a rather
+  simple XML format.
+ </blurb>
+ <blurb>
+  While implementing an UDF one no longer needs to implement all
+  the boring repetitive interface stuff but can start with the
+  actual functionality right away.
+ </blurb>
+ <blurb>
+  The *%&amp;lt;udf&amp;gt;%* tag is the top level tag of 
+  every extension description. The name of the extension is specified
+  in its *%name%* attribute. A minimal extension looks like this:
+ </blurb>
+ <example type="xml" linenumbers="true" filename="examples/x1.xml" fontsize="1em"/>
+</slide>

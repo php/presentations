@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>%&amp;lt;parameter&amp;gt;%</title>
+ <blurb>
+  The *%&amp;lt;parameter&amp;gt;%* tag defines function parameter 
+  names and types using the *name* and *type* attributes:
+ </blurb>
+
+ <list>
+  <li>*name* - parameter name</li>
+  <li>*type* - *string*, *int*, *real* or *datetime*</li>
+ </list>
+ 
+ <blurb>
+  Code to check the parameter count and types is generated automatically.
+ </blurb>
+
+ <blurb>
+  Local C variables are created that take the parameter value and optional
+  information. For a parameter named *foobar* the following variables are
+  created:
+ </blurb>
+
+ <list>
+  <li>
+*foobar* - takes the parameter value. Depending on the parameter type
+this is either a *double*, *long long*, *char&amp;#42;* or *time_t*
+  </li>
+  <li>
+*foobar_is_null* - for *int*, *real* and *datetime* this indicates 
+whether a *NULL* value was passed (for *string* types *foobar* itself
+is a NULL pointer)
+  </li>
+  <li>
+*foobar_len* - for *string* this contains the actual string length
+  </li>
+ </list>
+
+</slide>

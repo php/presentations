@@ -1,0 +1,4 @@
+$ cd x1
+$ configure
+$ make
+$ sudo cp .libs/x1.so /usr/lib

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>adding files</title>
+ <blurb>
+  Additional code files may be specified within the *%&amp;lt;deps&amp;gt;%* section.
+ </blurb>
+
+ <example type="xml" linenumbers="true" filename="examples/dep_file.xml" fontsize="1em"/>
+
+ <blurb>
+  These files are copied to the newly created source directory and added 
+  to the *%Makefile%*s list of source files for the UDF shared object. 
+ </blurb> 
+</slide>

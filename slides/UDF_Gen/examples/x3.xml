@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<udf name="x3">
+
+  <maintainer>
+    <name>Hartmut Holzgraefe</name>
+    <email>hartmut@php.net</email>
+  </maintainer>
+
+  <license>LGPL</license>
+
+  <function name="ex_sqr" returns="real">
+    <param name="p1" type="real"/>
+    <code>
+      return p1*p1;
+    </code>
+  </function>
+</udf>

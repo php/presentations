@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Modes of Operation</title>
+ <list title="PECL_Gen has thre modes of operation">
+  <li>full extension generation from an XML spec</li>
+  <li>single function skeleton from a prototype given on the command line</li>
+  <li>%ext_skel% backwards compatibility</li> 
+ </list>
+</slide>

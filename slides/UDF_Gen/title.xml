@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>UDF_GEN</title>
+ <list title="UDF_Gen is">
+  <li>an XML based UDF function code generator</li>
+  <li>based on the PECL_Gen PHP extension code generator</li>
+  <li>implemented using PHP 5 and PEAR only</li> 
+ </list>
+
+ <list title="UDF_Gen creates">
+  <li>functions</li>
+  <li>%configure% and %Makefile% infrastructure</li>
+ </list>
+</slide>

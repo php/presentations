@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Adding an aggregate function</title>
+ <blurb>
+  Adding an aggregate function requires some additional effort as an aggregate 
+  function on the SQL level is actually implemented by a small family of C 
+  functions and private data passed between them.
+ </blurb>
+ <blurb>
+  Aggregate private data is declared using the &amp;lt;data&amp;gt; tag. 
+  For each aggregate group it is initialized by the code given in 
+  &amp;lt;clear&amp;gt;. For each row of the group the &amp;lt;add&amp;gt; code is
+  executed, receiving the declared &amp;lt;parameter&amp;gt;s just like a 
+  normal function. Finally the &amp;lt;result&amp;gt; code is executed and
+  expected to pass the functions.
+ </blurb>
+ <blurb>
+  See the following example for a simple reimplementation of the
+  standard AVG() function:
+ </blurb>
+ <example filename="examples/x4.xml" linenumbers="1" format="xml" fontsize="1em"/>
+</slide>
+

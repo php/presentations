@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>adding custom code</title>
+
+ <blurb>
+  Custom C code may be added using *%&amp;lt;code&amp;gt;%* sections
+  outside of *%&amp;lt;function&amp;gt;%* declarations at any time.
+ </blurb>
+
+ <blurb>
+  If the *role* attribute is set to '*header*' the code will be
+  inserted right after the default %#include% statements, else
+  it will be appended after any automatically generated code. 
+ </blurb>
+
+ 
+</slide>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>What else is possible?</title>
+ <list>
+  <li>other argument types (string, double, date, ...)</li>
+  <li>adding source file to the project (including e.g. flex/bison code)</li>
+  <li>...</li>
+ </list>
+ <blurb>
+  See %ora_funcs.xml% as a reference example that implements most
+  standard Oracle SQL functions not available in plain SQL. 
+ </blurb>
+ <blurb>
+  It includes stuff like all implemented parameter types and
+  incorprates a %flex% code file for %TO_CHAR% argument parsing.
+ </blurb>
+ <blurb>
+  ...
+ </blurb>
+</slide>

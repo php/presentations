@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Function parameters</title>
+ <blurb>
+  *How does it work?*
+ </blurb>
+ <blurb>
+  For each parameter in your functions prototype there will be
+  a local C variable of the same name and an appropriate type.
+ </blurb>
+ <blurb>
+  For %string% parameters the actual string length is storen
+  in an additional %int% variable that is named like the parameter
+  but with an additional %'_len'% suffix. 
+ </blurb>
+ <blurb>
+  The mapping from PHP to C variable types is as follows:
+
+<![CDATA[
+<table>
+<tr><th>PHP type</th><th>C type</th></tr>
+<tr><td><b><tt>bool</tt></b></td><td><tt>zend_bool</tt></td></tr>
+<tr><td><b><tt>int</tt></b></td><td><tt>long</tt></td></tr>
+<tr><td><b><tt>float</tt></b></td><td><tt>double</tt></td></tr>
+<tr><td><b><tt>string</tt></b></td><td><tt>char *</tt></td></tr>
+<tr><td><b><tt>array</tt></b></td><td><tt>zval *</tt></td></tr>
+<tr><td><b><tt>object</tt></b></td><td><tt>zval *</tt></td></tr>
+<tr><td><b><tt>resource</tt></b></td><td><tt>zval *</tt></td></tr>
+<tr><td><b><tt>callback</tt></b></td><td><tt>zval *</tt></td></tr>
+<tr><td><b><tt>mixed</tt></b></td><td><tt>zval *</tt></td></tr>
+</table>
+]]>
+ </blurb> 
+</slide>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Compilation</title>
+ <blurb>
+  The generated extension directory already contains a
+  ready to use %configure% file, so compilation is as
+  usual. 
+ </blurb>
+ <blurb>
+  The only step you need to perform manually right now
+  is putting the generated %x1.so% extension file to
+  a library directory where the mysql server can find it.
+ </blurb>
+ <example filename="examples/x1.phpize" fontsize="1em"/>
+</slide>

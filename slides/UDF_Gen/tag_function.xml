@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>%&amp;lt;function&amp;gt;%</title>
+ <blurb>
+  The *%&amp;lt;function&amp;gt;%* tag is used to define both
+  normal and aggregate functions. Name, type and returned data
+  type have to be specified using attributes.
+ </blurb>
+
+ <list>
+  <li>*name* - function name</li>
+  <li>*type* - either *normal* (default) or *aggregate*</li>
+  <li>*null* - *true* if function may return *NULL*, else *false* (default)</li>
+  <li>*returns* - return type: *string*, *int*, *real* or *datetime*</li>
+  <li>*length* - for *real* and *integer*</li>
+  <li>*decimals* - for *real*</li>
+ </list>
+ 
+ <blurb>
+  Function parameters are defined using the *%&amp;lt;parameter&amp;gt;%* tag.
+ </blurb>
+
+ <blurb>
+  Data private to a function is declared within the *%&amp;lt;data&amp;gt;%* tag.
+ </blurb>
+
+ <blurb>
+  The *%&amp;lt;code&amp;gt;%* tag takes the code for normal functions,
+  aggregate function code is put into the *%&amp;lt;clear&amp;gt;%*,
+  *%&amp;lt;add&amp;gt;%* and *%&amp;lt;result&amp;gt;%* tags
+ </blurb>
+
+</slide>

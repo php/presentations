@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Function parameters</title>
+ <blurb>
+  Now our test script looks like this:
+ </blurb>
+ <example filename="examples/x4.php" fontsize="1em"/>
+ <blurb>
+  And its result is:
+ </blurb>
+ <example filename="examples/x4.result" fontsize="1em"/>
+</slide>
+

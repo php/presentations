@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Installation</title>
+ <blurb>
+  UDF requires %PHP5% and %PECL_Gen% from the %PECL% repository.
+  UDF_Gen itself is not (yet?) part of %PECL% but available 
+  independently at %http://www.php-groupies.de/php/UDF_Gen-0.2.0.tgz%
+ </blurb>
+ <blurb>
+  %PECL_Gen% and %UDF_Gen% are both installed using the %PECL% installer  
+ </blurb>
+ <example filename="examples/install.sh" fontsize="1em"/>
+</slide>

@@ -1,0 +1,29 @@
+<presentation navbarbackground="#DAE6EA">
+ <title>UDF_Gen - a code generator for Mysql UDFs</title>
+ <event>FOSDEM 2004</event>
+ <location>Brussels</location>
+ <date>Februrary 20 2004</date>
+ <speaker>Hartmut Holzgraefe</speaker>
+ <navmode>html</navmode>
+ <basefontsize>12pt</basefontsize>
+ <topic>Code Generators</topic>
+ <logo1>presentations/slides/UDF_Gen/mysql_2004.png</logo1>
+
+ <slide>slides/UDF_Gen/why.xml</slide>
+ <slide>slides/UDF_Gen/title.xml</slide>
+ <slide>slides/UDF_Gen/installation.xml</slide>
+ <slide>slides/UDF_Gen/extension_tag.xml</slide>
+ <slide>slides/UDF_Gen/invocation.xml</slide>
+ <slide>slides/UDF_Gen/compilation.xml</slide>
+ <slide>slides/UDF_Gen/function.xml</slide>
+ <slide>slides/UDF_Gen/loading.xml</slide>
+ <slide>slides/UDF_Gen/aggregate.xml</slide>
+ <slide>slides/UDF_Gen/tag_function.xml</slide>
+ <slide>slides/UDF_Gen/tag_parameter.xml</slide>
+ <slide>slides/UDF_Gen/tag_code.xml</slide>
+ <slide>slides/UDF_Gen/return_values.xml</slide>
+ <slide>slides/UDF_Gen/tag_data.xml</slide>
+ <slide>slides/UDF_Gen/adding_code.xml</slide>
+ <slide>slides/UDF_Gen/adding_files.xml</slide>
+ <slide>slides/UDF_Gen/whats_next.xml</slide>
+</presentation>

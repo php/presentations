@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Compilation (Unix etc.)</title>
+ <blurb>
+  If all went well the final step installs your new extension
+  in the PHP extension directory so that it can be used:
+ </blurb>
+ <example filename="examples/x1.install" fontsize="1em"/>
+</slide>

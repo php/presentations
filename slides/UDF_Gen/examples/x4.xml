@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<udf name="x4">
+
+  <maintainer>
+    <name>Hartmut Holzgraefe</name>
+    <email>hartmut@php.net</email>
+  </maintainer>
+
+  <license>LGPL</license>
+
+  <function name="ex_avg" type="aggregate" returns="real" null="yes">
+    <param name="x" type="real"/>
+    <data>
+      <element name="count"    type="int"  default="0"/>
+      <element name="sum_x"    type="real" default="0.0"/>
+    </data>
+    <clear>
+<![CDATA[
+        data->count    = 0;
+        data->sum_x    = 0.0;
+]]>
+    </clear>
+    <add>
+<![CDATA[
+        if (!x_is_null) {
+            data->count++;
+            data->sum_x    += x;
+        }
+]]>
+    </add>
+    <result>
+<![CDATA[
+        if (data->count < 1)
+        {
+            *is_null = 1;
+            return 0.0;
+        }
+
+        *is_null = 0;
+        return data->sum_x / data->count;
+]]>
+    </result>
+  </function>
+</udf>

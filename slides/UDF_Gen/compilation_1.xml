@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Compilation (Unix etc.)</title>
+ <blurb>
+  %phpize% generates the %configure% script and other files needed to
+  configure and optimize the extensions build infrastructure on the
+  target system. Next you run %configure% anf %make% 
+  (for now there are no configure options to be taken care of):
+ </blurb>
+ <example filename="examples/x1.configure-make" fontsize="1em"/>
+</slide>
+
