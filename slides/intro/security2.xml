@@ -1,0 +1,39 @@
+<slide title="Security">
+
+<example title="Never trust user data!"><![CDATA[<?php
+	readfile($filename);
+?>]]></example>
+
+<blurb>
+Turning off register_globals doesn't make this any 
+more secure.  The script would instead look like this:
+</blurb>
+
+<example><![CDATA[<?php
+	readfile($HTTP_POST_VARS['filename']);
+?>]]></example>
+
+<blurb>
+The only way to secure something like this is to be really paranoid about
+cleaning user input.  In this case if you really want the user to be able to
+specify a filename that gets used in any of PHP's file functions, do something
+like this:
+</blurb>
+
+<example><![CDATA[<?php
+    $doc_root = $HTTP_SERVER_VARS['DOCUMENT_ROOT'];
+    $filename = realpath($filename);
+    readfile($doc_root.$filename);
+?>]]></example>
+
+<blurb>
+You may also want to strip out any path and only take the filename component.  An
+easy way to do that is to use the basename() function.
+Or perhaps check the extension of the file.  You can get the extension using this
+code:
+</blurb>
+<example><![CDATA[<?php
+	$ext = substr($str,strrpos($str,'.'));
+?>]]></example>
+
+</slide>

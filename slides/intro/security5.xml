@@ -1,0 +1,40 @@
+<slide title="Security">
+
+<blurb>Take this standard file upload form:</blurb>
+<example fontsize="1.5em"><![CDATA[<FORM ENCTYPE="multipart/form-data" ACTION="upload.php" METHOD=POST>
+<INPUT TYPE="hidden" name="MAX_FILE_SIZE" value="100000">
+Send this file: <INPUT NAME="myfile" TYPE="file">
+<INPUT TYPE="submit" VALUE="Send File">
+</FORM>]]></example>
+
+<blurb>The correct way to put the uploaded file in the right place:</blurb>
+<example fontsize="1.5em"><![CDATA[<?php
+	/* Not under DOCUMENT_ROOT */
+	$destination = "/some/path/$myfile_name";  
+
+	move_uploaded_file($myfile, $destination);
+?>]]></example>
+
+<blurb>
+If you are uploading files to be placed somewhere under the DOCUMENT_ROOT
+then you need to be very paranoid in checking what you are putting there.
+For example, you wouldn't want to let people upload arbitrary PHP scripts
+that they can then browse to in order to execute them.  Here we get paranoid
+about checking that only image files can be uploaded.  We even look at the
+contents of the file and ensure that the file extension matches the content.
+</blurb>
+
+<example fontsize="1.5em"><![CDATA[<?php
+	$type = $HTTP_POST_FILES['myfile']['type'];
+	$file = $HTTP_POST_FILES['myfile']['tmp_name'];
+	$name = $HTTP_POST_FILES['myfile']['name'];
+	$types = array(0,'.gif','.jpg','.png','.swf');
+	list(,,$type) = getimagesize($file);
+	if($type) {
+		$name = substr($name,0,strrpos($str,'.'));	
+		$name .= $types[$type];
+	}	
+	move_uploaded_file($myfile, "$DOCUMENT_ROOT/images/$name");
+?>]]></example>
+
+</slide>

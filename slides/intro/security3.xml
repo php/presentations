@@ -1,0 +1,25 @@
+<slide title="Security">
+<example title="Again, never trust user data!"><![CDATA[<?php
+	system("ls $dir");
+?>]]></example>
+
+<blurb>
+In this example you want to make sure that the user can't pass in
+$dir set to something like: ".;cat /etc/passwd"
+The remedy is to use escapeshellarg() which
+places the argument inside single quotes and escapes any single quote
+characters in the string.
+</blurb>
+
+<example><![CDATA[<?php
+	$dir=escapeshellarg($dir);
+	system("ls $dir");
+?>]]></example>
+
+<blurb>
+Beyond making sure users can't pass in arguments that executes other
+system calls, make sure that the argument itself is ok and only accesses data
+you want the users to have access to.  
+</blurb>
+
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Security">
+<example title="Watch for uninitialized variables" width="40em"><![CDATA[<?php
+	if($user=='rasmus') {
+		$ok = true;
+	}
+
+	if($ok) {
+		echo "$user logged in";
+	}
+?>]]></example>
+<blurb>
+Catch these by setting the error_reporting level to E_ALL.  
+The above script would generate this warning (assuming $user is set):
+</blurb>
+<example examplebackground="#eeee33" fontsize="1.5em" type="html"><![CDATA[<b>Warning</b>:  Undefined variable:  ok in <b>script.php</b> on line <b>6</b>]]></example>
+<blurb>
+You can of course also turn off register_globals, but that addresses the symptom
+rather than the problem.
+</blurb>
+</slide>

@@ -1,0 +1,31 @@
+<slide title="Security">
+
+<blurb>
+Many users place code in multiple files and include these files:
+</blurb>
+<example><![CDATA[<?php
+	require 'functions.inc';
+?>]]></example>
+
+<blurb>Or perhaps</blurb>
+<example><![CDATA[<?php
+	require 'functions.php';
+?>]]></example>
+
+<blurb>
+Both of these can be problematic if the included file is accessible somewhere
+under the DOCUMENT_ROOT directory.  The best solution is to place these files
+outside of the DOCUMENT_ROOT directory where they are not accessible directly.
+You can add this external directory to your include_path
+configuration setting.
+</blurb>
+<blurb>
+Another option is to reject any direct requests for these files in your Apache
+configuration.  You can use a rule like this in your "httpd.conf"
+file:
+</blurb>
+<example><![CDATA[<Files ~ "\.inc$">
+    Order allow,deny
+    Deny from all
+</Files>]]></example>
+</slide>
