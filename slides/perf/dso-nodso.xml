@@ -5,6 +5,7 @@
 	<list>
 	<li>When you're using PHP as DSO module</li>
 	<li>So use static compiled modules</li>
+	<li>or compile with --prefer-non-pic</li>
 	</list>
 
 	<image marginleft='4em' filename='dso.png'/>
