@@ -53,13 +53,13 @@
 <slide>slides/phpperform/mrinf_gz.xml</slide>
 
 <slide>slides/phpperform/extern.xml</slide>
-<slide>slides/phpperform/extern_apc.xml</slide>
-<slide>slides/phpperform/extern_ioncube.xml</slide>
-<slide>slides/phpperform/extern_zend.xml</slide>
-<slide>slides/phpperform/extern_comparison.xml</slide>
+<slide>slides/phpperform/extern_bytecode.xml</slide>
 <slide>slides/phpperform/extern_benchmark.xml</slide>
 
+<slide>slides/phpperform/extern_squid.xml</slide>
 <slide>slides/phpperform/extern_srm.xml</slide>
+<slide>slides/phpperform/extern_lingerd.xml</slide>
 
+<slide>slides/phpperform/resources.xml</slide>
 
 </presentation>
