@@ -1,0 +1,21 @@
+<slide title="Apache Hooks">
+
+<blurb title="In some future PHP far far away">
+... we will have Apache hooks
+</blurb>
+
+<example title="In your httpd.conf">phpAuthHandler = /path/to/your/auth_code.php</example>
+<example><![CDATA[<?php
+// ... logic ...
+return OK;
+?>]]></example>
+<example title="Other handlers">phpUriHandler
+phpAccessHandler
+phpHeaderHandler
+phpTypeHandler
+phpFixupHandler
+phpLoggerHandler
+phpPostReadHandler
+phpResponseHandler
+</example>
+</slide>

@@ -1,7 +1,9 @@
 <?
-function dispnames() {
-    $names = array("betty", "johnny", "sue");
+global $names;
+$names = array("betty", "johnny", "sue");
 
+function dispnames() {
+	global $names;
     foreach ($names as $name) {
         print "<td>$name</td>";
     }

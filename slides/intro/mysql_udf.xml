@@ -1,0 +1,51 @@
+<slide title="UDF">
+
+<blurb title="User Defined Functions">
+You can execute PHP code as a user defined function inside MySQL.
+</blurb>
+
+<example title="Loading the PHP UDF library">CREATE FUNCTION php RETURNS STRING SONAME 'myphp.so';</example>
+<example title="Hello World" type="shell">
+mysql> SELECT php('hello, world!');
++---------------------------------+
+| php('hello, world!')            |
++---------------------------------+
+| hello, world!                   |
++---------------------------------+
+1 row in set (0.36 sec)
+</example>
+<example type="shell">
+mysql> SELECT php('strftime("%c")');
++--------------------------+
+| php('strftime("%c")')    |
++--------------------------+
+| Thu Oct 24 18:12:04 2002 |
++--------------------------+
+1 row in set (0.36 sec)
+</example>
+<example title="Applying PHP on a selected column" type="shell" fontsize="1.5em">
+mysql> CREATE TABLE test (s varchar(255));
+mysql> insert into test values ('iguana'),('turtle'),('aardvark');
+mysql> select s,php('strlen($argv[1])',s) FROM test;
++----------+---------------------------+
+| s        | php('strlen($argv[1])',s) |
++----------+---------------------------+
+| iguana   | 6                         |
+| turtle   | 6                         |
+| aardvark | 8                         |
++----------+---------------------------+
+3 rows in set (1.07 sec)
+</example>
+<example title="Oh my!" type="shell" fontsize="1.5em">
+mysql> create table code (name varchar(255), code mediumblob);
+mysql> insert into code values ('capitalize','strtoupper($argv[1])');
+mysql> select php(code,s) FROM test,code WHERE code.name = 'capitalize';
++-------------+
+| php(code,s) |
++-------------+
+| IGUANA      |
+| TURTLE      |
+| AARDVARK    |
++-------------+
+</example>
+</slide>
