@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PHP 4</title>
+
+	<list fontsize="3.5em" marginleft="-1em">
+		<bullet>Paradigm switch: execute-while-parsing to execute-after-compilation</bullet>
+		<bullet>Zend Engine</bullet>
+		<bullet>Support for more Web servers</bullet>
+		<bullet>Sessions</bullet>
+		<bullet>Output Buffering</bullet>
+	</list>
+<break lines="4"/>
+	<image align="center" filename="zend-powered-by.png"/>
+</slide>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>MySQLi - Using a Database</title>
+
+	<example class="bit_larger" fontsize="1.5em"><![CDATA[<?php
+$mysqli = new mysqli("localhost", "my_user", "my_password", "world");
+
+/* check connection */
+if (mysqli_connect_errno()) {
+   printf("Connect failed: %s\n", mysqli_connect_error());
+   exit();
+}
+
+/* Select queries return a resultset */
+if ($result = $mysqli->query("SELECT Name FROM City LIMIT 10")) {
+   printf("Select returned %d rows.\n", $result->num_rows);
+
+   /* free result set */
+   $result->close();
+}
+?>]]></example>
+<break/>
+	<image filename='mysql.png' align="center"/>
+</slide>

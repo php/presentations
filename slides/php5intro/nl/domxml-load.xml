@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>DOMXML load</title>
+	<title>DOM - not so cool</title>
 
 
 	<example fontsize="1.5em"><![CDATA[<?php
@@ -24,6 +24,6 @@ foreach ($books as $book) {
         echo "{$title} was written by {$author}\n";
     }
 }
-? >]]></example>
+?>]]></example>
 
 </slide>

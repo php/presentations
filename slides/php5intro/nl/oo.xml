@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>OO</title>
+
+	<list>
+		<bullet>*REAL OO*: Objects passed by handle</bullet>
+		<bullet>*PPP*: private, protected and public</bullet>
+		<bullet>Contructors and *Destructors*</bullet>
+		<bullet>*Interfaces*</bullet>
+		<bullet>*Static* and *Abstract*</bullet>
+		<bullet>*Overloading*: __call, __get and __set</bullet>
+		<bullet>*Exceptions*</bullet>
+	</list>
+</slide>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>GD - Graphics manipulation</title>
+
+	<example fontsize="1.5em"><![CDATA[<?php
+	$i = imagecreatefromjpeg('nacreous-cloud.jpg');
+	imagefilter($i, IMG_FILTER_COLORIZE, 0, 0, 120);
+	imagejpeg($i);
+?>]]></example>
+<break lines="15"/>
+	<image align="center" filename="cloud-orig.jpg"/>
+
+</slide>

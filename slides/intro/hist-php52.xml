@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PHP 5.2</title>
+
+	<list fontsize="3.5em" marginleft="-1em">
+		<bullet>Unicode support</bullet>
+	</list>
+<break lines="10"/>
+	<image align="center" filename="unicode.gif"/>
+</slide>

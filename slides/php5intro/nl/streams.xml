@@ -11,14 +11,13 @@
 		<bullet>Filters (php://filter)</bullet>
 	</list>
 
-	<break lines="2" />
 	<example fontsize="1.2em"><![CDATA[<?php
 /* This will output the contents of 
    www.example.com entirely in uppercase */
-readfile("php://filter/read=string.toupper/resource=http://www.example.com");
+readfile("php://filter/read=string.toupper/resource=http://www.php.net");
 
 /* This will do the same as above except it will ROT13 encode it */
 readfile("php://filter/read=string.rot13/resource=http://www.example.com");
-? >]]></example>
+?>]]></example>
 
 </slide>

@@ -79,6 +79,11 @@ ul.large div li.pres_bullet
 	font-size: 40pt;
 }
 	
+ul.small div li.pres_bullet
+{
+	font-size: 20pt;
+}
+	
 div.small_blurb {
 	font-size: 24px;
 }

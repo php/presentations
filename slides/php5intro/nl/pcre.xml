@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Perl Style Regular Expressions</title>
+
+	<example class="bit_larger" fontsize="1.5em"><![CDATA[<?php
+	preg_match('/([0-9]+)$/', $urlAlias['destination_url'], $matches);
+?>]]></example>
+<break/>
+
+	<example class="bit_larger" fontsize="1.5em"><![CDATA[<?php
+	preg_match(
+	  '/((?<!src="|href="|url="|action="|src=|href=|url=|action=)'.
+	  'http:\/\/|https:\/\/|ftp:\/\/|news:\/\/|'.
+	  '((?<!http:\/\/|https:\/\/)www\.))([\w\-.]+[^,.;:?!\/\s\]!"\)<>])'.
+	  '([\w#&=%+@~*_\-,;:]*)([\/\w?.#&=%+@~*_\-,;:]*?)'.
+	  '(?=[,.;:?!\]<>!")]*([^\/\w.#?&=%+@~*_\-,;:]|&gt;|$))/i',
+	  file_get_contents("http://php.net"), $matches);
+?>]]></example>
+<break/>
+	<image filename='lunatic.jpg' align="center"/>
+</slide>

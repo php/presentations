@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>MCrypt - Encrypting Data</title>
+
+	<example class="bit_larger" result="1" fontsize="1.5em"><![CDATA[<pre><?php
+    $key = "this is a secret key";
+    $input = "Let us meet at 9 o'clock at the secret place.";
+
+    $td = mcrypt_module_open('rijndael-256', '', 'ecb', '');
+    $iv = mcrypt_create_iv (mcrypt_enc_get_iv_size($td), MCRYPT_RAND);
+    mcrypt_generic_init($td, $key, $iv);
+    $encrypted_data = mcrypt_generic($td, $input);
+    mcrypt_generic_deinit($td);
+    mcrypt_module_close($td);
+
+    echo chunk_split(bin2hex($encrypted_data), 64);
+?>
+]]></example>
+
+	<image filename='enigma.jpg' align="center"/>
+</slide>

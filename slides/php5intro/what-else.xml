@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Other Extensions</title>
+
+	<list class="small">
+		<bullet>*Science*: BC Arbitrary Maths, GMP, </bullet>
+		<bullet>*Compression*: BZip2, LZF, rar, Zip, zlib</bullet>
+		<bullet>*Date/time*: Calendar</bullet>
+		<bullet>*Interop*: COM/.Net, Java</bullet>
+		<bullet>*Protocols*: Curl, IMAP, Direct-IO, FTP, IRCg, LDAP, mailparse, NIS, OpenSSL, SNMP</bullet>
+		<bullet>*Databases*: DBM, dBase, db++, dbx, FrontBase, filePro, Hyperwave, Interbase, Informix, Ingress II, MaxDB, mSQL, MSSQL, MySQL, Oracle, Ovrimos, PDO, PostGreSQL, Sesam, SQLite, Sybase, ODBC</bullet>
+		<bullet>*XML*: DOM, SimpleXML, SOAP, WDDX, XML-RPC, XSLT</bullet>
+		<bullet>*Graphics*: ClibPDF, GD, Exif, mimetype, Ming, PDFLib/FDF</bullet>
+		<bullet>*Internationalisation*: FriBiDi, Gettext, iconv, mbstring, Pspell, recode</bullet>
+		<bullet>*Encryption*: MCrypt, MHash</bullet>
+		<bullet>*System like functions*: Process Control, POSIX, Semaphore, Shared Memory, socket</bullet>
+		<bullet>*Others*: mnogosearch, ncurses, Regular Expressions, POSIX, Printer, SPL, xdiff</bullet>
+		
+	</list>
+</slide>

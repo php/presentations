@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PHP 5</title>
+
+	<list fontsize="3.5em" marginleft="-1em">
+		<bullet>Revamped Internals</bullet>
+		<bullet>*Real* Object Orientation</bullet>
+		<bullet>Improved Streams API</bullet>
+		<bullet>Bundled SQLite</bullet>
+		<bullet>New XML extensions based on libXML-2</bullet>
+		<bullet>SPL - Object Iterators and more</bullet>
+	</list>
+<break lines="4"/>
+	<image align="center" filename="php-version5.png"/>
+</slide>

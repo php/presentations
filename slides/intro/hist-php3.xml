@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PHP 3</title>
+
+	<list fontsize="3.5em" marginleft="-1em">
+		<bullet>First PHP as we know it</bullet>
+		<bullet>Object Oriented Syntax support</bullet>
+		<bullet>Tons of extensions for databases etc.</bullet>
+		<bullet>Easy to add extensions</bullet>
+	</list>
+<break lines="4"/>
+	<image align="center" filename="php-logo-large.png"/>
+</slide>

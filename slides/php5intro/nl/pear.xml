@@ -2,33 +2,35 @@
 <slide fontsize="6em">
 	<title>PEAR</title>
 
-	<image align="right" filename="pear.png" />
 	<list marginleft="0em" fontsize="3.5em">
 		<bullet>PHP Extension and Application Repository</bullet>
 		<bullet>Commandline tool for maintenance</bullet>
 		<bullet>Dependency checking</bullet>
 	</list>
 
-	<example fontsize="1.1em"><![CDATA[[derick@kossu derick]$ sudo pear -v install Net_DIME
-downloading Net_DIME-0.3.tgz ...
-...done: 6,740 bytes
-install ok: Net_DIME 0.3]]></example>
-
-	<example fontsize="1.1em"><![CDATA[[derick@kossu derick]$ sudo pear list-upgrades
-Available Upgrades (beta):
-==========================
-Package        Version  Size  
-DB             1.4.0    60kB  
-HTML_QuickForm 3.0Beta2 60kB  
-Net_SMTP       1.2.3    6.1kB]]></example>
-
-	<example fontsize="1.1em"><![CDATA[[derick@kossu derick]$ sudo pear list-all | head -6
-All packages:
+	<example fontsize="1.1em"><![CDATA[derick@kossu:~$ sudo pear install PHPUnit
+downloading PHPUnit-1.2.2.tgz ...
+Starting to download PHPUnit-1.2.2.tgz (21,058 bytes)
+........done: 21,058 bytes
+install ok: PHPUnit 1.2.2]]></example>
+<break/>
+	<example fontsize="1.1em"><![CDATA[derick@kossu:~$ sudo pear list-upgrades
+Available Upgrades (stable):
+============================
+Package     Local          Remote         Size
+Archive_Tar 1.1 (stable)   1.2 (stable)   14.5kB
+DB          1.6.2 (stable) 1.6.8 (stable) 91kB
+HTTP        1.2.2 (stable) 1.3.4 (stable) 4.5kB
+Mail        1.1.3 (stable) 1.1.4 (stable) 14.3kB
+Net_Socket  1.0.1 (stable) 1.0.5 (stable) 4.1kB
+XML_Parser  1.2.0 (stable) 1.2.4 (stable) 10.7kB]]></example>
+<break/>
+	<example fontsize="1.1em"><![CDATA[derick@kossu:~$ sudo pear list-all | head -6
+ALL PACKAGES:
 =============
-Package                  Latest   Local    
-apd                      0.4p2             
-bcompiler                0.4      0.4      
-PHPDoc                   0.1.0    0.1.0    ]]></example>
-
+PACKAGE                   LATEST   LOCAL
+APC                       2.0.4    2.0.4
+Cache                     1.5.4
+Cache_Lite                1.4.0]]></example>
 
 </slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PHP 5.1</title>
+
+	<list fontsize="3.5em" marginleft="-1em">
+		<bullet>PDO</bullet>
+		<bullet>Improved Executor</bullet>
+		<bullet>New date/time functionality</bullet>
+		<bullet>xmlreader/xmlwriter</bullet>
+	</list>
+<break lines="4"/>
+	<image align="center" filename="php-version5.png"/>
+</slide>
