@@ -1,0 +1,13 @@
+<slide title="The BLURB tag">
+<blurb title="foo">
+Used to display simple paragraphs optionally with a title in a larger font.  
+The default value for each attribute is listed first.
+</blurb>
+<example><![CDATA[<blurb title="Blurb Title"
+       talign="left|center|right"
+       align="left|center|right">
+
+Paragraph of text.
+
+</blurb>]]></example>
+</slide>

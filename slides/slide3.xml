@@ -1,0 +1,19 @@
+<slide title="Your first Slide">
+<blurb>
+Now that we have defined a simple presentation containing just 3 slides, we can
+start creating them.  You can either use slides from an existing directory or
+create a new one:
+</blurb>
+<example type="shell">mkdir slides/foo</example>
+<blurb>
+The first slide tends to be a titlepage for the presentation.
+A simple automatic titlepage generator is included which uses the information in
+the presentation definition file.  Simply copy "titlepage.xml" into your slides
+directory and as you saw in the presentation definition file the first slide
+was defined to be "slides/foo/titlepage.xml".
+</blurb>
+<example type="shell">cp slides/titlepage.xml slides/foo</example>
+<blurb>
+Your titlepage should now work.
+</blurb>
+</slide>

@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
 
-  <title>The ??? Presentation System</title>
+  <title>The PHP Presentation System</title>
 
-  <blurb title="???">
-Yes, this presentation system has no name yet.  Its predecessor was called,
-"PHP Presents", but using "PHP" in the name of a project sets a bit of a bad
-precedent and we really should come up with something better.
+  <blurb>
+    Taking suggestions for a decent name for this thing.
   </blurb> 
 
-  <blurb title="Why use a browser?">
-Mostly because the system was built to present PHP.  PHP is a scripting language
-for creating web applications.  The most effective way to show web applications is
-with a web browser.  But beyond that, there are many compelling reasons to use
-something like this system over traditional Powerpoint-like systems:
-  </blurb>
-
-  <list>
-<bullet> Simple XML slide file format allowing for easy editing and revision control</bullet>
-<bullet> Easy publication of presentations on the web</bullet>
-<bullet> The slide-per file approach with a top-level presentation overview file gives you the 
-ability to develop an arsenal of slides which you can quickly create a new presentation from</bullet>
-<bullet> Simple HTML display mode for good search engine indexing</bullet>
-<bullet> Clean per-slide urls to make it easy to refer someone to a particular slide in a presentation</bullet>
+  <list title="Features">
+   <bullet>Simple XML slide format</bullet>
+   <bullet>Multi-format display modes including HTML and PDF</bullet>
+   <bullet>One slide per file with a presentation index file</bullet>
+   <bullet>Clean per-slide urls</bullet>
+   <bullet>Keyboard slide navigation</bullet>
+   <bullet>Simple slide animation</bullet>
   </list>
 
 </slide>
