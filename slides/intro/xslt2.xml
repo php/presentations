@@ -1,0 +1,90 @@
+<slide title="XSLT w/ Sablotron">
+<blurb>
+Freshmeat provides a search facility which returns matches in XML.  Here
+we write an XSL Transformation to transform the XML data into HTML.
+</blurb>
+
+<link href="http://freshmeat.net/search-xml/?q=php&amp;filter=183" />
+
+<example title="The resulting XML looks like this:" fontsize="1.25em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE search-results SYSTEM "http://freshmeat.net/backend/fm-search-0.1.dtd">
+<search-results>
+  <match>
+    <match_count>1</match_count>
+    <project_id>138</project_id>
+    <date_added>2000-02-01 01:26:10</date_added>
+    <date_updated>2001-01-30 21:41:22</date_updated>
+    <projectname_short>aeromail</projectname_short>
+    <projectname_full>AeroMail</projectname_full>
+    <desc_short>PHP based e-mail client</desc_short>
+    <desc_full>AeroMail is a Web-based email client written in 
+PHP. It uses an IMAP server to read and store messages in one 
+or more user-defined folders, and its features include HTTP 
+authentication for login (no cookies), folder manipulation, 
+support for sending and viewing attachments, inline image
+display, multilanguage support, and URL highlighting.</desc_full>
+    <vitality_score>0.02</vitality_score>
+    <vitality_percent>0.02</vitality_percent>
+    <url_homepage>http://freshmeat.net/redir/aeromail/138/url_homepage/</url_homepage>
+    <url_tgz>http://freshmeat.net/redir/aeromail/138/url_tgz/</url_tgz>
+    <url_changelog></url_changelog>
+    <url_rpm></url_rpm>
+    <url_deb></url_deb>
+    <url_bz2></url_bz2>
+    <url_cvs></url_cvs>
+    <url_list>http://freshmeat.net/redir/aeromail/138/url_list/</url_list>
+    <url_slp></url_slp>
+    <url_zip>http://freshmeat.net/redir/aeromail/138/url_zip/</url_zip>
+    <license>GNU General Public License (GPL)</license>
+  </match>
+  ...
+</search-results>]]></example>
+
+<blurb>
+To format this nicely we write an XSL stylesheet which defines the
+transformation:
+</blurb>
+
+<example fontsize="1.5em"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
+<xsl:output method="html" indent="yes" encoding="utf-8" />
+
+<xsl:template match="/search-results">
+  <html><head><title>XSLT Freshmeat Demo</title></head>
+  <body bgcolor="#FFFFFF">
+  <table>
+  <xsl:call-template name="matches"/>
+  </table>
+  </body></html>
+</xsl:template>
+
+<xsl:template name="matches">
+  <xsl:for-each select="match">
+    <tr>
+      <td><xsl:value-of select="match_count"/></td>
+      <td><a href="{url_homepage}"><xsl:value-of 
+                                        select="projectname_full"/></a></td>
+      <td><xsl:value-of select="desc_short"/></td>
+      <td><xsl:value-of select="date_updated"/></td>
+      <td><xsl:value-of select="license"/></td>
+    </tr>
+  </xsl:for-each>
+</xsl:template>
+
+</xsl:stylesheet>]]></example>
+
+<blurb>
+We now use PHP's xslt functions to apply the stylesheet to the XML:
+</blurb>
+
+<example><![CDATA[<?php
+ $p = xslt_create();
+ $res = xslt_process($p,'freshmeat.xml','freshmeat.xsl');
+ if(!$res) echo xslt_error($p);
+ echo $res;
+ xslt_free($p);
+?>]]></example>
+
+<example hide="1" title="Here is the result" result="1" type="iframe" filename="slides/intro/fm.html"/>
+
+</slide>
