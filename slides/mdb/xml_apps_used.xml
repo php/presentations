@@ -1,0 +1,31 @@
+<slide title='XML Apps used'>
+<blurb title='WDDX'>
+Simple data enconding format, handles scalars, arrays/structures,
+date and time.
+[http://www.openwddx.org/]
+</blurb>
+<blurb title='CML'>
+A very complete format specification for chemical data:
+structural information (coordinates, sequence, etc.) and properties (charges,
+spectroscopical data, etc.). One of the first XML applications designed.
+[http://www.xml-cml.org/]
+</blurb>
+<blurb title='RSS'>
+Widely used for news syndication (e.g. Slashdot, Freshmeat,
+PHPBuilder).
+[http://groups.yahoo.com/group/rss-dev/files/namespace.html]
+</blurb>
+<blurb title='XML-RPC'>
+Provides a simple remote procedure call protocol and encoding
+specification. You can read and understand it over a cup of coffee
+(or tea or whatever is your favorite poison). Uses HTTP as its primary
+transport.
+[http://www.xmlrpc.org/]
+</blurb>
+<blurb title='SOAP'>
+A heavier and more flexible specification for performing remote procedure calls, it
+includes specifications for transports, envelope handling, call redirection,
+data encoding, etc. It has as partners in crime the WSDL and UDDI specs.
+[http://www.w3.org/TR/SOAP/]
+</blurb>
+</slide>

@@ -1,0 +1,26 @@
+<slide title='Conclusions'>
+<list type='darrow' effect='hide' title='The "take home" message:'>
+<bullet>
+APIs (aka Services) for Web Applications are needed and good.
+</bullet>
+<bullet>
+Little effort to implement them, with high payoffs in terms of sharing and collaboration
+</bullet>
+<bullet>
+Use Corba, use XML-RPC, use SOAP, use whatever, just make one.  
+</bullet>
+<bullet>
+But make it nice and simple, your fellow programmers will love you for that.
+</bullet>
+<bullet>
+XML-RPC is nice and simple, and you can read the specs over a cup of coffee (or tea). 
+</bullet>
+<bullet>
+SOAP is a little more complex, but it gives you more flexibility (see also WSDL, UDDI).
+</bullet>
+</list>
+<blurb title='... and remember:' effect='hide'>
+*Bioinformatics:* the tool to explore the unexplored new 
+biological landscape. (Consider programming bioinformatic applications)
+</blurb>
+</slide>

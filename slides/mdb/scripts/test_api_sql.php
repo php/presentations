@@ -1,5 +1,5 @@
 <?php
-$server = 'http://nisod.scripps.edu:8080';
+$server = 'http://metallo.scripps.edu';
 $api_uri = '/services/api.php';
 $query = "select source_id,expdata,description from protein limit 3";
 $format = "table";

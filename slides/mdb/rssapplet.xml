@@ -1,0 +1,49 @@
+<slide title='RSSApplet'>
+<example type='html' result='0' fontsize='1.0em'
+marginright='1em' marginleft='1em' width='95%'
+title="Using Webreference's RSS Applet to get RSS feed from the MDB API">
+<![CDATA[
+<div align='center'>
+<APPLET archive='rssApplet13.jar' width=500 height=300
+code='com.exploringxml.rss.applet.RSSViewerApplet.class'>
+<PARAM name="src"
+value="http://redox.scripps.edu:7000/services/api.php?func=metallopdb&metal=zn&mode=random&count=12&format=rss">
+<PARAM name=box.foreground value=#003300>
+<PARAM name=box.background value=#33ffcc>
+<PARAM name=title.foreground value=#336600>
+<PARAM name=title.background value=#66ccff>
+<PARAM name=item.foreground value=#000000>
+<PARAM name=item.background value=#cccccc>
+<PARAM name=title.font.family value=sansserif>
+<PARAM name=item.font.family value=sansserif>
+</APPLET>
+</div>
+]]>
+</example>
+<link href='http://webreference.com/xml/column7/'
+leader='From the article: ' marginleft='2em'
+fontsize='1.0em' align='right'>RSS Viewer Applet: 
+Window to the World of News</link>
+<example type='text' result='0' fontsize='1.0em'
+marginright='1em' marginleft='1em' width='95%'
+title='HTML code for the applet'>
+<![CDATA[
+<div align='center'>
+<APPLET archive='rssApplet13.jar' width=500 height=300
+code='com.exploringxml.rss.applet.RSSViewerApplet.class'>
+<PARAM name="src"
+value="http://redox.scripps.edu:7000/services/api.php?func=metallopdb&metal=zn&mode=random&count=12&format=rss">
+<PARAM name=box.foreground value=#003300>
+<PARAM name=box.background value=#33ffcc>
+<PARAM name=title.foreground value=#336600>
+<PARAM name=title.background value=#66ccff>
+<PARAM name=item.foreground value=#000000>
+<PARAM name=item.background value=#cccccc>
+<PARAM name=title.font.family value=sansserif>
+<PARAM name=item.font.family value=sansserif>
+</APPLET>
+</div>
+]]>
+</example>
+
+</slide>

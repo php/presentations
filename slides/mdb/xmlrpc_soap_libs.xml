@@ -1,0 +1,17 @@
+<slide title='Libs for XML-RPC/SOAP'>
+<list title='For XML-RPC' type='none'>
+<bullet>XMLRPC (Useful Inc.) -- http://xmlrpc.usefulinc.com/</bullet>
+<bullet>XMLRPC-EPI (Epinions) -- http://xmlrpc-epi.sourceforge.net/</bullet>
+<bullet>
+*PEAR::XML_RPC (Shane) -- http://pear.php.net/package-info.php?pacid=17*
+</bullet> 
+</list>
+
+<list title='For SOAP' type='none'>
+<bullet>SOAPx4 (now NuSOAP, D. Ayala) -- http://dietrich.ganx4.com/soapx4/</bullet>
+<bullet>XMLRPC-EPI (Epinions, encoding only) -- http://xmlrpc-epi.sourceforge.net/</bullet>
+<bullet>
+*PEAR::SOAP (Shane) -- http://pear.php.net/package-info.php?pacid=87*
+</bullet>
+</list>
+</slide>
