@@ -1,6 +1,6 @@
 <slide title="Network Buffer Sizing (II)">
 <image align="right" filename="10000000000000610000006B74D8AABB.jpg" />
-<break lines="4"/>
+<break lines="3"/>
 <blurb fontsize="4.0em">OS (Linux)</blurb>
 <blurb marginleft="2.0em">%/proc/sys/net/ipv4/tcp_wmem%</blurb>
 <blurb marginleft="5.0em">%4096    16384   maxcontentsize%</blurb>
