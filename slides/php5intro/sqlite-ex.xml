@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>SQLite (example)</title>
+
+	<break />
+
+	<example fontsize="1.4em"><![CDATA[<?php
+function sqlite_starts_with($title, $char)
+{
+    $title = strtolower($title);
+    $char  = strtolower($char);
+    if (!strlen($title) || !strlen($char)) {
+        return FALSE;
+    }
+    return ($title{0} == $char{0});
+}
+
+$idx = sqlite_open("livedocs-en.sqlite");
+sqlite_create_function($idx, 'STARTS_WITH', 'sqlite_starts_with');
+
+$q = sqlite_query($idx,
+	"SELECT title, id FROM idents WHERE STARTS_WITH(title, '$idxl')");
+if ($q) {
+    while ($r = sqlite_fetch_array($q, SQLITE_NUM)) {
+        list($title, $id) = $r;
+        echo "$id: $title\n";
+    }
+}
+? >]]></example>
+
+</slide>

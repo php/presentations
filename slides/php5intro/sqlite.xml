@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>SQLite</title>
+
+	<break lines="2"/>
+
+	<list marginleft="1em" marginright="2em" fontsize="4em">
+		<bullet>Bundled with PHP 5</bullet>
+		<bullet>Fast and easy interface to 'flatfiles'</bullet>
+		<bullet>SQL 99 subset</bullet>
+		<bullet>No deamon required</bullet>
+		<bullet>Enabled by default</bullet>
+		<bullet>Callbacks for normal functions and aggregation functions</bullet>
+	</list>
+
+</slide>
