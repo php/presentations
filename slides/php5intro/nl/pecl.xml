@@ -4,7 +4,7 @@
 
 	<image marginright="1em" align="right" filename="pecl.png" />
 
-	<list marginleft="0em" fontsize="3.5em" effect="slide">
+	<list marginleft="0em" fontsize="3.5em">
 		<bullet>PHP Extension Code Library</bullet>
 		<bullet>Shared extensions</bullet>
 		<bullet>Makes use of the 'pear' tool</bullet>

@@ -14,7 +14,7 @@ foreach ($books as $book) {
 
 	<break lines="3" />
 
-	<list marginleft="2em" fontsize="4.5em" effect="slide">
+	<list marginleft="2em" fontsize="4.5em">
 		<bullet>K.I.S.S.</bullet>
 		<bullet type="none" marginleft="4em">Keep It Simple Stupid</bullet>
 	</list>

@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Protected</title>
 
-	<list marginleft="-1em" effect="slide" fontsize="3.3em">
+	<list marginleft="-1em" fontsize="3.3em">
 		<bullet>Only accessable/callable by the same, or an inherited class</bullet>
 		<bullet>Useful for 'packages'</bullet>
 	</list>
