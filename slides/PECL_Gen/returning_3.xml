@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Returning arrays</title>
+ <blurb>
+  When a function is defined to return an array its %return_value%
+  variable is already appropriately initialized. All you have to
+  do is to add the acutal array elements to %return_value%.
+ </blurb>
+ <blurb>
+  The Zend API provides a rich set of functions for adding various
+  data types as array elements, supporting numerical, associative
+  and automatic indexes.
+ </blurb>
+ <example filename="examples/return_array.snippet" fontsize="1em"/>
+</slide>
+

@@ -1,0 +1,13 @@
+<resource name="my_FILE" payload="FILE" alloc="no">
+ <destruct>
+  fclose(resource);
+ </destruct>
+</resource>
+
+<function name="my_fopen">
+ <proto>resource my_FILE my_fopen(string name, string mode)</proto>
+ <code>
+   return_res = fopen(name, mode);
+   if (!return_res) RETURN_FALSE;
+ </code>
+</function>

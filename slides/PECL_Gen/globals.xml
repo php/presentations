@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Request globals</title>
+ <blurb>
+  Variables global to a single request need special treatment
+  as some server APIs may run several PHP requests in different
+  threads at the same time.
+ </blurb>
+ <blurb>
+  Request global variables are declared using the %&amp;lt;global&amp;gt;%
+  tag and its %name% and %type% attributes.
+ </blurb>
+ <blurb>
+  Simple default values can be given with the %value% attribute, else you 
+  can always initialize request globals within the %RINIT% internal function.
+ </blurb>
+ <blurb>
+  To access your request global variables you have to use the the %EXTNAME_G%
+  macro (replace %EXTNAME% with the uppercased name of your extension).
+ </blurb>
+ <example filename="examples/globals.snippet" fontsize="1em"/>
+</slide>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Dependencies</title>
+ <blurb>
+  Dependencies to be checked by %configure% are declared within the
+  %&amp;lt;deps&amp;gt;% section.
+ </blurb>
+ <blurb>
+  The %&amp;lt;deps&amp;gt;% tag itself has two attributes: %lang% 
+  for the programming language you want to have code generated for 
+  and %platform% for the operating systems to be supported.
+ </blurb>
+ <blurb>
+  Set %lang% to %"c"% for plain C code or %"c++"% for C++ code 
+  generation. By default C code is generated. C++ code generation
+  should be selected for extensions making use of C++ libraries.
+ </blurb>
+ <blurb>
+  Possible values for %platform% are %unix% for all Unix-like platforms
+  supporting %configure% scripts, %win32% for Microsoft Windows with
+  Microsoft VisualStudio as developement platform or %all% for both
+  supported platforms. 
+ </blurb>
+ <blurb> 
+  Within the %&amp;lt;deps&amp;gt;% section it is possible to
+  define %configure% parameters, to specify needed header files
+  and libraries and to add existing files to the extension.
+ </blurb>
+</slide>
+

@@ -1,0 +1,15 @@
+// adding an integer element
+add_assoc_long(return_value, "index", 42); // like $array["index"] = 42;
+add_index_long(return_value, 23, 42);      // like $array[23] = 42;
+add_next_index_long(return_value, 42);     // like $array[] = 42;
+
+// adding a string element (string is copied)
+add_assoc_string(return_value, "foo", "bar", 1); // like $array["foo"] = "bar"
+add_assoc_stringl(return_value, "foo", "bar", 3, 1);  // the same binary safe including length
+
+// adding a string element previously allocated using emalloc
+add_assoc_string(return_value, "foo", "bar", 0); // no need to copy as memory is already managed
+
+// general form of adding a zval 
+add_assoc_zval(return_value, "foobar", zval_ptr);
+

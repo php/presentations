@@ -1,0 +1,13 @@
+RETURN_BOOL(1); // returning a PHP bool
+RETURN_TRUE;    // short for RETURN_BOOL(1)
+RETURN_FALSE;    // short for RETURN_BOOL(0)
+
+RETURN_LONG(42); // returning a PHP int
+
+RETURN_DOUBLE(3.14); // returning a PHP float
+
+RETURN_STRING(stringvar, 1); // returning copy of a C string
+RETURN_STRING(stringvar, 0); // returning a C string allocated with emalloc()
+
+RETURN_STRINGL(strvar, len, 1); // binary safe return of string copy
+RETURN_STRINGL(strvar, len, 0); // binary safe return of emalloc()ed string

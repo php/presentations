@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Constants</title>
+ <blurb>
+  PHP constants are defined using %&amp;lt;constant&amp;gt;%  tags.
+ </blurb>
+ <blurb>
+  The actual constant name, type and value are specified using the 
+  %name%, %type% and %value% attributes. Valid types for a constant
+  are %int%, %float% and %string%.
+ </blurb>
+ <blurb>
+  For %int% and %float% you may use either numeric strings or the 
+  names of C constants (either true ANSI C/C++ constants or values 
+  &#35;defined using the C preprocessor. %string% values
+  are always used "as is", no constants may be used here.
+ </blurb>
+ <blurb>
+  If only the %name% attribute is given it is assumed that the 
+  constant is supposed of type %int% and that its value is to be
+  that of a C constant of the same name.
+ </blurb>
+ <blurb>
+  A descriptive text may be given as data content of the 
+  %&amp;lt;constant&amp;gt;% tag. This text will be used 
+  when generation the DocBook XML documentation.
+ </blurb>
+ <example filename="examples/constants.snippet" fontsize="1em"/>
+</slide>
+

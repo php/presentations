@@ -1,0 +1,17 @@
+<extension name="foobar">
+ <global name="foo" type="long" value="42"/>
+
+ <function name="get_foo">
+  <proto>int get_foo(void)</proto>
+  <code>
+    RETURN_LONG( FOOBAR_G(foo) );
+  </code>
+ </function>
+
+ <function name="set_foo">
+  <proto>void set_foo(int newfoo)</proto>
+  <code>
+    FOOBAR_G(foo) = newfoo;
+  </code>
+ </function>
+</extension>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Return values</title>
+ <blurb>
+  To return data from a function you may use the convenience macros
+  provided by the Zend API or assign to the predefined %return_value% 
+  %zval% pointer.
+ </blurb>
+ <blurb>
+  If you do not add a &amp;lt;code&amp;gt; section to your function
+  the generated code skeleton will include a suggestion on how to
+  return data. If you put your own code into the XML specification
+  you also have to take care of returning your results yourself.
+ </blurb>
+ <example filename="examples/return.snippet" fontsize="1em"/>
+</slide>
+

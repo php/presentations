@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Custom code</title>
+ <blurb>
+  Custom C/C++ code may be added to the generated code and header
+  file using %&amp;lt;code&amp;gt;% tags on the top level within
+  %&amp;lt;extension%&amp;gt;.
+ </blurb>
+ <blurb>
+  Code can be added to either the generated code or hader file
+  by setting the %role% attribute to %code% (default) or %header%. 
+ </blurb>
+ <blurb>
+  The %position% attribute controls whether the code will be inserted
+  near the %top% or %bottom% (default) of the generated file.
+ </blurb>
+ <blurb>
+  Code fragments that go to the same file and position are inserted
+  by order of appearance in the XML source.
+ </blurb>
+ <example filename="examples/custom_code.snippet" fontsize="1em"/>
+ <blurb>
+  If you have to add large ammounts of custom code you should put
+  it into seperate files and add these in the dependencies section
+  (described on the next slide).
+ </blurb>
+</slide>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Returning resources</title>
+ <blurb>
+  For functions defined to return a known resource type a special
+  local variable %return_res% is generated. 
+ </blurb>
+ <blurb>
+  This variables type is a pointer to the resources payload type and 
+  points to an allready allocated piece of memory of this type unless
+  you specified %alloc="no"% in the %resource% tag.
+ </blurb>
+ <blurb>
+  All you have to do is to take care of storing the appropriate 
+  payload data here. The actual resource registration and returning
+  code will be generated for you.
+ </blurb>
+ <blurb>
+  Resources will be covered in more detail later on.
+ </blurb>
+ <example filename="examples/return_resource.snippet" fontsize="1em"/>
+</slide>
+

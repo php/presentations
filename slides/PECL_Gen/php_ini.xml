@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>%php.ini% directives</title>
+ <blurb>
+  %php.ini% directives are defined using the %&amp;lt;phpini&amp;gt;%
+  tag. To define a %php.ini% directive you have to specify its %name%,
+  %type% and default %value%.
+ </blurb>
+ <blurb>
+  Valid directive %name% values are C variable names. The actual directive name
+  is the extension name followed by a single dot '.' and the specified
+  name. A directive may be of %type% %bool%, %int%, %float% or %string%.
+ </blurb>
+ <blurb>
+  Directive default values are passed to the engine as strings, so you
+  may not use any C constants or preprocessor macros here. The default
+  value strings are parsed by the %OnUpdate% handler registered for that
+  directive. The %OnUpdate% handler defaults to the appropriate
+  internal %OnUpdate...% handler for its %type% unless you
+  specify a different handler using the %onupdate% attribute. 
+ </blurb>
+ <blurb>
+  The directive value may be changed at any time unless you specify an 
+  %access% attribute. Possible values are %all% (default), %perdir%
+  (may be changed by local %.htaccess% file but not by PHP code) and
+  %system% (may only be set in %php.ini% or global web server configuration.
+ </blurb>
+ <blurb>
+  The content data of %&amp;lt;phpini&amp;gt;% tags is used to generate 
+  documentation for the defined directive. 
+ </blurb>
+ <example filename="examples/ini.snippet" fontsize="1em"/>
+</slide>
+

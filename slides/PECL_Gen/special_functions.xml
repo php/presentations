@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Internal functions</title>
+ <blurb>
+  Five special C functions take care for internal matters within a PHP
+  extension: %MINIT%, %MSHUTDOWN%, %RINIT%, %RSHUTDOWN% and %MINFO%.
+ </blurb>
+ <blurb>
+  %MINIT% and %MSHUTDOWN% are called on initialization and shutdown
+  of an extension within PHP, these are called exactly once. Any
+  initialization and cleanup you need to do globaly should be added here.
+ </blurb>
+ <blurb>
+  %RINIT% and %RSHUTDOWN% are called on the beginning and end of each
+  request handled by PHP. Depending on the server api these may be
+  called just once or many times. Any per request initialization and
+  cleanup needed should be added here.
+ </blurb>
+ <blurb>
+  %MINFO% is called to produce the extensions output for %phpinfo()%
+  whenever this function is called.
+ </blurb>
+ <blurb>
+  All these functions are generated for you. Only if you have to add
+  special code you need to add %&amp;lt;function&amp;gt;% tags for
+  them. Usually you will only add code for %MINIT% and %MSHUTDOWN%.
+  Internal functions are specified by setting the %role% attribute
+  to %"internal"%.  
+ </blurb>
+ <example filename="examples/internal_functions.snippet" fontsize="1em"/>
+</slide>
+
