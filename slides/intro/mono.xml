@@ -1,0 +1,18 @@
+<slide title="PHP and .NET">
+<blurb>
+PHP can load .NET assemblies on the Windows and Linux platforms using 
+the Mono Extension.
+</blurb>
+
+<example><![CDATA[<?php
+$Console = new Mono('System.Console');
+$s = new Mono('System.Collections.Stack');
+
+$s->Push("World");
+$s->Push("Hello");
+
+$Console->WriteLine($s->Pop() . ' ' . $s->Pop());
+?>]]>
+</example>
+
+</slide>
