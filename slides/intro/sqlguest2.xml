@@ -1,0 +1,28 @@
+<slide title="DB-driven Guestbook">
+<blurb title="SQL'izing the Guestbook Example">
+Here we add the necessary code to store our guestbook comments
+in an SQL database</blurb>
+<example fontsize="1.4em" result="1" anchor="results"><![CDATA[<html><head><title>My Guestbook</title></head>
+<body>
+<h1>Welcome to my Guestbook</h1>
+<h2>Please write me a little note below</h2>
+<form action="<? echo "$PHP_SELF#results"?>" method="POST">
+<textarea cols=40 rows=5 name="note" wrap=virtual></textarea>
+<input type="submit" value=" Send it ">
+</form>
+<?
+  mysql_connect('localhost');
+  mysql_select_db('mydb');
+  if(isset($note)) {
+     $ts = date("Y-m-d H:i:s");
+     mysql_query("insert into comments values 
+                  (0,'$note','$ts')");
+  }
+?>
+<h2>The entries so far:</h2>
+<? $result = mysql_query("select * from comments");
+     while($row=mysql_fetch_row($result)) {
+       echo $row[0] ." " . $row[1] . " " . $row[2] . "<br>\n";
+     }  ?>
+</body></html>]]></example>
+</slide>

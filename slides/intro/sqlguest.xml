@@ -1,0 +1,37 @@
+<slide title="DB-driven Guestbook">
+
+<php><![CDATA[<?
+  // Clean out the table to we don't have old crap for this slide
+  @mysql_connect("localhost");
+  @mysql_db_query("mydb","delete from comments");
+?>]]></php>
+
+<blurb title="SQL'izing the Guestbook Example">
+Recall our file-driven guestbook example from earlier.  We are
+going to convert this into an SQL-driven guestbook by first creating a
+database, then a schema for the table where we will store the data and then we
+will modify the code.</blurb>
+<example fontsize="1.2em"><![CDATA[<h1>Welcome to my Guestbook</h1>
+  <h2>Please write me a little note below</h2>
+  <form action="<? echo $PHP_SELF?>" method="POST">
+  <textarea cols=40 rows=5 name="note"></textarea>
+  <input type="submit" value=" Send it ">
+  </form>
+  <?
+  if(isset($note)) {
+     $fp = fopen("notes.txt","a");
+     fputs($fp,nl2br($note)."<br>");
+     fclose($fp);
+  }
+  ?>
+<h2>The entries so far:</h2>
+<? @ReadFile("notes.txt") ?>]]></example>
+
+<example title="Create a database"><![CDATA[mysqladmin create mydb]]></example>
+<example title="Create a Schema"><![CDATA[CREATE TABLE comments (
+  id int(8) DEFAULT '0' NOT NULL auto_increment,
+  comment text,
+  ts datetime,
+  PRIMARY KEY (id)
+);]]></example>
+</slide>
