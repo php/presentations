@@ -3,8 +3,7 @@
 
   <title>This is an example slide</title>
 
-  <blurb>
-    <title>This is a normal title</title>
+  <blurb title="This is a normal title">
 And here is the paragraph of text that goes along with this title.
 It will simply be formatted according to the default formatting rules defined by the
 parser.
