@@ -4,12 +4,12 @@
 
 	<list effect="slide" fontsize="5em">
 		<bullet>Generated code not always optimal</bullet>
-		<bullet>Optimizing techiniques:</bullet>
+		<bullet>Optimizing techniques:</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">
 		<bullet>Removing NOPs</bullet>
 		<bullet>Removing unnecessary jumps</bullet>
-		<bullet>Concatination of strings</bullet>
+		<bullet>Concatenation of strings</bullet>
 		<bullet>Dead-code elimination</bullet>
 		<bullet>Cache function table lookups</bullet>
 		<bullet>Function inlining</bullet>
