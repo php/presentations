@@ -4,16 +4,10 @@
 PHP supports HTTP, and XML-RPC webservices out of the box.
 </blurb>
 <blurb fontsize="3.5em">
-PHP supports SOAP via the %PEAR::SOAP% library.
+PHP4 supports SOAP via the %PEAR::SOAP% library.
 </blurb>
 <blurb fontsize="3.5em">
-There is also a SOAP client in PECL, which is 100x faster than the 
-PEAR::SOAP library.
+PHP5 has a bundled extension which is much faster than the 
+PEAR::SOAP library but not as feature-complete yet. 
 </blurb>
-<list>
-<bullet marginleft="4.0em" type="none" fontsize="2.5em" effect="slide">
-Unfortunately it actually works about as often as I say the word 
-~bifurcate~.
-</bullet>
-</list>
 </slide>

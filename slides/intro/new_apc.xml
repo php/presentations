@@ -12,9 +12,9 @@
   $a = array(1,2,3,4,5);
   apc_store('my_array', $a, 5);
   $a = 0;
-  print_r($a);
+  echo "<pre>"; var_dump($a); echo "</pre>";
   $b = apc_fetch('my_array');
-  var_dump($b);
+  echo "<pre>"; var_dump($b); echo "</pre>";
 ?>]]></example>
 
 <break lines="1" />

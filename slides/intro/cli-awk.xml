@@ -2,14 +2,14 @@
 
 	<break lines="3" />
 
-	<example fontsize="1.6em"><![CDATA[-B <begin_code>  Run PHP <begin_code> before processing input lines
+	<example fontsize="1.6em" type="text"><![CDATA[-B <begin_code>  Run PHP <begin_code> before processing input lines
 -R <code>        Run PHP <code> for every input line
 -F <file>        Parse and execute <file> for every input line
 -E <end_code>    Run PHP <end_code> after processing all input lines]]></example>
 
 	<break lines="2" />
 
-	<example fontsize="2em"><![CDATA[$ find . | \
+	<example fontsize="2em" type="shell"><![CDATA[$ find . | \
 	php -B '$l = 0;' \
 	    -R '$l+=count(file($argn));' \
 	    -E 'echo "Lines: $l\n";']]></example>

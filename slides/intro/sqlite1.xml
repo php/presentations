@@ -1,6 +1,6 @@
 <slide title="SQLite">
 <blurb>SQL Interface for flat files!</blurb>
-<example title="Example" fontsize="1.6em" result="1"><![CDATA[<?php
+<example title="Example" fontsize="1.5em" result="1"><![CDATA[<?php
 @exec('rm /tmp/lb.db');
 $db = sqlite_open('/tmp/lb.db', 0666, $sqliteerror);
 if ($db) {
@@ -9,7 +9,7 @@ if ($db) {
 
   $result = sqlite_query($db,'select bar from foo');
   $record = sqlite_fetch_array($result);
-  var_dump($record);
+  echo "<pre>"; print_r($record); echo "</pre>";
 } else {
   die ($sqliteerror);
 }

@@ -11,7 +11,7 @@ replaced by the server before anything is sent to the web browser.
 <blurb>So if the HTML file contains:</blurb>
 
 <example><![CDATA[<html>
-<?php echo "Hello World"?>
+<?php echo "Hello World" ?>
 </html>]]></example>
 
 <blurb>

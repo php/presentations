@@ -29,5 +29,5 @@
 	$m->setDimension($w*1.8, $h*1.8);
 		
 	header('Content-type: application/x-shockwave-flash');
-	$m->output();
+	$m->output(6);
 ?>
