@@ -1,0 +1,81 @@
+<presentation 
+	template="php2" 
+	navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+90 Minutes
+
+You have used PHP for small projects for years, but how do you apply it to
+larger projects in a systematic way?  In this talk, Rasmus will walk you
+through a set of steps that include the design, implementation, testing,
+benchmarking, profiling, optimization and deployment of large-scale PHP
+applications.
+-->
+<topic>PHP</topic>
+<title>Best Practices</title>
+<event>php|works</event>
+<location>Toronto</location>
+<date>September 22, 2004</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/tortech04</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/tortech_goals.xml</slide>
+
+<chapter title="Design">
+  <slide>slides/intro/design.xml</slide>
+  <slide>slides/intro/urlapi.xml</slide>
+  <slide>slides/intro/pi.xml</slide>
+  <slide>slides/intro/errdoc.xml</slide>
+  <slide>slides/intro/image_cache.xml</slide>
+  <slide>slides/intro/funky.xml</slide>
+  <slide>slides/intro/file_layout.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+</chapter>
+
+<chapter title="Implement">
+  <slide>slides/intro/layers_a.xml</slide>
+</chapter>
+
+<chapter title="Extending">
+  <slide>slides/intro/arch.xml</slide>
+  <slide>slides/extending/ext4-bday.xml</slide>
+  <slide>slides/extending/ext8.xml</slide>
+  <slide>slides/extending/ext9.xml</slide>
+  <slide>slides/extending/ext11.xml</slide>
+  <slide>slides/extending/ext13.xml</slide>
+  <slide>slides/intro/layers_b.xml</slide>
+  <slide>slides/intro/poll1.xml</slide>
+  <slide>slides/intro/poll2.xml</slide>
+  <slide>slides/intro/poll3.xml</slide>
+</chapter>
+
+<chapter title="Performance">
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/intro/new_apc.xml</slide>
+  <slide>slides/intro/php_opcode_caches3.xml</slide>
+  <slide>slides/intro/new_bench1.xml</slide>
+  <slide>slides/intro/new_bench1a.xml</slide>
+  <slide>slides/intro/new_bench2.xml</slide>
+  <slide>slides/intro/new_bench3.xml</slide>
+  <slide>slides/intro/new_bench4.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/xdebug.xml</slide>
+  <slide>slides/intro/new_bench5.xml</slide>
+  <slide>slides/intro/valgrind.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+  <slide>slides/intro/repl3.xml</slide>
+  <slide>slides/intro/stop.xml</slide>
+</chapter>
+
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

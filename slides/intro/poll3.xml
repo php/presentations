@@ -1,0 +1,91 @@
+<slide title="Application Logic">
+
+<example title="SQL Schema" marginleft="1em" marginright="0em" fontsize="1.6em" type="php"><![CDATA[CREATE TABLE poll_votes (
+  user_name varchar(32) binary NOT NULL default '',
+  poll_id smallint(6) NOT NULL default '0',
+  question smallint(6) NOT NULL default '0',
+  answer set("","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
+             "p","q","r","s","t","u","v","w","x","y","z") NOT NULL default "",
+  text_answer varchar(255) binary NOT NULL default '',
+  PRIMARY KEY (user_name,poll_id,question)
+) TYPE=MyISAM;
+
+CREATE TABLE poll_results (
+  poll_id smallint(6) NOT NULL default '0',
+  question smallint(6) NOT NULL default '0',
+  answer char(1) NOT NULL default '',
+  text_answer varchar(255) binary NOT NULL default '',
+  votes int(11) NOT NULL default '0',
+  INDEX (poll_id)
+) TYPE=MyISAM;]]></example>
+
+<example title="Logic Layer" marginleft="1em" marginright="0em" fontsize="1.6em"><![CDATA[<?php
+
+function db_connect() {
+  mysql_pconnect("localhost","poll_user","password");
+  mysql_select_db("polls");
+}
+
+function db_query($q) {
+  $res = mysql_query($q);
+  if(!$res) {
+    trigger_error("db_query($q): ".mysql_error(), E_USER_ERROR);
+  }
+  return $res;
+}
+
+function voted($poll, $question) {
+  global $user;
+
+  $res = db_query("select answer from poll_votes 
+                   where poll_id=$poll 
+				   and user_name='$user' 
+				   and question=$question");
+
+  return mysql_num_rows($res) ? mysql_result($res,0):false;
+}
+
+function total_votes($poll, $question) {
+  $res = db_query("select sum(votes) as total from poll_results
+                   where poll_id=$poll and question=$question");
+
+  return mysql_num_rows($res) ? mysql_result($res,0):false;
+}
+
+function results($poll, $question, $answer) {
+  $res = db_query("select votes from poll_results 
+                   where poll_id=$poll 
+				   and question=$question
+				   and answer=$answer");
+
+  return mysql_num_rows($res) ? mysql_result($res,0):false;
+}
+
+function init($poll, $start_qn = 1) {
+  $GLOBALS['user'] = $user = $_SERVER['PHP_AUTH_USER'];
+  $GLOBALS['qn']   = $start_qn;
+  $GLOBALS['id']   = $poll;
+
+  db_connect();
+
+  if(getenv('REQUEST_METHOD')=="POST") {
+    // check bread crumb here
+    foreach($_POST['q'] as $qn=>$answer) {
+      if(($oanswer=voted($poll,$qn))!==false) {
+        // if user already voted on this question, decrement old vote
+        $where = "where poll_id=$poll and question=$qn and answer=$oanswer";
+        db_query("update poll_results set votes=votes-1 $where");
+      } 
+
+      // MySQL 4.1 specific query 
+      db_query("insert into poll_results 
+	            values ($poll,$qn,$answer,1) 
+				on duplicate key update set votes=votes+1");
+
+      // record user's [new] answer in poll_votes
+      db_query("replace into poll_votes values ('$user',$poll,$qn,$answer)");
+    }
+  }
+}
+?>]]></example>
+</slide>

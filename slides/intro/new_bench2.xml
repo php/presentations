@@ -1,0 +1,65 @@
+<slide title="Benchmarking Results">
+
+<example type="shell" title="An http_load run" fontsize="1.5em">
+5000 fetches, 5 max parallel, 5.145e+07 bytes, in 15.4981 seconds
+10290 mean bytes/connection
+322.619 fetches/sec, 3.31975e+06 bytes/sec
+msecs/connect: 1.24853 mean, 13.075 max, 0.034 min
+msecs/first-response: 10.0517 mean, 2406.17 max, 2.888 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+<blurb>Whenever you do any sort of load testing, you need look beyond just the
+raw numbers and have a look at what your server is actually doing.  Use %vmstat%:
+</blurb>
+
+<example type="shell" title="Base PHP Load" fontsize="1.5em" marginleft="1em" marginright="0em">
+procs -----------memory---------- ---swap-- -----io---- --system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in    cs us sy id wa
+ 3  0      0 695840  17452 150176    0    0     0     0 1005  2001 92  8  0  0
+ 2  0      0 694936  17452 150212    0    0     0     0 1014  2013 94  6  0  0
+ 3  0      0 693848  17452 150248    0    0     0     0 1004  1965 92  8  0  0
+ 4  0      0 691840  17452 150284    0    0     0     0 1015  1963 92  8  0  0
+ 5  0      0 691712  17452 150320    0    0     0     0 1008  1956 91  9  0  0
+ 6  0      0 691648  17452 150356    0    0     0     0 1011  1971 92  8  0  0
+ 1  0      0 691432  17452 150392    0    0     0     0 1003  1948 92  8  0  0
+ 1  0      0 691368  17452 150424    0    0     0     0 1013  1956 90 10  0  0
+ 1  0      0 691240  17452 150460    0    0     0     0 1003  1936 94  6  0  0
+ 1  0      0 691176  17452 150496    0    0     0     0 1015  1953 92  8  0  0
+ 2  0      0 691112  17452 150532    0    0     0     0 1007  1954 92  8  0  0
+ 3  0      0 691048  17452 150568    0    0     0     0 1012  1961 92  8  0  0
+ 1  0      0 690920  17452 150604    0    0     0     0 1007  1944 92  8  0  0
+</example>
+
+<blurb>
+Our benchmark test was deliberately designed to have quite a bit of PHP processing
+and not a whole lot of output.  10k is somewhat small for a web page.  If instead
+we have a whole lot of output, chances are we will be io-bound instead of cpu-bound.
+If you are io-bound, there is little sense in optimizing at the PHP level.
+</blurb>
+
+<example type="shell" title="Evidence of an io-bound test" fontsize="1.5em" marginleft="1em" marginright="0em">
+ procs      memory      page                    disks     faults      cpu
+ r b w     avm    fre  flt  re  pi  po  fr  sr ad0 ac0   in   sy  cs us sy id
+ 4 0 0  132860  15724 1033   0   0   0   0   0   0   0 4457  954 3704  2 25 74
+ 5 0 0  132860  15724 1009   0   0   0   0   0   0   0 4436  714 3597  3 24 73
+ 6 0 0  132860  15716  980   0   0   0   0   0   0   0 4446  925 3603  5 23 72
+ 2 0 0  132860  15716 1028   0   0   0   0   0   6   0 4514  720 3696  2 24 73
+ 3 0 0  132472  15716 1018   0   0   0   0   0   2   0 4501  946 3673  2 22 76
+ 4 0 0  132472  15716 1039   0   0   0   0   0   0   0 4565  737 3718  2 26 73
+ 3 0 0  132472  15708 1010   0   0   0   0   0   2   0 4498  938 3639  2 24 75
+ 2 0 0  132472  15708 1012   0   0   0   0   0   0   0 4543  730 3665  5 25 70
+</example>
+
+<example type="shell" title="Things to try if you are io-bound">
+[php.ini]
+output_handler = ob_gzhandler
+</example>
+
+<example type="shell">
+[httpd.conf]
+LoadModule gzip_module lib/apache/mod_gzip.so
+</example>
+
+</slide>

@@ -11,4 +11,12 @@
 Also make sure you use an atomic file deployment mechanism like *rsync* or *mv*.
 Never *tar* or *cp* files to their final destinations on a running production server.
 </blurb>
+<blurb title="Beware of cache slams">
+When a file is modified on a busy server there is a race to compile and cache the
+new file.  This can put a drain on your server and its resources.  Because APC uses
+the device+inode as the hash, you can make use of that in your file update strategy.
+Write new files to a temporary filename or perhaps a temporary directory, hit it once,
+then rename it to its publically visible location.  mtime does not change on a rename
+as long as you are not moving it from one fs to another.
+</blurb>
 </slide>

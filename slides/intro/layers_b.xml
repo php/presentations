@@ -1,0 +1,54 @@
+<slide title="Birthday Function">
+<break lines="1" />
+<example title="PHP Version" fontsize="1.5em"><![CDATA[<?php
+  function birthday($user) {
+    if(strftime('%m %d')==strftime('%m %d',$user['bday'])) 
+      $age = strftime('%Y') - strftime('%Y',$user['bday']);
+      if(($age%100)>10 && ($age%100)<20) $ap='th';
+      else switch($age%10) {
+        case 1: $ap = 'st'; break;
+        case 2: $ap = 'nd'; break;
+        case 3: $ap = 'rd'; break;
+        default:  $ap = 'th'; break; 
+      }
+      return $age.$ap;
+    else 
+      return false;
+  }
+?>]]></example>
+
+<blurb>
+Other than a little bit of added parameter parsing, if you compare the C version of 
+~birthday()~ to the PHP version, it isn't that much harder to write it in C.
+</blurb>
+
+<example title="C Version" fontsize="1.5em"><![CDATA[PHP_FUNCTION(birthday) {
+  time_t timestamp, now;
+  struct tm *ta1, tmbuf1, *ta2, tmbuf2;
+  int age;
+  char ret_age[8];
+
+  if (zend_parse_parameters(1 TSRMLS_CC, "l", &timestamp) == FAILURE)
+      return;
+
+  ta1 = php_localtime_r(&timestamp, &tmbuf1);
+  time(&now);
+  ta2 = php_localtime_r(&now, &tmbuf2);
+
+  if(tmbuf1.tm_mday==tmbuf2.tm_mday && tmbuf1.tm_mon==tmbuf2.tm_mon) {
+      age = tmbuf2.tm_year - tmbuf1.tm_year;
+      if((age%100)>10 && (age%100)<19) sprintf(ret_age,"%dth",age);
+      else switch(age % 10) {
+          case 1: sprintf(ret_age,"%dst",age); break;
+          case 2: sprintf(ret_age,"%dnd",age); break;
+          case 3: sprintf(ret_age,"%drd",age); break;
+          default:sprintf(ret_age,"%dth",age); break;
+      }
+  } else {
+      RETURN_FALSE;
+  }
+  RETURN_STRING(ret_age,1);
+}
+]]></example>
+
+</slide>

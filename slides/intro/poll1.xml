@@ -1,0 +1,41 @@
+<slide title="Template API">
+
+<blurb>
+For larger projects you want to be very careful when designing how the
+layers talk to each other.  I like to provide a very clean API to the 
+template layer and start each project by thinking about what the ideal
+template should look like.
+</blurb>
+
+<blurb title="Poll Example">
+Let's design a little application that allows people to answer a set of
+questions in various formats.  We want to make it really easy for our
+content people to create new polls and we want to provide them with a flexible
+template API.
+</blurb>
+
+<example title="Poll Template"><![CDATA[<?php
+start_poll(1);
+$os = array("FreeBSD", "Linux","OSX", "Windows", "Other");
+?>
+<p class="purpose">
+Please answer a couple of questions for us.
+</p>
+
+<p class="question">
+1. What is your name?
+</p>
+<?php text_answer('name',64)?>
+
+<p class="question">
+2. Which operating systems do you use on a daily basis?
+</p>
+<?php select_any_of($os)?>
+
+<p class="question">
+3. Which operating system do you prefer?
+</p>
+<?php select_one_of($os)?>
+
+<?php end_poll(); ?>]]></example>
+</slide>

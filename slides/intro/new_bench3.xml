@@ -1,0 +1,56 @@
+<slide title="Benchmarking Results">
+
+<blurb>
+So, we have determined we are cpu-bound and we need to go faster.  What can we do?
+Some low-hanging fruit:
+</blurb>
+
+<example title="include_path" type="shell">
+include_path = "/usr/share/pear:."
+</example>
+
+<example><![CDATA[<?php
+    include './template_helpers.inc';
+    include 'business_logic.inc';
+?>]]></example>
+
+<example title="open_basedir" type="shell" fontsize="1.75em">
+open_basedir = "/usr/share/htdocs/:/usr/share/pear/"
+</example>
+
+<blurb>open_basedir checking adds some extra syscalls to every file operation.  It can be useful,
+but it is rather expensive, so turn it off if you don't think you need it.</blurb>
+
+<example title="variables_order" type="shell">
+variables_order = "GPC"
+</example>
+<example><![CDATA[<?php
+    echo $_SERVER['DOCUMENT_ROOT'];
+    echo getenv('DOCUMENT_ROOT'); 
+?>]]></example>
+
+<blurb>If you never use cookies, turn those off too</blurb>
+
+<example title="Output buffering?" type="shell" fontsize="1.75em">
+output_buffering = On
+</example>
+
+<example title="Add an Opcode Cache" type="shell">
+extension=apc.so
+apc.shm_segments=1
+apc.shm_size=64
+apc.num_files_hint=1000
+apc.mmap_file_mask=/tmp/apc.XXXXXX
+</example>
+
+<example title="Switch to semaphore locking in APC" type="shell">
+CPPFLAGS=-I/usr/include/apache-1.3 \
+./configure' --enable-apc --enable-mmap --enable-sem
+</example>
+
+<list title="Apply some of the hacks floating around">
+<bullet>http://lerdorf.com/php/syscall.txt</bullet>
+<bullet>http://lerdorf.com/php/non-pic.txt</bullet>
+</list>
+
+</slide>

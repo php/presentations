@@ -1,0 +1,22 @@
+<slide title="Benchmarking Results">
+<break lines="5" />
+
+<example type="shell">
+ 322 requests/sec         Standard PHP 4.3
+ 325 requests/sec         Turn on Output Buffering
+ 325 requests/sec         variables_order from EGPCS to GPC
+ 345 requests/sec         Compile PHP with non-pic patch
+ 355 requests/sec         Compile PHP with non-pic and syscall patch
+ 385 requests/sec         Standard PHP + APC
+ 425 requests/sec         syscall+nonpic+GPC+APC
+</example>
+
+<break lines="2" />
+<blurb title="Perspective">
+322 requests/second is 1,159,200/hour or 27,820,800/day. 
+</blurb>
+<blurb>
+425 requests/second is 1,530,000/hour or 36,720,000/day.
+</blurb>
+
+</slide>

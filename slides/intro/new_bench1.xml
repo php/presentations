@@ -1,0 +1,25 @@
+<slide title="Benchmarking">
+
+<blurb>
+Let's have a look at how we might benchmark and subsequently tune a PHP server.  
+I use %http_load% from acme.com to do the actual testing.
+</blurb>
+
+<example title="Don't blow your io buffers!" type="shell">
+#  To change this on Linux, cat a larger number 
+#  into /proc/sys/net/core/wmem_max in your 
+#  httpd startup script
+SendBufferSize 65535
+</example>
+
+<example title="This is our benchmark script" fontsize="1.5em" filename="newbench_main.php"/>
+
+<example title="bench_include1.inc" fontsize="1.5em" filename="bench_include1.inc"/>
+
+<example title="bench_include2.inc" fontsize="1.5em" filename="bench_include2.inc"/>
+
+<example title="menu.xml" fontsize="1.5em" type="xml" filename="menu.xml"/>
+
+<example title="menu.xsl" fontsize="1.5em" type="xsl" filename="menu.xsl"/>
+
+</slide>

@@ -1,0 +1,31 @@
+<slide title="New APC Features">
+
+<break lines="1" />
+
+<list>
+<bullet>Better memory handling when getting near the shared memory limit.</bullet>
+<bullet>user-level access to store PHP variables in shared memory easily.</bullet>
+<bullet>Quick way to load constants from shared memory</bullet>
+</list>
+
+<example title="apc_store/fetch" result="1"><![CDATA[<?php
+  $a = array(1,2,3,4,5);
+  apc_store('my_array', $a, 5);
+  $a = 0;
+  print_r($a);
+  $b = apc_fetch('my_array');
+  var_dump($b);
+?>]]></example>
+
+<break lines="1" />
+
+<example title="save/load constants" result="1"><![CDATA[<?php
+  if(!apc_load_constants('my_constants')) {
+    $constants = array('ABC'=>'testing',
+                       'DEF'=>123,
+                       'FOO'=>'Bar');
+    apc_define_constants('my_constants', $constants);
+  }
+  echo ABC,DEF,FOO;
+?>]]></example>
+</slide>

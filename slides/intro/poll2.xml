@@ -1,0 +1,130 @@
+<slide title="Template Helpers">
+
+<blurb>
+In our template helper layer we implement our frontend API.
+</blurb>
+
+<example title="Helper Layer" fontsize="1.6em" marginright="0em" marginleft="1em"><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <base href="http://php.net" />
+    <title>Questionnaire</title>
+    <style type="text/css" media="screen">@import "/poll/style.css";</style>
+  </head>
+<body>
+<h3>Questionnaire</h3>
+<?php
+
+require 'logic.inc';
+
+function start_poll($poll, $qn=1) {
+  global $at_least_one_vote;
+
+  init($poll,	$qn);
+  $at_least_one_vote = false;
+  $self = getenv('REQUEST_URI');
+  // consider adding a crumb here to prevent poll spoofing
+
+echo <<<EOT
+  <form action="$self" method="POST">
+  <div class="main_box">
+EOT;
+
+}
+
+function end_poll() {
+  global $at_least_one_vote;
+
+  if(!$at_least_one_vote) {
+    echo '<div align="center"><input type="submit" 
+	      value=" Submit Answers " /></div></form>';
+  } else {
+    echo '<div align="center"><input type="submit" 
+	      value=" Change Answers "/></div></form>';
+  }
+  echo "</div\n";
+}
+
+function select_one_of($choices) {
+  global $id, $qn, $at_least_one_vote;
+
+  if(!is_array($choices)) 
+    trigger_error("You must pass an array to select_one_of()", E_USER_ERROR);
+
+  // Grab the user's recorded answer to this question if any
+  $answer  = voted($id,$qn);
+  $total_votes_on_this_question = total_votes($id,$qn);
+  $i='a';
+  echo '<table class="results">';
+  foreach($choices as $c) {
+    $checked = $answer?in_array($i,$answer):false;
+    echo "<tr><td><input type=\"radio\" name=\"q[$qn][]\" 
+	      value=\"$i\" ".($checked?'CHECKED':'')."/> $c</td>";
+    if($answer) {
+      $at_least_one_vote = true;
+      $percentage = 100*(($v=(int)results($id,$qn,$i))/
+	                $total_votes_on_this_question);
+      $img = ($percentage) ?
+	    ('<img  src="/poll/bline.gif" height="12" width="'.
+		(int)$percentage.'" />') :
+		'';
+      echo "<td>&nbsp;$v of $total_votes_on_this_question (".
+	       sprintf("%.1f",$percentage)."%)</td><td> $img</td></tr>\n";
+    } else {
+      echo '</tr>';
+    }
+    $i++;
+  }
+  echo "</table>\n";
+  $qn++;
+}
+
+function select_any_of($choices) {
+  global $id, $qn, $at_least_one_vote;
+
+  if(!is_array($choices)) 
+    trigger_error("You must pass an array to select_any_of()", E_USER_ERROR);
+  // Grab the user's recorded answer to this question if any
+  $answer  = voted($id,$qn);
+  $total_votes_on_this_question = total_votes($id,$qn);
+  $i='a';
+  echo '<table class="results">';
+  foreach($choices as $c) {
+    $checked = $answer?in_array($i,$answer):false;
+    echo "<tr><td><input type=\"checkbox\" name=\"q[$qn][]\"
+	      value=\"$i\" ".($checked?'CHECKED':'')."/> $c</td>";
+    if($answer) {
+      $at_least_one_vote = true;
+      $percentage = 100*(($v=(int)results($id,$qn,$i))/
+	                $total_votes_on_this_question);
+      $img = ($percentage>0.0) ?
+	    ('<img  src="/poll/bline.gif" height="12" width="'.
+		(int)$percentage.'" />') :
+		'';
+      echo "<td>&nbsp;$v of $total_votes_on_this_question (".
+	       sprintf("%.1f",$percentage)."%)</td><td> $img</td></tr>\n";
+    } else {
+      echo '</tr>';
+    }
+    $i++;
+  }
+  echo "</table>\n";
+  $qn++;
+}
+
+function text_answer($field_name,$len) {
+  global $id, $qn;
+
+  $answer = get_text_answer($id,$qn);
+  $size = (int)($len/2);
+echo <<<EOT
+  <table class="results">
+  <tr><td>
+  <input type="textfield" size="$size" maxlength="$len" name="t[$qn]" value="$answer" />
+  </td></tr>
+  </table>
+EOT;
+
+  $qn++;
+}?>]]></example>
+</slide>

@@ -1,9 +1,19 @@
 <slide title="Design">
-<list title="Considerations" fontsize="4em">
+<break lines="2" />
+<list title="Outside-in and Inside-out view" fontsize="4em">
+<bullet> What do outsiders (users) see looking in?</bullet>
+<bullet> What do insiders (developers) see looking out?</bullet>
+</list>
+<break lines="2" />
+<list title="Outside-in" fontsize="4em">
 <bullet>The URL - The API to your Web App</bullet>
 <bullet>User interface flow</bullet>
+</list>
+<break lines="2" />
+<list title="Inside-out" fontsize="4em">
 <bullet>File Layout</bullet>
 <bullet>Separation of layout from business logic</bullet>
 <bullet>Server Architecture and Load Balancing</bullet>
 </list>
+
 </slide>

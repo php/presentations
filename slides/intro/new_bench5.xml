@@ -1,0 +1,68 @@
+<slide title="Profile">
+
+<blurb>
+There is only so much you can do without changing your code.  Your main speedups are usually going to
+come from rethinking your approach if it proves to be too slow.
+</blurb>
+
+<example title="Change the Rules!"><![CDATA[<?php
+$xml = domxml_open_file('menu.xml');
+$xsl = domxml_xslt_stylesheet_file('menu.xsl');
+$out = $xsl->process($xml);
+echo $out->dump_mem();
+?>]]></example>
+
+<example title="Cheat!" fontsize="1.8em"><![CDATA[<?php
+$menu = apc_fetch('menu');
+if(!$menu) {
+  $dom = domxml_open_file('menu.xml');
+  $root = $dom->document_element();
+  $node = $root->first_child();
+  $i=0;
+  while($node) {
+    $subnode = $node->first_child();
+    while($subnode) {
+      if(isset($subnode->tagname)) {
+        $menu[$i][$subnode->tagname] = $subnode->get_content();
+      }
+      $subnode = $subnode->next_sibling();
+    }
+    $i++;
+    $node = $node->next_sibling();
+  }
+  apc_store('menu',$menu);
+}
+foreach($menu as $item) {
+echo <<<EOT
+<div style="background-color:teal;color:white;padding:4px">
+  <span style="font-weight:bold;color:white">$item[name]</span>
+  - $item[price]
+</div>
+<div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
+  $item[description]
+  <span style="font-style:italic">($item[calories] calories per serving)</span>
+</div>
+EOT;
+
+}
+?>]]></example>
+
+<break lines="1" />
+
+<example type="shell">
+ 322 requests/sec         Standard PHP 4.3
+ 325 requests/sec         Turn on Output Buffering
+ 325 requests/sec         variables_order from EGPCS to GPC
+ 345 requests/sec         Compile PHP with non-pic patch
+ 355 requests/sec         Compile PHP with non-pic and syscall patch
+ 385 requests/sec         Standard PHP + APC
+ 425 requests/sec         syscall+nonpic+GPC+APC
+ 570 requests/sec         by cheating
+</example>
+
+<break lines="2" />
+<blurb>
+570 is 2,052,000 requests/hour or 49,248,000 request/day
+</blurb>
+
+</slide>

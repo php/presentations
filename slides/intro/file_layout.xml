@@ -1,0 +1,16 @@
+<slide title="File Layout">
+<blurb> </blurb>
+<blurb fontsize="5em">Keep it simple!</blurb>
+<list fontsize="4em">
+<bullet>All files (.html/.php/.inc) with HTML under $DOC_ROOT</bullet>
+<bullet>All non-HTML files, somewhere else</bullet>
+</list>
+<blurb> </blurb>
+<blurb> </blurb>
+<blurb> </blurb>
+<blurb fontsize="5em">No direct access to .inc</blurb>
+<example><![CDATA[<Files ~ "\.inc$">
+    Order allow,deny
+    Deny from all
+</Files>]]></example>
+</slide>
