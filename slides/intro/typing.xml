@@ -27,6 +27,7 @@
 </list>
 
 <example result="1"><![CDATA[<?php
-    echo 5 + "1.5" + "10e2";]]></example>
+    echo 5 + "1.5" + "10e2";
+?>]]></example>
 
 </slide>
