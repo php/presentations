@@ -2,7 +2,6 @@
 	$s = new SWFShape();
 	$fp = fopen('php-big.jpg','r');
 	$jpg = new SWFBitmap($fp);
-	$fp = null;
 	$w = $jpg->getWidth(); $h = $jpg->getHeight();
 
 	$f = $s->addFill($jpg);
@@ -30,5 +29,5 @@
 	$m->setDimension($w*1.8, $h*1.8);
 		
 	header('Content-type: application/x-shockwave-flash');
-#	$m->output();
+	$m->output();
 ?>

@@ -11,7 +11,7 @@ $m = new SWFMovie();
 $m->setDimension($width, 70);
 $m->setBackground(0xcf, 0xcf, 0xcf);
 
-$f = new SWFFont("../../fonts/Techno.fdb");
+$f = new SWFFont("../../../fonts/Techno.fdb");
 
 $hit = new SWFShape();
 $hit->setRightFill($hit->addFill(0,0,0));
