@@ -10,28 +10,28 @@
 </head>
 <body bgcolor="#ffffff" text="#000000">
 <pre>
-<a name="line4"> 4</a> PHP_ARG_WITH(aalib, for aalib support,
-<a name="line5"> 5</a> [  --with-aalib             Include aalib support])
+<a name="line4"> 4</a> PHP_ARG_WITH(my_ext_name, for my_ext_name support,
+<a name="line5"> 5</a> [  --with-my_ext_name             Include my_ext_name support])
 <a name="line6"> 6</a> 
-<a name="line7"> 7</a> if test &quot;$PHP_AALIB&quot; != &quot;no&quot;; then
+<a name="line7"> 7</a> if test &quot;$PHP_MY_EXT_NAME&quot; != &quot;no&quot;; then
 <a name="line8"> 8</a> 
 <a name="line9"> 9</a>   SEARCH_PATH=&quot;/usr/local /usr&quot;     <font color="#444444"># you might want to change this</font>
-<a name="line10">10</a>   SEARCH_FOR=&quot;/<strong>include</strong>/aalib.h&quot;  <font color="#444444"># you most likely want to change this</font>
-<a name="line11">11</a>   if test -r $PHP_AALIB/$SEARCH_FOR; then <font color="#444444"># path given as parameter</font>
-<a name="line12">12</a>     AALIB_DIR=$PHP_AALIB
+<a name="line10">10</a>   SEARCH_FOR=&quot;/<strong>include</strong>/my_ext_name.h&quot;  <font color="#444444"># you most likely want to change this</font>
+<a name="line11">11</a>   if test -r $PHP_MY_EXT_NAME/$SEARCH_FOR; then <font color="#444444"># path given as parameter</font>
+<a name="line12">12</a>     MY_EXT_NAME_DIR=$PHP_MY_EXT_NAME
 <a name="line13">13</a>   else <font color="#444444"># search default path list</font>
-<a name="line14">14</a>     AC_MSG_CHECKING([for aalib files in default path])
+<a name="line14">14</a>     AC_MSG_CHECKING([for my_ext_name files in default path])
 <a name="line15">15</a>     for i in $SEARCH_PATH ; do
 <a name="line16">16</a>       if test -r $i/$SEARCH_FOR; then
-<a name="line17">17</a>         AALIB_DIR=$i
+<a name="line17">17</a>         MY_EXT_NAME_DIR=$i
 <a name="line18">18</a>         AC_MSG_RESULT(found in $i)
 <a name="line19">19</a>       fi
 <a name="line20">20</a>     done
 <a name="line21">21</a>   fi
 <a name="line22">22</a> 
-<a name="line23">23</a>   if test -z &quot;$AALIB_DIR&quot;; then
+<a name="line23">23</a>   if test -z &quot;$MY_EXT_NAME_DIR&quot;; then
 <a name="line24">24</a>     AC_MSG_RESULT([not found])
-<a name="line25">25</a>     AC_MSG_ERROR([Please reinstall the aalib distribution])
+<a name="line25">25</a>     AC_MSG_ERROR([Please reinstall the my_ext_name distribution])
 <a name="line26">26</a>   fi
 </pre>
 </body>

@@ -6,13 +6,13 @@
 	<list fontsize="4em">
 		<bullet>Copy our newly created extension to some other place:</bullet>
 	</list>
-	<example fontsize="1.7em"><![CDATA[# mv ext/aalib /dat/dev/php]]></example>
+	<example fontsize="1.7em"><![CDATA[# mv ext/my_ext_name /dat/dev/php]]></example>
 
 	<blurb></blurb>
 	<list fontsize="4em">
 		<bullet>Go to the new directory and run phpize:</bullet>
 	</list>
-	<example fontsize="1.7em"><![CDATA[# cd /dat/dev/php/aalib
+	<example fontsize="1.7em"><![CDATA[# cd /dat/dev/php/my_ext_name
 # phpize
 ]]></example>
 
@@ -20,10 +20,9 @@
 	<list fontsize="4em">
 		<bullet>You should see the following output (or similar):</bullet>
 	</list>
-	<example fontsize="1.7em"><![CDATA[You should update your `aclocal.m4' by running aclocal.
-Configuring for:
-  PHP Api Version:   20020918
-  Zend Module Api No:   20020429
-  Zend Extension Api No:   20021010
+	<example fontsize="1.7em"><![CDATA[Configuring for:
+PHP Api Version:         20031224
+Zend Module Api No:      20020429
+Zend Extension Api No:   90021012
 ]]></example>
 </slide>

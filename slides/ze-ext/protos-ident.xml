@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Prototypes</title>
+
+	<blurb> </blurb>
+	<blurb>protos</blurb>
+	<example fontsize="1.5em"><![CDATA[return_type function_name(type1 param1, type2 param2 [, type3 param3])
+	Description]]></example>
+
+	<blurb>Types:</blurb>
+
+	<list>
+		<bullet>bool</bullet>
+		<bullet>int</bullet>
+		<bullet>string</bullet>
+		<bullet>float</bullet>
+		<bullet>array</bullet>
+		<bullet>object</bullet>
+		<bullet>resource</bullet>
+	</list>
+</slide>

@@ -9,14 +9,14 @@
 ...
 
 Libraries have been installed in:
-   /dat/dev/php/aalib/modules]]></example>
+   /dat/dev/php/my_ext_name/modules]]></example>
 
 	<blurb> </blurb>
 	<blurb>Test library:</blurb>
-	<example fontsize="1.4em"><![CDATA[# php -r 'dl("/dat/dev/php/aalib/modules/aalib.so");
-          echo "\n".confirm_aalib_compiled("aalib")."\n";']]></example>
+	<example fontsize="1.4em"><![CDATA[# php -r 'dl("/dat/dev/php/my_ext_name/modules/my_ext_name.so");
+          echo "\n".confirm_my_ext_name_compiled("my_ext_name")."\n";']]></example>
 
 	<blurb> </blurb>
 	<blurb>Output:</blurb>
-	<example fontsize="1.4em"><![CDATA[Congratulations! You have successfully modified ext/aalib/config.m4. Module aalib is now compiled into PHP.]]></example>
+	<example fontsize="1.4em"><![CDATA[Congratulations! You have successfully modified ext/my_ext_name/config.m4. Module my_ext_name is now compiled into PHP.]]></example>
 </slide>
