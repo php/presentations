@@ -1,0 +1,9 @@
+<slide>
+<title>Simple RDF</title>
+<list>
+<bullet>RDF: Complexity made Simple</bullet>
+<bullet>Used to have to write SAX parser, or use PEAR Classes</bullet>
+<bullet>Faster using C extension</bullet>
+</list>
+<example title="RDF Processing" fontsize="1.4em" filename="rss_feed.php" type="php" result="1"/>
+</slide>

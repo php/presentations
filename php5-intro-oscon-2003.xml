@@ -22,8 +22,6 @@
 <slide>slides/php5intro/blanktitlepage.xml</slide>
 <slide>slides/php5intro/newfunctionality.xml</slide>
 <slide>slides/php5intro/internals1.xml</slide>
-<slide>slides/php5intro/exceptions.xml</slide>
-<slide>slides/php5intro/exceptions1.xml</slide>
 <slide>slides/php5intro/variables.xml</slide>
 <slide>slides/php5intro/oldoo.xml</slide>
 <slide>slides/php5intro/newoo1.xml</slide>
@@ -44,13 +42,18 @@
 <slide>slides/php5intro/autoload.xml</slide>
 <slide>slides/php5intro/overload.xml</slide>
 <slide>slides/php5intro/overload1.xml</slide>
-<slide>slides/php5intro/abstract.xml</slide>
 <slide>slides/php5intro/abstract1.xml</slide>
 <slide>slides/php5intro/interfaces.xml</slide>
 <slide>slides/php5intro/interfaces1.xml</slide>
+<slide>slides/php5intro/exceptions.xml</slide>
+<slide>slides/php5intro/exceptions1.xml</slide>
 <slide>slides/php5intro/typehint.xml</slide>
 <slide>slides/php5intro/spl.xml</slide>
 <slide>slides/php5intro/streams.xml</slide>
-<slide>slides/php5intro/thankyou.xml</slide>
+<slide>slides/php5intro/simplexml1.xml</slide>
+<slide>slides/php5intro/simplexml2.xml</slide>
+<slide>slides/php5intro/sqlite1.xml</slide>
+<slide>slides/php5intro/sqlite2.xml</slide>
+<slide>slides/php5intro/resources.xml</slide>
 
 </presentation>
