@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>External tools</title>
+	<title>External Tools</title>
 
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Bytecode caches</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Content caches</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>SRM: Script Running Machine</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>lingerd</bullet>
+	</list>
 </slide>

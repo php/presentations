@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Bytecode caches</title>
+
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Cache compiled PHP scripts</bullet>
+		<bullet>Serializing caches:</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>APC (Alternative PHP Cache)</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>'SHM' caches:</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>ionCube Accelerator</bullet>
+		<bullet>Zend Cache</bullet>
+	</list>
+</slide>
