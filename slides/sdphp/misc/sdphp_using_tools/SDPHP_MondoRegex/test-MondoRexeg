@@ -1,0 +1,29 @@
+<?php
+
+require_once 'SDPHP/MondoRegex.php';
+
+echo "TESTING MondoRegex\n";
+
+$reList = array (
+			'funcs' => "/function (\w+)\s?\(/",
+			'assign' => "/\s+([^\s]+)\s+=\s+(.+);/",
+			'varname' => "/([$]\w+[-]*[>]*\w+)/"
+			);
+
+$inputList = file("./MondoRegex.php");
+
+$mondo  = new MondoRegex($reList);
+
+echo "Using match\n--------------\n";
+$mondo->match($inputList);
+print_r($mondo->getMatches());
+
+echo "\nUsing match_all\n--------------\n";
+$mondo->matchAll($inputList);
+print_r($mondo->getMatches());
+
+echo "\nGetting only the matches to the 'funcs' regular expression\n";
+echo "----------------------------------------------------------\n";
+print_r($mondo->getMatchesForKey('funcs'));
+
+?>

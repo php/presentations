@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE package SYSTEM "../package.dtd">
+<!-- do not use the "Type" attribute here, that one is only for
+     generated package.xml files -->
+<package>
+ <name>MondoRegex</name>
+ <summary>Class to apply a list of regular expressions</summary>
+ <description>
+  This class applies an array of named regular expressions to an array of
+  input strings. Has methods to return all matches, or just matches for a
+  named regular expression.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>jmcastagnetto</user>
+   <name>Jesus M. Castagnetto</name>
+   <email>jmcastagnetto@php.net</email>
+   <role>lead</role>
+  </maintainer>
+  <maintainer>
+   <user>snipe</user>
+   <name>Alison Gianotto</name>
+   <email>snipe@snipe.net</email>
+   <role>developer</role>
+  </maintainer>
+ </maintainers>
+ <release>
+  <license>PHP</license>
+  <version>0.1.0</version>
+  <date>2003-06-05</date>
+  <notes>
+   Initial release
+  </notes>
+  <state>beta</state>
+  <filelist>
+   <dir name="/" baseinstalldir="SDPHP">
+    <file role="php">MondoRegex.php</file>
+   </dir>
+  </filelist>
+ </release>
+ <changelog>
+ </changelog>
+</package>
