@@ -12,6 +12,8 @@
 <url>http://talks.php.net/</url>
 
 <slide>slides/php5intro/titlepage.xml</slide>
+<slide>slides/php5intro/internals1.xml</slide>
+<slide>slides/php5intro/newfunctionality.xml</slide>
 <slide>slides/php5intro/namespace.xml</slide>
 <slide>slides/php5intro/nestednamespaces.xml</slide>
 <slide>slides/php5intro/exceptions.xml</slide>
@@ -41,7 +43,6 @@
 <slide>slides/php5intro/interfaces.xml</slide>
 <slide>slides/php5intro/interfaces1.xml</slide>
 <slide>slides/php5intro/typehint.xml</slide>
-<slide>slides/php5intro/internals1.xml</slide>
 <slide>slides/php5intro/thankyou.xml</slide>
 
 </presentation>
