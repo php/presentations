@@ -1,0 +1,24 @@
+<slide title="Steps">
+
+<image marginright="1.5em" align="right" 
+       filename="fantastic-four.jpg"
+/>
+
+<list title="Standard Setup">
+<bullet>Clients make requests and servers reply
+</bullet>
+<bullet>Communication done over the Internet
+</bullet>
+
+</list>
+
+<list title="Four Basic Steps">
+    <bullet type="number">Web Services client script builds up the request</bullet>
+    <bullet type="number">Client sends the request to server using HTTP</bullet>
+    <bullet type="number">Server replies and returns an XML document with results</bullet>
+    <bullet type="number">Client parses XML</bullet>
+</list>
+
+
+
+</slide>

@@ -1,0 +1,19 @@
+<slide>
+<title>Build Request</title>
+
+<example title="Load in the SOAP Client" type="php" fontsize='1.4em'><![CDATA[<?php require 'SOAP/Client.php'; ?>
+]]></example>
+
+<example title="Generate Client Proxy (for Amazon.Com)" type="php" fontsize='1.4em'><![CDATA[<?php
+// We have human readable explanation of the API.
+$wsdl_url = 'http://soap.amazon.com/schemas3/AmazonWebServices.wsdl';
+$WSDL = new SOAP_WSDL($wsdl_url); 
+$client = $WSDL->getProxy(); 
+?>
+]]></example>
+
+<blurb title="Web Service Description Language (WSDL)">
+Machine readable description (XML) of a web service. 
+Used here to define server's methods and parameters. 
+</blurb>
+</slide>

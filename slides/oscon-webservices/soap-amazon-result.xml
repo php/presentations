@@ -1,0 +1,32 @@
+<slide>
+<title>What We Get</title>
+
+<example title="What We Get" fontsize='1.4em'><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+    <SOAP-ENV:Envelope xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:amazon="http://soap.amazon.com">
+    <SOAP-ENV:Body>
+    <namesp37:ManufacturerSearchRequestResponse xmlns:namesp37="http://soap.amazon.com">
+    <return xsi:type="amazon:ProductInfo">
+    <TotalResults xsi:type="xsd:string">165</TotalResults>
+    <Details SOAP-ENC:arrayType="amazon:Details[10]" xsi:type="SOAP-ENC:Array">
+    <Details xsi:type="amazon:Details">
+        <Url xsi:type="xsd:string">http://www.amazon.com/...</Url>
+        <Asin xsi:type="xsd:string">B00004OCKR</Asin>
+        <ProductName xsi:type="xsd:string">OXO Good Grips Salad Spinner</ProductName>
+        <Catalog xsi:type="xsd:string">Kitchen</Catalog>
+        <Manufacturer xsi:type="xsd:string">OXO</Manufacturer>
+        <ImageUrlSmall xsi:type="xsd:string">http://images.amazon.com/...</ImageUrlSmall>
+        <ImageUrlMedium xsi:type="xsd:string">http://images.amazon.com/...</ImageUrlMedium>
+        <ImageUrlLarge xsi:type="xsd:string">http://images.amazon.com/...</ImageUrlLarge>
+        <ListPrice xsi:type="xsd:string">$35.00</ListPrice>
+        <OurPrice xsi:type="xsd:string">$24.95</OurPrice>
+    </Details>
+    </Details>
+</return>
+</namesp37:ManufacturerSearchRequestResponse>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]></example>
+
+
+
+</slide>

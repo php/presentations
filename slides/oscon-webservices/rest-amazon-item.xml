@@ -1,0 +1,28 @@
+<slide>
+<title>Amazon_item</title>
+
+<example title="A class for each item" type="php" fontsize='1.4em'><![CDATA[<?php
+class Amazon_item {
+
+  // attributes and character data fields we want   
+  var $ProductName = '' ;
+  var $OurPrice = '';
+  var $url = '';
+  var $ImageUrlSmall = '';
+
+  // same display() as before!
+  function display() {
+    printf('<p style="clear:both"><img src="%s" alt="%s" 
+            align="left" /><a href="%s">%s</a><br/>%s</p>',
+            $this->ImageUrlSmall, 
+            htmlspecialchars($this->ProductName),
+            $this->url, htmlspecialchars($this->ProductName),
+            htmlspecialchars($this->OurPrice)
+          );
+  } 
+} 
+
+?>
+]]></example>
+
+</slide>

@@ -1,0 +1,29 @@
+<slide>
+<title>Results</title>
+
+<example title="XML Results" fontsize='1.4em'><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<ProductInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://xml.amazon.com/schemas3/dev-lite.xsd">
+
+   <TotalResults>165</TotalResults>
+   <Details url="http://www.amazon.com/...">
+      <Asin>B00004OCKR</Asin>
+      <ProductName>OXO Good Grips Salad Spinner</ProductName>
+      <Catalog>Kitchen</Catalog>
+      <Manufacturer>OXO</Manufacturer>
+      <ImageUrlSmall>http://images.amazon.com/...</ImageUrlSmall>
+      <ImageUrlMedium>http://images.amazon.com/...</ImageUrlMedium>
+      <ImageUrlLarge>http://images.amazon.com/...</ImageUrlLarge>
+      <ListPrice>$35.00</ListPrice>
+      <OurPrice>$24.95</OurPrice>
+   </Details>
+
+   <Details url="http://www.amazon.com/...">
+         ...
+   </Details>
+
+   ...
+
+</ProductInfo>
+]]></example>
+
+</slide>

@@ -1,0 +1,23 @@
+<slide title="Overview">
+
+<image align="right" marginright="1.5em"
+       filename="guernica.jpg"
+/>
+
+<blurb title="What is a Web Service?">
+ A "web service" is a network accessible interface to application functionality 
+ built using XML and usually HTTP.
+</blurb>
+
+<list title="Examples">
+<bullet>Where is my FedEx package?
+</bullet>
+<bullet>What is the current stock price of IBM?
+</bullet>
+<bullet>Which kitchen utensils does OXO sell?
+</bullet>
+</list>
+
+<blurb title="Why do we care?">
+These interfaces work regardless of the client's and server's platform and language.</blurb>
+</slide>

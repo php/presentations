@@ -1,0 +1,26 @@
+<slide>
+<title>Element Parts</title>
+
+<image align="right" marginright="1.5em"
+       filename="bee.jpg" 
+/> 
+
+<blurb title="How SAX Works">
+SAX is an &quot;event-based parser&quot;. It crawls through an XML document 
+and you configure the parser to call a function when an &quot;event&quot; 
+occurs.
+</blurb>
+
+<list title="Element Parts">
+    <bullet>name</bullet>
+    <bullet>attributes</bullet>
+    <bullet>character data</bullet>
+</list>
+
+<example title="Sample Tag" type="xml"><![CDATA[
+<tag attribute="value">character data</tag>
+]]></example>
+
+
+
+</slide>

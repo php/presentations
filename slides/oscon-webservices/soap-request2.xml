@@ -1,0 +1,18 @@
+<slide>
+<title>Send Request</title>
+
+<example title="Make ManufacturerSearchRequest for OXO Kitchen Supplies" type="php" fontsize='1.4em'><![CDATA[<?php
+// I love OXO kitchen products
+$params = array('manufacturer' => 'oxo',
+                'mode'         => 'kitchen',
+                'page'         => 1,
+                'type'         => 'lite',
+                'tag'          => 'trachtenberg-20',
+                'devtag'       => 'XXXXXX'
+               );
+
+$hits = $client->ManufacturerSearchRequest($params);
+?>
+]]></example>
+
+</slide>

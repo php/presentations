@@ -1,0 +1,17 @@
+<slide>
+<title>Parse</title>
+
+<example title="Parse the Results" type="php" fontsize='1.4em'><![CDATA[<?php
+foreach ($hits->Details as $hit) {
+    printf('<p style="clear:both"><img src="%s" alt="%s" 
+            align="left" /><a href="%s">%s</a><br/>%s</p>',
+            $hit->ImageUrlSmall, 
+            htmlspecialchars($hit->ProductName),
+            $this->Url, htmlspecialchars($hit->ProductName),
+            htmlspecialchars($hit->OurPrice)
+          );
+}
+?>]]>
+</example>
+
+</slide>

@@ -1,0 +1,15 @@
+<slide>
+<title>end_element</title>
+
+<example title="...and then it closes." type="php" fontsize='1.4em'><![CDATA[<?php
+  function end_element($parser, $tag) {
+    // Each product ends with a closing Details tag
+    if ('Details' == $tag) {
+      $this->item->display();
+      unset($this->item); 
+    }
+  }
+?>
+]]></example>
+
+</slide>

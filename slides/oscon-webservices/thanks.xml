@@ -1,0 +1,21 @@
+<slide title="Resources">
+  <list marginbottom="0em">
+    <li>This presentation: <![CDATA[<a href="http://talks.php.net/show/webservices-oscon2003">http://talks.php.net/show/webservices-oscon2003</a>]]></li>
+    <li>PHP + SOAP + Amazon <![CDATA[<a href="http://www.onlamp.com/pub/a/php/2003/07/03/php_amazon_soap.html">http://www.onlamp.com/pub/a/php/2003/07/03/php_amazon_soap.html</a>]]></li>
+    <li>PEAR::SOAP <![CDATA[<a href="http://pear.php.net/package-info.php?package=SOAP">http://pear.php.net/package-info.php?package=SOAP</a>]]></li>
+    <li>Shane Carvaeo's SOAP Presentation <![CDATA[<a href="http://talks.php.net/show/soap-phpcon-ny2003/">http://talks.php.net/show/soap-phpcon-ny2003/</a>]]> (Very detailed.)</li>
+    <li><![CDATA[<a href="http://www.oreilly.com/catalog/progphp">Programming PHP</a>]]> - 
+Chapter 11 ("XML") (Mostly XML-RPC.)</li>
+    <li><![CDATA[<a href="http://www.oreilly.com/catalog/phpckbk">PHP Cookbook</a>]]> Recipes:</li>
+  </list>
+  <list margintop="0em" marginleft="2em">
+    <li>SOAP: 12.9, 12.10</li>
+    <li>XML-RPC: 12.7, 12.8</li>
+    <li>Building &amp; Sending HTTP Requests: 8.9, 11.2</li>
+    <li>Parsing XML: 12.4, 12.5, 12.6 </li>
+  </list>  
+  <list marginbottom="0em">
+    <li>XML.com's Web services area: <![CDATA[<a href="http://www.xml.com/webservices/"
+>http://www.xml.com/webservices/</a>]]></li>
+</list>
+</slide>

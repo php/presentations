@@ -1,0 +1,24 @@
+<slide>
+<title>start_element</title>
+
+<example title="A new element begins..." type="php" fontsize='1.4em'><![CDATA[<?php
+  function start_element($parser, $tag, $attributes) {
+    // Each new item lives inside a Details container
+    if ('Details' == $tag) {
+      // Make a new Item
+      $this->item = new Amazon_item;
+
+      // Loop through the attributes
+      foreach ($attributes as $name => $value) {
+        if (isset($this->item->$name)) {
+          $this->item->$name .= trim($value);
+        }
+      }
+    } elseif (!empty($this->item)) {
+      $this->tag = $tag;
+    }
+  }
+?>
+]]></example>
+
+</slide>

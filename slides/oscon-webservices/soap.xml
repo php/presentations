@@ -1,0 +1,17 @@
+<slide title="SOAP">
+
+<image align="right" marginright="1.5em"
+       filename="mrbubble.jpg" 
+/> 
+
+<list title="SOAP">
+    <bullet>Formerly known as Simple Object Access Protocol.</bullet>
+    <bullet>Uses XML, but you never need to touch it.</bullet>
+    <bullet>Which is good, because SOAP is messy to look at.</bullet>
+    <bullet>You just call functions and manipulate arrays. (Unless you want to.)</bullet>
+    <bullet>A few PHP implementations: PEAR::SOAP, PHP-SOAP, NuSOAP</bullet>
+    <bullet>(Dirty little secret: Nobody uses SOAP.)</bullet>
+</list>
+
+
+</slide>

@@ -1,0 +1,31 @@
+<slide>
+<title>Parse</title>
+
+<image align="right" marginright="1.5em"
+       filename="bee-small.jpg" 
+/> 
+
+<example title="Create SAX Parser" type="php" fontsize='1.4em' width="50%"><![CDATA[<?php $xml = xml_parser_create(); ?>
+]]></example>
+
+<example title="Instantiate Object" type="php" fontsize='1.4em' width="50%"><![CDATA[<?php
+// code to appear on later...
+$obj = new Amazon_parser;
+?>
+]]></example>
+
+<example title="Configure Parser" type="php" fontsize='1.4em'><![CDATA[<?php
+xml_set_object($xml, $obj);
+xml_set_element_handler($xml, 'start_element', 'end_element');
+xml_set_character_data_handler($xml, 'character_data');
+xml_parser_set_option($xml, XML_OPTION_CASE_FOLDING, false);
+?>
+]]></example>
+
+<example title="Action!" type="php" fontsize='1.4em'><![CDATA[<?php
+xml_parse($xml, $hits);
+xml_parser_free($xml); 
+?>
+]]></example>
+
+</slide>

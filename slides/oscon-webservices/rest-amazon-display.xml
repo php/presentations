@@ -1,0 +1,27 @@
+<slide>
+<title>Results</title>
+
+<image align="center" title="Output"
+       filename="amazon-results.png"
+       />
+
+
+<example title="HTML" type="html" fontsize='1.4em'><![CDATA[
+&lt;p style="clear:both"&gt;
+&lt;img src="http://images.amazon.com/..." alt="OXO Good Grips Salad Spinner" align="left" /&gt;
+&lt;a href="http://www.amazon.com/exec/..."&gt;
+OXO Good Grips Salad Spinner&lt;/a&gt;&lt;br/&gt;
+$24.95
+&lt;/p&gt;
+<br/>
+&lt;p style="clear:both"&gt;
+&lt;img src="http://images.amazon.com/..." alt="OXO Steel 6-Piece Kitchen Essentials Set" align="left" /&gt;
+&lt;a href="http://www.amazon.com/..."&gt;
+OXO Steel 6-Piece Kitchen Essentials Set&lt;/a&gt;&lt;br/&gt;
+$49.99&lt;/p&gt;
+</p>
+]]>
+</example>
+
+
+</slide>

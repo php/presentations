@@ -1,0 +1,16 @@
+<slide>
+<title>character_data</title>
+
+<example title="...in between is data..." type="php" fontsize='1.4em'><![CDATA[<?php
+  function character_data($parser, $data) {
+    if (!empty($this->item)) {
+      // only add pre-declared character data elements
+      if (isset($this->item->{$this->tag})) {
+        $this->item->{$this->tag} .= trim($data);
+      }
+    }
+  }
+?>
+]]></example>
+
+</slide>

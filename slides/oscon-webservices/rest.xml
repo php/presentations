@@ -1,0 +1,16 @@
+<slide title="REST">
+
+<image align="right" marginright="1.5em"
+       filename="rest.png" 
+/> 
+
+<list title="REST">
+    <bullet>REpresentational State Transfer (Roy Fielding)</bullet>
+    <bullet>Make URI request using existing HTTP methods: GET / POST / PUT / DELETE.</bullet>
+    <bullet>Data returned as XML, and you *do* need to touch it.</bullet>
+    <bullet>Which is good, because it's not complicated.</bullet>
+    <bullet>Many ways to parse XML: SAX / DOM / XSLT / SimpleXML</bullet>
+</list>
+
+
+</slide>

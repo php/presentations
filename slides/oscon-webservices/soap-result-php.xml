@@ -1,0 +1,28 @@
+<slide>
+<title>What We See</title>
+
+<example title="What We See" fontsize='1.4em'><![CDATA[stdClass Object
+(
+    [TotalResults] => 165
+    [Details] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [Url] => http://www.amazon.com/...
+                    [Asin] => B00004OCKR
+                    [ProductName] => OXO Good Grips Salad Spinner
+                    [Catalog] => Kitchen
+                    [Manufacturer] => OXO
+                    [ImageUrlSmall] => http://images.amazon.com/...
+                    [ImageUrlMedium] => http://images.amazon.com/...
+                    [ImageUrlLarge] => http://images.amazon.com/...
+                    [ListPrice] => $35.00
+                    [OurPrice] => $24.95
+                )
+         )
+)
+]]></example>
+
+
+
+</slide>

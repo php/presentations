@@ -1,0 +1,33 @@
+<slide>
+<title>Amazon_parser</title>
+
+<image align="right" marginright="1.5em"
+       filename="teapots.png" 
+/> 
+
+<example title="Parsing Class" type="php" fontsize='1.4em' width="70%"><![CDATA[<?php
+class Amazon_parser {
+  
+  var $tag;
+  var $item;
+  
+  function start_element($parser, $tag, $attributes) {
+     ...
+  }
+  
+  function end_element($parser, $tag) {
+     ...
+  }
+  
+  function character_data($parser, $data) {
+     ...
+  }
+}
+?>
+]]></example>
+
+
+
+
+
+</slide>

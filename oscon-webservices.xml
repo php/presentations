@@ -1,0 +1,47 @@
+<presentation>
+<topic>PHP</topic>
+<title>Web Services in PHP</title>
+<event>O'Reilly Open Source Conference</event>
+<location>Portland, OR</location>
+<date>July 9, 2003</date>
+<speaker>Adam Trachtenberg</speaker>
+<email>adam@trachtenberg.com</email>
+<url>http://talks.php.net/show/webservices-oscon2003</url>
+<slide>slides/oscon-webservices/titlepage.xml</slide>
+<slide>slides/oscon-webservices/overview.xml</slide>
+
+<slide>slides/oscon-webservices/steps.xml</slide>
+<slide>slides/oscon-webservices/protocols.xml</slide>
+<slide>slides/oscon-webservices/prong.xml</slide>
+
+
+<slide>slides/oscon-webservices/soap.xml</slide>
+<slide>slides/oscon-webservices/soap-request.xml</slide>
+<slide>slides/oscon-webservices/soap-request2.xml</slide>
+<slide>slides/oscon-webservices/soap-amazon-result.xml</slide>
+<slide>slides/oscon-webservices/soap-result-php.xml</slide>
+<slide>slides/oscon-webservices/soap-amazon-parse.xml</slide>
+<!-- <slide>slides/oscon-webservices/soap-amazon-item.xml</slide> -->
+<slide>slides/oscon-webservices/soap-amazon-display.xml</slide>
+
+<slide>slides/oscon-webservices/soap-server.xml</slide>
+<slide>slides/oscon-webservices/soap-server-client.xml</slide>
+
+
+<slide>slides/oscon-webservices/xml-rpc.xml</slide>
+<slide>slides/oscon-webservices/rest.xml</slide>
+<!-- <slide>slides/oscon-webservices/tag-parts.xml</slide> -->
+<slide>slides/oscon-webservices/rest-request.xml</slide>
+<slide>slides/oscon-webservices/rest-results.xml</slide>
+
+<slide>slides/oscon-webservices/rest-parse.xml</slide>
+<slide>slides/oscon-webservices/rest-amazon-parse.xml</slide>
+<slide>slides/oscon-webservices/rest-start-element.xml</slide>
+<slide>slides/oscon-webservices/rest-character-data.xml</slide>
+<slide>slides/oscon-webservices/rest-end-element.xml</slide>
+<slide>slides/oscon-webservices/rest-amazon-item.xml</slide>
+<slide>slides/oscon-webservices/rest-amazon-display.xml</slide>
+
+
+<slide>slides/oscon-webservices/thanks.xml</slide>
+</presentation>

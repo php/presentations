@@ -1,0 +1,21 @@
+<slide title="Protocols">
+
+<image align="right" marginright="1.5em"
+       filename="webservices.gif" 
+/> 
+
+<list title="Three forms of Web Services">
+    <bullet>SOAP</bullet>
+    <bullet>XML-RPC</bullet>
+    <bullet>REST</bullet>
+</list>
+
+<list title="This talk covers">
+    <bullet>SOAP Client</bullet>
+    <bullet>SOAP Server</bullet>
+    <bullet>XML-RPC (just a little)</bullet>
+    <bullet>REST Client</bullet>
+    <bullet>Querying Amazon.Com</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,29 @@
+<slide>
+<title>Request</title>
+
+<example title="Construct Query String" type="php" fontsize='1.4em'><![CDATA[<?php
+$url = 'http://xml.amazon.com/onca/xml3?';
+
+$params = array('ManufacturerSearch' => 'oxo',
+                'mode'               => 'kitchen',
+                'page'               => 1,
+                'type'               => 'lite',
+                'f'                  => 'xml',
+                't'                  => 'trachtenberg-20',
+                'dev-t'              => 'XXXXXXXXXXXXXX',
+               );
+foreach ($params as $a => $v) {
+  $url .= "$a=$v&";
+}
+?>]]>
+</example>
+
+<example title="Use cURL to make get request" type="php" fontsize='1.4em'><![CDATA[<?php
+$c = curl_init($url);
+curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
+$hits = curl_exec($c);
+curl_close($c); 
+?>]]>
+</example>
+
+</slide>

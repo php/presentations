@@ -1,0 +1,24 @@
+<slide>
+<title>SOAP Server Client</title>
+
+<example title="SOAP Server" type="php" fontsize='1.4em'><![CDATA[<?php 
+require_once 'SOAP/Client.php';
+$client = new SOAP_Client('http://localhost/rot13.php');
+
+// this namespace is the same as declared earlier
+$options = array('namespace' => 'urn:SOAP_Server_rot13');
+
+$rotated_string = $client->call("rotate",
+                                $params = array("input" =>
+                                                "Rotate Me!"),
+                                $options);
+print $rotated_string;
+?>
+]]></example>
+
+<example title="Results" fontsize='1.4em'>Ebgngr Zr! 
+</example>
+
+
+
+</slide>

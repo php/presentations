@@ -1,0 +1,24 @@
+<slide title="WSDL">
+<list title="Web Service Description Language">
+<bullet>Interface Description for Web Services</bullet>
+<bullet>...makes SOAP easy</bullet>
+<bullet>...is independent of SOAP</bullet>
+<bullet>...can be extended to support new technologies</bullet>
+<bullet>WSDL defines...</bullet>
+</list>
+<list marginleft="2em">
+    <bullet>Data Types via XML Schema</bullet>
+    <bullet>Interface Definitions</bullet>
+    <bullet>Transport Bindings</bullet>
+    <bullet>Service Descriptions</bullet>
+</list>
+<list>
+<bullet>WSDL can provide...</bullet>
+</list>
+<list marginleft="2em">
+    <bullet>Dynamic Proxies</bullet>
+    <bullet>Static Proxies</bullet>
+    <bullet>Documentation</bullet>
+    <bullet>Code hinting for editors and IDE's</bullet>
+</list>
+</slide>
