@@ -1,0 +1,7 @@
+<slide title="Switching Modes">
+<example result="yes" title="Syntax and switching modes"><![CDATA[<? if(strstr($_SERVER['HTTP_USER_AGENT'],"MSIE")) { ?>
+<b>You are using Internet Explorer</b>
+<? } else { ?>
+<b>You are not using Internet Explorer</b>
+<? }]]></example>
+</slide>
