@@ -1,7 +1,7 @@
 <slide title="Overloading">
 <blurb>
 In PHP you can "overload" objects, registering special handlers which 
-can catch property access and method calls.
+can catch property accesses and method calls.
 </blurb>
 <example 
     type="php" 

@@ -1,46 +1,49 @@
 <?php
 function debug ($data)
 {
-    fprintf ('php://stderr', "$data\n");
+	$fp = fopen('php://stderr', 'w');
+    fwrite($fp, "$data\n");
+	fclose($fp);
 }
 
 class OverloadMe 
 {
     var $props = array ();
-    var $methods = array(
-	'convn2br' => 'nl2br'
-	);
+	var $methods = array(
+						 'convn2br' => 'nl2br'
+						);
 
-    function __get ($propname, &$value) {
-	debug ("Fetching $propname..");
-	
-	$value = $this->props[$propname];
+	function __get ($propname, &$value) {
+		debug ("Fetching $propname..");
 
-	return true;
-    }
+		$value = $this->props[$propname];
 
-    function __get_foo (&$value) {
-	debug ("Fetching foo...");
-	$value = 'BAR';
-    }
+		return true;
+	}
+
+	function __get_foo (&$value) {
+		debug ("Fetching foo...");
+		$value = 'BAR';
+	}
 
 
-    function __set ($propname, $value) {
-	debug ("Setting $propname to $value...");
-	
-	$this->props[$propname] = $value;
-	
-	return true;
-    }
+	function __set ($propname, $value) {
+		debug ("Setting $propname to $value...");
 
-    function __call ($methodname, $args, &$ret) {
-	debug ("Calling $methodname...");
+		$this->props[$propname] = $value;
 
-	$func = $this->methods[$methodname];
-	$ret = call_user_func_array ($func, $args);
+		return true;
+	}
 
-	return true;
-    }
+	function __call ($methodname, $args, &$ret) {
+		debug ("Calling $methodname...");
+
+		$func = $this->methods[$methodname];
+		if (isset($func))
+			$ret = call_user_func_array ($func, $args);
+
+		return true;
+	}
 }
 
 overload ('OverloadMe');

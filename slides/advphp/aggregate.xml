@@ -1,7 +1,9 @@
 <slide title="Aggregation">
 <blurb>
-Aggregation is the idea of adding methods to an object at runtime, 
-PHP supports object aggregation via the aggregation extension.
+Aggregation is the idea of one object using another object instance to invoke
+some functionality, as opposed to inheritance. In PHP aggregation is currently
+implemented by aggregation functions, which allow you to add methods to an
+object at runtime.
 </blurb>
 
 <example 
