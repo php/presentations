@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Hash algorithms</title>
+
+	<break lines="2"/>
+	<image align="center" filename="hash.png"/>
+	<list fontsize="4em">
+		<bullet>Not reversable</bullet>
+	</list>
+	<list fontsize="4em">
+		<bullet>PHP: sha1(), md5(); mhash: GOST, HAVAL</bullet>
+	</list>
+	<image align="right" marginright="5em" filename="hash2.png"/>
+	<list fontsize="4em">
+		<bullet>Used for in signatures and validation</bullet>
+	</list>
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Transposition ciphers</title>
+
+	<break lines="3"/>
+	<list fontsize="5em">
+		<bullet>XOR plain text with key</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Easy to crack with small key</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Impossible to crack when<![CDATA[<br />&nbsp;&nbsp;&nbsp;]]>strlen(plain) == strlen(key)</bullet>
+	</list>
+	<break lines="3"/>
+	<image align="center" filename="xor.png"/>
+</slide>

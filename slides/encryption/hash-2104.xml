@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Crypt_MHAC example</title>
+
+	<break lines="1"/>
+	<example fontsize="1.7em"><![CDATA[<?php
+    require_once 'Crypt/HMAC.php';
+                                                                                
+    $hash = new Crypt_HMAC('SECRETKEY', 'sha1');
+                                                                                
+    if (isset($_COOKIE['stamp'])) {
+        if ($_COOKIE['stamp'] == $hash->hash($_COOKIE['data'])) {
+            echo "Validated!\n";
+        } else {
+            echo "<blink>Not validated</blink>";
+        }
+    } else {
+        $_COOKIE['data'] = '00110100011';
+        $_COOKIE['stamp'] = $hash->hash($_COOKIE['data']);
+    }
+?>]]></example>
+
+	<list fontsize="4em">
+		<bullet>%pear install Crypt_HMAC%</bullet>
+		<bullet>RFC 2104 implementation</bullet>
+		<bullet>MD5 and SHA1 supported</bullet>
+	</list>
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Cipher groups</title>
+
+	<break lines="8"/>
+	<list fontsize="5em">
+		<bullet>Rotational (ceasar)</bullet>
+		<bullet>Transposition (xor)</bullet>
+		<bullet>Symmetric (DES, Blowfish, AES)</bullet>
+		<bullet>Asymmetric (RSA, Diffie Hellman)</bullet>
+		<bullet>Hashes</bullet>
+	</list>
+</slide>

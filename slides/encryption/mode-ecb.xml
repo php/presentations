@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="3em">
+	<title>ECB and CBC</title>
+
+	<break lines="1"/>
+	<image align="center" filename="ecb.png"/>
+
+	<list marginleft="-2em" fontsize="3em" marginright="2em">
+		<bullet type="none">ECB: each block encrypted independently</bullet>
+	</list>
+
+	<break lines="1"/>
+	<image align="center" filename="cbc.png"/>
+
+	<list marginleft="-2em" fontsize="3em" marginright="2em">
+		<bullet type="none">CBC: text block is xor'ed with previous encrypted block</bullet>
+	</list>
+</slide>

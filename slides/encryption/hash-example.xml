@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Hash Example</title>
+
+	<break lines="3"/>
+	<example fontsize="1.7em"><![CDATA[<?php
+    if (isset($_COOKIE['stamp'])) {
+        if ($_COOKIE['stamp'] == sha1($_COOKIE['data'] . 'SECRETKEY')) {
+            echo "Validated!\n";
+        } else {
+            echo "<blink>Not validated</blink>";
+        }
+    } else {
+        $_COOKIE['data'] = '00110100011';
+        $_COOKIE['stamp'] = sha1($_COOKIE['data'] . 'SECRETKEY');
+    }
+?>]]></example>
+
+	<break/>
+	<list fontsize="4em">
+		<bullet>Easy validation of cookie data</bullet>
+		<bullet>But not the 'best' way</bullet>
+	</list>
+</slide>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Rotational ciphers</title>
+
+	<image align="center" filename="caesar.png"/>
+	<list fontsize="5em" marginleft="-0.3em">
+		<bullet>Rotate characters depending on key</bullet>
+	</list>
+	<list fontsize="5em" effect="slide">
+		<bullet>Easy to crack unless key is same size as plain text</bullet>
+	</list>
+	<list fontsize="5em" effect="slide">
+		<bullet>But we always have str_rot13() :-)</bullet>
+	</list>
+</slide>
