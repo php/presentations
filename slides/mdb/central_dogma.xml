@@ -7,18 +7,15 @@ which is finally |ff0000|translated| by a ribosome into a *Protein*
 <image filename='slides/mdb/images/central_dogma_biology.png' align='center'/>
 <list type='darrow'>
 	<bullet effect='hide'>
-	*DNA*:
-	%AAA _GGA_ GAA _TAG_ TGT _GGC_ CAT _CGT_ GCC _CGC_%
+	*DNA*: %AAA _GGA_ GAA _TAG_ TGT _GGC_ CAT _CGT_ GCC _CGC_%
 	</bullet>
 	<bullet effect='hide'>
-	*RNA*:
-	%UUU _CCU_ CUU _AUC_ AUA _CCG_ GUA _GCA_ GCC _GCG_%
+	*RNA*: %UUU _CCU_ CUU _AUC_ AUA _CCG_ GUA _GCA_ GCC _GCG_%
 	</bullet>
 	<bullet effect='hide'>
-	*Protein*:
-	%F _P_ L _I_ I _P_ V _A_ A _A_%
+	*Protein*: %F _P_ L _I_ I _P_ V _A_ A _A_%
 	</bullet>
-	<bullet effect='hide'>
+	<bullet type='arrow' effect='hide'>
 	(or: %Phe _Pro_ Leu _Ile_ Ile _Pro_ Val _Ala_ Ala _Ala_%)
 	</bullet>
 </list>
