@@ -1,0 +1,9 @@
+<slide>
+<title>"Portable" SQL</title>
+<break lines="4"/>
+<example fontsize="3.0em">SELECT COUNT(*) FROM mytable</example>
+<list>
+<bullet marginleft="1.0em" effect="slide" fontsize="4.0em">Very Fast on MySQL</bullet>
+<bullet marginleft="1.0em" effect="slide" fontsize="4.0em">Incredibly Slow on Oracle</bullet>
+</list>
+</slide>

@@ -1,14 +1,4 @@
 <slide title="SQL Queries">
-<list title="Problems" fontsize="3em">
-<bullet>Unused data is being pulled over a socket</bullet>
-<bullet>FULLTEXT indexes</bullet>
-<bullet>the LIKE clause</bullet>
-</list>
-
-<list title="Tips">
-<bullet>Only take what you need</bullet>
-<bullet>Separate writes and reads</bullet>
-<bullet>Be careful of the %LIKE% clause</bullet>
-<bullet>Tune your system</bullet>
-</list>
+<break lines="5"/>
+<blurb fontsize="5.0em">USE DATABASE SPECIFIC FEATURES</blurb>
 </slide>

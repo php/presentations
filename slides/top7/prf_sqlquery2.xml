@@ -1,0 +1,15 @@
+<slide>
+<title>The %LIKE% Clause</title>
+<blurb fontsize="4.0em">
+The %LIKE% clause is a very nifty feature.
+</blurb>
+<blurb fontsize="4.0em">
+It is also an incredibly expensive operation.
+</blurb>
+<blurb fontsize="4.0em">
+Use it judiciously, and consider alternative means of processing data.
+</blurb>
+<blurb fontsize="4.0em">
+*Don't* use PHP to process data.
+</blurb>
+</slide>
