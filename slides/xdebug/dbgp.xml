@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>DBGp mode</title>
+	<subtitle>DeBuGger Protocol</subtitle>
 
 	<list fontsize="4em">
 		<bullet>Input commands as "command line parameters"</bullet>
@@ -8,7 +9,7 @@
 		<bullet>Output data as *documented* XML:</bullet>
 	</list>
 	<break />
-	<example><![CDATA[data_length
+	<example type="xml" class="code_medium"><![CDATA[data_length
 [NULL]
 <response command="command_name" transaction_id="transaction_id"/>
 [NULL]]]></example>

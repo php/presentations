@@ -22,14 +22,21 @@ height: 14em;
 font-family: verdana, tahoma, arial, helvetica, sans-serif;
 z-index: 99;
 }
-div.navbar_title, div.navbar_title a {
-font-size: 32px;
-color: #698fe5;
-text-decoration: none;
-text-align: left;
-font-weight: bold;
-margin-top: 20px;
+div.navbar_title, div.navbar_title a, div.subtitle {
+	font-size: 32px;
+	color: #698fe5;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 20px;
 }
+div.subtitle {
+	margin-top: 5px;
+	font-size: 24;
+	font-weight: normal;
+	font-style: italic;
+}
+
 div.navbar_nr a {
 font-size: 16px;
 color: #77a;
@@ -51,14 +58,20 @@ ul.level2 {
 	list-style: circle;
 	font-size: 20pt;
 	margin-left: 40px;
+	margin-top: -15px;
 }
 
 li.pres_bullet {
-font-size: 24pt;
+font-size: 28pt;
+margin-right: 40px;
 }
 	
-div.blurb {
+div.small_blurb {
 	font-size: 24px;
+}
+
+div.blurb {
+	font-size: 32px;
 }
 
 div.large_blurb {
@@ -82,10 +95,17 @@ div.code_small code {
 	font-size: 12px;
 }
 
+div.code_medium {
+	background: #ccc;
+}
+div.code_medium code, div.code_medium pre {
+	font-size: 20px;
+}
+
 div.code_large {
 	background: #ccc;
 }
-div.code_large code {
+div.code_large code, div.code_large pre {
 	font-size: 24px;
 }
 </style>

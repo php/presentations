@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Variables</title>
+	<subtitle>Section 7.11 and 7.13</subtitle>
+
+	<blurb>Retrieve a property:</blurb>
+	<blurb>%property_get -i 16 -d 0 -n a%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="property_get" transaction_id="16">
+  <property name="a" fullname="\$a" address="140272044"
+      type="int"><![CDATA[7]]></property>
+</response>]]></example>
+
+	<break lines="2"/>
+	
+	<blurb>Change a property:</blurb>
+	<blurb>%property_set -i 18 -d 0 -n $a -- OA==%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="property_set" transaction_id="18"
+    success="1"></response>]]></example>
+
+</slide>

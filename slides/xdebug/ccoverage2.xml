@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Code Coverage - Test Application</title>
+	<title>Code Coverage</title>
+	<subtitle>The Testing Application</subtitle>
 
-	<blurb>Test program:</blurb>
 	<example><![CDATA[<?php
 	echo "Output:\n\n";
 	xdebug_start_code_coverage();

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Code Coverage - Testfile</title>
+	<title>Code Coverage</title>
+	<subtitle>Function To Test and Test Driver</subtitle>
 
 	<blurb>Function to test (bigassfunction.php):</blurb>
 	<example><![CDATA[<?php

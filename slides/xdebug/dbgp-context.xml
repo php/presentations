@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Context Information</title>
+	<subtitle>Section 7.9 and 7.10</subtitle>
+
+	<blurb>Retrieve the context names:</blurb>
+	<blurb>%context_names -i 10%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="context_names" transaction_id="10">
+  <context name="Locals" id="0"></context>
+  <context name="Globals" id="1"></context>
+</response>]]></example>
+
+	<break lines="2"/>
+
+	<blurb>Retrieve information from a context:</blurb>
+	<blurb>%context_get -i 12 -d 0 -c 0%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="context_get" transaction_id="12">
+  <property name="a" fullname="\$a" address="140272044"
+      type="int"><![CDATA[7]]></property>
+</response>]]></example>
+</slide>

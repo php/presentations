@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Stack Information</title>
+	<subtitle>Section 7.7 and 7.8</subtitle>
+
+	<blurb>Retrieving the current stack depth:</blurb>
+	<blurb>%stack_depth -i 9%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="stack_depth" transaction_id="9"
+    depth="2"></response>]]></example>
+
+	<break lines="2"/>
+
+	<blurb>Retrieve stack information:</blurb>
+	<blurb>%stack_get -i 11%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="stack_get" transaction_id="11">
+  <stack where="level1" level="0"
+      filename="file:///phpworks/dbgp-example.php"
+      lineno="7"></stack>
+  <stack where="{main}" level="1"
+      filename="file:///phpworks/dbgp-example.php"
+      lineno="10"></stack>
+</response>]]></example>
+</slide>

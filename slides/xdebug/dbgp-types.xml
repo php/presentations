@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Types</title>
+	<subtitle>Section 7.12</subtitle>
+
+	<blurb>Retrieve the type map:</blurb>
+	<blurb>%typemap_get -i 15%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_medium"><![CDATA[<response command="typemap_get" transaction_id="15"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <map name="bool" type="bool" xsi:type="xsd:boolean"></map>
+  <map name="int" type="int" xsi:type="xsd:decimal"></map>
+  <map name="float" type="float" xsi:type="xsd:double"></map>
+  <map name="string" type="string" xsi:type="xsd:string"></map>
+  <map name="null" type="null"></map>
+  <map name="array" type="hash"></map>
+  <map name="object" type="object"></map>
+  <map name="resource" type="resource"></map>
+</response>]]></example>
+
+</slide>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Activating the Remote Debugger</title>
+
+	<blurb>php.ini settings:</blurb>
+	<example class="code_large" type="ini">xdebug.remote_enable=1
+xdebug.remote_handler=dbgp
+xdebug.remote_mode=req
+xdebug.remote_host=localhost
+xdebug.remote_port=9000
+xdebug.extended_info=1</example>
+
+	<break lines="2"/>
+
+	<blurb>On the shell:</blurb>
+	<blurb class="small_blurb">%  export XDEBUG_CONFIG="idekey=phpworks remote_enable=1"%</blurb>
+
+	<break lines="2"/>
+
+	<blurb>With a browser:</blurb>
+	<blurb class="small_blurb">%  http://pres/show.php|698fe5|?XDEBUG_SESSION_START=phpworks2|%</blurb>
+</slide>

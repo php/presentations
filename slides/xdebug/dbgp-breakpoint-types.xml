@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Breakpoint Types</title>
+	<subtitle>Section 7.6</subtitle>
+
+	<blurb>Option explanation:</blurb>
+	<break/>
+	<example><![CDATA[-a  class name
+-f  file name
+-m  function name
+-n  line number
+-x  exception
+--  expression]]></example>
+
+	<break/>
+
+	<blurb>Different breakpoint types:</blurb>
+	<blurb>- ~line~: on a file/line combination (req: *-f* and *-n*)</blurb>
+	<blurb>- ~call~: on function entrance (req: *-m*; opt: *-a*)</blurb>
+	<blurb>- ~return~: on function exit (req: *-m*; opt: *-a*)</blurb>
+	<blurb>- ~exception~: on exception of given name (req: *-x*)</blurb>
+	<blurb>- ~conditional~: when condition is met (req: *--* and *-f*; opt: *-n*)</blurb>
+
+	<break lines="2"/>
+
+	<blurb>Extra options:</blurb>
+	<break/>
+	<example><![CDATA[-o  hit condition (>=, == or %)
+-g  hit value]]></example>
+</slide>

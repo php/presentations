@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Gathering debug data 1</title>
+	<title>Gathering debug data</title>
+	<subtitle>Functions and parameters</subtitle>
 
-	<blurb> </blurb>
+	<break lines="2"/>
+
 	<list fontsize="5em">
 		<bullet>Functions and classnames</bullet>
 	</list>

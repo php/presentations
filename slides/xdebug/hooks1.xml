@@ -6,11 +6,11 @@
 	<list fontsize="5em">
 		<bullet>Xdebug hooks into these events:</bullet>
 	</list>
-	<image align="left" marginright="2em" filename="hooks.jpg"/>
 	<list class="level2" fontsize="4em" marginleft="1em">
 		<bullet>Executing user defined function</bullet>
 		<bullet>Executing internal function</bullet>
 		<bullet>Compiling a file</bullet>
 		<bullet>Executing a statement</bullet>
 	</list>
+	<image align="right" marginright="2em" filename="hooks.jpg"/>
 </slide>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Basics</title>
+	<subtitle>Section 5.2 and 7.1</subtitle>
+
+	<blurb>Init packet:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<init fileuri="file:///phpworks/dbgp-example.php"
+    language="PHP" appid="3149" idekey="phpw">
+  <engine version="2.0.0dev">Xdebug</engine>
+</init>]]></example>
+
+	<break/>
+	<blurb>Command layout:</blurb>
+	<blurb>%|229922|[cmd]| *-i* [tid] ..other options..% *--* data</blurb>
+
+	<break lines="2"/>
+	<blurb>- Options always have the form: %*-[char]* value%</blurb>
+	<blurb>- The %*-i*% transaction ID option is mandatory</blurb>
+	<blurb>- Data, if available, must be base64 encoded</blurb>
+
+	<break lines="2"/>
+	<blurb>Status reply:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="status"
+    transaction_id="1" status="starting" reason="ok"/>]]></example>
+	<blurb>Statuses are: starting, running, break, stopping and
+stopped.</blurb>
+	<blurb>Reasons are: ok, error, aborted and exception.</blurb>
+</slide>

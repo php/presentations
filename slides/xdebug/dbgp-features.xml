@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Features</title>
+	<subtitle>Section 7.2</subtitle>
+ 
+	<blurb>Retrieval of features:</blurb>
+	<blurb>%feature_get *-i* 1 *-n* encoding%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="feature_get" transaction_id="1"
+    feature_name="encoding" supported="1">
+  <![CDATA[UTF-8]]>
+</response>]]></example>
+
+	<break/>
+
+	<blurb>Setting features:</blurb>
+	<blurb>%feature_set *-i* 2 *-n* show_hidden *-v* 1%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<reponse command="feature_set" transaction_id="2"
+    feature="show_hidden" success="1"></response>]]></example>
+
+	<break/>
+
+	<blurb>Features include:</blurb>
+	<blurb>%language_name% [RO], %supports_async% [RO],
+	%max_children% [RW], %max_data% [RW], %max_depth% [RO], %show_hidden% [RW] and
+	%supports_postmortem% [RO].</blurb>
+</slide>

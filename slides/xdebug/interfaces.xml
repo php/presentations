@@ -6,8 +6,7 @@
 		<bullet>PHP 3 debugger mode</bullet>
 	</list>
 	<list class="level2" fontsize="3.5em" marginleft="4em">
-		<bullet>Port of the old remote debug dump</bullet>
-		<bullet marginleft="5em" type="none">interface for PHP 3</bullet>
+		<bullet>Port of the old remote debug dump interface for PHP 3</bullet>
 		<bullet>Available in Xdebug 1.x and 2.x</bullet>
 	</list>
 

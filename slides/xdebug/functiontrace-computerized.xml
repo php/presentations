@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Execution trace to file (computerized)</title>
+	<title>Execution trace to file</title>
+	<subtitle>Automatic readable format</subtitle>
 	<image filename="tracefile-computerized.png"/>
 	<break/>
 	<example class="code_large" fontsize="1.7em">xdebug.auto_trace=1     ; enable tracing

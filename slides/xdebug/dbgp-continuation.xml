@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Continuation Commands</title>
+	<subtitle>Section 7.5</subtitle>
+
+	<blurb>Run until a breakpoint is hit:</blurb>
+	<blurb>%run -i 8%</blurb>
+	<break/>
+	<blurb>response:</blurb>
+	<example type="xml" class="code_large"><![CDATA[<response command="run" transaction_id="8"
+    status="break" reason="ok"></response>]]></example>
+
+	<break lines="2"/>
+
+	<blurb>Run until the next statement:</blurb>
+	<blurb>%step_into -i 8%</blurb>
+
+	<break lines="2"/>
+
+	<blurb>Run until the next statement in the current scope:</blurb>
+	<blurb>%step_over -i 8%</blurb>
+
+	<break lines="2"/>
+
+	<blurb>Run until the next statement in the calling scope:</blurb>
+	<blurb>%step_out -i 8%</blurb>
+
+	<break lines="2"/>
+
+	<blurb>Kill the script:</blurb>
+	<blurb>%stop -i 8%</blurb>
+</slide>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Debugging</topic>
+<title>Efficient debugging with Xdebug</title>
+<event>php|works</event>
+<location>Toronto, Canada</location>
+<date>September 22th, 2004</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://pres.derickrethans.nl/xdebug-phpworks04</url>
+<slide>slides/xdebug/title.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/xdebug/questions.xml</slide>
+<slide>slides/xdebug/how-started.xml</slide>
+
+<!-- BASIC STUFF -->
+<slide>slides/xdebug/infinite.xml</slide>
+<slide>slides/xdebug/vardump.xml</slide>
+<slide>slides/xdebug/stacktrace.xml</slide>
+<slide>slides/xdebug/local-vars2.xml</slide>
+
+<!-- SUPER GLOBALS -->
+<slide>slides/xdebug/superglobals.xml</slide>
+
+<!-- TRACING -->
+<slide>slides/xdebug/functiontrace-file.xml</slide>
+<slide>slides/xdebug/vim.xml</slide>
+<slide>slides/xdebug/functiontrace-computerized.xml</slide>
+<slide>slides/xdebug/xgui.xml</slide>
+
+<!-- PROFILING -->
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+
+<!-- CODE COVERAGE -->
+<slide>slides/xdebug/ccoverage1.xml</slide>
+<slide>slides/xdebug/ccoverage2.xml</slide>
+<slide>slides/xdebug/ccoverage3.xml</slide>
+
+<!-- THEORY -->
+<slide>slides/xdebug/gathering-data.xml</slide>
+<slide>slides/xdebug/gathering1.xml</slide>
+<slide>slides/xdebug/gathering2.xml</slide>
+<slide>slides/xdebug/hooks1.xml</slide>
+
+<!-- REMOTE INTERFACES -->
+<slide>slides/xdebug/interfaces.xml</slide>
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/gdb.xml</slide>
+<slide>slides/xdebug/gdb-xml.xml</slide>
+<slide>slides/xdebug/dbgp.xml</slide>
+
+<!-- DBGp COMMAND SET -->
+<slide>slides/xdebug/dbgp-common.xml</slide> <!-- -i, encoding, __, init -->
+<slide>slides/xdebug/dbgp-features.xml</slide> <!-- feature_get, feature_set -->
+<slide>slides/xdebug/dbgp-continuation.xml</slide> <!-- run, step_*, stop, detach -->
+<slide>slides/xdebug/dbgp-breakpoints.xml</slide> <!-- breakpoint_* -->
+<slide>slides/xdebug/dbgp-breakpoint-types.xml</slide> <!-- breakpoint_* -->
+<slide>slides/xdebug/dbgp-stack.xml</slide> <!-- stack_depth, stack_get -->
+<slide>slides/xdebug/dbgp-context.xml</slide> <!-- context_names, context_get -->
+<slide>slides/xdebug/dbgp-types.xml</slide> <!-- typemap_get, property_* -->
+<slide>slides/xdebug/dbgp-properties.xml</slide> <!-- typemap_get, property_* -->
+
+<!-- KOMODO SCREENSHOTS -->
+<!-- XDCX? -->
+
+<!-- END -->
+<slide>slides/xdebug/about.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
