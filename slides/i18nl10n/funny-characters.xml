@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Transliteration</title>
+	<subtitle>"Funny Characters"</subtitle>
+
+	<image align="center" filename="funny-characters.png" />
+
+<break lines="2"/>
+	<blurb>What we do now:</blurb>
+	<example class="bit_larger" result="0"><![CDATA["Håtveit på 8. plass" to "h_tveit_p_8_plass"]]></example>
+
+<break lines="2"/>
+	<blurb>What we want to do:</blurb>
+	<example class="bit_larger" result="0"><![CDATA["Håtveit på 8. plass" to "haatveit_paa_8_plass"]]></example>
+
+<break lines="2"/>
+	<blurb>How we do this:</blurb>
+	<example class="bit_larger" encoding="latin1" result="0"><![CDATA[<?php
+$string = iconv("latin1", "ucs-2", "Håtveit på 8. plass");
+$res = transliterate($string,
+	array('normalize_ligature', 'lowercase_latin', 'space_to_underscores'));
+echo iconv('ucs-2', 'latin1', $res);
+?>]]></example>
+
+</slide>
+<!--
+vim: encoding=latin1
+-->

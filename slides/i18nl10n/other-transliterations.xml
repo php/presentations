@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Transliteration</title>
+	<subtitle>Chinese, Hebrew and Greek Characters</subtitle>
+
+	<example class="bit_larger" result="1"><![CDATA[<?php
+	$string = <<<END
+美军总攻费卢杰 战况惨烈
+
+מורדים בפלוג'ה משגרים רקטה בניסיון לעצור את הניסיון של כוחות
+ארה"ב לכבוש את העיר תצלום: אי-פי
+
+Υποθέτω πως για τους ενασχολούντες, η είδηση της βάφτισης
+του linux kernel tree σε 2.6 στις 17 του Δεκέμβρη 2003 είναι
+ήδη γνωστή.
+END;
+
+
+	$string = iconv("utf-8", "ucs-2", $string);
+	$res = transliterate($string, array(
+		'han_transliterate', 'hebrew_transliterate', 'greek_transliterate'));
+	echo nl2br(iconv('ucs-2', 'utf-8', $res));
+?>]]></example>
+
+</slide>
+<!--
+vim: encoding=utf-8
+-->

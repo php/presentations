@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Users on-line</title>
+	<subtitle>With SRM</subtitle>
+
+	<blurb fontsize="4em">Script utilizing SRM to count the users 'online': </blurb>
+	<example fontsize="1.25em"><![CDATA[<?php
+	$srm = new SRM ('/var/srm.socket');
+	$srm->user_active($_COOKIE['PHP_SESSID']);
+	echo $srm->get_active_user_count();
+?>]]></example>
+<break lines="2"/>
+
+	<blurb fontsize="4em">Daemon side: </blurb>
+	<example fontsize="1.25em"><![CDATA[<?php
+$active_users = array();
+
+function user_active($id) {
+	$GLOBALS['active_users'][$id] = time();
+}
+
+function cleanup_inactive_users() {
+	foreach($GLOBALS['active_users'] as $id => $time) {
+		if ($time < time() - 300) {
+			unset($GLOBALS['active_users'][$id]);
+		}
+	}
+}
+
+function get_active_user_count() {
+	cleanup_inactive_users();
+	return count($GLOBALS['active_users']);
+}
+?>]]></example>
+
+</slide>

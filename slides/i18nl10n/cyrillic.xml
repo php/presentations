@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Transliteration</title>
+	<subtitle>Cyrillic Characters</subtitle>
+
+	<example class="bit_larger" result="1"><![CDATA[<?php
+	$string = <<<END
+След малко се запътвам съм автобусната спирка, от там на
+летището, после пак на летището и пак на автобусната спирка
+и в Пловдив.
+END;
+
+
+	$string = iconv("utf-8", "ucs-2", $string);
+	$res = transliterate($string, array('cyrillic_transliterate'));
+	echo iconv('ucs-2', 'utf-8', $res);
+?>]]></example>
+
+</slide>
+<!--
+vim: encoding=utf-8
+-->
