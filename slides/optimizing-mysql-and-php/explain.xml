@@ -1,3 +1,42 @@
 <slide title="EXPLAIN">
-<!-- TODO -->
+
+<example fontsize="1.8em">
+EXPLAIN SELECT City.Name,Country.Name,City.Population FROM City, Country
+         WHERE City.CountryCode = Country.Code AND City.Population > 8000000
+	 ORDER BY City.Population;
+</example>
+
+<example type="shell" fontsize="1.3em">
++---------+--------+---------------+---------+---------+------------------+------+-----------------------------+
+| table   | type   | possible_keys | key     | key_len | ref              | rows | Extra                       |
++---------+--------+---------------+---------+---------+------------------+------+-----------------------------+
+| City    | ALL    | NULL          | NULL    |    NULL | NULL             | 4079 | Using where; Using filesort |
+| Country | eq_ref | PRIMARY       | PRIMARY    |       3 | City.CountryCode |    1 |                          |
++---------+--------+---------------+---------+---------+------------------+------+-----------------------------+
+</example>
+
+<list>
+ <bullet>%system%: table only has one row</bullet>
+ <bullet>%const%: query matches at most one row from this table</bullet>
+ <bullet>%eq_ref%: one row from this table will match from previous tables</bullet>
+ <bullet>%ref%: rows matching from this table will match reference from earlier table</bullet>
+ <bullet>%ref_or_null%: like ref, but also matching null references (used by subqueries)</bullet>
+ <bullet>%range%: range of rows will be retrieved</bullet>
+ <bullet>%index%: the entire index will be scanned</bullet>
+ <bullet>%ALL%: the entire table will be scanned</bullet>
+</list>
+
+<example title="Add a new index">
+ALTER TABLE City ADD INDEX (population);
+</example>
+
+<example type="shell" fontsize="1.3em">
++---------+--------+---------------+------------+---------+------------------+------+-------------+
+| table   | type   | possible_keys | key        | key_len | ref              | rows | Extra       |
++---------+--------+---------------+------------+---------+------------------+------+-------------+
+| City    | range  | Population    | Population |       4 | NULL             |   78 | Using where |
+| Country | eq_ref | PRIMARY       | PRIMARY    |       3 | City.CountryCode |    1 |             |
++---------+--------+---------------+------------+---------+------------------+------+-------------+
+</example>
+
 </slide>
