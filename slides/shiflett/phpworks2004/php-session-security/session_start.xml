@@ -1,0 +1,9 @@
+<slide>
+<title>session_start()</title>
+<blurb fontsize="4.5em">What does *%session_start()%* do?</blurb>
+<list fontsize="4em">
+	<item>Checks for session identifier (%PHPSESSID%)</item>
+	<item>Creates record in session store for that identifier</item>
+	<item>Sets caching headers and %Set-Cookie%</item>
+</list>
+</slide>

@@ -1,0 +1,6 @@
+<slide>
+<title>Session Fixation</title>
+<blurb fontsize="4em">Regenerate the session identifier when there is a change
+in privilege level.</blurb>
+<example filename="code/session-fixation-defense-improved.php" result="0" />
+</slide>

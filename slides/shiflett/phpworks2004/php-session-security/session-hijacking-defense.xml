@@ -1,0 +1,5 @@
+<slide>
+<title>Session Hijacking</title>
+<blurb fontsize="4em">Is *%User-Agent%* consistent?</blurb>
+<example filename="code/session-hijacking-defense.php" result="0" />
+</slide>

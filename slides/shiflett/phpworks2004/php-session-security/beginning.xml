@@ -1,0 +1,8 @@
+<slide>
+<title>In the Beginning...</title>
+<blurb fontsize="5em">The Web was without state.</blurb>
+<blurb fontsize="4em">What does this mean?</blurb>
+<blurb fontsize="4em">It refers to the isolated way in which each HTTP
+transaction is treated - there is no relationship among the
+requests originating from the same client.</blurb>
+</slide>

@@ -1,0 +1,7 @@
+<slide>
+<title>Propagation</title>
+<blurb fontsize="4.5em">Propagate the browser fingerprint (or session token) by
+a different method than the session identifier when possible.</blurb>
+<blurb fontsize="4.5em">Propagating the session identifier in a cookie and the
+browser fingerprint (or session token) on the URL is a good approach.</blurb>
+</slide>

@@ -1,0 +1,37 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP Session Security</title>
+<event>php|works 2004</event>
+<location>Toronto, Canada</location>
+<date>September 23, 2004</date>
+<speaker>Chris Shiflett</speaker>
+<email>shiflett@php.net</email>
+<url>http://shiflett.org/talks/phpworks2004/php-session-security</url>
+<slide>slides/shiflett/phpworks2004/php-session-security/titlepage.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/outline.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/beginning.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/http.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/cookies_intro.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/cookies_example.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/sessions_intro.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session_start.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-fixation.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-fixation-example.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-fixation-defense.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-fixation-defense-improved.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-hijacking.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-hijacking-http.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-hijacking-defense.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-hijacking-fingerprint.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/session-hijacking-token.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/propagate.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/more-information.xml</slide>
+<slide>slides/shiflett/phpworks2004/php-session-security/thankyou.xml</slide>
+</presentation>

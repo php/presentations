@@ -1,0 +1,8 @@
+<slide>
+<title>HTTP?</title>
+<blurb fontsize="4.5em">HTTP is the protocol that powers the Web.</blurb>
+<blurb fontsize="3.5em">Example Request:</blurb>
+<example filename="code/http_request.txt" result="0" />
+<blurb fontsize="3.5em">Example Response:</blurb>
+<example filename="code/http_response.txt" result="0" />
+</slide>

@@ -1,0 +1,10 @@
+<slide>
+<title>Cookies</title>
+<blurb fontsize="4.5em">Netscape created an extension of the HTTP protocol that allows for
+stateful HTTP transactions.</blurb>
+<blurb fontsize="4.5em">These "cookies" consist of two new headers:</blurb>
+<list fontsize="4.5em">
+	<item>*%Set-Cookie%* response header</item>
+	<item>*%Cookie%* request header</item>
+</list>
+</slide>
