@@ -5,9 +5,9 @@ Often the complexity of the problems in analysis/design of structures grow
 at an exponential rate.
 </blurb>
 <list title='For example, the number of combinations for: (*)' type='dot'>
-<bullet>Redesign of a small protein (80 residues): 10^115</bullet>
-<bullet>Changing the (hydrophobic) core of a protein (170 residues): 10^224</bullet>
-<bullet>Side-chain placement on a protein backbone (2462 residues): 10^1044</bullet>
+<bullet>Redesign of a small protein (80 residues): 10^115^</bullet>
+<bullet>Changing the (hydrophobic) core of a protein (170 residues): 10^224^</bullet>
+<bullet>Side-chain placement on a protein backbone (2462 residues): 10^1044^</bullet>
 </list>
 <blurb fontsize='2em'>
 (*) From: Looger, L.L. and Hellinga, H.W. "Journal of Molecular Biology", 
