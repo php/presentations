@@ -1,6 +1,7 @@
-<slide title="Offensive Regexes">
+<slide title="Broken Tests">
 <image filename="testing.jpg" align="right"/>
-<break lines="5"/>
+<break/>
+<blurb>Offensive Regular Expressions</blurb>
 <example title="Bad"><![CDATA[@<a[^>]*href=\"([^"]+)\">[^<]*</a>@ix]]></example>
 <break/>
 <example title="Good"><![CDATA[@<a.*?href=\"([^"]+)\">[^<]*</a>@ix]]></example>
