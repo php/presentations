@@ -1,0 +1,13 @@
+<slide> 
+<title>Old Object Model</title>
+<blurb fontsize="3.5em">
+PHP 4 OO wasn't - Objects were base types.
+</blurb>
+<blurb fontsize="3.0em">
+You needed to explicitly pass objects by reference.
+</blurb>
+<blurb fontsize="3.0em">
+You even needed to *instantiate* them by reference.
+</blurb>
+<example filename="oldobjects1.php" />
+</slide>

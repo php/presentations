@@ -1,0 +1,7 @@
+<slide>
+<title>Variables</title>
+<blurb>
+PHP 5 supports static class variables.
+</blurb>
+<example filename="static.php" result="1" />
+</slide>

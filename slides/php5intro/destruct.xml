@@ -1,0 +1,8 @@
+<slide>
+<title>Destructors</title>
+<blurb fontsize="3.5em">
+PHP 5 also adds the concept of destructors, functions that are called when a
+class is destroyed.
+</blurb>
+<example filename="destruct.php" result="1" />
+</slide>

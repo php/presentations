@@ -1,0 +1,10 @@
+<slide>
+<title>Exceptions</title>
+<blurb fontsize="3.5em">
+PHP 5 supports exceptions, via %try%, %catch% and %throw%.
+</blurb>
+<blurb fontsize="3.5em">
+The default exception is the %Exception% class.
+</blurb>
+<example filename="except.php" result="1" />
+</slide>

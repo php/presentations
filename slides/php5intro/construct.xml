@@ -1,0 +1,12 @@
+<slide>
+<title>Unified Constructors</title>
+<blurb fontsize="3.5em">
+In PHP 4 constructors had the same name as the class itself.
+</blurb>
+<image filename="banana.gif" align="center" />
+<example filename="construct.php" result="1" />
+<blurb fontsize="3.5em">
+In PHP 5 constructors are unified, under the name %__construct()%.
+</blurb>
+<example filename="construct1.php" result="1" />
+</slide>

@@ -1,0 +1,11 @@
+<slide>
+<title>Object Dereferencing</title>
+<blurb fontsize="3.5em">
+In PHP 4 objects had to be manually dereferenced.
+</blurb>
+<example title="PHP4 Way" filename="deref_php4.php" result="1" />
+<blurb fontsize="3.5em">
+PHP 5 Automatically dereferences objects for you.
+</blurb>
+<example title="PHP5 Way" filename="deref_php5.php" result="1" />
+</slide>

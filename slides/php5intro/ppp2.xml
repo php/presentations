@@ -1,0 +1,7 @@
+<slide> 
+<title>Protected</title>
+<blurb fontsize="3.5em">
+Protected allows access to the current class, and child classes.
+</blurb>
+<example filename="access3.php" result="1" />
+</slide>

@@ -1,0 +1,9 @@
+<slide>
+<title>Static Members</title>
+<blurb>
+PHP 5 supports static class functions, which is a compiler hint 
+that enforces static usage.
+</blurb>
+<example title="Without Static" filename="static1.php" result="1" />
+<example title="With Static" filename="static2.php" result="1" />
+</slide>

@@ -1,0 +1,9 @@
+<slide>
+<title>Autoloading</title>
+<blurb>
+PHP5 allows you to register a function (%__autoload%) which will autosatisfy class 
+dependencies.
+</blurb>
+<example filename="monkey.php" title="Library Code (monkey.php)" />
+<example filename="autoload.php" title="Autoload Usage" result="1" />
+</slide>

@@ -1,0 +1,7 @@
+<slide>
+<title>Type Hinting</title>
+<blurb fontsize="3.5em">
+PHP 5 allows you restrict variables to complex types
+</blurb>
+<example fontsize="1.8em" filename="typehints.php" result="1" />
+</slide>

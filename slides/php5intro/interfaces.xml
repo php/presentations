@@ -1,0 +1,8 @@
+<slide>
+<title>Interfaces</title>
+<blurb fontsize="3.5em">
+Interfaces allow you to define a class that is guaranteed to implement
+a certain set of functions.
+</blurb>
+<example filename="interface1.php" result="1" />
+</slide>

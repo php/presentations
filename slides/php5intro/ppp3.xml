@@ -1,0 +1,9 @@
+<slide> 
+<title>Protected cont.</title>
+<blurb fontsize="3.5em">
+Don't let Larry add %$_% to PHP!
+</blurb>
+
+<image align="center" filename="larry.gif" width="200" />
+<example filename="access4.php" fontsize="1.5em" result="1" />
+</slide>

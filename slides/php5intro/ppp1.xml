@@ -1,0 +1,12 @@
+<slide> 
+<title>PPP</title>
+<blurb fontsize="3.5em">
+PHP5 introduces *P*rivate, *P*rotected, and *P*ublic.
+</blurb>
+<blurb>
+</blurb>
+<blurb fontsize="3.5em">
+Private allows access only to members of the current class.
+</blurb>
+<example filename="access2.php" result="1" />
+</slide>

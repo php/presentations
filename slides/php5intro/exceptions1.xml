@@ -1,0 +1,7 @@
+<slide>
+<title>Custom Exceptions</title>
+<blurb fontsize="3.5em">
+To define custom exceptions, just extend the %Exception% base class.
+</blurb>
+<example filename="except1.php" fontsize="1.8em" result="1" />
+</slide>

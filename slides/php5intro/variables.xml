@@ -1,0 +1,11 @@
+<slide>
+<title>Variables</title>
+<blurb fontsize="3.5em">
+PHP uses reference counting to manage base types.
+</blurb>
+<example filename="referencecounting.php" />
+<blurb fontsize="3.5em">
+To avoid copy-on-write, you would use the alias operator (%&amp;%).
+</blurb>
+<example filename="alias.php" />
+</slide>

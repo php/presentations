@@ -1,0 +1,9 @@
+<slide> 
+<title>Access Control</title>
+<image align="left" valign="middle" filename="game10_carmen1.jpg" />
+<blurb fontsize="3.5em">
+In PHP4 you could not enforce access control.
+</blurb>
+<blurb><![CDATA[<br /><br /><br /><br /><br /><br /><br />]]></blurb>
+<example filename="access1.php" result="1" title="Infiltration!" />
+</slide>

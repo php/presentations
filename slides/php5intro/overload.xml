@@ -1,0 +1,8 @@
+<slide>
+<title>Object Overloading</title>
+<blurb fontsize="3.5em">
+In PHP5 there exists engine level object overloading for variables via
+the %__get()% and %__set()% accessors.
+</blurb>
+<example filename="overload.php" result="1" />
+</slide>

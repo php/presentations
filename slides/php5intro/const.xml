@@ -1,0 +1,7 @@
+<slide>
+<title>Constants</title>
+<blurb>
+PHP5 supports %class% and %namespace% level %define%'s, known as constants (%const%).
+</blurb>
+<example filename="const.php" result="1" />
+</slide>

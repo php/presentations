@@ -1,0 +1,7 @@
+<slide>
+<title>Object Overloading</title>
+<blurb fontsize="3.5em">
+You can overload function calls via the %__call()% handler.
+</blurb>
+<example filename="overload1.php" result="1" />
+</slide>
