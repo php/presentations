@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>C library</title>
+
+ <blurb>
+  All mdbtool command line utilities use the mdbtool 
+  C library to read MDB files.
+ </blurb>
+
+ <blurb> 
+  The C library provides functions to read the file
+  structure and actual table data. 
+ </blurb>
+
+ <blurb>
+  The library itself depends on glib2.
+ </blurb>
+
+</slide>

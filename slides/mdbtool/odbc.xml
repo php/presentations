@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>ODBC</title>
+
+ <list title="A transfer with ODBC">
+  <li>requires Access ODBC drivers installed</li>
+  <li>also requires an ODBC driver for the target database</li>
+  <li>only works with local or network file access to the MDB file</li>
+ </list>
+</slide>

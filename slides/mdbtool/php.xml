@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>PHP extension</title>
+
+ <blurb>
+  I created a PHP extension based on the mdbtool C library
+  that makes the most important functions of the C API
+  available to PHP.
+ </blurb>
+
+ <blurb>
+  Using this extension you can find out what tables are
+  included in a MDB file and can iterate over the actual
+  table data.
+ </blurb>
+
+ <blurb>
+  The PHP extension is available in the PECL repository:
+
+  http://pecl.php.net/mdbtool
+ </blurb>
+
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Export to text</title>
+
+ <blurb>
+  There are three common text representations for 
+  Database tables: 
+ </blurb>
+ <list>
+  <li>fixed field length</li>
+  <li>TAB separated</li>
+  <li>CSV</li>
+ </list>
+ <blurb>
+  CSV is the most common these days
+ </blurb>
+</slide>

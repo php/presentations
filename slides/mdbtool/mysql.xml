@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Next step: MySQL</title>
+
+ <blurb>
+  We are currently investigating two approaches
+  to use mdbtoll for direct access to Acess MDB
+  file data from within MySQL:
+ </blurb>
+
+ <list>
+  <li>a mdbtool based table handler</li>
+  <li>LOAD DATA INFILE support for MDB format</li>
+ </list>
+</slide>

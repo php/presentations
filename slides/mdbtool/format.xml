@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>MDB File Format</title>
+
+ <blurb>
+  MDB files contain all Access data objects
+ </blurb>
+
+ <list>
+  <li>data tables and indexes</li>
+  <li>queries</li>
+  <li>forms</li> 
+  <li>reports</li>
+  <li>VBA code</li> 
+ </list>
+
+</slide>

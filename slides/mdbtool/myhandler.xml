@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>MDB table handler</title>
+
+ <blurb>
+  The MDB table handler (that i am working on right now)
+  will provide:
+ </blurb>
+
+ <list>
+  <li>native read access to Access data</li>
+  <li>full MySQL SQL syntax support</li>
+  <li>joins over Access and MySQL tables possible</li>
+  <li>Access data may be updated at any time by replacing the MDB file</li>
+ </list>
+</slide>

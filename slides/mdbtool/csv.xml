@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>CSV</title>
+
+ <list title="CSV">
+  <li>uses a delimiter character, usually *;*</li>
+  <li>encapsulates strings in *'...'* so that text can contain *;*</li>
+  <li>no real (formal) specifications</li>
+  <li>not all implementations support line breaks in data</li>
+ </list>
+</slide>

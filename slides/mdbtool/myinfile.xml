@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>LOAD DATA INFILE</title>
+
+ <blurb>
+  Another approach to use MDB data within MySQL
+  is to directly import it into MySQL tables.
+ </blurb>
+
+ <blurb>
+  The LOAD DATA INFILE feature currently used for
+  CSV style data has recently been extended to 
+  support data preprocessing and filtering.
+ </blurb>
+
+ <blurb>
+  With the help of the mdbtool library it should
+  be possible to create a preprocessing filter
+  that reads a table from an MDB file instead
+  of textual data.
+ </blurb>
+
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Command line tools</title>
+
+ <list title="mdbtool provides some usefull command line tools">
+  <li>_mdbtables_  shows names of tables in a MDB file</li>
+  <li>_mdbexport_  extracts table data as CSV</li>
+  <li>_mdbschema_  generates SQL schema definitions</li>
+  <li>_mdbsql_     a very simple SQL query tool</li>
+  <li>...</li>
+ </list>
+
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>mdbtool</title>
+
+ <list title="The mdbtool project on SourceForge">
+  <li>revese engineered the MDB file format</li>
+  <li>provides a C library to access MDB file structure and table data</li>
+  <li>comes with commandline tools</li>
+  <li>is also ported to native JAVA</li>
+  <li>see also http://mdbtool.sf.net/</li>
+ </list>
+
+</slide>

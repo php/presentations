@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Handler HowTo</title>
+
+ <blurb>
+  Using the mdbtool handler for now requires 
+  some manual interaction:
+ </blurb>
+
+ <list>
+  <li>The MDB file has to be copied to a database data directory</li>
+  <li>The table handler has no automatic schema detection</li>
+  <li>... so you have to use the mdbschema tool to get proper CREATE statements</li>
+  <li>Table names in the MDB and in the MySQL database have to match</li>
+  <li>Only one MDB file per database supported for now</li>
+ </list>
+</slide>

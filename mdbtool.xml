@@ -1,0 +1,36 @@
+<presentation navbarbackground="#DAE6EA">
+ <title>Using Microsoft Acess Databases without ODBC</title>
+ <event>LinuxTag 2004</event>
+ <location>Karlsruhe</location>
+ <date>June 24 2004</date>
+ <speaker>Hartmut Holzgraefe</speaker>
+ <navmode>html</navmode>
+ <basefontsize>12pt</basefontsize>
+ <topic>mdbtool</topic>
+ <logo1>presentations/slides/UDF_Gen/mysql_2004.png</logo1>
+
+ <slide>slides/mdbtool/intro.xml</slide>
+
+ <slide>slides/mdbtool/format.xml</slide>
+ <slide>slides/mdbtool/transfer.xml</slide>
+ <slide>slides/mdbtool/copymdb.xml</slide>
+ <slide>slides/mdbtool/export.xml</slide>
+ <slide>slides/mdbtool/csv.xml</slide>
+ <slide>slides/mdbtool/odbc.xml</slide>
+
+ <slide>slides/mdbtool/mdbtool.xml</slide>
+ <slide>slides/mdbtool/cmdline.xml</slide>
+ <slide>slides/mdbtool/clib.xml</slide>
+
+ <slide>slides/mdbtool/php.xml</slide>
+ <slide>slides/mdbtool/phpex.xml</slide>
+ <slide>slides/mdbtool/phpex1.xml</slide>
+ <slide>slides/mdbtool/phpex2.xml</slide>
+
+ <slide>slides/mdbtool/mysql.xml</slide>
+ <slide>slides/mdbtool/myhandler.xml</slide>
+ <slide>slides/mdbtool/myhandler2.xml</slide>
+ <slide>slides/mdbtool/myinfile.xml</slide>
+
+ <slide>slides/mdbtool/contact.xml</slide>
+</presentation>
