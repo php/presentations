@@ -1,0 +1,11 @@
+<slide title="XTemplate">
+<list>
+ <list>http://xtpl.sf.net/</list>
+ <bullet>PHP globals predefined ({PHP.PHP_SELF})</bullet>
+ <bullet>File includes</bullet>
+ <bullet>Nested blocks</bullet>
+</list>
+<example title="Code" filename="slides/pragmatic/xtpl.php" />
+<example title="Template" filename="slides/pragmatic/xtpl.tpl" type="system" />
+<example title="Output" filename="slides/pragmatic/xtpl.php" hide="1" result="1" />
+</slide>

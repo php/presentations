@@ -1,0 +1,9 @@
+<slide title="IntegratedTemplate">
+<list>
+ <bullet>Part of PEAR (HTML_IT)</bullet>
+ <bullet></bullet>
+</list>
+<example title="Code" filename="slides/pragmatic/integratedtemplate.php" />
+<example title="Template" filename="slides/pragmatic/integratedtemplate.tpl" type="system" />
+<example title="Output" filename="slides/pragmatic/integratedtemplate.php" hide="1" result="1" />
+</slide>

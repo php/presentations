@@ -1,0 +1,11 @@
+<slide title="Template Systems">
+<list title="Why?">
+ <bullet>Separate content and design</bullet>
+ <bullet>Separate designers from programmers</bullet>
+</list>
+<list title="Basics">
+ <bullet>Some sort of special tags for variables: <![CDATA[{variable}, <%variable%>, etc]]></bullet>
+ <bullet>Most have support for blocks (looping for table rows)</bullet>
+ <bullet>Some have support for conditional sections</bullet>
+</list>
+</slide>

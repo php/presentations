@@ -1,0 +1,10 @@
+<slide title="Phemplate">
+<list>
+ <bullet>http://pukomuko.esu.lt/phemplate/</bullet>
+ <bullet>Loops (with empty loop handling) and blocks</bullet>
+ <bullet>File includes (&amp;lt;include file="filename"&amp;gt;)</bullet>
+</list>
+<example title="Code" filename="slides/pragmatic/phemplate.php" />
+<example title="Template" filename="slides/pragmatic/phemplate.tpl" />
+<example title="Output" filename="slides/pragmatic/phemplate.php" hide="1" result="1" />
+</slide>

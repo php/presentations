@@ -10,6 +10,7 @@
 <speaker>Jim Winstead</speaker>
 <email>jimw@apache.org</email>
 <url>http://conf.php.net/pragmatic</url>
+
 <slide>slides/intro/titlepage.xml</slide>
 <slide>slides/pragmatic/agenda.xml</slide>
 
@@ -47,7 +48,18 @@
 <!-- <slide>slides/pragmatic/db-phplib.xml</slide> -->
 <slide>slides/pragmatic/db-tools.xml</slide>
 
-<!-- templates section goes here. -->
+<!-- template systems -->
+
+<slide>slides/pragmatic/tpl-overview.xml</slide>
+<slide>slides/pragmatic/tpl-bugi.xml</slide>
+<slide>slides/pragmatic/tpl-fasttemplate.xml</slide>
+<slide>slides/pragmatic/tpl-integratedtemplate.xml</slide>
+<slide>slides/pragmatic/tpl-phemplate.xml</slide>
+<slide>slides/pragmatic/tpl-smarty.xml</slide>
+<slide>slides/pragmatic/tpl-templateclass.xml</slide>
+<slide>slides/pragmatic/tpl-templatepower.xml</slide>
+<slide>slides/pragmatic/tpl-xtemplate.xml</slide>
+<slide>slides/pragmatic/tpl-php.xml</slide>
 
 <slide>slides/pragmatic/break.xml</slide>
 <slide>slides/pragmatic/agenda.xml</slide>
