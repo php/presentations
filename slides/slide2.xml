@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+
+  <title size="50" color="ffff00" align="center" mode="flash">Another Slide</title>
+
+  <blurb>
+    <title>Slide 2</title>
+	<text>
+This is the second slide which has a long code example on it.
+	</text>
+  </blurb>
+
+  <example fontsize="1.2em">	
+	<filename>objects.php</filename>
+  </example>
+</slide>
