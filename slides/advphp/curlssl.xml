@@ -1,3 +1,9 @@
 <slide title="SSL Connection">
-
+<blurb>cURL is very cool, when you compile PHP and cURL withh OpenSSL it 
+can handle HTTPS urls transparently.</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+$ch = curl_init ('https://www.thawte.com/');
+curl_exec ($ch);
+curl_close ($ch);
+?>]]></example>
 </slide>

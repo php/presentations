@@ -1,3 +1,7 @@
 <slide title="ext_skel">
-
+<blurb>
+%ext_skel% is an automated tool for creating PHP extensions, it sets up the 
+initial directory information, and creates basic skeleton files (with the 
+option of documentation).
+</blurb>
 </slide>

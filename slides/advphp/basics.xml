@@ -1,7 +1,7 @@
 <slide title="Basic cURL options">
 <blurb>
-Using cURL starts with a set of three functions, &lt;code>curl_init()&lt;/code>,
-&lt;code>curl_setopt()&lt;/code> and &lt;code>curl_exec()&lt;/code>.
+Using cURL starts with a set of three functions, %curl_init()%,
+%curl_setopt()% and %curl_exec()%.
 </blurb>
 <example fontsize="1.2em"><![CDATA[<?php
 $ch = curl_init ('http://www.php.net/');

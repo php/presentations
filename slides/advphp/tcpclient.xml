@@ -1,3 +1,38 @@
 <slide title="TCP Client">
+<blurb>
+Here is a simple HTTP client that leverages the socket 
+extension in order to download a webpage directly.
+</blurb>
 
+<example fontsize="1.2em"><![CDATA[<?php
+error_reporting (E_ALL);
+
+/* Get the port for the WWW service. */
+$service_port = getservbyname ('www', 'tcp');
+
+/* Get the IP address for the target host. */
+$address = gethostbyname ('www.php.net');
+
+/* Create a TCP/IP socket. */
+$socket = socket_create (AF_INET, SOCK_STREAM, 0);
+if ($socket < 0) {
+    echo "socket_create() failed: reason: " . socket_strerror ($socket) . "\n";
+}
+
+$result = socket_connect ($socket, $address, $service_port);
+if ($result < 0) {
+    echo "socket_connect() failed.\nReason: ($result) " . socket_strerror($result) . "\n";
+} 
+
+$in = "HEAD / HTTP/1.0\r\n\r\n";
+$out = '';
+
+socket_write ($socket, $in, strlen ($in));
+
+while ($out = socket_read ($socket, 2048)) {
+    echo $out;
+}
+
+socket_close ($socket);
+?>]]></example>
 </slide>

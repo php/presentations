@@ -1,3 +1,21 @@
 <slide title="CPU Usage">
+<list>
+<bullet>Avoid Using frequent array accesses, remember, each array access is a 
+hash lookup.</bullet>
+</list>
+<example fontsize="1.2em" title="The Wrong Way"><![CDATA[<?php
+$ar['name'] = 'Sterling';
+
+for ($i = 0; $i < 20; ++$i) {
+    print $ar['name'];
+}
+?>]]>
+</example>
+
+<list>
+<bullet>Shorten "required" executions, such as loops.</bullet>
+<bullet>Avoid rebuilding large data structures.</bullet>
+<bullet>Look for alternatives to regular expressions</bullet>
+</list>
 
 </slide>

@@ -1,3 +1,11 @@
 <slide title="Automating Form Submissions">
-
+<blurb>cURL also automates the process of posting data with HTTP</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+$ch = curl_init ('http://www.playboy.com/new_member.cgi');
+curl_setopt ($ch, CURLOPT_POSTFIELDS, 
+             array ('firstname' => 'Andrei',
+                    'lastname' => 'Zmievski'));
+curl_exec ($ch);
+curl_close ($ch);
+?>]]></example>
 </slide>

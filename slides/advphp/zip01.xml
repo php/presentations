@@ -1,3 +1,12 @@
 <slide title="Sample Extension">
+<blurb>In our overview of PHP Extensions, we will look at the %zip% extension
+which interfaces with the zziplib library in order to provide decompression 
+support for %zip% files.</blurb>
+
+<list title="Features">
+<bullet slide="1">Open a zip file</bullet>
+<bullet slide="1">Browse the directory structure</bullet>
+<bullet slide="1">Access and decompress a singular file</bullet>
+</list>
 
 </slide>

@@ -1,3 +1,29 @@
 <slide title="UDP Connection">
+<blurb>
+</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+$sock = socket_open(AF_INET, SOCK_DGRAM, 0);
+if($sock < 0) {
+    echo "socket() failed, error:" . strerror($sock) . "\n";
+}
 
+$opt_ret = socket_set_option($sock, 1, 6, TRUE);
+if($opt_ret < 0) {
+    echo "setsockopt() failed, error: " . 
+         strerror($opt_ret) . "\n";
+}
+
+$send_ret = socket_sendto($sock, 
+                          $broadcast_string, 
+                          strlen($broadcast_string),
+                          0, 
+                          '255.255.255.255', 
+                          4096);
+if($send_ret < 0) {
+	echo "sendto() failed, error:" . strerror($send_ret) . "\n";
+}
+
+socket_close($sock);
+?>]]>
+</example>
 </slide>

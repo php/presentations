@@ -1,3 +1,10 @@
 <slide title="Socket Extension">
+<blurb>The socket extension provides an interface to the 
+POSIX socket API on both Windows and Linux.</blurb>
+<list>
+<bullet>Good when you need low-level access</bullet>
+<bullet>More complexity, but more power</bullet>
+<bullet>Use it only if %fsockopen()% isn't to your liking</bullet>
+</list>
 
 </slide>

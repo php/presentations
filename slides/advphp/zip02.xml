@@ -1,3 +1,13 @@
 <slide title="Source Layout">
-
+<example fontsize="1.2em" title="Directory Tree" type="shell"><![CDATA[vivaldi:~/work/os/php/php4/ext/zip> ls -a | tr " " "\n"
+.  
+..  
+config.m4  
+CREDITS  
+CVS  
+.cvsignore  
+php_zip.h  
+tests  
+zip.c  
+zip.dsp]]></example>
 </slide>

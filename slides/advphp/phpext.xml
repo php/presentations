@@ -1,3 +1,12 @@
 <slide title="PHP Extensions">
+<blurb>A PHP Extension is a piece of C/C++ code, embedded within PHP that provides 
+some additional functionality to PHP.</blurb>
+<list title="Why a PHP Extension?">
+<bullet slide="1">Interface with 3rd party libraries</bullet>
+<bullet slide="1">Low-level operating system access</bullet>
+<bullet slide="1">Write speed intensive routines within C</bullet>
+<bullet slide="1">You miss pointer redirection?</bullet>
+<bullet slide="1">And of course malloc violations!</bullet>
+</list>
 
 </slide>
