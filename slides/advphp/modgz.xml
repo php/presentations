@@ -6,11 +6,11 @@ to the homebrewed PHP solutions.
 </blurb>
 
 <list title="mod_gzip features">
-<bullet slide="1">Compression statistics</bullet>
-<bullet slide="1">The ability to chose compression via MIME type and 
+<bullet effect="slide">Compression statistics</bullet>
+<bullet effect="slide">The ability to chose compression via MIME type and 
 Filename</bullet>
-<bullet slide="1">You can exclude compression for certain browsers</bullet>
-<bullet slide="1">Can cache compression results</bullet>
+<bullet effect="slide">You can exclude compression for certain browsers</bullet>
+<bullet effect="slide">Can cache compression results</bullet>
 </list>
 
 </slide>

@@ -4,9 +4,9 @@ which interfaces with the zziplib library in order to provide decompression
 support for %zip% files.</blurb>
 
 <list title="Features">
-<bullet slide="1">Open a zip file</bullet>
-<bullet slide="1">Browse the directory structure</bullet>
-<bullet slide="1">Access and decompress a singular file</bullet>
+<bullet effect="slide">Open a zip file</bullet>
+<bullet effect="slide">Browse the directory structure</bullet>
+<bullet effect="slide">Access and decompress a singular file</bullet>
 </list>
 
 </slide>

@@ -5,13 +5,13 @@ HTTP supports native compression by using Lempel-Ziv encoding
 unix tool &lt;code>gzip&lt;/code>. 
 </blurb>
 <list title="Compression Advantages">
-<bullet slide="1">Greatly reduces bandwidth</bullet>
-<bullet slide="1">Cross browser compliant</bullet>
-<bullet slide="1">Compression can cache as well</bullet>
+<bullet effect="slide">Greatly reduces bandwidth</bullet>
+<bullet effect="slide">Cross browser compliant</bullet>
+<bullet effect="slide">Compression can cache as well</bullet>
 </list>
 
 <list title="Compression Disadvantages">
-<bullet slide="1">CPU intensive on the Server</bullet>
-<bullet slide="1">CPU intensive on the Client</bullet>
+<bullet effect="slide">CPU intensive on the Server</bullet>
+<bullet effect="slide">CPU intensive on the Client</bullet>
 </list>
 </slide>

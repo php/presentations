@@ -7,12 +7,12 @@ must occur.</bullet>
 </list>
 
 <list title="File I/O Tips" fontsize="2.2em">
-<bullet slide="1">Use the disk in concentrated bits, meaning do all your writing
+<bullet effect="slide">Use the disk in concentrated bits, meaning do all your writing
 together.</bullet>
-<bullet slide="1">Do Not Read Large Files Into Memory!</bullet>
-<bullet slide="1">Do Not Read Small Files From Disk!</bullet>
-<bullet slide="1">Employ caching to access frequently used data stored in memory</bullet>
-<bullet slide="1">Try and put write operations where they will cause the least loss 
+<bullet effect="slide">Do Not Read Large Files Into Memory!</bullet>
+<bullet effect="slide">Do Not Read Small Files From Disk!</bullet>
+<bullet effect="slide">Employ caching to access frequently used data stored in memory</bullet>
+<bullet effect="slide">Try and put write operations where they will cause the least loss 
 in user experience (remember, web pages are chunked!)</bullet>
 </list>
 

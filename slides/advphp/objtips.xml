@@ -1,10 +1,10 @@
 <slide title="Object Tips">
 <list>
-<bullet slide="1">Objects in PHP are not references by default</bullet>
-<bullet slide="1">Objects are internally an array of properties and an array of methods</bullet>
-<bullet slide="1">Private methods should start with a '_' in order to denote their access levels.</bullet>
-<bullet slide="1">Inheritance can be used to share methods between multiple classes</bullet>
-<bullet slide="1">Overloading helps you facilitate lazy evaluation/lazy caching</bullet>
-<bullet slide="1">Aggregation helps facilitate creating dynamic interfaces which loads methods at runtime</bullet>
+<bullet effect="slide">Objects in PHP are not references by default</bullet>
+<bullet effect="slide">Objects are internally an array of properties and an array of methods</bullet>
+<bullet effect="slide">Private methods should start with a '_' in order to denote their access levels.</bullet>
+<bullet effect="slide">Inheritance can be used to share methods between multiple classes</bullet>
+<bullet effect="slide">Overloading helps you facilitate lazy evaluation/lazy caching</bullet>
+<bullet effect="slide">Aggregation helps facilitate creating dynamic interfaces which loads methods at runtime</bullet>
 </list>
 </slide>

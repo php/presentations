@@ -1,9 +1,9 @@
 <slide title="Zend API">
 <list>
-<bullet slide="1">Functions must use %zend_parse_parameters()% to access function arguments</bullet>
-<bullet slide="1">Objects are accessed via the %getThis()% macro</bullet>
-<bullet slide="1">Resources are used to store C datastructures and map them at runtime to PHP 
+<bullet effect="slide">Functions must use %zend_parse_parameters()% to access function arguments</bullet>
+<bullet effect="slide">Objects are accessed via the %getThis()% macro</bullet>
+<bullet effect="slide">Resources are used to store C datastructures and map them at runtime to PHP 
 data</bullet>
-<bullet slide="1">Returning data is done via the %RETURN_*()% macros</bullet>
+<bullet effect="slide">Returning data is done via the %RETURN_*()% macros</bullet>
 </list>
 </slide>
