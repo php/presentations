@@ -1,0 +1,6 @@
+<slide title="UTF-8 Encoding">
+  <example title="Remove UTF-8 Encoding" fontsize="1.6em"><![CDATA[<?php $iso_8859_1 = utf8_decode($bad); ?>]]></example>
+    <example title="Force ISO-8859-1 on the Browser" fontsize="1.6em"><![CDATA[<?php
+print '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">';
+?>]]></example>
+</slide>

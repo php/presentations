@@ -1,0 +1,14 @@
+<slide title="Decrypting Data">
+<example fontsize="1.5em"><![CDATA[<?php
+$alg = MCRYPT_BLOWFISH;
+$mode = MCRYPT_MODE_CBC;
+$id = intval($_REQUEST['id']);
+$r = mysql_query("SELECT iv, ciphertext FROM secrets WHERE id = $id");
+$ar = mysql_fetch_assoc($r);
+    
+$plaintext = mcrypt_decrypt($alg, $_REQUEST['key'], $ar['ciphertext'], $mode, $ar['iv']);
+?>]]></example>
+<image filename="potato.jpg" align="center"/>
+</slide>
+
+

@@ -1,0 +1,9 @@
+<slide title="Regular Expressions">
+<example title="Test Values with Regular Expressions"><![CDATA[<?php
+if (! preg_match('/^\d{5}(-\d{4})?$/',
+                  $_POST['zipcode'])) { ... }
+
+$email_rx = '/^[^@\s]+@([-a-z0-9]+\.)+[a-z]{2,}$/i';
+if (! preg_match($email_rx, $_POST['email'])) { ... }
+?>]]></example>
+</slide>

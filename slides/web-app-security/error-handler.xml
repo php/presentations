@@ -1,0 +1,11 @@
+<slide title="Error Handlers">
+<example title="Use a Custom Error Handler"><![CDATA[<?php
+set_error_handler('do_errors');
+function do_errors($errno, $errstr, $errfile, $errline) {
+    error_log("ERROR ($errfile:$errline): $errstr");
+    header('Location: http://'.$_SERVER['HTTP_HOST'].'/error.php');
+    exit();
+}
+?>]]></example>
+  </slide>
+  

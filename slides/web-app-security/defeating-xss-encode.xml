@@ -1,0 +1,8 @@
+<slide title="Defeating XSS">
+<example title="You must encode special characters!" fontsize="1.6em" result="1"><![CDATA[<?php 
+$bad = '<script>alert("boo!")</script>';
+$ok = htmlspecialchars($bad,ENT_QUOTES); // < > & " ' 
+print "Alert...$bad";
+print $ok;
+?>]]></example>
+</slide>

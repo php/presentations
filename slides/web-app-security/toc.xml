@@ -1,0 +1,10 @@
+<slide title="Topics">
+<image filename="attack.jpg" align="right" marginright="2em"/>
+  <list talign="center" fontsize="4em" title="Vulnerabilities">
+    <bullet>Unvalidated Parameters</bullet>
+    <bullet>Cross-Site Scripting Flaws</bullet>
+    <bullet>Command Injection Flaws</bullet>
+    <bullet>Error Handling Problems</bullet>
+    <bullet>Insecure Use of Cryptography</bullet>
+  </list>
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Data Tampering">
+<image filename="laptop-saw.jpeg" align="right" marginright="5em"/>
+  <list title="Sending the hash">
+    <li>For cookies or hidden form fields</li>
+    <li>Hash: data plus secret word</li>
+    <li>Add hash to a cookie or form</li>
+  </list>
+  <list title="Checking the hash">
+    <li>When you get the data back, re-hash</li>
+    <li>Compare received and calculated hashes</li>
+  </list>
+</slide>

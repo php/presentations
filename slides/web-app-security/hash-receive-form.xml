@@ -1,0 +1,9 @@
+<slide title="Hash with Form">
+<example title="Processing the Form"><![CDATA[<?php
+if (md5($secret_word.$_POST['id']) == $_POST['hash']) {
+    $id = $_POST['id'];
+} else {
+    die('Invalid ID');
+}
+?>]]></example>
+</slide>

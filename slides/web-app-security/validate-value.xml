@@ -1,0 +1,10 @@
+<slide title="Testing Values">
+  <example title="Check allowable range of numeric values"><![CDATA[<?php
+if (($_GET['age'] < 13) || ($_GET['age'] > 65)) {...}
+?>]]></example>
+  <example title="Restrict %&amp;lt;select>% choices to a preset array"><![CDATA[<?php
+$choices = array(1 => 'Trout', 'Halibut', 'Tilapia');
+if (! $choices[$_POST['fish']]) { ... }
+?>]]></example>
+</slide>
+

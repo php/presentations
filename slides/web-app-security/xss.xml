@@ -1,0 +1,15 @@
+<slide title="Cross-Site Scripting">
+<image filename="t2phage.gif" align="left" marginleft="1em"/>
+
+<list marginleft="1em">
+<li>Interactive features of your site are used as unwitting carriers of client-side attacks</li>
+  </list>
+<list marginleft="1em">
+<li> Anywhere you display external input:</li>
+  </list>
+<list marginleft="3em">
+<li> User profile </li>
+<li> Forums</li>
+    <li> Error pages (the URL is external input)</li>
+  </list>
+</slide>

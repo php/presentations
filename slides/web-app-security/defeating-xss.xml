@@ -1,0 +1,8 @@
+<slide title="Defeating XSS">
+<blurb>Before displaying it, modify user input to defang scripts.</blurb>
+  <example title="You can remove all HTML and PHP tags" fontsize="1.6em" result="1"><![CDATA[<?php 
+    $bad = "<?php header(); ?><blink>Ugh!</blink><?php footer(); ?>";
+$ok = strip_tags($bad);
+print $ok;
+?>]]></example>
+</slide>

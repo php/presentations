@@ -1,0 +1,8 @@
+<slide title="Error Handling">
+<example title="Don't Display Raw Errors to Users">display_errors = off
+log_errors = on
+</example> 
+<blurb>
+This logs errors, but puts them in the server's error log, not in the browser.
+  </blurb>
+</slide>

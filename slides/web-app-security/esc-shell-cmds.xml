@@ -1,0 +1,17 @@
+<slide title="Escaping Shell Commands">
+<blurb align="center" title="%escapeshellcmd()% escapes but doesn't quote:">%<![CDATA[# & ; ` ' " | * ? ~ < > ^ ( ) [ ] { } $ \ 0x0A 0xFF]]>%</blurb>
+<example fontsize="1.6em"><![CDATA[<?php
+$bad_format = 'html <a>';
+$also_bad_format = escapeshellarg($bad_format);
+$ok_format = escapeshellcmd($bad_format);
+
+// redirection error
+system("/usr/local/bin/formatter-$bad_format");
+
+// no such program
+system("/usr/local/bin/formatter-$also_bad_format"); 
+
+// runs /usr/local/bin/formatter-html with correct argument
+system("/usr/local/bin/formatter-$ok_format");
+?>]]></example>
+</slide>

@@ -1,0 +1,15 @@
+<slide title="Escaping Shell Arguments">
+  <list>
+    <li>%escapeshellarg()% puts single quotes around an argument and escapes single quotes inside the argument</li>
+  </list>
+  <example><![CDATA[<?php
+$bad_arg = '-al; rm -rf /';
+$ok_arg = escapeshellarg($bad_arg);
+
+// list all files, then delete everything!
+system("ls $bad_arg");
+
+// is there a file called "-al; rm -rf /"?
+system("ls $ok_arg");
+?>]]></example>
+</slide>

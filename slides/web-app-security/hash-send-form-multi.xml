@@ -1,0 +1,17 @@
+<slide title="Hash with Form">
+  <example title="Hashing Multiple Values"><![CDATA[<?php
+$secret_word = 'salt-baked squid';
+$var_names = array('id','shopping_cart','size');
+$vars_string = serialize(compact($var_names));
+$hash = md5($secret_word.$vars_string);
+$vars_safe = htmlspecialchars($vars_string);
+print<<<_HTML_
+<form method="POST" action="save.php">
+<input type="hidden" name="vars" value="$vars_safe">
+  <input type="hidden" name="hash" value="$hash">
+... other form elements ...
+</form>
+_HTML_;
+?>]]></example>
+
+</slide>

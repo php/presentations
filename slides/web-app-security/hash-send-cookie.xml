@@ -1,0 +1,10 @@
+<slide title="Hash with Cookie">
+<example title="Sending the cookie"><![CDATA[<?php
+$secret_word = 'salt-baked squid';
+$id = 31415926;
+$hash = md5($secret_word.$id);
+setcookie('id',$id.'-'.$hash);
+?>]]></example>
+<image filename="squid.jpg" align="center"/>
+
+</slide>

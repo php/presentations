@@ -1,0 +1,14 @@
+<slide title="Hash with Form">
+  <example title="Displaying the Form"><![CDATA[<?php
+$secret_word = 'salt-baked squid';
+$id = 31415926;
+$hash = md5($secret_word.$id);
+print<<<_HTML_
+<form method="POST" action="save.php">
+<input type="hidden" name="id" value="$id">
+<input type="hidden" name="hash" value="$hash">
+... other form elements ...
+</form>
+_HTML_;
+?>]]></example>
+</slide>

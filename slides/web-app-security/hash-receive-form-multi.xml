@@ -1,0 +1,11 @@
+<slide title="Hash with Form">
+<example title="Processing the Form"><![CDATA[<?php
+if (md5($secret_work.$_POST['vars']) == $_POST['hash']) {
+    $vars = unserialize($_POST['vars']);
+    // put back into global namespace
+    extract($vars);
+} else {
+    die('Invalid vars');
+}
+?>]]></example>
+</slide>

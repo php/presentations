@@ -1,0 +1,9 @@
+<slide title="Command Injection">
+<list><li>Like XSS, but nasty stuff is intended for your server or database</li></list>
+<list><li>Different set of code/data delimiters:</li></list>
+<list marginleft="2em">
+<li>Database escapes and wildcard characters</li>
+<li>Shell escapes, wildcards, and metacharacters</li>
+  </list>
+<image filename="brine-injection.jpeg" align="center"/>
+</slide>

@@ -1,0 +1,9 @@
+<slide title="Cryptography">
+<list>
+<bullet>Use SSL to prevent network sniffing</bullet>
+<bullet>Use %mcrypt%</bullet>
+<bullet>If you store keys, mind the security on the key storage</bullet>
+<bullet>Don't store plaintext passwords</bullet>
+<bullet>Watch out for misconfigured shared hosting environments</bullet>
+  </list>
+</slide>

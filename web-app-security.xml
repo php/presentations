@@ -1,0 +1,41 @@
+<presentation>
+  <topic>PHP</topic>
+  <title>PHP Web Application Security Vulnerabilities</title>
+  <event>International PHP Conference</event>
+  <location>Amsterdam, NL</location>
+  <date>May 8, 2003</date>
+  <speaker>David Sklar</speaker>
+  <email>sklar@sklar.com</email>
+  <url>http://talks.php.net/show/web-app-security</url>
+  
+  <slide>slides/web-app-security/titlepage.xml</slide>
+  <slide>slides/web-app-security/toc.xml</slide>
+  <slide>slides/web-app-security/validate-syntax.xml</slide>
+  <slide>slides/web-app-security/validate-value.xml</slide>
+  <slide>slides/web-app-security/validate-regex.xml</slide>
+  <slide>slides/web-app-security/hash.xml</slide>
+  <slide>slides/web-app-security/hash-send-cookie.xml</slide>
+  <slide>slides/web-app-security/hash-receive-cookie.xml</slide>
+  <slide>slides/web-app-security/hash-send-form.xml</slide>
+  <slide>slides/web-app-security/hash-receive-form.xml</slide>
+  <slide>slides/web-app-security/hash-send-form-multi.xml</slide>
+  <slide>slides/web-app-security/hash-receive-form-multi.xml</slide>
+  <slide>slides/web-app-security/xss.xml</slide>
+  <slide>slides/web-app-security/defeating-xss.xml</slide>
+  <slide>slides/web-app-security/defeating-xss-encode.xml</slide>
+  <slide>slides/web-app-security/xss-unicode.xml</slide>
+  <slide>slides/web-app-security/command-injection.xml</slide>
+  <slide>slides/web-app-security/db-esc-chars.xml</slide>
+  <slide>slides/web-app-security/db-cmd-injection.xml</slide>
+  <slide>slides/web-app-security/db-cmd-injection-stop.xml</slide>
+  <slide>slides/web-app-security/shell-cmd-injection.xml</slide>
+  <slide>slides/web-app-security/esc-shell-args.xml</slide>
+  <slide>slides/web-app-security/esc-shell-cmds.xml</slide>
+  <slide>slides/web-app-security/error-display.xml</slide>
+  <slide>slides/web-app-security/error-handler.xml</slide>
+  <slide>slides/web-app-security/crypto.xml</slide>
+  <slide>slides/web-app-security/mcrypt-store.xml</slide>
+  <slide>slides/web-app-security/mcrypt-retrieve.xml</slide>
+
+  <slide>slides/web-app-security/more-info.xml</slide>
+</presentation>

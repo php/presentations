@@ -1,0 +1,10 @@
+<slide title="Hash with Cookie">
+  <example title="Receiving and verifying the cookie"><![CDATA[<?php
+list($c_id,$c_hash) = explode('-',$_COOKIE['id']);
+if (md5($secret_word.$c_id) == $c_hash) {
+    $id = $c_id;
+} else {
+    die('Invalid cookie.');
+}
+?>]]></example>
+</slide>
