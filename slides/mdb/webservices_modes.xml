@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Accessing web services">
+	<blurb title="A possible problem">
+		The client accessing the MDB web services has to wait
+		for as long as it takes to get the results. This can be very
+		inefficient if complex queries or analyses are requested.
+	</blurb>
+	<blurb title="... and a solution: asynchronous access"/>
+	<list type="arrow" fontsize="2.5em" marginright="1em">
+		<bullet>
+			Decouple the request and the retrieval of the results, to
+			allow scheduling of query execution to periods of decreased server load.
+		</bullet>
+		<bullet>
+			Query result caching: if the same query is requested by different clients,
+			it will be executed only once.
+		</bullet>
+		<bullet>
+			Flexible result/documentation delivery. For example, an external web application can
+			register interest in knowing the latest metalloproteins indexed in the
+			MDB, for that it will register a callback service, a method/protocol, and a
+			result format.
+		</bullet>
+	</list>
+</slide>

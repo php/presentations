@@ -1,23 +1,24 @@
 <?php
-$server = 'http://metallo.scripps.edu';
-$api_uri = '/services/api.php';
-$query = "select source_id,expdata,description from protein limit 3";
+include 'slides/mdb/scripts/mdb_tests.cfg';
+$query = "select source_id,expdata,description from protein ";
+$query .= "where expdata not like '%nmr%' limit 4";
 $format = "table";
 $q = urlencode($query);
 $func = "sql";
-$getstr = "{$server}{$api_uri}";
-$getstr .= "?func=sql&query=$q&format=$format";
-$result = implode("",file($getstr));
+$getstr = MDB_SERVER.API_URI;
+$getstr .= "?func=$func&query=$q&format=$format";
+$result = implode('',file($getstr));
 
 echo "<h1 align='center'>Testing the HTTP based API</h1>
-<b>Server used:</b> [ $server ]
-<b>Service:</b>[ $api_uri ]
-<hr>\n<h2>SQL query function</h2>
-<b>Function vars:</b>
-[query: $query]
+<b>Server used:</b> [ ".MDB_SERVER.
+"]<br><b>Service:</b>[ ".API_URI."]
+<hr>
+<h2>SQL query function</h2>
+<b>Function vars:</b><br>
+[query: $query]<br>
 [format: $format]
-<br><b>Using the URL: </b>
-$getstr
-<br><b>RESULT</b><br>
+<br><b>Using the URL: </b>".
+wordwrap($getstr,45,"<br>\n",true).
+"<br><b>RESULT</b><br>
 $result\n";
 ?>

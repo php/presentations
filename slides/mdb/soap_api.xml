@@ -1,5 +1,5 @@
-<slide title='SOAP API'>
-<example title='Server created using PEAR::SOAP' fontsize='1.5em'>
+<slide title='SOAP service'>
+<example title='Server created using PEAR::SOAP' fontsize='1.2em'>
 <![CDATA[<?php
 require_once 'globals.inc';
 require_once 'SOAP/Server.php';
@@ -20,8 +20,8 @@ class MDB_SOAP_Services {
 
 	function sql($query) {
 		if (!eregi("^(select|show|describe)", $query)) {
-			trigger_error('Invalid query. Only SELECT, SHOW and DESCRIBE allowed', 
-							E_USER_ERROR);
+			trigger_error('Invalid query. Only SELECT, SHOW '.
+			              'and DESCRIBE allowed', E_USER_ERROR);
 		}
 		$db = $GLOBALS['dsn'].$GLOBALS['datadb'];
 		$result = @sqlquery($db, $query, false);
@@ -43,8 +43,8 @@ class MDB_SOAP_Services {
 	function _dometallopdb($metal, $mode, $count, $rss=false) {
 		$count = intval($count);
 		if ($count <= 0) {
-			trigger_error("Parameter count must be an integer > 0, value sent: $count",
-							E_USER_ERROR);
+			trigger_error("Parameter count must be an ".
+		              "integer > 0, value sent: $count", E_USER_ERROR);
 		}
 		$result = @getPDBFromMetal($metal, $mode, $count);
 		if (is_object($result) &&  DB::isError($result)) {
@@ -64,7 +64,7 @@ class MDB_SOAP_Services {
 }
 
 $server = new SOAP_Server();
-$mdb_services = new MDB_SOAP_Services($ns);
+$mdb_services = new MDB_SOAP_Services();
 $server->addObjectMap($mdb_services);
 $server->service($HTTP_RAW_POST_DATA);
 ?>

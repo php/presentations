@@ -1,5 +1,5 @@
 <slide title='Conclusions'>
-<list type='darrow' effect='hide' title='The "take home" message:'>
+<list type='darrow' title='The "take home" message:'>
 <bullet>
 APIs (aka Services) for Web Applications are needed and good.
 </bullet>
@@ -19,7 +19,7 @@ XML-RPC is nice and simple, and you can read the specs over a cup of coffee (or 
 SOAP is a little more complex, but it gives you more flexibility (see also WSDL, UDDI).
 </bullet>
 </list>
-<blurb title='... and remember:' effect='hide'>
+<blurb title='... and remember:'>
 *Bioinformatics:* the tool to explore the unexplored new 
 biological landscape. (Consider programming bioinformatic applications)
 </blurb>

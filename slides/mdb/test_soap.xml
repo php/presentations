@@ -5,8 +5,9 @@ outputbackground='#ffffdd'>
 <![CDATA[
 <?php 
 require_once 'SOAP/Client.php';
+require_once "slides/mdb/scripts/mdb_tests.cfg";
 $SOAP_OBJECT_STRUCT=false;
-$url = 'http://metallo.scripps.edu:80/services/soap.php';
+$url = MDB_SERVER.SOAP_URI;
 $ns = 'urn:MDB_SOAP_Server';
 $c = new SOAP_Client($url);
 

@@ -29,7 +29,7 @@ function toTable($arr) {
 	for ($i=0; $i<$ndata; $i++) {
 		$out .= "<tr align='center'>\n";
 		while(list($f,$val) = each($arr[$i])) {
-			$out .= "<td>&nbsp;".htmlspecialchars($val)."</td>\n";
+			$out .= "<td><small>".htmlspecialchars($val)."</small></td>\n";
 		}
 		$out .= "</tr>\n";
 	}

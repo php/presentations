@@ -1,5 +1,6 @@
 <slide title='Testing: metallopdb()'>
 <example type='php' result='1' fontsize='1.5em'
+	rfontsize='1em'
 marginright='1em' marginleft='1em' width='95%'
 filename='scripts/test_api_metallopdb.php'
 title='Using the metallopdb() function'/>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title='Agenda'>
+<list title='Web Services' type='darrow'>
+	<bullet>REST (aka HTTP methods), XML-RPC, and SOAP</bullet>
+	<bullet>Why do we need Web Services in Bioinformatics</bullet>
+</list>
+<list title='The MDB Web Application' type='darrow'>
+	<bullet>Background</bullet>
+	<bullet>Its Architecture</bullet>
+	<bullet>Web Services Implementation (with examples)</bullet>
+	<bullet>Access modes: synchronous, asynchronous</bullet>
+</list>
+<list title='Summary and Acknowldegements'>
+	<bullet type='none'/>
+</list>
+</slide>

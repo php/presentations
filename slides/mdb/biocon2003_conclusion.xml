@@ -1,0 +1,35 @@
+<slide title="Summary">
+	<list type='darrow' marginright="1.5em">
+		<bullet>
+			Bioinformatic Web Applications *must* implement Web Services.
+			Small effort to implement them, and high payoffs in terms 
+			of sharing, collaboration, and knowledge integration.
+		</bullet>
+		<bullet>
+			Use REST, XML-RPC, SOAP, or the [RPC flavor of the month]. Just
+			keep them nice and simple, your fellow researchers will 
+			love you for that.
+		</bullet>
+		<bullet>
+			*REST* is the simplest way to share. We've been doing it since
+			the CGI spec appeared. No spec on how to represent
+			the returned data.
+		</bullet>
+		<bullet>
+			*XML-RPC* is simple, but data with complex structure might not be easy to
+			represent.
+		</bullet>
+		<bullet>
+			*SOAP* is a more complex, but it gives you more flexibility (XML
+			Schemas, RPC and Document Literal, WSDL, Service redirection, etc.)
+		</bullet>
+		<bullet>
+			Plan on synchronous and asynchronous access to improve performance.
+			Consider XML Spaces and similar Tuple/Data Spaces.
+		</bullet>
+		<bullet>
+			Use the MDB Web Services. Use the MDB Web Services. Use the MDB Web
+			Services...
+		</bullet>
+	</list>
+</slide>

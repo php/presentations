@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Register interest">
+	<blurb title="Example of callback registration"/>
+	<list type="number">
+		<bullet>
+			Web client tells the SOAP server that it wants to be 
+			informed whenever _new_ Cu-containing proteins are indexed in the MDB.
+			Gives as callback the URL: _http://www.example.com/newcu.jsp_, and
+			wants to recieve data in RSS format, using the HTTP POST method.
+		</bullet>
+		<bullet>
+			MDB Web services know how to use POST and format data in RSS, so a
+			registration ID is returned. ID can be used to unregister
+			the callback, or modify it.
+		</bullet>
+ 	<bullet>
+			The following week, new protein structures are indexed. Five new
+			Cu-containing proteins are found.
+		</bullet>
+		<bullet>
+			MDB uses the registered URL and POSTs a RSS formatted document with
+			information on the new Cu-containing proteins.
+		</bullet>
+		<bullet>
+			Callback is repeated next week unless unregistered, modified, or
+			if an error condition was encountered the previous week (e.g. a critical
+			HTTP error).
+		</bullet>
+	</list>
+</slide>

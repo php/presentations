@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Future services">
+ <list type="dot">
+  <!-- bullet>
+   _MSIT_: The Metal-binding Site Indexing Tool. Used to recognize
+   metal-binding sites in PDB structures, assigning geometries, liganding
+   shell and interactions. Generates mini-PDB structures containing the
+   metal sites, including valid SITE records.
+  </bullet -->
+  <bullet>
+   _MSE_: The Metal-binding Site Evaluator. Performs a full analysis on a 
+   user submitted PDB structure, generating a complete report of the
+   metal-binding sites, their geometry, first and second shell ligands,
+   hydrogen-bond interactions, etc. Uses our *MSIT* java application.
+  </bullet>
+ </list>
+ <image title="Analysis of 2sod.pdb" talign="center"
+  align="center" filename="images/mse_output.png" />
+
+ <list type="dot">
+  <bullet>
+   _ClusterGeom_: Java application that performs a geometrical analysis of
+   iron-sulfur clusters ([4Fe4S] and [3Fe4S]). Generates parameters and
+   projections that can be correlated with cluster distortion from an ideal
+   geometry.
+  </bullet>
+ </list>
+ <image title="[4Fe4S] 2D projection" talign="center"
+  align="center" filename="images/clustergeom_plot.png" />
+
+ <list type="dot">
+  <bullet>
+   Expansion of the analytical tools, to include: Chi angle distributions and
+   2D comparisons, Bond angle distributions, Liganding pattern and parameter 
+   distribution correlations, etc.
+  </bullet>
+ </list>
+ <image title="Chi@1@-Chi@2@ distribution. All Histidines vs Zn(His)@3@X" talign="center"
+  align="center" filename="images/his_chi_dist_small.png" />
+</slide>

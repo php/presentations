@@ -1,16 +1,14 @@
 <slide title='method.metallopdb'>
-<example title='Using method.metallopdb from the XML-RPC API' result='1'
+<example title='Using method.metallopdb from the XML-RPC service' result='1'
 fontsize='1.0em' rfontsize='1.5em' outputbackground='#ffffdd'>
 <![CDATA[
 <?php
 error_reporting(1);
 require_once "XML/RPC.php";
-require_once "presentations/slides/mdb/scripts/xmlrpc_util.php";
-$host = 'metallo.scripps.edu';
-$port = 80;
-$xmlrpc_uri = '/services/xmlrpc.php';
+require_once "slides/mdb/scripts/xmlrpc_util.php";
+require_once "slides/mdb/scripts/mdb_tests.cfg";
 
-$c=new XML_RPC_Client($xmlrpc_uri, $host, $port);
+$c=new XML_RPC_Client(XMLRPC_URI, MDB_SERVER_NAME, MDB_SERVER_PORT);
 
 $metal = new XML_RPC_Value('zn');
 $mode = new XML_RPC_Value('random');

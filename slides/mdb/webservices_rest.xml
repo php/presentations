@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="REST (HTTP methods)">
+	<blurb>
+		*REST* is the acronym for *RE*presentational *S*tate *T*ransfer, and is a
+		term coined by Roy Fielding [1] in a dissertation attempting to describe
+		formally the Web architectural style.
+	</blurb>
+	<blurb>
+		The argument is that the HTTP methods (GET, POST, etc.) define a limited set
+		of *verbs* that can be applied to an (in principle) infinite number of
+		*nouns* (URIs).
+	</blurb>
+	<blurb>
+		This design has some beneficial effects:
+	</blurb>
+	<list type="alpha" fontsize="2.5em" marginright="1em">
+		<bullet>
+			It allows simpler interoperation between otherwise uncoordinated agents
+			(web clients, servers, spiders, etc.)
+		</bullet>
+		<bullet>
+			The HTTP semantics constitutes a coordination language general enough to
+			be of use in any desired communication pattern. Its methods make it akin
+			to message passing or function calling protocols.
+		</bullet>
+		<bullet>
+			Offering a service is a simple as publishing a URL.
+		</bullet>
+	</list>
+	<blurb fontsize="1.5em">
+		[1] Roy Fielding's Ph.D. dissertation 
+		"_Architectural Styles and the Design of Network-based Software Architectures_"
+	</blurb>
+</slide>

@@ -1,0 +1,23 @@
+<slide title="Bioinformatics">
+	<blurb title="A (fuzzy) definition">
+		*Bioinformatics* studies the information content and data flow in
+		a biological system or process. It provides the link between the
+		observations (_data_), the understanding of how a system works
+		(_information_), and the subsequent application of these principles
+		(_knowledge_).
+	</blurb>
+	<blurb title='Research areas (by "dimensionality")'>
+		*1D,2D*: Gene identification in Genome,
+		sequence analysis (similarity, evolutionary distances, etc.),
+		expression dynamics, etc.
+	</blurb>
+	<blurb>
+		*3D*: Structure similarities, dynamic changes,
+		protein folding, structure-function relationships, etc.
+	</blurb>
+	<blurb>
+		*nD*: Protein ensembles in a cell,
+		interaction networks, expression pathways, etc.
+	</blurb>
+
+</slide>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Further reading">
+	<list title="Talks as Biocon 2003" fontsize="2em" type="dot">
+		<bullet>
+		"Integrating Distributed Bioinformatics Data Using Data Webs",
+		Robert Grossman.
+		</bullet>
+		<bullet>
+		"Bioinformatics Data Integration Approaches via SOAP Web Services
+		and XML", Jurgen Kaljuvee.
+		</bullet>
+		<bullet>
+		"caCORE: Infrastructure for Communal Biomedical Informatics",
+		Peter Covitz.
+		</bullet>
+		<bullet>
+		"Best Practices for Designing XML Schemas for Bioionformatics",
+		Ayesha Malik.
+		</bullet>
+	</list>
+	<list title="Elsewhere" fontsize="2em" type="dot">
+		<bullet>
+		MDB talks at http://metallo.scripps.edu/talks/
+		</bullet>
+		<bullet>
+		SOAP talks at http://talks.php.net/ (general issues and
+		implementations such as PEAR::SOAP and php-soap)
+		</bullet>
+		<bullet>
+		REST Wiki at http://internet.conveyor.com/RESTwiki/moin.cgi/FrontPage
+		</bullet>
+		<bullet>
+		Article: "Do Web Services Need RPC?", Benoit Marchal,
+		http://www.developer.com/xml/article.php/1383941
+		</bullet>
+		<bullet>
+		XML-RPC specs at http://www.xmlrpc.org/
+		</bullet>
+		<bullet>
+		SOAP specs at http://www.w3.org/TR/SOAP/
+		</bullet>
+		<bullet>
+		SOAP implementations at http://www.soapware.com
+		</bullet>
+		<bullet>
+		SOAP interoperability: http://www.soapbuilders.com/,
+		http://www.whitemesa.com/interop.htm,
+		http://www.whitemesa.com/r3/interop3.html
+		</bullet>
+		<bullet>
+		Tuple Spaces page at the XML Cover Pages
+		http://xml.coverpages.org/tupleSpaces.html
+		</bullet>
+	</list>
+</slide>

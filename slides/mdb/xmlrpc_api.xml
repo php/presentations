@@ -1,15 +1,13 @@
-<slide title='XML-RPC API'>
+<slide title='XML-RPC Instrospection'>
 <example type='php' result='1' fontsize='1.0em' rfontsize='1.0em'
 outputbackground='#ffffdd'>
 <![CDATA[
 <?php 
 require_once "XML/RPC.php";
-require_once "presentations/slides/mdb/scripts/xmlrpc_util.php";
-$host = 'metallo.scripps.edu';
-$port = 80;
-$xmlrpc_uri = '/services/xmlrpc.php';
-$c=new XML_RPC_Client($xmlrpc_uri, $host, $port);
+require_once "slides/mdb/scripts/xmlrpc_util.php";
+require_once "slides/mdb/scripts/mdb_tests.cfg";
 
+$c=new XML_RPC_Client(XMLRPC_URI, MDB_SERVER_NAME, MDB_SERVER_PORT);
 $f=new XML_RPC_Message('system.listMethods');
 
 $v=rpc_call($c, $f);

@@ -1,8 +1,7 @@
 <slide title='A (kludgy) first API'>
-<example title='First kludgy attempt to an API' 
+<example title='List of metal-containing proteins (circa 1999)' 
 fontsize='1.5em' type='php' result='0'>
-<![CDATA[
-<?php
+<![CDATA[<?php
     (...)
 	require("sql.php3.inc");
 	Header("Content-type: text/plain");

@@ -2,7 +2,110 @@
 require_once 'globals.inc';
 require_once 'api/api_functions.php';
 
-if (!$func) {
+if (isset($func) && !empty($func)) {
+
+	if (!in_array($func, array_keys($api))) {
+		echo "Unknown function";
+		exit;
+	}
+
+	// include the appropriate function
+	require_once "{$api[$func]}";
+	require_once "api/util_convert.php";
+
+	// SQL query wrapper function
+	function sql() {/*{{{*/
+		if (!$_REQUEST['query']) {
+			echo "<b>ERROR: Missing parameters.</b>\n";
+			return false;
+		}
+		// allow only SELECT, SHOW or DESCRIBE queries
+		$allowed = "^(select|show|describe)";
+		if (!eregi($allowed, trim($_REQUEST['query']))) {
+			echo "<b>ERROR: Only 'SELECT', 'SHOW', or 'DESCRIBE' queries are allowed.</b>\n";
+			return false;
+		}
+		$result = sqlquery(MDB_DATA_DSN, $_REQUEST['query']);
+		if (is_object($result) && DB::isError($result)) {
+			echo "<b>ERROR ".$result->getCode().": ".$result->getMessage()."</b>\n";
+			return false;
+		}
+		$format = isset($_REQUEST['format']) ? strtolower($_REQUEST['format']) : "csv";
+		switch ($format) {
+			case "wddx" :
+				$out = wddx_serialize_value($result);
+				break;
+			case "serialize" :
+				$out = serialize($result);
+				break;
+			case "table" :
+				$out = toTable($result);
+				break;
+			case "csv" :
+			default :
+				$fields = array_keys($result[0]);
+				$out = toCSV($fields);
+				for ($i=0; $i < count($result); $i++) {
+					$out .= toCSV(array_values($result[$i]));
+				}
+				break;
+		}
+		echo $out;
+		return true;
+	}/*}}}*/
+	
+	// wrapper function to get PDB ids for a given metal
+	function metallopdb() {/*{{{*/
+		if (!$_REQUEST['metal']) {
+			echo "<b>ERROR: Missing parameters.</b>\n";
+			return false;
+		}
+		$metal = strtolower($_REQUEST['metal']);
+		$mode = isset($_REQUEST['mode']) ? strtolower($_REQUEST['mode']) : 'first';
+		$count = isset($_REQUEST['count']) ? intval($_REQUEST['count']) : 5;
+		$format = isset($_REQUEST['format']) ? strtolower($_REQUEST['format']) : 'csv';
+
+		$result = getPDBFromMetal($metal, $mode, $count);
+		if (is_object($result) && DB::isError($result)) {
+			echo "<b>ERROR ".$result->getCode().": ".$result->getMessage()."</b>\n";
+			return false;
+		}
+		if ($result == false) {
+			echo "";
+			return false;
+		}
+		switch ($format) {
+			case "wddx" :
+				header("Content-type: text/xml");
+				echo wddx_serialize_value($result);
+				break;
+			case "serialize" :
+				header("Content-type: text/plain");
+				echo serialize($result);
+				break;
+			case "rss" :
+				header("Content-type: text/xml");
+				echo toRSS($result,$GLOBALS['server_remote']);
+				break;
+			case "csv" :
+			default :
+				header("Content-type: text/plain");
+				$fields = array_keys($result[0]);
+				$out = toCSV($fields);
+				for ($i=0; $i < count($result); $i++) {
+					$out .= toCSV(array_values($result[$i]));
+				}
+				echo $out;
+				break;
+		}
+		return true;
+
+	}/*}}}*/
+
+	// execute the api wrapper function
+	$output = $func();
+
+} else {
 	// show introspection
 
 	require_once "general.lib";
@@ -44,112 +147,5 @@ if (!$func) {
 
 	require_once "dochandler.lib";
 
-} else {
-
-
-	if (!in_array($func, array_keys($api))) {
-		echo "Unknown function";
-		exit;
-	}
-
-	// include the appropriate function
-	require_once "{$api[$func]}";
-	require_once "api/util_convert.php";
-
-	// SQL query wrapper function
-	function sql() {/*{{{*/
-		$VARS = isset($_GET) ? $_GET : $_POST;
-		if (!$VARS['query']) {
-			echo "<b>ERROR: Missing parameters.</b>\n";
-			return false;
-		}
-		// allow only SELECT, SHOW or DESCRIBE queries
-		$allowed = "^(select|show|describe)";
-		if (!eregi($allowed, trim($VARS['query']))) {
-			echo "<b>ERROR: Only 'SELECT', 'SHOW', or 'DESCRIBE' queries are allowed.</b>\n";
-			return false;
-		}
-		$dsn = $GLOBALS['dsn'].$GLOBALS['datadb'];
-		$result = sqlquery($dsn, $VARS['query']);
-		if (is_object($result) && DB::isError($result)) {
-			echo "<b>ERROR ".$result->getCode().": ".$result->getMessage()."</b>\n";
-			return false;
-		}
-		$format = isset($VARS['format']) ? strtolower($VARS['format']) : "csv";
-		switch ($format) {
-			case "wddx" :
-				$out = wddx_serialize_value($result);
-				break;
-			case "serialize" :
-				$out = serialize($result);
-				break;
-			case "table" :
-				$out = toTable($result);
-				break;
-			case "csv" :
-			default :
-				$fields = array_keys($result[0]);
-				$out = toCSV($fields);
-				for ($i=0; $i < count($result); $i++) {
-					$out .= toCSV(array_values($result[$i]));
-				}
-				break;
-		}
-		echo $out;
-		return true;
-	}/*}}}*/
-	
-	// wrapper function to get PDB ids for a given metal
-	function metallopdb() {/*{{{*/
-		$VARS = isset($_GET) ? $_GET : $_POST;
-		if (!$VARS['metal']) {
-			echo "<b>ERROR: Missing parameters.</b>\n";
-			return false;
-		}
-		$metal = strtolower($VARS['metal']);
-		$mode = isset($VARS['mode']) ? strtolower($VARS['mode']) : 'first';
-		$count = isset($VARS['count']) ? intval($VARS['count']) : 5;
-		$format = isset($VARS['format']) ? strtolower($VARS['format']) : 'csv';
-
-		$result = getPDBFromMetal($metal, $mode, $count);
-		if (is_object($result) && DB::isError($result)) {
-			echo "<b>ERROR ".$result->getCode().": ".$result->getMessage()."</b>\n";
-			return false;
-		}
-		if ($result == false) {
-			echo "";
-			return false;
-		}
-		switch ($format) {
-			case "wddx" :
-				header("Content-type: text/xml");
-				echo wddx_serialize_value($result);
-				break;
-			case "serialize" :
-				header("Content-type: text/plain");
-				echo serialize($result);
-				break;
-			case "rss" :
-				header("Content-type: text/xml");
-				echo toRSS($result,$GLOBALS['server_remote']);
-				break;
-			case "csv" :
-			default :
-				header("Content-type: text/plain");
-				$fields = array_keys($result[0]);
-				$out = toCSV($fields);
-				for ($i=0; $i < count($result); $i++) {
-					$out .= toCSV(array_values($result[$i]));
-				}
-				echo $out;
-				break;
-		}
-		return true;
-
-	}/*}}}*/
-
-	// execute the api wrapper function
-	$output = $func();
 }
-
 ?>

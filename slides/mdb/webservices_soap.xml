@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="SOAP">
+	<blurb title="Simple Object Access Protocol">
+		It is a "lightweight protocol
+		for exchange of information in a decentralized,
+		distributed environment" [1]
+	</blurb>
+	<list type="arrow" title="SOAP provides">
+		<bullet>XML based messaging</bullet>
+		<bullet>Support for message routing</bullet>
+		<bullet>Encoding rules for expressing data types (XML Schema)</bullet>
+		<bullet>Conventions for using SOAP for RPC</bullet>
+		<bullet>Transport Independence</bullet>
+	</list>
+	<blurb title="Related specs and standards">
+		WSDL, UDDI, MIME and DIME attachements,
+		SOAP Authentication, ebXML, XML Security, etc.
+	</blurb>
+	<blurb fontsize="1.5em">
+		[1] from the SOAP specs, http://www.w3.org/TR/SOAP/
+	</blurb>
+</slide>

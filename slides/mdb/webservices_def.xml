@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Web Services">
+	<!-- blurb titlecolor="#ff0000" title="From the old API point of view ..." -->
+	<blurb titlecolor="#ff0000" title="My old 'Web API' point of view ...">
+		A web Application Program Interface, is a set of callable functions or
+		methods that a web application exposes as a public interface for
+		communication with external application.
+ </blurb>
+	<blurb titlecolor="#0000ff" 
+	title="... and the modern Web Services definition">
+		"A Web service is a collection of functions that are packaged as a single
+		entity and published to the network for use by other programs. Web services
+		are building blocks for creating open distributed systems..." [1]
+	</blurb>
+	<blurb fontsize="1.5em">
+		[1] from "_The Web services (r)evolution, Part 1_",
+		http://www-106.ibm.com/developerworks/webservices/library/ws-peerl.html
+ </blurb>
+</slide>

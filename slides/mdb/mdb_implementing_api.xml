@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Implementing the services">
+	<blurb title="The initial plan"/>
+	<list type="arrow">
+		<bullet>
+			Refactor basic functions, so they can be used in
+			the UI as well as the Web Services.
+		</bullet>
+		<bullet>
+			Implement wrappers for HTTP-based (REST) and
+			XML-RPC interfaces.
+		</bullet>
+		<bullet>
+			Add a SOAP server and associated WSDL document.
+		</bullet>
+	</list>
+	<blurb title="... and the expanded plan"/>
+	<list type="arrow">
+		<bullet>
+			Add asynchronous modes of access the services. 
+		</bullet>
+		<bullet>
+			Implement a tuple-space based access to query or analysis results
+			and other generated documents.
+		</bullet>
+	</list>
+</slide>

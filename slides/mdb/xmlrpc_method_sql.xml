@@ -1,29 +1,26 @@
 <slide title='method.sql'>
-<example title='Using method.sql from the XML-RPC API' result='1'
-fontsize='1.0em' rfontsize='1.5em' outputbackground='#ffffdd'>
-<![CDATA[
-<?php
+<example title='Using method.sql from the XML-RPC service' result='1'
+fontsize='1.2em' rfontsize='1em' outputbackground='#ffffdd'>
+<![CDATA[<?php
 require_once "XML/RPC.php";
-require_once "presentations/slides/mdb/scripts/xmlrpc_util.php";
-$host = 'metallo.scripps.edu';
-$port = 80;
-$xmlrpc_uri = '/services/xmlrpc.php';
-
+require_once "slides/mdb/scripts/xmlrpc_util.php";
+require_once "slides/mdb/scripts/mdb_tests.cfg";
 ?>
 <b>method.sql:</b> 
 <small>"select source_id,expdata,rev_date,resolution,description 
 from protein limit 10"</small><br>
 <?php
-$c=new XML_RPC_Client($xmlrpc_uri, $host, $port);
 $method = "method.sql";
-$query = "select source_id,expdata,rev_date,resolution,description from protein limit 10";
-
+$query = "select source_id,expdata,resolution,description ";
+$query .= "from protein where expdata like '%x-ray%' and ";
+$query .= "resolution >= 0.7 order by resolution limit 5";
 $q = new XML_RPC_Value($query, $GLOBALS['XML_RPC_String']);
 $msg = new XML_RPC_Message($method,array($q));
+
+$c=new XML_RPC_Client(XMLRPC_URI, MDB_SERVER_NAME, MDB_SERVER_PORT);
 $r = $c->send($msg);
-$v = $r->value();
 if (!$r->faultCode()) {
-	echo toTable(XML_RPC_decode($v));
+	echo toTable(XML_RPC_decode($r->value()));
 } else {
 	echo "<pre>\n";
 	echo "ERROR: ".$r->faultCode()." -- ".$r->faultString();

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="WSDL &amp; UDDI">
+	<blurb title="Web Services Description Language">
+		Used for describing interfaces for Web Services. It is a general
+		specification independent of SOAP (i.e. WSDL for REST services)
+		and defines data types, interface definitions, transport
+		bindings, and service descriptions.
+	</blurb>
+	<blurb>
+		WSDL makes creating SOAP proxies simpler (either dynamic or static),
+		it can also be used for interface documentation, and can be integrated
+		into development systems (code editors, class generators, etc.).
+	</blurb>
+	<blurb title="Universal Description Discovery and Integration">
+		Defines a system for automated publishing and discovery of Web Services,
+		allowing registries to be maintained for different purposes and contexts.
+	</blurb>
+	<blurb>
+		UDDI defines an API specification for publish and inquire for businesses and
+		web services, a data structure, and several XML Schemas for custody,
+		subscription policy, replication, etc.
+	</blurb>
+</slide>

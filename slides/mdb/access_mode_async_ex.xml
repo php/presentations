@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Async. access">
+	<blurb title="Example of asynchronous access">
+		We will assume that the client connecting to the MDB web services is capable
+		of using different protocols.
+	</blurb>
+	<list type="number">
+		<bullet>
+			Web client asks for _all_ Zn-containing proteins using the _sql()_
+			method of the XML-RPC server.
+		</bullet>
+		<bullet>
+			XML-RPC	server returns a result ID to client, then schedules query to be
+			executed and results stored for later retrieval.
+		</bullet>
+		<bullet>
+			Query is executed and result set stored using the assigned ID.
+		</bullet>
+		<bullet>
+			Client uses SOAP to retrieve result. Server retrieves stored result set,
+			and formats it as a complex structure using the appropriate XML Schema.
+		</bullet>
+	</list>
+</slide>

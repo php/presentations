@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Tuplespaces">
+	<blurb title="What is a tuplespace? [1]">
+	"... (A) tuplespace is a shared datastore (the space) for simple list
+	data structures (tuples). A very simple model is used to access the
+	tuplespace, usually consisting of the operations write (out), take (in),
+	read (rd) ..."
+	</blurb>
+	<blurb title="XML Spaces [2]">
+	"...  An XML-space is a tuple-space made up only of XML-tuples--that is, a
+	public repository or buffer that can contain XML-tuples. An XML-space has
+	a name, by which it is referenced, and it is hosted on a server, along
+	with any number of other (and other-named) XML-spaces ..."
+	</blurb>
+	<example title='A Sample XML Tuple' output='0'>
+<![CDATA[<pdb_id>1hca</pdb_id>
+<mdb_id>1hca_s1</mdb_id>
+<metal_site>
+	<metal_center>
+		<metal>Zn</metal>
+		<geometry>Tetrahedral</geometry>
+	</metal_center>
+</metal_site>]]>
+	</example>
+	<link fontsize='1em' leader='[1] '>http://earl.strain.at/space/Tuple%20Spaces</link>
+	<link fontsize='1em' leader='[2] "XML-Tuples and XML-Spaces, V0.7" (1999) '>
+		http://uncled.oit.unc.edu/XML/XMLSpaces.html
+	</link>
+</slide>

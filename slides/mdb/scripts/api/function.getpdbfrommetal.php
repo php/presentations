@@ -12,7 +12,6 @@ require_once "DB.php";
  */
 
 function &getPDBFromMetal($metal, $mode, $count) {
-	$dsn = $GLOBALS['dsn'].$GLOBALS['datadb'];
 	$fields = "distinct site.metal, protein.source_id, ";
 	$fields .= "DATE_FORMAT(protein.rev_date, '%Y/%m/%d') as revision_date,"; 
 	$fields .= "DATE_FORMAT(protein.dep_date, '%Y/%m/%d') as deposition_date,"; 
@@ -36,7 +35,7 @@ function &getPDBFromMetal($metal, $mode, $count) {
 			break;
 	}
 	$query = "select $fields $from $where $ordlim";
-	$c = @DB::connect($dsn);
+	$c = @DB::connect(MDB_DATA_DSN);
 	if (is_object($c) && !DB::isError($c)) {
 		$c->setFetchMode(DB_FETCHMODE_ASSOC);
 		$result = $c->getAll($query);

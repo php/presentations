@@ -1,0 +1,35 @@
+<slide title="Why Web Services">
+	<blurb title="What is happening in bioinformatics"/>
+	<list type="arrow">
+		<bullet>
+			All that research is producing incredible amounts of data.
+		</bullet>
+		<bullet>
+			No single human being can hope to grok what all the data means without
+			integration of the analysis from many sources.
+		</bullet>
+		<bullet>
+			A sizeable amount of that data is being made accessible via
+			an interactive web interface, e.g.:
+		</bullet>
+	</list>
+	<list type="none" marginleft="2em" marginright="1em">
+		<bullet>Protein Data Bank: http://www.rcsb.org/</bullet>
+		<bullet>GenBank : http://www.ncbi.nlm.nih.gov/Genbank</bullet>
+	</list>
+	<blurb title="What web services bring to game"/>
+	<list type="arrow" marginright="1em">
+		<bullet>
+			They make integration, collaboration,
+			data sharing, and cross-domain data analysis possible and simpler.
+		</bullet>
+		<bullet>
+			No need to re-architecture existing resources, e.g. use a
+			SOAP server to access data in a non-web aware system.
+			<!--
+			Programmatic access to all that data could make it possible for
+			us to understand its meaning and relevance. 
+			-->
+		</bullet>
+	</list>
+</slide>
