@@ -1,0 +1,94 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	backgroundimage="slides/intro/background.png"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
+<topic>PHP</topic>
+<title>PHP - Scripting the Web</title>
+<event>LUGOD</event>
+<location>Davis</location>
+<date>July 2, 2002</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://pres.lerdorf.com/show/lugod</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/intro1.xml</slide>
+<slide>slides/intro/old.xml</slide>
+<slide>slides/intro/old2.xml</slide>
+<slide>slides/intro/old3.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+<slide>slides/intro/platforms.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/embed2.xml</slide>
+<slide>slides/intro/basics.xml</slide>
+<slide>slides/intro/modes.xml</slide>
+<slide>slides/intro/forms2.xml</slide>
+<slide>slides/intro/syntax.xml</slide>
+<slide>slides/intro/typing.xml</slide>
+<slide>slides/intro/arrays.xml</slide>
+<slide>slides/intro/funcs.xml</slide>
+<slide>slides/intro/oop.xml</slide>
+<slide>slides/intro/datetime.xml</slide>
+<slide>slides/intro/string.xml</slide>
+<slide>slides/intro/regex.xml</slide>
+<slide>slides/intro/encode.xml</slide>
+<slide>slides/intro/file.xml</slide>
+<slide>slides/intro/cfile.xml</slide>
+<slide>slides/intro/scope.xml</slide>
+<slide>slides/intro/regglobals.xml</slide>
+<slide>slides/intro/guest.xml</slide>
+<slide>slides/intro/sqlex.xml</slide>
+<slide>slides/intro/sql.xml</slide>
+<slide>slides/intro/sqlguest.xml</slide>
+<slide>slides/intro/sqlguest2.xml</slide>
+<slide>slides/intro/smarty1.xml</slide>
+<slide>slides/intro/db.xml</slide>
+<slide>slides/intro/header.xml</slide>
+<slide>slides/intro/cookie.xml</slide>
+<slide>slides/intro/image.xml</slide>
+<slide>slides/intro/image_colors4.xml</slide>
+<slide>slides/intro/image_colors6.xml</slide>
+<slide>slides/intro/image2.xml</slide>
+<slide>slides/intro/image2a.xml</slide>
+<slide>slides/intro/image_text1.xml</slide>
+<slide>slides/intro/image_text2.xml</slide>
+<slide>slides/intro/image_text3.xml</slide>
+<slide>slides/intro/exif.xml</slide>
+<slide>slides/intro/image3.xml</slide>
+<slide>slides/intro/pdf.xml</slide>
+<slide>slides/intro/flash_swf.xml</slide>
+<slide>slides/intro/flash_ming.xml</slide>
+<slide>slides/intro/flash_ming2.xml</slide>
+<slide>slides/intro/image_cache.xml</slide>
+<slide>slides/intro/session.xml</slide>
+<slide>slides/intro/session2.xml</slide>
+<slide>slides/intro/session3.xml</slide>
+<slide>slides/intro/session4.xml</slide>
+<slide>slides/intro/safemode.xml</slide>
+<slide>slides/intro/security1.xml</slide>
+<slide>slides/intro/security2.xml</slide>
+<slide>slides/intro/security3.xml</slide>
+<slide>slides/intro/security4.xml</slide>
+<slide>slides/intro/security5.xml</slide>
+<slide>slides/intro/conn.xml</slide>
+<slide>slides/intro/ref1.xml</slide>
+<slide>slides/intro/ref2.xml</slide>
+<slide>slides/intro/shared.xml</slide>
+<slide>slides/intro/pi.xml</slide>
+<slide>slides/intro/errdoc.xml</slide>
+<slide>slides/intro/funky.xml</slide>
+<slide>slides/intro/varvar.xml</slide>
+<slide>slides/intro/cookiehint.xml</slide>
+<slide>slides/intro/opt.xml</slide>
+<slide>slides/intro/squid1.xml</slide>
+<slide>slides/intro/squid2.xml</slide>
+<slide>slides/intro/repl1.xml</slide>
+<slide>slides/intro/gtk.xml</slide>
+<slide>slides/intro/gtk2.xml</slide>
+<slide>slides/intro/latest.xml</slide>
+<slide>slides/intro/future.xml</slide>
+<slide>slides/intro/resources.xml</slide>
+</presentation>
