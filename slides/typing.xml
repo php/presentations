@@ -1,0 +1,33 @@
+<slide title="Basic Data Types">
+<example title="Numbers (integers and real)" result="yes"><![CDATA[<?php
+    // Numbers (integers and real)
+    $a = 1234;
+    $b = 0777;
+    $c = 0xff;
+    $d = 1.25;
+    echo "$a $b $c $d<br />\n";
+?>]]></example>
+
+<example title="Strings" result="yes"><![CDATA[<?php
+    $name = 'Rasmus $last'; // Single-quoted
+    $str  = "Hi $name\n";   // Double-quoted
+    echo $str;
+?>]]></example>
+
+<example title="Booleans" result="yes"><![CDATA[<?php
+    $greeting = true;
+    if($greeting) {
+        echo "Hi Carl";
+        $greeting = false;
+    }
+?>]]></example>
+
+<list title="Dynamic Typing">
+<bullet>Don't have to declare types</bullet>
+<bullet>Automatic conversion done</bullet>
+</list>
+
+<example result="yes"><![CDATA[<?php
+    echo 5 + "1.5" + "10e2";]]></example>
+
+</slide>
