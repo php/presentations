@@ -1,27 +1,136 @@
 <slide title="Benchmarking">
 
 <blurb>
-Let's have a look at how we might benchmark and subsequently tune a PHP server.
+Let's have a look at how we might benchmark and subsequently tune a PHP server.  
+We will use two machines.  A client machine to run our HTTP load program 
+(%http_load% from acme.com) and a P4 1.7G server with 256M of RAM.  We will also
+be using 3 freely available opcode caches:
 </blurb>
 
-<link href="http://apc.communityconnect.com/sources/apc-cvs.tar.gz">http://apc.communityconnect.com/sources/apc-cvs.tar.gz</link>
+<link href="http://cvs.php.net/cvs.php/pear/PECL/apc">http://cvs.php.net/cvs.php/pear/PECL/apc</link>
+<link href="http://www.turckware.ru/en/e_mmc.htm">http://www.turckware.ru/en/e_mmc.htm</link>
 <link href="http://www.ioncube.com/">http://www.ioncube.com</link>
 
-<example type="shell" fontsize="1.5em">
-CPU: Pentium III 700MHz
-RAM: 128M
-</example>
-
-<blurb>Our test script includes 2 files, defines 3 functions, loops a bit and outputs about %6k% of data.
-</blurb>
-
-<blurb>For testing I am using %http_load% from acme.com and the default SendBufferSize</blurb>
-
-<example type="shell">
+<example title="Don't blow your io buffers!" type="shell">
 #  To change this on Linux, cat a larger number 
 #  into /proc/sys/net/core/wmem_max in your 
 #  httpd startup script
 SendBufferSize 65535
 </example>
+
+<example title="This is our benchmark script" fontsize="1.5em"><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Simple PHP Benchmark</title></head>
+<body>
+<h1>String Manipulation</h1>
+<p>
+<?php
+$str = 'This is just a silly benchmark that doesn\'t do anything useful.';
+$str .= 'Here we are just uppercasing the first two characters of every word ';
+$str .= 'in this long string';
+$parts = explode(' ',$str);
+foreach($parts as $part) {
+    $new[] = strtoupper(substr($part,0,2)).substr($part,2);
+}
+echo implode(' ',$new);
+?>
+</p>
+<h1>Including 2 files</h1>
+<p>
+<?php
+include './bench_include1.inc';
+include './bench_include2.inc';
+?>
+</p>
+<h1>for-loop and calling a function many times</h1>
+<p>
+<?php
+$a = range(1,200);
+$b = range(200,1);
+for($i=0; $i<200; $i++) {
+    echo foo($a[$i],$b[$i]);
+}
+?>
+</p>
+<h1>Define and Instantiate an object and call some methods</h2>
+<p>
+<?php
+class test_class {
+    var $test_var1;
+    var $test_var2;
+    var $test_var3;
+    var $test_var4;
+                                                                                                                            
+    function test_class($arg1, $arg2) {
+        echo "Constructor args: $arg1, $arg2<br />\n";
+    }
+                                                                                                                            
+    function set_var1($value) {
+        $this->test_var1 = $value;
+        echo "test_var1 property set to $value<br />\n";
+        return true;
+    }
+    function set_var2($value) {
+        $this->test_var2 = $value;
+        echo "test_var2 property set to $value<br />\n";
+        return true;
+    }
+    function set_var3($value) {
+        $this->test_var3 = $value;
+        echo "test_var3 property set to $value<br />\n";
+        return true;
+    }
+    function set_var4($value) {
+        $this->test_var4 = $value;
+        echo "test_var4 property set to $value<br />\n";
+        return true;
+    }
+    function disp() {
+        echo "<pre>";
+        var_dump($this);
+        echo "</pre>";
+    }
+}
+$obj = new test_class(1,'arg2');
+$obj->set_var1('test1');
+$obj->set_var2(123);
+$obj->set_var3($a);  /* Array from previous test */
+$obj->set_var4(array(1,2,3,4,5,6,7,8,9));
+$obj->disp();
+?>
+</p>
+</body>
+</html>]]></example>
+
+<example title="bench_include1.inc" fontsize="1.5em"><![CDATA[<?php
+function foo($arg1, $arg2) {
+    if($arg1>$arg2) return $arg1;
+    elseif($arg1<$arg2) return $arg2;
+    else return 'xxx';
+}
+?>]]></example>
+
+<example title="bench_include2.inc" fontsize="1.5em"><![CDATA[This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />]]></example>
 
 </slide>

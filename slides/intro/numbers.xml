@@ -1,27 +1,28 @@
 <slide title="PHP is Big!">
 <list>
-<title>June 2003 Netcraft Report</title>
-<bullet>40,936,076 Domains queried</bullet>
-<bullet> 12,749,410 Domains.  1,317,425 IP addresses</bullet>
-<bullet>PHP installed on 31% of all domains</bullet>
+<title>September 2003 Netcraft Report</title>
+<bullet>43,144,374 Domains queried</bullet>
+<bullet> 13,717,527 Domains.  1,310,849 IP addresses</bullet>
+<bullet>PHP installed on 32% of all domains</bullet>
 </list>
 <image filename="phpstats.png" align="center"/>
 <link href="http://www.netcraft.com" leader="Source: " align="right" marginright="6em">Netcraft</link>
 
 <list>
-<title>March 2003 Apache Module Report</title>
-<bullet>%6,813,534 Apache Servers surveyed%</bullet>
-<bullet>%3,510,294 (51.52\%) PHP%</bullet>
-<bullet>%2,075,828 (30.47\%) OpenSSL%</bullet>
-<bullet>%2,007,598 (29.46\%) mod_ssl%</bullet>
-<bullet>%1,486,868 (21.82\%) Frontpage%</bullet>
-<bullet>%1,407,732 (20.66\%) mod_perl%</bullet>
-<bullet>%  401,097  (5.89\%) DAV%</bullet>
-<bullet>%  348,856  (5.12\%) mod_throttle%</bullet>
-<bullet>%  206,122  (3.03\%) mod_jk%</bullet>
-<bullet>%  175,924  (2.87\%) AuthMySQL%</bullet>
-<bullet>%  190,290  (2.79\%) mod_log_bytes%</bullet>
-<bullet>%  185,076  (2.72\%) mod_bwlimited%</bullet>
+<title>August 2003 Apache Module Report</title>
+<bullet>%7,705,536 Apache Servers surveyed%</bullet>
+<bullet>%4,028,942 (52.29\%) PHP%</bullet>
+<bullet>%2,382,063 (30.91\%) OpenSSL%</bullet>
+<bullet>%2,305,879 (29.92\%) mod_ssl%</bullet>
+<bullet>%1,693,807 (21.98\%) Frontpage%</bullet>
+<bullet>%1,520,160 (19.73\%) mod_perl%</bullet>
+<bullet>%  396,190  (5.14\%) DAV%</bullet>
+<bullet>%  353,222  (4.58\%) mod_throttle%</bullet>
+<bullet>%  296,228  (3.84\%) mod_jk%</bullet>
+<bullet>%  264,732  (3.44\%) mod_log_bytes%</bullet>
+<bullet>%  259,171  (3.36\%) mod_bwlimited%</bullet>
+<bullet>%  237,822  (3.09\%) mod_fastcgi%</bullet>
+<bullet>%  205,158  (2.66\%) AuthMySQL%</bullet>
 </list>
 <link href="http://www.securityspace.com/s_survey/data/index.html" leader="Source: ">SecuritySpace.com</link>
 

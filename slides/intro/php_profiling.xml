@@ -7,7 +7,7 @@ bottlenecks are quantitatively.
 </blurb>
 
 <blurb title="How?">
-PEAR/Pecl to the rescue!
+PECL to the rescue!
 </blurb>
 
 <example type="shell"><![CDATA[
@@ -26,57 +26,104 @@ apd.so copied to /tmp/tmprFlAqf/apd-0.4p1/apd.so
 install ok: apd 0.4p1
 ]]></example>
 
-<blurb>Woohoo!</blurb>
-
-<example type="shell" fontsize="1.2em"><![CDATA[
-www:~> pear info apd
-About apd-0.4p1
-===============
-+-----------------+--------------------------------------------------+
-| Package         | apd                                              |
-| Summary         | A full-featured engine-level profiler/debugger   |
-| Description     | APD is a full-featured profiler/debugger that is |
-|                 | loaded as a zend_extension. It aims to be an     |
-|                 | analog of C's gprof or Perl's Devel::DProf.      |
-| Maintainers     | George Schlossnagle <george@omniti.com> (lead)   |
-| Version         | 0.4p1                                            |
-| Release Date    | 2002-11-25                                       |
-| Release License | PHP License                                      |
-| Release State   | stable                                           |
-| Release Notes   | Fix for pre-4.3 versions of php                  |
-| Last Modified   | 2002-12-02                                       |
-+-----------------+--------------------------------------------------+
+<blurb>Then in your %php.ini% file:</blurb>
+<example><![CDATA[zend_extension = "/usr/local/lib/php/apd.so"
+apd.dumpdir = /tmp
 ]]></example>
 
-<example type="shell" fontsize="1em"><![CDATA[
-www:~> pear config-show
-Configuration:
-==============
-+----------------------+-----------------+-------------------------------------+
-| PEAR executables     | bin_dir         | /usr/local/bin                      |
-| directory            |                 |                                     |
-| PEAR documentation   | doc_dir         | /usr/local/lib/php/docs             |
-| directory            |                 |                                     |
-| |ffff11|PHP extension|        | |ffff11|ext_dir|         | |ffff11|/usr/local/lib/php/extensions/no-de| |
-| |ffff11|directory|            |                 | |ffff11|bug-non-zts-20020429|                |
-| PEAR directory       | php_dir         | /usr/local/lib/php                  |
-| PEAR Installer cache | cache_dir       | /tmp/pear/cache                     |
-| directory            |                 |                                     |
-| PEAR data directory  | data_dir        | /usr/local/lib/php/data             |
-| PEAR test directory  | test_dir        | /usr/local/lib/php/tests            |
-| Cache TimeToLive     | cache_ttl       | <not set>                           |
-| Preferred Package    | preferred_state | stable                              |
-| State                |                 |                                     |
-| Unix file mask       | umask           | 18                                  |
-| Debug Log Level      | verbose         | 1                                   |
-| HTTP Proxy Server    | http_proxy      | <not set>                           |
-| Address              |                 |                                     |
-| PEAR server          | master_server   | pear.php.net                        |
-| PEAR password (for   | password        | <not set>                           |
-| maintainers)         |                 |                                     |
-| PEAR username (for   | username        | <not set>                           |
-| maintainers)         |                 |                                     |
-+----------------------+-----------------+-------------------------------------+
-
+<blurb>It isn't completely transparent.  You need to tell the profiler
+when to start profiling.  At the top of a script you want to profile, add this call:
+</blurb>
+<example><![CDATA[<?php
+apd_set_pprof_trace();
+?>
 ]]></example>
+
+<blurb>
+The use the command-line tool called %pprofp%:
+</blurb>
+
+<example type="shell" fontsize="1.2em" marginleft="1em" marginright="1em"><![CDATA[wwww: ~> pprofp
+pprofp <flags> <trace file>
+    Sort options
+    -a          Sort by alphabetic names of subroutines.
+    -l          Sort by number of calls to subroutines
+    -m          Sort by memory used in a function call.
+    -r          Sort by real time spent in subroutines.
+    -R          Sort by real time spent in subroutines (inclusive of child calls).
+    -s          Sort by system time spent in subroutines.
+    -S          Sort by system time spent in subroutines (inclusive of child calls).
+    -u          Sort by user time spent in subroutines.
+    -U          Sort by user time spent in subroutines (inclusive of child calls).
+    -v          Sort by average amount of time spent in subroutines.
+    -z          Sort by user+system time spent in subroutines. (default)
+
+    Display options
+    -c          Display Real time elapsed alongside call tree.
+    -i          Suppress reporting for php builtin functions
+    -O <cnt>    Specifies maximum number of subroutines to display. (default 15)
+    -t          Display compressed call tree.
+    -T          Display uncompressed call tree.
+]]></example>
+
+<example type="shell" fontsize="1em" marginleft="1em" marginright="1em"><![CDATA[
+% pprofp -z /tmp/pprof.48478
+ 
+Trace for /home/y/share/htdocs/bench_main.php
+Total Elapsed Time =    0.01
+Total System Time  =    0.01
+Total User Time    =    0.01
+ 
+ 
+         Real         User        System             secs/    cumm
+%Time (excl/cumm)  (excl/cumm)  (excl/cumm) Calls    call    s/call  Memory Usage Name
+--------------------------------------------------------------------------------------
+100.0  0.00  0.00   0.01  0.01   0.01  0.01   200   0.0001    0.0001            0 foo
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 test_class->set_var2
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 test_class->set_var1
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 test_class->set_var3
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 test_class->set_var4
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 var_dump
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 test_class->disp
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 test_class->test_class
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 main
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00    26   0.0000    0.0000            0 strtoupper
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00    52   0.0000    0.0000            0 substr
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 implode
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     2   0.0000    0.0000            0 include
+  0.0  0.01  0.01   0.00  0.00   0.00  0.00     2   0.0000    0.0000            0 range
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 explode
+]]></example>
+
+<example type="shell" fontsize="1em" marginleft="1em" marginright="1em"><![CDATA[
+Trace for /home/rasmus/phpweb/index.php
+Total Elapsed Time =    0.69
+Total System Time  =    0.01
+Total User Time    =    0.08
+
+         Real         User        System             secs/    cumm
+%Time (excl/cumm)  (excl/cumm)  (excl/cumm) Calls    call    s/call  Memory Usage Name
+--------------------------------------------------------------------------------------
+ 33.3  0.11  0.13   0.02  0.03   0.01  0.01     7   0.0043    0.0057       298336 require_once
+ 22.2  0.02  0.02   0.02  0.02   0.00  0.00   183   0.0001    0.0001       -33944 feof
+ 11.1  0.01  0.01   0.01  0.01   0.00  0.00     3   0.0033    0.0033       -14808 define
+ 11.1  0.04  0.04   0.01  0.01   0.00  0.00   182   0.0001    0.0001       112040 fgetcsv
+ 11.1  0.25  0.25   0.01  0.01   0.00  0.00     6   0.0017    0.0017         3768 getimagesize
+ 11.1  0.01  0.01   0.01  0.01   0.00  0.00    55   0.0002    0.0002         2568 sprintf
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     7   0.0000    0.0000         -136 printf
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000          136 htmlspecialchars
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000          -16 mirror_provider_url
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     7   0.0000    0.0000          112 spacer
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00    10   0.0000    0.0000         -552 delim
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000          112 mirror_provider
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00    20   0.0000    0.0000         -624 print_link
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000           24 have_stats
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000          -72 make_submit
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     2   0.0000    0.0000          112 strrchr
+  0.0  0.08  0.08   0.00  0.00   0.00  0.00     2   0.0000    0.0000          168 filesize
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000          -16 commonfooter
+  0.0  0.00  0.11   0.00  0.00   0.00  0.00     2   0.0000    0.0000            0 download_link
+  0.0  0.00  0.25   0.00  0.01   0.00  0.00     6   0.0000    0.0017          208 make_image
+]]></example>
+
 </slide>

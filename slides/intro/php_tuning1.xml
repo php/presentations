@@ -5,8 +5,10 @@
 <item>Don't go overboard on OOP.  Use where appropriate.</item>
 <item>Same goes for Layers.  Abstraction, Indirection, abstract classes.</item>
 <item>Everything has a cost</item>
+<item>Use an opcode cache</item>
 <item>Watch your regular expressions!</item>
 <item>Cache! Cache! Cache!</item>
+<item>If you have plenty of CPU but limited bandwidth, turn on output compression</item>
 </list>
 
 </slide>
