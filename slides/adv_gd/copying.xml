@@ -1,0 +1,9 @@
+<slide title="Copying a canvas">
+<blurb>
+    The ability to copy a portion (or all) of one canvas to another is quite useful and is done
+    using the %imagecopy()% function:
+</blurb>
+<blurb>
+    %imagecopy($dest_r, $src_r, $dest_x, $dest_y, $src_x, $src_y, $src_w, $src_h);%
+</blurb>
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Transparency">
+<blurb title="With PHP, you can also create transparent images">
+    Transparent images are created by assigning a particular color in the
+    index as the transparent color. This color will be ignored when rendered. The
+    color deemed "transparent" can be set using the %imagecolortransparent()% function
+</blurb>
+<blurb>
+    %imagecolortransparent($img_r, $color);%
+</blurb>
+</slide>

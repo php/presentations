@@ -1,0 +1,14 @@
+<slide title="Altering a loaded font">
+<blurb>
+PostScripts fonts can be slanted, stretched, and shrunk before being rendered on the canvas
+</blurb>
+<list>
+    <bullet>%imagepsslantfont($font, $slant)% - Slants a font by %$slant%</bullet>
+    <bullet>%imagepsextendfont($font, $ratio)% - Streches / Shrinks font by %$ratio%</bullet>
+</list>
+<blurb>
+    In general, %$slant% is between 0 -> 1 (anything else is too hard to read) and %$ratio% is
+    represents the shrink/strech ratio (+1.5 would strech by 50 percent, -.5 would shrink by 50 percent)
+</blurb>
+<blurb title="Note: These function modify the font itself in memory"/>
+</slide>

@@ -1,0 +1,26 @@
+<slide title="What to expect">
+<blurb title="What we'll be covering">
+There is a lot of material to cover today, and it's broken up into the following themes:
+</blurb>
+<blurb title="1st Hour: Basic GD within PHP"/>
+<list>
+    <bullet>Installation</bullet>
+    <bullet>An introduction to GD and underlying concepts</bullet>
+    <bullet>Using GD to manipulate and create images</bullet>
+    <bullet>Taking advantage of the FreeType / T1lib font libraries</bullet>
+</list>
+<blurb title="2nd Hour: Applications of GD in PHP"/>
+<list>
+    <bullet>Counters</bullet>
+    <bullet>Thumbnails</bullet>
+    <bullet>Fun stuff (Magic Eye Posters)</bullet>
+    <bullet>GD-based PHP libraries (JpGraph, etc.)</bullet>
+</list>
+<blurb title="3rd Hour: ImageMagick and PHP"/>
+<list>
+    <bullet>Installation</bullet>
+    <bullet>Working with Filters</bullet>
+    <bullet>Animated graphics</bullet>
+    <bullet>Applications of ImageMagick in PHP</bullet>
+</list>
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Copying /Merging a canvas">
+<blurb>
+    %imagecopymerge()% copies all (or a portion) of an image and merges it with another canvas by
+    %$percent%
+</blurb>
+<blurb>
+    %imagecopymerge($dest_r, $src_r, $dest_x, $dest_y, $src_x, $src_y, $src_w, $src_h, $percent);%
+</blurb>
+<example filename="copymerge_ex.php" fontsize="1.6em"/>
+<image filename="copymerge_ex.php" align="center"/>
+</slide>

@@ -1,0 +1,26 @@
+<slide title="PostScript Bounding Boxes">
+<blurb title="Like FreeType, T1Lib supports bounding boxes">
+Bounding Boxes for a given PostScript string/font is done using the %imagepsbbox()% function.
+</blurb>
+<blurb>
+    %imagepsbbox($string, $font_r, $size [, $spacing, $char_spacing, $angle]);%
+</blurb>
+<blurb>
+    This function will provide an array indicating the coordinates of the lower-left and upper-right
+    corners of the bounding box.
+</blurb>
+<example type="php" fontsize="1.6em" result="1"><![CDATA[<?php
+
+    $font = imagepsloadfont('/usr/share/fonts/default/Type1/n019003l.pfb');
+    $text = "PHP Developer's Handbook";
+    $size = 40;
+    
+    echo "<PRE>";
+    print_r(imagepsbbox($text, $font, $size));
+    echo "</PRE>";
+    
+    imagepsfreefont($font);
+    
+?>]]>
+</example>
+</slide>

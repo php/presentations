@@ -1,0 +1,9 @@
+<slide title="Drawing in GD">
+<blurb title="GD supports the complete array of drawing routines for most geometric shapes and figures."/>
+<list>
+    <bullet>%imageline()% - Lines</bullet>
+    <bullet>%imagerectangle()% - Rectangles</bullet>
+    <bullet>%imagearc()% - Arc lengths</bullet>
+    <bullet>%imagepolygon()% - Polygons</bullet>
+</list>
+</slide>

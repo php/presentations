@@ -1,0 +1,13 @@
+<slide title="Brushes and Styles">
+<blurb title="Brushes">
+    When drawing on a canvas, by default the brush is a single pixel of the selected color. However
+    another canvas can be used as a brush (allowing you to define custom brushes for the GD drawing
+    functions.
+</blurb>
+<blurb title="Styles">
+    Styles like brushes allow you to change the way the standard GD drawing functions render. However,
+    unlike brushes styles are defined by creating a pattern (represented as an array) instead of
+    a canvas.
+</blurb>
+<image filename="brushes.png" align="center"/>
+</slide>

@@ -1,0 +1,14 @@
+<slide title="General Image Manipulation">
+<blurb>
+    PHP supports a wide range of general manipulation functions for images,
+    allowing you to copy all or portions of images, resize images, gather information
+    about images, and more.
+</blurb>
+<list>
+    <bullet>%imagecopy()% -- Copy all or a portion of one image onto another</bullet>
+    <bullet>%imagecopymerge()% -- Copies and merges a portion of one image onto another</bullet>
+    <bullet>%imagecopymergegray()% -- A grayscale version of %imagecopymerge()%</bullet>
+    <bullet>%imagecopyresized()% -- Copy and scale a portion of one image onto another canvas</bullet>
+    <bullet>%imagecopyresampled()% -- Copy, scale, and resample one image onto another canvas</bullet>
+</list>
+</slide>

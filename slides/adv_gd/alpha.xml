@@ -1,0 +1,14 @@
+<slide title="Alpha blending">
+<blurb title="Using the 24-bit color Alpha Channel">
+    In an RGB palette, the alpha channel is used to specify the "transparency" of a given
+    color in the palette when it is rendered. *Note:* Alpha channels only apply to 24-bit canvases
+</blurb>
+<blurb>
+    %imagecolorallocatealpha($img_r, $red, $green, $blue, $alpha);%
+</blurb>
+<blurb>
+    Where %$alpha% is a value anywhere from 0 (see-through) to 127 (Solid)
+</blurb>
+<example filename="alpha.php" fontsize="1.6em" title="Alpha chaneling handling"/>
+<image filename="alpha.php" align="center"/>
+</slide>

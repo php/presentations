@@ -1,0 +1,14 @@
+<slide title="Adding Text to images">
+<blurb>
+    When placing text on a canvas, there are a few support functions that can help you place
+    the text properly.
+</blurb>
+<blurb>
+    %imagefontwidth($font)% - Returns the width of the specified user / built-in font
+</blurb>
+<blurb>
+    %imagefontheight($font)% - Returns the height of the specified user / built-in font
+</blurb>
+<example fontsize="1.6em" filename="imagestring2.php"/>
+<image filename="imagestring2.php" align="center"/>
+</slide>

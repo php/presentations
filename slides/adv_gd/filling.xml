@@ -1,0 +1,10 @@
+<slide title="Filled Regions">
+<blurb title="Using the GD color filler">
+    In PHP geometric shapes can be drawn filled in with a particular color, or a region
+    can be filled manually using PHP
+</blurb>
+<blurb>
+    To draw "filled" geometric shapes, use %imagefilledrectangle()% instead of %imagerectangle()%, or
+    %imagefilledarc()% istead of %imagearc()%
+</blurb>
+</slide>

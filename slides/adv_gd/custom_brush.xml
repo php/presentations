@@ -1,0 +1,17 @@
+<slide title="Brushes and Styles">
+<blurb title="Custom Brushes">
+    Although Styles are useful, they are limited to specifying patterns in the form on an array.
+    More complex styles must be created in the form of brushes.
+</blurb>
+<blurb>
+    Custom brushes are created by creating an image and then setting that image as the brush to use
+    in another drawing operation using the %imagesetbrush()% function
+</blurb>
+<blurb>
+    %imagesetbrush($img_r, $brush_r);%
+</blurb>
+<blurb>
+    Once a brush has been defined, it can be used by setting the color of a drawing function to
+    the %IMG_COLOR_BRUSHED% constant
+</blurb>
+</slide>

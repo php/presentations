@@ -1,0 +1,9 @@
+<slide title="Flood Filling">
+<blurb title="Two types of Flood Filling"/>
+<list>
+    <bullet>%imagefill()% -- Fills a region, stopping at every border</bullet>
+    <bullet>%imagefilltoborder()% -- Fills a region, stopping at the specified border color</bullet>
+</list>
+<example filename="fill_ex.php" fontsize="1.6em"/>
+<image filename="fill_ex.php" align="center"/>
+</slide>

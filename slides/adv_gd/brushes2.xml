@@ -1,0 +1,10 @@
+<slide title="Back to Brushes">
+<blurb title="Changing the thickness of the brush">
+    Starting with the default brush, the most straightforward modification is to
+    change the thickness of the brush. This modification is accomplished using the
+    %imagesetthickness()% function
+</blurb>
+<blurb>
+    %imagesetthickness($img_r, $thickness);%
+</blurb>
+</slide>

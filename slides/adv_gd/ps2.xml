@@ -1,0 +1,19 @@
+<slide title="Using a loaded Postscript font">
+<blurb>
+    Once loaded, the Postscript font can be used to render text using the %imagepstext()% function
+</blurb>
+<blurb>
+    %imagepstext($img_r, $string, $font_r, $size, $f_color, $b_color, $x, $y%
+                %[, $spacing, $char_spacing, $angle, $antialias]);%
+</blurb>
+<blurb>
+    *Note:* Unlike most functions, the %imagepstext()% accepts either eight or twelve parameters _only_
+</blurb>
+<blurb title="Descriptions of the optional parameters"/>
+<list>
+    <bullet>%$spacing% - The amount of whitespace between words</bullet>
+    <bullet>%$char_spacing% - The amount of whitespace between individual characters</bullet>
+    <bullet>%$angle% - The angle to render the text on the canvas (in degrees)</bullet>
+    <bullet>%$antialias% - How many colors to use when anti-aliasing the text (4 or 16)</bullet>
+</list>
+</slide>

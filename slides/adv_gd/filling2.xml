@@ -1,0 +1,16 @@
+<slide title="More drawing">
+<blurb title="Particularly useful">
+    A particularly useful 'fill' function is the %imagefilledarc()% function, which can be
+    used to make pie charts
+</blurb>
+<blurb>
+    %imagefilledarc($img_r, $cx, $cy, $width, $height, $start_a, $end_a, $color, $style);%
+</blurb>
+<blurb title="Where $style can be..."/>
+<list>
+    <bullet>%IMG_ARC_PIE% - Fill as if it is a part of a pie chart</bullet>
+    <bullet>%IMG_ARC_CHORD% - Fill up to the chord of the arc</bullet>
+    <bullet>%IMG_ARC_NOFILL% - Currently only used with %IMG_ARC_EDGED% to indicate only the edges should be drawn (no real fill)</bullet>
+    <bullet>%IMG_ARC_EDGED% - Outline (don't fill) when rendering</bullet>
+</list> 
+</slide>

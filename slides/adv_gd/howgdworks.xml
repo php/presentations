@@ -1,0 +1,18 @@
+<slide title="How GD Works">
+    <blurb title="The Canvas">
+        The GD Canvas is the fundamental base of all graphics using GD. It contains the bit-by-bit
+        data of the image itself. A Canvas can be started from scratch, or created based on an
+        already existing image.
+    </blurb>
+    <blurb>
+        In PHP, a canvas is created using one of GD's %imagecreate*()% functions. Depending on
+        how GD has been configured in PHP, some or all of the following creation functions are available:
+    </blurb>
+    <list>
+        <bullet>%imagecreate($width, $height)% - Creates an empty canvas</bullet>
+        <bullet>%imagecreatetruecolor($width, $height)% - Creates an empty 24-bit color canvas</bullet>
+        <bullet>%imagecreatefromjpeg($filename)% - Creates a canvas based on a Jpeg image</bullet>
+        <bullet>%imagecreatefrompng($filename)% - Creates a canvas based on a PNG image</bullet>
+        <bullet>Similar functions for XPM, WBMP, XBM, and GIF files</bullet>
+    </list>
+</slide>

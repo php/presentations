@@ -1,0 +1,10 @@
+<slide title="GD: The basics">
+<blurb title="In PHP, graphics are both created and manipulated in five steps:"/>
+<list>
+<bullet>Creation of a new canvas in memory (from an image, or from scratch)</bullet>
+<bullet>Allocation of the colors used in the canvas</bullet>
+<bullet>Manipulation of the canvas</bullet>
+<bullet>Accessing the final image canvas as an image</bullet>
+<bullet>Destruction of the canvas in memory</bullet>
+</list>
+</slide>

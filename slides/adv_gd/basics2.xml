@@ -1,0 +1,15 @@
+<slide title="Creating a canvas">
+<blurb>
+Canvases are created using one of the %imagecreate*% family of functions as %imagecreate()% (to create an empty canvas) or %imagecreatefromjpeg()% (to create from an existing Jpeg image)
+Both functions return a resource representing the canvas for that image.
+</blurb>
+<example fontsize="1.6em"><![CDATA[<?php
+	/* Create an new 256 x 256 image canvas */
+	$img = imagecreate(256, 256);
+
+	/* Create a canvas based on a jpeg */
+	$img2 = imagecreatefromjpeg("/path/to/my/jpeg");
+?>]]>
+</example>
+</slide>
+

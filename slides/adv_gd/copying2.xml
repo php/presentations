@@ -1,0 +1,14 @@
+<slide title="Copying a canvas">
+<blurb>
+    The ability to copy a portion (or all) of one canvas to another is quite useful and is done
+    using the %imagecopy()% function:
+</blurb>
+<blurb>
+    %imagecopy($dest_r, $src_r, $dest_x, $dest_y, $src_x, $src_y, $src_w, $src_h);%
+</blurb>
+<blurb>
+    The %imagecopy()% function is quite useful for doing things like making a hit counter
+</blurb>
+<example filename="counter_ex.php" fontsize="1.6em"/>
+<image filename="counter_ex.php" align="center"/>
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Using PostScript Fonts">
+<blurb title="GD supports the use of PostScript type 1 fonts on images">
+    T1Lib provides Postscript font support which can be broken down into the following steps
+</blurb>
+<list>
+  <bullet>Load the PostScript font - %imagepsloadfont($filename)%</bullet>
+  <bullet>Render text using the loaded font - %imagepstext(...)%</bullet>
+  <bullet>Free the font resource - %imagepsfreefont($font_r)%</bullet>
+</list>
+</slide>

@@ -1,0 +1,9 @@
+<slide title="Resizing and Resampling a canvas">
+<blurb>
+    %imagecopyresampled()% function will copy and resized and resampled
+    a portion of a canvas.
+</blurb>
+<example filename="copyresampled_ex.php" fontsize="1.6em"/>
+<image filename="php.png" align="center"/>
+<image filename="copyresampled_ex.php" align="center"/>
+</slide>

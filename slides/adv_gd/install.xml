@@ -1,0 +1,13 @@
+<slide title="Installing GD">
+<blurb title="The installation of a complete GD package requires a number of different libraries."/>
+<list>
+<bullet>The GD graphics library (comes bundled with PHP 4)</bullet>
+<bullet>The Jpeg library (for .jpg support)</bullet>
+<bullet>The Zlib compression library (for .png support)</bullet>
+<bullet>The Png library (for .png support)</bullet>
+<bullet>The Xpm library (for .xpm support)</bullet>
+<bullet>FreeType 1.x or 2.x (for TrueType support)</bullet>
+<bullet>T1Lib (for PostScript Font Support)</bullet>
+</list>
+<blurb title="Links to these libraries will be provided later"/>
+</slide>

@@ -1,0 +1,11 @@
+<slide title="How GD Works">
+    <blurb title="The palette">
+        Every image (and canvas) has associated with it a color palette which defines the colors used within
+        the image itself. 
+    </blurb>
+    <list>
+        <bullet>Most image types support basically infinite palette sizes such as PNG files</bullet>
+        <bullet>Other image types, such as GIF files, have quite limited (256 color) palettes</bullet>
+    </list>
+    <image filename="palette.png" align="center"/>
+</slide>

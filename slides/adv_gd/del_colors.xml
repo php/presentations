@@ -1,0 +1,25 @@
+<slide title="General color resolving">
+<blurb title="A useful function">
+    Using these functions one could write a %get_color()% function that will do everything
+    possible to resolve the best possible match for the desired color:
+</blurb>
+<example fontsize="1.6em"><![CDATA[<?php
+    function get_color($img, $red, $green, $blue) {
+        $color = imagecolorexact($img, $red, $green, $blue);
+      
+        if($color == -1) {
+            $color = imagecolorallocate($img, $red, $green, $blue);
+      
+            if($color == -1) {
+                 $color = imagecolorclosest($img, $red, $green, $blue);
+            }
+        }
+      
+        return $color;
+    }
+?>]]>
+</example>
+<blurb title="However why bother re-inventing the wheel?">
+    This is exactly what %imagecolorresolve()% is for!
+</blurb>
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Copying / Merging a canvas">
+<blurb>
+    %imagecopymergegray()% converts the source image to grayscale and then
+    copies all (or a portion) of an image and merges it with another canvas by
+    %$percent% 
+</blurb>
+<blurb>
+    %imagecopymergegray($dest_r, $src_r, $dest_x, $dest_y, $src_x, $src_y, $src_w, $src_h, $percent);%
+</blurb>
+<example filename="copymergegray_ex.php" fontsize="1.6em"/>
+<image filename="copymergegray_ex.php" align="center"/>
+</slide>

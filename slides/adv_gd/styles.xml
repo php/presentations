@@ -1,0 +1,18 @@
+<slide title="Brushes and Styles">
+<blurb title="Changing the style">
+    Although things like thickness can be modified by adjusting the brush, rendering things
+    like dashed-lines require changing the style of the brush.
+</blurb>
+<blurb>
+    Styles are defined by an array of allocated colors which represent the desired style which
+    is then registered using the %imagesetstyle()% function.
+</blurb>
+<example fontsize="1.6em"><![CDATA[<?php
+    $dashed = array($black, $black, $black, $white, $white, $white);
+?>]]>
+</example>
+<blurb>
+    Once a style has been defined, it can be used with any GD drawing function by setting the
+    color to %IMG_COLOR_STYLED%
+</blurb>  
+</slide>

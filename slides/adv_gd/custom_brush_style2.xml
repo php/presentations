@@ -1,0 +1,9 @@
+<slide title="Custom Brushes with Styles">
+<blurb title="Using a custom brush and style">
+    To make our custom brush readable, we must force GD not to draw it in place of every pixel and then
+    use that style in conjunction with the brush by setting the color of the operation to the
+    %IMG_COLOR_STYLEBRUSHED%
+</blurb>
+<example filename="stylebrush_ex.php" fontsize="1.6em" title="Using brushes with style"/>
+<image filename="stylebrush_ex.php" align="center"/>
+</slide>

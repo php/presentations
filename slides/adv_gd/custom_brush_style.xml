@@ -1,0 +1,16 @@
+<slide title="Custom Brushes with Styles">
+<image filename="custom_brush_ex.php" align="center"/>
+<blurb>
+    Note how the custom brush (a small circle) renders poorly (solid black lines and circle)
+    This is because PHP is drawing that circle in the place of every single pixel in a standard brush.
+</blurb>
+<blurb>
+    To space out the brush to something more reasonable, you must combine the custom brush
+    with a custom style.
+</blurb>
+<blurb>
+    Unlike using just a style, when using a custom brush and style the actual values of the the style
+    array is irrlevant. Values greater than zero will cause the custom brush to be drawn while a value
+    of zero will not.
+</blurb>
+</slide>

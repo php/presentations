@@ -1,0 +1,11 @@
+<slide title="Adding Text to images">
+<blurb>
+    You can add text to images using a number of different methods
+</blurb>
+<list>
+    <bullet>Using the built-in GD fonts</bullet>
+    <bullet>Using FreeType / TrueType Fonts</bullet>
+    <bullet>Using T1lib / PostScript Fonts</bullet>
+    <bullet>User-defined font bitmaps</bullet>
+</list>
+</slide>

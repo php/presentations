@@ -1,0 +1,10 @@
+<slide title="Interesting Trick">
+<blurb title="One color can be completely replaced by another by changing the palette">
+    Because the _location_ of the color determines the actual color used, by changing
+    the color at that particular palette index changes it throughout the canvas.. Individual
+    palette changes can be made using the %imagecolorset()% function.
+</blurb>
+<blurb>
+    %imagecolorset($img_r, $old_color, $red, $green, $blue);%
+</blurb>
+</slide>

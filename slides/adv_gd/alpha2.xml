@@ -1,0 +1,11 @@
+<slide title="Alpha blending">
+<blurb title="Other alpha-friendly functions">
+    The following is a list of other alpha-related fuctions for PHP.
+</blurb>
+<list>
+    <bullet>%imagecolorallocatealpha()% - Allocate a new color in the palette with alpha information</bullet>
+    <bullet>%imagecolorexactalpha()% - Match the exact color specified (including the alpha channel).</bullet>
+    <bullet>%imagecolorclosestalpha()% - Match the closest color to that specified.</bullet>
+    <bullet>%imagecolorresolvealpha()% - Same as %imagecolorresolve()%, except includes alpha channel.</bullet>
+</list>
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Filling Regions">
+<blurb title="Regions of a canvas can be filled with a specified color">
+    Two functions, %imagefill()% and %imagefilltoborder()% serve this purpose. The first will "stay in the lines",
+    while the second will fill until it reaches a border of a certain color.
+</blurb>
+<blurb>
+    %imagefill($img_r, $x, $y, $color);%
+</blurb>
+<blurb>
+    %imagefilltoborder($img_r, $x, $y, $border_color, $fill_color);%
+</blurb>
+</slide>

@@ -1,0 +1,15 @@
+<slide title="Adding colors to the palette">
+<blurb title="Adding colors">
+    Unless a canvas is created based on an already existing image, creating an image with %imagecreate()% will
+    not have any colors in its palette
+</blurb>
+<blurb title="Ways to add colors">
+    Adding colors can be done in a number of different ways using the following function family:
+</blurb>
+<list>
+    <bullet>%imagecolorallocate()% - Allocate a new color in the palette</bullet>
+    <bullet>%imagecolorexact()% - Attempt to find the specified color in an existing palette</bullet>
+    <bullet>%imagecolorclosest()% - Provide the closest match to the specified color</bullet>
+</list>
+
+</slide>
