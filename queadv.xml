@@ -1,0 +1,78 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Advanced PHP</title>
+<event>PHP Québec Conference</event>
+<location>Montréal</location>
+<date>Mar.25, 2004</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>Live presentation at http://talks.php.net</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+</chapter>
+
+<slide>slides/intro/goals.xml</slide>
+
+<chapter title="PHP5">
+  <slide>slides/intro/php5_refclone.xml</slide>
+  <slide>slides/intro/php5_construct.xml</slide>
+  <slide>slides/intro/php5_private.xml</slide>
+  <slide>slides/intro/php5_protected.xml</slide>
+  <slide>slides/intro/php5_setget.xml</slide>
+  <slide>slides/intro/php5_call.xml</slide>
+  <slide>slides/intro/php5_exceptions.xml</slide>
+  <slide>slides/intro/streams.xml</slide>
+  <slide>slides/intro/cli-awk.xml</slide>
+  <slide>slides/intro/php5_domxml-load.xml</slide>
+  <slide>slides/intro/simplexml1.xml</slide>
+  <slide>slides/intro/simplexml2.xml</slide>
+  <slide>slides/intro/sqlite1.xml</slide>
+  <slide>slides/intro/sqlite2.xml</slide>
+</chapter>
+
+<chapter title="Design">
+  <slide>slides/intro/design.xml</slide>
+  <slide>slides/intro/urlapi.xml</slide>
+  <slide>slides/intro/pi.xml</slide>
+  <slide>slides/intro/errdoc.xml</slide>
+  <slide>slides/intro/image_cache.xml</slide>
+  <slide>slides/intro/funky.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+  <slide>slides/intro/layers.xml</slide>
+</chapter>
+
+<chapter title="Extending">
+  <slide>slides/intro/arch.xml</slide>
+  <slide>slides/extending/ext4-bday.xml</slide>
+  <slide>slides/extending/ext8.xml</slide>
+  <slide>slides/extending/ext9.xml</slide>
+  <slide>slides/extending/ext11.xml</slide>
+  <slide>slides/extending/ext13.xml</slide>
+  <slide>slides/extending/ffi.xml</slide>
+</chapter>
+
+<chapter title="Performance">
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/intro/php_opcode_caches3.xml</slide>
+  <slide>slides/intro/php_bench1.xml</slide>
+  <slide>slides/intro/php_bench2.xml</slide>
+  <slide>slides/intro/php_bench3.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/xdebug.xml</slide>
+  <slide>slides/intro/valgrind.xml</slide>
+  <slide>slides/intro/stop.xml</slide>
+</chapter>
+
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

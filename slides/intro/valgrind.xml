@@ -1,0 +1,14 @@
+<slide title="Deploy">
+<break />
+<example title="All Hail Valgrind!">http://valgrind.kde.org</example>
+<list title="Valgrind Tools">
+<item> Memcheck </item>
+<item> Addrcheck </item>
+<item> Cachegrind </item>
+<item> Helgrind </item>
+</list>
+<blurb>
+Also make sure you use an atomic file deployment mechanism like *rsync* or *mv*.
+Never *tar* or *cp* files to their final destinations on a running production server.
+</blurb>
+</slide>

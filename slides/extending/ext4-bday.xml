@@ -1,0 +1,34 @@
+<slide title="The Birthday Extension">
+<blurb>First we create a function definition file:</blurb>
+<example type="shell" title="bday.def" fontsize="1.5em"><![CDATA[string birthday(int timestamp)
+]]></example>
+<blurb>
+Then run the *ext_skel* script which creates all the required skeleton files.
+</blurb>
+<example type="shell" fontsize="1.75em"><![CDATA[% cd php4/ext
+% ./ext_skel --extname=bday --proto=bday.def ]]></example>
+
+<blurb title="Standalone or Embedded?">
+At this point you have a choice on how to proceed.  You can either develop your
+extension under the main PHP framework where you run the top-level *buildconf*
+script to include your extension in PHP's main configuration script, or you can
+develop your extension in a completely separate directory where you run the
+*phpize* script to populate your extension directory with all the required
+files.
+</blurb>
+
+<example title="Embedded" type="shell"><![CDATA[% cd bday
+% vi config.m4
+% cd ../..
+% ./buildconf
+% ./configure --enable-bday
+% make]]></example>
+
+<example title="Standalone" type="shell"><![CDATA[% mv bday /tmp
+% cd /tmp/bday
+% vi config.m4
+% phpize
+% ./configure --enable-bday
+% make]]></example>
+
+</slide>

@@ -42,4 +42,6 @@ install ok: xdebug 1.3.0]]></example>
 	var_dump($_COOKIE);
 ?>]]></example>
 
+<image title="debugclient" filename="../xdebug/debugclient.png" align="center"/>
+
 </slide>
