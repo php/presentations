@@ -1,7 +1,7 @@
 <slide title="MySQL Optimization">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
 <break lines="5"/>
-<list>
+<list marginleft="2.0em">
 <bullet effect="slide">Use the %LIMIT% statement</bullet>
 <bullet effect="slide">Use the %mysql_unbuffered_query()% function</bullet>
 <bullet effect="slide">Be careful about persistant connections</bullet>
