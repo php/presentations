@@ -1,0 +1,33 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>>
+<topic>Scripting Languages</topic>
+<title>Introduction to Scripting Languages</title>
+<event>UAM Linux Course</event>
+<location>Miraflores, Spain</location>
+<date>July 19, 2003</date>
+<speaker>Sterling Hughes</speaker>
+<email>sterling@php.net</email>
+<url>http://talks.php.net/show/scripting-v2</url>
+<slide>slides/scripting/titlepage.xml</slide>
+<slide>slides/scripting/intro.xml</slide>
+<slide>slides/scripting/c.xml</slide>
+<slide>slides/scripting/c.example.xml</slide>
+<slide>slides/scripting/languages.xml</slide>
+<slide>slides/scripting/perl.xml</slide>
+<slide>slides/scripting/perl.example.xml</slide>
+<slide>slides/scripting/perl.command.xml</slide>
+<slide>slides/scripting/python.xml</slide>
+<slide>slides/scripting/python.example.xml</slide>
+<slide>slides/scripting/python.yeller.xml</slide>
+<slide>slides/scripting/python.yeller1.xml</slide>
+<slide>slides/scripting/php.xml</slide>
+<slide>slides/scripting/php.example.xml</slide>
+<slide>slides/scripting/php.guestbook.xml</slide>
+<slide>slides/scripting/moreinfo.xml</slide>
+</presentation>
