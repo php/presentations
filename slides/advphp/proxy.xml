@@ -10,6 +10,15 @@ curl_close ($ch);
 ?>]]>
 </example>
 
-<blurb>Furthermore, cURL can be used to 
+<blurb>Furthermore, cURL can be used to tunnel all operations through
+an HTTP proxy.</blurb>
+
+<example title="Tunnel with cURL" fontsize="1.2em"><![CDATA[<?php
+$ch = curl_init ('ftp://ftp.playboy.com/centerfolds/may.jpg');
+curl_setopt ($ch, CURLOPT_HTTPPROXY, 'http://127.0.0.1/');
+curl_setopt ($ch, CURLOPT_HTTPPROXYTUNNEL, 1);
+curl_exec ($ch);
+curl_close ($ch);
+?>]]></example>
 
 </slide>
