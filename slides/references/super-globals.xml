@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Superglobals</title>
+
+	<list>
+	<li>Are always available.</li>
+	<li>Are not created into the local symbol table.</li>
+	</list>
+	
+</slide>

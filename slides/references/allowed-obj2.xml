@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>'Allowed' usage</title>
+
+	<blurb>Handling objects</blurb>
+	<break/>
+	<example><![CDATA[<?php
+    class foo {
+        function foo($id) {
+            $this->id = $id;
+        }
+    }
+
+    function return_object_array(&$obj1, &$obj2)
+    {
+        return array(1 => &$obj1, 2 => &$obj2);
+    }
+
+    $obj1 = new foo('en');
+    $obj2 = new foo('to');
+    $a = return_object_array($obj1, $obj2);
+    $a[1]->id = 'tre';
+    var_dump($obj1);
+?>
+]]></example>
+	
+</slide>

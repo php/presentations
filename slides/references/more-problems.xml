@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Other problems</title>
+
+	<blurb>What does this output?</blurb>
+	<break/>
+	<example><![CDATA[<?php
+    $array = array();
+
+    $new = 9;
+    $array[] =& $new;
+
+    $new = 18;
+    $array[] =& $new;
+
+    var_dump($array);
+?>]]></example>
+	
+</slide>

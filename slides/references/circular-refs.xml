@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Circular References</title>
+
+	<blurb>Why is this a problem?</blurb>
+	<break/>
+	<example><![CDATA[<?php
+	$array = array(1);
+	$array[] = &$array;
+?>]]></example>
+	<break/>
+	<blurb>This is why:</blurb>
+<example class="code-small"><![CDATA[/Zend/zend_hash.c(416) :  Freeing 0x08434674 (35 bytes), script=circular.php
+/Zend/zend_execute.c(2015) :  Freeing 0x08434614 (44 bytes), script=circular.php
+/Zend/zend_API.c(562) : Actual location (location was relayed)
+/Zend/zend_hash.c(188) :  Freeing 0x0843E414 (32 bytes), script=circular.php
+/Zend/zend_execute.c(2035) :  Freeing 0x0843DCB4 (12 bytes), script=circular.php
+/Zend/zend_execute.c(499) :  Freeing 0x0843DC74 (12 bytes), script=circular.php
+]]></example>
+	
+</slide>

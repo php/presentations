@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Copy-on-Write</title>
+
+	<list>
+	<li>Copying or copying?</li>
+	</list>
+
+	<example><![CDATA[<?php
+	echo memory_get_usage(), "\n";   // 14776
+	$a = array();
+	for ($i = 0; $i < 250; $i++) {
+		$a[] = range($i, $i + 250);
+	}
+	unset($i);
+	
+	echo memory_get_usage(), "\n";   // 3809864
+	$b = $a;
+
+	echo memory_get_usage(), "\n";
+	$b[5] = range(0, 250);
+
+	echo memory_get_usage(), "\n";
+?>]]></example>
+	
+</slide>

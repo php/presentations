@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Returning References</title>
+
+	<blurb>What's wrong here?</blurb>
+	<example><![CDATA[<?php
+	$var =& strlen("this is a string");
+?>]]></example>
+	
+	<blurb>Or here?</blurb>
+	<example><![CDATA[<?php
+	function &create_array($count)
+	{
+		$len = range(0, $count);
+		return &$len;
+	}
+	$array = create_array(50000);
+?>]]></example>
+	
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>'Allowed' usage</title>
+
+	<blurb>Passing variables "by-ref":</blurb>
+	<break/>
+	<example><![CDATA[<?php
+	function screw_up_array(&$array)
+	{
+		$array[] = 'screwed up';
+	}
+
+	$a = array('not');
+	screw_up_array($a);
+?>]]></example>
+	
+</slide>

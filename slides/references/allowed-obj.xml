@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>'Allowed' usage</title>
+
+	<blurb>Handling objects</blurb>
+	<break/>
+	<example><![CDATA[<?php
+	function &return_object()
+	{
+		return new foo();
+	}
+
+	$a =& return_object();
+?>]]></example>
+	
+</slide>

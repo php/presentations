@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="0" >
+<topic>PHP</topic>
+<title>References</title>
+<event>eZ Training</event>
+<location>Skien, Norway</location>
+<date>June 24th, 2004</date>
+<speaker>Derick Rethans</speaker>
+<email>dr (at) ez (dot) no</email>
+<url></url>
+<slide>slides/perf/title.xml</slide>
+
+<slide>slides/references/what-are.xml</slide>
+<slide>slides/references/how-they-work.xml</slide>
+<slide>slides/references/global.xml</slide>
+<slide>slides/references/super-globals.xml</slide>
+<slide>slides/references/mem-c-on-w-array.xml</slide>
+<slide>slides/references/mem-c-on-w-obj.xml</slide>
+<slide>slides/references/reference-on-return.xml</slide>
+<slide>slides/references/more-problems.xml</slide>
+<slide>slides/references/circular-refs.xml</slide>
+<slide>slides/references/allowed.xml</slide>
+<slide>slides/references/allowed-obj.xml</slide>
+<slide>slides/references/allowed-obj2.xml</slide>
+<slide>slides/references/what-are.xml</slide>
+</presentation>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Objects</title>
+
+	<example><![CDATA[<?php
+	function &foo() {
+		$a = array();
+		for ($i = 0; $i < 250; $i++) {
+			$a[] = new foo;
+		}
+		return $a;
+	}
+
+	class foo {
+		function foo() {
+			$this->stuff = range(0, 250);
+		}
+	}
+
+	echo memory_get_usage(), "\n"; // 15944
+	$a =& foo();
+	echo memory_get_usage(), "\n"; // 3845160
+	$b = $a;
+	echo memory_get_usage(), "\n";
+	$b[5] = new foo;
+	echo memory_get_usage(), "\n";
+?>]]></example>
+	
+</slide>
