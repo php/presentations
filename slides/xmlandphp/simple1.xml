@@ -1,0 +1,15 @@
+<slide title="Simple Wishlist">
+<example><![CDATA[<?php
+$w = new XML_Simple('thedata.xml');
+$items = $w->item;
+while ($item = $w->item->next()) 
+{
+	$url = $w['uri'] . $item['id'];
+
+	echo "<a href=\"$url\">";
+	echo $item->title;
+	echo "</a>\n<br />\n";
+	echo "{$item->description}<br />\n";
+}
+?>]]></example>
+</slide>
