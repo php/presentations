@@ -1,7 +1,7 @@
 <slide title="WSDL based Servers">
 
-<blurb>PHP-SOAP supports binding WSDL files to
-the server objects (PEAR::SOAP does not at this time).  This
+<blurb>PEAR::SOAP and PHP-SOAP supports binding WSDL files to
+the server objects.  This
 allows for much easier server design, and makes using PHP objects
 as SOAP servers possible without any modifications.  Binding the server
 to a WSDL allows the WSDL to define types and interfaces for

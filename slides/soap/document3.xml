@@ -4,9 +4,9 @@
 <![CDATA[<?php
 require_once('SOAP/Client.php');
 
-$baseurl = "http://www.epionet.com/epiowavewebservices";
-         
-$client = new SOAP_Client("$baseurl/livecitycams/livecitycams.asp", 0);
+$baseurl = "http://www.epionet.com/webservices/epiowebservices";
+$endpoint = 'http://www.epionet.com/epiowavewebservices/livecitycams/livecitycams.asp';
+$client = new SOAP_Client($endpoint);
 
 $result = $client->call("ListLiveCityCams", 
         NULL, 
@@ -14,6 +14,11 @@ $result = $client->call("ListLiveCityCams",
             'soapaction' => $baseurl.'/livecitycams/listlivecitycams',
             'style' => 'document',
             'use' => 'literal')); 
+
+if (PEAR::isError($result)) {
+    echo $result->getMessage();
+    exit;
+}
 
 print $client->wire;
 

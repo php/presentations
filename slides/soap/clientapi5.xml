@@ -1,0 +1,37 @@
+<slide title="WSDL API">
+<list>
+<bullet>SOAP_WSDL</bullet>
+<blurb>WSDL Parsing, Interpretation and Proxy Generation.</blurb>
+</list>
+<list>
+    <bullet>Constructor</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: WSDL URL</bullet>
+<bullet>Arg 2 Optional: Array: HTTP Proxy options (HTTP::Request)</bullet>
+</list>
+<list>
+    <bullet>Method: set_service</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: Service Name</bullet>
+</list>
+<list>
+    <bullet>Method: generateProxyCode</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Optional: String: Port Name</bullet>
+<bullet>Arg 1 Optional: String: Class Name</bullet>
+</list>
+<list>
+    <bullet>Method: generateAllProxies</bullet>
+</list>
+<list>
+    <bullet>Method: getProxy</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Optional: String: Port Name</bullet>
+<bullet>Arg 1 Optional: String: Class Name</bullet>
+</list>
+
+</slide>    

@@ -1,0 +1,60 @@
+<slide title="Multiple Out Arguments">
+<example type="php" fontsize='1.4em' title=" ">
+<![CDATA[<?php
+require_once 'SOAP/Server.php';
+
+$server = new SOAP_Server;
+
+class SOAP_Example_Server {
+    var $__dispatch_map = array();
+    
+    function SOAP_Interop_GroupB() {
+	$this->__dispatch_map['echoStructAsSimpleTypes'] =
+		array('in' => array('inputStruct' => 'SOAPStruct'),
+		      'out' => array(
+                        'outputString' => 'string', 
+                        'outputInteger' => 'int', 
+                        'outputFloat' => 'float')
+		      );
+    }
+    
+    function &echoStructAsSimpleTypes (&$struct)
+    {
+	# convert a SOAPStruct to an array
+	return array(
+	    new SOAP_Value('outputString','string',$struct->varString),
+	    new SOAP_Value('outputInteger','int',$struct->varInt),
+	    new SOAP_Value('outputFloat','float',$struct->varFloat)
+	    );
+    }
+}
+
+$soapclass = new SOAP_Example_Server();
+$server->addObjectMap($soapclass,'urn:SOAP_Example_Server');
+$server->service($HTTP_RAW_POST_DATA);
+?>]]>
+</example>
+
+<example type="php" fontsize='1.4em' title='Client for Example Server'>
+<![CDATA[<?
+$client = SoapObject(
+    'http://localhost/SOAP/example/exampleserver.php');
+
+class SOAPStruct {
+    var $varString;
+    var $varInt;
+    var $varFloat;
+    function SOAPStruct($s=NULL, $i=NULL, $f=NULL) {
+        $this->varString = $s;
+        $this->varInt = $i;
+        $this->varFloat = $f;
+    }
+}
+
+$struct = new SOAPStruct('test string',123,123.123);
+
+list($string, $int, $float) = 
+    $client->call("echoStructAsSimpleTypes",$struct,$options);
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,42 @@
+<slide title="Attachments API">
+<list>
+<bullet>SOAP_Attachment</bullet>
+<blurb>Encapsulates data to serialize to SOAP.</blurb>
+</list>
+<list>
+    <bullet>Constructor</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: Name</bullet>
+<bullet>Arg 2 Required: String: Type (default application/octet-stream)</bullet>
+<bullet>Arg 3 Required: String: Filename</bullet>
+<bullet>Arg 4 Optional: String: File (actual contents of file or data to be sent)</bullet>
+</list>
+<blurb>If you only specify the filename, the SOAP_Attachment class will
+attempt to read the file into memory and send the data.  DIME is the default
+attachment method if the 'attachments' option is not defined.</blurb>
+<example type="php" title="Example Usage" fontsize='1.4em'>
+<![CDATA[<?php
+$filename = 'attachment.zip';
+$v =  new SOAP_Attachment('test','text/plain',$filename);
+$methodValue = new SOAP_Value('testattach', 'Struct', array($v));
+?>
+]]>
+</example>
+<example type="php" title="Full Example" fontsize='1.4em'>
+<![CDATA[<?php
+$filename = 'attachment.php';
+$v =  new SOAP_Attachment('test','text/plain',$filename);
+$methodValue = new SOAP_Value('testattach', 'Struct', array($v));
+
+$client = new SOAP_Client('mailto:user@domain.com');
+# calling with mime
+$resp = $client->call('echoMimeAttachment',array($v),
+                array('attachments'=>'Mime',
+                    'namespace'=>'http://soapinterop.org/',
+                    'from'=>'user@domain.com',
+                    'host'=>'smtp.domain.com'));
+?>
+]]>
+</example>
+</slide>    

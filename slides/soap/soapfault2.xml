@@ -1,0 +1,51 @@
+<slide title="SOAP Faults">
+
+<example type="php" fontsize='1.4em' title="Server that returns a SOAP Fault">
+<![CDATA[<?php
+require_once 'SOAP/Server.php';
+
+$server = new SOAP_Server;
+
+class SOAP_Example_Server {
+    var $method_namespace = 'urn:SOAP_Example_Server';
+
+    function echoString($inputString)
+    {
+        if (!$inputString) {
+            $faultcode = 'Client';
+            $faultstring = 'You sent an empty string';
+            $faultactor = $this->method_namespace;
+            $detail = NULL;
+            return new SOAP_Fault($faultstring,
+                                  $faultcode,
+                                  $faultactor,
+                                  $detail);
+        }
+        return $inputString;
+    }
+}
+
+$soapclass = new SOAP_Example_Server();
+$server->addObjectMap($soapclass);
+$server->service($HTTP_RAW_POST_DATA);
+?>]]>
+</example>
+
+<example type="php" fontsize='1.4em' title="Client for Example Server">
+<![CDATA[<?php
+require_once 'SOAP/Client.php';
+
+$soapclient = new SOAP_Client(
+    'http://localhost/SOAP/example/exampleserver.php');
+
+$result = $soapclient->call('echoStringSimple',
+                         array('inputString' => NULL),
+                         array('namespace' =>
+                               'urn:SOAP_Example_Server');
+if (PEAR::isError($result)) {
+    // handle the error condition
+    echo $result->getMessage();
+}
+?>]]>
+</example>
+</slide>

@@ -25,10 +25,12 @@
 <bullet>soapaction (URI)</bullet>
 <bullet>style ('rpc' or 'document')</bullet>
 <bullet>use ('encoded' or 'literal')</bullet>
+<bullet>attachments ('Mime' or 'DIME')</bullet>
 <bullet>parameters (boolean, internal use)</bullet>
 <bullet>result (empty, set to 'raw' to get unparsed soap result)</bullet>
 <bullet>input (empty, set to 'raw' to send unparsed soap request)</bullet>
 <bullet>timeout (socket timeout)</bullet>
+<bullet>port (socket port)</bullet>
 <bullet>headers (associative array of extra protocol headers)</bullet>
 <bullet>trace (0, set to 1 for debug tracing)</bullet>
 <bullet>from (SMTP)</bullet>
@@ -52,5 +54,11 @@
 </list>
 <list marginleft="2em">
 <bullet>Contains raw wire of SOAP transaction if trace is set.</bullet>
+</list>
+<list>
+    <bullet>Member: xml</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Contains the received xml.</bullet>
 </list>
 </slide>    

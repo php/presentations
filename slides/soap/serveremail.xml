@@ -17,8 +17,6 @@ require_once 'SOAP/Server/Email.php';
 $server = new SOAP_Server_Email;
 
 class SOAP_Example_Server {
-    var $method_namespace = 'urn:SOAP_Example_Server';
-
     function echoString($inputString)
     {
         return $inputString;
@@ -37,7 +35,7 @@ while (!feof($fin) && $data = fread($fin, 8096)) {
 fclose($fin);
 
 $soapclass = new SOAP_Example_Server();
-$server->addObjectMap($soapclass);
+$server->addObjectMap($soapclass,'urn:SOAP_Example_Server');
 $server->service($email);
 ?>]]>
 </example>

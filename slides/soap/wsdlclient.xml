@@ -1,0 +1,44 @@
+<slide title="WSDL Based Dynamic Clients">
+
+<example type="php" title="Using SOAP_WSDL" fontsize='1.4em'>
+<![CDATA[<?php 
+require_once('SOAP/Client.php'); 
+
+$wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
+$WSDL = new SOAP_WSDL($wsdlurl);
+$client = $WSDL->getProxy();
+
+$response =
+        $client->doGoogleSearch(
+                    $key,$query,0,4,
+                    false,'',false,'','','');
+
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">';
+    echo $result->title."</a><br><br>\n";
+    echo $result->snippet."<br><br><br>\n";
+}
+?>
+]]>
+</example>
+<example type="php" title="Using SOAP_Client and Overload" fontsize='1.4em'>
+<![CDATA[<?php 
+require_once('SOAP/Client.php'); 
+
+$wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
+$client = new SOAP_Client($wsdlurl,1);
+
+$response =
+        $client->doGoogleSearch(
+                    $key,$query,0,4,
+                    false,'',false,'','','');
+
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">';
+    echo $result->title."</a><br><br>\n";
+    echo $result->snippet."<br><br><br>\n";
+}
+?>
+]]>
+</example>
+</slide>

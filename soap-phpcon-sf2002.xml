@@ -23,6 +23,8 @@
 <slide>slides/soap/soaphistory.xml</slide>
 <slide>slides/soap/soap.xml</slide>
 <slide>slides/soap/soapenvelope.xml</slide>
+<slide>slides/soap/headers.xml</slide>
+<slide>slides/soap/soapfault.xml</slide>
 <slide>slides/soap/document.xml</slide>
 <slide>slides/soap/wsdl.xml</slide>
 <slide>slides/soap/wsdlparts.xml</slide>
@@ -55,25 +57,32 @@
 
 <slide>slides/soap/document2.xml</slide>
 <slide>slides/soap/document3.xml</slide>
+<slide>slides/soap/document4.xml</slide>
 
-<slide>slides/soap/headers.xml</slide>
 <slide>slides/soap/headers2.xml</slide>
 
 <slide>slides/soap/attachments2.xml</slide>
 <slide>slides/soap/attachments3.xml</slide>
+<slide>slides/soap/clientapi4.xml</slide>
 
 <slide>slides/soap/soapsmtp.xml</slide>
 
+<slide>slides/soap/wsdlclient.xml</slide>
+<slide>slides/soap/proxygen.xml</slide>
+<slide>slides/soap/clientapi5.xml</slide>
+
 <slide>slides/soap/server1.xml</slide>
 <slide>slides/soap/server2.xml</slide>
-<slide>slides/soap/serverfault.xml</slide>
+<slide>slides/soap/serverapi1.xml</slide>
+<slide>slides/soap/server3.xml</slide>
+<slide>slides/soap/soapfault2.xml</slide>
 <slide>slides/soap/serverheader.xml</slide>
 <slide>slides/soap/serveremail.xml</slide>
+
 <slide>slides/soap/serverwsdl.xml</slide>
 
-<slide>slides/soap/wsdl2.xml</slide>
+<slide>slides/soap/soapobjects1.xml</slide>
 
-<slide>slides/soap/advanced.xml</slide>
 <slide>slides/soap/soapresources.xml</slide>
 <slide>slides/soap/resources.xml</slide>
 

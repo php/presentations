@@ -2,6 +2,8 @@
 
 <example type="php" title="Example Usage" fontsize='1.4em'>
 <![CDATA[<?php
+require_once 'SOAP/Value.php';
+
 class Person {
     var $Age;
     var $ID;

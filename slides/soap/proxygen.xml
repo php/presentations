@@ -1,0 +1,60 @@
+<slide title="WSDL Proxy Generation">
+
+<example type="php" title="Generating a Static Client from WSDL" fontsize='1.4em'>
+<![CDATA[<?php 
+require_once('SOAP/WSDL.php'); 
+
+$wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
+$wsdl = new SOAP_WSDL($wsdlurl);
+print $wsdl->generateProxyCode();
+?>
+]]>
+</example>
+<example type="php" title="Generated Class" fontsize='1.4em'>
+<![CDATA[<?php 
+require_once('SOAP/Client.php'); 
+
+class WebService_GoogleSearchService extends SOAP_Client {
+    function WebService_GoogleSearchService() {
+        $this->SOAP_Client("http://api.google.com/search/beta2", 0);
+    }
+    function doGetCachedPage($key, $url) {
+        return $this->call("doGetCachedPage", 
+                        array("key"=>$key, "url"=>$url), 
+                        array('namespace'=>'urn:GoogleSearch',
+                            'soapaction'=>'urn:GoogleSearchAction',
+                            'style'=>'rpc',
+                            'use'=>'encoded')); 
+    }
+    function doSpellingSuggestion($key, $phrase) {
+        return $this->call("doSpellingSuggestion", 
+                        array("key"=>$key, "phrase"=>$phrase), 
+                        array('namespace'=>'urn:GoogleSearch',
+                            'soapaction'=>'urn:GoogleSearchAction',
+                            'style'=>'rpc',
+                            'use'=>'encoded')); 
+    }
+    function doGoogleSearch($key, $q, $start, $maxResults, 
+                            $filter, $restrict, $safeSearch, 
+                            $lr, $ie, $oe) {
+        return $this->call("doGoogleSearch", 
+                        array("key"=>$key, 
+                        "q"=>$q, 
+                              "start"=>$start, 
+                              "maxResults"=>$maxResults, 
+                              "filter"=>$filter, 
+                              "restrict"=>$restrict, 
+                              "safeSearch"=>$safeSearch, 
+                              "lr"=>$lr, 
+                              "ie"=>$ie, 
+                              "oe"=>$oe), 
+                        array('namespace'=>'urn:GoogleSearch',
+                            'soapaction'=>'urn:GoogleSearchAction',
+                            'style'=>'rpc',
+                            'use'=>'encoded')); 
+    }
+}
+?>
+]]>
+</example>
+</slide>

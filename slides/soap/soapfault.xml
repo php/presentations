@@ -1,0 +1,40 @@
+<slide title="SOAP Faults">
+<blurb>Errors in SOAP should be returned as SOAP Faults.  A SOAP Fault
+contains specific information detailing the reason for the Fault.  PEAR::SOAP provides
+a SOAP_Fault class to aid in returning faults.</blurb>
+<blurb>Faults can be of four basic types: VersionMismatch, MustUnderstand,
+Client and Server:</blurb>
+<list>
+<bullet>VersionMismatch: invalid namespace for the SOAP Envelope</bullet>
+<bullet>MustUnderstand: a required header was not understood by the server</bullet>
+<bullet>Client: the message sent by the client was not properly formed, or did
+not contain the necessary information to fulfill the request.</bullet>
+<bullet>Server: the message could not be processed</bullet>
+</list>
+<blurb>Faults can also contain other information, such as a
+basic message describing the fault, the URI of the originator of the fault, and a
+detail field that can be used to provide additional information on the fault.
+</blurb>
+
+<example type="xml" fontsize='1.4em' title="SOAP Fault in a SOAP Message">
+<![CDATA[<SOAP-ENV:Fault>
+         
+<faultcode xsi:type="xsd:QName">
+         SOAP-ENV:Client
+</faultcode>
+         
+<faultstring xsi:type="xsd:string">
+         You sent an empty string
+</faultstring>
+         
+<faultactor xsi:type="xsd:anyURI">
+         urn:SOAP_Example_Server
+</faultactor>
+         
+<detail xsi:type="xsd:string"/>
+         
+</SOAP-ENV:Fault>
+]]>
+</example>
+
+</slide>

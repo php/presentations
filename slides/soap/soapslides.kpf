@@ -124,6 +124,16 @@
 </file>
 <file name="clientapi2.xml" url="clientapi2.xml">
 </file>
+<file name="clientapi3.xml" url="clientapi3.xml">
+</file>
+<file name="clientapi4.xml" url="clientapi4.xml">
+</file>
+<file name="wsdlclient.xml" url="wsdlclient.xml">
+</file>
+<file name="proxygen.xml" url="proxygen.xml">
+</file>
+<file name="clientapi5.xml" url="clientapi5.xml">
+</file>
 </folder>
 <folder name="Interoperability">
 <file name="interop.xml" url="interop.xml">
@@ -150,11 +160,19 @@
 <folder name="Faults">
 <file name="serverfault.xml" url="serverfault.xml">
 </file>
+<file name="soapfault.xml" url="soapfault.xml">
+</file>
+<file name="soapfault2.xml" url="soapfault2.xml">
+</file>
 </folder>
 <folder name="Simple Servers">
 <file name="server1.xml" url="server1.xml">
 </file>
 <file name="server2.xml" url="server2.xml">
+</file>
+<file name="serverapi1.xml" url="serverapi1.xml">
+</file>
+<file name="server3.xml" url="server3.xml">
 </file>
 </folder>
 <folder name="Attachments">
@@ -169,6 +187,12 @@
 <file name="document2.xml" url="document2.xml">
 </file>
 <file name="document3.xml" url="document3.xml">
+</file>
+<file name="document4.xml" url="document4.xml">
+</file>
+</folder>
+<folder name="Objects">
+<file name="soapobjects1.xml" url="soapobjects1.xml">
 </file>
 </folder>
 </project>

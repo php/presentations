@@ -1,0 +1,36 @@
+<slide title="SOAP Objects">
+
+<list>
+<bullet>Use Objects with SOAP for all the same reasons you would normally use Objects</bullet>
+<bullet>Client will serialize objects sent and received</bullet>
+<bullet>Server will serialize objects sent and recieved</bullet>
+<bullet>PEAR::SOAP treats XML Schema Complex Types as Objects</bullet>
+<bullet>Constructors are not used, members are set directly</bullet>
+<bullet>Overload could be used to provide setters and getters</bullet>
+</list>
+
+<example type="xml" fontsize='1.4em' title="Schema defining SOAPStruct">
+<![CDATA[<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://soapinterop.org/xsd">
+    <complexType name="SOAPStruct">
+        <all>
+            <element name="varString" type="string"/>
+            <element name="varInt" type="int"/>
+            <element name="varFloat" type="float"/>
+        </all>
+    </complexType>
+</schema>
+]]>
+</example>
+
+<example type="php" fontsize='1.4em' title="PHP Object derived from Schema">
+<![CDATA[<?php
+class SOAPStruct {
+    var $varString;
+    var $varInt;
+    var $varFloat;
+}
+?>
+]]>
+</example>
+</slide>

@@ -1,0 +1,68 @@
+<slide title="Server API">
+<list>
+<bullet>SOAP_Server</bullet>
+<blurb>Handles all server side SOAP requests.</blurb>
+</list>
+<list>
+    <bullet>Constructor</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Optional: Array: Options</bullet>
+</list>
+<list marginleft="4em">
+<bullet>use: 'encoded' or 'literal'</bullet>
+<bullet>style: 'rpc' or 'document'</bullet>
+<bullet>parameters: 0 or 1 (internal use)</bullet>
+</list>
+<list>
+    <bullet>Method: bind (Binds a WSDL to the server)</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: WSDL URL</bullet>
+</list>
+<list>
+    <bullet>Method: service</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: XML Data to handle</bullet>
+<bullet>Arg 2 Optional: String: Endpoint Name</bullet>
+<bullet>Arg 3 Optional: Boolean: default=false true=test server</bullet>
+</list>
+
+<list>
+    <bullet>Method: addObjectMap</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: Object: Server Object</bullet>
+<bullet>Arg 2 Optional: String: Server Object Namespace</bullet>
+</list>
+
+<list>
+    <bullet>Method: addToMap</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: Function Name</bullet>
+<bullet>Arg 2 Optional: Array: In Parameters</bullet>
+<bullet>Arg 3 Optional: Array: Out Parameters</bullet>
+<bullet>Arg 4 Optional: String: Function Namespace</bullet>
+</list>
+<example type="php" fontsize='1.4em' title="Function Mapping">
+<![CDATA[<?php
+require_once 'SOAP/Server.php';
+
+$server = new SOAP_Server;
+
+function echoString($inputString)
+{
+    return $inputString;
+}
+
+$in = array('inputString'=>'string');
+$in = array('outputString'=>'string');
+
+$soapclass = new SOAP_Example_Server();
+$server->addToMap($soapclass,$in,$out,'urn:SOAP_Example_Server');
+$server->service($HTTP_RAW_POST_DATA);
+?>]]>
+</example>
+</slide>    
