@@ -1,0 +1,34 @@
+<h1 align='center'>Testing the HTTP based API</h1>
+<b>Server used:</b> [ http://nisod.scripps.edu:8080 ]
+<b>Service:</b>[ /services/api.php ]
+<hr>
+<h2>SQL query function</h2>
+<b>Function vars:</b>
+[query: select source_id,expdata,description from protein limit 3]
+[format: table]
+<br><b>Using the URL: </b>
+http://nisod.scripps.edu:8080/services/api.php?func=sql&query=select+source_id%2Cexpdata%2Cdescription+from+protein+limit+3&format=table
+<br><b>RESULT</b><br>
+<table border='0' cellspacing='1' cellpadding='5'>
+<tr bgcolor='#ffffdd'>
+<th>source_id</th><th>expdata</th><th>description</th></tr>
+<tr bgcolor='#ffffff'>
+<td>1aoo</td><td>nmr, minimized average structure</td><td>Header: [metallothionein 08-jul-97 1aoo]
+Title: [ag-substituted metallothionein from saccharomyces cerevisiae, nmr, minimized average structure]
+Compound: [mol_id: 1; molecule: ag-metallothionein; chain: null; synonym: ag-mt; biological_unit: monomer; other_details: ag(i) substituted]
+Source: [mol_id: 1; organism_scientific: saccharomyces cerevisiae; organism_common: baker's yeast; strain: 301n]
+Keywords: [copper detoxification, metal-thiolate cluster]</td></tr>
+<tr bgcolor='#dddddd'>
+<td>1aqq</td><td>nmr, 10 structures</td><td>Header: [metallothionein 31-jul-97 1aqq]
+Title: [ag-substituted metallothionein from saccharomyces cerevisiae, nmr, 10 structures]
+Compound: [mol_id: 1; molecule: ag-metallothionein; chain: null; synonym: ag-mt; biological_unit: monomer; other_details: ag(i) substituted]
+Source: [mol_id: 1; organism_scientific: saccharomyces cerevisiae; organism_common: baker's yeast; strain: 301n]
+Keywords: [copper detoxification, metal-thiolate cluster]</td></tr>
+<tr bgcolor='#ffffff'>
+<td>2aw0</td><td>nmr, 20 structures</td><td>Header: [copper transport 08-oct-97 2aw0]
+Title: [fourth metal-binding domain of the menkes copper-transporting atpase, nmr, 20 structures]
+Compound: [mol_id: 1; molecule: menkes copper-transporting atpase; chain: null; fragment: fourth metal-binding domain; ec: 3.6.1.36; engineered: yes; biological_unit: monomer; other_details: ag(i)-bound state]
+Source: [mol_id: 1; organism_scientific: homo sapiens; organism_common: human; expression_system: escherichia coli]
+Keywords: [copper-binding domain, hydrolase, copper transport]</td></tr>
+</table>
+
