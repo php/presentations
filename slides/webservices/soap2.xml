@@ -1,0 +1,12 @@
+<slide title="SOAP Document">
+<image filename="mice-small.jpg" align="right"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">
+A SOAP Document must meet the following requirements
+</blurb>
+<list fontsize="4.0em">
+<bullet>Must have a top-level %Envelope% namespaced to http://soapinterop.org/</bullet>
+<bullet>Must contain a %Header% and %Body% element</bullet>
+<bullet>The contents of that %Header% and %Body% must be properly namespaced</bullet>
+</list>
+</slide>

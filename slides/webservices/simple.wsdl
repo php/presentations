@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<definitions name="StockQuote"
+ targetNamespace="http://example.com/stockquote.wsdl"
+ xmlns:SQ="http://example.com/stockquote.wsdl"
+ xmlns:xsd="http://www.w3.org/2000/10/XMLSchema"
+ xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+ <message name="GetTradePriceInput">
+  <part name="tickerSymbol" element="xsd:string"/>
+  <part name="time" element="xsd:timeInstant"/>
+ </message>
+
+ <message name="GetTradePriceOutput">
+  <part name="result" type="xsd:float"/>
+ </message>
+
+ <portType name="StockQuotePortType">
+  <operation name="GetTradePrice">
+   <input message="SQ:GetTradePriceInput"/>
+   <output message="SQ:GetTradePriceOutput"/>
+  </operation>
+ </portType>
+
+ <binding name="StockQuoteSoapBinding" type="SQ:StockQuotePortType">
+  <soap:binding 
+   style="rpc" 
+   transport="http://schemas.xmlsoap.org/soap/http"/>
+  <operation name="GetTradePrice">
+   <soap:operation soapAction="http://example.com/GetTradePrice"/>
+    <input>
+     <soap:body use="encoded" 
+      namespace="http://example.com/stockquote"
+      encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </input>
+    <output>
+     <soap:body use="encoded" 
+      namespace="http://example.com/stockquote"
+      encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </output>
+  </operation>
+ </binding>
+
+ <service name="StockQuoteService">
+  <documentation>My first service</documentation>
+  <port name="StockQuotePort" binding="tns:StockQuoteBinding">
+   <soap:address location="http://example.com/stockquote"/>
+  </port>
+ </service>
+</definitions>

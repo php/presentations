@@ -1,0 +1,10 @@
+<slide title="SOAP and WSDL">
+<image filename="mice-small.jpg" align="right"/>
+<php><![CDATA[<?php chdir(getcwd() . '/presentations/slides/webservices/'); ?>]]></php>
+<break lines="2"/>
+<blurb fontsize="4.0em">
+We will use the WSDL file from %xmethods.net% to autogenerate a wrapper call, and then 
+call the appropriate method.
+</blurb>
+<example filename="babelfish.php" result="1"/>
+</slide>
