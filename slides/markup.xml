@@ -1,0 +1,11 @@
+<slide title="Text Markup">
+<blurb> </blurb>
+<blurb fontsize="5em">
+You can have *bold*, _underlined_ and %mono-spaced% text.
+</blurb>
+<blurb fontsize="5em">
+You |55FF44|can| |5544FF|also| |FF55FF|change| |55FFFF|the| |FF5544|color| |554455|of| |55FFFF|the| text.
+</blurb>
+<blurb fontsize="4em">This is done Usenet-style using *'s to denote a bold word, _'s for underline,
+%'s for monospace and |RRGGBB|word| for colors.</blurb>
+</slide>

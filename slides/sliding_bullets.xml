@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
 
-  <title>Sliders</title>
+  <title>Effects</title>
   <blurb>Hit the right arrow key to get the bullets to show up!</blurb>
   <list fontsize="5em">
   <bullet effect="slide">This is a sliding bullet 1</bullet>
   <bullet effect="slide">This is a sliding bullet 2</bullet>
   <bullet effect="slide">This is a sliding bullet 3</bullet>
   </list>
+
+  <example fontsize="1.5em" 
+	title="Here is the source for this slide" 
+	filename="slides/sliding_bullets.xml"/>
+
 </slide>
