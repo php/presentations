@@ -1,0 +1,11 @@
+<slide title="Overloading">
+<blurb>
+In PHP you can "overload" objects, registering special handlers which 
+can catch property access and method calls.
+</blurb>
+<example 
+    type="php" 
+    title="Overloading" 
+    fontsize="1.2em"
+    filename="slides/advphp/overload.php"/>
+</slide>

@@ -1,0 +1,9 @@
+<slide title="Static vs. Dynamic">
+<list title="Static Dynamic Data">
+<bullet>Pre-generation...  Pregenerate your website or certain pages on your
+website from templates and/or a database.</bullet>
+<bullet>Caching...  Save portions of generated data for a short period of 
+time, to avoid excessive re-generation.</bullet>
+</list>
+
+</slide>

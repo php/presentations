@@ -1,0 +1,17 @@
+<slide title="HTML Optimization">
+<list>
+<bullet>Only close tags that _be_ closed.  Tags such as the &lt;code><![CDATA[&lt;li>]]>&lt;/code>, 
+&lt;code><![CDATA[&lt;p>]]>&lt;/code> and even &lt;code><![CDATA[&lt;td>]]>&lt;/code> and 
+&lt;code><![CDATA[&lt;tr>]]>&lt;/code> tags need not be closed. </bullet>
+<bullet>Remove All Comments!</bullet>
+<bullet>Meta tags don't work!</bullet>
+<bullet>Use parent html tags to specify child values, when all children have the same value</bullet>
+<bullet>Fully qualify links (ie, personal/images/ not personal/images)</bullet>
+<bullet>Only quote attributes that don't have spaces...</bullet>
+</list>
+<example fontsize="1.2em"><![CDATA[<a href=data.html>Some Data</a>
+<div align=center></div>
+<a href=title.html ><img src=title.jpg alt="Title Page"></a>
+]]></example>
+
+</slide>

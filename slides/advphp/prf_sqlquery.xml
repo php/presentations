@@ -1,0 +1,18 @@
+<slide title="SQL Queries">
+<list title="SQL Problems" fontsize="2.2em">
+<bullet>Unused data is being pulled over a socket</bullet>
+<bullet>FULLTEXT indexes</bullet>
+<bullet>the LIKE clause</bullet>
+</list>
+
+<list title="SQL Tips" fontsize="2.2em">
+<bullet slide="1">Study and Learn Database Optimization</bullet>
+<bullet slide="1">Failing that use the following tips...</bullet>
+<bullet slide="1">MySQL supports the 'LIMIT' clause which can be used 
+to lower the returned result set to a specified number</bullet>
+<bullet slide="1">Never use LIKE or a FULLTEXT index to do complex 
+searches. Use keywords and an alternative ranking system</bullet>
+<bullet slide="1">The only thing worse than using a LIKE clause, is building 
+your own LIKE clause in PHP.</bullet>
+</list>
+</slide>

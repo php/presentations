@@ -1,0 +1,12 @@
+<slide title="Aggregation">
+<blurb>
+Aggregation is the idea of adding methods to an object at runtime, 
+PHP supports object aggregation via the aggregation extension.
+</blurb>
+
+<example 
+    fontsize="1.2em"
+    title="Adding a method to Simple" 
+    type="php"
+    filename="slides/advphp/aggregate.php"/>
+</slide>

@@ -1,0 +1,31 @@
+<slide title="Objects">
+<blurb>
+Objects represent singular instances of a specified class.
+</blurb>
+
+<blurb>To initialize an object instance, use the new keyword:</blurb>
+<example type="php" title="new" fontsize="1.2em"><![CDATA[<?php
+$obj = new Simple;
+?>]]>
+</example>
+<blurb>If the class has a constructor, simply add your function 
+arguments to the classname:</blurb>
+<example type="php" title="Constructor" fontsize="1.2em"><![CDATA[<?php
+$obj = new Simple ('hallo world');
+?>]]>
+</example>
+<blurb>To access object properties, use the '-&gt;' specifier:</blurb>
+<example type="php" title="Properties" fontsize="1.2em"><![CDATA[<?php
+$obj = &new Simple ('hallo world');
+print $obj->someprop;
+?>]]>
+</example>
+<blurb>To access object methods, you can also use the '-&gt;' specifier:</blurb>
+<example type="php" title="Methods" fontsize="1.2em"><![CDATA[<?php
+$obj = &new Simple ('hallo world');
+print $obj->someprop . "\n<br>\n";
+print $obj->somemethod ();
+?>]]>
+</example>
+
+</slide>

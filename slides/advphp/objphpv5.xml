@@ -1,0 +1,89 @@
+<slide title="PHP5 OO">
+<blurb title="Object Model">Object model is brand spanking new!</blurb>
+<blurb title="Private">Private and Protected member variables are now available</blurb>
+<example fontsize="1.2em" filename="slides/advphp/privateprotected.php"/>
+<blurb title="Cloning">You are able to make direct copies of objects with PHPv5, furthermore
+you can define functions that are called when the objects are copied.</blurb>
+<example fontsize="1.2em" filename="slides/advphp/clone.php"/>
+<blurb title="Nested Classes">In PHPv5 you can have classes within classes.  This allows for many
+neat features, most importantly, you can simulate namespaces.</blurb>
+<example fontsize="1.2em" filename="slides/advphp/classclass.php"/>
+<blurb title="Constants">Classes may now contain constants</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+class foo {
+    const hey = 'hello';
+}
+
+print foo::hey;
+?>]]></example>
+<blurb title="Importing">You may now import class symbols into the current "namespace"</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+class MyClass {
+    class MyClass2 {
+        function hello() {
+            print "Hello, World in MyClass2\n";
+        }
+    }
+
+    function hello() {
+        print "Hello, World\n";
+    }
+}
+
+import function hello, class MyClass2 from MyClass;
+
+MyClass2::hello();
+hello();
+?>]]></example>
+<blurb title="Unified Constructors and Destructors">
+The new OO model will allow for consistency amongst constructors and 
+destructors, so they are no longer dependent on they class name (PHPv4 
+actually only had the concept of constructors.)
+</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+class MyDestructableClass {
+    function __construct() {
+        print "In constructor\n";
+        $this->name = 'MyDestructableClass';
+    }
+
+    function __destruct() {
+        print 'Destroying ' . $this->name . "\n";
+    }
+}
+
+$obj = new MyDestructableClass();
+?>]]>
+</example>
+<blurb title="Exceptions!">The new OO model will support exceptions ala Java</blurb>
+<example fontsize="1.2em" filename="slides/advphp/exceptions.php"/>
+
+<blurb title="Object Dereferencing">You can now directly dereference objects 
+returned from functions.</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+class Circle {
+    function draw() {
+        print "Circle\n";
+    }
+}
+
+class Square {
+    function draw() {
+        print "Square\n";
+    }
+}
+
+function ShapeFactoryMethod($shape) {
+    switch ($shape) {
+        case 'Circle': return new Circle();
+        case 'Square': return new Square();
+    }
+}
+
+ShapeFactoryMethod('Circle')->draw();
+ShapeFactoryMethod('Square')->draw();
+
+?>]]>
+</example>
+
+</slide>

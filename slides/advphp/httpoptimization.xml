@@ -1,0 +1,30 @@
+<slide title="HTTP Optimization">
+<blurb title="URL Shortening">
+By using Apache's &lt;i>mod_rewrite&lt;/i> module, you can greatly shorten your
+HTML files by making common locations into one/two letter aliases.
+</blurb>
+<example fontsize="1.2em" title="Apache Mod_Rewrite Entry">
+<![CDATA[RewriteMap      abbr            dbm:/etc/apache/abbr
+RewriteRule     ^/r/([^/]*)/?(.*)   ${abbr:$1}$2    
+[redirect=permanent,last]
+]]>
+</example>
+<example fontsize="1.2em" title="/etc/apache/abbr">
+<![CDATA[
+b	bytes/
+d	dogs/
+g	graphics/
+
+gt	graphics/template/
+]]>
+</example>
+
+<blurb title="HTTP Caching">
+Use HTTP headers to have finer grained control over browser caching, these
+headers include:
+</blurb>
+<example fontsize="1.2em" title="Headers"><![CDATA[Last-Modified: Mon, 22 Jul 2002 15:50:00 GMT
+Expires: Mon, 22 Jul 2002 15:52:25 GMT
+Cache-Control: must-revalidate, max-age=15, s-maxage=0, private]]>
+</example>
+</slide>

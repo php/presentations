@@ -1,0 +1,97 @@
+<slide title="Classes">
+<blurb>
+Classes are data containers which store functions (called 
+methods) and variables (called properties).
+</blurb>
+<blurb>Classes are defined with the class declaration:</blurb>
+<example 
+	fontsize="1.2em" 
+	title="Class Declaration" 
+	type="php">
+<![CDATA[<?php 
+class Simple {
+}
+?>]]>
+</example>
+<blurb> Properties are defined with the var declaration:</blurb>
+<example 
+	fontsize="1.2em" 
+	title="Property Declaration" 
+	type="php">
+<![CDATA[<?php
+class Simple {
+	var $someprop;
+}
+?>]]>
+</example>
+<blurb> Methods are defined with the function declaration:</blurb>
+<example 
+	fontsize="1.2em" 
+	title="Method Declaration" 
+	type="php">
+<![CDATA[<?php
+class Simple {
+	var $someprop;
+
+	function somemethod ()
+	{
+	    print ('Anal im Zillertal!');
+	}
+}
+?>]]>
+</example>
+<blurb> In order access class properties and methods, you can 
+use the default $this object, which is created alongside every
+object instance.</blurb>
+<example 
+	fontsize="1.2em" 
+	title="$this" 
+	type="php">
+<![CDATA[<?php
+class Simple {
+	var $someprop;
+
+	function somemethod ()
+	{
+	    $this->someprop = 'Irgendwie neeee?';
+
+	    print ('Ja, das ist doch ' . $this->someprop);
+	}
+
+	function anothermethod ()
+	{
+	    $this->somemethod ();
+	}
+}
+?>]]>
+</example>
+<blurb> Constructors are methods that have the same name 
+as the class:</blurb>
+<example 
+	fontsize="1.2em" 
+	type="php" 
+	title="Constructors">
+<![CDATA[<?php
+class Simple {
+	var $someprop;
+
+	function Simple () 
+	{
+	    $this->someprop = get_defined_functions ();
+	}
+
+	function somemethod ()
+	{
+	    $this->someprop = 'Irgendwie neeee?';
+
+	    print ('Ja, das ist doch ' . $this->someprop);
+	}
+
+	function anothermethod ()
+	{
+	    $this->somemethod ();
+	}
+}
+?>]]>
+</example>
+</slide>
