@@ -1,0 +1,26 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Advanced PHP</title>
+<event>O'Reilly Open Source Convention</event>
+<location>Portland, Oregon</location>
+<url>http://talks.php.net/show/advanced</url>
+<date>July 7, 2003</date>
+<speaker>Sterling Hughes</speaker>
+
+<slide>slides/advanced/titlepage.xml</slide>
+<slide>slides/advanced/adv_what.xml</slide>
+<slide>slides/advanced/t_intro.xml</slide>
+<slide>slides/advanced/t_golden.xml</slide>
+<slide>slides/advanced/t_basic.xml</slide>
+<slide>slides/advanced/t_unit.xml</slide>
+<slide>slides/advanced/t_unit_phpunit.xml</slide>
+<slide>slides/advanced/t_unit_phpunit1.xml</slide>
+
+</presentation>
