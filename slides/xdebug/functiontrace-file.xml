@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Execution trace to file</title>
+	<image filename="tracefile.png" align="center"/>
+
+	<break />
+	<example fontsize="1.7em">xdebug.auto_trace=1               ; enable tracing
+xdebug.auto_trace_file=/tmp/trace ; configure tracefile
+xdebug.collect_params=0           ; disable parameter collection
+xdebug.collect_include_files=1    ; enable collecting filenames to include
+xdebug.extended_info=0            ; disable 'extended' code generation
+xdebug.show_mem_delta=1           ; show difference in memory usage before
+                                  ; and after call</example>
+</slide>

@@ -1,0 +1,57 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navColor="#f1fbff"
+	logo1="presentations/slides/xdebug/ez.png"
+	stylesheet="presentations/slides/xdebug/style.css"
+	backgroundfixed="1" >
+<topic>Internals</topic>
+<title>Xdebug in a nutshell</title>
+<event>Conférence PHP Québec</event>
+<location>Montreal, Canada</location>
+<date>March 25th, 2004</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://pres.derickrethans.nl/xdebug-montreal</url>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/xdebug/questions.xml</slide>
+
+<slide>slides/internals/apache-module.xml</slide>
+<slide>slides/internals/intro.xml</slide>
+<slide>slides/internals/clearness.xml</slide>
+<slide>slides/internals/parse_error.xml</slide>
+<slide>slides/internals/lex.xml</slide>
+<slide>slides/internals/tokens.xml</slide>
+<slide>slides/internals/tokenizer1.xml</slide>
+<slide>slides/internals/tokenizer2.xml</slide>
+
+<slide>slides/internals/compile.xml</slide>
+<slide>slides/internals/opcode2.xml</slide>
+<slide>slides/internals/opcode.xml</slide>
+<slide>slides/internals/execute1.xml</slide>
+<slide>slides/xdebug/execute.xml</slide>
+
+<slide>slides/xdebug/how-started.xml</slide>
+<slide>slides/xdebug/about.xml</slide>
+
+<slide>slides/xdebug/infinite.xml</slide>
+<slide>slides/xdebug/vardump.xml</slide>
+
+<slide>slides/xdebug/stacktrace.xml</slide>
+<slide>slides/xdebug/local-vars.xml</slide>
+<slide>slides/xdebug/functiontrace-file.xml</slide>
+
+<slide>slides/xdebug/gathering-data.xml</slide>
+<slide>slides/xdebug/gathering1.xml</slide>
+<slide>slides/xdebug/gathering2.xml</slide>
+<slide>slides/xdebug/hooks1.xml</slide>
+
+<slide>slides/xdebug/interfaces.xml</slide>
+<slide>slides/xdebug/gdb.xml</slide>
+<slide>slides/xdebug/gdb-xml.xml</slide>
+<slide>slides/xdebug/dbgp.xml</slide>
+
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
