@@ -1,4 +1,5 @@
 <slide title="Documentation">
+<link align="center" href="http://php.net/manual">http://php.net/manual</link>
 <list>
  <bullet>Written in DocBook (XML)</bullet>
  <bullet>Generated versions updated automatically</bullet>
@@ -29,6 +30,7 @@
  twenty pages (of about 3,000) with the most notes have about 15% of the total
  notes.
 </blurb>
+<link align="center" href="http://php.net/setcookie">Notes Example</link>
 <table columns="2">
  <cell>*Notes*</cell> <cell>*Page*</cell>
  <cell>105</cell> <cell>http://php.net/manual/en/function.setcookie.php</cell>
