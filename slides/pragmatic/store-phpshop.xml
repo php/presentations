@@ -1,8 +1,9 @@
 <slide title="phpShop">
+<link href="http://www.phpshop.org/" align="center">http://www.phpshop.org/</link>
 <list>
- <bullet>http://www.phpshop.org/</bullet>
  <bullet>Table-driven tax calculations</bullet>
  <bullet>Flat rate, percentage-based, and calculated shipping (InterShipper)</bullet>
  <bullet>File-based template system</bullet>
 </list>
+<image align="center" filename="slides/pragmatic/phpshop.png" />
 </slide>

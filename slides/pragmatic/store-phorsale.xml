@@ -1,6 +1,6 @@
 <slide title="phorSale">
+<link href="http://shifter.org/phorSale/" align="center">http://shifter.org/phorSale/</link>
 <list>
- <bullet>http://shifter.org/phorSale/</bullet>
  <bullet>About median complexity</bullet>
  <bullet>Handles SSL</bullet>
  <bullet>No template system, edit files to customize</bullet>
@@ -9,4 +9,5 @@
  <bullet>Integrated shipping calculations (FedEx and UPS)</bullet>
  <bullet>CyberCash integration</bullet>
 </list>
+<image align="center" filename="slides/pragmatic/phorsale.png" />
 </slide>
