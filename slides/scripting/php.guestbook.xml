@@ -1,0 +1,24 @@
+<slide title="PHP Guestbook">
+<blurb>
+A Simple Guestbook written in PHP, to show you how powerful the language is 
+at creating web applications.
+</blurb>
+
+<list title="Guestbook Features" fontsize="2.5em">
+<bullet>Stores data in a MySQL database</bullet>
+<bullet>Escapes all data (&lt;i>Security&lt;/i>)</bullet>
+<bullet>Logs remote addresses (&lt;i>Security&lt;/i>)</bullet>
+<bullet>Implements Persistent Database connections</bullet>
+</list>
+
+<list title="Important Notes" fontsize="2.5em">
+<bullet>The entire application (including html) is 96 lines long</bullet>
+<bullet>I wrote it in 20 minutes (including database creation, apache setup)</bullet>
+<bullet>I'm not a graphic designer :)</bullet>
+</list>
+
+<blurb>
+<link href="http://conf.php.net/guestbook.tar.gz">Source Download</link>
+</blurb>
+
+</slide>

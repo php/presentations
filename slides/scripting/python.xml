@@ -1,0 +1,22 @@
+<slide title="Python">
+<blurb>
+Python is a heavily object oriented scripting language, that features 
+oddities such as indent based scope.
+</blurb>
+
+<list title="Python Advantages" fontsize="2.5em">
+<bullet>Heavy Object Orientation</bullet>
+<bullet>CS 'Correct'</bullet>
+<bullet>Well Thoughtout base API</bullet>
+<bullet>Rich C API</bullet>
+<bullet>Indent based scope encourages neat programming</bullet>
+<bullet>Guido named it after Monty Python</bullet>
+</list>
+
+<list title="Python Disadvantages" fontsize="2.5em">
+<bullet>Heavy Object Orientation</bullet>
+<bullet>Deviates heavily from more standard languages</bullet>
+<bullet>Its wierd</bullet>
+</list>
+
+</slide>

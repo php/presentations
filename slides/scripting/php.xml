@@ -1,0 +1,25 @@
+<slide title="PHP">
+<blurb>
+PHP is a scripting language specifically designed to help developers
+solve web problems, it works by embedding sections of code within HTML 
+blocks.
+</blurb>
+
+<list title="PHP Advantages" fontsize="2.5em">
+<bullet>Easy to learn</bullet>
+<bullet>Targeted, built-in functions for web developers</bullet>
+<bullet>Good introduction to programming</bullet>
+<bullet>Configurable</bullet>
+<bullet>Simple extension API</bullet>
+<bullet>PEAR</bullet>
+<bullet>Runs britneyspears.com</bullet>
+</list>
+
+<list title="PHP Disadvantages" fontsize="2.5em">
+<bullet>Focused on the Web environment</bullet>
+<bullet>Poor OO support</bullet>
+<bullet>Configurability Hurts Portability</bullet>
+<bullet>Easy for beginning users, Easy for beginning users to make mistakes</bullet>
+</list>
+
+</slide>

@@ -7,7 +7,7 @@ An example program that downloads a webpage.
 <blurb>
 First install the LWP package via CPAN:
 </blurb>
-<example fontsize="1.2em" type="command">
+<example fontsize="1.2em" type="shell">
 vivaldi:~# perl -MCPAN -e "install 'LWP';"
 </example>
 
@@ -18,7 +18,7 @@ Then you can do the following:
 <example 
       fontsize="1.2em" 
       type="perl"
-      filename="slides/scripting/perl_ex.pl"/>
+      filename="slides/scripting/http.pl"/>
 
 
 </slide>
