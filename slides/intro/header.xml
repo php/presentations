@@ -6,10 +6,10 @@ headers are sent before any of the actual response data, you have to send these
 headers before outputting any data.  So, put any such header calls at the top
 of your script.
 </blurb>
-<example title="Redirection"><![CDATA[<?header('Location: http://www.php.net')?>]]></example>
+<example title="Redirection"><![CDATA[<?php header('Location: http://www.php.net')?>]]></example>
 
 <h3>Setting a Last-Modified Header</h3>
-<example title="Setting a Last-Modified Header"><![CDATA[<?header('Last-Modified: '.
+<example title="Setting a Last-Modified Header"><![CDATA[<?php header('Last-Modified: '.
       gmdate('D, d M Y H:i:s',getlastmod()).' GMT')?>]]></example>
 
 <example title="Avoid all Caching"><![CDATA[<?php

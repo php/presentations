@@ -9,22 +9,22 @@
     echo "</pre>";
 ?>]]></example>
 
-<example fontsize="1.8em"><![CDATA[Array
-(
-    [0] => php
-    [1] => file
-    [2] => http
-    [3] => ftp
-    [4] => compress.zlib
-)
-
-Array
-(
-    [0] => string.rot13
-    [1] => string.toupper
-    [2] => string.tolower
-    [3] => string.strip_tags
-    [4] => convert.*
+<example fontsize="1.8em" hide="1" result="1"><![CDATA[Array<br />
+(<br />
+    [0] => php<br />
+    [1] => file<br />
+    [2] => http<br />
+    [3] => ftp<br />
+    [4] => compress.zlib<br />
+)<br />
+<br />
+Array<br />
+(<br />
+    [0] => string.rot13<br />
+    [1] => string.toupper<br />
+    [2] => string.tolower<br />
+    [3] => string.strip_tags<br />
+    [4] => convert.*<br />
 )]]></example>
 
 <example title="Examples" fontsize="1.4em"><![CDATA[<?php

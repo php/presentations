@@ -16,6 +16,6 @@ $h->rusty();
 $h->anton();
 ?>]]></example>
 
-<example><![CDATA[Hello Rusty!
+<example hide="1" result="1"><![CDATA[Hello Rusty!<br />
 Hello Anton!]]></example>
 </slide>

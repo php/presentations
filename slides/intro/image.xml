@@ -1,9 +1,9 @@
 <slide title="GD 1/2" outputbackground="#5b69a6">
 <example title="Creating a PNG with a TrueType font" filename="txt.php" fontsize="1.5em"/>
 
-<example fontsize="1.5em"><![CDATA[<IMG src="txt.php?text=<?echo urlencode($text)?>">]]></example>
+<example fontsize="1.5em"><![CDATA[<IMG src="txt.php?text=<?php echo urlencode($text)?>">]]></example>
 
-<example hide="1" result="1" rwidth="650"><![CDATA[<?if(!empty($text)) {
+<example hide="1" result="1" rwidth="650"><![CDATA[<?php if(!empty($text)) {
   echo "<IMG src=\"presentations/slides/intro/txt.php?text=".urlencode($text)."\">";
  } else $text = 'Cool Dynamic Images!';
  echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";

@@ -1,4 +1,4 @@
-<?
+<?php
 Header("Content-type: image/png");
 $im = ImageCreate(630,80);
 $blue = ImageColorAllocate($im,0x5B,0x69,0xA6);

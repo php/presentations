@@ -1,4 +1,4 @@
-<?
+<?php
 	$s = new SWFShape();
 	$fp = fopen('php-big.jpg','r');
 	$jpg = new SWFBitmap($fp);

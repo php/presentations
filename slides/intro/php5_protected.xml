@@ -2,6 +2,8 @@
 
 <blurb>
 Only accessable/callable by the same, or an inherited class.
+Here we see a call to a protected method from the global scope 
+being rejected.
 </blurb>
 
 <example><![CDATA[<?php
@@ -29,4 +31,8 @@ $kh->peek();
 $br = new Bedroom();
 $br->peek();           /* Doesn't work */
 ?>]]></example>
+
+<example hide="1" result="1"><![CDATA[fun<br />
+Fatal error: Call to protected method Bedroom::peek() from context '' in script.php on line 24]]></example>
+
 </slide>

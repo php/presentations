@@ -26,7 +26,7 @@ $osses->windows = 'blows';
 var_dump($osses->getNames());
 ?>]]></example>
 
-<example><![CDATA[array(1) {
+<example hide="1" result="1"><![CDATA[array(1) {
   ["linux"]=>
   string(5) "rocks"
 }]]></example>
