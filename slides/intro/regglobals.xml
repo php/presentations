@@ -20,10 +20,19 @@ you can access this data via a number of special associative arrays listed below
 Special variables set by your web server.  You can get a list of what
 is set by running this code on your server:
 </blurb>
-<example result="1"><![CDATA[<?php
+<example><![CDATA[<?php
 foreach($_SERVER as $key=>$val) {
 	echo '$_SERVER['.$key."] = $val<br>\n";
 }
+?>]]></example>
+<example hide="1" result="1" rfontsize="1.5em"><![CDATA[<?php
+$old = error_reporting(0);
+foreach($_SERVER as $key=>$val) {
+	$val = strip_tags($val);
+	if(strlen($val)>40) $val=substr($val,0,40).'...';
+	echo '$_SERVER['.$key."] = $val<br>\n";
+}
+error_reporting($old);
 ?>]]></example>
 
 <blurb title="$HTTP_ENV_VARS ($_ENV)">
@@ -31,7 +40,7 @@ Environment variables that were present at server startup time.  Note that envir
 variables created by PHP using putenv() will not be shown here,
 nor do they persist beyond the request.
 </blurb>
-<example hide="1" result="1"><![CDATA[<?php
+<example hide="1" result="1" rfontsize="1.5em"><![CDATA[<?php
 $str = '';
 foreach($_ENV as $key=>$val) {
 	$val = strip_tags($val);
