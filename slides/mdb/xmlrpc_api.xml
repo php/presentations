@@ -4,27 +4,12 @@ outputbackground='#ffffdd'>
 <![CDATA[
 <?php 
 require_once "XML/RPC.php";
+require_once "slides/mdb/scripts/xmlrpc_util.php";
 $host = 'metallo.scripps.edu';
 $port = 80;
 $xmlrpc_uri = '/services/xmlrpc.php';
 $c=new XML_RPC_Client($xmlrpc_uri, $host, $port);
 
-function &rpc_call(&$client, &$msg) {
-	$r=$client->send($msg);
-	if (!$r) {
-		print "<PRE>ERROR: couldn't send message</PRE>\n";
-		return 0;
-	} else {
-		if (!$r->faultCode()) {
-			return $r->value();
-		} else {
-			print "Fault: ";
-			print "Code: " . $r->faultCode() . 
-				" Reason '" .$r->faultString()."'<BR>";
-			return 0;
-		}
-	}
-}
 $f=new XML_RPC_Message('system.listMethods');
 
 $v=rpc_call($c, $f);

@@ -4,47 +4,10 @@ fontsize='1.0em' rfontsize='1.5em' outputbackground='#ffffdd'>
 <![CDATA[
 <?php
 require_once "XML/RPC.php";
+require_once "slides/mdb/scripts/xmlrpc_util.php";
 $host = 'metallo.scripps.edu';
 $port = 80;
 $xmlrpc_uri = '/services/xmlrpc.php';
-
-function &rpc_call(&$client, &$msg) {
-	$r=$client->send($msg);
-	if (!$r) {
-		print "<PRE>ERROR: couldn't send message</PRE>\n";
-		return 0;
-	} else {
-		if (!$r->faultCode()) {
-			return $r->value();
-		} else {
-			print "Fault: ";
-			print "Code: " . $r->faultCode() . 
-				" Reason '" .$r->faultString()."'<BR>";
-			return 0;
-		}
-	}
-}
-
-function toTable($arr) {
-	$fields = array_keys($arr[0]);
-	$nfields = count($fields);
-	$out = "<table border=1>\n<tr align='center'>\n";
-	for ($i=0; $i<$nfields; $i++) {
-		$out .= "<th>".$fields[$i]."</th>\n";
-	}
-	$out .= "</tr>\n";
-	$ndata = count($arr);
-	for ($i=0; $i<$ndata; $i++) {
-		$out .= "<tr align='center'>\n";
-		while(list($f,$val) = each($arr[$i])) {
-			$out .= "<td>&nbsp;".htmlspecialchars($val)."</td>\n";
-		}
-		$out .= "</tr>\n";
-	}
-	$out .= "</table>\n";
-	return $out;
-}
-
 
 ?>
 <b>method.sql:</b> 
