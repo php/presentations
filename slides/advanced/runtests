@@ -1,0 +1,6 @@
+#!/bin/sh
+
+PHP=`which php`
+for i in `ls *.phpt`; do
+	$PHP $i
+done

@@ -1,6 +1,6 @@
 <slide title="Unit Testing">
 <image filename="testing.jpg" align="right"/>
-<break lines="4"/>
+<break lines="6"/>
 <list>
 <bullet>Testing Small Portions (~Units~) of Code</bullet>
 <bullet>Make Sure Nothing Breaks (~Regression Tests~)</bullet>
