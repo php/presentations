@@ -18,6 +18,7 @@ And add a replication user id for slaves to log in as:
 <example type="shell"><![CDATA[GRANT FILE ON *.* TO repl@"%" IDENTIFIED BY 'foobar';]]></example>
 
 <blurb>
+If you are using MySQL 4.0.2 or later, replace %FILE% with %REPLICATION SLAVE% in the above.
 Then on your slave servers:
 </blurb>
 <example type="shell">[mysqld]
