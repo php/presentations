@@ -1,0 +1,10 @@
+<slide title="Persistant Cache (II)">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<list>
+<bullet>DBMs and RDBMS support key-value pairs for easy storage of simple data</bullet>
+<bullet>Complex data requires serialization/deserialization</bullet>
+<bullet>Make sure your data is worth the trouble!</bullet>
+<bullet>PHP's %session% extension is a good example</bullet>
+</list>
+</slide>

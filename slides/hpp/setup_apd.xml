@@ -1,0 +1,7 @@
+<slide title="Setting up APD">
+<blurb>Install APD via PEAR</blurb>
+<example type="shell"><![CDATA[]$ pear install apd
+]$ cp apd.so /absolute/path/to/php_apd.so]]></example>
+<blurb>Then add the following to your %php.ini% file</blurb>
+<example>zend_extension = /absolute/path/to/php_apd.so</example>
+</slide>

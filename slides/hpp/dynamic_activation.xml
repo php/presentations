@@ -1,6 +1,9 @@
 <slide title="Dynamic Activation">
-<blurb>Dynamic Activation</blurb>
-<blurb>if($_GET[?debug?] == 1) {</blurb>
-<blurb>}</blurb>
-<image filename="100000000000005C0000005C29D61F11.jpg" />
+<image filename="100000000000005C0000005C29D61F11.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/>]]></blurb>
+<example><![CDATA[<?php
+if($_GET['debug'] == 1) {
+	// .. debug code ...
+}
+?>]]></example>
 </slide>

@@ -1,0 +1,6 @@
+<slide title="Caching for Text_Statistics">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb>Text Statistics is a PEAR package to calculate statistics for documents including readability scores.  One of its more intensive operations is calculating the number of syllables in a word, which is calculated through a number of regexps.  We can improve its performance on moderate-large documents by caching word objects.</blurb>
+<example filename="WordFactory.inc" fontsize="1.7em"/>
+
+</slide>

@@ -1,6 +1,7 @@
 <slide title="Simple example">
-<blurb>Simple example</blurb>
-<blurb>Let?s try and actually measure the difference between PHP and C function implementations. </blurb>
-<blurb>(max.php)</blurb>
-<image filename="100000000000005C0000005C29D61F11.jpg" />
+<image filename="100000000000005C0000005C29D61F11.jpg" align="right"/>
+<blurb>
+</blurb>
+<blurb>Let's try and actually measure the difference between PHP and C function implementations. </blurb>
+<example filename="max.php" fontsize="1.8em"/>
 </slide>

@@ -1,0 +1,8 @@
+<slide title="Profiler Diagram (APD)">
+<image marginleft="2.0em" filename="10000000000001C10000022ECC7E4B87.jpg" />
+<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<list>
+<bullet>Intercepts calls to zend_execute</bullet>
+<bullet>Generates trace of functions calls with timings</bullet>
+</list>
+</slide>
