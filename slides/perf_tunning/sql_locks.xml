@@ -7,9 +7,11 @@ To ensure data integrity in certain situations you will need to use locks. Howev
 implementation can severely hinder the performance of your application.
 </blurb>
 
-<list fontsize="3.2em">
-	<bullet>If supported, when possible use row level locks instead of table locks.</bullet>
-	<bullet>When using table locks, try to have the effect as few tables as possible.</bullet>
+<break lines="2" />
+
+<list fontsize="3.4em">
+	<bullet>If supported, whenever possible use row level locks instead of table locks.</bullet>
+	<bullet>When using table locks, try to lock as few tables as possible.</bullet>
 	<bullet>Whenever possible avoid locks all together.</bullet>
 </list>
 

@@ -6,7 +6,7 @@ or writing to files. One common mistake made by developers often makes these ope
 slower then necessary.
 </blurb>
 
-<example title="How NOT to open files" fontsize="4em"><![CDATA[<?php
+<example title="How %NOT% to open files" fontsize="4em"><![CDATA[<?php
 include "file.php";
 ?>]]></example>
 
