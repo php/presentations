@@ -4,28 +4,26 @@
 <![CDATA[<?php
 require_once('SOAP/Client.php');
 
-$client = new SOAP_Client("http://www.epionet.com/epiowavewebservices/livecitycams/livecitycams.asp", 0);
+$baseurl = "http://www.epionet.com/epiowavewebservices";
+         
+$client = new SOAP_Client("$baseurl/livecitycams/livecitycams.asp", 0);
 
 $result = $client->call("ListLiveCityCams", 
         NULL, 
-        array('namespace'=>
-                'http://www.epionet.com/webservices/epiowebservices/livecitycams.wsdl',
-            'soapaction'=>
-                'http://www.epionet.com/webservices/epiowebservices/livecitycams/listlivecitycams',
-            'style'=>'document',
-            'use'=>'literal')); 
+        array('namespace' => $baseurl.'/livecitycams.wsdl',
+            'soapaction' => $baseurl.'/livecitycams/listlivecitycams',
+            'style' => 'document',
+            'use' => 'literal')); 
 
 print $client->wire;
 
 foreach($result as $citycam) {
     $cam = $client->call("GetLiveCityCam", 
-        array("citycamid"=>$citycam->camid), 
-        array('namespace'=>
-                'http://www.epionet.com/webservices/epiowebservices/livecitycams.wsdl',
-            'soapaction'=>
-                'http://www.epionet.com/webservices/epiowebservices/livecitycams/getlivecitycam',
-            'style'=>'document',
-            'use'=>'literal')); 
+        array("citycamid" => $citycam->camid), 
+        array('namespace'=> $baseurl.'/livecitycams.wsdl',
+            'soapaction'=> $baseurl.'/livecitycams/getlivecitycam',
+            'style' => 'document',
+            'use' => 'literal')); 
     echo "$cam\n";
 }
 

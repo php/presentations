@@ -18,10 +18,21 @@ detail field that can be used to provide additional information on the fault.
 
 <example type="xml" fontsize='1.4em' title="SOAP Fault in a SOAP Message">
 <![CDATA[<SOAP-ENV:Fault>
-<faultcode xsi:type="xsd:QName">SOAP-ENV:Client</faultcode>
-<faultstring xsi:type="xsd:string">You sent an empty string</faultstring>
-<faultactor xsi:type="xsd:anyURI">urn:SOAP_Example_Server</faultactor>
+         
+<faultcode xsi:type="xsd:QName">
+         SOAP-ENV:Client
+</faultcode>
+         
+<faultstring xsi:type="xsd:string">
+         You sent an empty string
+</faultstring>
+         
+<faultactor xsi:type="xsd:anyURI">
+         urn:SOAP_Example_Server
+</faultactor>
+         
 <detail xsi:type="xsd:string"/>
+         
 </SOAP-ENV:Fault>
 ]]>
 </example>
@@ -42,7 +53,10 @@ class SOAP_Example_Server {
             $faultstring = 'You sent an empty string';
             $faultactor = $this->method_namespace;
             $detail = NULL;
-            return new SOAP_Fault($faultstring,$faultcode,$faultactor,$detail);
+            return new SOAP_Fault($faultstring,
+                                  $faultcode,
+                                  $faultactor,
+                                  $detail);
         }
         return $inputString;
     }
@@ -58,11 +72,13 @@ $server->service($HTTP_RAW_POST_DATA);
 <![CDATA[<?php
 require_once 'SOAP/Client.php';
 
-$soapclient = new SOAP_Client('http://localhost/SOAP/example/exampleserver.php');
+$soapclient = new SOAP_Client(
+    'http://localhost/SOAP/example/exampleserver.php');
 
 $result = $soapclient->call('echoStringSimple',
                          array('inputString' => NULL),
-                         array('namespace' => 'urn:SOAP_Example_Server');
+                         array('namespace' =>
+                               'urn:SOAP_Example_Server');
 if (PEAR::isError($result)) {
     // handle the error condition
     echo $result->getMessage();

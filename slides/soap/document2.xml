@@ -6,7 +6,8 @@ practically the same!  WSDL handles the details for you.</blurb>
 <![CDATA[<?php
 require_once('SOAP/Client.php');
 
-$WSDL = new SOAP_WSDL('http://mssoapinterop.org/stkV3/Interop.wsdl');
+$WSDL = new SOAP_WSDL(
+    'http://mssoapinterop.org/stkV3/Interop.wsdl');
 $client = $WSDL->getProxy();
 $response = $client->echoString('this is a test');
 
@@ -19,7 +20,7 @@ print $client->xml;
 require_once('SOAP/Client.php');
 
 $WSDL = new SOAP_WSDL('
-        http://mssoapinterop.org/stkv3/wsdl/interopTestDocLit.wsdl');
+    http://mssoapinterop.org/stkv3/wsdl/interopTestDocLit.wsdl');
 $client = $WSDL->getProxy();
 $response = $client->echoString('this is a test');
 

@@ -1,6 +1,6 @@
 <style title="Default" type="text/css">
 body {
-	font-size: 8pt;
+	font-size: 12pt;
 	margin-left:1.5em;
 	margin-right:0em;
 	margin-bottom:0em;
@@ -46,11 +46,11 @@ div.output {
 	border: thin solid #000000;
 	padding: 0.5em;
 }
-h1 {
+h1X {
 	font-size: 2em;
 }
-p,li {
-	font-size: 2.6em;
+pX,liX {
+	font-size: 12pt;
 }
 a {
 	text-decoration: none;

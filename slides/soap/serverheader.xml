@@ -24,7 +24,10 @@ class Header_Handler {
         $faultstring = 'Invalid Authentication';
         $faultactor = $this->method_namespace;
         $detail = NULL;
-        return new SOAP_Fault($faultstring,$faultcode,$faultactor,$detail);
+        return new SOAP_Fault($faultstring,
+                              $faultcode,
+                              $faultactor,
+                              $detail);
     }
 }
 
@@ -43,7 +46,10 @@ class Simple_Server {
             $faultstring = 'You must send authentication headers';
             $faultactor = $this->method_namespace;
             $detail = NULL;
-            return new SOAP_Fault($faultstring,$faultcode,$faultactor,$this);
+            return new SOAP_Fault($faultstring,
+                                  $faultcode,
+                                  $faultactor,
+                                  $this);
         }
         return $text;
     }
@@ -70,7 +76,9 @@ $header = new SOAP_Header(
 
 $soapclient->addHeader($header);
 
-$ret = $soapclient->call('echoString',array('inputString'=>'test'),'urn:Simple_Server');
+$ret = $soapclient->call('echoString',
+                         array('inputString'=>'test'),
+                         'urn:Simple_Server');
 ?>]]>
 </example>
 
@@ -135,7 +143,9 @@ Content-Length: 695
  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 
 <SOAP-ENV:Header>
-<ns4:authenticate xsi:type="xsd:string">Authentication OK</ns4:authenticate>
+<ns4:authenticate xsi:type="xsd:string">
+         Authentication OK
+</ns4:authenticate>
 </SOAP-ENV:Header>
 
 <SOAP-ENV:Body>

@@ -8,7 +8,8 @@ $v =  new SOAP_Attachment('test','text/plain',$filename);
 
 $methodValue = new SOAP_Value('testattach', 'Struct', array($v));
 
-$client = new SOAP_Client('http://www.caraveo.com/soap_interop/server_round2.php');
+$client = new SOAP_Client(
+    'http://www.caraveo.com/soap_interop/server_round2.php');
 
 $resp = $client->call('echoMimeAttachment',array($v),
                 array('Attachments'=>'Mime',
@@ -41,7 +42,9 @@ Content-Transfer-Encoding: quoted-printable
 <SOAP-ENV:Body>
 
 <ns4:echoMimeAttachment>
-<test href=3D"cid:71df492641cddfe43fe3f7b057301fd5"/></ns4:echoMimeAttachment>
+<test href=3D"cid:71df492641cddfe43fe3f7b057301fd5"/>
+</ns4:echoMimeAttachment>
+
 </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 
@@ -51,9 +54,9 @@ Content-Type: text/plain
 Content-Transfer-Encoding: base64
 Content-ID: <71df492641cddfe43fe3f7b057301fd5>
 
-PD9waHANCnJlcXVpcmVfb25jZSgiU09BUC9DbGllbnQucGhwIik7DQojcmVxdWlyZV9vbmNlKCJT
+PD9waHANCnJlcXVpcmVfb25jZS
 ...
-cmludCAkd2lyZS4iXG5cblxuIjsNCiNwcmludF9yKCRyZXNwKTsNCj8+
+cmludCAkd2lyZS4iXG5cblxuIjsN
 --=_a9e37cebd5684ebda52242db0a004f81--
 ]]>
 </example>

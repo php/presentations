@@ -1,4 +1,4 @@
-<slide title="Sending Attachments">
+<slide title="DIME Attachments">
 <example type="php" fontsize='1.4em' title='DIME Attachments'>
 <![CDATA[<?php
 require_once('SOAP/Client.php');
@@ -8,7 +8,8 @@ $v =  new SOAP_Attachment('test','text/plain',$filename);
 
 $methodValue = new SOAP_Value('testattach', 'Struct', array($v));
 
-$client = new SOAP_Client('http://www.caraveo.com/soap_interop/server_round2.php');
+$client = new SOAP_Client(
+    'http://www.caraveo.com/soap_interop/server_round2.php');
 
 $resp = $client->call('echoMimeAttachment',array($v),
                 array('namespace'=>'http://soapinterop.org/'));
@@ -27,7 +28,8 @@ SOAPAction: ""
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-<SOAP-ENV:Envelope  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
@@ -35,7 +37,8 @@ SOAPAction: ""
 <SOAP-ENV:Body>
 
 <echoMimeAttachment>
-<test href="cid:ec1fc6eb10e1f726c0ceb422cc3b21a4"/></echoMimeAttachment>
+<test href="cid:ec1fc6eb10e1f726c0ceb422cc3b21a4"/>
+</echoMimeAttachment>
 </SOAP-ENV:Body>
 </SOAP-ENV:Envelope>
 

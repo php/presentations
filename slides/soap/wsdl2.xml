@@ -9,7 +9,8 @@ $query = 'Caraveo';
 
 $client = new SOAP_Client('http://api.google.com/search/beta2');
 $response = $client->call('doGoogleSearch',
-                          array($key,$query,0,10,false,'',false,'','',''),
+                          array($key,$query,0,10,false,'',false,
+                                '','',''),
                           array('namespace'=>'urn:GoogleSearch'));
 
 foreach($response->resultElements as $result) {
@@ -52,7 +53,8 @@ $oe = new SOAP_Value('oe','string','');
 $client = new SOAP_Client('http://api.google.com/search/beta2');
 $response = $client->call('doGoogleSearch',
                           array($key,$query,$start,$maxResults,
-                                $filter,$restrict,$safeSearch,$lr,$ie,$oe),
+                                $filter,$restrict,$safeSearch,
+                                $lr,$ie,$oe),
                           array('namespace'=>'urn:GoogleSearch'));
 
 foreach($response->resultElements as $result) {

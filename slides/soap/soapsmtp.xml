@@ -12,7 +12,8 @@ $options = array('namespace' => 'http://soapinterop.org/',
                 'port' => 25);
 
 $return = $soapclient->call('echoStringArray',
-                            array('inputStringArray' => array('good','bad','ugly')),
+                            array('inputStringArray' =>
+                                  array('good','bad','ugly')),
                             $options);
 
 // don't expect much of a result!

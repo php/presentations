@@ -2,16 +2,18 @@
 
 <example type="php" fontsize='1.4em' title='Sending Headers requires an extra few steps:'>
 <![CDATA[<?php
-require_once('SOAP/Client.php\');
+require_once('SOAP/Client.php');
 
-$client = new SOAP_Client('http://www.caraveo.com/soap_interop/server_round2.php');
+$client = new SOAP_Client(
+    'http://www.caraveo.com/soap_interop/server_round2.php');
 
 $header = new SOAP_Header(
         '{http://soapinterop.org/echoheader/}echoMeStringRequest',
         'string',
         'This is a test header',
         1, /* defaults to zero */
-        'http://schemas.xmlsoap.org/soap/actor/next'  /* this is the default */
+        /* this is the default */
+        'http://schemas.xmlsoap.org/soap/actor/next'  
         );
 
 $client->addHeader($header);
@@ -34,7 +36,8 @@ SOAPAction: ""
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-<SOAP-ENV:Envelope  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
@@ -45,7 +48,9 @@ SOAPAction: ""
 <ns4:echoMeStringRequest
     xsi:type="xsd:string"
     SOAP-ENV:actor="http://schemas.xmlsoap.org/soap/actor/next"
-    SOAP-ENV:mustUnderstand="1">This is a test header</ns4:echoMeStringRequest>
+    SOAP-ENV:mustUnderstand="1">
+      This is a test header
+</ns4:echoMeStringRequest>
 </SOAP-ENV:Header>
 <SOAP-ENV:Body>
 
@@ -58,7 +63,7 @@ INCOMING
 
 HTTP/1.1 200 OK
 Date: Tue, 25 Jun 2002 20:18:34 GMT
-Server: Apache/1.3.19 (Unix)  (Red-Hat/Linux) mod_ssl/2.8.1 OpenSSL/0.9.6 PHP/4.1.2
+Server: Apache/1.3.19 (Unix)  (Red-Hat/Linux) PHP/4.1.2
 X-Powered-By: PHP/4.1.2
 Content-Length: 614
 Connection: close
@@ -66,7 +71,8 @@ Content-Type: text/xml; charset=UTF-8
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-<SOAP-ENV:Envelope  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
@@ -74,7 +80,10 @@ Content-Type: text/xml; charset=UTF-8
   SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
 <SOAP-ENV:Header>
 
-<echoMeStringResponse xsi:type="xsd:string">This is a test header</echoMeStringResponse>
+<echoMeStringResponse xsi:type="xsd:string">
+  This is a test header
+</echoMeStringResponse>
+
 </SOAP-ENV:Header>
 <SOAP-ENV:Body>
 

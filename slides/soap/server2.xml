@@ -16,8 +16,10 @@ $server->handle();
 
 <example type="php" fontsize='1.4em' title='Client for Example Server'>
 <![CDATA[<?
-$example = SoapObject(\'http://localhost/SOAP/example/exampleserver.php\');
-$response = $example->echoString(\'This is a test!\');
+$example = SoapObject(
+    'http://localhost/SOAP/example/exampleserver.php');
+         
+$response = $example->echoString('This is a test!');
 ?>]]>
 </example>
 </slide>

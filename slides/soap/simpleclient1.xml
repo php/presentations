@@ -1,6 +1,6 @@
 <slide title="Simple SOAP">
 
-<example type="php" title="PEAR::SOAP">
+<example type="php" title="PEAR::SOAP" fontsize='1.4em'>
 <![CDATA[<?php
 require_once('SOAP/Client.php');
 
@@ -25,7 +25,7 @@ foreach($response->resultElements as $result) {
 ]]>
 </example>
 
-<example type="php" title="PHP-SOAP">
+<example type="php" title="PHP-SOAP" fontsize='1.4em'>
 <![CDATA[<?php
 $key = 'xxxxxxxxxxxx';
 $query = 'Caraveo';
