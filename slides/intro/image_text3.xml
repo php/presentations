@@ -2,8 +2,11 @@
 <blurb title="TrueType Fonts and Truecolor Images">
 Unfortunately the current GD-2.0.1 has a bug which prevents truetype
 fonts from being anti-aliased correctly on truecolor images.  This is
-fixed in GD-2.0.2, but you have to remember to turn on alpha blending
-for it to work.  Compare these two:
+fixed in GD-2.0.2 which unfortunatelyt doesn't exist.  As of PHP 4.3
+we have bundled GD2 with PHP and fixed this and many other bugs.
+</blurb>
+<blurb>
+Compare these two:
 </blurb>
 <example 
 	title="With alpha blending"
