@@ -2,7 +2,7 @@
 <example><![CDATA[<?php
 $conn = OCINLogin("user","pass","database")
   or die("unable to connect");
-$stmt = OCIParse($coon, "SELECT ... ");
+$stmt = OCIParse($conn, "SELECT ... ");
 OCIExecute($stmt, OCI_DEFAULT)
   or die ("query failed: ".OCIError($stmt));
 while (OCIFetchInto($stmt, $row)) {
