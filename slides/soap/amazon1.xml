@@ -1,0 +1,29 @@
+<slide title="Amazon">
+
+<list>
+<bullet>Using objects to make Amazon simple</bullet>
+<bullet>Used genproxy.php to get a starting point</bullet>
+<bullet>Modified generated proxy to make class easier to use</bullet>
+<bullet>Hand coded "type" classes based on XML Schema</bullet>
+<bullet>Built logic into the "type" classes to manipulate and output the data</bullet>
+<bullet>Now a simple script produces cool results!</bullet>
+<bullet>Code available in PEAR::SOAP CVS</bullet>
+</list>
+
+<example type="php" fontsize='1.4em' title="Amazon Made Simple">
+<![CDATA[<?php
+require_once 'amazon.php';
+require_once 'config.php';
+
+$amazon = new Amazon('soap',$amazon_id);
+$amazon->SearchForm($_REQUEST); 
+if (count($_REQUEST)) {
+    if ($amazon->Search($_REQUEST)) {
+        // display a second search form at the bottom of page
+        $amazon->SearchForm($_REQUEST); 
+    }
+}
+?>
+]]>
+</example>
+</slide>
