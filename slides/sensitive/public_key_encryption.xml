@@ -1,0 +1,17 @@
+<slide title="Public Key Encryption">
+	<list title="Public Key Encryption">
+		<bullet>RSA/DSA are the most common asmmetric ciphers (used in SSH and OpenSSL)</bullet>
+		<bullet>Uses a pair of keys for encryption and decryption</bullet>
+		<bullet>Encryption is accomplished with a public key</bullet>
+		<bullet>Decryption can only be done with a private key</bullet>
+		<bullet>Much slower than crypto hashes</bullet>
+		<bullet>Still slower than most private (symmetric) key ciphers</bullet>
+		<bullet>Tremendously useful for protecting data and </bullet>
+		<bullet>Relatively easy to use</bullet>
+	</list>
+
+	<list title="Examples">
+		<bullet>Encrypting a message digest of a clear-text document</bullet>
+		<bullet>Securing data entered into a database on an insecure server</bullet>
+	</list>
+</slide>

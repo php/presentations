@@ -1,0 +1,13 @@
+<slide title="Quantization">
+	<list title="Quantization">
+		<bullet>Mapping a data set onto a smaller data set</bullet>
+		<bullet>Reducing the amount of sensitive data disclosed</bullet>
+		<bullet>...while still retaining useful information.</bullet>
+	</list>
+	
+	<list title="Examples" effect="slide">
+		<bullet>Lossy compression or scaling of images or signals to allow for broader distribution</bullet>
+		<bullet>Discarding postal code or IP address information to prevent easy identification of individuals</bullet>
+		<bullet>Aggregating feedback from all school districts to reduce politicking</bullet>
+	</list>
+</slide>

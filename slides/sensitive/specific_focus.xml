@@ -1,0 +1,8 @@
+<slide title="Specific Focus">
+	<list title="Specific Focus" effect="slide">
+		<bullet>This session focuses on protecting the data with cryptographic methods rather than access controls</bullet>
+		<bullet>Restricting application and data access is critical, but...</bullet>
+		<bullet>many developers and software tools already deal with access control issues fairly well (Apache, Linux, MySQL, PHP, ...)</bullet>
+		<bullet>Data is vulnerable at so many points that it takes massive effort to create a very low risk environment for it if only relying on access control and policies</bullet>
+	</list>
+</slide>

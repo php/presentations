@@ -1,0 +1,55 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	backgroundimage="slides/intro/background.png"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
+<topic>PHP</topic>
+<title>Protecting Sensitive Data</title>
+<subtitle>with MySQL and PHP</subtitle>
+<event>Conférence PHP Québec</event>
+<location>Montréal</location>
+<date>March 20, 2003</date>
+<speaker>Zak Greant</speaker>
+<email>zak@mysql.com</email>
+
+<slide>slides/sensitive/titlepage.xml</slide>
+<slide>slides/sensitive/setup.xml</slide>
+<slide>slides/sensitive/followup.xml</slide>
+<slide>slides/sensitive/credits.xml</slide>
+<slide>slides/sensitive/thank_you.xml</slide>
+<slide>slides/sensitive/introduction.xml</slide>
+<slide>slides/sensitive/sensitive_data.xml</slide>
+<slide>slides/sensitive/identity_crisis.xml</slide>
+<slide>slides/sensitive/reputation_poisoning.xml</slide>
+<slide>slides/sensitive/you_get_the_idea.xml</slide>
+<slide>slides/sensitive/risks.xml</slide>
+<slide>slides/sensitive/broad_vulnerabilities.xml</slide>
+<slide>slides/sensitive/solutions.xml</slide>
+<slide>slides/sensitive/specific_focus.xml</slide>
+<slide>slides/sensitive/drawbacks.xml</slide>
+<slide>slides/sensitive/advantages.xml</slide>
+
+<slide>slides/sensitive/tools.xml</slide>
+<slide>slides/sensitive/quantization.xml</slide>
+<slide>slides/sensitive/data_poisoning_and_decoys.xml</slide>
+<slide>slides/sensitive/crypto_hashes.xml</slide>
+<slide>slides/sensitive/public_key_encryption.xml</slide>
+<slide>slides/sensitive/private_key_encryption.xml</slide>
+<slide>slides/sensitive/key_exchange_distro.xml</slide>
+<!--
+ECB: Electronic Codebook - crypt blocks separately - easiest to crack
+CBC: Cipher Block Chaining - each block XOR'd with previous clear block before being crypted
+CFB: Cipher Feedback - block XOR'd with previous crypted block
+OFB: Output Feedback - block XOR'd with other data (not clear or crypted block)
+-->
+
+<slide>slides/sensitive/mysql.xml</slide>
+<slide>slides/sensitive/php.xml</slide>
+<slide>slides/sensitive/example_code.xml</slide>
+<slide>slides/sensitive/example_code_2.xml</slide>
+<slide>slides/sensitive/example_code_3.xml</slide>
+<slide>slides/sensitive/questions.xml</slide>
+
+</presentation>

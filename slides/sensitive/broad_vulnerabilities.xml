@@ -1,0 +1,10 @@
+<slide title="Broad Vulnerabilities">
+	<list title="Broad Vulnerabilities">
+		<bullet>Human - trusted user abuse, lack of vigilance, uneducated users (joe, PHB syndrome)</bullet>
+		<bullet>Network - virtual/physical compromise</bullet>
+		<bullet>Server - virtual/physical access</bullet>
+		<bullet>Software - permissions escalation, software interactions, side effects</bullet>
+		<bullet>Storage - disk, hardcopy</bullet>
+		<bullet>Consumption - data consumer disclosure, transfer to insecure area, poor data management...</bullet>
+	</list>
+</slide>

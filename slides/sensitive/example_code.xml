@@ -1,0 +1,12 @@
+<slide title="Example Code">
+	<list title="Example Code">
+		<bullet>Ensure that all users are made aware of a message with roughly equal opportunity</bullet>
+		<bullet>User enters a message intended for n people to read</bullet>
+		<bullet>User enters a list of receipts and a message</bullet>
+		<bullet>Application generates passphrase and a list of shared keys</bullet>
+		<bullet>Message is encrypted with the passphrase</bullet>
+		<bullet>Keys are distributed to users</bullet>
+		<bullet>Passphrase and keys are destroyed</bullet>
+	</list>
+	<example title="Code" filename="code/shared_keys.php" result="0" fontsize="1em" />
+</slide>

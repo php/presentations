@@ -1,0 +1,14 @@
+<slide title="MySQL">
+	<list title="MySQL">
+		<bullet>SHA1</bullet>
+		<bullet>MD5</bullet>
+		<bullet>PASSWORD (caveat)</bullet>
+		<bullet>ENCRYPT (UNIX crypt)</bullet>
+		<bullet>ENCODE/DECODE (trivial secrets only)</bullet>
+		<bullet>AES_ENCRYPT/DECRYPT (coming soon)</bullet>
+		<bullet>DES_ENCRYPT/DECRYPT (coming soon)</bullet>
+		<bullet>SSL Support (coming soon)</bullet>
+		<bullet>UDFs</bullet>
+		<bullet>Watch out for logging!</bullet>
+	</list>
+</slide>

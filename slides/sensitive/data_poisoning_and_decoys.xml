@@ -1,0 +1,14 @@
+<slide title="Data Poisoning, Bait and Decoys">
+	<list title="Data Poisoning, Bait and Decoys">
+		<bullet>Poisoned data makes compromise of the real data more expensive.</bullet>
+		<bullet>Bait is false data whose usage can be tracked, allowing administrators to detect and "watch" abusers.</bullet>
+		<bullet>Decoy data disguises real information</bullet>
+	</list>
+		
+	<list title="Examples">
+		<bullet>Artificial user data that includes genuine contact information that is monitored. (good for employee and paper leaks)</bullet>
+		<bullet>Artificial user data that triggers warning systems if accessed.</bullet>
+		<bullet>Disguise the data entry requested by a user by mixing it with non-requested data.</bullet>
+		<bullet>Generate additional entries in systems where the cost of compromise is relatively low. (Same data, modify keys)</bullet>
+	</list>
+</slide>

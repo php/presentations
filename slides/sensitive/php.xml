@@ -1,0 +1,10 @@
+<slide title="PHP">
+	<list title="PHP">
+		<bullet>MCRYPT (Access to private/symmetric ciphers)</bullet>
+		<bullet>MHASH (Access to crypto hash algorithms)</bullet>
+		<bullet>OpenSSL (public/asymmetric ciphers (RSA/DSA))</bullet>
+		<bullet>BCMath and GMP (Large integer math)</bullet>
+		<bullet>Crack (Brute force password challenges)</bullet>
+		<bullet>General (String (md5, sha1), Regex, Array, Pack/Unpack, ...)</bullet>
+	</list>
+</slide>

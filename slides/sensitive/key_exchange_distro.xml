@@ -1,0 +1,7 @@
+<slide title="Key Exchange Schemes">
+	<list title="Key Exchange Schemes">
+		<bullet>Allow keys to be shared in ways that reduce the possibility of compromise.</bullet>
+		<bullet>Public/Private key exchanges that allow users to exchange public keys that are used to generate a shared private key (Diffie/Hellman)</bullet>
+		<bullet>Distributed private key exchanges (see code)</bullet>
+	</list>
+</slide>

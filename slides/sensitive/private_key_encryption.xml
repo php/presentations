@@ -1,0 +1,14 @@
+<slide title="Private Key Encryption">
+	<list title="Private Key Encryption">
+		<bullet>AES, 3DES and Blowfish are some of the most common symmetric ciphers</bullet>
+		<bullet>Uses a single private key for encryption and decryption</bullet>
+		<bullet>Slower than crypto hashes</bullet>
+		<bullet>Most private key ciphers are much faster than most public key ciphers</bullet>
+		<bullet>Also tremendously useful for protecting data and </bullet>
+		<bullet>Relatively easy to use</bullet>
+	</list>
+
+	<list title="Examples">
+		<bullet>Examples in the code up ahead</bullet>
+	</list>
+</slide>

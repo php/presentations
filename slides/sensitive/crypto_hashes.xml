@@ -1,0 +1,17 @@
+<slide title="Crypto Hashes">
+	<list title="Crypto Hashes">
+		<bullet>Algorithms that output a unique 'fingerprint' for a given input of data (MDx, SHA1)</bullet>
+		<bullet>Input data may be of almost any length</bullet>
+		<bullet>No key is required - only data is needed as input (Though an IV can be used in some cases (! PHP))</bullet>
+		<bullet>Generated "fingerprint" is of a fixed length</bullet>
+		<bullet>Deterministic</bullet>
+		<bullet>Considered nigh-impossible to reconstruct the input data given the output data</bullet>
+		<bullet>Also called one-way functions, message digests, signatures and hashes</bullet>
+	</list>
+	<list title="Examples">
+		<bullet>Unix, MySQL, htpasswd, ... password systems</bullet>
+		<bullet>Hash user credentials together with preference information</bullet>
+		<bullet>i.e. md5($user_name, $password, $mark_on_test)</bullet>
+		<bullet>Data is not reversible - just comparable</bullet>
+	</list>
+</slide>
