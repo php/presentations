@@ -1,0 +1,8 @@
+<slide title="APD">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<image filename="apd.jpg" align="left"/>
+<break lines="10"/>
+<blurb fontsize="4.0em">Intercepts calls to %zend_execute%</blurb>
+<blurb fontsize="4.0em">Generates function call traces with timings</blurb>
+</slide>

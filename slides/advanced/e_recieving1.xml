@@ -1,0 +1,8 @@
+<slide title="Pull Error Handling">
+<break/>
+<image filename="stonehenge.jpg" align="right" marginright="1.0em"/>
+<blurb fontsize="4.0em">%set_error_handler()% and %trigger_error()% are good
+tools for logging error messages</blurb>
+<blurb fontsize="4.0em">They *are not* a substitute for proper flow control statements</blurb>
+<example filename="errorhandler.php"/>
+</slide>

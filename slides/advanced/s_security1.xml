@@ -1,0 +1,13 @@
+<slide title="Common Vulnerabilities">
+<break/>
+<image filename="bb-small.jpg" align="right" marginright="1.0em"/>
+<break lines="4"/>
+<list fontsize="4.0em">
+<bullet>Error Handling problems</bullet>
+<bullet>Command injection</bullet>
+<bullet>SQL injection</bullet>
+<bullet>Unvalidated parameters</bullet>
+<bullet>Cross Site Scripting</bullet>
+<bullet>Insecure cryptography</bullet>
+</list>
+</slide>

@@ -1,0 +1,13 @@
+<slide title="Roll your own">
+<break/>
+<image filename="bb-small.jpg" align="right" marginright="1.0em"/>
+<break lines="2"/>
+<blurb fontsize="4.0em">
+My first attempt at encryption
+</blurb>
+<blurb fontsize="4.0em">
+Ran on a piece of banking software for over 2 years.
+</blurb>
+<blurb fontsize="4.0em">%xor% anyone?</blurb>
+<example filename="sencrypt.pl" type="perl"/>
+</slide>

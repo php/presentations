@@ -1,0 +1,16 @@
+<slide title="The Humanity!">
+<break/>
+<image filename="stonehenge.jpg" align="right" marginright="1.0em"/>
+<break lines="5"/>
+<blurb fontsize="4.0em">
+*Do Not* email yourself the logs for every failed message.  Write high priority failures
+to a log file, and then email yourself that logfile (or the location of that logfile).
+</blurb>
+<blurb fontsize="4.0em">
+If you are SMS' yourself failed error logs, you should consider investing in a second system
+administrator
+</blurb>
+<blurb fontsize="4.0em">
+Make logs into test cases!
+</blurb>
+</slide>

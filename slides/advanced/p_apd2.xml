@@ -1,0 +1,13 @@
+<slide title="Calling APD">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<break lines="5"/>
+<example title="Trace Dump"><![CDATA[<?php
+apd_set_pprof_trace();
+// ... your code
+?>]]></example>
+<example title="Browser Dump"><![CDATA[<?php
+apd_set_browser_trace();
+// ... your code
+?>]]></example>
+</slide>

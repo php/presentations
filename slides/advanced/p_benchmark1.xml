@@ -1,0 +1,12 @@
+<slide title="Benchmarking">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">
+The two classes you need for benchmarking are %Benchmark_Timer% and %Benchmark_Iterate%
+</blurb>
+<break/>
+<example type="shell" title="Benchmark_Timer"><![CDATA[# pear install Benchmark_Timer]]></example>
+<break/>
+<example type="shell" title="Benchmark_Iterate"><![CDATA[# pear install Benchmark_Iterate]]></example>
+</slide>

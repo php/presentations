@@ -1,0 +1,10 @@
+<slide title="Squid Pre-generation">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<blurb fontsize="4.0em">
+A neat way of handling pre-generation/static data caching is using 
+Squid, which will cache the static portions of your website.
+</blurb>
+<image filename="squid1.png" align="center" />
+
+</slide>

@@ -1,0 +1,14 @@
+<slide title="mod_gzip">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">
+Use %mod_gzip% to compress your data before you send it over the wire
+</blurb>
+<blurb fontsize="4.0em">
+%mod_gzip% is much better than php's built-in gzip compression
+</blurb>
+<blurb fontsize="4.0em">
+But some encryption is better than none
+</blurb>
+</slide>

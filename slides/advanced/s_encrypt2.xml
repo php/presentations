@@ -1,0 +1,9 @@
+<slide title="Mcrypt">
+<break/>
+<image filename="bb-small.jpg" align="right" marginright="1.0em"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">
+Use the mcrypt extension which provides a rich set of "real" cryptography
+</blurb>
+<example filename="encryptsensitive.php"/>
+</slide>

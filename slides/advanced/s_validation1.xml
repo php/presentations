@@ -1,0 +1,7 @@
+<slide title="Data Tampering">
+<break/>
+<image filename="bb-small.jpg" align="right" marginright="1.0em"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">Do not allow users to manually modify hidden variables or cookies</blurb>
+<example filename="cookie.php"/>
+</slide>

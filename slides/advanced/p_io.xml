@@ -1,0 +1,14 @@
+<slide title="Output Buffering">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">
+System calls are expensive, %write()% is an inordinately expensive system call
+</blurb>
+<blurb fontsize="4.0em">
+Set %output_buffering = On% in your PHP script
+</blurb>
+<blurb fontsize="4.0em">
+Match your I/O sizes (%SendBufferSize% == %PageSize%)
+</blurb>
+</slide>

@@ -1,0 +1,16 @@
+<slide title="Data Validation">
+<break/>
+<image filename="bb-small.jpg" align="right" marginright="1.0em"/>
+<break lines="4"/>
+<list fontsize="4.0em">
+<bullet>Turn *off* %register_globals%.  Access variables via %$_GET%, %$_POST%, %$_COOKIE%, etc.</bullet>
+<bullet type="none" marginleft="5.0em" effect="slide">... Dude, its faster! Heh! Hehe!</bullet>
+<bullet>Create specific parameters for input data, and make sure they match only that data</bullet>
+</list>
+<example><![CDATA[<?php
+if (!is_numerical($_GET['age']) && 
+    $_GET['age'] < 0 || $_GET['age'] > 200) {
+	die("Invalid age given");
+}
+?>]]></example>
+</slide>

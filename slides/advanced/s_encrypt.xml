@@ -1,0 +1,12 @@
+<slide title="Cryptography">
+<break/>
+<image filename="bb-small.jpg" align="right" marginright="1.0em"/>
+<break lines="5"/>
+<list fontsize="4.0em">
+<bullet>Your data be not safe!</bullet>
+<bullet>I've hacked common webhosts in under 2 minutes</bullet>
+<bullet type="none" marginleft="2.0em">... and it required no more than %grep%</bullet>
+<bullet>You are liable for security breaches</bullet>
+<bullet type="none" marginleft="2.0em">... especially if you don't encrypt sensitive data</bullet>
+</list>
+</slide>

@@ -1,5 +1,27 @@
 <slide title="Recieving">
-<blurb>
+<break/>
+<image filename="stonehenge.jpg" align="right" marginright="1.0em"/>
+<blurb fontsize="4.0em">
+The classic manner of PHP error handling is to use lots and lots of 
+%if%'s.
 </blurb>
+<example><![CDATA[<?php
+$conn = mysql_connect('localhost', 'user', 'pass');
+if (!$conn) {
+	die("bah bah bear");
+}
+if (!mysql_select_db('bing', $conn)) {
+	die("booh hoo hoo");
+}
+
+$stmt = mysql_query('select * baz from bar', $conn);
+if (!$stmt) {
+	die("wah wah woo");
+}
+
+if (!mysql_num_rows($conn)) {
+	die("ding dong doo");
+}
+?>]]></example>
 
 </slide>

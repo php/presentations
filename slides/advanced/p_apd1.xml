@@ -1,0 +1,15 @@
+<slide title="Installing APD">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">
+Install APD via PEAR
+</blurb>
+<example type="shell"><![CDATA[# pear install apd
+% mkdir /tmp/traces]]></example>
+<blurb fontsize="4.0em">
+Then add the following to your %php.ini% file:
+</blurb>
+<example><![CDATA[zend_extension=/absolute/path/to/apd.so
+apd.dumpdir=/tmp/traces]]></example>
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Injection problems">
+<break/>
+<image filename="bb-small.jpg" align="right" marginright="1.0em"/>
+<break lines="8"/>
+<blurb fontsize="4.0em">
+An example injection vulnerability is shown below
+</blurb>
+<example filename="inject.php"/>
+<blurb fontsize="4.0em">
+What happens if I pass '%directory=/; rm -rf /%'?
+</blurb>
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Shielding">
+<break/>
+<image filename="stonehenge.jpg" align="right" marginright="1.0em"/>
+<break lines="5"/>
+<blurb fontsize="4.0em">
+Set %display_errors = Off%
+</blurb>
+<blurb fontsize="4.0em">
+Use a custom error handler
+</blurb>
+<blurb fontsize="4.0em">
+Log all error levels to different locations
+</blurb>
+</slide>

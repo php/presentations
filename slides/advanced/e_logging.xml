@@ -1,0 +1,14 @@
+<slide title="Logging">
+<break/>
+<image filename="stonehenge.jpg" align="right" marginright="1.0em"/>
+<break lines="5"/>
+<blurb fontsize="4.0em">
+Logging must be designed for extensibility
+</blurb>
+<blurb fontsize="4.0em">
+When your application grows, logging can quickly become a bottleneck
+</blurb>
+<blurb fontsize="4.0em">
+Use apache's logging facilities, extend with a custom module, eg, spread.
+</blurb>
+</slide>

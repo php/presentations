@@ -1,0 +1,16 @@
+<slide title="With Compiler Cache">
+<break/>
+<image filename="ninja.gif" align="right" />
+<image filename="ccache.jpg" align="left" marginleft="1.0em"/>
+<break lines="10"/>
+<blurb fontsize="4.0em">
+Each source file is compiled once
+</blurb>
+<blurb fontsize="4.0em">
+Expensive optimizations occur, but only once
+</blurb>
+<blurb fontsize="4.0em">
+Dynamic includes do introduce their own, insignifigant, overhead
+</blurb>
+
+</slide>

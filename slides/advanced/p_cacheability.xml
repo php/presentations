@@ -1,0 +1,10 @@
+<slide title="External Cacheability">
+<break/>
+<image filename="ninja.gif" align="right"/>
+<break lines="4"/>
+<blurb fontsize="3.5em">Set %Cache-Control% headers so external caches know how to respect your content.</blurb>
+<break/>
+<example fontsize="1.8em"><![CDATA[Last-Modified: Mon, 22 Jul 2002 15:50:00 GMT
+Expires: Mon, 22 Jul 2002 15:52:25 GMT
+Cache-Control: must-revalidate, max-age=15, s-maxage=0, private]]></example>
+</slide>

@@ -1,0 +1,13 @@
+<slide title="Request Lifecycle">
+<break/>
+<image filename="ninja.gif" align="right" />
+<image filename="request.jpg" align="left" marginleft="1.0em"/>
+<break lines="10"/>
+<blurb fontsize="4.0em">
+This happens for |ff0000|*every*| include file
+</blurb>
+<blurb fontsize="4.0em">
+Compilation can easily consume more time than execution
+</blurb>
+
+</slide>
