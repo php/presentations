@@ -6,6 +6,8 @@ var_dump(
 	escapeshellcmd($command . $user)
 );
 
+print "\n<br />\n";
+
 var_dump(
 	$command . escapeshellarg($user)
 );
