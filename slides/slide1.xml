@@ -3,11 +3,11 @@
 
   <title>The PHP Presentation System</title>
 
-  <blurb>
+  <blurb fontsize="4em">
     Taking suggestions for a decent name for this thing.
   </blurb> 
 
-  <list title="Features">
+  <list title="Features" fontsize="4em">
    <bullet>Simple XML slide format</bullet>
    <bullet>Multi-format display modes including HTML and PDF</bullet>
    <bullet>One slide per file with a presentation index file</bullet>
