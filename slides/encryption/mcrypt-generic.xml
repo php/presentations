@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Mcrypt Init</title>
+
+	<break lines="2"/>
+	<example fontsize="1.8em" result="0"><![CDATA[<?php
+  $td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
+                                                                                                                                              
+  if ($td) {
+    /* Get key size and IV size */
+    $iv_size  = mcrypt_enc_get_iv_size($td);
+    $key_size = mcrypt_enc_get_key_size($td);
+
+    /* Create IV and 'key' */
+    $iv  = mcrypt_create_iv($iv_size);
+    $key = substr(sha1('very secret key'), 0, $key_size);
+
+    /* Init encryption module */
+    mcrypt_generic_init($td, $key, $iv);
+  }
+?>]]></example>
+
+</slide>

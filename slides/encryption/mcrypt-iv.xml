@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Q3: IV troubles</title>
+
+	<break lines="2"/>
+	<blurb fontsize="3.5em">"Typical uses for something like libmcrypt is to encrypt a plaintext
+for decryption at some later date. All that should be required for
+the decryption is the key that was used during encryption. In
+particular, the values in the IV array cannot be expected to be the
+same during encryption and decryption.</blurb>
+																																
+	<blurb fontsize="3.5">[...] If however, I modify
+the test program as per the patch below, so that the IV array is
+different for encryption and decryption, then many of the tests
+fail."</blurb>
+																																
+	<break />
+	<list fontsize="4em" effect="slide" marginleft="-1.5em">
+		<bullet type="none">The IV for encryption and decryption should always be the same.</bullet>
+		<bullet type="none">*But* it does not need to be secret, only unique and random.</bullet>
+	</list>
+</slide>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Encrypting</title>
+
+	<example fontsize="1.5em" result="1"><![CDATA[<?php
+  $td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
+                                                                                                                                              
+  if ($td) {
+    $iv_size  = mcrypt_enc_get_iv_size($td);
+    $key_size = mcrypt_enc_get_key_size($td);
+    $iv  = mcrypt_create_iv($iv_size);
+    $key = substr(sha1('very secret key'), 0, $key_size);
+
+    /* Init encryption module */
+    mcrypt_generic_init($td, $key, $iv);
+
+    /* Encrypt text */
+    $crypt_text = mcrypt_generic($td, "very important data");
+    echo $crypt_text;
+
+    /* Clean up cipher */
+    mcrypt_generic_deinit($td);
+    mcrypt_module_close($td);
+  }
+?>]]></example>
+
+</slide>

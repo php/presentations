@@ -38,8 +38,20 @@
 <slide>slides/encryption/mode-ecb.xml</slide>
 <slide>slides/encryption/mode-cfb.xml</slide>
 <slide>slides/encryption/quote-fail.xml</slide>
+<slide>slides/encryption/example-fail.xml</slide>
 
+<!-- mcrypt examples -->
+<slide>slides/encryption/mcrypt-modules.xml</slide>
+<slide>slides/encryption/mcrypt-generic.xml</slide>
+<slide>slides/encryption/mcrypt-crypt.xml</slide>
+<slide>slides/encryption/mcrypt-store.xml</slide>
+<slide>slides/encryption/mcrypt-bug26733.xml</slide>
+<slide>slides/encryption/mcrypt-iv.xml</slide>
+<slide>slides/encryption/mcrypt-supported.xml</slide>
+<slide>slides/encryption/mcrypt-future.xml</slide>
+<slide>slides/encryption/quote-false.xml</slide>
 
+<slide>slides/xdebug/questions.xml</slide>
 <slide>slides/encryption/resources.xml</slide>
 
 </presentation>

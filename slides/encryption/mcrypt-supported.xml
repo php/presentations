@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Supported modes and ciphers</title>
+
+	<example fontsize="1.5em" result="1"><![CDATA[<pre><font size="6"><?php
+
+	$modes = mcrypt_list_modes();
+	$algos = mcrypt_list_algorithms();
+	sort($modes);
+	sort($algos);
+
+	foreach ($modes as $mode) {
+		printf ("%7s ", $mode);
+	}
+	echo "<br />";
+
+	foreach ($algos as $algo) {
+		foreach ($modes as $mode) {
+			if ($td = @mcrypt_module_open($algo, '', $mode, '')) {
+				if (mcrypt_enc_is_block_mode($td)) {
+					$bs = mcrypt_enc_get_block_size($td);
+				} else {
+					$bs = 1;
+				}
+				$ks = mcrypt_enc_get_key_size($td);
+				printf ("%3s/%3s ", $bs, $ks);
+				mcrypt_module_close($td);
+			} else {
+				printf ("%7s ", "-");
+			}
+		}
+		echo $algo."<br />";
+	}
+?></pre>]]></example>
+
+</slide>

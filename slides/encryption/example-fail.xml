@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Example</title>
+
+	<break lines="6"/>
+
+	<blurb fontsize="5em">"most security failures in its area of interest are due to failures in implementation, not failure in algorithms or protocols"</blurb>
+	<blurb align="right" fontsize="4em">~The NSA~</blurb>
+
+	<break lines="1"/>
+	<list>
+		<bullet marginleft="-0.3em" fontsize="2.8em" type="none">Do [blink]*not*[/blink] store the key on the same machine as the encrypted data</bullet>
+	</list>
+	<list>
+		<bullet effect="slide" fontsize="2.8em" type="none">Do *never* store passwords, unless hashed</bullet>
+	</list>
+</slide>

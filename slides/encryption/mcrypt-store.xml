@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Q1: Storing crypttext</title>
+
+	<break lines="8"/>
+	<list fontsize="5em" marginleft="-0.3em">
+		<bullet>Encrypted data is binary 'crap'</bullet>
+	</list>
+	<list fontsize="5em" marginleft="-0.3em">
+		<bullet>Length and trailing zeros are important</bullet>
+	</list>
+	<list fontsize="5em" effect="slide">
+		<bullet>Use base64_encode() or binhex()</bullet>
+	</list>
+</slide>

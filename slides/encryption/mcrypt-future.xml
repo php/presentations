@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Future?</title>
+
+	<blurb fontsize="4em">Wouldn't this be much nicer?</blurb>
+
+	<example fontsize="1.5em"><![CDATA[<?php
+	$td = new Mcrypt('tripledes', 'cfb');
+
+	echo $td->name;
+
+	echo $td->is_block_algorithm;
+	echo $td->block_size;
+
+	echo $td->iv_size;
+	echo $td->key_size;
+
+	$iv = $td->generate_iv();
+	/* or */
+	$iv = mcrypt::creat_iv($size);
+	$td->set_iv($iv);
+
+	$td->set_key('secret_key', MCRYPT_HASH); /* or MCRYPT_PAD */
+
+	$td->init(); /* optional, only required for multiple encryptions */
+	$crypt = $td->encrypt('secret text');
+
+	$td = NULL;
+?>]]></example>
+</slide>

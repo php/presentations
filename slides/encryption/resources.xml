@@ -6,11 +6,9 @@
 	<image align="center" filename="blowfish.png" />
 
 	<break lines="2" /> 
-	<link fontsize="3em" marginleft="2em" leader="These Slides: " href="http://pres.derickrethans.nl" target="_new"/>
-	<link fontsize="3em" marginleft="2em" leader="Xdebug site: " href="http://xdebug.org" target="_new"/>
-	<link fontsize="3em" marginleft="2em" leader="DBGp specification: " href="http://xdebug.org/docs-dbgp.php" target="_new"/>
+	<link fontsize="3em" marginleft="2em" leader="These Slides: " href="http://pres.derickrethans.nl/mcrypt-vancouver" target="_new"/>
 
-	<break lines="3" /> 
 	<link fontsize="3em" marginleft="2em" leader="PHP: " href="http://www.php.net" target="_new"/>
-	<link fontsize="3em" marginleft="2em" leader="Questions?: " href="derick@xdebug.org" target="_new"/>
+	<link fontsize="3em" marginleft="2em" leader="Crypto Intro: " href="http://" target="_new"/>
+	<link fontsize="3em" marginleft="2em" leader="Questions?: " href="mailto:derick@php.net" target="_new"/>
 </slide>

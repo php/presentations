@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Q2: Bug #26733</title>
+
+	<break lines="2"/>
+	<blurb fontsize="3em">"I have a string encrypted with mcrypt and encoded in base64. I unbase64
+this string and I decrypt it using mcrypt. I looks like I got the exact same string
+but when I compare it with == it is not the same."</blurb>
+	<break />
+	<example fontsize="1.3em" result="0"><![CDATA[<?php
+  $td = @mcrypt_module_open('rijndael-128', '', 'ecb', '');
+                                                                                                                                              
+  $iv_size  = mcrypt_enc_get_iv_size($td);
+  $key_size = mcrypt_enc_get_key_size($td);
+  $key = substr(sha1('very secret key'), 0, $key_size);
+
+  /* Init encryption module */
+  @mcrypt_generic_init($td, $key, '');
+
+  /* Decrypt text */
+  $text = mdecrypt_generic($td, $crypt_text);
+  echo $text;
+?>]]></example>
+	<break />
+	<list fontsize="4em" effect="slide" marginleft="-2em">
+		<bullet>If you use a block method, mcrypt will pad with \0s.</bullet>
+		<bullet>So store the original length of the text too.</bullet>
+	</list>
+</slide>
