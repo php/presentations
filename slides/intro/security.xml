@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>A Few Notes on Security</title>
+
+	<list fontsize="3.5em" marginleft="-1em">
+		<bullet>Do Not Trust Website Visitors</bullet>
+		<bullet>There is no Holy Grail</bullet>
+		<bullet>Safe Mode</bullet>
+		<bullet>Input Filtering, XSS</bullet>
+		<bullet>mod_security (does not solve anything for PHP)</bullet>
+		<bullet>Security by Obscurity does not help</bullet>
+	</list>
+</slide>

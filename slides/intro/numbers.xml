@@ -1,11 +1,9 @@
 <slide title="PHP is Big!">
 <list>
-<title>August 2004 Netcraft Report</title>
-<bullet> 53,341,867 Domains queried</bullet>
-<bullet> 16,946,328 Domains.  1,348,793 IP addresses</bullet>
-<bullet>PHP installed on 32% of all domains</bullet>
+<title>December 2004 Netcraft Report</title>
+<bullet>18,455,683 Domains.  1,317,871 IP addresses</bullet>
 </list>
-<image filename="phpstats.png" align="center"/>
+<image filename="phpstats.png" align="right"/>
 <link href="http://www.netcraft.com" leader="Source: " align="right" marginright="6em">Netcraft</link>
 
 <list>

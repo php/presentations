@@ -46,8 +46,15 @@
 <slide>slides/xdebug/ccoverage2.xml</slide>
 <slide>slides/xdebug/ccoverage3.xml</slide>
 
+<!-- THEORY -->
+<slide>slides/xdebug/gathering-data.xml</slide>
+<slide>slides/xdebug/gathering1.xml</slide>
+<slide>slides/xdebug/gathering2.xml</slide>
+<slide>slides/xdebug/hooks1.xml</slide>
+
 <!-- REMOTE INTERFACES -->
 <slide>slides/xdebug/interfaces.xml</slide>
+<slide>slides/xdebug/debugger-activation.xml</slide>
 <slide>slides/xdebug/dbgp.xml</slide>
 
 <!-- CLIENTS -->

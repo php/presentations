@@ -130,14 +130,18 @@ div.shadow, code {
 	font-size: 18px; width: 640px;
 }
 
-div.example code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
+div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
 	background: #ccc;
 	font-size: 20px;
 	width: 100%;
 }
-div.example, div.bit_larger, div.bit_larger_output {
+div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 	margin-left: 20px;
 	margin-right: 20px;
+}
+div.highlight code, div.highlight {
+	background: #fffc00;
+	font-weight: bold;
 }
 
 div.code_small, div.code_medium, div.code_large, div.example {

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Different Approach</title>
+	<subtitle>Adding a Child</subtitle>
+
+<break/>
+	<example><![CDATA[  id | parent_id | path_string    | path_identification_string     | depth
+  ---+-----------+----------------+--------------------------------+------
+  87 |         2 | /1/2/87/       | countries                      |     2
+  88 |        87 | /1/2/87/88/    | countries/belgium              |     3]]></example>
+	<example class="highlight"><![CDATA[  89 |        87 | /1/2/87/89/    | countries/netherlands          |     3]]></example>
+	<example><![CDATA[  91 |        89 | /1/2/87/89/91/ | countries/netherlands/business |     4
+  92 |        89 | /1/2/87/89/92/ | countries/netherlands/economy  |     4 
+  90 |        87 | /1/2/87/90/    | countries/germany              |     3]]></example>
+ 
+	<list>
+		<bullet>Figure out new ID</bullet>
+		<bullet>Insert new item</bullet>
+	</list>
+
+	<example><![CDATA[INSERT INTO ezcontentobject_tree(id) VALUES (NULL);
+	
+SELECT LAST_INSERT_ID();
+
+UPDATE ezcontentobject_tree SET
+	parent_node_id = 89, path_string = '/1/2/87/89/93/',
+	path_identification_string = 'countries/netherlands/food',
+	depth = 4
+WHERE id = 93;
+	]]></example>
+</slide>

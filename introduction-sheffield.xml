@@ -16,6 +16,7 @@
 <email>dr@ez.no</email>
 <url>http://files.derickrethans.nl/introduction-sheffield.pdf</url>
 <slide>slides/ze-xdebug/title.xml</slide>
+<slide>slides/php5intro/nl/who-am-i.xml</slide>
 
 <!-- Project -->
 <slide>slides/php5intro/nl/intro.xml</slide>
@@ -49,6 +50,11 @@
 <slide>slides/php5intro/nl/pear.xml</slide>
 <slide>slides/php5intro/nl/pecl.xml</slide>
 
+<!-- Security -->
+<slide>slides/php5intro/nl/numbers.xml</slide>
+<slide>slides/intro/who-uses.xml</slide>
+<slide>slides/intro/strong-points.xml</slide>
+<slide>slides/intro/security.xml</slide>
 
 <!-- Future -->
 <slide>slides/intro/hist-php51.xml</slide>
