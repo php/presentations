@@ -1,0 +1,22 @@
+<slide title="Fetch the Resource">
+
+<blurb>
+And like before, we check the passed in argument and then use it to look up our
+resource. We get a pointer to our stocks struct back. And from that we are
+interested in the current pointer.
+</blurb>
+
+<example type="c"><![CDATA[ if (ZEND_NUM_ARGS()!=1 || zend_get_parameters_ex(1, &result)==FAILURE) {
+   WRONG_PARAM_COUNT;
+}
+ZEND_FETCH_RESOURCE(stocks_struct, stocks_le_struct *, result, -1,
+                     "Stocks result", le_stocks);
+stock_quotes = stocks_struct->current;
+
+if(!stock_quotes) RETURN_FALSE;]]></example>
+
+<blurb>
+If the current pointer is NULL we have hit the end of the linked list and we just return FALSE.
+</blurb>
+
+</slide>

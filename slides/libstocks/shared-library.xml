@@ -1,0 +1,20 @@
+<slide title="Shared Library">
+<blurb>
+Our new extension can also be compiled as a standalone shared library. Compile
+it like this:
+</blurb>
+
+<example type="shell"><![CDATA[./configure --with-stocks=shared]]></example>
+
+<blurb>
+And then in our test script we can load it using:
+</blurb>
+
+<example type="php"><![CDATA[<?dl("modules/stocks.so");?>]]></example>
+
+<blurb>
+Or we can configure the library to be loaded automatically from *php.ini* or
+*httpd.conf*. 
+</blurb>
+
+</slide>

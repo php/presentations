@@ -1,0 +1,31 @@
+<slide title="Call get_stocks">
+
+<blurb>
+Now we have *str* in the right format and we can go ahead and call libstocks's
+get_stocks() function: 
+</blurb>
+
+<example type="c"><![CDATA[error = get_stocks(str, &stock_quotes);
+if(error) {
+   php_error(E_WARNING, "Error (%d) getting stock quotes",error);
+   RETURN_FALSE;
+}]]></example>
+
+<blurb>
+We are done with *str* now, so we can free it. And we allocate a stocks_struct
+to store the pointer we got back from get_stocks(). Initially the current
+pointer will point to the first/top element in the linked list.
+</blurb>
+
+<example type="c"><![CDATA[efree(str);
+stocks_struct = emalloc(sizeof(stocks_le_struct));
+stocks_struct->top = stock_quotes;
+stocks_struct->current = stock_quotes;]]></example>
+
+<blurb>
+And finally we register our resource:
+</blurb>
+
+<example type="c"><![CDATA[ZEND_REGISTER_RESOURCE(return_value, stocks_struct, le_stocks);]]></example>
+
+</slide>

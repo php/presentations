@@ -1,0 +1,17 @@
+<slide title="fetch_quote()">
+
+<blurb>
+We now need a fetch_quote() function which will take a stock resource id as an
+argument and return an associative array containing the current price, last
+price, opening price, etc of a stock.
+</blurb>
+
+<example type="c"><![CDATA[/* {{{ proto array fetch_quote(int stock_result)
+   Return a quote array from a stock result and advance pointer*/
+PHP_FUNCTION(fetch_quote)
+{
+    zval **result;
+    stock *stock_quotes;
+    stocks_le_struct *stocks_struct;]]></example>
+
+</slide>

@@ -1,0 +1,32 @@
+<slide title="Parsing arguments">
+
+<blurb>
+First we fetch the argument the user passed in. If the wrong number of
+arguments were passed in, this will throw an error.
+</blurb>
+
+<example type="c"><![CDATA[  if (ZEND_NUM_ARGS() != 1 || zend_get_parameters_ex(1, &arg) == FAILURE) {
+    WRONG_PARAM_COUNT;
+  }]]></example>
+
+<blurb>
+Next we assume the argument is an array. If it isn't, we check if it is a
+string and make a copy of it. 
+</blurb>
+
+<example type="c"><![CDATA[  target_hash = HASH_OF(*arg);
+  if(!target_hash) { /* then we didn't get an array as an arg */
+    if ((*arg)->type == IS_STRING) {
+      convert_to_string_ex(arg);
+      str = estrndup((*arg)->value.str.val,(*arg)->value.str.len);
+    } else {
+      php_error(E_WARNING, "Wrong datatype in get_stocks() call");
+    }
+  }]]></example>
+
+<blurb>
+Now, if it was an array, we need to write code that will loop through this
+array and create a string in the form of "LNUX+RHAT+IBM+SUNW" 
+</blurb>
+
+</slide>

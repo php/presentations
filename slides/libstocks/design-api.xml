@@ -1,0 +1,29 @@
+<slide title="User-Level API">
+
+<blurb title="Determine a user-level API">
+By looking at the libstocks library we see that there is a get_stocks()
+function which takes a string containing stock symbols separated by '+'. To be
+a bit more flexible, we will create a user-level PHP function that can either
+take a string like that, or an array of symbol names. 
+</blurb>
+
+<example type="php"><![CDATA[<? $quotes = get_stocks("LNUX+RHAT+IBM+SUNW") ?>]]></example>
+<example type="php"><![CDATA[<? $quotes = get_stocks(array("LNUX","RHAT","IBM","SUNW")) ?>]]></example>
+
+<blurb>
+get_stocks() is going to return a result identifier which we will then pass to
+a fetch_quote() function. This fetch_quote() function will return an
+associative array containing all the data on a quote and advance the result
+pointer.
+</blurb>
+
+<example type="php"><![CDATA[<?
+  $s = get_stocks(array('LNUX','RHAT','IBM','SUNW'));
+  while ($quote = fetch_quote($s)) {
+    while (list($k,$v)=each($quote)) {
+      echo "$k: $v<br>\n";
+    }
+  }
+?>]]></example>
+
+</slide>

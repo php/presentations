@@ -1,0 +1,29 @@
+<slide title="get_quotes()">
+
+<blurb>
+Here we go. The top of our function:
+</blurb>
+
+<example type="c"><![CDATA[/* {{{ proto int get_stocks(array|string symbols)
+   Look up stock symbols and return a stock result identifier */
+PHP_FUNCTION(get_stocks)
+{
+    zval **arg,                 /* Passed in argument */
+         **entry;               /* pointer to array entry */
+    HashTable *target_hash;     /* array hashtable */
+    HashPosition pos;           /* hash iterator */
+    zval *tmp;
+    stocks_le_struct *stocks_struct;
+
+    int len=0, count=0, target = 0;
+    char *str;
+
+    stock *stock_quotes=NULL;
+    libstocks_return_code error;]]></example>
+
+<blurb>
+The zval struct is the basic PHP datatype, and HashTable is a list of zval
+structs. 
+</blurb>
+
+</slide>

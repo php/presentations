@@ -1,0 +1,31 @@
+<slide title="php_stocks.h">
+
+<blurb title="Edit php_stocks.h">
+First we pull in the stocks.h header file from the libstocks library we are going to link in.
+</blurb>
+
+<example type="c"><![CDATA[#include "stocks.h"]]></example>
+
+<blurb>
+Then we add the function prototypes for the two new functions we plan on
+adding. 
+</blurb>
+
+<example type="c"><![CDATA[PHP_FUNCTION(get_stocks);
+PHP_FUNCTION(fetch_quote); ]]></example>
+
+<blurb>
+And finally, we create a simple little data structure for the stock pointer
+that the libstocks get_quotes() function returns. We need this because
+libstocks just uses a linked list of pointers. We need to keep track of both
+the top pointer so we can free the memory later and we also need the current
+pointer so we can walk through the linked list one by one. Here is our simple
+structure: 
+</blurb>
+
+<example type="c"><![CDATA[typedef struct {
+  stock *top;
+  stock *current;
+} stocks_le_struct; ]]></example>
+
+</slide>

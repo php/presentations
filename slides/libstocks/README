@@ -1,0 +1,21 @@
+this is a small example of building a PHP interface to an external library
+(libstocks, available at http://libstocks.sourceforge.net/)
+
+these slides originally came from the "advanced php" tutorial done by rasmus
+and jim at the o'reilly open source conference 2000 in monterey.
+
+the order:
+
+<slide>slides/libstocks/getting-libstocks.xml</slide>
+<slide>slides/libstocks/initial-test.xml</slide>
+<slide>slides/libstocks/design-api.xml</slide>
+<slide>slides/libstocks/phpstocks_h.xml</slide>
+<slide>slides/libstocks/stocks_c.xml</slide>
+<slide>slides/libstocks/get_quotes.xml</slide>
+<slide>slides/libstocks/parsing-arguments.xml</slide>
+<slide>slides/libstocks/array-traversal.xml</slide>
+<slide>slides/libstocks/call-get_stocks.xml</slide>
+<slide>slides/libstocks/fetch_quote.xml</slide>
+<slide>slides/libstocks/fetch-the-resource.xml</slide>
+<slide>slides/libstocks/build-array.xml</slide>
+<slide>slides/libstocks/shared-library.xml</slide>

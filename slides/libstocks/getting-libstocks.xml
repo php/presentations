@@ -1,0 +1,16 @@
+<slide title="Getting libstocks">
+
+<blurb title="Building a stock quote extension">
+A quick search on freshmeat turned up libstocks. Building it is trivial:
+</blurb>
+
+<example type="shell"><![CDATA[./configure; make install]]></example>
+
+<blurb>
+This puts *libstocks.a* in /usr/lib and *stocks.h* in /usr/include. Now we create the framework for our stocks extension:
+</blurb>
+
+<example type="shell"><![CDATA[cd ext
+./ext_skel --extname=stocks]]></example>
+
+</slide>

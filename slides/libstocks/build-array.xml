@@ -1,0 +1,34 @@
+<slide title="Build Array">
+<blurb>
+Now that we have the pointer to the current stock in the linked list we need to
+turn this stock struct from libstocks into an associative array. Luckily we
+have macros that make this easy: 
+</blurb>
+
+<example type="c"><![CDATA[array_init(return_value);
+
+add_assoc_string(return_value, "symbol", stock_quotes->Symbol, 1);
+add_assoc_string(return_value, "time", stock_quotes->Time, 1);
+add_assoc_string(return_value, "date", stock_quotes->Date, 1);
+add_assoc_string(return_value, "name", stock_quotes->Name, 1);
+add_assoc_double(return_value, "current", stock_quotes->CurrentPrice);
+add_assoc_double(return_value, "last", stock_quotes->LastPrice);
+add_assoc_double(return_value, "open", stock_quotes->OpenPrice);
+add_assoc_double(return_value, "min", stock_quotes->MinPrice);
+add_assoc_double(return_value, "max", stock_quotes->MaxPrice);
+add_assoc_double(return_value, "variation", stock_quotes->Variation);
+add_assoc_double(return_value, "percent", stock_quotes->Pourcentage);
+add_assoc_long  (return_value, "volume", stock_quotes->Volume);
+
+stocks_struct->current = stock_quotes->NextStock;]]></example>
+
+<blurb>
+We initialized our return value to be an array, then added a bunch of elements and finally we advanced the pointer to the next element in the link list.
+</blurb>
+<blurb>
+That's it. We are done. We don't need to explicitly return anything here.
+*return_value* is automatically returned. We are ready to compile and test our
+new extension. 
+</blurb>
+
+</slide>

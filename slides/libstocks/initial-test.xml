@@ -1,0 +1,16 @@
+<slide title="Initial Test">
+
+<example title="Do a test build:" type="shell"><![CDATA[cd ..
+./buildconf
+./configure --with-stocks --without-mysql
+make
+./php -f ext/stocks/stocks.php]]></example>
+<example title="Output:" type="shell"><![CDATA[
+Congratulations, you have successfully modified ext/stocks/config.m4,
+module stocks is compiled into PHP]]></example>
+
+<blurb>
+We now have a working stub extension and we can start hacking on the C code to actually make it do something useful.
+</blurb>
+
+</slide>

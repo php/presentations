@@ -1,0 +1,36 @@
+<slide title="stocks.c">
+
+<blurb>
+First we define our user-callable functions in the function_entry table:
+</blurb>
+
+<example type="c"><![CDATA[function_entry stocks_functions[] = {
+  PHP_FE(get_stocks,  NULL)
+  PHP_FE(fetch_quote, NULL)
+  {NULL, NULL, NULL}
+};]]></example>
+
+<blurb>
+Since we are going to be using a resource, make sure we have it declared as a
+static and then we define a destructor function. It is pretty simple, it just
+calls the libstocks free_stocks() function on the top pointer in the linked
+list.
+</blurb>
+
+<example type="c"><![CDATA[static void _free_stocks(stocks_le_struct *stocks_struct) {
+  free_stocks(stocks_struct->top);
+}]]></example>
+
+<blurb>
+Now in our MINIT function we register the destructor by attaching it to the
+le_stocks resource:
+</blurb>
+
+<example type="c"><![CDATA[le_stocks = register_list_destructors(_free_stocks,NULL);]]></example>
+
+<blurb>
+We have nothing special to do in any of the shutdown functions, so the next
+step is to write our actual get_quotes() function.
+</blurb>
+
+</slide>
