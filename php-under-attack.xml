@@ -1,0 +1,26 @@
+<presentation>
+<topic>PHP</topic>
+<title>PHP Under Attack</title>
+<event>OSCON 2003</event>
+<location>Portland, Oregon</location>
+<date>July 10, 2003</date>
+<speaker>Chris Shiflett</speaker>
+<email>shiflett@php.net</email>
+<url>http://talks.php.net/show/php-under-attack</url>
+<slide>slides/php-under-attack/titlepage.xml</slide>
+<slide>slides/php-under-attack/outline.xml</slide>
+<slide>slides/php-under-attack/intro.xml</slide>
+<slide>slides/php-under-attack/xss_intro.xml</slide>
+<slide>slides/php-under-attack/xss_example_simple.xml</slide>
+<slide>slides/php-under-attack/xss_execution.xml</slide>
+<slide>slides/php-under-attack/xss_example_realistic.xml</slide>
+<slide>slides/php-under-attack/xss_prevention.xml</slide>
+<slide>slides/php-under-attack/xss_prevention_example.xml</slide>
+<slide>slides/php-under-attack/csrf_intro.xml</slide>
+<slide>slides/php-under-attack/csrf_example.xml</slide>
+<slide>slides/php-under-attack/csrf_example_explained.xml</slide>
+<slide>slides/php-under-attack/csrf_prevention.xml</slide>
+<slide>slides/php-under-attack/csrf_prevention_example.xml</slide>
+<slide>slides/php-under-attack/more_info.xml</slide>
+<slide>slides/php-under-attack/thank_you.xml</slide>
+</presentation>
