@@ -1,0 +1,55 @@
+<slide title="Documentation">
+<list>
+ <bullet>Written in DocBook (XML)</bullet>
+ <bullet>Generated versions updated automatically</bullet>
+</list>
+<table align="center" columns="3">
+ <cell>*Language*</cell> <cell>*Up-to-date*</cell> <cell>*Untranslated*</cell>
+ <cell>Arabic</cell><cell>0%</cell><cell>99.80%</cell>
+ <cell>Brazilian Portuguese</cell><cell>5.19%</cell><cell>89.91%</cell>
+ <cell>Chinese</cell><cell>0.39%</cell><cell>98.95%</cell>
+ <cell>Czech</cell><cell>1.29%</cell><cell>77.87%</cell>
+ <cell>Dutch</cell><cell>7.57%</cell><cell>90.85%</cell>
+ <cell>Finnish</cell><cell>0.07%</cell><cell>99.84%</cell>
+ <cell>French</cell><cell>0%</cell><cell>28.81%</cell>
+ <cell>German</cell><cell>27.36%</cell><cell>45.58%</cell>
+ <cell>Hebrew</cell><cell>1.25%</cell><cell>97.11%</cell>
+ <cell>Hungarian</cell><cell>18.37%</cell><cell>71.47%</cell>
+ <cell>Italian</cell><cell>31.42%</cell><cell>62.78%</cell>
+ <cell>Japanese</cell><cell>0%</cell><cell>7.28%</cell>
+ <cell>Korean</cell><cell>0%</cell><cell>48.20%</cell>
+ <cell>Polish</cell><cell>12.73%</cell><cell>85.82%</cell>
+ <cell>Romanian</cell><cell>0%</cell><cell>91.78%</cell>
+ <cell>Russian</cell><cell>0%</cell><cell>99.64%</cell>
+ <cell>Spanish</cell><cell>3.07%</cell><cell>49.41%</cell>
+ <cell>Turkish</cell><cell>0%</cell><cell>99.18%</cell>
+</table>
+<blurb title="Manual Notes">
+ There are 7,132 total notes attached to various pages in the manual. The
+ twenty pages (of about 3,000) with the most notes have about 15% of the total
+ notes.
+</blurb>
+<table columns="2">
+ <cell>*Notes*</cell> <cell>*Page*</cell>
+ <cell>105</cell> <cell>http://php.net/manual/en/function.setcookie.php</cell>
+ <cell>100</cell> <cell>http://php.net/manual/en/ref.session.php</cell>
+ <cell>64</cell> <cell>http://php.net/manual/en/language.oop.php</cell>
+ <cell>59</cell> <cell>http://php.net/manual/en/install.apache.php</cell>
+ <cell>57</cell> <cell>http://php.net/manual/en/function.preg-replace.php</cell>
+ <cell>55</cell> <cell>http://php.net/manual/en/function.include.php</cell>
+ <cell>49</cell> <cell>http://php.net/manual/en/ref.imap.php</cell>
+ <cell>49</cell> <cell>http://php.net/manual/en/function.mail.php</cell>
+ <cell>49</cell> <cell>http://php.net/manual/en/ref.image.php</cell>
+ <cell>48</cell> <cell>http://php.net/manual/en/features.file-upload.php</cell>
+ <cell>48</cell> <cell>http://php.net/manual/en/function.date.php</cell>
+ <cell>45</cell> <cell>http://php.net/manual/en/ref.pdf.php</cell>
+ <cell>44</cell> <cell>http://php.net/manual/en/ref.datetime.php</cell>
+ <cell>42</cell> <cell>http://php.net/manual/en/install.windows.php</cell>
+ <cell>41</cell> <cell>http://php.net/manual/en/function.exec.php</cell>
+ <cell>37</cell> <cell>http://php.net/manual/en/language.variables.predefined.php</cell>
+ <cell>37</cell> <cell>http://php.net/manual/en/function.fopen.php</cell>
+ <cell>34</cell> <cell>http://php.net/manual/en/faq.installation.php</cell>
+ <cell>34</cell> <cell>http://php.net/manual/en/function.mssql-connect.php</cell>
+ <cell>34</cell> <cell>http://php.net/manual/en/ref.oci8.php</cell>
+</table>
+</slide>
