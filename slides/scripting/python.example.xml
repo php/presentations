@@ -1,10 +1,11 @@
 <slide title="Python Example">
+<image filename="python-small.jpg" align="right" marginright="1.0em"/>
 <blurb>
 We'll download a URL with Python and print the results.
 </blurb>
+<break lines="3"/>
 
 <example 
-   fontsize="1.2em" 
    type="python"
    filename="http.py"/>
 </slide>           

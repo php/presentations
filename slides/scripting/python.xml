@@ -1,23 +1,24 @@
 <slide title="Python">
+<image filename="python.jpg" align="right" marginright="1.0em"/>
 <blurb>
-Python is a heavily object oriented scripting language, that features 
-oddities such as indent based scope.
+Python is a heavily object oriented scripting language. 
 </blurb>
 
 <list title="Python Advantages" fontsize="2.5em">
-<bullet>Heavy Object Orientation (Good Object Orientation)</bullet>
-<bullet>CS 'Correct'</bullet>
+<bullet>Thousand year language</bullet>
+<bullet>Very small core functionality</bullet>
+<bullet>Very good for prototyping</bullet>
+<bullet>Object Orientation done right</bullet>
 <bullet>Built-in Support for CS Datastructures</bullet>
 <bullet>Rich C API</bullet>
 <bullet>Excellent for Mathematical Work</bullet>
 <bullet>Indent based scope encourages neat programming</bullet>
 <bullet>Guido named it after Monty Python</bullet>
 </list>
-
 <list title="Python Disadvantages" fontsize="2.5em">
 <bullet>Heavy Object Orientation</bullet>
 <bullet>Deviates heavily from more standard languages</bullet>
-<bullet>Its wierd</bullet>
+<bullet>Its weird</bullet>
 </list>
 
 </slide>

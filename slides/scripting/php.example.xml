@@ -1,11 +1,10 @@
 <slide title="PHP Example">
-
+<image filename="animated_elephant.gif" align="right" marginright="1.0em"/>
 <blurb>
 An example program that downloads a webpage.
 </blurb>
 
 <example 
-      fontsize="1.2em" 
       type="php"
       filename="request.php"/>
 

@@ -1,8 +1,10 @@
 <slide title="Command Line Perl">
+<image filename="onion.jpg" align="right" marginright="1.0em"/>
 <blurb>
 Perl is very good at one line programs to finish complicated
 tasks:
 </blurb>
+<break lines="3"/>
 <example fontsize="1.2em">
 <![CDATA[# Taken from a message sent by Tom Christianson to 
 # comp.lang.perl.misc
