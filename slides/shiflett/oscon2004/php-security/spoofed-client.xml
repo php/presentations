@@ -1,5 +1,5 @@
 <slide>
 <title>Spoofed HTTP Requests</title>
 <blurb fontsize="4em">If you're allergic to %telnet%...</blurb>
-<example filename="code/spoofed-client.php" result="1" />
+<example filename="code/spoofed-client.php" result="0" />
 </slide>
