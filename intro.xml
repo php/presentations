@@ -2,9 +2,12 @@
     animate='1'
     jskeyboard='1'
 	navmode="flash">
-<title>This Presentation System</title>
 <topic>Presentation System</topic>
+<title>This Presentation System</title>
+<subtitle>Build web-based presentations quickly and easily</subtitle>
+<copyright>(C) Copyright 2002 The PHP Presentation Team</copyright>
 <navmode>html</navmode>
+<slide>slides/titlepage.xml</slide>
 <slide>slides/slide1.xml</slide>
 <slide>slides/slide2.xml</slide>
 <slide>slides/slide3.xml</slide>
