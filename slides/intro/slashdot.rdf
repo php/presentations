@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://my.netscape.com/rdf/simple/0.9/">
+
+<channel>
+<title>Slashdot: News for nerds, stuff that matters</title>
+<link>http://slashdot.org/</link>
+<description>News for nerds, stuff that matters</description>
+</channel>
+
+<image>
+<title>Slashdot: News for nerds, stuff that matters</title>
+<url>http://images.slashdot.org/topics/topicslashdot.gif</url>
+<link>http://slashdot.org/</link>
+</image>
+
+<item>
+<title>Tom's Guide to Water Cooling</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/181201</link>
+</item>
+
+<item>
+<title>Buffy Staked Again By Emmys</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/1434254</link>
+</item>
+
+<item>
+<title>SSH-Based Solutions - Looking for Industry Proof?</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/1915257</link>
+</item>
+
+<item>
+<title>All Sourceforge.net Being Blocked by SmartFilter</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/1944241</link>
+</item>
+
+<item>
+<title>Snort Creator Makes Good</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/1711229</link>
+</item>
+
+<item>
+<title>Ask 'Rocket Guy' Brian Walker</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/1733231</link>
+</item>
+
+<item>
+<title>LotR Two Towers Trailer Online</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/164242</link>
+</item>
+
+<item>
+<title>802.11 Networks, The Definitive Guide</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/1525250</link>
+</item>
+
+<item>
+<title>One Billion Computers Sold Worldwide</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/1452201</link>
+</item>
+
+<item>
+<title>The True Story of Website Results</title>
+<link>http://slashdot.org/article.pl?sid=02/07/01/143241</link>
+</item>
+
+<textinput>
+<title>Search Slashdot</title>
+<description>Search Slashdot stories</description>
+<name>query</name>
+<link>http://slashdot.org/search.pl</link>
+</textinput>
+
+</rdf:RDF>
