@@ -1,0 +1,30 @@
+<slide title="Document/Literal Example">
+<blurb>But the code to use RPC or Document style SOAP is
+practically the same!  WSDL handles the details for you.</blurb>
+
+<example type="php" fontsize='1.4em' title='RPC/Encoded SOAP Call'>
+<![CDATA[<?php
+require_once('SOAP/Client.php');
+
+$WSDL = new SOAP_WSDL('http://mssoapinterop.org/stkV3/Interop.wsdl');
+$client = $WSDL->getProxy();
+$response = $client->echoString('this is a test');
+
+print $client->xml;
+?>]]>
+</example>
+
+<example type="php" fontsize='1.4em' title='Document/Literal SOAP Request'>
+<![CDATA[<?php
+require_once('SOAP/Client.php');
+
+$WSDL = new SOAP_WSDL('
+        http://mssoapinterop.org/stkv3/wsdl/interopTestDocLit.wsdl');
+$client = $WSDL->getProxy();
+$response = $client->echoString('this is a test');
+
+print $client->xml;
+?>]]>
+</example>
+
+</slide>

@@ -1,0 +1,36 @@
+<slide title="PEAR::SOAP Server">
+
+<example type="php" fontsize='1.4em' title=" ">
+<![CDATA[<?php
+require_once 'SOAP/Server.php';
+
+$server = new SOAP_Server;
+
+class SOAP_Example_Server {
+    var $method_namespace = 'urn:SOAP_Example_Server';
+
+    function echoString($inputString)
+    {
+        return $inputString;
+    }
+}
+
+$soapclass = new SOAP_Example_Server();
+$server->addObjectMap($soapclass);
+$server->service($HTTP_RAW_POST_DATA);
+]]>
+</example>
+
+<example type="php" fontsize='1.4em' title='Client for Example Server'>
+<![CDATA[<?php
+require_once 'SOAP/Client.php';
+
+$soapclient = new SOAP_Client('http://localhost/SOAP/example/exampleserver.php');
+
+$result = $soapclient->call('echoStringSimple',
+                         array('inputString' => 'this is a test string'),
+                         array('namespace' => 'urn:SOAP_Example_Server');
+?>]]>
+</example>
+</slide>
+   

@@ -1,0 +1,53 @@
+<slide title="WSDL based Servers">
+
+<blurb>PHP-SOAP supports binding WSDL files to
+the server objects (PEAR::SOAP does not at this time).  This
+allows for much easier server design, and makes using PHP objects
+as SOAP servers possible without any modifications.  Binding the server
+to a WSDL allows the WSDL to define types and interfaces for
+any SOAP requests made against the server.  Serialization of data
+will also be easier for the developer.</blurb>
+
+<blurb>PHP-SOAP also has an option to persist server objects allowing for
+more robust server-side applications using SOAP.</blurb>
+
+<example type="php" fontsize='1.4em' title="WSDL based SOAP Server">
+<![CDATA[<?php
+
+class SOAP_Example_Server {
+    var $name = NULL;
+    
+    function setName($inputString)
+    {
+        $this->name = $inputString;
+        return true;
+    }
+
+    function getName()
+    {
+        return $this->name;
+    }
+}
+
+$server = new SoapServer('urn:SOAP_Example_Server');
+$server->bind('SOAP_Example_Server.wsdl');
+$server->setClass('MyClass');
+
+# tell the server to use PHP's session capabilities
+# to persist the object
+$server->setPersistence(SOAP_PERSISTENCE_SESSION);
+
+$server->handle();
+?>]]>
+</example>
+
+<example type="php" fontsize='1.4em' title="WSDL based SOAP Client">
+<![CDATA[<?
+$client = SoapObject('http://localhost/SOAP_Example_Server.wsdl');
+
+# These two function calls are seperate HTTP Requests
+$client->setName('Brad Lafountain');
+$name = $client->getName();
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,28 @@
+<slide title="SOAP Messages">
+<list>
+<bullet>Envelope defines what is in the message</bullet>
+<bullet>Encoding defines serialization</bullet>
+</list>
+<list marginleft="2em">
+    <bullet>Strong Data typing Section 5 encoding</bullet>
+    <bullet>Weak Data typing Literal encoding</bullet>
+    <bullet>XML Schema data definition via WSDL</bullet>
+</list>
+<list>
+<bullet>RPC Conventions</bullet>
+</list>
+<list marginleft="2em">
+    <bullet>"Please do this for me."</bullet>
+    <bullet>Used for "function call" type messaging</bullet>
+    <bullet>Less work at the application level</bullet>
+</list>
+<list>
+<bullet>Document Model</bullet>
+</list>
+<list marginleft="2em">
+    <bullet>"I have information for you."</bullet>
+    <bullet>You can pass arbitrary data, such as serialized DOM trees</bullet>
+    <bullet>More work at the application level</bullet>
+    <bullet>RPC-Like behaviour possible</bullet>
+</list>
+</slide>    

@@ -1,0 +1,31 @@
+<slide title="SOAP Envelope">
+<blurb>Only the Insane should deal with this</blurb>
+<example>
+    <![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV=
+    "http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:xsd=
+    "http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi=
+    "http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:SOAP-ENC=
+    "http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:ns4="http://soapinterop.org/"
+  SOAP-ENV:encodingStyle=
+    "http://schemas.xmlsoap.org/soap/encoding/">
+
+<SOAP-ENV:Body>
+
+<ns4:echoString>
+<inputString xsi:type="xsd:string">hello world!</inputString>
+</ns4:echoString>
+
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+    ]]>
+</example>
+</slide>

@@ -1,0 +1,14 @@
+<slide title="SOAP Over SMTP">
+<list>
+<bullet>SOAP does more than HTTP</bullet>
+<bullet>SMTP can provide...</bullet>
+</list>
+<list marginleft="2em">
+<bullet>one-way messaging</bullet>
+<bullet>one-to-many messaging (aka email list)</bullet>
+<bullet>asynchronous messaging</bullet>
+</list>
+<list>
+<bullet>SOAP Over SMTP is otherwise the same as SOAP over HTTP</bullet>
+</list>
+</slide>

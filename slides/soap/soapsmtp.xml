@@ -1,0 +1,24 @@
+<slide title="SOAP SMTP Client">
+
+<example type="php" fontsize='1.4em' title='Sending SOAP over SMTP'>
+<![CDATA[<?php
+require_once('SOAP/Client.php');
+
+$soapclient = new SOAP_Client('mailto:soap@caraveo.com');
+
+$options = array('namespace' => 'http://soapinterop.org/',
+                'from' => 'shanec@ActiveState.com',
+                'host' => 'smtp.ActiveState.com'
+                'port' => 25);
+
+$return = $soapclient->call('echoStringArray',
+                            array('inputStringArray' => array('good','bad','ugly')),
+                            $options);
+
+// don't expect much of a result!
+print_r($return);
+?>]]>
+</example>
+        
+<blurb>The Message ID is the result of the SOAP call: cf4af6d730f1f9ef0cb0309bf9680c23.soap@smtp.ActiveState.com</blurb>
+</slide>

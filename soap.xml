@@ -1,7 +1,8 @@
 <presentation
     jskeyboard="1"
     stylesheet="slides/soap/styles.css.php"
-    logo2="slides/soap/activestate_logo.gif">
+    logo2="slides/soap/activestate_logo.gif"
+    navsize="1.4em">
 <title>Web Services for PHP</title>
 <topic>SOAP</topic>
 <event>OSCON</event>
@@ -12,6 +13,39 @@
 <email>shanec@ActiveState.com</email>
 <url>http://conf.php.net/pres</url>
 <slide>slides/soap/slide1.xml</slide>
-<slide>slides/soap/slide2.xml</slide>
+<slide>slides/soap/agenda.xml</slide>
+<slide>slides/soap/whatissoap.xml</slide>
+<slide>slides/soap/soap.xml</slide>
+<slide>slides/soap/soapenvelope.xml</slide>
+<slide>slides/soap/wsdl.xml</slide>
+<slide>slides/soap/wsdlexample.xml</slide>
+<slide>slides/soap/mime.xml</slide>
+<slide>slides/soap/dime.xml</slide>
+<slide>slides/soap/smtp.xml</slide>
+<slide>slides/soap/other.xml</slide>
+<slide>slides/soap/interop.xml</slide>
+<slide>slides/soap/interop2.xml</slide>
+<slide>slides/soap/implementations.xml</slide>
+<slide>slides/soap/pear.xml</slide>
+<slide>slides/soap/phpsoap.xml</slide>
+<slide>slides/soap/usingsoap.xml</slide>
+<slide>slides/soap/simpleclient1.xml</slide>
+<slide>slides/soap/wsdl2.xml</slide>
+<slide>slides/soap/document.xml</slide>
+<slide>slides/soap/document2.xml</slide>
+<slide>slides/soap/document3.xml</slide>
+<slide>slides/soap/headers.xml</slide>
+<slide>slides/soap/headers2.xml</slide>
+<slide>slides/soap/attachments2.xml</slide>
+<slide>slides/soap/attachments3.xml</slide>
+<slide>slides/soap/soapsmtp.xml</slide>
+<slide>slides/soap/server1.xml</slide>
+<slide>slides/soap/server2.xml</slide>
+<slide>slides/soap/serverfault.xml</slide>
+<slide>slides/soap/serverheader.xml</slide>
+<slide>slides/soap/serveremail.xml</slide>
+<slide>slides/soap/serverwsdl.xml</slide>
+<slide>slides/soap/advanced.xml</slide>
+<slide>slides/soap/resources.xml</slide>
 
 </presentation>

@@ -1,0 +1,25 @@
+<slide title="PHP and SOAP">
+<list>
+<bullet>PEAR::SOAP</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Shane Caraveo, ActiveState</bullet>
+<bullet>Based on SOAPx4 by Dietrich Ayala</bullet>
+</list>
+<list>
+<bullet>PHP-SOAP</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Brad Lafountain</bullet>
+<bullet>Will become the standard PHP-SOAP library</bullet>
+<bullet>C Based extension, using libxml2</bullet>
+</list>
+<list>
+<bullet>NuSOAP</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Dietrich Ayala, contracted by NuSphere</bullet>
+<bullet>Based on SOAPx4</bullet>
+</list>
+
+</slide>

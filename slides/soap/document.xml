@@ -1,0 +1,54 @@
+<slide title="Document/Literal">
+<list title="Differences between Document and RPC styles">
+    <bullet>Generally no type encoding (Document/Literal)</bullet>
+    <bullet>Generally no "function call" element</bullet>
+</list>
+
+<blurb><html>Note the differences (below) between an RPC call and
+a Document message.  RPC calls will have a <b>"function" element</b> around the
+parameters, <b>type data (xsi:type attribute)</b>, and an <b>encodingStyle</b>
+attribute in the envelope.</html></blurb>
+
+<example type="xml" fontsize='1.4em' title="RPC/Encoded SOAP Envelope">
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="http://soapinterop.org/"
+
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"
+>
+
+<SOAP-ENV:Body>
+
+<ns4:echoString>
+<inputString xsi:type="xsd:string">this is a test</inputString>
+</ns4:echoString>
+
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]>
+</example>
+
+<example type="xml" fontsize='1.4em' title="Document/Literal SOAP Envelope">
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+>
+<SOAP-ENV:Body>
+
+<ns1:echoStringParam xmlns:ns1="http://soapinterop.org/xsd">
+this is a test
+</ns1:echoStringParam>
+
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>]]>
+</example>
+
+</slide>

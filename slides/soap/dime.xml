@@ -1,0 +1,10 @@
+<slide title="DIME Attachments">
+<list>
+<bullet>DIME - Direct Internet Message Encapsulation</bullet>
+<bullet>Low overhead binary transfer protocol developed by Microsoft</bullet>
+<bullet>Provides for 'HTTP-1.1 like' data chunking</bullet>
+<bullet>Much more efficient than Mime when dealing with large data</bullet>
+<bullet>DIME is default with .Net services</bullet>
+<bullet>PHP Support highly experimental (works with itself, not tested against .Net)</bullet>
+</list>
+</slide>

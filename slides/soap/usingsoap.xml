@@ -1,0 +1,23 @@
+<slide title="Using SOAP">
+<list>
+<bullet>Using SOAP without WSDL</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Hard to do, requires good knowledge of SOAP library</bullet>
+<bullet>WSDL parsing is still being developed, hand coding can be more interoperable</bullet>
+</list>
+<list>
+<bullet>SOAP libraries that use WSDL</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Very easy to use, but most SOAP libraries do not handle WSDL well enough yet</bullet>
+<bullet>Slow, library must parse WSDL on every instance</bullet>
+</list>
+<list>
+<bullet>Generating Proxies for robust Web Services</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Tools can take their time analyzing WSDL to generate robust proxy classes that increase interoperability.</bullet>
+</list>
+
+</slide>

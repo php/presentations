@@ -1,0 +1,10 @@
+<?
+unset($bg);
+require 'slide.inc'
+?>
+<p>&nbsp;</p>
+<br><h1 align=center>Web Services for PHP</h1>
+<br><h2 align=center>Shane Caraveo<br><font style="color:black;">ActiveState Corporation</font><br>&lt;shanec@ActiveState.com&gt;</h2>
+<br><h3 align=center><a href="http://conf.php.net/soap">http://conf.php.net/soap</a></h3>
+<p>&nbsp;</p>
+<?footer()?>

@@ -1,0 +1,34 @@
+<slide title="Document/Literal Example">
+<blurb>Document/Literal without WSDL possible also:</blurb>
+<example type="php" fontsize='1.0em'>
+<![CDATA[<?php
+require_once('SOAP/Client.php');
+
+$client = new SOAP_Client("http://www.epionet.com/epiowavewebservices/livecitycams/livecitycams.asp", 0);
+
+$result = $client->call("ListLiveCityCams", 
+        NULL, 
+        array('namespace'=>
+                'http://www.epionet.com/webservices/epiowebservices/livecitycams.wsdl',
+            'soapaction'=>
+                'http://www.epionet.com/webservices/epiowebservices/livecitycams/listlivecitycams',
+            'style'=>'document',
+            'use'=>'literal')); 
+
+print $client->wire;
+
+foreach($result as $citycam) {
+    $cam = $client->call("GetLiveCityCam", 
+        array("citycamid"=>$citycam->camid), 
+        array('namespace'=>
+                'http://www.epionet.com/webservices/epiowebservices/livecitycams.wsdl',
+            'soapaction'=>
+                'http://www.epionet.com/webservices/epiowebservices/livecitycams/getlivecitycam',
+            'style'=>'document',
+            'use'=>'literal')); 
+    echo "$cam\n";
+}
+
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,23 @@
+<slide title="PHP-SOAP Server">
+<example type="php" fontsize='1.4em' title=" ">
+<![CDATA[<?php
+class SOAP_Example_Server {
+    function echoString($inputString)
+    {
+        return $inputString;
+    }
+}
+
+$server = new SoapServer("urn:SOAP_Example_Server");
+$server->setClass("SOAP_Example_Server");
+$server->handle();
+?>]]>
+</example>
+
+<example type="php" fontsize='1.4em' title='Client for Example Server'>
+<![CDATA[<?
+$example = SoapObject(\'http://localhost/SOAP/example/exampleserver.php\');
+$response = $example->echoString(\'This is a test!\');
+?>]]>
+</example>
+</slide>

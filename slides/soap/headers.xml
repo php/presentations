@@ -1,0 +1,36 @@
+<slide title="SOAP Headers">
+<list>
+<bullet>A way to send additional data that effects the processing of the SOAP Body</bullet>
+<bullet>Can be targeted towards an intermediary, or the endpoint</bullet>
+<bullet>Could be used for authentication, routing information, debug data, etc.</bullet>
+</list>
+
+<example type="xml" fontsize='1.4em' title='Example of SOAP Message with Headers'>
+<![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:ns4="http://soapinterop.org/echoheader/"
+  xmlns:ns5="http://soapinterop.org/"
+  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+<SOAP-ENV:Header>
+
+<ns4:echoMeStringRequest
+    xsi:type="xsd:string"
+    SOAP-ENV:actor="http://schemas.xmlsoap.org/soap/actor/next"
+    SOAP-ENV:mustUnderstand="1"
+  >hello world</ns4:echoMeStringRequest>
+
+</SOAP-ENV:Header>
+
+<SOAP-ENV:Body>
+<ns5:echoVoid/>
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>]]>
+</example>
+</slide>

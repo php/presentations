@@ -1,0 +1,20 @@
+<slide title="Common Interop Issues">
+<list>
+<bullet>Some things just don't fit</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Sending 14 points of precision to a 10 point precision system</bullet>
+<bullet>Everyone does a map differently</bullet>
+<bullet>Complex types are just sometimes too complex</bullet>
+</list>
+<list>
+<bullet>Document/Literal vs. RPC/Encoded</bullet>
+<bullet>Future...</bullet>
+</list>
+<list marginleft="2em">
+<bullet>More Document/Literal work</bullet>
+<bullet>Hashes and Maps</bullet>
+<bullet>Authentications, Security</bullet>
+<bullet>Better WSDL and Schema support</bullet>
+</list>
+</slide>

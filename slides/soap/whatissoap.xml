@@ -1,0 +1,11 @@
+<slide title="What is SOAP?">
+<blurb title="Simple Object Access Protocol">The specs describe SOAP as 'a lightweight protocol
+for exchange of information in a decentralized,
+distributed environment.'</blurb>
+<list>
+<bullet>XML based messaging</bullet>
+<bullet>Encoding rules for expressing data types</bullet>
+<bullet>Conventions for using SOAP for RPC</bullet>
+<bullet>Bindings for transport layers</bullet>
+</list>
+</slide>

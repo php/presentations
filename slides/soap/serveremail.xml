@@ -1,0 +1,44 @@
+<slide title="SOAP Email">
+<blurb>PEAR::SOAP includes classes and examples to handle
+SOAP Messages embedded in Email.  These classes are used in relatively
+the same manor as a regular HTTP based SOAP Server, except that
+they need to be executed by a task scheduler or directly by the
+SMTP server itself.</blurb>
+
+<blurb>This server reads data from STDIN and services the SOAP Message
+it receives.  If you use QMail, you can create a .qmail-soapaddress file with
+'| /usr/bin/php /path/to/email_server.php' to service SOAP over SMTP requests.
+</blurb>
+
+<example type="php" fontsize='1.4em' title='SOAP Server that handles Email'>
+<![CDATA[<?php
+require_once 'SOAP/Server/Email.php';
+
+$server = new SOAP_Server_Email;
+
+class SOAP_Example_Server {
+    var $method_namespace = 'urn:SOAP_Example_Server';
+
+    function echoString($inputString)
+    {
+        return $inputString;
+    }
+}
+
+# read stdin
+$fin = fopen('php://stdin','rb');
+if (!$fin) exit(0);
+
+$email = '';
+while (!feof($fin) && $data = fread($fin, 8096)) {
+  $email .= $data;
+}
+
+fclose($fin);
+
+$soapclass = new SOAP_Example_Server();
+$server->addObjectMap($soapclass);
+$server->service($email);
+?>]]>
+</example>
+</slide>

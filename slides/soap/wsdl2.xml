@@ -1,0 +1,80 @@
+<slide title="WSDL or Not?">
+
+<example type="php" fontsize='1.4em' title='Without WSDL, you have to know much more!'>
+<![CDATA[<?php
+require_once('SOAP/Client.php');
+
+$key = 'xxxxxxxxxxxx';
+$query = 'Caraveo';
+
+$client = new SOAP_Client('http://api.google.com/search/beta2');
+$response = $client->call('doGoogleSearch',
+                          array($key,$query,0,10,false,'',false,'','',''),
+                          array('namespace'=>'urn:GoogleSearch'));
+
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">'.$result->title."</a><br><br>\n";
+    echo $result->snippet."<br><br><br>\n";
+}
+?>]]>
+</example>
+        
+<example type="xml" fontsize='1.4em' title="But this is still wrong...the soap library cannot determine what to call anything:">
+<![CDATA[<ns4:doGoogleSearch>
+<item xsi:type="xsd:string">xxxxxxxxx</item>
+<item xsi:type="xsd:string">Caraveo</item>
+<item xsi:type="xsd:int">0</item>
+<item xsi:type="xsd:int">1</item>
+<item xsi:type="xsd:boolean">false</item>
+<item xsi:type="xsd:string"></item>
+<item xsi:type="xsd:boolean">false</item>
+<item xsi:type="xsd:string"></item>
+<item xsi:type="xsd:string"></item>
+<item xsi:type="xsd:string"></item>
+</ns4:doGoogleSearch>]]>
+</example>
+
+<example type="php" fontsize='1.4em' title="Here is a fully accurate non-WSDL call:">
+<![CDATA[<?php
+require_once('SOAP/Client.php');
+
+$key = new SOAP_Value('key','string','xxxx');
+$query = new SOAP_Value('q','string','Caraveo');
+$start = new SOAP_Value('start','int',0);
+$maxResults = new SOAP_Value('maxResults','int',4);
+$filter = new SOAP_Value('filter','boolean',false);
+$restrict = new SOAP_Value('restrict','string','');
+$safeSearch = new SOAP_Value('safeSearch','boolean',false);
+$lr = new SOAP_Value('lr','string','');
+$ie = new SOAP_Value('ie','string','');
+$oe = new SOAP_Value('oe','string','');
+
+$client = new SOAP_Client('http://api.google.com/search/beta2');
+$response = $client->call('doGoogleSearch',
+                          array($key,$query,$start,$maxResults,
+                                $filter,$restrict,$safeSearch,$lr,$ie,$oe),
+                          array('namespace'=>'urn:GoogleSearch'));
+
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">'.$result->title."</a><br><br>n";
+    echo $result->snippet."<br><br><br>\n";
+}
+
+?>]]>
+</example>
+
+<example type="xml" fontsize='1.4em' title="And the XML it produces:">
+<![CDATA[<ns4:doGoogleSearch>
+<key xsi:type="xsd:string">xxxx</key>
+<q xsi:type="xsd:string">Caraveo</q>
+<start xsi:type="xsd:int">0</start>
+<maxResults xsi:type="xsd:int">10</maxResults>
+<filter xsi:type="xsd:boolean">false</filter>
+<restrict xsi:type="xsd:string"></restrict>
+<safeSearch xsi:type="xsd:boolean">false</safeSearch>
+<lr xsi:type="xsd:string"></lr>
+<ie xsi:type="xsd:string"></ie>
+<oe xsi:type="xsd:string"></oe>
+</ns4:doGoogleSearch>]]>
+</example>
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Mime Attachments">
+<list>
+<bullet>Many things cannot easily be put into SOAP Envelopes</bullet>
+</list>
+<list marginleft="2em">
+    <bullet>XML documents with different encodings</bullet>
+    <bullet>Word Documents, Images, viruses...etc.</bullet>
+</list>
+<list>
+<bullet>You can attach external data using Mime or DIME</bullet>
+<bullet>The SOAP Body will have an element with a reference to the external data</bullet>
+</list>
+</slide>
+

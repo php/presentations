@@ -1,0 +1,149 @@
+<slide title="SOAP Headers">
+<blurb>The server handles headers much like it
+handles other types of calls.  You set up a class to handle
+the headers and register it just as you would a regular
+server object.  The way the server knows to pass headers
+to the header class is by the namespace given to the class.</blurb>
+
+<example type="php" fontsize='1.4em' title="Server that handles headers">
+<![CDATA[<?php
+require_once 'SOAP/Server.php';
+
+class Header_Handler {
+    var $method_namespace = 'urn:Header_Handler';
+    var $authenticated = FALSE;
+    
+    function authenticate($authinfo)
+    {
+        if ($authinfo->username == 'foo' &&
+            $authinfo->password == 'bar') {
+            $this->authenticated = TRUE;
+            return 'Authentication OK';
+        }
+        $faultcode = 'Client';
+        $faultstring = 'Invalid Authentication';
+        $faultactor = $this->method_namespace;
+        $detail = NULL;
+        return new SOAP_Fault($faultstring,$faultcode,$faultactor,$detail);
+    }
+}
+
+class Simple_Server {
+    var $method_namespace = 'urn:Simple_Server';
+    
+    function Simple_Server() {
+        global $server;
+        $this->headers = new Header_Handler();
+        $server->addObjectMap($this->headers);
+    }
+    
+    function echoString($text) {
+        if (!$this->headers->authenticated) {
+            $faultcode = 'Client';
+            $faultstring = 'You must send authentication headers';
+            $faultactor = $this->method_namespace;
+            $detail = NULL;
+            return new SOAP_Fault($faultstring,$faultcode,$faultactor,$this);
+        }
+        return $text;
+    }
+}
+
+$server = new SOAP_Server;
+$myserver = new Simple_Server();
+$server->addObjectMap($myserver);
+$server->service($HTTP_RAW_POST_DATA);
+?>]]>
+</example>
+
+<example type="php" fontsize='1.4em' title="Client sending headers">
+<![CDATA[<?php
+require_once 'SOAP/Client.php';
+
+$soapclient = new SOAP_Client('http://localhost/talk/server3.php');
+
+$header = new SOAP_Header(
+        '{urn:Header_Handler}authenticate',
+        'Struct',
+        array('username'=>'foo','password'=>'bar'),
+        1);
+
+$soapclient->addHeader($header);
+
+$ret = $soapclient->call('echoString',array('inputString'=>'test'),'urn:Simple_Server');
+?>]]>
+</example>
+
+<example type="text" fontsize='1.4em' title="The SOAP Wire">
+<![CDATA[OUTGOING:
+
+POST /talk/server3.php HTTP/1.0
+User-Agent: PEAR-SOAP 0.6.1
+Host: localhost
+Content-Type: text/xml; charset=UTF-8
+Content-Length: 834
+SOAPAction: ""
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:Header_Handler"
+ xmlns:ns5="urn:Simple_Server"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+<SOAP-ENV:Header>
+<ns4:authenticate
+  SOAP-ENV:actor="http://schemas.xmlsoap.org/soap/actor/next"
+  SOAP-ENV:mustUnderstand="1">
+    <username xsi:type="xsd:string">foo</username>
+    <password xsi:type="xsd:string">bar</password>
+</ns4:authenticate>
+</SOAP-ENV:Header>
+
+<SOAP-ENV:Body>
+<ns5:echoString>
+<inputString xsi:type="xsd:string">test</inputString>
+</ns5:echoString>
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>
+
+
+INCOMING
+
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/5.0
+Date: Wed, 26 Jun 2002 06:54:40 GMT
+X-Powered-By: PHP/4.2.1
+Server: PEAR-SOAP 0.6.1
+Content-Type: text/xml; charset=UTF-8
+Content-Length: 695
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:Header_Handler"
+ xmlns:ns5="urn:Simple_Server"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+
+<SOAP-ENV:Header>
+<ns4:authenticate xsi:type="xsd:string">Authentication OK</ns4:authenticate>
+</SOAP-ENV:Header>
+
+<SOAP-ENV:Body>
+<ns5:echoStringResponse>
+<return xsi:type="xsd:string">test</return>
+</ns5:echoStringResponse>
+</SOAP-ENV:Body>
+
+</SOAP-ENV:Envelope>]]>
+</example>
+</slide>

@@ -1,0 +1,62 @@
+<slide title="Simple SOAP">
+
+<example type="php" title="PEAR::SOAP">
+<![CDATA[<?php
+require_once('SOAP/Client.php');
+
+$key = 'xxxxxxxxxxxx';
+$query = 'Caraveo';
+
+$wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
+$WSDL = new SOAP_WSDL($wsdlurl);
+$client = $WSDL->getProxy();
+
+$response =
+        $client->doGoogleSearch(
+                    $key,$query,0,4,
+                    false,'',false,'','','');
+
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">';
+    echo $result->title."</a><br><br>\n";
+    echo $result->snippet."<br><br><br>\n";
+}
+?>
+]]>
+</example>
+
+<example type="php" title="PHP-SOAP">
+<![CDATA[<?php
+$key = 'xxxxxxxxxxxx';
+$query = 'Caraveo';
+
+$wsdl = 'http://api.google.com/GoogleSearch.wsdl';
+$client = new SoapObject($wsdl);
+
+$response =
+        $client->doGoogleSearch(
+                    $key,$query,0,4,
+                    false,'',false,'','','');
+
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">';
+    echo $result->title."</a><br><br>\n";
+    echo $result->snippet."<br><br><br>\n";
+}
+?>
+]]>
+</example>
+
+<blurb type="html" title="Example Output">
+<![CDATA[
+<a href="http://www.caraveopapayas.com/">Welcome to <b>Caraveo</b> Papayas on Internet....!</a><br><br>
+ <b>...</b> <b>CARAVEO</b> PAPAYAS. Welcome to <b>Caraveo</b> Papayas site on the Web. Here, you will find<br> all the information you are looking for about our products and our company. <b>...</b>   <br><br><br>
+<a href="http://www.caraveo.com/"> This website is built for the <b>Caraveo</b> Family, and it's <b>...</b> </a><br><br>
+This website is built for the <b>Caraveo</b> Family, and it's extended family members. <b>...</b> Finally!<br> After almost a year of being down, <b>Caraveo</b>.com is almost back! <b>...</b>   <br><br><br>
+<a href="http://www.webportal.com/caraveo/">Rebecca <b>Caraveo</b> - Photographer</a><br><br>
+photography by rebecca m. <b>caraveo</b>, <b>...</b> 2001 Photography by Rebecca <b>Caraveo</b> 2001<br> HTML Graphics by WebPortal Inc. All rights reserved. Disclaimer.  <br><br><br>
+<a href="http://www.chez.com/marccaraveo/">Page personnelle de Marc <b>CARAVEO</b></a><br><br>
+ <b>...</b> Tout d'abord bienvenue sur ma page personnelle de Marc <b>CARAVEO</b>. Malheureusement,<br> votre navigateur ne prend pas en compte les page contenant des cadres (frames). <b>...</b>   <br><br><br>
+]]>
+</blurb>
+</slide>
