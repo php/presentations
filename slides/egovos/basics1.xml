@@ -1,0 +1,12 @@
+<slide title="Language Basics">
+
+<blurb title="Variables and Expressions" />
+<example><![CDATA[<?php
+	$age = 15;
+	$name = "Robertson Davies";
+	$gpa = 3.14;
+	$age = $age + 1;
+?>]]></example>
+
+
+</slide>

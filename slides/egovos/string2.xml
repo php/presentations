@@ -1,0 +1,12 @@
+<slide title="String Manipulation">
+<h3>explode</h3>
+<example title="explode" result="1"><![CDATA[<?php
+ $a = explode(":", "This:string:has:delimiters.");
+ while (list(,$value) = each($a)) {
+     if (strcmp($value, "has") == 0) {
+         echo "had ";
+     } else echo $value." ";
+ }
+?>]]></example>
+
+</slide>

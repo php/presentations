@@ -1,0 +1,12 @@
+<slide title="Language Basics">
+
+<blurb title="Output" />
+<example><![CDATA[<?php
+    print "Hello World\n";
+    printf("%.2f",$price);
+    print<<<_END_
+<input type="submit" value="$val">
+_END_;
+?>]]></example>
+
+</slide>

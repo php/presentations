@@ -1,0 +1,7 @@
+<slide title="String Manipulation">
+<example title="substr" result="1"><![CDATA[<?php
+ $str = "Fast String Manipulation";
+ echo substr($str,0,4) . substr($str,-9);
+?>]]></example>
+
+</slide>

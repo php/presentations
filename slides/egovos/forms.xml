@@ -1,0 +1,16 @@
+<slide title="Forms">
+<blurb title="Handling form variables">
+Submitted variables are in arrays: %$_GET%, %$_POST%, %$_COOKIE%, %$_REQUEST%
+ </blurb>
+  <example fontsize="1.5em" result="1"><![CDATA[<?php
+if (isset($_POST['submit'])) {
+    print 'Hello, '.$_POST['name'];
+} else {
+    print<<<_HTML_
+<form method="POST" action="$_SERVER[PHP_SELF]">
+    Your name: <input type="text" name="name"> <br>
+<input type="submit" name="submit">
+</form>
+_HTML_;
+} ?>]]></example>
+</slide>

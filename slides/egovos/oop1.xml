@@ -1,0 +1,21 @@
+<slide title="Objects">
+
+<example title="Class Definition"><![CDATA[<?php
+  class Cart {
+    var $items;
+    function add_item($artnr, $num) {
+        $this->items[$artnr] += $num;
+    }  
+  } 
+?>]]></example>
+
+<example title="Inheriting a class with a Constructor"><![CDATA[<?php
+  class NamedCart extends Cart {
+    var $owner;
+    function NamedCart($name) {
+        $this->owner = $name;
+    }
+  } 
+?>]]></example>
+
+</slide>

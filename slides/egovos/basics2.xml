@@ -1,0 +1,12 @@
+<slide title="Language Basics">
+
+<blurb title="Arrays" />
+<example><![CDATA[<?php
+    $states[0] = 'Delaware';  
+    $states[1] = 'Pennsylvania';
+    $matrix[5][7] = 12.7;
+    $capitals['DE'] = 'Dover';
+    $capitals['PA'] = 'Harrisburg';
+?>]]></example>
+    
+</slide>

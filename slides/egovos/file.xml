@@ -1,0 +1,9 @@
+<slide title="Reading a File">
+<example title="readfile()" result="1"><![CDATA[<?php readfile("/etc/issue")?>]]></example>
+
+<example title="file_get_contents()" result="1"><![CDATA[<?php 
+    $contents = file_get_contents("/etc/issue");
+	$contents = trim($contents,"\n");
+	echo nl2br($contents);
+?>]]></example>
+</slide>

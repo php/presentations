@@ -1,0 +1,16 @@
+<slide title="Encryption">
+<blurb>The %mcrypt% extension lets you encrypt and decrypt data with many popular algorithms: Blowfish, DES, IDEA, Twofish, WAKE, and many others.
+  </blurb>
+<example fontsize="1.5em"><![CDATA[<?php
+$key = 'Is this the potato farm?'
+$s   = 'The account balance is $2000';
+$alg = MCRYPT_BLOWFISH;
+$mode = MCRYPT_MODE_CBC;
+$iv = mcrypt_create_iv(mcrypt_get_iv_size($alg,$mode),
+                       MCRYPT_DEV_URANDOM);
+$ct = mcrypt_encrypt($alg, $key, $s,  $mode, $iv);
+$pt = mcrypt_decrypt($alg, $key, $ct, $mode, $iv);
+?>]]></example>
+</slide>
+
+

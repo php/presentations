@@ -1,0 +1,43 @@
+<presentation>
+<topic>PHP</topic>
+<title>Web Programming with PHP</title>
+<location>Washington, DC</location>
+<event>eGovOS Conference</event>
+<date>March 19, 2003</date>
+<speaker>David Sklar</speaker>
+<email>sklar@sklar.com</email>
+<url>http://www.sklar.com/</url>
+
+<slide>slides/egovos/titlepage.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+<slide>slides/egovos/users.xml</slide>
+<slide>slides/intro/platforms.xml</slide>
+<slide>slides/egovos/basics1.xml</slide>
+<slide>slides/egovos/basics2.xml</slide>
+<slide>slides/egovos/basics3.xml</slide>
+<slide>slides/egovos/basics4.xml</slide>
+<slide>slides/egovos/modes.xml</slide>
+<slide>slides/egovos/forms.xml</slide>
+<slide>slides/egovos/syntax.xml</slide>
+<slide>slides/egovos/typing.xml</slide>
+<slide>slides/egovos/arrays.xml</slide>
+<slide>slides/egovos/funcs.xml</slide>
+<slide>slides/egovos/oop1.xml</slide>
+<slide>slides/egovos/oop2.xml</slide>
+<slide>slides/egovos/datestimes.xml</slide>
+<slide>slides/egovos/string1.xml</slide>
+<slide>slides/egovos/string2.xml</slide>
+<slide>slides/egovos/regex.xml</slide>
+<slide>slides/egovos/file.xml</slide>
+<slide>slides/intro/cfile.xml</slide>
+<slide>slides/egovos/sqlex.xml</slide>
+<slide>slides/egovos/sql.xml</slide>
+<slide>slides/egovos/header1.xml</slide>
+<slide>slides/egovos/cookie1.xml</slide>
+<slide>slides/egovos/cookie2.xml</slide>
+<slide>slides/i18nl10n/multibyte.xml</slide>
+<slide>slides/egovos/mcrypt.xml</slide>
+<slide>slides/intro/ext.xml</slide>
+<slide>slides/egovos/resources.xml</slide>
+</presentation>

@@ -1,0 +1,21 @@
+<slide title="SQL Example">
+<blurb>
+PHP code that talks to databases generally connect
+to the database, select a database, send a query and process through the results.
+</blurb>
+  <example fontsize="1.3em"><![CDATA[<?php
+mysql_pconnect("db.server.com","user","pwd");
+mysql_select_db("products");
+$result = mysql_query("SELECT * FROM details");
+if ($result) {
+    echo "<TABLE>\n";
+    echo "<TR><TH>Name</TH><TH>Info</TH></TR>\n";
+    while ($a = mysql_fetch_array($result)) {
+      echo "<TR><TD>$a[name]</TD><TD>$a[info]</TD></TR>";
+    }
+    echo "</TABLE>";
+} else {
+    echo "<P>Nothing to see here.";
+}
+?>]]></example>
+</slide>

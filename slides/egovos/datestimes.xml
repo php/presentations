@@ -1,0 +1,6 @@
+<slide title="Dates and Times">
+<example fontsize="1.5em" result="1" title="Format time with %strftime()%:"><![CDATA[<?php print strftime('%A %b %e: day %j of %Y'); ?>]]></example>
+
+<example fontsize="1.5em" result="1" title="Find dates with %strtotime()%:"><![CDATA[<?php $t = strtotime('now + 3 weeks');
+    print strftime('%c',$t); ?>]]></example>
+</slide>

@@ -1,0 +1,16 @@
+<slide title="Cookies">
+
+<example title="Reading a Cookie"><![CDATA[<?php echo $_COOKIE['user']; ?>]]></example>
+
+<example title="Deleting the Cookies"><![CDATA[<?php setcookie('user',''); ?>]]></example>
+<example><![CDATA[<? setcookie('user','', 
+             mktime(12,0,0,11,22,1970)); ?>]]></example>
+
+<blurb title="Other Optional Paramters">
+Path, Domain, and Secure parameters can also be set to restrict a
+cookie to a certain path, domain or in the case of the 
+Secure parameter, limit the cookie to only be
+set if the request came in over an SSL connection.
+</blurb>
+
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Regular Expressions">
+  <example title="Perl Compatible Regexes" fontsize="1.5em"><![CDATA[<?php
+    if (preg_match('/^\d{5}(-\d{4})?$/',
+                   $_POST['zip'])) {  }
+?>]]></example>
+  <example result="1" fontsize="1.5em"><![CDATA[<?php
+    $text = "Hello, /Alice/. How are you?";
+    print preg_replace('{/([^/]+)/}','<b>\\1</b>',
+                       $text);
+?>]]></example>
+</slide>

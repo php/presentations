@@ -1,0 +1,17 @@
+<slide title="Basic Data Types">
+<example title="Numbers (integers and real)" result="1"><![CDATA[<?php
+    $a = 1234;  $b = 0777;
+    $c = 0xff;  $d = 1.25;
+    echo "$a $b $c $d<br />\n";
+?>]]></example>
+
+<list title="Dynamic Typing">
+<bullet>Don't have to declare types</bullet>
+<bullet>Automatic conversion done</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+    echo 5 + "1.5" + "10e2";
+?>]]></example>
+
+</slide>

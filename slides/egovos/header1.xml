@@ -1,0 +1,10 @@
+<slide title="HTTP Headers">
+<blurb>
+You can add headers to the HTTP response in PHP using the 
+%header()% function. 
+</blurb>
+<example title="Redirection"><![CDATA[<?php 
+header('Location: http://www.php.net/');
+?>]]></example>
+
+</slide>

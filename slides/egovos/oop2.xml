@@ -1,0 +1,18 @@
+<slide title="Objects">
+
+<example title="Invocation"><![CDATA[<?php
+  $cart = new NamedCart("PenguinGear");
+  $cart->add_item(170923, 2);
+?>]]></example>
+
+<example title="Static Method calls"><![CDATA[<?php
+  class Widget {
+    function report() {
+        echo "Widget reporting for duty.";
+    }
+  }
+
+Widget::report();
+?>]]></example>
+
+</slide>

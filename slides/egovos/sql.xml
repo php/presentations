@@ -1,0 +1,27 @@
+<slide title="Database Support" layout="2columns">
+<list title="SQL">
+<bullet> Adabas D, 
+Empress, 
+IBM DB2, 
+Informix, 
+Ingres, 
+Interbase, 
+Frontbase, 
+mSQL, 
+MS SQL Server, 
+MySQL, 
+ODBC, 
+Ovrimos, 
+Oracle (OCI7,OCI8), 
+PostgreSQL, 
+Raima Velocis, 
+Solid, 
+Sybase, 
+DB++
+</bullet>
+</list>
+<divide />
+<list title="Others">
+<bullet>dBase, filePro (read-only), dbm (ndbm, gdbm, Berkeley db)</bullet>
+</list>
+</slide>

@@ -1,0 +1,9 @@
+<slide title="Cookies">
+
+<example title="Setting a Session Cookie"><![CDATA[<?php setcookie('user','david'); ?>]]></example>
+
+<example title="Setting a Persistent Cookie"><![CDATA[<?php setcookie('user','david', 
+           mktime(12,0,0,11,22,2003)); ?>]]></example>
+
+
+</slide>

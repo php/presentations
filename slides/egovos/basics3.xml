@@ -1,0 +1,11 @@
+<slide title="Language Basics">
+
+<blurb title="Functions and Control Structures" />
+<example><![CDATA[<?php
+    $len = strlen($input);
+    phpinfo();
+    while($not_done) { ... }
+    for($i = 0; $i < 10; $i++) { ... }
+?>]]></example>
+
+</slide>

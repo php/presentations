@@ -1,0 +1,18 @@
+<slide title="Functions">
+<example title="Typical User Defined Function"><![CDATA[<?php
+function log_err($user, $type="error") {
+    print "User $user: $problem.\n";
+}
+?>]]></example>
+
+<example title="Default values"><![CDATA[<?php
+function head($title="Default Title") {?>
+    <HTML><HEAD><TITLE>
+    <? echo $title ?>
+    </TITLE></HEAD><BODY><?
+}
+
+head();
+?>]]></example>
+
+</slide>
