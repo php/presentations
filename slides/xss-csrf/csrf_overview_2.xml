@@ -1,0 +1,9 @@
+<slide fontsize="4.5em">
+<title>CSRF Overview (2/3)</title>
+<blurb fontsize="3.5em">
+An attacker can use any number of techniques to trick a trusted user into
+sending a request unintentionally. This request can potentially perform an
+unwanted action, bypassing any safeguards that might be in place.
+</blurb>
+<image align="center" filename="tricked.jpg" />
+</slide>

@@ -1,0 +1,8 @@
+<slide fontsize="4.5em">
+<title>CSRF Overview (1/3)</title>
+<blurb fontsize="3.5em">
+CSRF vulnerabilities exist when the identity of the user is the only
+safeguard used to protect an important action.
+</blurb>
+<image align="center" filename="license.jpg" />
+</slide>

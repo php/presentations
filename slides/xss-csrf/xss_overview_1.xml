@@ -1,0 +1,9 @@
+<slide fontsize="4.5em">
+<title>XSS Overview (1/3)</title>
+<blurb fontsize="3.5em">
+XSS vulnerabilities exist when foreign data is not properly validated. This
+data can potentially be displayed to other users, exposing them to security
+risks.
+</blurb>
+<image align="center" filename="alien.png" />
+</slide>

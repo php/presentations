@@ -1,0 +1,5 @@
+<slide fontsize="4em">
+<title>XSS Example</title>
+<blurb fontsize="3.5em">XSS attacks can be anything. This script steals the user's cookies.</blurb>
+<example filename="xss_example.php" />
+</slide>

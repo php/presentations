@@ -1,0 +1,9 @@
+<slide fontsize="4.5em">
+<title>XSS Overview (3/3)</title>
+<blurb fontsize="3.5em">
+Other vulnerabilities exist because of a flaw in the data filtering. Peer
+code reviews, greedy filtering rules, and a general understanding of how
+data moves within your application can decrease the likelihood of such flaws.
+</blurb>
+<image align="center" filename="lock_picks.png" />
+</slide>

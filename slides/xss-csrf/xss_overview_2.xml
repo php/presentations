@@ -1,0 +1,9 @@
+<slide fontsize="4.5em">
+<title>XSS Overview (2/3)</title>
+<blurb fontsize="3.5em">
+Client data, and truly any foreign data, should never be trusted. Many XSS
+vulnerabilities exist because of a complete lack of data filtering. Don't
+let this be you.
+</blurb>
+<image align="center" filename="open_door.png" />
+</slide>

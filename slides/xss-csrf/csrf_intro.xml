@@ -1,0 +1,22 @@
+<slide fontsize="4em">
+<title>What is CSRF?</title>
+<list fontsize="3.5em">
+	<bullet>
+		Exploits the trust a site has for a particular user
+	</bullet>
+	<bullet>
+		Generally involves Web sites that rely completely on the
+		identification of the user for security
+	</bullet>
+	<bullet>
+		Involves "tricking" a user into unknowingly sending an HTTP request
+		of the attacker's choosing
+	</bullet>
+	<bullet>
+		Represents the best reason to disable register_globals
+	</bullet>
+	<bullet>
+		No easy solution - depends on application design
+	</bullet>
+</list>
+</slide>

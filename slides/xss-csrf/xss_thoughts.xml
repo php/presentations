@@ -1,0 +1,14 @@
+<slide fontsize="4.5em">
+<title>XSS Thoughts</title>
+<blurb fontsize="3.5em">
+Due to media exposure and the large number of vulnerabilities, most Web
+developers are familiar with the term Cross-Site Scripting (XSS).
+</blurb>
+<blurb fontsize="3.5em">
+Many Web developers also have a basic understanding of what XSS is and
+have taken steps to prevent such vulnerabilities in their own applications.
+</blurb>
+<blurb fontsize="3.5em">
+A false understanding can be just as dangerous as no understanding.
+</blurb>
+</slide>

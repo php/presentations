@@ -1,0 +1,9 @@
+<slide fontsize="4.5em">
+<title>CSRF Overview (3/3)</title>
+<blurb fontsize="3.5em">
+The primary challenge in defending against CSRF is enforcing the use of your
+own forms. This can practically eliminate the likelihood of a successful
+CSRF attack by making a legitimate request extremely difficult to forge.
+</blurb>
+<image align="center" filename="escher.jpg" />
+</slide>
