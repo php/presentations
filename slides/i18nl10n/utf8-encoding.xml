@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>UTF8 Encoding</title>
+
+	<blurb>Characters in the ASCII range are stored "as-is"</blurb>
+	<break />
+
+	<blurb>Characters in the range 0x0080 to 0x07ff:</blurb>
+	<example class="bit_larger"><![CDATA[byte 1: 110x xxxx
+byte 2: 10xx xxxx
+
+ë (0x00eb)   110x xxxx  10xx xxxx
+1110 1011 -> ---+ ++11  --10 1011
+             ====================
+             1100 0011  1010 1011
+                  0xc3       0xab]]></example>
+	<break />
+
+	<blurb>Characters in the range 0x8000 to 0xffff:</blurb>
+	<example class="bit_larger"><![CDATA[byte 1: 1110 xxxx
+byte 2: 10xx xxxx
+byte 3: 10xx xxxx
+
+功 (0x529f)              110x xxxx  10xx xxxx  10xx xxxx
+0101 0010  1001 1111 ->  ---+ 0101  --00 1010  --01 1111
+                         ===============================
+                         1100 0101  1000 1010  1001 1111
+                              0xe5       0x8a       0x9f]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

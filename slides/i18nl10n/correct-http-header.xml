@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF8"?>
+<slide fontsize="6em">
+	<title>Setting a Content-Type header</title>
+
+	<example class="bit_larger"><![CDATA[<?php
+	header("Content-Type: text/html; charset=iso-8859-1");
+?>
+Vær så god]]></example>
+	<break lines="5"/>
+
+	<blurb>Very easy to do, and the result is much better:</blurb>
+	<image class="spaced" filename="correct-http-header.png"/>
+</slide>
+<!--
+vim: encoding=utf8
+-->

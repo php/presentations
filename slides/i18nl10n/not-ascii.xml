@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Not Everything is ASCII</title>
+
+	<break lines="3"/>
+	<image class="spaced" align="right" filename="ascii-table.png"/>
+	<break lines="2"/>
+	<list>
+		<bullet>ASCII is a 7 bit character set</bullet>
+		<bullet>ASCII is old (published in 1968)</bullet>
+		<bullet effect="hide">Only English does not require accented characters.</bullet>
+		<bullet effect="hide">There are more languages than English :)</bullet>
+		<bullet effect="hide">This means that it is no longer adequate</bullet>
+	</list>
+</slide>

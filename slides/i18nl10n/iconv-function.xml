@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Converting Character Sets</title>
+
+	<blurb>iconv():</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+$str = "1978,Dérick,Rethans";
+echo iconv('iso-8859-1', 'utf8', $str);
+?>]]></example>
+
+	<break lines="2"/>
+
+	<blurb>iconv():</blurb>
+	<example class="bit_larger"><![CDATA[<?php
+$str = "© 2004, by Derick Rethans";
+echo iconv('iso-8859-1', 'iso-8859-2', $str);
+?>]]></example>
+	<blurb>output:</blurb>
+	<example class="bit_larger_output">Notice: iconv() [function.iconv]: Detected an illegal character in input string in /home/httpd/pres2/display.php(461) : eval()'d code on line 3</example>
+
+	<break lines="2"/>
+
+	<blurb>iconv():</blurb>
+	<example class="bit_larger"><![CDATA[<?php
+$str = "© 2004, by Derick Rethans";
+echo iconv('iso-8859-1', 'iso-8859-2//ignore', $str);
+?>]]></example>
+	<blurb>output:</blurb>
+	<example class="bit_larger_output">Notice: iconv() [function.iconv]: Detected an illegal character in input string in /home/httpd/pres2/display.php(461) : eval()'d code on line 3
+  2004, by Derick Rethans</example>
+
+</slide>
+<!--
+vim: encoding=latin1
+-->

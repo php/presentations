@@ -70,12 +70,26 @@ div.small_blurb {
 	font-size: 24px;
 }
 
-div.blurb {
+div.blurb, div.bit_larger_output_text {
 	font-size: 32px;
+	width: 100%;
+}
+
+div.bit_larger_output_text {
+	margin-top: 10px;
+}
+
+div.x_small_blurb {
+	font-size: 0.5em;
 }
 
 div.large_blurb {
 	font-size: 32px;
+}
+
+div.xx_large_blurb_center {
+	font-size: 80px;
+	text-align: center;
 }
 
 div.q_mark {
@@ -86,6 +100,17 @@ div.q_mark {
 
 div.shadow, code {
 	font-size: 18px; width: 640px;
+}
+
+div.bit_larger, div.bit_larger code, div.bit_larger_output {
+	background: #ccc;
+	font-size: 20px;
+	width: 100%;
+}
+div.bit_larger, div.bit_larger_output {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 100%;
 }
 
 div.code_small {
@@ -107,5 +132,22 @@ div.code_large {
 }
 div.code_large code, div.code_large pre {
 	font-size: 24px;
+}
+
+div.event, div.event-date, div.event-presenter {
+	text-align: center;
+	font-size:  32pt;
+}
+
+div.pres-url-small {
+	text-align: center;
+	font-size:  24pt;
+}
+
+img.spaced {
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 </style>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>UTF8</title>
+	<subtitle>Encoding of UCS characters</subtitle>
+
+	<list>
+		<bullet>All UCS characters > 0x7f (127) are stored as multi-byte characters >= 0x80</bullet>
+		<bullet>No problems with control characters</bullet>
+		<bullet>The first byte of a multi-byte character is always in the range 0xc0 - 0xfd and describes how long this byte-sequence is.</bullet>
+		<bullet>European languages usually use up to two bytes per character</bullet>
+		<bullet>Characters of other languages usually use up to three bytes per character</bullet>
+		<bullet>The longest UTF8 encoded character is 6 bytes</bullet>
+	</list>
+</slide>
+<!--
+vim: encoding=utf8
+-->

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Problems with Multi-byte Characters</title>
+
+	<blurb>strlen() no longer "works":</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+$str = "Vær så god!";
+echo "The string has length: ", strlen($str);
+?>]]></example>
+
+	<break lines="2"/>
+
+	<blurb>substr() may mangle text:</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+$str = "Vær så god!";
+echo "The first 7 characters are: ", substr($str, 0, 7);
+?>]]></example>
+
+	<break lines="2"/>
+
+	<blurb>wordwrap() wraps too early:</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+$str = "Vær så god!";
+echo wordwrap($str, 6, '|');
+?>]]></example>
+
+</slide>
+<!--
+vim: encoding=utf8
+-->

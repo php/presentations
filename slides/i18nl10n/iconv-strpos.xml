@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Iconv Functions</title>
+	<subtitle>iconv_strpos() and iconv_strrpos()</subtitle>
+
+	<blurb>iconv_strpos():</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+iconv_set_encoding('internal_encoding', 'utf8');
+$str = "Vær så god!";
+echo "The o is at position: ", strpos($str, 'o'), "<br />\n";
+echo "The o is at position: ", iconv_strpos($str, 'o'), "\n";
+?>]]></example>
+
+	<break lines="4"/>
+
+	<blurb>iconv_strrpos():</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+iconv_set_encoding('internal_encoding', 'utf8');
+$str = "Vær så god!";
+echo "The å is at position: ", strrpos($str, 'å'), "<br />\n";
+echo "The å is at position: ", iconv_strrpos($str, 'å'), "\n";
+?>]]></example>
+
+</slide>
+<!--
+vim: encoding=utf8
+-->

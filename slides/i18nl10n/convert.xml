@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Conversion Between ISO-8859 Character Sets</title>
+
+	<list>
+		<bullet>Each set has only 256 positions</bullet>
+		<bullet>Impossible to convert everything</bullet>
+		<bullet>Conversion will result in broken text</bullet>
+		<bullet>http://www.eki.ee/letter/</bullet>
+	</list>
+	<break />
+	<example class="bit_larger"><![CDATA[  ISO 8859-1   ISO-8859-2
+  Hex   Char   Hex   Char    Description
+   E0     à     --     -     LATIN SMALL LETTER A WITH GRAVE
+   E1     á     E1     á     LATIN SMALL LETTER A WITH ACUTE
+   E2     â     E2     â     LATIN SMALL LETTER A WITH CIRCUMFLEX
+   E3     ã     --     -     LATIN SMALL LETTER A WITH TILDE
+   E4     ä     E4     ä     LATIN SMALL LETTER A WITH DIAERESIS
+   E5     å     --     -     LATIN SMALL LETTER A WITH RING ABOVE
+   E6     æ     --     -     LATIN SMALL LETTER AE
+   E7     ç     E7     ç     LATIN SMALL LETTER C WITH CEDILLA
+   E8     è     --     -     LATIN SMALL LETTER E WITH GRAVE
+   E9     é     E9     é     LATIN SMALL LETTER E WITH ACUTE
+   EA     ê     --     -     LATIN SMALL LETTER E WITH CIRCUMFLEX
+   EB     ë     EB     ë     LATIN SMALL LETTER E WITH DIAERESIS
+   EC     ì     --     -     LATIN SMALL LETTER I WITH GRAVE
+   ED     í     ED     í     LATIN SMALL LETTER I WITH ACUTE
+   EE     î     EE     î     LATIN SMALL LETTER I WITH CIRCUMFLEX
+   EF     ï     --     -     LATIN SMALL LETTER I WITH DIAERESIS
+]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

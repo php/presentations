@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Asian Character Sets</title>
+	<subtitle>亚字</subtitle>
+
+	<list>
+		<bullet>They need more than 256 positions</bullet>
+		<bullet>Multi-byte</bullet>
+		<bullet>One character is often one word</bullet>
+		<bullet>Problems with NULL characters and special characters</bullet>
+		<bullet>addslashes() mis-recognises chinese-big5 words like "0xA5 0x5C" (%¥\,% 功, E5 8A 9F)</bullet>
+	</list>
+	<break lines="3"/>
+	<blurb class="xx_large_blurb_center"><![CDATA[伲存内洋国]]></blurb>
+</slide>
+<!--
+vim: encoding=utf8
+-->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Iconv Functions</title>
+
+	<blurb>iconv_strlen():</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+$str = "Vær så god!";
+echo "The string has length: ", iconv_strlen($str, 'utf8');
+?>]]></example>
+
+	<break lines="4"/>
+
+	<blurb>iconv_substr():</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+iconv_set_encoding('internal_encoding', 'utf8');
+$str = "Vær så god!";
+echo "The first 7 characters are: ", iconv_substr($str, 0, 7);
+?>]]></example>
+
+</slide>
+<!--
+vim: encoding=utf8
+-->
