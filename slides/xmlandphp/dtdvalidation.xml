@@ -1,0 +1,29 @@
+<slide title="DTD Validation">
+<blurb>
+%LibXML% supports DTD validation, during parsing, and post parsing.
+</blurb>
+<example title="Parse &amp; Validate">
+<![CDATA[<?php
+$d = xmldocfile(
+	'validate.xml', 
+	DOMXML_LOAD_VALIDATING, 
+	$errors
+);
+if (!$d) {
+	echo "<pre>";
+	var_dump($errors);
+	echo "</pre>";
+}
+?>]]>
+</example>
+<example title="Parse Then Validate">
+<![CDATA[<?php
+$d = xmldocfile('validate.xml');
+if (!$d->validate($errors)) {
+	echo "<pre>";
+	var_dump($errors);
+	echo "</pre>";
+}
+?>]]>
+</example>
+</slide>

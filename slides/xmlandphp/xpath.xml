@@ -1,0 +1,7 @@
+<slide title="XPath">
+<blurb>
+%XPath% is a standardized query language for XML documents.  %LibXML% provides an 
+API for accessing DOM trees and querying documents.
+</blurb>
+<example filename="xpath.php"/>
+</slide>

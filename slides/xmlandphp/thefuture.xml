@@ -1,0 +1,14 @@
+<slide>
+<title>The Future of XML and PHP</title>
+<list title="PHP5">
+<bullet>LibXML default library</bullet>
+<bullet>DOM 2 Compliance</bullet>
+<bullet>SAX 2, XPath, XInclude, Schema compliance</bullet>
+</list>
+<list title="Next Month">
+<bullet>Simple API for XML (See Links)</bullet>
+<bullet>Bundle LibXML as the default</bullet>
+<bullet>Integrate cURL support</bullet>
+<bullet>Provide an API for PHP extensions</bullet>
+</list>
+</slide>
