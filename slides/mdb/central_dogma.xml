@@ -1,0 +1,38 @@
+<slide title='How do they relate'>
+<blurb> 
+*DNA* serves as the _information storage medium_, which
+is |ff0000|transcribed| into *RNA* (the _information transmission medium_),
+which is finally |ff0000|translated| by a ribosome into a *Protein*
+</blurb>
+<image filename='slides/mdb/images/central_dogma_biology.png' align='center'/>
+<list type='darrow'>
+	<bullet effect='hide'>
+	*DNA*:
+	%AAA _GGA_ GAA _TAG_ TGT _GGC_ CAT _CGT_ GCC _CGC_%
+	</bullet>
+	<bullet effect='hide'>
+	*RNA*:
+	%UUU _CCU_ CUU _AUC_ AUA _CCG_ GUA _GCA_ GCC _GCG_%
+	</bullet>
+	<bullet effect='hide'>
+	*Protein*:
+	%F _P_ L _I_ I _P_ V _A_ A _A_%
+	</bullet>
+	<bullet effect='hide'>
+	(or: %Phe _Pro_ Leu _Ile_ Ile _Pro_ Val _Ala_ Ala _Ala_%)
+	</bullet>
+</list>
+<blurb>
+An text composed of 3-letter words (with 4 unique letters) gets
+mapped into a sequence of 20 unique letters.
+This is usually called 
+"_The Central Dogma of Biology_"
+</blurb>
+
+<blurb>
+... but the fun really starts when we want 
+to go *from a sequence (1D) to a 3D structure*,
+even more fun when we want to figure out the (probable) 
+*function and properties* of the biomolecule.
+</blurb>
+</slide>

@@ -1,0 +1,23 @@
+<slide title='Complexity'>
+
+<blurb title='Algorithmic complexity in Structural Bioinformatics'>
+Often the complexity of the problems in analysis/design of structures grow
+at an exponential rate.
+</blurb>
+<list title='For example: (*)' type='dot'>
+<bullet>
+Redesign of a small protein (about 80 residues): 
+10^115 combinations
+</bullet>
+<bullet>Changing the (hydrophobic) core of a protein (170 core residues):
+10^224 combinations
+</bullet>
+<bullet>Side-chain placement on a protein backbone (2462 residues):
+10^1044 combinations</bullet>
+</list>
+<blurb fontsize='2em'>
+(*) From: Looger, L.L. and Hellinga, H.W. "Journal of Molecular Biology", 
+2001, 37, 429-445.
+</blurb>
+
+</slide>

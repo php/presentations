@@ -1,0 +1,18 @@
+<slide title='State of BioDBs'>
+<list title='The State of Biological Databases' type='none'>
+<bullet>Many good ones with searchable data, and
+useable interactive interfaces, e.g.:</bullet>
+</list>
+<list type='darrow' effect='hide'>
+<bullet>Protein Data Bank: http://www.rcsb.org/</bullet>
+<bullet>GenBank : http://www.ncbi.nlm.nih.gov/Genbank</bullet>
+<bullet>Molecules 'R' Us: http://molbio.info.nih.gov/cgi-bin/pdb</bullet>
+</list>
+<list effect='hide' type='none'>
+<bullet>
+But, very few that allow non-interactive (i.e. programmatic)
+access to the data they contain (a couple had started to use
+BioCorba)
+</bullet>
+</list>
+</slide>

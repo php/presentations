@@ -1,0 +1,35 @@
+<slide title='MDB Remote Viewer'>
+<blurb>
+We made a lightweight molecular viewer that is embeddable
+by using simple HTML code in a page. For example, the snippet:
+</blurb>
+<example fontsize='1.5em' result='1'>
+<title>This form will display all zinc containing sites in 1hca and
+1npc</title>
+<text>
+<![CDATA[<div align='center'>
+<form method="POST"
+action="http://metallo.scripps.edu/services/remote/viewer.php"
+name="Remote MDB Viewer" target="_blank">
+<input type="hidden" name="source_id[]" value="1hca">
+<input type="hidden" name="source_id[]" value="1npc">
+<input type="hidden" name="metal[]" value="zn">
+<input type="hidden" name="caption" value="Zn sites in 1hca and 1npc">
+<input type="submit" name="submit" value="Display Zn sites in the MDB Viewer">
+</form>
+</div>]]>
+</text>
+</example>
+<blurb>
+The remote viewer is being used by several web sites, among them:
+</blurb>
+<link leader='CaBP database:'>
+	http://structbio.vanderbilt.edu/cabp_database/
+</link>
+<link leader='IMB at Jena:'>
+	http://www.imb-jena.de/
+</link>
+<link leader='PROMISE:'>
+	http://bioinf.leeds.ac.uk/promise/
+</link>
+</slide>
