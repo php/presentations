@@ -1,4 +1,4 @@
-<slide title="Extending Benchmark_Iterate">
+<slide title="Benchmark_RandomData">
 <image filename="100000000000005C0000005C29D61F11.jpg" align="right" />
 <blurb>We'll overload the run method of Benchmark_Iterate to allow for passing a data generation function.</blurb>
 <example title="Benchmark_RandomData.inc" filename="Benchmark_RandomData.inc" fontsize="1.6em"/>
