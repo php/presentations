@@ -5,14 +5,14 @@
 <h3>Setting a Persistent Cookie</h3>
 
 <example title="Setting a Persistent Cookie"><![CDATA[<? SetCookie('Cookie_Name','value', 
-             mktime(12,0,0,22,11,2002) ); ?>]]></example>
+             mktime(12,0,0,11,22,2002) ); ?>]]></example>
 
 <example title="Reading a Cookie"><![CDATA[<? echo $Cookie_Name; ?>]]></example>
 <example><![CDATA[<? echo $HTTP_COOKIE_VARS['Cookie_Name']; ?>]]></example>
 
 <example title="Deleting the Cookies"><![CDATA[<? SetCookie('Cookie_Name',''); ?>]]></example>
 <example><![CDATA[<? SetCookie('Cookie_Name','', 
-             mktime(12,0,0,22,11,1970) ); ?>]]></example>
+             mktime(12,0,0,11,22,1970) ); ?>]]></example>
 
 <blurb title="Other Optional Paramters">
 Path, Domain, and Secure parameters can also be set to restrict a
