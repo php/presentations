@@ -14,7 +14,7 @@ ImageColorAllocate() as with paletted images, but
 you can also specify the color directly.
 </blurb>
 
-<example title="For example:" type="genimage" result="1" filename="image_colors_ex3.php" rwidth="455"/>
+<example title="For example:" type="genimage" result="1" fontsize="1.5em" filename="image_colors_ex3.php" rwidth="455"/>
 
 <example fontsize="1.7em" title="This example could also be written like this:"><![CDATA[<?php
 $im  = ImageCreateTruecolor(400,300);
