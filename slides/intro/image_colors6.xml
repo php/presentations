@@ -1,5 +1,5 @@
 <slide title="ImageColorAt" outputbackground="#222222">
-<example title="Using ImageColorAt()" result="1" fontsize="1.6em" rfontsize="1.5em" rwidth="56em"><![CDATA[
+<example title="Using ImageColorAt()" result="1" fontsize="1.6em" rfontsize="1.5em" rwidth="58em"><![CDATA[
 <? $image = "presentations/slides/intro/php-tiny.jpg"; ?>
 <img src="<?=$image?>"><br />
 <?
