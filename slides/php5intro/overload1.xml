@@ -1,5 +1,5 @@
 <slide>
-<title>Object Overloading</title>
+<title>Method Overloading</title>
 <blurb fontsize="3.5em">
 You can overload function calls via the %__call()% handler.
 </blurb>
