@@ -1,0 +1,16 @@
+<slide title='Advanced search'>
+ <blurb>
+  Sometimes we need to do more complex searches, so we use the advanced search
+  form. For example, we'll search for all sites containing *Zn or Cu* with a
+  metal coordination number of *4 or 5*, the set of ligands to the metals should contain
+  *at least 2 His and 1 Asp*, and the structures should have been 
+  *from 1997 to 2002* and have a resolution in the *0.9 - 2.5 Angstroms*
+  range.
+ </blurb>
+ <image align='center' filename='images/mdbsite_advsearch-form.png'/>
+ <blurb>
+  We now find a more manageable set of sites, roughle ten times smaller than
+  what we got using the simple search form.
+ </blurb>
+ <image align='center' filename='images/mdbsite_advsearch-results.png'/>
+</slide>

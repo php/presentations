@@ -1,0 +1,33 @@
+<slide title="Summary">
+ <list type='darrow' marginright="1.5em">
+  <bullet>
+   MDB shares data using a standarized file formats
+   (e.g. RSS, CML) and well known
+   web services protocols (REST, XML-RPC, SOAP)
+  </bullet>
+  <bullet>
+   *REST* is the simplest way to share (publish a URL). Little or no modification needed
+   to your CGI scripts. 
+  </bullet>
+  <bullet>
+   *XML-RPC* is simple and has instrospection, but data with complex structure might not be easy to
+   represent.
+  </bullet>
+  <bullet>
+   *SOAP* is more complex, but it gives you more flexibility (XML
+   Schemas, RPC and Document Literal, WSDL, Service redirection, WS-Security, etc.)
+  </bullet>
+  <bullet>
+   Plan on synchronous and asynchronous access to improve performance.
+  </bullet>
+  <bullet>
+   Implementing more than one protocol is no more difficult than implementing
+   just one. Modularization is the key.
+  </bullet>
+  <!-- bullet>
+   _Use the MDB Web Services_. 
+   _Use the MDB Web Services_. 
+   _Use the MDB Web Services_ ...
+  </bullet -->
+ </list>
+</slide>

@@ -1,0 +1,14 @@
+<slide title='Ligand patterns'>
+ <blurb>
+  If we were to design a metal-binding site, we need to know what are the most
+  common ligand patterns for a given metal (*Zn* in this example) and
+  coordination number (*4* in this case). The MDB can help you there too:
+ </blurb>
+ <image align='center' filename='images/mdbsite_patternform.png'/>
+ <blurb>
+  The ligand pattern plot will show the first 30 patterns graphically,
+  and list all known patterns for that metal and coordination number on a
+  table:
+ </blurb>
+ <image align='center' filename='images/mdbsite_patternplot.png'/>
+</slide>

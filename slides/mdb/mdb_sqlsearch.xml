@@ -1,0 +1,21 @@
+<slide title='Using SQL'>
+ <blurb>
+  Oftentimes we need to do searches that cannot easily be done using any
+  of the previous interfaces, that is when we can use SQL to tailor our
+  search to our needs (SQL = *S*tructured *Q*uery *L*anguage). 
+ </blurb>
+ <blurb>
+  If we want to find of all proteins with an *R-value &lt; 0.15*, and we
+  want to list their *PDB IDs, deposition date, R-value and resolution*, the
+  SQL statement will look like:
+ </blurb>
+ <image align='center' filename='images/mdbsite_sql-form.png'/>
+ <image title='Output from SQL query' align='center' filename='images/mdbsite_sql-results.png'/>
+ <blurb title='The MDB schema'>
+  To use SQL we need to know the internal structure of the data in the MDB
+  (called the *database schema*), there are no simple and general shortcuts
+  here. Currently the MDB has 22 tables, as shown on the schema generated
+  dynamically:
+ </blurb>
+ <image align='center' filename='images/mdbsite_schema.png'/>
+</slide>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Using the MDB">
+ <blurb>
+  The MDB offers a variety of search and analysis tools for interactive use,
+  all accessible via a regular web browser, no strange or special plugins
+  needed.
+ </blurb>
+ <list title='Search'>
+  <bullet>Interative search (using the Java viewer)</bullet>
+  <bullet>A quick PDB ID search form</bullet>
+  <bullet>Simple and advanced search forms</bullet>
+  <bullet>SQL query interface</bullet>
+ </list>
+ <list title='Analysis'>
+  <bullet>Metal-Ligand distance distribution</bullet>
+  <bullet>Ligand pattern preferences</bullet>
+  <bullet>MSE: Metal-binding Site Evaluator</bullet>
+ </list>
+ <blurb>
+  ... and more tools to come in the future
+ </blurb>
+</slide>

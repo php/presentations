@@ -1,0 +1,10 @@
+<slide title='ClusterGeom'>
+ <blurb title='Quantifying [Fe4S4] distortions'>
+  We developed the *ClusterGeom* program to analyze and quantify the
+  distortions on iron-sulfur clusters. Below we can see the a two dimensional
+  mapping (Hammer-Aitoff projection) of the cluster in *1aop* (continuous lines) 
+  compared to a perfect cluster geometry (dotted lines).
+ </blurb>
+ <image align='center' filename='images/clustergeom_example.png'/>
+ <!-- image align='center' filename='images/clustergeom_plot.png'/ -->
+</slide>

@@ -1,0 +1,16 @@
+<slide title='M-L distances'>
+ <blurb title='Quantitative analyses'>
+  When we need to know something about the geometrical parameters of the
+  metal sites, the MDB has tools for that too. For example, we can
+  request the distribution of the *Zn-His(ND)* distance when zinc has a
+  *coordination number of 4* using the appropriate form:
+ </blurb>
+ <image align='center' filename='images/mdbsite_histform.png'/>
+ <blurb>
+  The MDB server will generate the histogram, display the statistics for the
+  data, and list the bins with a button that allows the display in the
+  java viewer of the sites containing the particular metal-ligand distance 
+  range.
+ </blurb>
+ <image align='center' filename='images/mdbsite_histplot.png'/>
+</slide>

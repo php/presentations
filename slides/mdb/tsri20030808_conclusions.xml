@@ -1,0 +1,35 @@
+<slide title="Summary">
+ <list type='darrow' marginright="1.5em">
+  <bullet>
+   You can use the MDB for interactive searches, from an interface that
+   uses a java applet to see the strucutures in real time, to quick searches
+   by PDB ID, to more complex searches and even SQL queries.
+  </bullet>
+  <bullet>
+   You can do analysis like Metal-Ligand distance distributions interactively
+   in about 2-3 seconds. Something that used to take ad-hoc analysis, and was
+   the subject of full papers.
+  </bullet>
+  <bullet>
+   More complex analysis tools are coming via the MSE: MSIT, Torsion angle
+   distributions, ClusterGeom, etc.
+  </bullet>
+  <bullet>
+   MDB shares data using a standarized file formats
+   (e.g. RSS, CML) and well known
+   web services protocols (REST, XML-RPC, SOAP)
+  </bullet>
+  <!-- bullet>
+   *REST* is the simplest way to share (publish a URL). 
+   *XML-RPC* is simple and has instrospection, but data with complex structure might not be easy to
+   represent.
+   *SOAP* is more complex, but it gives you more flexibility (XML
+   Schemas, RPC and Document Literal, WSDL, Service redirection, WS-Security, etc.)
+  </bullet -->
+  <bullet>
+   _Use the MDB_,
+   _Use the MDB_,
+   _Use the MDB_ ...
+  </bullet>
+ </list>
+</slide>

@@ -1,0 +1,15 @@
+<slide title='Simple search'>
+ <blurb>
+  When we want to do something more complicated than just use a PDB ID, we can
+  use a simple search form. Let us search for all site containing *Zn or Cu*
+  with a metal coordination number of *4 or 5* and coming from structures with
+  a *resolution of 2.0 Angstroms or better*. We also choose to display 25 results per
+  page.
+ </blurb>
+ <image align='center' filename='images/mdbsite_simplesearch-form.png'/>
+ <blurb>
+  We can page through the results readily, and in this example the second page
+  will be: 
+ </blurb>
+ <image align='center' filename='images/mdbsite_simplesearch-results.png'/>
+</slide>

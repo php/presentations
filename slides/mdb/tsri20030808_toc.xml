@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title='Agenda'>
+ <list type='darrow'> 
+  <bullet>An overview of the MDB</bullet>
+ </list>
+<list title='Interactive queries' type='darrow'>
+ <bullet>Using the java viewer</bullet>
+ <bullet>PDB id searches</bullet>
+ <bullet>Simple search form</bullet>
+ <bullet>Advanced search form</bullet>
+ <bullet>Using SQL</bullet>
+</list>
+<list title='Non-interactive use of the MDB' type='darrow'>
+ <bullet>Its Architecture</bullet>
+ <bullet>Web Services: Overview, Implementation, and Examples of Use</bullet>
+ <!-- bullet>Access modes: synchronous, asynchronous</bullet -->
+</list>
+<list title='Summary and Acknowldegements'>
+ <bullet type='none'/>
+</list>
+</slide>

@@ -1,0 +1,11 @@
+<slide title='Chi angles'>
+ <blurb title='Comparing chi angle distributions'>
+  Analyzing the chi angle data in the MDB shows that the *His* ligands in
+  metal-binding sites following the pattern *M(His)@3@X*, have a very distinctive
+  distribution when compared with the rest of the histidines in the PDB
+  structures (approx. 125,000 values).
+ </blurb>
+ <image align='center' filename='images/his_chis_all.png'/>
+ <!-- image align='center' filename='images/chis_plot_with_histograms.png'/ -->
+ <!-- image align='center' filename='images/his_chi_dist_small.png'/ -->
+</slide>

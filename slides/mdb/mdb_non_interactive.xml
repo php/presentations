@@ -1,0 +1,9 @@
+<slide title='Non-interactive use'>
+ <blurb>
+  So far we have seen interactive ways of using the MDB. We have also
+  developed non-interactive methods for access the MDB's data and analysis
+  tools, which allow programs and even other web sites to use the MDB as if it
+  were a library.
+ </blurb>
+ <image align='center' filename='images/local_extrnl_libs.gif'/>
+</slide>

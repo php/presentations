@@ -1,0 +1,11 @@
+<slide title='REST: "MDB News"'>
+ <blurb title='If we use the URL' />
+ <blurb fontsize='1.8em'>
+<![CDATA[
+http://metallo.scripps.edu/services/rest.php?func=metallopdb&metal=zn&mode=random&count=5&format=rss
+]]>
+</blurb>
+
+<image title='HotSheet displays it as an RSS feed' align='center' filename='images/hotsheet_mdbrss.png'/>
+<image title="Even SQLData's reader (web-based) groks it" align='center' filename='images/rss_soapclient_viewer.png'/>
+</slide>

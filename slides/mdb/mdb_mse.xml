@@ -1,0 +1,15 @@
+<slide title='MSE'>
+ <blurb>
+  The *M*etal-binding *S*ite *E*valuator (*MSE*) is the web interface to the
+  programs we have developed for the MDB (e.g. MSIT: Metal-binding Site Indexing
+  Tool). The current prototype allows a user to upload a valid PDB file, and
+  obtain a complete report from MSIT processing the structure.
+ </blurb>
+ <image title='If we submit 2sod.pdb'
+  align='center' filename='images/mdbsite_mse-form.png'/>
+ <image title='... after some seconds we get'
+  align='center' filename='images/mse_output.png'/>
+ <!-- example title='Full output' fontsize='1em'
+  type='html' align='center' examplebackground='#ffffdd'
+  filename='output/mse_2sod_out.html'/ -->
+</slide>

@@ -1,0 +1,15 @@
+<slide title='Using PDB IDs'>
+ <image title="We look for our favorite metalloprotein"
+  align='center' filename='images/mdbsite_pdbsearch.png'/>
+ <image title='... and find that it has 2 metal-binding sites'
+  align='center' filename='images/mdbsite_pdbsearch-results.png'/>
+ <image title='(A) Viewing the site with our java applet'
+  align='center' filename='images/mdbsite_pdbsearch-results-1hca.png'/>
+
+ <image title='(B) Finding out more on the protein'
+  align='center' filename='images/mdbsite_pdbsearch-results-1hca_rcsb.png'/>
+ <image title="... and making nice pics at Molecules'R'Us"
+  align='center' filename='images/mdbsite_pdbsearch-results-1hca_nih_form.png'/>
+<image align='center'
+ filename='images/mdbsite_pdbsearch-results-1hca_nih_results.gif'/>
+</slide>
