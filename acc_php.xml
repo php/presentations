@@ -1,0 +1,74 @@
+<presentation template="php2" titlecolor="#1111aa" navbarbackground="url(images/trans-ffffff.png)" logo1="images/php-med-trans-light.gif" titlesize="2em" navbarheight="4.1em">
+<topic>PHP</topic>
+<title>Accelerating PHP Applications</title>
+<copyright>(c) Copyright 2004 Ilia Alshanetsky</copyright>
+<event>International PHP Conference 2004</event>
+<location>Amsterdam, Netherlands</location>
+<date>May 5th 2004</date>
+<speaker>Ilia Alshanetsky</speaker>
+<navmode>html</navmode>
+<url>http://talks.php.net/</url>
+
+<slide>slides/acc_php/titlepage.xml</slide>
+
+<slide>slides/acc_php/c_cflags.xml</slide>
+<slide>slides/acc_php/c_exten.xml</slide>
+<slide>slides/acc_php/c_static.xml</slide>
+<slide>slides/acc_php/c_strip.xml</slide>
+
+<slide>slides/acc_php/conf_php.xml</slide>
+<slide>slides/acc_php/conf_php2.xml</slide>
+
+<slide>slides/acc_php/conf_apache.xml</slide>
+<slide>slides/acc_php/conf_apache2.xml</slide>
+<slide>slides/acc_php/conf_apache3.xml</slide>
+
+<slide>slides/acc_php/keep_alive.xml</slide>
+<slide>slides/acc_php/lingerd.xml</slide>
+
+<slide>slides/acc_php/content_serve.xml</slide>
+<slide>slides/acc_php/content_serve2.xml</slide>
+
+<slide>slides/acc_php/hd.xml</slide>
+
+<slide>slides/acc_php/ob.xml</slide>
+
+<slide>slides/acc_php/opcode_intro.xml</slide>
+<slide>slides/acc_php/opcode_graph.xml</slide>
+<slide>slides/acc_php/opcode_benefits.xml</slide>
+<slide>slides/acc_php/opcode_imp.xml</slide>
+<slide>slides/acc_php/opcode_comp.xml</slide>
+
+<slide>slides/acc_php/content_caching.xml</slide>
+<slide>slides/acc_php/content_caching_php.xml</slide>
+<slide>slides/acc_php/content_caching_php2.xml</slide>
+<slide>slides/acc_php/content_caching_mmcache.xml</slide>
+<slide>slides/acc_php/content_caching_c.xml</slide>
+
+<slide>slides/acc_php/partial_caching.xml</slide>
+<slide>slides/acc_php/partial_caching_ex.xml</slide>
+
+<slide>slides/acc_php/content_compress.xml</slide>
+<slide>slides/acc_php/content_compress_zlib.xml</slide>
+<slide>slides/acc_php/content_compress_css.xml</slide>
+<slide>slides/acc_php/content_compress_tidy.xml</slide>
+<slide>slides/acc_php/content_compress_tidy2.xml</slide>
+
+<slide>slides/acc_php/includes.xml</slide>
+<slide>slides/acc_php/includes2.xml</slide>
+
+<slide>slides/acc_php/tmpfs.xml</slide>
+<slide>slides/acc_php/tmpfs2.xml</slide>
+
+<slide>slides/acc_php/sessions.xml</slide>
+<slide>slides/acc_php/sessions2.xml</slide>
+
+<slide>slides/acc_php/sql_intro.xml</slide>
+
+<slide>slides/acc_php/sql_mysql4.xml</slide>
+
+<slide>slides/acc_php/right_db.xml</slide>
+
+<slide>slides/acc_php/thankyou.xml</slide>
+
+</presentation>

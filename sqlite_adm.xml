@@ -1,0 +1,74 @@
+<presentation template="php2" titlecolor="#1111aa" navbarbackground="url(images/trans-ffffff.png)" logo1="images/php-med-trans-light.gif" titlesize="2em" navbarheight="4.1em">
+<topic>SQLite</topic>
+<title>SQLite Overview</title>
+<copyright>(c) Copyright 2004 Ilia Alshanetsky</copyright>
+<event>International PHP Conference 2004</event>
+<location>Amsterdam, Netherlands</location>
+<date>May 4, 2004</date>
+<speaker>Ilia Alshanetsky</speaker>
+<navmode>html</navmode>
+<url>http://talks.php.net/</url>
+
+<slide>slides/sqlite_adm/titlepage.xml</slide>
+<slide>slides/sqlite_adm/libintro.xml</slide>
+<slide>slides/sqlite_adm/phpapi.xml</slide>
+
+<slide>slides/sqlite_adm/advantages.xml</slide>
+<slide>slides/sqlite_adm/disadvantages.xml</slide>
+
+<slide>slides/sqlite_adm/ip_app.xml</slide>
+
+<slide>slides/sqlite_adm/open.xml</slide>
+
+<slide>slides/sqlite_adm/database_schema.xml</slide>
+<slide>slides/sqlite_adm/index_create.xml</slide>
+
+<slide>slides/sqlite_adm/database_pop.xml</slide>
+<slide>slides/sqlite_adm/database_esc.xml</slide>
+<slide>slides/sqlite_adm/database_error.xml</slide>
+<slide>slides/sqlite_adm/database_check.xml</slide>
+<slide>slides/sqlite_adm/database_check2.xml</slide>
+<slide>slides/sqlite_adm/database_lid.xml</slide>
+<slide>slides/sqlite_adm/database_more_ins.xml</slide>
+<slide>slides/sqlite_adm/database_fetch.xml</slide>
+<slide>slides/sqlite_adm/database_unbuf.xml</slide>
+<slide>slides/sqlite_adm/database_single.xml</slide>
+<slide>slides/sqlite_adm/database_single2.xml</slide>
+<slide>slides/sqlite_adm/database_trans.xml</slide>
+<slide>slides/sqlite_adm/database_chain.xml</slide>
+<slide>slides/sqlite_adm/database_final.xml</slide>
+
+<slide>slides/sqlite_adm/single_all.xml</slide>
+<slide>slides/sqlite_adm/fetch_all.xml</slide>
+<slide>slides/sqlite_adm/fetch_all2.xml</slide>
+
+<slide>slides/sqlite_adm/ip_match_client.xml</slide>
+
+<slide>slides/sqlite_adm/attach_db.xml</slide>
+<slide>slides/sqlite_adm/attach_db2.xml</slide>
+
+<slide>slides/sqlite_adm/oo.xml</slide>
+
+<slide>slides/sqlite_adm/oo_rec.xml</slide>
+<slide>slides/sqlite_adm/oo_rec2.xml</slide>
+
+<slide>slides/sqlite_adm/views.xml</slide>
+<slide>slides/sqlite_adm/trigger.xml</slide>
+
+<slide>slides/sqlite_adm/oo_ex2.xml</slide>
+
+<slide>slides/sqlite_adm/foreach.xml</slide>
+
+<slide>slides/sqlite_adm/phpsql.xml</slide>
+
+<slide>slides/sqlite_adm/util.xml</slide>
+<slide>slides/sqlite_adm/util3_oo.xml</slide>
+
+<slide>slides/sqlite_adm/info2.xml</slide>
+
+<slide>slides/sqlite_adm/pragma.xml</slide>
+<slide>slides/sqlite_adm/pragma2.xml</slide>
+
+<slide>slides/sqlite_adm/thankyou.xml</slide>
+
+</presentation>
