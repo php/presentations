@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Tokenizer Example 1</title>
+
+	<blurb>tokenize.php:</blurb>
+	<example fontsize="1.7em"><![CDATA[<?php
+    function apply_magic(&$a) {
+        $a = $a + rand(0,3);
+    }
+
+    $a = 5;
+    apply_magic($a);
+    echo "$a\n";
+?>
+]]></example>
+
+	<list effect="slide" fontsize="5em">
+		<bullet>Tokenizer extension</bullet>
+		<bullet>Refactoring</bullet>
+	</list>
+</slide>

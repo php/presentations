@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Optimizing 4</title>
+
+	<blurb>Eliminating the NOP, unnecessary jump and unnecessary jump
+	condition:</blurb>
+	<blurb>before:</blurb>
+	<example fontsize="1.4em"><![CDATA[    0  NOP                 0, 0, 0
+    1  IS_SMALLER          %0, '40', '50'
+    2  JMPZ                0, %0, 5
+    3  ECHO                0, 'foo\n', 0
+    4  JMP                 0, 5, 0
+    5  ECHO                0, 'end\n', 0
+    6  RETURN              0, '1', 0
+]]></example>
+
+	<blurb>after:</blurb>
+	<example fontsize="1.4em"><![CDATA[    0  ECHO                0, 'foo\n', 0
+    1  ECHO                0, 'end\n', 0
+    2  RETURN              0, '1', 0
+]]></example>
+</slide>

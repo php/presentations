@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Optimizing 1</title>
+
+	<list effect="slide" fontsize="5em">
+		<bullet>Generated code not always optimal</bullet>
+		<bullet>Optimizing techiniques:</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Removing NOPs</bullet>
+		<bullet>Removing unnecessary jumps</bullet>
+		<bullet>Concatination of strings</bullet>
+		<bullet>Dead-code elimination</bullet>
+		<bullet>Cache function table lookups</bullet>
+		<bullet>Function inlining</bullet>
+	</list>
+</slide>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Oparrays / Opcode</title>
+
+	<list effect="slide" fontsize="5em">
+		<bullet>Oparrays</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Compiled code</bullet>
+		<bullet>One for every script element</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Opcode</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Basic execution unit</bullet>
+		<bullet>Two operands</bullet>
+		<bullet>One result</bullet>
+	</list>
+
+</slide>

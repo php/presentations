@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Executing 3</title>
+
+	<blurb>The engine:</blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>parses and compiles test.php</bullet>
+		<bullet>starts executing test.php</bullet>
+		<bullet>parses and compiles test.inc when the include() statement is encountered</bullet>
+		<bullet>starts executing test.inc</bullet>
+		<bullet>resumes executing test.php</bullet>
+	</list>
+</slide>

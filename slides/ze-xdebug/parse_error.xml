@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Parsing</title>
+
+	<list effect="slide" fontsize="5em">
+		<bullet>Analyze script source</bullet>
+		<bullet>Devide into logical blocks</bullet>
+		<bullet>Give special blocks a meaning</bullet>
+	</list>
+
+	<blurb> </blurb>
+
+	<blurb>Our friend Mr Parse Error: </blurb>
+
+	<example><![CDATA[Parse error: parse error,
+unexpected T_CLASS, expecting ',' or ';' in - on line 2
+]]></example>
+</slide>

@@ -1,4 +1,6 @@
 <presentation 
+	template="php" 
+	navmode="html"
 	navbarbackground="#3C5BB4"
     stylesheet="presentations/slides/ze-xdebug/style.css"
 	backgroundfixed="1" >
@@ -11,4 +13,41 @@
 <email>d.rethans@jdimedia.nl</email>
 <slide>slides/ze-xdebug/title.xml</slide>
 <slide>slides/ze-xdebug/intro.xml</slide>
+<slide>slides/ze-xdebug/parse_error.xml</slide>
+<slide>slides/ze-xdebug/tokens.xml</slide>
+<slide>slides/ze-xdebug/tokenizer1.xml</slide>
+<slide>slides/ze-xdebug/tokenizer2.xml</slide>
+<slide>slides/ze-xdebug/compile.xml</slide>
+<slide>slides/ze-xdebug/opcode.xml</slide>
+<slide>slides/ze-xdebug/tokenizer3.xml</slide>
+<slide>slides/ze-xdebug/vld1.xml</slide>
+<slide>slides/ze-xdebug/vld2.xml</slide>
+<slide>slides/ze-xdebug/optimize1.xml</slide>
+<slide>slides/ze-xdebug/optimize2.xml</slide>
+<slide>slides/ze-xdebug/optimize3.xml</slide>
+<slide>slides/ze-xdebug/optimize4.xml</slide>
+<slide>slides/ze-xdebug/optimize5.xml</slide>
+<slide>slides/ze-xdebug/execute1.xml</slide>
+<slide>slides/ze-xdebug/execute2.xml</slide>
+<slide>slides/ze-xdebug/execute3.xml</slide>
+<slide>slides/ze-xdebug/hooks1.xml</slide>
+<slide>slides/ze-xdebug/xdebug1.xml</slide>
+<slide>slides/ze-xdebug/ext_info1.xml</slide>
+<slide>slides/ze-xdebug/ext_info2.xml</slide>
+<slide>slides/ze-xdebug/internal_functions.xml</slide>
+<slide>slides/ze-xdebug/gathering1.xml</slide>
+<slide>slides/ze-xdebug/gathering2.xml</slide>
+<slide>slides/ze-xdebug/gathering3.xml</slide>
+<slide>slides/ze-xdebug/interfaces.xml</slide>
+<slide>slides/ze-xdebug/error_cb.xml</slide>
+<slide>slides/ze-xdebug/functiontrace.xml</slide>
+<slide>slides/ze-xdebug/debugging_modes.xml</slide>
+<slide>slides/ze-xdebug/jit.xml</slide>
+<slide>slides/ze-xdebug/req.xml</slide>
+<slide>slides/ze-xdebug/xdebug_handlers.xml</slide>
+<slide>slides/ze-xdebug/handler_php3.xml</slide>
+<slide>slides/ze-xdebug/handler_gdb1.xml</slide>
+<slide>slides/ze-xdebug/xdebug_future.xml</slide>
+<slide>slides/ze-xdebug/final.xml</slide>
+<slide>slides/ze-xdebug/resources.xml</slide>
 </presentation>

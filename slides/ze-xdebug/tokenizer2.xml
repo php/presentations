@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Tokenizer Example 2</title>
+
+	<blurb> </blurb>
+
+	<example fontsize="1.7em"><![CDATA[<?php
+    function apply_magic(&$a) {
+]]></example>
+
+	<blurb> </blurb>
+
+	<example fontsize="1.7em"><![CDATA[   0 T_OPEN_TAG               [<?php]
+   1 T_WHITESPACE             [    ]
+   2 T_FUNCTION               [function]
+   3 T_WHITESPACE             [ ]
+   4 T_STRING                 [apply_magic]
+   5                          [(]
+   6                          [&]
+   7 T_VARIABLE               [$a]
+   8                          [)]
+   9 T_WHITESPACE             [ ]
+  10                          [{]
+]]></example>
+</slide>
