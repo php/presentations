@@ -7,7 +7,7 @@
  <event>International PHP Conference</event>
  <location>Frankfurt</location>
  <date>November 5, 2002</date>
- <speaker>Andrei Zmievski</speaker>
+ <speaker>Andrei Zmievski (Fast Search &amp; Transfer)</speaker>
  <email>andrei@php.net</email>
  <url>http://conf.php.net/kongress-gtk-csg</url>
 
@@ -23,4 +23,26 @@
  <slide>slides/gtk-csg/colors2.xml</slide>
  <slide>slides/gtk-csg/gcs1.xml</slide>
  <slide>slides/gtk-csg/gcs2.xml</slide>
+ <slide>slides/gtk-csg/xpms1.xml</slide>
+ <slide>slides/gtk-csg/xpms2.xml</slide>
+ <slide>slides/gtk-csg/xpms3.xml</slide>
+ <slide>slides/gtk-csg/xpms4.xml</slide>
+ <slide>slides/gtk-csg/icons.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-intro.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-load.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-render1.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-render2.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-scalecomp1.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-scalecomp2.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-scalecomp3.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-scalecomp4.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-img2xpm.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-draw2img1.xml</slide>
+ <slide>slides/gtk-csg/pixbuf-draw2img2.xml</slide>
+ <slide>slides/gtk-csg/styles1.xml</slide>
+ <slide>slides/gtk-csg/styles2.xml</slide>
+ <slide>slides/gtk-csg/styles3.xml</slide>
+ <slide>slides/gtk-csg/rcs1.xml</slide>
+ <slide>slides/gtk-csg/rcs2.xml</slide>
+ <slide>slides/gtk-csg/moreinfo.xml</slide>
 </presentation>
