@@ -1,26 +1,26 @@
 <slide title="PHP Usage Growth">
 <list>
-<title>February 2003 Netcraft Report</title>
-<bullet>35,863,952 Domains queried</bullet>
-<bullet> 10,519,623 Domains.  1,220,927 IP addresses</bullet>
-<bullet>PHP installed on 29.33% of all domains</bullet>
+<title>March 2003 Netcraft Report</title>
+<bullet>40,100,739 Domains queried</bullet>
+<bullet> 11,860,645 Domains.  1,316,288 IP addresses</bullet>
+<bullet>PHP installed on 29.58% of all domains</bullet>
 </list>
 <image filename="phpstats.png" align="center"/>
 <link href="http://www.netcraft.com" leader="Source: " align="right" marginright="6em">Netcraft</link>
 
 <list>
-<title>February 2003 Apache Module Report</title>
-<bullet>%5,852,747 Apache Servers surveyed%</bullet>
-<bullet>%2,998,762 (51.24\%) PHP%</bullet>
-<bullet>%1,765,800 (30.17\%) OpenSSL%</bullet>
-<bullet>%1,703,290 (29.10\%) mod_ssl%</bullet>
-<bullet>%1,269,545 (21.69\%) Frontpage%</bullet>
-<bullet>%1,255,480 (21.45\%) mod_perl%</bullet>
-<bullet>%  348,783  (5.96\%) DAV%</bullet>
-<bullet>%  296,899  (5.07\%) mod_throttle%</bullet>
-<bullet>%  167,790  (2.87\%) AuthMySQL%</bullet>
-<bullet>%  159,416  (2.72\%) mod_auth_pam%</bullet>
-<bullet>%  156,354  (2.67\%) mod_jk%</bullet>
+<title>March 2003 Apache Module Report</title>
+<bullet>%6,134,492 Apache Servers surveyed%</bullet>
+<bullet>%3,107,624 (50.66\%) PHP%</bullet>
+<bullet>%1,877,707 (30.61\%) OpenSSL%</bullet>
+<bullet>%1,813,509 (29.56\%) mod_ssl%</bullet>
+<bullet>%1,345,589 (21.93\%) Frontpage%</bullet>
+<bullet>%1,297,683 (21.15\%) mod_perl%</bullet>
+<bullet>%  370,550  (6.04\%) DAV%</bullet>
+<bullet>%  321,928  (5.25\%) mod_throttle%</bullet>
+<bullet>%  175,924  (2.87\%) AuthMySQL%</bullet>
+<bullet>%  172,517  (2.81\%) mod_jk%</bullet>
+<bullet>%  170,581  (2.78\%) mod_auth_pam%</bullet>
 </list>
 <link href="http://www.securityspace.com/s_survey/data/index.html" leader="Source: ">SecuritySpace.com</link>
 
