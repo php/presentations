@@ -7,6 +7,7 @@
 <form action="form.phtml" method="POST">
 Name: <input type="text" name="name">
 Age: <input type="text" name="age">
+<br><input type="submit">
 </form>
 <?if($name):?>
 Hi <?echo $name?>, you are <?echo $age?> years old
