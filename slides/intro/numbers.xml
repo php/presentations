@@ -1,28 +1,28 @@
 <slide title="PHP is Big!">
 <list>
-<title>June 2004 Netcraft Report</title>
-<bullet> 51,635,284 Domains queried</bullet>
-<bullet> 16,251,453 Domains.  1,346,521 IP addresses</bullet>
-<bullet>PHP installed on 31% of all domains</bullet>
+<title>August 2004 Netcraft Report</title>
+<bullet> 53,341,867 Domains queried</bullet>
+<bullet> 16,946,328 Domains.  1,348,793 IP addresses</bullet>
+<bullet>PHP installed on 32% of all domains</bullet>
 </list>
 <image filename="phpstats.png" align="center"/>
 <link href="http://www.netcraft.com" leader="Source: " align="right" marginright="6em">Netcraft</link>
 
 <list>
-<title>June 2004 Apache Module Report</title>
-<bullet>%10,520,690 Apache Servers surveyed%</bullet>
-<bullet>% 5,449,296 (51.80\%) PHP%</bullet>
-<bullet>% 2,874,196 (27.32\%) OpenSSL%</bullet>
-<bullet>% 2,793,397 (26.55\%) mod_ssl%</bullet>
-<bullet>% 2,044,270 (19.43\%) Frontpage%</bullet>
-<bullet>% 1,586,713 (15.08\%) mod_perl%</bullet>
-<bullet>%   497,312  (4.73\%) mod_log_bytes%</bullet>
-<bullet>%   482,058  (4.58\%) mod_bwlimited%</bullet>
-<bullet>%   455,216  (4.33\%) DAV%</bullet>
-<bullet>%   431,320  (4.10\%) mod_throttle%</bullet>
-<bullet>%   376,234  (3.58\%) mod_jk%</bullet>
-<bullet>%   266,823  (2.54\%) mod_fastcgi%</bullet>
-<bullet>%   194,000  (1.84\%) mod_auth_pam%</bullet>
+<title>September 2004 Apache Module Report</title>
+<bullet>%10,933,256	 Apache Servers surveyed%</bullet>
+<bullet>% 5,405,907	(49.44\%) PHP%</bullet>
+<bullet>% 2,952,183 (27.00\%) OpenSSL%</bullet>
+<bullet>% 2,868,311 (26.23\%) mod_ssl%</bullet>
+<bullet>% 2,114,853 (19.34\%) Frontpage%</bullet>
+<bullet>% 1,542,833 (14.11\%) mod_perl%</bullet>
+<bullet>%   583,005  (5.33\%) mod_log_bytes%</bullet>
+<bullet>%   562,279  (5.14\%) mod_bwlimited%</bullet>
+<bullet>%   456,107  (4.17\%) DAV%</bullet>
+<bullet>%   430,484  (3.94\%) mod_throttle%</bullet>
+<bullet>%   361,366  (3.31\%) mod_jk%</bullet>
+<bullet>%   276,478  (2.53\%) mod_fastcgi%</bullet>
+<bullet>%   187,720  (1.72\%) mod_auth_pam%</bullet>
 </list>
 <link href="http://www.securityspace.com/s_survey/data/index.html" leader="Source: ">SecuritySpace.com</link>
 
