@@ -1,3 +1,16 @@
 <slide title="Embedding PHP Tags">
-<image align="center" filename="slides/tags.png" />
+<example title="The 4 available tag styles" result="yes"><![CDATA[<html>
+<body>
+<? echo 'Short Tags - Most common' ?>
+<br />
+<?php echo 'Long Tags - Portable' ?>
+<br />
+<%= 'ASP Tags' %>
+<br />
+<script language="php">
+ echo 'Really Long Tags - rarely used';
+</script>
+<br />
+</body>
+</html>]]></example>
 </slide>
