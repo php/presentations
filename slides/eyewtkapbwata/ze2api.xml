@@ -3,7 +3,9 @@
  <list title="Major changes and additions" fontsize="3em">
   <bullet>Object abstraction via handlers (see below)</bullet>
   <bullet>Ability to override opcode handlers</bullet>
-  <bullet>Streams subsystem API</bullet>
+  <bullet>Streams subsystem API: new filters implementation, socket transport
+   abstraction, memory mapping API, socket servers, SSL/crypto API for
+   transports</bullet>
  </list>
  <example title="Object handlers" fontsize="1.5em"><![CDATA[  add_ref
   del_ref
