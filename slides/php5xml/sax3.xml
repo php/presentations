@@ -1,0 +1,11 @@
+<slide>
+<title>SAX Structured Access</title>
+
+<blurb>
+A simpler way to access XML structures (SAX for lazy people).
+<![CDATA[<br />]]>This is pretty much a DOM emulation mode.
+</blurb>
+
+<example filename="expat_struct.php" result="1" fontsize="1.4em" />
+
+</slide>

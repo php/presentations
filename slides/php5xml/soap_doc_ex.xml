@@ -1,0 +1,26 @@
+<slide title="SOAP Document">
+
+<example title="SOAP Document"><![CDATA[<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+ 
+<soap:Header>
+<m:Trans xmlns:m="http://www.example.com/header/" soap:mustUnderstand="1">
+234
+</m:Trans>
+</soap:Header>
+      
+<soap:Body>
+	<soap:Fault>
+	</soap:Fault>
+
+	<purge xmlns="http://fud.prohost.org/message">
+		<documentid>298</documentid>
+	</purge>
+</soap:Body>
+                       
+</soap:Envelope>]]></example>
+
+
+</slide>

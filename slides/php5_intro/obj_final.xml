@@ -1,0 +1,10 @@
+<slide title="Final Classes/Methods">
+
+<blurb>
+Classes and methods can be specified as %final% that will disallow classes to be extended
+and methods to be overloaded.
+</blurb>
+
+<example filename="obj_final.php" fontsize="1.5em" />
+
+</slide>

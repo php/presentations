@@ -1,0 +1,21 @@
+<slide title="SOAP">
+	
+<blurb fontsize="4em">The road to hell is paved with good intentions.</blurb>	
+
+<image filename="soap.gif" align="right" />
+	
+<list>
+	<bullet>Formerly known as Simple Object Access Protocol.</bullet>
+	<bullet>A messaging format primary used for RPC.</bullet>
+	<bullet>Uses XML.</bullet>
+	<bullet>View Source protocol.</bullet>
+</list>
+
+<list title="Brief History">
+	<bullet>Initial release, Babylon 2800 B.C</bullet>
+	<bullet>SOAP 1.0, Microsoft 1999</bullet>
+	<bullet>SOAP 1.1, IBM and Microsoft 2000</bullet>
+	<bullet>SOAP 1.2, W3C present time</bullet>
+</list>
+
+</slide>

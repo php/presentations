@@ -1,0 +1,29 @@
+<slide title="Extension Functionality">
+
+<blurb>
+The PHP's XML extensions can be split into 4 categories, based on their
+functionality and backend processing mechanisms.
+</blurb>
+
+<image filename="extension.jpg" align="right" />
+
+<list title="Document Object Model (DOM)" fontsize="2em">
+	<bullet>SimpleXML</bullet>
+	<bullet>DOM |00AA00|Evolution of domxml in PHP 4|</bullet>
+</list>
+
+<list title="Simple API for XML (SAX)" fontsize="2em">
+	<bullet>XML |00AA00|Same as in PHP 4|</bullet>
+	<bullet>XMLReader</bullet>
+</list>
+
+<list title="Web Services" fontsize="2em">
+	<bullet>SOAP</bullet>
+	<bullet>XML-RPC |00AA00|Same as in PHP 4|</bullet>
+</list>
+
+<list title="XML Transformation" fontsize="2em">
+	<bullet>XSL |00AA00|Evolution of XLST in PHP 4|</bullet>
+</list>
+
+</slide>

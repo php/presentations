@@ -1,0 +1,13 @@
+<slide title="Abstract Classes">
+
+<image filename="abstract.jpg" align="right" />
+
+<blurb>
+PHP 5 introduces %abstract% classes and methods. An abstract method only declares 
+the method's signature and does not provide an implementation. A class that contains 
+abstract methods needs to be declared abstract. 
+</blurb>
+
+<example filename="obj_abstract.php" fontsize="1.5em" />
+
+</slide>

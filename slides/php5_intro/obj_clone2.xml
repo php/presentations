@@ -1,0 +1,11 @@
+<slide title="Object Cloning">
+
+<image filename="dolly.jpg" align="right" />
+
+<blurb>
+You can specify your own __clone() method that will be executed when an object is cloned.
+</blurb>
+
+<example filename="obj_clone2.php" fontsize="1.5em" />
+
+</slide>

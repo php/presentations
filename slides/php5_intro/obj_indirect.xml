@@ -1,0 +1,10 @@
+<slide title="Indirect Referencing">
+
+<blurb>
+PHP 5 permits access to properties and methods of an object that is stored inside in another
+object. In PHP 4 this required assignment of the object to separate variables.
+</blurb>
+
+<example filename="obj_indirect.php" fontsize="1.5em" />
+
+</slide>

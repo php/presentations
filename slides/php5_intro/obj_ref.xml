@@ -1,0 +1,10 @@
+<slide title="Object References">
+
+<blurb>
+In ZE / PHP 4 objects were passed by reference, so when variables containing objects were passed to
+functions a local copy of the object was made for the function.
+</blurb>
+
+<example filename="obj_ref.php" fontsize="2em" />
+
+</slide>

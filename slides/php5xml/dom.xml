@@ -1,0 +1,18 @@
+<slide title="DOM Extension">
+
+<blurb fontsize="3.5em">
+DOM is not DOMXML. DOM extension has been written from scratch and strongly relies on the PHP 5 features
+&amp; capabilities. |FF0000|DOM is not compatible with DOMXML|
+</blurb>
+
+<list title="Features" fontsize="2.5em">
+<bullet>DOM Level 3 Load and Save Support</bullet>
+<bullet>XPath</bullet>
+<bullet>Validation support</bullet>
+<bullet>NamedNodeMap support</bullet>
+<bullet>Complete Namespaces support</bullet>
+<bullet>Interop with SimpleXML and XSLT</bullet>
+<bullet>HTML</bullet>
+</list>
+
+</slide>

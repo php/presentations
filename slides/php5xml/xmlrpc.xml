@@ -1,0 +1,16 @@
+<slide title="XMLRPC">
+
+<break />
+
+<blurb fontsize="3em">
+XMLRPC allows a computer to execute functions and class methods on another computer with any given
+arguments.
+</blurb>
+
+<image filename="xmlrpc.jpg" align="center" />	
+
+<blurb fontsize="3em">
+Primarily uses HTTP for transporting requests that are encoded using XML.
+</blurb>
+
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Getter and Setter">
+
+<blurb>
+PHP 5 objects support special %__get()% and %__set()% methods to access "virtual" 
+properties that do not actually existing, but instead are emulated existing data.
+</blurb>
+
+<example filename="obj_get_set.php" fontsize="1.5em" />
+
+</slide>

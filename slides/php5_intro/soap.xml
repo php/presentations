@@ -1,0 +1,21 @@
+<slide title="SOAP">
+
+<image filename="ivorysoap.gif" align="right" />
+
+<blurb>
+The %SOAP% extension is a fast and fairly complete interface for creating and
+working with SOAP web-services.
+</blurb>
+
+<list title="Capabilities">
+<bullet>WSDL Code Generation improved</bullet>
+<bullet>Schema Code Generation added!</bullet>
+<bullet>Less focus on RPC, more on Document messaging</bullet>
+<bullet>Smaller code base, easier to extend</bullet>
+<bullet>Streams API support</bullet>
+<bullet>Uses DOM, may use SimpleXML alternatively in the future</bullet>
+<bullet>Cleaner code, better organized</bullet>
+<bullet>Makes use of new OO support in PHP 5</bullet>
+</list>
+
+</slide>

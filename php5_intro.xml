@@ -1,0 +1,76 @@
+<presentation template="php2" titlecolor="#1111aa" navbarbackground="url(images/trans-ffffff.png)" logo1="images/php-med-trans-light.gif" titlesize="2em" navbarheight="4.1em">
+<topic>PHP 5</topic>	
+<title>Introduction to PHP 5</title>
+<copyright>(c) Copyright 2004 Ilia Alshanetsky</copyright>
+<event>PHP|Works</event>
+<location>Toronto, Canada</location>
+<date>September 22rd 2004</date>
+<speaker>Ilia Alshanetsky</speaker>
+<navmode>html</navmode>
+<url>http://talks.php.net/</url>
+
+<slide>slides/php5_intro/titlepage.xml</slide>
+<slide>slides/php5_intro/evolution.xml</slide>
+<slide>slides/php5_intro/revolution.xml</slide>
+
+<slide>slides/php5_intro/obj_ref.xml</slide>
+<slide>slides/php5_intro/obj_ref2.xml</slide>
+
+<slide>slides/php5_intro/obj_clone.xml</slide>
+<slide>slides/php5_intro/obj_clone2.xml</slide>
+
+<slide>slides/php5_intro/obj_con_des.xml</slide>
+<slide>slides/php5_intro/obj_con_des2.xml</slide>
+
+<slide>slides/php5_intro/obj_ppp.xml</slide>
+<slide>slides/php5_intro/obj_ppp2.xml</slide>
+
+<slide>slides/php5_intro/obj_static.xml</slide>
+<slide>slides/php5_intro/obj_final.xml</slide>
+<slide>slides/php5_intro/obj_const.xml</slide>
+
+<slide>slides/php5_intro/obj_indirect.xml</slide>
+
+<slide>slides/php5_intro/obj_autoload.xml</slide>
+<slide>slides/php5_intro/obj_get_set.xml</slide>
+<slide>slides/php5_intro/obj_method_over.xml</slide>
+
+<slide>slides/php5_intro/obj_abstract.xml</slide>
+<slide>slides/php5_intro/obj_interface.xml</slide>
+
+<slide>slides/php5_intro/obj_exceptions.xml</slide>
+<slide>slides/php5_intro/obj_tostring.xml</slide>
+
+<slide>slides/php5_intro/xml_intro.xml</slide>
+<slide>slides/php5_intro/simplexml.xml</slide>
+
+<slide>slides/php5_intro/dom.xml</slide>
+<slide>slides/php5_intro/dom_ex.xml</slide>
+
+<slide>slides/php5_intro/xsl.xml</slide>
+<slide>slides/php5_intro/xsl_ex.xml</slide>
+
+<slide>slides/php5_intro/soap.xml</slide>
+<slide>slides/php5_intro/soap_ex.xml</slide>
+
+<slide>slides/php5_intro/sqlite_intro.xml</slide>
+<slide>slides/php5_intro/sqlite_ex.xml</slide>
+<slide>slides/php5_intro/sqlite_ex2.xml</slide>
+
+<slide>slides/php5_intro/tidy_intro.xml</slide>
+<slide>slides/php5_intro/tidy_ex1.xml</slide>
+<slide>slides/php5_intro/tidy_ex2.xml</slide>
+
+<slide>slides/php5_intro/spl_intro.xml</slide>
+<slide>slides/php5_intro/spl_ex1.xml</slide>
+
+<slide>slides/php5_intro/streams_intro.xml</slide>
+<slide>slides/php5_intro/streams_ex1.xml</slide>
+<slide>slides/php5_intro/streams_ex2.xml</slide>
+
+<slide>slides/php5_intro/standard.xml</slide>
+<slide>slides/php5_intro/standard2.xml</slide>
+
+<slide>slides/php5_intro/thankyou.xml</slide>
+
+</presentation>

@@ -1,0 +1,9 @@
+<slide title="Dynamic Methods">
+
+<blurb>
+You can also create "virtual" methods that will be handled via the special %__call()% method.
+</blurb>
+
+<example filename="obj_method_over.php" fontsize="1.5em" />
+
+</slide>

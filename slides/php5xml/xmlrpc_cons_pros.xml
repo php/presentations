@@ -1,0 +1,16 @@
+<slide title="XMLRPC Cons &amp; Pros">
+
+<list title="Why use XMLRPC?">
+<bullet>Easy to understand, implement and debug</bullet>
+<bullet>Quite fast</bullet>
+<bullet>Stable</bullet>
+<bullet>Can be emulated with PEAR</bullet>
+</list>
+
+<list title="XML-RPC sucks because...">
+<bullet>No new functionality being added</bullet>
+<bullet>Not completely buzzword compliant</bullet>
+<bullet>Very few big providers use XMLRPC</bullet>
+</list>
+
+</slide>

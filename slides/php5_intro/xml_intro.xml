@@ -1,0 +1,26 @@
+<slide title="PHP 5 &amp; XML">
+
+<blurb>
+PHP 5 introduced a number of new XML extensions: %SOAP%, %SimpleXML%, %XSL%, %DOM%
+</blurb>
+
+<break />
+
+<blurb>
+Older %XLST% and %DOMXML% were removed in favor of their newer counterparts.
+</blurb>
+
+<break />
+
+<blurb>
+All XML extensions now use a single XML parsing library, LibXML2, unlike the older
+%Expat% this library is too big to bundle, however it is available by default on most systems.
+</blurb>
+
+<break />
+
+<blurb>
+Additional XML extensions for PHP 5 are available from PECL repository (%XmlReader% &amp; %XmlWriter%)
+</blurb>
+
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Static Methods/Properties">
+
+<image filename="static.jpg" align="right" />
+
+<blurb>
+You can specify methods &amp; properties as %static% that permits
+access to them from outside of the class.
+</blurb>
+
+<example filename="obj_static.php" fontsize="1.5em" />
+
+</slide>

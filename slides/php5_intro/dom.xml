@@ -1,0 +1,18 @@
+<slide title="DOM">
+
+<blurb>
+%DOM% is a complete rewrite of the %DOMXML% extension. The new extensions makes use
+of PHP 5's OO features to offer a robust interface. 
+</blurb>
+
+<list title="Capabilities">
+<bullet>DOM Level 3 Load and Save Support</bullet>
+<bullet>XPath</bullet>
+<bullet>Validation support</bullet>
+<bullet>NamedNodeMap support</bullet>
+<bullet>Complete Namespaces support</bullet>
+<bullet>Interop with SimpleXML and XSLT</bullet>
+<bullet>HTML Support</bullet>
+</list>
+
+</slide>

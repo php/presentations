@@ -1,0 +1,18 @@
+<slide title="Construct/Destruct">
+
+<image filename="under-construction.jpg" align="right" />
+
+<blurb>
+In PHP 4 constructors were supported by creating a function with the same name as the class.
+</blurb>
+
+<example filename="obj_con_des4.php" fontsize="1.5em" />
+
+<blurb>
+In PHP 5, the %__construct()% method will be called (if it exists) when the object is created, 
+and the %__destruct()% method when it is destroyed. 
+</blurb>
+
+<example filename="obj_con_des5.php" fontsize="1.5em" />
+
+</slide>

@@ -1,0 +1,14 @@
+<slide title="SOAP Summary">
+
+<list fontsize="4em" title="Advantages">
+	<bullet>PHP API is very easy to use</bullet>
+	<bullet>Ability to customize every portion of the message</bullet>
+	<bullet>Fully Buzzword Compliant</bullet>
+</list>
+
+<list fontsize="4em" title="Disadvantages">
+        <bullet>Not yet completely stable</bullet>
+	<bullet>Difficult to understand internals</bullet>
+</list>
+
+</slide>

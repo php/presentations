@@ -1,0 +1,10 @@
+<slide title="PPP">
+
+<blurb>
+PHP 5 supports %public%, %private% and %protected% properties. The PHP 4 style %var% are treated
+as %public%, but will raise an E_STRICT warning when used.
+</blurb>
+
+<example filename="obj_ppp.php" fontsize="1.5em" />
+
+</slide>

@@ -1,0 +1,12 @@
+<slide title="SimpleXML">
+
+<image filename="magician.gif" align="right" />
+
+<blurb>
+SimpleXML is arguably the simplest and fastest way to parse XML documents that is 
+natively available in PHP.
+</blurb>
+
+<example filename="obj_simplexml.php" fontsize="1.5em" />
+
+</slide>

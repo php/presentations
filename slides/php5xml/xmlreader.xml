@@ -1,0 +1,16 @@
+<slide title="XmlReader">
+
+<blurb fontsize="5em" align="center">
+XmlReader
+</blurb>
+
+<image filename="reader.jpg" align="center" />
+
+<list fontsize="3em">
+<bullet>Very new extension (in PECL)</bullet>
+<bullet>a so called Pull Parser</bullet>
+<bullet>API derived from C# XmlTextReader</bullet>
+<bullet>A replacement for SAX</bullet>
+</list>
+
+</slide>

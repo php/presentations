@@ -1,0 +1,18 @@
+<slide title="Tidy Extension">
+
+<image filename="tidy.jpg" align="right" />
+
+<blurb>
+Tidy Extension is a wrapper around %libTidy% library, who's purpose is to clean,
+compact and convert between the various HTML variants.
+</blurb>
+
+<list title="Capabilities">
+<bullet>Automatically repair malformed HTML</bullet>
+<bullet>Convert HTML 3 to HTML 4 to XHTML in a few lines of code</bullet>
+<bullet>Find and extract portions of HTML documents using OO</bullet>
+<bullet>Compact your page output using Tidy output buffer.</bullet>
+<bullet>Convert HTML tags to CSS whenever possible.</bullet>
+</list>
+
+</slide>

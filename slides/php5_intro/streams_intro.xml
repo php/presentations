@@ -1,0 +1,17 @@
+<slide title="Streams">
+
+<image filename="stream.jpg" align="right" />
+
+<blurb>
+While streams were introduced in PHP 4, it is in PHP 5 where the full capabilities
+of streams can be fully explored.
+</blurb>
+
+<list title="Changes">
+<bullet>Nearly all functions that work with opening files/urls/sockets support contexts</bullet>
+<bullet>A number of built-in filters</bullet>
+<bullet>Can define new streams and filters in userspace</bullet>
+<bullet>Stream server support</bullet>
+</list>
+
+</slide>

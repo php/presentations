@@ -1,0 +1,10 @@
+<slide title="PPP">
+
+<blurb>
+Object methods can also be designated as %public%, %private% and %protected%. Methods
+without specific designation are assumed to be %public%.
+</blurb>
+
+<example filename="obj_ppp2.php" fontsize="1.5em" />
+
+</slide>

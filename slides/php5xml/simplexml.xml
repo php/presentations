@@ -1,0 +1,18 @@
+<slide title="SimpleXML">
+
+<image filename="wizardry.jpg" align="right" />
+
+<blurb fontsize="3em">
+Sterling Hughes: "XML is the solution to all your problems; SimpleXML ensures it isn't the root of your problems!" 
+</blurb>
+
+<list fontsize="2.5em">
+<bullet>New in PHP 5 (enabled by default)</bullet>
+<bullet>Object Oriented approach to XML Documents</bullet>
+<bullet>Really useful for well structured XML</bullet>
+<bullet>Supports XPath for all sorts of tricks</bullet>
+<bullet>Can write to attributes</bullet>
+<bullet>|FF0000|Fast and Simple to use|</bullet>
+</list>
+
+</slide>

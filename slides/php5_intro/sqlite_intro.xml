@@ -1,0 +1,19 @@
+<slide title="SQLite">
+
+<image filename="sqlite.gif" align="right" />
+
+<blurb>
+Newest database extension with arguably the fastest interface between the database &amp; PHP.
+</blurb>
+
+<list type="Features">
+<bullet>Bundled with PHP 5 (including library)</bullet>
+<bullet>Fast and easy interface to 'flatfiles'</bullet>
+<bullet>Implements most of SQL92</bullet>
+<bullet>Supports both OO and procedural API</bullet>
+<bullet>No daemon required</bullet>
+<bullet>Enabled by default</bullet>
+<bullet>Can use PHP to extend SQL language</bullet>
+</list>
+
+</slide>

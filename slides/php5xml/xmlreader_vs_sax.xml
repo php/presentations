@@ -1,0 +1,12 @@
+<slide title="XmlReader vs SAX">
+
+<image filename="boxing.jpg" align="center" />
+
+<list fontsize="3.5em">
+<bullet>Sax is Event based</bullet>
+<bullet>XmlReader is cursor based</bullet>
+<bullet>XmlReader has support for namespaces, validation and entities</bullet>
+<bullet>Both do not load the whole document into memory</bullet>
+</list>
+
+</slide>

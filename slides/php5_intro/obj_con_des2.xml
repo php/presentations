@@ -1,0 +1,10 @@
+<slide title="Construct/Destruct">
+
+<blurb>
+As with PHP 4, classes that extend other classes should call the parent's constructor within
+their own constructor.
+</blurb>
+
+<example filename="obj_con.php" fontsize="1.5em" />
+
+</slide>

@@ -1,0 +1,19 @@
+<slide title="LibXML2 vs Expat">
+
+<blurb>
+Aside from the addition of the new XML parsing extensions, in PHP 5 the underlying XML
+library was changed as well.
+</blurb>
+
+<list title="LibXML2 the Good">
+	<bullet>Feature complete</bullet>
+	<bullet>Active development</bullet>
+	<bullet>Very fast for DOM</bullet>
+</list>
+
+<list title="and the Bad">
+	<bullet>Significantly larger then Expat (not bundled with PHP)</bullet>
+	<bullet>Slightly slower for SAX</bullet>
+</list>
+
+</slide>

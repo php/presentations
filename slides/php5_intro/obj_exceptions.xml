@@ -1,0 +1,12 @@
+<slide title="Exceptions">
+
+<image filename="different.jpg" align="right" />
+
+<blurb>
+PHP 5 introduces exceptions using a Java-like syntax. All exceptions extend the standard
+%Exception% class, meaning that you can create your own custom exceptions.
+</blurb>
+
+<example filename="obj_exception.php" fontsize="1.5em" />
+
+</slide>

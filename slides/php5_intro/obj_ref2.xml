@@ -1,0 +1,10 @@
+<slide title="Object References Cont.">
+
+<blurb>
+In PHP 5 anytime a variable containing an object is assigned to another variable it ends up being
+passed by reference.
+</blurb>
+
+<example filename="obj_ref2.php" fontsize="1.5em" />
+
+</slide>

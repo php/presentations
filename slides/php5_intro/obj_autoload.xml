@@ -1,0 +1,14 @@
+<slide title="Autoload">
+
+<image filename="autoload.jpg" align="right" />
+
+<blurb>
+To make the developer simpler, PHP 5 introduces a global-scope function %__autoload()% that will automatically
+satisfy class dependencies at run time.
+</blurb>
+
+<example title="Source Class" filename="obj_autoload2.php" fontsize="1.5em" />
+
+<example title="Main Script" filename="obj_autoload.php" fontsize="1.5em" />
+
+</slide>

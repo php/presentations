@@ -1,0 +1,12 @@
+<slide title="DOM &amp; XML Validation">
+
+<list fontsize="3.5em" title="DOM XML Validation Mechanisms">
+<bullet>boolean attribute DOMDocument->validateOnParse</bullet>
+<bullet>boolean DOMDocument->validate()</bullet>
+<bullet>boolean DOMDocument->schemaValidate(string filename)</bullet>
+<bullet>boolean DOMDocument->schemaValidateSource(string xml)</bullet>
+<bullet>boolean DOMDocument->relaxNGValidate(string filename)</bullet>
+<bullet>boolean DOMDocument->relaxNGValidateSource(string xml)</bullet>
+</list>
+
+</slide>
