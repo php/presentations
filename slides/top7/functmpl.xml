@@ -1,0 +1,10 @@
+<slide title="Function templating">
+<blurb>
+Code it in html with a set of functions which serve to output/format dynamic blocks.
+</blurb>
+<example filename="functmpl.tpl" result="1" title="Template File"/>
+<blurb>
+<![CDATA[<br /><br />]]>
+</blurb>
+<example filename="funcdisp.php" title="Display Functions"/>
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Be Smart">
+<blurb>
+</blurb>
+<list fontsize="5.0em">
+<bullet effect="hide" type="none" marginleft="4.0em">... Use Smarty!</bullet>
+</list>
+<blurb>
+</blurb>
+<list>
+<bullet effect="slide">MVC Paradigm</bullet>
+<bullet effect="slide">Precompiled templates</bullet>
+<bullet effect="slide">Multiple Caching Backends</bullet>
+<bullet effect="slide">Plugin architecture</bullet>
+<bullet effect="slide">Filter Architecture</bullet>
+<bullet effect="hide" marginleft="2.0em">Prefilter</bullet>
+<bullet effect="hide" marginleft="2.0em">Postfilter</bullet>
+<bullet effect="slide">Output block caching</bullet>
+<bullet effect="slide">Security Features</bullet>
+</list>
+</slide>
