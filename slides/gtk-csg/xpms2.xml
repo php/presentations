@@ -1,0 +1,56 @@
+<slide title="XPMs 2/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em" title="Loading">
+  To load a pixmap from an .xpm file:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  array gdk::pixmap_create_from_xpm(GdkWindow $window,
+                                    GdkColor  $trans_color,
+                                    string    $filename)
+?>]]></example>
+ <blurb title="$window">
+  provides the defaults for creating the pixmap; it is the same
+  window you would pass to the GdkPixmap() constructor
+ </blurb>
+  
+ <blurb title="$trans_color">
+     the color to use to fill in the transparent pixels in the
+     pixmap. Can be null.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  list($pixmap, $mask) =
+     gdk::pixmap_create_from_xpm($win->window, null, "gtk-logo.xpm");
+?>]]></example>
+
+ <blurb fontsize="3em">
+  You can also load pixmap from an inline data array.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  $book_open_xpm = array("16 16 4 1",
+                         "       c None s None",
+                         ".      c black",
+                         "X      c #808080",
+                         "o      c white",
+                         "                ",
+                         "  ..            ",
+                         " .Xo.    ...    ",
+                         " .Xoo. ..oo.    ",
+                         " .Xooo.Xooo...  ",
+                         " .Xooo.oooo.X.  ",
+                         " .Xooo.Xooo.X.  ",
+                         " .Xooo.oooo.X.  ",
+                         " .Xooo.Xooo.X.  ",
+                         " .Xooo.oooo.X.  ",
+                         "  .Xoo.Xoo..X.  ",
+                         "   .Xo.o..ooX.  ",
+                         "    .X..XXXXX.  ",
+                         "    ..X.......  ",
+                         "     ..         ",
+                         "                ");
+  list($pixmap, $mask) =
+     gdk::pixmap_create_from_xpm_d($win->window, null, $book_open_xpm);
+?>]]></example>
+</slide>

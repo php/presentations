@@ -1,0 +1,41 @@
+<slide title="XPMs 1/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  XPM (X PixMap) is a powerful and portable format for
+  storing/retrieving pixmaps to/from files. It provides the easiest
+  way to load a graphical image into a GTK+ application. Moreover, the
+  graphical data can be embedded in the application itself.
+ </blurb>
+
+ <blurb fontsize="3em">
+  Briefly, the XPM format consists of a string describing its
+  dimensions and number of colors, followed by the color table, and
+  finally by the image data utilizing the characters mapped in the
+  color table. Here's a sample:
+ </blurb>
+
+ <example fontsize="1.3em" marginleft="10%" width="70%"><![CDATA[                         "16 16 6 1",
+                         "       c None s None",
+                         ".      c black",
+                         "X      c red",
+                         "o      c yellow",
+                         "O      c #808080",
+                         "#      c white",
+                         "                ",
+                         "       ..       ",
+                         "     ..XX.      ",
+                         "   ..XXXXX.     ",
+                         " ..XXXXXXXX.    ",
+                         ".ooXXXXXXXXX.   ",
+                         "..ooXXXXXXXXX.  ",
+                         ".X.ooXXXXXXXXX. ",
+                         ".XX.ooXXXXXX..  ",
+                         " .XX.ooXXX..#O  ",
+                         "  .XX.oo..##OO. ",
+                         "   .XX..##OO..  ",
+                         "    .X.#OO..    ",
+                         "     ..O..      ",
+                         "      ..        ",
+                         "                "]]></example>
+
+</slide>

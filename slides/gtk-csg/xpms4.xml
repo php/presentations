@@ -1,0 +1,29 @@
+<slide title="XPMs 4/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em" title="Transparent Background">
+  What about transparent backgrounds? In order to have some areas of
+  the window appear transparent, you need to apply a shape mask to it.
+  A shape mask is a GdkBitmap specifying which pixels will appear
+  transparent and which - opaque. Note that GdkBitmap is a monochrome
+  mask so it is not possible to achieve variable transparency as of yet.
+
+  Complete example:
+ </blurb>
+
+ <example fontsize="1.7em"><![CDATA[<?php
+  $win = &new GtkWindow();
+  $win->realize();
+
+  list($pixmap, $mask) =
+     gdk::pixmap_create_from_xpm($win->window, null, "rings.xpm");
+
+  $pix = &new GtkPixmap($pixmap, $mask);
+
+  $win->add($pix);
+  $win->shape_combine_mask($mask, 0, 0);
+
+  $win->set_default_size($pixmap->width, $pixmap->height);
+  $win->set_policy(false, false, false);
+  $win->show_all();
+?>]]></example>
+</slide>

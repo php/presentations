@@ -1,0 +1,28 @@
+<slide title="XPMs 3/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em" title="Displaying">
+  What a good is a pixmap when you can't display it?
+  There are couple of approaches to doing this.
+ </blurb>
+
+ <list>
+  <bullet>
+   Create a drawing area, hook up to expose_event, and draw the pixmap onto it
+   as seen before. Although doing it for every icon you are going to display
+   will drive you crazy.
+  </bullet>
+
+  <bullet>
+   Use GtkPixmap class which provides a simple pixmap container.
+  </bullet>
+ </list>
+
+ <example><![CDATA[<?php
+  list($pixmap, $mask) =
+     gdk::pixmap_create_from_xpm($window->window,
+                                 null, "gtk-logo.xpm");
+  $gtkpix = &new GtkPixmap($pixmap, $mask);
+  $window->add($gtkpix);
+?>]]></example>
+
+</slide>
