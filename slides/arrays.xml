@@ -1,0 +1,21 @@
+<slide title="Arrays">
+
+<example title="Ordered Arrays"><![CDATA[<?php
+    $a[0] = 1;
+    $a[1] = "foo";
+    $a[]  = 1.57;
+?>]]></example>
+
+<example title="Associative arrays"><![CDATA[<?php
+$catch_it['cat'] = "mouse";
+$catch_it['dog'] = "cat";
+?>]]></example>
+
+<list title="Manipulating">
+<bullet>Sorting: sort(), rsort(), ksort(), usort(), array_multisort()</bullet>
+<bullet>Traversal: reset(), end(), next(), each(), current(), key(), array_walk()</bullet>
+<bullet>Advanced: array_diff(), array_intersect(), array_merge(),
+array_merge_recursive(), array_slice(), array_splice() and lots more...</bullet>
+</list>
+
+</slide>

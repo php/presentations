@@ -1,6 +1,5 @@
 <slide title="Basic Data Types">
 <example title="Numbers (integers and real)" result="yes"><![CDATA[<?php
-    // Numbers (integers and real)
     $a = 1234;
     $b = 0777;
     $c = 0xff;
