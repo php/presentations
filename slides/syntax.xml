@@ -1,0 +1,25 @@
+<slide title="Language Syntax">
+<example title="C-Like Syntax" fontsize="1.8em" width="40em"><![CDATA[<?
+for ($loop = -5; $loop < 5; $loop++) {
+    if ($i < 0) {
+        echo "-";
+    } elseif ($i > 0) {
+        echo "+";
+    }
+    echo "$loop<BR>\n";
+}
+while(--$loop) {
+    switch($i % 2) {
+      case 0:
+        echo "Even<BR>\n";
+        break;
+      case 1:
+        echo "Odd<BR>\n";
+        break;
+    }
+}
+do {
+    echo "$loop<BR>";
+} while (++$loop < 10);
+?>]]></example>
+</slide>
