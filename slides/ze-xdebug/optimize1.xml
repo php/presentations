@@ -2,8 +2,12 @@
 <slide fontsize="6em">
 	<title>Optimizing 1</title>
 
-	<list effect="slide" fontsize="5em">
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list fontsize="5em">
 		<bullet>Generated code not always optimal</bullet>
+	</list>
+	<list fontsize="5em">
 		<bullet>Optimizing techniques:</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">

@@ -2,12 +2,16 @@
 <slide fontsize="6em">
 	<title>Tokens</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<list effect="slide" fontsize="5em">
 		<bullet>The building blocks of a script</bullet>
 		<bullet>Strings, variables, keywords</bullet>
 		<bullet>Action rules</bullet>
 	</list>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<blurb> </blurb>
 
 	<example fontsize="1.4em"><![CDATA[<ST_IN_SCRIPTING>"::" {

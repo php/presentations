@@ -2,19 +2,21 @@
 <slide fontsize="6em">
 	<title>Disassembling 1</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<blurb>script body:</blurb>
 	<example fontsize="1.7em"><![CDATA[number of ops:  13
 
- 0  NOP           0, 0, 0
- 1  FETCH_W       $0, 'a', 1
- 2  ASSIGN        $1, $0, '5'
- 3  FETCH_W       $2, 'a', 1
- 4  SEND_REF      0, $2, 1
- 5  DO_FCALL      $3, 'apply_magic', 0
- 6  INIT_STRING   %4, 0, 0
- 7  FETCH_R       $5, 'a', 1
- 8  ADD_VAR       %4, %4, $5
- 9  ADD_CHAR      %4, %4, '10'
+0   NOP           0, 0, 0
+1   FETCH_W       $0, 'a', 1
+2   ASSIGN        $1, $0, '5'
+3   FETCH_W       $2, 'a', 1
+4   SEND_REF      0, $2, 1
+5   DO_FCALL      $3, 'apply_magic', 0
+6   INIT_STRING   %4, 0, 0
+7   FETCH_R       $5, 'a', 1
+8   ADD_VAR       %4, %4, $5
+9   ADD_CHAR      %4, %4, '10'
 10  ECHO          0, %4, 0
 11  RETURN        0, '1', 0
 ]]></example>

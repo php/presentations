@@ -2,6 +2,7 @@
 <slide fontsize="6em">
 	<title>Optimizing 2</title>
 
+	<blurb> </blurb>
 	<blurb>foo.php:</blurb>
 	<example fontsize="1.4em"><![CDATA[<?php
     function foo() {
@@ -14,6 +15,7 @@
 ?>
 ]]></example>
 
+	<blurb> </blurb>
 	<blurb>generated opcodes:</blurb>
 	<example fontsize="1.4em"><![CDATA[    0  NOP                 0, 0, 0
     1  IS_SMALLER          %0, '40', '50'

@@ -2,4 +2,20 @@
 <slide fontsize="6em">
 	<title>Xdebug handlers</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>PHP 3 Debugger</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>GDB Handler</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Extensible</bullet>
+	</list>
 </slide>

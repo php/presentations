@@ -2,4 +2,19 @@
 <slide fontsize="6em">
 	<title>Engine hooks</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet>Available for several 'events':</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Executing user defined function</bullet>
+		<bullet>Compiling a file</bullet>
+		<bullet>Executing internal function</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Executing a statement</bullet>
+		<bullet>Function start</bullet>
+		<bullet>Function end</bullet>
+	</list>
 </slide>

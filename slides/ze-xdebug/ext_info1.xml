@@ -2,4 +2,23 @@
 <slide fontsize="6em">
 	<title>Extended Information 1</title>
 
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet>4 extra generated opcodes:</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>EXT_FCALL_BEGIN</bullet>
+		<bullet>EXT_FCALL_END</bullet>
+		<bullet>EXT_STMT</bullet>
+		<bullet>EXT_NOP</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Handlers can be bounded</bullet>
+		<bullet>Can be activated with the -e option:</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<example fontsize="1.6em"><![CDATA[$ php -h | grep '\-e'
+-e    Generate extended information for debugger/profiler
+]]></example>
 </slide>

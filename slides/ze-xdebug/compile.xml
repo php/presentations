@@ -2,9 +2,15 @@
 <slide fontsize="6em">
 	<title>Compiling</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<list effect="slide" fontsize="5em">
 		<bullet>Interpreting tokens</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
 		<bullet>Generating execution units</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
 		<bullet>Generating class and function tables</bullet>
 	</list>
 

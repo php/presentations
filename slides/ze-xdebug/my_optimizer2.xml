@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>myOptimizer 2</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<example fontsize="1.1em"><![CDATA[
+zend_op_array* (*old_compile_file)(zend_file_handle* file_handle, int type TSRMLS_DC);
+zend_op_array* vld_compile_file(zend_file_handle*, int TSRMLS_DC);
+
+PHP_MINIT_FUNCTION(vld)
+{
+    old_compile_file = zend_compile_file;
+    zend_compile_file = vld_compile_file;
+
+    return SUCCESS;
+}
+
+PHP_MSHUTDOWN_FUNCTION(vld)
+{
+    zend_compile_file = old_compile_file;
+
+    return SUCCESS;
+}
+
+void vld_compile_file(zend_op_array *op_array TSRMLS_DC)
+{
+    zend_op_array *op_array;
+
+    op_array = old_compile_file (file_handle, type TSRMLS_CC);
+    concat_strings (&op_array);
+
+    return op_array;
+}
+]]></example>
+</slide>

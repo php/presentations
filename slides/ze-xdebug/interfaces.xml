@@ -2,4 +2,20 @@
 <slide fontsize="6em">
 	<title>Xdebug Interfaces</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Backtraces</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Functiontraces</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Remote interfaces:</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>PHP 3 debugger mode</bullet>
+		<bullet>GDB debugger mode</bullet>
+		<bullet>Easy extendible</bullet>
+	</list>
 </slide>

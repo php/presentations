@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>myOptimizer 4</title>
+
+	<blurb>script:</blurb>
+	<example fontsize="1.4em"><![CDATA[
+<?php
+	$foo = "boo!";       
+	echo "The cow says $foo\n";
+?>
+]]></example>
+
+	<blurb> </blurb>
+	<blurb>opcodes:</blurb>
+	<example fontsize="1.4em"><![CDATA[number of ops:  14
+0   FETCH_W             $0, 'foo', 1
+1   ASSIGN              $1, $0, 'boo!'
+2   INIT_STRING         %2, 0, 0
+3   ADD_STRING          %2, %2, 'The cow says '
+4   NOP                 %2, %2, ' '
+5   NOP                 %2, %2, 'cow'
+6   NOP                 %2, %2, ' '
+7   NOP                 %2, %2, 'says'
+8   NOP                 %2, %2, ' '
+10  ADD_VAR             %2, %2, $3
+11  ADD_CHAR            %2, %2, '10'
+12  ECHO                0, %2, 0
+13  RETURN              0, '1', 0
+]]></example>
+</slide>

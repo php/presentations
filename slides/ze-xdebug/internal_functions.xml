@@ -2,4 +2,25 @@
 <slide fontsize="6em">
 	<title>Internal functions</title>
 
+	<list effect="slide" fontsize="5em">
+		<bullet>Functions in extensions</bullet>
+		<bullet>Different from user defined functions</bullet>
+		<bullet>Its own hook:</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<example fontsize="1.7em"><![CDATA[
+void xdebug_execute_internal(
+    zend_execute_data * execute_data,
+    int return_value_used
+    TSRMLS_DC
+) {
+    /* Do your own stuff */
+
+    execute_internal(
+        execute_data,
+        return_value_used
+        TSRMLS_CC
+    );
+]]></example>
 </slide>

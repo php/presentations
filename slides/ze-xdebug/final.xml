@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Final word</title>
+	<title>Summary</title>
 
+	<blurb> </blurb>
+	<list fontsize="5em" marginleft="1.3em">
+		<bullet>Introduction to the engine</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Parse</bullet>
+		<bullet>Compile</bullet>
+		<bullet>Execute</bullet>
+	</list>
+	<list fontsize="5em" marginleft="1.3em">
+		<bullet>Xdebug</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Gathering data</bullet>
+		<bullet>Using data</bullet>
+		<bullet>Handlers</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Demonstration</bullet>
+	</list>
 </slide>

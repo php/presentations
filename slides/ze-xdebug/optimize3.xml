@@ -2,6 +2,8 @@
 <slide fontsize="6em">
 	<title>Optimizing 3</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<blurb>Eliminating the NOP and unnecessary jump:</blurb>
 	<blurb>before:</blurb>
 	<example fontsize="1.4em"><![CDATA[    0  NOP                 0, 0, 0
@@ -13,6 +15,7 @@
     6  RETURN              0, '1', 0
 ]]></example>
 
+	<blurb> </blurb>
 	<blurb>after:</blurb>
 	<example fontsize="1.4em"><![CDATA[    0  IS_SMALLER          %0, '40', '50'
     1  JMPZ                0, %0, 3

@@ -2,6 +2,7 @@
 <slide fontsize="6em">
 	<title>Executing 2</title>
 
+	<blurb> </blurb>
 	<blurb>test.inc:</blurb>
 	<example fontsize="1.7em"><![CDATA[<?php 
     function foo () {
@@ -11,6 +12,7 @@
 ?>
 ]]></example>
 
+	<blurb> </blurb>
 	<blurb>test.php</blurb>
 	<example fontsize="1.7em"><![CDATA[<?php  
     echo "foo\n";

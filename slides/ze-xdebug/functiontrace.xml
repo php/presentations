@@ -1,5 +1,651 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Xdebug's functiontraces</title>
+	<title>Function traces</title>
 
+	<list effect="slide" fontsize="5em">
+		<bullet>Contains all function calls</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Performance tool</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Logging to a file</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb><![CDATA[
+<table border='1' cellspacing='0'>
+<tr><th class='tracesml' bgcolor='#aaaaaa' colspan='5'>Function trace</th></tr>
+<tr><th class='tracesml' bgcolor='#cccccc'>Time</th><th class='tracesml' bgcolor='#cccccc'>#</th><th class='tracesml' bgcolor='#cccccc'>Function</th><th class='tracesml' bgcolor='#cccccc'>Location</th><th class='tracesml' bgcolor='#cccccc'>Memory</th></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>-></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>187088</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.001234</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>197768</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.003856</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>241808</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.003889</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;IMAGE_THUMBNAIL&#039;, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>17</td><td class='tracesml' bgcolor='#ffffff' align='right'>241872</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.003956</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;IMAGE_ITEMINFO&#039;, 2)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>18</td><td class='tracesml' bgcolor='#ffffff' align='right'>241824</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.003976</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;BASKET_FROM_SESSION&#039;, 0)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>21</td><td class='tracesml' bgcolor='#ffffff' align='right'>241864</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.003998</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;BASKET_FROM_ORDER&#039;, -2147483648)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>22</td><td class='tracesml' bgcolor='#ffffff' align='right'>241808</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004020</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;BASKET_EDIT&#039;, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>24</td><td class='tracesml' bgcolor='#ffffff' align='right'>241760</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004036</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;BASKET_FOOTER&#039;, 2)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>25</td><td class='tracesml' bgcolor='#ffffff' align='right'>241776</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004051</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;CONTACT_COMPANY&#039;, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>28</td><td class='tracesml' bgcolor='#ffffff' align='right'>241792</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004066</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;CONTACT_PERSON&#039;, 2)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>29</td><td class='tracesml' bgcolor='#ffffff' align='right'>241808</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004082</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;ORDER_STATUS_UNFINISHED&#039;, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>32</td><td class='tracesml' bgcolor='#ffffff' align='right'>241824</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004100</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;ORDER_STATUS_ORDERED&#039;, 2)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>33</td><td class='tracesml' bgcolor='#ffffff' align='right'>241848</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004116</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;ORDER_STATUS_DELIVERED&#039;, 3)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>34</td><td class='tracesml' bgcolor='#ffffff' align='right'>241872</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004134</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;ORDER_STATUS_INVOICE&#039;, 4)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>35</td><td class='tracesml' bgcolor='#ffffff' align='right'>241896</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004151</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;ORDER_STATUS_IN_BOOKS&#039;, 5)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>36</td><td class='tracesml' bgcolor='#ffffff' align='right'>241920</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004167</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;ORDER_STATUS_PAID&#039;, 6)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>37</td><td class='tracesml' bgcolor='#ffffff' align='right'>241944</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004185</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;ORDER_STATUS_NO_INVOICE&#039;, 7)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>38</td><td class='tracesml' bgcolor='#ffffff' align='right'>241896</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004201</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;ORDER_STATUS_CANCELLED&#039;, 8)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>39</td><td class='tracesml' bgcolor='#ffffff' align='right'>241920</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004219</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;PERM_HANDLE_USER&#039;, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>42</td><td class='tracesml' bgcolor='#ffffff' align='right'>241944</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004236</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_HANDLE_COMPANY&#039;, 2)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>43</td><td class='tracesml' bgcolor='#ffffff' align='right'>241896</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004253</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_HANDLE_ADMIN&#039;, 4)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>44</td><td class='tracesml' bgcolor='#ffffff' align='right'>241920</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004269</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;PERM_HANDLE_TEASERS&#039;, 8)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>45</td><td class='tracesml' bgcolor='#ffffff' align='right'>241872</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004286</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_HANDLE_ITEMS&#039;, 16)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>46</td><td class='tracesml' bgcolor='#ffffff' align='right'>241896</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004306</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_HANDLE_CATEGORIES&#039;, 32)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>47</td><td class='tracesml' bgcolor='#ffffff' align='right'>241848</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004325</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;PERM_HANDLE_MANUFACTURERS&#039;, 64)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>48</td><td class='tracesml' bgcolor='#ffffff' align='right'>241872</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004342</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_HANDLE_ORDERS&#039;, 128)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>49</td><td class='tracesml' bgcolor='#ffffff' align='right'>241904</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004359</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_HANDLE_IMAGES&#039;, 256)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>50</td><td class='tracesml' bgcolor='#ffffff' align='right'>241928</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004377</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+
+(&#039;PERM_HANDLE_URLS&#039;, 512)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>51</td><td class='tracesml' bgcolor='#ffffff' align='right'>241952</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004393</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_FORUM_MOD&#039;, 8192)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>52</td><td class='tracesml' bgcolor='#ffffff' align='right'>241904</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004409</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/define' target='_new'>define</a>
+(&#039;PERM_FORUM_TOPIC&#039;, 16384)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>53</td><td class='tracesml' bgcolor='#ffffff' align='right'>241920</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004430</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/php_sapi_name' target='_new'>php_sapi_name</a>
+
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>209</td><td class='tracesml' bgcolor='#ffffff' align='right'>241872</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004487</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/session_cache_limiter' target='_new'>session_cache_limiter</a>
+(&#039;no-cache, must-revalidate&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>212</td><td class='tracesml' bgcolor='#ffffff' align='right'>241880</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.004509</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/session_start' target='_new'>session_start</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>213</td><td class='tracesml' bgcolor='#ffffff' align='right'>241920</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.006660</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>264704</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.015126</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>468128</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.018729</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>539048</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.023934</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>665360</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.024246</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>db->db()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>414</td><td class='tracesml' bgcolor='#ffffff' align='right'>664592</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.024321</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/mysql_connect' target='_new'>mysql_connect</a>
+(&#039;localhost&#039;, &#039;db_user&#039;, &#039;db_pass&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/table_class.php<b>:</b>24</td><td class='tracesml' bgcolor='#ffffff' align='right'>664816</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.025086</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/mysql_select_db' target='_new'>mysql_select_db</a>
+(&#039;ecommerce&#039;, resource(8) of type (mysql link))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/table_class.php<b>:</b>28</td><td class='tracesml' bgcolor='#ffffff' align='right'>665408</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.025626</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>load_sidebar_data(class db {var $con = resource(8) of type (mysql link)})</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>416</td><td class='tracesml' bgcolor='#ffffff' align='right'>665424</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.025901</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_manufacturer_box(class db {var $con = resource(8) of type (mysql link)})</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>422</td><td class='tracesml' bgcolor='#ffffff' align='right'>665648</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.025958</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/sprintf' target='_new'>sprintf</a>
+(&#039;%s.%d&#039;, &#039;manufacturers.select&#039;, 2)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>69</td><td class='tracesml' bgcolor='#ffffff' align='right'>665696</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.026104</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_cache_object(&#039;manufacturers.select.2&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>69</td><td class='tracesml' bgcolor='#ffffff' align='right'>665792</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.026177</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/clearstatcache' target='_new'>clearstatcache</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>74</td><td class='tracesml' bgcolor='#ffffff' align='right'>666056</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.026190</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/stat' target='_new'>stat</a>
+(&#039;/var/cache/ecommerce/manufacturers.select.2&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>75</td><td class='tracesml' bgcolor='#ffffff' align='right'>666056</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.026274</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/time' target='_new'>time</a>
+
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>79</td><td class='tracesml' bgcolor='#ffffff' align='right'>667632</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.026789</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>668624</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.026961</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_category_box(class db {var $con = resource(8) of type (mysql link)})</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>423</td><td class='tracesml' bgcolor='#ffffff' align='right'>668168</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.027033</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/sprintf' target='_new'>sprintf</a>
+(&#039;%s.%d&#039;, &#039;categories.select&#039;, 2)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>103</td><td class='tracesml' bgcolor='#ffffff' align='right'>668168</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.027163</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_cache_object(&#039;categories.select.2&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>103</td><td class='tracesml' bgcolor='#ffffff' align='right'>668104</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.027219</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/clearstatcache' target='_new'>clearstatcache</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>74</td><td class='tracesml' bgcolor='#ffffff' align='right'>668128</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.027231</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/stat' target='_new'>stat</a>
+(&#039;/var/cache/ecommerce/categories.select.2&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>75</td><td class='tracesml' bgcolor='#ffffff' align='right'>668128</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.027295</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/time' target='_new'>time</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>79</td><td class='tracesml' bgcolor='#ffffff' align='right'>668272</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.027681</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>669256</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.027728</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/str_replace' target='_new'>str_replace</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>129</td><td class='tracesml' bgcolor='#ffffff' align='right'>668800</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.028169</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>check_login()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>428</td><td class='tracesml' bgcolor='#ffffff' align='right'>669016</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.028336</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_cache_object(&#039;teaser_data&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>459</td><td class='tracesml' bgcolor='#ffffff' align='right'>669016</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.028732</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/clearstatcache' target='_new'>clearstatcache</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>74</td><td class='tracesml' bgcolor='#ffffff' align='right'>668984</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.028748</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/stat' target='_new'>stat</a>
+(&#039;/var/cache/ecommerce/teaser_data&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>75</td><td class='tracesml' bgcolor='#ffffff' align='right'>668984</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.028824</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/time' target='_new'>time</a>
+
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>79</td><td class='tracesml' bgcolor='#ffffff' align='right'>669360</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.029823</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>680592</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.029963</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/is_array' target='_new'>is_array</a>
+
+(array (16 =&gt; array (1 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111" valign="top" align="center"&gt;
+
+      &lt;a class="nothing" href="item.php?id=6"&gt;
+      &lt;img src="/upload/images/g4_tmb.gif" border="0" width="50" height="50" alt=""&gt;&lt;br /&gt;
+      &lt;span class="teaser-title"&gt;HP Deskjet 690&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;&lt;/span&gt;&lt;br /&gt;
+
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+   
+  &lt;tr valign="top"&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111"&gt;&amp;nbsp;&lt;span class="teaser-amount"&gt;{amount: 342.95000}&lt;/span&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&lt;a href="http://www.hp.com/"&gt;&lt;img src="/images/ball_arrow_light.png" width="15" height="15" border="0" alt=""&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="95" height="16" class="teaser-action"&gt;&lt;a href="http://www.hp.com/"&gt;HP Webhome&lt;/a&gt;&lt;/td&gt;
+
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;), 2 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=6"&gt;
+      &lt;img src="/upload/images/g4_tmb.gif" border="0" width="50" height="50" alt=""&gt;&lt;br /&gt;
+      &lt;span class="teaser-title"&gt;HP Deskjet 690&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+
+      &lt;span class="teaser-text"&gt;blah&lt;/span&gt;&lt;br /&gt;
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+   
+  &lt;tr valign="top"&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111"&gt;&amp;nbsp;&lt;span class="teaser-amount"&gt;{amount: 342.95000}&lt;/span&gt;&lt;/td&gt;
+
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&lt;a href="http://www.hp.com/"&gt;&lt;img src="/images/ball_arrow_light.png" width="15" height="15" border="0" alt=""&gt;&lt;/a&gt;&lt;/td&gt;
+
+    &lt;td width="95" height="16" class="teaser-action"&gt;&lt;a href="http://www.hp.com/"&gt;HP Webhome&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;)), 17 =&gt; array (1 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=9"&gt;
+      &lt;span class="teaser-title"&gt;HP UKJ&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;blaat UK&lt;/span&gt;&lt;br /&gt;
+
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;   
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&amp;nbsp;&lt;/td&gt;
+
+    &lt;td width="95" height="16" class="teaser-action"&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;), 2 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=9"&gt;
+      &lt;span class="teaser-title"&gt;blaat&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;blaat NL&lt;/span&gt;&lt;br /&gt;
+
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;   
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&amp;nbsp;&lt;/td&gt;
+
+    &lt;td width="95" height="16" class="teaser-action"&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;))))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>464</td><td class='tracesml' bgcolor='#ffffff' align='right'>678080</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.031025</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>teaser_boxes(array (16 =&gt; array (1 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=6"&gt;
+      &lt;img src="/upload/images/g4_tmb.gif" border="0" width="50" height="50" alt=""&gt;&lt;br /&gt;
+      &lt;span class="teaser-title"&gt;HP Deskjet 690&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+
+      &lt;span class="teaser-text"&gt;&lt;/span&gt;&lt;br /&gt;
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+
+  &lt;/tr&gt;
+   
+  &lt;tr valign="top"&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111"&gt;&amp;nbsp;&lt;span class="teaser-amount"&gt;{amount: 342.95000}&lt;/span&gt;&lt;/td&gt;
+
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&lt;a href="http://www.hp.com/"&gt;&lt;img src="/images/ball_arrow_light.png" width="15" height="15" border="0" alt=""&gt;&lt;/a&gt;&lt;/td&gt;
+
+    &lt;td width="95" height="16" class="teaser-action"&gt;&lt;a href="http://www.hp.com/"&gt;HP Webhome&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;), 2 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111" valign="top" align="center"&gt;
+
+      &lt;a class="nothing" href="item.php?id=6"&gt;
+      &lt;img src="/upload/images/g4_tmb.gif" border="0" width="50" height="50" alt=""&gt;&lt;br /&gt;
+      &lt;span class="teaser-title"&gt;HP Deskjet 690&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;blah&lt;/span&gt;&lt;br /&gt;
+
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+   
+  &lt;tr valign="top"&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111"&gt;&amp;nbsp;&lt;span class="teaser-amount"&gt;{amount: 342.95000}&lt;/span&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&lt;a href="http://www.hp.com/"&gt;&lt;img src="/images/ball_arrow_light.png" width="15" height="15" border="0" alt=""&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="95" height="16" class="teaser-action"&gt;&lt;a href="http://www.hp.com/"&gt;HP Webhome&lt;/a&gt;&lt;/td&gt;
+
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;)), 17 =&gt; array (1 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=9"&gt;
+      &lt;span class="teaser-title"&gt;HP UKJ&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;blaat UK&lt;/span&gt;&lt;br /&gt;
+
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;   
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&amp;nbsp;&lt;/td&gt;
+
+    &lt;td width="95" height="16" class="teaser-action"&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;), 2 =&gt; array (&#039;w&#039; =&gt; 1, &#039;text&#039; =&gt; &#039;
+
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=9"&gt;
+      &lt;span class="teaser-title"&gt;blaat&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;blaat NL&lt;/span&gt;&lt;br /&gt;
+
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;   
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&amp;nbsp;&lt;/td&gt;
+
+    &lt;td width="95" height="16" class="teaser-action"&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;))))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>465</td><td class='tracesml' bgcolor='#ffffff' align='right'>678080</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032039</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/is_array' target='_new'>is_array</a>
+(array (0 =&gt; array (&#039;n&#039; =&gt; 16, &#039;w&#039; =&gt; 1), 1 =&gt; array (&#039;n&#039; =&gt; 17, &#039;w&#039; =&gt; 1)))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>111</td><td class='tracesml' bgcolor='#ffffff' align='right'>678208</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032253</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'>randomize_boxes(array (0 =&gt; array (&#039;n&#039; =&gt; 16, &#039;w&#039; =&gt; 1), 1 =&gt; array (&#039;n&#039; =&gt; 17, &#039;w&#039; =&gt; 1)))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>112</td><td class='tracesml' bgcolor='#ffffff' align='right'>678208</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032407</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/mt_rand' target='_new'>mt_rand</a>
+(0, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>49</td><td class='tracesml' bgcolor='#ffffff' align='right'>678432</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032489</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/mt_rand' target='_new'>mt_rand</a>
+(0, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>49</td><td class='tracesml' bgcolor='#ffffff' align='right'>678472</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032525</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/mt_rand' target='_new'>mt_rand</a>
+(0, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>51</td><td class='tracesml' bgcolor='#ffffff' align='right'>678472</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032556</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/mt_rand' target='_new'>mt_rand</a>
+(0, 1)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>51</td><td class='tracesml' bgcolor='#ffffff' align='right'>678472</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032623</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/is_array' target='_new'>is_array</a>
+(array (0 =&gt; 17, 1 =&gt; 16))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>84</td><td class='tracesml' bgcolor='#ffffff' align='right'>678552</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032650</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/array_unique' target='_new'>array_unique</a>
+
+(array (0 =&gt; 17, 1 =&gt; 16))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>85</td><td class='tracesml' bgcolor='#ffffff' align='right'>678552</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032712</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/is_array' target='_new'>is_array</a>
+(array (0 =&gt; 17, 1 =&gt; 16))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>116</td><td class='tracesml' bgcolor='#ffffff' align='right'>678584</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.032812</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/preg_replace_callback' target='_new'>preg_replace_callback</a>
+(&#039;/\\{amount\\:\\ ([0-9.]+)\\}/&#039;, &#039;currency_output&#039;, &#039;
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=9"&gt;
+
+      &lt;span class="teaser-title"&gt;blaat&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;blaat NL&lt;/span&gt;&lt;br /&gt;
+    &lt;/td&gt;
+
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;   
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&amp;nbsp;&lt;/td&gt;
+    &lt;td width="95" height="16" class="teaser-action"&gt;&amp;nbsp;&lt;/td&gt;
+
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>127</td><td class='tracesml' bgcolor='#ffffff' align='right'>678624</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.033008</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/preg_replace_callback' target='_new'>preg_replace_callback</a>
+(&#039;/\\{amount\\:\\ ([0-9.]+)\\}/&#039;, &#039;currency_output&#039;, &#039;
+&lt;img src="/images/webshop/teaser_top_small.gif" width="115" height="6" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0" height="115"&gt;
+
+  &lt;tr&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111" valign="top" align="center"&gt;
+      &lt;a class="nothing" href="item.php?id=6"&gt;
+
+      &lt;img src="/upload/images/g4_tmb.gif" border="0" width="50" height="50" alt=""&gt;&lt;br /&gt;
+      &lt;span class="teaser-title"&gt;HP Deskjet 690&lt;/span&gt;&lt;br /&gt;
+      &lt;/a&gt;
+      &lt;span class="teaser-text"&gt;blah&lt;/span&gt;&lt;br /&gt;
+
+    &lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+   
+  &lt;tr valign="top"&gt; 
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+    &lt;td width="111"&gt;&amp;nbsp;&lt;span class="teaser-amount"&gt;{amount: 342.95000}&lt;/span&gt;&lt;/td&gt;
+    &lt;td width="1" valign="bottom"&gt;&lt;img src="/images/blank.gif" width="1" height="2" alt=""&gt;&lt;/td&gt;
+
+    &lt;td width="1" bgcolor="#cccccc"&gt;&lt;img src="/images/grey.gif" width="1" height="1" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_middle_small.gif" width="115" height="4" alt=""&gt;&lt;br /&gt;
+&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+
+  &lt;tr bgcolor="#cccccc"&gt; 
+    &lt;td width="3" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_left.gif" width="3" height="16" alt=""&gt;&lt;/td&gt;
+    &lt;td width="15" height="16"&gt;&lt;a href="http://www.hp.com/"&gt;&lt;img src="/images/ball_arrow_light.png" width="15" height="15" border="0" alt=""&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;td width="95" height="16" class="teaser-action"&gt;&lt;a href="http://www.hp.com/"&gt;HP Webhome&lt;/a&gt;&lt;/td&gt;
+
+    &lt;td width="2" height="16" valign="bottom"&gt;&lt;img src="/images/webshop/teaser_bottom_right.gif" width="2" height="16" alt=""&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;
+&lt;img src="/images/webshop/teaser_bottom_small.gif" width="115" height="2" alt=""&gt;&lt;br /&gt;&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>127</td><td class='tracesml' bgcolor='#ffffff' align='right'>680080</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.033449</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'>currency_output(array (0 =&gt; &#039;{amount: 342.95000}&#039;, 1 =&gt; &#039;342.95000&#039;))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>127</td><td class='tracesml' bgcolor='#ffffff' align='right'>686680</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.033606</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>        -></pre></td><td class='tracesml' bgcolor='#ffffff'>convert_currency(&#039;342.95000&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>167</td><td class='tracesml' bgcolor='#ffffff' align='right'>686680</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.033734</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_currency_data(class db {var $con = resource(8) of type (mysql link)})</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>150</td><td class='tracesml' bgcolor='#ffffff' align='right'>686840</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.033868</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>            -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_cache_object(&#039;currency_data&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>50</td><td class='tracesml' bgcolor='#ffffff' align='right'>686952</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.033935</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>              -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/clearstatcache' target='_new'>clearstatcache</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>74</td><td class='tracesml' bgcolor='#ffffff' align='right'>687008</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.033948</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>              -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/stat' target='_new'>stat</a>
+(&#039;/var/cache/ecommerce/currency_data&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>75</td><td class='tracesml' bgcolor='#ffffff' align='right'>687008</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.034037</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>              -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/time' target='_new'>time</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>79</td><td class='tracesml' bgcolor='#ffffff' align='right'>688376</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.034624</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>              -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>689928</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.034720</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/is_array' target='_new'>is_array</a>
+(array (1 =&gt; array (&#039;id&#039; =&gt; &#039;1&#039;, &#039;symbol&#039; =&gt; &#039;&amp;euro;&#039;, &#039;value&#039; =&gt; &#039;1.00000&#039;), 2 =&gt; array (&#039;id&#039; =&gt; &#039;2&#039;, &#039;symbol&#039; =&gt; &#039;&amp;pound;&#039;, &#039;value&#039; =&gt; &#039;1.59000&#039;), 3 =&gt; array (&#039;id&#039; =&gt; &#039;3&#039;, &#039;symbol&#039; =&gt; &#039;fl.&#039;, &#039;value&#039; =&gt; &#039;0.45378&#039;), 4 =&gt; array (&#039;id&#039; =&gt; &#039;4&#039;, &#039;symbol&#039; =&gt; &#039;$&#039;, &#039;value&#039; =&gt; &#039;1.14000&#039;)))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>152</td><td class='tracesml' bgcolor='#ffffff' align='right'>689896</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.034861</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/count' target='_new'>count</a>
+(array (1 =&gt; array (&#039;id&#039; =&gt; &#039;1&#039;, &#039;symbol&#039; =&gt; &#039;&amp;euro;&#039;, &#039;value&#039; =&gt; &#039;1.00000&#039;), 2 =&gt; array (&#039;id&#039; =&gt; &#039;2&#039;, &#039;symbol&#039; =&gt; &#039;&amp;pound;&#039;, &#039;value&#039; =&gt; &#039;1.59000&#039;), 3 =&gt; array (&#039;id&#039; =&gt; &#039;3&#039;, &#039;symbol&#039; =&gt; &#039;fl.&#039;, &#039;value&#039; =&gt; &#039;0.45378&#039;), 4 =&gt; array (&#039;id&#039; =&gt; &#039;4&#039;, &#039;symbol&#039; =&gt; &#039;$&#039;, &#039;value&#039; =&gt; &#039;1.14000&#039;)))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>152</td><td class='tracesml' bgcolor='#ffffff' align='right'>689904</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.035040</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/sprintf' target='_new'>sprintf</a>
+(&#039;%s&amp;nbsp;%.2f&#039;, &#039;&amp;euro;&#039;, 342.95)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>156</td><td class='tracesml' bgcolor='#ffffff' align='right'>689944</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.035499</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>set_sidebar_basket()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>472</td><td class='tracesml' bgcolor='#ffffff' align='right'>685560</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.035605</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'>basket_contents()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/utils.php<b>:</b>19</td><td class='tracesml' bgcolor='#ffffff' align='right'>685560</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.035745</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'>convert_currency(0)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/utils.php<b>:</b>20</td><td class='tracesml' bgcolor='#ffffff' align='right'>685616</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.035863</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_currency_data(class db {var $con = resource(8) of type (mysql link)})</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>150</td><td class='tracesml' bgcolor='#ffffff' align='right'>685616</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.035989</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>        -></pre></td><td class='tracesml' bgcolor='#ffffff'>get_cache_object(&#039;currency_data&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>50</td><td class='tracesml' bgcolor='#ffffff' align='right'>685616</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.036043</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/clearstatcache' target='_new'>clearstatcache</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>74</td><td class='tracesml' bgcolor='#ffffff' align='right'>685576</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.036054</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/stat' target='_new'>stat</a>
+(&#039;/var/cache/ecommerce/currency_data&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>75</td><td class='tracesml' bgcolor='#ffffff' align='right'>685576</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.036129</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/time' target='_new'>time</a>
+()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>79</td><td class='tracesml' bgcolor='#ffffff' align='right'>685712</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.036592</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>          -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/session.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>687000</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.036673</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/is_array' target='_new'>is_array</a>
+(array (1 =&gt; array (&#039;id&#039; =&gt; &#039;1&#039;, &#039;symbol&#039; =&gt; &#039;&amp;euro;&#039;, &#039;value&#039; =&gt; &#039;1.00000&#039;), 2 =&gt; array (&#039;id&#039; =&gt; &#039;2&#039;, &#039;symbol&#039; =&gt; &#039;&amp;pound;&#039;, &#039;value&#039; =&gt; &#039;1.59000&#039;), 3 =&gt; array (&#039;id&#039; =&gt; &#039;3&#039;, &#039;symbol&#039; =&gt; &#039;fl.&#039;, &#039;value&#039; =&gt; &#039;0.45378&#039;), 4 =&gt; array (&#039;id&#039; =&gt; &#039;4&#039;, &#039;symbol&#039; =&gt; &#039;$&#039;, &#039;value&#039; =&gt; &#039;1.14000&#039;)))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>152</td><td class='tracesml' bgcolor='#ffffff' align='right'>685640</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.036808</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/count' target='_new'>count</a>
+(array (1 =&gt; array (&#039;id&#039; =&gt; &#039;1&#039;, &#039;symbol&#039; =&gt; &#039;&amp;euro;&#039;, &#039;value&#039; =&gt; &#039;1.00000&#039;), 2 =&gt; array (&#039;id&#039; =&gt; &#039;2&#039;, &#039;symbol&#039; =&gt; &#039;&amp;pound;&#039;, &#039;value&#039; =&gt; &#039;1.59000&#039;), 3 =&gt; array (&#039;id&#039; =&gt; &#039;3&#039;, &#039;symbol&#039; =&gt; &#039;fl.&#039;, &#039;value&#039; =&gt; &#039;0.45378&#039;), 4 =&gt; array (&#039;id&#039; =&gt; &#039;4&#039;, &#039;symbol&#039; =&gt; &#039;$&#039;, &#039;value&#039; =&gt; &#039;1.14000&#039;)))</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>152</td><td class='tracesml' bgcolor='#ffffff' align='right'>685488</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.036964</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>      -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/sprintf' target='_new'>sprintf</a>
+(&#039;%s&amp;nbsp;%.2f&#039;, &#039;&amp;euro;&#039;, 0)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>156</td><td class='tracesml' bgcolor='#ffffff' align='right'>685528</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.039089</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>  -></pre></td><td class='tracesml' bgcolor='#ffffff'>{main}()</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td><td class='tracesml' bgcolor='#ffffff' align='right'>715064</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.039178</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/urlencode' target='_new'>urlencode</a>
+(&#039;/webshop/index.php&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/tpl_episte/user/html/webshop/webshop.tpl.php<b>:</b>25</td><td class='tracesml' bgcolor='#ffffff' align='right'>715064</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.039265</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/urlencode' target='_new'>urlencode</a>
+
+(&#039;/webshop/index.php&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/tpl_episte/user/html/webshop/webshop.tpl.php<b>:</b>30</td><td class='tracesml' bgcolor='#ffffff' align='right'>715008</td></tr>
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.040422</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/urlencode' target='_new'>urlencode</a>
+(&#039;/webshop/index.php&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/tpl_episte/user/html/webshop/webshop.tpl.php<b>:</b>219</td><td class='tracesml' bgcolor='#ffffff' align='right'>715032</td></tr>
+
+<tr><td class='tracesml' bgcolor='#ffffff' align='center'>0.040505</td><td class='tracesml' bgcolor='#ffffff' align='left'><pre>    -></pre></td><td class='tracesml' bgcolor='#ffffff'><a href='http://nl.php.net/urlencode' target='_new'>urlencode</a>
+(&#039;/webshop/index.php&#039;)</td><td class='tracesml' bgcolor='#ffffff'>/home/httpd/tpl_episte/user/html/webshop/webshop.tpl.php<b>:</b>220</td><td class='tracesml' bgcolor='#ffffff' align='right'>715056</td></tr>
+</table>
+]]></blurb>
 </slide>

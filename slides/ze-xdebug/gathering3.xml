@@ -2,4 +2,18 @@
 <slide fontsize="6em">
 	<title>Gathering debug data 3</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet>Stack for backtrace information</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>List for function traces information</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Same stack frame used in both structures</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Reference counted</bullet>
+	</list>
 </slide>

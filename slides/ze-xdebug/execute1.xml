@@ -2,9 +2,17 @@
 <slide fontsize="6em">
 	<title>Executing 1</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<list effect="slide" fontsize="5em">
 		<bullet>Executor executes opcodes</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
 		<bullet>116 or 140 different opcodes</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
 		<bullet>Per file execution</bullet>
 	</list>
 </slide>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>GDB Handler 2</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Breakpoints</bullet>
+		<bullet>Stepping</bullet>
+		<bullet>Watches</bullet>
+		<bullet>Accessing data</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Reading Local and Global variables</bullet>
+		<bullet>Writing Local and Global variables</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Profiling</bullet>
+	</list>
+</slide>

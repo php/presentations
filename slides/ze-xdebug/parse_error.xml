@@ -2,12 +2,16 @@
 <slide fontsize="6em">
 	<title>Parsing</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<list effect="slide" fontsize="5em">
 		<bullet>Analyze script source</bullet>
 		<bullet>Divide into logical blocks</bullet>
 		<bullet>Give special blocks a meaning</bullet>
 	</list>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<blurb> </blurb>
 
 	<blurb>Our friend Mr Parse Error: </blurb>

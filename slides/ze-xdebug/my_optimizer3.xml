@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>myOptimizer 3</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<example fontsize="1.4em"><![CDATA[void concat_strings (zend_op_array **opa)
+{
+    int i;
+    int last_add_string = -1;
+
+    for (i = 0; i < (*opa)->size; i++) {
+        if (((*opa)->opcodes[i].opcode == ADD_STRING) || 
+            ((*opa)->opcodes[i].opcode == ADD_CHAR)) {
+            if (last_add_string == -1) {
+                last_add_string = i;
+            } else {
+                if ((*opa)->opcodes[i].opcode == ADD_STRING) {
+                    opt_concat_string (*opa, last_add_string, i);
+                } else {
+                    opt_concat_char (*opa, last_add_string, i);
+                }
+                opt_set_nop (*opa, i);
+            }
+        } else {
+            last_add_string = -1;
+        }
+    }
+}
+]]></example>
+</slide>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>zend_execute hook</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<example fontsize="1.4em"><![CDATA[
+void (*old_execute)(zend_op_array *op_array TSRMLS_DC);
+void xdebug_execute(zend_op_array *op_array TSRMLS_DC);
+
+PHP_MINIT_FUNCTION(xdebug) {
+    old_execute = zend_execute;
+    zend_execute = xdebug_execute;
+    return SUCCESS;
+}
+
+PHP_MSHUTDOWN_FUNCTION(xdebug) {
+    zend_execute = old_execute;
+    return SUCCESS;
+}
+
+void xdebug_execute(zend_op_array *op_array TSRMLS_DC)
+{
+      printf ("Executing in file %s\n", op_array->filename);
+      old_execute (op_array TSRMLS_CC);
+
+}
+]]></example>
+</slide>

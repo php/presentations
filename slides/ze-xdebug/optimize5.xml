@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<slide fontsize="6em">
+<slide fontsize="5em">
 	<title>Optimizing 5</title>
 
-	<list effect="slide" fontsize="5em">
+	<blurb> </blurb>
+	<list fontsize="5em">
 		<bullet>Optimizers:</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">
@@ -11,11 +12,11 @@
 		<bullet>Zend Encoder and ionCube encoder</bullet>
 		<bullet>Your own optimizer!</bullet>
 	</list>
-	<list effect="slide" fontsize="5em">
+	<list fontsize="5em">
 		<bullet>When is it useful?</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">
-		<bullet>Great speed increases</bullet>
+		<bullet>Large speed increases</bullet>
 		<bullet>Cached PHP scripts</bullet>
 		<bullet>Encoded PHP scripts</bullet>
 	</list>

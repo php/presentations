@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Xdebug's error handler</title>
+	<title>Error handler</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Replaces standard PHP error handler</bullet>
+	</list>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Shows backtraces</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb><![CDATA[
+<table border='1' cellspacing='0' align='center'>
+<tr><td class='trace' bgcolor='#ffbbbb' colspan="3"><b>Warning</b>: Wrong parameter count for str_replace() in <b>/home/httpd/html/ecommerce/common/algorithms.php</b> on line <b>129</b><br />
+<tr><th class='trace' bgcolor='#aaaaaa' colspan='3'>Call Stack</th></tr>
+<tr><th class='trace' bgcolor='#cccccc'>#</th><th class='trace' bgcolor='#cccccc'>Function</th><th class='trace' bgcolor='#cccccc'>Location</th></tr>
+<tr><td class='trace' bgcolor='#ffffff' align='center'>1</td><td class='trace' bgcolor='#ffffff'>{main}()</td><td class='trace' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>0</td></tr>
+
+<tr><td class='trace' bgcolor='#ffffff' align='center'>2</td><td class='trace' bgcolor='#ffffff'>get_category_box(class db {var $con = resource(8) of type (mysql link)})</td><td class='trace' bgcolor='#ffffff'>/home/httpd/html/ecommerce/modules/user/webshop/index.php<b>:</b>423</td></tr>
+<tr><td class='trace' bgcolor='#ffffff' align='center'>3</td><td class='trace' bgcolor='#ffffff'><a href='http://nl.php.net/str_replace' target='_new'>str_replace</a>
+()</td><td class='trace' bgcolor='#ffffff'>/home/httpd/html/ecommerce/common/algorithms.php<b>:</b>129</td></tr>
+</table>
+]]></blurb>
 </slide>

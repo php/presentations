@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Xdebug debugging modes</title>
+	<title>Remote interfaces</title>
 
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet>JIT debugging</bullet>
+	</list>
+	<list effect="slide" fontsize="4.4em" marginleft="2em">
+		<bullet>"Just In Time"</bullet>
+		<bullet>Only initiated on an event</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet>REQ debugging</bullet>
+	</list>
+	<list effect="slide" fontsize="4.4em" marginleft="2em">
+		<bullet>Session based</bullet>
+		<bullet>Initiated on script start</bullet>
+	</list>
 </slide>

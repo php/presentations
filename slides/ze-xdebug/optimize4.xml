@@ -2,6 +2,8 @@
 <slide fontsize="6em">
 	<title>Optimizing 4</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<blurb>Eliminating the NOP, unnecessary jump and unnecessary jump
 	condition:</blurb>
 	<blurb>before:</blurb>
@@ -14,6 +16,7 @@
     6  RETURN              0, '1', 0
 ]]></example>
 
+	<blurb> </blurb>
 	<blurb>after:</blurb>
 	<example fontsize="1.4em"><![CDATA[    0  ECHO                0, 'foo\n', 0
     1  ECHO                0, 'end\n', 0

@@ -2,6 +2,7 @@
 <slide fontsize="6em">
 	<title>Tokenizer Example 1</title>
 
+	<blurb> </blurb>
 	<blurb>tokenize.php:</blurb>
 	<example fontsize="1.7em"><![CDATA[<?php
     function apply_magic(&$a) {
@@ -14,6 +15,8 @@
 ?>
 ]]></example>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
 	<list effect="slide" fontsize="5em">
 		<bullet>Tokenizer extension</bullet>
 		<bullet>Refactoring</bullet>
