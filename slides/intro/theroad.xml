@@ -107,10 +107,10 @@ http://www.io.org/~rasmus]]></example>
 <bullet>Added YYMAXDEPTH 50000 definition to parse.y to eliminate stack overflows in
   older versions of bison</bullet>
 <bullet>Added support for Tom Boutell's GD library</bullet>
-<bullet>Added ImageCreate(), ImageDestroy(), ImageGif(), ImageSetPixel(), 
-  ImageLine(), ImageRectangle(), ImageFilledRectangle(),
-  ImageArc(), ImageFillToBorder(), ImageFill(), ImageColorAllocate(),
-  ImageColorTransparent(), ImageInterlace() functions</bullet>
+<bullet>Added ImageCreate(), ImageDestroy(), ImageGif(), ImageSetPixel(), ImageLine(), 
+ImageRectangle(), ImageFilledRectangle(), ImageArc(), ImageFillToBorder(), ImageFill(),
+ImageColorAllocate(), ImageColorTransparent(), ImageInterlace() functions
+</bullet>
 <bullet>Added tempnam() function</bullet>
 <bullet>Added unlink() function</bullet>
 <bullet>Added rename() function</bullet>
