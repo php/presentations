@@ -15,7 +15,10 @@
 <url>http://talks.php.net/</url>
 
 <slide>slides/adt/titlepage.xml</slide>
+<slide>slides/adt/aboutadt.xml</slide>
 <slide>slides/adt/adt.xml</slide>
+<slide>slides/adt/notadt.xml</slide>
+<slide>slides/adt/bigo.xml</slide>
 <slide>slides/adt/stack.xml</slide>
 <slide>slides/adt/stack1.xml</slide>
 <slide>slides/adt/queue.xml</slide>
@@ -24,6 +27,7 @@
 <slide>slides/adt/binary_tree1.xml</slide>
 <slide>slides/adt/binary_tree2.xml</slide>
 <slide>slides/adt/avl.xml</slide>
+<slide>slides/adt/ihope.xml</slide>
 <slide>slides/adt/heap.xml</slide>
 <slide>slides/adt/heap1.xml</slide>
 <slide>slides/adt/set.xml</slide>
