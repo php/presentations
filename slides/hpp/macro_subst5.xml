@@ -2,6 +2,6 @@
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
 <blurb><![CDATA[<br/><br/><br/>]]></blurb>
 <blurb>Traditional templates such as %SimpleTemplate% and %ITX% use 
-macro substitution, which becomes incredibly expensive on complex templates.
+macro substitution, which becomes incredibly expensive on complex templates (loops).
 Use %Smarty% instead.</blurb>
 </slide>
