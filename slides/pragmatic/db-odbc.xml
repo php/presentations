@@ -1,0 +1,10 @@
+<slide title="ODBC Example">
+<example><![CDATA[<?php
+$conn = odbc_connect("dns", "user", "pass");
+$stmt = odbc_prepare($conn, "SELECT ... ");
+odbc_execute($stmt)
+  or die("query failed: ".odbc_error($stmt));
+while (odbc_fetch_into($stmt, $row)) {
+  echo " $row[id] ... ";
+}]]></example>
+</slide>

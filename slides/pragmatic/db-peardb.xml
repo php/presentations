@@ -1,0 +1,22 @@
+<slide title="PEAR::DB">
+<list>
+ <bullet>Bundled with PHP (part of PEAR)</bullet>
+ <bullet>Written in PHP</bullet>
+ <bullet>Supports: dBase, FrontBase, Interbase, Informix, mSQL, Microsoft SQL Server, MySQL, Oracle, ODBC, PostgreSQL, Sybase</bullet>
+ <bullet>Next major version to be based on Metabase</bullet>
+</list>
+<example><![CDATA[<?php
+require 'DB.php';
+
+$conn = DB::connect("dsn");
+if (DB::isError($conn))
+  die("connection failed: ".$conn->getMessage());
+
+$result = $conn->query("SELECT ... ");
+if (DB::isError($result))
+  die("query failed: ".$result->getMessage());
+
+while ($row = $result->fetchRow(DB_FETCHMODE_ASSOC)) {
+  echo " $row[id] ... ";
+}]]></example>
+</slide>

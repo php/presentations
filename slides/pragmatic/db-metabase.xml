@@ -1,0 +1,26 @@
+<slide title="Metabase">
+<list>
+ <bullet>http://phpclasses.org/metabase</bullet>
+ <bullet>Goal #1 is SQL portability</bullet>
+ <bullet>Includes schema management</bullet>
+ <bullet>Supports: Interbase, Informix, Microsoft SQL Server, mSQL, MySQL, ODBC, Oracle, PostgreSQL</bullet>
+</list>
+<example><![CDATA[<?php
+require 'metabase_interface.php';
+require 'metabase_database.php';
+
+$error = MetabaseSetupDatabase(
+  array("Type"=>"mysql","User"=>"user","Password"=>"pass"),
+  $database
+) and die("unable to connect: $error");
+
+$stmt = MetabasePreparedQuery($database, "SELECT ... ");
+$result = MetabaseExecuteQuery($database, $stmt)
+  or die("query failed: ".MetabaseError($database));
+
+$rows = MetabaseNumberOfRows($database, $result);
+for ($row = 0; $row < $rows; $row++) {
+  $id = MetabaseFetchResult($database, $result, $row, "id");
+  echo " $id ... ";
+}]]></example>
+</slide>

@@ -1,0 +1,29 @@
+<slide title="Native Interfaces">
+<list title="SQL Databases">
+ <bullet>db++</bullet>
+ <bullet>FrontBase</bullet>
+ <bullet>Informix</bullet>
+ <bullet>Interbase</bullet>
+ <bullet>Ingres II</bullet>
+ <bullet>Microsoft SQL Server</bullet>
+ <bullet>mSQL</bullet>
+ <bullet>MySQL</bullet>
+ <bullet>ODBC (Adabas D, Birdstep, IBM DB2, Solid, Sybase SQL Anywhere)</bullet>
+ <bullet>Oracle</bullet>
+ <bullet>Ovrimos</bullet>
+ <bullet>PostgreSQL</bullet>
+ <bullet>SESAM</bullet>
+ <bullet>Sybase</bullet>
+</list>
+<list title="Other Databases">
+ <bullet>dbm (gdbm, ndbm, Berkeley db, etc.)</bullet>
+ <bullet>dBase</bullet>
+ <bullet>filePro</bullet>
+ <bullet>Hyperwave</bullet>
+ <bullet>IMAP</bullet>
+ <bullet>LDAP</bullet>
+ <bullet>Lotus Notes</bullet>
+ <bullet>YAZ (Z39.50)</bullet>
+ <bullet>YP/NIS</bullet>
+</list>
+</slide>

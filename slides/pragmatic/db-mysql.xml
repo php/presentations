@@ -1,0 +1,11 @@
+<slide title="MySQL Example">
+<example><![CDATA[<?php
+$conn = mysql_connect("server","name","pass")
+  or die("unable to connect");
+$result = mysql_query("SELECT ... ", $conn)
+  or die("query failed: ".mysql_error($conn));
+while ($row = mysql_fetch_assoc($result) {
+  echo " $row[id] ... ";
+}
+]]></example>
+</slide>

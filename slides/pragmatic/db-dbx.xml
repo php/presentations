@@ -1,0 +1,15 @@
+<slide title="dbx">
+<list>
+ <bullet>Bundled with PHP (disabled by default)</bullet>
+ <bullet>Written in C</bullet>
+ <bullet>Supports: FrontBase, Microsoft SQL Server, MySQL, ODBC, PostgreSQL, Sybase-CT</bullet>
+</list>
+<example><![CDATA[<?php
+$conn = dbx_connect(DBX_MYSQL, "host", "database", "user", "pass")
+  or die("unable to connect");
+$result = dbx_query($conn, "SELECT ... ", DBX_RESULT_ASSOC)
+  or die("query failed: ".dbx_error($conn));
+foreach ($result->data as $row) {
+  echo " $row[id] ... ";
+}]]></example>
+</slide>
