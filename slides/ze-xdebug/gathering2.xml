@@ -5,7 +5,7 @@
 	<blurb> </blurb>
 	<blurb> </blurb>
 	<blurb> </blurb>
-	<list effect="slide" fontsize="5em">
+	<list fontsize="5em">
 		<bullet>Memory footprint</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">
@@ -13,7 +13,7 @@
 		<bullet>emalloc()</bullet>
 		<bullet>--enable-memory-limit</bullet>
 	</list>
-	<list effect="slide" fontsize="5em">
+	<list fontsize="5em">
 		<bullet>Time index</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">

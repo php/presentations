@@ -3,7 +3,7 @@
 	<title>Gathering debug data 1</title>
 
 	<blurb> </blurb>
-	<list effect="slide" fontsize="5em">
+	<list fontsize="5em">
 		<bullet>Functions and classnames</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">
@@ -12,7 +12,7 @@
 		<bullet>Static class members (class::strlen())</bullet>
 		<bullet>include/require/eval</bullet>
 	</list>
-	<list effect="slide" fontsize="5em">
+	<list fontsize="5em">
 		<bullet>Parameters</bullet>
 	</list>
 	<list effect="slide" fontsize="4em" marginleft="2em">

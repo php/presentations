@@ -5,7 +5,7 @@
 	<blurb> </blurb>
 	<blurb> </blurb>
 	<blurb>The engine:</blurb>
-	<list effect="slide" fontsize="5em">
+	<list fontsize="5em">
 		<bullet>parses and compiles test.php</bullet>
 		<bullet>starts executing test.php</bullet>
 		<bullet>parses and compiles test.inc when the include() statement is encountered</bullet>
