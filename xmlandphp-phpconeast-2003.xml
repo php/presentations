@@ -1,0 +1,29 @@
+<presentation 
+	template="php" 
+	navmode="html"
+>
+<topic>PHP</topic>
+<title>XML and PHP</title>
+<event>PHPCON East 2003</event>
+<location>New York, New York</location>
+<date>April 24, 2003</date>
+<speaker>Sterling Hughes</speaker>
+<email>sterling@php.net</email>
+<url>http://conf.php.net/</url>
+
+<slide>slides/xmlandphp/titlepage.xml</slide>
+<slide>slides/xmlandphp/what1.xml</slide>
+<slide>slides/xmlandphp/what2.xml</slide>
+<slide>slides/xmlandphp/sample.xml</slide>
+<slide>slides/xmlandphp/interface.xml</slide>
+<slide>slides/xmlandphp/callback.xml</slide>
+<slide>slides/xmlandphp/glue.xml</slide>
+<slide>slides/xmlandphp/parseinto.xml</slide>
+<slide>slides/xmlandphp/dom.xml</slide>
+<slide>slides/xmlandphp/helpers.xml</slide>
+<slide>slides/xmlandphp/evaluate_sax.xml</slide>
+<slide>slides/xmlandphp/evaluate_dom.xml</slide>
+<slide>slides/xmlandphp/diamond.xml</slide>
+<slide>slides/xmlandphp/thankyou.xml</slide>
+
+</presentation>
