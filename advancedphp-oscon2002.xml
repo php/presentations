@@ -1,8 +1,9 @@
 <presentation 
 	template="php" 
-	navmode="flash"
-    backgroundcol="#EEEE33"
-    logo1="php_logo.gif"
+	navmode="html"
+	backgroundimage="slides/intro/background.png"
+	backgroundrepeat="1"
+	backgroundfixed="1"
 >
   <topic>PHP</topic> <title>Advanced PHP</title> <event>O'Reilly Open
     Source Convention</event> <location>San Diego,

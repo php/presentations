@@ -6,7 +6,7 @@
 you can define functions that are called when the objects are copied.</blurb>
 <example fontsize="1.2em" filename="slides/advphp/clone.php"/>
 <blurb title="Nested Classes">In PHPv5 you can have classes within classes.  This allows for many
-neat features, most importantly, you can simulate namespaces.</blurb>
+ neat features, most importantly, classes can function as namespaces.</blurb>
 <example fontsize="1.2em" filename="slides/advphp/classclass.php"/>
 <blurb title="Constants">Classes may now contain constants</blurb>
 <example fontsize="1.2em"><![CDATA[<?php
