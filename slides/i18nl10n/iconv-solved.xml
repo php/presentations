@@ -10,12 +10,14 @@ echo "The string has length: ", iconv_strlen($str, 'utf8');
 
 	<break lines="4"/>
 
+<div effect="hide">
 	<blurb>iconv_substr():</blurb>
 	<example class="bit_larger" result="1"><![CDATA[<?php
 iconv_set_encoding('internal_encoding', 'utf8');
 $str = "Vær så god!";
 echo "The first 7 characters are: ", iconv_substr($str, 0, 7);
 ?>]]></example>
+</div>
 
 </slide>
 <!--

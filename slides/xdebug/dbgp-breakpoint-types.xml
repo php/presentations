@@ -5,7 +5,7 @@
 
 	<blurb>Option explanation:</blurb>
 	<break/>
-	<example><![CDATA[-a  class name
+	<example class="bit_larger"><![CDATA[-a  class name
 -f  file name
 -m  function name
 -n  line number
@@ -15,16 +15,16 @@
 	<break/>
 
 	<blurb>Different breakpoint types:</blurb>
-	<blurb>- ~line~: on a file/line combination (req: *-f* and *-n*)</blurb>
-	<blurb>- ~call~: on function entrance (req: *-m*; opt: *-a*)</blurb>
-	<blurb>- ~return~: on function exit (req: *-m*; opt: *-a*)</blurb>
-	<blurb>- ~exception~: on exception of given name (req: *-x*)</blurb>
-	<blurb>- ~conditional~: when condition is met (req: *--* and *-f*; opt: *-n*)</blurb>
+	<blurb class="small_blurb">- ~line~: on a file/line combination (req: *-f* and *-n*)</blurb>
+	<blurb class="small_blurb">- ~call~: on function entrance (req: *-m*; opt: *-a*)</blurb>
+	<blurb class="small_blurb">- ~return~: on function exit (req: *-m*; opt: *-a*)</blurb>
+	<blurb class="small_blurb">- ~exception~: on exception of given name (req: *-x*)</blurb>
+	<blurb class="small_blurb">- ~conditional~: when condition is met (req: *--* and *-f*; opt: *-n*)</blurb>
 
 	<break lines="2"/>
 
 	<blurb>Extra options:</blurb>
 	<break/>
-	<example><![CDATA[-o  hit condition (>=, == or %)
+	<example class="bit_larger"><![CDATA[-o  hit condition (>=, == or %)
 -g  hit value]]></example>
 </slide>

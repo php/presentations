@@ -9,8 +9,7 @@
 	<blurb>response:</blurb>
 	<example type="xml" class="code_large"><![CDATA[<response command="feature_get" transaction_id="1"
     feature_name="encoding" supported="1">
-  <![CDATA[UTF-8]]>
-</response>]]></example>
+  <![CDATA[UTF-8]]></response>]]></example>
 
 	<break/>
 
@@ -25,6 +24,6 @@
 
 	<blurb>Features include:</blurb>
 	<blurb>%language_name% [RO], %supports_async% [RO],
-	%max_children% [RW], %max_data% [RW], %max_depth% [RO], %show_hidden% [RW] and
+	%max_children%, %max_data%, %max_depth% [RO], %show_hidden% and
 	%supports_postmortem% [RO].</blurb>
 </slide>

@@ -4,7 +4,7 @@
 
 	<list>
 		<bullet>Most sites don't set any Content-Type header</bullet>
-		<bullet>Browsers and/or digital environments will move more and more to UTF8 as default encoding</bullet>
+		<bullet>Browsers and/or digital environments will move more and more to UTF-8 as default encoding</bullet>
 	</list>
 	<blurb>Result:</blurb>
 	<image class="spaced" filename="wrong-http-header.png"/>

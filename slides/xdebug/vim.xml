@@ -3,13 +3,13 @@
 	<title>Vim Syntax</title>
 
 	<blurb>~/.vim/filetype.vim</blurb>
-	<example fontsize="1.7em">augroup filetypedetect
+	<example class="bit_larger" fontsize="1.7em">augroup filetypedetect
 au BufNewFile,BufRead *.xt  setf xt
 augroup END</example>
 
 	<break lines="2"/>
 	<blurb>~/.vim/syntax/xt.vim (http://xdebug.org/files/xt.vim)</blurb>
-	<example fontsize="1em">if version &lt; 600
+	<example class="bit_larger" fontsize="1em">if version &lt; 600
   syntax clear
 elseif exists("b:current_syntax")
   finish

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Method 3: Gettext</title>
+	<subtitle>Using gettext to manage translations</subtitle>
+
+	<blurb>How it works:</blurb>
+	<list>
+		<bullet>Extract phrases: %xgettext gettext.php%</bullet>
+		<bullet>Create directories: %mkdir -p nl/LC_MESSAGES%</bullet>
+		<bullet>Copy file: %cp messages.po nl/LC_MESSAGES%</bullet>
+		<bullet>Translate: %vi nl/LC_MESSAGES/messages.po%</bullet>
+		<bullet>Compile: %msgfmt nl/LC_MESSAGES/messages.po \ % %  -o nl/LC_MESSAGES/messages.mo%</bullet>
+	</list>
+
+	<break/>
+
+	<blurb>Usage:</blurb>
+	<example class='bit_larger'><![CDATA[<?php
+	bindtextdomain('messages', './');
+	setlocale(LC_MESSAGES, 'nl');
+	printf(_("Click <a href='%s'>here</a>") . " " .
+		_("to login"), 'login.php');
+?>]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

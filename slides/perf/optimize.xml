@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Bandwidth Optimizations</title>
+	<subtitle>How?</subtitle>
+
+	<list>
+		<bullet>Use preprocessors to eliminate whitespace</bullet>
+		<bullet>If you save 20 bytes per file, and have 1,000,000 hits a day, you've just saved
+		20,000,000 extra bytes</bullet>
+		<bullet>Send content "when ready", and use progressive images</bullet>
+	</list>
+</slide>

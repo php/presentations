@@ -1,0 +1,24 @@
+<slide>
+	<title>CPU Usage</title>
+
+	<list>
+		<bullet>Avoid Using frequent array accesses, remember, each array access is a 
+		hash lookup.</bullet>
+	</list>
+
+	<example><![CDATA[<?php
+$ar = array();
+$ar['name'] = 'Optimization';
+
+for ($i = 0; $i < count($entries); $i++) {
+    print $ar['name'];
+}
+?>]]></example>
+
+	<list>
+		<bullet>Shorten "required" executions, such as loops.</bullet>
+		<bullet>Avoid rebuilding large data structures.</bullet>
+		<bullet>Look for alternatives to regular expressions</bullet>
+	</list>
+
+</slide>

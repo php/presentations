@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>LC_CTYPE</title>
+	<subtitle>language oriented case changes</subtitle>
+
+	<example class="bit_larger" encoding="iso-8859-1" result="1"><![CDATA[<?php
+	$a = "øyeblikk";
+
+	setlocale(LC_CTYPE, 'C');
+	echo strtoupper($a), "<br/>\n";
+
+	setlocale(LC_CTYPE, 'no_NO');
+	echo strtoupper($a), "<br/>\n";
+
+	setlocale(LC_CTYPE, 'tr_TR');
+	echo strtoupper($a), "<br/>\n";
+?>]]></example>
+	<break/>
+</slide>
+<!--
+vim: encoding=utf8
+-->

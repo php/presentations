@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Bandwidth Optimizations</title>
+	<subtitle>Reducing Output</subtitle>
+
+	<blurb>Less output is good because...</blurb>
+	<list>
+		<bullet>Saves server bandwidth</bullet>
+		<bullet>Decreases server CPU and memory usage</bullet>
+		<bullet>Has the same effect on the client side</bullet>
+		<bullet>On large sites, bandwidth is most often the most costly bottleneck</bullet>
+	</list>
+</slide>

@@ -1,0 +1,9 @@
+<slide>
+	<title>Content Compression</title>
+
+	<list class="large">
+		<bullet>Some browsers can accept certain content compressed.</bullet>
+		<bullet>We can trade some CPU cycles for reduced bandwidth usage.</bullet>
+		<bullet>Compression is usually a minor overhead.</bullet>
+	</list>
+</slide>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Method 1: Constants</title>
+	<subtitle>Using define() to define translation strings</subtitle>
+
+	<blurb>Pro:</blurb>
+	<list>
+		<bullet>It is very simple</bullet>
+	</list>
+
+	<break/>
+	
+	<blurb>Con:</blurb>
+	<list>
+		<bullet>Translators need to fiddle with PHP code</bullet>
+		<bullet>Translation files need to be manually created</bullet>
+		<bullet>Fall back is hardly possible</bullet>
+		<bullet>define() is not fast</bullet>
+	</list>
+</slide>
+<!--
+vim: encoding=utf8
+-->

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Method 3: Gettext</title>
+	<subtitle>Using gettext to manage translations</subtitle>
+
+	<blurb>Translation file:</blurb>
+	<example class='bit_larger'><![CDATA[#: gettext.php:4
+msgid "Click <a href='%s'>here</a>"
+msgstr "Klik <a href='%s'>hier</a>"
+
+#: gettext.php:4
+msgid "to login"
+msgstr "om in te loggen"]]></example>
+
+	<break/>
+
+	<blurb>Pro:</blurb>
+	<list>
+		<bullet>Fall back mechanism in place</bullet>
+		<bullet>Translation files can automatically be generated</bullet>
+		<bullet>It's very efficient</bullet>
+	</list>
+
+	<break/>
+	
+	<blurb>Con:</blurb>
+	<list>
+		<bullet>Setting it up is not an easy task</bullet>
+		<bullet>Translators still not have a very easy job</bullet>
+	</list>
+</slide>
+<!--
+vim: encoding=utf8
+-->

@@ -14,6 +14,7 @@ if (preg_match('@,(.{6}),@', $str, $result)) {
 
 	<break lines="4"/>
 
+<div effect="hide">
 	<blurb>preg_match() in UTF8 mode:</blurb>
 	<example class="bit_larger" result="1"><![CDATA[<?php
 $str = "1978,Dérick,Rethans";
@@ -23,6 +24,7 @@ if (preg_match('@,(.{6}),@u', $str, $result)) {
 	echo 'There was no match!', "<br/>\n";
 }
 ?>]]></example>
+</div>
 
 </slide>
 <!--

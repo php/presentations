@@ -2,10 +2,11 @@
 <slide fontsize="6em">
 	<title>Say Squeeze</title>
 
-	<list>
+	<list class="large">
 	<li>Optimized %./configure%</li>
 	<li>Memory Limit</li>
 	<li>Shorter Path</li>
+	<li>Use ~include()~ in a smarter way</li>
 	<li>Ramdisk</li>
 	</list>
 	

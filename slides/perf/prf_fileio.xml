@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>File I/O</title>
+
+	<blurb>File I/O Problems</blurb>
+	<list>
+		<bullet>Disk access is slower than memory access</bullet>
+		<bullet>Simultaneous write/write operations cause data corruption. Therefore locking
+		must occur—which is slow</bullet>
+	</list>
+
+	<blurb>Tips:</blurb>
+	<list>
+		<bullet>Use the disk in concentrated bits, meaning do all your writing
+		together.</bullet>
+		<bullet>Try and put write operations where they will cause the least loss 
+		in user experience (remember, web pages are chunked!)</bullet>
+		<bullet>Close the session handler ASAP with ~session_write_close()~</bullet>
+	</list>
+
+</slide>
+<!--
+ vim: encoding=utf8
+-->

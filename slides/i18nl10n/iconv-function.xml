@@ -15,11 +15,15 @@ echo iconv('iso-8859-1', 'utf8', $str);
 $str = "© 2004, by Derick Rethans";
 echo iconv('iso-8859-1', 'iso-8859-2', $str);
 ?>]]></example>
+
+<div effect="hide">
 	<blurb>output:</blurb>
 	<example class="bit_larger_output">Notice: iconv() [function.iconv]: Detected an illegal character in input string in /home/httpd/pres2/display.php(461) : eval()'d code on line 3</example>
 
 	<break lines="2"/>
+</div>
 
+<div effect="hide">
 	<blurb>iconv():</blurb>
 	<example class="bit_larger"><![CDATA[<?php
 $str = "© 2004, by Derick Rethans";
@@ -28,6 +32,7 @@ echo iconv('iso-8859-1', 'iso-8859-2//ignore', $str);
 	<blurb>output:</blurb>
 	<example class="bit_larger_output">Notice: iconv() [function.iconv]: Detected an illegal character in input string in /home/httpd/pres2/display.php(461) : eval()'d code on line 3
   2004, by Derick Rethans</example>
+</div>
 
 </slide>
 <!--

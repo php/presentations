@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Bandwidth Optimizations</title>
+	<subtitle>Optimizing HTML</subtitle>
+	
+	<list>
+		<bullet>Remove All Comments!</bullet>
+		<bullet>Use CSS</bullet>
+		<bullet>Fully qualify links (ie, personal/images/ not personal/images)</bullet>
+		<bullet>%ext/tidy%</bullet>
+	</list>
+
+	<example><![CDATA[<?php
+    $opts = array("clean" => true,
+                  "drop-proprietary-attributes" => true,
+                  "drop-font-tags" => true,
+                  "drop-empty-paras" => true,
+                  "hide-comments" => true,
+                  "join-classes" => true,
+                  "join-styles" => true);
+
+    $tidy = tidy_parse_file("php.html", $opts);                  
+    tidy_clean_repair($tidy);
+    
+    echo $tidy;
+?>]]></example>
+
+</slide>

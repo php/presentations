@@ -4,7 +4,7 @@
 	<subtitle>Function To Test and Test Driver</subtitle>
 
 	<blurb>Function to test (bigassfunction.php):</blurb>
-	<example><![CDATA[<?php
+	<example class="bit_larger"><![CDATA[<?php
     function test_parse_time($f)
     {
         if (preg_match("/[0-9]{12}/", $f)) {
@@ -25,12 +25,11 @@
 ?>]]></example>
 	<break />
 	<blurb>Test driver (basic.t):</blurb>
-	<example><![CDATA[<?php
+	<example class="bit_larger"><![CDATA[<?php
     $text = realpath("tests/bigassfunction.php");
 	include $text;
 
     $formats = array('2004-08-17 21:20', '20040817 2120');
-
     foreach ($formats as $format) {
         test_parse_time($format);
     }

@@ -1,0 +1,9 @@
+<slide>
+	<title>zlib.output_compression</title>
+	<list class="large">
+		<bullet>A built-in output buffer handler</bullet>
+		<bullet>Set in %php.ini%</bullet>
+		<bullet>Cannot be used with a custom %output_handler%</bullet>
+		<bullet>Does generally not work with trans-sid</bullet>
+	</list>
+</slide>

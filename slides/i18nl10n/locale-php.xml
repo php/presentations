@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Locales and PHP</title>
+
+	<blurb>string *setlocale*(const ~category~, string ~locale~, ~...~)</blurb>
+	<blurb>string *setlocale*(const ~category~, array ~locales~)</blurb>
+
+	<break/>
+
+	<blurb>Localenames:</blurb>
+	<list>
+		<bullet>Are OS dependent (deu_deu vs. de_DE)</bullet>
+		<bullet>Are not always available</bullet>
+	</list>
+
+	<break/>
+
+	<blurb>Example:</blurb>
+	<example class="bit_larger" result="1"><![CDATA[<?php
+	$locale = setlocale(LC_ALL,
+		"nl_NL.UTF-8@euro", "nl_NL.UTF-8", "dutch", "nld_nld");
+	echo "New locale: ", $locale, "<br />\n";
+
+	$locale = setlocale(LC_ALL, array("nld_nld", "nederlands"));
+	echo "New locale: ", $locale, "<br />\n";
+?>]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

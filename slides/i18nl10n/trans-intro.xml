@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Translating Applications</title>
+
+	<blurb>A few things are important:</blurb>
+	<list>
+		<bullet>Non-technical translators should have an easy job</bullet>
+		<bullet>Easy discovery of translatable text</bullet>
+		<bullet>There needs to be a fall back to the default language</bullet>
+		<bullet>It needs to be fast</bullet>
+	</list>
+</slide>
+<!--
+vim: encoding=utf8
+-->

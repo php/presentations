@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Method 2: Phrase dictionary</title>
+	<subtitle>Using an array to define translation strings</subtitle>
+
+	<blurb>How it works:</blurb>
+	<list>
+		<bullet>Each string an entry in the translation array</bullet>
+		<bullet>Fall back realized with array merging</bullet>
+	</list>
+
+	<break/>
+
+	<blurb>Definition files:</blurb>
+	<example class='bit_larger'><![CDATA[trans/en.php:
+<?php
+	$l = array();
+    $l["CLICK_HERE"] = 'Click <a href="%1">here</a> to';
+	$l["LOGIN"]      = 'log in';
+	$l["LOGOUT"]     = 'log out';
+?>
+trans/nl.php:
+<?php
+	include 'trans/en.php';
+	$l["LOGIN"]  = 'in te loggen';
+	$l["LOGOUT"] = 'uit te loggen';
+?>]]></example>
+
+	<break/>
+
+	<blurb>Usage:</blurb>
+	<example class='bit_larger'><![CDATA[<?php
+	include 'trans/nl.php';
+	printf("{$l['CLICK_HERE']} {$l['LOGIN']}", 'login.php');
+?>]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

@@ -13,12 +13,12 @@
 	<blurb>Command layout:</blurb>
 	<blurb>%|229922|[cmd]| *-i* [tid] ..other options..% *--* data</blurb>
 
-	<break lines="2"/>
+	<break lines="1"/>
 	<blurb>- Options always have the form: %*-[char]* value%</blurb>
 	<blurb>- The %*-i*% transaction ID option is mandatory</blurb>
 	<blurb>- Data, if available, must be base64 encoded</blurb>
 
-	<break lines="2"/>
+	<break lines="1"/>
 	<blurb>Status reply:</blurb>
 	<example type="xml" class="code_large"><![CDATA[<response command="status"
     transaction_id="1" status="starting" reason="ok"/>]]></example>

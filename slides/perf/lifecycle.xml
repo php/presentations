@@ -1,0 +1,11 @@
+<slide>
+	<title>Compiler Caches</title>
+	<subtitle>What can be optimized</subtitle>
+	
+	<image filename="lifecycle.png" class="spaced"/>
+	<break lines="5"/>
+	<list>
+		<bullet>This cycle happens for every include file, not just for the "main" script</bullet>
+		<bullet>Compilation can easily consume more time than execution</bullet>
+	</list>
+</slide>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Conversion to HTML</title>
+	<subtitle>(slide encoding is iso-8859-1)</subtitle>
+
+	<blurb>iso-8859-1 to HTML:</blurb>
+	<example class="bit_larger" encoding="iso-8859-1" result="0"><![CDATA[<?php
+	$str = "Nittenhundreogåttiåtte<br/>\n";
+	echo htmlentities($str, ENT_NOQUOTES, 'iso-8859-1');
+?>]]></example>
+	<break lines="2"/>
+	<blurb class="bit_larger_output_text">output:</blurb>
+	<example class="bit_larger_output"><![CDATA[Nittenhundreog&aring;tti&aring;tte&lt;br/&gt;]]></example>
+
+	<break lines="4"/>
+
+	<blurb>UTF-8 to HTML:</blurb>
+	<example class="bit_larger" result="0"><![CDATA[<?php
+	$str = "NittenhundreogÃ¥ttiÃ¥tte<br/>\n";
+	echo htmlentities($str, ENT_NOQUOTES, 'utf-8');
+?>]]></example>
+	<break lines="2"/>
+	<blurb class="bit_larger_output_text">output:</blurb>
+	<example class="bit_larger_output"><![CDATA[Nittenhundreog&aring;tti&aring;tte&lt;br/&gt;]]></example>
+
+</slide>
+<!--
+vim: encoding=latin1
+-->

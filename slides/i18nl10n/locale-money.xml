@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>LC_MONETARY</title>
+	<subtitle>formatting amounts of money</subtitle>
+
+	<example class="bit_larger" result="1"><![CDATA[<pre><?php
+$locales = array(
+  'Egypt   ' => 'ar_EG.UTF-8', 'Finland  ' => 'fi_FI.UTF-8',
+  'Germany ' => 'de_DE.UTF-8', 'Israel   ' => 'iw_IL.UTF-8', 
+  'Japan   ' => 'ja_JP.UTF-8', 'Netherlands' => 'nl_NL.UTF-8',
+  'Norway  ' => 'no_NO.UTF-8',
+);
+
+foreach ($locales as $country => $locale) {
+  setlocale(LC_MONETARY, $locale);
+  $nr = 31415.92654;
+  echo "<b>$country</b>\t",
+    money_format("[%i]", $nr), "    \t", money_format("[%n]", $nr), "\n";
+}
+?></pre>]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

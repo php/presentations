@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PHP Accelerators</title>
+
+	<list>
+		<li>APC</li>
+		<li>Zend Performance Suite</li>
+		<li>Turck MM Cache</li>
+		<li>PHP Accelerator</li>
+	</list>
+
+	<image marginleft='4em' filename='caches.png'/>
+	
+</slide>

@@ -1,0 +1,15 @@
+<slide>
+	<title>Pros and Cons of Caching</title>
+
+	<break lines="4"/>
+	<blurb>Pros:</blurb>
+	<list>
+		<bullet>Potentially Immense Speed-Up</bullet>
+		<bullet>Decreased Resource Consumption</bullet>
+	</list>
+	<blurb>Cons:</blurb>
+	<list>
+		<bullet>Increase in Architectural Complexity</bullet>
+		<bullet>Potential for Stale or Inconsistent Data</bullet>
+	</list>
+</slide>

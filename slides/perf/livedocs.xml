@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Livedocs</title>
+	<subtitle>An Example of On-Demand Page Generation</subtitle>
+
+	<blurb>Set up a 404 error handler in .htaccess:</blurb>
+	<example><![CDATA[RewriteEngine on
+RewriteRule /.*\.[^h][^t][^m][^l]$ /$1.html
+ErrorDocument 404 /index.php
+DirectoryIndex index.php
+]]></example>
+
+	<break/>
+	<blurb>index.php:</blurb>
+	<example><![CDATA[<?php
+if (!empty($_SERVER['REDIRECT_URL'])) {
+    // This is the requested page that caused the error
+    $current_page = substr($_SERVER['REDIRECT_URL'], strlen(WEBBASE));
+}
+
+...
+
+if (!FORCE_DYNAMIC) {
+    $contents = ob_get_contents();
+    ob_clean();
+    $f = fopen($lang . "/" . $current_page . ".html", 'w');
+    fwrite($f, $contents);
+    fclose($f);
+    echo $contents;
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Method 1: Constants</title>
+	<subtitle>Using define() to define translation strings</subtitle>
+
+	<blurb>How it works:</blurb>
+	<list>
+		<bullet>Each string is a constant</bullet>
+		<bullet>Different include files for each language</bullet>
+	</list>
+
+	<break/>
+
+	<blurb>Definition file:</blurb>
+	<example class='bit_larger'><![CDATA[trans/nl.php:
+<?php
+	define("CLICK_HERE", 'Klik <a href="%1">hier</a> om');
+	define("LOGIN", 'in te loggen');
+	define("LOGOUT", 'uit te loggen');
+?>]]></example>
+
+	<break/>
+
+	<blurb>Usage:</blurb>
+	<example class='bit_larger'><![CDATA[<?php
+	include 'trans/nl.php';
+	printf(CLICK_HERE . ' ' . LOGIN, 'login.php');
+?>]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

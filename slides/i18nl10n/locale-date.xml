@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>LC_TIME</title>
+	<subtitle>language oriented date and time formatting</subtitle>
+
+	<example class="bit_larger" result="1"><![CDATA[<pre><?php
+	$locales = array(
+		'Arabic (Egypt)' => 'ar_EG.UTF-8', 'American' => 'en_US',
+		'Dutch   '       => 'nl_NL',       'Hebrew  ' => 'iw_IL',
+		'Hebrew (UTF-8)' => 'iw_IL.UTF-8', 'Japanese' => 'ja_JP.UTF-8',
+		'Norwegian'      => 'no_NO.UTF-8', 'Turkish ' => 'tr_TR.UTF-8'
+	);
+
+	foreach ($locales as $country => $locale) {
+		setlocale(LC_TIME, $locale);
+		echo '<b>', $country, "</b>\t", strftime('%c'),
+			"\n";
+	}
+?></pre>]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

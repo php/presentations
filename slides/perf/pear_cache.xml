@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Caching Example</title>
+	<subtitle>PEAR::Cache_Lite</subtitle>
+
+	<example><![CDATA[<?php
+	/* Include the class */
+	require_once('Cache/Lite.php');
+
+	/* Set a key for this cache item */
+	$id = 'newsitem1';
+
+	/* Set a few options */
+	$options = array(
+		'cacheDir' => '/var/cache/news/',
+		'lifeTime' => 3600
+	);
+
+	/* Create a Cache_Lite object */
+	$Cache_Lite = new Cache_Lite($options);
+
+	/* Test if there is a valid cache-entry for this key */
+	if ($data = $Cache_Lite->get($id)) {
+		/* Cache hit! */
+	} else {
+		/* Cache miss! */
+		ob_start();
+		/* Generate content */
+		$data = ob_get_contents();
+		$Cache_Lite->save($data);
+	}
+?>
+]]></example>
+	
+</slide>

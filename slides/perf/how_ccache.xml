@@ -1,0 +1,12 @@
+<slide>
+	<title>Compiler Caches</title>
+	<subtitle>How it works</subtitle>
+
+	<image filename="how_ccache.png" class="spaced"/>
+	<break lines="5"/>
+	<list>
+		<bullet>In general, each source file is compiled once</bullet>
+		<bullet>Compilation overhead becomes inconsequential</bullet>
+		<bullet>Cache introduces its own overhead due to dynamic nature of includes</bullet>
+	</list>
+</slide>

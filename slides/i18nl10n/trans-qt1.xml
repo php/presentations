@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Method 4: The Qt way</title>
+	<subtitle>Using XML based translation files</subtitle>
+
+	<blurb>How it works:</blurb>
+	<list>
+		<bullet>Extract phrases: %lupdate linguist.php -ts en.ts nl.ts%</bullet>
+		<bullet>Translate: %linguist nl.ts%</bullet>
+	</list>
+
+	<break/>
+
+	<blurb>Usage:</blurb>
+	<example class='bit_larger'><![CDATA[<?php
+	// Parse XML file "nl.ts" into $dictionary
+
+	function tr($phrase)
+	{
+		return $GLOBALS['dictionary'][$phrase];
+	}
+	
+	printf(tr("Click <a href='%s'>here</a>") . " " .
+		tr("to login"), 'login.php');
+?>]]></example>
+</slide>
+<!--
+vim: encoding=utf8
+-->

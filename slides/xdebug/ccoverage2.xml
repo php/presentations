@@ -3,7 +3,7 @@
 	<title>Code Coverage</title>
 	<subtitle>The Testing Application</subtitle>
 
-	<example><![CDATA[<?php
+	<example class="bit_larger"><![CDATA[<?php
 	echo "Output:\n\n";
 	xdebug_start_code_coverage();
 	include 'tests/basic.t';

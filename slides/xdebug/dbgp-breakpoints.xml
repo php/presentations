@@ -4,10 +4,10 @@
 	<subtitle>Section 7.6</subtitle>
 
 	<blurb>Setting a breakpoint:</blurb>
-	<blurb>~%breakpoint_set *-t* [type] *-f* [filename] *-n* [lineno]%~</blurb>
-	<blurb>~% *-a* [classname] *-m* [functionname]%~</blurb>
-	<blurb>%breakpoint_set -i 4 -t line -f dbgp-example.php -n 3%</blurb>
-	<blurb>%breakpoint_set -i 5 -t call -m level1%</blurb>
+	<blurb class="small_blurb">~%breakpoint_set *-t* [type] *-f* [filename] *-n* [lineno]%~</blurb>
+	<blurb class="small_blurb">~% *-a* [classname] *-m* [functionname]%~</blurb>
+	<blurb class="small_blurb">%breakpoint_set -i 4 -t line -f dbgp-example.php -n 3%</blurb>
+	<blurb class="small_blurb">%breakpoint_set -i 5 -t call -m level1%</blurb>
 	<break/>
 	<blurb>response:</blurb>
 	<example type="xml" class="code_large"><![CDATA[<response command="breakpoint_set" transaction_id="4"
@@ -16,9 +16,9 @@
 	<break/>
 
 	<blurb>Retrieving and deleting breakpoints:</blurb>
-	<blurb>%breakpoint_list -i 6%</blurb>
-	<blurb>%breakpoint_get -i 7 -d 3140002%</blurb>
-	<blurb>%breakpoint_remove -i 7 -d 3140001%</blurb>
+	<blurb class="small_blurb">%breakpoint_list -i 6%</blurb>
+	<blurb class="small_blurb">%breakpoint_get -i 7 -d 3140002%</blurb>
+	<blurb class="small_blurb">%breakpoint_remove -i 7 -d 3140001%</blurb>
 	<break/>
 	<blurb>response:</blurb>
 	<example type="xml" class="code_large"><![CDATA[<response command="breakpoint_get" transaction_id="7">

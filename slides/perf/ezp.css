@@ -48,11 +48,13 @@ bottom: 0px;
 div.mainarea {
 position: fixed;
 top: 150px;
+width: 725px;
 }
 ul.pres {
 list-style: circle;
 font-size: 24pt;
 }
+
 
 ul.level2 {
 	list-style: circle;
@@ -65,13 +67,18 @@ li.pres_bullet {
 font-size: 28pt;
 margin-right: 40px;
 }
+
+ul.large div li.pres_bullet
+{
+	font-size: 40pt;
+}
 	
 div.small_blurb {
-	font-size: 24px;
+	font-size: 24pt;
 }
 
 div.blurb, div.bit_larger_output_text {
-	font-size: 32px;
+	font-size: 28pt;
 	width: 100%;
 }
 
@@ -84,7 +91,12 @@ div.x_small_blurb {
 }
 
 div.large_blurb {
-	font-size: 32px;
+	font-size: 32pt;
+}
+
+div.large_blurb_center {
+	font-size: 48px;
+	text-align: center;
 }
 
 div.xx_large_blurb_center {
@@ -94,7 +106,6 @@ div.xx_large_blurb_center {
 
 div.q_mark {
 	text-align: center;
-	margin-left: 250px;
 	font-size: 480px;
 }
 
@@ -102,33 +113,24 @@ div.shadow, code {
 	font-size: 18px; width: 640px;
 }
 
-div.bit_larger, div.bit_larger code, div.bit_larger_output {
+div.example code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
 	background: #ccc;
 	font-size: 20px;
 	width: 100%;
 }
-div.bit_larger, div.bit_larger_output {
+div.example, div.bit_larger, div.bit_larger_output {
 	margin-left: 20px;
 	margin-right: 20px;
-	width: 100%;
 }
 
-div.code_small {
+div.code_small, div.code_medium, div.code_large, div.example {
 	background: #ccc;
 }
 div.code_small code {
 	font-size: 12px;
 }
-
-div.code_medium {
-	background: #ccc;
-}
 div.code_medium code, div.code_medium pre {
 	font-size: 20px;
-}
-
-div.code_large {
-	background: #ccc;
 }
 div.code_large code, div.code_large pre {
 	font-size: 24px;

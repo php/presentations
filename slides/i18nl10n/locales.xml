@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Locales</title>
+	<subtitle>language and cultural rules</subtitle>
+
+	<blurb>
+		A locale is a set of language and cultural rules. These cover aspects
+		such as language for messages, different character sets, lexigraphic
+		conventions, etc.
+	</blurb>
+<break/>
+	<blurb>Locale types:</blurb>
+	<list>
+		<bullet>LC_COLLATE: string collation</bullet>
+		<bullet>LC_CTYPE: character properties, case sensivity</bullet>
+		<bullet>LC_MONETARY: monetary formatting</bullet>
+		<bullet>LC_NUMBER: number formatting</bullet>
+		<bullet>LC_TIME: date and time formatting</bullet>
+	</list>
+</slide>
+<!--
+vim: encoding=utf8
+-->

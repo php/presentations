@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Method 4: The Qt way</title>
+	<subtitle>Using XML based translation files</subtitle>
+
+	<blurb>Pro:</blurb>
+	<list>
+		<bullet>Fall back mechanism in place</bullet>
+		<bullet>Translation files can automatically be generated and updated</bullet>
+		<bullet>Translators have a very easy job</bullet>
+	</list>
+
+	<break/>
+	
+	<blurb>Con:</blurb>
+	<list>
+		<bullet>The XML needs to be parsed</bullet>
+	</list>
+</slide>
+<!--
+vim: encoding=utf8
+-->

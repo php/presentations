@@ -1,0 +1,10 @@
+<slide>
+	<title>mod_gzip</title>
+
+	<list class="large">
+		<bullet>A very nice apache module for compressing content</bullet>
+		<bullet>Can compress any content</bullet>
+		<bullet>Can switch on MIME Types and Browser Types</bullet>
+		<bullet>Uses Temporary Files</bullet>
+	</list>
+</slide>

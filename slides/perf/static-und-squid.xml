@@ -3,12 +3,12 @@
 	<title>Static Squids</title>
 
 	<image filename="static.jpg" align="right" marginright="2em" />
-	<list>
-	<li>Reverse Proxy</li>
-	<li>Tied into Apache</li>
-	<li>Static Generated</li>
-	<li>Huge Performance Boost</li>
-	<li>No 'Dynamic' Content</li>
+	<list class="large">
+		<bullet>Reverse Proxy</bullet>
+		<bullet>Tied into Apache</bullet>
+		<bullet>Static Generated</bullet>
+		<bullet>Huge Performance Boost</bullet>
+		<bullet>No 'Dynamic' Content</bullet>
 	</list>
 	
 </slide>
