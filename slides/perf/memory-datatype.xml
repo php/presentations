@@ -8,9 +8,9 @@
 	<li>From 11MB to 7MB</li>
 	</list>
 
-	<example fontsize="1em">function &amp;create( $dataTypeString )
+	<example fontsize="1em"><![CDATA[function &create( $dataTypeString )
  {
-   $types =&amp; $GLOBALS["eZDataTypes"];
+   $types =& $GLOBALS["eZDataTypes"];
    $def = null;
 +  if ( !isset( $types[$dataTypeString] ) )
 +  {
@@ -24,6 +24,6 @@
    var $Name;
  }
 
--eZDataType::loadAndRegisterAllTypes();</example>
+-eZDataType::loadAndRegisterAllTypes();]]></example>
 	
 </slide>

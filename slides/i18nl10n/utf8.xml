@@ -9,7 +9,7 @@
 		<bullet>The first byte of a multi-byte character is always in the range 0xc0 - 0xfd and describes how long this byte-sequence is.</bullet>
 		<bullet>European languages usually use up to two bytes per character</bullet>
 		<bullet>Characters of other languages usually use up to three bytes per character</bullet>
-		<bullet>The longest UTF8 encoded character is 6 bytes</bullet>
+		<bullet>The longest UTF8 encoded character can be 6 bytes, but only 4 bytes are used</bullet>
 	</list>
 </slide>
 <!--

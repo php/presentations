@@ -4,7 +4,8 @@
 
 	<image filename="superglobals.png" align="right"/>
 
-	<example class="code_large">; show all GET variables in error messages
+	<example class="code_large">
+; show all GET variables in error messages
 xdebug.dump.GET=*
 ; show the login and password POST variables
 xdebug.dump.POST=login,password
