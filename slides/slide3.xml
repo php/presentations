@@ -8,9 +8,9 @@ create a new one:
 <blurb>
 The first slide tends to be a titlepage for the presentation.
 A simple automatic titlepage generator is included which uses the information in
-the presentation definition file.  Simply copy "titlepage.xml" into your slides
+the presentation definition file.  Simply copy %titlepage.xml% into your slides
 directory and as you saw in the presentation definition file the first slide
-was defined to be "slides/foo/titlepage.xml".
+was defined to be %slides/foo/titlepage.xml%.
 </blurb>
 <example type="shell">cp slides/titlepage.xml slides/foo</example>
 <blurb>

@@ -3,7 +3,7 @@
 
   <title>Sliders</title>
   <blurb>Hit the right arrow key to get the bullets to show up!</blurb>
-  <list>
+  <list fontsize="5em">
   <bullet slide="1" id="test1">This is a sliding bullet 1</bullet>
   <bullet slide="1" id="test2">This is a sliding bullet 2</bullet>
   <bullet slide="1" id="test3">This is a sliding bullet 3</bullet>

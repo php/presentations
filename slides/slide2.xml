@@ -1,7 +1,7 @@
 <slide title="Creating a Presentation">
 <blurb title="Your first Presentation">
-Create a new file in the presentations/ directory.  "foo.xml", for example.  A small
-sample presentations/foo.xml file is included below.
+Create a new file in the %presentations/% directory.  %foo.xml%, for example.  A small
+sample %presentations/foo.xml% file is included below.
 </blurb>
 <example><![CDATA[<presentation>
   <topic>PHP</topic>
