@@ -5,7 +5,7 @@ fontsize='1.0em' rfontsize='1.5em' outputbackground='#ffffdd'>
 <?php
 error_reporting(1);
 require_once "XML/RPC.php";
-require_once "slides/mdb/scripts/xmlrpc_util.php";
+require_once "presentations/slides/mdb/scripts/xmlrpc_util.php";
 $host = 'metallo.scripps.edu';
 $port = 80;
 $xmlrpc_uri = '/services/xmlrpc.php';

@@ -5,7 +5,10 @@ class files from rssApplet13.jar for the slide rssapplet.xml to work.
 Assuming PRES2DIR to be the path to where you checked out 'pres2' from CVS.
 
 $ cd PRES2DIR/
-$ jar xf slides/mdb/rssApplet13.jar
+$ jar xf presentations/slides/mdb/rssApplet13.jar
 $ rm -fr META-INF
 
 You should now have a "com" tree under PRES2DIR and Mozilla should be happy.
+
+Several of the examples also assume that the presentations and slides are
+under the PRES2DIR path.

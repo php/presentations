@@ -1,5 +1,5 @@
 <slide title="Genomics">
-<image filename='slides/mdb/images/genes.png' align='center' title='Genome,
+<image filename='images/genes.png' align='center' title='Genome,
 Genes and ORFs'/>
 <blurb title='Genes'>
 Are the individual sections of the genome that encode for a particular protein
@@ -8,7 +8,7 @@ and/or effect a given action (regulation, inhibition, etc.)
 <blurb title='Open Reading Frame (ORF)'>
 The section of the mRNA that gets translated into a Protein.
 </blurb>
-<image filename='slides/mdb/images/reading_frames.png' align='center'/>
+<image filename='images/reading_frames.png' align='center'/>
 <blurb>
 A given (gene) sequence can (and several do) have more than one 
 ORF, which will be used for translation depending on a set of interacting

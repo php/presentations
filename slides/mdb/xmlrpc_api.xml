@@ -4,7 +4,7 @@ outputbackground='#ffffdd'>
 <![CDATA[
 <?php 
 require_once "XML/RPC.php";
-require_once "slides/mdb/scripts/xmlrpc_util.php";
+require_once "presentations/slides/mdb/scripts/xmlrpc_util.php";
 $host = 'metallo.scripps.edu';
 $port = 80;
 $xmlrpc_uri = '/services/xmlrpc.php';

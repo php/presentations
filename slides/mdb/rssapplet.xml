@@ -7,7 +7,7 @@ title="Using Webreference's RSS Applet to get RSS feed from the MDB API">
 <APPLET archive='rssApplet13.jar' width=500 height=300
 code='com.exploringxml.rss.applet.RSSViewerApplet.class'>
 <PARAM name="src"
-value="http://redox.scripps.edu:7000/services/api.php?func=metallopdb&metal=zn&mode=random&count=12&format=rss">
+value="http://metallo.scripps.edu/services/api.php?func=metallopdb&metal=zn&mode=random&count=12&format=rss">
 <PARAM name=box.foreground value=#003300>
 <PARAM name=box.background value=#33ffcc>
 <PARAM name=title.foreground value=#336600>
@@ -32,7 +32,7 @@ title='HTML code for the applet'>
 <APPLET archive='rssApplet13.jar' width=500 height=300
 code='com.exploringxml.rss.applet.RSSViewerApplet.class'>
 <PARAM name="src"
-value="http://redox.scripps.edu:7000/services/api.php?func=metallopdb&metal=zn&mode=random&count=12&format=rss">
+value="http://metallo.scripps.edu/services/api.php?func=metallopdb&metal=zn&mode=random&count=12&format=rss">
 <PARAM name=box.foreground value=#003300>
 <PARAM name=box.background value=#33ffcc>
 <PARAM name=title.foreground value=#336600>

@@ -1,10 +1,8 @@
 <slide title='Introspection'>
 <example type='php' result='0' fontsize='1.5em'
 marginright='1em' marginleft='1em' width='95%'
-filename='slides/mdb/scripts/introspection_http.php'/>
+filename='scripts/introspection_http.php'/>
 <example type='html' result='0' fontsize='1em' align='center'
 title='Output of the "Introspection" script'
-filename='slides/mdb/output/introspection_api_out.html'/>
-<link align='right' 
-href='/pres2/slides/mdb/scripts/introspection_http.php'>Try it in real time</link>
+filename='output/introspection_api_out.html'/>
 </slide>
