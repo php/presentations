@@ -1,0 +1,34 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#3C5BB4"
+    stylesheet="presentations/slides/ze-ext/style.css"
+	backgroundfixed="1" >
+<topic>Internals</topic>
+<title>Zend and Extending PHP</title>
+<event>PHP Forum 2002</event>
+<location>Paris, France</location>
+<date>December 10, 2002</date>
+<speaker>Derick Rethans</speaker>
+<email>d.rethans@jdimedia.nl</email>
+<slide>slides/ze-xdebug/title.xml</slide>
+<slide>slides/ze-xdebug/intro.xml</slide>
+<slide>slides/ze-xdebug/parse_error.xml</slide>
+<slide>slides/ze-xdebug/tokens.xml</slide>
+<slide>slides/ze-xdebug/tokenizer1.xml</slide>
+<slide>slides/ze-xdebug/tokenizer2.xml</slide>
+<slide>slides/ze-xdebug/compile.xml</slide>
+<slide>slides/ze-xdebug/opcode.xml</slide>
+<slide>slides/ze-xdebug/tokenizer3.xml</slide>
+<slide>slides/ze-xdebug/vld1.xml</slide>
+<slide>slides/ze-xdebug/vld2.xml</slide>
+<slide>slides/ze-xdebug/optimize1.xml</slide>
+<slide>slides/ze-xdebug/optimize2.xml</slide>
+<slide>slides/ze-xdebug/optimize3.xml</slide>
+<slide>slides/ze-xdebug/optimize4.xml</slide>
+<slide>slides/ze-xdebug/optimize5.xml</slide>
+<slide>slides/ze-xdebug/execute1.xml</slide>
+<slide>slides/ze-xdebug/execute2.xml</slide>
+<slide>slides/ze-xdebug/execute3.xml</slide>
+<slide>slides/ze-xdebug/resources.xml</slide>
+</presentation>
