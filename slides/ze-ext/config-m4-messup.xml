@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Running configure</title>
+
+	<blurb> </blurb>
+	<blurb>Run configure to test for the library and create the Makefile:</blurb>
+	<example fontsize="1.4em"><![CDATA[# ./configure
+
+checking how to run the C preprocessor... gcc -E
+checking for aalib support... yes, shared 
+checking for aalib files in default path... found in /usr/local
+checking for aalib in -laalib... no 
+configure: error: wrong aalib lib version or lib not found
+]]></example>
+
+	<blurb> </blurb>
+	<blurb>We messed up :(</blurb>
+	<blurb> </blurb>
+	<blurb>config.log to the rescue:</blurb>
+	<blurb fontsize="2em"><![CDATA[<pre>
+configure:1659: checking for aa_init in -laalib
+configure:1678: gcc -o conftest -g -O2
+    -L/usr/local/lib -lm -ldl
+    conftest.c -laalib   1>&5
+<font color='red'>*/usr/bin/ld: cannot find -laalib*</font>
+collect2: ld returned 1 exit status
+configure: failed program was:
+#line 1667 "configure"
+#include "confdefs.h"
+/* Override any gcc2 internal prototype to avoid an error. 
+   We use char because int might match the return type of a gcc2
+   builtin and then its argument prototype would still apply.  */
+char aa_init();
+
+int main() {
+aa_init()
+; return 0; }
+</pre>]]></blurb>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb>The library is called 'aa' (and not 'aalib'), so we fix config.m4:</blurb>
+	<blurb fontsize="2em"><![CDATA[<pre>
+<a name="line29">29</a> 
+<a name="line30">30</a>   LIBNAME=aa          <font color="#444444"># you may want to change this</font>
+<a name="line31">31</a>   LIBSYMBOL=aa_init   <font color="#444444"># you most likely want to change this </font>
+<a name="line32">32</a> 
+</pre>
+]]></blurb>
+</slide>

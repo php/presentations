@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Prototypes</title>
+
+	<blurb> </blurb>
+	<blurb>protos</blurb>
+	<example fontsize="1.0em"><![CDATA[resource aa_init()
+	Initialize the AA library
+
+int aa_get_screen_height(resource c)
+	Get the screen height
+
+int aa_get_screen_width(resource c)
+	Get the screen width
+
+void aa_put_pixel(resource c, int x, int y, int value)
+	Draw a pixel
+
+void aa_render(resource c [, int contrast [, int dither [, int inversion [, int randomval]]]])
+	Render the image
+
+string aa_get_all(resource c)
+	Get the result as one string
+
+array aa_get_lines(resource c)
+	Get the result with one line in an array element
+
+array aa_get_array(resource c)
+	Get the result with one element per pixel
+]]></example>
+</slide>

@@ -2,7 +2,7 @@
 	template="php" 
 	navmode="html"
 	navbarbackground="#3C5BB4"
-    stylesheet="presentations/slides/ze-ext/style.css"
+	stylesheet="presentations/slides/ze-ext/style.css"
 	backgroundfixed="1" >
 <topic>Internals</topic>
 <title>Zend and Extending PHP</title>
@@ -30,5 +30,36 @@
 <slide>slides/ze-xdebug/execute1.xml</slide>
 <slide>slides/ze-xdebug/execute2.xml</slide>
 <slide>slides/ze-xdebug/execute3.xml</slide>
-<slide>slides/ze-xdebug/resources.xml</slide>
+
+<slide>slides/ze-ext/protos.xml</slide>
+<slide>slides/ze-ext/protos-generate.xml</slide>
+<slide>slides/ze-ext/protos-result.xml</slide>
+
+<slide>slides/ze-ext/config-m4-search.xml</slide>
+<slide>slides/ze-ext/config-m4-check.xml</slide>
+<slide>slides/ze-ext/config-m4-phpize.xml</slide>
+<slide>slides/ze-ext/config-m4-messup.xml</slide>
+<slide>slides/ze-ext/config-m4-run2.xml</slide>
+
+<slide>slides/ze-ext/compile.xml</slide>
+
+<slide>slides/ze-ext/code-remove-stuff.xml</slide>
+<slide>slides/ze-ext/code-resource-create.xml</slide>
+<slide>slides/ze-ext/code-resource-dtor.xml</slide>
+<slide>slides/ze-ext/code-resource-fetch.xml</slide>
+<slide>slides/ze-ext/code-check.xml</slide>
+
+<slide>slides/ze-ext/code-functions1.xml</slide>
+<slide>slides/ze-ext/code-functions2.xml</slide>
+<slide>slides/ze-ext/code-function-params.xml</slide>
+
+<slide>slides/ze-ext/code-return-string.xml</slide>
+<slide>slides/ze-ext/test-script1.xml</slide>
+
+<slide>slides/ze-ext/code-return-array.xml</slide>
+<slide>slides/ze-ext/code-return-nested-array.xml</slide>
+<slide>slides/ze-ext/code-return-others.xml</slide>
+
+
+<slide>slides/ze-ext/resources.xml</slide>
 </presentation>

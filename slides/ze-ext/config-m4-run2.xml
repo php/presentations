@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Running configure (2)</title>
+
+	<blurb> </blurb>
+	<blurb>Run configure to test for the library and create the Makefile:</blurb>
+	<example fontsize="1.4em"><![CDATA[# ./configure
+
+creating cache ./config.cache
+checking for gcc... gcc
+checking whether the C compiler (gcc  ) works... yes
+
+...
+
+creating ./config.status
+creating config.h
+]]></example>
+
+	<blurb>Now run make:</blurb>
+	<example fontsize="1.4em"><![CDATA[# make]]></example>
+
+	<blurb> </blurb>
+	<blurb>And of course we get lots of compile errors :-)</blurb>
+</slide>

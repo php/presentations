@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Extension framework generation</title>
+
+	<blurb> </blurb>
+	<list fontsize="4.4em">
+		<bullet>Go to the php4/ext directory</bullet>
+		<bullet>Execute the following command:</bullet>
+	</list>
+	<blurb></blurb>
+	<example fontsize="1.7em"><![CDATA[# ./ext_skel --extname=aalib --proto=/path/to/protofile]]></example>
+	<list fontsize="4.4em">
+		<bullet>This produces the following source files:</bullet>
+	</list>
+	<list fontsize="4em" marginleft="2em">
+		<bullet>config.m4</bullet>
+		<bullet>aalib.c</bullet>
+		<bullet>php_aalib.h</bullet>
+	</list>
+</slide>
