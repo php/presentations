@@ -1,9 +1,15 @@
 <slide fontsize="4em">
 <title>Preventing XSS Attacks</title>
-<list fontsize="3em">
+<list fontsize="4em">
 	<bullet>Filter ALL foreign data</bullet>
+</list>
+<list fontsize="4em">
 	<bullet>Let PHP help - htmlentities(), strip_tags(), utf8_decode(), etc.</bullet>
+</list>
+<list fontsize="4em">
 	<bullet>Don't try to guess bad tags - only allow safe ones</bullet>
+</list>
+<list fontsize="4em">
 	<bullet>The bad guys are very creative - you must be, too!</bullet>
 </list>
 </slide>

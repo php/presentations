@@ -1,9 +1,8 @@
 <slide fontsize="4em">
 <title>Simple XSS Example</title>
-<blurb fontsize="3.5em">Simple but harmless attack</blurb>
+<blurb fontsize="4em">Simple but harmless attack</blurb>
 <example filename="xss_example_simple.php" />
-<blurb fontsize="3.5em">
-	If this script is sent by a trusted site, the potential for danger should
-	be clear.
+<blurb fontsize="4em">
+	If this script is sent by a trusted site, it will be trusted as much as the site that sent it. This is where the danger lies.
 </blurb>
 </slide>

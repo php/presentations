@@ -1,22 +1,22 @@
 <slide fontsize="4em">
 <title>What is XSS?</title>
-<list fontsize="3.5em">
+<list fontsize="4em">
 	<bullet>
 		Exploits the trust a user has for a particular site
 	</bullet>
 </list>
-<list fontsize="3.5em">
+<list fontsize="4em">
 	<bullet>
 		Generally involves Web sites that display foreign data (Web mail,
 		forums, syndicated content, etc.)
 	</bullet>
 </list>
-<list fontsize="3.5em">
+<list fontsize="4em">
 	<bullet>
 		Can be anything - executing malicious scripts, stealing cookies, etc.
 	</bullet>
 </list>
-<list fontsize="3.5em">
+<list fontsize="4em">
 	<bullet>
 		Popularized by the media
 	</bullet>

@@ -1,6 +1,6 @@
 <?
-$url = 'show/php-under-attack/8';
-$tag = "<img src=\"$url?message=CSRF\">";
+$url = 'show.php/php-under-attack/6';
+$tag = "<img src=\"$url?message=Hi\">";
 echo htmlentities($tag);
 echo $tag;
 ?>
