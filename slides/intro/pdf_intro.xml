@@ -1,0 +1,26 @@
+<slide title="Introduction">
+<blurb title="PDFlib License">
+The Aladdin Free Public License allows the use of PDFlib for:
+</blurb>
+<list>
+<bullet> Developing any non-commercial software provided source code is available</bullet>
+<bullet> Personal use</bullet>
+<bullet> Redistribute PDFlib</bullet>
+</list>
+
+<blurb>
+Commercial license required for any commercial use including 
+commercial web services.  
+</blurb>
+<link leader="For pricing see ">http://pdflib.com</link>
+
+<list title="Alternatives">
+<bullet> FreePDFlib (open source) by Thomas Szadel</bullet>
+<bullet> ClibPDF (terms similar to pdflib)</bullet>
+</list>
+<list title="Why use PDF with PHP?">
+<bullet> Invoices for e-commerce sites</bullet>
+<bullet> Report generation</bullet>
+<bullet> Anything that requires precise control over printable output</bullet>
+</list>
+</slide>

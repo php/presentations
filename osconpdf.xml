@@ -1,0 +1,20 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	backgroundimage="slides/intro/background.png"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
+<topic>PHP</topic>
+<title>Creating PDF Documents with PHP</title>
+<event>OSCON</event>
+<location>San Diego</location>
+<date>July 26, 2002</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://conf.php.net/osconpdf</url>
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/pdf_intro.xml</slide>
+<slide>slides/intro/pdf_hello.xml</slide>
+<slide>slides/intro/pdf_coords.xml</slide>
+</presentation>

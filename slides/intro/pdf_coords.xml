@@ -1,0 +1,35 @@
+<slide title="Coordinates">
+
+<blurb>
+Origin is at the lower left and the basic unit is the DTP pt.
+</blurb>
+
+<blurb>
+1 pt = 1/72 inch = 0.35277777778 mm
+</blurb>
+
+<table title="Some common page sizes" columns="3" border="4" width="50%">
+<cell bold="1">Format</cell><cell bold="1">Width</cell><cell bold="1">Height</cell>
+<cell>US-Letter</cell>  <cell>612</cell>  <cell>792</cell>
+<cell>US-Legal</cell>   <cell>612</cell> <cell>1008</cell>
+<cell>US-Ledger</cell> <cell>1224</cell>  <cell>792</cell>
+<cell>11x17</cell>      <cell>792</cell> <cell>1224</cell>
+<cell>A0</cell>        <cell>2380</cell> <cell>3368</cell>
+<cell>A1</cell>        <cell>1684</cell> <cell>2380</cell>
+<cell>A2</cell>        <cell>1190</cell> <cell>1684</cell>
+<cell>A3</cell>         <cell>842</cell> <cell>1190</cell>
+<cell>A4</cell>         <cell>595</cell>  <cell>842</cell>
+<cell>A5</cell>         <cell>421</cell>  <cell>595</cell>
+<cell>A6</cell>         <cell>297</cell>  <cell>421</cell>
+<cell>B5</cell>         <cell>501</cell>  <cell>709</cell>
+</table>
+
+<example
+	title="Coordinate Example"
+	filename="slides/intro/pdf_coords_ex1.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+</slide>
