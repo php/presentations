@@ -1,0 +1,38 @@
+<presentation
+    template="php2"
+    navmode="html"
+	logo1="images/php-med-trans-light.gif"
+	navbarheight="4.7em"
+	navbarbackground="url(images/trans-ffffff.png) transparent fixed"
+	titlesize="2em"
+	titlecolor="#1111cc"
+>
+<topic>PHP</topic>
+<title>Solving the Web Problem</title>
+<location>Veracruz, Mexico</location>
+<date>December 6, 2002</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<slide>slides/keynotes/titlepage.xml</slide>
+<slide>slides/keynotes/problem.xml</slide>
+<slide>slides/keynotes/rocket.xml</slide>
+<slide>slides/keynotes/einstein.xml</slide>
+<slide>slides/keynotes/tennessee.xml</slide>
+<slide>slides/keynotes/einstein2.xml</slide>
+<slide>slides/keynotes/heisenberg.xml</slide>
+<slide>slides/keynotes/schroedinger.xml</slide>
+<slide>slides/keynotes/simple.xml</slide>
+<slide>slides/keynotes/simpleproblem.xml</slide>
+<slide>slides/keynotes/solution.xml</slide>
+<slide>slides/intro/old.xml</slide>
+<slide>slides/intro/old2.xml</slide>
+<slide>slides/intro/old3.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/keynotes/liveform.xml</slide>
+<slide>slides/keynotes/timeline.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+<slide>slides/state/php430.xml</slide>
+<slide>slides/state/pear.xml</slide>
+<slide>slides/state/php50.xml</slide>
+<slide>slides/keynotes/carl.xml</slide>
+</presentation>

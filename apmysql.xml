@@ -1,0 +1,30 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	backgroundimage="slides/intro/background.png"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
+<topic>PHP</topic>
+<title>PHP and MySQL</title>
+<event>ApacheCon</event>
+<location>Last Vegas</location>
+<date>November 18, 2002</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/mysql_setup.xml</slide>
+<slide>slides/intro/mysql_check.xml</slide>
+<slide>slides/intro/mysql_connect.xml</slide>
+<slide>slides/intro/mysql_pconnect.xml</slide>
+<slide>slides/intro/mysql_create.xml</slide>
+<slide>slides/intro/mysql_insert.xml</slide>
+<slide>slides/intro/mysql_select.xml</slide>
+<slide>slides/intro/mysql_time.xml</slide>
+<slide>slides/intro/mysql_update.xml</slide>
+<slide>slides/intro/mysql_udf.xml</slide>
+<slide>slides/intro/squid1.xml</slide>
+<slide>slides/intro/squid2.xml</slide>
+<slide>slides/intro/repl1.xml</slide>
+<slide>slides/intro/apache_hooks.xml</slide>
+</presentation>

@@ -1,0 +1,117 @@
+<presentation
+        template="php2"
+        navmode="html"
+		titlecolor="#1111aa"
+		navbarbackground="url(images/trans-ffffff.png)"
+		logo1="images/php-med-trans-light.gif"
+		titlesize="2em"
+		navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Introduction to PHP</title>
+<speaker>Rasmus Lerdorf</speaker>
+<event>linux.conf.au</event>
+<location>Perth</location>
+<date>January 22, 2003</date>
+<copyright>(c) Copyright 2003 Rasmus Lerdorf</copyright>
+
+<navmode>html</navmode>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/old.xml</slide>
+  <slide>slides/intro/old2.xml</slide>
+  <slide>slides/intro/old3.xml</slide>
+  <slide>slides/intro/php-solution.xml</slide>
+  <slide>slides/intro/php-intro.xml</slide>
+  <slide>slides/intro/numbers.xml</slide>
+  <slide>slides/intro/timeline.xml</slide>
+  <slide>slides/intro/group.xml</slide>
+  <slide>slides/intro/php-website.xml</slide>
+  <slide>slides/intro/php-website-tips.xml</slide>
+  <slide>slides/intro/serverside.xml</slide>
+  <slide>slides/intro/embed2.xml</slide>
+</chapter>
+
+<chapter title="Language Intro">
+  <slide>slides/intro/basics.xml</slide>
+  <slide>slides/intro/modes.xml</slide>
+  <slide>slides/intro/forms2.xml</slide>
+  <slide>slides/intro/typing.xml</slide>
+  <slide>slides/intro/arrays.xml</slide>
+  <slide>slides/intro/operators.xml</slide>
+  <slide>slides/intro/funcs.xml</slide>
+  <slide>slides/intro/loops.xml</slide>
+  <slide>slides/intro/oop.xml</slide>
+  <slide>slides/intro/datetime.xml</slide>
+  <slide>slides/intro/string.xml</slide>
+  <slide>slides/intro/regex.xml</slide>
+  <slide>slides/intro/encode.xml</slide>
+  <slide>slides/intro/file.xml</slide>
+  <slide>slides/intro/cfile.xml</slide>
+  <slide>slides/intro/scope.xml</slide>
+  <slide>slides/intro/regglobals.xml</slide>
+  <slide>slides/intro/db.xml</slide>
+  <slide>slides/intro/header.xml</slide>
+  <slide>slides/intro/cookie.xml</slide>
+</chapter>
+
+<chapter title="Guestbook Example">
+  <slide>slides/intro/guest.xml</slide>
+  <slide>slides/intro/sqlex.xml</slide>
+  <slide>slides/intro/sql.xml</slide>
+  <slide>slides/intro/sqlguest.xml</slide>
+  <slide>slides/intro/sqlguest2.xml</slide>
+</chapter>
+
+<chapter title="Accessing MySQL Databases from PHP">
+  <slide>slides/intro/mysql_setup.xml</slide>
+  <slide>slides/intro/mysql_check.xml</slide>
+  <slide>slides/intro/mysql_connect.xml</slide>
+  <slide>slides/intro/mysql_pconnect.xml</slide>
+  <slide>slides/intro/mysql_create.xml</slide>
+  <slide>slides/intro/mysql_insert.xml</slide>
+  <slide>slides/intro/mysql_select.xml</slide>
+  <slide>slides/intro/mysql_time.xml</slide>
+  <slide>slides/intro/mysql_update.xml</slide>
+  <slide>slides/intro/magic_quotes.xml</slide>
+</chapter>
+
+<chapter title="Dynamic Generation">
+  <slide>slides/intro/image.xml</slide>
+  <slide>slides/intro/image_colors1.xml</slide>
+  <slide>slides/intro/image_colors2.xml</slide>
+  <slide>slides/intro/image_colors4.xml</slide>
+  <slide>slides/intro/image_colors5.xml</slide>
+  <slide>slides/intro/image_colors6.xml</slide>
+  <slide>slides/intro/image2.xml</slide>
+  <slide>slides/intro/image2a.xml</slide>
+  <slide>slides/intro/image_text1.xml</slide>
+  <slide>slides/intro/image_text2.xml</slide>
+  <slide>slides/intro/exif.xml</slide>
+  <slide>slides/intro/pdf.xml</slide>
+  <slide>slides/intro/flash_ming.xml</slide>
+  <slide>slides/intro/flash_ming2.xml</slide>
+  <slide>slides/intro/image_cache.xml</slide>
+</chapter>
+
+<chapter title="Using the PEAR library">
+  <slide>slides/intro/whatispear.xml</slide>
+  <slide>slides/intro/pear.xml</slide>
+</chapter>
+
+<chapter title="Session Management">
+  <slide>slides/intro/php_session.xml</slide>
+  <slide>slides/intro/php_session1.xml</slide>
+  <slide>slides/intro/php_session2.xml</slide>
+  <slide>slides/intro/php_session_start.xml</slide>
+  <slide>slides/intro/php_session_config.xml</slide>
+  <slide>slides/intro/php_session3.xml</slide>
+  <slide>slides/intro/php_session_backend.xml</slide>
+  <slide>slides/intro/php_session_mysql.xml</slide>
+</chapter>
+
+<slide>slides/intro/future.xml</slide>
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

@@ -1,0 +1,83 @@
+<presentation 
+	template="php2" 
+	navmode="html"
+	logo1="images/php-med-trans-light.gif"
+	navbarheight="4.7em"
+	navbarbackground="url(images/trans-ffffff.png) transparent fixed"
+	titlesize="1.5em"
+	titlecolor="#1111cc"
+>
+<topic>PHP</topic>
+<title>PHP - Advanced Tutorial</title>
+<event>Gulev</event>
+<location>Veracruz, Mexico</location>
+<url>http://lerdorf.com/veracruz.pdf</url>
+<date>December 6, 2002</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<slide>slides/titlepage.xml</slide>
+<slide>slides/intro/veracruz_agenda.xml</slide>
+<slide>slides/intro/mysql_setup.xml</slide>
+<slide>slides/intro/mysql_check.xml</slide>
+<slide>slides/intro/mysql_connect.xml</slide>
+<slide>slides/intro/mysql_pconnect.xml</slide>
+<slide>slides/intro/mysql_create.xml</slide>
+<slide>slides/intro/mysql_insert.xml</slide>
+<slide>slides/intro/mysql_select.xml</slide>
+<slide>slides/intro/mysql_time.xml</slide>
+<slide>slides/intro/mysql_update.xml</slide>
+<slide>slides/intro/magic_quotes.xml</slide>
+<slide>slides/intro/guest.xml</slide>
+<slide>slides/intro/mysqlguest.xml</slide>
+<slide>slides/intro/sqlguest2.xml</slide>
+<slide>slides/intro/db.xml</slide>
+<slide>slides/intro/header.xml</slide>
+<slide>slides/intro/cookie.xml</slide>
+<slide>slides/intro/cookiehint.xml</slide>
+<slide>slides/intro/image.xml</slide>
+<slide>slides/intro/image_colors1.xml</slide>
+<slide>slides/intro/image_colors2.xml</slide>
+<slide>slides/intro/image_colors4.xml</slide>
+<slide>slides/intro/image_colors5.xml</slide>
+<slide>slides/intro/image_colors6.xml</slide>
+<slide>slides/intro/image2.xml</slide>
+<slide>slides/intro/image_text1.xml</slide>
+<slide>slides/intro/image_text2.xml</slide>
+<slide>slides/intro/exif.xml</slide>
+<slide>slides/intro/pdf.xml</slide>
+<slide>slides/intro/flash_ming.xml</slide>
+<slide>slides/intro/flash_ming2.xml</slide>
+<slide>slides/intro/image_cache.xml</slide>
+<slide>slides/intro/session.xml</slide>
+<slide>slides/intro/session2.xml</slide>
+<slide>slides/intro/session3.xml</slide>
+<slide>slides/intro/session4.xml</slide>
+<slide>slides/intro/regglobals.xml</slide>
+<slide>slides/intro/safemode.xml</slide>
+<slide>slides/intro/security1.xml</slide>
+<slide>slides/intro/security2.xml</slide>
+<slide>slides/intro/security3.xml</slide>
+<slide>slides/intro/security4.xml</slide>
+<slide>slides/intro/security5.xml</slide>
+<slide>slides/intro/ref1.xml</slide>
+<slide>slides/intro/ref2.xml</slide>
+<slide>slides/intro/shared.xml</slide>
+<slide>slides/intro/pi.xml</slide>
+<slide>slides/intro/errdoc.xml</slide>
+<slide>slides/intro/funky.xml</slide>
+<slide>slides/intro/varvar.xml</slide>
+<slide>slides/intro/opt.xml</slide>
+<slide>slides/intro/php_opcode_caches.xml</slide>
+<slide>slides/intro/php_opcode_caches2.xml</slide>
+<slide>slides/intro/php_profiling.xml</slide>
+<slide>slides/intro/php_profiling2.xml</slide>
+<slide>slides/intro/debug_backtrace.xml</slide>
+<slide>slides/intro/squid1.xml</slide>
+<slide>slides/intro/squid2.xml</slide>
+<slide>slides/intro/repl1.xml</slide>
+<slide>slides/intro/load_balance.xml</slide>
+<slide>slides/intro/squid_load_balance.xml</slide>
+<slide>slides/intro/latest.xml</slide>
+<slide>slides/intro/future.xml</slide>
+<slide>slides/intro/resources.xml</slide>
+</presentation>

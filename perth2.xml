@@ -1,0 +1,109 @@
+<presentation
+        template="php2"
+        navmode="html"
+		titlecolor="#1111aa"
+		navbarbackground="url(images/trans-ffffff.png)"
+		logo1="images/php-med-trans-light.gif"
+		titlesize="2em"
+		navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Advanced PHP</title>
+<speaker>Rasmus Lerdorf</speaker>
+<location>Perth</location>
+<event>linux.conf.au</event>
+<date>January 22, 2003</date>
+<copyright>(c) Copyright 2003 Rasmus Lerdorf</copyright>
+<navmode>html</navmode>
+
+<slide>slides/titlepage.xml</slide>
+
+<chapter title="Security">
+  <slide>slides/intro/safemode.xml</slide>
+  <slide>slides/intro/security1.xml</slide>
+  <slide>slides/intro/security2.xml</slide>
+  <slide>slides/intro/security3.xml</slide>
+  <slide>slides/intro/security4.xml</slide>
+  <slide>slides/intro/security5.xml</slide>
+</chapter>
+
+<slide>slides/intro/req.xml</slide>
+<slide>slides/intro/keepalive.xml</slide>
+<slide>slides/intro/ref1.xml</slide>
+<slide>slides/intro/ref2.xml</slide>
+<slide>slides/intro/varvar.xml</slide>
+<slide>slides/intro/cookiehint.xml</slide>
+<slide>slides/intro/opt.xml</slide>
+<slide>slides/intro/conn.xml</slide>
+<slide>slides/intro/mysql_opt.xml</slide>
+<slide>slides/intro/mysql_udf.xml</slide>
+
+<chapter title="PHP Installation">
+  <slide>slides/intro/php_addons.xml</slide>
+  <slide>slides/intro/php_build.xml</slide>
+  <slide>slides/intro/php_build2.xml</slide>
+  <slide>slides/intro/php_build3.xml</slide>
+</chapter>
+
+<chapter title="Configuring PHP">
+  <slide>slides/intro/php_config.xml</slide>
+  <slide>slides/intro/php_404.xml</slide>
+  <slide>slides/intro/php_forcetype.xml</slide>
+</chapter>
+
+<chapter title="Advanced PHP coding">
+  <slide>slides/intro/tpl-overview.xml</slide>
+  <slide>slides/intro/tpl-templatepower.xml</slide>
+  <slide>slides/intro/tpl-smarty.xml</slide>
+  <slide>slides/intro/tpl-php.xml</slide>
+  <slide>slides/intro/debug_backtrace.xml</slide>
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/intro/php_opcode_caches2.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/php_profiling2.xml</slide>
+</chapter>
+
+<chapter title="Short URLs please!">
+  <slide>slides/intro/pi.xml</slide>
+  <slide>slides/intro/errdoc.xml</slide>
+  <slide>slides/intro/php_image_cache.xml</slide>
+  <slide>slides/intro/funky.xml</slide>
+</chapter>
+
+<chapter title="Using SQUID to Cache Web Pages for Apache">
+  <slide>slides/intro/squid1.xml</slide>
+  <slide>slides/intro/squid2.xml</slide>
+  <slide>slides/intro/squid_load_balance.xml</slide>
+  <slide>slides/intro/load_balance.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+</chapter>
+
+<chapter title="Extending PHP">
+  <slide>slides/extending/why.xml</slide>
+  <slide>slides/intro/arch.xml</slide>
+  <slide>slides/extending/tree-layout.xml</slide>
+  <slide>slides/extending/ext1.xml</slide>
+  <slide>slides/extending/ext2.xml</slide>
+  <slide>slides/extending/ext3.xml</slide>
+  <slide>slides/extending/ext4.xml</slide>
+  <slide>slides/extending/ext5.xml</slide>
+  <slide>slides/extending/ext6.xml</slide>
+  <slide>slides/extending/ext7.xml</slide>
+  <slide>slides/extending/ext8.xml</slide>
+  <slide>slides/extending/ext9.xml</slide>
+  <slide>slides/extending/ext10.xml</slide>
+  <slide>slides/extending/ext11.xml</slide>
+  <slide>slides/extending/ext12.xml</slide>
+  <slide>slides/extending/ext13.xml</slide>
+  <slide>slides/extending/ext14.xml</slide>
+  <slide>slides/extending/ext15.xml</slide>
+  <slide>slides/extending/ext16.xml</slide>
+  <slide>slides/extending/ext17.xml</slide>
+  <slide>slides/extending/ext18.xml</slide>
+  <slide>slides/extending/ext19.xml</slide>
+  <slide>slides/extending/ext20.xml</slide>
+</chapter>
+
+<slide>slides/intro/php5-todo.xml</slide>
+</presentation>
