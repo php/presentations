@@ -1,12 +1,4 @@
 <?php
-
-/* dba dump utility
-*
-* Usage php dba_dump <file> <handler>
-*
-* Note: configure with --enable-dba
-*/
-
 class dba_reader implements spl::iterator {
 
     public $db = NULL;
