@@ -8,9 +8,24 @@
 <email>jimw@apache.org</email>
 <url>http://conf.php.net/community</url>
 
+<!--
+* History
+* People
+* CVS
+* Bug System
+* Documentation
+* Mailing Lists
+** as news groups
+** comp.lang.php
+* Conferences
+* Sites
+** machines
+-->
+
 <slide>slides/intro/titlepage.xml</slide>
 
 <slide>slides/community/mail-lists.xml</slide>
+<slide>slides/community/bugs.xml</slide>
 
 <slide>slides/community/fin.xml</slide>
 
