@@ -9,6 +9,6 @@ Use %mod_gzip% to compress your data before you send it over the wire
 %mod_gzip% is much better than php's built-in gzip compression
 </blurb>
 <blurb fontsize="4.0em">
-But some encryption is better than none
+But some compression is better than none
 </blurb>
 </slide>
