@@ -2,9 +2,9 @@
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
 <image filename="10000000000000610000006B74D8AABB.jpg" align="right"/>
 <blurb><![CDATA[<br/><br/><br/>]]></blurb>
-<example><![CDATA[<br>"SELECT * FROM table where field = ?"<br>
-versus<br>
-"SELECT * FROM table where field = '$name'"<br>]]></example>
+<example>SELECT * FROM table where field = ?</example>
+<blurb>versus</blurb>
+<example>SELECT * FROM table where field = '$name'</example>
 <list>
 <bullet>Avoids hard parsing of your query</bullet>
 <bullet>Avoids extensive fragmentation of the SGA</bullet>
