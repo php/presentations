@@ -1,0 +1,48 @@
+<slide title="Extensions" layout="2columns">
+<list fontsize="2.5em">
+<bullet> GD (GIF, JPEG, PNG, WBMP)</bullet>
+<bullet> LDAP</bullet>
+<bullet> SNMP</bullet>
+<bullet> IMAP (POP, NNTP)</bullet>
+<bullet> FTP</bullet>
+<bullet> MCAL</bullet>
+<bullet> IMSP</bullet>
+<bullet> IPTC</bullet>
+<bullet> BC/GMP (arbitrary precision math)</bullet>
+<bullet> Hyperwave</bullet>
+<bullet> XML parser</bullet>
+<bullet> PDF generation</bullet>
+<bullet> FDF (PDF forms)</bullet>
+<bullet> System V Semaphores and Shared memory</bullet>
+<bullet> DCOM (Win32 only)</bullet>
+<bullet> Java Connectivity</bullet>
+<bullet> mnogosearch (udmsearch support)</bullet>
+<bullet> Cybermut</bullet>
+<bullet> Iconv</bullet>
+<bullet> Satellite</bullet>
+<bullet> Curl</bullet>
+</list>
+<divide />
+<list fontsize="2.5em">
+<bullet> gettext (GNU internationalization)</bullet>
+<bullet> zlib (compressed IO)</bullet>
+<bullet> Charset/text conversion (UTF-8, Cyrillic, Hebrew)</bullet>
+<bullet> Browser capabilities extension</bullet>
+<bullet> EXIF</bullet>
+<bullet> SWF (Flash)</bullet>
+<bullet> ASPELL/PSPELL</bullet>
+<bullet> MCRYPT</bullet>
+<bullet> Cybercash</bullet>
+<bullet> Recode</bullet>
+<bullet> Readline</bullet>
+<bullet> XSLT (Sablotron, libxslt, Xalan)</bullet>
+<bullet> WDDX</bullet>
+<bullet> NIS</bullet>
+<bullet> YAZ (Z39.50 client)</bullet>
+<bullet> Payflow Pro</bullet>
+<bullet> CCVS (Credit Card Verification System)</bullet>
+<bullet> Fribidi</bullet>
+<bullet> Ncurses</bullet>
+<bullet> Muscat</bullet>
+</list>
+</slide>
