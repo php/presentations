@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Compilation</title>
+
+	<blurb> </blurb>
+	<blurb>Run make:</blurb>
+	<example fontsize="1.4em"><![CDATA[# make
+
+...
+
+Libraries have been installed in:
+   /dat/dev/php/aalib/modules]]></example>
+
+	<blurb> </blurb>
+	<blurb>Test library:</blurb>
+	<example fontsize="1.4em"><![CDATA[# php -r 'dl("/dat/dev/php/aalib/modules/aalib.so");
+          echo "\n".confirm_aalib_compiled("aalib")."\n";']]></example>
+
+	<blurb> </blurb>
+	<blurb>Output:</blurb>
+	<example fontsize="1.4em"><![CDATA[Congratulations! You have successfully modified ext/aalib/config.m4. Module aalib is now compiled into PHP.]]></example>
+</slide>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Resource creation</title>
+
+	<blurb> </blurb>
+	<blurb>aalib.c:</blurb>
+	<blurb fontsize="2em" nomarkup="true"><![CDATA[<pre>
+<a name="line117">117</a> <font color="#444444">/* {{{ proto resource aa_init()
+<a name="line118">118</a>    Initialize the AA library */</font>
+<a name="line119">119</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_init</font><font color="4444FF">)</font>
+<a name="line120">120</a> <font color="4444FF"><strong>{</strong></font>
+<a name="line121">121</a> 	<font color="#ff0000">aa_context *c;</font>
+<a name="line122">122</a> 
+<a name="line123">123</a> 	<strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font> <font color="4444FF">!</font><font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line124">124</a> 		<font color="#2040a0">WRONG_PARAM_COUNT</font><font color="4444FF">;</font>
+<a name="line125">125</a> 	<font color="4444FF"><strong>}</strong></font>
+<a name="line126">126</a> 
+<a name="line127">127</a> 	<font color="#ff0000">c = aa_init(&amp;mem_d, &amp;aa_defparams, NULL);</font>
+<a name="line128">128</a> 	<font color="#ff0000">ZEND_REGISTER_RESOURCE(return_value, c, le_aalib);</font>
+<a name="line129">129</a> <font color="4444FF"><strong>}</strong></font>
+<a name="line130">130</a> <font color="#444444">/* }}} */</font>
+</pre>
+]]></blurb>
+</slide>

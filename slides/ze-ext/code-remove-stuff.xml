@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Extension structure</title>
+
+	<blurb> </blurb>
+	<list fontsize="4.4em">
+		<bullet>Includes</bullet>
+		<bullet>Function table</bullet>
+		<bullet>Module entry</bullet>
+		<bullet>INI settings</bullet>
+		<bullet>Module/Request start and shutdown handlers</bullet>
+		<bullet>phpinfo() function</bullet>
+		<bullet>Function implementations</bullet>
+	</list>
+</slide>

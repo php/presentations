@@ -31,6 +31,8 @@
 <slide>slides/ze-xdebug/execute2.xml</slide>
 <slide>slides/ze-xdebug/execute3.xml</slide>
 
+<slide>slides/ze-ext/aalib.xml</slide>
+
 <slide>slides/ze-ext/protos.xml</slide>
 <slide>slides/ze-ext/protos-generate.xml</slide>
 <slide>slides/ze-ext/protos-result.xml</slide>
@@ -41,8 +43,6 @@
 <slide>slides/ze-ext/config-m4-messup.xml</slide>
 <slide>slides/ze-ext/config-m4-run2.xml</slide>
 
-<slide>slides/ze-ext/compile.xml</slide>
-
 <slide>slides/ze-ext/code-remove-stuff.xml</slide>
 <slide>slides/ze-ext/code-resource-create.xml</slide>
 <slide>slides/ze-ext/code-resource-dtor.xml</slide>
@@ -50,8 +50,9 @@
 <slide>slides/ze-ext/code-check.xml</slide>
 
 <slide>slides/ze-ext/code-functions1.xml</slide>
+<slide>slides/ze-ext/parameter-parsing-api1.xml</slide>
+<slide>slides/ze-ext/parameter-parsing-api2.xml</slide>
 <slide>slides/ze-ext/code-functions2.xml</slide>
-<slide>slides/ze-ext/code-function-params.xml</slide>
 
 <slide>slides/ze-ext/code-return-string.xml</slide>
 <slide>slides/ze-ext/test-script1.xml</slide>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Implementation (2)</title>
+
+	<blurb> </blurb>
+	<blurb>aalib.c (aa_put_pixel() ):</blurb>
+	<blurb fontsize="1.8em"><![CDATA[<pre>
+<a name="line187">187</a> 	<strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line188">188</a> 		<font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font><font color="#2040a0">ac</font>, <font color="#2040a0">aa_context</font> <font color="4444FF">*</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;aa&quot;</font>, <font color="#2040a0">le_aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line189">189</a> 	<font color="4444FF"><strong>}</strong></font>
+<a name="line190">190</a> 
+<a name="line191">191</a> 	<font color="#2040a0">aa_putpixel</font><font color="4444FF">(</font><font color="#2040a0">ac</font>, <font color="#2040a0">x</font>, <font color="#2040a0">y</font>, <font color="#2040a0">value</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line192">192</a> <font color="4444FF"><strong>}</strong></font>
+</pre>]]></blurb>
+
+	<blurb>aalib.c (aa_render() ):</blurb>
+	<blurb nomarkup="true" fontsize="1.8em"><![CDATA[<pre>
+<a name="line197">197</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_render</font><font color="4444FF">)</font>
+<a name="line198">198</a> <font color="4444FF"><strong>{</strong></font>
+<a name="line199">199</a> 	<strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line200">200</a> 	<strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+<a name="line201">201</a> 	<strong>long</strong> <font color="#2040a0">contrast</font> <font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">;</font>
+<a name="line202">202</a> 	<strong>long</strong> <font color="#2040a0">dither</font> <font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">;</font>
+<a name="line203">203</a> 	<strong>long</strong> <font color="#2040a0">inversion</font> <font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">;</font>
+<a name="line204">204</a> 	<strong>long</strong> <font color="#2040a0">randomval</font> <font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">;</font>
+<a name="line205">205</a> 	<font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+<a name="line206">206</a> 	<font color="#2040a0">aa_context</font> <font color="4444FF">*</font><font color="#2040a0">ac</font><font color="4444FF">;</font>
+<a name="line207">207</a>     <font color="#2040a0">aa_renderparams</font> <font color="4444FF">*</font><font color="#2040a0">params</font><font color="4444FF">;</font>
+<a name="line208">208</a> 	
+<a name="line209">209</a> 	<strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r|llll&quot;</font>,
+                <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="4444FF">&amp;</font><font color="#2040a0">contrast</font>, <font color="4444FF">&amp;</font><font color="#2040a0">dither</font>, <font color="4444FF">&amp;</font><font color="#2040a0">inversion</font>, <font color="4444FF">&amp;</font><font color="#2040a0">randomval</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+<a name="line210">210</a> 		<strong>return</strong><font color="4444FF">;</font>
+<a name="line211">211</a> 
+<a name="line212">212</a> 	<strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line213">213</a> 		<font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font><font color="#2040a0">ac</font>, <font color="#2040a0">aa_context</font> <font color="4444FF">*</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;aa&quot;</font>, <font color="#2040a0">le_aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line214">214</a> 	<font color="4444FF"><strong>}</strong></font>
+<a name="line215">215</a> 
+<a name="line216">216</a>     <font color="#2040a0">params</font> <font color="4444FF">=</font> <font color="#2040a0">aa_getrenderparams</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line217">217</a>     <font color="#2040a0">params</font><font color="4444FF">-</font><font color="4444FF">&gt;</font><font color="#2040a0">contrast</font>  <font color="4444FF">=</font> <font color="#2040a0">contrast</font><font color="4444FF">;</font>
+<a name="line218">218</a>     <font color="#2040a0">params</font><font color="4444FF">-</font><font color="4444FF">&gt;</font><font color="#2040a0">dither</font>    <font color="4444FF">=</font> <font color="#2040a0">dither</font><font color="4444FF">;</font>
+<a name="line219">219</a>     <font color="#2040a0">params</font><font color="4444FF">-</font><font color="4444FF">&gt;</font><font color="#2040a0">inversion</font> <font color="4444FF">=</font> <font color="#2040a0">inversion</font><font color="4444FF">;</font>
+<a name="line220">220</a>     <font color="#2040a0">params</font><font color="4444FF">-</font><font color="4444FF">&gt;</font><font color="#2040a0">bright</font>    <font color="4444FF">=</font> <font color="#2040a0">randomval</font><font color="4444FF">;</font>
+<a name="line221">221</a>     <font color="#2040a0">aa_render</font><font color="4444FF">(</font><font color="#2040a0">ac</font>, <font color="#2040a0">params</font>, <font color="#FF0000">0</font>, <font color="#FF0000">0</font>, <font color="#2040a0">aa_scrwidth</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font> <font color="4444FF">*</font> <font color="#FF0000">2</font>, <font color="#2040a0">aa_scrheight</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font> <font color="4444FF">*</font> <font color="#FF0000">2</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line222">222</a>     <font color="#2040a0">free</font><font color="4444FF">(</font><font color="#2040a0">params</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line223">223</a>     <font color="#2040a0">aa_flush</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line224">224</a> <font color="4444FF"><strong>}</strong></font>
+</pre>]]></blurb>
+</slide>

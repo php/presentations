@@ -4,7 +4,7 @@
 
 	<blurb> </blurb>
 	<blurb>php_aalib.h</blurb>
-	<blurb fontsize="1em"><![CDATA[<html>
+	<blurb nomarkup="true" fontsize="1em"><![CDATA[<html>
 <head>
   <title>php_aalib.h</title>
 </head>
@@ -27,7 +27,7 @@
 15   | Author:                                                              |
 16   +----------------------------------------------------------------------+
 17 
-18   $Id: protos-result.xml,v 1.2 2002-12-05 07:41:06 derick Exp $ 
+18   $Id: protos-result.xml,v 1.3 2002-12-09 09:48:03 derick Exp $ 
 19 */</font>
 20 
 21 <font color="0000ff">#ifndef PHP_AALIB_H</font>
@@ -105,7 +105,7 @@
 ]]></blurb>
 	<blurb> </blurb>
 	<blurb>aalib.c</blurb>
-	<blurb fontsize="1em"><![CDATA[
+	<blurb nomarkup="true" fontsize="1em"><![CDATA[
 <html>
 <head>
   <title>aalib.c</title>
@@ -129,7 +129,7 @@
  15   | Author:                                                              |
  16   +----------------------------------------------------------------------+
  17 
- 18   $Id: protos-result.xml,v 1.2 2002-12-05 07:41:06 derick Exp $ 
+ 18   $Id: protos-result.xml,v 1.3 2002-12-09 09:48:03 derick Exp $ 
  19 */</font>
  20 
  21 <font color="0000ff">#ifdef HAVE_CONFIG_H</font>

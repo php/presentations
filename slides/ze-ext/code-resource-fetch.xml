@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Resource fetching</title>
+
+	<blurb> </blurb>
+	<blurb>aalib.c:</blurb>
+	<blurb fontsize="2em"><![CDATA[<pre>
+<a name="line132">132</a> <font color="#444444">/* {{{ proto int aa_get_screen_height(resource c)
+<a name="line133">133</a>    Get the screen height */</font>
+<a name="line134">134</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_height</font><font color="4444FF">)</font>
+<a name="line135">135</a> <font color="4444FF"><strong>{</strong></font>
+<a name="line136">136</a> 	<strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line137">137</a> 	<strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+<a name="line138">138</a> 	<font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+<a name="line139">139</a> 	<font color="#ff0000">aa_context *ac;</font>
+<a name="line140">140</a> 
+<a name="line141">141</a> 	<strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+<a name="line142">142</a> 		<strong>return</strong><font color="4444FF">;</font>
+<a name="line143">143</a> 
+<a name="line144">144</a> 	<strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line145">145</a> 		<font color="#ff0000">ZEND_FETCH_RESOURCE(ac, aa_context *, &amp;c, c_id, &quot;aa&quot;, le_aalib);</font>
+<a name="line146">146</a> 	<font color="4444FF"><strong>}</strong></font>
+<a name="line147">147</a> <font color="4444FF"><strong>}</strong></font>
+<a name="line148">148</a> <font color="#444444">/* }}} */</font>
+]]></blurb>
+</slide>
