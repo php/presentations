@@ -1,0 +1,36 @@
+<slide title="Smarty Example 3">
+
+ <example type="html" title="index.tpl" fontsize="1.5em"><![CDATA[<pre>
+  &lt;table&gt;
+  <font color=blue>{section name=mysec loop=$name}</font>
+  <font color=blue>{strip}</font>
+     &lt;tr bgcolor="<font color=blue>{cycle values="#eeeee,#dddddd"}</font>"&gt;
+        &lt;td&gt;<font color=blue>{$name[mysec]}</font>&lt;/td&gt;
+
+     &lt;/tr&gt;
+  <font color=blue>{/strip}</font>
+  <font color=blue>{/section}</font>
+  &lt;/table&gt;
+
+  &lt;table&gt;
+  <font color=blue>{foreach item=user from=$users}</font>
+  <font color=blue>{strip}</font>
+     &lt;tr bgcolor="<font color=blue>{cycle values="#aaaaaa,#bbbbbb"}</font>"&gt;
+
+        &lt;td&gt;<font color=blue>{$user.name|capitalize}</font>&lt;/td&gt;
+        &lt;td&gt;<font color=blue>{$user.phone}</font>&lt;/td&gt;
+     &lt;/tr&gt;
+  <font color=blue>{/strip}</font>
+  <font color=blue>{/foreach}</font>
+
+  &lt;/table&gt;
+  </font><pre>]]></example>
+
+ <blurb>
+  This template illustrates two ways to loop through arrays assigned to
+  templates. Note the alternating row colors via the *cycle* function, the
+  *capitalize* variable modifier, and the use of *strip* function to strip out
+  newlines and white space.
+ </blurb>
+
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Zend Engine 2 Internals">
+
+ <list title="Significant Zend Engine 2 Changes" fontsize="4em">
+  <bullet>New object model</bullet>
+  <bullet>Unified constructors</bullet>
+  <bullet>Destructors</bullet>
+  <bullet>Private/protected methods and member variables</bullet>
+  <bullet>Abstract classes and methods</bullet>
+  <bullet>Interfaces</bullet>
+  <bullet>Namespaces</bullet>
+  <bullet>Exceptions</bullet>
+  <bullet>Object method chaining</bullet>
+  <bullet>Static member variables and methods</bullet>
+  <bullet>Class level constants</bullet>
+  <bullet>Class type hints</bullet>
+  <bullet>instanceof operator</bullet>
+  <bullet>Method and property overloading</bullet>
+ </list>
+
+</slide>

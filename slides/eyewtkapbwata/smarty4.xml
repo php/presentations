@@ -1,0 +1,21 @@
+<slide title="Smarty Example 4">
+
+ <example type="html" title="output" fontsize="1.5em"><![CDATA[<pre>
+  &lt;table&gt;
+  &lt;tr bgcolor="<font color=brown>#eeeeee</font>"&gt;&lt;td&gt;<font color=brown>bob</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#dddddd</font>"&gt;&lt;td&gt;<font color=brown>jim</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#eeeeee</font>"&gt;&lt;td&gt;<font color=brown>joe</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#dddddd</font>"&gt;&lt;td&gt;<font color=brown>jerry</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#eeeeee</font>"&gt;&lt;td&gt;<font color=brown>fred</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+
+  &lt;table&gt;
+  &lt;tr bgcolor="<font color=brown>#aaaaaa</font>"&gt;&lt;td&gt;<font color=brown>Bob</font>&lt;/td&gt;&lt;td&gt;<font color=brown>555-3425</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#bbbbbb</font>"&gt;&lt;td&gt;<font color=brown>Jim</font>&lt;/td&gt;&lt;td&gt;<font color=brown>555-4364</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#aaaaaa</font>"&gt;&lt;td&gt;<font color=brown>Joe</font>&lt;/td&gt;&lt;td&gt;<font color=brown>555-3422</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#bbbbbb</font>"&gt;&lt;td&gt;<font color=brown>Jerry</font>&lt;/td&gt;&lt;td&gt;<font color=brown>555-4973</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr bgcolor="<font color=brown>#aaaaaa</font>"&gt;&lt;td&gt;<font color=brown>Fred</font>&lt;/td&gt;&lt;td&gt;<font color=brown>555-3235</font>&lt;/td&gt;&lt;/tr&gt;
+  &lt;/table&gt;
+ <pre>]]></example>
+
+</slide>

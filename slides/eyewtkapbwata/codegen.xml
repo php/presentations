@@ -1,0 +1,18 @@
+<slide title="PHP-GTK Code Generator">
+
+ <list title="What the heck is it?" fontsize="4em">
+  <bullet>PHP-GTK consists of about 100 classes, 1000 methods, and 600 constants..</bullet>
+  <bullet>..not counting the extensions</bullet>
+  <bullet>Writing them by hand would become mind-numbingly tedious</bullet>
+  <bullet>But the generator helps tremendously and eases development of new
+   PHP-GTK extensions</bullet>
+  <bullet>The header files are converted to definition (.defs) files which are converted to C code</bullet>
+  <bullet>It is possible to hide any method or override it a custom implementation</bullet>
+ </list>
+
+ <blurb fontsize="3em">
+  Alan Knowles has started to turn this into a generic PHP code generator. Current results can be found at:
+ </blurb>
+ <link marginleft="1em">http://docs.akbkhome.com/PHP_CGenerator.tgz</link>
+
+</slide>

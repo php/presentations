@@ -1,0 +1,31 @@
+<slide title="PHP-GTK Generator Example">
+
+ <example title="header file" fontsize="1.5em"><![CDATA[  const char *glade_get_widget_name (GtkWidget *widget);
+]]></example>
+
+ <example title=".defs file" fontsize="1.5em"><![CDATA[  (function get_widget_name
+    (c-name glade_get_widget_name)
+    (return-type const-gchar*)
+    (parameter (type-and-name GtkWidget* widget))
+  )
+]]></example>
+
+ <example title="C code" fontsize="1.5em"><![CDATA[PHP_FUNCTION(glade_get_widget_name)
+{
+    zval *widget;
+    const gchar *ret;
+
+    if (!php_gtk_parse_args(ZEND_NUM_ARGS(), "O", &widget, gtk_widget_ce))
+        return;
+
+    ret = glade_get_widget_name(GTK_WIDGET(PHP_GTK_GET(widget)));
+    if (ret) {
+        RETURN_STRING((char *)ret, 1);
+    }
+    else {
+        RETURN_NULL();
+    }
+}
+]]></example>
+
+</slide>

@@ -1,0 +1,28 @@
+<presentation 
+	template="php" 
+	navmode="html"
+>
+<topic>PHP</topic>
+<title>"Everything" You Ever Wanted To Know About PHP But Were Afraid To Ask</title>
+<event>PHP Quebec Conference 2003</event>
+<location>Montreal, Quebec</location>
+<date>March 20, 2003</date>
+<speaker>Andrei Zmievski</speaker>
+<email>andrei@php.net</email>
+<url>http://conf.php.net/</url>
+
+<slide>slides/eyewtkapbwata/titlepage.xml</slide>
+<slide>slides/eyewtkapbwata/overview.xml</slide>
+<slide>slides/eyewtkapbwata/smarty.xml</slide>
+<slide>slides/eyewtkapbwata/smarty2.xml</slide>
+<slide>slides/eyewtkapbwata/smarty3.xml</slide>
+<slide>slides/eyewtkapbwata/smarty4.xml</slide>
+<slide>slides/eyewtkapbwata/php-gtk.xml</slide>
+<slide>slides/eyewtkapbwata/php-gtk2.xml</slide>
+<slide>slides/eyewtkapbwata/ze2internals.xml</slide>
+<slide>slides/eyewtkapbwata/ze2api.xml</slide>
+<slide>slides/eyewtkapbwata/codegen.xml</slide>
+<slide>slides/eyewtkapbwata/codegen2.xml</slide>
+<slide>slides/eyewtkapbwata/phpzeapi.xml</slide>
+
+</presentation>
