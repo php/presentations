@@ -5,7 +5,7 @@
 	stylesheet="presentations/slides/srm/style.css"
 	backgroundfixed="1" >
 <topic>PHP</topic>
-<title>PHP 5</title>
+<title>New funks with PHP 5</title>
 <event>Linux Tag 2003</event>
 <location>Karlsruhe, Germany</location>
 <date>July 11th, 2003</date>
@@ -20,6 +20,7 @@
 <slide>slides/php5intro/nl/oldobjectmodel.xml</slide>
 <slide>slides/php5intro/nl/oldobjectmodel2.xml</slide>
 <slide>slides/php5intro/nl/newobjectmodel.xml</slide>
+<slide>slides/php5intro/nl/nsrip.xml</slide>
 <slide>slides/php5intro/nl/clone.xml</slide>
 <slide>slides/php5intro/nl/structors.xml</slide>
 <slide>slides/php5intro/nl/private.xml</slide>
