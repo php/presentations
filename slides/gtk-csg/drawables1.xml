@@ -1,0 +1,26 @@
+<slide title="Drawables 1/4" logo1="images/php-gtk.gif">
+
+
+ <blurb fontsize="3em">
+  In GTK+ a "drawable" is anything that you can "draw" to. This includes
+  windows (GdkWindow) and offscreen buffers (GdkPixmap, GdkBitmap).
+ </blurb>
+
+ <blurb fontsize="3em">
+  Almost all the Gtk widgets handle their own drawing and need no help from you.
+  Most of them have an associated GdkWindow which they use for this purpose;
+  some, however, use their parent widget's window. So, trying to draw to a
+  window of a widget is futile since it will all be erased once the widget is
+  refreshed. If you want to draw your own little piece of art, use
+  GtkDrawingArea widget which gives you a blank canvas to start from.
+ </blurb>
+
+ <blurb fontsize="3em">
+  Normally, you wouldn't draw to the GtkDrawingArea directly, because it doesn't
+  have any "memory" -- as soon as another window covers it, the content of the
+  underlying window is gone. What you have to do instead is draw to an offscreen
+  pixmap (GdkPixmap) and then copy the contents of the pixmap to the window
+  anytime it's exposed ("blit it").
+ </blurb>
+
+</slide>

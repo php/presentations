@@ -1,0 +1,28 @@
+<slide title="Drawables 2/4" logo1="images/php-gtk.gif">
+
+ <list title="Related events">
+  <bullet>expose_event
+  </bullet>
+  <bullet>configure_event</bullet>
+ </list>
+
+ <blurb fontsize="3em">
+  'expose_event' is generated when the window or a portion of it has
+  become visible and needs to be redrawn. Simply draw the offscreen pixmap
+  you've so thoughtfully created to the window and be done.
+ </blurb>
+
+ <blurb fontsize="3em">
+  'configure_event' is generated anytime the window is resized. You
+  don't necessarily have to handle it, but then the size of your
+  offscreen pixmap and onscreen window may not match up.
+ </blurb>
+
+ <blurb fontsize="3em">
+  Word of caution: be careful about creating too many unnecessary
+  pixmaps, as the old ones do not get destroyed in the current version
+  of PHP-GTK. Either disallow resizing the drawing area or create a big
+  pixmap upfront and use only a portion of it.
+ </blurb>
+
+</slide>

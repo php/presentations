@@ -1,0 +1,26 @@
+<presentation 
+ template="php" 
+ navmode="html"
+ navbarbackground="#0099cc">
+ <topic>PHP-GTK</topic>
+ <title>Color, Style, and Graphics in PHP-GTK</title>
+ <event>International PHP Conference</event>
+ <location>Frankfurt</location>
+ <date>November 5, 2002</date>
+ <speaker>Andrei Zmievski</speaker>
+ <email>andrei@php.net</email>
+ <url>http://conf.php.net/kongress-gtk-csg</url>
+
+ <slide>slides/gtk-csg/titlepage.xml</slide>
+ <slide>slides/gtk-csg/intro.xml</slide>
+ <slide>slides/gtk-csg/timeline.xml</slide>
+ <slide>slides/gtk-csg/pieces.xml</slide>
+ <slide>slides/gtk-csg/drawables1.xml</slide>
+ <slide>slides/gtk-csg/drawables2.xml</slide>
+ <slide>slides/gtk-csg/drawables3.xml</slide>
+ <slide>slides/gtk-csg/drawables4.xml</slide>
+ <slide>slides/gtk-csg/colors1.xml</slide>
+ <slide>slides/gtk-csg/colors2.xml</slide>
+ <slide>slides/gtk-csg/gcs1.xml</slide>
+ <slide>slides/gtk-csg/gcs2.xml</slide>
+</presentation>

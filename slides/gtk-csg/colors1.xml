@@ -1,0 +1,28 @@
+<slide title="Colors and Colormaps 1/2" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+   Monochrome art can be somewhat non-exciting. How do we get colors? From
+   colormaps and visuals.
+ </blurb>
+
+ <blurb fontsize="3em">
+    A visual is a description of the color capabilities of a particular graphics
+    mode. A colormap is a table of available colors for a particular visual.
+ </blurb>
+
+ <blurb fontsize="3em">
+  Color in GDK is represented by a GdkColor class which contains an RGB value
+  and a pixel. The red, green, and blue values are in the range 0 to 65535
+  (16-bit). Contents of the pixel field depend on the visual.
+ </blurb>
+
+ <example><![CDATA[<?php
+  class GdkColor {
+    var $red;
+    var $green;
+    var $blue;
+    var $pixel;
+  }
+?>]]></example>
+ 
+</slide>

@@ -1,0 +1,27 @@
+<slide title="Graphics Contexts 1/2" logo1="images/php-gtk.gif">
+
+ <list title="A graphics context (GC) encapsulates a set of parameters to be used when drawing.">
+  <bullet effect='hide'>foreground color</bullet>
+  <bullet effect="hide">background color</bullet>
+  <bullet effect="hide">font (unused)</bullet>
+  <bullet effect="hide">function</bullet>
+  <bullet effect="hide">fill type</bullet>
+  <bullet effect="hide">fill origin</bullet>
+  <bullet effect="hide">tile pixmap</bullet>
+  <bullet effect="hide">stipple pixmap (doesn't work on Win32)</bullet>
+  <bullet effect="hide">clip mask</bullet>
+  <bullet effect="hide">clip origin</bullet>
+  <bullet effect="hide">subwindow mode</bullet>
+  <bullet effect="hide">graphics exposures flag</bullet>
+  <bullet effect="hide">line width</bullet>
+  <bullet effect="hide">line style</bullet>
+  <bullet effect="hide">cap style</bullet>
+  <bullet effect="hide">join style</bullet>
+ </list>
+
+ <blurb fontsize="3em" effect="hide">
+  Without GCs, you'd have to specify these parameters every time you wanted to
+  draw something.
+ </blurb>
+
+</slide>

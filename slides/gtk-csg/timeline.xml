@@ -1,0 +1,18 @@
+<slide title="Timeline" logo1="images/php-gtk.gif">
+
+ <blurb title="Early days" fontsize="4em">
+  You had to work with graphics hardware directly. How would
+  you like to toggle port 0x8034 manually just to produce a pixel on the
+  screen?
+ </blurb>
+
+ <blurb title="Middle ages" fontsize="4em">
+  Drivers for graphics hardware abstracted drawing of primitives and simple
+  management of resources. Still not a piece of cake.
+ </blurb>
+
+ <blurb title="Present time" fontsize="4em">
+  High-level libraries for anything from 3D rendering to movie playback.
+ </blurb>
+ 
+</slide>

@@ -1,0 +1,45 @@
+<slide title="Drawables 4/4" logo1="images/php-gtk.gif">
+
+ <list>
+  <bullet>Handling configure event (not useful currently)</bullet>
+ </list>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  function configure_event($area, $event)
+  {
+      global  $pixmap; 
+
+      $new_pixmap = &new GdkPixmap($event->window,
+                                   $event->width,
+                                   $event->height,
+                                   -1);
+      if ($pixmap) {
+          $new_pixmap->copy_area($area->style->white_gc, 0, 0, $pixmap, 0, 0,
+                                 min($pixmap->width, $new_pixmap->width),
+                                 min($pixmap->height, $new_pixmap->height));
+      }
+      $pixmap = $new_pixmap;
+  }
+?>]]></example>
+
+ <list>
+  <bullet>Drawing</bullet>
+ </list>
+
+ <blurb>
+  Let your imagination run wild. For now, we'll draw a filled black rectangle.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  gdk::draw_rectangle($pixmap, $area->style->black_gc, true, 10, 10, 100, 100);
+?>]]></example>
+
+ <list title="Some other drawing functions">
+  <bullet>gdk::draw_point()</bullet>
+  <bullet>gdk::draw_line()</bullet>
+  <bullet>gdk::draw_arc()</bullet> 
+  <bullet>gdk::draw_string()</bullet>
+  <bullet>gdk::draw_rgb_image()</bullet>
+ </list>
+
+</slide>

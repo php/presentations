@@ -1,0 +1,30 @@
+<slide title="Graphics Contexts 2/2" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em" title="Creating GCs">
+  To create a GC, call the new_gc() method of a drawable. This method can also
+  take an associative array specifying some initial values (only foreground,
+  background, tile, stipple, and clip_mask are currently supported).  The rest
+  have to be set manually.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  // create a default GC
+  $gc = $window->new_gc();
+
+  or
+
+  // create GC and set some fields
+  $gc = $window->new_gc(array('foreground' => $fg_color,
+                              'background' => $bg_color));
+  $gc->function   = GDK_XOR;
+  $gc->line_width = 3;
+  $gc->cap_style  = GDK_CAP_ROUND;
+?>]]></example>
+
+  <blurb fontsize="3em" title="Using GCs">
+   Simply pass the GC to the drawing function that you need to use. Which GC
+   fields are used for the drawing operation depends on the function.
+  </blurb>
+  <example fontsize="1.5em"><![CDATA[<?php gdk::draw_line($pixmap, $gc, 0, 0, 100, 100); ?>]]></example>
+
+</slide>

@@ -1,0 +1,40 @@
+<slide title="Drawables 3/4" logo1="images/php-gtk.gif">
+
+ <list title="Sample code">
+  <bullet>Creating a pixmap</bullet>
+ </list>
+
+ <example fontsize="1.5em"><![CDATA[<?php $pixmap = &new GdkPixmap($area->window, 300, 300, -1); ?>]]></example>
+
+ <list>
+  <bullet>Setting up a drawing area</bullet>
+ </list>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  $area = &new GtkDrawingArea();
+  $area->size(300, 300);
+  $area->realize();
+
+  $area->connect('expose_event', 'handle_expose_event');
+  $area->connect('configure_event', 'handle_configure_event');
+?>]]></example>
+
+ <list>
+  <bullet>Handling expose event</bullet>
+ </list>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+   function expose_event($area, $event)
+   {
+       global $pixmap;
+
+       gdk::draw_pixmap($event->window,
+                        $area->style->fg_gc[$area->state],
+                        $pixmap,
+                        $event->area->x, $event->area->y,
+                        $event->area->x, $event->area->y,
+                        $event->area->width, $event->area->height);
+   }
+?>]]></example>
+
+</slide>

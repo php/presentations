@@ -1,0 +1,27 @@
+<slide title="XWindows, GDI, and GDK" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  One thing common between different OSes is that they provide an
+  abstraction over graphics hardware to make developers' lives easier.
+ </blurb>
+
+ <blurb fontsize="3em">
+  On Unix we have X Window system. On Win32 platforms - GDI. On Mac OS X
+  - Quartz.
+ </blurb>
+
+ <blurb fontsize="3em">
+  Since GTK+ is supposed to work on multiple platforms, it has a library
+  called GDK (GTK+ Drawing Kit) which isolates GTK+ from the details of
+  the windowing system.
+ </blurb>
+
+ <table columns="2" width="50%" border="1" padding="8px" align="center">
+  <cell bold="1">XWindows</cell><cell>XDrawPoint()</cell>
+  <cell bold="1">GDI</cell><cell>SetPixel()</cell>
+  <cell bold="1">Quartz</cell><cell>You don't wanna know</cell>
+  <cell bold="1">GDK</cell><cell>gdk_draw_point()</cell>
+  <cell bold="1">PHP-GTK</cell><cell>gdk::draw_point()</cell>
+ </table>
+
+</slide>

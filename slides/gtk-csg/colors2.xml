@@ -1,0 +1,24 @@
+<slide title="Colors and Colormaps 2/2" logo1="images/php-gtk.gif">
+
+ 
+ <blurb fontsize="3em">
+  Obtaining a color that you want to use can be an enormously complicated
+  process, depending on the platform and graphics drivers. GDK makes it very
+  easy.
+ </blurb>
+
+ <list>
+  <bullet type="number" start="1">Obtain the colormap</bullet>
+ </list>
+ <example><![CDATA[<?php $colormap = gdk::colormap_get_system(); ?>]]></example>
+
+ <list>
+  <bullet type="number" start="2">Allocate the color</bullet>
+ </list>
+ <example><![CDATA[<?php $color = $colormap->alloc("orange"); ?>]]></example>
+ <blurb align="center" fontsize="3em">or</blurb>
+ <example><![CDATA[<?php $color = $colormap->alloc("#0099cc"); ?>]]></example>
+ <blurb align="center" fontsize="3em">or</blurb>
+ <example><![CDATA[<?php $color = $colormap->alloc(1000, 0, 24000); ?>]]></example>
+
+</slide>
