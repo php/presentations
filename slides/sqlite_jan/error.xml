@@ -2,8 +2,8 @@
 
 <image filename="bsod.jpg" align="right" />
 
-<blurb>SQLite allows retrieval of a numeric error codes allowing for custom handling of different errors. It also provides
-a mechanism for converting an error code into a human readable error string.</blurb>
+<blurb>SQLite allows retrieval of a numeric error codes, making it simple to implement different handlers for
+various errors. It also provides a mechanism for converting an error code into a human readable error string.</blurb>
 
 <break lines="3" />
 

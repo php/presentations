@@ -1,6 +1,6 @@
 <slide title="Securing SQLite Queries">
-<blurb>SQLite has it's own query escaping function, sqlite_escape_string() which in addition to preventing SQL injection,
-which is particularly dangerous due to query chaining capability will safely handle binary data.</blurb>
+<blurb>SQLite has it's own query escaping function, sqlite_escape_string() that in addition to simple
+data escaping will also encode binary data.</blurb>
 
 <example fontsize="1.6em" title=""><![CDATA[<?php
 	$db = sqlite_open("/path/to/database") or die($error);
