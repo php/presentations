@@ -3,7 +3,7 @@
 	<title>Setting a Content-Type header</title>
 
 	<example class="bit_larger"><![CDATA[<?php
-	header("Content-Type: text/html; charset=iso-8859-1");
+	header("Content-Type: text/html; charset=utf-8");
 ?>
 Vær så god]]></example>
 	<break/>

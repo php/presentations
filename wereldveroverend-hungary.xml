@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Localization and Internationalization</topic>
+<title>Multi-lingual development</title>
+<event>PHPKonferencia 2005</event>
+<location>Budapest, Hungary</location>
+<date>March 12th, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://files.derickrethans.nl/wereldveroverend-hungary.pdf</url>
+<slide>slides/i18nl10n/title-hungary.xml</slide>
+
+
+<!-- CHARSETS -->
+<!--<slide>slides/i18nl10n/what-languages.xml</slide>--> <!-- what is the problem actually? -->
+<slide>slides/i18nl10n/not-ascii.xml</slide> <!-- not everything is ascii -->
+<slide>slides/i18nl10n/latin.xml</slide> <!-- latin charsets -->
+<slide>slides/i18nl10n/convert.xml</slide> <!-- converting charsets (single byte) -->
+<slide>slides/i18nl10n/asian.xml</slide> <!-- asian charsets -->
+<slide>slides/i18nl10n/unicode.xml</slide> <!-- unicode and ucs2, ucs4 -->
+<slide>slides/i18nl10n/utf8.xml</slide> <!-- what does utf8 solve? -->
+<slide>slides/i18nl10n/utf8-encoding.xml</slide> <!-- how does the encoding work? -->
+<slide>slides/i18nl10n/utf16.xml</slide> <!-- how does the encoding work? -->
+
+<!-- PROBLEMS and SOLUTIONS -->
+<slide>slides/i18nl10n/mb-problems.xml</slide> <!-- functions with utf8 chars -->
+<slide>slides/i18nl10n/iconv-solved.xml</slide> <!-- fixed with iconv -->
+<slide>slides/i18nl10n/iconv-strpos.xml</slide> <!-- iconv* and other functions -->
+<slide>slides/i18nl10n/pcre-utf8.xml</slide> <!-- regular expressions, /u, mb_regexp */ -->
+
+<!-- CONVERSION and OUTPUT -->
+<slide>slides/i18nl10n/iconv.xml</slide> <!-- iconv -->
+<slide>slides/i18nl10n/iconv-function.xml</slide> <!-- converting charsets with iconv -->
+<slide>slides/i18nl10n/iconv-ob-buffer-multiple.xml</slide> <!-- multiple charsets and iconv conversion -->
+<slide>slides/i18nl10n/wrong-http-header.xml</slide> <!-- show problem with wrong http header --> 
+<slide>slides/i18nl10n/correct-http-header.xml</slide> <!-- setting http header -->
+
+<!-- TRANSLITERATION -->
+<slide>slides/i18nl10n/funny-characters.xml</slide> <!-- æ -> ae -->
+<slide>slides/i18nl10n/cyrillic.xml</slide> <!-- cyrillic -->
+<slide>slides/i18nl10n/other-transliterations.xml</slide> <!-- chinese, greek, hebrew, korean -->
+<slide>slides/i18nl10n/normalize.xml</slide> <!-- curly->normal quotes, punctuation, diacritics -->
+<slide>slides/i18nl10n/other-filters.xml</slide> <!-- currency signs, copyright -->
+
+<!-- LOCALE ISSUES -->
+<slide>slides/i18nl10n/locales.xml</slide>
+<slide>slides/i18nl10n/locale-collation.xml</slide> <!-- string collation (ordering) -->
+<slide>slides/i18nl10n/locale-casing.xml</slide> <!-- strupper/strlower -->
+<slide>slides/i18nl10n/locale-date.xml</slide> <!-- formatting a date -->
+<slide>slides/i18nl10n/locale-numeric.xml</slide> <!-- formatting numbers (also arabic numbers?) -->
+<slide>slides/i18nl10n/locale-money.xml</slide> <!-- formatting money -->
+<slide>slides/i18nl10n/locale-php.xml</slide> <!-- PHP and locales -->
+
+<!-- EXIT -->
+<slide>slides/i18nl10n/resources.xml</slide> <!-- resources -->
+</presentation>
