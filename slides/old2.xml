@@ -2,7 +2,7 @@
 
 <blurb>Perl became an obvious choice because it was made for text processing.  The same thing in Perl using CGI.pm:</blurb>
 
-<example><![CDATA[use CGI qw(:standard);
+<example type="plain"><![CDATA[use CGI qw(:standard);
 print header;
 print start_html('Form Example'),
     h1('My Example Form'),
