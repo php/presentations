@@ -1,3 +1,9 @@
 <slide title="Reading a File">
 <example title="readfile()" result="yes"><![CDATA[<PRE><?php readfile("/proc/cpuinfo")?></PRE>]]></example>
+<blurb title="And a new PHP 4.3.0 Function" />
+<example title="file_get_contents()" result="yes"><![CDATA[<?php 
+    $contents = file_get_contents("/proc/cpuinfo");
+	$contents = trim($contents,"\n");
+	echo nl2br($contents);
+?>]]></example>
 </slide>
