@@ -1,0 +1,13 @@
+<slide title="Databases Idiosyncrasies (Oracle)">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<image filename="10000000000000610000006B74D8AABB.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<list title="Avoiding Latch and Lock Contention">
+<bullet>Correctly Size your SGA</bullet>
+<bullet>Leave autocommit on unless you explicitly need it</bullet>
+<bullet>Avoid excessive use of triggers</bullet>
+<bullet>Use bind SQL</bullet>
+</list>
+<blurb>Oracle has extremely powerful introspection capabilities to help determine bottlenecks and diagnose performance issues.</blurb>
+
+</slide>
