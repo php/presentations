@@ -1,6 +1,6 @@
 <slide title='method.metallopdb'>
-<example title='Using method.metallopdb from the XML-RPC service' result='1'
-fontsize='1.0em' rfontsize='1.5em' outputbackground='#ffffdd'>
+<example title='Using method.metallopdb from the XML-RPC service' result='0'
+ fontsize='1.0em'>
 <![CDATA[
 <?php
 error_reporting(1);
@@ -17,19 +17,21 @@ $format = new XML_RPC_Value('array');
 $method = 'method.metallopdb';
 $fmt = "<h3>Parameters: metal='%s', mode='%s', count=%d, format='%s'</h3>";
 printf($fmt, $metal->scalarval(), $mode->scalarval(), 
-			$count->scalarval(), $format->scalarval());
+   $count->scalarval(), $format->scalarval());
 
 $msg = new XML_RPC_Message($method, array($metal, $mode, $count, $format));
 $r = $c->send($msg);
 $v = $r->value();
 if (!$r->faultCode()) {
-	echo toTable2(XML_RPC_decode($v));
+ echo toTable2(XML_RPC_decode($v));
 } else {
-	echo "<pre>\n";
-	echo "ERROR: ".$r->faultCode()." -- ".$r->faultString();
-	echo "</pre>\n";
+ echo "<pre>\n";
+ echo "ERROR: ".$r->faultCode()." -- ".$r->faultString();
+ echo "</pre>\n";
 }
 ?>
 ]]>
 </example>
+<example title='Output' type='html' filename='output/xmlrpc_method_metallopdb_out.html'
+ fontsize='1.5em' examplebackground='#ffffdd'/>
 </slide>

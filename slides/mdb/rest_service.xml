@@ -1,4 +1,4 @@
-<slide title='REST (HTTP-based) Service'>
+<slide title='REST Service'>
  <list title='Available functions'>
   <bullet> 
    _sql_ : accepts a (url encoded) SQL query, and an optional
@@ -10,5 +10,5 @@
   </bullet>
  </list>
  <example title='Introspection' type='html' result='0' align='center'
-filename='output/introspection_api_out.html'/>
+  fontsize='1.5em' filename='output/introspection_api_out.html' examplebackground='#ffffdd' />
 </slide>

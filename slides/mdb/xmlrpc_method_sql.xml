@@ -1,5 +1,5 @@
 <slide title='method.sql'>
-<example title='Using method.sql from the XML-RPC service' result='1'
+<example title='Using method.sql from the XML-RPC service' result='0'
 fontsize='1.2em' rfontsize='1em' outputbackground='#ffffdd'>
 <![CDATA[<?php
 require_once "XML/RPC.php";
@@ -20,14 +20,16 @@ $msg = new XML_RPC_Message($method,array($q));
 $c=new XML_RPC_Client(XMLRPC_URI, MDB_SERVER_NAME, MDB_SERVER_PORT);
 $r = $c->send($msg);
 if (!$r->faultCode()) {
-	echo toTable(XML_RPC_decode($r->value()));
+ echo toTable(XML_RPC_decode($r->value()));
 } else {
-	echo "<pre>\n";
-	echo "ERROR: ".$r->faultCode()." -- ".$r->faultString();
-	echo "</pre>\n";
+ echo "<pre>\n";
+ echo "ERROR: ".$r->faultCode()." -- ".$r->faultString();
+ echo "</pre>\n";
 }
 
 ?>
 ]]>
 </example>
+<example title='Output' type='html' filename='output/xmlrpc_method_sql_out.html'
+ fontsize='1.5em' examplebackground='#ffffdd'/>
 </slide>

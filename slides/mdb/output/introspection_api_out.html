@@ -1,25 +1,24 @@
 <table>
 <tr><td>
-<table border='0' width='50%' cellpadding='0' cellspacing='0' width='100%'>
+<table border='0' cellpadding='0' cellspacing='0' width='100%'>
 <tr><td bgcolor='#000000'>
-<table border='0' width='100%' cellspacing='1' cellpadding='5' width='100%'>
+<table border='0' cellspacing='1' cellpadding='5' width='100%'>
 <tr bgcolor='#eeeeee'>
-<th align='center'><i style='font-size: 1em;'>Function</i>:<br /> sql</th>
+<th align='center'><i style='font-size: 1.2em;'>Function</i>:<br /> sql</th>
 <th align='left'>
-<i style='font-size: 1em;'>Parameters</i>:<ul>
-<li style='font-size: 1em;'>query: urlencoded SQL query</li>
-<li style='font-size: 1em;'>[format]: csv (default), wddx, serialized, table</li>
+<i style='font-size: 1.2em;'>Parameters</i>:<ul>
+<li style='font-size: 1.2em;'>query: urlencoded SQL query</li>
+<li style='font-size: 1.2em;'>[format]: csv (default), wddx, serialized, table</li>
 </ul>
 </th>
 </tr>
 <tr bgcolor='#ddffff'>
-<td colspan='2'><p style='font-size: 1em;'><b>Description:</b><br />General function to query a database server.
+<td colspan='2'><p style='font-size: 1.2em;'><b>Description:</b><br />General function to query a database server.
 Accepts a valid SQL query (&quot;SELECT&quot;, &quot;SHOW&quot;, or &quot;DESCRIBE&quot; statements only),
 and an optioanl result format. Valid formats are &quot;csv&quot; (default),
 &quot;wddx&quot;, &quot;serialized&quot; (PHP serialization), &quot;table&quot; (HTML table).
 Example of use: 
-/services/api.php?function=sql&amp;query=select+source_id+from+protein+limit+10
-&amp;format=wddx</p>
+/services/api.php?func=sql&amp;query=select+source_id+from+protein+limit+10&amp;format=wddx</p>
 </td>
 </tr>
 </table>
@@ -32,17 +31,17 @@ Example of use:
 <tr bgcolor='#eeeeee'>
 <th align='center'><i>Function</i>:<br /> metallopdb</th>
 <th align='left'>
-<i style='font-size: 1em;'>Parameters</i>:<ul>
-<li style='font-size: 1em;'>metal: atomic symbol for the metal</li>
-<li style='font-size: 1em;'>[mode]: one of: first (default), last, random, new</li>
-<li style='font-size: 1em;'>[count]: how many PDB entries to retrieve (default = 5)</li>
-<li style='font-size: 1em;'>[format]: csv (default), wddx, rss, serialized</li>
+<i style='font-size: 1.2em;'>Parameters</i>:<ul>
+<li style='font-size: 1.2em;'>metal: atomic symbol for the metal</li>
+<li style='font-size: 1.2em;'>[mode]: one of: first (default), last, random, new</li>
+<li style='font-size: 1.2em;'>[count]: how many PDB entries to retrieve (default = 5)</li>
+<li style='font-size: 1.2em;'>[format]: csv (default), wddx, rss, serialized</li>
 </ul>
 </th>
 </tr>
 <tr bgcolor='#ddffff'>
 <td colspan='2'>
-<p style='font-size: 1em;'><b>Description:</b><br />Specialized function to retrieve a list of PDB structures
+<p style='font-size: 1.2em;'><b>Description:</b><br />Specialized function to retrieve a list of PDB structures
 containing a particular metal ion, as indexed in the MDB. The retrieval
 mode can be one of &quot;first&quot; (default) to get the first &quot;n&quot; PDB ids (sorted
 alphabetically), &quot;last&quot; to get the last &quot;n&quot; ids, &quot;random&quot; to get &quot;n&quot;
@@ -51,7 +50,7 @@ The number of entries to retrieve is set using &quot;count&quot;.
 The list can be formated as &quot;csv&quot; (default), &quot;wddx&quot;, &quot;rss&quot;, or &quot;serialized&quot;
 (PHP serialization).
 Example of use: 
-/services/api.php?function=metallopdb&amp;metal=zn&amp;mode=random&amp;count=5
+/services/api.php?func=metallopdb&amp;metal=zn&amp;mode=random&amp;count=5
 &amp;format=rss</p>
 </td>
 </tr>

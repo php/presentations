@@ -1,6 +1,8 @@
 <slide title='Testing: sql()'>
-<example type='php' result='1' fontsize='1.5em'
+<example type='php' result='0' fontsize='1.5em'
 marginright='1em' marginleft='1em' width='95%'
 filename='scripts/test_api_sql.php'
 title='Using the sql() function'/>
+<example title='Output' type='html' filename='output/test_api_sql_out.html'
+ fontsize='1.2em' examplebackground='#ffffdd'/>
 </slide>

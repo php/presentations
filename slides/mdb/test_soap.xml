@@ -1,7 +1,6 @@
 <slide title='Test SOAP'>
 <example title='Using the methods sql, metallopdb and rssmetallopdb'
-result='1' rfontsize='1.2em' fontsize='1.2em'
-outputbackground='#ffffdd'>
+ result='0' fontsize='1.2em'>
 <![CDATA[
 <?php 
 require_once 'SOAP/Client.php';
@@ -12,23 +11,23 @@ $ns = 'urn:MDB_SOAP_Server';
 $c = new SOAP_Client($url);
 
 function niceOut($obj) {
-	echo "<table border='1'>\n<tr>\n<td bgcolor='#eeeeee'>\n";
-	print_rec($obj);
-	echo "\n</td>\n</tr>\n</table>\n";
+ echo "<table border='1'>\n<tr>\n<td bgcolor='#eeeeee'>\n";
+ print_rec($obj);
+ echo "\n</td>\n</tr>\n</table>\n";
 }
 
 function print_rec($obj) {
-	if (is_string($obj)) {
-		echo "<pre>\n$obj\n</pre>\n";
-	} else {
-		foreach ($obj as $key=>$val) {
-			if (is_array($val) || is_object($val)) {
-				echo "<b>$key</b>:\n".print_rec($val)."<br>\n";
-			} else {
-				echo "<b>$key</b>: $val<br>\n";
-			}
-		}
-	}
+ if (is_string($obj)) {
+  echo "<pre>\n$obj\n</pre>\n";
+ } else {
+  foreach ($obj as $key=>$val) {
+   if (is_array($val) || is_object($val)) {
+    echo "<b>$key</b>:\n".print_rec($val)."<br>\n";
+   } else {
+    echo "<b>$key</b>: $val<br>\n";
+   }
+  }
+ }
 }
 
 ?>
@@ -44,7 +43,7 @@ niceOut($ret);
 <?php
 $ret = $c->call('metallopdb',array('metal'=>'zn', 'mode'=>'first','count'=>-3),$ns);
 if (PEAR::isError($ret))
-	echo "<br><b>OOPS we got an error</b>\n";
+ echo "<br><b>OOPS we got an error</b>\n";
 niceOut($ret);
 ?>
 <hr>
@@ -64,4 +63,6 @@ niceOut(htmlspecialchars(base64_decode($ret)));
 ?>
 ]]>
 </example>
+<example title='Output' type='html' filename='output/test_soap_out.html'
+ fontsize='1.5em' examplebackground='#ffffdd'/>
 </slide>

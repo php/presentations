@@ -1,7 +1,8 @@
 <slide title='Testing: metallopdb()'>
-<example type='php' result='1' fontsize='1.5em'
-	rfontsize='1em'
+<example type='php' result='0' fontsize='1.5em' rfontsize='1em'
 marginright='1em' marginleft='1em' width='95%'
 filename='scripts/test_api_metallopdb.php'
 title='Using the metallopdb() function'/>
+<example title='Output' type='html' filename='output/test_api_metallopdb_out.html'
+ fontsize='1em' examplebackground='#ffffdd'/>
 </slide>

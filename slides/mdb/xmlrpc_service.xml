@@ -1,9 +1,66 @@
 <slide title='XML-RPC service'>
- <list title='Available methods'>
-  <bullet> _method.sql_ : to perform 'SELECT', 'SHOW', or 'DESCRIBE' SQL
-   queries</bullet>
- </list>
- <example title='Introspection'
-  type='html' result='0' align='center' 
+ <example title='Server Introspection' type='php' result='0' fontsize='1.5em'>
+<![CDATA[<?php 
+require_once "XML/RPC.php";
+require_once "slides/mdb/scripts/xmlrpc_util.php";
+require_once "slides/mdb/scripts/mdb_tests.cfg";
+
+$c=new XML_RPC_Client(XMLRPC_URI, MDB_SERVER_NAME, MDB_SERVER_PORT);
+$f=new XML_RPC_Message('system.listMethods');
+
+$v=rpc_call($c, $f);
+print "<h2>Methods available at http://" . $c->server . ":" . 
+$c->port . $c->path .  "</h2>\n";
+if ($v) {
+ 
+ for($i=0; $i<$v->arraysize(); $i++) {
+  $mname=$v->arraymem($i);
+  print "<hr noshade size=1><H3>" . $mname->scalarval() . "</H3>\n";
+  $f=new XML_RPC_Message('system.methodHelp');
+  $f->addParam(new XML_RPC_Value($mname->scalarval(), "string"));
+  $w=rpc_call($c, $f);
+  if ($w) {
+   $txt=$w->scalarval();
+   if ($txt!="") {
+    print "<H4>Documentation</H4><P style='font-size: 1.0em;'>${txt}</P>\n";
+   } else {
+    print "<P>No documentation available.</P>\n";
+   }
+  }
+  $f=new XML_RPC_Message('system.methodSignature');
+  $f->addParam(new XML_RPC_Value($mname->scalarval(), "string"));
+  $w=rpc_call($c, $f);
+  if ($w) {
+   print "<H4>Signature</H4><P style='font-size: 1.0em;'>\n";
+   if ($w->kindOf()=="array") {
+    for($j=0; $j<$w->arraysize(); $j++) {
+     $x=$w->arraymem($j);
+     $ret=$x->arraymem(0);
+     print "<CODE style='font-size: 1.0em;'>" . $ret->scalarval() . " " . 
+      $mname->scalarval() ."(";
+     if ($x->arraysize()>1) {
+      for($k=1; $k<$x->arraysize(); $k++) {
+       $y=$x->arraymem($k);
+       print $y->scalarval();
+       if ($k<$x->arraysize()-1) {
+        print ", ";
+       }
+      }
+     }
+     print ")</CODE><BR>\n";
+    }
+   } else {
+    print "Signature unknown\n";
+   }
+   print "</P>\n";
+  }
+ }
+
+}
+?>
+]]>
+</example>
+<example title='Output' fontsize='1.5em'
+  type='html' result='0' align='center' examplebackground='#ffffdd'
   filename='output/xmlrpc_api_out.html'/>
 </slide>
