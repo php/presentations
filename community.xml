@@ -1,0 +1,17 @@
+<presentation template="php" navmode="html">
+<topic>PHP</topic>
+<title>The Care and Feeding of the PHP Community</title>
+<event>O'Reilly Open Source Conference</event>
+<location>San Diego</location>
+<date>July 25, 2002</date>
+<speaker>Jim Winstead</speaker>
+<email>jimw@apache.org</email>
+<url>http://conf.php.net/community</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/community/mail-lists.xml</slide>
+
+<slide>slides/community/fin.xml</slide>
+
+</presentation>
