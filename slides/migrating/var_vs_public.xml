@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>var vs. public</title>
+
+	<break lines="2"/>
+    <example fontsize="1.3em"><![CDATA[<?php
+	class Russia {
+		var $local_name;
+
+		function Russia() {
+			$this->local_name = "Roosjia";
+		}
+	}
+? >]]></example>
+
+	<break lines="2"/>
+	<blurb fontsize="3.5em">PHP 5:</blurb>
+    <example fontsize="1.3em"><![CDATA[Strict Standards: var: Deprecated. Please use the public/private/protected modifiers in - on line 3]]></example>
+
+</slide>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Changes in MySQL</title>
+
+	<break lines="4"/>
+	<blurb fontsize="4em">
+	In PHP 5 the MySQL client library is no longer bundled because:
+	</blurb>
+	<list fontsize="4em">
+		<bullet>Maintainability</bullet>
+		<bullet>License change</bullet>
+		<bullet>Problems with other modules</bullet>
+	</list>
+	<break lines="2"/>
+	<blurb fontsize="4em">
+	Solution:
+	</blurb>
+	<list fontsize="4em">
+		<bullet>Install the MySQL client libraries</bullet>
+		<bullet>--with-mysql=[DIR]</bullet>
+	</list>
+</slide>

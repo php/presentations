@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Command Line Interface</title>
+
+	<break lines="3"/>
+	<blurb fontsize="4em">
+	In the PHP 4 distributions you will find the following binaries:
+	</blurb>
+	<list marginleft="-2em" fontsize="3.5em">
+		<bullet>php.exe (The CGI binary to use with a web server)</bullet>
+		<bullet>*cli/*php.exe (The CLI binary to use with command line scripts)</bullet>
+	</list>
+
+	<break lines="4"/>
+	<blurb fontsize="4em">
+	In the PHP 5 distributions you will find the following binaries:
+	</blurb>
+	<list marginleft="-2em" fontsize="3.5em">
+		<bullet>php*-cgi*.exe (The CGI binary to use with a web server)</bullet>
+		<bullet>php.exe (The CLI binary to use with command line scripts)</bullet>
+	</list>
+</slide>

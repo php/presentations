@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>E_STRICT</title>
+
+	<break lines="4"/>
+	<blurb fontsize="4em">
+	E_STRICT is a new error level.
+	</blurb>
+	<list fontsize="4em">
+		<bullet>Not part of E_ALL</bullet>
+		<bullet>Numerical value is 2048 (and E_ALL is still 2047)</bullet>
+		<bullet>To see all errors: E_ALL | E_STRICT</bullet>
+	</list>
+
+	<break lines="4"/>
+	<blurb fontsize="4em">
+	Affects:
+	</blurb>
+	<list fontsize="4em">
+		<bullet>Automagically creating objects</bullet>
+		<bullet>var / public modifiers</bullet>
+		<bullet>Constructor naming</bullet>
+	</list>
+</slide>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Clone</title>
+
+	<blurb fontsize="3.5em">The Compatible Way</blurb>
+
+    <example fontsize="1.3em"><![CDATA[<?php
+	ini_set('zend.ze1_compatibility_mode', '1');
+	
+	class OS {
+		var $name;
+
+		function OS($name) {
+			$this->name = $name;
+		}
+	}
+
+	function changeName(&$obj, $name) {
+		$obj->name = $name;
+	}
+
+	$linux = new OS('linux');
+	$win = $linux;
+	changeName($win, 'windows');
+	echo $linux->name. "\n";
+	echo $win->name;
+	
+? >]]></example>
+
+	<blurb fontsize="2.5em">Output:</blurb>
+
+    <example fontsize="1.3em"><![CDATA[linux
+windows]]></example>
+</slide>

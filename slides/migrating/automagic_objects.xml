@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Automagic Objects</title>
+
+	<break lines="2"/>
+    <example fontsize="1.3em"><![CDATA[<?php
+	$country->name = 'Moldovia';
+
+	var_dump($country);
+? >]]></example>
+
+	<break lines="2"/>
+	<blurb fontsize="3.5em">PHP 5:</blurb>
+    <example fontsize="1.3em"><![CDATA[Strict Standards: Creating default object from empty value in - on line 2
+	object(stdClass)#1 (1) {
+		  ["name"]=>
+			    string(8) "Moldovia"
+	}]]></example>
+
+</slide>

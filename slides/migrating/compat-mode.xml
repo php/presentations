@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Compatibility Mode</title>
+
+	<break lines="4"/>
+	<blurb fontsize="5em">
+	php.ini:
+	</blurb>
+	<blurb marginleft="3em" fontsize="5em">
+	%zend.ze1_compatibility_mode = 1%
+	</blurb>
+	<break lines="2"/>
+	<blurb marginright="2em" fontsize="5em">
+	Affects:
+	</blurb>
+	<list fontsize="5em">
+		<bullet>cloning objects</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>casting objects</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>comparing objects</bullet>
+	</list>
+</slide>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Signatures</title>
+
+	<break lines="2"/>
+    <example fontsize="1.3em"><![CDATA[<?php
+	class Scandinavia {
+		function get_countries() {
+			return array('Norway', 'Sweden', 'Denmark', 'Finland');
+		}
+	}
+
+	class Europe extends Scandinavia {
+		function get_countries($area) {
+			if ($area == "Scandinavia") {
+				return Scandinavia::get_countries();
+			}
+		}
+	}
+? >]]></example>
+
+	<break lines="2"/>
+	<blurb fontsize="3.5em">PHP 5:</blurb>
+    <example fontsize="1.3em"><![CDATA[Strict Standards: Declaration of Europe::get_countries() should be compatible with that of Scandinavia::get_countries() in - on line 14]]></example>
+
+</slide>

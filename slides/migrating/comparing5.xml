@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Comparing Objects</title>
+
+	<blurb fontsize="3.5em">PHP 5</blurb>
+
+    <example fontsize="1.3em"><![CDATA[<?php
+	class Country {
+		var $area;
+		function Country($area) {
+			$this->area = $area;
+		}
+	}
+
+	$deutschland = new Country('West Europe');
+	$die_schweiz = new Country('West Europe');
+	$norway      = new Country('Scandinavia');
+
+	if ($deutschland == $die_schweiz) {
+		echo "Deutschland ist die Schweiz.\n";
+	}
+	if ($deutschland == $norway) {
+		echo "Deutschland er Norway.\n";
+	}
+? >]]></example>
+
+	<list>
+		<bullet marginleft="0em">In PHP 5 *$obj1 == $obj2* results in *true*:</bullet>
+		<bullet effect="slide" marginleft="2em">when the object's *handles* are the same</bullet>
+	</list>
+</slide>

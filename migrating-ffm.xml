@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navColor="#f1fbff"
+	logo1="presentations/slides/xdebug/ez.png"
+	stylesheet="presentations/slides/xdebug/style.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Migrating from PHP 4 to PHP 5</title>
+<event>Intl. PHP Conference</event>
+<location>Amsterdam, the Netherlands</location>
+<date>May 5, 2004</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://pres.derickrethans.nl/migrating-ffm</url>
+<slide>slides/migrating/title.xml</slide>
+<slide>slides/php5intro/nl/oldobjectmodel2.xml</slide>
+<slide>slides/php5intro/nl/newobjectmodel.xml</slide>
+<slide>slides/migrating/clone.xml</slide>
+<slide>slides/migrating/clone-compat.xml</slide>
+<slide>slides/migrating/casting4.xml</slide>
+<slide>slides/migrating/casting5.xml</slide>
+<slide>slides/migrating/comparing4.xml</slide>
+<slide>slides/migrating/comparing5.xml</slide>
+<slide>slides/migrating/compat-mode.xml</slide>
+
+<slide>slides/migrating/this.xml</slide>
+<slide>slides/migrating/get_class.xml</slide>
+<slide>slides/migrating/e_strict.xml</slide>
+<slide>slides/migrating/var_vs_public.xml</slide>
+<slide>slides/migrating/automagic_objects.xml</slide>
+<slide>slides/migrating/signatures.xml</slide>
+<slide>slides/migrating/cli.xml</slide>
+<slide>slides/migrating/mysql.xml</slide>
+<slide>slides/migrating/array_merge.xml</slide>
+<slide>slides/migrating/strrpos.xml</slide>
+<slide>slides/migrating/questions.xml</slide>
+<slide>slides/migrating/resources.xml</slide>
+</presentation>

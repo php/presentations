@@ -5,7 +5,7 @@
 	<break lines="1" />
 	<image align="center" filename="newoo.png" />
 
-	<list marginleft="3em" effect="slide" fontsize="3.5em">
+	<list marginleft="2em" fontsize="3.5em">
 		<bullet>Pass by reference</bullet>
 		<bullet>Objects are referenced by a handle.</bullet>
 	</list>

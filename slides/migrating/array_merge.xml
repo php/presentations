@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>array_merge()</title>
+
+	<break lines="1"/>
+	<blurb fontsize="4em">
+	array_merge() no longer accepts non-array parameters to merge.
+	</blurb>
+
+	<example fontsize="1.3em"><![CDATA[<?php
+
+	$scandinavia = array('Denmark', 'Norway', 'Sweden', 'Finland');
+	$uk = "The UK";
+
+	$europe = array_merge($scandinavia, $uk);
+
+	print_r($europe);
+? >]]></example>
+
+	<blurb fontsize="2.5em">PHP 4:</blurb>
+
+    <example fontsize="1em"><![CDATA[Array
+(
+[0] => Denmark
+[1] => Norway
+[2] => Sweden
+[3] => Finland
+[4] => The UK
+) ]]></example>
+
+	<blurb fontsize="2.5em">PHP 5:</blurb>
+
+    <example fontsize="1.5em"><![CDATA[Warning: array_merge(): Argument #2 is not an array in - on line 7]]></example>
+</slide>
