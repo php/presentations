@@ -1,0 +1,24 @@
+<presentation 
+	template="php" 
+	navmode="html"
+>
+<topic>PHP</topic>
+<title>Pragmatic PHP</title>
+<event>O'Reilly Open Source Conference</event>
+<location>San Diego</location>
+<date>July 22, 2002</date>
+<speaker>Jim Winstead</speaker>
+<email>jimw@apache.org</email>
+<url>http://conf.php.net/pragmatic</url>
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/pragmatic/agenda.xml</slide>
+<slide>slides/pragmatic/php-helloworld.xml</slide>
+<slide>slides/pragmatic/php-shorttags.xml</slide>
+<slide>slides/pragmatic/php-variables.xml</slide>
+<slide>slides/pragmatic/php-arrays.xml</slide>
+<slide>slides/pragmatic/php-forminput.xml</slide>
+<slide>slides/pragmatic/php-registerglobals.xml</slide>
+<slide>slides/pragmatic/php-controlstructures.xml</slide>
+<slide>slides/pragmatic/php-looping.xml</slide>
+<slide>slides/pragmatic/php-functions.xml</slide>
+</presentation>

@@ -1,0 +1,17 @@
+<slide title="Functions and Control Structures">
+<example><![CDATA[
+<?php
+if ($action == "delete") {
+  mysql_query("DELETE FROM table WHERE id = $id");
+  echo "<p>Record $id deleted!</p>";
+} else {
+?>
+<form action="<?=$PHP_SELF?>" method="post">
+ <input type="text" name="id" />
+ <input type="submit" name="action" value="delete" />
+</form>
+<?php
+}
+]]>
+</example>
+</slide>

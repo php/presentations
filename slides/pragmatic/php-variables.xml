@@ -1,0 +1,10 @@
+<slide title="Variables and Data Types">
+<example result="1"><![CDATA[
+<? $id = 12; ?>
+<? $cost = 9.95; ?>
+<? $inventory = 1.3e9; ?>
+<? $name = "Richard Q. Jonnes"; ?>
+<? echo "Hello, $name!"; ?>
+]]>
+</example>
+</slide>

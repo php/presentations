@@ -1,0 +1,8 @@
+<slide title="Short Tags">
+<example><![CDATA[
+<?php echo "Hello world!" ?>
+<? echo "Hello world!" ?>
+<?= "Hello world!" ?>
+]]>
+</example>
+</slide>

@@ -1,0 +1,17 @@
+<slide title="Register Globals">
+<example><![CDATA[
+<?php echo $query; ?>
+<?php mysql_query("INSERT INTO table VALUES('$name')"); ?>
+]]>
+</example>
+<example type="shell"><![CDATA[
+; in php.ini:
+register_globals = on
+magic_quotes_gpc = off
+
+# in apache config:
+php_flag register_globals on
+php_flag magic_quotes_gpc off
+]]>
+</example>
+</slide>

@@ -1,0 +1,13 @@
+<slide title="Looping">
+<example><![CDATA[
+<?php
+while ($row = mysql_fetch_array($result)) {
+  echo "<tr><td>$id</td> ... </tr>";
+}
+
+foreach ($foods as $type => $varieties) {
+  echo "There are " . count($varieties) . " of $type.";
+}
+]]>
+</example>
+</slide>

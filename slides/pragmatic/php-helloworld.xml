@@ -1,0 +1,13 @@
+<slide title="Hello World!">
+<example><![CDATA[
+<html>
+<head>
+ <title>My first page</title>
+</head>
+<body>
+ Hello, <?php echo $name; ?>!
+</body>
+</html>
+]]>
+</example>
+</slide>

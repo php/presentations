@@ -1,0 +1,11 @@
+<slide title="Arrays and Objects">
+<example><![CDATA[<?php
+$fruits = array("apple", "orange");
+$foods = array(
+           "fruit" => $fruits,
+           "meat"  => array("beef", "pork")
+         );
+$fluffy = new Dog("poodle");
+]]>
+</example>
+</slide>

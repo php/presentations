@@ -1,0 +1,16 @@
+<slide title="Functions">
+<example><![CDATA[<?php
+function reout($value) {
+  return htmlspecialchars(
+    get_magic_quotes_gpc() ? stripslashes($value) : $value
+  );
+}
+]]></example>
+<example><![CDATA[<?php
+function oneof() {
+  foreach (func_get_args() as $arg) {
+   if ($arg) return $arg;
+  }
+}
+]]></example>
+</slide>

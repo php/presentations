@@ -1,0 +1,9 @@
+<slide title="Handling Form Input">
+<example><![CDATA[
+<?php echo $_GET["query"]; ?>
+<?php echo $_POST["query"]; ?>
+<?php echo $_COOKIE["query"]; ?>
+<?php echo $_REQUEST["query"]; ?>
+]]>
+</example>
+</slide>
