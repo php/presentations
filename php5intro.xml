@@ -1,0 +1,45 @@
+<presentation 
+	template="php" 
+	navmode="html"
+>
+<topic>PHP</topic>
+<title>Introduction to PHP 5</title>
+<event>NYPHP</event>
+<location>NYC, NY</location>
+<date>March 25, 2003</date>
+<speaker>Sterling Hughes</speaker>
+<email>sterling@php.net</email>
+<url>http://talks.php.net/</url>
+
+<slide>slides/php5intro/titlepage.xml</slide>
+<slide>slides/php5intro/namespace.xml</slide>
+<slide>slides/php5intro/nestednamespaces.xml</slide>
+<slide>slides/php5intro/variables.xml</slide>
+<slide>slides/php5intro/oldoo.xml</slide>
+<slide>slides/php5intro/newoo1.xml</slide>
+<slide>slides/php5intro/construct.xml</slide>
+<slide>slides/php5intro/destruct.xml</slide>
+<slide>slides/php5intro/deref.xml</slide>
+<slide>slides/php5intro/static.xml</slide>
+<slide>slides/php5intro/svariables.xml</slide>
+<slide>slides/php5intro/static1.xml</slide>
+<slide>slides/php5intro/final.xml</slide>
+<slide>slides/php5intro/const.xml</slide>
+<slide>slides/php5intro/copy.xml</slide>
+<slide>slides/php5intro/copy1.xml</slide>
+<slide>slides/php5intro/ppp.xml</slide>
+<slide>slides/php5intro/ppp1.xml</slide>
+<slide>slides/php5intro/ppp2.xml</slide>
+<slide>slides/php5intro/ppp3.xml</slide>
+<slide>slides/php5intro/overload.xml</slide>
+<slide>slides/php5intro/overload1.xml</slide>
+<slide>slides/php5intro/exceptions.xml</slide>
+<slide>slides/php5intro/exceptions1.xml</slide>
+<slide>slides/php5intro/abstract.xml</slide>
+<slide>slides/php5intro/abstract1.xml</slide>
+<slide>slides/php5intro/interfaces.xml</slide>
+<slide>slides/php5intro/interfaces1.xml</slide>
+<slide>slides/php5intro/typehint.xml</slide>
+<slide>slides/php5intro/autoload.xml</slide>
+
+</presentation>
