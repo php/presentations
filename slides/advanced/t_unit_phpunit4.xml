@@ -1,7 +1,7 @@
 <slide title="Broken Tests">
 <image filename="testing.jpg" align="right"/>
 <break/>
-<blurb>Let's add our test!</blurb>
+<blurb fontsize="4.5em">Let's add our test!</blurb>
 <break/>
 <example title="url_parser1.phpt" filename="url_parser1.phpt" fontsize="1.5em" result="1"/>
 </slide>

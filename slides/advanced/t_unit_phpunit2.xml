@@ -1,7 +1,7 @@
 <slide title="url_parser">
 <image filename="testing.jpg" align="right"/>
-<break/>
-<blurb>Can you spot the error(~s~) in this code?</blurb>
+<break lines="2"/>
+<blurb fontsize="4.5em">Can you spot the error(~s~) in this code?</blurb>
 <break/>
 <example filename="url_parser.php" fontsize="1.7em"/>
 </slide>

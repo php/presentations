@@ -1,7 +1,7 @@
 <slide title="PHPUnit">
 <image filename="testing.jpg" align="right"/>
 <break lines="4"/>
-<blurb>PHPUnit is a Unit Testing Suite written for PHP, modeled after %JUnit%.</blurb>
+<blurb fontsize="4.5em">PHPUnit is a Unit Testing Suite written for PHP, modeled after %JUnit%.</blurb>
 <blurb>
 </blurb>
 <example title="Installing PHPUnit" type="shell"><![CDATA[% pear install PHPUnit]]></example>

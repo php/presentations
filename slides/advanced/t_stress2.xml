@@ -1,0 +1,16 @@
+<slide title="Finding Race Conditions">
+<image filename="testing.jpg" align="right"/>
+<break lines="2"/>
+<blurb fontsize="4.5em">Use %cherry%!</blurb>
+<break/>
+<example><![CDATA[% cherry -c 100 -n 10000 -v --similair http://localhost/
+getting initial data from http://localhost/... done
+generating rabin 64 checksums... done
+stress testing...
+   100
+   200
+   300
+   [..]
+done
+%]]></example>
+</slide>

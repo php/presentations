@@ -1,7 +1,7 @@
 <slide title="Offensive Regexes">
 <image filename="testing.jpg" align="right"/>
 <break lines="5"/>
-<example title="Bad"><![CDATA[@<a[^>]*href=\"([^"]+)\">[^<]*</a>@ix]]></example>
+<example fontsize="3.0em" title="Bad"><![CDATA[@<a[^>]*href=\"([^"]+)\">[^<]*</a>@ix]]></example>
 <break/>
-<example title="Good"><![CDATA[@<a.*?href=\"([^"]+)\">[^<]*</a>@ix]]></example>
+<example fontsize="3.0em" title="Good"><![CDATA[@<a.*?href=\"([^"]+)\">[^<]*</a>@ix]]></example>
 </slide>

@@ -1,15 +1,15 @@
 <slide title="Basic Testing">
 <image filename="testing.jpg" align="right"/>
 <break lines="4"/>
-<list title="Methods">
+<list title="Methods" fontsize="4.5em">
 <bullet>If it compiles, it works</bullet>
 <bullet>Click through the application</bullet>
 </list>
-<list title="Flaws">
-<bullet fontsize="2.2em">Innumerable Race Conditions</bullet>
-<bullet fontsize="1.9em" type="none" marginleft="2.0em">~... High Concurrency~</bullet>
-<bullet fontsize="1.9em" type="none" marginleft="2.0em">~... Data Overflows~</bullet>
-<bullet fontsize="1.9em" type="none" marginleft="2.0em">~... Request Combinations~</bullet>
-<bullet fontsize="1.9em" type="none" marginleft="2.0em">~... Edge Cases~</bullet>
+<list title="Flaws" fontsize="4.5em">
+<bullet>Innumerable Race Conditions</bullet>
+<bullet type="none" marginleft="2.0em">~... High Concurrency~</bullet>
+<bullet type="none" marginleft="2.0em">~... Data Overflows~</bullet>
+<bullet type="none" marginleft="2.0em">~... Request Combinations~</bullet>
+<bullet type="none" marginleft="2.0em">~... Edge Cases~</bullet>
 </list>
 </slide>

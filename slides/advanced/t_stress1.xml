@@ -1,0 +1,9 @@
+<slide title="Race Condition">
+<image filename="testing.jpg" align="right"/>
+<break/>
+<blurb fontsize="4.5em">
+Can you spot the race condition?
+</blurb>
+<break lines="2"/>
+<example filename="cache.php"/>
+</slide>

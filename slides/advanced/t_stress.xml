@@ -1,0 +1,10 @@
+<slide title="Stress Testing">
+<image filename="testing.jpg" align="right"/>
+<break lines="8"/>
+<list fontsize="4.5em">
+<bullet>Applications behave differently under extreme loads</bullet>
+<bullet>"Unforseeable" Race Conditions</bullet>
+<bullet>Multiple Processes and Multiple Threads</bullet>
+<bullet>Memory corruption</bullet>
+</list>
+</slide>
