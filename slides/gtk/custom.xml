@@ -1,0 +1,27 @@
+<slide title="Extending Widgets" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  Since this is an object-oriented toolkit, we can extend default widget
+  classes.
+ </blurb>
+
+ <example fontsize="1.5ex"><![CDATA[<?php
+  class Uppercase_Button extends GtkButton {
+      function Uppercase_Button($label = null) {
+          if (isset($label))
+              $this->GtkButton(strtoupper($label));
+          else
+              $this->GtkButton();
+          ...
+      }
+  }
+
+  $ok =& new Uppercase_Button('click this');
+  $box->pack_start($ok);
+?>]]></example>
+
+ <blurb>
+  Make sure to call base class's constructor.
+ </blurb>
+
+</slide>
