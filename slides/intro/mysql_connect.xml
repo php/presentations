@@ -1,0 +1,15 @@
+<slide title="Connecting to MySQL">
+
+<example title="The simple connection" result="1"><![CDATA[<?
+$conn = mysql_connect('localhost');
+echo $conn;
+?>]]></example>
+
+<example title="Other variations"><![CDATA[<?
+mysql_connect('db.domain.com:33306','rasmus','foobar');
+mysql_connect('localhost:/tmp/mysql.sock');
+mysql_connect('localhost','rasmus','foobar',
+              true,MYSQL_CLIENT_SSL|MYSQL_CLIENT_COMPRESS);
+?>]]></example>
+
+</slide>

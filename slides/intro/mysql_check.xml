@@ -1,0 +1,13 @@
+<slide title="Sanity Check">
+
+<example title="Make sure MySQL is running" type="shell"><![CDATA[prompt:~> mysqlshow
++-----------+
+| Databases |
++-----------+
+| mysql     |
+| test      |
++-----------+]]></example>
+
+<example result="1" title="Or with the latest PHP"><![CDATA[<? echo mysql_stat() ?>]]></example>
+
+</slide>

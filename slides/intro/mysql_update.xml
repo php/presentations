@@ -1,0 +1,18 @@
+<slide title="Changing Existing Rows">
+<example title="Using UPDATE" result="1"><![CDATA[<?
+  mysql_connect('localhost');
+  mysql_select_db('foo');
+  $result = mysql_query(
+	"update users set email = 'babycarl@lerdorf.com'
+	 where id = 'carl'");
+  if($result) {
+	echo mysql_affected_rows();
+  } else {
+	echo mysql_error();
+  }
+?>]]></example>
+<blurb title="REPLACE INTO">
+You can also use %REPLACE INTO% to update a row if it exists and
+insert it if it doesn't.
+</blurb>
+</slide>

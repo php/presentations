@@ -1,0 +1,15 @@
+<slide title="PHP 5.0">
+<list title="Proposed Features (so far)" fontsize="4em">
+<bullet>New Object Model</bullet>
+<bullet>Private and Protected properties</bullet>
+<bullet>Objects are referenced and not copied by default</bullet>
+<bullet>New cloning mechanism to copy objects</bullet>
+<bullet>Nested class support which gives us Namespaces</bullet>
+<bullet>Class destructors</bullet>
+<bullet>Try/Catch exception handling</bullet>
+<bullet>Dereference object directly from a function call</bullet>
+<bullet>Native large number support</bullet>
+<bullet>Bundle curl library to be used by streams-based connection handling</bullet>
+<bullet>Move many extensions to PEAR</bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Setup">
+
+<example title="Check your PHP Setup for MySQL support"><![CDATA[<? phpinfo() ?>]]></example>
+<image filename="slides/intro/mysql_info.png" align="center"/>
+
+<blurb title="If not enabled">
+Very rare since a MySQL client library is distributed with PHP and built into PHP
+by default.  However, it is possible to build PHP without MySQL support.  Some
+possible fixes:
+</blurb>
+<example type="shell"><![CDATA[apt-get install php-mysql]]></example>
+<example type="shell"><![CDATA[rpm -Uvh php-mysql-4.2.2-1.i386.rpm]]></example>
+<blurb> </blurb>
+<example type="shell"><![CDATA[./configure --with-mysql=shared,/usr
+cp modules/mysql.so /usr/local/lib/php]]></example>
+<example><![CDATA[extension_dir=/usr/local/lib/php
+extension=mysql.so]]></example>
+
+</slide>

@@ -1,0 +1,30 @@
+<slide title="Creating a Database">
+
+<php><![CDATA[<?mysql_query('drop database if exists foo')?>]]></php>
+
+<example result="1" title="Create a DB"><![CDATA[<?
+  mysql_connect('localhost');
+  if(mysql_query("CREATE DATABASE foo")) {
+	echo "Database foo created";
+  } else {
+	echo mysql_error();
+  }
+?>]]></example>
+
+<example result="1" title="Create a Table"><![CDATA[<?
+  mysql_select_db('foo');
+  $result = mysql_query("CREATE TABLE users (
+    id varchar(16) binary NOT NULL default '',
+    Password varchar(16) NOT NULL default '',
+    Name varchar(64) default NULL,
+    email varchar(64) default NULL,
+    ts timestamp(14) NOT NULL,
+    PRIMARY KEY (id)
+  )");
+  if($result) {
+	echo "Table created";
+  } else {
+	echo mysql_error();
+  }
+?>]]></example>
+</slide>

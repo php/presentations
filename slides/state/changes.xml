@@ -1,40 +1,47 @@
 <slide title="Important Changes">
 
-<list title="PHP 4.0.6">
+<list title="PHP 4.0.6" fontsize="4em" marginleft="1em">
 <bullet>Multibyte Japanese string support added</bullet>
 <bullet>GD 2 support added</bullet>
 <bullet>DBX databse abstration extension added</bullet>
 <bullet>mysql_unbuffered_query() added</bullet>
 </list>
 
-<list title="PHP 4.1.0">
+<list title="PHP 4.1.0" fontsize="4em" marginleft="1em">
 <bullet>MySQL 4.0 Support</bullet>
 <bullet>Thread-safe performance improvement</bullet>
 <bullet>New Process Control (pcntl) extension</bullet>
 </list>
 
-<list title="PHP 4.1.1">
+<list title="PHP 4.1.1" fontsize="4em" marginleft="1em">
 <bullet>Minor bug fix release</bullet>
 </list>
 
-<list title="PHP 4.1.2">
+<list title="PHP 4.1.2" fontsize="4em" marginleft="1em">
 <bullet>File upload security fixes</bullet>
 </list>
 
-<list title="PHP 4.2.0">
+<list title="PHP 4.2.0" fontsize="4em" marginleft="1em">
 <bullet>*register_globals* defaults to *OFF* now</bullet>
 <bullet>Experimental Apache 2.0 support</bullet>
 <bullet>Overloading extension added</bullet>
 <bullet>Tokenizer extension added</bullet>
 </list>
 
-<list title="PHP 4.2.1">
+<list title="PHP 4.2.1" fontsize="4em" marginleft="1em">
 <bullet>domxml overhaul</bullet>
 <bullet>Bug fixes</bullet>
 </list>
 
-<list title="PHP 4.2.2">
+<list title="PHP 4.2.2" fontsize="4em" marginleft="1em">
 <bullet>File upload security fix</bullet>
 </list>
+
+<list title="GTK" fontsize="4em" marginleft="1em">
+<bullet>34 apps written in PHP-GTK listed at gtk.php.net</bullet>
+<bullet>Coolest App - PHPMole</bullet>
+</list>
+
+<image filename="slides/state/gtk.png" marginleft="-2em"/>
 
 </slide>

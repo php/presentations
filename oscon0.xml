@@ -6,14 +6,20 @@
 	backgroundfixed="1"
 >
 <topic>PHP</topic>
-<title>State of PHP</title>
+<title>PHP 4.1 and Beyond</title>
 <event>OSCON</event>
 <location>San Diego</location>
 <date>July 24, 2002</date>
 <speaker>Rasmus Lerdorf</speaker>
 <email>rasmus@php.net</email>
 <slide>slides/state/titlepage.xml</slide>
+<slide>slides/state/questions.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+<slide>slides/state/doc.xml</slide>
 <slide>slides/state/timeline.xml</slide>
 <slide>slides/state/changes.xml</slide>
 <slide>slides/state/php430.xml</slide>
+<slide>slides/state/pear.xml</slide>
+<slide>slides/state/php50.xml</slide>
+<slide>slides/state/announcements.xml</slide>
 </presentation>

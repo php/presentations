@@ -1,0 +1,15 @@
+<slide title="Persistent Connections">
+
+<example title="The simple connection" result="1"><![CDATA[<?
+$conn = mysql_pconnect('localhost');
+echo $conn;
+?>]]></example>
+
+<list title="Caveats">
+<bullet>Watch out for multi-credential connections</bullet>
+<bullet>Make sure you match up max_connections and MaxClients</bullet>
+</list>
+
+<image filename="slides/intro/pconnect.png" align="center" />
+
+</slide>

@@ -1,0 +1,24 @@
+<slide title="Selecting Data">
+<example result="1" title="SELECT Query" fontsize="1.5em" rfontsize="1.3em"><![CDATA[<?
+  mysql_connect('localhost');
+  mysql_select_db('foo');
+  $result = mysql_query("select * from users");
+  if(!$result) echo mysql_error();
+  else {
+	while($row = mysql_fetch_row($result)) {
+		echo "$row[0] - $row[1] - $row[2] - $row[3] - $row[4]<br />\n";
+	}
+  }
+?>]]></example>
+
+<example result="1" title="mysql_fetch_array()" fontsize="1.5em" rfontsize="1.3em"><![CDATA[<?
+  $result = mysql_query("select * from users order by id");
+  if(!$result) echo mysql_error();
+  else {
+	while($row = mysql_fetch_array($result,MYSQL_ASSOC)) {
+		echo "$row[id] - $row[Password] - $row[Name] - 
+              $row[email] - $row[ts]<br />\n";
+	}
+  }
+?>]]></example>
+</slide>
