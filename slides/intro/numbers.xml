@@ -1,28 +1,28 @@
 <slide title="PHP is Big!">
 <list>
-<title>November 2003 Netcraft Report</title>
-<bullet> 44,946,965 Domains queried</bullet>
-<bullet> 14,528,748 Domains.  1,328,604 IP addresses</bullet>
+<title>January 2004 Netcraft Report</title>
+<bullet> 46,067,743 Domains queried</bullet>
+<bullet> 14,699,098 Domains.  1,330,821 IP addresses</bullet>
 <bullet>PHP installed on 32% of all domains</bullet>
 </list>
 <image filename="phpstats.png" align="center"/>
 <link href="http://www.netcraft.com" leader="Source: " align="right" marginright="6em">Netcraft</link>
 
 <list>
-<title>November 2003 Apache Module Report</title>
-<bullet>%12,220,278 Apache Servers surveyed%</bullet>
-<bullet>% 4,311,776 (52.04\%) PHP%</bullet>
-<bullet>% 2,542,854 (30.69\%) OpenSSL%</bullet>
-<bullet>% 2,465,141 (29.75\%) mod_ssl%</bullet>
-<bullet>% 1,825,732 (22.03\%) Frontpage%</bullet>
-<bullet>% 1,607,948 (19.41\%) mod_perl%</bullet>
-<bullet>%   406,032  (4.90\%) DAV%</bullet>
-<bullet>%   368,240  (4.44\%) mod_throttle%</bullet>
-<bullet>%   330,237  (3.99\%) mod_jk%</bullet>
-<bullet>%   319,777  (3.86\%) mod_log_bytes%</bullet>
-<bullet>%   314,140  (3.79\%) mod_bwlimited%</bullet>
-<bullet>%   249,816  (3.01\%) mod_fastcgi%</bullet>
-<bullet>%   216,022  (2.61\%) AuthMySQL%</bullet>
+<title>January 2004 Apache Module Report</title>
+<bullet>%9,286,904 Apache Servers surveyed%</bullet>
+<bullet>% 5,010,035 (53.95\%) PHP%</bullet>
+<bullet>% 2,608,258 (28.09\%) OpenSSL%</bullet>
+<bullet>% 2,527,385 (27.21\%) mod_ssl%</bullet>
+<bullet>% 1,845,621 (19.87\%) Frontpage%</bullet>
+<bullet>% 1,597,830 (17.21\%) mod_perl%</bullet>
+<bullet>%   411,443  (4.43\%) DAV%</bullet>
+<bullet>%   380,012  (4.09\%) mod_throttle%</bullet>
+<bullet>%   360,440  (3.88\%) mod_log_bytes%</bullet>
+<bullet>%   355,235  (3.83\%) mod_bwlimited%</bullet>
+<bullet>%   327,263  (3.52\%) mod_jk%</bullet>
+<bullet>%   233,404  (2.51\%) mod_fastcgi%</bullet>
+<bullet>%   222,410  (2.39\%) AuthMySQL%</bullet>
 </list>
 <link href="http://www.securityspace.com/s_survey/data/index.html" leader="Source: ">SecuritySpace.com</link>
 
