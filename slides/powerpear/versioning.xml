@@ -1,0 +1,28 @@
+<slide title="Versioning Standard">
+ <list fontsize="6em" effect="hide">
+  <bullet>Why Standardize?</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>Common Perception of What X.Y Means</bullet>
+  <bullet>Tools Need to Compare Versions</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>major [.minor [.patch]] [pre]</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>"major" version: numeric, 0 means "experimental"</bullet>
+  <bullet>"minor" version: new features ok, BC maintained</bullet>
+  <bullet>"patch" version: bug fixes, tiny changes</bullet>
+  <bullet>"pre" element: {dev,a,b,RC,pl}//N//</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>Comparing:</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>version_compare() function (from PHP 4.1.0)</bullet>
+  <bullet>0.x &lt; 1.x &lt; 2.x ...</bullet>
+  <bullet>0.1 &lt; 0.9 &lt; 0.10 &lt; 1.0 ...</bullet>
+  <bullet>1.0dev1 &lt; 1.0a1 &lt; 1.0b1 &lt; 1.0RC1 &lt; 1.0 &lt; 1.0pl1</bullet>
+ </list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

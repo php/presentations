@@ -1,0 +1,15 @@
+<slide title="Including Files">
+ <list fontsize="6em" effect="hide">
+  <bullet>Including Files</bullet>
+ </list>
+ <list fontsize="4em" marginleft="2em" effect="hide">
+  <bullet>Use include_path</bullet>
+  <bullet>require_once / include_once</bullet>
+  <bullet>always include what you use</bullet>
+  <bullet>(do not include what you do not use)</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>Why dirname(__FILE__) is bad</bullet>
+ </list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

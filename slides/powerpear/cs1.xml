@@ -1,0 +1,22 @@
+<slide title="PEAR Coding Standard">
+<list fontsize="5em" effect="hide">
+<bullet>Indentation: 4 spaces</bullet>
+<bullet>Package Naming: Foo, Foo_Bar</bullet>
+<bullet>Symbol Naming:</bullet>
+</list>
+<list marginleft="2em" fontsize="4em" effect="hide">
+<bullet>Functions: Package_function()</bullet>
+<bullet>Classes: Package, Package_Anotherclass</bullet>
+<bullet>Methods: public(), publicMethod(), _privateMethod()</bullet>
+<bullet>Globals: $_Package_globalname</bullet>
+<bullet>Constants: PACKAGE_CONSTANT</bullet>
+</list>
+<list fontsize="5em" effect="hide">
+<bullet>PhpDoc Comments</bullet>
+<bullet>Including PEAR Code</bullet>
+<bullet>Use of PHP Short Tags</bullet>
+<bullet>Handling php.ini Settings</bullet>
+<bullet>CVS Rules (for cvs.php.net)</bullet>
+</list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

@@ -1,0 +1,15 @@
+<slide title="Case Study: PEAR Wiki">
+ <list fontsize="6em" effect="hide">
+  <bullet>Starting Simple:</bullet>
+ </list>
+ <list marginleft="2em" fontsize="5em" effect="hide">
+  <bullet>One MySQL table</bullet>
+  <bullet>View Page</bullet>
+  <bullet>Edit Page</bullet>
+ </list>
+ <example effect="slide">
+  <title>mywiki.sql</title>
+  <filename>examples/sql/mywiki.sql</filename>
+ </example>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

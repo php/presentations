@@ -1,0 +1,21 @@
+<slide title="go-pear">
+ <list fontsize="6em" effect="hide">
+  <bullet>Requires CLI/CGI version of PHP</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>PHP 4.2.x: configure ... --enable-cli</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>go-pear</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>%lynx -source go-pear.org | php%</bullet>
+  <bullet>Up to date!</bullet>
+  <bullet>Web version available</bullet>
+  <bullet>Doesn't work too great on Windows/MacOS X yet</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>Demonstration</bullet>
+ </list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

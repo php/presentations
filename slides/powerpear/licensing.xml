@@ -1,0 +1,27 @@
+<slide title="Licensing Options">
+ <list fontsize="5em" effect="hide">
+  <bullet>PHP License Recommended</bullet>
+  <bullet>GPL problems</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>C code: PHP/GPL licenses incompatible</bullet>
+  <bullet>PHP code: not really resolved</bullet>
+  <bullet>Applies for _distribution_</bullet>
+ </list>
+ <list fontsize="5em" effect="hide">
+  <bullet>Compatible Licenses:</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>Lesser/Library GPL</bullet>
+  <bullet>Apache / BSD</bullet>
+  <bullet>MPL / QPL</bullet>
+ </list>
+ <list fontsize="5em" effect="hide">
+  <bullet>PEAR Tools are general</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>May be used to manage in-house packages</bullet>
+  <bullet>Install from any URL</bullet>
+ </list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

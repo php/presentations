@@ -1,0 +1,28 @@
+<slide title="PHP Ext. and App. Repository">
+<list fontsize="5em" effect="hide">
+<bullet>Code Follows PEAR Coding Standards</bullet>
+<bullet>Currently Only PHP Code</bullet>
+</list>
+<list marginleft="2em" fontsize="4em" effect="hide">
+<bullet>Nothing stopping PEAR C modules</bullet>
+<bullet>Naming Standards Still Apply</bullet>
+</list>
+<list fontsize="5em" effect="hide">
+<bullet>Package Name Management</bullet>
+</list>
+<list marginleft="2em" fontsize="4em" effect="hide">
+<bullet>Discussion/voting on pear-dev</bullet>
+</list>
+<list fontsize="5em" effect="hide">
+<bullet>Example packages</bullet>
+</list>
+<list marginleft="2em" fontsize="4em" effect="hide">
+<bullet>Auth, Cache, Date, DB, File_Find</bullet>
+<bullet>HTML_Table, HTML_Template_IT, HTTP_Request</bullet>
+<bullet>HTTP_WebDav_Server, I18N, Image_Transform</bullet>
+<bullet>Inline_C, Log, Mail_Mime, Math, MDB, Net_DNS</bullet>
+<bullet>Net_POP3, LiveUser, SOAP, SQL_Parser</bullet>
+<bullet>XML_Parser, XML_Transformer, XML_Tree, +++</bullet>
+</list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

@@ -1,0 +1,10 @@
+<slide title="Error Modes">
+ <list fontsize="6em" effect="hide">
+  <bullet>PEAR_ERROR_RETURN</bullet>
+  <bullet>PEAR_ERROR_PRINT</bullet>
+  <bullet>PEAR_ERROR_DIE</bullet>
+  <bullet>PEAR_ERROR_TRIGGER</bullet>
+  <bullet>PEAR_ERROR_CALLBACK</bullet>
+ </list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

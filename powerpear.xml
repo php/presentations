@@ -1,0 +1,52 @@
+<presentation
+    jskeyboard="1"
+    template="php"
+    logo1="/images/pear.png"
+    logoimage1url="http://pear.php.net/"
+    navbarbackground="#339900"
+    backgroundcol="#f0f0f0"
+    navsize="1.4em">
+<title>Teach Yourself PEAR in 6 Hours</title>
+<topic>PEAR</topic>
+<event>International PHP Conference</event>
+<location>Frankfurt</location>
+<date>2002-11-03</date>
+<speaker>Stig Bakken</speaker>
+<company>Fast Search &amp; Transfer</company>
+<email>ssb@fast.no</email>
+<url>http://conf.php.net/</url>
+<slide>slides/powerpear/titlepage.xml</slide>
+<slide>slides/powerpear/agenda.xml</slide>
+<slide>slides/powerpear/intro1.xml</slide>
+<slide>slides/powerpear/intro2.xml</slide>
+<slide>slides/powerpear/intro3.xml</slide>
+<slide>slides/powerpear/intro4.xml</slide>
+<slide>slides/powerpear/packages1.xml</slide>
+<slide>slides/powerpear/packages2.xml</slide>
+<slide>slides/powerpear/versioning.xml</slide>
+<slide>slides/powerpear/cs1.xml</slide>
+<slide>slides/powerpear/tools1.xml</slide>
+<slide>slides/powerpear/tools2.xml</slide>
+<slide>slides/powerpear/distnet.xml</slide>
+<slide>slides/powerpear/devcom.xml</slide>
+<slide>slides/powerpear/licensing.xml</slide>
+<slide>slides/powerpear/break.xml</slide>
+<slide>slides/powerpear/obtaining.xml</slide>
+<slide>slides/powerpear/go-pear.xml</slide>
+<slide>slides/powerpear/usinginstaller1.xml</slide>
+<slide>slides/powerpear/usinginstaller2.xml</slide>
+<slide>slides/powerpear/fund.xml</slide>
+<slide>slides/powerpear/errors1.xml</slide>
+<slide>slides/powerpear/errors2.xml</slide>
+<slide>slides/powerpear/errors3.xml</slide>
+<slide>slides/powerpear/errors4.xml</slide>
+<slide>slides/powerpear/errors5.xml</slide>
+<slide>slides/powerpear/errors6.xml</slide>
+<slide>slides/powerpear/wiki-intro.xml</slide>
+<slide>slides/powerpear/wiki-src-index.php.xml</slide>
+<slide>slides/powerpear/wiki-src-Wiki.php.xml</slide>
+<slide>slides/powerpear/wiki-src-node.tpl.xml</slide>
+<slide>slides/powerpear/wiki-src-header.tpl.xml</slide>
+<slide>slides/powerpear/wiki-src-footer.tpl.xml</slide>
+<slide>slides/powerpear/wiki-src-edit.tpl.xml</slide>
+</presentation>

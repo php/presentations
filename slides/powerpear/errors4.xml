@@ -1,0 +1,23 @@
+<slide title="PEAR::raiseError">
+ <list fontsize="5em">
+  <bullet>Called statically</bullet>
+ </list>
+ <example type="php">
+  <text><![CDATA[
+if (datacenter_is_burning()) {
+    PEAR::raiseError("power failure imminent");
+}
+
+]]></text></example>
+ <list fontsize="5em">
+  <bullet>Called as part of object</bullet>
+ </list>
+ <example type="php">
+  <text><![CDATA[
+    if ($this->datacenterIsBurning()) {
+        return $this->raiseError("CPU on fire");
+    }
+
+]]></text></example>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

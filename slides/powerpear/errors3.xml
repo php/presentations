@@ -1,0 +1,18 @@
+<slide title="PEAR::isError">
+ <list fontsize="5em">
+  <bullet>PEAR::isError() Implementation</bullet>
+ </list>
+ <example type="php">
+  <text><![CDATA[
+function isError($data) {
+    return (bool)(is_object($data) &&
+                  (get_class($data) == 'pear_error' ||
+                   is_subclass_of($data, 'pear_error')));
+}
+
+]]></text></example>
+ <list fontsize="5em">
+  <bullet>PEAR_Error may be subclassed</bullet>
+ </list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

@@ -1,0 +1,31 @@
+<slide title="Using the Installer (1)">
+ <list fontsize="6em" effect="hide">
+  <bullet>Inventory</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>%pear list%</bullet>
+  <bullet>%pear info //Package//%</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>New Packages</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>%pear install Package%</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>Catching Up</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>%pear upgrade-all%</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>Cleaning House</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em" effect="hide">
+  <bullet>%pear uninstall Package%</bullet>
+ </list>
+ <list fontsize="6em" effect="hide">
+  <bullet>Demonstration</bullet>
+ </list>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    

@@ -1,0 +1,23 @@
+<slide title="PEAR Errors (2)">
+ <list fontsize="5em">
+  <bullet>PEAR::raiseError()</bullet>
+ </list>
+ <example type="php">
+  <text><![CDATA[
+    if (!@fopen($file, "r")) {
+        return PEAR::raiseError($php_errormsg);
+    }
+
+]]></text></example>
+ <list fontsize="5em">
+  <bullet>PEAR::isError()</bullet>
+ </list>
+ <example type="php">
+  <text><![CDATA[
+$res = open_file();
+if (PEAR::isError($res)) {
+    die("Couldn't open file: " . $res->getMessage());
+}
+]]></text></example>
+ <list fontsize="2em" effect="hide"><bullet>next</bullet></list>
+</slide>    
