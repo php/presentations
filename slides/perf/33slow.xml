@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Challenge: Improve eZ publish 3.3 performance</title>
+
+	<list>
+	<li>Too much memory usage</li>
+	<li>Too much CPU usage</li>
+	</list>
+
+	<image marginleft='4em' filename='33-noaccel.png'/>
+	
+</slide>

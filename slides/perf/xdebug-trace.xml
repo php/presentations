@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Tracing the Problems</title>
+
+	<list>
+	<li>Xdebug's Trace Features</li>
+	<li>Trace function calls</li>
+	<li>Provides details on memory usage</li>
+	</list>
+
+	<image align='right' marginright="3em" filename='tracefile.png'/>
+	
+</slide>

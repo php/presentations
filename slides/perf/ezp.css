@@ -1,0 +1,56 @@
+<style title="Default" type="text/css">
+body {
+	font-size: 10pt;
+	margin-left:290px;
+	margin-right:0em;
+	margin-bottom:0em;
+	background-image: url(presentations/slides/perf/ezp.png);
+	background-attachment: fixed;
+}
+div.sticky {
+	margin: 0;
+	position: fixed;
+	top: 0em;
+	left: 290px;
+	right: auto;
+	bottom: auto;
+}
+div.navbar {
+padding: 4;
+margin: 0;
+height: 14em;
+font-family: verdana, tahoma, arial, helvetica, sans-serif;
+z-index: 99;
+}
+div.navbar_title, div.navbar_title a {
+font-size: 32px;
+color: #698fe5;
+text-decoration: none;
+text-align: left;
+font-weight: bold;
+margin-top: 20px;
+}
+div.navbar_nr a {
+font-size: 16px;
+color: #77a;
+text-decoration: none;
+position: fixed;
+right: 10px;
+bottom: 0px;
+}
+div.mainarea {
+position: fixed;
+top: 150px;
+}
+ul.pres {
+list-style: circle;
+font-size: 24pt;
+}
+li.pres_bullet {
+font-size: 24pt;
+}
+	
+div.blurb {
+	font-size: 24px;
+}
+</style>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Reducing Memory Usage</title>
+
+	<list>
+	<li>Processed vs. Compiled Templates</li>
+	<li>Loading Data Types on demand</li>
+	<li>From 11MB to 7MB</li>
+	</list>
+
+	<example fontsize="1em">
+@@ -157,8 +157,15 @@
+ */
+ function &amp;create( $dataTypeString )
+ {
+     $types =&amp; $GLOBALS["eZDataTypes"];
+     $def = null;
++    if ( !isset( $types[$dataTypeString] ) )
++    {
++        eZDataType::loadAndRegisterType( $dataTypeString );
++    }
++
+     if ( isset( $types[$dataTypeString] ) )
+     {
+         $className = $types[$dataTypeString];
+@@ -709,6 +716,4 @@
+     var $Name;
+ }
+
+-eZDataType::loadAndRegisterAllTypes();
+-
+	</example>
+	
+</slide>

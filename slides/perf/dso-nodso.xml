@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Apache Sucks!</title>
+
+	<list>
+	<li>If you're using PHP as DSO module</li>
+	<li>So use static compiled modules</li>
+	</list>
+
+	<image marginleft='4em' filename='dso.png'/>
+	
+</slide>

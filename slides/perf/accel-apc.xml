@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Accelerating: APC</title>
+
+	<list>
+	<li>Acceleraters store PHP 'Byte Code'</li>
+	<li>Shared Memory</li>
+	<li>Faster Execution</li>
+	</list>
+
+	<image marginleft='4em' filename='33-accel.png'/>
+	
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Finding the Bottleneck</title>
+
+	<list>
+	<li>Xdebug's Profiling Features</li>
+	<li>GUI analysing with KCachegrind</li>
+	<li>Provides details on CPU usage</li>
+	</list>
+
+	<image align='right' marginright="3em" filename='xdebug-profile.png'/>
+	
+</slide>
