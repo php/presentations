@@ -1,12 +1,13 @@
 <slide title="References">
-<example title="References are not pointers!"><![CDATA[<?php
+
+<example title="References are not pointers!" align="left"><![CDATA[<?php
     $foo = 'Hello';
     $bar = 'World';
 ?>]]></example>
 
 <image marginleft="5em" filename="ref1.png" clear="left"/>
 
-<example><![CDATA[<?php
+<example align="left"><![CDATA[<?php
     $bar = & $foo;
 ?>]]></example>
 
