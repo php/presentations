@@ -1,10 +1,15 @@
 <?php
-class dba_reader implements spl::iterator {
-
+class dba_reader 
+	implements spl::iterator {
     public $db = NULL;
 
-    function __construct($file, $handler) {
-        $this->db = dba_open($file, 'r', $handler);
+    function __construct($file, $handler) 
+	{
+        $this->db = dba_open(
+			$file, 
+			'r', 
+			$handler
+		);
     }
     
     function new_iterator() {
@@ -12,7 +17,9 @@ class dba_reader implements spl::iterator {
     }
 }
 
-class dba_iter implements spl::sequence_assoc {
+class dba_iter 
+	implements spl::sequence_assoc 
+{
     private $obj;
     private $key = NULL;
     private $val = NULL;
@@ -22,9 +29,11 @@ class dba_iter implements spl::sequence_assoc {
     }
 
     function reset() {
-        if ($this->obj->db) {
-            $this->key = dba_firstkey($this->obj->db);
-        }
+        if (!$this->obj->db) {
+			return;
+		}
+        $this->key = 
+			dba_firstkey($this->obj->db);
     }
 
     function elem() {
@@ -32,12 +41,17 @@ class dba_iter implements spl::sequence_assoc {
     }
 
     function next() {
-        $this->key = dba_nextkey($this->obj->db);
+        $this->key = 
+			dba_nextkey($this->obj->db);
     }
 
     function more() {
-        if ($this->obj->db && $this->key !== false) {
-            $this->val = dba_fetch($this->key, $this->obj->db);
+        if ($this->obj->db && 
+			$this->key !== false) {
+            $this->val = dba_fetch(
+				$this->key, 
+				$this->obj->db
+			);
             return true;
         } else {
             return false;
