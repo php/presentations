@@ -8,15 +8,6 @@
 <email>jimw@apache.org</email>
 <url>http://conf.php.net/community</url>
 
-<!--
-* Mailing Lists
-** as news groups
-** comp.lang.php
-* Conferences
-* Sites
-** machines
--->
-
 <slide>slides/intro/titlepage.xml</slide>
 
 <!-- * History -->
@@ -35,13 +26,19 @@
 <slide>slides/community/bugs.xml</slide>
 
 <!-- * Documentation -->
+<slide>slides/community/docs.xml</slide>
 
 <!-- * Mailing Lists -->
 <slide>slides/community/mail-lists.xml</slide>
 
 <!-- * Conferences -->
+<slide>slides/community/conferences.xml</slide>
 
 <!-- * User Groups -->
+<slide>slides/community/usergroups.xml</slide>
+
+<!-- * Sites -->
+<slide>slides/community/sites.xml</slide>
 
 <slide>slides/community/fin.xml</slide>
 
