@@ -18,7 +18,7 @@ static zend_function_entry php_my_class_functions[] = {
 Next, in our module_init function we initialize and register our class definition.
 </blurb>
 
-<example fontsize="1em" type="c"><![CDATA[PHP_MINIT_FUNCTION(test) {
+<example fontsize="1.5em" type="c"><![CDATA[PHP_MINIT_FUNCTION(test) {
     zend_class_entry my_class_entry;
 
     INIT_CLASS_ENTRY(my_class_entry, "my_class", php_my_class_functions);
