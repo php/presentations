@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:mn="http://usefulinc.com/rss/manifest/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+  <channel rdf:about="http://metallo.scripps.edu/services/rest.php?func=metallopdb&amp;count=10&amp;metal=zn&amp;mode=random&amp;format=rss">
+    <title>MDB - The Metalloprotein Database and Browser</title>
+    <link>http://metallo.scripps.edu</link>
+    <description>Data retrieved using the MDB API</description>
+    <image rdf:resource="http://metallo.scripps.edu/images/mdb_logo_rss.png"/>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1anv&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1dzu&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1ffy&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1gax&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1i94&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1jk1&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1jpu&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1lnf&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1tli&amp;metal[]=zn"/>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1zin&amp;metal[]=zn"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  <image rdf:about="http://metallo.scripps.edu/images/mdb_logo_rss.png">
+     <title>MDB</title>
+     <url>http://metallo.scripps.edu/images/mdb_logo_rss.png</url>
+     <link>http://metallo.scripps.edu</link>
+     <dc:description>Data retrieved using the MDB API</dc:description>
+  </image>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1anv&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1anv&amp;metal[]=zn</link>
+    <title>(Zn) 1anv [deposited on: 1996/03/14, revised on: 1997/02/12]</title>
+    <description>Header: [dna-binding protein 14-mar-96 1anv]
+Title: [adenovirus 5 dbp/uranyl fluoride soak]
+Compound: [mol_id: 1; molecule: adenovirus single-stranded dna-binding protein; chain: null; fragment: c-terminal domain, residues 174 - 529]
+Source: [mol_id: 1; organism_scientific: human adenovirus type 5]
+Keywords: [dna-binding protein, zinc-finger, phosphorylation, nuclear protein] Authors[p.n.kanellopoulos,d.tsernoglou,p.c.van der vliet,p.a.tucker] ExpData[x-ray diffraction] R-value[0.20] Resolution[2.70]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1dzu&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1dzu&amp;metal[]=zn</link>
+    <title>(Zn) 1dzu [deposited on: 2000/03/07, revised on: 2000/07/20]</title>
+    <description>Header: [lyase (aldehyde) 07-mar-00 1dzu]
+Title: [l-fuculose-1-phosphate aldolase from escherichia coli mutant t26a]
+Compound: [mol_id: 1; molecule: l-fuculose-1-phosphate aldolase; chain: p; ec: 4.1.2.17; engineered: yes; mutation: yes]
+Source: [mol_id: 1; organism_scientific: escherichia coli; expression_system: escherichia coli; expression_system_strain: jm 105; expression_system_plasmid: pkkfa2-t26a; other_details: t26a substitution performed with phosphorothioate method using m13mp19]
+Keywords: [bacterial l-fucose metabolism, cleavage of l-fuculose-1-phosphate to dihydroxyacetonephosphate and l-lactaldehyde, mutant structure] Authors[a.c.joerger,g.e.schulz] ExpData[x-ray diffraction] R-value[0.15] Resolution[2.09]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1ffy&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1ffy&amp;metal[]=zn</link>
+    <title>(Zn) 1ffy [deposited on: 2000/07/26, revised on: 2000/08/07]</title>
+    <description>Header: [ligase/rna 26-jul-00 1ffy]
+Title: [insights into editing from an ile-trna synthetase structure with trna(ile) and mupirocin]
+Compound: [mol_id: 1; molecule: isoleucyl-trna synthetase; chain: a; synonym: isoleucine--trna ligase, ilers; ec: 6.1.1.5; engineered: yes; mol_id: 2; molecule: isoleucyl-trna; chain: t; engineered: yes]
+Source: [mol_id: 1; organism_scientific: staphylococcus aureus; organism_common: bacteria; expression_system: escherichia coli; mol_id: 2; synthetic: yes; other_details: in vitro transcription of e.coli trna sequence]
+Keywords: [protein-rna complex, metal ions, editing trna synthetase, double-sieve, ligase/rna, mupirocin] Authors[l.f.silvian,j.wang,t.a.steitz] ExpData[x-ray diffraction] R-value[0.24] Resolution[2.20]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1gax&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1gax&amp;metal[]=zn</link>
+    <title>(Zn) 1gax [deposited on: 2000/06/23, revised on: 2000/12/06]</title>
+    <description>Header: [ligase/rna 23-jun-00 1gax]
+Title: [crystal structure of thermus thermophilus valyl-trna synthetase complexed with trna(val) and valyl-adenylate analogue]
+Compound: [mol_id: 1; molecule: valyl-trna synthetase; chain: a, b; synonym: valrs; ec: 6.1.1.9; engineered: yes; mol_id: 2; molecule: trna(val); chain: c, d; engineered: yes]
+Source: [mol_id: 1; organism_scientific: thermus thermophilus; organism_common: bacteria; expression_system: escherichia coli; expression_system_common: bacteria; expression_system_vector_type: plasmid; expression_system_plasmid: pk7; mol_id: 2; synthetic: yes; other_details: sequence from thermus thermophilus]
+Keywords: [rossmann fold, coiled coil, trna] Authors[s.fukai,o.nureki,s.sekine,a.shimada,j.tao,d.g.vassylyev, s.yokoyama] ExpData[x-ray diffraction] R-value[0.25] Resolution[2.90]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1i94&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1i94&amp;metal[]=zn</link>
+    <title>(Zn) 1i94 [deposited on: 2001/03/18, revised on: 2001/04/12]</title>
+    <description>Header: [ribosome 18-mar-01 1i94]
+Title: [crystal structures of the small ribosomal subunit with tetracycline, edeine and if3]
+Compound: [mol_id: 1; molecule: 16s rrna; chain: a; mol_id: 2; molecule: 30s ribosomal protein s2; chain: b; mol_id: 3; molecule: 30s ribosomal protein s3; chain: c; mol_id: 4; molecule: 30s ribosomal protein s4; chain: d; mol_id: 5; molecule: 30s ribosomal protein s5; chain: e; mol_id: 6; molecule: 30s ribosomal protein s6; chain: f; mol_id: 7; molecule: 30s ribosomal protein s7; chain: g; mol_id: 8; molecule: 30s ribosomal protein s8; chain: h; mol_id: 9; molecule: 30s ribosomal protein s9; chain: i; mol_id: 10; molecule: 30s ribosomal protein s10; chain: j; mol_id: 11; molecule: 30s ribosomal protein s11; chain: k; mol_id: 12; molecule: 30s ribosomal protein s12; chain: l; mol_id: 13; molecule: 30s ribosomal protein s13; chain: m; mol_id: 14; molecule: 30s ribosomal protein s14; chain: n; mol_id: 15; molecule: 30s ribosomal protein s15; chain: o; mol_id: 16; molecule: 30s ribosomal protein s16; chain: p; mol_id: 17; molecule: 30s ribosomal protein s17; chain: q; mol_id: 18; molecule: 30s ribosomal protein s18; chain: r; mol_id: 19; molecule: 30s ribosomal protein s19; chain: s; mol_id: 20; molecule: 30s ribosomal protein s20; chain: t; mol_id: 21; molecule: 30s ribosomal protein thx; chain: u]
+Source: [mol_id: 1; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 2; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 3; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 4; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 5; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 6; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 7; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 8; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 9; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 10; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 11; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 12; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 13; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 14; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 15; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 16; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 17; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 18; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 19; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 20; organism_scientific: thermus thermophilus; organism_common: bacteria; mol_id: 21; organism_scientific: thermus thermophilus; organism_common: bacteria]
+Keywords: [] Authors[m.pioletti,f.schluenzen,j.harms,r.zarivach,m.gluehmann, h.avila,h.bartels,c.jacobi,t.hartsch,a.yonath,f.franceschi] ExpData[x-ray diffraction] R-value[0.20] Resolution[3.20]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1jk1&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1jk1&amp;metal[]=zn</link>
+    <title>(Zn) 1jk1 [deposited on: 2001/07/11, revised on: 2001/10/19]</title>
+    <description>Header: [transcription/dna 11-jul-01 1jk1]
+Title: [zif268 d20a mutant bound to wt dna site]
+Compound: [mol_id: 1; molecule: zif268; chain: a; fragment: zinc fingers (residues 333-421); synonym: early growth response protein 1; engineered: yes; mutation: yes; mol_id: 2; molecule: 5'-d(*ap*gp*cp*gp*tp*gp*gp*gp*cp*gp*g)-3'; chain: b; engineered: yes; mol_id: 3; molecule: 5'-d(*tp*cp*cp*gp*cp*cp*cp*ap*cp*gp*c)-3'; chain: c; engineered: yes]
+Source: [mol_id: 1; organism_scientific: mus musculus; organism_common: mouse; expression_system: escherichia coli; expression_system_common: bacteria; expression_system_strain: bl21 (de3); expression_system_vector_type: plasmid; expression_system_plasmid: pzifd20a; mol_id: 2; synthetic: yes; mol_id: 3; synthetic: yes]
+Keywords: [double-stranded dna, protein-dna complex] Authors[j.c.miller,c.o.pabo] ExpData[x-ray diffraction] R-value[0.21] Resolution[1.90]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1jpu&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1jpu&amp;metal[]=zn</link>
+    <title>(Zn) 1jpu [deposited on: 2001/08/03, revised on: 2001/10/03]</title>
+    <description>Header: [oxidoreductase 03-aug-01 1jpu]
+Title: [crystal structure of bacillus stearothermophilus glycerol dehydrogenase]
+Compound: [mol_id: 1; molecule: glycerol dehydrogenase; chain: a; ec: 1.1.1.6; engineered: yes; mutation: yes]
+Source: [mol_id: 1; organism_scientific: bacillus stearothermophilus; gene: glda or gld; expression_system: escherichia coli; expression_system_common: bacteria; expression_system_strain: jm103; expression_system_vector_type: plasmid; expression_system_plasmid: pkk233-2]
+Keywords: [nad, glycerol metabolism] Authors[s.n.ruzheinikov,j.burke,s.sedelnikova,p.j.baker,r.taylor, p.a.bullough,n.m.muir,m.g.gore,d.w.rice] ExpData[x-ray diffraction] R-value[0.16] Resolution[1.80]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1lnf&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1lnf&amp;metal[]=zn</link>
+    <title>(Zn) 1lnf [deposited on: 1994/05/13, revised on: 1995/05/08]</title>
+    <description>Header: [hydrolase (metalloprotease) 13-may-94 1lnf]
+Title: []
+Compound: [thermolysin (e.c.3.4.24.27)]
+Source: [(bacillus thermoproteolyticus)]
+Keywords: [] Authors[d.r.holland,b.w.matthews] ExpData[x-ray diffraction] R-value[0.15] Resolution[1.70]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1tli&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1tli&amp;metal[]=zn</link>
+    <title>(Zn) 1tli [deposited on: 1998/10/27, revised on: 2000/02/18]</title>
+    <description>Header: [hydrolase 27-oct-98 1tli]
+Title: [thermolysin (2% isopropanol soaked crystals)]
+Compound: [mol_id: 1; molecule: thermolysin; chain: a; ec: 3.4.24.27]
+Source: [mol_id: 1; organism_scientific: bacillus thermoproteolyticus]
+Keywords: [metalloproteinase, organic solvent] Authors[a.c.english,s.h.done,c.r.groom,r.e.hubbard] ExpData[x-ray diffraction] R-value[0.17] Resolution[2.05]</description>
+  </item>
+
+  <item rdf:about="http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1zin&amp;metal[]=zn">
+    <link>http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1zin&amp;metal[]=zn</link>
+    <title>(Zn) 1zin [deposited on: 1996/06/07, revised on: 1997/06/16]</title>
+    <description>Header: [phosphotransferase 07-jun-96 1zin]
+Title: [adenylate kinase with bound ap5a]
+Compound: [mol_id: 1; molecule: adenylate kinase; chain: null; synonym: adk; ec: 2.7.4.3; other_details: zinc finger]
+Source: [mol_id: 1; organism_scientific: bacillus stearothermophilus]
+Keywords: [zinc finger] Authors[m.b.berry,g.n.phillips junior] ExpData[x-ray diffraction] R-value[0.17] Resolution[1.60]</description>
+  </item>
+
+  <rdf:Description rdf:ID="manifest">
+    <mn:channels>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://metallo.scripps.edu/services/rest.php?func=metallopdb&amp;count=10&amp;metal=zn&amp;mode=random&amp;format=rss"/>
+      </rdf:Seq>
+    </mn:channels>
+  </rdf:Description>
+
+</rdf:RDF>
