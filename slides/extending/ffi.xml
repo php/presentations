@@ -1,0 +1,10 @@
+<slide title="FFI">
+<list>
+ <bullet>Foreign function interface</bullet>
+ <bullet>Load a dynamic library and start calling functions</bullet>
+ <bullet>Will also allow for mapping types in an OO way</bullet>
+ <bullet>Pass PHP functions to C functions that take callbacks</bullet>
+ <bullet>For PHP 5</bullet>
+ <bullet>Being written by Wez Furlong</bullet>
+</list>
+</slide>

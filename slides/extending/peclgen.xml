@@ -1,0 +1,22 @@
+<slide title="PECL_Gen">
+<list>
+<bullet>Requires PHP 5</bullet>
+<bullet>Written in pure PHP</bullet>
+<bullet>Uses XML description of extension to create</bullet>
+<bullet>Creates Visual Studio project files in addition to config.m4</bullet>
+</list>
+<example title="PECL_Gen example"><![CDATA[
+...
+    <function role='internal' name='MINFO'>
+      <code>
+<![CDATA[
+  php_info_print_table_start();
+  php_info_print_table_header(2, "test", "table");
+  php_info_print_table_end();
+]]>]]&gt;<![CDATA[
+      </code>
+    </function>
+...
+]]>
+</example>
+</slide>
