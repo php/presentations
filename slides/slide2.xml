@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide title="Files">
-  <table title="File Layout" columns="2">
+  <table title="File Layout" columns="2" border="0">
   <cell>config.php-dist</cell><cell>Rename to config.php and customize</cell>
   <cell>index.php</cell><cell>Main presentation list page</cell>
   <cell>show.php</cell><cell>Slide navigation and control</cell>
   <cell>objects.php</cell><cell>Display code</cell>
   </table>
 
-  <example fontsize="1.2em">	
-	<filename>objects.php</filename>
-  </example>
 </slide>
