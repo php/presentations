@@ -1,13 +1,13 @@
 <slide title="PHPEdit">
+<link href="http://www.phpedit.com" align="center">http://www.phpedit.com</link>
 <list>
- <bullet>http://www.phpedit.com</bullet>
  <bullet>Win32-only</bullet>
  <bullet>Syntax Highlighting</bullet>
- <bullet>Integrated Debugging</bullet>
+ <bullet>Integrated debugging (local with CGI version, remote with DBG</bullet>
  <bullet>Code "hints"</bullet>
  <bullet>Code browser</bullet>
 </list>
 
-<!-- TODO: insert screenshot -->
+<image filename="slides/pragmatic/phpedit.jpg" align="center" />
 
 </slide>
