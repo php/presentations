@@ -1,0 +1,44 @@
+<presentation
+	template="php2"
+	titlecolor="#660066"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-yahoo-95x50.png"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+
+<topic>PHP</topic>
+<title>Do you PHP?</title>
+<date>Oct.10, 2003</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.lerdorf.com/itdk</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/php-many.xml</slide>
+  <slide>slides/intro/numbers.xml</slide>
+  <slide>slides/intro/platforms.xml</slide>
+  <slide>slides/intro/serverside.xml</slide>
+  <slide>slides/intro/embed2.xml</slide>
+  <slide>slides/intro/basics.xml</slide>
+  <slide>slides/intro/modes.xml</slide>
+  <slide>slides/intro/forms2.xml</slide>
+  <slide>slides/intro/php-intro.xml</slide>
+  <slide>slides/intro/image.xml</slide>
+  <slide>slides/intro/image_colors4.xml</slide>
+  <slide>slides/intro/image_colors6.xml</slide>
+  <slide>slides/intro/image2.xml</slide>
+  <slide>slides/intro/image2a.xml</slide>
+  <slide>slides/intro/gdchart.xml</slide>
+  <slide>slides/intro/image_cache.xml</slide>
+  <slide>slides/intro/pdf.xml</slide>
+  <slide>slides/intro/flash_ming.xml</slide>
+  <slide>slides/intro/flash_ming2.xml</slide>
+  <slide>slides/intro/squid1.xml</slide>
+  <slide>slides/intro/squid2.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+  <slide>slides/intro/resources.xml</slide>
+</chapter>
+
+</presentation>
