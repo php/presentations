@@ -1,0 +1,29 @@
+<slide title="Simple SOAP Client">
+
+<example type="text" title="SOAP::Lite" fontsize='1.4em'>
+<![CDATA[
+use SOAP::Lite;
+
+my $endpoint = 'http://services.xmethods.net:80/perl/soaplite.cgi';
+
+my $uri = 'urn:xmethodsBabelFish';
+
+my $soapObj = SOAP::Lite->new ('xmlschema' => '1999',
+                    'proxy' => $endpoint, 'uri' => $uri,);
+
+my $tm = SOAP::Data->name('translationmode')->value('en_es');
+
+my $text = SOAP::Data->name('sourcedata')->value('Hello World');
+
+my $response = $soapObj->call('BabelFish',$tm,$text);
+
+print $response->result;
+]]>
+</example>
+
+<blurb type="text" title="Example Output">
+<![CDATA[
+Hola Mundo
+]]>
+</blurb>
+</slide>

@@ -1,0 +1,25 @@
+<slide title="Python SOAP">
+<list>
+<bullet>SOAPpy</bullet>
+</list>
+<list marginleft="2em">
+<bullet>SOAP 1.1</bullet>
+<bullet>Supports 1999/2001 Schema</bullet>
+<bullet>WSDL Support</bullet>
+<bullet>No recent development work</bullet>
+</list>
+<list>
+<bullet>ZSI (formerly Zolera)</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Rich Salz</bullet>
+<bullet>SOAP 1.1</bullet>
+<bullet>Supports 1999/2001 Schema</bullet>
+<bullet>SOAP with Attachments</bullet>
+<bullet>NO WSDL Support</bullet>
+<bullet>www.soaplite.com</bullet>
+</list>
+<list>
+<bullet>pywebsvcs.sourceforge.net</bullet>
+</list>
+</slide>

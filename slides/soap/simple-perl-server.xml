@@ -1,0 +1,25 @@
+<slide title="Simple SOAP Server">
+
+<example type="text" title="SOAP::Lite" fontsize='1.4em'>
+<![CDATA[
+#!perl -w
+
+use SOAP::Transport::HTTP;
+
+SOAP::Transport::HTTP::CGI->
+	dispatch_to('Demo')->handle;
+
+package Demo;
+
+sub hi { return "hello, world"; }
+
+sub bye { return "goodbye, cruel world"; }
+]]>
+</example>
+
+<blurb type="text" title="Example Output">
+<![CDATA[
+mi nombre es Dick Hardt.
+]]>
+</blurb>
+</slide>

@@ -1,0 +1,18 @@
+<slide title="Installing SOAP">
+<list>
+<bullet>ActiveState PPM</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Perl: ppm install SOAP-Lite</bullet>
+<bullet>Python: ppm install ZSI</bullet>
+<bullet>Python (2.1): ppm install GoogleSearch</bullet>
+</list>
+<list>
+<bullet>PEAR</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Needs a few modules, Mail_Mime, Net_DIME and SOAP</bullet>
+<bullet>See pear.php.net for the package manager installation</bullet>
+<bullet>pear install MODULE_NAME</bullet>
+</list>
+</slide>

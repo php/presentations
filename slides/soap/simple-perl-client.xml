@@ -1,0 +1,22 @@
+<slide title="Simple SOAP Client">
+
+<example type="text" title="SOAP::Lite" fontsize='1.4em'>
+<![CDATA[
+use SOAP::Lite;
+
+my $babelfish = SOAP::Lite ->
+	    service('http://www.xmethods.net/sd/BabelFishService.wsdl');
+
+my $nameis = $babelfish->
+	    BabelFish('en_es','My name is Dick Hardt.');
+
+print $nameis;
+]]>
+</example>
+
+<blurb type="text" title="Example Output">
+<![CDATA[
+mi nombre es Dick Hardt.
+]]>
+</blurb>
+</slide>

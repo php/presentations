@@ -1,0 +1,16 @@
+<slide title="Simple SOAP Server">
+
+<example type="text" title="SOAP::Lite" fontsize='1.4em'>
+<![CDATA[
+use bablefish;
+
+my $client = WebService::BabelFish->new;
+
+my $response = $client->
+
+BabelFish('en_es','Open Source is cool.');
+
+print $ response->result."\n";
+]]>
+</example>
+</slide>
