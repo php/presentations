@@ -1,0 +1,32 @@
+<slide title="Define the functions">
+<blurb>From your plan, generate a function definition file</blurb>
+<example type="shell" title="xmms.def"><![CDATA[int    xmms_start(void)        Start up XMMS if it is not already running
+bool   xmms_is_running(void)   Check if XMMS is running
+int    xmms_playlist_length(void) Get the number of songs in the playlist
+int    xmms_playlist_pos(void) Get current playlist position
+array  xmms_playlist([mixed pos]) Get full or partial playlist info
+void   xmms_play([int pos])    Play current or provided song position
+void   xmms_stop(void)         Stop playing current song
+void   xmms_pause(void)        Pause current song (toggle)
+void   xmms_quit(void)         Force XMMS to terminate
+int    xmms_version(void)      Get the XMMS version
+void   xmms_next(void)         Go to next song in playlist
+void   xmms_prev(void)         Go to previous song in playlist
+string xmms_status(void)       Returns current XMMS status
+bool   xmms_is_repeat(void)    Get repeat setting
+int    xmms_repeat([bool setting]) Toggle/Set repeat setting
+bool   xmms_is_shuffle(void)   Get shuffle setting
+int    xmms_shuffle([bool setting]) Toggle/Set shuffle setting
+void   xmms_add(mixed songs)   Add entries to playlist
+void   xmms_delete(int pos)    Delete entry from playlist
+void   xmms_clear(void)        Clear playlist
+array  xmms_current(void)      Get current song info
+void   xmms_volume([int level [, int right_level]]) Set volume
+void   xmms_url(string url)    Play from url
+void   xmms_skin([string skin_file]) Set XMMS skin
+float  xmms_time([float time_pos]) Get/Set output time position
+void   xmms_main_win(bool setting) Hide/Unhide main xmms window
+void   xmms_pl_win(bool setting) Hide/Unhide playlist xmms window
+void   xmms_eq_win(bool setting) Hide/Unhide equalizer xmms window
+object xmms([bool start])      XMMS class constructor]]></example>
+</slide>

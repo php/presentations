@@ -1,0 +1,17 @@
+<slide title="Getting Started">
+<list>
+<bullet>Grab a copy of the current php4 CVS tree</bullet>
+<bullet>Read README.EXT_SKEL</bullet>
+<bullet>Read README.SELF-CONTAINED-EXTENSIONS</bullet>
+<bullet>Look at the existing extensions for code examples</bullet>
+<bullet>Follow this example</bullet>
+</list>
+<example title="Grabbing a copy of the CVS tree - Anonymous CVS instructions" type="shell"><![CDATA[% cvs -d:pserver:cvsread@cvs.php.net:/repository login
+Password: phpfi
+% cvs -d:pserver:cvsread@cvs.php.net:/repository co php4
+% cd php4
+% cvs -d:pserver:cvsread@cvs.zend.com:/repository login
+Password: Zend
+% cvs -d:pserver:cvsread@cvs.zend.com:/repository co Zend
+% cvs -d:pserver:cvsread@cvs.zend.com:/repository co TSRM]]></example>
+</slide>

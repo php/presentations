@@ -1,0 +1,16 @@
+<slide title="Memory Management">
+
+<blurb>
+PHP has its own memory management functions which adds a safety net in case you
+forget to free things.  It also helps catch overflows and other memory-related
+issues.  The functions are exactly like their typical C counterparts:
+</blurb>
+
+<example type="c"><![CDATA[emalloc
+efree
+estrdup
+estrndup
+ecalloc
+erealloc]]></example>
+
+</slide>

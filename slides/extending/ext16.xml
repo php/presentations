@@ -1,0 +1,58 @@
+<slide title="Setting and Accessing Global Variables">
+
+<blurb>
+If you need extension-wide global variables, you can't just use standard
+C-style static variables because PHP needs to be thread-safe.  To achieve this,
+globals are placed in a struct and passed around.  To add global variables to
+your extension, first define them in your header file:
+</blurb>
+
+<example type="c"><![CDATA[ZEND_BEGIN_MODULE_GLOBALS(test)
+    int   some_integer;
+    char *some_string;
+ZEND_END_MODULE_GLOBALS(test)
+
+/* shortcut macros */
+#ifdef ZTS
+# define TEST_G(v) TSRMG(test_globals_id, zend_test_globals *, v)
+#else
+# define TEST_G(v) (test_globals.v)
+#endif]]></example>
+
+<blurb>
+Then in your .c file:
+</blurb>
+
+<example type="c"><![CDATA[ZEND_DECLARE_MODULE_GLOBALS(foo)
+
+static void php_foo_init_globals(zend_foo_globals *foo_globals)
+{
+    foo_globals->some_integer = 0;
+    foo_globals->some_string = NULL;
+}]]></example>
+
+<blurb>
+And in your MINIT function:
+</blurb>
+
+<example type="c"><![CDATA[ZEND_INIT_MODULE_GLOBALS(foo, php_foo_init_globals, NULL);]]></example>
+
+<blurb>
+Now, anywhere you need to get/set one of these variables, use 
+%TEST_G(some_integer)%.  This will only 
+work if the test_globals struct is available in the function, of course.  All
+the standard PHP functions will automatically have the globals struct
+available, but if you write your own utility functions you either have to call
+%TSRMLS_FETCH();% at the top of the function, or better 
+yet, pass in the TSRM struct.  Like this:
+</blurb>
+
+<example type="c"><![CDATA[test_utility_function(my_arg TSRMLS_CC);]]></example>
+
+<blurb>
+And the function is declared using:
+</blurb>
+
+<example type="c"><![CDATA[static void test_utility_function(int my_arg TSRMLS_DC)]]></example>
+
+</slide>

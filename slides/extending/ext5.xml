@@ -1,0 +1,39 @@
+<slide title="Creating a skeleton extension">
+<blurb>
+Run the *ext_skel* script which creates
+all the required skeleton files.
+</blurb>
+<example type="shell"><![CDATA[% cd php4/ext
+% ./ext_skel --extname=xmms --proto=xmms.def
+Creating directory xmms
+Creating basic files: config.m4 Makefile.in .cvsignore xmms.c 
+                      php_xmms.h CREDITS EXPERIMENTAL 
+                      tests/001.phpt xmms.php [done].
+% ls xmms
+config.m4    CREDITS       EXPERIMENTAL    xmms.c 
+xmms.php     Makefile.in   php_xmms.h      tests/]]></example>
+
+<blurb title="Standalone or Embedded?">
+At this point you have a choice on how to proceed.  You can either develop your
+extension under the main PHP framework where you run the top-level *buildconf*
+script to include your extension in PHP's main configuration script, or you can
+develop your extension in a completely separate directory where you run the
+*phpize* script to populate your extension directory with all the required
+files.
+</blurb>
+
+<example title="Embedded" type="shell"><![CDATA[% cd xmms
+% vi config.m4
+% cd ../..
+% ./buildconf
+% ./configure --[with|enable]-xmms
+% make]]></example>
+
+<example title="Standalone" type="shell"><![CDATA[% mv xmms /tmp
+% cd /tmp/xmms
+% vi config.m4
+% phpize
+% ./configure --[with|enable]-xmms
+% make]]></example>
+
+</slide>

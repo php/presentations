@@ -1,0 +1,16 @@
+<slide title="Before you dive in...">
+<blurb>
+You need to make sure your environment is ready.  Install bison, flex, 
+autoconf, libtool and of course gcc and make.
+</blurb>
+
+<example title="Next, install the command-line version of PHP" type="shell"><![CDATA[% cd php4
+% ./configure --with-mysql=/usr --with-pgsql --with-zlib \
+  --enable-inline-optimization --with-config-file-path=/etc
+% make
+% make install]]></example>
+
+<example title="Test It"><![CDATA[% /usr/local/bin/php -v
+4.0.8-dev]]></example>
+
+</slide>

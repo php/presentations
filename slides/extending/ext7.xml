@@ -1,0 +1,83 @@
+<slide title="Structure">
+<blurb>
+The structure of a typical extension contains the following components:
+</blurb>
+
+<example title="includes" type="c"><![CDATA[#ifdef HAVE_CONFIG_H
+#include "config.h"
+#endif
+
+#include "php.h"
+#include "php_ini.h"
+#include "ext/standard/info.h"
+#include "php_xmms.h"]]></example>
+
+<example title="function_entry" type="c"><![CDATA[function_entry xmms_functions[] = {
+    PHP_FE(confirm_xmms_compiled,    NULL)
+    {NULL, NULL, NULL}
+};]]></example>
+
+<example title="module_entry" type="c"><![CDATA[zend_module_entry xmms_module_entry = {
+    "xmms",
+    xmms_functions,
+    PHP_MINIT(xmms),
+    PHP_MSHUTDOWN(xmms),
+    PHP_RINIT(xmms),
+    PHP_RSHUTDOWN(xmms),
+    PHP_MINFO(xmms),
+    STANDARD_MODULE_PROPERTIES
+};]]></example>
+
+<example title="PHP_INI_BEGIN" type="c"><![CDATA[PHP_INI_BEGIN()
+    STD_PHP_INI_ENTRY("xmms.value",      "42", PHP_INI_ALL, OnUpdateInt, global_value, zend_xmms_globals, xmms_globals)
+    STD_PHP_INI_ENTRY("xmms.string", "xmmsbar", PHP_INI_ALL, OnUpdateString, global_string, zend_xmms_globals, xmms_globals)
+PHP_INI_END()]]></example>
+
+<example title="PHP_MINIT_FUNCTION" type="c"><![CDATA[PHP_MINIT_FUNCTION(xmms)
+{
+    REGISTER_INI_ENTRIES();
+    return SUCCESS;
+}]]></example>
+
+<example title="PHP_MSHUTDOWN_FUNCTION" type="c"><![CDATA[PHP_MSHUTDOWN_FUNCTION(xmms)
+{
+    UNREGISTER_INI_ENTRIES();
+    return SUCCESS;
+}]]></example>
+
+<example title="PHP_RINIT_FUNCTION" type="c"><![CDATA[PHP_RINIT_FUNCTION(xmms)
+{
+    return SUCCESS;
+}]]></example>
+
+<example title="PHP_RSHUTDOWN_FUNCTION" type="c"><![CDATA[PHP_RSHUTDOWN_FUNCTION(xmms)
+{
+    return SUCCESS;
+}]]></example>
+
+<example title="PHP_MINFO_FUNCTION" type="c"><![CDATA[PHP_MINFO_FUNCTION(xmms)
+{
+    php_info_print_table_start();
+    php_info_print_table_header(2, "xmms support", "enabled");
+    php_info_print_table_end();
+
+    DISPLAY_INI_ENTRIES();
+}]]></example>
+
+<example title="functions" type="c"><![CDATA[PHP_FUNCTION(confirm_xmms_compiled)
+{
+    char *arg = NULL;
+    int arg_len, len;
+    char string[256];   
+    
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &arg, &arg_len) == FAILURE) {
+        return;
+    }
+
+    len = sprintf(string, "Congratulations!
+You have successfully modified ext/%.78s/config.m4. 
+Module %.78s is now compiled into PHP.", "xmms", Z_STRVAL_PP(arg));
+    RETURN_STRINGL(string, len, 1);
+}]]></example>
+
+</slide>

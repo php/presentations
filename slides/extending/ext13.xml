@@ -1,0 +1,71 @@
+<slide title="Returning Values">
+<blurb>
+The simple types are returned using the following convenience macros:
+</blurb>
+
+<example type="c"><![CDATA[#define RETVAL_RESOURCE(l)          ZVAL_RESOURCE(return_value, l)
+#define RETVAL_BOOL(b)              ZVAL_BOOL(return_value, b)
+#define RETVAL_NULL()               ZVAL_NULL(return_value)
+#define RETVAL_LONG(l)              ZVAL_LONG(return_value, l)
+#define RETVAL_DOUBLE(d)            ZVAL_DOUBLE(return_value, d)
+#define RETVAL_STRING(s, dup)       ZVAL_STRING(return_value, s, dup)
+#define RETVAL_STRINGL(s, l, dup)   ZVAL_STRINGL(return_value, s, l, dup)
+#define RETVAL_EMPTY_STRING()       ZVAL_EMPTY_STRING(return_value)
+#define RETVAL_FALSE                ZVAL_BOOL(return_value, 0)
+#define RETVAL_TRUE                 ZVAL_BOOL(return_value, 1)
+
+#define RETURN_RESOURCE(l)          { RETVAL_RESOURCE(l); return; }
+#define RETURN_BOOL(b)              { RETVAL_BOOL(b); return; }
+#define RETURN_NULL()               { RETVAL_NULL(); return;}
+#define RETURN_LONG(l)              { RETVAL_LONG(l); return; }
+#define RETURN_DOUBLE(d)            { RETVAL_DOUBLE(d); return; }
+#define RETURN_STRING(s, dup)       { RETVAL_STRING(s, dup); return; }
+#define RETURN_STRINGL(s, l, dup)   { RETVAL_STRINGL(s, l, dup); return; }
+#define RETURN_EMPTY_STRING()       { RETVAL_EMPTY_STRING(); return; }
+#define RETURN_FALSE                { RETVAL_FALSE; return; }
+#define RETURN_TRUE                 { RETVAL_TRUE; return; }]]></example>
+
+<blurb>
+As you can see, returning a value from a function involves setting the special
+%return_value% zval to the return value and then just
+returning from the function call.  At the C level, all functions return void.
+</blurb>
+
+<blurb>
+Simple %sum()% function:
+</blurb>
+
+<example type="c"><![CDATA[PHP_FUNCTION(my_sum)
+{
+    int argc = ZEND_NUM_ARGS();
+    long arg1;
+    long arg2;
+
+    if (zend_parse_parameters(argc TSRMLS_CC, "ll", &arg1, &arg2) == FAILURE)
+        return;
+
+    RETURN_LONG(arg1+arg2);
+}]]></example>
+
+<blurb>
+Here we uppercase every other character of a string.
+</blurb>
+
+<example type="c"><![CDATA[PHP_FUNCTION(my_upper)
+{
+    char *str = NULL;
+    int argc = ZEND_NUM_ARGS();
+    int str_len;
+    char *p;
+    int i;
+
+    if (zend_parse_parameters(argc TSRMLS_CC, "s", &str, &str_len) == FAILURE)
+        return;
+
+    for(p=str, i=0; *p; p++,i++) {
+        if(i%2) *p = toupper(*p);
+    }
+    RETURN_STRINGL(str,str_len,1);
+}]]></example>
+
+</slide>

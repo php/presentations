@@ -1,0 +1,28 @@
+<slide title="Compiling">
+<example title="Compiling the test skeleton extension" type="shell"><![CDATA[% cd /tmp/xmms
+% vi config.m4]]></example>
+
+<blurb title="The config.m4 file">
+The *config.m4* file adds any extension-specific configuration options.  If
+your extension relies on external libraries and header files, you need to
+define those in this file and uncomment the *--with-xmms*> section.  If your
+extension does not rely on any external libraries, uncomment the
+*--enable-xmms* section.
+</blurb>
+
+<example title="Configure, build and install" type="shell"><![CDATA[% ./configure
+% make
+% cp modules/xmms.so /usr/local/lib/php]]></example>
+
+<blurb title="Testing your extension">
+The *ext_skel* script created a sample *xmms.php* script.  A quick way to check
+if your extension is working is to edit this script and add *dl('xmms.so')* to
+the top.  Then run it through your command-line PHP parser:
+</blurb>
+
+<example type="shell"><![CDATA[% php -q xmms.php
+Congratulations! 
+You have successfully modified ext/xmms/config.m4. 
+Module xmms is now compiled into PHP.]]></example>
+
+</slide>

@@ -1,0 +1,77 @@
+<slide title="Accessing Array Parameters">
+<blurb>
+If your function takes an array parameter.  You can check it and access
+it like this:
+</blurb>
+<example type="c"><![CDATA[PHP_FUNCTION(my_arr)
+{
+    int argc = ZEND_NUM_ARGS();
+    zval **tmp, *arr = NULL;
+
+    if (zend_parse_parameters(argc TSRMLS_CC, "a", &arr) == FAILURE)
+        return;
+
+    zend_hash_internal_pointer_reset(Z_ARRVAL_P(arr));
+    while (zend_hash_get_current_data(Z_ARRVAL_P(arr), (void **)&tmp) == SUCCESS) {
+        convert_to_long_ex(tmp);
+        php_printf("%ld\n",Z_LVAL_PP(tmp));
+        zend_hash_move_forward(Z_ARRVAL_P(arr));
+    }
+    RETURN_TRUE;
+}]]></example>
+
+<blurb>
+Here the call to %zend_parse_parameters()% does the type check.  If 
+the user passes a non-array to this function s/he will get a message that looks like this:
+</blurb>
+
+<example type="shell"><![CDATA[foo.php(4) : Warning - my_arr() expects argument 1 to be array, integer given]]></example>
+
+<blurb>
+If you wanted to write a function that could take either an array of integers
+or perhaps a single integer and have your function figure it out automatically
+you do do it like this:
+</blurb>
+
+<example type="c"><![CDATA[PHP_FUNCTION(my_arr)
+{
+    int argc = ZEND_NUM_ARGS();
+    zval **tmp, *arg = NULL;
+
+    if (zend_parse_parameters(argc TSRMLS_CC, "z", &arg) == FAILURE)
+        return;
+
+    switch(Z_TYPE_P(arg)) {
+    case IS_ARRAY:
+        zend_hash_internal_pointer_reset(Z_ARRVAL_P(arg));
+        while (zend_hash_get_current_data(Z_ARRVAL_P(arg), (void **)&tmp) == SUCCESS) {
+            convert_to_long_ex(tmp);
+            php_printf("%ld\n",Z_LVAL_PP(tmp));
+            zend_hash_move_forward(Z_ARRVAL_P(arg));
+        }
+        break;
+    case IS_STRING:
+    case IS_LONG:
+    case IS_DOUBLE:
+        convert_to_long_ex(&arg);
+        php_printf("%ld\n",Z_LVAL_P(arg));
+        break;
+    }
+    RETURN_TRUE;
+}]]></example>
+
+<blurb>
+The possible types are:
+</blurb>
+<example type="c"><![CDATA[#define IS_NULL     0
+#define IS_LONG     1
+#define IS_DOUBLE   2
+#define IS_STRING   3
+#define IS_ARRAY    4
+#define IS_OBJECT   5
+#define IS_BOOL     6
+#define IS_RESOURCE 7
+#define IS_CONSTANT 8
+#define IS_CONSTANT_ARRAY   9]]></example>
+
+</slide>

@@ -1,0 +1,25 @@
+<slide title="Plan your Extension">
+<blurb>
+Try to plan your extension before you start writing your code.
+A good way to do this is to write a sample PHP script that illustrates
+how your extension is going to be accessed from a PHP script.
+</blurb>
+<example title="XMMS Sample Extension" type="php"><![CDATA[<?php
+xmms_start();
+if(isset($url)) {
+  xmms_url($url);
+  $len = xmms_playlist_length();
+  xmms_play($len-1);
+} else {
+  xmms_play(5);
+}
+$song = xmms_current();
+$list = xmms_playlist(range($song[\'pos\']-5, $song[\'pos\']+5));
+foreach($list as $pos=>$plsong) {
+  echo "$pos: ".$plsong[\'title\']."<br>\n";
+}
+sleep(10);
+xmms_stop();
+?>]]></example>
+
+</slide>
