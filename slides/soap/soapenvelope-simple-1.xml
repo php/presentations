@@ -1,0 +1,14 @@
+<slide title="SOAP Envelope: Part 1">
+<blurb>A SOAP Envelope at it's simplest implementation.  This
+envelope defines that it is a SOAP message, with a single method
+called 'echoString', which is given a single parameter, 'inputString'.</blurb>
+<example type="xml" fontsize='1.4em' title="SOAP Envelope">
+<![CDATA[<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <method:echoString xmlns:method="http://soapinterop.org/">
+      <inputString>hello world!</inputString>
+    </method:echoString>
+  </Body>
+</Envelope>]]>
+</example>
+</slide>

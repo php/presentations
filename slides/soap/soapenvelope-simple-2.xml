@@ -1,0 +1,21 @@
+<slide title="SOAP Envelope: Part 2">
+<blurb>But we want to be more explicit, defining this as a SOAP RPC call.  We
+can also define namespaces for the message in the Envelope itself.  Making the
+namespaces explicit is not necessary, but can aid in [human] readability.</blurb>
+<example type="xml" fontsize='1.4em' title="SOAP Envelope">
+<![CDATA[<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:method="http://soapinterop.org/"
+  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  
+  <SOAP-ENV:Body>
+
+    <method:echoString>
+      <inputString>hello world!</inputString>
+    </method:echoString>
+    
+  </SOAP-ENV:Body>
+  
+</SOAP-ENV:Envelope>]]>
+</example>
+</slide>

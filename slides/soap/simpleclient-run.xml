@@ -1,0 +1,48 @@
+<slide title="How Simple?">
+
+<example 
+	title="BabelFish Client"
+	filename="examples\client-babelfish.php"
+	type="php"
+        fontsize='1.4em'
+/>
+
+<example hide="1" result="1" fontsize="1.4em" type="text">
+<![CDATA[<?php 
+ $base = "$PHP_SELF{$_SERVER['PATH_INFO']}";
+ $action = isset($_SERVER['QUERY_STRING'])?"$base?{$_SERVER['QUERY_STRING']}":$base;
+ // time in vancouver, assuming I'm in NYC
+ $time = time()-(3*60*60);
+ $default = "It's ".date('g:i A',$time)." in Vancouver, thank God for Coffee!";
+ $text = isset($_GET['text'])?$_GET['text']:$default;
+echo <<<END
+<form action="$action" method=GET>
+Text: <input type="text" name="text" value="$text"> 
+<select name="translation">
+<option value="en_de">English -> German</option>
+<option value="en_fr">English -> French</option>
+<option value="en_it">English -> Italian</option>
+<option value="en_pt">English -> Portugese</option>
+<option value="en_es" SELECTED>English -> Spanish</option>
+<option value="fr_en">French -> English</option>
+<option value="it_en">German -> English</option>
+<option value="pt_en">Italian -> English</option>
+<option value="ru_en">Russian -> English</option>
+<option value="es_en">Spanish -> English</option>
+</select>
+<input type=submit value=" Go! ">
+</form>
+END;
+?>]]>
+</example>
+
+<example 
+	title="BabelFish Says..."
+	filename="examples\client-babelfish-real.php"
+	hide="1"
+	result="1"
+	type="html"
+        fontsize='1.4em'
+/>
+
+</slide>

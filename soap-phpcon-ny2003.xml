@@ -1,0 +1,110 @@
+<presentation
+    jskeyboard="1"
+    template="php"
+    logo2="/pres2/presentations/slides/soap/activestate_logo.gif"
+    navbarbackground="#A68C53"
+    backgroundfixed="true"
+    backgroundimage = "/pres2/presentations/slides/soap/activestate_background.jpg"
+    backgroundcol="#EFECDD"
+    navsize="1.4em">
+<title>Web Services Tutorial</title>
+<topic>SOAP</topic>
+<event>ActiveState Corporation</event>
+<location>PHPCON, NYC, NY</location>
+<date>April 23, 2003</date>
+<speaker>Shane Caraveo</speaker>
+<company>ActiveState Corporation</company>
+<email>shanec@ActiveState.com</email>
+<url></url>
+<slide>slides/soap/slide1.xml</slide>
+<slide>slides/soap/agenda2.xml</slide>
+<slide>slides/soap/simpleclient-run.xml</slide>
+<slide>slides/soap/whatissoap.xml</slide>
+<slide>slides/soap/whatisgood.xml</slide>
+<slide>slides/soap/whatisbad.xml</slide>
+<slide>slides/soap/soaphistory.xml</slide>
+
+<slide x="envelope xml example1">slides/soap/soapenvelope-simple-1.xml</slide>
+<slide x="envelope xml example2">slides/soap/soapenvelope-simple-2.xml</slide>
+<slide x="envelope xml example3">slides/soap/soapenvelope-simple-3.xml</slide>
+<slide x="doclit xml example">slides/soap/document.xml</slide>
+<slide x="message description">slides/soap/soap.xml</slide>
+
+<slide x="header xml example">slides/soap/headers.xml</slide>
+<slide x="fault desc and example">slides/soap/soapfault.xml</slide>
+
+<slide x="attachments description">slides/soap/mime.xml</slide>
+<slide x="dime description">slides/soap/dime.xml</slide>
+<slide x="transport description">slides/soap/protocols.xml</slide>
+
+<slide x="simple schema data types">slides/soap/datatypes1.xml</slide>
+<slide x="xml schema part1">slides/soap/schema1.xml</slide>
+<slide x="xml schema part1">slides/soap/schema1-xml.xml</slide>
+<slide x="xml schema part2">slides/soap/schema2.xml</slide>
+<slide x="xml schema part2">slides/soap/schema2-xml.xml</slide>
+<slide x="xml schema summary">slides/soap/schemasummary.xml</slide>
+
+<slide x="wsdl description">slides/soap/wsdl.xml</slide>
+<slide x="wsdl xml example">slides/soap/wsdlparts.xml</slide>
+<slide x="wsdl benefits">slides/soap/usingsoap.xml</slide>
+<slide x="disco description">slides/soap/disco.xml</slide>
+<slide x="uddi description">slides/soap/uddi.xml</slide>
+
+<slide>slides/soap/interop.xml</slide>
+<slide>slides/soap/interop2.xml</slide>
+<slide>slides/soap/interop3.xml</slide>
+
+<slide x="specs">slides/soap/other.xml</slide>
+<slide x="more specs">slides/soap/other2.xml</slide>
+<slide x="even more specs">slides/soap/other3.xml</slide>
+
+<slide>slides/soap/implementations.xml</slide>
+<slide>slides/soap/pear.xml</slide>
+<slide>slides/soap/phpsoap.xml</slide>
+<slide>slides/soap/nusoap.xml</slide>
+
+<slide>slides/soap/break.xml</slide>
+
+<slide>slides/soap/simpleclient1.xml</slide>
+<slide>slides/soap/simpleclient2.xml</slide>
+
+<slide>slides/soap/anatomyclient1.xml</slide>
+<slide>slides/soap/anatomyclient2.xml</slide>
+<slide>slides/soap/anatomyclient3.xml</slide>
+
+<slide>slides/soap/clientapi1.xml</slide>
+<slide>slides/soap/clientapi2.xml</slide>
+<slide>slides/soap/clientapi3.xml</slide>
+
+<slide>slides/soap/document2.xml</slide>
+<slide>slides/soap/document3.xml</slide>
+<slide>slides/soap/document4.xml</slide>
+
+<slide>slides/soap/headers2.xml</slide>
+
+<slide>slides/soap/attachments2.xml</slide>
+<slide>slides/soap/attachments3.xml</slide>
+<slide>slides/soap/clientapi4.xml</slide>
+
+<slide>slides/soap/soapsmtp.xml</slide>
+
+<slide>slides/soap/wsdlclient.xml</slide>
+<slide>slides/soap/proxygen.xml</slide>
+<slide>slides/soap/clientapi5.xml</slide>
+
+<slide>slides/soap/server1.xml</slide>
+<slide>slides/soap/server2.xml</slide>
+<slide>slides/soap/serverapi1.xml</slide>
+<slide>slides/soap/server3.xml</slide>
+<slide>slides/soap/soapfault2.xml</slide>
+<slide>slides/soap/serverheader.xml</slide>
+<slide>slides/soap/serveremail.xml</slide>
+
+<slide>slides/soap/serverwsdl.xml</slide>
+
+<slide>slides/soap/soapobjects1.xml</slide>
+
+<slide>slides/soap/soapresources.xml</slide>
+<slide>slides/soap/resources.xml</slide>
+
+</presentation>

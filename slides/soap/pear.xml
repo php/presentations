@@ -1,14 +1,23 @@
 <slide title="PEAR::SOAP">
-<list>
+<list title="The good parts">
 <bullet>SOAP 1.1</bullet>
 <bullet>Interoperability testing done with all major implementations</bullet>
 <bullet>Script based Client and Server</bullet>
 <bullet>RPC/Encoded and Document/Literal</bullet>
-<bullet>HTTP, HTTPS and SMTP</bullet>
+<bullet>HTTP, HTTPS, TCP and SMTP</bullet>
 <bullet>Email Server and Gateway</bullet>
 <bullet>Supports 1999/2001 Schema</bullet>
 <bullet>WSDL Support</bullet>
+<bullet>WSDL and DISCO Generation</bullet>
 <bullet>SOAP with Attachments (Mime)</bullet>
 <bullet>DIME Support</bullet>
+</list>
+<list title="The bad parts">
+<bullet>SOAP 1.2 support not finished</bullet>
+<bullet>Not good for long running processes</bullet>
+<bullet>Chews up memory</bullet>
+<bullet>PHP 4 Object support</bullet>
+<bullet>No streaming XML pull parser (yet)</bullet>
+<bullet>Written entirely in script</bullet>
 </list>
 </slide>

@@ -7,4 +7,38 @@
 <bullet>DIME is default with .Net services</bullet>
 <bullet>PHP Support still experimental</bullet>
 </list>
+
+<example type="text" fontsize='1.4em' title="SOAP Message with DIME Attachments:">
+<![CDATA[POST /soap_interop/server_round2.php HTTP/1.0
+User-Agent: PEAR-SOAP 0.6.1
+Host: www.caraveo.com
+Content-Type: application/dime
+Content-Length: 1528
+SOAPAction: ""
+
+[BINARY DIME HEADER INFORMATION]
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+
+<echoMimeAttachment>
+<test href="cid:ec1fc6eb10e1f726c0ceb422cc3b21a4"/>
+</echoMimeAttachment>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+[BINARY DIME HEADER INFORMATION]
+   .... File Attachement is here ....
+[BINARY DIME HEADER INFORMATION]
+
+]]>
+</example>
+
 </slide>

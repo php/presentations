@@ -12,13 +12,14 @@
     xmlns:s="http://soapinterop.org/xsd"
     xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">]]>
 </example>
+<example type="xml" fontsize='1.4em' title="Imports">
+<![CDATA[<import location="http://site.com/import1B.wsdl"
+            namespace="http://site.com/namespace/"/>]]>
+</example>
 <example type="xml" fontsize='1.4em' title="Data Types">
 <![CDATA[<types>
     <schema xmlns="http://www.w3.org/2001/XMLSchema"
         targetNamespace="http://soapinterop.org/xsd">
-        
-        <import location="http://site.com/import1B.wsdl"
-            namespace="http://site.com/namespace/"/>
         
         <complexType name="SOAPStruct">
             <all>
@@ -79,7 +80,6 @@
         binding="tns:InteropTestSoapBinding">
         <soap:address location="http://host.com/server.php"/>
     </port>
-</service>
-]]>
+</service>]]>
 </example>
 </slide>

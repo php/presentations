@@ -1,0 +1,21 @@
+<slide title="XML Schema: Part 2">
+
+<blurb>Here we have XML that reflects the Doc/Lit Schema.
+</blurb>
+
+<example type="xml" fontsize='1.4em' title="echoStringParam">
+<![CDATA[<echoStringParam xmlns="http://soapinterop.org/xsd">
+Hello World
+</echoStringParam>]]>
+</example>
+
+<example type="xml" fontsize='1.4em' title="echoStringParam">
+<![CDATA[<ns4:echoStringArrayParam 
+    xmlns:ns4="http://soapinterop.org/xsd">
+
+    <ns4:item>good</ns4:item>
+    <ns4:item>bad</ns4:item>
+</ns4:echoStringArrayParam>]]>
+</example>
+
+</slide>    

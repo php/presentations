@@ -1,0 +1,17 @@
+<slide title="XML Schema">
+
+<list>
+<bullet>Schema *IS* Scary</bullet>
+<bullet>Provides extensibility</bullet>
+<bullet>Defines Data Types</bullet>
+<bullet>Namespaces allow for conflicting element names</bullet>
+<bullet>Can be imported by other XML documents</bullet>
+</list>
+
+<list>
+<bullet>Scripting Langauges generaly have poor support for Schema</bullet>
+<bullet>SOAP and WSDL use Schema heavily</bullet>
+<bullet>New LibXML extension will help PHP SOAP support</bullet>
+</list>
+
+</slide>    

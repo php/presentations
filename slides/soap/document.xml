@@ -14,14 +14,11 @@ attribute in the envelope.</html></blurb>
 
 <SOAP-ENV:Envelope
  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
- xmlns:xsd="http://www.w3.org/2001/XMLSchema"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
 >
 <SOAP-ENV:Body>
 
 <ns1:echoStringParam xmlns:ns1="http://soapinterop.org/xsd">
-this is a test
+Hello World!
 </ns1:echoStringParam>
 
 </SOAP-ENV:Body>

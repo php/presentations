@@ -1,0 +1,27 @@
+<slide title="UDDI">
+<blurb textcolor="red">"Where Are You Going, Where Have You Been?"</blurb>
+<list title="Universal Description, Discovery and Integration of Web Services">
+<bullet>Developed by OASIS (oasis-open.org)</bullet>
+<bullet>As the name says, provides Descriptions of services, and ways to find
+and use them.</bullet>
+<bullet>No support built in to PHP, but...UDDI is used via SOAP.</bullet>
+</list>
+
+<blurb fontsize="1.5em">The UDDI specifications define Web service interfaces to allow 
+programmatic access to the UDDI registry information. The UDDI API is 
+based on SOAP (Simple Object Access Protocol) which provides a synchronous 
+RPC mechanism to UDDI. All UDDI registry Operator sites will support all 
+the UDDI API calls. The UDDI API is divided into two logical parts:</blurb>
+<list>
+<bullet fontsize="1em">Inquiry API: Provide programs with the capability to locate candidate 
+businesses, Web services and then services, and drill into the specifics based 
+on overview information provided in the initial calls. The Inquiry API functions 
+are exposed as SOAP messages over HTTP. No authentication is required to make 
+use of the Inquiry API functions.</bullet>
+<bullet fontsize="1em">Publisher API: Enables programs to save and delete each of four data 
+types supported by UDDI. Authenticated access is required to use the Publisher 
+API, i.e. the user must first sign-up with one or more operator sites to establish 
+user credentials.</bullet>
+</list>
+<blurb fontsize="1em">Source: http://wwws.sun.com/software/xml/developers/uddi/</blurb>
+</slide>

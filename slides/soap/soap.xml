@@ -1,10 +1,10 @@
 <slide title="SOAP Messages">
 <list>
-<bullet>Envelope defines what is in the message</bullet>
+<bullet>Envelope wraps what is in the message</bullet>
 <bullet>Encoding defines serialization</bullet>
 </list>
 <list marginleft="2em">
-    <bullet>Strong Data typing Section 5 encoding</bullet>
+    <bullet>Strong Data typing 'Section 5' encoding</bullet>
     <bullet>Weak Data typing Literal encoding</bullet>
     <bullet>XML Schema data definition via WSDL</bullet>
 </list>

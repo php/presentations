@@ -1,0 +1,46 @@
+<slide title="XML Schema: Part 2">
+
+<blurb>Schema can define similar types in multiple ways.  Here
+we define an Array of Strings, much like the last Schema, but
+perhaps a bit easier to read.  Some of the differences here do
+affect how one might generate or parse XML.  This Schema comes 
+from a WSDL for a Document/Literal SOAP service.
+</blurb>
+
+<example type="xml" fontsize='1.4em' title="XML Schema">
+<![CDATA[<schema targetNamespace="http://soapinterop.org/xsd"
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd1="http://soapinterop.org/xsd"
+    elementFormDefault="qualified"
+    >
+    
+    <complexType name="ArrayOfstring_literal">
+        <sequence>
+            <element maxOccurs="unbounded" 
+                     minOccurs="1" 
+                     name="string" 
+                     type="xsd:string"/>
+        </sequence>
+    </complexType>
+    
+    <complexType name="SOAPStruct">
+        <all>
+            <element name="varFloat" type="xsd:float"/>
+            <element name="varInt" type="xsd:int"/>
+            <element name="varString" type="xsd:string"/>
+        </all>
+    </complexType>
+
+    <element name="echoStringParam" type="xsd:string"/>
+    <element name="echoStringReturn" type="xsd:string"/>
+    <element name="echoStringArrayParam" 
+                type="xsd1:ArrayOfstring_literal"/>
+    <element name="echoStringArrayReturn" 
+                type="xsd1:ArrayOfstring_literal"/>
+    <element name="echoStructParam" type="xsd1:SOAPStruct"/>
+    <element name="echoStructReturn" type="xsd1:SOAPStruct"/>
+</schema>
+    ]]>
+</example>
+</slide>    

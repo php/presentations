@@ -1,10 +1,17 @@
 <slide title="PHP-SOAP">
-<list>
+<list title="The good parts">
 <bullet>SOAP 1.1</bullet>
 <bullet>C based Client and Server</bullet>
 <bullet>RPC/Encoded only</bullet>
-<bullet>HTTP only</bullet>
+<bullet>HTTP and HTTPS only</bullet>
 <bullet>Supports 1999/2001 Schema</bullet>
 <bullet>WSDL Support</bullet>
+<bullet>Fastest implementation available for PHP</bullet>
+</list>
+<list title="The bad parts">
+<bullet>SOAP 1.1 and 1.2 support not finished</bullet>
+<bullet>WSDL support not finished, cannot interop test</bullet>
+<bullet>PHP 4 Object support</bullet>
+<bullet>No streaming XML parser (yet)</bullet>
 </list>
 </slide>

@@ -16,50 +16,5 @@ $resp = $client->call('echoMimeAttachment',array($v),
                 'namespace'=>'http://soapinterop.org/'));
 ?>]]>
 </example>
-<list>
-<bullet>The attachments option can be either 'Mime' or 'DIME'.</bullet>
-</list>
-<example type="text" fontsize='1.4em' title="SOAP Message with Mime Attachments:">
-<![CDATA[POST /soap_interop/server_round2.php HTTP/1.0
-User-Agent: PEAR-SOAP 0.6.1
-Host: www.caraveo.com
-Content-Type: multipart/related; type=text/xml;
-    boundary="=_a9e37cebd5684ebda52242db0a004f81"
-Content-Length: 2042
-SOAPAction: ""
 
---=_a9e37cebd5684ebda52242db0a004f81
-Content-Type: text/xml; charset="UTF-8"
-Content-Transfer-Encoding: quoted-printable
-
-<?xml version=3D"1.0" encoding=3D"UTF-8"?>
-
-<SOAP-ENV:Envelope
- xmlns:SOAP-ENV=3D"http://schemas.xmlsoap.org/soap/envelope/"
- xmlns:xsd=3D"http://www.w3.org/2001/XMLSchema"
- xmlns:xsi=3D"http://www.w3.org/2001/XMLSchema-instance"
- xmlns:SOAP-ENC=3D"http://schemas.xmlsoap.org/soap/encoding/"
- xmlns:ns4=3D"http://soapinterop.org/"
- SOAP-ENV:encodingStyle=3D"http://schemas.xmlsoap.org/soap/encoding/">
-<SOAP-ENV:Body>
-
-<ns4:echoMimeAttachment>
-<test href=3D"cid:71df492641cddfe43fe3f7b057301fd5"/>
-</ns4:echoMimeAttachment>
-
-</SOAP-ENV:Body>
-</SOAP-ENV:Envelope>
-
---=_a9e37cebd5684ebda52242db0a004f81
-Content-Disposition: attachment.php
-Content-Type: text/plain
-Content-Transfer-Encoding: base64
-Content-ID: <71df492641cddfe43fe3f7b057301fd5>
-
-PD9waHANCnJlcXVpcmVfb25jZS
-...
-cmludCAkd2lyZS4iXG5cblxuIjsN
---=_a9e37cebd5684ebda52242db0a004f81--
-]]>
-</example>
 </slide>

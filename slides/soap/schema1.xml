@@ -1,0 +1,48 @@
+<slide title="XML Schema: Part 1">
+
+<blurb>Schema is Scary.  The following Schema defines
+a couple complex data types, an array of strings, an
+object called SOAPStruct, and an array of SOAPStruct
+objects.  This Schema comes from a WSDL for an 
+RPC/Encoded SOAP service.
+</blurb>
+
+<example type="xml" fontsize='1.4em' title="XML Schema">
+<![CDATA[<schema 
+    xmlns="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://soapinterop.org/xsd"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    >
+        
+    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   
+    <complexType name="ArrayOfstring">
+        <complexContent>
+            <restriction base="SOAP-ENC:Array">
+                <attribute ref="SOAP-ENC:arrayType" 
+                    wsdl:arrayType="string[]"/>
+            </restriction>
+        </complexContent>
+    </complexType>
+
+    <complexType name="SOAPStruct">
+        <all>
+            <element name="varString" type="string"/>
+            <element name="varInt" type="int"/>
+            <element name="varFloat" type="float"/>
+        </all>
+    </complexType>
+
+    <complexType name="ArrayOfSOAPStruct">
+        <complexContent>
+            <restriction base="SOAP-ENC:Array">
+                <attribute ref="SOAP-ENC:arrayType" 
+                    wsdl:arrayType="s:SOAPStruct[]"/>
+            </restriction>
+        </complexContent>
+    </complexType>
+</schema>
+    ]]>
+</example>
+</slide>    

@@ -1,0 +1,28 @@
+<slide title="SOAP Envelope: Part 3">
+<blurb>As a last part, we want to provide explicit data typing.  The following envelope
+is in a format known as RPC/Encoded.</blurb>
+<example type="xml" fontsize='1.4em' title="SOAP Envelope">
+<![CDATA[<SOAP-ENV:Envelope
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:ns4="http://soapinterop.org/"
+  SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+  
+  <SOAP-ENV:Body>
+
+    <method:echoString>
+      <inputString xsi:type="xsd:string">hello world!</inputString>
+    </method:echoString>
+    
+  </SOAP-ENV:Body>
+  
+</SOAP-ENV:Envelope>]]>
+</example>
+
+<blurb>Data typing does not necessarily have to happen in the SOAP message.
+XML Schema and WSDL can provide that information, or the client can simply
+dynamicaly handle the data types as it sees fit.</blurb>
+
+</slide>

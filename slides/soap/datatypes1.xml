@@ -1,0 +1,67 @@
+<slide title="SOAP Data Types">
+<blurb>
+In the SOAP envelopes I showed data type encoding.
+</blurb>
+<example type="xml" fontsize='1.4em' title="SOAP parameter with data type">
+<![CDATA[<inputString xsi:type="xsd:string">hello world!</inputString>]]>
+</example>
+<blurb>
+SOAP provides 16 basic data types, and 28 derived
+data types through the use of XML Schema.  PHP obviously
+does not have that many data types, so many SOAP types are
+mapped into PHP types, somewhat arbitrarily.
+</blurb>
+
+<example type="text" fontsize='1.4em' title="SOAP types mapped to PHP types">
+    <![CDATA[
+    'http://www.w3.org/2001/XMLSchema' => array(
+        'string' => 'string',
+        'boolean' => 'boolean',
+        'float' => FLOAT,
+        'double' => FLOAT,
+        'decimal' => FLOAT,
+        'duration' => 'integer',
+        'dateTime' => 'string',
+        'time' => 'string',
+        'date' => 'string',
+        'gYearMonth' => 'integer',
+        'gYear' => 'integer',
+        'gMonthDay' => 'integer',
+        'gDay' => 'integer',
+        'gMonth' => 'integer',
+        'hexBinary' => 'string',
+        'base64Binary' => 'string',
+        // derived datatypes
+        'normalizedString' => 'string',
+        'token' => 'string',
+        'language' => 'string',
+        'NMTOKEN' => 'string',
+        'NMTOKENS' => 'string',
+        'Name' => 'string',
+        'NCName' => 'string',
+        'ID' => 'string',
+        'IDREF' => 'string',
+        'IDREFS' => 'string',
+        'ENTITY' => 'string',
+        'ENTITIES' => 'string',
+        'integer' => 'integer',
+        'nonPositiveInteger' => 'integer',
+        'negativeInteger' => 'integer',
+        'long' => 'integer',
+        'int' => 'integer',
+        'short' => 'integer',
+        'byte' => 'string',
+        'nonNegativeInteger' => 'integer',
+        'unsignedLong' => 'integer',
+        'unsignedInt' => 'integer',
+        'unsignedShort' => 'integer',
+        'unsignedByte' => 'integer',
+        'positiveInteger'  => 'integer',
+        'anyType' => 'string',
+        'anyURI' => 'string',
+        'QName' => 'string'
+    )
+    ]]>
+</example>
+    
+</slide>    

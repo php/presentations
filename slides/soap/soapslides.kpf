@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Komodo Project File - DO NOT EDIT -->
 <project kpf_version="2" name="soapslides">
 <preference-set id="Unnamed Project 1">
@@ -8,19 +8,23 @@
 <file name="tools.xml" url="tools.xml">
 </file>
 <folder name="presentations">
-<file name="soap-phpcon-sf2002.xml" url="file:///D:/src/pres2/presentations/soap-phpcon-sf2002.xml">
-</file>
-<file name="soap.xml" url="file:///D:/src/pres2/presentations/soap.xml">
-</file>
-<file name="soapbc1.xml" url="file:///D:/src/pres2/presentations/soapbc1.xml">
-</file>
-<file name="soap-linuxworld-sf2002.xml" url="file:///D:/src/pres2/presentations/soap-linuxworld-sf2002.xml">
-</file>
 <file name="styles.css.php" url="styles.css.php">
 </file>
 <file name="slide1.xml" url="slide1.xml">
 </file>
 <file name="title.xml" url="title.xml">
+</file>
+<file name="soap-linuxworld-sf2002.xml" url="file:///C:/usr/src/pres2/presentations/soap-linuxworld-sf2002.xml">
+</file>
+<file name="soapbc1.xml" url="file:///C:/usr/src/pres2/presentations/soapbc1.xml">
+</file>
+<file name="soap-forumduphp-paris2002.xml" url="file:///C:/usr/src/pres2/presentations/soap-forumduphp-paris2002.xml">
+</file>
+<file name="soap.xml" url="file:///C:/usr/src/pres2/presentations/soap.xml">
+</file>
+<file name="soap-phpcon-sf2002.xml" url="file:///C:/usr/src/pres2/presentations/soap-phpcon-sf2002.xml">
+</file>
+<file name="soap-phpcon-ny2003.xml" url="file:///C:/usr/src/pres2/presentations/soap-phpcon-ny2003.xml">
 </file>
 </folder>
 <folder name="Agenda's">
@@ -68,17 +72,7 @@
 </file>
 <file name="soapenvelope.xml" url="soapenvelope.xml">
 </file>
-<file name="dime.xml" url="dime.xml">
-</file>
-<file name="mime.xml" url="mime.xml">
-</file>
 <file name="usingsoap.xml" url="usingsoap.xml">
-</file>
-<file name="wsdl.xml" url="wsdl.xml">
-</file>
-<file name="wsdlexample.xml" url="wsdlexample.xml">
-</file>
-<file name="wsdlparts.xml" url="wsdlparts.xml">
 </file>
 <file name="other.xml" url="other.xml">
 </file>
@@ -87,6 +81,16 @@
 <file name="other3.xml" url="other3.xml">
 </file>
 <file name="protocols.xml" url="protocols.xml">
+</file>
+<file name="whatisgood.xml" url="whatisgood.xml">
+</file>
+<file name="whatisbad.xml" url="whatisbad.xml">
+</file>
+<file name="soapenvelope-simple-3.xml" url="soapenvelope-simple-3.xml">
+</file>
+<file name="soapenvelope-simple-1.xml" url="soapenvelope-simple-1.xml">
+</file>
+<file name="soapenvelope-simple-2.xml" url="soapenvelope-simple-2.xml">
 </file>
 </folder>
 <folder name="Implementations">
@@ -97,6 +101,8 @@
 <file name="phpsoap.xml" url="phpsoap.xml">
 </file>
 <file name="installation.xml" url="installation.xml">
+</file>
+<file name="nusoap.xml" url="nusoap.xml">
 </file>
 </folder>
 <folder name="Resources">
@@ -134,6 +140,8 @@
 </file>
 <file name="clientapi5.xml" url="clientapi5.xml">
 </file>
+<file name="simpleclient-run.xml" url="simpleclient-run.xml">
+</file>
 </folder>
 <folder name="Interoperability">
 <file name="interop.xml" url="interop.xml">
@@ -155,6 +163,16 @@
 <file name="wsdl2.xml" url="wsdl2.xml">
 </file>
 <file name="serverwsdl.xml" url="serverwsdl.xml">
+</file>
+<file name="wsdl.xml" url="wsdl.xml">
+</file>
+<file name="wsdlexample.xml" url="wsdlexample.xml">
+</file>
+<file name="wsdlparts.xml" url="wsdlparts.xml">
+</file>
+<file name="disco.xml" url="disco.xml">
+</file>
+<file name="uddi.xml" url="uddi.xml">
 </file>
 </folder>
 <folder name="Faults">
@@ -180,6 +198,10 @@
 </file>
 <file name="attachments3.xml" url="attachments3.xml">
 </file>
+<file name="mime.xml" url="mime.xml">
+</file>
+<file name="dime.xml" url="dime.xml">
+</file>
 </folder>
 <folder name="Document Style">
 <file name="document.xml" url="document.xml">
@@ -195,4 +217,40 @@
 <file name="soapobjects1.xml" url="soapobjects1.xml">
 </file>
 </folder>
+<folder name="real scripts">
+<preference-set id="">
+</preference-set>
+<file name="client.php" url="client.php">
+</file>
+<file name="example_server.php" url="example_server.php">
+</file>
+<file name="example_types.php" url="example_types.php">
+</file>
+<file name="server.php" url="server.php">
+</file>
+<file name="client-echostring-real.php" url="examples/client-echostring-real.php">
+</file>
+<file name="client-echostring.php" url="examples/client-echostring.php">
+</file>
+<file name="client-babelfish-real.php" url="examples/client-babelfish-real.php">
+<preference-set id="">
+</preference-set>
+</file>
+</folder>
+<folder name="xml schema">
+<file name="schema1.xml" url="schema1.xml">
+</file>
+<file name="datatypes1.xml" url="datatypes1.xml">
+</file>
+<file name="schema2.xml" url="schema2.xml">
+</file>
+<file name="schema2-xml.xml" url="schema2-xml.xml">
+</file>
+<file name="schema1-xml.xml" url="schema1-xml.xml">
+</file>
+<file name="schemasummary.xml" url="schemasummary.xml">
+</file>
+</folder>
+<file name="break.xml" url="break.xml">
+</file>
 </project>

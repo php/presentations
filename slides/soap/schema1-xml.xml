@@ -1,0 +1,27 @@
+<slide title="XML Schema: Part 1">
+
+<blurb>Here we have the XML that would match the
+Schema.
+</blurb>
+
+<example type="xml" fontsize='1.4em' title="ArrayOfString">
+<![CDATA[<inputStringArray 
+    xsi:type="SOAP-ENC:Array" 
+    SOAP-ENC:arrayType="xsd:string[2]" 
+    SOAP-ENC:offset="[0]">
+
+    <item xsi:type="xsd:string">good</item>
+    <item xsi:type="xsd:string">bad</item>
+
+</inputStringArray>]]>
+</example>
+
+<example type="xml" fontsize='1.4em' title="SOAPStruct">
+<![CDATA[<inputStruct xsi:type="ns5:SOAPStruct">
+    <varString xsi:type="xsd:string">arg</varString>
+    <varInt xsi:type="xsd:int">34</varInt>
+    <varFloat xsi:type="xsd:float">325.325</varFloat>
+</inputStruct>]]>
+</example>
+
+</slide>    

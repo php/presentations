@@ -1,0 +1,33 @@
+<slide title="DISCO">
+<blurb textcolor="red">Macho Macho Man...</blurb>
+<list title="Discovery of Web Services">
+<bullet>DISCO is a Microsoft technology for publishing and discovering Web Services</bullet>
+<bullet>Provides a way to discover and retrieve WSDL description of services on remote machines</bullet>
+<bullet>Only minimal support in PHP</bullet>
+</list>
+<example fontsize="1.4em" type="xml" title="DISCO Example">
+<![CDATA[<?xml version="1.0"?>
+
+<disco:discovery 
+    xmlns:disco="http://schemas.xmlsoap.org/disco/" 
+    xmlns:scl="http://schemas.xmlsoap.org/disco/scl/">
+    
+  <!-- reference to other DISCO document -->
+  <disco:discoveryRef 
+    ref="http://localhost/related-services/default.disco"/>
+
+  <!-- reference to WSDL and documentation -->
+  <scl:contractRef 
+        ref="http://localhost/server.php?wsdl"
+        docRef="http://localhost/interface-docs.html"/>
+    
+</disco:discovery>]]>
+</example>
+<blurb textcolor="red">Confusion, Confusion, Confusion.  </blurb>
+<blurb>MS Says 'The [docRef is the] URL for a XML Web 
+service implementing the service description specified by the ref attribute.', then
+again says 'contractRef has two attributes, ref and docRef, which point to the WSDL 
+and documentation files for a given Web Service.'  They provide examples showing
+both on MSDN. (4/20/2003)</blurb>
+
+</slide>
