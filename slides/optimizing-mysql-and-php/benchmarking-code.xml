@@ -1,0 +1,15 @@
+<slide title="Benchmarking Code">
+<example type="php" result="1"><![CDATA[<?php
+require_once 'Benchmark/Iterate.php';
+$benchmark = new Benchmark_Iterate;
+
+function fact($n) {
+	if ($n <= 1) return 1;
+	return $n * fact($n - 1);
+}
+
+$benchmark->run(20, 'fact', '1000');
+$result = $benchmark->get();
+print $result['mean'];
+?>]]></example>
+</slide>

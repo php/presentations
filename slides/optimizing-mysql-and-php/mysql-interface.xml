@@ -1,0 +1,12 @@
+<slide title="MySQL Interface">
+<blurb fontsize="5em">
+ The most basic optimization: only ask for data you really need!
+</blurb>
+<example type="sql" title="TMI" fontsize="1.5em">SELECT * FROM Country WHERE Name LIKE 'A%' ORDER BY Population DESC</example>
+<example type="sql" title="Just the Facts" fontsize="1.5em">SELECT Name, Population FROM Country WHERE Name LIKE 'A%' ORDER BY Population DESC LIMIT 5</example>
+<list title="Other useful functions">
+ <bullet>%mysql_unbuffered_query()%</bullet>
+ <bullet>%mysql_pconnect()%</bullet>
+ <bullet>%mysqli% interface in PHP5 (prepared statements)</bullet>
+</list>
+</slide>

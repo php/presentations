@@ -1,0 +1,12 @@
+<slide title="The Query Optimizer">
+
+<list title="How MySQL thinks:">
+ <bullet>Eliminate rows</bullet>
+ <bullet>Use indexes</bullet>
+ <bullet>Avoid table scans</bullet>
+ <bullet>Consider different join orders</bullet>
+ <bullet>Avoid hitting the disk</bullet>
+ <bullet>Avoid using the data if the index knows enough</bullet>
+</list>
+
+</slide>

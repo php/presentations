@@ -1,0 +1,12 @@
+<slide title="Gzip Compression">
+<list>
+ <bullet>Pro: send less data over the network</bullet>
+ <bullet>Con: requires more CPU processing</bullet>
+</list>
+<example title="ob_gzhandler"><![CDATA[<?php ob_start('ob_gzhandler');?>]]></example>
+<example title="zlib.output_compression">zlib.output_compression = On
+zlib.compression_level = 3
+</example>
+<example title="mod_gzip">LoadModule gzip_module lib/apache/mod_gzip.so
+</example>
+</slide>

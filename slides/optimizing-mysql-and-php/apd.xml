@@ -1,0 +1,41 @@
+<slide title="Profiling with APD">
+<example type="shell">$ pear install apd</example>
+<example>zend_extension = /path/to/directory/apd.so
+apd.dumpdir = /tmp</example>
+<example type="php"><![CDATA[<?php
+apd_set_pprof_trace();
+/* rest of script */
+?>]]>
+</example>
+<example type="shell"><![CDATA[$ pprof -z /tmp/pprof.1234
+Trace for /home/jimw/pres2/show.php
+Total Elapsed Time =    0.31
+Total System Time  =    0.00
+Total User Time    =    0.24
+
+
+         Real         User        System             secs/    cumm
+%Time (excl/cumm)  (excl/cumm)  (excl/cumm) Calls    call    s/call  Memory Usage Name
+--------------------------------------------------------------------------------------
+ 54.2  0.13  0.15   0.13  0.15   0.00  0.00     9   0.0144    0.0167      1052240 require_once
+ 12.5  0.03  0.03   0.03  0.03   0.00  0.00   126   0.0002    0.0002         7800 strtolower
+  8.3  0.02  0.02   0.02  0.02   0.00  0.00    10   0.0020    0.0020       213832 define
+  4.2  0.01  0.01   0.01  0.01   0.00  0.00     2   0.0050    0.0050         7328 htmlspecialchars
+  4.2  0.01  0.01   0.01  0.01   0.00  0.00     4   0.0025    0.0025        -4032 feof
+  4.2  0.01  0.01   0.01  0.01   0.00  0.00     4   0.0025    0.0025         3248 _example->_example
+  4.2  0.01  0.01   0.01  0.01   0.00  0.00    57   0.0002    0.0002         2896 count
+  4.2  0.01  0.01   0.01  0.01   0.00  0.00    37   0.0003    0.0003         6336 xml_presentation->_add_attribs
+  4.2  0.01  0.01   0.01  0.01   0.00  0.00     2   0.0050    0.0050       -20704 fclose
+  0.0  0.00  0.01   0.00  0.01   0.00  0.00     5   0.0000    0.0020           64 xml_slide->starthandler
+  0.0  0.00  0.02   0.00  0.02   0.00  0.00     2   0.0000    0.0100         -208 xml_slide->parsestring
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000          528 _slide->_slide
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000         2816 html->display
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     5   0.0000    0.0000          288 xml_slide->_add_attribs
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     5   0.0000    0.0000           88 xml_slide->endhandler
+  0.0  0.00  0.01   0.00  0.01   0.00  0.00    75   0.0000    0.0001         4048 xml_slide->cdatahandler
+  0.0  0.00  0.03   0.00  0.03   0.00  0.00     1   0.0000    0.0300          -16 xml_slide->parse
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000           72 xml_slide->seterrorhandling
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000          208 dirname
+  0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000         -120 xml_slide->pear
+]]></example>
+</slide>

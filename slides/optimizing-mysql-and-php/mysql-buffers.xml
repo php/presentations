@@ -1,0 +1,13 @@
+<slide title="Buffer tuning">
+
+<example>http://jeremy.zawodny.com/mysql/mytop/</example>
+
+<list title="Buffers to tune">
+ <bullet>Key buffer (MyISAM): %key_buffer_size%</bullet>
+ <bullet>Table cache (all): %table_cache%</bullet>
+ <bullet>Record buffer (per session): %read_buffer_size%, %read_rnd_buffer_size%</bullet>
+ <bullet>Sort buffer (per session): %sort_buffer_size%</bullet>
+ <bullet>Thread cache: %thread_cache_size%</bullet>
+ <bullet>Query cache (4.0+): %query_cache_size%, %query_cache_limit%</bullet>
+</list>
+</slide>

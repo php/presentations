@@ -1,0 +1,32 @@
+<slide title="Funky caching">
+
+<blurb title="The Goal">
+ Don't do the cache-checking with PHP code.
+</blurb>
+
+<example title="The Solution">ErrorDocument 404 /generate-page.php</example>
+
+<example title="The Script"><![CDATA[<?php
+if (preg_match('^/article-(\d+).html$!', $_SERVER['REDIRECT_URI'], $m)) {
+	ob_start();
+	/* Do stuff to generate page */
+	$data = ob_get_contents();
+	ob_end_clean();
+
+	echo $data;
+
+	$fn = "article-$m[0].html.".getmypid();
+
+	$fd = fopen($fn, "w") or exit;
+	fputs($fd, $data);
+	fclose($fd);
+
+	rename($fn, "article-$m[0].html");
+} else {
+	header("HTTP/1.0 404 Not found");
+	/* Generate 404 message here */
+}
+?>]]>
+</example>
+	
+</slide>

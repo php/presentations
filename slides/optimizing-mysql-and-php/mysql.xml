@@ -1,0 +1,9 @@
+<slide title="Optimizing MySQL">
+<list>
+ <bullet>Pick the right storage engine</bullet>
+ <bullet>Help the optimizer</bullet>
+ <bullet>Use EXPLAIN</bullet>
+ <bullet>Tune the buffers</bullet>
+ <bullet>Consider replication</bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Cache Alternatives">
+
+<list>
+<bullet>APC (Alternative PHP Cache): in PEAR</bullet>
+<bullet>Turck MMCache: on SourceForge</bullet>
+<bullet>IonCube Accelerator - free, but closed source</bullet>
+<bullet>BWare Afterburner - free, but closed source</bullet>
+<bullet>Zend Performance Suite - commercial (includes optimizer)</bullet>
+</list>
+
+<blurb title="Installation">
+Installation generally only involves loading an extension:
+</blurb>
+
+<example type="shell">
+zend_extension = "/usr/local/lib/php/apc.so"
+</example>
+
+</slide>

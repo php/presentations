@@ -1,0 +1,19 @@
+<slide title="HEAP">
+<list title="HEAP">
+ <bullet>Not transaction-capable</bullet>
+ <bullet>Stored in memory (so data lost on shutdown)</bullet>
+ <bullet>Hash indexes (great for indexed lookups, not for range queries)</bullet>
+ <bullet>Btree indexes in 4.1</bullet>
+</list>
+
+<list title="Dynamic">
+ <bullet>Not transaction-capable</bullet>
+ <bullet>Migrates between memory and disk</bullet>
+ <bullet>New in 4.1</bullet>
+</list>
+
+<list title="Cluster">
+ <bullet>5.0?</bullet>
+</list>
+
+</slide>

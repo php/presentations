@@ -1,0 +1,25 @@
+<slide title="InnoDB">
+<list>
+ <bullet>Transaction-capable</bullet>
+ <bullet>Row-level locking</bullet>
+ <bullet>MVCC architecture</bullet>
+ <bullet>Standard part of 4.0 (available in 3.23)</bullet>
+ <bullet>Great for balanced read/write usage</bullet>
+</list>
+
+<example type="sql">
+CREATE TABLE order (
+ ...
+) TYPE = InnoDB;
+
+ALTER TABLE address TYPE = InnoDB;
+</example>
+
+<list title="BDB">
+ <bullet>Transaction-capable</bullet>
+ <bullet>Page-level locking</bullet>
+ <bullet>Built on top of Sleepycat Software's Berkeley DB</bullet>
+ <bullet>Part of MySQL Max</bullet>
+</list>
+
+</slide>

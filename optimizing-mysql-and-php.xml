@@ -12,7 +12,50 @@
 
 <slide>slides/intro/titlepage.xml</slide>
 
-<!-- stuff goes here -->
+<slide>slides/optimizing-mysql-and-php/bottlenecks.xml</slide>
+<slide>slides/optimizing-mysql-and-php/cpu.xml</slide>
+<slide>slides/optimizing-mysql-and-php/memory.xml</slide>
+<slide>slides/optimizing-mysql-and-php/disk.xml</slide>
+<slide>slides/optimizing-mysql-and-php/network.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/bottlenecks2.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/apache.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/benchmarking-pages.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/execution-path.xml</slide>
+<slide>slides/optimizing-mysql-and-php/execution-path-with-cache.xml</slide>
+<slide>slides/optimizing-mysql-and-php/opcode-caches.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/engine-patches.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/cache-lite.xml</slide>
+<slide>slides/optimizing-mysql-and-php/funky-caching.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/gzip-compression.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/apd.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/benchmarking-code.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/mysql-interface.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/mysql.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/myisam.xml</slide>
+<slide>slides/optimizing-mysql-and-php/innodb.xml</slide>
+<slide>slides/optimizing-mysql-and-php/heap.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/mysql-optimizer.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/explain.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/mysql-buffers.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/replication.xml</slide>
+
+<slide>slides/optimizing-mysql-and-php/other-talks-phpcon-2003.xml</slide>
 
 <slide>slides/community/fin.xml</slide>
 

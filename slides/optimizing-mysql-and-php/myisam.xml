@@ -1,0 +1,12 @@
+<slide title="MyISAM">
+<list>
+ <bullet>Not transaction-capable</bullet>
+ <bullet>Table-level locking</bullet>
+ <bullet>Fast appends (great for logging)</bullet>
+ <bullet>Can be compressed</bullet>
+</list>
+
+<blurb>The MERGE table type allows you to treat several MyISAM tables as a
+single table: great for chunking logs into manageable pieces (so parts can be
+compressed).</blurb>
+</slide>

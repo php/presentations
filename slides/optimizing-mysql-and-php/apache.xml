@@ -1,0 +1,10 @@
+<slide title="Apache">
+<list title="Configuring Apache for Performance">
+  <bullet>StartServers, MinSpareServers, MaxSpareServers, MaxClients</bullet>
+  <bullet>KeepAlive, KeepAliveTimeout</bullet>
+  <bullet>Timeout</bullet>
+  <bullet>SendBufferSize</bullet>
+  <bullet>MaxRequestsPerChild</bullet>
+  <bullet>HostnameLookups</bullet>
+</list>
+</slide>

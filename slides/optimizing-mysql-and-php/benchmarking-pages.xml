@@ -1,0 +1,55 @@
+<slide title="Benchmarking Pages">
+<blurb>
+ The %ab% (Apache benchmark) utility can be used for basic page-level
+ benchmarking:
+</blurb>
+
+<example type="shell">
+$ ab -c 2 -n 50 http://localhost/test.php?n=500
+</example>
+
+<example type="shell">
+This is ApacheBench, Version 1.3d &lt;$Revision: 1.1 $&gt; apache-1.3
+Copyright (c) 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Copyright (c) 1998-2002 The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+Server Software:        Apache/1.3.28
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /test.php?n=500
+Document Length:        6 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.979 seconds
+Complete requests:      50
+Failed requests:        0
+Broken pipe errors:     0
+Total transferred:      10353 bytes
+HTML transferred:       306 bytes
+Requests per second:    51.07 [#/sec] (mean)
+Time per request:       39.16 [ms] (mean)
+Time per request:       19.58 [ms] (mean, across all concurrent requests)
+Transfer rate:          10.58 [Kbytes/sec] received
+
+Connnection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0     0    0.0      0     0
+Processing:    18    38   55.4     21   361
+Waiting:       18    38   55.4     21   361
+Total:         18    38   55.4     21   361
+
+Percentage of the requests served within a certain time (ms)
+  50%     21
+  66%     37
+  75%     39
+  80%     39
+  90%     49
+  95%     83
+  98%    222
+  99%    361
+ 100%    361 (last request)
+</example>
+</slide>

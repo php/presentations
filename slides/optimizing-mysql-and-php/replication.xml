@@ -1,0 +1,25 @@
+<slide title="Replication">
+
+<blurb>
+Replication can be used to distribute the load across multiple machines, particularly in a SELECT-heavy environment: this also reduces (or eliminates) lock contention on the master server when writing data.
+</blurb>
+
+<!-- borrow graphic from george -->
+<image filename="../hpp/replication.png" align="center"/>
+
+<example type="shell" title="Master Server Configuration">[mysqld]
+log-bin
+server-id=1</example>
+
+<example type="shell" title="Slave User"><![CDATA[GRANT REPLICATION SLAVE ON *.* TO repl@"%" IDENTIFIED BY 'foobar';]]></example>
+
+<example type="shell" title="Slave Server Configuration">[mysqld]
+set-variable = max_connections=200
+log-bin
+master-host=192.168.0.1
+master-user=repl
+master-password=foobar
+master-port=3306
+server-id=2</example>
+
+</slide>
