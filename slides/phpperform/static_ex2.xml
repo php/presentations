@@ -29,7 +29,7 @@
 			$data = ob_get_contents();
 			$Cache_Lite->save($data);
 		}
-	?>
+	? >
 ]]></example>
 	
 </slide>

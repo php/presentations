@@ -12,7 +12,7 @@
         echo "foo\n";
     }
     echo "end\n";
-?>
+? >
 ]]></example>
 
 	<blurb> </blurb>

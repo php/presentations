@@ -12,7 +12,7 @@
     $a = 5;
     apply_magic($a);
     echo "$a\n";
-?>
+? >
 ]]></example>
 
 	<blurb> </blurb>

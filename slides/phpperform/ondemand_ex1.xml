@@ -32,5 +32,5 @@
 	$fp = fopen(sprintf("/home/httpd/news/%06d.html", $id), "w");
 	fputs($fp, $html);
 	fclose($fp);
-?>]]></example>
+? >]]></example>
 </slide>

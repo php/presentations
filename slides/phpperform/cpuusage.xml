@@ -9,7 +9,7 @@ $ar['name'] = 'Sterling';
 for ($i = 0; $i < 20; ++$i) {
     print $ar['name'];
 }
-?>]]>
+? >]]>
 </example>
 
 <list>

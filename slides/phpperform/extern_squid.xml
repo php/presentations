@@ -19,5 +19,5 @@ if ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
 } else {
     header("Last-Modified: ".$tsstring);
 }
-?>]]></example>
+? >]]></example>
 </slide>

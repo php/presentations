@@ -25,6 +25,6 @@ handle everything related to HTTP_Compression for you...
 	print "Some more data\n";
 	print "Even _more_ data\n";
 	HTTP_Compress::output ();
-?>]]>
+? >]]>
 </example>
 </slide>

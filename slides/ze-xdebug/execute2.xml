@@ -9,7 +9,7 @@
         echo "bar\n";
     }
 	echo "inc\n";
-?>
+? >
 ]]></example>
 
 	<blurb> </blurb>
@@ -19,6 +19,6 @@
     include "test.inc";
     foo();
     echo "more bar\n";
-?>
+? >
 ]]></example>
 </slide>

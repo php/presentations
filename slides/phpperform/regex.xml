@@ -7,14 +7,14 @@ that have the same effect.
 if (preg_match ('/(.*)\@(.*)/', $data, $matches)) {
     print $matches[2];
 }
-?>]]></example>
+? >]]></example>
 
 <example fontsize="1.2em" title="Without Regular Expressions"><![CDATA[<?php
 $pos = strrpos ('@', $data);
 if ($pos !== false) {
     print substr ($data, $pos);
 }
-?>]]></example>
+? >]]></example>
 
 <blurb title="Fast Regexps">
 In other cases it may help to use regular expressions instead of custom parse
