@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>On demand - example 1</title>
+	<title>On demand - example</title>
 
+	<blurb fontsize="5em">Facts:</blurb>
+	<list fontsize="5em">
+		<bullet type="none">Url: http://yoursite.com/news/000001.html</bullet>
+		<bullet type="none">Path: /home/httpd/news/</bullet>
+	</list>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb fontsize="5em">Set up a 404 error handler:</blurb>
+
+	<example fontsize="2.5em"><![CDATA[<Directory /home/httpd/news>
+	ErrorDocument 404 /generate-news.php
+</Directory>]]></example>
+
+	<blurb> </blurb>
+	<blurb fontsize="5em">generate-news.php:</blurb>
+	<example fontsize="1.4em"><![CDATA[<?php
+	$id = basename($_SERVER['REDIRECT_URL'], '.html');
+
+	/* Generate the HTML */
+	include "/home/httpd/news/generator.php";
+	$html = generate_html($data);
+
+	/* Show the page */
+	echo $html;
+
+	/* Store the page for later use */
+	$fp = fopen(sprintf("/home/httpd/news/%06d.html", $id), "w");
+	fputs($fp, $html);
+	fclose($fp);
+?>]]></example>
 </slide>

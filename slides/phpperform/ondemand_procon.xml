@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Creating pages on demand 2</title>
+	<title>On demand: Pros and Cons</title>
 
+	<list effect="slide" fontsize="5em">
+		<bullet type="none">Pros:</bullet>
+		<bullet>No wasted resources on generating</bullet>
+		<bullet>No stale content</bullet>
+	</list>
+
+	<list effect="slide" fontsize="5em">
+		<bullet type="none">Cons:</bullet>
+		<bullet>None :-)</bullet>
+	</list>
 </slide>
