@@ -1,0 +1,19 @@
+<slide title="'form'">
+<blurb title="Offrir un choix entre différentes options en utilisant l'élément 'form'.">langue.vxml</blurb>
+<example fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+<form>
+  <field name="langue" type="digits?lenght=1">
+    <prompt>
+      <audio src="langue.wav">
+        For english type 1,
+	    pour le français tapez 2.
+      </audio>
+    </prompt>
+  </field>
+  <block>
+    <submit next="intro.php" namelist="langue" />
+  </block>
+</form>
+</vxml>]]></example>
+</slide>

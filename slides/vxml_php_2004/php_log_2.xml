@@ -1,0 +1,43 @@
+<slide title="Logs (3/5)">
+<blurb>redirection.php</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+
+// application de rencontre
+if ($numero_dnis == '15145551212') {
+  $appli = 'rencontre/index.php';
+}
+// application de voyances
+elseif ($numero_dnis == '15145551234') {
+  $appli = 'voyance/index.php';
+}
+
+/* 
+  le cookie 'session_id' contient 
+  la valeur unique de l'appel.
+ */
+setcookie('session_id', $session_id);
+
+/* 
+  supposons une connection déjà
+  établi à une base de données -
+  Insertion des données
+*/
+mysql_query('INSERT INTO log (session_id, connection_debut, numero_ani, numero_dnis) VALUES ("'.$session_id.'", "'.date('Y-m-d H:i:s').'", "'.$session_ani.'", "'.$session_dnis.'")');
+mysql_close();
+
+header('Content-type: text/xml');
+header('Cache-Control: no-cache, must-revalidate');
+header('Pragma: no-cache');
+
+?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+  <form>
+    <block>
+	  <var name="appli" expr="'<?php echo $appli; ?>'" />
+	  <return namelist="appli" />
+	</block>
+  </form>
+</vxml>
+]]></example>
+</slide>

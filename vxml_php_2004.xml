@@ -1,0 +1,37 @@
+<presentation
+	template="php" 
+	navmode="html"
+	navbarbackground="#990000"
+>
+<topic>VoiceXML</topic>
+<title>PHP et VoiceXML</title>
+<copyright>(c) Copyright 2004 Réal Thibeault</copyright>
+<event>PHP Québec Conférence 2004</event>
+<location>Montréal, Canada</location>
+<date>25-26 mars 2004</date>
+<speaker>Réal Thibeault</speaker>
+<url>www.programmeur-analyste.com</url>
+<navmode>html</navmode>
+<slide>slides/vxml_php_2004/bienvenue.xml</slide>
+<slide>slides/vxml_php_2004/session.xml</slide>
+<slide>slides/vxml_php_2004/vxml_intro.xml</slide>
+<slide>slides/vxml_php_2004/vxml_general.xml</slide>
+<slide>slides/vxml_php_2004/vxml_general_ex.xml</slide>
+<slide>slides/vxml_php_2004/vxml_menu.xml</slide>
+<slide>slides/vxml_php_2004/vxml_form.xml</slide>
+<slide>slides/vxml_php_2004/vxml_condition.xml</slide>
+<slide>slides/vxml_php_2004/vxml_transfert.xml</slide>
+<slide>slides/vxml_php_2004/vxml_transfert_2.xml</slide>
+<slide>slides/vxml_php_2004/php_intro.xml</slide>
+<slide>slides/vxml_php_2004/php_vxml.xml</slide>
+<slide>slides/vxml_php_2004/php_subdialog.xml</slide>
+<slide>slides/vxml_php_2004/php_subdialog_2.xml</slide>
+<slide>slides/vxml_php_2004/php_enregistrement.xml</slide>
+<slide>slides/vxml_php_2004/php_enregistrement_2.xml</slide>
+<slide>slides/vxml_php_2004/php_log.xml</slide>
+<slide>slides/vxml_php_2004/php_log_1.xml</slide>
+<slide>slides/vxml_php_2004/php_log_2.xml</slide>
+<slide>slides/vxml_php_2004/php_log_3.xml</slide>
+<slide>slides/vxml_php_2004/php_log_4.xml</slide>
+<slide>slides/vxml_php_2004/fin.xml</slide>
+</presentation>

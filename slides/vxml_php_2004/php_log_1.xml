@@ -1,0 +1,21 @@
+<slide title="Logs (2/5)">
+<blurb title="Cueillir l'appel"/>
+<blurb>index.vxml</blurb>
+<example fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+<var name="session_dnis" expr="session.telephone.dnis" />
+<var name="session_ani" expr="session.telephone.ani" />
+<var name="session_id" expr="session.id" />
+
+<form>
+  <block />
+  <subdialog name="redirection" src="redirection.php" namelist="session_dnis
+  session_ani session_id">
+    <prompt />
+    <filled>
+      <submit expr="redirection.appli" />
+    </filled>
+  </subdialog>
+</form>
+</vxml>]]></example>
+</slide>

@@ -1,0 +1,39 @@
+<slide title="Logs (4/5)">
+<blurb title="Suivre l'appel" />
+<blurb>rencontre.php</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+header ('Content-type: text/xml');
+?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+
+<!--
+  Pour chaque page, créons la variable 'sorti'
+  avec le nom de la page courante comme valeur
+-->
+<var name="sorti" expr="'<?php 
+  echo str_replace('.php', '', basename($PHP_SELF));
+?>'" />
+
+<!--
+  Si l'appelant raccroche, la page 'exit.php' est
+  lancé avec la variable 'sorti'
+-->
+<catch event="connection.disconnect">
+  <submit expr="'exit.php'" namelist="sorti" />
+</catch>
+
+<!--
+  Un plus...
+  Si le serveur vocal détecte une erreur non pas
+  sur la page actuelle, mais sur la prochaine page
+  à être exécutée, il lancera plutôt la page 'erreur.php'
+-->
+<catch event="error">
+  <submit expr="'erreur.php'" />
+</catch>
+
+<!-- ... -->
+</vxml>
+]]></example>
+</slide>

@@ -1,0 +1,25 @@
+<slide title="PHP et VoiceXML">
+<blurb title="Définir l'entête"/>
+<blurb>exemple.php</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+header('Content-type: text/xml');
+$heures = date('H');
+$minutes = date('i');
+?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+<form>
+  <block>
+    <prompt>
+      <?php 
+	    echo 'Il est actuellement ' .
+	    $heures . ' heures et ' .
+	    $minutes . ' minutes.';
+	  ?>
+    </prompt>
+    <exit />
+  </block>
+</form>
+</vxml>
+]]></example>
+</slide>

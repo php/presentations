@@ -1,0 +1,23 @@
+<slide title="Logs (5/5)">
+<blurb title="Terminer l'appel"/>
+<blurb>exit.php</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+/* 
+  supposons une connection déjà
+  établi à une base de données -
+  Mise-à-jour des données
+*/
+mysql_query('UPDATE log SET connection_fin = "'.date('Y-m-d H:i:s').'", sorti = "'.$sorti.'" WHERE session_id = "'.$_COOKIE['session_id'].'"');
+mysql_close();
+
+header('Content-type: text/xml');
+?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+  <form>
+	<block>
+	  <exit/>
+    </block>
+  </form>
+</vxml>]]></example>
+</slide>

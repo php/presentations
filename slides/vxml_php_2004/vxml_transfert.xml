@@ -1,0 +1,56 @@
+<slide title="Transferts d'appels">
+<list>
+<bullet>Support à la clientèle</bullet>
+<bullet>Service de voyance</bullet>
+<bullet>Hotline</bullet>
+<bullet>...</bullet>
+</list>
+<blurb>transfert.vxml</blurb>
+<example fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+
+<!-- Support à la clientèle, ligne #1 -->
+<form id="transfer_1">
+  <transfer name="xfer" dest="tel:15145551212" transferaudio="attente.wav"
+  bridge="true">
+	<prompt />
+	<filled>
+      <if cond="xfer$.duration &gt; 0">
+		<var name="duree" expr="xfer$.duration" />
+		<var name="support" expr="'1'" />
+		<submit next="next.php" namelist="support duree" />  
+	  <else />
+        <goto next="#transfer_2" /> 
+      </if> 
+    </filled> 
+  </transfer>
+</form>
+
+<!-- Support à la clientèle, ligne #2 -->
+<form id="transfer_2">
+  <transfer name="xfer" dest="tel:15145551234" transferaudio="attente.wav"
+  bridge="true">
+	<prompt />
+	<filled> 
+      <if cond="xfer$.duration &gt; 0"> 
+		<var name="duree" expr="xfer$.duration" />
+		<var name="support" expr="'2'" />
+		<submit next="next.php" namelist="support duree" />
+	  <elseif cond="xfer == 'busy'" />
+	    <prompt>
+		  Toutes nos lignes sont occupées, veuillez patienter.
+		</prompt>
+        <goto next="#transfer_1" /> 
+	  <!-- En supposant que la ligne #1 n'était pas occupé -->
+	  <else />
+	    <prompt>
+		  Notre support à la clientèle est actuellement indisponible,
+		  réessayez plus tard.
+		</prompt>
+        <goto next="menu.php" />
+      </if> 
+    </filled> 
+  </transfer>
+</form>
+</vxml>]]></example>
+</slide>

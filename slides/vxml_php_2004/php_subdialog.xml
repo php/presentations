@@ -1,0 +1,59 @@
+<slide title="'subdialog' (1/2)">
+<blurb title="Interagir avec le serveur pendant l'exécution d'une page VXML"/>
+<blurb>telephone.vxml</blurb>
+<example fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+<form>
+  <!-- Demande le numéro de téléphone -->
+  <property name="termchar" value="#" />
+  <field name="telephone" type="digits">
+    <prompt>
+      <audio src="telephone.wav">
+	    Entrez votre numéro de téléphone à 10 chiffres et 
+		terminez votre saisie en appuyant sur la touche dièse.
+      </audio>
+    </prompt>
+  </field>
+
+  <!-- 
+    Appel la page 'valide.php' et envoie la variable 'telephone'
+	La page 'valide.php' retournera la variable 'result' qui
+	contiendra soit la valeur 'OK', 'KO' ou 'FAILED'
+	  OK : Le numéro de tél. est valide
+	  KO : Le numéro de tél. n'est pas valide
+	  FAILED: Une erreur système a perturbée l'application
+	Nous pourrons récupérer la valeur comme ceci:
+	valide.result  (valide étant le nom de l'élément 'subdialog')
+  -->
+  <subdialog name="valide" src="valide.php" namelist="telephone" 
+  method="post">
+    <filled>
+	  <if cond="valide.result == 'OK'">
+		<prompt>
+		  <audio src="merci.wav">
+			Merci.
+		  </audio>
+	    </prompt>
+		<goto next="next.php" />
+	  <elseif cond="valide.result == 'FAILED'" />
+		<prompt>
+		  <audio src="failed.wav">
+			Une erreur s'est produite - veuillez réessayer plus tard.
+		  </audio>
+	    </prompt>
+		<goto next="menu.php" />
+	  <else />
+		<prompt>
+		  <audio src="ko.wav">
+			Vous n'avez pas saisie correctement votre numéro de téléphone.
+			Veuillez recommencer.
+		  </audio>
+	    </prompt>
+		<clear namelist="valide telephone" />
+		<reprompt />
+	  </if>
+	</filled>
+  </subdialog>
+</form>
+</vxml>]]></example>
+</slide>

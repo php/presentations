@@ -1,0 +1,55 @@
+<slide title="Enregistrements (1/2)">
+<blurb>enregistrement.vxml</blurb>
+<example fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+<form>
+  <record name="message" beep="true" maxtime="60s" finalsilence="4000ms">
+	<prompt>
+	  Dites votre message après le signal sonore.
+	</prompt>
+  </record>
+
+  <field name="valide" type="digits?length=1">
+    <prompt>
+      Voici votre message: <audio expr="message" />.
+      Pour ré-écouter votre message, tapez 1.
+	  Pour recommencer l'enregistrement, tapez 2.
+	  Pour valider votre message, tapez 3.
+	</prompt>
+
+	<filled>
+	  <if cond="valide == 2">
+		<clear namelist="message valide" />
+		<reprompt />
+	  <elseif cond="valide != 3" />
+		<clear namelist="valide" />
+		<reprompt />
+	  </if>
+	</filled>
+  </field>
+
+  <!-- 
+	La page 'enregistrement.php' retournera la variable 'result' qui
+	contiendra soit la valeur 'OK' ou 'FAILED'
+	  OK : L'enregistrement a été fait
+	  FAILED: L'enregistrement n'a pas été fait
+  -->
+  <subdialog name="record" src="enregistrement.php" method="post"
+  enctype="multipart/form-data" namelist="message message_de">
+    <filled>
+      <if cond="record.result == 'OK'">
+		<prompt>
+		  Votre message a été enregistré. Merci!
+		</prompt>
+		<goto next="next.php" />
+	  <else />
+		<prompt>
+		  Une erreur s'est produite. Réessayez plus tard.
+		</prompt>
+		<goto next="next.php" />
+	  </if>
+	</filled>
+  </subdialog>
+</form>
+</vxml>]]></example>
+</slide>

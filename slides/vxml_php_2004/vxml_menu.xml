@@ -1,0 +1,17 @@
+<slide title="'menu'">
+<blurb title="Offrir un choix entre différentes options en utilisant l'élément 'menu'.">langue.vxml</blurb>
+<example fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE vxml SYSTEM "http://www.w3.org/TR/voicexml20/vxml.dtd">
+<vxml version="2.0">
+<menu>
+  <prompt>
+    <audio src="langue.wav">
+      For english type 1,
+	  pour le français tapez 2.
+    </audio>
+  </prompt>
+  <choice dtmf="1" next="intro.php?l=en" />
+  <choice dtmf="2" next="intro.php?l=fr" />
+</menu>
+</vxml>]]></example>
+</slide>

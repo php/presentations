@@ -1,0 +1,52 @@
+<slide title="'subdialog' (2/2)">
+<blurb>valide.php</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+
+include_once('lib.php');
+
+/* Valide la valeur de la variable $telephone */
+if (strlen($_POST['telephone']) == 10) {
+  $base_id = mysql_connect('localhost','username','password');
+  if (!$base_id) { 
+    debug(1); // envoie d'un courriel à l'administrateur
+    $result = 'FAILED';
+  }
+  elseif (!mysql_select_db('clients',$base_id)) { 
+    debug(2);
+	$result = 'FAILED';
+  }
+  elseif (mysql_query('INSERT INTO info (telephone) 
+  VALUES ('.$_POST['telephone'].')')) { 
+	$result = 'OK';
+  }
+  else {
+    debug(3);
+	$result = 'FAILED';
+  }
+  if ($base_id) {
+	mysql_close($base_id);
+  }
+}
+else {
+  $result = 'KO';
+}
+
+header('Content-type: text/xml');
+header('Cache-Control: no-cache, must-revalidate');
+header('Pragma: no-cache');
+?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+<form>
+  <!--
+	Spécifie la valeur de la variable 'result'
+	à retourner à la page racine.
+  -->
+  <block>
+    <var name="result" expr="'<?php echo $result;?>'" />
+    <return namelist="result" />
+  </block>
+</form>
+</vxml>
+]]></example>
+</slide>

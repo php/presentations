@@ -1,0 +1,46 @@
+<slide title="Conférences">
+<list>
+<bullet>Conférence</bullet>
+<bullet>Rencontre</bullet>
+<bullet>...</bullet>
+</list>
+<blurb>conference.vxml</blurb>
+<example fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+
+<menu>
+  <prompt>
+    <audio src="choix.wav">
+      Si vous parlez français, tapez 1.
+	  If you speak english, type 2.
+    </audio>
+  </prompt>
+  <choice dtmf="1" next="#conf_francais" />
+  <choice dtmf="2" next="#conf_english" />
+</menu>
+
+<!-- Zone de conférence en français -->
+<form id="#conf_francais">
+  <transfer name="xfer" dest="conf:francais" connecttimeout="40s"
+  bridge="true">
+	<prompt>
+	  Veuillez patienter...
+	</prompt>
+	<filled> 
+      <if cond="xfer$.duration &gt; 0">
+		<var name="duree" expr="xfer$.duration" />
+		<var name="langue" expr="'fr'" />
+		<submit next="next.php" namelist="duree langue" />
+	  <else />
+	    <prompt>
+		  Il n'y a actuellement personne. Réessayez plus tard.
+		</prompt>
+        <submit next="next.php" namelist="langue" />
+      </if> 
+    </filled> 
+  </transfer>
+</form>
+
+<!-- Zone de conférence en anglais... -->
+</vxml>]]></example>
+</slide>

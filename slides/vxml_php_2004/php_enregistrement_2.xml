@@ -1,0 +1,30 @@
+<slide title="Enregistrements (2/2)">
+<blurb>enregistrement.php</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+
+$message_de = 'real';
+
+$tmpFile=$HTTP_POST_FILES['message']['tmp_name'];
+if ($tmpFile) {
+  move_uploaded_file($tmpFile, '/www/root/upload/'.$message_de.'.wav');
+  $result = 'OK';
+}
+else {
+  $result = 'FAILED';
+}
+
+header('Content-type: text/xml');
+header('Cache-Control: no-cache, must-revalidate');
+header('Pragma: no-cache');
+?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<vxml version="2.0">
+<form>
+  <block>
+    <var name="result" expr="'<?php echo $result;?>'" />
+    <return namelist="result" />
+  </block>
+</form>
+</vxml>
+]]></example>
+</slide>
