@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>constructors</title>
+
+    <example fontsize="1.3em"><![CDATA[<?php
+	class Weather {
+		var $temperature;
+
+		function __construct($temp)
+		{
+			echo "New version\n";
+		}
+
+		function Weather($temp)
+		{
+			echo "Old version\n";
+		}
+	}
+
+	$w = new Weather(7);
+?>]]></example>
+
+<break lines="2"/>
+	<blurb fontsize="3.5em">PHP 5:</blurb>
+<break/>
+    <example fontsize="1.3em"><![CDATA[Strict Standards: var: Deprecated. Please use the public/private/protected modifiers in - on line 3
+	
+Strict Standards: Redefining already defined constructor for class Weather in - on line 9
+
+New version
+]]></example>
+
+</slide>
+

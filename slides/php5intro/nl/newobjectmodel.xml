@@ -3,8 +3,8 @@
 	<title>Objectmodel in PHP 5</title>
 
 	<break lines="1" />
-	<image align="center" filename="newoo.png" />
-
+	<image align="right" filename="newoo.png" />
+	<break lines="32"/>
 	<list marginleft="2em" fontsize="3.5em">
 		<bullet>Pass by reference</bullet>
 		<bullet>Objects are referenced by a handle.</bullet>

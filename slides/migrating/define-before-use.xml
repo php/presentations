@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Define classes before using them</title>
+
+	<blurb>In PHP 4 it was never necessary to define a class before using it in your code, although it would decrease script execution times a bit. The same is true for PHP 5, but if you are using Interfaces in your code, then you are *required* to define a class before using it.</blurb>
+</slide>
+

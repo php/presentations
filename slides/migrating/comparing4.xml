@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Comparing Objects</title>
-
-	<blurb fontsize="3.5em">PHP 4</blurb>
+	<subtitle>PHP 4</subtitle>
 
     <example fontsize="1.3em"><![CDATA[<?php
 	class Country {
@@ -19,13 +18,17 @@
 	if ($deutschland == $die_schweiz) {
 		echo "Deutschland ist die Schweiz.\n";
 	}
+	if ($deutschland === $die_schweiz) {
+		echo "Deutschland ist die Schweiz.\n";
+	}
 	if ($deutschland == $norway) {
 		echo "Deutschland er Norway.\n";
 	}
-? >]]></example>
+?>]]></example>
 
+<break lines="2"/>
+	<blurb>In PHP 4 *$obj1 == $obj2* or *$obj1 === $obj2* results in *true*:</blurb>
 	<list>
-		<bullet marginleft="0em">In PHP 4 *$obj1 == $obj2* results in *true*:</bullet>
-		<bullet effect="slide" marginleft="2em">when the object's properties are the same</bullet>
+		<bullet effect="hide" marginleft="2em">when the object's properties are the same</bullet>
 	</list>
 </slide>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Casting Objects</title>
-
-	<blurb fontsize="3.5em">PHP 4</blurb>
+	<subtitle>PHP 4</subtitle>
 
     <example fontsize="1.3em"><![CDATA[<?php
 	class Country {
@@ -17,10 +16,9 @@
 
 	echo (int) $jurop, "\n";
 	echo (int) $dutchieland, "\n";
-? >]]></example>
-
-	<blurb fontsize="2.5em">Output:</blurb>
-
+?>]]></example>
+<break/>
+	<blurb fontsize="2.5em">output:</blurb>
     <example fontsize="1.3em"><![CDATA[0
 1]]></example>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Clone</title>
+	<subtitle>The Compatible Way</subtitle>
 
-	<blurb fontsize="3.5em">The Compatible Way</blurb>
-
+	<blurb>%zend.ze1_compatibility_mode%:</blurb>
     <example fontsize="1.3em"><![CDATA[<?php
 	ini_set('zend.ze1_compatibility_mode', '1');
 	
@@ -25,9 +25,9 @@
 	echo $linux->name. "\n";
 	echo $win->name;
 	
-? >]]></example>
-
-	<blurb fontsize="2.5em">Output:</blurb>
+?>]]></example>
+<break/>
+	<blurb fontsize="2.5em">output:</blurb>
 
     <example fontsize="1.3em"><![CDATA[linux
 windows]]></example>

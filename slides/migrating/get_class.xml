@@ -2,7 +2,6 @@
 <slide fontsize="6em">
 	<title>get_class()</title>
 
-	<break lines="2"/>
     <example fontsize="1.3em"><![CDATA[<?php
 	class TheNetherlands {
 		var $area;
@@ -14,16 +13,19 @@
 	$holland = new TheNetherlands('Holland');
 
 	echo get_class($holland), "\n";
-? >]]></example>
+?>]]></example>
 
-	<break lines="2"/>
+<break lines="2"/>
 	<blurb fontsize="3.5em">PHP 4:</blurb>
+<break/>
     <example fontsize="1.3em"><![CDATA[thenetherlands]]></example>
 
-	<break lines="2"/>
+<break lines="2"/>
 	<blurb fontsize="3.5em">PHP 5:</blurb>
+<break/>
     <example fontsize="1.3em"><![CDATA[TheNetherlands]]></example>
 
+<break lines="2"/>
 	<blurb fontsize="3.5">
 		The same is true for get_parent_class() and get_class_methods().
 	</blurb>

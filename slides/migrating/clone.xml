@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Clone</title>
+	<subtitle>The PHP 5 Way</subtitle>
 
-	<blurb fontsize="3.5em">The PHP 5 Way</blurb>
-
+	<blurb fontsize="2.5em">%clone% keyword:</blurb>
     <example fontsize="1.3em"><![CDATA[<?php
 	class OS {
 		var $name;
@@ -23,10 +23,10 @@
 	echo $linux->name. "\n";
 	echo $win->name;
 	
-? >]]></example>
+?>]]></example>
 
-	<blurb fontsize="2.5em">Output:</blurb>
-
+	<break/>
+	<blurb fontsize="2.5em">output:</blurb>
     <example fontsize="1.3em"><![CDATA[linux
 windows]]></example>
 </slide>

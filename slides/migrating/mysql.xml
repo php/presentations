@@ -2,21 +2,19 @@
 <slide fontsize="6em">
 	<title>Changes in MySQL</title>
 
-	<break lines="4"/>
 	<blurb fontsize="4em">
 	In PHP 5 the MySQL client library is no longer bundled because:
 	</blurb>
 	<list fontsize="4em">
-		<bullet>Maintainability</bullet>
-		<bullet>License change</bullet>
-		<bullet>Problems with other modules</bullet>
+		<bullet>Most systems have the library installed</bullet>
+		<bullet>Multiple versions of libraries can cause problems (mod_auth_mysql)</bullet>
+		<bullet>Maintainability of the bundled library</bullet>
+		<bullet>libmysql changed license to GPL, which means we can not bundle it with PHP anymore.</bullet>
 	</list>
-	<break lines="2"/>
-	<blurb fontsize="4em">
-	Solution:
+<break lines="2"/>
+	<blurb>Solution:</blurb>
+	<blurb>
+		Install the MySQL client libraries and add %--with-mysql=[DIR]% to
+		./configure
 	</blurb>
-	<list fontsize="4em">
-		<bullet>Install the MySQL client libraries</bullet>
-		<bullet>--with-mysql=[DIR]</bullet>
-	</list>
 </slide>

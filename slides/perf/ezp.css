@@ -68,6 +68,12 @@ font-size: 28pt;
 margin-right: 40px;
 }
 
+li.pres_bullet_nr {
+font-size: 28pt;
+margin-right: 40px;
+list-style-type: decimal;
+}
+
 ul.large div li.pres_bullet
 {
 	font-size: 40pt;

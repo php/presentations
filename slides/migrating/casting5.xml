@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Casting Objects</title>
-
-	<blurb fontsize="3.5em">PHP 5</blurb>
+	<subtitle>PHP 5</subtitle>
 
     <example fontsize="1.3em"><![CDATA[<?php
 	class Country {
@@ -17,18 +16,17 @@
 
 	echo (int) $jurop, "\n";
 	echo (int) $dutchieland, "\n";
-? >]]></example>
+?>]]></example>
+<break/>
+	<blurb fontsize="2.5em">output:</blurb>
+    <example fontsize="1.3em"><![CDATA[Object id #1
+Object id #2
+]]></example>
 
-	<blurb fontsize="2.5em">Output:</blurb>
-
-    <example fontsize="1.3em"><![CDATA[Notice: Object of class Country could not be converted to integer in - on line 13
-1
-Notice: Object of class Country could not be converted to integer in - on line 14
-1]]></example>
-
+<break lines="2"/>
+	<blurb>In PHP 5 *(int) $object* results in:</blurb>
 	<list>
-		<bullet marginleft="0em">In PHP 5 *(int) $object* results in:</bullet>
-		<bullet marginleft="2em">A notice and always "1"</bullet>
+		<bullet marginleft="2em">"Object id #" + Object ID</bullet>
 		<bullet marginleft="2em">unless *zend.ze1_compatibility_mode = 1*</bullet>
 	</list>
 </slide>
