@@ -1,0 +1,35 @@
+<slide title="Bad Documentation">
+<image filename="doi.jpg" align="right" marginright="1.0em"/>
+
+<break lines="8"/>
+
+<example><![CDATA[<?php
+/**
+ * Find the mean average of the contents of $a, and return that
+ * value to the user.
+ */
+function calculate_a_and_b($a)
+{
+	$i = 0;  // set number of elements to 0
+	$c = 0;  // set total value of all elements to 0
+
+	/**
+	 * Loop through all the values of $a, and put the current 
+	 * loop value in $b
+	 */
+	foreach ($a as $b) {
+		/**
+		 * increment by the current loop value
+	     */
+		$c += $b;
+
+		/**
+		 * incremenet the number of elements found
+		 */
+		$i++;
+	}
+
+	return ($c / $i);
+}
+?>]]></example>
+</slide>
