@@ -2,4 +2,14 @@
 <slide fontsize="6em">
 	<title>Database optimization</title>
 
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Queries are slow</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Recursive queries are slower</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Recursive queries on every page are slowest</bullet>
+	</list>
 </slide>

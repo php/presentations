@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Pregenerated content 1</title>
+	<title>Pregenerated content</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Only regenerate page when needed</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Different elements</bullet>
+	</list>
 </slide>

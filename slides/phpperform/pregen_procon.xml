@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Pregenerated content 2</title>
+	<title>Pregenerating: Pros and Cons</title>
 
+	<list effect="slide" fontsize="5em">
+		<bullet type="none">Pros:</bullet>
+		<bullet>No stale content</bullet>
+		<bullet>PHP is only used for regeneration</bullet>
+	</list>
+
+	<list effect="slide" fontsize="5em">
+		<bullet type="none">Cons:</bullet>
+		<bullet>Costs a of resources</bullet>
+		<bullet>Hard to figure out what to regenerate</bullet>
+	</list>
 </slide>

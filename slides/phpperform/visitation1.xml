@@ -2,4 +2,44 @@
 <slide fontsize="6em">
 	<title>Visitation model 1</title>
 
+	<blurb fontsize="5em">Directory structure:</blurb>
+	<image align="center" filename="yahoo.png" />
+
+	<blurb fontsize="5em">Stored as:
+	<![CDATA[<table class="db" border="1" align="center" cellspacing="0">
+<tr>
+	<th>Id</th><th>Parent</th><th>Name</th>
+</tr>
+<tr>
+	<td>3</td><td>1</td><td class="left">Countries</td>
+</tr>
+<tr>
+	<td>4</td><td>3</td><td class="left">Belgium</td>
+</tr>
+<tr>
+	<td>5</td><td>3</td><td class="left">Netherlands</td>
+</tr>
+<tr>
+	<td>6</td><td>3</td><td class="left">Germany</td>
+</tr>
+<tr>
+	<td>7</td><td>5</td><td class="left">Business and Economy</td>
+</tr>
+</table>
+	]]></blurb>
+
+	<blurb fontsize="5em">Retrieve list with:</blurb>
+	<example fontsize="1.1em"><![CDATA[<?php
+	function gimmeParent($id) {
+		global $dir;
+
+		$res = mysql_query("SELECT parent, name FROM directory WHERE id = $id");
+		if (mysql_num_rows($res) > 0) {
+			$dir[] = ($row = mysql_fetch_row($res));
+			gimmeParent($row['parent']);
+		}
+	}
+
+	gimmeParent(7);
+?>]]></example>
 </slide>
