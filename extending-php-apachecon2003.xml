@@ -1,6 +1,4 @@
-<presentation
-  template="php2"
->
+<presentation template="php">
 <topic>PHP</topic>
 <title>Writing a PHP Extension</title>
 <event>Apachecon</event>
@@ -23,7 +21,7 @@
 <slide>slides/extending/ext9.xml</slide>
 <slide>slides/extending/ext10.xml</slide>
 <slide>slides/extending/ext11.xml</slide>
-<slide>slides/extending/ext12.xml</slide>
+<slide>slides/extending-tidy/ext12.xml</slide>
 <slide>slides/extending/ext13.xml</slide>
 <slide>slides/extending/ext14.xml</slide>
 <slide>slides/extending/ext15.xml</slide>
