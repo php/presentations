@@ -1,12 +1,11 @@
 <slide title="WikkiTikkiTavi">
+<link href="http://tavi.sf.net/" align="center">http://tavi.sf.net/</link>
 <list>
- <bullet>http://tavi.sf.net/</bullet>
  <bullet>Uses MySQL</bullet>
  <bullet>Categories: like change-sensitive bookmarks</bullet>
  <bullet>RSS export</bullet>
  <bullet>No user management</bullet>
 </list>
 
-<!-- TODO: screenshot -->
-
+<image align="center" filename="slides/pragmatic/tavi.png" />
 </slide>

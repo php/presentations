@@ -1,6 +1,6 @@
 <slide title="PHPWiki">
+<link href="http://phpwiki.sf.net/" align="center">http://phpwiki.sf.net/</link>
 <list>
- <bullet>http://phpwiki.sf.net/</bullet>
  <bullet>Supporst MySQL, PostgreSQL, mSQL, flat files, dbm-style database</bullet>
  <bullet>Color diffs of revisions</bullet>
  <bullet>Links at bottom of pages showing relationships (incoming, outgoing, most popular nearby</bullet>
@@ -8,5 +8,5 @@
  <bullet>RSS export</bullet>
 </list>
 
-<!-- TODO: screenshot -->
+<image align="center" filename="slides/pragmatic/phpwiki.png" />
 </slide>

@@ -1,10 +1,10 @@
 <slide title="pwiki">
+<link href="http://wiki.2gn.com/" align="center">http://wiki.2gn.com/</link>
 <list>
- <bullet>http://wiki.2gn.com/</bullet>
  <bullet>Uses MySQL or PostgreSQL or flat-files</bullet>
  <bullet>File and image handling</bullet>
  <bullet>RSS integration</bullet>
 </list>
 
-<!-- TODO: screenshot -->
+<image align="center" filename="slides/pragmatic/pwiki.png" />
 </slide>
