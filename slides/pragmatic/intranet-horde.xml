@@ -1,6 +1,6 @@
 <slide title="Horde">
+<link href="http://www.horde.org/" align="center">http://www.horde.org/</link>
 <list>
- <bullet>http://www.horde.org/</bullet>
  <bullet>An application framework with a number of groupware-related applications</bullet>
  <bullet>Built on top of PEAR, including PEAR::DB for database abstraction</bullet>
  <bullet>IMP: Webmail</bullet>
@@ -15,5 +15,5 @@
  <bullet>Orator: Presentation software</bullet>
 </list>
 
-<!-- TODO: screenshot(s) -->
+<image align="center" filename="slides/pragmatic/imp-standard.png" />
 </slide>

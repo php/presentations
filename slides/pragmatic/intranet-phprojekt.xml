@@ -1,10 +1,10 @@
 <slide title="PHProjekt">
+<link href="http://www.phprojekt.com/" align="center">http://www.phprojekt.com/</link>
 <list>
- <bullet>http://www.phprojekt.com/</bullet>
  <bullet>Includes calendar, contact manager, time card system, project manager, chat, forum, request tracker, webmail, file manager, notes, bookmarks, votingtodo list</bullet>
  <bullet>Supports MySQL, PotgreSQL, Oracle, Infromix, and Microsoft SQL Server</bullet>
  <bullet>Translated into 20 languages</bullet>
 </list>
 
-<!-- TODO: screenshot(s) -->
+<image align="center" filename="slides/pragmatic/phprojekt.png" />
 </slide>

@@ -1,10 +1,10 @@
 <slide title="TUTOS">
+<link href="http://www.tutos.org/" align="center">http://www.tutos.org/</link>
 <list>
- <bullet>http://www.tutos.org/</bullet>
  <bullet>Includes: calendar, address book, project management, task management, file management, bug tracking, time tracking, invoices</bullet>
  <bullet>Works with MySQL, PostgreSQL, Oracle, and Interbase</bullet>
  <bullet>Translated into a dozen languages</bullet>
 </list>
 
-<!-- TODO: screenshot(s) -->
+<image align="center" filename="slides/pragmatic/tutos.png" />
 </slide>

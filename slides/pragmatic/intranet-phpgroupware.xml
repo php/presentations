@@ -1,10 +1,10 @@
 <slide title="phpGroupWare">
+<link href="http://phpgroupware.org/" align="center">http://phpgroupware.org/</link>
 <list>
- <bullet>http://phpgroupware.org/</bullet>
  <bullet>Another framework with a number of applications, including: address book, calendar, webmail, file manager, forum, and much more.</bullet>
  <bullet>Includes own database abstraction (MySQL and PostgreSQL) and template system, among other APIs.</bullet>
  <bullet>Part of the DotGNU project</bullet>
 </list>
 
-<!-- TODO: screenshot(s) -->
+<image align="center" filename="slides/pragmatic/phpgroupware.png" />
 </slide>
