@@ -1,0 +1,65 @@
+<slide title="Fonts">
+
+<table title="14 Built-in Fonts" columns="2" width="60%">
+<cell>Courier</cell> <cell>Courier-Bold</cell>
+<cell>Courier-Oblique</cell> <cell>Courier-BoldOblique</cell>
+<cell>Helvetica</cell> <cell>Helvetica-Bold</cell>
+<cell>Helvetica-Oblique</cell> <cell>Helvetica-BoldOblique</cell>
+<cell>Times-Roman</cell> <cell>Times-Bold</cell>
+<cell>Times-Italic</cell> <cell>Times-BoldItalic</cell>
+<cell>Symbol</cell> <cell>ZapfDingbats</cell>
+</table>
+
+<blurb>
+You can also use other AFM fonts, postscript type-1 and TTF fonts.  To use a TTF font,
+for example:
+</blurb>
+
+<example><![CDATA[<?php 
+PDF_set_parameter($p,"FontOutline",
+                     "CANDY==/usr/fonts/candy.ttf");
+$font = PDF_findfont($p,"CANDY","host",1); 
+?>]]></example>
+
+<example filename="slides/intro/pdf_font_ex1.php" hide="1" result="1" type="iframe" title="CANDY Font Example"/>
+
+<blurb>
+Fonts can also be defined in the pdflib.upr file.  
+</blurb>
+
+<table title="Character Encodings" columns="2">
+<cell bold="1">winansi</cell><cell>Windows code page 1252,a superset of ISO 8859-1</cell>
+<cell bold="1">macroman</cell><cell>Mac Roman encoding,i.e.,the default Macintosh character set</cell>
+<cell bold="1">ebcdic</cell><cell>EBCDIC code page 1047 as used on IBM AS/400 and S/390 systems</cell>
+<cell bold="1">builtin</cell><cell>Original encoding used by non-text (symbol) or non-Latin text fonts</cell>
+<cell bold="1">host</cell><cell>Macroman on the Mac,ebcdic on EBCDIC-based systems,and winansi on all other</cell>
+</table>
+
+<example filename="slides/intro/pdf_font_ex2.php"
+		 title="Font Example"
+		 result="1"
+		 type="iframe"
+		 fontsize="1.5em"
+/>
+
+<blurb>
+The pdflib.upr file entries for this would look like this:
+</blurb>
+
+<example><![CDATA[FontAFM
+LuciduxSans=lcdxsr.afm
+Utopia-Regular=UTRG____.afm
+URWGothicL-BookObli=a010033l.afm
+URWPalladioL-Roma=p052003l.afm
+NimbusMonL-ReguObli=n022023l.afm
+
+FontOutline
+LuciduxSans=lcdxsr.pfa
+Utopia-Regular=UTRG____.pfa
+URWGothicL-BookObli=a010033l.pfa
+URWPalladioL-Roma=p052003l.pfa
+NimbusMonL-ReguObli=n022023l.pfa
+CANDY=CANDY.ttf
+Arial=arial.ttf]]></example>
+
+</slide>

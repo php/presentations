@@ -1,0 +1,31 @@
+<slide title="Text">
+
+<blurb title="pdf_show_xy()">
+Output text at a given position.
+</blurb>
+<example><![CDATA[<? pdf_show_xy($p,"Text",50,100); ?>')?>]]></example>
+
+<blurb title="pdf_show()">
+Output text at the current position set with pdf_set_text_pos().
+</blurb>
+<example><![CDATA[<? pdf_set_text_pos($p, 50,100);
+   pdf_show($p,"Text"); ?>')?>]]></example>
+
+<blurb title="pdf_continue_text()">
+Output text on the next line.
+</blurb>
+<example><![CDATA[<? pdf_continue_text($p, "Next line."); ?>]]></example>
+
+<blurb title="pdf_show_boxed()">
+Format text within the defined box.
+</blurb>
+
+<example
+	title="pdf_show_boxed() Example"
+	filename="slides/intro/pdf_text_ex1.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+</slide>

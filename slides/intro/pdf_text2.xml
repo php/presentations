@@ -1,0 +1,26 @@
+<slide title="Text Attributes">
+<blurb>
+Underline, Overline and Strikeout Text are set using a call to 
+PDF_set_parameter().</blurb>
+
+<example><![CDATA[<? pdf_set_parameter($p,"underline","true");
+   pdf_set_parameter($p,"overline","true");
+   pdf_set_parameter($p,"strikeout","true");
+   pdf_show_xy($p,"Text",50,100); ?>]]></example>
+
+<table title="Text Rendering" width="100%" columns="4">
+<cell bold="1" fontsize="3em">0</cell><cell>Normal</cell> <cell bold="1" fontsize="3em">4</cell> <cell>Normal Text - add to clipping path</cell>
+<cell bold="1" fontsize="3em">1</cell><cell>Stroke text (outline)</cell> <cell bold="1" fontsize="3em">5</cell> <cell>Stroke text - add to clipping path</cell>
+<cell bold="1" fontsize="3em">2</cell><cell>Fill and stroke text</cell> <cell bold="1" fontsize="3em">6</cell> <cell>Fill and stroke text - add to clipping path</cell>
+<cell bold="1" fontsize="3em">3</cell><cell>Invisible Text</cell> <cell bold="1" fontsize="3em">7</cell> <cell>Invisible text - add to clipping path</cell>
+</table>
+
+<example
+	title="Text Attributes and Rendering Example"
+	filename="slides/intro/pdf_text_ex2.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+</slide>

@@ -1,0 +1,16 @@
+<slide title="A Saner Coordinate System">
+<blurb>
+It is possible to move the origin and also reverse the direction.
+ie. you can make the top-left corner the origin and have positive
+coordinates indicate down and to the right using something like this:
+</blurb>
+
+<example
+	title="Coordinate Example"
+	filename="slides/intro/pdf_coords_ex2.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+</slide>
