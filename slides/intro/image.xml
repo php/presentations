@@ -1,4 +1,4 @@
-<slide title="GD 1/2">
+<slide title="GD 1/2" outputbackground="#5b69a6">
 <example title="Creating a PNG with a TrueType font"><![CDATA[<?php
  Header("Content-type: image/png");
  $im = ImageCreate(630,80);
@@ -13,7 +13,7 @@
 <example><![CDATA[<IMG src="txt.php?text=<?echo urlencode($text)?>">]]></example>
 
 
-<example hide="1" result="1"><![CDATA[<?if(!empty($text)) {
+<example hide="1" result="1" rwidth="650"><![CDATA[<?if(!empty($text)) {
   echo "<BR> <IMG src=\"slides/intro/txt.php?text=".urlencode($text)."\">";
  } else $text = 'Cool Dynamic Images!';
  echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";

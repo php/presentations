@@ -1,0 +1,21 @@
+<slide title="ImageColorAt" outputbackground="#222222">
+
+<example title="Using ImageColorAt()" result="1" rfontsize="1.7em" ><![CDATA[
+<img src="slides/intro/php-tiny.jpg"><br />
+<?
+    $im = imagecreatefromjpeg('slides/intro/php-tiny.jpg');
+    $dx = imagesx($im);
+    $dy = imagesy($im);
+    for($y = 0; $y < $dy; $y++) {
+        for($x=0; $x < $dx; $x++) {
+            $col = imagecolorat($im, $x, $y);
+            $rgb = imagecolorsforindex($im,$col);
+            printf('<font color=#%02x%02x%02x>#</font>',
+			  $rgb['red'],$rgb['green'],$rgb['blue']);
+        }
+        echo "<br />\n";
+    }
+    imagedestroy($im);
+?>]]></example>
+
+</slide>
