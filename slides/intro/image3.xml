@@ -8,7 +8,7 @@
 ><![CDATA[<?php
  if(empty($text)) $text = 'php'; 
  if(empty($si)) $si=30;
- echo "<P class=\"huge\"> <IMG src=\"slides/intro/tshirt.png\" align=middle>+<IMG src=\"slides/intro/blank.png\" align=middle>=<IMG src=\"slides/intro/tshirt.php?si=$si&text=".urlencode($text)."\" align=middle>";
+ echo "<P class=\"huge\"> <IMG src=\"presentations/slides/intro/tshirt.png\" align=middle>+<IMG src=\"presentations/slides/intro/blank.png\" align=middle>=<IMG src=\"presentations/slides/intro/tshirt.php?si=$si&text=".urlencode($text)."\" align=middle>";
  echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";
  echo "Text1: <input type=text name=text value=\"$text\"> Size: <input type=text name=si value=\"$si\"> <input type=submit name=\" Go! \">\n";
  echo "</form>\n";
