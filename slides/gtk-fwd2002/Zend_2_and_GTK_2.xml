@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Zend 2 and GTK 2</title>
+<blurb>  GTK2 released Early 2002, Zend 2 (PHP 5) is due Soon......, GTK 2   features</blurb>
+<list>
+<bullet>Gdk Pixbuf is now part of Gtk (this is used for loading
+    images other than xpm's)</bullet>
+<bullet>Better Win32 support</bullet>
+<bullet>Better Frame buffer support (eg. For embedded devices)</bullet>
+<bullet>Complete Unicode support (eg. Languages)</bullet>
+<bullet>Better copy and paste support</bullet>
+<bullet>New Widget GtkTreeView, A richer Tree widget which can show
+    large data contents and allows adding of gtk widgets to
+    cells.</bullet>
+</list>
+</slide>

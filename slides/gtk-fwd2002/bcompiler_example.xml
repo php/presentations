@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>bcompiler - example</title>
+
+<example title="Compiling some classes" fontsize="1.2em"><![CDATA[<?php
+
+$fh = fopen("/tmp/testa","w");
+bcompiler_write_header($fh);
+bcompiler_write_class($fh,'DB');   
+bcompiler_write_class($fh,'PEAR_error');   
+bcompiler_write_class($fh,'DB_error');   
+fclose($fh);
+
+?>]]></example>
+
+<example title="Including the classes" fontsize="1.2em"><![CDATA[<?php
+
+bcompiler_load("/tmp/testa");
+print_r(get_declared_classes());
+
+
+
+?>]]></example>
+
+</slide>

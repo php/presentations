@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Ugly 2</title>
+<blurb>Did not use internal events </blurb>
+<list>
+<bullet>fell back to global $application</bullet>
+<bullet>should have registered events and callbacks (like GTK)</bullet>
+</list>
+</slide>

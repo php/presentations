@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Resolving GTK Issues</title>
+<blurb>letting the Interface take   control</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+/* update a progress bar */
+$fileProgressBar->set_percentage((float) ($params / $activeDownloadSize));
+
+/* let the interface update */
+while(gtk::events_pending()) gtk::main_iteration();
+?>]]></example>
+<blurb>  Use callbacks</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+    $this->ui->prompt('Are You sure you want to do that?',array(&$this,'isOk'), array(&$this,'isNotOk'));
+?>]]></example>
+</slide>

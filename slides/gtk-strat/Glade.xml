@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Glade</title>
+<blurb>Advantages </blurb>
+<list>
+<bullet>Making changes to the interface does not affect code
+    base</bullet>
+<bullet>Interface design is considerably faster</bullet>
+<bullet>Presentation is separated from controller code</bullet>
+</list>
+<blurb>Disadvantages </blurb>
+<list>
+<bullet>PHP-GTK beginners - no chance to learn the API .</bullet>
+<bullet>Some widgets are not supported by Glade.</bullet>
+<bullet>you must name all they key interface components
+
+    </bullet>
+</list>
+</slide>

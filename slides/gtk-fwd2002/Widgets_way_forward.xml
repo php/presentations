@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Widgets Way Forward</title>
+<blurb>Gtkhtml was a reasonably typical binding for PHP-GTK, involved 3 step process</blurb>
+<list>
+<bullet>Parse C header file to 'defs' format (h2def.py)</bullet>
+<bullet>Create Overrides file for things that can not be automatically created</bullet>
+<bullet>Try building it!</bullet>
+</list>
+<blurb>Most GTK widgets are designed to have language bindings, 
+so Apart from getting the C memory management right! 
+- The Overrides file is the key time consumer.</blurb>
+<list>
+<bullet>Generator could do with easier handling of resources</bullet>
+<bullet>It's going to need some work to handle Zend Engine 2</bullet>
+<bullet>Not all widgets are designed to work on Win32</bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Integrating with existing Code</title>
+<blurb>Key differences between   Web/Command Line code and GUI's </blurb>
+<list>
+<bullet>Event based</bullet>
+<bullet>Memory Resident (no sessions or single transaction)</bullet>
+</list>
+<blurb>Consider the following code</blurb>
+<example fontsize="1.2em"><![CDATA[<?php
+$this->ui->updateProgress();
+$result = $this->ui->prompt('Are You sure you want to do that?')
+?>]]></example>
+<list>
+<bullet>Updating GUI requires letting the GUI take over
+    application</bullet>
+<bullet>You need to use callbacks for prompts or dialogs.</bullet>
+</list>
+</slide>

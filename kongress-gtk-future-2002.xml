@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation jskeyboard="1" template="php" backgroundfixed="true" logo1="images/php-gtk.gif" navsize="1.1em" navbarbackground="#0099cc">
+<title>Conquering the final obstacles for PHP-GTK</title>
+<topic>PHP-GTK</topic>
+<event>PHPCON</event>
+<location>Frankfurt</location>
+<date>November 5, 2002</date>
+<speaker>Alan Knowles</speaker>
+<company>Freelance Consultant</company>
+<email>alan@akbkhome.com</email>
+<url>http://conf.php.net/pres</url>
+<slide>slides/gtk-fwd2002/welcome.xml</slide>
+<slide>slides/gtk-fwd2002/About_me.xml</slide>
+<slide>slides/gtk-fwd2002/Introduction.xml</slide>
+<slide>slides/gtk-fwd2002/The_Issues_Delivery.xml</slide>
+<slide>slides/gtk-fwd2002/The_Issues_Multitasking.xml</slide>
+<slide>slides/gtk-fwd2002/The_Issues_More_Widgets.xml</slide>
+<slide>slides/gtk-fwd2002/Widgets_Drawing.xml</slide>
+<slide>slides/gtk-fwd2002/Widgets_Spreadsheets_and_Graphs.xml</slide>
+<slide>slides/gtk-fwd2002/Widgets_3D.xml</slide>
+<slide>slides/gtk-fwd2002/Widgets_Games.xml</slide>
+<slide>slides/gtk-fwd2002/Widgets_Video.xml</slide>
+<slide>slides/gtk-fwd2002/Widgets_XML_and_HTML.xml</slide>
+<slide>slides/gtk-fwd2002/Widgets_way_forward.xml</slide>
+<slide>slides/gtk-fwd2002/Threading_dealing_with_multitasking.xml</slide>
+<slide>slides/gtk-fwd2002/Threading_Story_of_development.xml</slide>
+<slide>slides/gtk-fwd2002/Threading_Where_are_we.xml</slide>
+<slide>slides/gtk-fwd2002/Threading_Where_is_it_going.xml</slide>
+<slide>slides/gtk-fwd2002/PHP_Bytecode_Compiling.xml</slide>
+<slide>slides/gtk-fwd2002/bcompiler_Current_Status.xml</slide>
+<slide>slides/gtk-fwd2002/bcompiler_example.xml</slide>
+<slide>slides/gtk-fwd2002/bcompiler_Future.xml</slide>
+<slide>slides/gtk-fwd2002/Single_Binaries.xml</slide>
+<slide>slides/gtk-fwd2002/Single_Binaries_PHP_Embedded.xml</slide>
+<slide>slides/gtk-fwd2002/PHP_Embedded_Example.xml</slide>
+<slide>slides/gtk-fwd2002/PHP_Embedded_and_bcompiler.xml</slide>
+
+<slide>slides/gtk-fwd2002/Installers.xml</slide>
+<slide>slides/gtk-fwd2002/Zend_2_and_GTK_2.xml</slide>
+<slide>slides/gtk-fwd2002/Zend_2_and_GTK_2_effects.xml</slide>
+<slide>slides/gtk-fwd2002/Thanks_Questsion.xml</slide>
+</presentation>

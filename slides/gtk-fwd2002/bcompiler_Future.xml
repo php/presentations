@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>bcompiler - Future</title>
+<blurb>  Not a full solution - but sufficient to solve many problems at   present. </blurb>
+<list>
+<bullet>Needs to do real class inheritance (currently an extended
+    class is compiled as the combined view)</bullet>
+<bullet>Needs to do Raw opcodes, and deal with variable
+    scoping!</bullet>
+<bullet>Needs to handle require/includes in a sensible way</bullet>
+</list>
+</slide>

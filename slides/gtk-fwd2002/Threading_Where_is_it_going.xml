@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Threading- Where is it going</title>
+<blurb>Unfortunatly, needs more   work and time...... </blurb>
+<list>
+<bullet>Look towards Object based API (like Java or C#)</bullet>
+<bullet>Need to work out a way to replicate opcodes from one thread
+    to another (bcompiler/APD)</bullet>
+<bullet>Changing Zend Engine to run bytecode files would be nice
+    (but not likely)
+</bullet>
+</list>
+</slide>

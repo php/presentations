@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Glade -Using Partial Loading</title>
+<list>
+<bullet>Remove component from Window</bullet>
+<bullet>Add to new parent</bullet>
+</list>
+<example fontsize="1.2em"><![CDATA[<?php
+/* load the glade file */
+$glade = &new GladeXML("glade_file.glade");
+
+/* grab the subcontainer */
+$widget = $glade->get_widget("widgetGroup")  
+       
+/* remove the widget from the parent */
+$parent = $widget->parent;
+$parent->remove($widget);
+
+/* grab the new parent widget */
+$window = $glade->get_widget("window");
+
+/* add the widget to the application */
+$application->widgetholder->add($widget)
+?>]]></example>
+</slide>

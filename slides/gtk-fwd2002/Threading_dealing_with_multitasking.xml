@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Dealing with multitasking</title>
+<blurb>Phpmole suffers from multitasking problems when</blurb>
+<list>
+<bullet>doing http calls</bullet>
+<bullet>doing scp/ssh 'exec()' calls</bullet>
+<bullet>monitoring sockets (for debugging)</bullet>
+<bullet>reading large directories</bullet>
+</list>
+<blurb>Theading is better than forking for memory and speed.</blurb>
+<list>
+<bullet>No memory replication occurs by default.</bullet>
+<bullet>biggest memory duplication would have been php.exe (4Mb or
+    1Mb stripped)!</bullet>
+<bullet>Gtk does not work well with forking (2 forks can not access
+    the interface!)
+</bullet>
+</list>
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Code Readability- Classes</title>
+<list>
+<bullet>Straight Port of Moleskine</bullet>
+<bullet>Code Readability - where is that methoda</bullet>
+</list>
+<example fontsize="1.2em"><![CDATA[<?php
+class phpmole_editor extends gtkScintilla {
+    function phpmole_editor () {
+        /* do some initialization */
+        $this->gtkScintilla();
+        $this->set_text('abcd');
+    }
+}
+?>]]></example>
+</slide>

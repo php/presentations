@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Ugly</title>
+<blurb>Modules and Transports did not have a defined   interface</blurb>
+<list>
+<bullet>Grew over time</bullet>
+<bullet>Should have defined interface in base class</bullet>
+</list>
+<blurb>Hidden Data Structures</blurb>
+<list>
+<bullet>My background more 'functional' than object
+    based
+</bullet>
+<bullet>Associative arrays in PHP very useful for quick dirty
+    solutions</bullet>
+<bullet>Using a Class as a 'struct' makes data easier to
+    document.</bullet>
+</list>
+</slide>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Code Readability - Solutions</title>
+<list>
+<bullet>Use $this->widget</bullet>
+</list>
+<example fontsize="1.2em"><![CDATA[<?php
+class phpmole_editor {
+    var $widget;
+    function phpmole_editor () {
+        /* do some initialization */
+        $this->widget = new GtkScintilla();
+        $this->widget->set_text('abcd');
+    }
+}
+?>]]></example>
+<list>
+<bullet>Use PHP's funky static parent calls
+</bullet>
+</list>
+<example fontsize="1.2em"><![CDATA[<?php
+class phpmole_editor extends gtkScintilla {
+    function phpmole_editor () {
+        /* do some initialization */
+        GtkScintilla::GtkScintilla();
+        GtkScintilla::set_text('abcd');
+    }
+}
+?>]]></example>
+</slide>

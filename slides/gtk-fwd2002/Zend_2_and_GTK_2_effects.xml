@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Zend 2 and GTK 2 effects</title>
+<blurb>Zend 2 will affect PHP-GTK code   !!</blurb>
+<example fontsize="1.2em"><![CDATA[<?
+$object = & new GtkWindow();
+//In the new Zend Engine, the & will cause a parse error and is not required. eg.
+$object = new GtkWindow();
+?>]]></example>
+<list>
+<bullet>Object no longer need 'aliasing' -</bullet>
+<bullet>the '=' will not copy objects</bullet>
+<bullet>C Code will need changing to cope with this and some API
+    changes.</bullet>
+<bullet>Hopefully we can extend Andrei's C Generator to do make
+    adding other extensions easier!</bullet>
+</list>
+</slide>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation jskeyboard="1" template="php" backgroundfixed="true" logo1="images/php-gtk.gif" navsize="1.4em" navbarbackground="#0099cc">
+<title>Design Strategies for PHP-GTK Applications</title>
+<topic>PHP-GTK</topic>
+<event>PHPCON</event>
+<location>Frankfurt</location>
+<date>November 5, 2002</date>
+<speaker>Alan Knowles</speaker>
+<company>Freelance Consultant</company>
+<email>alan@akbkhome.com</email>
+<url>http://conf.php.net/pres</url>
+
+<slide>slides/gtk-strat/welcome.xml</slide>
+<slide>slides/gtk-strat/About_me.xml</slide>
+<slide>slides/gtk-strat/Introduction.xml</slide>
+<slide>slides/gtk-strat/Learn_from_Mistakes.xml</slide>
+<slide>slides/gtk-strat/Phpmole_History.xml</slide>
+<slide>slides/gtk-strat/Moleskine.xml</slide>
+<slide>slides/gtk-strat/Code_Readability_Classes.xml</slide>
+<slide>slides/gtk-strat/Code_Readability_Solutions.xml</slide>
+<slide>slides/gtk-strat/Glade.xml</slide>
+<slide>slides/gtk-strat/Glade_Partial_Loading_.xml</slide>
+<slide>slides/gtk-strat/Glade_Using_Partial_Loading.xml</slide>
+<slide>slides/gtk-strat/Modules.xml</slide>
+<slide>slides/gtk-strat/Review_of_Phpmole.xml</slide>
+<slide>slides/gtk-strat/Ugly.xml</slide>
+<slide>slides/gtk-strat/Ugly_2.xml</slide>
+<slide>slides/gtk-strat/Bad_or_not_so_nice_.xml</slide>
+<slide>slides/gtk-strat/Bad_or_not_so_nice_2.xml</slide>
+<slide>slides/gtk-strat/Good.xml</slide>
+<slide>slides/gtk-strat/Good_2.xml</slide>
+<slide>slides/gtk-strat/Anaylsis_2_PEAR_Installer_.xml</slide>
+<slide>slides/gtk-strat/Integrating_with_existing_Code.xml</slide>
+<slide>slides/gtk-strat/Resolving_GTK_Issues.xml</slide>
+<slide>slides/gtk-strat/Overdesigning_Widgets.xml</slide>
+<slide>slides/gtk-strat/Overdesigning_Widgets_2.xml</slide>
+<slide>slides/gtk-strat/Interface_Design.xml</slide>
+<slide>slides/gtk-strat/Guidelines_and_Resources.xml</slide>
+<slide>slides/gtk-strat/Working_with_Glade_Files.xml</slide>
+<slide>slides/gtk-strat/A_Glade_File.xml</slide>
+<slide>slides/gtk-strat/Extracting_Names_callbacks.xml</slide>
+<slide>slides/gtk-strat/Doing_it_again_.xml</slide>
+<slide>slides/gtk-strat/Open_source_the_desktop.xml</slide>
+<slide>slides/gtk-strat/Questions.xml</slide>
+</presentation>

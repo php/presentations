@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Bad (or not so nice) 2</title>
+<blurb>  Virtual File System </blurb>
+<list>
+<bullet>Extremely complex due to Midgard Data Structures</bullet>
+<bullet>Very Powerfull, yet undocumented!</bullet>
+</list>
+ <image align="center" scale="30%" filename="phpmole_vfs.jpg" />
+</slide>

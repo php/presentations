@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Doing it again?</title>
+<list>
+<bullet>Follow standards - eg. PEAR</bullet>
+<bullet>Class Naming Standards enable locating code easy</bullet>
+<bullet>Use singleton, rather than global resources</bullet>
+<bullet>More use of factory methods</bullet>
+<bullet>Read the Design Patterns Book!!!!</bullet>
+</list>
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Overdesigning Widgets</title>
+<blurb>HTML rendering widget written as   alternative to gtkhtml as</blurb>
+<list>
+<bullet>Gtkhtml is a Unix only widget</bullet>
+<bullet>Only provides very rough editing tools</bullet>
+<bullet>Seemed like a good challenge</bullet>
+</list>
+<blurb>First design of this Widget</blurb>
+<list>
+<bullet>Based on code from gtkhtml, Mosaic</bullet>
+<bullet>Modulized everything from parsing, display, tables, text,
+    textelements etc.</bullet>
+<bullet>Ended up as 13 abstract classes</bullet>
+</list>
+</slide>

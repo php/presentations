@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Threading - Story of development</title>
+<blurb>Discussions on php-dev   in the middle of 2002, indicated that Brad LaFountian and Shane   Caraveo had discussed this at OSCON. Came to light after my first   attempt at trying to implement it..</blurb>
+<list>
+<bullet>First effort involved threading the zend_execute call</bullet>
+<bullet>Had big problems ('thrashing locks')</bullet>
+</list>
+<blurb>Implementing Threading closely related to the internal   design of the Zend engine </blurb>
+<list>
+<bullet>Bytecodes can not be shared as they are not static</bullet>
+<bullet>PHP has support for multithreading and managing memory for
+    multiple threads
+</bullet>
+<bullet>PHP is more like perl than Python internally (Python
+    does queued opcode execution)
+</bullet>
+</list>
+</slide>

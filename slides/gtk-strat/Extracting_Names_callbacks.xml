@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Extracting Names, callbacks</title>
+<list>
+<bullet>Automatically map method variables to widgets</bullet>
+<bullet>Auto connect callbacks to methods</bullet>
+<bullet>can be done using regex or an XML parser</bullet>
+</list>
+<example fontsize="1.2em"><![CDATA[<?php
+preg_match_all('/\<name\>([^\<]+)\<\/name\>/',$data,$items);
+
+preg_match_all(
+   '/\<handler\>([^\<]+)\<\/handler\>/',
+        $data,
+      $items);
+?>]]></example>
+</slide>

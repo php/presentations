@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>PHP Bytecode Compiling</title>
+<blurb>First Step on building PHP-GTK   suitable for Desktop is hiding the code. Plenty of options out   there.</blurb>
+<list>
+<bullet>eGuardian http://sourceguardian.com/</bullet>
+<bullet>POBS GPL - Obfuscator
+    http://pobs.mywalhalla.net/start.htm</bullet>
+<bullet>Zend Encoder
+    http://www.zend.com/store/products/zend-encoder.php</bullet>
+<bullet>PHP-Screw http://sourceforge.net/projects/php-screw/</bullet>
+<bullet>microCode
+    http://www.microcode.de/index.php3?LANGUAGE=english</bullet>
+<bullet>ionCube encoder http://www.ioncube.com/encoder/
+</bullet>
+</list>
+<blurb>APC (Advanced PHP Cache included code to do something   similar) - so bcompiler was born!</blurb>
+</slide>

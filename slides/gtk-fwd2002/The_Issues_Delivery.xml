@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>The Issues - Delivery</title>
+<blurb>PHP - traditionally source only, on the desktop it has some security issues</blurb>
+<list>
+<bullet>End user can modify code
+</bullet>
+<bullet>A Virus can modify code</bullet>
+<bullet>Danger of scripting languages on the desktop</bullet>
+</list>
+<blurb>What about licencing</blurb>
+<list>
+<bullet>You may want write closed source 'licenced software'</bullet>
+</list>
+<blurb>So many files</blurb>
+<list>
+<bullet>Windows Applications = .exe + a few .dll's</bullet>
+<bullet>PHPApplications = php.exe + lots of php
+    files.
+</bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>bcompiler - Current Status</title>
+<blurb>  born out of a need to write 'protected source' for embedded   devices - based on APC, </blurb>
+<list>
+<bullet>Thead safe</bullet>
+<bullet>Writes and reads streams</bullet>
+<bullet>Uses compression (to reduce binary sizes)</bullet>
+<bullet>Has features to load code from a merged '.exe' +
+    bytecode</bullet>
+<bullet>Works with classes and functions (not raw PHP)</bullet>
+<bullet>All compiler methods are implemented as php
+    functions
+</bullet>
+<bullet>Best used in conjunction tokenizer to parse php
+    scripts.
+</bullet>
+</list>
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>The Issues -Multitasking</title>
+<blurb>User Interfaces are often multitasking (remember copying a file and the machine   hanging?)</blurb>
+<list>
+<bullet>PHP and PHP-GTK are 'single tasked'</bullet>
+<bullet>Application freezes if you do blocking or CPU intensive calculations</bullet>
+<bullet>Forking Available (on Unix), or start another instance of php.exe</bullet>
+<bullet>More memory Required for Forking and exec()</bullet>
+<bullet>Need for inter-process communications (signals, shm or dba)
+</bullet>
+</list>
+</slide>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Working with Glade Files</title>
+<list>
+<bullet>Glade works like templates - XML</bullet>
+<bullet>Every widget has a name</bullet>
+</list>
+<blurb>Widgets can have multiple 'callbacks' </blurb>
+<list>
+<bullet>Can be automatically connected to functions</bullet>
+<bullet>Often prefer to connect to methods
+</bullet>
+<bullet>Windows support currently slightly flakey (pure php
+    implementation of Glade is available in Phpmole)</bullet>
+</list>
+</slide>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>PHP Embedded - Example</title>
+<blurb>Very simple to make your own   BASE binary - which can be merged with bcompiler bytecode on any   system.</blurb>
+<example fontsize="1.2em"><![CDATA[#include <main/php_embed.h>
+#include <zlib.h>
+
+int main(int argc, char **argv)
+{
+  Bytef *dest =<?
+
+      dl('bcompiler.so');
+        bcompiler_read_exe();
+      main::main();
+
+    ?>; 
+   PHPEMBED_INIT(argc, argv);
+
+   zend_eval_string(dest, NULL, "Embedded code" TSRMLS_CC);
+
+   PHPEMBED_SHUTDOWN();
+   free(dest);
+   return 0;
+}]]></example>
+</slide>

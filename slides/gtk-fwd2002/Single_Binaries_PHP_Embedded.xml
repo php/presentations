@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Single Binaries - PHP Embedded</title>
+<blurb>Edin Kadribasic added a   new build option to PHP 4.3 - libphp4.so (or libphp4.dll)</blurb>
+<list>
+<bullet>embed PHP code in a C Program</bullet>
+<bullet>could be used to add PHP applications to C programs (like
+    IRC, email transports, LDAP)</bullet>
+<bullet>write the glue code for a PHP desktop application</bullet>
+<bullet>combined with bcompiler - it is possible to build an
+    encoded PHP Binary!
+</bullet>
+</list>
+</slide>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+<title>Threading- Where are we</title>
+<blurb>It runs! </blurb>
+<list>
+<bullet>Reliably it can only 'include' another script to
+    execute.</bullet>
+<bullet>Can pass data between threads</bullet>
+<bullet>Funnily enough PHP-GTK had thread support (GUI locking)
+    from the start.</bullet>
+<bullet>Works on Windows</bullet>
+<bullet>Has a abstraction layer for thread calls
+</bullet>
+</list>
+<example fontsize="1.2em"><![CDATA[<?
+set_time_limit(0);
+thread_include(dirname(__FILE__).'/thread.php');
+for ($i=0;$i< 300;$i++) {
+	echo "test.php:$i\n";flush();
+}
+
+
+?>]]></example>
+
+</slide>
