@@ -2,8 +2,6 @@
 <slide fontsize="6em">
 	<title>Quote</title>
 
-	<break lines="15"/>
-
-	<blurb fontsize="5em">"Perl - The only language that looks the same before and after RSA encryption."</blurb>
-	<blurb align="right" fontsize="4em">~Keith Bostic~</blurb>
+	<blurb class="quote">"Perl - The only language that looks the same before and after RSA encryption."</blurb>
+	<blurb class="quote_attr">~Keith Bostic~</blurb>
 </slide>

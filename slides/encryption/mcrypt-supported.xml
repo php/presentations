@@ -2,7 +2,7 @@
 <slide>
 	<title>Supported modes and ciphers</title>
 
-	<example fontsize="1.5em" result="1"><![CDATA[<pre><font size="6"><?php
+	<example fontsize="1.5em" result="1"><![CDATA[<pre><font size="5"><?php
 
 	$modes = mcrypt_list_modes();
 	$algos = mcrypt_list_algorithms();

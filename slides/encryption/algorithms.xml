@@ -2,8 +2,7 @@
 <slide>
 	<title>Cipher groups</title>
 
-	<break lines="8"/>
-	<list fontsize="5em">
+	<list>
 		<bullet>Rotational (ceasar)</bullet>
 		<bullet>Transposition (xor)</bullet>
 		<bullet>Symmetric (DES, Blowfish, AES)</bullet>

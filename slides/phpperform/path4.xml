@@ -4,15 +4,17 @@
 	<subtitle>Selecting a Subtree</subtitle>
 
 <break/>
-	<example><![CDATA[  id | parent_id | path_string    | path_identification_string     | depth
-  ---+-----------+----------------+--------------------------------+------
-  87 |         2 | /1/2/87/       | countries                      |     2
-  88 |        87 | /1/2/87/88/    | countries/belgium              |     3]]></example>
-	<example class="highlight"><![CDATA[  89 |        87 | /1/2/87/89/    | countries/netherlands          |     3
-  91 |        89 | /1/2/87/89/91/ | countries/netherlands/business |     4
-  92 |        89 | /1/2/87/89/92/ | countries/netherlands/economy  |     4]]></example>
-	<example><![CDATA[  90 |        87 | /1/2/87/90/    | countries/germany              |     3]]></example>
+	<example><![CDATA[id | parent_id | path_string| path_identification_string     | depth
+---+-----------+------------+--------------------------------+------
+87 |         2 | /87/       | countries                      |     2
+88 |        87 | /87/88/    | countries/belgium              |     3]]></example>
+	<example class="highlight"><![CDATA[89 |        87 | /87/89/    | countries/netherlands          |     3
+91 |        89 | /87/89/91/ | countries/netherlands/business |     4
+92 |        89 | /87/89/92/ | countries/netherlands/economy  |     4]]></example>
+	<example><![CDATA[90 |        87 | /87/90/    | countries/germany              |     3]]></example>
 <break lines="4"/>
-	<blurb>SELECT * FROM ezcontentobject_tree WHERE path_string LIKE '/1/2/87/89/%'</blurb>
+	<blurb>Query:</blurb>
+	<example class="large">SELECT * FROM ezcontentobject_tree
+	WHERE path_string LIKE '/87/89/%'</example>
 </slide>
   

@@ -3,22 +3,27 @@
 	<title>Mcrypt Modules</title>
 
 	<example fontsize="1.4em" result="1"><![CDATA[<?php
-  error_reporting(E_ALL);
-  $td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
-                                                                                                                                              
-  if ($td) {
-    echo mcrypt_enc_get_algorithms_name($td). "/";
-    echo mcrypt_enc_get_modes_name($td). "<br />";
-    echo "IV Size:    ". mcrypt_enc_get_iv_size($td). "; ";
-    echo "Block Size: ". mcrypt_enc_get_block_size($td). "; ";
-    echo "Key Size:   ". mcrypt_enc_get_key_size($td). "<br />";
-    echo "Key Sizes:  ". join(", ", mcrypt_enc_get_supported_key_sizes($td)). "<br />";
-                                                                                                                                              
-    echo "Is Block A/M: ". (mcrypt_enc_is_block_algorithm_mode($td) ? "Y" : "N"). "; ";
-    echo "Is Block A:   ". (mcrypt_enc_is_block_algorithm($td) ? "Y" : "N"). "; ";
-    echo "Is Block M:   ". (mcrypt_enc_is_block_mode($td) ? "Y" : "N"). "<br /> ";
-    echo "Selftest:     ". (mcrypt_enc_self_test($td) ? "N" : "Y");
-  }
+error_reporting(E_ALL);
+$td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
+
+if ($td) {
+  echo mcrypt_enc_get_algorithms_name($td). "/";
+  echo mcrypt_enc_get_modes_name($td). "<br />";
+  echo "IV Size:  ". mcrypt_enc_get_iv_size($td). "; ";
+  echo "Block Size: ". mcrypt_enc_get_block_size($td). "; ";
+  echo "Key Size:  ". mcrypt_enc_get_key_size($td). "<br />";
+  echo "Key Sizes: ".
+    join(", ", mcrypt_enc_get_supported_key_sizes($td)). "<br />";
+
+  echo "Is Block A/M: ".
+    (mcrypt_enc_is_block_algorithm_mode($td) ? "Y" : "N"). "; ";
+  echo "Is Block A:  ". 
+    (mcrypt_enc_is_block_algorithm($td) ? "Y" : "N"). "; ";
+  echo "Is Block M:  ". 
+    (mcrypt_enc_is_block_mode($td) ? "Y" : "N"). "<br /> ";
+  echo "Selftest:   ". 
+    (mcrypt_enc_self_test($td) ? "N" : "Y");
+}
 ?>]]></example>
 
 </slide>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+    <title>Storing Sensitive Data in a DB (3)</title>
+
+    <example result="1"><![CDATA[<form method="post">
+Username: <input type="text" name="username"/><br/>
+Password: <input type="text" name="password"/><br/>
+<input type="submit"/>
+</form>
+
+<?php
+if (!isset($_POST['username']) || !isset($_POST['password']))
+{
+    return;
+}
+
+mysql_connect('localhost', 'root');
+mysql_select_db('encryption');
+
+$username = $_POST['username'];
+$password = sha1($_POST['password']);
+
+/* Retrieve data */
+$q = <<<END
+SELECT * FROM userdata
+    WHERE username = '$username' AND password = '$password'
+END;
+
+$res = mysql_query($q);
+if (mysql_num_rows($res) == 1) {
+    list($id, $username, $password, $adres, $ccnr) =
+        mysql_fetch_row($res);
+
+    /* Init mcrypt environment */
+    $td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
+    $iv_size  = mcrypt_enc_get_iv_size($td);
+    $key_size = mcrypt_enc_get_key_size($td);
+    $key = $iv = substr($password, 0, $key_size);
+    mcrypt_generic_init($td, $key, $iv);
+
+    /* Decrypt data */
+    echo "Retrieved data:<br/>\n";
+    echo "Address: ",
+        mdecrypt_generic($td, base64_decode($adres)), "<br/>\n";
+    echo "CC#",
+        mdecrypt_generic($td, base64_decode($ccnr)), "<br/>\n";
+} else {
+    echo 'wrong credentials!';
+}
+]]></example>
+</slide>

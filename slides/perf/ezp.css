@@ -6,6 +6,7 @@ body {
 	margin-bottom:0em;
 	background-image: url(presentations/slides/perf/ezp.png);
 	background-attachment: fixed;
+overflow: -moz-scrollbars-none;
 }
 div.sticky {
 	margin: 0;
@@ -46,9 +47,12 @@ right: 10px;
 bottom: 0px;
 }
 div.mainarea {
-position: fixed;
+margin-top: 120px;
 top: 150px;
-width: 725px;
+width: 733px;
+height: 600px;
+overflow: auto;
+overflow: -moz-scrollbars-vertical;
 }
 ul.pres {
 list-style: circle;
@@ -116,6 +120,19 @@ div.large_blurb_center {
 	text-align: center;
 }
 
+div.quote {
+	font-size: 48px;
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+div.quote_attr {
+	font-size: 32px;
+	text-align: right;
+	margin-right: 40px;
+}
+
 div.xx_large_blurb_center {
 	font-size: 80px;
 	text-align: center;
@@ -131,21 +148,31 @@ div.shadow, code {
 }
 
 div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
-	background: #ccc;
-	font-size: 20px;
+	background: #eee;
+	font-size: 23px;
 	width: 100%;
+	font-weight: bold;
 }
 div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 	margin-left: 20px;
 	margin-right: 20px;
 }
+
+div.large code, div.large {
+	font-size: 32px;
+	background: #eee;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 div.highlight code, div.highlight {
 	background: #fffc00;
 	font-weight: bold;
 }
 
 div.code_small, div.code_medium, div.code_large, div.example {
-	background: #ccc;
+	background: #eee;
 }
 div.code_small code {
 	font-size: 12px;
@@ -155,6 +182,9 @@ div.code_medium code, div.code_medium pre {
 }
 div.code_large code, div.code_large pre {
 	font-size: 24px;
+}
+div.example pre {
+    font-size: 23px;
 }
 
 div.event, div.event-date, div.event-presenter {
@@ -172,5 +202,9 @@ img.spaced {
 	margin-left: 25px;
 	margin-top: 25px;
 	margin-bottom: 25px;
+}
+
+table {
+	font-size: 20pt;
 }
 </style>

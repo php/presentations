@@ -2,10 +2,10 @@
 <slide>
 	<title>Encrypting</title>
 
-	<example fontsize="1.5em" result="1"><![CDATA[<?php
-  $td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
-                                                                                                                                              
-  if ($td) {
+	<example encoding="iso-8859-1" fontsize="1.5em" result="1"><![CDATA[<?php
+$td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
+
+if ($td) {
     $iv_size  = mcrypt_enc_get_iv_size($td);
     $key_size = mcrypt_enc_get_key_size($td);
     $iv  = mcrypt_create_iv($iv_size);
@@ -16,12 +16,13 @@
 
     /* Encrypt text */
     $crypt_text = mcrypt_generic($td, "very important data");
-    echo $crypt_text;
+    echo $crypt_text, "<br/>";
+    echo base64_encode($crypt_text);
 
     /* Clean up cipher */
     mcrypt_generic_deinit($td);
     mcrypt_module_close($td);
-  }
+}
 ?>]]></example>
 
 </slide>

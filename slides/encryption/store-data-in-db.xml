@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Storing Sensitive Data in a DB</title>
+
+	<blurb>Goal:</blurb>
+    <list>
+        <bullet>User wants to store senstive data on a site (so that he doesn't have to enter it all the time)</bullet>
+        <bullet>Data is not allowed to be stored unencrypted because of privacy regulations</bullet>
+    </list>
+</slide>

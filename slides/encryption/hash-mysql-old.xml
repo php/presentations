@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Bad Hash!</title>
+
+	<example fontsize="1.7em"><![CDATA[mysql> SELECT OLD_PASSWORD('aaaaaa') AS bad_hash UNION
+    -> SELECT OLD_PASSWORD('aaaaab') UNION
+    -> SELECT OLD_PASSWORD('aaaaac');
++------------------+
+| bad_hash         |
++------------------+
+| 3af111f42d178bb8 |
+| 3af113e92d178dad |
+| 3af11d9e2d178f62 |
++------------------+]]></example>
+
+	<list fontsize="4em">
+		<bullet>Distribution of the hash key is bad and thus quite insecure</bullet>
+	</list>
+</slide>

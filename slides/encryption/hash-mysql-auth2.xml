@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>MySQL authentication (2)</title>
+
+	<list>
+		<bullet>Client connects to Server</bullet>
+		<bullet>Server sends salt: *%S%*</bullet>
+		<bullet>Client sends hash over hashed password and salt: *%H(H'(P) S)%*</bullet>
+		<bullet>Server compares received hash with it's own computed hash (from the hashed password *%H'(P)%* stored in the database)</bullet>
+	</list>
+
+	<blurb>A salt is used because without it you can authenticate simply by using a replay attack</blurb>
+</slide>

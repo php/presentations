@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>New Hash Function</title>
+
+	<example fontsize="1.7em"><![CDATA[mysql> SELECT PASSWORD('aaaaaa') AS goodhash UNION
+	-> SELECT PASSWORD('aaaaab') UNION
+	-> SELECT PASSWORD('aaaaac');
++-------------------------------------------+
+| goodhash                                  |
++-------------------------------------------+
+| *B1461C9C68AFA1129A5F968C343636192A084ADB |
+| *E4CF0FD33485536A57EC1660C2B443D06F6367AA |
+| *05B529FF460DF128463DFA53EF18C80CE427E9A0 |
++-------------------------------------------+]]></example>
+
+	<list fontsize="4em">
+		<bullet>Based on: SHA-1</bullet>
+	</list>
+</slide>

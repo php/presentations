@@ -2,8 +2,7 @@
 <slide fontsize="6em">
 	<title>Quote</title>
 
-	<break lines="9"/>
-
-	<blurb fontsize="5em">"People who are willing to rely on the government to keep them safe are pretty much standing on Darwin's mat, pounding on the door, screaming, 'Take me, take me!'"</blurb>
-	<blurb align="right" fontsize="4em">~Carl Jacobs, Alt.Sysadmin.Recovery~</blurb>
+	<break lines="8"/>
+	<blurb class="quote">"People who are willing to rely on the government to keep them safe are pretty much standing on Darwin's mat, pounding on the door, screaming, 'Take me, take me!'"</blurb>
+	<blurb class="quote_attr">~Carl Jacobs, Alt.Sysadmin.Recovery~</blurb>
 </slide>

@@ -2,18 +2,11 @@
 <slide>
 	<title>Symmetric ciphers</title>
 
-	<break lines="2"/>
 	<image align="center" filename="symmetric.png"/>
 	<list fontsize="4em">
 		<bullet>Key to encrypt is the same as the key to decrypt</bullet>
-	</list>
-	<list fontsize="4em">
 		<bullet>mcrypt: DES, Blowfish, Rijndael (AES)</bullet>
-	</list>
-	<list fontsize="4em">
 		<bullet>Used for session keys and in secure environment</bullet>
-	</list>
-	<list fontsize="4em">
 		<bullet>*Not* used for key distribution</bullet>
 	</list>
 </slide>

@@ -7,7 +7,7 @@
 	<image align="center" filename="tree3.png" />
 
 	<blurb fontsize="5em">Query:</blurb>
-	<example fontsize="2em"><![CDATA[SELECT * FROM directory
+	<example class="large"><![CDATA[SELECT * FROM directory
 WHERE
 	left <= 5 AND right >= 6]]></example>
 </slide>

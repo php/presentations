@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Payment Gateway</title>
+
+	<example><![CDATA[<?php
+function requestValidation()
+{
+	$original = $this->data["id"] . $this->data["subid"] .
+        (100 * $this->data["amount"]) .  $this->data["currency"] .
+        $this->data["utref"] .  $this->data["irrn"] .
+        $this->ini->variable("PaynetSettings", "SecretWord");
+
+	if (sha1($original) == $this->data["VERIFICATION"])
+	{
+		$this->log( 'The verification hash is correct' );
+		return true;
+	}
+
+	$this->log( 'The verification hash is INCORRECT.' );
+	return false;
+}
+?>]]></example>
+<break lines="3"/>
+    <blurb>Secret word:</blurb>
+	<example><![CDATA[jcgQXRP5mI!VnwfUGzbrT8FyWt3x2o7YaEJ1pHi6AKN4qLOdCeDhBvslSku9Z#M]]></example>
+</slide>

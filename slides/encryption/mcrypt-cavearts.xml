@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Cavearts</title>
+
+	<list>
+        <bullet>Encrypting happens on binary data</bullet>
+        <bullet>Mcrypt pads plain text with \0 to fill up a whole block</bullet>
+        <bullet>It's up to you to strip excessive padding</bullet>
+    </list>
+
+	<list>
+        <bullet>The IV for encryption and decryption should always be the same.</bullet>
+        <bullet>*But* it does not need to be secret, only unique and random.</bullet>
+    </list>
+</slide>

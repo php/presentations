@@ -4,24 +4,22 @@
 	<subtitle>An Example of On-Publish Generation</subtitle>
 
 	<example><![CDATA[<?php
-    function cacheURL( $url, $nodeID = false, $skipExisting = false )
+    function cacheURL($url, $nodeID = false, $skipExisting = false)
     {
         $fileName = "http://$hostname$dir$url";
-        $content = @file_get_contents( $fileName );
-        $this->storeCachedFile( $file, $content );
+        $content = @file_get_contents($fileName);
+        $this->storeCachedFile($file, $content);
     }
 
-    function storeCachedFile( $file, $content )
+    function storeCachedFile($file, $content)
     {
-        $fp = fopen( $tmpFileName, 'w' );
-        if ( $fp )
-        {
-            fwrite( $fp, $content );
-            fclose( $fp );
-            rename( $tmpFileName, $file );
+        $fp = fopen($tmpFileName, 'w');
+        if ($fp) {
+            fwrite($fp, $content);
+            fclose($fp);
+            rename($tmpFileName, $file);
         }
-    }
-?>]]></example>
+    }]]></example>
 	<break/>
 
 	<blurb>Set up RewriteRules:</blurb>

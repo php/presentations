@@ -30,16 +30,13 @@
 
 	<blurb fontsize="5em">Retrieve list with:</blurb>
 	<example fontsize="1.1em"><![CDATA[<?php
-	function gimmeParent($id) {
-		global $dir;
-
-		$res = mysql_query("SELECT parent, name FROM directory WHERE id = $id");
-		if (mysql_num_rows($res) > 0) {
-			$dir[] = ($row = mysql_fetch_row($res));
-			gimmeParent($row['parent']);
-		}
+function gimmeParent($id) {
+	global $dir;
+	$res = mysql_query("SELECT parent, name FROM dir WHERE id=$id");
+	if (mysql_num_rows($res) > 0) {
+		$dir[] = ($row = mysql_fetch_row($res));
+		gimmeParent($row['parent']);
 	}
-
-	gimmeParent(7);
-? >]]></example>
+}
+gimmeParent(7);]]></example>
 </slide>

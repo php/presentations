@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Storing Sensitive Data in a DB (2)</title>
+
+    <example result="1"><![CDATA[<form method="post">
+Username: <input type="text" name="username"/><br/>
+Password: <input type="text" name="password"/><br/>
+Address: <input type="text" name="adres"/><br/>
+CC#: <input type="text" name="ccnr"/><br/>
+<input type="submit"/>
+</form>
+
+<?php
+if (!isset($_POST['username']) || !isset($_POST['password']))
+{
+    return;
+}
+mysql_connect('localhost', 'root');
+mysql_select_db('encryption');
+
+/* Init mcrypt environment */
+$td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
+$iv_size  = mcrypt_enc_get_iv_size($td);
+$key_size = mcrypt_enc_get_key_size($td);
+
+/* Prepare data to insert */
+$username  = $_POST['username'];
+$password  = sha1($_POST['password']);
+$key = $iv = substr($password, 0, $key_size);
+mcrypt_generic_init($td, $key, $iv);
+
+$adres = base64_encode(mcrypt_generic($td, $_POST['adres']));
+$ccnr  = base64_encode(mcrypt_generic($td, $_POST['ccnr']));
+
+$q = <<<END
+INSERT INTO userdata(username, password, adres, ccnr)
+    VALUES ('$username', '$password', '$adres', '$ccnr')
+END;
+mysql_query($q);
+echo "New User Id=", mysql_insert_id(), "<br/>\n";
+]]></example>
+</slide>

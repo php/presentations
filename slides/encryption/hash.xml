@@ -6,12 +6,8 @@
 	<image align="center" filename="hash.png"/>
 	<list fontsize="4em">
 		<bullet>Not reversable</bullet>
-	</list>
-	<list fontsize="4em">
-		<bullet>PHP: sha1(), md5(); mhash: GOST, HAVAL</bullet>
-	</list>
-	<image align="right" marginright="5em" filename="hash2.png"/>
-	<list fontsize="4em">
+		<bullet>Distribution in hash keys is important</bullet>
+		<bullet>PHP: sha1(), md5(); mhash: GOST, HAVAL, SHA-256</bullet>
 		<bullet>Used for in signatures and validation</bullet>
 	</list>
 </slide>

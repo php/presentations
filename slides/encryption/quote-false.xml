@@ -2,8 +2,7 @@
 <slide fontsize="6em">
 	<title>Quote</title>
 
-	<break lines="9"/>
-
-	<blurb fontsize="5em">A *false* sense of security is worse than being unsure.</blurb>
-	<blurb align="right" fontsize="4em">~grc.com~</blurb>
+    <break lines="16"/>
+	<blurb class="quote">A *false* sense of security is worse than being unsure.</blurb>
+	<blurb class="quote_attr">~grc.com~</blurb>
 </slide>
