@@ -1,0 +1,54 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#3C5BB4"
+	stylesheet="presentations/slides/srm/style.css"
+	backgroundfixed="1" >
+<topic>SRM</topic>
+<title>Script Running Machine</title>
+<event>Conférence PHP Québec</event>
+<location>Montreal, Canada</location>
+<date>March 20th, 2003</date>
+<speaker>Derick Rethans</speaker>
+<email>d.rethans@jdimedia.nl</email>
+<slide>slides/ze-xdebug/title.xml</slide>
+<slide>slides/srm/intro.xml</slide>
+<slide>slides/srm/timeline.xml</slide>
+<slide>slides/srm/phphist.xml</slide>
+<slide>slides/srm/online1.xml</slide>
+<slide>slides/srm/online2.xml</slide>
+<slide>slides/srm/persistant1.xml</slide>
+<slide>slides/srm/persistant2.xml</slide>
+<slide>slides/srm/tree1.xml</slide>
+<slide>slides/srm/tree2.xml</slide>
+
+<slide>slides/phpperform/extern_srm.xml</slide>
+<slide>slides/srm/banana.xml</slide>
+<slide>slides/ze-xdebug/opcode.xml</slide>
+<slide>slides/srm/interact.xml</slide>
+<slide>slides/srm/protocols.xml</slide>
+<!--
+<slide>slides/srm/by-example.xml</slide>
+<slide>slides/srm/srm-online1.xml</slide>
+<slide>slides/srm/srm-online2.xml</slide>
+<slide>slides/srm/srm-caching1.xml</slide>
+<slide>slides/srm/srm-caching2.xml</slide>
+-->
+
+<slide>slides/srm/srm-tree1.xml</slide>
+<slide>slides/srm/srm-tree2.xml</slide>
+<slide>slides/srm/srm-tree3.xml</slide>
+
+<slide>slides/srm/parts.xml</slide>
+<slide>slides/srm/design.xml</slide>
+
+<slide>slides/srm/future1.xml</slide>
+<slide>slides/srm/future2.xml</slide>
+<!--
+<slide>slides/srm/srm-game1.xml</slide>
+<slide>slides/srm/srm-game2.xml</slide>
+-->
+<slide>slides/srm/questions.xml</slide>
+<slide>slides/srm/fin.xml</slide>
+<slide>slides/srm/resources.xml</slide>
+</presentation>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Persistent Tree</title>
+
+	<blurb fontsize="3em">Searching for a key in the binairy tree:</blurb>
+	<example fontsize="2em"><![CDATA[<?php
+    $s = new SRM('/tmp/srm.socket');
+    $t = new SRMApp($s, 'binsearch');
+
+    echo $t->get_value($argv[1])."\n";
+? >]]></example>
+</slide>

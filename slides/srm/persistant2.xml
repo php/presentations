@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Persistent objects</title>
+
+	<blurb>__sleep and __wakeup example:</blurb>
+	<example fontsize="1.5em"><![CDATA[// example1.php
+<?php
+    require 'file.class.php';
+    session_start();
+
+    $f = new File('/etc/hosts');
+    $f->seek(20);
+
+    $_SESSION['f'] = $f;
+? >]]></example>
+	<example fontsize="1.5em"><![CDATA[// example2.php
+<?php
+    require 'file.class.php';
+    session_start();
+
+    var_dump($_SESSION['f']);
+? >]]></example>
+</slide>

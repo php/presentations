@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Persistent Tree</title>
+
+	<blurb fontsize="3em">Adding a value to the binairy tree:</blurb>
+	<example fontsize="2em"><![CDATA[<?php
+    $s = new SRM('/tmp/srm.socket');
+    $t = new SRMApp($s, 'binsearch');
+
+    $t->add_value($argv[1], $argv[2]);
+    $all = $t->get_all();
+
+    var_dump($all);
+? >]]></example>
+</slide>

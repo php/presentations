@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Persistent objects</title>
+
+	<blurb>__sleep and __wakeup:</blurb>
+	<example fontsize="1.25em"><![CDATA[// file.class.php
+<?php
+    class File {
+        function File($filename) {
+            $this->filename = $filename;
+            $this->fp = fopen($filename, 'rb');
+        }
+
+        function seek($pos) {
+            fseek($this->fp, $pos);
+        }
+
+        function __sleep() {
+            $this->pos = ftell($this->fp);
+            return array('fp', 'pos', 'filename');
+        }   
+
+        function __wakeup() {
+            $this->fp = fopen($this->filename, 'rb');
+            fseek($this->fp, $this->pos);
+        }   
+    }
+? >]]></example>
+</slide>

@@ -1,0 +1,132 @@
+<style title="Default" type="text/css">
+body {
+	font-size: 12pt;
+	margin-left:1.5em;
+	margin-right:0em;
+	margin-bottom:0em;
+	background-image: url(presentations/slides/srm/cray.jpg);
+}
+ul {
+	padding-top: 20;
+	padding-left: 100;
+}
+th.trace {
+	font-family: arial;
+	font-size: 12pt;
+}
+td.trace {
+	font-family: arial;
+	font-size: 12pt;
+}
+th.tracesml {
+	font-family: arial;
+	font-size: 9pt;
+}
+td.tracesml {
+	font-family: arial;
+	font-size: 9pt;
+}
+div.sticky {
+	margin: 0;
+	position: fixed;
+	top: 0em;
+	left: 0em;
+	right: auto;
+	bottom: auto;
+	width: auto;
+}
+div.shadow {
+	background: #777777;
+	padding: 0.5em;
+}
+div.navbar {
+	background: url(images/trans.png) transparent fixed;
+	padding: 4;
+	margin: 0;
+        height: 6em;
+	background-color: #3c5bb4;
+	color: #3c5bb4;
+	font-family: verdana, tahoma, arial, helvetica, sans-serif;
+	z-index: 99;
+}
+div.emcode {
+	background: #cccccc;
+	border: thin solid #000000;
+	padding: 0.5em;
+	font-family: monospace;
+}
+
+div.output {
+	font-family: monospace;
+	background: #eeee33;
+	border: thin solid #000000;
+	padding: 0.5em;
+}
+
+table.index {
+ background: #cccccc;
+ border: thin dotted #000000;                                                                                                 
+ padding: 0.5em;
+ font-family: monospace;
+}
+
+td.index {
+ background: #cccccc;
+ padding: 1em;
+ font-family: monospace;
+}
+
+h1 {
+	font-size: 2em;
+}
+p,li {
+	font-size: 2.6em;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.c2right {
+	margin : 1em 1em 0 0; 
+	padding-left : 1%;
+	padding-right : 1%;
+	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 1px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+	border-right-color : inherit; 
+	border-left-color : inherit; 
+	width : 46%; 
+	float : right; 
+}
+.c2left {
+	margin : 1em 1em 0 0; 
+	padding-left : 1%;
+   	padding-right : 1%;
+   	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 1px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+   	border-right-color : inherit; 
+   	border-left-color : inherit; 
+   	width : 46%; 
+   	float : left; 
+}
+.box {
+	margin : 0 0 0 0; 
+	padding-left : 1%;
+   	padding-right : 1%;
+   	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 1px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+   	border-right-color : inherit; 
+   	border-left-color : inherit; 
+   	float : left; 
+}
+</style>

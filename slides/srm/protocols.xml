@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Protocols</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb fontsize="5em">SRM's support for protocols is extensible:</blurb>
+	<list effect="slide" fontsize="4em">
+		<bullet>Native protocol: fast</bullet>
+		<bullet>XML-RPC: easy to use from other languages</bullet>
+		<bullet>SOAP: harder to use, but widespread support</bullet>
+	</list>
+</slide>

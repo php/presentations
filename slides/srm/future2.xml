@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Future</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Zend Engine 2</bullet>
+		<bullet>$obj->foo = array (1, 2, 3, 4);</bullet>
+		<bullet>echo $obj->foo[1];</bullet>
+	</list>
+</slide>

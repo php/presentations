@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Interaction</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="4.5em">
+		<bullet>With the SRM daemon</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>UNIX domain sockets</bullet>
+		<bullet>$srm = new SRM ('/var/srm.socket');</bullet>
+		<bullet>TCP/IP sockets</bullet>
+		<bullet>$srm = new SRM ('localhost', 7777);</bullet>
+	</list>
+
+	<list effect="slide" fontsize="4.5em">
+		<bullet>With Bananas</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>$binsearch = new SRMApp($srm, 'binsearch');</bullet>
+		<bullet>$binsearch->function('param1', 2);</bullet>
+	</list>
+</slide>

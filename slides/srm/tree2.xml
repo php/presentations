@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>The Past: Trees</title>
+
+	<example fontsize="1em"><![CDATA[<?php
+    $elements = array (
+        'jan'    => 'Dorsten',       'derick' => 'Dieren',
+        'stig'   => 'Trondheim',     'dan'    => 'Baltimore',
+        'rasmus' => 'San Francisco', 'ilia'   => 'Montreal'
+    );
+
+    $tree =& new binsearch($elements);
+    echo $tree->get_value('rasmus');
+? >]]></example>
+	
+	<example fontsize="1em"><![CDATA[<?php
+class node {
+  var $key = 'jan';
+  var $value = 'Dorsten';
+  var $left = 
+  class node {
+    var $key = 'derick';
+    var $value = 'Dieren';
+    var $left = 
+    class node {
+      var $key = 'dan';
+      var $value = 'Baltimore';
+      var $left = NULL;
+      var $right = NULL;
+    };
+    var $right = 
+    class node {
+      var $key = 'ilia';
+      var $value = 'Montreal';
+      var $left = NULL;
+      var $right = NULL;
+    };
+  };
+  var $right = 
+  class node {
+    var $key = 'stig';
+    var $value = 'Trondheim';
+    var $left = 
+    class node {
+      var $key = 'rasmus';
+      var $value = 'San Francisco';
+      var $left = NULL;
+      var $right = NULL;
+    };
+    var $right = NULL;
+  };
+}
+? >]]></example>
+</slide>
