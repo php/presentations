@@ -1,0 +1,23 @@
+<slide title="GD 1/2">
+<example title="Creating a PNG with a TrueType font"><![CDATA[<?php
+ Header("Content-type: image/png");
+ $im = ImageCreate(630,80);
+ $blue = ImageColorAllocate($im,0x5B,0x69,0xA6);
+ $white = ImageColorAllocate($im,255,255,255);
+ $black = ImageColorAllocate($im,0,0,0);
+ ImageTTFText($im, 60, 0, 10, 55, $black, "CANDY.TTF", $text);
+ ImageTTFText($im, 60, 0, 6, 52, $white, "CANDY.TTF", $text);
+ ImagePNG($im);
+?>]]></example>
+
+<example><![CDATA[<IMG src="txt.php?text=<?echo urlencode($text)?>">]]></example>
+
+
+<example hide="1" result="1"><![CDATA[<?if(!empty($text)) {
+  echo "<BR> <IMG src=\"slides/intro/txt.php?text=".urlencode($text)."\">";
+ } else $text = 'Cool Dynamic Images!';
+ echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";
+ echo "<input type=text name=text value=\"$text\">\n";
+ echo "</form>\n";
+ ?>]]></example>
+</slide>
