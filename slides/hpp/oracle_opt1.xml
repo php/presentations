@@ -3,6 +3,6 @@
 <blurb><![CDATA[<br/><br/><br/>]]></blurb>
 <list title="Use Stored Procedures For DML">
 <bullet>Combining multiple DML statements in a single stored procedure can reduce the number of soft parses.</bulllet>
-<bullet>Isolating your DML is also nice to separate out the implementation.
+<bullet>Isolating your DML is also nice to separate out the implementation.</bullet>
 </list>
 </slide>
