@@ -1,0 +1,85 @@
+<slide title="WSDL Parts">
+<blurb>Reading and Writing WSDL is not for the faint of heart...</blurb>
+<example type="xml" fontsize='1.4em' title="The Definition">
+<![CDATA[<definitions 
+    name="InteropTest" 
+    targetNamespace="http://soapinterop.org/"
+    xmlns="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:tns="http://soapinterop.org/"
+    xmlns:s="http://soapinterop.org/xsd"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">]]>
+</example>
+<example type="xml" fontsize='1.4em' title="Data Types">
+<![CDATA[<types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://soapinterop.org/xsd">
+        
+        <import location="http://site.com/import1B.wsdl"
+            namespace="http://site.com/namespace/"/>
+        
+        <complexType name="SOAPStruct">
+            <all>
+                <element name="varString" type="string"/>
+                <element name="varInt" type="int"/>
+                <element name="varFloat" type="float"/>
+            </all>
+        </complexType>
+        
+    </schema>
+</types>]]>
+</example>
+<example type="xml" fontsize='1.4em' title="Messages">
+<![CDATA[<message name="echoStructRequest">
+    <part name="inputStruct" type="s:SOAPStruct"/>
+</message>
+
+<message name="echoStructResponse">
+    <part name="return" type="s:SOAPStruct"/>
+</message>]]>
+</example>
+<example type="xml" fontsize='1.4em' title="Ports">
+<![CDATA[<portType name="InteropTestPortType">
+    <operation name="echoStruct" parameterOrder="inputStruct">
+        <input message="tns:echoStructRequest"/>
+        <output message="tns:echoStructResponse"/>
+    </operation>
+</portType>]]>
+</example>
+<example type="xml" fontsize='1.4em' title="Bindings">
+<![CDATA[<binding name="InteropTestSoapBinding" 
+        type="tns:InteropTestPortType">
+    <soap:binding style="rpc" 
+        transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="echoStruct">
+        <soap:operation soapAction="http://soapinterop.org/"/>
+        <input>
+            <soap:body use="encoded"
+                namespace="http://soapinterop.org/"
+                encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+        </input>
+        <output>
+            <soap:body use="encoded"
+                namespace="http://soapinterop.org/"
+                encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+        </output>
+        <fault>
+            <soap:fault use="encoded"
+                namespace="http://soapinterop.org/"
+                encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+        </fault>
+    </operation>
+</binding>]]>
+</example>
+<example type="xml" fontsize='1.4em' title="Services">
+<![CDATA[<service name="interopLab">
+    <port name="interopTestPort" 
+        binding="tns:InteropTestSoapBinding">
+        <soap:address location="http://host.com/server.php"/>
+    </port>
+</service>
+]]>
+</example>
+</slide>

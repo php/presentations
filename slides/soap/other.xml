@@ -1,11 +1,19 @@
 <slide title="More SOAP Specs">
-<list>
-<bullet>SOAP related specs abound...</bullet>
-<bullet>SOAP Routing</bullet>
-<bullet>SOAP Authentication</bullet>
-<bullet>WS-Security</bullet>
-<bullet>WS-Inspection</bullet>
-<bullet>WS-Reliability</bullet>
-<bullet>UDDI</bullet>
-</list>
+<list><bullet>WS-Routing</bullet></list>
+    <blurb>
+        stateless protocol for exchanging one-way SOAP messages 
+        from an initial sender to the ultimate receiver, 
+        potentially via a set of intermediaries
+    </blurb>
+<list><bullet>SOAP Authentication</bullet></list>
+    <blurb>
+        Basic and Digest authentication methods similar to HTTP authentication.  
+        http://www.whitemesa.com/soapauth.html
+    </blurb>
+<list><bullet>WS-Security</bullet></list>
+    <blurb>
+        quality of protection through message integrity,
+        message confidentiality, and single message authentication
+        through security tokens (X.509, Kerberos)
+    </blurb>
 </slide>

@@ -1,0 +1,18 @@
+<slide title="More SOAP Specs">
+<list><bullet>WS-Inspection</bullet></list>
+    <blurb>
+        XML format for assisting in the inspection 
+        of a site for available services.  Provides a standard
+        method of inspecting a server for what services
+        it provides or knows about.
+    </blurb>
+<list><bullet>WS-Referral</bullet></list>
+    <blurb>
+        dynamic configuration protocol for use with WS-Routing
+    </blurb>
+<list><bullet>UDDI: Universal Description Discovery and Integration</bullet></list>
+    <blurb>
+        Repository system for automated publishing and discovery 
+        of Web Services.
+    </blurb>
+</slide>

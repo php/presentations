@@ -1,0 +1,97 @@
+<slide title="Client/Server">
+
+<example type="php" title="PEAR::SOAP Client" fontsize='1.4em'>
+<![CDATA[<?php
+include("SOAP/Client.php");
+
+$soapclient = new SOAP_Client("http://localhost/server.php");
+
+// this namespace is the same as declared in server.php
+$options = array('namespace' => 'urn:SOAP_Example_Server',
+                 'trace' => 1);
+
+$ret = $soapclient->call("echoString",array("inputString"=>"this is a test string"),$options);
+
+print_r($ret);
+?>
+]]>
+</example>
+
+<example type="php" title="PEAR::SOAP Server" fontsize='1.4em'>
+<![CDATA[<?php
+require_once 'SOAP/Server.php';
+
+class SOAP_Example_Server {
+    function echoString($inputString)
+    {
+	return $inputString;
+    }
+}
+
+$server = new SOAP_Server;
+$soapclass = new SOAP_Example_Server();
+$server->addObjectMap($soapclass,'urn:SOAP_Example_Server');
+$server->service($HTTP_RAW_POST_DATA);
+?>
+]]>
+</example>
+<example type="xml" title="Transaction Wire" fontsize='1.4em'>
+<![CDATA[OUTGOING:
+
+POST /SOAP/example/server.php HTTP/1.0
+User-Agent: PEAR-SOAP 0.7.0
+Host: localhost
+Content-Type: text/xml; charset=UTF-8
+Content-Length: 572
+SOAPAction: ""
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope 
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:SOAP_Example_Server"
+ SOAP-ENV:encodingStyle=
+    "http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+
+<ns4:echoString>
+<inputString xsi:type="xsd:string">this is a test string</inputString>
+</ns4:echoString>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+
+INCOMING
+
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/5.0
+Date: Tue, 22 Oct 2002 08:04:09 GMT
+X-Powered-By: PHP/4.2.1
+Server: PEAR-SOAP 0.7.0
+Content-Type: text/xml; charset=UTF-8
+Content-Length: 578
+
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope  
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:ns4="urn:SOAP_Example_Server"
+ SOAP-ENV:encodingStyle=
+    "http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+
+<ns4:echoStringResponse>
+<return xsi:type="xsd:string">this is a test string</return>
+</ns4:echoStringResponse>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+]]>
+</example>
+
+</slide>

@@ -1,0 +1,13 @@
+<slide title="PEAR::SOAP::Interop">
+<list>
+<bullet>Interoperability Test Suite</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Covers Round 2 and Round 3</bullet>
+<bullet>Tests raw PHP and converted data types</bullet>
+<bullet>Client 70% Interoperable with raw data types</bullet>
+<bullet>Client 95% Interoperable at Round 2</bullet>
+<bullet>Client 100% Interoperable at Round 3 (only 4 implementations tested)</bullet>
+<bullet>...Show Interop Tables...</bullet>
+</list>
+</slide>

@@ -1,6 +1,6 @@
 <slide title="PEAR::SOAP">
 <list>
-<bullet>SOAP 1.1 and SOAP 1.2</bullet>
+<bullet>SOAP 1.1</bullet>
 <bullet>Interoperability testing done with all major implementations</bullet>
 <bullet>Script based Client and Server</bullet>
 <bullet>RPC/Encoded and Document/Literal</bullet>
@@ -9,6 +9,6 @@
 <bullet>Supports 1999/2001 Schema</bullet>
 <bullet>WSDL Support</bullet>
 <bullet>SOAP with Attachments (Mime)</bullet>
-<bullet>Experimental DIME Support</bullet>
+<bullet>DIME Support</bullet>
 </list>
 </slide>

@@ -5,6 +5,6 @@
 <bullet>Provides for 'HTTP-1.1 like' data chunking</bullet>
 <bullet>Much more efficient than Mime when dealing with large data</bullet>
 <bullet>DIME is default with .Net services</bullet>
-<bullet>PHP Support highly experimental (works with itself, not tested against .Net)</bullet>
+<bullet>PHP Support still experimental</bullet>
 </list>
 </slide>
