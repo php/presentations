@@ -15,7 +15,7 @@ vivaldi:~# perl -MCPAN -e "install 'LWP';"
 Then you can do the following:
 </blurb>
 
-<example 
+<example
       fontsize="1.2em" 
       type="perl"
       filename="slides/scripting/http.pl"/>

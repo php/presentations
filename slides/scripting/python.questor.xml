@@ -1,0 +1,18 @@
+<slide title="Python Questor">
+<blurb>
+An example of how messed up, err, wonderful python  is.
+</blurb>
+
+<list title="Questor" fontsize="2.5em">
+<bullet>Uses a class to keep track of questions and answers</bullet>
+<bullet>Demonstrates, loops, recursion, OO</bullet>
+<bullet>Super-Intelligent AI (Deep Blue, watchout!)</bullet>
+</list>
+
+<example
+  title="Questor"
+  fontsize="1em"
+  type="python"
+  filename="slides/scripting/questor.py"/>
+
+</slide>
