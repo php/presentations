@@ -15,6 +15,12 @@
 <slide>slides/phpperform/title.xml</slide>
 <slide>slides/phpperform/intro.xml</slide>
 
+<slide>slides/phpperform/perf_intr.xml</slide>
+<slide>slides/phpperform/prf_socket.xml</slide>
+<slide>slides/phpperform/prf_fileio.xml</slide>
+<slide>slides/phpperform/prf_sqlquery.xml</slide>
+<slide>slides/phpperform/cpuusage.xml</slide>
+<slide>slides/phpperform/regex.xml</slide>
 <slide>slides/phpperform/caching.xml</slide>
 <slide>slides/phpperform/static1.xml</slide>
 <slide>slides/phpperform/static2.xml</slide>
@@ -35,6 +41,17 @@
 <slide>slides/phpperform/visitation4.xml</slide>
 <slide>slides/phpperform/visitation5.xml</slide>
 
+<slide>slides/phpperform/reduce.xml</slide>
+<slide>slides/phpperform/optimize.xml</slide>
+<slide>slides/phpperform/htmloptimize.xml</slide>
+<slide>slides/phpperform/cssoptimize.xml</slide>
+<slide>slides/phpperform/httpoptimization.xml</slide>
+<slide>slides/phpperform/mrinf_opt.xml</slide>
+<slide>slides/phpperform/compress.xml</slide>
+<slide>slides/phpperform/phpgz.xml</slide>
+<slide>slides/phpperform/modgz.xml</slide>
+<slide>slides/phpperform/mrinf_gz.xml</slide>
+
 <slide>slides/phpperform/extern.xml</slide>
 <slide>slides/phpperform/extern_apc.xml</slide>
 <slide>slides/phpperform/extern_ioncube.xml</slide>
@@ -43,4 +60,6 @@
 <slide>slides/phpperform/extern_benchmark.xml</slide>
 
 <slide>slides/phpperform/extern_srm.xml</slide>
+
+
 </presentation>
