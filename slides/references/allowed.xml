@@ -5,13 +5,13 @@
 	<blurb>Passing variables "by-ref":</blurb>
 	<break/>
 	<example><![CDATA[<?php
-	function screw_up_array(&$array)
+	function add_element(&$array)
 	{
-		$array[] = 'screwed up';
+		$array[] = 'element';
 	}
 
-	$a = array('not');
-	screw_up_array($a);
+	$a = array('initial element');
+	add_element($a);
 ?>]]></example>
 	
 </slide>
