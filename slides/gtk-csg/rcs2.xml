@@ -45,9 +45,9 @@ widget "main window.*GtkScrolledWindow.*GtkButton*" style "button_list"
 ]]></example>
 
  <blurb fontsize="3em">
-  Note that the wildcards are important: "**GtkScrolledWindow*" makes
+  Note that the wildcards are important: "\*GtkScrolledWindow\*" makes
   sure that it applies to the scroll window inside "main window" even
-  if it's bundled in a box or something like that, and "**GtkButton**"
+  if it's bundled in a box or something like that, and "\*GtkButton\*"
   says that the button can be packed up in a box and that the style
   will also apply to the child of the button, that is, label. Without
   the final asterisk the button label font would not be affected.

@@ -33,7 +33,7 @@
       $style = $style->copy();
       $cmap = $button->get_colormap(); 
       $color = $cmap->alloc('#406090');
-      $style->bg[GTK_STATE_NORMAL] = $color;
+      $style->bg[GTK_STATE_PRELIGHT] = $color;
       $button->set_style($style);
 
       $label = $button->child;
