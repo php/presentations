@@ -9,5 +9,5 @@
 	<blurb fontsize="5em">Query:</blurb>
 	<example fontsize="2em"><![CDATA[SELECT * FROM directory
 WHERE
-	left > 4 AND right < 9]]></example>
+	left >= 4 AND right <= 9]]></example>
 </slide>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Practical Filters</title>
+
+	<example class="bit_larger" result="1"><![CDATA[<pre><?php
+  $string = <<<END
+Håtveit på 8. plass, take #2
+Привет Bulgaria!
+费卢杰
+END;
+
+  /* For URLs */
+  echo transliterate($string,
+    array( 'han_transliterate', 'cyrillic_transliterate', 'lowercase_latin',
+      'normalize_ligature', 'diacritical_remove', 'normalize_punctuation',
+      'remove_punctuation', 'spaces_to_underscore', 'compact_underscores'),
+    'utf-8', 'utf-8'), "\n\n";
+
+  /* For search words */
+  $ords = transliterate($string, 
+    array('han_transliterate', 'cyrillic_transliterate', 'lowercase_latin',
+      'normalize_ligature', 'diacritical_remove', 'normalize_punctuation',
+      'remove_punctuation'),
+    'utf-8', 'utf-8');
+  echo join(', ', preg_split('/\s+/', $ords));
+?>]]></example>
+
+</slide>
+<!--
+vim: encoding=utf-8
+-->

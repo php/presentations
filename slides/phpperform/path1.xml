@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Different Approach</title>
+
+	<image align="center" filename="path1.png" />
+	<blurb fontsize="5em">Path strings:</blurb>
+<break/>
+	<example fontsize="2em"><![CDATA[  Id | Parent Id | Path String    | Path Identification String     | Depth
+  ---+-----------+----------------+--------------------------------+------
+  87 |         2 | /1/2/87/       | countries                      |     2
+  88 |        87 | /1/2/87/88/    | countries/belgium              |     3
+  89 |        87 | /1/2/87/89/    | countries/netherlands          |     3
+  91 |        89 | /1/2/87/89/91/ | countries/netherlands/business |     4
+  92 |        89 | /1/2/87/89/92/ | countries/netherlands/economy  |     4 
+  90 |        87 | /1/2/87/90/    | countries/germany              |     3]]></example>
+</slide>
+  

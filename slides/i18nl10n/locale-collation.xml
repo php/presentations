@@ -3,16 +3,14 @@
 	<title>LC_COLLATE</title>
 	<subtitle>language oriented sorting</subtitle>
 
-	<example class="bit_larger" result="1"><![CDATA[<?php
+	<example class="bit_larger" result="1"><![CDATA[<pre><?php
 	$b = $a = array("øks", "ærlig", "åtte", "øyeblikk");
 
 	setlocale(LC_COLLATE, 'C');
-	sort($a);
-	var_dump($a);
+	sort($a); print_r($a);
 
 	setlocale(LC_COLLATE, 'no_NO.UTF8');
-	sort($b, SORT_LOCALE_STRING);
-	var_dump($b);
+	sort($b, SORT_LOCALE_STRING); print_r($b);
 ?>]]></example>
 	<break/>
 	<blurb>Mathematical order: å (229), æ (230), ø (248)</blurb>

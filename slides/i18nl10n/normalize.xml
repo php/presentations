@@ -5,7 +5,7 @@
 	<example class="bit_larger" result="1"><![CDATA[<?php
 	$string = <<<END
 Normalization:
-This example is called «normalization». It`s used to convert of
+This example is called «normalization». It`s used to convert
 “curly quotes”, special—hypens and other characters to more ‘ascii’
 representations.
 

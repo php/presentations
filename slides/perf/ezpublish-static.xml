@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Static Cache in eZ publish</title>
+	<subtitle>An Example of On-Publish Generation</subtitle>
+
+	<example><![CDATA[<?php
+    function cacheURL( $url, $nodeID = false, $skipExisting = false )
+    {
+        $fileName = "http://$hostname$dir$url";
+        $content = @file_get_contents( $fileName );
+        $this->storeCachedFile( $file, $content );
+    }
+
+    function storeCachedFile( $file, $content )
+    {
+        $fp = fopen( $tmpFileName, 'w' );
+        if ( $fp )
+        {
+            fwrite( $fp, $content );
+            fclose( $fp );
+            rename( $tmpFileName, $file );
+        }
+    }
+?>]]></example>
+	<break/>
+
+	<blurb>Set up RewriteRules:</blurb>
+	<example><![CDATA[RewriteEngine on
+
+RewriteCond   /dat/ez.no/static/index.html -f
+RewriteRule   ^/$     /static/index.html [L]
+
+RewriteCond   %{REQUEST_METHOD}       !^POST$
+RewriteCond   /dat/ez.no/static$1/index.html -f
+RewriteRule   ^(.*)$  /static$1/index.html [L]
+]]></example>
+
+</slide>

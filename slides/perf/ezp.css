@@ -83,6 +83,12 @@ ul.small div li.pres_bullet
 {
 	font-size: 20pt;
 }
+
+div.title_blurb {
+	font-size: 80px;
+	text-align: center;
+	font-weight: bold;
+}
 	
 div.small_blurb {
 	font-size: 24px;

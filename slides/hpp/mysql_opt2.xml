@@ -1,15 +1,18 @@
-<slide title="MySQL Table Types">
-<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<break lines="3"/>
-<list title="MyISAM">
-<bullet>Efficient For *either* High Volume writes *or* reads</bullet>
-<bullet>Table level locking</bullet>
-<bullet>No Transaction support</bullet>
+<slide>
+	<title>MySQL Table Types</title>>
+
+<blurb>MyISAM</blurb>
+<list>
+	<bullet>Efficient For *either* High Volume writes *or* reads</bullet>
+	<bullet>Table level locking</bullet>
+	<bullet>No Transaction support</bullet>
 </list>
-<list title="InnoDB">
-<bullet>Efficient locking (Row-level update, non-locking read)</bullet>
-<bullet>Foreign Keys, Transactions</bullet>
-<bullet>High Concurrency</bullet>
+
+<blurb>InnoDB</blurb>
+<list>
+	<bullet>Efficient locking (Row-level update, non-locking read)</bullet>
+	<bullet>Foreign Keys, Transactions</bullet>
+	<bullet>High Concurrency</bullet>
 </list>
 
 </slide>

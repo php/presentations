@@ -16,10 +16,10 @@
 <break lines="2"/>
 	<blurb>How we do this:</blurb>
 	<example class="bit_larger" encoding="latin1" result="0"><![CDATA[<?php
-$string = iconv("latin1", "ucs-2", "Håtveit på 8. plass");
+$string = "Håtveit på 8. plass";
 $res = transliterate($string,
-	array('normalize_ligature', 'lowercase_latin', 'space_to_underscores'));
-echo iconv('ucs-2', 'latin1', $res);
+	array('normalize_ligature', 'lowercase_latin', 'space_to_underscores'),
+	'utf-8', 'utf-8');
 ?>]]></example>
 
 </slide>

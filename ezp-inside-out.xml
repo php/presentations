@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="0" >
+<topic>Performance</topic>
+<title>eZ publish Inside-Out</title>
+<event>FOSDEM 2005</event>
+<location>Brussels, Belgium</location>
+<date>February 27th, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://files.derickrethans.nl/ezp-inside-out.pdf</url>
+
+<slide>slides/perf/title.xml</slide>
+<slide>slides/xdebug/questions.xml</slide>
+
+<slide>slides/perf/groups2.xml</slide>
+
+<!-- CACHING OPTIMIZATION -->
+<slide>slides/perf/caching-title.xml</slide>
+<slide>slides/perf/what_caching.xml</slide>
+<slide>slides/perf/how_caching_works.xml</slide>
+<slide>slides/perf/pear_cache.xml</slide>
+<slide>slides/perf/caching_eval.xml</slide>
+<slide>slides/perf/total_page_caching.xml</slide>
+<slide>slides/perf/livedocs.xml</slide>
+
+<slide>slides/perf/static-und-squid.xml</slide>
+<slide>slides/perf/extern_squid.xml</slide>
+<slide>slides/perf/ezpublish-static.xml</slide>
+
+<!-- SQL OPTIMIZATION -->
+<slide>slides/perf/database-tuning-title.xml</slide>
+<slide>slides/hpp/mysql_opt2.xml</slide>
+<slide>slides/phpperform/visitation1.xml</slide>
+<slide>slides/phpperform/visitation2.xml</slide>
+<slide>slides/phpperform/visitation3.xml</slide>
+<slide>slides/phpperform/visitation4.xml</slide>
+<slide>slides/phpperform/visitation5.xml</slide>
+<slide>slides/phpperform/path1.xml</slide>
+
+<!-- OPTIMIZING APPLICATIONS -->
+<slide>slides/perf/app-tuning-title.xml</slide>
+<slide>slides/perf/cpuusage.xml</slide>
+<slide>slides/perf/xdebug.xml</slide>
+<slide>slides/perf/xdebug-trace.xml</slide>
+<slide>slides/perf/xdebug-trace-xgui.xml</slide>
+<slide>slides/perf/xdebug-profile.xml</slide>
+<slide>slides/perf/regex.xml</slide>
+<slide>slides/perf/prf_fileio.xml</slide>
+
+<!-- SERVER OPTIMIZATION -->
+<slide>slides/perf/server-tuning-title.xml</slide>
+<slide>slides/perf/lifecycle.xml</slide>
+<slide>slides/perf/how_ccache.xml</slide>
+<slide>slides/perf/accelerators.xml</slide> <!-- Accelerators -->
+<slide>slides/perf/dso-nodso.xml</slide>
+<slide>slides/perf/squeeze.xml</slide>
+
+<!-- CHARSETS -->
+<!--<slide>slides/i18nl10n/what-languages.xml</slide>--> <!-- what is the problem actually? -->
+<slide>slides/perf/i18n-tuning-title.xml</slide>
+<slide>slides/i18nl10n/latin.xml</slide> <!-- latin charsets -->
+<slide>slides/i18nl10n/convert.xml</slide> <!-- converting charsets (single byte) -->
+<slide>slides/i18nl10n/asian.xml</slide> <!-- asian charsets -->
+<slide>slides/i18nl10n/unicode.xml</slide> <!-- unicode and ucs2, ucs4 -->
+<slide>slides/i18nl10n/utf8.xml</slide> <!-- what does utf8 solve? -->
+
+<!-- PROBLEMS and SOLUTIONS -->
+<slide>slides/i18nl10n/mb-problems.xml</slide> <!-- functions with utf8 chars -->
+<slide>slides/i18nl10n/iconv-solved.xml</slide> <!-- fixed with iconv -->
+<slide>slides/i18nl10n/iconv-strpos.xml</slide> <!-- iconv* and other functions -->
+<slide>slides/i18nl10n/pcre-utf8.xml</slide> <!-- regular expressions, /u, mb_regexp */ -->
+
+<!-- CONVERSION and OUTPUT -->
+<slide>slides/i18nl10n/iconv.xml</slide> <!-- iconv -->
+<slide>slides/i18nl10n/iconv-function.xml</slide> <!-- converting charsets with iconv -->
+<slide>slides/i18nl10n/iconv-ob-buffer-multiple.xml</slide> <!-- iconv ob_buffer -->
+<slide>slides/i18nl10n/correct-http-header.xml</slide> <!-- setting http header -->
+
+<!-- TRANSLITERATION -->
+<slide>slides/i18nl10n/funny-characters.xml</slide> <!-- æ -> ae -->
+<slide>slides/i18nl10n/cyrillic.xml</slide> <!-- cyrillic -->
+<slide>slides/i18nl10n/other-transliterations.xml</slide> <!-- chinese, greek, hebrew, korean -->
+<slide>slides/i18nl10n/normalize.xml</slide> <!-- curly->normal quotes, punctuation, diacritics -->
+<slide>slides/i18nl10n/other-filters.xml</slide> <!-- currency signs, copyright -->
+<slide>slides/i18nl10n/url-strings.xml</slide> <!-- currency signs, copyright -->
+
+<!-- LOCALE ISSUES -->
+<slide>slides/i18nl10n/locales.xml</slide>
+<slide>slides/i18nl10n/locale-collation.xml</slide> <!-- string collation (ordering) -->
+<slide>slides/i18nl10n/locale-casing.xml</slide> <!-- strupper/strlower -->
+<slide>slides/i18nl10n/locale-php.xml</slide> <!-- PHP and locales -->
+
+<!-- TRANSLATIONS IN WEBSITES -->
+<slide>slides/perf/translation-title.xml</slide>
+<slide>slides/i18nl10n/trans-intro.xml</slide> <!-- intro -->
+<slide>slides/i18nl10n/trans-define1.xml</slide> <!-- with define -->
+<slide>slides/i18nl10n/trans-array1.xml</slide> <!-- with array -->
+<slide>slides/i18nl10n/trans-gettext1.xml</slide> <!-- with gettext -->
+<slide>slides/i18nl10n/trans-qt1.xml</slide> <!-- xml based definition -->
+<slide>slides/i18nl10n/trans-linguist.xml</slide> <!-- Qt Linguist -->
+<slide>slides/i18nl10n/trans-qt2.xml</slide> <!-- xml based definition  -->
+<slide>slides/php5intro/nl/p5pp.xml</slide>
+<slide>slides/perf/resources-oscom4.xml</slide>
+
+</presentation>

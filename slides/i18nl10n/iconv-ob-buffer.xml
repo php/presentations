@@ -6,7 +6,7 @@
 	<blurb>ob_iconv_handler():</blurb>
 	<example class="bit_larger" result="1"><![CDATA[<?php
 	// Output text as-is
-	echo 'Nittenhundreogåttiåtte', "<br/>\n";
+	echo 'blåbærøl', "<br/>\n";
 
 	// Set the internal and output encodings
 	iconv_set_encoding("internal_encoding", "iso-8859-1");
@@ -14,7 +14,7 @@
 
 	// Start the output buffer handler and echo the string again
 	ob_start("ob_iconv_handler");
-	echo 'Nittenhundreogåttiåtte', "<br/>\n";
+	echo 'blåbærøl', "<br/>\n";
 
 	// Flush and stop the output buffer handler
 	ob_end_flush();

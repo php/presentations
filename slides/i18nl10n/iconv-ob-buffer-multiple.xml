@@ -3,9 +3,9 @@
 	<title>Conversions with Multiple Character Sets</title>
 
 	<blurb>ob_iconv_handler():</blurb>
-	<example class="bit_larger"><![CDATA[<?php
+	<example class="bit_larger" result="1"><![CDATA[<?php
 	// Output text as-is
-	echo 'Nittenhundreogåttiåtte', "<br/>\n";
+	echo 'blåbærøl', "<br/>\n";
 
 	// Set the output and internal encodings
 	iconv_set_encoding("output_encoding", "utf-8");
@@ -13,7 +13,7 @@
 
 	// Start the output buffer handler and echo the string again
 	ob_start("ob_iconv_handler");
-	echo 'Nittenhundreogåttiåtte', "<br/>\n";
+	echo 'blåbærøl', "<br/>\n";
 	ob_end_flush();
 
 	// Change the internal encoding
@@ -21,13 +21,9 @@
 
 	// Start the output buffer handler and echo the string again
 	ob_start("ob_iconv_handler");
-	echo 'Nittenhundreogåttiåtte', "<br/>\n";
+	echo 'blåbærøl', "<br/>\n";
 	ob_end_flush();
 ?>]]></example>
-	<blurb>output:</blurb>
-	<example class="bit_larger_output"><![CDATA[Nittenhundreogåttiåtte
-NittenhundreogÃ¥ttiÃ¥tte
-NittenhundreogÄºttiÄºtte]]></example>
 
 </slide>
 <!--
