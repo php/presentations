@@ -7,6 +7,6 @@
 	<list effect="slide" fontsize="4.5em">
 		<bullet>Use as much static content as possible</bullet>
 		<bullet>Cache dynamic generated content</bullet>
-		<bullet>Use as less database queries as possible</bullet>
+		<bullet>Use as few database queries as possible</bullet>
 	</list>
 </slide>
