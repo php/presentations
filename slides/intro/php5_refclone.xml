@@ -32,7 +32,7 @@
     }
 
     $linux = new OS('linux');
-    $win = $linux->__clone();
+    $win = clone $linux;
     changeName($win, 'windows');
     echo $linux->name. "\n";
     echo $win->name;
