@@ -8,12 +8,16 @@ my $endpoint = 'http://services.xmethods.net:80/perl/soaplite.cgi';
 
 my $uri = 'urn:xmethodsBabelFish';
 
-my $soapObj = SOAP::Lite->new ('xmlschema' => '1999',
-                    'proxy' => $endpoint, 'uri' => $uri,);
+my $soapObj = SOAP::Lite->new 
+    ('xmlschema' => '1999',
+     'proxy' => $endpoint, 
+     'uri' => $uri,);
 
-my $tm = SOAP::Data->name('translationmode')->value('en_es');
+my $tm = SOAP::Data->name('translationmode')
+		    ->value('en_es');
 
-my $text = SOAP::Data->name('sourcedata')->value('Hello World');
+my $text = SOAP::Data->name('sourcedata')
+		    ->value('Hello World');
 
 my $response = $soapObj->call('BabelFish',$tm,$text);
 

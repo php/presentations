@@ -1,6 +1,6 @@
 <slide title="Simple SOAP Server">
 
-<example type="text" title="SOAP::Lite" fontsize='1.4em'>
+<example type="text" title="SOAP::Lite Server" fontsize='1.4em'>
 <![CDATA[
 #!perl -w
 
@@ -13,13 +13,31 @@ package Demo;
 
 sub hi { return "hello, world"; }
 
-sub bye { return "goodbye, cruel world"; }
+sub bye { 
+    return  SOAP::Data->name('byeResult')
+	    ->value('goodbye, cruel world')
+	    ->type('string')
+	    ->uri('http://soapinterop.org/xsd');
+}
+
 ]]>
 </example>
 
-<blurb type="text" title="Example Output">
+
+
+<example type="text" title="SOAP::Lite Client" fontsize='1.4em'>
 <![CDATA[
-mi nombre es Dick Hardt.
+#!perl -w
+
+use SOAP::Lite;
+
+print SOAP::Lite
+    ->uri('http://www.soaplite.com/Demo')
+    ->proxy('http://localhost/hibye.cgi')
+    ->hi()
+    ->result;
 ]]>
-</blurb>
+</example>
+
+
 </slide>

@@ -6,15 +6,16 @@ require_once('SOAP/Client.php');
 
 $soapclient = new SOAP_Client('mailto:soap@caraveo.com');
 
-$options = array('namespace' => 'http://soapinterop.org/',
-                'from' => 'shanec@ActiveState.com',
-                'host' => 'smtp.ActiveState.com'
-                'port' => 25);
+$options = array(
+	    'namespace' => 'http://soapinterop.org/',
+	    'from' => 'shanec@ActiveState.com',
+	    'host' => 'smtp.ActiveState.com'
+	    'port' => 25);
 
 $return = $soapclient->call('echoStringArray',
-                            array('inputStringArray' =>
-                                  array('good','bad','ugly')),
-                            $options);
+			array('inputStringArray' =>
+			  array('good','bad','ugly')),
+			$options);
 
 // don't expect much of a result!
 print_r($return);

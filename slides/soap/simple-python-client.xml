@@ -1,0 +1,14 @@
+<slide title="Simple Python Client">
+
+<example type="text" title="SOAP::Lite" fontsize='1.4em'>
+<![CDATA[
+import SOAP
+
+client = SOAP.SOAPProxy( \
+    "http://services.xmethods.com/soap", \
+    namespace = "urn:xmethods-delayed-quotes")
+
+print client.getQuote(symbol = "IBM")
+]]>
+</example>
+</slide>

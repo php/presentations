@@ -1,0 +1,59 @@
+<slide title="SOAP::Lite Document/Literal">
+<blurb>A fix for the Document/Literal hole in SOAP::Lite.</blurb>
+
+
+<example type="php" fontsize='1.4em'>
+<![CDATA[
+use SOAP::Lite;
+
+# define serializer
+BEGIN {
+    package My::Serializer; 
+    @My::Serializer::ISA = 'SOAP::Serializer';
+
+    # methods of My::Serializer
+    # constructor is identical to 
+    # SOAP::Serilizer->new, but doesn't
+    # add the encodingStyle
+
+    sub new {
+	my $self = shift->SUPER::new(@_);
+	$self->{_attr} = {}; # kill the encodingStyle
+	return $self;
+    }
+    
+    # we don't use the 'method' envelope for doc/lit
+
+    sub envelope { SOAP::Trace::trace('()');
+      my $self = shift->new;
+      my $type = shift;
+      return $self->SUPER::envelope(freeform=>@_);
+    }
+
+}
+
+
+my $endpoint = 'http://mssoapinterop.org/stkv3/wsdl/interopTestDocLit.wsdl';
+my $uri = 'http://soapinterop.org/WSDLInteropTestDocLit';
+my $action = '"http://soapinterop.org/"';
+my $soapObj = SOAP::Lite->new (
+	'xmlschema' => '2001', 
+	'proxy' => $endpoint,
+	'uri' => $uri,
+	'serializer' => 
+	    My::Serializer->new ('xmlschema' => '2001')
+       )->on_action(sub { return $action;});
+
+# echoString
+my $data = SOAP::Data->name('echoStringParam')
+		->value('TESTING')
+		->type('')
+		->uri('http://soapinterop.org/xsd');
+my $som = $soapObj->call($data);
+my $response = $som->valueof('//echoStringReturn');
+print $response;
+
+]]>
+</example>
+
+</slide>

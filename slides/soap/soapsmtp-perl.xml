@@ -1,0 +1,17 @@
+<slide title="Perl SMTP Client">
+
+<example type="php" fontsize='1.4em' title='Sending SOAP over SMTP'>
+<![CDATA[
+use SOAP::Lite;
+
+SOAP::Lite
+  -> uri('http://soapinterop.org/')                
+  -> proxy('mailto:soap@caraveo.com', 
+	    smtp => 'smtp.ActiveState.com', 
+	    From => 'shanec@ActiveState.com', 
+	    Subject => 'SOAP message')
+  ->echoString("A SOAP Email for You!");
+
+?>]]>
+</example>
+</slide>
