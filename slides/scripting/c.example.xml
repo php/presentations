@@ -1,6 +1,11 @@
 <slide title="C Example">
+
 <blurb>
 An example program that download's a webpage:
-<example fontsize="1.2em" filename="/data/www/pres2/slides/scripting/http.c" type="c"/>
+<example 
+      fontsize="1.2em" 
+      filename="slides/scripting/http.c" 
+      type="c"/>
 </blurb>
+
 </slide>

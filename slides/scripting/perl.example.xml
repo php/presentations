@@ -1,6 +1,24 @@
 <slide title="Perl Example">
+
 <blurb>
-An example program that download's a webpage:
-<example fontsize="1.2em" filename="/data/www/pres2/slides/scripting/perl_ex.pl" type="perl"/>
+An example program that download's a webpage.
 </blurb>
+
+<blurb>
+First install the LWP package via CPAN:
+</blurb>
+<example fontsize="1.2em" type="command">
+vivaldi:~# perl -MCPAN -e "install 'LWP';"
+</example>
+
+<blurb>
+Then you can do the following:
+</blurb>
+
+<example 
+      fontsize="1.2em" 
+      type="perl"
+      filename="slides/scripting/perl_ex.pl"/>
+
+
 </slide>
