@@ -1,0 +1,12 @@
+<slide title="Why is it better?">
+
+<list fontsize="4em">
+	<bullet padding="0.5em">Faster (C is faster PHP).</bullet>
+	<bullet padding="0.5em">Can easily store cache in memory or disk or both.</bullet>
+	<bullet padding="0.5em">Better atomicity.</bullet>
+	<bullet padding="0.5em">Supports zlib compression for cached pages.</bullet>
+	<bullet padding="0.5em">Bypasses PHP completely.</bullet>
+	<bullet padding="0.5em">No need to write/test/debug any code.</bullet>
+</list>
+
+</slide>

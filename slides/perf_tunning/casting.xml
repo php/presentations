@@ -1,0 +1,20 @@
+<slide title="Type Conversion">
+
+<blurb fontsize="4em">
+PHP is a type less language, which can seamlessly manipulate variables containing any sort of data.
+</blurb>
+
+<blurb fontsize="3em">
+However, forgetting about the underlying types can make your application slow and potentially open 
+to security vulnerabilities.
+</blurb>
+
+<example title="Forcing correct type via casting" filename="casting.php" fontsize="1.4em" />
+
+<blurb fontsize="3em">
+Type conversion prevents things like SQL injection due to unexpected input. It also optimizes the
+application by providing PHP with a type it expects, rather having to internally perform type
+conversions each time the variable is used.
+</blurb>
+
+</slide>

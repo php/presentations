@@ -1,0 +1,10 @@
+<slide title="SQLite Library" fontsize="6em">
+<image filename="library.jpg" align="center" />
+
+<list fontsize="4em">
+	<bullet padding="0.5em">SQLite is a C library that implements an embeddable SQL database engine.</bullet>
+	<bullet padding="0.5em">Started in 2000 by D. Richard Hipp.</bullet>
+	<bullet padding="0.5em">Implements majority of SQL92 standard.</bullet>
+	<bullet padding="0.5em">Combines the database and the interface inside a single library.</bullet>
+</list>
+</slide>

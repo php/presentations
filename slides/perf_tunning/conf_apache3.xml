@@ -1,0 +1,13 @@
+<slide title="Apache Configuration Cont.">
+
+<image filename="apache.jpg" align="right" />
+
+<list title="Eliminate Expensive System Calls" fontsize="4em">
+	<bullet>Do not enable %ExtendedStatus% (prevents 2 calls to timing functions per request).</bullet>
+	<bullet>For %Deny/Allow% rules use IPs rather then domains. (prevents superfluous DNS lookups).</bullet>
+	<bullet>Do not enable %HostnameLookups% (DNS is slow).</bullet>
+		<bullet fontsize="2em" marginleft="2em">This can be done during log analysis when speed is not an issue.</bullet>
+	<bullet>Keep %ServerSignature% off (do not sent Apache identification string)</bullet>
+</list>
+
+</slide>

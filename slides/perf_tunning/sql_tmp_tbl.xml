@@ -1,0 +1,12 @@
+<slide title="SQL: Temporary Tables">
+
+<image filename="database_sm.gif" align="right" />
+
+<blurb fontsize="4em">
+Temporary tables are memory buffers that can be used as in between steps for data retrieval, to avoid
+complex (and slow) PHP logic.
+</blurb>
+
+<example fontsize="1.4em" filename="tmp_table.php" />
+
+</slide>

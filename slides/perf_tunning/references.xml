@@ -1,0 +1,23 @@
+<slide title="References Tricks">
+
+<example fontsize="1.4em" title="Optimize passing of large objects by passing them by reference (PHP 4)."><![CDATA[<?php
+function display_function(&$obj) { ... }
+
+$obj = mysql_fetch_object($result);
+display_function($obj);
+?>]]></example>
+
+<example fontsize="1.4em" title="When modifying complex or large variables inside a function/method."><![CDATA[<?php
+function template_apply(&$str)
+{
+	$str = str_replace(..., ..., $str);
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="Simplify and Speed up access to large multi-dimensional arrays"><![CDATA[<?php
+$foo =& $bar['foo']['bar']['test'];
+$foo['imp'] = implode(',', $foo);
+$foo['imp'] = addslashes($foo['imp']);
+?>]]></example>
+
+</slide>

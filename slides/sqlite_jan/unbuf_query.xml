@@ -1,0 +1,27 @@
+<slide title="Running Unbuffered Queries">
+<break />
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Procedural Approach */
+	$db = sqlite_open("/path/to/database");
+
+	$result = sqlite_unbuffered_query("SELECT * FROM tbl", $db);
+	/* OR */
+	$result = sqlite_unbuffered_query($db, "SELECT * FROM tbl");
+?>]]>
+</example>
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Object Oriented Approach */
+	$db = new sqlite_db("/path/to/database");
+
+	$db->unbuffered_query("SELECT * FROM tbl");
+?>]]>
+</example>
+
+<list>
+	<bullet>|00AA00|15-30% performance increase depending on the number of rows fetched.|</bullet>
+	<bullet>|00AA00|Data is available right away, don't need to wait for all data to be pre-fetched.|</bullet>
+	<bullet>|00AA00|Lower memory utilization.|</bullet>
+	<bullet>|FF0000|Can only move forward one row at a time.|</bullet>
+</list>
+
+</slide>

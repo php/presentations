@@ -1,0 +1,23 @@
+<slide title="Error Handling">
+
+<image filename="bsod.jpg" align="right" />
+
+<blurb>SQLite allows retrieval of a numeric error codes allowing for custom handling of different errors. It also provides
+a mechanism for converting an error code into a human readable error string.</blurb>
+
+<break lines="3" />
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Procedural Approach */
+	$db = sqlite_open("/path/to/database");
+
+	$result = sqlite_query("INSERT INTO tbl VALUES(1,2,3)", $db);
+	if (!$result) {
+		/* get a numeric code for the error */
+		$error_code = sqlite_last_error($db);
+		/* use the error code to get a readable error */
+		$error_str = sqlite_error_string($error_code);
+	}
+?>]]>
+</example>
+
+</slide>

@@ -1,0 +1,26 @@
+<slide title="Closing a Database">
+
+<break />
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Procedural Approach */
+	$db = sqlite_open("/path/to/database");
+
+	/* void sqlite_close(resource database_handle) */
+	sqlite_close($db);
+?>]]>
+</example>
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Object Oriented Approach */
+	$db = new sqlite_db("/path/to/database");
+
+	unset($db);
+?>]]>
+</example>
+
+<list>
+	<bullet>In most cases optional as PHP will automatically close non-persistent connections.</bullet>
+	<bullet>Unlike in other database extensions sqlite_close() can &amp; will close persistent connections.</bullet>
+	<bullet>For OO there is no dedicated 'close' method, so to close the connection you simply destroy the database object.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,15 @@
+<slide title="SQLite Disadvantages">
+
+<image filename="stats.jpg" align="center" />
+
+<list>
+	<bullet fontsize="4em">It's Slow</bullet>
+		<bullet fontsize="3.2em" marginleft="1.5em">Locks whole file for writing.</bullet>
+		<bullet fontsize="3.2em" marginleft="1.5em">No caching mechanism of it's own.</bullet>
+
+	<bullet fontsize="4em">Limited</bullet>
+		<bullet marginleft="1.5em" fontsize="3.2em">Database size restricted to 2GB in most cases.</bullet>
+		<bullet marginleft="1.5em" fontsize="3.2em">Not fully SQL92 compliant.</bullet>
+		<bullet marginleft="1.5em" fontsize="3.2em">Not very scalable.</bullet>
+</list>
+</slide>

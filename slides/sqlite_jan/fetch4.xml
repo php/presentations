@@ -1,0 +1,9 @@
+<slide title="Array Data Retrieval IV">
+
+<blurb>For even faster data retrieval and shorter code you can combine query execution with data retrieval via sqlite_array_query().</blurb>
+
+<example fontsize="1.6em" result="1" type="php" filename="fetch5.php" />
+
+<blurb>Internally sqlite_array_query() will execute an unbuffered query to minimize memory usage.</blurb>
+
+</slide>

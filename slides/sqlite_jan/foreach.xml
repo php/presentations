@@ -1,0 +1,8 @@
+<slide title="SQLite Iterators/Foreach">
+
+<blurb>The real power of iterators comes through the ability to overload foreach allowing an extremely fast way for iterating
+through object properties. <![CDATA[<font color="red">(PHP5 only)</font>]]></blurb>
+
+<example fontsize="1.6em" result="1" type="php" filename="foreach.php" />
+
+</slide>

@@ -1,0 +1,9 @@
+<slide title="Array Data Retrieval">
+
+<blurb>Data retrieval is almost always done in a form of an array.</blurb>
+
+<example fontsize="1.6em" result="1" type="php" filename="fetch.php" />
+
+<blurb>By default, result_type is set to SQLITE_BOTH and decode_binary is enabled.</blurb>
+
+</slide>

@@ -1,0 +1,13 @@
+<slide title="Array Data Retrieval II">
+
+<blurb>In most cases you will not need both the numeric and string keys, so you can benefit from the increased performance
+of just using SQLITE_ASSOC (string keys) or SQLITE_NUM (numeric keys).</blurb>
+
+<example fontsize="1.6em" result="1" type="php" filename="fetch2.php" />
+
+<example fontsize="1.6em" result="1" type="php" filename="fetch3.php" />
+
+<blurb>If performance is a main concern, use the SQLITE_NUM mode of retrieval, it is 5-10% faster depending on the number
+of columns.</blurb>
+
+</slide>

@@ -1,0 +1,8 @@
+<slide title="Array Data Retrieval III">
+
+<blurb>When dealing with small result sets you can improve the data retrieval performance by using sqlite_fetch_all(), which
+will retrieve all rows at once.</blurb>
+
+<example fontsize="1.6em" result="1" type="php" filename="fetch4.php" />
+
+</slide>

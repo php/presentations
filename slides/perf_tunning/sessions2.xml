@@ -1,0 +1,21 @@
+<slide title="Sessions Cont.">
+
+<blurb fontsize="3em">
+The surest way to accelerate sessions is by moving away from the %files% session handler to a memory based one.
+</blurb>
+
+<list fontsize="3.6em" title="Memory Session Handlers">
+	<bullet>tmpfs</bullet>
+		<bullet marginleft="2em">mount the session directory as a RAM disk.</bullet>
+		<bullet marginleft="2em">|FF0000|not available on all OSes|</bullet>
+	<bullet>--with-mm</bullet>
+		<bullet marginleft="2em">available with every PHP version.</bullet>
+		<bullet marginleft="2em">|FF0000|not thread-safe|</bullet>
+	<bullet>mmcache</bullet>
+		<bullet marginleft="2em">very fast</bullet>
+		<bullet marginleft="2em">work on virtually all OSes and is thread-safe</bullet>
+		<bullet marginleft="2em">|FF0000|you need mmcache|</bullet>
+	
+</list>
+
+</slide>

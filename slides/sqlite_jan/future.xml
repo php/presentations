@@ -1,0 +1,14 @@
+<slide title="Future of the SQLite Extension" fontsize="6em">
+
+<image filename="future.gif" align="center" />
+
+<blurb title="Pre-compiled SQL">
+Ability to pre-compile SQL statements so that they need not be parsed every time they are executed.
+</blurb>
+
+<blurb title="PEAR Library">
+A set of functions &amp; classes for PEAR that can be used to implement various useful functions
+to be used from within SQL.
+</blurb>
+
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Strip your binaries">
+
+<blurb fontsize="4em">
+Eliminate waste by removing symbols from object files using %strip% utility.
+</blurb>
+
+<image filename="strip.gif" align="center" />
+
+<blurb fontsize="4em">
+Saves disk space and more importantly memory needed to load the library or run the binary. In case of PHP
+makes the binary or Apache library |FF0000|20-30|% smaller.
+</blurb>
+
+</slide>

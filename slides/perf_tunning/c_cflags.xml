@@ -1,0 +1,24 @@
+<slide title="Compiling: CFLAGS">
+
+<image filename="compiler.gif" align="right" />
+
+<blurb fontsize="3em">
+The first step to tuning PHP begins with compiling an optimized version of PHP.
+</blurb>
+
+<list fontsize="3em">
+	<bullet>Enable all compiler optimizations with %-O3%</bullet>
+	<bullet>Make the compiler tune the code to your CPU via %-march% %-mcpu% |FF0000|Use Caution|</bullet>
+	<bullet>Try to make the compiler use CPU specific features %-msse% %-mmmx% %-mfpmath=sse%</bullet>
+</list>
+
+<break lines="2" />
+
+<example title="Revised Build Procedure" fontsize="1.4em"><![CDATA[
+export CFLAGS="-O3 -msse -mmmx -march=pentium3 -mcpu=pentium3 -funroll-loops -mfpmath=sse"
+./configure
+make
+make install
+]]></example>
+
+</slide>

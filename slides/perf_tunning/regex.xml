@@ -1,0 +1,13 @@
+<slide title="Regular Expressions">
+
+<blurb fontsize="4em">
+PHP being is often using for templating and as such often needs to manipulate strings, which is often done with Regular Expressions.
+</blurb>
+
+<image filename="regex.jpg" align="center" />
+
+<blurb fontsize="4em">
+Unfortunately, the flexibility that makes regular expressions so useful, also makes them extremely slow.
+</blurb>
+
+</slide>

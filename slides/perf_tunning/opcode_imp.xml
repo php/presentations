@@ -1,0 +1,18 @@
+<slide title="Cache Implementations">
+
+<list fontsize="3.4em">
+	<bullet>Turck MMCache (GPL)</bullet>
+		<bullet marginleft="2em">|00AA00|Implements many features beyond opcode caching.|</bullet>
+		<bullet marginleft="2em">|FF0000|Development halted.|</bullet>
+	<bullet>APC (PHP)</bullet>
+		<bullet marginleft="2em">|00AA00|Slow, but steady progress.|</bullet>
+		<bullet marginleft="2em">|FF0000|Weak optimizer.|</bullet>
+	<bullet>ionCube PHP Accelerator</bullet>
+		<bullet marginleft="2em">|FF0000|It works, but no new development in past year.|</bullet>
+		<bullet marginleft="2em">|00AA00|Free|, but |FF0000|closed source|.</bullet>
+	<bullet>Zend Cache (Proprietary)</bullet>
+		<bullet marginleft="2em">|00AA00|Implements many features beyond opcode caching.|</bullet>
+		<bullet marginleft="2em">|FF0000|$$$|</bullet>
+</list>
+
+</slide>

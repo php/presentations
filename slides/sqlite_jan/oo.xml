@@ -1,0 +1,7 @@
+<slide title="Results as Objects">
+
+<blurb>So far we've seen SQLite retrieve data in the form of array, but it can just as easily return them as objects.</blurb>
+
+<example fontsize="1.6em" result="1" type="php" filename="oo.php" />
+
+</slide>

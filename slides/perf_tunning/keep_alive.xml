@@ -1,0 +1,17 @@
+<slide title="KeepAlive">
+
+<blurb fontsize="4em">
+In theory KeepAlive is supposed to make things faster, however if not used carefully it can cripple the server.
+</blurb>
+
+<list>
+	<bullet>Set KeepAlive timeout, %KeepAliveTimeout% as low as possible.</bullet>
+</list>
+
+<image filename="ekg.jpg" align="center" />
+
+<blurb fontsize="4em">
+If the server is only serving dynamic requests, disable KeepAlive.
+</blurb>
+
+</slide>

@@ -1,0 +1,17 @@
+<slide title="Regular Expressions Cont.">
+
+<image filename="regex.jpg" align="right" />
+
+<blurb fontsize="4em">
+Significant speed gains can be made by replacing regular expression with one or more string functions
+offered by PHP.
+</blurb>
+
+<list title="Common Alternatives" fontsize="4em">
+	<bullet>Replacement - %str_replace%, %substr_replace%, %strtr%, etc...</bullet>	
+	<bullet>Matching - %strpos%, %stripos%, %strchr%, %strrchr%, etc..</bullet>
+	<bullet>Type Checking - %ctype% extension (enabled by default)</bullet>
+	<bullet>Comparison - %strcmp%, %strncasecmp%, etc...</bullet>
+</list>
+
+</slide>

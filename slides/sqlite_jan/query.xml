@@ -1,0 +1,23 @@
+<slide title="Running Queries">
+
+<break />
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Procedural Approach */
+	$db = sqlite_open("/path/to/database");
+
+	$result = sqlite_query("INSERT INTO tbl VALUES(1,2,3)", $db);
+	/* OR */
+	$result = sqlite_query($db, "INSERT INTO tbl VALUES(1,2,3)");
+?>]]>
+</example>
+
+<blurb>For compatibility, procedural approach supports both MySQL &amp; PostgreSQL/MSSQL/Etc... syntaxes.</blurb>
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Object Oriented Approach */
+	$db = new sqlite_db("/path/to/database");
+
+	$db->query("INSERT INTO tbl VALUES(1,2,3)");
+?>]]>
+</example>
+
+</slide>

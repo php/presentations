@@ -1,0 +1,25 @@
+<slide title="Content Reduction: Compacting">
+
+<image filename="vice.gif" align="right" />
+
+<blurb fontsize="3em">
+HTML contains a large quantity of useless data such as whitespace, comments etc... that is normally used to
+make the output readable to the developers.
+</blurb>
+
+<blurb fontsize="3em">
+In production no one other then the browser will be reading the HTML we can use the %tidy extension% to strip all the 
+unnecessary bits.
+</blurb>
+
+<list fontsize="3.6em" title="Advantages">
+	<bullet>10-30% smaller pages.</bullet>
+	<bullet>While compressing HTML can fix HTML bugs.</bullet>
+</list>
+
+<list fontsize="3.6em" title="Disadvantages">
+	<bullet>Requires Tidy extension.</bullet>
+	<bullet>CPU costs make this useful only if the output is cached.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,23 @@
+<slide title="Tidy Example">
+
+<example title="Compacting Tidy Config" fontsize="1.4em"><![CDATA[indent: no
+hide-endtags: yes
+char-encoding: ascii
+word-2000: yes
+clean: yes
+bare: yes
+show-errors: 0
+show-warnings: no
+quiet: yes
+drop-proprietary-attributes: yes
+hide-comments: yes
+wrap: 0]]></example>
+
+<break />
+
+<example title="PHP script bit" fontsize="1.4em"><![CDATA[<?php
+ini_set("tidy.default_config", "/path/to/compact_tidy.cfg");
+ini_set("tidy.clean_output", 1);
+?>]]></example>
+
+</slide>

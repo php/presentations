@@ -1,0 +1,24 @@
+<slide title="Chaining Queries">
+<image filename="chain.jpg" align="right" />
+
+<blurb>Query chaining allows for execution of any number of queries via a single PHP function.</blurb>
+
+<example fontsize="1.6em" title=""><![CDATA[<?php
+	$db = sqlite_open("/path/to/database");
+
+	/* Execute 10 inserts via a single query */
+	$query = 'BEGIN;';
+	for ($i = 0; $i < 10; $i++) {
+		$query .= "INSERT INTO tbl VALUES(".$i.");";
+	}
+	$query .= "COMMIT;"
+	sqlite_query($query, $db);
+?>]]>
+</example>
+
+<list>
+	<bullet>|00AA00|Faster, thanks to reduced PHP overhead.|</bullet>
+	<bullet>|FF0000|Information available only about the effect of the last query.|</bullet>
+</list>
+
+</slide>

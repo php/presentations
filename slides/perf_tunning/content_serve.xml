@@ -1,0 +1,18 @@
+<slide title="Optimizing Content Serving">
+
+<blurb fontsize="4em">
+Virtually any webpage is the combination of dynamic (php) and static content (images, CSS, JavaScript, etc...)
+</blurb>
+
+<blurb fontsize="4em">
+For maximum performance it is best to separate the serving of dynamic and static content.
+</blurb>
+
+<list fontsize="3.6em" title="Benefits">
+	<bullet>Ability to disable KeepAlive for server handling dynamic data.</bullet>
+	<bullet>Simpler and Faster serving numerous static requests.</bullet>
+	<bullet>Allow more complex configuration (.htaccess, mod_rewrite) for dynamic data without affecting static content</bullet>	
+	<bullet>Easy distribution of the content serving load across servers.</bullet>
+</list>
+
+</slide>

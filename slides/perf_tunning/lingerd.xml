@@ -1,0 +1,22 @@
+<slide title="lingerd">
+
+<blurb>
+Lingerd is a daemon (service) designed to take over the job of properly closing network connections from an http server like Apache. 
+</blurb>
+
+<break lines="2" />
+
+<blurb>
+Because of some technical complications in the way TCP/IP and HTTP work, each Apache process currently wastes a lot 
+of time "lingering" on client connections, after the page has been generated and sent. Lingerd takes over this job,
+leaving the Apache process immediately free to handle a new connection. As a result, Lingerd makes it possible to
+serve the same load using considerably fewer Apache processes.
+</blurb>
+
+<break lines="2" />
+
+<blurb>
+|FF0000|Warning: will only work (properly) if KeepAlive is disabled.|
+</blurb>
+
+</slide>

@@ -1,0 +1,11 @@
+<slide title="SQL: Query Chaining">
+
+<image filename="database_sm.gif" align="right" />
+
+<blurb fontsize="4em">
+Executing one query at a time is boring (and slow), chain them and execute many queries at once.
+</blurb>
+
+<example title="Query Chaining" fontsize="1.4em" filename="query_chain.php" />
+
+</slide>

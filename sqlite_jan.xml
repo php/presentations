@@ -1,0 +1,55 @@
+<presentation template="php2" titlecolor="#1111aa" navbarbackground="url(images/trans-ffffff.png)" logo1="images/php-med-trans-light.gif" titlesize="2em" navbarheight="4.1em">
+<topic>SQLite</topic>
+<title>Introduction to SQLite</title>
+<copyright>(c) Copyright 2004 Ilia Alshanetsky</copyright>
+<event></event>
+<location>Vancouver, Canada</location>
+<date>January 22th 2004</date>
+<speaker>Ilia Alshanetsky</speaker>
+<navmode>html</navmode>
+<url>http://talks.php.net/</url>
+
+<slide>slides/sqlite_jan/titlepage.xml</slide>
+<slide>slides/sqlite_jan/libintro.xml</slide>
+<slide>slides/sqlite_jan/phpapi.xml</slide>
+<slide>slides/sqlite_jan/advantages.xml</slide>
+<slide>slides/sqlite_jan/disadvantages.xml</slide>
+
+<slide>slides/sqlite_jan/open.xml</slide>
+<slide>slides/sqlite_jan/open2.xml</slide>
+<slide>slides/sqlite_jan/close.xml</slide>
+
+<slide>slides/sqlite_jan/query.xml</slide>
+<slide>slides/sqlite_jan/unbuf_query.xml</slide>
+<slide>slides/sqlite_jan/multi_query.xml</slide>
+<slide>slides/sqlite_jan/escape.xml</slide>
+
+<slide>slides/sqlite_jan/error.xml</slide>
+<slide>slides/sqlite_jan/error_oo.xml</slide>
+
+<slide>slides/sqlite_jan/fetch.xml</slide>
+<slide>slides/sqlite_jan/fetch2.xml</slide>
+<slide>slides/sqlite_jan/fetch3.xml</slide>
+<slide>slides/sqlite_jan/fetch4.xml</slide>
+
+<slide>slides/sqlite_jan/oo.xml</slide>
+<slide>slides/sqlite_jan/oo2.xml</slide>
+
+<slide>slides/sqlite_jan/string.xml</slide>
+<slide>slides/sqlite_jan/string2.xml</slide>
+
+<slide>slides/sqlite_jan/iterators.xml</slide>
+<slide>slides/sqlite_jan/foreach.xml</slide>
+
+<slide>slides/sqlite_jan/util_oo.xml</slide>
+<slide>slides/sqlite_jan/util2_oo.xml</slide>
+<slide>slides/sqlite_jan/util3_oo.xml</slide>
+
+<slide>slides/sqlite_jan/phpsql.xml</slide>
+<slide>slides/sqlite_jan/phpsql2.xml</slide>
+
+<slide>slides/sqlite_jan/future.xml</slide>
+
+<slide>slides/sqlite_jan/thankyou.xml</slide>
+
+</presentation>

@@ -1,0 +1,23 @@
+<slide title="Arrays via OO Model">
+
+<blurb>All of the array functions are avaliable via the OO interface as well.</blurb>
+
+<example fontsize="1.6em" title=""><![CDATA[<?php
+	$db = new sqlite_db(dirname(__FILE__)."/db.sqlite");
+
+	$result = $db->query("SELECT * FROM auth_tbl");
+	/* sqlite_result->fetch_array([, int result_type [, bool decode_binary]]) */
+	while ($row = $result->fetch_array(SQLITE_ASSOC)) {
+		print_r($row);
+	}
+
+	$result = $db->query("SELECT * FROM auth_tbl");
+	/* sqlite_result->fetch_all([, int result_type [, bool decode_binary]]) */
+	print_r($result->fetch_all(SQLITE_NUM));
+
+	/* array sqlite_object->array_query(string query [ , int result_type [, bool decode_binary]]) */
+	print_r($db->array_query("SELECT * FROM auth_tbl", SQLITE_BOTH));
+?>]]>
+</example>
+
+</slide>

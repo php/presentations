@@ -1,0 +1,19 @@
+<slide title="SQL: Sub-queries">
+
+<image filename="database_sm.gif" align="right" />
+
+<blurb fontsize="4em">
+Like Joins, Sub-queries can be used to move some of the logic from PHP into the database engine.
+</blurb>
+
+<example filename="subquery.php" fontsize="1.4em" />
+
+<blurb fontsize="4em">
+In MySQL, the full support for sub-queries starts from version 4.1
+</blurb>
+
+<blurb fontsize="4em">
+In many instances it is better to use Joins rather then sub-queries.
+</blurb>
+
+</slide>

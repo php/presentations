@@ -1,0 +1,27 @@
+<slide title="SQL: Explain">
+
+<image filename="database_sm.gif" align="right" />
+
+<blurb fontsize="4em">
+Always use %EXPLAIN% to analyze your queries to determine if they use proper indexes.
+</blurb>
+
+<example fontsize="1.4em" title="Slow Query"><![CDATA[
+EXPLAIN select * from mm_users where login LIKE '%ilia%';
++----------+------+---------------+------+---------+------+-------+------------+
+| table    | type | possible_keys | key  | key_len | ref  | rows  | Extra      |
++----------+------+---------------+------+---------+------+-------+------------+
+| mm_users | ALL  | NULL          | NULL |    NULL | NULL | 27506 | where used |
++----------+------+---------------+------+---------+------+-------+------------+
+]]></example>
+
+<example fontsize="1.4em" title="Fast Query"><![CDATA[
+EXPLAIN select * from mm_users where login LIKE 'ilia%';
++----------+-------+---------------+-------+---------+------+------+------------+
+| table    | type  | possible_keys | key   | key_len | ref  | rows | Extra      |
++----------+-------+---------------+-------+---------+------+------+------------+
+| mm_users | range | login         | login |      50 | NULL |    2 | where used |
++----------+-------+---------------+-------+---------+------+------+------------+
+]]></example>
+
+</slide>

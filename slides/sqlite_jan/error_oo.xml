@@ -1,0 +1,21 @@
+<slide title="Error Handling OO">
+
+<image filename="bsod.jpg" align="right" />
+
+<blurb>While fetching of the error code is possible via OO, the retrieval of a text error
+is done via sqlite_escape_string().</blurb>
+
+<break lines="4" />
+
+<example fontsize="1.6em" title=""><![CDATA[<?php	/* Object Oriented Approach */
+	$db = new sqlite_db("/path/to/database");
+
+	$r = $db->query("INSERT INTO tbl VALUES(1,2,3)");
+	if (!$r) {
+		$error_code = $db->last_error();
+		$error_str = sqlite_error_string($error_code);
+	}
+?>]]>
+</example>
+
+</slide>

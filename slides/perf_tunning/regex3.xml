@@ -1,0 +1,20 @@
+<slide title="Regular Expressions Cont.">
+
+<image filename="regex.jpg" align="right" />
+
+<blurb fontsize="4em">
+In some situations, regular expressions would take too long to replace. Now you need to decide
+which regular expression implementation you want %ereg% or %PCRE%.
+</blurb>
+
+<list type="Implementation Comparison" fontsize="3.6em">
+	<bullet>PCRE</bullet>
+		<bullet marginleft="2em">Much faster in most cases.</bullet>
+		<bullet marginleft="2em">UTF-8 support.</bullet>
+		<bullet marginleft="2em">Significantly greater functionality.</bullet>
+	<bullet>ereg</bullet>
+		<bullet marginleft="2em">Always available.</bullet>
+		<bullet marginleft="2em">Can operate on multi-byte strings w/mbstring extension.</bullet>
+</list>
+
+</slide>

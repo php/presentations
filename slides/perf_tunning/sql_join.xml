@@ -1,0 +1,17 @@
+<slide title="SQL: Joins">
+
+<image filename="database_sm.gif" align="right" />
+
+<blurb fontsize="4em">
+Usage of joins allows simplification &amp; acceleration of the script by moving portions of the logic
+to the database engine.
+</blurb>
+
+<example filename="join.php" fontsize="1.4em" />
+
+<list title="Join Gotchas" fontsize="3em">
+	<bullet>Unoptimized joins can be VERY slow.</bullet>
+	<bullet>Internal (read) lock on all tables involved.</bullet>
+</list>
+
+</slide>

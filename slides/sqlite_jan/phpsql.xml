@@ -1,0 +1,8 @@
+<slide title="PHP in SQL">
+
+<blurb>Because the SQLite library is both a client and a database you have the ability to call PHP function(s)
+from within SQL queries.</blurb>
+
+<example fontsize="1.6em" result="1" type="php" filename="phpsql.php" />
+
+</slide>

@@ -1,0 +1,24 @@
+<slide title="Opening a Database via OO">
+<blurb>SQLite offers a built-in OO interface to the database without the need for PHP wrappers.</blurb>
+
+<example fontsize="1.6em" title=""><![CDATA[<?php
+	try {
+		/* object sqlite_db(string filename [, int mode [, string &error_message]]) */
+		$db = new sqlite_db(":memory:");
+	}
+	/* Error occur let's handle it
+	 * In php5 unhandled exceptions result in fatal errors 
+	 */
+	catch (Exception $exception) { 
+		echo $exception; 
+	}
+?>]]>
+</example>
+
+<list>
+	<bullet>No support for persistent connections (yet).</bullet>
+	<bullet>OO interface is simpler and faster then the procedural one.</bullet>
+	<bullet>Instead of regular errors, OO code throws exceptions when fatal errors occur.</bullet>
+</list>
+
+</slide>
