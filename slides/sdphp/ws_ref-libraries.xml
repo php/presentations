@@ -1,0 +1,17 @@
+<slide title='Libraries'>
+ <list title='REST' fontsize='2.5em'>
+  <bullet>PEAR::XML_Wddx, http://pear.php.net/package/XML_Wddx</bullet>
+  <bullet>PHP's wddx extension (--enable-wddx)</bullet>
+ </list>
+ <list title='XML-RPC' fontsize='2.5em'>
+  <bullet>PEAR::XML_RPC, http://pear.php.net/package/XML_RPC</bullet>
+  <bullet>Useful Inc's XML-RPC, http://xmlrpc.usefulinc.com/php.html </bullet>
+  <bullet>PHP's xmlrpc extension (--with-xmlrpc)</bullet>
+  <bullet>More implementations: http://www.xmlrpc.com/directory/1568/implementations</bullet>
+ </list>
+ <list title='SOAP' fontsize='2.5em'>
+  <bullet>PEAR::SOAP, http://pear.php.net/package/SOAP</bullet>
+  <bullet>NuSOAP, http://dietrich.ganx4.com/nusoap/</bullet>
+  <bullet>PHP5's SOAP extension (--enable-soap)</bullet>
+ </list>
+</slide>

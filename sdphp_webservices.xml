@@ -1,0 +1,57 @@
+<presentation 
+ template="php2" 
+ titlecolor="#1111aa"
+ logo1="presentations/slides/sdphp/images/testsdphplogo.png"
+ navbarbackground="#ffffff"
+ navbarheight="4.1em"
+>
+<!-- navbarbackground="url(images/trans-ffffff.png)" -->
+<topic>Web Services</topic>
+<title>Overview of Web Services</title>
+<subtitle>or "A Web Service by any other name... REST, XML-RPC, SOAP"</subtitle>
+<!-- subtitle>Understanding the alphabet soup: REST, XML-RPC, SOAP</subtitle -->
+<event>SDPHP monthly meeting</event>
+<location>San Diego</location>
+<url>http://www.sdphp.net/</url>
+<date>May 6, 2004</date>
+<speaker>Jesus M. Castagnetto</speaker>
+<email>jmcastagnetto@php.net</email>
+
+<slide>slides/sdphp/ws_title.xml</slide>
+<slide>slides/sdphp/ws_toc.xml</slide>
+<chapter title='Introduction'>
+ <slide>slides/sdphp/ws_definition.xml</slide>
+ <slide>slides/sdphp/ws_whyuse.xml</slide>
+ <slide>slides/sdphp/ws_aslibrary.xml</slide>
+ <slide>slides/sdphp/ws_protocols.xml</slide>
+</chapter>
+
+<chapter title="REST">
+ <slide>slides/sdphp/ws_rest.xml</slide>
+ <slide>slides/sdphp/ws_rest-xml.xml</slide>
+ <slide>slides/sdphp/ws_rest-example.xml</slide>
+</chapter>
+
+<chapter title="XML-RPC">
+ <slide>slides/sdphp/ws_xmlrpc.xml</slide>
+ <slide>slides/sdphp/ws_xmlrpc2.xml</slide>
+ <slide>slides/sdphp/ws_xmlrpc-example.xml</slide>
+</chapter>
+
+<chapter title="SOAP">
+ <slide>slides/sdphp/ws_soap.xml</slide>
+ <slide>slides/sdphp/ws_soap2.xml</slide>
+ <slide>slides/sdphp/ws_wsdl.xml</slide>
+ <slide>slides/sdphp/ws_soap-example.xml</slide>
+</chapter>
+
+<chapter title='MDB Services'>
+<slide>slides/sdphp/ws_mdbasexample.xml</slide>
+<slide>slides/sdphp/ws_mdballapis.xml</slide>
+</chapter>
+
+<slide>slides/sdphp/ws_glossary.xml</slide>
+<slide>slides/sdphp/ws_ref-libraries.xml</slide>
+<slide>slides/sdphp/ws_ref-moreinfo.xml</slide>
+
+</presentation>

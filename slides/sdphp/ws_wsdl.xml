@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="WSDL">
+ <blurb>
+  The Web Services Description Language, describes the API a
+  web service exposes to the world. It is usually generated from
+  an interface, rarely written from scratch (unless the programmer
+  likes pain, a lot)
+ </blurb>
+ <blurb>
+  A WSDL document usually has 4 major sections: type definition,
+  message definition (which refers to the types), port description
+  (what input and output message are associated),
+  and a binding definitions (how the ports map into the services
+  methods).
+ </blurb>
+ <example title='The Google Search WSDL' type='xml'
+  fontsize='1em' filename='misc/GoogleSearch.wsdl'/>
+</slide>

@@ -1,0 +1,43 @@
+<h3>Methods available at http://metallo.scripps.edu:80/services/xmlrpc.php</h3>
+<hr noshade size=1><H3>method.sql</H3>
+<H4>Documentation</H4><P style='font-size: 1.0em;'>General function to query the MDB database server.
+Accepts a valid SQL query ("SELECT", "SHOW", or "DESCRIBE" statements only),
+and returns the resulting rows as a structure.</P>
+<H4>Signature</H4><P style='font-size: 1.0em;'>
+<CODE style='font-size: 1.0em;'>struct method.sql(string)</CODE><BR>
+</P>
+<hr noshade size=1><H3>method.metallopdb</H3>
+<H4>Documentation</H4><P style='font-size: 1.0em;'>Specialized function to retrieve a list of PDB structures
+containing a particular metal ion, as indexed in the MDB. The retrieval
+mode can be one of "first" (default) to get the first "n" PDB ids (sorted
+alphabetically), "last" to get the last "n" ids, "random" to get "n"
+random entries, and "new" to ge the newest "n" entries released/indexed.
+The number of entries to retrieve is set using "count".
+The result can be returned as XML-RPC structure, WDDX packet or RSS document</P>
+<H4>Signature</H4><P style='font-size: 1.0em;'>
+<CODE style='font-size: 1.0em;'>struct method.metallopdb(string, string, int, string)</CODE><BR>
+</P>
+<hr noshade size=1><H3>method.get</H3>
+<H4>Documentation</H4><P style='font-size: 1.0em;'>Returns the requested file. It accepts 2 parameters: 
+the name of the file, and (optionally) the whether the base64 encoding
+will be done on the "raw" (default) file, or the file after being
+compressed with gzip ("gzip").</P>
+<H4>Signature</H4><P style='font-size: 1.0em;'>
+<CODE style='font-size: 1.0em;'>base64 method.get(string, string)</CODE><BR>
+</P>
+<hr noshade size=1><H3>system.listMethods</H3>
+<H4>Documentation</H4><P style='font-size: 1.0em;'>This method lists all the methods that the XML-RPC server knows how to dispatch</P>
+<H4>Signature</H4><P style='font-size: 1.0em;'>
+<CODE style='font-size: 1.0em;'>array system.listMethods(string)</CODE><BR>
+<CODE style='font-size: 1.0em;'>array system.listMethods()</CODE><BR>
+</P>
+<hr noshade size=1><H3>system.methodHelp</H3>
+<H4>Documentation</H4><P style='font-size: 1.0em;'>Returns help text if defined for the method passed, otherwise returns an empty string</P>
+<H4>Signature</H4><P style='font-size: 1.0em;'>
+<CODE style='font-size: 1.0em;'>string system.methodHelp(string)</CODE><BR>
+</P>
+<hr noshade size=1><H3>system.methodSignature</H3>
+<H4>Documentation</H4><P style='font-size: 1.0em;'>Returns an array of known signatures (an array of arrays) for the method name passed. If no signatures are known, returns a none-array (test for type != array to detect missing signature)</P>
+<H4>Signature</H4><P style='font-size: 1.0em;'>
+<CODE style='font-size: 1.0em;'>array system.methodSignature(string)</CODE><BR>
+</P>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="REST service">
+ <example type='php' filename='scripts/rest-example.php'
+  output='0'/>
+ <example type='xml' filename='output/rest-example.out'/>
+</slide>

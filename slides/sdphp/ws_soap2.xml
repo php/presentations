@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title='MDB SOAP'>
+ <list title='Methods'>
+  <bullet>_sql_ : allows for SELECT, SHOW, DESCRIBE SQL queries</bullet>
+  <bullet>_metallopdb_ : information about metal containing proteins given a
+   metal, a mode, and a count</bullet>
+  <bullet>_rssmetallopdb_ : similar to the _metallopdb_ with the output
+   formated as an RSS document</bullet>
+ </list>
+ <example title='Using the methods sql, metallopdb and rssmetallopdb'
+  type='html' align='center' examplebackground='#ffffdd'
+  result='0' fontsize='1.5em' filename='output/test_soap_out.html'/>
+</slide>

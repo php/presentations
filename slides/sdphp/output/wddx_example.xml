@@ -1,0 +1,17 @@
+<wddxPacket version='1.0'>
+  <header>
+    <comment>results</comment>
+  </header>
+  <data>
+    <array length='1'>
+      <struct>
+        <var name='name'>
+          <string>John Q. Public</string>
+        </var>
+        <var name='userID'>
+          <string>l337d00d</string>
+        </var>
+      </struct>
+    </array>
+  </data>
+</wddxPacket>

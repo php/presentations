@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="REST &amp; XML">
+<example title='Assume we have the array' type='php'>
+<![CDATA[$data = array( 
+  array(
+    'name'=>'John Q. Public',
+    'userID'=>'l337d00d'
+  ));]]>
+</example>
+<blurb title='WDDX'>
+Simple data enconding format, handles scalars, arrays/structures,
+date and time.
+</blurb>
+<example type='xml' fontsize='2em' filename='output/wddx_example.xml'/>
+<example title='... or use my own XML format' type='xml'
+ fontsize='2em' filename='output/myown.xml'/>
+</slide>

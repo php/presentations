@@ -1,0 +1,23 @@
+<slide title='Why use WS?'>
+ <list title='A WS gives you'>
+  <bullet>Language, Operating System, and Implementation independence</bullet>
+  <bullet>Loose coupling between components/applications</bullet>
+  <bullet>Abstract way of exposing what each service offers</bullet>
+ </list>
+ <blurb>
+  When we have components that are loosely coupled, can be composed easily,
+  and are independent, we have a system designed using a "Services Oriented
+  Architecture" (SOA).
+ </blurb>
+ <blurb>
+  In the past, SOAs were built from CORBA/IDL components, JINI/RMI, or other
+  similar approaches, none of which combined the characteristics provided by
+  Web Services.
+ </blurb>
+ <blurb>
+  *But*, at the present time, Web Services do support some of the more
+  interesting parts of SOAs: orchestration and dynamic composition of
+  services, reliable aysnchronous communication, etc. Although there are
+  specs in the works for all of these aspects.
+ </blurb>
+</slide>

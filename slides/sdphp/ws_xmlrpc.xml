@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="XML-RPC">
+<blurb>
+		"It's a spec and a set of implementations that allow software running on
+		disparate operating systems, running in different environments to make
+		procedure calls over the Internet." [1]
+	</blurb>
+	<blurb>
+		"It's remote procedure calling using HTTP as the transport and XML as the
+		encoding. XML-RPC is designed to be as simple as possible, while allowing
+		complex data structures to be transmitted, processed and returned." [1]
+	</blurb>
+	<blurb>
+		It supports server introspection. Making it easy for a client application to
+		interrogate and discover the available methods and their paramaters.
+	</blurb>
+	<blurb>
+		XML-RPC also supports "box-carring" of requests, i.e. sending a series
+		of RPC calls at one time. Uses the *system.multicall* method.
+	</blurb>
+	<blurb>
+		It does not support message passing/redirection, or complex data type
+		definitions. But it does support mappings to simple and structured data
+		types to/from many languages.
+	</blurb>
+	<blurb fontsize="1.5em">
+		[1] from http://www.xmlrpc.org/
+	</blurb>
+</slide>

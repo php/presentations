@@ -1,0 +1,15 @@
+<wddxPacket version='1.0'>
+  <header>
+    <comment>timestamp</comment>
+  </header>
+  <data>
+    <struct>
+      <var name='date'>
+        <string>2004-05-06</string>
+      </var>
+      <var name='time'>
+        <string>15:14:25</string>
+      </var>
+    </struct>
+  </data>
+</wddxPacket>

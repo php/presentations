@@ -1,0 +1,15 @@
+<slide title='What &amp; How'>
+ <break lines='2'/>
+ <blurb title='What is a web service?'>
+  Basically, a *web service* is an application with which other 
+  applications can communicate over via a network, often using
+  XML to encapsulate data and context, and HTTP as the transport layer.
+ </blurb>
+ <break lines='2'/>
+ <blurb title='How do we expose a Web Service?'>
+  There are several ways (protocols) we can expose our web services
+  to the rest of the world, from a the minimalistic approach of the
+  "RESTafarians", to using XML-RPC, to SOAP and all its accompanying
+  specifications (UDDI, WSDL, WS-Security, WS-Context, etc.)
+ </blurb>
+</slide>

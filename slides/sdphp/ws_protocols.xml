@@ -1,0 +1,11 @@
+<slide title='Protocols'>
+ <break lines='4'/>
+ <blurb title='The Good, The Bad, and The Ugly'>
+  There are at least 3 ways to expose a web service. Two are what we
+  understand as communication/transport protocols (XML-RPC and SOAP), 
+  and the other is more a "way of doing things" (REST).
+ </blurb>
+ <blurb>
+  You decide which is which %:-)% 
+ </blurb>
+</slide>

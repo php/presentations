@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="SOAP client">
+ <example title='A simple Google search client'
+  fontsize='2em'
+  output='0' type='php' filename='scripts/ex_php_google.php'/>
+ <example title='... and the result of running it'
+  fontsize='1.5em'
+  filename='output/php_google.out'/>
+</slide>

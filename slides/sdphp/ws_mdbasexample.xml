@@ -1,0 +1,8 @@
+<slide title='Multi-WS'>
+ <blurb title='The MDB case'>
+  A set of simple modular functions that can be wrapped
+  in each of the services. 
+ </blurb>
+<image align='center' 
+ filename='images/mdbapi_impl.png'/>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Using XML">
+<blurb title='WDDX'>
+Simple data enconding format, handles scalars, arrays/structures,
+date and time.
+[http://www.openwddx.org/]
+</blurb>
+<blurb title='CML'>
+A very complete format specification for chemical data:
+structural information (coordinates, sequence, etc.) and properties (charges,
+spectroscopical data, etc.). One of the first XML applications designed.
+[http://www.xml-cml.org/]
+</blurb>
+<blurb title='RSS'>
+Widely used for news syndication (e.g. Slashdot, Freshmeat,
+PHPBuilder).
+[http://groups.yahoo.com/group/rss-dev/files/namespace.html]
+</blurb>
+</slide>
