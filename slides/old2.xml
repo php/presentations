@@ -1,0 +1,25 @@
+<slide title="The Perl alternative">
+
+<blurb>Perl became an obvious choice because it was made for text processing.  The same thing in Perl using CGI.pm:</blurb>
+
+<example><![CDATA[use CGI qw(:standard);
+print header;
+print start_html('Form Example'),
+    h1('My Example Form'),
+    start_form,
+    "Name: ", textfield('name'),
+    p,
+    "Age: ", textfield('age'),
+    p,
+    submit,
+    end_form;
+if(param()) {
+    print "Hi ",em(param('name')),
+        "You are ",em(param('age')),
+        " years old";
+}
+print end_html;]]></example>
+
+<blurb>Much easier both to read and to write, at least to people with a bit of a programming background.</blurb>
+
+</slide>

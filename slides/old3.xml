@@ -1,0 +1,19 @@
+<slide title="The PHP Approach">
+
+<blurb>PHP has an HTML-centric approach.  The same script in PHP became:</blurb>
+
+<example><![CDATA[<html><header><title>Form Example</title></header>
+<body><h1>My Example Form</h1>
+<form action="form.phtml" method="POST">
+Name: <input type="text" name="name">
+Age: <input type="text" name="age">
+</form>
+<?if($name):?>
+Hi <?echo $name?>, you are <?echo $age?> years old
+<?endif?>
+</body></html>]]></example>
+
+<blurb>A block of raw HTML followed by the minimum amount of logic possible.</blurb>
+
+</slide>
+

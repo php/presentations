@@ -1,8 +1,8 @@
 <slide title="The Good Old Days">
-<example fontsize="1.75em">
-<title>Handling simple data coming from a form took something like this
-to do in C:</title>
-<text><![CDATA[#include <stdio.h>
+<blurb>
+Handling simple data coming from a form took something like this to do in C:
+</blurb>
+<example fontsize="1.75em"><![CDATA[#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
@@ -65,6 +65,5 @@ void main(int argc, char *argv[]) {
 	}
 	puts("</body></html>");
 }
-]]></text>
-</example>
+]]></example>
 </slide>
