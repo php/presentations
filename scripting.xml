@@ -1,0 +1,17 @@
+<presentation 
+	template="php" 
+	navmode="html"
+    backgroundcol="#EEEE33"
+    logo1=""
+>
+<topic>Scripting Languages</topic>
+<title>Introduction to Scripting Languages</title>
+<event>UAM Linux Course</event>
+<location>Miraflores, Spain</location>
+<date>July 2, 2002</date>
+<speaker>Sterling Hughes</speaker>
+<email>sterling@php.nte</email>
+<url>http://conf.php.net/scripting</url>
+<slide>slides/titlepage.xml</slide>
+<slide>slides/scripting/intro.xml</slide>
+</presentation>
