@@ -1,0 +1,59 @@
+<slide title="Anatomy of a Static Client">
+
+<example type="php" title="Include the SOAP Client" fontsize='1.4em'>
+<![CDATA[<?php require_once('SOAP/Client.php'); ?>
+]]>
+</example>
+<example type="php" title="Create the SOAP Client" fontsize='1.4em'>
+<![CDATA[<?php
+$endpoint = 'http://api.google.com/search/beta2';
+$client = new SOAP_Client($endpoint);
+?>
+]]>
+</example>
+<example type="php" title="Prepare the Data" fontsize='1.4em'>
+<![CDATA[<?php
+$key = new SOAP_Value('key','string','xxxx');
+$query = new SOAP_Value('q','string','Caraveo');
+$start = new SOAP_Value('start','int',0);
+$maxResults = new SOAP_Value('maxResults','int',4);
+$filter = new SOAP_Value('filter','boolean',false);
+$restrict = new SOAP_Value('restrict','string','');
+$safeSearch = new SOAP_Value('safeSearch','boolean',false);
+$lr = new SOAP_Value('lr','string','');
+$ie = new SOAP_Value('ie','string','');
+$oe = new SOAP_Value('oe','string','');
+?>
+]]>
+</example>
+<example type="php" title="Make the SOAP Call" fontsize='1.4em'>
+<![CDATA[<?php
+$response = $client->call('doGoogleSearch',
+                          array($key,$query,$start,$maxResults,
+                                $filter,$restrict,$safeSearch,
+                                $lr,$ie,$oe),
+                          array('namespace'=>'urn:GoogleSearch'));
+?>
+]]>
+</example>
+<example type="php" title="Do something with the results" fontsize='1.4em'>
+<![CDATA[<?php
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">';
+    echo $result->title."</a><br><br>\n";
+    echo $result->snippet."<br><br><br>\n";
+}
+?>
+]]>
+</example>
+<list><bullet>Benefits</bullet></list>
+<list marginleft="2em">
+    <bullet>Best Interoperability</bullet>
+    <bullet>Can customize SOAP message in detail</bullet>
+</list>
+<list><bullet>Pitfalls</bullet></list>
+<list marginleft="2em">
+    <bullet>Must know much more about SOAP</bullet>
+    <bullet>Must know how to read WSDL</bullet>
+</list>
+</slide>

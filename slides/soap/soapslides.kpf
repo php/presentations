@@ -104,6 +104,8 @@
 </file>
 <file name="resources2.xml" url="resources2.xml">
 </file>
+<file name="soapresources.xml" url="soapresources.xml">
+</file>
 </folder>
 <folder name="Simple Clients">
 <file name="simple.wsdl" url="simple.wsdl">
@@ -111,6 +113,16 @@
 <file name="simpleclient1.xml" url="simpleclient1.xml">
 </file>
 <file name="simpleclient2.xml" url="simpleclient2.xml">
+</file>
+<file name="anatomyclient1.xml" url="anatomyclient1.xml">
+</file>
+<file name="anatomyclient2.xml" url="anatomyclient2.xml">
+</file>
+<file name="anatomyclient3.xml" url="anatomyclient3.xml">
+</file>
+<file name="clientapi1.xml" url="clientapi1.xml">
+</file>
+<file name="clientapi2.xml" url="clientapi2.xml">
 </file>
 </folder>
 <folder name="Interoperability">

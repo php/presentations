@@ -23,6 +23,7 @@
 <slide>slides/soap/soaphistory.xml</slide>
 <slide>slides/soap/soap.xml</slide>
 <slide>slides/soap/soapenvelope.xml</slide>
+<slide>slides/soap/document.xml</slide>
 <slide>slides/soap/wsdl.xml</slide>
 <slide>slides/soap/wsdlparts.xml</slide>
 <slide>slides/soap/usingsoap.xml</slide>
@@ -44,9 +45,14 @@
 <slide>slides/soap/simpleclient1.xml</slide>
 <slide>slides/soap/simpleclient2.xml</slide>
 
-<slide>slides/soap/wsdl2.xml</slide>
+<slide>slides/soap/anatomyclient1.xml</slide>
+<slide>slides/soap/anatomyclient2.xml</slide>
+<slide>slides/soap/anatomyclient3.xml</slide>
 
-<slide>slides/soap/document.xml</slide>
+<slide>slides/soap/clientapi1.xml</slide>
+<slide>slides/soap/clientapi2.xml</slide>
+<slide>slides/soap/clientapi3.xml</slide>
+
 <slide>slides/soap/document2.xml</slide>
 <slide>slides/soap/document3.xml</slide>
 
@@ -65,7 +71,10 @@
 <slide>slides/soap/serveremail.xml</slide>
 <slide>slides/soap/serverwsdl.xml</slide>
 
+<slide>slides/soap/wsdl2.xml</slide>
+
 <slide>slides/soap/advanced.xml</slide>
+<slide>slides/soap/soapresources.xml</slide>
 <slide>slides/soap/resources.xml</slide>
 
 </presentation>

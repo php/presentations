@@ -1,0 +1,43 @@
+<slide title="Using SOAP_Value in Objects">
+
+<example type="php" title="Example Usage" fontsize='1.4em'>
+<![CDATA[<?php
+class Person {
+    var $Age;
+    var $ID;
+    var $Name;
+    var $Male;
+    function Person($a=NULL, $i=NULL, $n=NULL, $m=NULL) {
+        $this->Age = $a;
+        $this->ID = $i;
+        $this->Name = $n;
+        $this->Male = $m;
+    }
+
+    function &__to_soap($name = 'x_Person',
+                        $ns = 'http://soapinterop.org/xsd')
+    {
+        return new SOAP_Value("\{$ns}$name",'Person',
+            array( #push struct elements into one soap value
+                new SOAP_Value("\{$ns}Age",'double',$this->Age),
+                new SOAP_Value("\{$ns}ID",'float',$this->ID),
+            ),array('Name'=>$this->Name,'Male'=>$this->Male));
+    }        
+}
+
+$shane = new Person(32,'abcd1234','Shane Caraveo',true);
+$soapval = $shane->__to_soap();
+
+?>
+]]>
+</example>
+
+<example type="xml" title="Serialized" fontsize='1.4em'>
+<![CDATA[<ns4:x_Person Name="Shane" Male="1" 
+    xmlns:ns4="http://soapinterop.org/xsd">
+        <ns4:Age>32</ns4:Age>
+        <ns4:ID>12345</ns4:ID>
+</ns4:x_Person>]]>
+</example>
+
+</slide>    

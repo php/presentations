@@ -1,0 +1,56 @@
+<slide title="Client API">
+<list>
+<bullet>SOAP_Client</bullet>
+<blurb>Handles all client side SOAP requests.</blurb>
+</list>
+<list>
+    <bullet>Constructor</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: WSDL or Endpoint URL</bullet>
+<bullet>Arg 2 Optional: Boolean: Is a WSDL URL? (false)</bullet>
+<bullet>Arg 3 Optional: String: Port Name (null)</bullet>
+<bullet>Arg 4 Optional: Array: Proxy Settings (none)</bullet>
+</list>
+<list>
+    <bullet>Method: call</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: Method Name</bullet>
+<bullet>Arg 2 Optional: Array: Arguments (none)</bullet>
+<bullet>Arg 3 Optional: Array: Options (none)</bullet>
+</list>
+<list marginleft="4em">
+<bullet>namespace (URI)</bullet>
+<bullet>soapaction (URI)</bullet>
+<bullet>style ('rpc' or 'document')</bullet>
+<bullet>use ('encoded' or 'literal')</bullet>
+<bullet>parameters (boolean, internal use)</bullet>
+<bullet>result (empty, set to 'raw' to get unparsed soap result)</bullet>
+<bullet>input (empty, set to 'raw' to send unparsed soap request)</bullet>
+<bullet>timeout (socket timeout)</bullet>
+<bullet>headers (associative array of extra protocol headers)</bullet>
+<bullet>trace (0, set to 1 for debug tracing)</bullet>
+<bullet>from (SMTP)</bullet>
+<bullet>transfer-encoding (SMTP, sets the Content-Transfer-Encoding)</bullet>
+<bullet>subject (SMTP, subject header)</bullet>
+</list>
+<list>
+    <bullet>Method: setEncoding</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: 'UTF-8', 'US_ASCII' or 'ISO-8859-1'</bullet>
+</list>
+<list>
+    <bullet>Method: addHeader</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: SOAP_Header class</bullet>
+</list>
+<list>
+    <bullet>Member: wire</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Contains raw wire of SOAP transaction if trace is set.</bullet>
+</list>
+</slide>    

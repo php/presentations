@@ -1,0 +1,45 @@
+<slide title="Anatomy of a Dynamic Client">
+
+<example type="php" title="Include the SOAP Client" fontsize='1.4em'>
+<![CDATA[<?php require_once('SOAP/Client.php'); ?>
+]]>
+</example>
+<example type="php" title="Generate the Client Proxy" fontsize='1.4em'>
+<![CDATA[<?php
+$wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
+$WSDL = new SOAP_WSDL($wsdlurl);
+$client = $WSDL->getProxy();
+?>
+]]>
+</example>
+<example type="php" title="Make the SOAP Call" fontsize='1.4em'>
+<![CDATA[<?php
+$response =
+        $client->doGoogleSearch(
+                    $key,$query,0,4,
+                    false,'',false,'','','');
+?>
+]]>
+</example>
+<example type="php" title="Do something with the results" fontsize='1.4em'>
+<![CDATA[<?php
+foreach($response->resultElements as $result) {
+    echo '<a href="'.$result->URL.'">';
+    echo $result->title."</a><br><br>\n";
+    echo $result->snippet."<br><br><br>\n";
+}
+?>
+]]>
+</example>
+<list><bullet>Benefits</bullet></list>
+<list marginleft="2em">
+    <bullet>Easy to use</bullet>
+    <bullet>VERY Interoperable</bullet>
+    <bullet>Don't need to know much about SOAP</bullet>
+</list>
+<list><bullet>Pitfalls</bullet></list>
+<list marginleft="2em">
+    <bullet>More overhead parsing WSDL</bullet>
+    <bullet>WSDL parsing is not 100%</bullet>
+</list>
+</slide>

@@ -1,0 +1,102 @@
+<slide title="Value API">
+<list>
+<bullet>SOAP_Value</bullet>
+<blurb>Encapsulates data to serialize to SOAP.</blurb>
+</list>
+<list>
+    <bullet>Constructor</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Arg 1 Required: String: Name</bullet>
+<bullet>Arg 2 Required: String: Type</bullet>
+<bullet>Arg 3 Required: ANY: Value</bullet>
+<bullet>Arg 4 Optional: Array: Attributes (as in XML Element Attributes)</bullet>
+</list>
+
+<example type="php" title="Example Usage" fontsize='1.4em'>
+<![CDATA[<?php
+$soapval = new SOAP_Value('{namespace uri}name',
+                      '{namespace uri}type',
+                      $value,
+                      array('something'=>'value'));
+
+$soapval = new SOAP_Value('{http://site/xyz/person/}Person',
+                      '{http://site/xyz/person/x}x_Person',
+                      $x_Person,
+                      array('Employer'=>'ActiveState'));
+?>
+]]>
+</example>
+
+<example type="php" title="'Built-in' Types" fontsize='1.4em'>
+<![CDATA[<?php
+    // SOAP Type => PHP Type
+    var $_typemap = array(
+        'http://www.w3.org/2001/XMLSchema' => array(
+            'string' => 'string',
+            'boolean' => 'boolean',
+            'float' => FLOAT,
+            'double' => FLOAT,
+            'decimal' => FLOAT,
+            'duration' => 'integer',
+            'dateTime' => 'string',
+            'time' => 'string',
+            'date' => 'string',
+            'gYearMonth' => 'integer',
+            'gYear' => 'integer',
+            'gMonthDay' => 'integer',
+            'gDay' => 'integer',
+            'gMonth' => 'integer',
+            'hexBinary' => 'string',
+            'base64Binary' => 'string',
+            // derived datatypes
+            'normalizedString' => 'string',
+            'token' => 'string',
+            'language' => 'string',
+            'NMTOKEN' => 'string',
+            'NMTOKENS' => 'string',
+            'Name' => 'string',
+            'NCName' => 'string',
+            'ID' => 'string',
+            'IDREF' => 'string',
+            'IDREFS' => 'string',
+            'ENTITY' => 'string',
+            'ENTITIES' => 'string',
+            'integer' => 'integer',
+            'nonPositiveInteger' => 'integer',
+            'negativeInteger' => 'integer',
+            'long' => 'integer',
+            'int' => 'integer',
+            'short' => 'integer',
+            'byte' => 'string',
+            'nonNegativeInteger' => 'integer',
+            'unsignedLong' => 'integer',
+            'unsignedInt' => 'integer',
+            'unsignedShort' => 'integer',
+            'unsignedByte' => 'integer',
+            'positiveInteger'  => 'integer',
+            'anyType' => 'string',
+            'anyURI' => 'string',
+            'QName' => 'string'
+        ),
+        'http://www.w3.org/1999/XMLSchema' => array(
+            'i4' => 'integer',
+            'int' => 'integer',
+            'boolean' => 'boolean',
+            'string' => 'string',
+            'double' => FLOAT,
+            'float' => FLOAT,
+            'dateTime' => 'string',
+            'timeInstant' => 'string',
+            'base64Binary' => 'string',
+            'base64' => 'string',
+            'ur-type' => 'string'
+        ),
+        'http://schemas.xmlsoap.org/soap/encoding/' => array(
+            'base64' => 'string',
+            'Array' => 'array', 
+            'Struct'=>'array')
+    );
+]]>
+</example>
+</slide>    

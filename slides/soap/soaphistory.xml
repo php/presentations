@@ -5,4 +5,20 @@
 <bullet>SOAP 1.1: Don Box, DevelopMentor; IBM; Microsoft; 2000</bullet>
 <bullet>SOAP 1.2: W3C, very soon now...</bullet>
 </list>
+<list>
+<bullet>Changes from 1.1 to 1.2</bullet>
+</list>
+<list marginleft="2em">
+<bullet>SOAP is no longer an acronym</bullet>
+<bullet>Specs split into three logical parts (Intro, Core, Add-ins)</bullet>
+<bullet>Based on XML Infoset rather than XML 1.0</bullet>
+<bullet>Namespaces changed to differenticate from 1.1</bullet>
+</list>
+
+<example type="html" fontsize='1.4em' title="XML Infosets?">
+<![CDATA["An XML document has an information set if it is well-formed and 
+satisfies namespace constraints." <br/>
+    - XML Infoset spec]]>
+</example>
+
 </slide>

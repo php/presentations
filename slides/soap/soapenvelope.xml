@@ -1,6 +1,6 @@
 <slide title="SOAP Envelope">
 <blurb>Only the Insane should deal with this</blurb>
-<example type="xml" fontsize='1.4em'>
+<example type="xml" fontsize='1.4em' title="SOAP Envelope">
     <![CDATA[
 <?xml version="1.0" encoding="UTF-8"?>
 
@@ -11,17 +11,26 @@
   xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
   xmlns:ns4="http://soapinterop.org/"
   SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
-
+    ]]>
+</example>
+<example type="xml" fontsize='1.4em' title="SOAP Headers">
+    <![CDATA[
 <SOAP-ENV:Header>
 <inputString xsi:type="xsd:string">hello world!</inputString>
 </SOAP-ENV:Header>
-
+    ]]>
+</example>
+<example type="xml" fontsize='1.4em' title="SOAP Body">
+    <![CDATA[
 <SOAP-ENV:Body>
 <ns4:echoString>
 <inputString xsi:type="xsd:string">hello world!</inputString>
 </ns4:echoString>
 </SOAP-ENV:Body>
-
+    ]]>
+</example>
+<example type="xml" fontsize='1.4em' title="SOAP Envelope">
+    <![CDATA[
 </SOAP-ENV:Envelope>
     ]]>
 </example>
