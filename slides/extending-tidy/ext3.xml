@@ -7,7 +7,7 @@ how your extension is going to be accessed from a PHP script.
 <example title="HTML Tidy Sample Extension" type="php" result="1" required_extension="tidy" ><![CDATA[<?php
 $tidy = tidy_create();
 tidy_set_option($tidy, "show-body-only", "yes");
-tidy_parse_string($tidy, "<b>foo <i>bar</b></i>");
+@tidy_parse_string($tidy, "<b>foo <i>bar</b></i>");
 tidy_clean_and_repair($tidy);
 ob_start();
 tidy_output($tidy);
