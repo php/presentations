@@ -1,3 +1,14 @@
 <slide title="Non blocking I/O">
+<blurb>
+Non-blocking I/O allows you to poll multiple connections, and see 
+if they have any data.
+</blurb>
+<example fontsize="1.2em" title="socket_select() example"><![CDATA[
+$read = array ($sock1, $sock2);
+$read_pool = $read;
 
+socket_select ($read_pool, null, null, 0);
+if (in_array ($sock1, $read_pool)) {
+    print "Can read from sock1\n";
+}]]></example>
 </slide>

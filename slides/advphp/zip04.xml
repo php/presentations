@@ -1,3 +1,16 @@
 <slide title="Module Layout">
 
+<list title="Source file">
+<bullet slide="1">First the includes</bullet>
+<bullet slide="1">Function entries</bullet>
+<bullet slide="1">Module entry</bullet>
+<bullet slide="1">Helper functions</bullet>
+<bullet slide="1">Buggy code, err, PHP Functions</bullet>
+</list>
+
+<list title="Config.m4">
+<bullet slide="1">Configuration Argument</bullet>
+<bullet slide="1">Library and Header checks</bullet>
+<bullet slide="1">Makefile specific code</bullet>
+</list>
 </slide>

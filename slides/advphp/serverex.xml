@@ -1,3 +1,7 @@
 <slide title="Example server">
-
+<blurb>
+Here is a very simple example socket server, using the concepts discussed in this
+tutorial.
+</blurb>
+<example filename="slides/advphp/socket_server.php" fontsize="1.2em"/>
 </slide>

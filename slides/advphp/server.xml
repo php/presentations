@@ -1,3 +1,11 @@
 <slide title="Socket Servers">
+<list>
+<bullet>First you must allocated a new socket</bullet>
+<bullet>Bind to the desired address and port</bullet>
+<bullet>Set the listen backlog</bullet>
+<bullet>Accept and handle new connections</bullet>
+</list>
 
+<example filename="slides/advphp/simple_sock_server.php" 
+         fontsize="1.2em"/>
 </slide>

@@ -1,5 +1,7 @@
 <slide title="UDP Connection">
 <blurb>
+UDP is a connectionless protocol running over IP that is mainly used for 
+broadcasting messages, popular services that use UDP include NFS, SNMP and DNS.
 </blurb>
 <example fontsize="1.2em"><![CDATA[<?php
 $sock = socket_open(AF_INET, SOCK_DGRAM, 0);
@@ -7,7 +9,7 @@ if($sock < 0) {
     echo "socket() failed, error:" . strerror($sock) . "\n";
 }
 
-$opt_ret = socket_set_option($sock, 1, 6, TRUE);
+$opt_ret = socket_set_option($sock, SOL_SOCKET, SO_BROADCAST, 1);
 if($opt_ret < 0) {
     echo "setsockopt() failed, error: " . 
          strerror($opt_ret) . "\n";

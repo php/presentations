@@ -4,4 +4,31 @@
 initial directory information, and creates basic skeleton files (with the 
 option of documentation).
 </blurb>
+
+<example title="Using ext_skel" fontsize="1.2em" type="shell"><![CDATA[vivaldi:~/work/os/php/php4/ext>  ./ext_skel --extname=sample
+Creating directory sample
+Creating basic files: config.m4 
+.cvsignore 
+sample.c 
+php_sample.h 
+CREDITS 
+EXPERIMENTAL 
+tests/001.phpt 
+sample.php [done].
+
+To use your new extension, you will have to execute the following steps:
+
+1.  $ cd ..
+2.  $ vi ext/sample/config.m4
+3.  $ ./buildconf
+4.  $ ./configure --[with|enable]-sample
+5.  $ make
+6.  $ ./php -f ext/sample/sample.php
+7.  $ vi ext/sample/sample.c
+8.  $ make
+
+Repeat steps 3-6 until you are satisfied with ext/sample/config.m4 and
+step 6 confirms that your module is compiled into PHP. Then, start writing
+code and repeat the last two steps as often as necessary.]]></example>
+
 </slide>
