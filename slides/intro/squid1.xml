@@ -1,0 +1,14 @@
+<slide title="Squid">
+<blurb>
+For really busy sites, a reverse proxy like Squid is magical!
+Either run it as a single-server accelerator:
+</blurb>
+<image filename="slides/intro/squid1.png" align="center"/>
+<blurb>
+Or as a front-end cache to a number of local or remote servers:
+</blurb>
+<image filename="slides/intro/squid2.png" align="center"/>
+<blurb title="Note:">
+Watch out for any use of $REMOTE_ADDR in your PHP scripts.  Use $HTTP_X_FORWARDED_FOR instead.
+</blurb>
+</slide>

@@ -1,0 +1,35 @@
+<slide title="Funky Cacheing">
+<blurb>
+An interesting way to handle cacheing is to have all 404's redirected to a PHP
+script.
+</blurb>
+<example type="shell">ErrorDocument 404 /generate.php</example>
+
+<blurb>
+Then in your generate.php script use the contents of $REDIRECT_URI to determine
+which URL the person was trying to get to.  In your database you would then
+have fields linking content to the URL they affect and from that you should be
+able to generate the page.  Then in your generate.php script do something like:
+</blurb>
+<example><![CDATA[<?php
+	$s = $REDIRECT_URI;
+	$d = $DOCUMENT_ROOT;
+	// determine requested uri
+	$uri = substr($s, strpos($s,$d) + strlen($d) + 1);
+	ob_start();  // Start buffering output
+    // ... code to fetch and output content from DB ...
+	$data = ob_get_contents();
+    $fp = fopen("$DOCUMENT_ROOT/$uri",'w');
+	fputs($fp,$data);
+	fclose($fp);
+    ob_end_flush(); // Flush and turn off buffering
+?>]]></example>
+<blurb>
+So, the way it works, when a request comes in for a page that doesn't exist,
+generate.php checks the database and determines if it should actually exist and
+if so it will create it and respond with this generated data.  The next request
+for that same URL will get the generated page directly.  So in order to refresh
+your cache you simply have to delete the files.
+</blurb>
+
+</slide>

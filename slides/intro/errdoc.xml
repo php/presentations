@@ -1,0 +1,28 @@
+<slide title="ErrorDocument">
+<blurb>
+Apache's ErrorDocument directive can come in handy.  For example, this line in
+your Apache configuration file:
+</blurb>
+<example type="shell">ErrorDocument 404 /error.php</example>
+<blurb>
+Can be used to redirect all 404 errors to a PHP script.
+The following server variables are of interest:
+</blurb>
+
+<list>
+<bullet>$REDIRECT_ERROR_NOTES - File does not exist: /docroot/bogus</bullet>
+<bullet>$REDIRECT_REQUEST_METHOD - GET</bullet>
+<bullet>$REDIRECT_STATUS - 404</bullet>
+<bullet>$REDIRECT_URL - /docroot/bogus</bullet>
+</list>
+
+<blurb>
+Don't forget to send a 404 status if you choose not to redirect to a real page.
+</blurb>
+<example><![CDATA[<? Header('HTTP/1.0 404 Not Found'); ?>]]></example>
+<list title="Interesting uses">
+<bullet>Search for closest matching valid URL and redirect</bullet>
+<bullet>Use attempted url text as a DB keyword lookup</bullet>
+<bullet>Funky cacheing</bullet>
+</list>
+</slide>

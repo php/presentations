@@ -1,0 +1,58 @@
+<slide title="Squid Configuration">
+<blurb>
+Make it listen to port 80 on our external interface:
+</blurb>
+<example>http_port 198.186.203.51:80</example>
+<blurb>
+If we don't do cgi-bin stuff, comment these out:
+</blurb>
+<example>#acl QUERY urlpath_regex cgi-bin
+#no_cache deny QUERY</example>
+
+<blurb>
+If we have plenty of RAM, bump this up a bit:
+</blurb>
+<example>cache_mem 16MB
+maximum_object_size 14096 KB</example>
+
+<blurb>
+Specify where to store cached files  (size in Megs, level 1 subdirs, level 2 subdirs)
+</blurb>
+<example>cache_dir ufs /local/squid/cache 500 16 256</example>
+
+<blurb>
+Get rid of the big store.log file:
+</blurb>
+<example>cache_store_log none</example>
+
+<blurb>
+Set our SNMP public community string:
+</blurb>
+<example>acl snmppublic snmp_community public</example>
+
+<blurb>
+Get rid of "allow all" and use list of hosts we are blocking (1 ip per line):
+</blurb>
+<example>#http_access allow all
+acl forbidden src "/local/squid/etc/forbidden"
+http_access allow !forbidden</example>
+
+<blurb>
+Set user/group squid should run as:
+</blurb>
+<example>cache_effective_user squid
+cache_effective_group daemon</example>
+
+<blurb>
+Single-server reverse proxy setup (set up Apache to listen to port 80 on the loopback):
+</blurb>
+<example>httpd_accel_host 127.0.0.1
+httpd_accel_port 80
+httpd_accel_single_host on
+httpd_accel_uses_host_header on</example>
+
+<blurb>
+Only allow localhost access through snmp:
+</blurb>
+<example>snmp_access allow snmppublic localhost</example>
+</slide>

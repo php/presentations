@@ -1,0 +1,42 @@
+<slide title="Optimization">
+<blurb title="Don't use a regex if you don't have to">
+PHP has a rich set of string manipulation functions - use them!
+</blurb>
+<example><![CDATA[BAD: <?  $new = ereg_replace("-","_",$str); ?>]]></example>
+<example><![CDATA[GOOD:<?  $new = str_replace("-","_",$str);  ?>]]></example>
+<example><![CDATA[BAD: <?  preg_match('/(\..*?)$/',$str,$reg);?>]]></example>
+<example><![CDATA[GOOD:<?  substr($str,strrpos($str,'.'));    ?>]]></example>
+
+<blurb title="Use References if you are passing large data structs around to save memory">
+There is a tradeoff here.  Manipulating references is actually a bit slower
+than making copies of your data, but with references you will be using less
+memory.  So you need to determine if you are cpu or memory bound to decide
+whether to go through and look for places to pass references to data instead of
+copies.
+</blurb>
+<blurb title="Use Persistent Database connections">
+Some database are slower than others at establising new connections.  The
+slower it is, the more of an impact using persistent connections will have.
+But, keep in mind that persistent connections will sit and tie up resources
+even when not in use.  Watch your resource limits as well.  For example, by
+default Apache's <font color="#ff0000">MaxClients</font> directive is set to 
+150, but MySQL's default <font color="#ff0000">max_connections</font> is set 
+to 100.
+</blurb>
+<blurb title="Using MySQL?  Check out mysql_unbuffered_query()">
+Use it exactly like you would mysql_query().  The
+difference is that instead of waiting for the entire query to finish and
+storing the result in the client API, an unbuffered query makes results
+available to you as soon as possible and they are not allocated in the client
+API.  You potentially get access to your data quicker, use a lot less
+memory, but you can't use mysql_num_rows() on the
+result resource and it is likely to be slightly slower for small selects.  
+</blurb>
+<blurb title="Hey Einstein!">
+Don't over-architect things.  If your solution seems complex to you, there is
+probably a simpler and more obvious approach.  Take a break from the computer
+and go out into the big (amazingly realistic) room and think about
+something else for a bit.  
+</blurb>
+
+</slide>

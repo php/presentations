@@ -1,0 +1,46 @@
+<slide title="Variable variables">
+<blurb>
+A variable variable looks like this: $$var
+</blurb>
+<blurb>
+So, if $var = 'foo' and $foo = 'bar' then $$var would contain the value 'bar'
+because $$var can be thought of as $'foo' which is simply $foo which has the
+value 'bar'.
+</blurb>
+<blurb>
+Variable variables sound like a cryptic a useless concept, but they
+can be useful sometimes.  For example, if we have a configuration
+file consisting of configuration directives and values in this format:
+</blurb>
+<example type="shell"><![CDATA[foo=bar
+abc=123]]></example>
+<blurb>
+Then it is very easy to read this file and create corresponding
+variables:
+</blurb>
+<example><![CDATA[<?php
+$fp = fopen('config.txt','r');
+while(true) {
+    $line = fgets($fp,80);
+    if(!feof($fp)) {
+        if($line[0]=='#' || strlen($line)<2) continue;
+        list($name,$val)=explode('=',$line,2);
+        $$name=trim($val);
+    } else break;
+}
+fclose($fp);
+?>]]></example>
+<blurb>
+Along the same lines as variable variables, you can create compound variables
+and variable functions.
+</blurb>
+<example><![CDATA[<?php
+  $str = 'var';
+  $var_toaster = "Hello World";
+  echo ${$str.'_toaster'};
+
+  $str();  // Calls a function named var()
+  ${$str.'_abc'}();  // Calls a function named var_abc()
+?>]]></example>
+
+</slide>

@@ -1,0 +1,25 @@
+<slide title="Adding an extension">
+<blurb title="Problem">
+You need PHP's built-in ftp functions for the ultra-cool
+script you are writing, but your service provider does not have PHP compiled
+with the --enable-ftp option.</blurb>
+<blurb title="Solution">
+If you have a shell account on a system with the same
+operating system as your web server, grab the PHP source tarball and
+build using: </blurb>
+
+<example type="shell"><![CDATA[--with-apxs --enable-ftp=shared]]></example>
+
+<blurb>You can check which flags your provider used by putting a phpinfo() call in a script
+on your server.</blurb>
+<example><![CDATA[<?phpinfo()?>]]></example>
+
+<blurb>Once compiled, you will find a "modules/ftp.so" file which you can copy
+to your web server and enable either by putting: </blurb>
+<example type="shell">extension=ftp.so</example>
+<blurb>
+in your php.ini file or by adding this to the top of your script:
+</blurb>
+<example><![CDATA[<?php dl("ftp.so") ?>]]></example>
+
+</slide>

@@ -1,0 +1,24 @@
+<slide title="Cookie Expiry">
+<blurb title="Problem">
+Short expiry cookies depend on users having their system clocks set correctly.  
+</blurb>
+<blurb title="Solution">
+Don't depend on the users having their clocks set right.  Embed the timeout
+based on your server's clock in the cookie.
+</blurb>
+<example><![CDATA[<?php
+  $value = time()+3600 . ':' . $variable;
+  SetCookie('Cookie_Name',$value); 
+?>]]></example>
+<blurb>
+Then when you receive the cookie, decode it and determine if it is still valid.
+</blurb>
+<example><![CDATA[<?php
+list($ts,$variable) = explode(':',$Cookie_Name,2);
+if($ts < time()) {
+   ...
+} else {
+	SetCookie('Cookie_Name','');
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,18 @@
+<slide title="$PATH_INFO">
+<blurb>
+$PATH_INFO is your friend when it comes to creating clean URLS.  Take for
+example this URL:
+</blurb>
+<example>http://www.company.com/products/routers</example>
+<blurb>
+If the Apache configuration contains this block:
+</blurb>
+<example type="shell"><![CDATA[<Location "/products">
+  ForceType application/x-httpd-php
+</Location>]]></example>
+<blurb>
+Then all you have to do is create a PHP script in your DOCUMENT_ROOT named
+'products' and you can use the $PATH_INFO variable which will contain the
+string, '/routers', to make a DB query.
+</blurb>
+</slide>
