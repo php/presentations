@@ -1,0 +1,24 @@
+<slide title="Flash on-the-fly">
+
+<example
+	title="Flash using libswf"
+	filename="slides/intro/swf.php"
+/>
+
+<example 
+	hide="1"
+	result="1"
+	type="flash"
+	iwidth="500"
+	iheight="300"
+	rwidth="510"
+><![CDATA[<form action="<?=$PHP_SELF?>" method="POST">
+<? $str = empty($str) ? 'PHP' : $str; ?>
+<input type=text name="str" value="<?=$str?>">
+</form>
+<embed src="slides/intro/swf.php?str=<?echo urlencode($str)?>" quality=high loop=true
+pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" 
+type="application/x-shockwave-flash" width=500 height=300>
+</embed>]]></example>
+
+</slide>

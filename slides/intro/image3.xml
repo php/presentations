@@ -2,9 +2,9 @@
 <example 
 	hide="1" 
 	result="1"
-	fontsize="1em"
-	marginleft="0.3em"
-	marginright="0.3em"
+	fontsize="0.5em"
+	marginleft="0.2em"
+	marginright="0.2em"
 ><![CDATA[<?php
  if(empty($text)) $text = 'php'; 
  if(empty($si)) $si=30;

@@ -2,9 +2,9 @@
 <example title="HTML" result="1"><![CDATA[<?php echo htmlspecialchars("This & that are <problems>.");?>]]></example>
 
 <example title="Base64" result="1"><![CDATA[<?php
- echo ($encoded = base64_encode(
-           "A rose by any other name..."));
- echo ($decoded = base64_decode($encoded));
+ $encoded = base64_encode("A rose by any other name...");
+ $decoded = base64_decode($encoded);
+ echo "$encoded<br />$decoded";
 ?>]]></example>
 
 <blurb title="Others">
