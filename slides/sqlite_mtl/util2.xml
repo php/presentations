@@ -1,0 +1,11 @@
+<slide title="SQLite Utility Functions II">
+
+<break />
+
+<example result="1" type="php" filename="utility2.php" />
+
+<blurb fontsize="3.2em">
+For chained queries only the id for the last inserted row will be returned.
+</blurb>
+
+</slide>

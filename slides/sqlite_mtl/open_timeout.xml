@@ -1,0 +1,26 @@
+<slide title="Setting a Timeout">
+
+<image filename="timeout.jpg" align="right" />
+
+<example><![CDATA[<?php	// Procedural Approach
+	$db = sqlite_open("/path/to/database");
+
+	// timeout is set in microseconds 
+	// (1/1000 of a second)
+	sqlite_busy_timeout($db, 1000);
+?>]]>
+</example>
+
+<example><![CDATA[<?php	// OO Approach
+	$db = new sqlite_db("/path/to/database");
+
+	$db->busy_timeout(1000);
+?>]]>
+</example>
+
+<list fontsize="3.2em">
+	<bullet>Default timeout is 60 seconds.</bullet>
+	<bullet>Prevents pile-up of processes waiting for a lock to be released.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,13 @@
+<slide title="Multiple Databases: Limitations">
+
+<image filename="limit.jpg" align="left" />
+
+<list padding="0.2em" fontsize="3.3em">
+	<bullet>Can only attach up to 10 databases.</bullet>
+	<bullet>When locks (transactions) are used all databases are being locked.</bullet>
+	<bullet>Transactions across databases are not atomic.</bullet>
+	<bullet>You cannot modify table structure of the attached databases.</bullet>
+	<bullet>When using multiple databases that may have tables with the same name, prefixes must be used.</bullet>
+</list>
+
+</slide>

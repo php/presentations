@@ -1,0 +1,12 @@
+<slide title="Query Chaining">
+
+<image filename="chain.jpg" align="right" />
+
+<blurb fontsize="4em">
+SQLite also supports query chaining that can be used to execute multiple queries via a single PHP
+function call.
+</blurb>
+
+<example filename="database_pop13.php" />
+
+</slide>

@@ -1,0 +1,21 @@
+<slide title="Opening a Database">
+
+<blurb fontsize="3.5em">
+As with any database system the first thing you must do is open a database. Since SQLite is based on files
+opening a database differs very little from opening a regular file.
+</blurb>
+
+<example><![CDATA[<?php
+$db = sqlite_open("./ip.db", 0666, $error) 
+	or die("Failed to connect because: ".$error);
+?>]]>
+</example>
+
+<list fontsize="3.2em" title="Notes">
+	<bullet>If a database does not a exist a new one will be created.</bullet>
+	<bullet>Database path will be checked against %safe_mode% &amp; %open_basedir%.</bullet>
+	<bullet>If database path is %:memory:% will create a memory only database.</bullet>
+	<bullet>In the future the 2nd argument will allow opening the database in read-only mode.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,9 @@
+<slide title="PHP in SQL Aggregation">
+
+<blurb fontsize="4em">
+You can also create PHP functions that can be used to aggregate data.
+</blurb>
+
+<example result="1" type="php" filename="phpsql2.php" />
+
+</slide>

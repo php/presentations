@@ -1,0 +1,10 @@
+<slide title="Fetch Single">
+
+<blurb fontsize="4em">
+To improve the performance and usability, SQLite extension implements %sqlite_fetch_single()%, which
+can be used to retrieve single column data in a form of a string.
+</blurb>
+
+<example filename="database_pop10.php" />
+
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Creating Database Schema">
+
+<blurb fontsize="4em">
+Once database is made, time to create tables to store the data.
+</blurb>
+
+<example fontsize="1.7em" title="Source CSV"><![CDATA["3413902336","3413925887","AU","AUS","AUSTRALIA"
+"3413925888","3413927455","SG","SGP","SINGAPORE"
+"3413927456","3413927471","CA","CAN","CANADA"
+"3413927472","3413927487","US","USA","UNITED STATES"]]></example>
+
+<example filename="php_schema.php" title="SQLite Database Schema" /> 
+
+<list fontsize="3.2em" title="Notes">
+	<bullet>%sqlite_query()% supports dual resource passing notation.</bullet>
+	<bullet>Because SQLite is type-less column type specification is optional.</bullet>
+	<bullet>Auto-incremented columns are created via %INTEGER PRIMARY KEY% syntax.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Data Protection">
+
+<blurb fontsize="4em">
+What if the country data contains special characters like % ' \ %?
+</blurb>
+
+<blurb fontsize="3em">
+For data protection SQLite has %sqlite_escape_string()% function that should be used
+to escape data.
+</blurb>
+
+<example filename="database_pop2.php" />
+
+<blurb fontsize="3em" title="Why not use addslashes() ?">
+%sqlite_escape_string()% can properly encode handle binary data (such as images) to make
+sure that it can be later retrieved without data loss and/or corruption.
+</blurb>
+
+</slide>

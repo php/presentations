@@ -1,0 +1,10 @@
+<slide title="Data Retrieval">
+
+<blurb fontsize="3.5em">
+Since our CSV source is likely to have more then one entry per file,
+we should check if a country is already in the database before inserting it.
+</blurb>
+
+<example filename="database_pop4.php" />
+
+</slide>

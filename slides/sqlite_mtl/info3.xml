@@ -1,0 +1,10 @@
+<slide title="Column Types">
+
+<blurb fontsize="4em">
+In PHP5 there is also the %sqlite_fetch_column_types()% function that can be used to determine column types
+inside a table.
+</blurb>
+
+<example filename="info3.php" result="1" />
+
+</slide>
