@@ -1,7 +1,14 @@
-<slide title="DTD Validation">
+<slide title="Document Validation">
 <blurb>
-%LibXML% supports DTD validation, during parsing, and post parsing.
+%LibXML% supports DTD, Schema and RelaxNG validation, during parsing,
+and post parsing.
 </blurb>
+<list>
+<bullet>boolean attribute DOMDocument->validateOnParse</bullet>
+<bullet>boolean DOMDocument->validate(string filename)</bullet>
+<bullet>boolean DOMDocument->schemaValidate(string filename)</bullet>
+<bullet>boolean DOMDocument->relaxNGValidate(string filename)</bullet>
+</list>
 <example title="Parse &amp; Validate">
 <![CDATA[<?php
 $dom = new domDocument;

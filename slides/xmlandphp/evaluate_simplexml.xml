@@ -1,0 +1,14 @@
+<slide>
+<title>SimpleXML: Pros and Cons</title>
+<list title="Pros">
+<bullet>Simple structures, PHP style objects</bullet>
+<bullet>Parser Optimizations/Result Caching Available</bullet>
+<bullet>You Can Query Documents with Xpath</bullet>
+</list>
+<list title="Cons">
+<bullet>Must Fully Visualize Document</bullet>
+<bullet>(Overly ?) Simple, lacking some flexibility</bullet>
+<bullet>Pre-PHP 5 beta 2 implementation has issues</bullet>
+<bullet>Some ambiguities in structures</bullet>
+</list>
+</slide>

@@ -5,11 +5,12 @@
 <bullet>Standard Encapsulation</bullet>
 <bullet>Parser Optimizations/Result Caching Available</bullet>
 <bullet>You Can Query Documents with Xpath</bullet>
+<bullet>PHP 5 Extension is great, DOM 3 compliant</bullet>
 </list>
 <list title="Cons">
 <bullet>Must Fully Visualize Document</bullet>
-<bullet>(Overly) Complex</bullet>
-<bullet>PHP Extension is Buggy</bullet>
+<bullet>(Overly ?) Complex</bullet>
+<bullet>PHP 4 Extension is Buggy, not DOM compliant</bullet>
 <bullet>Requires Object Oriented Paradigms</bullet>
 </list>
 </slide>

@@ -1,0 +1,17 @@
+<slide title="SOAP">
+<blurb>
+Where is it?
+</blurb>
+<list>
+<bullet>WSDL Code Generation improved</bullet>
+<bullet>Schema Code Generation added!</bullet>
+<bullet>Less focus on RPC, more on Document messaging</bullet>
+<bullet>Smaller code base, easier to extend</bullet>
+<bullet>Will make use of streams for transport api's</bullet>
+<bullet>Uses DOM, may use SimpleXML alternately in the future</bullet>
+<bullet>Cleaner code, better organized</bullet>
+<bullet>Makes use of new OO support in PHP 5</bullet>
+<bullet>Alpha Release late October 2003</bullet>
+</list>
+
+</slide>

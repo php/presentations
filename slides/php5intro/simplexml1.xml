@@ -3,9 +3,7 @@
 <list>
 <bullet>Simple XML is Simply Brilliant</bullet>
 <bullet>No more SAX parsing</bullet>
-<bullet>Use Simple API or DOM</bullet>
-<bullet>Combine with XSLT, XPath, other LibXML capabilities</bullet>
-<bullet>Future PEAR::SOAP to be based on Simple XML</bullet>
+<bullet>Supports DTD validation and XPath queries</bullet>
 </list>
 <example title="Book XML File" filename="book.xml" type="XML"/>
 <example title="Book PHP File" filename="book.php" type="php" result="1"/>

@@ -3,12 +3,12 @@ define('URL', 'http://www.amazon.com/exec/obidos/%s/');
 
 function process_item($item) 
 {
-	$id = $item->get_attribute('id');
+	$id = $item->getAttribute('id');
 	echo '<a href="';
 	printf(URL, $id);
 	echo '">';
 	
-	$children = $item->children();
+	$children = $item->childNodes;
 	foreach ($children as $element) {
 		if ($element instanceof domelement) {
 			process_subelement($element);
@@ -19,9 +19,9 @@ function process_item($item)
 
 function process_subelement($element)
 {
-	$name = $element->tagname;
-	$e = array_shift($element->children());
-	$data = trim($e->content);
+	$name = $element->tagName;
+	$e = array_shift($element->childNodes);
+	$data = trim($e->nodeValue);
 
 	switch ($name) {
 	case 'title':

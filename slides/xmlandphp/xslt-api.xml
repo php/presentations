@@ -1,0 +1,11 @@
+<slide title="XSLT API">
+<list title="class XSLTProcessor">
+<bullet>importStylesheet(DOMDocument doc)</bullet>
+<bullet>transformToDoc(DOMDocument doc, [boolean clone]) returns domdocument</bullet>
+<bullet>transformToURI(DOMDocument doc, string URI, [boolean clone]) returns int</bullet>
+<bullet>transformToXML(DOMDocument doc, [boolean clone]) returns string </bullet>
+<bullet>setParameter(string namespace, string name, string value)</bullet>
+<bullet>getParameter(string namespace, string name) returns string</bullet>
+<bullet>removeParameter(string namespace, string name) returns boolean</bullet>
+</list>
+</slide>

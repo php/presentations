@@ -1,0 +1,42 @@
+<presentation 
+	template="php" 
+	navmode="html"
+>
+<topic>PHP</topic>
+<title>XML and PHP 5</title>
+<event>Vancouver User Group</event>
+<location>BC, Canada</location>
+<date>Oct 9, 2003</date>
+<speaker>Shane Caraveo</speaker>
+<email>shane@php.net</email>
+<url>http://talks.php.net/</url>
+
+<slide>slides/xmlandphp/titlepage-vpug-oct2003.xml</slide>
+<slide>slides/xmlandphp/what1.xml</slide>
+<slide>slides/xmlandphp/what2.xml</slide>
+<slide>slides/xmlandphp/sample.xml</slide>
+<slide>slides/xmlandphp/interface.xml</slide>
+<slide>slides/xmlandphp/sax.xml</slide>
+<slide>slides/xmlandphp/callback.xml</slide>
+<slide>slides/xmlandphp/glue.xml</slide>
+<slide>slides/xmlandphp/parseinto.xml</slide>
+<slide>slides/xmlandphp/pear.xml</slide>
+<slide>slides/xmlandphp/pear1.xml</slide>
+<slide>slides/xmlandphp/pear2.xml</slide>
+<slide>slides/xmlandphp/dom.xml</slide>
+<slide>slides/xmlandphp/domglue.xml</slide>
+<slide>slides/xmlandphp/helpers.xml</slide>
+<slide>slides/xmlandphp/xpath.xml</slide>
+<slide>slides/xmlandphp/validation.xml</slide>
+<slide>slides/php5intro/simplexml1.xml</slide>
+<slide>slides/php5intro/simplexml2.xml</slide>
+<slide>slides/xmlandphp/evaluate_sax.xml</slide>
+<slide>slides/xmlandphp/evaluate_dom.xml</slide>
+<slide>slides/xmlandphp/evaluate_simplexml.xml</slide>
+<slide>slides/xmlandphp/xslt.xml</slide>
+<slide>slides/xmlandphp/xslt1.xml</slide>
+<slide>slides/xmlandphp/xslt2.xml</slide>
+<slide>slides/xmlandphp/xslt-api.xml</slide>
+<slide>slides/xmlandphp/soap.xml</slide>
+
+</presentation>

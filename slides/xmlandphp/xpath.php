@@ -1,11 +1,13 @@
 <?php
-$doc = xmldocfile('data.rss');
-$ctx = $doc->xpath_new_context();
+$doc = new domdocument();
+$doc->load('data.rss');
 
-$node = $ctx->xpath_eval(
+$ctx = new domXpath($doc);
+
+$node = $ctx->query(
 	'/rss/channel/item/title/text()'
 );
 echo 'Title: ';
-echo $node->nodeset[0]->content;
+echo $node[0]->nodeValue;
 echo "\n";
 ?>

@@ -2,4 +2,12 @@
 <blurb>
 XSLT is a language designed to facilitate XML transformations, in XML itself.
 </blurb>
+<list>
+<bullet>Uses DOM extension</bullet>
+<bullet>Supports most EXSLT (www.exslt.org)</bullet>
+<bullet>Transform DOM to DOM, File or XML</bullet>
+</list>
+
+<example filename="xsl.php" fontsize="1.5em"/>
+
 </slide>

@@ -1,12 +1,15 @@
 <slide>
 <title>SAX: Pros and Cons</title>
 <list title="Pros">
-<bullet>Always Available</bullet>
+<bullet>Always Available (PHP 4)</bullet>
 <bullet>Partial Visualization</bullet>
 <bullet>Can Discard Unneeded Information</bullet>
 </list>
 <list title="Cons">
 <bullet>Slower Parse Stage</bullet>
 <bullet>Higher Memory Consumption (per-unit)</bullet>
+</list>
+<list title="PHP 5 Update">
+<bullet>If XML support is compiled in, SAX, DOM and SimpleXML available</bullet>
 </list>
 </slide>

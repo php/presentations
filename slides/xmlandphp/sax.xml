@@ -5,6 +5,7 @@
 <bullet>Event Driven</bullet>
 <bullet>Streaming</bullet>
 <bullet>Non-blocking</bullet>
-<bullet>PHP Extension uses %Expat% by James Clark</bullet>
+<bullet>PHP 4 Extension uses %Expat% by James Clark</bullet>
+<bullet>PHP 5 Extensions use %libXML%</bullet>
 </list>
 </slide>
