@@ -1,0 +1,45 @@
+<slide title="PHP 4.3 Changes">
+
+<list title="MySQL-Related" fontsize="4em">
+<bullet>%mysql_ping()%</bullet>
+<bullet>%mysql_real_escape_string()%</bullet>
+<bullet>%mysql_character_set_name()%</bullet>
+<bullet>%mysql_thread_id()%</bullet>
+<bullet>%mysql_stat()%</bullet>
+<bullet>%mysql_list_processes()%</bullet>
+<bullet>%mysql_info()%</bullet>
+<bullet>add support for compression and SSL to %mysql_connect()%</bullet>
+<bullet>automatic rollback for non committed transactions</bullet>
+</list>
+
+<example
+	title="Example"
+	result="1"
+><![CDATA[<? echo mysql_stat(); ?>]]></example>
+
+<list title="GD-Related" fontsize="4em">
+<bullet>Fork and bundle GD2 with PHP</bullet>
+<bullet>Anti-aliased TTF fonts will now work in TrueColor images</bullet>
+</list>
+
+<list title="New Streams code" fontsize="4em">
+<bullet>Allows things like %fopen('https://www.domain.com','r')%</bullet>
+<bullet>%copy()% works on URLs now</bullet>
+<bullet>Support for ssl:// and tls:// in %fsockopen()%</bullet>
+<bullet>User-space streams</bullet>
+<bullet>Most functions that operate on filenames can now take URLs</bullet>
+<bullet>Support for memory streams</bullet>
+</list>
+
+<list title="Miscellaneous" fontsize="4em">
+<bullet>New and improved build system - replaced automake</bullet>
+<bullet>IMAP performance improvements</bullet>
+<bullet>Multibyte string support for Simplified Chinese, Traditional Chinese and Korean encodings</bullet>
+<bullet>Multibyte string support enabled by default</bullet>
+<bullet>new %glob()% function</bullet>
+<bullet>new %apache_request_headers()% function</bullet>
+<bullet>make %shuffle()% really shuffle</bullet>
+<bullet>add %pg_fetch_all()% function</bullet>
+</list>
+
+</slide>

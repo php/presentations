@@ -1,0 +1,40 @@
+<slide title="Important Changes">
+
+<list title="PHP 4.0.6">
+<bullet>Multibyte Japanese string support added</bullet>
+<bullet>GD 2 support added</bullet>
+<bullet>DBX databse abstration extension added</bullet>
+<bullet>mysql_unbuffered_query() added</bullet>
+</list>
+
+<list title="PHP 4.1.0">
+<bullet>MySQL 4.0 Support</bullet>
+<bullet>Thread-safe performance improvement</bullet>
+<bullet>New Process Control (pcntl) extension</bullet>
+</list>
+
+<list title="PHP 4.1.1">
+<bullet>Minor bug fix release</bullet>
+</list>
+
+<list title="PHP 4.1.2">
+<bullet>File upload security fixes</bullet>
+</list>
+
+<list title="PHP 4.2.0">
+<bullet>*register_globals* defaults to *OFF* now</bullet>
+<bullet>Experimental Apache 2.0 support</bullet>
+<bullet>Overloading extension added</bullet>
+<bullet>Tokenizer extension added</bullet>
+</list>
+
+<list title="PHP 4.2.1">
+<bullet>domxml overhaul</bullet>
+<bullet>Bug fixes</bullet>
+</list>
+
+<list title="PHP 4.2.2">
+<bullet>File upload security fix</bullet>
+</list>
+
+</slide>
