@@ -1,9 +1,7 @@
 <slide title="Using PHPUnit">
 <image filename="testing.jpg" align="right"/>
-<blurb>
-</blurb>
+<break lines="2"/>
 <blurb fontsize="3.0em">Remember, Tests First!</blurb>
-<blurb>
-</blurb>
+<break lines="2"/>
 <example filename="Test_EmailAddress.php" result="1" fontsize="1.5em"/>
 </slide>
