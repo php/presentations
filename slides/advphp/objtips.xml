@@ -5,6 +5,6 @@
 <bullet slide="1">Private methods should start with a '_' in order to denote their access levels.</bullet>
 <bullet slide="1">Inheritance can be used to share methods between multiple classes</bullet>
 <bullet slide="1">Overloading helps you facilitate lazy evaluation/lazy caching</bullet>
-<bullet slide="1">Aggregation helps facility creating dynamic interfaces which loads methods at runtime</bullet>
+<bullet slide="1">Aggregation helps facilitate creating dynamic interfaces which loads methods at runtime</bullet>
 </list>
 </slide>

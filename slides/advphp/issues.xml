@@ -1,3 +1,17 @@
 <slide title="Programming Issues">
+<blurb>
+PHP can run mostly unmodified when dealing with clustering solutions, except 
+for one crucial area, session management.
+</blurb>
+<blurb title="The Problem">
+When you're remembering data about users, it needs to be saved universally, 
+however, php sessions are only natively adapted to using files.
+</blurb>
+<list title="Solutions">
+<bullet slide="1">NFS</bullet>
+<bullet slide="1">RDBM</bullet>
+<bullet slide="1">Msession</bullet>
+<bullet slide="1">SRM</bullet>
+</list>
 
 </slide>

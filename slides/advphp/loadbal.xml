@@ -1,3 +1,7 @@
-<slide title="Load Balancing">
+<slide title="Squid">
+<blurb>Squid is an excellent tool for handling clustering, it can act as a 
+simple reverse proxy, or even as a more advanced way of doing load balancing.
+</blurb>
+<image filename="slides/advphp/squid2.png" align="center"/>
 
 </slide>

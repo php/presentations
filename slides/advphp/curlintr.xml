@@ -1,3 +1,14 @@
 <slide title="cURL">
+<blurb>
+cURL stands for Client URL Request Library, it provides support for nearly
+every Internet protocol available.
+</blurb>
+
+<list title="Reasons for cURL">
+<bullet slide="1">Code is done in heavily optimized C</bullet>
+<bullet slide="1">Actively developed</bullet>
+<bullet slide="1">It supports SSL</bullet>
+<bullet slide="1">Because you needed it done yesterday!</bullet>
+</list>
 
 </slide>

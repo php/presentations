@@ -1,3 +1,9 @@
 <slide title="Clustering">
-
+<blurb>Clustering is the process of taking multiple computers, and networking 
+them together to share the burden of serving up requests.</blurb>
+<list title="Clustering Solutions">
+<bullet slide="1">Round Robin DNS</bullet>
+<bullet slide="1">Reverse-Proxying</bullet>
+<bullet slide="1">Load Balancer</bullet>
+</list>
 </slide>

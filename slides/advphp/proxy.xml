@@ -1,3 +1,15 @@
 <slide title="cURL with proxies">
+<blurb>cURL allows you to go through a proxy in order to make 
+HTTP requests.</blurb>
+<example title="cURL with Proxy" fontsize="1.2em"><![CDATA[<?php
+$ch = curl_init ('http://www.playboy.com/');
+curl_setopt ($ch, CURLOPT_PROXY, 'http://evil.proxy/');
+// curl_setopt ($ch, CURLOPT_PROXY_USERPWD, 'username:pass');
+curl_exec ($ch);
+curl_close ($ch);
+?>]]>
+</example>
+
+<blurb>Furthermore, cURL can be used to 
 
 </slide>
