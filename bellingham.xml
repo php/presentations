@@ -1,0 +1,51 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP</title>
+<event>Linuxfest Northwest 2004</event>
+<location>Bellingham, WA</location>
+<date>Apr.17, 2004</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/bellingham</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+</chapter>
+
+<slide>slides/intro/bellingham_goals.xml</slide>
+
+<chapter title="Design">
+  <slide>slides/intro/design.xml</slide>
+  <slide>slides/intro/urlapi.xml</slide>
+  <slide>slides/intro/pi.xml</slide>
+  <slide>slides/intro/errdoc.xml</slide>
+  <slide>slides/intro/image_cache.xml</slide>
+  <slide>slides/intro/funky.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+  <slide>slides/intro/layers.xml</slide>
+</chapter>
+
+<chapter title="Performance">
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/intro/php_opcode_caches3.xml</slide>
+  <slide>slides/intro/php_bench1.xml</slide>
+  <slide>slides/intro/php_bench2.xml</slide>
+  <slide>slides/intro/php_bench3.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/xdebug.xml</slide>
+  <slide>slides/intro/valgrind.xml</slide>
+  <slide>slides/intro/stop.xml</slide>
+</chapter>
+
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>
