@@ -1,0 +1,16 @@
+<slide>
+<title>Cross-Site Scripting</title>
+<blurb fontsize="4em">XSS Defense.</blurb>
+<list fontsize="4em">
+	<bullet>Filter all foreign data.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Use existing functions.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Use a whitelist approach.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Use a strict naming convention.</bullet>
+</list>
+</slide>

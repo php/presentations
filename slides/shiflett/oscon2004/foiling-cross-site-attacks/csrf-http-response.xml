@@ -1,0 +1,9 @@
+<slide>
+<title>Cross-Site Request Forgeries</title>
+<blurb> </blurb>
+<blurb fontsize="4em">An example HTTP response.</blurb>
+<example filename="code/csrf-http-response.php" result="0" />
+<blurb fontsize="4em">Because of the *%img%* tag, the browser makes a second
+request.</blurb>
+<example filename="code/csrf-http-request-image.php" result="0" />
+</slide>

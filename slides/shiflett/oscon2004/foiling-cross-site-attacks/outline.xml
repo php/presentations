@@ -1,0 +1,20 @@
+<slide>
+<title>Outline</title>
+<blurb fontsize="4em">Cross-Site Scripting (XSS)</blurb>
+<list fontsize="3.5em">
+	<bullet>Overview</bullet>
+	<bullet>Demonstration</bullet>
+	<bullet>Defense</bullet>
+	<bullet>Improved Demonstration</bullet>
+</list>
+<blurb> </blurb>
+<blurb fontsize="4em">Cross-Site Request Forgeries (CSRF)</blurb>
+<list fontsize="3.5em">
+	<bullet>Overview</bullet>
+	<bullet>Demonstration</bullet>
+	<bullet>Defense</bullet>
+	<bullet>Improved Demonstration</bullet>
+</list>
+<blurb> </blurb>
+<blurb fontsize="4em">More Information</blurb>
+</slide>

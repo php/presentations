@@ -1,0 +1,8 @@
+<slide>
+<title>Cross-Site Request Forgeries</title>
+<blurb> </blurb>
+<blurb fontsize="4em">An example %GET% request.</blurb>
+<example filename="code/csrf-http-request.php" result="0" />
+<blurb fontsize="4em">You may have referenced some of this in your code...</blurb>
+<example filename="code/csrf-http-php.php" result="0" />
+</slide>

@@ -1,0 +1,13 @@
+<slide>
+<title>Cross-Site Scripting</title>
+<blurb fontsize="4em">Cross-site scripting attacks...</blurb>
+<list fontsize="3.75em">
+	<bullet>Exploit the trust a user has for a particular site.</bullet>
+</list>
+<list fontsize="3.75em">
+	<bullet>Generally involve Web sites that display foreign data.</bullet>
+</list>
+<list fontsize="3.75em">
+	<bullet>Inject content of attacker's choosing.</bullet>
+</list>
+</slide>

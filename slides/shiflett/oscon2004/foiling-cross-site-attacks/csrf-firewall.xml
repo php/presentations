@@ -1,0 +1,6 @@
+<slide>
+<title>Cross-Site Request Forgeries</title>
+<blurb> </blurb>
+<blurb fontsize="4em">Again, firewalls don't help.</blurb>
+<image align="center" filename="images/csrf-firewall.png" />
+</slide>
