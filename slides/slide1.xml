@@ -2,48 +2,41 @@
 <slide>
 
   <title>This is an example slide</title>
-  <description>It shows what might be a possible way to handle this problem</description>
 
   <blurb>
     <title>This is a normal title</title>
-    <text>
 And here is the paragraph of text that goes along with this title.
 It will simply be formatted according to the default formatting rules defined by the
 parser.
-    </text>
   </blurb>
 
   <list anim="left">
     <title>And here is a list of items</title>
     <bullet anim="right">Item 1</bullet>
     <bullet>Item 2</bullet>
-    <bullet fontsize="0.5em">Item 3</bullet>
+    <bullet fontsize="1.5em">Item 3</bullet>
     <bullet>Item 4</bullet>
   </list>
 
   <image align="center">
     <title>And an image</title>
-    <filename>slides/serverside.png</filename>
+    <filename>slides/intro/serverside.png</filename>
   </image>
 
-  <example result="yes">
-    <title>Embedded PHP Code Example</title>
-    <text><![CDATA[<?php
+  <example result="yes" title="Embedded PHP Code Example"><![CDATA[<?php
   echo "Hello World<br>Line 2<br>\n";
-?>
-]]></text>
-  </example>
+?>]]></example>
 
   <example result="yes">
     <title>PHP code from a File Example</title>
 	<filename>slides/hello.php</filename>
   </example>
 
-  <blurb>
-    <title>Second Blurb</title>
-	<text>
+  <blurb title="Second Blurb">
 This is a second blurb right at the end of the file.
-	</text>
   </blurb>
 
+  <example fontsize="1.25em" title="The XML for this Slide looks like this:">
+ 	<filename>slides/slide1.xml</filename>
+  </example>
 </slide>

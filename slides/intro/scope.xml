@@ -5,7 +5,7 @@ The global scope spans all included files.  That is, $foo
 will be visible in file.php. 
 </blurb>
 
-<example><![CDATA[<?php
+<example width="35em"><![CDATA[<?php
     $foo = 1;
     include 'file.php';
 ?>]]></example>
@@ -16,7 +16,7 @@ use the global keyword to tell the function that
 it should use the variable from the global scope instead of the function's own
 local scope.
 </blurb>
-<example result="yes" global="foo"><![CDATA[<?php
+<example result="yes" global="foo" width="35em"><![CDATA[<?php
 function bar() {
     global $foo;
 
@@ -27,7 +27,7 @@ $foo = 1;
 bar();
 ?>]]></example>
 
-<example title="Static Variables" result="yes"><![CDATA[<?php
+<example title="Static Variables" result="yes" width="35em"><![CDATA[<?php
 function bar2() {
 	static $i=0;
 	return ++$i;
