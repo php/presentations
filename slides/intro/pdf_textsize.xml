@@ -21,7 +21,7 @@ know the height of a block of text in order to handle pagination correctly in mu
 <bullet>wordspacing</bullet>
 </list>
 
-<example title="Calculating the height of a blurb"><![CDATA[<?
+<example title="Calculating the height of a blurb" fontsize="1.85em"><![CDATA[<?
  pdf_save($pdf);
  pdf_translate($pdf,0,$page_height);
  pdf_scale($pdf,1,-1);

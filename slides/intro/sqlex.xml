@@ -8,14 +8,14 @@ to the database, select a database, send a query and loop through the results.
   mysql_select_db("products");
   $result = mysql_query("SELECT * FROM details");
   if ($result) {
-      echo "<TABLE>\n";
-      echo "<TR><TH>Name</TH><TH>Description</TH></TR>\n";
-      while ($a = mysql_fetch_array($result)) {
-        echo "<TR><TD>$a[name]</TD>", "<TD>$a[descr]</TD></TR>";
-      }
-      echo "</TABLE>";
+    echo "<TABLE>\n";
+    echo "<TR><TH>Name</TH><TH>Description</TH></TR>\n";
+    while ($a = mysql_fetch_array($result)) {
+      echo "<TR><TD>$a[name]</TD>", "<TD>$a[descr]</TD></TR>";
+    }
+    echo "</TABLE>";
   } else {
-      echo "<P>Nothing to see here.";
+    echo "<P>Nothing to see here.";
   }
 ?>]]></example>
 </slide>

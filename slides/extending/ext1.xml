@@ -7,7 +7,7 @@
 <bullet>Look at the existing extensions for code examples</bullet>
 <bullet>Follow this example</bullet>
 </list>
-<example title="Grabbing a copy of the CVS tree - Anonymous CVS instructions" type="shell"><![CDATA[% cvs -d:pserver:cvsread@cvs.php.net:/repository login
+<example title="Grabbing a copy of the CVS tree - Anonymous CVS instructions" fontsize="1.75em" type="shell"><![CDATA[% cvs -d:pserver:cvsread@cvs.php.net:/repository login
 Password: phpfi
 % cvs -d:pserver:cvsread@cvs.php.net:/repository co php4
 % cd php4

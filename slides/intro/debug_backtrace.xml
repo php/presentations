@@ -3,7 +3,7 @@
 <blurb>
 %debug_backtrace()% is a new function in PHP 4.3
 </blurb>
-<example fontsize="1.5em" result="0" title="Custom error handler" align="left" filename="file1.php"/>
+<example fontsize="1.3em" result="0" title="Custom error handler" align="left" filename="file1.php"/>
 <example fontsize="1.5em" result="0" title="Custom error handler" align="left" filename="file2.php"/>
-<example filename="file1.php" hide="1" result="1" rfontsize="1em"/>
+<example filename="file1.php" hide="1" result="1" rfontsize="1.5em"/>
 </slide>

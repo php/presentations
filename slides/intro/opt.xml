@@ -7,12 +7,8 @@ PHP has a rich set of string manipulation functions - use them!
 <example><![CDATA[BAD: <?  preg_match('/(\..*?)$/',$str,$reg);?>]]></example>
 <example><![CDATA[GOOD:<?  substr($str,strrpos($str,'.'));    ?>]]></example>
 
-<blurb title="Use References if you are passing large data structs around to save memory">
-There is a tradeoff here.  Manipulating references is actually a bit slower
-than making copies of your data, but with references you will be using less
-memory.  So you need to determine if you are cpu or memory bound to decide
-whether to go through and look for places to pass references to data instead of
-copies.
+<blurb title="References?">
+It is usually not faster to use references because of PHP's copy-on-write nature.
 </blurb>
 <blurb title="Use Persistent Database connections">
 Some database are slower than others at establising new connections.  The

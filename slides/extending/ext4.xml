@@ -1,6 +1,6 @@
 <slide title="Define the functions">
 <blurb>From your plan, generate a function definition file</blurb>
-<example type="shell" title="xmms.def"><![CDATA[int    xmms_start(void)        Start up XMMS if it is not already running
+<example type="shell" title="xmms.def" fontsize="1.5em"><![CDATA[int    xmms_start(void)        Start up XMMS if it is not already running
 bool   xmms_is_running(void)   Check if XMMS is running
 int    xmms_playlist_length(void) Get the number of songs in the playlist
 int    xmms_playlist_pos(void) Get current playlist position

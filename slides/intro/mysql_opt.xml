@@ -7,9 +7,10 @@
 <bullet marginleft="1em">Use %mysqldumpslow% to look at these</bullet>
 </list>
 <example title="A non-indexed query" rfontsize="1.3em"><![CDATA[<?
-  mysql_connect('localhost');
-  mysql_select_db('foo');
-  $result = mysql_query("select * from users where ts>0");
+mysql_connect('localhost');
+mysql_select_db('foo');
+$result=mysql_query(
+        "select * from users where ts>0");
 ?>]]></example>
 
 <example result="1" title="And an indexed query" rfontsize="1.3em"><![CDATA[<?

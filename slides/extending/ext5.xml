@@ -1,9 +1,9 @@
-<slide title="Creating a skeleton extension">
+<slide title="A skeleton extension">
 <blurb>
 Run the *ext_skel* script which creates
 all the required skeleton files.
 </blurb>
-<example type="shell"><![CDATA[% cd php4/ext
+<example type="shell" fontsize="1.75em"><![CDATA[% cd php4/ext
 % ./ext_skel --extname=xmms --proto=xmms.def
 Creating directory xmms
 Creating basic files: config.m4 Makefile.in .cvsignore xmms.c 

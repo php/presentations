@@ -1,9 +1,9 @@
 <slide title="Templates">
-<block>
+<blurb>
 Templates (known as &quot;form XObjects&quot; in the PDF world) 
 are useful when you need to repeat something on multiple pages.  By putting the repeated
 PDF sequences in a template, the generated PDF file is smaller.
-</block>
+</blurb>
 
 <example
 	title="Template Example"

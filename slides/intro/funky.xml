@@ -15,9 +15,9 @@ able to generate the page.  Then in your generate.php script do something like:
 	$s = $REDIRECT_URI;
 	$d = $DOCUMENT_ROOT;
 	// determine requested uri
-	$uri = substr($s, strpos($s,$d) + strlen($d) + 1);
+	$uri = substr($s, strpos($s,$d) + strlen($d)+1);
 	ob_start();  // Start buffering output
-    // ... code to fetch and output content from DB ...
+    // ... code to fetch and output content from DB
 	$data = ob_get_contents();
     $fp = fopen("$DOCUMENT_ROOT/$uri",'w');
 	fputs($fp,$data);

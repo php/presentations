@@ -1,4 +1,5 @@
 <slide title="Convenience Macros">
+<blurb> </blurb>
 <example fontsize="1.5em" type="c"><![CDATA[#define Z_LVAL(zval)        (zval).value.lval
 #define Z_BVAL(zval)        ((zend_bool)(zval).value.lval)
 #define Z_DVAL(zval)        (zval).value.dval
