@@ -1,0 +1,10 @@
+<slide title='PEAR::XML_Transformer'>
+<example title='Using XML_Transformer'
+type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa'
+filename='scripts/using_pear_xmltransformer.php'/>
+<example title='Output'
+type='xml' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#aaffff' 
+filename='data/using_pear_xmltransformer.out'/>
+</slide>

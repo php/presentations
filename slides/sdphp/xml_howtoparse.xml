@@ -1,0 +1,23 @@
+<slide title='How to parse XML'>
+<blurb title='Strategies'>
+Basically we can use a *functional* or an *object oriented*
+programming approach. We will start using functions to
+handle the parsing.
+</blurb>
+<list title='When using functions we need to' 
+type='arrow'>
+<bullet>Create callback functions
+to handle start and end tags, content, attributes,
+etc.</bullet>
+<bullet>Keep track of where in
+the parsing process we are by using a stack structure
+and/or a group of global variables.</bullet>
+<bullet>Plan carefully the structure to generate 
+from the XML document.
+</bullet>
+</list>
+<blurb align='right'>
+Let's use a simple XML file and code to
+handle it ...
+</blurb>
+</slide>

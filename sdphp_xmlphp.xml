@@ -1,0 +1,46 @@
+<presentation
+    jskeyboard="1"
+    logo2="presentations/slides/sdphp/sdphp_logo.png"
+    navsize="1.4em">
+<title>Processing XML with PHP - An Introduction</title>
+<topic>PHP</topic>
+<event>SDPHP monthly meeting</event>
+<location>San Diego</location>
+<date>August 26, 2002</date>
+<speaker>Jesus M. Castagnetto, Ph.D.</speaker>
+<company>The Scripps Research Institute</company>
+<email>jesusmc@scripps.edu</email>
+<url>http://www.sdphp.net/talks</url>
+<slide>slides/sdphp/xmlintro_title.xml</slide>
+<slide>slides/sdphp/xml_overview.xml</slide>
+<slide>slides/sdphp/xml_whatis.xml</slide>
+<slide>slides/sdphp/xml_wddx.xml</slide>
+<slide>slides/sdphp/xml_wddx_ex.xml</slide>
+<slide>slides/sdphp/xml_parsers.xml</slide>
+<slide>slides/sdphp/xml_eventparser.xml</slide>
+<slide>slides/sdphp/xml_domparser.xml</slide>
+<slide>slides/sdphp/xml_howtoparse.xml</slide>
+<slide>slides/sdphp/xml_sample_doc.xml</slide>
+<slide>slides/sdphp/xml_parser_ex1.xml</slide>
+<slide>slides/sdphp/xml_parser_ex2.xml</slide>
+<slide>slides/sdphp/xml_sample_doc2.xml</slide>
+<slide>slides/sdphp/xml_parser_dom_design.xml</slide>
+<slide>slides/sdphp/xml_parser_ex3.xml</slide>
+<slide>slides/sdphp/xml_sample_dtd.xml</slide>
+<slide>slides/sdphp/xml_sample_doc3.xml</slide>
+<slide>slides/sdphp/xml_parser_ex4.xml</slide>
+<slide>slides/sdphp/xml_easyparsing.xml</slide>
+<slide>slides/sdphp/xml_parseintostruct.xml</slide>
+<slide>slides/sdphp/xml_pear_xmltree.xml</slide>
+<slide>slides/sdphp/xml_pear_xmltree2.xml</slide>
+<slide>slides/sdphp/xml_pear_xmltree3.xml</slide>
+<slide>slides/sdphp/xml_pear_tree.xml</slide>
+<slide>slides/sdphp/xml_pear_transformer.xml</slide>
+<slide>slides/sdphp/xml_rss.xml</slide>
+<slide>slides/sdphp/xml_rss_create.xml</slide>
+<slide>slides/sdphp/xml_rss_parse.xml</slide>
+<slide>slides/sdphp/xml_further_reading.xml</slide>
+<!--
+<slide>slides/sdphp/.xml</slide>
+-->
+</presentation>

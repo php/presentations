@@ -1,0 +1,15 @@
+<slide title='Easy XML processing'>
+<list title='Making parsing and transforming simpler' type='arrow' effect='hide'>
+<bullet>Use of the function %xml_parse_into_struct()%</bullet>
+<bullet>%PEAR::XML_Parser%, a class that allows event and tag driven parsing. 
+By Stig Sæther Bakken</bullet>
+<bullet>%PEAR::XML_Tree%, a class that parses into a general tree of nodes
+(DOMXML style tree). By Bernd Römer and Tomas Cox.</bullet>
+<bullet>%PEAR::Tree%, a general class to represent trees that can handle XML
+data, as well as data from other sources (DBs, etc.). By  Wolfram
+Kriesing.</bullet>
+<bullet>%PEAR::XML_Transformer%, allows XML transformations without XSLT by
+registering processing callback functions for each tag. By Sebastian Bergmann 
+and Kristian Köhntopp.</bullet>
+</list>
+</slide>

@@ -1,0 +1,11 @@
+<slide title='Sample DTD'>
+<blurb>
+*DTD*: Document Type Definition. Describes the elements and attributes
+that an XML document can contain. The (old) way of defining XML applications,
+nowadays XSD (XML Schema Definition) is preferred.
+</blurb>
+<example title='sdphp_talks.dtd'
+type='xml' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#aaffff'
+filename='data/sdphp_talks.dtd'/>
+</slide>

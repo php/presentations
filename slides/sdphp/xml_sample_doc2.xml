@@ -1,0 +1,16 @@
+<slide title='Another XML document'>
+<example title='sdphp_talk2.xml'
+type='xml' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa'
+filename='data/sdphp_talk2.xml'/>
+<blurb>
+The document we saw before with some attributes
+added to it.
+</blurb>
+<blurb>
+Now we are going to see a more general parser, 
+modelled after a DOM-style structure, i.e. each
+element is an XMLNode object, which contains
+XMLAttribute objects and a content.
+</blurb>
+</slide>

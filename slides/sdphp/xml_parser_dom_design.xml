@@ -1,0 +1,8 @@
+<slide title='Design of the parser'>
+<image align='center' filename='images/xmlparsing_uml.png'/>
+<blurb>
+The %XML_Parser% contains a root %XML_Node%. Each %XML_Node% has a
+reference to its parent node (if any), as well as an array of %XML_Attribute%
+objects, an array of its children nodes, and its content.
+</blurb>
+</slide>

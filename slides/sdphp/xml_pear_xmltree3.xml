@@ -1,0 +1,9 @@
+<slide title='PEAR::XML_Tree (3)'>
+<blurb title='Creating XML programatically'>
+Finally, we write some code to generate a new XML document.
+</blurb>
+<example type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa' result='1'
+outputbackground='#aaffff' rfontsize='1.2em'
+filename='scripts/using_pear_xmltree_create.php'/>
+</slide>

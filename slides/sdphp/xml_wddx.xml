@@ -1,0 +1,25 @@
+<slide title='WDDX'>
+<blurb title='What it is and what it does'>
+*WDDX*: an XML application that allows the exchange of complex data between
+dissimilar programming languages. It has encoding rules for serialization of
+simple (string, numeric, boolean, etc.) and compound (arrays, structures, etc.) 
+data types. It can be used over different transports:
+HTTP, SMTP, POP, FTP, etc.
+</blurb>
+<blurb title='Support in PHP'>
+WDDX has been supported natively since PHP 3 was around. No need for
+external libs, all you need is to set up your PHP installation using 
+"%configure --enable-wddx ...%"
+</blurb>
+<blurb title='Available functions'>
+When using WDDX one needs to perform data serialization
+(*wddx_serialize_value*, *wddx_serialize_vars*, *wddx_add_vars*), create
+a data packet (*wddx_packet_start*, *wddx_packet_end*), and deserialize
+the data (*wddx_deserialize*). It is a simple and clean process, so we
+can use XML and PHP without having to create our own parsing code. %;-)%
+</blurb>
+<link leader='An article on using WDDX for data exchange: '
+href='http://www.phpbuilder.com/columns/jesus20000402.php3' target='_blank'/>
+<link leader='For more information: ' href='http://www.openwddx.org/'
+target='_blank'/>
+</slide>

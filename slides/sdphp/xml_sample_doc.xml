@@ -1,0 +1,16 @@
+<slide title='An XML document'>
+<example title='sdphp_talk.xml'
+type='xml' fontsize='1.5em' marginleft='0.5em'
+width='90%' examplebackground='#ffffaa'
+filename='data/sdphp_talk.xml'/>
+<blurb>
+This is a document that we could use to describe
+this talk, it has a root element (%talk%), that
+contains other simple elements (%title%, %date%, 
+%speaker%, and %url%). 
+</blurb>
+<blurb>
+Let us put the data into structures
+that we can then manipulate as needed.
+</blurb>
+</slide>

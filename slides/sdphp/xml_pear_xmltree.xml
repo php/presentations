@@ -1,0 +1,26 @@
+<slide title='PEAR::XML_Tree'>
+<blurb>
+With PEAR's XML_Tree you can parse as well as create new XML documents.
+In the example in this slide we will use the file 
+"%sdphp_talk2.xml%". 
+</blurb>
+<blurb title='Installing PEAR::XML_Tree'>
+First we need to install it using the pear installer:
+</blurb>
+<example type='shell'>
+<![CDATA[
+$ pear install XML_Tree
+...
+install ok
+
+$ pear list
+Installed packages:
+===================
++-------------------+----------+--------+
+| Package           | Version  | State  |
+...
+| XML_Tree          | 1.1      | stable |
+...
+]]>
+</example>
+</slide>

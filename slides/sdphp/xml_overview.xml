@@ -1,0 +1,12 @@
+<slide title='Overview'>
+<list>
+<bullet>A quick introduction to XML</bullet>
+<bullet>XML for serialization: WDDX</bullet>
+<bullet>Parsers and how they work</bullet>
+<bullet>How to mangle a simple XML document</bullet>
+<bullet>The functional programming way and the OOP way</bullet>
+<bullet>Faking a DOM XML-like structure with an event-driven parser</bullet>
+<bullet>Parsing made easy: xml_parse_into_struct() and some PEAR classes</bullet>
+<bullet>RSS: syndicating news. Creating and processing RSS documents</bullet>
+</list>
+</slide>

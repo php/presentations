@@ -1,0 +1,34 @@
+<slide title='Event-driven parser'>
+<blurb>
+The %expat% parser, that the XML functions in PHP use,
+works by generating calls to the appropriate
+element handling functions (or methods in a class) as the sequential parsing
+of the input document occurs.
+</blurb>
+<blurb effect='hide'>
+<![CDATA[&lt;]]>|ff0000|title| |ff0000|level='1'|<![CDATA[&gt;]]>
+SDPHP
+<![CDATA[&lt;/]]>title<![CDATA[&gt;]]>
+</blurb>
+<list effect='hide' type='darrow'>
+<bullet>Call start element handler function, and pass tag name (%title%) 
+and attributes (level='1')</bullet>
+</list>
+<blurb effect='hide'>
+<![CDATA[&lt;]]>|0000ff|title| |0000ff|level='1'|<![CDATA[&gt;]]>
+|ff0000|SDPHP|
+<![CDATA[&lt;/]]>title<![CDATA[&gt;]]>
+</blurb>
+<list effect='hide' type='darrow'>
+<bullet>Call CDATA element handler function, pass the tag contents including
+end-of-line characters.</bullet>
+</list>
+<blurb effect='hide'>
+<![CDATA[&lt;]]>|0000ff|title| |0000ff|level='1'|<![CDATA[&gt;]]>
+|0000ff|SDPHP|
+<![CDATA[&lt;/]]>|ff0000|title|<![CDATA[&gt;]]>
+</blurb>
+<list effect='hide' type='darrow'>
+<bullet>Call end element handler function passing the tag name (%title%)</bullet>
+</list>
+</slide>

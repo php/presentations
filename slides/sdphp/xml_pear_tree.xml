@@ -1,0 +1,37 @@
+<slide title='PEAR::Tree'>
+<blurb>
+With PEAR's Tree you can process tree structures from different sources,
+be it a database result set or an XML document. An interesting characteristic
+of this package is that it allows you random access to tree nodes by using
+an element path, in a similar way as you would address a file in a filesystem.
+In the example in this slide we will use the file 
+"%sdphp_talk.xml%".
+</blurb>
+<blurb title='Installing PEAR::Tree'>
+First we need to install it using the pear installer:
+</blurb>
+<example type='shell'>
+<![CDATA[
+$ pear install Tree
+...
+install ok
+
+$ pear list
+Installed packages:
+===================
++-------------------+----------+--------+
+| Package           | Version  | State  |
+...
+| Tree              | 0.1.1    | beta   |
+...
+]]>
+</example>
+<blurb>
+Then we write a little bit of code to use our newly installed class.
+</blurb>
+<example title='Parsing using PEAR::Tree'
+type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa' result='1'
+outputbackground='#aaffff' 
+filename='scripts/using_pear_tree.php'/>
+</slide>

@@ -1,0 +1,15 @@
+<slide title='xml_parse_into_struct()'>
+<blurb>
+The function %xml_parse_into_struct()% parses XML documents
+without the need for creating handler functions or
+classes. It generates 2 parallel arrays: an index and a values 
+array. The index array contains the offsets and tree depth levels
+for the correspoding data in the values array. Combining
+these two we can process XML documents in a quick'n'dirty way.
+</blurb>
+<example title='using_xmlparseintostruct.php'
+type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa' result='1'
+outputbackground='#aaffff' rfontsize='1.2em'
+filename='scripts/using_xmlparseintostruct.php'/>
+</slide>

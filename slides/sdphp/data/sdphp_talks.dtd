@@ -1,0 +1,18 @@
+<!-- 
+     sdphp_talks.dtd
+     version 0.1, JMC
+-->
+<!-- Element definitions -->
+<!ELEMENT % sdphp_talks   'sdphp_talks   (title, talk*)'>
+
+<!ELEMENT % talk    'talk    (title, date, speaker, url+)'>
+<!ATTLIST talk id CDATA #REQUIRED>
+
+<!ELEMENT % title   'title   CDATA #REQUIRED'>
+
+<!ELEMENT % date    'date    CDATA #REQUIRED'>
+
+<!ELEMENT % speaker 'speaker CDATA #REQUIRED'>
+
+<!ELEMENT % url     'url     CDATA #REQUIRED'>
+<!ATTLIST url type (download|www|ftp) 'www'>

@@ -1,0 +1,17 @@
+<slide title='XML Parsers'>
+<list title='Available parsers' type='darrow' effect='hide'>
+<bullet>*Event-driven* (one tag at time) parsers, e.g. expat.
+These are good for big XML document and you can filter
+the input, but needs more code and parser state handling.
+</bullet>
+<bullet>Parse everything to a DOM XML tree, e.g. Gnome's
+libxml. All the parsing is done for you, but it can be slower
+for big files. It also uses more memory and the tag filtering
+needs to be done post-facto.</bullet>
+<bullet>Parse-on-demand parsers (aka "pull parsers"), that internally
+behave like the event-driven ones, but return a branch of the DOM tree 
+_for the node (or nodes) requested_.</bullet>
+</list>
+<link leader='XML functions: ' align='center' target='_blank'
+href='http://www.php.net/manual/en/ref.xml.php'/>
+</slide>

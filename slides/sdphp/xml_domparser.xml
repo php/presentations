@@ -1,0 +1,22 @@
+<slide title='DOMXML parser'>
+<blurb>
+The DOMXML parser in %libxml%, that the DOM XML functions in PHP use,
+generates a tree of node elements from the input document all at once.
+Each node is an object with properties (like the ones shown below), and
+methods to retrieve or modify those properties.
+</blurb>
+<blurb>
+<![CDATA[&lt;]]>|ff0000|title| |ff0000|level='1'|<![CDATA[&gt;]]>
+|ff0000|SDPHP|
+<![CDATA[&lt;/]]>|ff0000|title|<![CDATA[&gt;]]>
+</blurb>
+<list title='Root node' type='darrow'>
+<bullet>name (%title%)</bullet>
+<bullet>attributes (%level=1%)</bullet>
+<bullet>*CDATA node*</bullet>
+</list>
+<list type='arrow' marginleft='2em'>
+<bullet>parent (_Root node_)</bullet>
+<bullet>content (%SDPHP%)</bullet>
+</list>
+</slide>

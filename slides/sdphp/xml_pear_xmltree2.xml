@@ -1,0 +1,9 @@
+<slide title='PEAR::XML_Tree (2)'>
+<blurb title='Parsing using PEAR::XML_Tree'>
+Then we write a little bit of code to use our newly installed class.
+</blurb>
+<example type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa' result='1'
+outputbackground='#aaffff' rfontsize='1.2em'
+filename='scripts/using_pear_xmltree.php'/>
+</slide>

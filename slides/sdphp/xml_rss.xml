@@ -1,0 +1,24 @@
+<slide title='RSS'>
+<blurb title='What is it?'>
+The *R*ich *S*ite *S*ummary (%RSS%) is a document format 
+geared towards providing information
+digests from distributed sources. It is
+widely used for news syndication (e.g. Slashdot, Freshmeat,
+PHPBuilder).
+</blurb>
+<blurb title='Processing RSS'>
+There are several classes for creating and parsing RSS files. We will
+use UsefulInc's *RSSWriter* class, and then we'll parse that news
+feed using PEAR::XML_RSS, generating a nice looking HTML output.
+</blurb>
+<link leader='RSS: '
+	target='_blank'
+	href='http://groups.yahoo.com/group/rss-dev/files/namespace.html'/>
+<link leader='RSSWriter: '
+	target='_blank'
+	href='http://www.usefulinc.com/rss/rsswriter'/>
+<link leader='XML_RSS: '
+	target='_blank'
+	href='http://pear.php.net/package-info.php?pacid=22'/>
+
+</slide>

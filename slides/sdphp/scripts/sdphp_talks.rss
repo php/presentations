@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://purl.org/rss/1.0/" xmlns:mn="http://usefulinc.com/rss/manifest/" xmlns:dc="http://purl.org/dc/elements/1.1/" >
+
+  <channel rdf:about="http://">
+    <title>SDPHP users group</title>
+    <link>http://www.sdphp.net</link>
+    <description>Talks given at the monthly meetings</description>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://www.sdphp.net/talks/jmc_templates" />
+        <rdf:li rdf:resource="http://www.sdphp.net/talks/sdphp_peardb" />
+        <rdf:li rdf:resource="http://www.sdphp.net/talks/sdphp_class" />
+        <rdf:li rdf:resource="http://www.sdphp.net/talks/ag_image" />
+        <rdf:li rdf:resource="http://www.sdphp.net/talks/intro_xml.pdf" />
+        <rdf:li rdf:resource="http://www.sdphp.net/talks/domxml_php" />
+      </rdf:Seq>
+    </items>
+  </channel>
+
+  <item rdf:about="http://www.sdphp.net/talks/jmc_templates">
+    <link>http://www.sdphp.net/talks/jmc_templates</link>
+    <title>Templates - Separating from from function</title>
+    <description>Speaker: Jesus M. Castagnetto, Date: 2001-03-26</description>
+  </item>
+
+  <item rdf:about="http://www.sdphp.net/talks/sdphp_peardb">
+    <link>http://www.sdphp.net/talks/sdphp_peardb</link>
+    <title>An introduction to PEAR and PEAR DB</title>
+    <description>Speaker: Jesus M. Castagnetto, Date: 2002-02-25</description>
+  </item>
+
+  <item rdf:about="http://www.sdphp.net/talks/sdphp_class">
+    <link>http://www.sdphp.net/talks/sdphp_class</link>
+    <title>Doing it with class - Using OOP in PHP</title>
+    <description>Speaker: Jesus M. Castagnetto, Date: 2002-03-25</description>
+  </item>
+
+  <item rdf:about="http://www.sdphp.net/talks/ag_image">
+    <link>http://www.sdphp.net/talks/ag_image</link>
+    <title>Dynamic Images in PHP - How and When to Use Them</title>
+    <description>Speaker: Alison Gianotto, Date: 2002-04-29</description>
+  </item>
+
+  <item rdf:about="http://www.sdphp.net/talks/intro_xml.pdf">
+    <link>http://www.sdphp.net/talks/intro_xml.pdf</link>
+    <title>Processing XML with PHP - An Introduction</title>
+    <description>Speaker: Jesus M. Castagnetto, Date: 2002-08-26</description>
+  </item>
+
+  <item rdf:about="http://www.sdphp.net/talks/domxml_php">
+    <link>http://www.sdphp.net/talks/domxml_php</link>
+    <title>DOM-XML and PHP</title>
+    <description>Speaker: Mark J. Hershenson, Date: 2002-09-30</description>
+  </item>
+
+  <rdf:Description rdf:ID="manifest">
+    <mn:channels>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://" />
+      </rdf:Seq>
+    </mn:channels>
+  </rdf:Description>
+
+</rdf:RDF>

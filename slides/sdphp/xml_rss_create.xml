@@ -1,0 +1,16 @@
+<slide title='Generating RSS'>
+<blurb>
+We will reuse the functions from a previous example to
+convert our %sdphp_talks.xml% file into an RSS document,
+using the RSSWriter class defined in %rss10.inc%.
+</blurb>
+<example title='rss_create.php'
+type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa' result='0'
+outputbackground='#aaffff' rfontsize='1.2em'
+filename='scripts/rss_create.php'/>
+<example title='Output'
+type='xml' fontsize='1em' marginleft='0.5em'
+width='95%' examplebackground='#aaffff' result='0'
+filename='data/sdphp_talks.rss'/>
+</slide>

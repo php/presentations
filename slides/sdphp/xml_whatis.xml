@@ -1,0 +1,23 @@
+<slide title='Basic concepts'>
+<list>
+<bullet>The e*X*tensible *M*arkup *L*anguage is a format for document and data
+representation. 
+</bullet>
+<bullet>It is a meta-language that allows the definition of markup
+languages.</bullet>
+<bullet>XML is not a markup language itself.</bullet>
+<bullet>It is a (simplified) subset of *SGML* (Standard Generalized
+Markup Language).</bullet>
+<bullet>Initially designed for use on the web, but now its use
+extends to many more areas.</bullet>
+<bullet>It is being used also for protocol descriptions, remote procedure calls, etc.
+</bullet>
+<bullet>New markup languages are called "XML Applications", which can be
+confusing sometimes</bullet>
+<bullet>A short list of XML applications: WDDX, XML-RPC,
+SOAP, XML Schema, CML, RSS, XHTML, MathML, SVG, DocBook XML.
+</bullet>
+</list>
+
+<link target='_blank' align='center' leader='For more details see: ' href='http://www.w3.org/xml'/>
+</slide>

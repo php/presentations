@@ -1,0 +1,15 @@
+<slide title='Parsing RSS'>
+<blurb>
+We will now parse the RSS document we created before, which we
+saved to the file %sdphp_talks.rss%, using PEAR's XML_RSS class.
+</blurb>
+<example title='rss_parse.php'
+type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa' result='0'
+outputbackground='#aaffff' rfontsize='1.2em'
+filename='scripts/rss_parse.php'/>
+<example title='Output' hide='1'
+type='html' rfontsize='1.5em' marginleft='0.5em'
+width='95%' outputbackground='#aaffff' result='1'
+filename='data/rss_parse.out'/>
+</slide>

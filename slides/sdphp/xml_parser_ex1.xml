@@ -1,0 +1,13 @@
+<slide title='... into an array'>
+<blurb align='right'>
+(Object-O-Meter:
+|ff0000|fp| |00ff00|^||dddddd|----| |0000ff|oop|)
+</blurb>
+<example title='xml_parser_ex1.php'
+type='php' fontsize='1.5em' marginleft='0.5em'
+width='95%' examplebackground='#ffffaa'
+filename='scripts/xml_parser_ex1.php'/>
+<example title='Output' width='95%' marginleft='0.5em'
+fontsize='1.5em'
+filename='data/xml_parser_ex1.out'/>
+</slide>
