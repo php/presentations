@@ -1,0 +1,14 @@
+<slide title="GD 1/2">
+<example title="CreateFrom and Bounding Box Math" filename="slides/intro/txt2.php" />
+
+<example><![CDATA[<IMG src="txt2.php?text=<?echo urlencode($text)?>&si=<?echo $si?>">]]></example>
+
+<example hide="1" result="1" rwidth="650"><![CDATA[<?php if(!empty($text)) {
+  echo "<img src=\"slides/intro/txt2.php?si=$si&text=".urlencode($text)."\">";
+ } 
+ echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";
+ echo "Text: <input type=text name=text> Size: <input type=text name=si> <input type=submit value=\" Go! \">\n";
+ echo "</form>\n";
+ ?>]]></example>
+
+</slide>
