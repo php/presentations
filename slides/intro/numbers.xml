@@ -1,28 +1,28 @@
 <slide title="PHP is Big!">
 <list>
-<title>January 2004 Netcraft Report</title>
-<bullet> 46,067,743 Domains queried</bullet>
-<bullet> 14,699,098 Domains.  1,330,821 IP addresses</bullet>
-<bullet>PHP installed on 32% of all domains</bullet>
+<title>March 2004 Netcraft Report</title>
+<bullet> 47,173,415 Domains queried</bullet>
+<bullet> 15,054,623 Domains.  1,335,263 IP addresses</bullet>
+<bullet>PHP installed on 33% of all domains</bullet>
 </list>
 <image filename="phpstats.png" align="center"/>
 <link href="http://www.netcraft.com" leader="Source: " align="right" marginright="6em">Netcraft</link>
 
 <list>
-<title>January 2004 Apache Module Report</title>
-<bullet>%9,286,904 Apache Servers surveyed%</bullet>
-<bullet>% 5,010,035 (53.95\%) PHP%</bullet>
-<bullet>% 2,608,258 (28.09\%) OpenSSL%</bullet>
-<bullet>% 2,527,385 (27.21\%) mod_ssl%</bullet>
-<bullet>% 1,845,621 (19.87\%) Frontpage%</bullet>
-<bullet>% 1,597,830 (17.21\%) mod_perl%</bullet>
-<bullet>%   411,443  (4.43\%) DAV%</bullet>
-<bullet>%   380,012  (4.09\%) mod_throttle%</bullet>
-<bullet>%   360,440  (3.88\%) mod_log_bytes%</bullet>
-<bullet>%   355,235  (3.83\%) mod_bwlimited%</bullet>
-<bullet>%   327,263  (3.52\%) mod_jk%</bullet>
-<bullet>%   233,404  (2.51\%) mod_fastcgi%</bullet>
-<bullet>%   222,410  (2.39\%) AuthMySQL%</bullet>
+<title>March 2004 Apache Module Report</title>
+<bullet>%9,868,332 Apache Servers surveyed%</bullet>
+<bullet>% 5,248,457 (53.18\%) PHP%</bullet>
+<bullet>% 2,741,015 (27.78\%) OpenSSL%</bullet>
+<bullet>% 2,660,131 (26.96\%) mod_ssl%</bullet>
+<bullet>% 1,951,713 (19.78\%) Frontpage%</bullet>
+<bullet>% 1,559,519 (15.80\%) mod_perl%</bullet>
+<bullet>%   425,370  (4.31\%) DAV%</bullet>
+<bullet>%   418,542  (4.24\%) mod_log_bytes%</bullet>
+<bullet>%   407,857  (4.13\%) mod_bwlimited%</bullet>
+<bullet>%   379,098  (3.84\%) mod_throttle%</bullet>
+<bullet>%   345,390  (3.50\%) mod_jk%</bullet>
+<bullet>%   250,717  (2.54\%) mod_fastcgi%</bullet>
+<bullet>%   224,012  (2.27\%) AuthMySQL%</bullet>
 </list>
 <link href="http://www.securityspace.com/s_survey/data/index.html" leader="Source: ">SecuritySpace.com</link>
 
