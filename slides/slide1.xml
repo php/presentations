@@ -1,41 +1,28 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
 
-  <title>This is an example slide</title>
+  <title>The ??? Presentation System</title>
 
-  <blurb title="This is a normal title">
-And here is the paragraph of text that goes along with this title.
-It will simply be formatted according to the default formatting rules defined by the
-parser.
+  <blurb title="???">
+Yes, this presentation system has no name yet.  Its predecessor was called,
+"PHP Presents", but using "PHP" in the name of a project sets a bit of a bad
+precedent and we really should come up with something better.
+  </blurb> 
+
+  <blurb title="Why use a browser?">
+Mostly because the system was built to present PHP.  PHP is a scripting language
+for creating web applications.  The most effective way to show web applications is
+with a web browser.  But beyond that, there are many compelling reasons to use
+something like this system over traditional Powerpoint-like systems:
   </blurb>
 
-  <list anim="left">
-    <title>And here is a list of items</title>
-    <bullet anim="right">Item 1</bullet>
-    <bullet>Item 2</bullet>
-    <bullet fontsize="1.5em">Item 3</bullet>
-    <bullet>Item 4</bullet>
+  <list>
+<bullet> Simple XML slide file format allowing for easy editing and revision control</bullet>
+<bullet> Easy publication of presentations on the web</bullet>
+<bullet> The slide-per file approach with a top-level presentation overview file gives you the 
+ability to develop an arsenal of slides which you can quickly create a new presentation from</bullet>
+<bullet> Simple HTML display mode for good search engine indexing</bullet>
+<bullet> Clean per-slide urls to make it easy to refer someone to a particular slide in a presentation</bullet>
   </list>
 
-  <image align="center">
-    <title>And an image</title>
-    <filename>slides/intro/serverside.png</filename>
-  </image>
-
-  <example result="yes" title="Embedded PHP Code Example"><![CDATA[<?php
-  echo "Hello World<br>Line 2<br>\n";
-?>]]></example>
-
-  <example result="yes">
-    <title>PHP code from a File Example</title>
-	<filename>slides/hello.php</filename>
-  </example>
-
-  <blurb title="Second Blurb">
-This is a second blurb right at the end of the file.
-  </blurb>
-
-  <example fontsize="1.25em" title="The XML for this Slide looks like this:">
- 	<filename>slides/slide1.xml</filename>
-  </example>
 </slide>
