@@ -1,4 +1,11 @@
 <slide title="gdchart">
+<blurb>
+gdchart is a fast graphing extension written entirely in C.  It can
+handle most common types of graphs with the only major missing feature
+being that it currently doesn't handle legends.  Either create your
+own legend beside your graph, or maybe even layer it into the background
+image of your gdchart graph if you have a static legend.
+</blurb>
 <example
     title="Line Chart"
     filename="gdchart_line.php"
@@ -30,7 +37,7 @@
 <example
     title="Combo High-Low-Close Chart"
     filename="gdchart_hlc.php"
-    fontsize="1.4em"
+    fontsize="1.2em"
     result="1"
     type="genimage"
 />
