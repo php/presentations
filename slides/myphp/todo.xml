@@ -1,0 +1,12 @@
+<slide title="Changes and Additions">
+  <list title="In the works for myphp:">
+    <bullet effect="slide">Update for PHP 5 and MySQL 4</bullet>
+    <bullet effect="slide">Separate Compilation and Evaluation</bullet>
+    <bullet effect="slide">Other performance improvements</bullet>
+    <bullet effect="slide">Restrict dangerous code</bullet>
+    <bullet effect="slide">Provide a MySQL connection handle inside %PHP()%</bullet>
+    <bullet effect="slide">Return arrays and objects</bullet>
+</list>
+
+</slide>
+ 

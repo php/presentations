@@ -1,0 +1,8 @@
+<slide title="php()">
+  <list title="%php()%">
+    <bullet>Process non-constant arguments</bullet>
+    <bullet>Evaluate code</bullet>
+    <bullet>Free memory used for non-constant arguments</bullet>
+    <bullet>Process result from code evaluation</bullet>
+  </list>
+</slide>

@@ -1,0 +1,15 @@
+<slide title="myphp">
+  <example><![CDATA[mysql> SELECT PHP("return strftime('%c');");
++-------------------------------+
+| PHP("return strftime('%c');") |
++-------------------------------+
+| Fri May  9 13:52:49 2003      |
++-------------------------------+]]></example>
+  <list>
+    <bullet>Using myphp</bullet>
+    <bullet>Installing myphp</bullet>
+    <bullet>How myphp works</bullet>
+    <bullet>myphp TODO</bullet>
+  </list>
+</slide>
+

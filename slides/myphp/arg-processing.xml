@@ -1,0 +1,27 @@
+<slide title="Argument Processing">
+  <example title="Argument Processing in %php_init()%" type="c" fontsize="1.5em"><![CDATA[for (unsigned int i = 0; i < args->arg_count; i++) {
+    if (args->args[i] == NULL) {
+        // non-constant arg
+        rv->argv[i] = NULL;
+        rv->nc_args[rv->nc_arg_count] = i;
+        rv->nc_arg_count++;
+    } else {
+        switch (args->arg_type[i]) {
+        case STRING_RESULT:
+            rv->argv[i] = new char[args->lengths[i] + 1];
+            strncpy(rv->argv[i], args->args[i],args->lengths[i]);
+            rv->argv[i][args->lengths[i]] = 0;
+            break;
+        case INT_RESULT:
+            rv->argv[i] = new char[32]; 
+            sprintf(rv->argv[i],"%lld",*(long long *) args->args[i]);
+            break;
+        case REAL_RESULT:
+            rv->argv[i] = new char[32]; 
+            sprintf(rv->argv[i],"%f",*(double *)args->args[i]);
+            break;
+        }
+    }
+}]]></example>
+    </slide>
+    

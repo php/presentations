@@ -1,0 +1,15 @@
+<slide title="php_init()">
+<list title="%php_init()%">
+    <bullet> Check number of arguments (between 1 and 255)</bullet>
+    <bullet> Allocate an %rv_str%</bullet>
+    <bullet> Process constant arguments</bullet>
+</list>
+  <example type="c">typedef struct {
+    char *str;                 /* argument conversion buffer */
+    int size;                  /* size of data in str */
+    char **argv;               /* array of arguments */
+    unsigned int *nc_args;     /* array of non-constant args */
+    unsigned int nc_arg_count; /* number of non-constant args */
+    unsigned int arg_count;    /* number of arguments */
+} rv_str;</example>
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Stored Arguments">
+<example title="You can store arguments in the database:"><![CDATA[mysql> CREATE TABLE dinner (dish varchar(255));
+mysql> INSERT INTO dinner VALUES ('Soup Dumpling');
+mysql> INSERT INTO dinner VALUES ('Salt-Baked Shrimp');
+mysql> INSERT INTO dinner VALUES ('Steamed Whole Fish');
+mysql> SELECT PHP(c,dish) FROM code, dinner;
++--------------------+
+| PHP(c,dish)        |
++--------------------+
+| 13                 |
+| SOUP DUMPLING      |
+| soup dumpling      |
+| 17                 |
+| SALT-BAKED SHRIMP  |
+| salt-baked shrimp  |
+| 18                 |
+| STEAMED WHOLE FISH |
+| steamed whole fish |
++--------------------+
+]]></example></slide>

@@ -1,0 +1,25 @@
+<slide title="Returning from php()">
+  <example title="Result constructed based on %zv->type%" type="c" fontsize="1.5em"><![CDATA[
+/* Set up the return value based on the type of the zval */
+switch(zv->type) {
+case IS_NULL:
+    is_null = "1";
+    result = NULL;
+    break;
+case IS_STRING:
+    if (rv->size < zv->value.str.len) {
+        rv->str = (char *) realloc(rv->str,zv->value.str.len);
+        if (NULL == rv->str) {
+            error = "1";
+            fprintf(stderr,"Can't allocate memory for string result");
+            result = NULL;
+            break;
+        }
+        rv->size = zv->value.str.len;
+    }
+    memcpy(rv->str,zv->value.str.val,zv->value.str.len);
+    *length = (ulong) zv->value.str.len;
+    result = rv->str;
+    break;
+]]></example>
+</slide>

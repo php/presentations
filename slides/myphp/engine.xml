@@ -1,0 +1,14 @@
+<slide title="Invoking PHP">
+  <example title="How myphp uses the %embed% SAPI:"><![CDATA[php_embed_init(args->arg_count, rv->argv PTSRMLS_CC);
+zend_first_try {
+    myphp_eval_string(rv->argv[0], zv, "MySQL/PHP" TSRMLS_CC);
+} zend_end_try();
+php_embed_shutdown(TSRMLS_C);]]></example>
+<list>
+<bullet>Initialize PHP with arguments (%php_embed_init()%)</bullet>
+<bullet>Compile and Evaluate the code (%myphp_eval_string()%)</bullet>
+<bullet>Shutdown PHP and clean up (%php_embed_shutdown()%)</bullet>
+</list>
+</slide>
+
+

@@ -1,0 +1,18 @@
+<slide title="myphp_eval_string()">
+  <example title="A modified %zend_eval_string()% without:" type="c">if (retval_ptr) {
+    pv.value.str.len = strlen(str)+sizeof("return  ;")-1;
+    pv.value.str.val = emalloc(pv.value.str.len+1);
+    strcpy(pv.value.str.val, "return ");
+    strcat(pv.value.str.val, str);
+    strcat(pv.value.str.val, " ;");
+} else {
+    pv.value.str.len = strlen(str);
+    pv.value.str.val = estrndup(str, pv.value.str.len);
+}
+pv.type = IS_STRING;
+  </example>
+  <list title="In %myphp_eval_string()%:">
+    <bullet>%retval_ptr% is always a %*zval%</bullet>
+    <bullet>%str% is copied to %pv% unmodified</bullet>
+  </list>
+</slide>

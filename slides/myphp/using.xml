@@ -1,0 +1,15 @@
+<slide title="Using myphp">
+<example title="Pass %PHP()% code to evaluate:"><![CDATA[mysql> SELECT PHP("return strftime('%c');");
++-------------------------------+
+| PHP("return strftime('%c');") |
++-------------------------------+
+| Fri May  9 13:52:49 2003      |
++-------------------------------+]]></example>
+
+<example title="Arguments are available in %$argv%:"><![CDATA[mysql> SELECT PHP('return $argv[1] * $argv[2];',4,5);
++----------------------------------------+
+| PHP('return $argv[1] * $argv[2];',4,5) |
++----------------------------------------+
+| 20                                     |
++----------------------------------------+]]></example>
+</slide>

@@ -1,0 +1,13 @@
+<slide title="Code Lookup Table">
+<example title="Store code with an ID for easy retrieval:"><![CDATA[mysql> CREATE TABLE php_functions (id char(32), code mediumblob);
+mysql> INSERT INTO php_functions VALUES ('preg_replace','return preg_replace($argv[1],$argv[2],$argv[3]);');
+]]></example>
+<example title="Then, execute previously stored code:"><![CDATA[mysql> SELECT PHP(code,'/[^a-zA-Z]/','*',dish) FROM php_functions,dinner WHERE php_functions.id = 'preg_replace';
++----------------------------------+
+| PHP(code,'/[^a-zA-Z]/','*',dish) |
++----------------------------------+
+| Soup*Dumpling                    |
+| Salt*Baked*Shrimp                |
+| Steamed*Whole*Fish               |
++----------------------------------+]]></example>
+</slide>

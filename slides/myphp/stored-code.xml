@@ -1,0 +1,14 @@
+<slide title="Stored Code">
+<example title="You can store code in the database:"><![CDATA[mysql> CREATE TABLE code(c MEDIUMBLOB);
+mysql> INSERT INTO code VALUES ('return strlen($argv[1]);');
+mysql> INSERT INTO code VALUES ('return strtoupper($argv[1]);');
+mysql> INSERT INTO code VALUES ('return strtolower($argv[1]);');
+mysql> SELECT PHP(c,'Shrimp Dumpling') FROM code;
++--------------------------+
+| PHP(c,'Shrimp Dumpling') |
++--------------------------+
+| 15                       |
+| SHRIMP DUMPLING          |
+| shrimp dumpling          |
++--------------------------+
+]]></example></slide>

@@ -1,0 +1,34 @@
+<slide title="Returning from php()">
+  <example title="Numeric results use %sprintf()%:" type="c" fontsize="1.5em"><![CDATA[case IS_DOUBLE:
+    if (rv->size < 32) {
+        rv->str = (char *) realloc(rv->str, 32);
+        if (NULL == rv->str) {
+            error = "1";
+            fprintf(stderr,"Can't allocate memory for double result");
+            result = NULL;
+            break;
+        }
+        rv->size = 32;
+    }
+    sprintf(rv->str,"%f",zv->value.dval);
+    *length = (ulong) strlen(rv->str);
+    result = rv->str;
+    break;
+case IS_LONG:
+case IS_BOOL:
+    if (rv->size < 32) {
+        rv->str = (char *) realloc(rv->str, 32);
+        if (NULL == rv->str) {
+            error = "1";
+            fprintf(stderr,"Can't allocate memory for double result");
+            result = NULL;
+            break;
+        }
+        rv->size = 32;
+    }
+    sprintf(rv->str,"%ld",zv->value.lval);
+    *length = (ulong) strlen(rv->str);
+    result = rv->str;
+    break;
+]]></example>
+</slide>

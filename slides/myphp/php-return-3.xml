@@ -1,0 +1,12 @@
+<slide title="Returning from php()">
+<example title="Some types return an error:" type="c"><![CDATA[
+case IS_ARRAY:
+case IS_OBJECT:
+case IS_RESOURCE:
+case IS_CONSTANT:
+default:
+    error = "1";
+    result = NULL;
+}
+]]></example>
+</slide>

@@ -1,0 +1,15 @@
+<slide title="php_deinit()">
+<example title="Clean up memory allocation:" type="c"><![CDATA[void php_deinit(UDF_INIT *initid) {
+    rv_str *rv = (rv_str *) initid->ptr;
+    free(rv->str);
+    /* XXX: just check non-constant ones? */
+    for (unsigned int i = 0; i < rv->arg_count; i++) {
+        if (rv->argv[i]) {
+            delete[] rv->argv[i];
+        }
+    }
+    delete[] rv->argv;
+    delete[] rv->nc_args;
+    delete initid->ptr;
+}]]></example>
+</slide>

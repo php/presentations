@@ -1,0 +1,23 @@
+<slide title="Argument Processing">
+  <example title="Non-Constant Argument Processing in %php()%" type="c" fontsize="1.5em"><![CDATA[for (i = 0; i < rv->nc_arg_count; i++) {
+    unsigned int arg_num = rv->nc_args[i];
+    switch (args->arg_type[arg_num]) {
+    case STRING_RESULT:
+        rv->argv[arg_num] = new char[args->lengths[arg_num] + 1];
+        strncpy(rv->argv[arg_num], args->args[arg_num],
+                args->lengths[arg_num]);
+        rv->argv[arg_num][args->lengths[arg_num]] = 0;
+        break;
+    case INT_RESULT:
+        rv->argv[arg_num] = new char[32]; 
+        sprintf(rv->argv[arg_num],"%lld",
+                *(long long *) args->args[arg_num]);
+        break;
+    case REAL_RESULT:
+        rv->argv[arg_num] = new char[32]; 
+        sprintf(rv->argv[arg_num],"%f",*(double *)args->args[arg_num]);
+        break;
+    }
+}]]></example>
+    </slide>
+    

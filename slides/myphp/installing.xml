@@ -1,0 +1,12 @@
+<slide title="Installing myphp">
+<list>
+<bullet>Start with a %mysqld% that can load shared libraries</bullet>
+<bullet> Download myphp from PECL or http://www.sklar.com/page/article/myphp</bullet>
+<bullet>Configure PHP with %--enable-embed=shared%</bullet>
+<bullet>Build PHP  ("%make%")</bullet>
+<bullet>Copy %sapi/embed/php_embed.h% to your myphp source directory</bullet>
+<bullet>Build myphp ("%make%")</bullet>
+<bullet>Copy %myphp.so% and %libphp4.so% to %/usr/lib%</bullet>
+<bullet>%mysql> CREATE FUNCTION PHP RETURNS STRING SONAME 'myphp.so';%</bullet>
+  </list>
+</slide>

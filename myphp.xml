@@ -1,0 +1,32 @@
+<presentation>
+  <topic>PHP</topic>
+  <title>myphp: embedding PHP in MySQL</title>
+  <event>International PHP Conference</event>
+  <location>Amsterdam, NL</location>
+  <date>May 9, 2003</date>
+  <speaker>David Sklar</speaker>
+  <email>tech-talks at sklar.com</email>
+  <url>http://talks.php.net/show/myphp</url>
+
+<slide>slides/myphp/titlepage.xml</slide>
+<slide>slides/myphp/toc.xml</slide>
+<slide>slides/myphp/using.xml</slide>
+<slide>slides/myphp/stored-code.xml</slide>
+<slide>slides/myphp/stored-args.xml</slide>
+<slide>slides/myphp/code-table.xml</slide>
+<slide>slides/myphp/installing.xml</slide>
+<slide>slides/myphp/udf-intro.xml</slide>
+<slide>slides/myphp/udf-init.xml</slide>
+<slide>slides/myphp/arg-processing.xml</slide>
+<slide>slides/myphp/udf-main.xml</slide>
+<slide>slides/myphp/nc-arg-processing.xml</slide>
+<slide>slides/myphp/engine.xml</slide>
+<slide>slides/myphp/myphp-eval-string.xml</slide>
+<slide>slides/myphp/php-return-1.xml</slide>
+<slide>slides/myphp/php-return-2.xml</slide>
+<slide>slides/myphp/php-return-3.xml</slide>
+<slide>slides/myphp/udf-deinit.xml</slide>
+<slide>slides/myphp/todo.xml</slide>
+<slide>slides/myphp/more-info.xml</slide>
+
+</presentation>

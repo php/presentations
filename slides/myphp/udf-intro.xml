@@ -1,0 +1,12 @@
+<slide title="How UDFs Work">
+  <list title="Each UDF has three C/C++ functions">
+    <bullet> %php_init()%: check arguments, allocate memory, set up</bullet>
+    <bullet> %php()%: generate a row of results</bullet>
+    <bullet> %php_deinit()%: free memory, clean up</bullet>
+  </list>
+  <list>
+    <bullet>%php_init()% is called once per query</bullet>
+    <bullet>%php()% is called once per row in the result set</bullet>
+    <bullet>%php_deinit()% is called once per query</bullet>
+  </list>
+</slide>
