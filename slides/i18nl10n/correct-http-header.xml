@@ -6,7 +6,12 @@
 	header("Content-Type: text/html; charset=iso-8859-1");
 ?>
 Vær så god]]></example>
-	<break lines="5"/>
+	<break/>
+	<blurb>or php.ini setting:</blurb>
+	<break/>
+	<example class="bit_larger"><![CDATA[default_charset = "utf-8"]]></example>
+
+	<break lines="3"/>
 
 	<blurb>Very easy to do, and the result is much better:</blurb>
 	<image class="spaced" filename="correct-http-header.png"/>
