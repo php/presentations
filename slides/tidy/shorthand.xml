@@ -1,0 +1,24 @@
+<slide title="Tidy simplified">
+    <blurb>
+        Common tidy operations can be simplified into a single PHP function
+        call which allows you to tidy a string or input file using a specified
+        configuration...
+    </blurb>
+    <blurb>
+        %tidy_repair_string($data [, $config_file]);%
+    </blurb>
+    <blurb>
+        %tidy_repair_file($data, [, $config_file [, $use_include_path]]);%
+    </blurb>
+    <example fontsize="1.6em" title="Repairing http://www.coggeshall.org/"><![CDATA[<?php
+    echo tidy_repair_file("http://www.coggeshall.org/", "basic.tcfg");
+?>]]>
+</example>
+    <example fontsize="1.6em" title="Repairing user POST data"><![CDATA[<?php
+    if(!empty($_POST['data'])) {
+        $data = tidy_repair_string($_POST['data']);
+        echo htmlentities($data);
+    }
+?>]]>
+</example>
+</slide>

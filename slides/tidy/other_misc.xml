@@ -1,0 +1,22 @@
+<slide title="Other useful information">
+<blurb>
+    Here are some other ways tidy can be used effectively, and things to watch out for...
+</blurb>
+<example type="php" title="As a Smarty Output filter"><![CDATA[<?php
+function smarty_outputfilter_tidyrepairhtml($source, &$smarty)
+{
+    if(extension_loaded('tidy')) {
+        tidy_parse_string($source);
+        tidy_clean_repair();
+        return tidy_get_output();
+    }
+    return $source;
+}
+?>]]>
+</example>
+<list>
+    <bullet>Tidy is a tool, don't get lazy!</bullet>
+    <bullet>Tidy *is not* perfect, it can make mistakes</bullet>
+    <bullet>Although tidy is indeed fast, caching makes a lot of sense</bullet>
+</list>
+</slide>

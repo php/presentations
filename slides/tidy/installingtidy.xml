@@ -1,0 +1,23 @@
+<slide title="Installing Tidy">
+<list>
+    <bullet>Tidy is available as a PHP module for both PHP 4.3.x as well as PHP 5</bullet>
+    <bullet>Version 1.0 is available online in the PECL repository at http://pecl.php.net/tidy</bullet>
+    <bullet>Win32 PHP modules are available for PHP 4.3.x (with PHP 5 coming soon)</bullet>
+</list>
+<blurb title="How to install tidy">
+    Tidy can be installed either by using the %pear% command, or by compiling the source yourself.
+    In either case, you'll need the latest libtidy library from <link>http://tidy.sf.net/</link>
+</blurb>
+<example fontsize="1.5em" title="From binary"><![CDATA[[root@coggeshall ]# pear install tidy]]></example>
+<example fontsize="1.5em"  title="From source"><![CDATA[[john@coggeshall ]# cvs co pecl/tidy
+[john@coggeshall ]# cd php-src
+[john@coggeshall ]# mv pecl/tidy ext/
+[john@coggeshall ]# ./buildconf
+[john@coggeshall ]# ./configure --with-tidy=/path/to/libtidy
+[john@coggeshall ]# make
+]]>
+</example>
+<blurb>
+    Once installed, %phpinfo()% should show tidy listed
+</blurb>
+</slide>

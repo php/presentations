@@ -1,0 +1,52 @@
+<slide title="Type hinting">
+<blurb>
+Although PHP is not a strong-typed language, PHP 5 does support type
+hinting for complex data types (objects)
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+
+	interface pump {
+
+		function get_gas();
+
+	}
+
+	class premium implements pump {
+		function get_gas() {
+
+			echo "chug!";
+		}
+	}
+
+	class regular implements pump {
+	
+		function get_gas() {
+
+			echo "chug!";
+		}
+	}
+
+	class mercedes {
+
+		function fill(premium $pump) {
+			echo $pump->get_gas();
+		}
+
+	}
+
+	class pinto {
+		function fill(pump $pump) {
+			echo $pump->get_gas();
+		}
+	}
+
+	$pinto = new pinto;
+	$pinto->fill(new premium);
+	$pinto->fill(new regular);
+	
+	$mercedes = new mercedes;
+	$mercedes->fill(new premium);
+	$mercedes->fill(new regular);
+?>]]>
+</example>
+</slide>

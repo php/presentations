@@ -1,0 +1,28 @@
+<slide title="Cloning objects">
+<blurb>
+Since PHP 5 no longer passes around the actual contents of an object between
+functions (only a reference), how do you copy an object?
+</blurb>
+<blurb>
+*Answer:* You 'clone" it using the %__clone()% built-in class method
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	class anotherclass {
+
+		var $id;
+
+	}
+
+	/* Start an instance */
+	$a = new anotherclass();
+	$a->id = 10;
+
+	/* Clone the active instance, making a copy of the entire object */
+	$b = $a->__clone();
+	$b->id = 20;
+
+?>]]>
+</example>
+</slide>
+
+

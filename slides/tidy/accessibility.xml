@@ -1,0 +1,37 @@
+<slide title="Diagnosing problems">
+<blurb>
+    The tidy extension can also report to you a list of problems with the
+    document, identifying them by the offending row and column. These messages
+    are stored in an error buffer which can be retrieved using %tidy_get_error_buffer()%:
+</blurb>
+<example fontsize="1.4em" title="Error buffer from http://www.php.net/"><![CDATA[
+line 143 column 67 - Warning: unescaped & or unknown entity "&r2"
+line 5 column 2 - Warning: <link> inserting "type" attribute
+line 6 column 2 - Warning: <link> inserting "type" attribute
+line 15 column 1 - Warning: <table> lacks "summary" attribute
+line 50 column 1 - Warning: <table> lacks "summary" attribute
+line 53 column 4 - Warning: <table> lacks "summary" attribute
+line 112 column 3 - Warning: <td> proprietary attribute "background"
+line 114 column 4 - Warning: <table> lacks "summary" attribute
+line 366 column 24 - Warning: <td> proprietary attribute "background"
+line 368 column 2 - Warning: <table> lacks "summary" attribute
+line 455 column 1 - Warning: <table> lacks "summary" attribute
+line 464 column 1 - Warning: <table> lacks "summary" attribute
+]]>
+</example>
+<blurb>
+    Tidy can also do a more in-depth analysis of the provided document by using the
+    %tidy_diagnose()% function (which adds the following lines to the error buffer above):
+</blurb>
+<example type="php" fontsize="1.4em" title="Analysis of http://www.php.net/"><![CDATA[tidy_parse_file("http://www.php.net/");
+tidy_diagnose();
+echo tidy_get_error_buffer();
+]]>
+</example>
+<example fontsize="1.4em"><![CDATA[... see above example for the missing portion ...
+Info: Doctype given is "-//W3C//DTD HTML 4.01 Transitional//EN"
+Info: Document content looks like HTML Proprietary
+12 warnings, 0 errors were found!
+]]>
+</example>
+</slide>

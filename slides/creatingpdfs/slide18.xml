@@ -1,0 +1,30 @@
+<slide title="Rendering PDF pages">
+    <blurb title="Drawing Arc lengths">
+        PDFLib provides three methods of drawing arc lengths:
+    </blurb>
+    <list>
+        <bullet>%pdf_circle()% -- render a circle</bullet>
+        <bullet>%pdf_arc()% -- render an arclength, drawing in the counter-clockwise direction</bullet>
+        <bullet>%pdf_arcn()% -- render an arclength, drawing in a clockwise direction</bullet>
+    </list>
+    <example type="php" fontsize='1.4em'><![CDATA[<?php
+    
+    /* Note: all angles in degrees */
+    
+    /* Draw an arc length from $start_a -> $end_a using
+       radius $radius (counter-clockwise) */
+    pdf_arc($pdf_r, PAGE_WIDTH/2, PAGE_HEIGHT/2, $radius, $start_a, $end_a);
+	pdf_stroke($pdf_r);
+    
+    /* Draw an arc length from $start_a -> $end_a using
+       radius $radius (clockwise) */
+	pdf_arcn($pdf_r, PAGE_WIDTH/2, PAGE_HEIGHT/2, $radius, $start_a, $end_a);
+	pdf_stroke($pdf_r);
+    
+    /* Draw a circle of radius $radius */
+	pdf_circle($pdf_r, PAGE_WIDTH/2, PAGE_HEIGHT/2, $radius);
+    pdf_stroke($pdf_r);
+?>
+    ]]>
+    </example>
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Basic PDF Generation Steps">
+<blurb title="The Basic Steps"/>
+    <list>
+        <bullet>Create a new PDF Resource (%pdf_new()%)</bullet>
+        <bullet>Create a page within the PDF document (%pdf_begin_page()%)</bullet>
+        <bullet>Add graphics, text, etc. to page</bullet>
+        <bullet>Close page</bullet>
+        <bullet>Repeat page creation as necessary</bullet>
+        <bullet>Close the PDF Document</bullet>
+    </list>
+</slide>

@@ -1,0 +1,47 @@
+<slide title="Final members">
+<blurb>
+PHP 5 will also support the idea of a "final" member variable or property
+which prevents any further extending of that class
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	
+	final class final_example {
+
+		function foobar() { /* ... */ }
+
+	}
+
+	/* You can't do this, final_example is declared final */
+	class tester extends final_example {
+
+		function foobar() { /* ... */ }
+
+	}
+
+?>]]>
+</example>
+<blurb>
+Member methods may also be declared final, preventing them specifically
+from being overloaded in a sub class
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+
+	class finalfunc {
+
+		final function dosomething() { /* ... */ }
+		function foobar() { /* ... */ }
+	}
+
+	class anotherclass extends finalfunc {
+
+		function foobar() { /* something more */ }
+
+		/* This can't work, dosomething() is 'final' */
+
+		function dosomething() { /* This breaks */ }
+
+	}
+
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,16 @@
+<slide title="Useful Tips and Tricks">
+    <blurb title="Translating the coordinate system">
+       When rendering a pdf page, the coordinate system can be manipulated
+       to accomplish certain operations. PDFLib supports the entire array of
+       coordinate manipulations including:
+    </blurb>
+    <list>
+        <bullet>Rotations (%pdf_rotate()%)</bullet>
+        <bullet>Offsets (%pdf_translate()%)</bullet>
+        <bullet>Scaling (%pdf_scale()%)</bullet>
+    </list>
+    <blurb>
+      The current state of the coordinate system may also be saved/restored
+      using the %pdf_save()% and %pdf_restore()% functions.
+    </blurb>
+</slide>

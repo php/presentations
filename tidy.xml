@@ -1,0 +1,38 @@
+<presentation
+	template="php" 
+	navmode="html"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
+<topic>PHP</topic>
+<title>HTML Manipulation and mining with tidy</title>
+<copyright>(c) Copyright 2003 John Coggeshall</copyright>
+<event>Linux Expo</event>
+<location>Toronto, Canada</location>
+<date>October 16th</date>
+<speaker>John Coggeshall</speaker>
+<url>http://www.coggeshall.org/</url>
+<navmode>html</navmode>
+<slide>slides/tidy/titlepage.xml</slide>
+<slide>slides/tidy/whatistidy.xml</slide>
+<slide>slides/tidy/whatistidy2.xml</slide>
+<slide>slides/tidy/whatistidy3.xml</slide>
+<slide>slides/tidy/installingtidy.xml</slide>
+<slide>slides/tidy/basictidy.xml</slide>
+<slide>slides/tidy/diagnose.xml</slide>
+<slide>slides/tidy/configintro.xml</slide>
+<slide>slides/tidy/configintro2.xml</slide>
+<slide>slides/tidy/howconfigswork.xml</slide>
+<slide>slides/tidy/configexample.xml</slide>
+<slide>slides/tidy/shorthand.xml</slide>
+<slide>slides/tidy/tidyasaparser.xml</slide>
+<slide>slides/tidy/tidyasaparser2.xml</slide>
+<slide>slides/tidy/tidyasaparser3.xml</slide>
+<slide>slides/tidy/tidyasaparser4.xml</slide>
+<slide>slides/tidy/tidyasaparser5.xml</slide>
+<slide>slides/tidy/tidyasaparser5b.xml</slide>
+<slide>slides/tidy/tidyasaparser6.xml</slide>
+<slide>slides/tidy/parsing_ex.xml</slide>
+<slide>slides/tidy/other_misc.xml</slide>
+<slide>slides/tidy/thankyou.xml</slide>
+</presentation>

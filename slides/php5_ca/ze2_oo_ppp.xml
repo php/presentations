@@ -1,0 +1,48 @@
+<slide title="Private, Public, Protected">
+<blurb>
+In PHP 4, there was no concept of object properity protection. i.e.
+any chunk of code could modify a member variable's value.
+</blurb>
+<blurb>
+PHP 5 now provides ways to prevent that from happening by introducing
+%private%, %public%, and %protected% member variables and methods.
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	class foo {
+		/* Only accessable within an instance of foo */
+		private $foovar;
+		
+		/* Accessable from foo, or a subclass of foo */
+		protected $foofamilyvar;
+		
+		/* Accessable from anywhere */
+	
+		public $a_var;
+
+		public function mypublicfunc() { /* ... */ }
+
+		private function myprivatefunc() { /* ... */ }
+
+		protected function myprotectedfunc() { /* ... */ }
+	}
+
+	class bar extends foo {
+
+		public function modify() {
+	
+			$this->foofamilyvar = true;
+		}
+	}
+
+	$var_one = new foo();
+	$var_two = new bar();
+
+	$var_one->a_var = 10; /* acceptable, public variable */
+	$var_one->foofamilyvar = true; /* error, protected var */
+	$var_one->foovar = "Hi!" /* error, private var */
+
+	$var_two->modify(); /* modifies the variable */
+
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Rendering PDF pages">
+    <blurb title="Common PDFLib drawing functions">
+        PDFLib supports a wide variety of functions for drawing geometric shapes within
+        a given page include arc lengths, lines, and general polygons. All drawing in PDFLib
+        is done via a three-step process:
+    </blurb>
+    <list>
+        <bullet>Move the cursor to the start location (%pdf_moveto()%)</bullet>
+        <bullet>Draw the desired shapes</bullet>
+        <bullet>Render (or "stroke") the drawing to the page (%pdf_stroke()%)</bullet>
+    </list>
+</slide>

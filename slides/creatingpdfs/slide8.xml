@@ -1,0 +1,13 @@
+<slide title="The Portable Document Format">
+<blurb title="Benefits of PDF Documents"/>
+    <list>
+    <bullet>Accessable on any modern platform</bullet>
+    <bullet>Allows for WYSIWYG formatting and printing</bullet>
+    <bullet>Password protectable, difficult to modify</bullet>
+    </list>
+<blurb title="Drawbacks of PDF"/>
+    <list>
+        <bullet>Requires a third party viewer (free)</bullet>
+        <bullet>Considerably more difficult to work with from within PHP</bullet>
+    </list>
+</slide>

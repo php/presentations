@@ -1,0 +1,77 @@
+<slide title="Rendering PDF pages">
+<blurb title="Points, not pixels!">
+    In PDFLib documents coordinates are represented in *points* not *pixels*. There
+    are 72 points per pixel on a PDF document.
+</blurb>
+<blurb title="Common paper sizes in points">
+<![CDATA[
+<CENTER>
+<TABLE WIDTH=30%>
+<TR>
+<TD><B>Paper Size</B></TD>
+<TD><B>Width</B></TD>
+<TD><B>Height</B></TD>
+</TR>
+<TR>
+<TD>A0</TD>
+<TD>2380</TD>
+<TD>3368</TD>
+</TR>
+<TR>
+<TD>A1</TD>
+<TD>1684</TD>
+<TD>2380</TD>
+</TR>
+<TR>
+<TD>A2</TD>
+<TD>1190</TD>
+<TD>1684</TD>
+</TR>
+<TR>
+<TD>A3</TD>
+<TD>842</TD>
+<TD>1190</TD>
+</TR>
+<TR>
+<TD>A4</TD>
+<TD>595</TD>
+<TD>842</TD>
+</TR>
+<TR>
+<TD>A5</TD>
+<TD>421</TD>
+<TD>595</TD>
+</TR>
+<TR>
+<TD>A6</TD>
+<TD>297</TD>
+<TD>421</TD>
+</TR>
+<TR>
+<TD>B5</TD>
+<TD>501</TD>
+<TD>709</TD>
+</TR>
+<TR>
+<TD>Letter</TD>
+<TD>612</TD>
+<TD>792</TD>
+</TR>
+<TR>
+<TD>Legal</TD>
+<TD>612</TD>
+<TD>1008</TD>
+</TR>
+<TR>
+<TD>Ledger</TD>
+<TD>1224</TD>
+<TD>792</TD>
+</TR>
+</TABLE>
+<HR>
+<font size=3>More paper sizes: <A HREf="http://home.inter.net/eds/paper/papersize.html">http://home.inter.net/eds/paper/papersize.html</A></font>
+</CENTER>
+]]>
+
+</blurb>
+</slide>

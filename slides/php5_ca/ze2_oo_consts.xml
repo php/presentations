@@ -1,0 +1,18 @@
+<slide title="Class Constants">
+<blurb>
+PHP 5 also supports declaring class-specific constant values (similar to 
+using %define()% in PHP 4.
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+
+	class const_example {
+
+		const myconstant = 20;
+
+	}
+
+	echo "Value: ".const_example::myconstant;
+
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Rendering PDF pages">
+    <blurb title="Adding Images to PDF Documents">
+        PDFLib supports a wide range of functions to load and then use Images within
+        a PDF Page. However it is recommended that you avoid as many of them as possible.
+    </blurb>
+    <blurb>
+        A much more reasonable course of action is to load the image using the GD extension
+        and then using the %pdf_open_memory_image()% function instead. This function will
+        convert a GD image resource into a PDF image resource that can be placed on a page
+    </blurb>
+</slide>

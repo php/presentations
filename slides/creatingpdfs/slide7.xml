@@ -1,0 +1,32 @@
+<slide title="Dynamic RTF Documents">
+<blurb title="Populating a template RTF">
+    Here's a function which accepts an array of variables, and a template
+    RTF document. Returns the populated document:
+</blurb>
+<example type="php" fontsize='1.4em'><![CDATA[<?php
+function populate_RTF($vars, $doc_file) {
+     
+    $replacements = array ('\\' => "\\\\",
+                           '{'  => "\{",
+                           '}'  => "\}");
+    
+    $document = file_get_contents($doc_file);
+    if(!$document) {
+        return false;
+    }
+    
+    foreach($vars as $key=>$value) {
+        $search = "%%".strtoupper($key)."%%";
+
+        foreach($replacements as $orig => $replace) {
+            $value = str_replace($orig, $replace, $value);
+        }
+        
+        $document = str_replace($search, $value, $document);
+    }
+    
+    return $document;
+ }
+?>]]>
+</example>
+</slide>

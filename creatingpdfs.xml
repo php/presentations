@@ -1,0 +1,46 @@
+<presentation
+	template="php" 
+	navmode="html"
+>
+<topic>PHP</topic>
+<title>Creating Dynamic PDFs using PHP</title>
+<copyright>(c) Copyright 2003 John Coggeshall</copyright>
+<event>ApacheCon 2003</event>
+<location>Las Vegas, Nevada</location>
+<date>Nov. 19th</date>
+<speaker>John Coggeshall</speaker>
+<url>http://www.coggeshall.org/</url>
+<navmode>html</navmode>
+<slide>slides/creatingpdfs/titlepage.xml</slide>
+<slide>slides/creatingpdfs/slide1.xml</slide>       
+<slide>slides/creatingpdfs/slide2.xml</slide> 
+<slide>slides/creatingpdfs/slide3.xml</slide> 
+<slide>slides/creatingpdfs/slide4.xml</slide> 
+<slide>slides/creatingpdfs/slide5.xml</slide> 
+<slide>slides/creatingpdfs/slide6.xml</slide> 
+<slide>slides/creatingpdfs/slide7.xml</slide> 
+<slide>slides/creatingpdfs/slide8.xml</slide> 
+<slide>slides/creatingpdfs/slide9.xml</slide> 
+<slide>slides/creatingpdfs/slide10.xml</slide>
+<slide>slides/creatingpdfs/slide11.xml</slide>
+<slide>slides/creatingpdfs/slide12.xml</slide>
+<slide>slides/creatingpdfs/slide13.xml</slide>
+<slide>slides/creatingpdfs/slide14.xml</slide>
+<slide>slides/creatingpdfs/slide15.xml</slide>
+<slide>slides/creatingpdfs/slide15a.xml</slide>
+<slide>slides/creatingpdfs/slide15b.xml</slide>
+<slide>slides/creatingpdfs/slide15c.xml</slide>
+<slide>slides/creatingpdfs/slide16.xml</slide>
+<slide>slides/creatingpdfs/slide17.xml</slide>
+<slide>slides/creatingpdfs/slide18.xml</slide>
+<slide>slides/creatingpdfs/slide19.xml</slide>
+<slide>slides/creatingpdfs/slide20.xml</slide>
+<slide>slides/creatingpdfs/slide21.xml</slide>
+<slide>slides/creatingpdfs/slide22.xml</slide>
+<slide>slides/creatingpdfs/slide25.xml</slide>
+<slide>slides/creatingpdfs/slide26.xml</slide>
+<slide>slides/creatingpdfs/slide27.xml</slide>
+<slide>slides/creatingpdfs/slide28.xml</slide>
+<slide>slides/creatingpdfs/slide29.xml</slide>
+<slide>slides/creatingpdfs/thankyou.xml</slide>
+</presentation>

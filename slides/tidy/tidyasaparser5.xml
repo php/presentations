@@ -1,0 +1,17 @@
+<slide title="Looking for specific nodes">
+<blurb>
+    All tidy objects have an %id% properity which allows them to be identified
+    by comparing it to a constant. Node constants have the form %TIDY_NODE_&lt; TAGNAME &gt; %
+    while attributes are %TIDY_ATTR_&lt; ATTR_NAME &gt;%.
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+
+    tidy_parse_file('test.html');
+    $body = tidy_get_body();
+    if($body->id == TIDY_NODE_BODY) {
+        echo "Yep, we got the body...";
+    }
+    
+?>]]>
+</example>
+</slide>

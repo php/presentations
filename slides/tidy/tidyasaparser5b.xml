@@ -1,0 +1,13 @@
+<slide title="Looking for specific nodes">
+<blurb>
+    Likewise, the %name% properity is the string value of the tag...
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+
+    tidy_parse_file('test.html');
+    $body = tidy_get_body();
+    echo "We retrieved the '{$body->name}' tag..";
+    
+?>]]>
+</example>
+</slide>

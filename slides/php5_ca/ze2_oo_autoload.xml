@@ -1,0 +1,26 @@
+<slide title="Automagic class loading">
+<blurb>
+In PHP 5 you can now define the global-scope function %__autoload()% which
+can be used to automatically satisify class dependencies at run time
+</blurb>
+<example title="bank_account.class.php" type="php" fontsize="1.6em"><![CDATA[<?php
+	class bank_account {
+
+		public $account;
+
+	}
+?>]]>
+</example>
+<example title="accounts.php" type="php" fontsize="1.6em"><![CDATA[<?php
+
+	function __autoload($classname) {
+
+		include_once("$classname.class.php");
+
+	}
+
+	$a = new bank_account();
+
+]]></example>
+</slide>
+	

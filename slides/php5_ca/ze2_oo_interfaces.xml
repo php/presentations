@@ -1,0 +1,44 @@
+<slide title="Interfaces">
+<blurb>
+PHP5 also supports the definiation of object interfaces, which is a way
+to ensure that a given class provides a certain set of functions you can
+rely on elsewhere:
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	class game {
+
+		function move_next() {
+
+			echo "next";
+		}
+		
+		function move_prev() {
+
+			echo "prev";
+		}
+
+	}
+
+	interface price {
+
+		function get_price();
+
+	}
+
+	class boardgame extends game implements price {
+	
+		function get_price() {
+
+			return 22.95;
+		}
+	}
+
+	$g = new boardgame;
+
+	/* Can we rely on the 'price' interface? */
+	if($g instanceof price) {
+		echo "Price is: ".$g->get_price();
+	}
+?>]]>
+</example>
+</slide>

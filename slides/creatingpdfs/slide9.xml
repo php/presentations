@@ -1,0 +1,12 @@
+<slide title="What you will need">
+<blurb title="Many different options">
+    PHP Supports a number of different methods of generating PDF documents
+    from pure PHP Code (FPDF), to a number of PDF-generating extensions. I
+    have chosen to use the PDFLib extension (ext/pdf).
+</blurb>
+<blurb title="What you'll need to  PDFLib support into PHP"/>
+    <list>
+        <bullet>The PDFLib library (http://www.pdflib.com/)</bullet>
+    </list>
+    <example><![CDATA[./configure --with-pdflib=[DIR]]]></example>
+</slide>

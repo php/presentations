@@ -1,0 +1,17 @@
+<slide title="Basic Tidy Use">
+<blurb title="How tidy Works">
+    The most basic use of tidy within PHP is divided accross three functions:
+</blurb>
+<list>
+    <bullet>%tidy_parse_file($filename)% - Load the specified file/URI and parse it</bullet>
+    <bullet>%tidy_clean_repair()% - Clean and repair the parsed file</bullet>
+    <bullet>%tidy_get_output()% - Returns the repaired document as a string</bullet>
+</list>
+<example fontsize="1.6em" type="php" title="Cleaning up http://www.php.net/"><![CDATA[<?php
+    tidy_parse_file("http://www.php.net/");
+    tidy_clean_repair();
+    echo tidy_get_output();
+?>
+]]>
+</example>
+</slide>

@@ -1,0 +1,37 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>An introduction to the future: PHP 5</title>
+<event>Linux Expo</event>
+<location>Toronto, Canada</location>
+<date>October 16th, 2003</date>
+<speaker>John Coggeshall</speaker>
+<email>john@coggeshall.org</email>
+<url>http://www.coggeshall.org/talks.php</url>
+
+<slide>slides/php5_ca/titlepage.xml</slide>
+<slide>slides/php5_ca/summary.xml</slide>
+<slide>slides/php5_ca/ze2_oo_ref.xml</slide>
+<slide>slides/php5_ca/ze2_oo_structs.xml</slide>
+<slide>slides/php5_ca/ze2_oo_ppp.xml</slide>
+<slide>slides/php5_ca/ze2_oo_static.xml</slide>
+<slide>slides/php5_ca/ze2_oo_final.xml</slide>
+<slide>slides/php5_ca/ze2_oo_consts.xml</slide>
+<slide>slides/php5_ca/ze2_oo_clone.xml</slide>
+<slide>slides/php5_ca/ze2_oo_deref.xml</slide>
+<slide>slides/php5_ca/ze2_oo_autoload.xml</slide>
+<slide>slides/php5_ca/ze2_oo_getset.xml</slide>
+<slide>slides/php5_ca/ze2_oo_call.xml</slide>
+<slide>slides/php5_ca/ze2_oo_abstract.xml</slide>
+<slide>slides/php5_ca/ze2_oo_interfaces.xml</slide>
+<slide>slides/php5_ca/ze2_oo_exceptions.xml</slide>
+<slide>slides/php5_ca/ze2_oo_typehints.xml</slide>
+<slide>slides/php5_ca/simplexml.xml</slide>
+<slide>slides/php5_ca/sqlite.xml</slide>
+<slide>slides/php5_ca/streams.xml</slide>
+<slide>slides/php5_ca/tidy.xml</slide>
+<slide>slides/php5_ca/thanks.xml</slide>
+
+</presentation>

@@ -1,0 +1,33 @@
+<slide title="Standardized Construct/Destruct">
+<blurb>
+	In PHP 4 constructors were supported by creating a function
+with the same name as the class
+</blurb>
+<example type="php"><![CDATA[<?php
+	class foo {
+
+		function foo($param) {
+
+			/* ... */
+		}
+	}
+?>]]></example>
+<blurb>
+	In PHP 5, the %__construct()% method will be called (if it exists)
+when the object is created, and the %__destruct()% method when it is
+destroied. 
+</blurb>
+<example type="php"><![CDATA[<?php
+
+	class newfoo {
+
+		function __construct($param) { /* ... */ }
+
+		function __destruct() { /* ... */ }
+
+	}
+?>]]></example>
+<blurb>
+*Note:* PHP 4 style constructs will be supported for backward compatibility.
+</blurb>
+</slide>

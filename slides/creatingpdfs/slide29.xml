@@ -1,0 +1,27 @@
+<slide title="Useful Tips and Tricks">
+    <blurb title="Using PDFLib templates"/>
+    <example title="Generating a standard header" fontsize="1.4em"><![CDATA[<?php
+    /* Load the logo image and relevant metrics*/
+    $logo = pdf_open_image_file($pdf, "jpeg", "php-logo.jpg");
+    $logo_h  = pdf_get_value($pdf, "imageheight", $logo);
+    
+    /* Define a template header */
+    $template = pdf_begin_template($pdf, PAGE_WIDTH, HEADER_HEIGHT);
+               
+        pdf_place_image($pdf, $logo, 5, (HEADER_HEIGHT-$logo_h)/2, 1.0);
+        $font = pdf_findfont($pdf, "Helvetica-Bold", "auto", false);
+        pdf_setfont($pdf, $font, 40);
+        $s_width = pdf_stringwidth($pdf, HEADER_TEXT, $font, 40);
+        pdf_show_xy($pdf, HEADER_TEXT, PAGE_WIDTH-$s_width - 10, 35);
+        
+    pdf_end_template($pdf);
+    pdf_close_image($pdf, $logo);
+    
+    for($i = 0; $i < 5; $i++) {
+        pdf_begin_page($pdf, PAGE_WIDTH, PAGE_HEIGHT);
+        pdf_place_image($pdf, $template, 0, PAGE_HEIGHT-80, 1.0);
+        pdf_end_page($pdf);
+    }
+?>]]>
+</example>
+</slide>

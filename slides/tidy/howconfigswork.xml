@@ -1,0 +1,23 @@
+<slide title="Using tidy configuration files">
+<blurb title="Setting up a tidy configuration file">
+    Tidy configuration files are easy to use -- just specify one option per line:
+</blurb>
+<example title="Example tidy configuration file"><![CDATA[
+// Tidy configuration file comment...
+indent: auto
+indent-spaces: 2
+wrap: 72
+markup: yes
+output-xml: no
+input-xml: no
+show-warnings: yes
+numeric-entities: yes
+quote-marks: yes
+quote-nbsp: yes
+quote-ampersand: no
+break-before-br: no
+uppercase-tags: no
+uppercase-attributes: no
+]]>
+</example>
+</slide>

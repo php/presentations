@@ -1,0 +1,43 @@
+<slide title="Tidy document parsing">
+<blurb title="Parser Interfaces">
+    All document parsing is accomplished through objects -- %tidy_node% and
+    %tidy_attr% representing a node and attribute respectively.
+</blurb>
+<example fontsize="1.6em" title="The tidy_node schema"><![CDATA[<?php
+    class tidy_node {
+    
+        var name;
+        var type;
+        var id;
+        var value;
+        
+        function attributes();
+        function children();
+        
+        function has_children();
+        function has_siblings();
+        
+        function is_comment();
+        function is_html();
+        function is_text();
+        function is_jste();
+        function is_asp();
+        function is_php();
+        
+        function next();
+        function prev();
+        function get_attr();
+    }
+?>]]>
+</example>
+<example fontsize="1.6em" title="The tidy_attr schema"><![CDATA[<?php
+    class tidy_node {
+    
+        var name;
+        var id;
+        var value;
+        
+    }
+?>]]>
+</example>
+</slide>

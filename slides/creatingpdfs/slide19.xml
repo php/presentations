@@ -1,0 +1,14 @@
+<slide title="Rendering PDF pages">
+    <blurb title="Using colors">
+        Of course, Drawing routines can also render things in color. The color
+        a particular rendering operation is to use is set before the operation
+        using the %pdf_setcolor()% function
+    </blurb>
+    <example type="php" fontsize='1.4em'><![CDATA[<?php
+    pdf_setcolor($pdf_r, $fill_type, $color_type, $c1, $c2, $c3, $c4);
+    pdf_circle($pdf_r, $width, $height, 100);
+    pdf_stroke($pdf_r);
+?>]]>
+    </example>
+    
+</slide>

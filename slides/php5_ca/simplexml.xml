@@ -1,0 +1,25 @@
+<slide title="PHP 5 and XML">
+<blurb>
+In PHP 5 all of the XML related extensions are now based around
+the libxml2 library. PHP 5 also comes with the new %simplexml% extension,
+which allows the manipulation of XML documents using ZE2 OO constructs
+</blurb>
+<example title="Sample XML file"><![CDATA[<books>
+ <book>
+  <title>The Grapes of Wrath</title>
+  <author>John Steinbeck</author>
+ </book>
+ <book>
+  <title>The Pearl</title>
+  <author>John Steinbeck</author>
+ </book>
+</books>]]></example>
+<example title="Loading the XML using simplexml"><![CDATA[<?php
+
+	$books = simplexml_load_file('books.xml');
+	foreach($books->book as $book) {
+		echo "{$book->title} was written by {$book->author}\n";
+	}
+?>]]>
+</example>
+</slide>

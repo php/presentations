@@ -1,0 +1,16 @@
+<slide title="Exceptions">
+<blurb>
+PHP 5 also supports the throwing and catching of exceptions using a Java-like
+syntax. All exceptions are based on the standard %Exception% class
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+
+	try {
+		if($a < 20) {
+			throw new Exception('$a is too small!');
+		}
+	} catch (Exception $e) {
+		echo $e->getMessage();
+	}
+?>]]></example>
+</slide>

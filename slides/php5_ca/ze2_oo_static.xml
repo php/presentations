@@ -1,0 +1,22 @@
+<slide title="Static class members">
+<blurb>
+	Member variables and methods can now be declared static, allowing
+them to be called from outside an instance of the object
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	class coggeshall {
+
+		static $myvar = 10;
+		
+		static static_func() { /* ... */ }
+
+		function another_func() { /* ... */ }
+	}
+
+	coggeshall::$myvar = 20;
+	coggeshall::static_func();
+	
+?>]]>
+</example>
+</slide>
+

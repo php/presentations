@@ -1,0 +1,13 @@
+<slide title="The Rich Text Format">
+<blurb title="Benefits of the Rich Text Format"/>
+    <list>
+    <bullet>Largely compatible with most word processors</bullet>
+    <bullet>Allows for WYSIWYG formatting and printing</bullet>
+    <bullet>Extremely easy to work with from within PHP</bullet>
+    </list>
+<blurb title="Drawbacks of RTF"/>
+    <list>
+        <bullet>Generally requires a word processor application</bullet>
+        <bullet>Insecure (documents can be edited after generation)</bullet>
+    </list>
+</slide>

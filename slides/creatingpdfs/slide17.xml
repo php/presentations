@@ -1,0 +1,16 @@
+<slide title="Rendering PDF pages">
+    <blurb title="Drawing Lines, rectangles"/>
+    <example type="php" fontsize='1.4em'><![CDATA[<?php
+    /* Move to the start of the line to be drawn */
+    pdf_moveto($pdf_r, $start_x, $start_y);
+    /* Draw a line from the current cursor location to the end */
+    pdf_lineto($pdf_r, $end_x, $end_y);
+    pdf_stroke($pdf_r);
+    
+    /* Automatically move the cursor and draw a rectangle */
+    pdf_rect($pdf_r, $start_x, $start_y, $width, $height);
+    pdf_stroke($pdf_r);
+?>
+    ]]>
+    </example>
+</slide>

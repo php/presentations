@@ -1,0 +1,15 @@
+<slide title="Using tidy configuration files">
+<blurb>
+    Almost all of the wide range of abilites found in the tidy extension can be controlled
+    by setting the values of tidy configuration options. These options can be set by:
+</blurb>
+<list>
+    <bullet> at run-time using %tidy_setopt()% / %tidy_getopt()%</bullet>
+    <bullet> loading a tidy configuration file using %tidy_load_config()%</bullet>
+    <bullet> having a default configuration file loaded by setting the %tidy.deafult_config% PHP
+    configuration directive.</bullet>
+</list>
+<blurb>
+    *NOTE:* You can access a list of all of the tidy configuration options in the output of %phpinfo()%
+</blurb>
+</slide>

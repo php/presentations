@@ -1,0 +1,17 @@
+<slide title="Useful Tips and Tricks">
+    <blurb title="Using PDFLib templates">
+      Often, especially on multi-page PDF documents a consistent look and feel is desired.
+      Rather than re-drawing the same basic things on every page templates can be used to
+      and then placed as needed. Creating a template is much like creating a PDF page:
+    </blurb>
+    <list>
+      <bullet>Begin a new Template (%pdf_begin_template()%)</bullet>
+      <bullet>Render the content for the template</bullet>
+      <bullet>Close the Template (%pdf_end_template()%)</bullet>
+      <bullet>Place the template on a PDF page as necessary as an image (%pdf_place_image()%)</bullet>
+    </list>)%
+    <blurb>
+      Note: Templates must be created outside the context of a page (must be called before %pdf_begin_page()%
+      and after %pdf_end_page()%
+    </blurb>
+</slide>

@@ -1,0 +1,23 @@
+<slide title="Useful Tips and Tricks">
+    <blurb title="Using %pdf_rotate()%">
+      The %pdf_rotate()% function is used in a similar way allowing you to
+      rotate the coordinate system around the origin. Very useful for rendering
+      text at an angle (for example)
+    </blurb>
+    <example type="php" title="Rendering Text at an angle" fontsize='1.4em'><![CDATA[<?php
+    /* Save the current state */
+    pdf_save($pdf_r);
+
+    /* Rotate the orgin 45 degrees */
+    pdf_rotate($pdf_r, 45);
+    
+    /* Write some text */
+    pdf_set_font($pdf_r, "Helvetica-Oblique", 18, "host");
+    pdf_show_xy($pdf_r, "Angled Text", 20, 20);
+    
+    /* Restore the coordinate system */
+    pdf_restore($pdf_r);
+?>]]>
+</example>
+    
+</slide>

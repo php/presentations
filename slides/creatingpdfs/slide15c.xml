@@ -1,0 +1,44 @@
+<slide title="Text Rendering">
+    <blurb title="Acceptable Values for the %textrendering% PDFLib option"/>
+    <blurb><![CDATA[
+    <CENTER>
+    <TABLE>
+    <TR>
+    <TD><B>Option Value</B></TD>
+    <TD><B>Result</B></TD>
+    </TR>
+    <TR>
+    <TD>0</TD>
+    <TD>Normal (default)</TD>
+    </TR>
+    <TR>
+    <TD>1</TD>
+    <TD>Stroke Only (Outlined Text)</TD>
+    </TR>
+    <TR>
+    <TD>2</TD>
+    <TD>Fill and Stroke Text</TD>
+    </TR>
+    <TR>
+    <TD>3</TD>
+    <TD>Invisible Text</TD>
+    </TR>
+    <TR>
+    <TD>4</TD>
+    <TD>Normal Text (Add to clipping path)</TD>
+    </TR>
+    <TR>
+    <TD>5</TD>
+    <TD>Stroke Text (Add to clipping path)</TD>
+    </TR>
+    <TR>
+    <TD>6</TD>
+    <TD>Fill and Stroke Text (Add to clipping path)</TD>
+    </TR>
+    <TR>
+    <TD>7</TD>
+    <TD>Invisible Text (Add to clipping path)</TD>
+    </TR>
+    </TABLE>
+    ]]></blurb>
+</slide>

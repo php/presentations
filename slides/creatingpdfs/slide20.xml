@@ -1,0 +1,13 @@
+<slide title="Rendering PDF pages">
+    <blurb title="Using colors">
+        When setting colors, there are two considerations
+    </blurb>
+    <list>
+        <bullet>Stroke and fill color (%stroke%, %fill%, or %both%</bullet>
+        <bullet>Type of color (%rgb%, %cmyk%, %gray%, %pattern%)</bullet>
+    </list>
+    <blurb>
+        The stroke color is the "outside" edge of the drawing associated with %pdf_stroke()%,
+        while the fill color is the "inside" of the drawing associated with %pdf_fill_stroke()%.
+    </blurb>
+</slide>

@@ -1,0 +1,34 @@
+<slide title="What is Tidy, anyway?">
+<blurb title="Some things tidy can automatically fix"/>
+<example title="Missing or mismatched end tags"><![CDATA[<h1>heading
+<h2>subheading</h2>
+
+... is automatically fixed:
+
+<h1>heading</h1>
+<h2>subheading</h2>
+]]>
+</example>
+<example title="End tags provided in the wrong order"><![CDATA[If you like this talk, <i>then
+you should <b>check out</i> my book</b>!
+
+... is automatically fixed:
+
+If you like this talk, <i>then you should <b>check out</b> my book!</i>!
+]]>
+</example>
+<example title="Confused &lt;hr&gt; tags"><![CDATA[
+<h1><hr>heading</h1>
+<h2>sub<hr>heading</h2>
+   
+... is automatically fixed:
+
+<hr>
+<h1>heading</h1>
+<h2>sub</h2>
+<hr>
+<h2>heading</h2>
+
+]]>
+</example>
+</slide>

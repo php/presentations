@@ -1,0 +1,30 @@
+<slide title="Accessing attributes">
+<blurb>
+    The attributes for a given node can be retrieved using the %attributes()% method,
+    which returns an array of attributes for that node.
+</blurb>
+<example fontsize="1.6em" type="php"><![CDATA[<?php
+    tidy_parse_file('test.html');
+    $body = tidy_get_body();
+    foreach($body->attributes() as $attr) {
+    
+        if($attr->id == TIDY_ATTR_BGCOLOR) {
+            echo "The background color is: '{$attr->value}'";
+        }
+        
+    }
+    
+?>]]>
+</example>
+<blurb>
+    The %get_attr()% method is a shorthand version of above and allows you to retrieve a
+    specific attribute object with less code:
+</blurb>
+<example fontsize="1.6em" type="php"><![CDATA[<?php
+    tidy_parse_file('test.html');
+    $body = tidy_get_body();
+    $attr = $body->get_attr(TIDY_ATTR_BGCOLOR);
+    echo "The background color is: '{$attr->value}'";
+?>]]>
+</example>
+</slide>

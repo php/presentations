@@ -1,0 +1,23 @@
+<slide title="Basic PDF PHP Code Skeleton">
+<example title="PHP PDF Code Skeleton" fontsize='1.4em'><![CDATA[<?php
+    define('PAGE_WIDTH', 612);
+    define('PAGE_HEIGHT', 792);
+    
+    $pdf = pdf_new();
+    pdf_open_file($pdf);
+    pdf_begin_page($pdf, PAGE_WIDTH, PAGE_HEIGHT);
+    
+    /* Code to display content in the page here */
+
+    pdf_end_page($pdf);
+    pdf_close($pdf);
+    
+    $data = pdf_get_buffer($pdf);
+    header('Content-type: application/pdf');
+    header("Content-disposition: inline; filename=example1.pdf");
+    header("Content-length: " . strlen($data));
+    echo $data;
+    
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Text Rendering">
+    <blurb title="Other Text Rendering Options">
+        There are a number of options which can be set to change the way text is rendered
+        on a PDF page including making underlined, overlined, strike-through and different
+        coloring options.
+    </blurb>
+    <list>
+        <bullet>Underline, Overline, and Strike-through are set using %pdf_set_parameter()%</bullet>
+        <bullet>Special text-rendering options are set using %pdf_set_value()%</bullet>
+    </list>
+</slide>

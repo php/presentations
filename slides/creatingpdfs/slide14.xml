@@ -1,0 +1,18 @@
+<slide title="Rendering PDF pages">
+<blurb title="How to render text on a PDF page">
+Rendering text on a PDF page is done in three steps:
+</blurb>
+<list>
+    <bullet>Finding a font to render the text with (%pdf_findfont()%)</bullet>
+    <bullet>Selecting the font to use (%pdf_setfont()%)</bullet>
+    <bullet>Rendering the text on the page (%pdf_show_xy()%)</bullet>
+</list>
+<example type="php" fontsize='1.4em'><![CDATA[<?php
+    $font = pdf_findfont($pdf, "Helvetica", "auto", false);
+    pdf_setfont($pdf, $font, 30);
+    pdf_show_xy($pdf, "PHP Developer's Handbook", $x_cord, $y_cord);
+?>
+]]>
+</example>
+
+</slide>

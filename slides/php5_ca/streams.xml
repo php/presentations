@@ -1,0 +1,14 @@
+<slide title="Streams nd Filters">
+<blurb>
+PHP 5 has an excellent streams interface and filtering support.
+</blurb>
+<list>
+<bullet>PHP  5 will come standard with a number of filters such as rot13</bullet>
+<bullet>Painless support for http://, https:// ftp:// ftps://</bullet>
+<bullet>Can define new streams and filters in userspace</bullet>
+<bullet>Compression streams compression.gzip:// and compression.bz2://</bullet>
+</list>
+<example title="Filter Example" fontsize="1.2em"><![CDATA[<?php
+	$data = file_get_contents("php://filter/read=string.rot13/resource=http://www.coggeshall.org/");
+?>]]></example>
+</slide>

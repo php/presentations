@@ -1,0 +1,12 @@
+<slide title="What is Tidy, anyway?">
+<blurb title="Other useful features"/>
+<list>
+    <bullet>Addition of missing quotes around attributes</bullet>
+    <bullet>Unknown / proprietary attributes are located</bullet>
+    <bullet>Wide range of character encodings supported</bullet>
+    <bullet>Notifies of potential Accessibility issues</bullet>
+    <bullet>Automatically replace depreciated &lt;font&gt; tags with CSS</bullet>
+    <bullet>Limited Support for ASP, JSTE, and PHP code blocks</bullet>
+    <bullet>Automatic indentation of HTML for easier reading</bullet>
+</list>
+</slide>

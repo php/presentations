@@ -1,0 +1,38 @@
+<slide title="ZE2: Object References">
+<blurb title="Object references The right way"/>
+<list>
+<bullet>In ZE / PHP 4 objects weren't references, so when they were passed
+to a function a copy was made.</bullet>
+</list>
+<example><![CDATA[<?php
+	class bank_account {
+		var $amount;
+		function bank_account($cash) {
+			$this->amount = $cash;
+		}
+	}
+	
+	function deposit($account, $cash) {
+		$account->amount += $cash;
+	}
+
+	function withdraw(&$account, $cash) {
+		$account->amount -= $withdraw;
+	}
+
+	$wallet = new bank_account(100);
+	deposit($wallet, 50);
+	withdraw($wallet, 120);
+
+	echo "The account balance is: {$this->amount}";
+
+?>]]>
+</example>
+<example title="Output">The account balance is: -20</example>
+<blurb>
+	Since %deposit()% wasn't pass-by-reference, the extra deposit
+was made to a _copy_ of the bank account, which was then destroied when
+the method returned.
+</blurb>
+</slide>
+

@@ -1,0 +1,11 @@
+<slide title="Dynamic RTF Documents">
+<blurb title="Making template RTF Documents">
+    Since RTF documents are stored in a plain-text markup format, they
+    are quite easy to generate dynamically
+</blurb>
+<list>
+    <bullet>Create a RTF document template with the desired formatting, etc.</bullet>
+    <bullet>In place of actual values, use unique placeholders (i.e. %%PLACEHOLDER%%)</bullet>
+    <bullet>Open the document in PHP, Replace the placeholders with real values and re-save</bullet>
+</list>
+</slide>

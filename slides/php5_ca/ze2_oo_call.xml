@@ -1,0 +1,21 @@
+<slide title="Runtime method overloading">
+<blurb>
+When a method is called that doesn't explicitally exist within an object,
+PHP5 will now call the special method %__call()% method
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	class dyn_class {
+
+		function __call($f_name, $args) {
+
+			echo "You called $f_name, # of params: ".count($args);
+		}
+	}
+
+	$test = new dyn_class();
+	$test->call_my_function();
+	$test->call_another_function(20);
+?>]]>
+</example>
+</slide>
+

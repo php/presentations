@@ -1,0 +1,49 @@
+<slide title="Real life example">
+<blurb>
+    Here's one example of a real life application of tidy parsing. Retrieves all the URLs in a document
+</blurb>
+<example fontsize="1.6em" type="php"><![CDATA[<?php
+    function get_links($node) {
+        $urls = array();
+        
+        /* Check to see if we are on an <A> tag or not */
+        if($node->id == TIDY_TAG_A) {
+            /* If we are, find the HREF attribute */
+            $attrib = $node->get_attr(TIDY_ATTR_HREF);
+            if($attrib) {
+                /* Add the value of the HREF attrib to $urls */
+                $urls[] = $attrib->value;
+            }
+            
+        }
+        
+        /* Are there any children? */
+        if($node->has_children()) {
+            
+            /* Traverse down each child recursively */
+            foreach($node->children() as $child) {
+                   
+                /* Append the results from recursion to $urls */
+                foreach(get_links($child) as $url) {
+                    
+                    $urls[] = $url;
+                    
+                }
+                
+            }
+        }
+        
+        return $urls;
+    }
+ 
+?>]]>
+</example>
+<example fontsize="1.6em" type="php" title="Using %get_links()%"><![CDATA[<?php
+    tidy_parse_file('test.html');
+    tidy_clean_repair();
+    $html = tidy_get_html();
+    $links = get_links($html);
+    print_r($links);
+?>]]>
+</example>
+</slide>

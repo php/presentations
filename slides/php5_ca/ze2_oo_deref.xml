@@ -1,0 +1,26 @@
+<slide title="Indirect referencing">
+<blurb>
+In PHP 4, you couldn't access a member function or properity indirectly
+through another object's member function or properity..
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	$foo = new foobar();
+
+	/* this breaks in PHP 4, even if $foo->a is an object with
+	   another member variable $b within it */
+	echo $foo->a->b;
+
+	/* This is how it would have to work in PHP 4 */
+
+	$tmp = $foo->a;
+	echo $tmp->b;
+]]></example>
+<blurb>
+	In PHP 5, indirect referencing is allowed
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+
+	echo $foo->a->b;
+]]></example>
+</slide>
+

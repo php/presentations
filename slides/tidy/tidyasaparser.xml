@@ -1,0 +1,16 @@
+<slide title="Tidy document parsing">
+<blurb title="Using the tidy markup parser">
+    In PHP 5 Tidy also provides a number of object-oriented constructs for
+    document parsing and screen-scraping.
+</blurb>&lt;
+<blurb title="Using the tidy parser is simple">
+    A number of functions are provided to allow you to "jump into" a particular
+    major section of the document and begin traversing from there:
+</blurb>
+<list>
+    <bullet>%tidy_get_root()% -- The root of the document tree</bullet>
+    <bullet>%tidy_get_head()% -- Starting from the %&lt; HEAD &gt;% node</bullet>
+    <bullet>%tidy_get_html()% -- Starting from the %&lt; HTML &gt;% node</bullet>
+    <bullet>%tidy_get_body()% -- Starting from the %&lt; BODY &gt;% node</bullet>
+</list>
+</slide>

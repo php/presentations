@@ -1,0 +1,10 @@
+<slide title="The Printability Problem">
+  <blurb title="Why do we care about this at all?">
+  With modern HTML and CSS standards, why should we go through the effort
+  of making printable documents?  
+  </blurb>
+  <blurb title="Answer: Printability">
+  Although HTML and CSS can render a document within a browser, they do not
+  retain their formatting when printed.
+  </blurb>
+</slide>

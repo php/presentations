@@ -1,0 +1,8 @@
+<slide title="Rendering PDF pages">
+<blurb>
+    To render PDF pages, first you must understand the PDFLib cordinate system. Perhaps
+    counter-intuitively PDF (0,0) on a basic PDF page is the lower-left hand corner of the
+    page.
+</blurb>
+<image align="center" filename="pdfcoordinates.png"/> 
+</slide>

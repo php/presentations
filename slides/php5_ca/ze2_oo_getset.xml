@@ -1,0 +1,30 @@
+<slide title="Getting and Setter Methods">
+<blurb>
+	PHP 5 supports the overloading of the %__get()% %__set()% methods,
+which are responsible for being called when a particular class variable
+is requested but doesn't explicitally exist.
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	class anotherfoo {
+
+		private $testvar = array ('test'=> 10);
+
+		function __get($varname) {
+
+			return $this->testvar[$name];
+
+		}
+
+		function __set($varname, $value) {
+
+			$this->testvar[$name] = $value;
+		}
+
+	}
+
+	$varinst = new anotherfoo();
+	$varinst->test++;
+	echo "The value of 'test' is {$varinst->test}";
+?>
+]]></example>
+</slide>

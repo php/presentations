@@ -1,0 +1,18 @@
+<slide title="Rendering PDF pages">
+    <blurb title="Steps to adding an image to a PDF page"/>
+    <list>
+        <bullet>Open the image using GD's %imagecreatefrom*% family of functions</bullet>
+        <bullet>Convert the image to a PDF resource using %pdf_open_memory_image()%</bullet>
+        <bullet>Place the image on the PDF page using %pdf_place_image()%</bullet>
+        <bullet>Close *both* the PDF image and the GD image resources!</bullet>
+    </list>
+    <example title="Adding the PHP-Logo to a PDF page" type="php" fontsize='1.4em'><![CDATA[<?php
+    $gd_logo = imagecreatefromjpeg("php-logo.jpg");
+    $logo = pdf_open_memory_image($pdf_r, $gd_logo);
+    $logo_w = pdf_get_value($pdf_r, "imagewidth", $logo);
+    imagedestroy($gd_logo);    
+    pdf_place_image($pdf_r, $logo, PAGE_WIDTH/2 - ($logo_w/2), PAGE_HEIGHT/2, 1.0);
+    pdf_close_image($pdf_r, $logo);
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,30 @@
+<slide title="Accessing values of nodes">
+<blurb>
+    The %value% attribute of any given node represents the value of the entire branch
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+    tidy_parse_file('test.html');
+    tidy_clean_repair();
+    
+    $head = tidy_get_head();
+    $html = tidy_get_html();
+    
+    $head = htmlentities($head->value);
+    $html = htmlentities($html->value);
+    echo "<PRE>Head: $head\n\nHTML: $html</PRE>";
+?>]]>
+</example>
+<example fontsize="1.6em" title="Result:">Head: &lt;head&gt;
+&lt;title&gt;Hello, World!&lt;/title&gt;
+&lt;/head&gt;
+
+HTML: &lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Hello, World!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body bgcolor="#ffffff"&gt;
+&lt;b&gt;A simple HTML document&lt;/b&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</example>
+</slide>

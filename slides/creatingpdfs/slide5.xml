@@ -1,0 +1,15 @@
+<slide title="The Rich Text Format">
+<blurb title="An example RTF document">
+Here is perhaps the most simplistic of RTF documents..
+</blurb>
+<example title="Basic RTF Document" type="text" fontsize='1.4em'><![CDATA[
+{\rtf1
+{\fonttbl 
+{\f0 Arial;}
+{\f1 Times New Roman;}
+}
+\f0\fs60 PHP Developer's Handbook\par
+\f1\fs20 This is a simple RTF document, not bad, eh?\par
+}]]>
+</example>
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Using tidy configuration files">
+<example fontsize="1.6em" title="Cleaning up Microsoft generated HTML"><![CDATA[<?php
+    tidy_setopt("word-2000", true);
+    tidy_parse_file("/tmp/mydoc.html");
+    tidy_clean_repair();
+    echo tidy_get_output();
+?>
+]]>
+</example>
+</slide>

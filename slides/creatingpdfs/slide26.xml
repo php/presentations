@@ -1,0 +1,23 @@
+<slide title="Useful Tips and Tricks">
+    <blurb title="Using %pdf_translate()%">
+      The %pdf_translate()% function is used to move the origin of the PDF page
+      (usually the lower-left hand corner) somewhere else. 
+    </blurb>
+    <example type="php" title="Another way to draw a circle" fontsize='1.4em'><![CDATA[<?php
+    /* Save the current state */
+    pdf_save($pdf_r);
+
+    /* Move the orgin from the lower-left to the center of the document */
+    pdf_translate($pdf_r, PAGE_WIDTH/2, PAGE_HEIGHT/2);
+    
+    /* Draw a circle at 0,0 (now the center of the document)*/
+    pdf_circle($pdf_r, 0, 0, 100);
+    
+    pdf_stroke($pdf_r);
+    
+    /* Restore the coordinate system */
+    pdf_restore($pdf_r);
+?>]]>
+</example>
+    
+</slide>

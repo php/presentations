@@ -1,0 +1,21 @@
+<slide title="Abstract classes">
+<blurb>
+In PHP 5 classes can also be defined as "abstract" classes, which must be
+extended before it can be instanciated
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+	abstract class foobar {
+
+		abstract function myfunct();
+
+	}
+
+	class myfoobar extends foobar {
+
+		function myfunct() { /* .... */ }
+	}
+
+	$a = new myfoobar;
+	$a->myfunct();
+?>]]></example>
+</slide>
