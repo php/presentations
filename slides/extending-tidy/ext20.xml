@@ -1,0 +1,80 @@
+<slide title="Resources">
+
+<blurb>
+A generic data container.  Used to hold file handles, database connections, or
+anything else that needs to be initialized and then passed around for other
+functions to act on.  To create a resource in your extension, first declare 
+an extension-wide true global.  We don't have to worry about thread-safety here.
+And then if your resource holds a complex datatype of some sort, typedef it as 
+well at the top of your .c file (on in your header file):
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[static int le_test;
+
+typedef struct _test_le_struct {
+    char *name;
+    long age;
+} test_le_struct;]]></example>
+
+<blurb>
+Next we need to create a resource destructor function.
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[static void _php_free_test(zend_rsrc_list_entry *rsrc TSRMLS_DC) {
+    test_le_struct *test_struct = (test_le_struct *)rsrc->ptr;
+
+    efree(test_struct->name);
+    efree(test_struct);
+}]]></example>
+
+<blurb>
+Then in our MINIT function we declare/initialize our resource:
+</blurb>
+<example fontsize="1.5em" type="c"><![CDATA[le_test = zend_register_list_destructors_ex(_php_free_test,
+                                            NULL, "test", module_number);]]></example>
+
+
+<blurb>
+Then we might have a function that looks like this that returns a resource:
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_init) {
+    char *name = NULL;
+    int name_len, age;
+    test_le_struct *test_struct;
+
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC,
+                              "sl", &name, &name_len, &age) == FAILURE) {
+        return;
+    }
+    test_struct = emalloc(sizeof(test_le_struct));
+    test_struct->name = estrndup(name, name_len);
+    test_struct->age = age;
+    ZEND_REGISTER_RESOURCE(return_value, test_struct, le_test);
+}]]></example>
+
+<blurb>
+Followed by other functions that then take a resource as an argument and do something with it:
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_get)
+{
+    test_le_struct *test_struct;
+    pval *res;
+
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC,
+                              "r", &res) == FAILURE) {
+        return;
+    }
+
+    ZEND_FETCH_RESOURCE(test_struct, test_le_struct *,
+                        &res, -1, "test", le_test);
+
+    if(!test_struct) RETURN_FALSE;
+
+    array_init(return_value);
+    add_assoc_string(return_value, "name", test_struct->name, 1);
+    add_assoc_long(return_value, "age", test_struct->age);
+}]]></example>
+
+</slide>

@@ -1,0 +1,25 @@
+<slide title="Define the functions">
+<blurb>From your plan, generate a function definition file</blurb>
+<example type="shell" title="tidy.def"><![CDATA[resource tidy_create() Create a new Tidy document object
+void tidy_release(resource tdoc) Release an allocated Tidy document object
+string tidy_release_date() Get release date (version) for current library
+bool tidy_set_option(resource tdoc, string name, string value) Get release date (version) for current library
+int tidy_status(resource tdoc) Get status of current document
+int tidy_detected_html_version(resource tdoc) Detected HTML version: 0, 2, 3 or 4
+bool tidy_detected_xhtml(resource tdoc) Input is XHTML?
+bool tidy_detected_generic_xml(resource tdoc) Input is generic XML (not HTML or XHTML)?
+int tidy_error_count(resource tdoc) Number of Tidy errors encountered.  If > 0, output is suppressed unless TidyForceOutput is set.
+int tidy_warning_count(resource tdoc) Number of Tidy warnings encountered
+int tidy_access_warning_count(resource tdoc) Number of Tidy accessibility warnings encountered
+int tidy_config_error_count(resource tdoc) Number of Tidy configuration errors encountered
+int tidy_load_config(resource tdoc, string file [, string encoding]) Load a Tidy configuration file
+bool tidy_file_exists(string file) Whether a file exists (with tilde expansion)
+int tidy_set_character_encoding(resource tdoc, string encoding) Set the input/output character encoding for parsing markup
+int tidy_parse_file(resource tdoc, string filename) Parse markup from a file
+int tidy_parse_string(resource tdoc, string source) Parse markup from a string
+int tidy_clean_and_repair(resource tdoc) Execute configured cleanup and repair operations on parsed markup
+int tidy_run_diagnostics(resource tdoc) Run configured diagnostics on parsed and repaired markup (must call tidy_clean_and_repair() first)
+int tidy_output(resource tdoc [, string filename]) Output currently parsed document (to standard output or specified filename)
+void tidy_error_summary(resource tdoc) Write more complete information about errors
+void tidy_general_info(resource tdoc) Write more general information about markup]]></example>
+</slide>

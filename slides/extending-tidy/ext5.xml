@@ -1,0 +1,39 @@
+<slide title="Creating a skeleton extension">
+<blurb>
+Run the *ext_skel* script which creates
+all the required skeleton files.
+</blurb>
+<example type="shell"><![CDATA[% cd php4/ext
+% ./ext_skel --extname=tidy --proto=tidy.def
+Creating directory tidy
+Creating basic files: config.m4 Makefile.in .cvsignore tidy.c 
+                      php_tidy.h CREDITS EXPERIMENTAL 
+                      tests/001.phpt tidy.php [done].
+% ls tidy
+config.m4    CREDITS       EXPERIMENTAL    tidy.c 
+tidy.php     Makefile.in   php_tidy.h      tests/]]></example>
+
+<blurb title="Standalone or Embedded?">
+At this point you have a choice on how to proceed.  You can either develop your
+extension under the main PHP framework where you run the top-level *buildconf*
+script to include your extension in PHP's main configuration script, or you can
+develop your extension in a completely separate directory where you run the
+*phpize* script to populate your extension directory with all the required
+files.
+</blurb>
+
+<example title="Embedded" type="shell"><![CDATA[% cd tidy
+% vi config.m4
+% cd ../..
+% ./buildconf
+% ./configure --[with|enable]-tidy
+% make]]></example>
+
+<example title="Standalone" type="shell"><![CDATA[% mv tidy /tmp
+% cd /tmp/tidy
+% vi config.m4
+% phpize
+% ./configure --[with|enable]-tidy
+% make]]></example>
+
+</slide>

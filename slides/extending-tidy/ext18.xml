@@ -1,0 +1,62 @@
+<slide title="Adding php.ini Entries">
+
+<blurb>
+Generally the extension-wide global variables are actually configuration
+options set in the %php.ini% file, or perhaps in the Apache %httpd.conf% file.
+Adding such configuration options for your extension is easy.  To add a 
+%test.my_ini_setting% configuration variable, first
+follow the instructions for creating a global variable from the last slide.
+Then in your .c file add:
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[PHP_INI_BEGIN()
+    STD_PHP_INI_ENTRY("test.some_integer", "0",
+                      PHP_INI_ALL, OnUpdateInt,
+		      some_integer, zend_test_globals, test_globals)
+PHP_INI_END()]]></example>
+
+<blurb>
+The arguments to STD_PHP_INI_ENTRY here are: 
+</blurb>
+<list>
+<bullet>entry name</bullet>
+<bullet>entry value</bullet>
+<bullet>change permissions</bullet>
+<bullet>pointer to change notification handler</bullet>
+<bullet>corresponding global variable</bullet>
+<bullet>globals struct type</bullet>
+<bullet>globals struct</bullet>
+</list>
+
+<blurb>
+You can implement your own change notification handlers using 
+%PHP_INI_MH()%, but here we will just
+use the default %OnUpdateInt% which 
+basically just takes the string in the .ini file and does an atoi()
+on it.  The other built-in handlers are 
+%OnUpdateReal()%, 
+%OnUpdateBool()%,
+%OnUpdateString()%, and
+%OnUpdateStringUnempty()%. 
+</blurb>
+
+<blurb>
+After adding your STD_PHP_INI_ENTRY block to your .c file, in your MINIT function
+after the %ZEND_INIT_MODULE_GLOBALS()% add this:
+</blurb>
+
+<example type="c">REGISTER_INI_ENTRIES();</example>
+
+<blurb>
+And likewise, in your MSHUTDOWN function add:
+</blurb>
+
+<example type="c">UNREGISTER_INI_ENTRIES();</example>
+
+<blurb>
+And finally, you can optionally add this to your MINFO function:
+</blurb>
+
+<example type="c">DISPLAY_INI_ENTRIES();</example>
+
+</slide>

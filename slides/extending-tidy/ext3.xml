@@ -1,0 +1,15 @@
+<slide title="Plan your Extension">
+<blurb>
+Try to plan your extension before you start writing your code.
+A good way to do this is to write a sample PHP script that illustrates
+how your extension is going to be accessed from a PHP script.
+</blurb>
+<example title="HTML Tidy Sample Extension" type="php"><![CDATA[<?php
+$tidy = tidy_create();
+tidy_set_option($tidy, "show-body-only", "yes");
+tidy_parse_string("<b>foo <i>bar</i></b>");
+tidy_clean_and_repair($tidy);
+tidy_output($tidy);
+?>]]></example>
+
+</slide>

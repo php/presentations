@@ -1,0 +1,52 @@
+<slide title="SAPI Globals">
+
+<blurb>
+SAPI is the Server abstraction API and you can access server-related
+global variables using the %SG()% macro.  Include
+%SAPI.h% in your .c file to get the SG macro.  You
+can then access the elements of the %sapi_globals_struct%
+which looks like this:
+</blurb>
+
+<example type="c"><![CDATA[typedef struct _sapi_globals_struct {
+    void *server_context;
+    sapi_request_info request_info;
+    sapi_headers_struct sapi_headers;
+    int read_post_bytes;
+    unsigned char headers_sent;
+    struct stat global_stat;
+    char *default_mimetype;
+    char *default_charset;
+    HashTable *rfc1867_uploaded_files;
+    long post_max_size;
+    int options;
+} sapi_globals_struct;]]></example>
+
+<blurb>
+To access the default MIME type, you would use:
+</blurb>
+
+<example type="c">SG(default_mimetype)</example>
+
+<blurb>
+And to access the request_uri you would use:
+</blurb>
+
+<example type="c">SG(request_info).request_uri</example>
+
+<blurb title="Executor Globals">
+These are run-time globals.  The ones you are likely to be interested in are
+the %symbol_table% and %active_symbol_table% globals.  For example, to access
+the user-space $foo variable from the current global context, you would do
+this:
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[  pval **tmp;
+  if(zend_hash_find(&EG(symbol_table),
+                    "foo", 4, (void **)&tmp) == SUCCESS) {
+    RETURN_STRINGL(Z_STRVAL_PP(tmp), Z_STRLEN_PP(tmp), 1);
+  } else {
+    RETURN_FALSE;
+  }]]></example>
+
+</slide>

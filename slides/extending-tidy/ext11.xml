@@ -1,0 +1,79 @@
+<slide title="Advanced Parameter Parsing">
+<blurb>
+To do real parameter handling, use the %zend_parse_parameters()%
+function.
+</blurb>
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(return_arg)
+{
+    int argc = ZEND_NUM_ARGS();
+    long arg;
+
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "l", &arg) == FAILURE)
+        return;
+
+	RETURN_LONG(arg);
+}]]></example>
+
+<blurb>
+You can make it an optional argument by putting a "%|%" in the
+argument format string.  Like this:
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(return_arg)
+{
+    int argc = ZEND_NUM_ARGS();
+    long arg;
+
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "|l", &arg) == FAILURE)
+        return;
+
+	if(argc) RETURN_LONG(arg)
+	else RETURN_FALSE
+}]]></example>
+
+<blurb>
+Here are all the possible modifiers in the argument format string:
+</blurb>
+
+<example type="shell"><![CDATA['l'  long (integer)
+'d'  double (floating point)
+'s'  string
+'b'  boolean
+'r'  resource
+'a'  array
+'o'  any object
+'O'  specific object
+'z'  mixed]]></example>
+
+<blurb>
+So, for example, a function that takes a string, an integer, and array and an 
+optional resource would look like this:
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(complex_func)
+{
+    int argc = ZEND_NUM_ARGS();
+    char *str = NULL;
+    int str_len;
+    int res_id = -1;
+    long arg;
+    zval *arr = NULL;
+    zval *res = NULL;
+
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "sla|r", &str, &str_len,
+			      &arg, &arr, &res) == FAILURE)
+        return;
+
+    if (res) {
+	ZEND_FETCH_RESOURCE(test_struct, test_le_struct *,
+	                    &res, -1, "test", le_test);
+	if(!test_struct) RETURN_FALSE;
+    }
+
+    /* do stuff ... */
+}]]></example>
+
+</slide>

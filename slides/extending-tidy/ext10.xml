@@ -1,0 +1,24 @@
+<slide title="Parsing Parameters">
+<blurb>
+In its simplest form you can call %ZEND_NUM_ARGS()% to
+check the number of parameters passed to your function.
+</blurb>
+<example type="c"><![CDATA[PHP_FUNCTION(count_args)
+{
+	RETURN_LONG(ZEND_NUM_ARGS());
+}]]></example>
+
+<blurb>
+You can use the %WRONG_PARAM_COUNT% macro to output a generic
+wrong parameter count warning.  
+</blurb>
+
+<example type="c"><![CDATA[PHP_FUNCTION(my_func)
+{
+    if(ZEND_NUM_ARGS() > 1) {
+        WRONG_PARAM_COUNT;
+    }
+    RETURN_TRUE;
+}]]></example>
+
+</slide>

@@ -1,0 +1,112 @@
+<slide title="Returning an Array">
+<blurb>
+Returning an array is a little bit more complex.  Here we take
+a string and a count and return an array with the specified
+number of elements containing the given string.
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_array)
+{
+    char *str = NULL;
+    int argc = ZEND_NUM_ARGS();
+    int str_len;
+    long count;
+    int i;
+
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "sl", &str, &str_len, &count) == FAILURE)
+        return;
+
+    array_init(return_value);
+    for(i=0; i<count; i++) {
+        add_index_stringl(return_value, i, str, str_len, 1);
+    }
+}]]></example>
+
+<blurb>
+So, to return an array you first call %array_init()% on the return_value zval
+and then populate the array by calling the various add_* functions.  The
+functions available to populate an array are:
+</blurb>
+
+<example fontsize="1em" type="c"><![CDATA[add_index_long(zval *arg, uint idx, long n)
+add_index_null(zval *arg, uint idx)
+add_index_bool(zval *arg, uint idx, int b)
+add_index_resource(zval *arg, uint idx, int r)
+add_index_double(zval *arg, uint idx, double d)
+add_index_string(zval *arg, uint idx, char *str, int dup)
+add_index_stringl(zval *arg, uint idx, char *str, uint length, int dup)
+add_index_zval(zval *arg, uint index, zval *value)]]></example>
+<blurb>
+Recall that PHP supports the non-indexed array syntax.  eg. 
+</blurb>
+<example type="php"><![CDATA[<? $a[] = 1; ?>]]></example>
+
+<blurb>
+This same concept is available in the extension API using these functions:
+</blurb>
+
+<example fontsize="1em" type="c"><![CDATA[add_next_index_long(zval *arg, long n)
+add_next_index_null(zval *arg)
+add_next_index_bool(zval *arg, int b)
+add_next_index_resource(zval *arg, int r)
+add_next_index_double(zval *arg, double d)
+add_next_index_string(zval *arg, char *str, int dup)
+add_next_index_stringl(zval *arg, char *str, uint length, int dup)
+add_next_index_zval(zval *arg, zval *value)]]></example>
+
+<blurb>
+You can also create an array with non-numeric indices.  Otherwise known as an 
+associative array using these functions:
+</blurb>
+
+<example fontsize="1em" type="c"><![CDATA[add_assoc_long(zval *arg, char *key, long n)
+add_assoc_null(zval *arg, char *key)
+add_assoc_bool(zval *arg, char *key, int b)
+add_assoc_resource(zval *arg, char *key, int r)
+add_assoc_double(zval *arg, char *key, double d)
+add_assoc_string(zval *arg, char *key, char *str, int dup)
+add_assoc_stringl(zval *arg, char *key, char *str, uint length, int dup)
+add_assoc_zval(zval *arg, char *key, zval *value)]]></example>
+
+<blurb>
+To return a 2-dimensional array, you simply make new arrays and add them as
+elements of the top array.  Like this:
+</blurb>
+
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_array)
+{
+    char *str = NULL;
+    int argc = ZEND_NUM_ARGS();
+    int str_len;
+    long count;
+    int i;
+    pval *tmp_arr;
+
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "sl", &str, &str_len,
+			      &count) == FAILURE)
+        return;
+
+    array_init(return_value);
+    for(i=0; i<count; i++) {
+        MAKE_STD_ZVAL(tmp_arr);
+        array_init(tmp_arr);
+        add_assoc_long_ex(tmp_arr,
+	                  str, str_len,
+			  count+i);
+        add_next_index_zval(return_value, tmp_arr);
+    }
+}]]></example>
+
+<blurb>
+Note the use of %add_assoc_long_ex()% in the above example.  If
+we know the length of the key, then this is slightly faster than calling 
+%add_assoc_long()%.  The macro definition shows why:
+</blurb>
+
+<example fontsize="1em" type="c"><![CDATA[int add_assoc_long_ex(zval *arg, char *key, uint key_len, long n);
+#define add_assoc_long(__arg, __key, __n) \\
+        add_assoc_long_ex(__arg, __key, strlen(__key)+1, __n)]]></example>
+
+</slide>

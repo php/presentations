@@ -1,0 +1,29 @@
+<slide title="the pval/zval base datatype">
+
+<blurb>
+Data in PHP is stored in the pval or zval datatype.  Two names for
+the same thing.  They are defined like this:
+</blurb>
+
+<example type="c"><![CDATA[typedef union _zvalue_value {
+    long lval;          /* long value */
+    double dval;        /* double value */
+    struct {
+        char *val;
+        int len;
+    } str;
+    HashTable *ht;      /* hash table value */
+    zend_object obj;
+} zvalue_value;
+
+struct _zval_struct {
+    zvalue_value value; /* value */
+    zend_uchar type;    /* active type */
+    zend_uchar is_ref;
+    zend_ushort refcount;
+};
+
+typedef struct _zval_struct zval;
+typedef zval pval;]]></example>
+
+</slide>
