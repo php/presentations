@@ -1,24 +1,24 @@
 <slide title="PHP Usage Growth">
 <list>
-<title>June 2002 Netcraft Report</title>
-<bullet>38,807,788 Domains queried</bullet>
-<bullet> 9,356,880 Domains.  1,234,295 IP addresses</bullet>
-<bullet>PHP installed on 24% of all domains</bullet>
+<title>July 2002 Netcraft Report</title>
+<bullet>37,235,470 Domains queried</bullet>
+<bullet> 9,286,502 Domains.  1,217,730 IP addresses</bullet>
+<bullet>PHP installed on 25% of all domains</bullet>
 </list>
-<image filename="slides/intro/phpstats-200206.png" align="center"/>
+<image filename="slides/intro/phpstats.png" align="center"/>
 <link href="http://www.netcraft.com" leader="Source: " align="right" marginright="6em">Netcraft</link>
 
 <list>
-<title>June 2002 Apache Module Report</title>
-<bullet>5,573,897 Apache Servers surveyed</bullet>
-<bullet>2,128,669 (38.19%) PHP</bullet>
-<bullet>1,683,286 (30.20%) mod_perl</bullet>
-<bullet>1,240,173 (22.25%) OpenSSL</bullet>
-<bullet>1,200,038 (21.53%) mod_ssl</bullet>
-<bullet>  993,803 (17.83%) Frontpage</bullet>
-<bullet>  200,674  (3.60%) DAV</bullet>
-<bullet>  154,801  (2.78%) mod_throttle</bullet>
-<bullet>  150,575  (3.29%) ApacheJServ</bullet>
+<title>July 2002 Apache Module Report</title>
+<bullet>5,758,921 Apache Servers surveyed</bullet>
+<bullet>2,305,572 (40.03%) PHP</bullet>
+<bullet>1,773,063 (30.79%) mod_perl</bullet>
+<bullet>1,400,994 (24.33%) OpenSSL</bullet>
+<bullet>1,355,715 (23.54%) mod_ssl</bullet>
+<bullet>1,038,819 (18.04%) Frontpage</bullet>
+<bullet>  199,297  (3.46%) DAV</bullet>
+<bullet>  159,777  (2.77%) mod_throttle</bullet>
+<bullet>  145,016  (2.52%) ApacheJServ</bullet>
 </list>
 <link href="http://www.securityspace.com/s_survey/data/index.html" leader="Source: ">SecuritySpace.com</link>
 
