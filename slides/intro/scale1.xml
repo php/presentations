@@ -1,0 +1,18 @@
+<slide title="Scale">
+
+<blurb>
+</blurb>
+
+<list title="Share-nothing Architecture">
+<bullet> Like HTTP, each request is distinct</bullet>
+<bullet> Shared data is pushed down to the data-store layer</bullet>
+</list>
+
+<list title="This gives us">
+<bullet> Ability to load balance</bullet>
+<bullet> Invisible failover from one datacenter to another</bullet>
+<bullet> Better modularization of applications</bullet>
+<bullet> Easier to develop and debug</bullet>
+</list>
+
+</slide>

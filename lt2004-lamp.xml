@@ -1,0 +1,44 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<!--
+Deploying PHP on a large scale touches on a lot of interesting issues.
+There is the ever-present performance dragon that needs to be tamed but
+there are also more subtle issues such as supporting a huge internal
+engineering team with tools and training.  In this talk Rasmus will go
+through the current state of PHP at the largest web destination in the
+world and explain how these issues have been addressed over the past 2
+years.
+-->
+<topic>PHP</topic>
+<title>Large Scale PHP</title>
+<event>Linuxtag</event>
+<location>Karlsruhe</location>
+<date>Jun.24, 2004</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>Live presentation at http://talks.php.net</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/large.xml</slide>
+  <slide>slides/intro/whyphp.xml</slide>
+  <slide>slides/intro/scale1.xml</slide>
+  <slide>slides/intro/scale2.xml</slide>
+  <slide>slides/intro/scale3.xml</slide>
+  <slide>slides/intro/scale4.xml</slide>
+  <slide>slides/intro/scale5.xml</slide>
+</chapter>
+
+<chapter title="Architecture">
+  <slide>slides/intro/stack_arch.xml</slide>
+  <slide>slides/intro/people_arch.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+</chapter>
+
+</presentation>

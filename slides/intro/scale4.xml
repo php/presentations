@@ -1,0 +1,12 @@
+<slide title="Scale">
+
+<blurb>
+</blurb>
+
+<list title="Watch those compiler flags">
+<bullet> Use non-PIC Apache DSO (gcc -prefer-non-pic)</bullet>
+<bullet> Use platform-specific gcc flags</bullet>
+<bullet> ./configure --disable-all</bullet>
+</list>
+
+</slide>
