@@ -1,23 +1,20 @@
-<slide title='Introduction'>
-<blurb>
-We all have a basic understanding of biology and its relevant
-molecules and higher order structures (viruses, cells, etc.).
-</blurb>
-<list title='Nucleic Acids'>
-	<bullet>RNA</bullet>
-	<bullet>DNA</bullet>
-</list>
-<list title='Proteins'>
-	<bullet>Enzymes</bullet>
-	<bullet>Antibodies</bullet>
-</list>
-<list title='Others'>
-	<bullet>Polysaccharides (sugars)</bullet>
-	<bullet>Lipids (fats)</bullet>
-	<bullet>Miscellaneous: co-factors, ligands, metabolites, etc.</bullet>
-</list>
-<blurb>
-Let's see some nice pictures of some of these biomolecules, with
-an aim on gaining a sense of size and relative scale.
-</blurb>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Introduction</title>
+
+	<list effect="slide" fontsize="5em">
+		<bullet>Introduction to the engine</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Parse</bullet>
+		<bullet>Compile</bullet>
+		<bullet>Execute</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Xdebug</bullet>
+	</list>
+	<list effect="slide" fontsize="4em" marginleft="2em">
+		<bullet>Getting data</bullet>
+		<bullet>Using data</bullet>
+	</list>
 </slide>
