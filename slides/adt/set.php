@@ -22,6 +22,6 @@ if ($universal->is_member("hallo")) {
 }
 
 if (!$universal->is_member("grüßgott")) {
-	echo "Grüßgott is for Süddeutsche\n";
+	echo "Grüßgott is fia di Deitschn\n";
 }
 ?>
