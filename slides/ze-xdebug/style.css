@@ -10,6 +10,11 @@ ul {
 	padding-top: 20;
 	padding-left: 100;
 }
+
+tt {
+	font-family: courier;
+}
+
 th.trace {
 	font-family: arial;
 	font-size: 12pt;
