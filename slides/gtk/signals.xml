@@ -16,9 +16,9 @@
   internal ~handler~, but one or more custom handlers can be ~connected~ to
   a signal to initiate some sort of response.</blurb>
 
- <blurb>For example, the 'OK' button in a dialog (a GtkButton) has
-  the *clicked* signal that is emitted when the user clicks the button with the
-  mouse. You may want to connect a custom handler to this signal in order to
-  perform an action that the 'OK' button implies.</blurb>
+ <blurb>For example, the 'OK' button (GtkButton) has the *clicked* signal that
+  is emitted when the user clicks the button with the mouse. You may want to
+  connect a custom handler to this signal in order to perform an action that the
+  'OK' button implies.</blurb>
 
 </slide>

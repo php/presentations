@@ -2,8 +2,8 @@
 
  <blurb>
   Widgets can grab the keyboard focus if needed, but it only makes sense for
-  those that interact with keyboard with some way. So, *GtkEntry* will work for
-  example, while *GtkArrow* won't.
+  the ones that interact with keyboard in some way. So, *GtkEntry* will work, for
+  example, while *GtkArrow* will not.
  </blurb>
 
  <example fontsize="1.5ex"><![CDATA[<?php $entry->grab_focus(); ?>]]></example>

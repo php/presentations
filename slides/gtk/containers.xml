@@ -8,7 +8,7 @@
   <bullet fontsize="3ex">table</bullet>
   <bullet fontsize="3ex">button</bullet>
  </list>
- <blurb>The contained widgets are called container ~children~.</blurb>
+ <blurb>The contained widgets are container's ~children~.</blurb>
  <blurb>Containers usually respond to resize events and addition and removal of children by reallocating the available space among its remaining children.</blurb>
  <blurb>Since a container is also a widget, we can nest containers to an arbitrary degree: a vertical box containing a table containing a button containing a label.</blurb>
 </slide>

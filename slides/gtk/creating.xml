@@ -3,7 +3,7 @@
  <blurb>
   To create a widget, use |0033aa|%&amp;new%| operator instead of
   |0033aa|%new%|. Some widgets take constructor parameters to initialize
-  themselves to some state.
+  themselves with.
  </blurb>
  <example fontsize="1.5ex"><![CDATA[<?php $vbox =& new GtkVBox(false, 5); ?>]]></example>
  <blurb>

@@ -24,7 +24,7 @@
  </blurb>
  <example fontsize="1ex"><![CDATA[<?php
   function show_log($stream, $condition, $my_data) { }
-  $stream = ...; // open the log via pipe, for example
+  $stream = ...; // open the log via file, pipe, or socket
   gtk::input_add($stream, GDK_INPUT_READ, 'show_log', $some_data);
   gtk::main();
 ?>]]></example>

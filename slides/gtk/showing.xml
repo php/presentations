@@ -16,7 +16,8 @@
 
  <blurb>
   If a widget is inside a container and you call %show()% on it, it will not
-  appear on screen until the container itself has been shown.
+  appear on screen until the container itself has been shown. This is useful for
+  visibility display of the main window, for example.
  </blurb>
 
  <blurb>

@@ -9,6 +9,8 @@
    <bullet fontsize="3ex">tree</bullet>
  </list>
  <blurb>A widget usually has a window on which it draws itself.</blurb>
- <blurb>Some widgets are invisible.</blurb>
+ <blurb>Some widgets are invisible - they draw on the window underneath them..</blurb>
+ <blurb>And some important classes, such as *GtkAdjustment* are not widgets at
+  all.</blurb>
 
 </slide>

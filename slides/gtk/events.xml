@@ -1,7 +1,7 @@
 <slide title="Theory: Events" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
 
  <blurb>In addition to signals, there are low-level ~events~ corresponding
-  to the X Window system event mechanism. They can be connected to, just like signals. These events are:</blurb>
+  to the X Window system event mechanism. They can be connected just like signals. These events are:</blurb>
 
  <list fontsize="1.2ex">
   <bullet>event</bullet>

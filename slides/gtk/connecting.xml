@@ -1,9 +1,10 @@
 <slide title="Connecting Signals" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
 
  <blurb>
-  The most basic way of connecting a signal to a callback with with
-  %connect()% method. For example, to respond to a %'clicked'% signal on
-  a *GtkButton* widget, you would do this:
+  The most basic way of connecting a signal to a callback is by using
+  %connect()% method. All classes descended from *GtkObject* have it. For
+  example, to respond to a %'clicked'% signal on a *GtkButton* widget, you would
+  do this:
  </blurb>
  <example fontsize="1ex"><![CDATA[<?php
   function on_ok_clicked($button) {  }

@@ -10,7 +10,7 @@
  <example fontsize="1ex"><![CDATA[<?php $window->set_position($position); ?>]]></example>
  <blurb fontsize="2ex">
   Where %$position% can be %'center'% (center of screen), %'mouse'% (under the
-  cursor), or %'none'% (let window manager place it).
+  cursor), or %'none'% (let the window manager place it).
  </blurb>
  <blurb fontsize="2ex">
   If you want to make window respond to resizing in a certain way, you have to

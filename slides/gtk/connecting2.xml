@@ -17,7 +17,7 @@
   $conn_id = $ok_button->connect('clicked', 'on_ok_clicked');
   $ok_button->signal_handler_block($conn_id); // disable callback
   $ok_button->signal_handler_unblock($conn_id); // re-enable callback
-  $ok_button->disconnect($conn_id); // remove callback
+  $ok_button->disconnect($conn_id); // remove callback permanently
 ?>]]></example>
 
 </slide>

@@ -6,7 +6,7 @@
   example of this container is a regular button.
  </blurb>
  <blurb>
-  To add to or remove a widget from a container:
+  To add to or remove a widget from such a container:
  </blurb>
  <example fontsize="1ex"><![CDATA[<?php
   $container->add($widget);
@@ -20,8 +20,8 @@
   $child_widgets = $container->children;
 ?>]]></example>
  <blurb>
-  In either case %$child_widgets% will be an array of widgets, but the second
-  approach lets you access a specific child directly, e.g.
+  In either case %$child_widgets% will be an array of immediate children, but
+  the second approach lets you access a specific child directly, e.g.
   %$container->children[0]%.
  </blurb>
 
