@@ -17,8 +17,17 @@ at creating web applications.
 <bullet>I'm not a graphic designer :)</bullet>
 </list>
 
-<blurb>
-<link href="http://conf.php.net/guestbook.tar.gz">Source Download</link>
-</blurb>
+<example 
+  title="Guestbook SQL Source"
+  fontsize="1.2em"
+  type="sql"
+  filename="slides/scripting/guestbook.sql"/>
+
+
+<example 
+  title="Guestbook PHP Source"
+  fontsize="1em"
+  type="php"
+  filename="slides/scripting/guestbook.php"/>
 
 </slide>
