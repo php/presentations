@@ -2,6 +2,8 @@
 <list>
  <bullet>http://php.weblogs.com/ADOdb</bullet>
  <bullet>Supports: MySQL, Interbase, Sybase, PostgreSQL, Oracle, Microsoft SQL server, ODBC, Informix, Sybase SQL Anywhere</bullet>
+ <bullet>Inspired by Microsoft's ADO (ActiveX Data Objects)</bullet>
+ <bullet>Code for handling INSERTs and UPDATEs (data handling)</bullet>
 </list>
 <example><![CDATA[<?php
 require 'adodb.inc.php';
@@ -11,7 +13,7 @@ $db->Connect("server","user","pass","database");
 
 $ADODB_FETCH_MODE = ADODB_FETCH_ASSOC;
 $result = $db->Execute("SELECT ... ")
-  or die("query failed: ".TODO);
+  or die("query failed: ".$db->ErrorMsg());
 
 while (!$result->EQF) {
   echo " {$result->fields[id]} ... ";
