@@ -1,0 +1,26 @@
+<slide title="Date/Time Functions">
+
+<example result="yes" title="Simple Date Display"><![CDATA[<?php echo date("M d, Y H:i:s", time()); ?>]]></example>
+
+<example result="yes" title="How old is CArL?"><![CDATA[<?php
+  $birth = mktime(13,26,0,3,6,2002);
+  $weeks = (int)((time() - $birth)/(7*86400));
+  $days = (int)((time() - $birth)/86400) - $weeks*7;
+  $hours = (int)((time() - $birth)/3600) - $days*24 - $weeks*7*24;
+  $mins = (int)((time()-$birth)/60) - $hours*60 - $days*24*60 - $weeks*7*24*60;
+  if($weeks>0) $str = "$weeks weeks, ";
+  if($days>0) $str .= "$days day";
+  if($days>1) $str .= "s";
+  if($hours == 1) $str .= " $hours hour and";
+  else $str .= " $hours hours and";
+  if($mins == 1) $str .= " 1 minute";
+  else $str .= " $mins minutes";
+  echo "CArL is now $str old";
+?>]]></example>
+<image filename="slides/intro/carl.jpg" align="center" />
+
+<blurb title="Calendar Conversions">
+Converts between calendars (Julian, Gregorian, Mayan, etc)
+</blurb>
+
+</slide>

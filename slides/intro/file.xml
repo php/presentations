@@ -1,0 +1,3 @@
+<slide title="Reading a File">
+<example title="readfile()" result="yes"><![CDATA[<PRE><?php readfile("/proc/cpuinfo")?></PRE>]]></example>
+</slide>

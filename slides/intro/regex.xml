@@ -1,0 +1,15 @@
+<slide title="Regular Expressions">
+<h3>Posix-style</h3>
+<example title="Posix Style" result="yes"><![CDATA[<?php
+echo ereg_replace('will be ([[:alpha:]]+)', 
+             'has been \1', 
+		     'This string will be modified.');
+?>]]></example>
+
+<h4>Perl-style</h4>
+<example title="Perl Style" result="yes"><![CDATA[<?php
+echo preg_replace('/will be ([\w\s]+)/', 
+          'has been \1', 
+		  'This string will be modified.');
+?>]]></example>
+</slide>
