@@ -7,7 +7,7 @@
 <example type="php" title="Create the SOAP Client" fontsize='1.4em'>
 <![CDATA[<?php
 $endpoint = 'http://api.google.com/search/beta2';
-$client = new SOAP_Client($endpoint);
+$client =& new SOAP_Client($endpoint);
 ?>
 ]]>
 </example>
@@ -29,7 +29,7 @@ $oe = '';
 <example type="php" title="Make the SOAP Call" fontsize='1.4em'>
 <![CDATA[<?php
 $response = $client->call('doGoogleSearch',
-                          array('key'=>$key,
+                          $params = array('key'=>$key,
                                 'q'=>$query,
                                 'start'=>$start,
                                 'maxResults'=>$maxResults,

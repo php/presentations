@@ -1,0 +1,95 @@
+<slide title="Server Generated WSDL">
+
+<blurb>The next step is to provide data in your
+server classes that can be used to generate 
+Schema and WSDL.  We do this by filling out the 
+dispatch mapping and data types.</blurb>
+<list>
+<bullet>Normally, all object methods are SOAP accessable (except _name)</bullet>
+<bullet>The dispactch map does not need to be used, but aids 
+the server class in knowing what parameters are used 
+with the functions</bullet>
+<bullet>For multiple OUT parameters, you MUST use the dispatch mapping</bullet>
+<bullet>If you use dispatch mapping, you MUST have a map for each SOAP function</bullet>
+<bullet></bullet>
+<bullet></bullet>
+</list>
+<example 
+	title="Disco Server Example"
+	filename="examples\example_server_small.php"
+	type="php"
+        fontsize='1.4em'
+/>
+
+<example title="WSDL Generated" type="xml" fontsize='1.4em'>
+<![CDATA[<?xml version="1.0"?>
+<definitions name="ServerExample" 
+    targetNamespace="urn:ServerExample" 
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns:tns="urn:ServerExample" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/" 
+    xmlns:ns5="http://soapinterop.org/xsd">
+    
+    <types xmlns="http://schemas.xmlsoap.org/wsdl/">
+        <schema xmlns="http://www.w3.org/2001/XMLSchema" 
+            targetNamespace="http://soapinterop.org/xsd">
+            <complexType name="SOAPStruct">
+                <all>
+                    <element name="varString" type="xsd:string" />
+                    <element name="varInt" type="xsd:int" />
+                    <element name="varFloat" type="xsd:float" />
+                </all>
+            </complexType>
+        </schema>
+    </types>
+
+    <message name="echoStructRequest">
+        <part name="inputStruct" type="ns5:SOAPStruct" />
+    </message>
+    <message name="echoStructResponse">
+        <part name="outputStruct" type="ns5:SOAPStruct" />
+    </message>
+
+    <portType name="ServerExamplePort">
+        <operation name="echoStruct">
+            <input message="tns:echoStructRequest" />
+            <output message="tns:echoStructResponse" />
+        </operation>
+    </portType>
+    
+    <binding name="ServerExampleBinding" type="tns:ServerExamplePort">
+        <soap:binding style="rpc" 
+            transport="http://schemas.xmlsoap.org/wsdl/http/" />
+        <operation name="echoStruct">
+            <soap:operation 
+                soapAction="urn:SOAP_Example_Server#soap_example_server#echoStruct" />
+            <input>
+                <soap:body 
+                    use="encoded" 
+                    namespace="urn:SOAP_Example_Server" 
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </input>
+            <output>
+                <soap:body use="encoded" 
+                    namespace="urn:SOAP_Example_Server" 
+                    encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+            </output>
+        </operation>
+    </binding>
+    
+    <service name="ServerExampleService">
+        <documentation />
+        <port name="ServerExamplePort" 
+            binding="tns:ServerExampleBinding">
+            <soap:address 
+                location="http://localhost/pres2/presentations/slides/soap/examples/server.php" />
+        </port>
+    </service>
+</definitions>]]>
+</example>
+
+
+</slide>

@@ -19,11 +19,11 @@ echo <<<END
 <form action="$action" method=GET>
 Text: <input type="text" name="text" value="$text"> 
 <select name="translation">
+<option value="en_es" SELECTED>English -> Spanish</option>
 <option value="en_de">English -> German</option>
 <option value="en_fr">English -> French</option>
 <option value="en_it">English -> Italian</option>
 <option value="en_pt">English -> Portugese</option>
-<option value="en_es" SELECTED>English -> Spanish</option>
 <option value="fr_en">French -> English</option>
 <option value="it_en">German -> English</option>
 <option value="pt_en">Italian -> English</option>

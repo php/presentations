@@ -4,10 +4,10 @@
 <![CDATA[<?php
 require_once('SOAP/Client.php');
 
-$client = new SOAP_Client(
+$client =& new SOAP_Client(
     'http://www.caraveo.com/soap_interop/server_round2.php');
 
-$header = new SOAP_Header(
+$header =& new SOAP_Header(
         '{http://soapinterop.org/echoheader/}echoMeStringRequest',
         'string',
         'This is a test header',
@@ -18,7 +18,7 @@ $header = new SOAP_Header(
 
 $client->addHeader($header);
 
-$response = $client->call('echoVoid');
+$response = $client->call('echoVoid', $p = NULL);
 print $client->wire;
 ?>]]>
 </example>

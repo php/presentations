@@ -1,5 +1,6 @@
 <slide title="Document/Literal Key Points">
 <list>
+<bullet>Doc/Lit will become the defacto standard for Web Services</bullet>
 <bullet>Services typically support only RPC/Encoded OR Doc/Lit</bullet>
 <bullet>MS .Net defaults to Doc/Lit</bullet>
 <bullet>Doc/Lit is easier for dynamicaly typed langauges</bullet>
@@ -7,16 +8,5 @@
 <bullet>Literal encoding avoids some (de)serialization overhead</bullet>
 <bullet>PEAR::SOAP defaults to RPC/Encoded, you must set style and use</bullet>
 </list>
-<example type="php" fontsize='1.3em'>
-<![CDATA[<?php
-$result = $client->call("ListLiveCityCams", 
-        NULL, 
-        array('namespace' => $baseurl.'/livecitycams.wsdl',
-            'soapaction' => $baseurl.'/livecitycams/listlivecitycams',
-            'style' => 'document',
-            'use' => 'literal')); 
-?>
-]]>
-</example>
 
 </slide>

@@ -1,37 +1,25 @@
 <slide title="Document/Literal Example">
 <blurb>Document/Literal without WSDL possible also:</blurb>
-<example type="php" fontsize='1.0em'>
+<example type="php" result="1" fontsize='1.0em'>
 <![CDATA[<?php
-require_once('SOAP/Client.php');
+include("SOAP/Client.php");
 
-$baseurl = "http://www.epionet.com/webservices/epiowebservices";
-$endpoint = 'http://www.epionet.com/epiowavewebservices/livecitycams/livecitycams.asp';
-$client = new SOAP_Client($endpoint);
+$endpoint = 'http://mssoapinterop.org/stkv3/wsdl/interopTestDocLit.wsdl';
+$client =& new SOAP_Client($endpoint);
 
-$result = $client->call("ListLiveCityCams", 
-        NULL, 
-        array('namespace' => $baseurl.'/livecitycams.wsdl',
-            'soapaction' => $baseurl.'/livecitycams/listlivecitycams',
-            'style' => 'document',
-            'use' => 'literal')); 
+$echoStringParam =& new SOAP_Value(
+        '{http://soapinterop.org/xsd}echoStringParam',
+        'string','Hello World');
+        
+$return = $client->call("echoString", 
+                $v = array("echoStringParam"=>$echoStringParam), 
+                array('namespace'=>'http://soapinterop.org/WSDLInteropTestDocLit',
+                    'soapaction'=>'http://soapinterop.org/',
+                    'style'=>'document',
+                    'use'=>'literal' ));
 
-if (PEAR::isError($result)) {
-    echo $result->getMessage();
-    exit;
-}
-
-print $client->wire;
-
-foreach($result as $citycam) {
-    $cam = $client->call("GetLiveCityCam", 
-        array("citycamid" => $citycam->camid), 
-        array('namespace'=> $baseurl.'/livecitycams.wsdl',
-            'soapaction'=> $baseurl.'/livecitycams/getlivecitycam',
-            'style' => 'document',
-            'use' => 'literal')); 
-    echo "$cam\n";
-}
-
+print $return;
 ?>]]>
 </example>
+
 </slide>

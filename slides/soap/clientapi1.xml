@@ -10,7 +10,7 @@
 <bullet>Arg 1 Required: String: WSDL or Endpoint URL</bullet>
 <bullet>Arg 2 Optional: Boolean: Is a WSDL URL? (false)</bullet>
 <bullet>Arg 3 Optional: String: Port Name (null)</bullet>
-<bullet>Arg 4 Optional: Array: Proxy Settings (none)</bullet>
+<bullet>Arg 4 Optional: Array: Proxy Settings (none) - necessary for WSDL proxy</bullet>
 </list>
 <list>
     <bullet>Method: call</bullet>
@@ -36,6 +36,19 @@
 <bullet>from (SMTP)</bullet>
 <bullet>transfer-encoding (SMTP, sets the Content-Transfer-Encoding)</bullet>
 <bullet>subject (SMTP, subject header)</bullet>
+<bullet>CURL:</bullet>
+</list>
+<list marginleft="6em">
+<bullet>Any additional CURL options as avialable via the CURL extension.</bullet>
+</list>
+<list>
+    <bullet>Method: setOpt</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Can be used to set options listed above.</bullet>
+<bullet>Arg 1 Required: String: Category | Option</bullet>
+<bullet>Arg 2 Required: String: Option   | Value</bullet>
+<bullet>Arg 3 Optional: String: Value</bullet>
 </list>
 <list>
     <bullet>Method: setEncoding</bullet>
@@ -60,5 +73,11 @@
 </list>
 <list marginleft="2em">
 <bullet>Contains the received xml.</bullet>
+</list>
+<list>
+    <bullet>Other:</bullet>
+</list>
+<list marginleft="2em">
+<bullet>A bunch of undocumented members, some methods, that may change prior to 1.0</bullet>
 </list>
 </slide>    

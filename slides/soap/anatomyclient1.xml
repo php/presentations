@@ -7,8 +7,8 @@
 <example type="php" title="Generate the Client Proxy" fontsize='1.4em'>
 <![CDATA[<?php
 $wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
-$WSDL = new SOAP_WSDL($wsdlurl);
-$client = $WSDL->getProxy();
+$WSDL =& new SOAP_WSDL($wsdlurl);
+$client =& $WSDL->getProxy();
 ?>
 ]]>
 </example>

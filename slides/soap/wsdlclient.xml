@@ -5,8 +5,8 @@
 require_once('SOAP/Client.php'); 
 
 $wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
-$WSDL = new SOAP_WSDL($wsdlurl);
-$client = $WSDL->getProxy();
+$WSDL =& new SOAP_WSDL($wsdlurl);
+$client =& $WSDL->getProxy();
 
 $response =
         $client->doGoogleSearch(
@@ -21,12 +21,13 @@ foreach($response->resultElements as $result) {
 ?>
 ]]>
 </example>
+<blurb>Overload does not work with PHP 4.3.x, and still has issues in PHP 5 cvs.</blurb>
 <example type="php" title="Using SOAP_Client and Overload" fontsize='1.4em'>
 <![CDATA[<?php 
 require_once('SOAP/Client.php'); 
 
 $wsdlurl = 'http://api.google.com/GoogleSearch.wsdl';
-$client = new SOAP_Client($wsdlurl,1);
+$client =& new SOAP_Client($wsdlurl,1);
 
 $response =
         $client->doGoogleSearch(

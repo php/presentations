@@ -4,15 +4,16 @@
 <![CDATA[<?php
 include("SOAP/Client.php");
 
-$soapclient = new SOAP_Client("http://localhost/server.php");
+$soapclient =& new SOAP_Client("http://localhost/server.php");
 
 // this namespace is the same as declared in server.php
 $options = array('namespace' => 'urn:SOAP_Example_Server',
                  'trace' => 1);
 
 $ret = $soapclient->call("echoString",
-						array("inputString"=>"this is a test"),
-						$options);
+                        $params = array("inputString"=>
+                                        "this is a test"),
+                        $options);
 
 print_r($ret);
 ?>
@@ -30,8 +31,8 @@ class SOAP_Example_Server {
     }
 }
 
-$server = new SOAP_Server;
-$soapclass = new SOAP_Example_Server();
+$server =& new SOAP_Server;
+$soapclass =& new SOAP_Example_Server();
 $server->addObjectMap($soapclass,'urn:SOAP_Example_Server');
 $server->service($HTTP_RAW_POST_DATA);
 ?>

@@ -42,6 +42,7 @@
 <slide x="xml schema part1">slides/soap/schema1-xml.xml</slide>
 <slide x="xml schema part2">slides/soap/schema2.xml</slide>
 <slide x="xml schema part2">slides/soap/schema2-xml.xml</slide>
+<slide>slides/soap/soapobjects1.xml</slide>
 <slide x="xml schema summary">slides/soap/schemasummary.xml</slide>
 
 <slide x="wsdl description">slides/soap/wsdl.xml</slide>
@@ -88,7 +89,6 @@
 
 <slide>slides/soap/soapsmtp.xml</slide>
 
-<slide>slides/soap/wsdlclient.xml</slide>
 <slide>slides/soap/proxygen.xml</slide>
 <slide>slides/soap/clientapi5.xml</slide>
 
@@ -102,7 +102,10 @@
 
 <slide>slides/soap/serverwsdl.xml</slide>
 
-<slide>slides/soap/soapobjects1.xml</slide>
+<slide>slides/soap/dispatchmaps.xml</slide>
+<slide>slides/soap/datatypemaps.xml</slide>
+<slide>slides/soap/serverdisco.xml</slide>
+<slide>slides/soap/serverdisco2.xml</slide>
 
 <slide>slides/soap/soapresources.xml</slide>
 <slide>slides/soap/resources.xml</slide>

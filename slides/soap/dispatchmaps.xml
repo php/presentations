@@ -1,0 +1,49 @@
+<slide title="Dispatch Maps">
+
+<blurb>To aid in generating WSDL, you must provide
+a bunch of detailed information about your service.  This
+is done via the *dispatch map* and the *data type map*.</blurb>
+<list>
+<bullet>Normally, all object methods are SOAP accessable (except _name)</bullet>
+<bullet>The dispactch map does not need to be used, but aids 
+the server class in knowing what parameters are used 
+with the functions</bullet>
+<bullet>For multiple OUT parameters, you MUST use the dispatch mapping</bullet>
+<bullet>If you use dispatch mapping, you MUST have a map for each SOAP function</bullet>
+</list>
+<list title="Dispatch Keys">
+<bullet>IN: An array of IN parameters for the method</bullet>
+<bullet>OUT: An array of OUT parameters for the method</bullet>
+<bullet>ALIAS: Can be used to specify a PHP function to handle the SOAP call (usefull for handling SOAP calls that use PHP keywords)</bullet>
+</list>
+<example 
+	title="Dispatch Map Example"
+	type="php"
+        fontsize='1.4em'
+>
+<![CDATA[<?php $this->__dispatch_map['echoStructAsSimpleTypes'] =
+    array(
+        'in' => 
+            array('inputStruct' => 
+                '{http://soapinterop.org/xsd}SOAPStruct'),
+                
+        'out' => 
+            array('outputString' => 'string', 
+                  'outputInteger' => 'int', 
+                  'outputFloat' => 'float'),
+        
+        'alias' => 'myEchoStructAsSimpleTypes'
+        );
+
+$this->__dispatch_map['echoStringSimple'] =
+    array(
+        'in' => 
+            array('inputStringSimple' => 'string'),
+        
+        'out' => 
+            array('outputStringSimple' => 'string'),
+        );
+?>]]>
+</example>
+
+</slide>

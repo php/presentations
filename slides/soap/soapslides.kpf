@@ -136,8 +136,6 @@
 </file>
 <file name="wsdlclient.xml" url="wsdlclient.xml">
 </file>
-<file name="proxygen.xml" url="proxygen.xml">
-</file>
 <file name="clientapi5.xml" url="clientapi5.xml">
 </file>
 <file name="simpleclient-run.xml" url="simpleclient-run.xml">
@@ -173,6 +171,16 @@
 <file name="disco.xml" url="disco.xml">
 </file>
 <file name="uddi.xml" url="uddi.xml">
+</file>
+<file name="proxygen.xml" url="proxygen.xml">
+</file>
+<file name="datatypemaps.xml" url="datatypemaps.xml">
+</file>
+<file name="serverdisco2.xml" url="serverdisco2.xml">
+</file>
+<file name="serverdisco.xml" url="serverdisco.xml">
+</file>
+<file name="dispatchmaps.xml" url="dispatchmaps.xml">
 </file>
 </folder>
 <folder name="Faults">
@@ -220,19 +228,19 @@
 <folder name="real scripts">
 <preference-set id="">
 </preference-set>
-<file name="client.php" url="client.php">
-</file>
-<file name="example_server.php" url="example_server.php">
-</file>
-<file name="example_types.php" url="example_types.php">
-</file>
-<file name="server.php" url="server.php">
-</file>
 <file name="client-echostring-real.php" url="examples/client-echostring-real.php">
 </file>
 <file name="client-echostring.php" url="examples/client-echostring.php">
 </file>
 <file name="client-babelfish-real.php" url="examples/client-babelfish-real.php">
+<preference-set id="">
+</preference-set>
+</file>
+<file name="example_types.php" url="examples/example_types.php">
+</file>
+<file name="example_server.php" url="examples/example_server.php">
+</file>
+<file name="server.php" url="examples/server.php">
 <preference-set id="">
 </preference-set>
 </file>

@@ -1,0 +1,15 @@
+<slide title="Server Generated WSDL">
+
+<blurb>PEAR::SOAP now can generate WSDL for you.</blurb>
+
+<blurb>The first part is setting up the basic logic
+to choose whether you process SOAP, or generate DISCO or WSDL output.</blurb>
+
+<example 
+	title="Disco Server Example"
+	filename="examples\server.php"
+	type="php"
+        fontsize='1.4em'
+/>
+
+</slide>

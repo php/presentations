@@ -7,29 +7,30 @@
 <example type="php" title="Create the SOAP Client" fontsize='1.4em'>
 <![CDATA[<?php
 $endpoint = 'http://api.google.com/search/beta2';
-$client = new SOAP_Client($endpoint);
+$client =& new SOAP_Client($endpoint);
 ?>
 ]]>
 </example>
 <example type="php" title="Prepare the Data" fontsize='1.4em'>
 <![CDATA[<?php
-$key = new SOAP_Value('key','string','xxxx');
-$query = new SOAP_Value('q','string','Caraveo');
-$start = new SOAP_Value('start','int',0);
-$maxResults = new SOAP_Value('maxResults','int',4);
-$filter = new SOAP_Value('filter','boolean',false);
-$restrict = new SOAP_Value('restrict','string','');
-$safeSearch = new SOAP_Value('safeSearch','boolean',false);
-$lr = new SOAP_Value('lr','string','');
-$ie = new SOAP_Value('ie','string','');
-$oe = new SOAP_Value('oe','string','');
+$key =& new SOAP_Value('key','string','xxxx');
+$query =& new SOAP_Value('q','string','Caraveo');
+$start =& new SOAP_Value('start','int',0);
+$maxResults =& new SOAP_Value('maxResults','int',4);
+$filter =& new SOAP_Value('filter','boolean',false);
+$restrict =& new SOAP_Value('restrict','string','');
+$safeSearch =& new SOAP_Value('safeSearch','boolean',false);
+$lr =& new SOAP_Value('lr','string','');
+$ie =& new SOAP_Value('ie','string','');
+$oe =& new SOAP_Value('oe','string','');
 ?>
 ]]>
 </example>
 <example type="php" title="Make the SOAP Call" fontsize='1.4em'>
 <![CDATA[<?php
 $response = $client->call('doGoogleSearch',
-                          array($key,$query,$start,$maxResults,
+                          $params = 
+                            array($key,$query,$start,$maxResults,
                                 $filter,$restrict,$safeSearch,
                                 $lr,$ie,$oe),
                           array('namespace'=>'urn:GoogleSearch'));
