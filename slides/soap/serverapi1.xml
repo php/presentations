@@ -58,7 +58,7 @@ function echoString($inputString)
 }
 
 $in = array('inputString'=>'string');
-$in = array('outputString'=>'string');
+$out = array('outputString'=>'string');
 
 $soapclass = new SOAP_Example_Server();
 $server->addToMap($soapclass,$in,$out,'urn:SOAP_Example_Server');

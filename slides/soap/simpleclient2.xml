@@ -10,7 +10,9 @@ $soapclient = new SOAP_Client("http://localhost/server.php");
 $options = array('namespace' => 'urn:SOAP_Example_Server',
                  'trace' => 1);
 
-$ret = $soapclient->call("echoString",array("inputString"=>"this is a test string"),$options);
+$ret = $soapclient->call("echoString",
+						array("inputString"=>"this is a test"),
+						$options);
 
 print_r($ret);
 ?>

@@ -12,11 +12,13 @@ $client = new SOAP_Client(
     'http://www.caraveo.com/soap_interop/server_round2.php');
 
 $resp = $client->call('echoMimeAttachment',array($v),
-                array('Attachments'=>'Mime',
+                array('attachments'=>'Mime',
                 'namespace'=>'http://soapinterop.org/'));
 ?>]]>
 </example>
-
+<list>
+<bullet>The attachments option can be either 'Mime' or 'DIME'.</bullet>
+</list>
 <example type="text" fontsize='1.4em' title="SOAP Message with Mime Attachments:">
 <![CDATA[POST /soap_interop/server_round2.php HTTP/1.0
 User-Agent: PEAR-SOAP 0.6.1

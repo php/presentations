@@ -1,0 +1,77 @@
+<presentation
+    jskeyboard="1"
+    template="php"
+    logo2="/pres2/presentations/slides/soap/activestate_logo.gif"
+    navbarbackground="#A68C53"
+    backgroundfixed="true"
+    backgroundimage = "/pres2/presentations/slides/soap/activestate_background.jpg"
+    backgroundcol="#EFECDD"
+    navsize="1.4em">
+<title>Web Services for PHP</title>
+<topic>SOAP</topic>
+<event>ActiveState Corporation</event>
+<location>&lt;br/&gt;Forum Du PHP, Paris, France</location>
+<date>December 10, 2002</date>
+<speaker>Shane Caraveo</speaker>
+<company>ActiveState Corporation</company>
+<email>shanec@ActiveState.com</email>
+<url>talks.php.net</url>
+<slide>slides/soap/slide1.xml</slide>
+<slide>slides/soap/agenda2.xml</slide>
+<slide>slides/soap/whatissoap.xml</slide>
+<slide>slides/soap/soaphistory.xml</slide>
+<slide>slides/soap/soap.xml</slide>
+<slide>slides/soap/soapenvelope2.xml</slide>
+<slide>slides/soap/soapfault.xml</slide>
+<slide>slides/soap/document.xml</slide>
+<slide>slides/soap/wsdl.xml</slide>
+<slide>slides/soap/wsdlparts.xml</slide>
+<slide>slides/soap/usingsoap.xml</slide>
+<slide>slides/soap/attachments.xml</slide>
+<slide>slides/soap/other.xml</slide>
+<slide>slides/soap/other2.xml</slide>
+<slide>slides/soap/protocols.xml</slide>
+
+<slide>slides/soap/interop.xml</slide>
+<slide>slides/soap/interop2.xml</slide>
+<slide>slides/soap/interop3.xml</slide>
+
+<slide>slides/soap/implementations.xml</slide>
+<slide>slides/soap/pear.xml</slide>
+
+<slide>slides/soap/simpleclient2.xml</slide>
+
+<slide>slides/soap/anatomyclient1.xml</slide>
+<slide>slides/soap/anatomyclient2.xml</slide>
+<slide>slides/soap/anatomyclient3.xml</slide>
+
+<slide>slides/soap/clientapi1.xml</slide>
+<slide>slides/soap/clientapi2.xml</slide>
+<slide>slides/soap/clientapi3.xml</slide>
+
+<slide>slides/soap/document4.xml</slide>
+
+<slide>slides/soap/headers2.xml</slide>
+
+<slide>slides/soap/clientapi4.xml</slide>
+
+<slide>slides/soap/soapsmtp.xml</slide>
+
+<slide>slides/soap/proxygen.xml</slide>
+<slide>slides/soap/clientapi5.xml</slide>
+
+<slide>slides/soap/server1.xml</slide>
+<slide>slides/soap/serverapi1.xml</slide>
+<slide>slides/soap/server3.xml</slide>
+<slide>slides/soap/soapfault2.xml</slide>
+<slide>slides/soap/serverheader.xml</slide>
+<slide>slides/soap/serveremail.xml</slide>
+
+<slide>slides/soap/serverwsdl.xml</slide>
+
+<slide>slides/soap/soapobjects1.xml</slide>
+
+<slide>slides/soap/soapresources.xml</slide>
+<slide>slides/soap/resources.xml</slide>
+
+</presentation>

@@ -7,7 +7,7 @@
 <bullet>Literal encoding avoids some (de)serialization overhead</bullet>
 <bullet>PEAR::SOAP defaults to RPC/Encoded, you must set style and use</bullet>
 </list>
-<example type="php" fontsize='1.0em'>
+<example type="php" fontsize='1.3em'>
 <![CDATA[<?php
 $result = $client->call("ListLiveCityCams", 
         NULL, 
