@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Xdebug</title>
 	<break lines="2"/>
-	<list fontsize="4.5em">
+	<list>
 		<bullet>Protects against infinite recursion</bullet>
 		<bullet>|ff0000|Colored| |00ff00|var||0000ff|_dump|()</bullet>
 		<bullet>Stacktraces</bullet>

@@ -6,7 +6,7 @@
 	<list fontsize="5em">
 		<bullet>Functions and classnames</bullet>
 	</list>
-	<list fontsize="4em" marginleft="2em">
+	<list class="level2" fontsize="4em" marginleft="2em">
 		<bullet>Normal functions (strlen())</bullet>
 		<bullet>Class members ($obj->strlen())</bullet>
 		<bullet>Static class members (class::strlen())</bullet>
@@ -15,7 +15,7 @@
 	<list fontsize="5em">
 		<bullet>Parameters</bullet>
 	</list>
-	<list fontsize="4em" marginleft="2em">
+	<list class="level2" fontsize="4em" marginleft="2em">
 		<bullet>From argument stack</bullet>
 		<bullet>Converted to strings</bullet>
 	</list>

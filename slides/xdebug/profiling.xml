@@ -3,7 +3,7 @@
 	<title>Profiling</title>
 	<image filename="pg1.png" align="right"/>
 
-	<example fontsize="1.7em">xdebug.profiler_enable=1          ; enable profiler
+	<example class="code_large">xdebug.profiler_enable=1          ; enable profiler
 xdebug.profile_output_dir=/tmp    ; output directory
 xdebug.profile_output_name=crc32  ; file extension</example>
 </slide>

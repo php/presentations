@@ -2,13 +2,12 @@
 <slide fontsize="6em">
 	<title>Gathering debug data 2</title>
 
-	<blurb> </blurb>
-	<blurb> </blurb>
-	<blurb> </blurb>
+	<break lines="2"/>
+
 	<list fontsize="5em">
 		<bullet>Memory footprint</bullet>
 	</list>
-	<list fontsize="4em" marginleft="2em">
+	<list class="level2" fontsize="4em" marginleft="2em">
 		<bullet>Script memory</bullet>
 		<bullet>emalloc()</bullet>
 		<bullet>--enable-memory-limit</bullet>
