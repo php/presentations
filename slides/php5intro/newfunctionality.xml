@@ -1,12 +1,13 @@
 <slide title="New Functionality">
 <list>
+<bullet>Revamped Internals</bullet>
+<bullet>Namespaces</bullet>
+<bullet>Exceptions</bullet>
+<bullet>*Real* Object Orientation</bullet>
 <bullet>The ~ADT~ extension</bullet>
 <bullet>RPC extension</bullet>
 <bullet>~Mono~ extension</bullet>
 <bullet>%file_set_contents()%</bullet>
 <bullet>Bundled ~cURL~ library</bullet>
-<bullet>Object Orientation</bullet>
-<bullet>Exceptions</bullet>
-<bullet>Namespaces</bullet>
 </list>
 </slide>
