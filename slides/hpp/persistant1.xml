@@ -1,6 +1,6 @@
 <slide title="Persistant Cache (II)">
 <image filename="10000000000000690000004538A678CE.jpg" align="right"/>
-<blurb><![CDATA[<br/><br/><br/>]]></blurb>
+<break lines="5"/>
 <list>
 <bullet>DBMs and RDBMS support key-value pairs for easy storage of simple data</bullet>
 <bullet>Complex data requires serialization/deserialization</bullet>
