@@ -1,0 +1,12 @@
+<slide title='SOAP Service'>
+ <list title='Methods'>
+  <bullet>_sql_ : allows for SELECT, SHOW, DESCRIBE SQL queries</bullet>
+  <bullet>_metallopdb_ : information about metal containing proteins given a
+   metal, a mode, and a count</bullet>
+  <bullet>_rssmetallopdb_ : similar to the _metallopdb_ with the output
+   formated as an RSS document</bullet>
+ </list>
+ <example title='Using the methods sql, metallopdb and rssmetallopdb'
+  type='html' align='center'
+  result='0' fontsize='1.2em' filename='output/test_soap_out.html'/>
+</slide>

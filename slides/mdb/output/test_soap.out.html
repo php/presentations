@@ -1,0 +1,406 @@
+<h2>Excercizing the sql method</h2>
+[query: 'select source_id,description from protein limit 3']
+<table border='1'>
+<tr>
+<td bgcolor='#eeeeee'>
+<b>source_id</b>: 1aoo<br>
+<b>description</b>: Header: [metallothionein 08-jul-97 1aoo]
+Title: [ag-substituted metallothionein from saccharomyces cerevisiae, nmr, minimized average structure]
+Compound: [mol_id: 1; molecule: ag-metallothionein; chain: null; synonym: ag-mt; biological_unit: monomer; other_details: ag(i) substituted]
+Source: [mol_id: 1; organism_scientific: saccharomyces cerevisiae; organism_common: baker's yeast; strain: 301n]
+Keywords: [copper detoxification, metal-thiolate cluster]<br>
+<b>0</b>:
+<br>
+<b>source_id</b>: 1aqq<br>
+<b>description</b>: Header: [metallothionein 31-jul-97 1aqq]
+Title: [ag-substituted metallothionein from saccharomyces cerevisiae, nmr, 10 structures]
+Compound: [mol_id: 1; molecule: ag-metallothionein; chain: null; synonym: ag-mt; biological_unit: monomer; other_details: ag(i) substituted]
+Source: [mol_id: 1; organism_scientific: saccharomyces cerevisiae; organism_common: baker's yeast; strain: 301n]
+Keywords: [copper detoxification, metal-thiolate cluster]<br>
+<b>1</b>:
+<br>
+<b>source_id</b>: 2aw0<br>
+<b>description</b>: Header: [copper transport 08-oct-97 2aw0]
+Title: [fourth metal-binding domain of the menkes copper-transporting atpase, nmr, 20 structures]
+Compound: [mol_id: 1; molecule: menkes copper-transporting atpase; chain: null; fragment: fourth metal-binding domain; ec: 3.6.1.36; engineered: yes; biological_unit: monomer; other_details: ag(i)-bound state]
+Source: [mol_id: 1; organism_scientific: homo sapiens; organism_common: human; expression_system: escherichia coli]
+Keywords: [copper-binding domain, hydrolase, copper transport]<br>
+<b>2</b>:
+<br>
+
+</td>
+</tr>
+</table>
+<hr>
+<h2>Making a deliberate error using the metallopdb method</h2>
+[metal: zn][mode: first][count: -3]
+<br><b>OOPS we got an error</b>
+<table border='1'>
+<tr>
+<td bgcolor='#eeeeee'>
+<b>error_message_prefix</b>: PHP<br>
+<b>mode</b>: 1<br>
+<b>level</b>: 1024<br>
+<b>code</b>: SOAP-ENV:Server<br>
+<b>message</b>: Parameter count must be an integer > 0, value sent: -3<br>
+<b>userinfo</b>: Errno: 256
+Filename: /export/asd/metallo2/metallodb/webdocs/services/soap.php
+Lineno: 46<br>
+<b>file</b>: /home/server/php/lib/php/SOAP/Fault.php<br>
+<b>line</b>: 49<br>
+<b>function</b>: pear_error<br>
+<b>class</b>: pear_error<br>
+<b>type</b>: ::<br>
+<b>0</b>: Parameter count must be an integer > 0, value sent: -3<br>
+<b>1</b>: SOAP-ENV:Server<br>
+<b>2</b>: <br>
+<b>3</b>: <br>
+<b>4</b>: Errno: 256
+Filename: /export/asd/metallo2/metallodb/webdocs/services/soap.php
+Lineno: 46<br>
+<b>args</b>:
+<br>
+<b>0</b>:
+<br>
+<b>file</b>: /home/server/php/lib/php/SOAP/Base.php<br>
+<b>line</b>: 320<br>
+<b>function</b>: soap_fault<br>
+<b>class</b>: soap_fault<br>
+<b>type</b>: -><br>
+<b>0</b>: Parameter count must be an integer > 0, value sent: -3<br>
+<b>1</b>: SOAP-ENV:Server<br>
+<b>2</b>: PHP<br>
+<b>3</b>: Errno: 256
+Filename: /export/asd/metallo2/metallodb/webdocs/services/soap.php
+Lineno: 46<br>
+<b>4</b>: <br>
+<b>5</b>: <br>
+<b>args</b>:
+<br>
+<b>1</b>:
+<br>
+<b>file</b>: /home/server/php/lib/php/SOAP/Client.php<br>
+<b>line</b>: 508<br>
+<b>function</b>: _raisesoapfault<br>
+<b>class</b>: soap_client<br>
+<b>type</b>: -><br>
+<b>0</b>: Parameter count must be an integer > 0, value sent: -3<br>
+<b>1</b>: Errno: 256
+Filename: /export/asd/metallo2/metallodb/webdocs/services/soap.php
+Lineno: 46<br>
+<b>2</b>: PHP<br>
+<b>3</b>: SOAP-ENV:Server<br>
+<b>args</b>:
+<br>
+<b>2</b>:
+<br>
+<b>file</b>: /home/server/php/lib/php/SOAP/Client.php<br>
+<b>line</b>: 476<br>
+<b>function</b>: __decoderesponse<br>
+<b>class</b>: soap_client<br>
+<b>type</b>: -><br>
+<b>value</b>: SOAP-ENV:Server<br>
+<b>name</b>: faultcode<br>
+<b>type</b>: QName<br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>type_namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>attributes</b>:
+<br>
+<b>arrayType</b>: <br>
+<b>options</b>:
+<br>
+<b>name</b>: faultcode<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>nqn</b>:
+<br>
+<b>name</b>: QName<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>tqn</b>:
+<br>
+<b>type_prefix</b>: <br>
+<b>0</b>:
+<br>
+<b>value</b>: Parameter count must be an integer > 0, value sent: -3<br>
+<b>name</b>: faultstring<br>
+<b>type</b>: string<br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>type_namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>attributes</b>:
+<br>
+<b>arrayType</b>: <br>
+<b>options</b>:
+<br>
+<b>name</b>: faultstring<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>nqn</b>:
+<br>
+<b>name</b>: string<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>tqn</b>:
+<br>
+<b>type_prefix</b>: <br>
+<b>1</b>:
+<br>
+<b>value</b>: PHP<br>
+<b>name</b>: faultactor<br>
+<b>type</b>: anyURI<br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>type_namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>attributes</b>:
+<br>
+<b>arrayType</b>: <br>
+<b>options</b>:
+<br>
+<b>name</b>: faultactor<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>nqn</b>:
+<br>
+<b>name</b>: anyURI<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>tqn</b>:
+<br>
+<b>type_prefix</b>: <br>
+<b>2</b>:
+<br>
+<b>value</b>: Errno: 256
+Filename: /export/asd/metallo2/metallodb/webdocs/services/soap.php
+Lineno: 46<br>
+<b>name</b>: detail<br>
+<b>type</b>: string<br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>type_namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>attributes</b>:
+<br>
+<b>arrayType</b>: <br>
+<b>options</b>:
+<br>
+<b>name</b>: detail<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>nqn</b>:
+<br>
+<b>name</b>: string<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://www.w3.org/2001/XMLSchema<br>
+<b>tqn</b>:
+<br>
+<b>type_prefix</b>: <br>
+<b>3</b>:
+<br>
+<b>value</b>:
+<br>
+<b>name</b>: Fault<br>
+<b>type</b>: Struct<br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>type_namespace</b>: <br>
+<b>attributes</b>:
+<br>
+<b>arrayType</b>: <br>
+<b>options</b>:
+<br>
+<b>name</b>: Fault<br>
+<b>ns</b>: <br>
+<b>namespace</b>: http://schemas.xmlsoap.org/soap/envelope/<br>
+<b>nqn</b>:
+<br>
+<b>name</b>: Struct<br>
+<b>ns</b>: <br>
+<b>namespace</b>: <br>
+<b>tqn</b>:
+<br>
+<b>type_prefix</b>: <br>
+<b>0</b>:
+<br>
+<b>args</b>:
+<br>
+<b>3</b>:
+<br>
+<b>file</b>: /home/server/php/lib/php/SOAP/Client.php<br>
+<b>line</b>: 245<br>
+<b>function</b>: __parse<br>
+<b>class</b>: soap_client<br>
+<b>type</b>: -><br>
+<b>0</b>: <?xml version="1.0" encoding="UTF-8"?>
+
+<SOAP-ENV:Envelope  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+
+<SOAP-ENV:Fault>
+<faultcode xsi:type="xsd:QName">SOAP-ENV:Server</faultcode>
+<faultstring xsi:type="xsd:string">Parameter count must be an integer &gt; 0, value sent: -3</faultstring>
+<faultactor xsi:type="xsd:anyURI">PHP</faultactor>
+<detail xsi:type="xsd:string">Errno: 256
+Filename: /export/asd/metallo2/metallodb/webdocs/services/soap.php
+Lineno: 46
+</detail></SOAP-ENV:Fault>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
+
+<br>
+<b>1</b>: UTF-8<br>
+<b>2</b>: <br>
+<b>args</b>:
+<br>
+<b>4</b>:
+<br>
+<b>file</b>: /home/jesus/devel/php/presentations/slides/mdb/test_soap.xml<br>
+<b>line</b>: 45<br>
+<b>function</b>: call<br>
+<b>class</b>: soap_client<br>
+<b>type</b>: -><br>
+<b>0</b>: metallopdb<br>
+<b>metal</b>: zn<br>
+<b>mode</b>: first<br>
+<b>count</b>: -3<br>
+<b>1</b>:
+<br>
+<b>2</b>: urn:MDB_SOAP_Server<br>
+<b>args</b>:
+<br>
+<b>5</b>:
+<br>
+<b>backtrace</b>:
+<br>
+<b>callback</b>: <br>
+
+</td>
+</tr>
+</table>
+<hr>
+<h2>Using the metallopdb method correctly</h2>
+[metal:zn][mode: random][count: 3]
+<table border='1'>
+<tr>
+<td bgcolor='#eeeeee'>
+<b>metal</b>: zn<br>
+<b>source_id</b>: 1eb6<br>
+<b>revision_date</b>: 2001/11/23<br>
+<b>deposition_date</b>: 2001/07/19<br>
+<b>expdata</b>: x-ray diffraction<br>
+<b>r_value</b>: 0.10<br>
+<b>resolution</b>: 1.00<br>
+<b>authors</b>: k.e.mcauley,y.jia-xing,e.j.dodson,j.lehmbeck, p.r.ostergaard,k.s.wilson<br>
+<b>description</b>: Header: [hydrolase 19-jul-01 1eb6]
+Title: [deuterolysin from aspergillus oryzae]
+Compound: [mol_id: 1; molecule: neutral protease ii; synonym: npii, deuterolysin; chain: a; ec: 3.4.24.39]
+Source: [mol_id: 1; organism_scientific: aspergillus oryzae]
+Keywords: [zinc, neutral protease ii, hydrolase]<br>
+<b>0</b>:
+<br>
+<b>metal</b>: zn<br>
+<b>source_id</b>: 1qf2<br>
+<b>revision_date</b>: 2000/12/20<br>
+<b>deposition_date</b>: 1999/04/06<br>
+<b>expdata</b>: x-ray diffraction<br>
+<b>r_value</b>: 0.16<br>
+<b>resolution</b>: 2.06<br>
+<b>authors</b>: j.-f.gaucher,m.selkti,g.tiraboschi,t.prange,b.p.roques, a.tomas,m.c.fournie-zaluski<br>
+<b>description</b>: Header: [hydrolase 06-apr-99 1qf2]
+Title: [thermolysin (e.c.3.4.24.27) complexed with (2-sulphanyl-3- phenylpropanoyl)-gly-(5-phenylproline). parameters for zn- monodentation of mercaptoacyldipeptides in metalloendopeptidase]
+Compound: [mol_id: 1; molecule: thermolysin; chain: a; ec: 3.4.24.27]
+Source: [mol_id: 1; organism_scientific: bacillus thermoproteolyticus]
+Keywords: [zn metallopeptidase]<br>
+<b>1</b>:
+<br>
+<b>metal</b>: zn<br>
+<b>source_id</b>: 1xuf<br>
+<b>revision_date</b>: 1998/12/16<br>
+<b>deposition_date</b>: 1997/10/10<br>
+<b>expdata</b>: x-ray diffraction<br>
+<b>r_value</b>: 0.15<br>
+<b>resolution</b>: 2.04<br>
+<b>authors</b>: b.a.katz,j.m.clark,j.s.finer-moore,t.e.jenkins,c.r.johnson, m.j.rose,c.luong,w.r.moore,r.m.stroud<br>
+<b>description</b>: Header: [serine protease 10-oct-97 1xuf]
+Title: [trypsin-babim-zn+2, ph 8.2]
+Compound: [mol_id: 1; molecule: trypsin; chain: null; ec: 3.4.21.4; other_details: trypsin/zn+2/small molecule ligand complex]
+Source: [mol_id: 1; organism_scientific: bos taurus; organism_common: bovine]
+Keywords: [trypsin-zn+2-small molecule ligand, designed small molecule ligand with nanomolar affinity]<br>
+<b>2</b>:
+<br>
+
+</td>
+</tr>
+</table>
+<hr>
+<h2>Using the rssmetallopdb method</h2>
+[metal: zn][mode: last][count: 3]
+<table border='1'>
+<tr>
+<td bgcolor='#eeeeee'>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;
+&lt;rdf:RDF 
+         xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
+         xmlns=&quot;http://purl.org/rss/1.0/&quot;
+         xmlns:mn=&quot;http://usefulinc.com/rss/manifest/&quot;
+         xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+&gt;
+
+  &lt;channel rdf:about=&quot;http://metallo.scripps.edu/services/soap.php&quot;&gt;
+    &lt;title&gt;MDB - The Metalloprotein Database and Browser&lt;/title&gt;
+    &lt;link&gt;http://metallo.scripps.edu&lt;/link&gt;
+    &lt;description&gt;Data retrieved using the MDB API&lt;/description&gt;
+    &lt;items&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9nse&amp;amp;metal[]=zn&quot; /&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9icv&amp;amp;metal[]=zn&quot; /&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9ici&amp;amp;metal[]=zn&quot; /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/items&gt;
+  &lt;/channel&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9nse&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9nse&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 9nse [deposited on: 1999/01/13, revised on: 2000/10/25]&lt;/title&gt;
+    &lt;description&gt;Header: [oxidoreductase 13-jan-99 9nse]
+Title: [bovine endothelial nitric oxide synthase, ethyl- isoselenourea complex]
+Compound: [mol_id: 1; molecule: nitric oxide synthase; chain: a, b; fragment: heme domain; synonym: nos, enos; ec: 1.14.13.39; engineered: yes]
+Source: [mol_id: 1; organism_scientific: bos taurus; organism_common: bovine; cell: endothelial; expression_system: escherichia coli; expression_system_common: bacteria; expression_system_strain: bl21]
+Keywords: [heme protein, tetrahydrobiopterin] Authors[h.li,c.s.raman,p.martasek,v.kral,b.s.s.masters,t.l.poulos] ExpData[x-ray diffraction] R-value[0.20] Resolution[2.24]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9icv&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9icv&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 9icv [deposited on: 1995/12/16, revised on: 1996/11/15]&lt;/title&gt;
+    &lt;description&gt;Header: [complex (nucleotidyltransferase/dna) 16-dec-95 9icv]
+Title: [dna polymerase beta (pol b) (e.c.2.7.7.7) complexed with seven base pairs of dna; soaked in the presence of datp (0.1 millimolar) and zncl2 (0.2 millimolar)]
+Compound: [mol_id: 1; molecule: dna polymerase beta; chain: a; ec: 2.7.7.7; engineered: yes; mol_id: 2; molecule: dna (5'-d(*cp*ap*tp*tp*ap*gp*a)-3') (dot) (5'-d(*tp*cp*tp*ap*ap*tp*g)-3'); chain: t, p; engineered: yes; other_details: soaked in the presence of datp (0.1 millimolar) and zncl2 (0.2 millimolar)]
+Source: [mol_id: 1; organism_scientific: homo sapiens; organism_common: human; expression_system: escherichia coli; mol_id: 2; synthetic: yes]
+Keywords: [dna replication, dna repair, nucleotidyltransferase, complex (nucleotidyltransferase/dna)] Authors[h.pelletier,m.r.sawaya] ExpData[x-ray diffraction] R-value[0.18] Resolution[2.70]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9ici&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/remote/remote.php3?source_id[]=9ici&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 9ici [deposited on: 1995/12/15, revised on: 1996/11/15]&lt;/title&gt;
+    &lt;description&gt;Header: [complex (nucleotidyltransferase/dna) 15-dec-95 9ici]
+Title: [dna polymerase beta (pol b) (e.c.2.7.7.7) complexed with seven base pairs of dna; soaked in the presence of dttp (1 millimolar) and zncl2 (1 millimolar)]
+Compound: [mol_id: 1; molecule: dna polymerase beta; chain: a; ec: 2.7.7.7; engineered: yes; mol_id: 2; molecule: dna (5'-d(*cp*ap*tp*tp*ap*gp*a)-3') (dot) (5'-d(*tp*cp*tp*ap*ap*tp*g)-3'); chain: t, p; engineered: yes; other_details: soaked in the presence of dttp (1 millimolar) and zncl2 (1 millimolar)]
+Source: [mol_id: 1; organism_scientific: homo sapiens; organism_common: human; expression_system: escherichia coli; mol_id: 2; synthetic: yes]
+Keywords: [dna replication, dna repair, nucleotidyltransferase, complex (nucleotidyltransferase/dna)] Authors[h.pelletier,m.r.sawaya] ExpData[x-ray diffraction] R-value[0.17] Resolution[3.10]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;rdf:Description rdf:ID=&quot;manifest&quot;&gt;
+    &lt;mn:channels&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/services/soap.php&quot; /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/mn:channels&gt;
+  &lt;/rdf:Description&gt;
+
+&lt;/rdf:RDF&gt;
+
+</pre>
+
+</td>
+</tr>
+</table>

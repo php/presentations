@@ -1,0 +1,9 @@
+<slide title='XML-RPC service'>
+ <list title='Available methods'>
+  <bullet> _method.sql_ : to perform 'SELECT', 'SHOW', or 'DESCRIBE' SQL
+   queries</bullet>
+ </list>
+ <example title='Introspection'
+  type='html' result='0' align='center' 
+  filename='output/xmlrpc_api_out.html'/>
+</slide>

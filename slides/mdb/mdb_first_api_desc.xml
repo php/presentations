@@ -1,0 +1,34 @@
+<slide title='A (kludgy) first API'>
+ <blurb title='Simple lists of metal-containing proteins for IMB'>
+  An ad-hoc script written so the IMB developers at Jena
+  could get easily lists of metal-containing proteins, with the option to
+  include the metal in the output. Simple, straightforward, and kludgy.
+ </blurb>
+ <example title='List of metal-containing proteins (circa 1999, code fragment)' 
+fontsize='1.5em' type='php' result='0'>
+<![CDATA[<?php
+    (...)
+    Header("Content-type: text/plain");
+
+    function mkCond($s) {
+     $s = " metal=\"".$s."\"";
+    }
+
+    $metal = array("ag","au","ba","ca","cd","co",
+       "cr","cu","fe","gd","hg","k","mg",
+       "mn","mo","na","ni","pb","pt","v",
+       "w","zn","sr");
+    array_walk($metal,"mkCond");
+
+    $condition = implode($metal," OR ");
+    if ($showmetal=="y") {
+     $fields = "source_id,metal";
+    } else {
+     $fields = "source_id";
+    }
+    $qstring = "select distinct $fields from site where ";
+    $qstring .= $condition." order by source_id";
+    (...)
+?>]]>
+</example>
+</slide>

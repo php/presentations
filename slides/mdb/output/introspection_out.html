@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!-- $Id$ -->
+  <head>
+    <meta name="generator" content="HTML Tidy, see www.w3.org" />
+    <meta http-equiv="Pragma" content="no cache" />
+    <meta name="Organization" content="The Scripps Research Institute" />
+    <meta name="Copyright" content="The Scripps Research Institute" />
+    <meta name="Version" content="2" />
+    <meta name="Author" content="Jesus M. Castagnetto, &#106;&#101;&#115;&#117;&#115;&#109;&#099;&#064;&#115;&#099;&#114;&#105;&#112;&#112;&#115;&#046;&#101;&#100;&#117;" />
+    <meta name="Keywords" content="metal,protein,metalloprotein,protein design,structure,database,molecular biology,metalloenzyme,metalloantibody" />
+    <meta name="Description" content="An structural database of metal-binding sites in metalloproteins, including an interactive search and visualization interface." />
+
+    <title>MDB - Web API (introspection)</title>
+  </head>
+
+  <body bgcolor="#ffffff">
+  <a name="top"></a>
+    <!-- outer table -->
+    <table border="0" cellspacing="0" cellpadding="1" width="100%">
+      <tr>
+        <td align="center" valign="middle" bgcolor="#000000">
+          <!-- Page content -->
+
+
+          <table border="0" cellspacing="0" cellpadding="2" width="100%">
+            <tr bgcolor="#ffffff">
+              <td align="center">
+                <!-- begin banners -->
+                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                  <tr bgcolor="#ffffff">
+                    <td align="left"><img
+                    src="/images/mdb_logo.png" border="0"
+                    title="MDB site - TSRI" width="150" height="54"
+                    alt="MDB site, TSRI" usemap="#mdb" /> <map
+                    id="mdb" name="mdb">
+                      <area shape="rect" coords="0,0,150,54"
+                      href="/index.php"
+                      alt="Metalloprotein-site Database and Browser" />
+                    </map></td>
+
+                    <td align="center"><img
+                    src="/images/metallo_mdb_banner.png" border="0"
+                    width="457" height="54"
+                    alt="Metallo Program &amp; MDB sites"
+                    usemap="#metallo_mdb" /> <map id="metallo_mdb"
+                    name="metallo_mdb">
+                      <area shape="rect" coords="0,0,457,26"
+                      href="http://www.scripps.edu/research/metallo/"
+                       alt="Metalloprotein Structure and Design Program" />
+                      <area shape="rect" coords="0,27,457,54"
+                      href="/index.php"
+                      alt="Metalloprotein-site Database and Browser" />
+                    </map></td>
+
+                    <td align="right"><img
+                    src="/images/tsrilogo_small.png" border="0"
+                    width="122" height="54"
+                    alt="The Scripps Research Institute"
+                    usemap="#tsri" /> <map id="tsri" name="tsri">
+                      <area shape="rect" coords="0,0,122,54"
+                      href="http://www.scripps.edu/"
+                      alt="The Scripps Research Institute" />
+                    </map></td>
+                  </tr>
+                </table>
+                <!--end banners-->
+              </td>
+            </tr>
+
+            <tr bgcolor="#ffffff" valign="top">
+              <td>
+                <!-- navigation bar -->
+
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+                  <tr bgcolor="#ffefd5" align="center">
+                    <td>[ <a href="/search/">Search</a> ]</td>
+                    <td>[ <a href="/analysis/">Analysis</a> ]</td>
+                    <td>[ <a href="/services/">Services</a> ]</td>
+                    <td>[ <a href="/news/">News</a> ]</td>
+                    <td>[ <a href="/help/">Help</a> ]</td>
+                    <td>[ <a href="/download/">Downloads</a> ]</td>
+                    <td>[ <a href="/about.php">About</a> ]</td>
+                    <td>[ <a href="/feedback.php">Feedback</a> ]</td>
+					<td>[ <a href="/beta/">*Beta*</a> ]</td>
+                    <td>[ <a href="/index.php">MDB Home</a> ]</td>
+                  </tr>
+                </table>
+
+
+                <!-- end of navigation bar -->
+              </td>
+            </tr>
+
+            <tr bgcolor="#ffffff">
+              <td align='left'>
+                <table><tr valign='middle' align='center'>
+	<td><a href='/services/api/index.php'><img src='/images/api.png' alt='MDB Web API' border='0' width="60" height="38" /></a></td>
+	</tr></table>
+<h1 align='center'>MDB - Web API (introspection)</h1>
+ <div align='center'>
+<table width='90%' border='0' cellpadding='5'>
+<tr><td>
+<table border='0' width='100%' cellpadding='0' cellspacing='0'>
+<tr><td bgcolor='#000000'>
+<table border='0' width='100%' cellspacing='1' cellpadding='5'>
+<tr bgcolor='#eeeeee'>
+<th align='center'><i>Function</i>:<br /> sql</th>
+<th align='left'>
+<i>Parameters</i>:<ul>
+<li>query: urlencoded SQL query</li>
+<li>[format]: csv (default), wddx, serialized, table</li>
+</ul>
+</th>
+</tr>
+<tr bgcolor='#ddffff'>
+<td colspan='2'><p><b>Description:</b><br />General function to query a database server.
+Accepts a valid SQL query (&quot;SELECT&quot;, &quot;SHOW&quot;, or &quot;DESCRIBE&quot; statements only),
+and an optioanl result format. Valid formats are &quot;csv&quot; (default),
+&quot;wddx&quot;, &quot;serialized&quot; (PHP serialization), &quot;table&quot; (HTML table).
+Example of use: /services/api.php?function=sql&amp;query=select+source_id+from+protein+limit+10&amp;format=wddx</p>
+</td>
+</tr>
+</table>
+</td></tr></table>
+</td></tr>
+<tr><td>
+<table border='0' width='100%' cellpadding='0' cellspacing='0'>
+<tr><td bgcolor='#000000'>
+<table border='0' width='100%' cellspacing='1' cellpadding='5'>
+<tr bgcolor='#eeeeee'>
+<th align='center'><i>Function</i>:<br /> metallopdb</th>
+<th align='left'>
+<i>Parameters</i>:<ul>
+<li>metal: atomic symbol for the metal</li>
+<li>[mode]: one of: first (default), last, random, new</li>
+<li>[count]: how many PDB entries to retrieve (default = 5)</li>
+<li>[format]: csv (default), wddx, rss, serialized</li>
+</ul>
+</th>
+</tr>
+<tr bgcolor='#ddffff'>
+<td colspan='2'><p><b>Description:</b><br />Specialized function to retrieve a list of PDB structures
+containing a particular metal ion, as indexed in the MDB. The retrieval
+mode can be one of &quot;first&quot; (default) to get the first &quot;n&quot; PDB ids (sorted
+alphabetically), &quot;last&quot; to get the last &quot;n&quot; ids, &quot;random&quot; to get &quot;n&quot;
+random entries, and &quot;new&quot; to ge the newest &quot;n&quot; entries released/indexed.
+The number of entries to retrieve is set using &quot;count&quot;.
+The list can be formated as &quot;csv&quot; (default), &quot;wddx&quot;, &quot;rss&quot;, or &quot;serialized&quot;
+(PHP serialization).
+Example of use: /services/api.php?function=metallopdb&amp;metal=zn&amp;mode=random&amp;count=5&amp;format=rss</p>
+</td>
+</tr>
+</table>
+</td></tr></table>
+</td></tr>
+</table></div>
+
+              </td>
+            </tr>
+
+            <tr bgcolor="#ffffff">
+              <td>
+                <!-- navigation bar -->
+                <table border="0" cellspacing="0" cellpadding="2" width="100%">
+                  <tr bgcolor="#ffefd5" align="center">
+                    <td>[ <a href="/search/">Search</a> ]</td>
+                    <td>[ <a href="/analysis/">Analysis</a> ]</td>
+                    <td>[ <a href="/services/">Services</a> ]</td>
+                    <td>[ <a href="/news/">News</a> ]</td>
+                    <td>[ <a href="/help/">Help</a> ]</td>
+                    <td>[ <a href="/download/">Downloads</a> ]</td>
+                    <td>[ <a href="/about.php">About</a> ]</td>
+                    <td>[ <a href="/feedback.php">Feedback</a> ]</td>
+					<td>[ <a href="/beta/">*Beta*</a> ]</td>
+                    <td>[ <a href="/index.php">MDB Home</a> ]</td>
+                  </tr>
+                </table>
+                <!-- end of navigation bar -->
+              </td>
+            </tr>
+
+            <tr bgcolor="#ffffff">
+              <td><small>The <a
+              href="http://metallo.scripps.edu/index.php">Metalloprotein
+              Database &amp; Browser</a> is part of the <a
+              href="http://www.scripps.edu/research/metallo/index.html">
+              Metalloprotein Structure, Design and Bioinformatics
+              Porgram Project</a> at <a
+              href="http://www.scripps.edu/index.html">The Scripps
+              Research Institute</a></small></td>
+            </tr>
+          </table>
+
+		  <!-- End of page content -->
+        </td>
+      </tr>
+    </table>
+    <!-- end outer table -->
+	<!-- Copyright and doc info -->
+    <hr noshade="noshade" size="1" />
+	<div id="footer">
+		<small>
+		<a href="http://validator.w3.org/check/referer"><img border="0"
+		src="/images/vxhtml10.gif" align="right" alt="Valid XHTML 1.0!"
+		height="31" width="88" /></a> <!-- a
+		href="http://jigsaw.w3.org/css-validator/check/referer"><img
+		src="/images/vcss.gif" alt="Valid CSS!" align="right"
+		border="0" /></a --> Document: http://metallo.scripps.edu/services/api.php<br />
+		 Last modified: Wednesday, July 31st, 2002 [18:03:50 PST]<br />
+		Last cached: Friday, March 21st, 2003 [21:39:30 PST]<br />
+		 Site maintained by Jesus M. Castagnetto (&#106;&#101;&#115;&#117;&#115;&#109;&#099;&#064;&#115;&#099;&#114;&#105;&#112;&#112;&#115;&#046;&#101;&#100;&#117;)
+		- &copy; 1998-2001 The Scripps Research Institute. <br
+		clear="all" />
+		</small>
+	</div>
+  </body>
+</html>

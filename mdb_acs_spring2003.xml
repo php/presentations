@@ -1,0 +1,40 @@
+<presentation
+    jskeyboard="1"
+    stylesheet="presentations/slides/mdb/styles.css.php"
+    logo1="presentations/slides/mdb/images/mdb_logo_trans.gif"
+    navsize="1.4em">
+<title>Data Sharing in Bioinformatics: Using the MDB's Web Services</title>
+<topic>Bioinformatics</topic>
+<event>225th ACS National Meeting</event>
+<location>New Orleans, LA</location>
+<date>March 25, 2003 </date>
+<speaker>Jesus M. Castagnetto, Ph.D.</speaker>
+<company>The Scripps Research Institute</company>
+<email>jesusmc@scripps.edu</email>
+<url>http://metallo.scripps.edu/talks</url>
+<slide>slides/mdb/acs2003.xml</slide>
+<slide>slides/mdb/acs2003_toc.xml</slide>
+<slide>slides/mdb/pdb_stats.xml</slide>
+<slide>slides/mdb/metalloprotein_example.xml</slide>
+<slide>slides/mdb/mdb_background.xml</slide>
+<slide>slides/mdb/mdb_desc.xml</slide>
+<slide>slides/mdb/mdb_as_lib.xml</slide>
+<slide>slides/mdb/imb_jena.xml</slide>
+<slide>slides/mdb/remote_viewer.xml</slide>
+<slide>slides/mdb/webservices_def.xml</slide>
+<slide>slides/mdb/mdb_arch.xml</slide>
+<slide>slides/mdb/api_implementation.xml</slide>
+<slide>slides/mdb/mdb_services_summary.xml</slide>
+<slide>slides/mdb/webservices_modes.xml</slide>
+<slide>slides/mdb/webservices_modes_diagram.xml</slide>
+<slide>slides/mdb/access_mode_sync.xml</slide>
+<slide>slides/mdb/xmlspace.xml</slide>
+<slide>slides/mdb/access_mode_async_ex.xml</slide>
+<slide>slides/mdb/access_mode_async.xml</slide>
+<slide>slides/mdb/access_mode_async_reg_ex.xml</slide>
+<slide>slides/mdb/access_mode_async_reg.xml</slide>
+<slide>slides/mdb/mdb_future.xml</slide>
+<slide>slides/mdb/acs2003_conclusion.xml</slide>
+<slide>slides/mdb/mdb_acknowledgments.xml</slide>
+<slide>slides/mdb/mdb_talks_url.xml</slide>
+</presentation>

@@ -1,0 +1,40 @@
+<h1 align='center'>Testing the HTTP based API</h1>
+<b>Server used:</b> [ http://metallo.scripps.edu:80]<br><b>Service:</b>[ /services/api.php]
+<hr>
+<h2>SQL query function</h2>
+<b>Function vars:</b><br>
+[query: select source_id,expdata,description from protein where expdata not like '%nmr%' limit 4]<br>
+[format: table]
+<br><b>Using the URL: </b>http://metallo.scripps.edu:80/services/api.ph<br>
+p?func=sql&query=select+source_id%2Cexpdata%2<br>
+Cdescription+from+protein+where+expdata+not+l<br>
+ike+%27%25nmr%25%27+limit+4&format=table<br><b>RESULT</b><br>
+<table border='0' cellspacing='1' cellpadding='5'>
+<tr bgcolor='#ffffdd'>
+<th>source_id</th><th>expdata</th><th>description</th></tr>
+<tr bgcolor='#ffffff'>
+<td>1a6e</td><td>x-ray diffraction</td><td>Header: [chaperonin 24-feb-98 1a6e]
+Title: [thermosome - mg-adp-alf3 complex]
+Compound: [mol_id: 1; molecule: thermosome; chain: a, b; biological_unit: hexadecamer]
+Source: [mol_id: 1; organism_scientific: thermoplasma acidophilum; collection: atcc 25905; cellular_location: cytoplasm]
+Keywords: [group ii chaperonin, cct, tric, protein folding, atpase, transition state complex, atp hydrolysis]</td></tr>
+<tr bgcolor='#dddddd'>
+<td>1agr</td><td>x-ray diffraction</td><td>Header: [complex (signal transduction/regulator) 25-mar-97 1agr]
+Title: [complex of alf4-activated gi-alpha-1 with rgs4]
+Compound: [mol_id: 1; molecule: guanine nucleotide-binding protein g(i); chain: a, d; fragment: alpha-1; synonym: gi-alpha-1; engineered: yes; biological_unit: monomer; mol_id: 2; molecule: rgs4; chain: e, h; synonym: regulator of g-protein signalling 4; engineered: yes; biological_unit: monomer]
+Source: [mol_id: 1; organism_scientific: rattus norvegicus; organism_common: rat; organ: brain; expression_system: escherichia coli; expression_system_strain: bl21 (de3); expression_system_plasmid: pqe6/gia1; mol_id: 2; organism_scientific: rattus norvegicus; organism_common: rat; organ: brain; plasmid: pqe60-h6rgs4; expression_system: escherichia coli; expression_system_strain: bl21 (de3)]
+Keywords: [hydrolase, signal transduction, rgs4, complex (signal transduction/regulator), gtp-binding, gtpase activating protein]</td></tr>
+<tr bgcolor='#ffffff'>
+<td>1br1</td><td>x-ray diffraction</td><td>Header: [muscle protein 26-aug-98 1br1]
+Title: [smooth muscle myosin motor domain-essential light chain complex with mgadp.alf4 bound at the active site]
+Compound: [mol_id: 1; molecule: myosin; chain: a, b, c, d, e, f, g, h; fragment: chains a, c, e, g, motor domain, chains b, d, f, h, essential light; synonym: mde; ec: 3.6.1.32; engineered: yes; other_details: mg, adp, alf(4)]
+Source: [mol_id: 1; organism_scientific: gallus gallus; organism_common: chicken; organ: gizzard; tissue: smooth muscle; expression_system: spodoptera frugiperda insect cells; expression_system_cell_line: sf9; expression_system_vector: baculovirus]
+Keywords: []</td></tr>
+<tr bgcolor='#dddddd'>
+<td>1br2</td><td>x-ray diffraction</td><td>Header: [muscle protein 26-aug-98 1br2]
+Title: [smooth muscle myosin motor domain complexed with mgadp.alf4]
+Compound: [mol_id: 1; molecule: myosin; chain: a, b, c, d, e, f; fragment: motor domain; ec: 3.6.1.32; engineered: yes; other_details: ligands mg, adp, alf(4)]
+Source: [mol_id: 1; organism_scientific: gallus gallus; organism_common: chicken; organ: gizzard; tissue: smooth muscle; expression_system: spodoptera frugiperda insect cells; expression_system_cell_line: sf9; expression_system_vector: baculovirus]
+Keywords: []</td></tr>
+</table>
+

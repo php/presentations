@@ -1,9 +1,9 @@
 <slide title='MDB Remote Viewer'>
 <blurb>
-	We also have a lightweight molecular viewer (written in Java, approx. 70Kb in
-	size) that is embeddable by using simple HTML code in a page, e.g.:
+ We also have a lightweight molecular viewer (written in Java, approx. 70Kb in
+ size) that is embeddable by using simple HTML code in a page, e.g.:
 </blurb>
-<example fontsize='1.2em' result='1'>
+<example fontsize='1.2em' result='0'>
 <![CDATA[<!-- Display sites in 1hca and 1npc -->
 <div align='center'>
 <form method="POST"
@@ -16,19 +16,22 @@ name="Remote MDB Viewer" target="_blank">
 </form>
 </div>]]>
 </example>
-<image title="Using the remote viewer"
-	align="center"
-	filename="images/remote_screenshot.gif"/>
+<image title='... generates a button like this one ...'
+ align='center'
+ filename='images/mdbviewer_formbutton.png'/>
+<image title="... which when pressed calls the remote viewer"
+ align="center"
+ filename="images/remote_screenshot.gif"/>
 <blurb>
 The remote viewer is being used by several web sites, among them:
 </blurb>
 <link leader='CaBP database:'>
-	http://structbio.vanderbilt.edu/cabp_database/
+ http://structbio.vanderbilt.edu/cabp_database/
 </link>
 <link leader='IMB at Jena:'>
-	http://www.imb-jena.de/
+ http://www.imb-jena.de/
 </link>
 <link leader='PROMISE:'>
-	http://bioinf.leeds.ac.uk/promise/
+ http://bioinf.leeds.ac.uk/promise/
 </link>
 </slide>

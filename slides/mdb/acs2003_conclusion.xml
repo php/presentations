@@ -1,0 +1,29 @@
+<slide title="Summary">
+ <list type='darrow' marginright="1.5em" fontsize='3.5em' effect='slide'>
+  <bullet>
+   Share data <!--embedding modules directly, --> using a standarized file format
+   (e.g. RSS, CML), better yet, via a standard 
+   web services protocol: REST, XML-RPC, SOAP.
+  </bullet>
+  <bullet>
+   *REST* is the simplest way to share. We've been doing it since
+   the CGI spec appeared. 
+  </bullet>
+  <bullet>
+   *XML-RPC* is simple, but data with complex structure might not be easy to
+   represent.
+  </bullet>
+  <bullet>
+   *SOAP* is more complex, but it gives you more flexibility (XML
+   Schemas, RPC and Document Literal, WSDL, Service redirection, etc.)
+  </bullet>
+  <bullet>
+   Plan on synchronous and asynchronous access to improve performance.
+  </bullet>
+  <bullet>
+   _Use the MDB Web Services_. 
+   _Use the MDB Web Services_. 
+   _Use the MDB Web Services_ ...
+  </bullet>
+ </list>
+</slide>

@@ -1,0 +1,73 @@
+<slide title='Available services'>
+ <list title='REST'>
+  <bullet>
+   URL: *http://metallo.scripps.edu/services/rest.php*
+  </bullet>
+  <bullet>
+   Functions: *sql* and *metallopdb*
+  </bullet>
+  <bullet>
+   Example:
+   http://metallo.scripps.edu/services/rest.php?func=metallopdb
+   &amp;metal=zn&amp;mode=new&amp;count=5&amp;format=rss
+  </bullet>
+  <!-- bullet>
+   *sql*  Parameters: _query_ = urlencoded SQL query; 
+   [_format_] = csv (default), wddx, serialized, table. 
+   
+   Example:
+   http://metallo.scripps.edu/services/rest.php?function=sql&amp;query=select
+   +source_id+from+protein+limit+10&amp;format=wddx
+  </bullet -->
+  <!-- bullet>
+   *metallopdb* Parameters: _metal_ = atomic symbol for the metal;
+   [_mode_]: one of: first (default), last, random, new;
+   [_count_]: how many PDB entries to retrieve (default = 5);
+   [_format_]: csv (default), wddx, rss, serialized
+  </bullet -->
+ </list>
+ <list title='XML-RPC'>
+  <bullet>
+   URL: *http://metallo.scripps.edu/services/xmlrpc.php*
+  </bullet>
+  <bullet> 
+   struct *method.sql*(string query)
+   <!--
+   General function to query the MDB database server. Accepts a valid SQL
+   query ("SELECT", "SHOW", or "DESCRIBE" statements only), and returns the
+   resulting rows as a structure.
+   -->
+  </bullet>
+  <bullet>
+   struct *method.metallopdb*(string metal, string mode, int count, string format)
+   <!--
+   Specialized function to retrieve a list of PDB structures containing a
+   particular metal ion, as indexed in the MDB. The retrieval mode can be one
+   of "first" (default) to get the first "n" PDB ids (sorted alphabetically),
+   "last" to get the last "n" ids, "random" to get "n" random entries, and
+   "new" to ge the newest "n" entries released/indexed. The number of entries
+   to retrieve is set using "count". The result can be returned as XML-RPC
+   structure, WDDX packet or RSS document
+   -->
+  </bullet>
+ </list>
+ <list title='SOAP'>
+  <bullet>
+   URL: *http://metallo.scripps.edu/services/soap.php*
+  </bullet>
+  <bullet>
+   Methods: *sql*, *metallopdb*, *rssmetallopdb*
+  </bullet>
+  <!-- bullet>
+   *sql* : allows for SELECT, SHOW, DESCRIBE SQL queries
+  </bullet>
+  <bullet>
+   *metallopdb* : information about metal containing proteins given a
+   metal, a mode, and a count
+  </bullet>
+  <bullet>
+   *rssmetallopdb* : similar to the _metallopdb_ with an RSS document as
+   output.
+  </bullet -->
+ </list>
+</slide>

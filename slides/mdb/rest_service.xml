@@ -1,0 +1,14 @@
+<slide title='REST (HTTP-based) Service'>
+ <list title='Available functions'>
+  <bullet> 
+   _sql_ : accepts a (url encoded) SQL query, and an optional
+   format (default='csv')
+  </bullet>
+  <bullet>
+   _metallopdb_ : accepts a metal, and as optional parameters: a mode,
+   a count, and a format (defaults are: mode='last', count=5, format='csv')
+  </bullet>
+ </list>
+ <example title='Introspection' type='html' result='0' align='center'
+filename='output/introspection_api_out.html'/>
+</slide>

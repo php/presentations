@@ -1,0 +1,98 @@
+<h1 align='center'>Testing the HTTP based API</h1>
+<b>Server used:</b> [ http://metallo.scripps.edu:80]<br><b>Service:</b>[ /services/api.php]
+<hr>
+<h2>Retrieving 5 random zinc containing proteins</h2>
+<b>Function vars:</b><br>
+[metal: zn]
+[count: 5]
+[format: rss]
+[mode: random]
+<br><b>Using the URL: </b>http://metallo.scripps.edu:80/services/api.ph<br>
+p?func=metallopdb&metal=zn&mode=random&count=<br>
+5&format=rss<br><b>RESULT</b><br>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;iso-8859-1&quot;?&gt;
+&lt;rdf:RDF 
+         xmlns:rdf=&quot;http://www.w3.org/1999/02/22-rdf-syntax-ns#&quot;
+         xmlns=&quot;http://purl.org/rss/1.0/&quot;
+         xmlns:mn=&quot;http://usefulinc.com/rss/manifest/&quot;
+         xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot;
+&gt;
+
+  &lt;channel rdf:about=&quot;http://metallo.scripps.edu/services/api.php?func=metallopdb&amp;amp;metal=zn&amp;amp;mode=random&amp;amp;count=5&amp;amp;format=rss&quot;&gt;
+    &lt;title&gt;MDB - The Metalloprotein Database and Browser&lt;/title&gt;
+    &lt;link&gt;http://metallo.scripps.edu&lt;/link&gt;
+    &lt;description&gt;Data retrieved using the MDB API&lt;/description&gt;
+    &lt;items&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1b55&amp;amp;metal[]=zn&quot; /&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1bt7&amp;amp;metal[]=zn&quot; /&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1dcq&amp;amp;metal[]=zn&quot; /&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1htb&amp;amp;metal[]=zn&quot; /&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1znb&amp;amp;metal[]=zn&quot; /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/items&gt;
+  &lt;/channel&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1b55&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1b55&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 1b55 [deposited on: 1999/01/12, revised on: 1999/06/15]&lt;/title&gt;
+    &lt;description&gt;Header: [transferase 12-jan-99 1b55]
+Title: [ph domain from bruton's tyrosine kinase in complex with inositol 1,3,4,5-tetrakisphosphate]
+Compound: [mol_id: 1; molecule: tyrosine-protein kinase btk; chain: a, b; fragment: ph domain and btk motif; synonym: bruton's agammaglobulinemia tyrosine kinase, btk; ec: 2.7.1.112; engineered: yes; other_details: complex with inositol 1,3,4,5-tetrakisphosphate]
+Source: [mol_id: 1; organism_scientific: homo sapiens; organism_common: human; cell: b-lymphocyte; expression_system: escherichia coli; expression_system_strain: bl21 (de3); expression_system_vector: pbat4; expression_system_plasmid: pbat4-btk3]
+Keywords: [ph domain, btk motif, zinc binding, x-linked agammaglobulinemia, tyrosine-protein kinase, inositol 1,3,4,5-tetrakisphosphate] Authors[k.djinovic carugo,e.baraldi,m.hyvoenen,p.lo surdo, a.m.riley,b.v.l.potter,r.o'brien,j.e.ladbury,m.saraste] ExpData[x-ray diffraction] R-value[0.23] Resolution[2.40]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1bt7&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1bt7&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 1bt7 [deposited on: 1998/09/01, revised on: 1999/06/22]&lt;/title&gt;
+    &lt;description&gt;Header: [hydrolase 01-sep-98 1bt7]
+Title: [the solution nmr structure of the n-terminal protease domain of the hepatitis c virus (hcv) ns3-protein, from bk strain, 20 structures]
+Compound: [mol_id: 1; molecule: ns3 serine protease; chain: null; engineered: yes; mutation: ins(r180-askkkk); other_details: compound engineered adding a solubilising tail at the c-terminus]
+Source: [mol_id: 1; organism_scientific: human hepatitis c virus; strain: bk; expression_system: escherichia coli; expression_system_strain: bl21 (de3); expression_system_plasmid: pt7.7]
+Keywords: [viral non-structural protein, serine protease] Authors[g.barbato,d.o.cicero,m.c.nardi,c.steinkuhler,r.cortese, r.de francesco,r.bazzo] ExpData[nmr, 20 structures] R-value[] Resolution[]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1dcq&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1dcq&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 1dcq [deposited on: 1999/11/05, revised on: 1999/12/22]&lt;/title&gt;
+    &lt;description&gt;Header: [metal binding protein 05-nov-99 1dcq]
+Title: [crystal structure of the arf-gap domain and ankyrin repeats of papbeta.]
+Compound: [mol_id: 1; molecule: pyk2-associated protein beta; chain: a; fragment: arf-gap domain; engineered: yes]
+Source: [mol_id: 1; organism_scientific: mus musculus; organism_common: mouse; organ: brain; expression_system: escherichia coli; expression_system_common: bacteria; expression_system_vector_type: plasmid; expression_system_plasmid: pet21a]
+Keywords: [ankyrin repeats, metal binding protein] Authors[v.mandiyan,j.andreev,j.schlessinger,s.r.hubbard] ExpData[x-ray diffraction] R-value[0.21] Resolution[2.10]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1htb&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1htb&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 1htb [deposited on: 1995/08/10, revised on: 1995/12/07]&lt;/title&gt;
+    &lt;description&gt;Header: [oxidoreductase 10-aug-95 1htb]
+Title: [crystallization of human beta3 alcohol dehydrogenase (10 mg/ml) in 100 mm sodium phosphate (ph 7.5), 7.5 mm nad+ and 1 mm 4-iodopyrazole at 25 c]
+Compound: [mol_id: 1; molecule: beta3 alcohol dehydrogenase; chain: a, b; synonym: beta3 adh; ec: 1.1.1.1; engineered: yes; heterogen: nad+; heterogen: 4-iodopyrazole; other_details: homodimeric with one nad+ and one 4-iodopyrazole per subunit]
+Source: [mol_id: 1; synthetic: yes; organism_scientific: homo sapiens; organism_common: human; organ: liver; expression_system: escherichia coli; expression_system_plasmid: pkk223-3; expression_system_gene: human beta3 cdna]
+Keywords: [] Authors[t.d.hurley,g.j.davis] ExpData[x-ray diffraction] R-value[0.18] Resolution[2.40]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;item rdf:about=&quot;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1znb&amp;amp;metal[]=zn&quot;&gt;
+    &lt;link&gt;http://metallo.scripps.edu/services/remote/remote.php?source_id[]=1znb&amp;amp;metal[]=zn&lt;/link&gt;
+    &lt;title&gt;(Zn) 1znb [deposited on: 1996/06/06, revised on: 1997/01/11]&lt;/title&gt;
+    &lt;description&gt;Header: [hydrolase (beta-lactamase) 06-jun-96 1znb]
+Title: [metallo-beta-lactamase]
+Compound: [mol_id: 1; molecule: metallo-beta-lactamase; chain: a, b; synonym: class b beta-lactamase; ec: 3.5.2.6; engineered: yes]
+Source: [mol_id: 1; organism_scientific: bacteroides fragilis; strain: tal3636; variant: clinical isolate qmcn3; expression_system: escherichia coli; expression_system_strain: bl21; expression_system_plasmid: lambda de3; expression_system_gene: ccra3]
+Keywords: [metallo beta-lactamase zinc] Authors[n.o.concha,o.herzberg] ExpData[x-ray diffraction] R-value[0.17] Resolution[1.85]&lt;/description&gt;
+  &lt;/item&gt;
+
+  &lt;rdf:Description rdf:ID=&quot;manifest&quot;&gt;
+    &lt;mn:channels&gt;
+      &lt;rdf:Seq&gt;
+        &lt;rdf:li rdf:resource=&quot;http://metallo.scripps.edu/services/api.php?func=metallopdb&amp;amp;metal=zn&amp;amp;mode=random&amp;amp;count=5&amp;amp;format=rss&quot; /&gt;
+      &lt;/rdf:Seq&gt;
+    &lt;/mn:channels&gt;
+  &lt;/rdf:Description&gt;
+
+&lt;/rdf:RDF&gt;
+
+</pre>
+
