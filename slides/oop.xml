@@ -1,0 +1,58 @@
+<slide title="Object Oriented Programming">
+
+<example title="Class Definition"><![CDATA[<?php
+  class Cart {
+    var $items;
+    function add_item($artnr, $num) {
+        $this->items[$artnr] += $num;
+    }  
+  } 
+?>]]></example>
+
+<example title="Inheriting a class with a Constructor"><![CDATA[<?php
+  class NamedCart extends Cart {
+    var $owner;
+    function NamedCart($name) {
+        $this->owner = $name;
+    }
+  } 
+?>]]></example>
+
+<example title="Invocation"><![CDATA[<?php
+  $cart = new NamedCart("PenguinGear");
+  $cart->add_item(170923, 2);
+?>]]></example>
+
+<example title="Static Method calls" result="yes"><![CDATA[<?php
+  class foo {
+    function bar() {
+        echo "bar() called";
+    }
+  }
+
+  foo::bar();
+?>]]></example>
+
+<blurb>
+<title>Calling methods in your parent class</title>
+This can be handy if you need to chain your constructors.
+</blurb>
+<example result="yes"><![CDATA[<?php
+  class foo2 {
+    function foo2() {
+        echo "Constructor for foo2";
+    }
+  }
+
+  class bar extends foo2 {
+    function bar() {
+        echo "Constructor for bar<br />";
+        $name = get_parent_class($this);
+        parent::$name();
+    }
+  }
+
+  $a = new bar();
+?>]]></example>
+
+</slide>
