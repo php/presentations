@@ -1,0 +1,15 @@
+<slide title="MySQL Table Types">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb><![CDATA[<br/>]]></blurb>
+<list title="MyISAM">
+<bullet>Efficient For *either* High Volume writes *or* reads</bullet>
+<bullet>Table level locking</bullet>
+<bullet>No Transaction support</bullet>
+</list>
+<list title="InnoDB">
+<bullet>Efficient locking (Row-level update, non-locking read)</bullet>
+<bullet>Foreign Keys, Transactions</bullet>
+<bullet>High Concurrency</bullet>
+</list>
+
+</slide>

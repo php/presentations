@@ -1,0 +1,11 @@
+<slide title="MySQL Replication">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/>]]></blurb>
+<blurb>
+Separate Reads and Writes
+</blurb>
+<image filename="replication.png" align="center"/>
+<blurb>
+~MySQLi supports automagical routing of queries to slaves~
+</blurb>
+</slide>

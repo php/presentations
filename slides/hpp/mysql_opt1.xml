@@ -1,0 +1,11 @@
+<slide title="MySQL*i*">
+<image filename="10000000000000690000004538A678CE.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/>]]></blurb>
+<blurb>
+MySQLi is an extension by Georg Richter, which leverages the new features in MySQL 4.1.
+</blurb>
+<blurb marginleft="2.0em">Available for PHP5</blurb>
+<blurb marginleft="2.0em">*Much* Faster</blurb>
+<blurb marginleft="2.0em">The ability to have true %prepare% and %bind% statements</blurb>
+<blurb marginleft="2.0em">Support for query profiling</blurb>
+</slide>

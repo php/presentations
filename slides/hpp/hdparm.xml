@@ -1,0 +1,19 @@
+<slide title="Harddrive Tweaking">
+<image filename="10000000000000610000006B74D8AABB.jpg" align="right"/>
+<blurb>
+%hdparm% can be used to query and set hard drive parameters.
+</blurb>
+<blurb><![CDATA[<br/>]]></blurb>
+<example fontsize="1.8em" type="shell"><![CDATA[ % hdparm /dev/hda
+  /dev/hda:
+   multcount    = 16 (on)
+   IO_support   =  1 (32-bit)
+   unmaskirq    =  1 (on)
+   using_dma    =  1 (on)
+   keepsettings =  0 (off)
+   readonly     =  0 (off)
+   readahead    =  8 (on)
+   geometry     = 3876/240/63, 
+                  sectors = 58605120, 
+                  start = 0]]></example>
+</slide>
