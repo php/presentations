@@ -3,10 +3,10 @@
 
   <title>Effects</title>
   <blurb>Hit the right arrow key to get the bullets to show up!</blurb>
-  <list fontsize="5em" type="alpha">
-  <li effect="slide">This is a sliding bullet 1</li>
+  <list fontsize="5em" type="alpha" effect="slide">
+  <li>This is a sliding bullet 1</li>
   <li effect="hide">This is a sliding bullet 2</li>
-  <li effect="slide">This is a sliding bullet 3</li>
+  <li>This is a sliding bullet 3</li>
   </list>
 
   <example fontsize="1.5em" 
