@@ -1,0 +1,32 @@
+<presentation 
+	template="php" 
+	navmode="html"
+>
+<topic>PHP</topic>
+<title>ADT for PHP</title>
+<event>International PHP Conference Amsterdam</event>
+<location>Amsterdam, Netherlands</location>
+<date>May 7, 2003</date>
+<speaker>Sterling Hughes &amp; Harald Radi</speaker>
+<url>http://talks.php.net/</url>
+
+<slide>slides/adt/titlepage.xml</slide>
+<slide>slides/adt/adt.xml</slide>
+<slide>slides/adt/stack.xml</slide>
+<slide>slides/adt/stack1.xml</slide>
+<slide>slides/adt/queue.xml</slide>
+<slide>slides/adt/queue1.xml</slide>
+<slide>slides/adt/binary_tree.xml</slide>
+<slide>slides/adt/binary_tree1.xml</slide>
+<slide>slides/adt/binary_tree2.xml</slide>
+<slide>slides/adt/avl.xml</slide>
+<slide>slides/adt/heap.xml</slide>
+<slide>slides/adt/heap1.xml</slide>
+<slide>slides/adt/set.xml</slide>
+<slide>slides/adt/set1.xml</slide>
+<slide>slides/adt/graph.xml</slide>
+<slide>slides/adt/graph1.xml</slide>
+<slide>slides/adt/graph2.xml</slide>
+<slide>slides/adt/thankyou.xml</slide>
+
+</presentation>
