@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>__set() and __get()</title>
 
-	<list marginleft="3em" margintop="0em" effect="slide" fontsize="2.5em">
+	<list marginleft="3em" margintop="0em" effect="slide" fontsize="3.5em">
 		<bullet>Property access handlers</bullet>
 		<bullet>In combination with private</bullet>
 		<bullet>As replacement for 'dynamic properties'</bullet>

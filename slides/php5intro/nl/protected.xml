@@ -2,8 +2,8 @@
 <slide fontsize="6em">
 	<title>Protected</title>
 
-	<list marginleft="1em" effect="slide" fontsize="3.3em">
-		<bullet>Only callable by the same, or an inherited class</bullet>
+	<list marginleft="-1em" effect="slide" fontsize="3.3em">
+		<bullet>Only accessable/callable by the same, or an inherited class</bullet>
 		<bullet>Useful for 'packages'</bullet>
 	</list>
 	<break lines="1" />
@@ -31,6 +31,6 @@
 	$kh->peek();
 
 	$br = new Bedroom();
-	$br->peek();           /* Werkt niet */
+	$br->peek();           /* Doesn't work */
 ? >]]></example>
 </slide>

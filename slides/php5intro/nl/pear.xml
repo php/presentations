@@ -2,13 +2,12 @@
 <slide fontsize="6em">
 	<title>PEAR</title>
 
-	<image align="right" filename="pear.gif" />
-	<list marginleft="2em" fontsize="3.5em">
+	<image align="right" filename="pear.png" />
+	<list marginleft="0em" fontsize="3.5em">
 		<bullet>PHP Extension and Application Repository</bullet>
 		<bullet>Commandline tool for maintenance</bullet>
 		<bullet>Dependency checking</bullet>
 	</list>
-	<break />
 
 	<example fontsize="1.1em"><![CDATA[[derick@kossu derick]$ sudo pear -v install Net_DIME
 downloading Net_DIME-0.3.tgz ...

@@ -19,7 +19,7 @@ $idx = sqlite_open("livedocs-en.sqlite");
 sqlite_create_function($idx, 'STARTS_WITH', 'sqlite_starts_with');
 
 $q = sqlite_query($idx,
-	"SELECT title, id FROM idents WHERE STARTS_WITH(title, '$idxl')");
+	"SELECT title, id FROM idents WHERE STARTS_WITH(title, '$idx')");
 if ($q) {
     while ($r = sqlite_fetch_array($q, SQLITE_NUM)) {
         list($title, $id) = $r;

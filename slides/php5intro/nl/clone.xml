@@ -6,7 +6,6 @@
 		<bullet>Implicit cloning</bullet>
 	</list>
 
-	<break />
     <example fontsize="1.3em"><![CDATA[<?php
 	class OS {
 		var $name;

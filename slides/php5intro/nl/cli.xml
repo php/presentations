@@ -2,12 +2,13 @@
 <slide fontsize="6em">
 	<title>CLI</title>
 
-	<list marginleft="2em" fontsize="3.5em" effect="slide">
+	<break lines="3"/>
+	<list marginleft="-1em" fontsize="3.5em" effect="slide">
 		<bullet>Command Line Interface</bullet>
 		<bullet>Actually not new in PHP 5, but was introduced in PHP 4.2.0</bullet>
 		<bullet>Useful tool for shell scripts</bullet>
 	</list>
-	<break />
+	<break lines="5"/>
 
 	<example fontsize="1.4em"><![CDATA[[derick@kossu nl]$ php -v
 PHP 5.0.0-dev (cli) (built: May 20 2003 11:06:44)

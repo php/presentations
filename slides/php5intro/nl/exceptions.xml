@@ -5,11 +5,11 @@
 	<blurb> </blurb>
 	<blurb>PHP 4:</blurb>
 	<example fontsize="1.2em"><![CDATA[<?php
-	if (@mysql_connect('localhost', 'root', 'ut34FblY:')) {
-		if (@mysql_select_db('game')) {
-			$r = mysql_query('SELECT * FROM news ORDER BY date DESC LIMIT 1');
+   if (@mysql_connect('localhost', 'root', 'ut34FblY:')) {
+      if (@mysql_select_db('game')) {
+         $r = mysql_query('SELECT * FROM news ORDER BY date DESC LIMIT 1');
 
-			...]]></example>
+         ...]]></example>
 
 	<blurb> </blurb>
 	<blurb>PHP 5:</blurb>
