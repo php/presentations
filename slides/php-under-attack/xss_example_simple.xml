@@ -1,0 +1,9 @@
+<slide fontsize="4em">
+<title>Simple XSS Example</title>
+<blurb fontsize="3.5em">Simple but harmless attack</blurb>
+<example filename="xss_example_simple.php" />
+<blurb fontsize="3.5em">
+	If this script is sent by a trusted site, the potential for danger should
+	be clear.
+</blurb>
+</slide>

@@ -1,0 +1,5 @@
+<slide fontsize="4em">
+<title>Realistic XSS Example</title>
+<blurb fontsize="3.5em">A more realistic attack may steal the user's cookies</blurb>
+<example filename="xss_example_realistic.php" />
+</slide>

@@ -1,0 +1,10 @@
+<slide fontsize="4em">
+<title>Preventing CSRF Attacks</title>
+<list fontsize="3em">
+	<bullet>Use POST rather than GET in forms</bullet>
+	<bullet>Turn off register_globals and use $_POST instead</bullet>
+	<bullet>Don't make important actions too easy</bullet>
+	<bullet>Try to force the use of your own forms</bullet>
+	<bullet>Learn from your peers!</bullet>
+</list>
+</slide>
