@@ -3,7 +3,7 @@
 	title="Reading EXIF Headers from a JPEG"
 	result="1"
 ><![CDATA[<?php
-$data = exif_read_data('slides/intro/p0004557.jpg'); 
+$data = exif_read_data('slides/intro/img_resize.jpg'); 
 foreach($data as $key=>$val) {
 	if(is_array($val)) {
 		foreach($val as $k=>$v) {
