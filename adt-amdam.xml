@@ -1,6 +1,10 @@
 <presentation 
-	template="php" 
-	navmode="html"
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
 >
 <topic>PHP</topic>
 <title>ADT for PHP</title>
