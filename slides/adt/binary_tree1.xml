@@ -1,0 +1,12 @@
+<slide title="ADT Binary Trees">
+<list>
+<bullet>AVL Trees</bullet>
+<bullet marginleft="2.0em">Balanced Binary Tree</bullet>
+<bullet marginleft="2.0em">%O(log n)% Lookup, %O(1)% Insertion and Removal</bullet>
+<bullet marginleft="2.0em">Better for data storage</bullet>
+<bullet>"Regular" Binary Trees</bullet>
+<bullet marginleft="2.0em">%O(n)% Lookup, %O(1)% Insertion and Removal</bullet>
+<bullet marginleft="2.0em">Simpler, Slower</bullet>
+<bullet marginleft="2.0em">Better for data modeling</bullet>
+</list>
+</slide>
