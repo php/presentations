@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Problems with static content</title>
+	<title>Problems with caching</title>
 
+	<list effect="slide" fontsize="5em">
+		<bullet type="none">Pros:</bullet>
+		<bullet>Less use of external resources</bullet>
+	</list>
+
+	<list effect="slide" fontsize="5em">
+		<bullet type="none">Cons:</bullet>
+		<bullet>PHP is still parsing the page</bullet>
+		<bullet>Cache expiry time</bullet>
+		<bullet>Stale content</bullet>
+	</list>
 </slide>
