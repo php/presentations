@@ -1,0 +1,42 @@
+<presentation 
+ template="php" 
+ navmode="html"
+ navbarbackground="#0099cc">
+ <topic>PHP-GTK</topic>
+ <title>PHP-GTK: Something Old, Something New</title>
+ <event>Vancouver PHP Conference</event>
+ <location>Vancouver, Canada</location>
+ <date>January 22, 2004</date>
+ <speaker>Andrei Zmievski (Yahoo! Inc)</speaker>
+ <email>andrei@gravitonic.com</email>
+ <url>http://talks.php.net/show/vancouver-gtk</url>
+
+ <slide>slides/gtk/titlepage.xml</slide>
+ <slide>slides/gtk/intro.xml</slide>
+ <slide>slides/gtk/phpmole.xml</slide>
+ <slide>slides/gtk/agata.xml</slide>
+
+ <slide>slides/gtk/widgets.xml</slide>
+ <slide>slides/gtk/containers.xml</slide>
+ <slide>slides/gtk/signals.xml</slide>
+ <slide>slides/gtk/events.xml</slide>
+ <slide>slides/gtk/callbacks.xml</slide>
+
+ <slide>slides/gtk/gensteps.xml</slide>
+ <slide>slides/gtk/creating.xml</slide>
+ <!--
+ <slide>slides/gtk/showing.xml</slide>
+ <slide>slides/gtk/focus.xml</slide>
+ <slide>slides/gtk/sensitivity.xml</slide>
+ <slide>slides/gtk/sizepos.xml</slide>
+
+ <slide>slides/gtk/gencontainer.xml</slide>
+ <slide>slides/gtk/boxes.xml</slide>
+ <slide>slides/gtk/windows.xml</slide>
+
+ <slide>slides/gtk/connecting.xml</slide>
+ <slide>slides/gtk/disconnecting.xml</slide>
+ <slide>slides/gtk/disabling.xml</slide>
+ -->
+
+</presentation>

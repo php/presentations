@@ -1,0 +1,22 @@
+<slide title="Theory: Signals" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>Gtk+ is an event-driven toolkit. This means that the application
+  sleeps in the main loop until something happens, after which the control
+  is passed to the appropriate function.</blurb>
+
+ <blurb>The passing of control is implemented via ~signals~. When a widget
+  experiences an event, it ~emits~ a signal. Every signal is uniquely
+  identified by name, but two different widgets may have the signal of the
+  same name but different meaning.</blurb>
+
+ <blurb>Signals present a way to customize application's behavior according
+  to the developer's needs and user's actions. Each signal has a default
+  internal ~handler~, but one or more custom handlers can be ~connected~ to
+  a signal to initiate some sort of response.</blurb>
+
+ <blurb>For example, the 'OK' button in a dialog (a GtkButton) has
+  the *clicked* signal that is emitted when the user clicks the button with the
+  mouse. You may want to connect a custom handler to this signal in order to
+  perform an action that the 'OK' button implies.</blurb>
+
+</slide>

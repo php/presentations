@@ -1,0 +1,14 @@
+<slide title="Theory: Containers" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>Some widgets serve a higher purpose: they organize and present other widgets.</blurb>
+ <blurb>These widgets are called ~containers~. This means that they may contain one or more of other widgets and control their relative layout as well as present some decoration alongside the contained widgets. Examples:</blurb>
+ <list>
+  <bullet fontsize="3ex">vertical box</bullet>
+  <bullet fontsize="3ex">horizontal box</bullet>
+  <bullet fontsize="3ex">table</bullet>
+  <bullet fontsize="3ex">button</bullet>
+ </list>
+ <blurb>The contained widgets are called container ~children~.</blurb>
+ <blurb>Containers usually respond to resize events and addition and removal of children by reallocating the available space among its remaining children.</blurb>
+ <blurb>Since a container is also a widget, we can nest containers to an arbitrary degree: a vertical box containing a table containing a button containing a label.</blurb>
+</slide>

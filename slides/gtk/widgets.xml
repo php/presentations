@@ -1,0 +1,14 @@
+<slide title="Theory: Widgets" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>In simplest terms, a GUI building block, similar to LEGOs.</blurb>
+ <list>
+   <bullet fontsize="3ex">window</bullet>
+   <bullet fontsize="3ex">button</bullet>
+   <bullet fontsize="3ex">progress bar</bullet>
+   <bullet fontsize="3ex">menu</bullet>
+   <bullet fontsize="3ex">tree</bullet>
+ </list>
+ <blurb>A widget usually has a window on which it draws itself.</blurb>
+ <blurb>Some widgets are invisible.</blurb>
+
+</slide>

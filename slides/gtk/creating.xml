@@ -1,0 +1,16 @@
+<slide title="Creating and Destroying" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  To create a widget, use %&amp;new% operator instead of %new%. Some
+  widgets take constructor parameters to initialize themselves to some
+  state.
+ </blurb>
+ <blurb>
+  To destroy a widget, use %destroy()% method. This is rarely used because all
+  widgets are destroyed automatically upon the application's exit.
+ </blurb>
+ <blurb>
+  Destroying a widget will not 
+ </blurb>
+
+</slide>

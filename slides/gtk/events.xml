@@ -1,0 +1,38 @@
+<slide title="Theory: Events" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>In addition to signals, there are low-level ~events~ corresponding
+  to the X Window system event mechanism. They can be connected to, just like signals. These events are:</blurb>
+
+ <list fontsize="1.2ex">
+  <bullet>event</bullet>
+  <bullet>button_press_event</bullet>
+  <bullet>button_release_event</bullet>
+  <bullet>motion_notify_event</bullet>
+  <bullet>delete_event</bullet>
+  <bullet>destroy_event</bullet>
+  <bullet>expose_event</bullet>
+  <bullet>key_press_event</bullet>
+  <bullet>key_release_event</bullet>
+  <bullet>enter_notify_event</bullet>
+  <bullet>leave_notify_event</bullet>
+  <bullet>configure_event</bullet>
+  <bullet>focus_in_event</bullet>
+  <bullet>focus_out_event</bullet>
+  <bullet>map_event</bullet>
+  <bullet>unmap_event</bullet>
+  <bullet>property_notify_event</bullet>
+  <bullet>selection_clear_event</bullet>
+  <bullet>selection_request_event</bullet>
+  <bullet>selection_notify_event</bullet>
+  <bullet>proximity_in_event</bullet>
+  <bullet>proximity_out_event</bullet>
+  <bullet>drag_begin_event</bullet>
+  <bullet>drag_request_event</bullet>
+  <bullet>drag_end_event</bullet>
+  <bullet>drop_enter_event</bullet>
+  <bullet>drop_leave_event</bullet>
+  <bullet>drop_data_available_event</bullet>
+  <bullet>other_event</bullet>
+ </list>
+
+</slide>

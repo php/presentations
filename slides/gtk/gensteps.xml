@@ -1,0 +1,23 @@
+<slide title="General Steps" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+ <blurb>The general steps involved in working with a widget are:</blurb>
+ <list type="number" fontsize="2ex">
+  <bullet>Instantiate the widget object of the appropriate class</bullet>
+ </list>
+ <example fontsize="1ex"><![CDATA[<?php $ok = &new GtkButton('OK'); ?>]]></example>
+ <list type="number" num="2" fontsize="2ex">
+  <bullet>Connect the signals to callbacks</bullet>
+ </list>
+ <example fontsize="1ex"><![CDATA[<?php $ok->connect('clicked', 'on_ok_clicked'); ?>]]></example>
+ <list type="number" num="3" fontsize="2ex">
+  <bullet>Set any additional attributes via properties or function calls</bullet>
+ </list>
+ <example fontsize="1ex"><![CDATA[<?php $ok->set_border_width(3); ?>]]></example>
+ <list type="number" num="4" fontsize="2ex">
+  <bullet>Put the widget into a pre-existing container</bullet>
+ </list>
+ <example fontsize="1ex"><![CDATA[<?php $top_window->add($ok); ?>]]></example>
+ <list type="number" num="5" fontsize="2ex">
+  <bullet>Display the widget</bullet>
+ </list>
+ <example fontsize="1ex"><![CDATA[<?php $ok->show(); ?>]]></example>
+</slide>
