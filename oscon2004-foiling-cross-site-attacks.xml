@@ -1,0 +1,41 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Foiling Cross-Site Attacks</title>
+<event>OSCON 2004</event>
+<location>Portland, Oregon</location>
+<date>July 29, 2004</date>
+<speaker>Chris Shiflett</speaker>
+<email>shiflett@php.net</email>
+<url>http://shiflett.org/talks/oscon2004/foiling-cross-site-attacks</url>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/titlepage.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/mysql-joke.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/titlepage.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/outline.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/xss.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/xss-diagram-simple.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/xss-board.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/xss-example.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/xss-firewall.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/xss-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/xss-board-improved.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-diagram-simple.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-http-request.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-http-response.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-example.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-diagram.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-firewall.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-board.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/csrf-board-improved.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/more-information.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/mysql-joke-again.xml</slide>
+<slide>slides/shiflett/oscon2004/foiling-cross-site-attacks/thankyou.xml</slide>
+</presentation>
