@@ -1,0 +1,13 @@
+<slide>
+<title>SQL Injection</title>
+<blurb fontsize="4em">SQL Injection is easy to defend against.</blurb>
+<list fontsize="4em">
+	<bullet>Filter your data.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Quote your data (if you can).</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Escape your data.</bullet>
+</list>
+</slide>

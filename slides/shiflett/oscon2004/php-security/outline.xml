@@ -1,0 +1,39 @@
+<slide>
+<title>Outline</title>
+<blurb fontsize="4em">Overview</blurb>
+<list fontsize="3.5em">
+	<bullet>What Is Security?</bullet>
+	<bullet>Basic Steps</bullet>
+	<bullet>Register Globals</bullet>
+	<bullet>Data Filtering</bullet>
+	<bullet>Error Reporting</bullet>
+</list>
+<blurb> </blurb>
+<blurb fontsize="4em">Form Processing</blurb>
+<list fontsize="3.5em">
+	<bullet>Spoofed Form Submissions</bullet>
+	<bullet>Spoofed HTTP Requests</bullet>
+	<bullet>Cross-Site Scripting</bullet>
+	<bullet>Cross-Site Request Forgeries</bullet>
+</list>
+<blurb> </blurb>
+<blurb fontsize="4em">Databases and SQL</blurb>
+<list fontsize="3.5em">
+	<bullet>Exposed Access Credentials</bullet>
+	<bullet>SQL Injection</bullet>
+</list>
+<blurb> </blurb>
+<blurb fontsize="4em">Sessions</blurb>
+<list fontsize="3.5em">
+	<bullet>Session Fixation</bullet>
+	<bullet>Session Hijacking</bullet>
+</list>
+<blurb> </blurb>
+<blurb fontsize="4em">Shared Hosts</blurb>
+<list fontsize="3.5em">
+	<bullet>Exposed Session Data</bullet>
+	<bullet>Browsing the Filesystem</bullet>
+</list>
+<blurb> </blurb>
+<blurb fontsize="4em">More Information</blurb>
+</slide>

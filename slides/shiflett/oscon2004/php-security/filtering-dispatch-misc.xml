@@ -1,0 +1,8 @@
+<slide>
+<title>Data Filtering</title>
+<blurb fontsize="4em">Use a directory index for cleaner URLs.</blurb>
+<blurb fontsize="3.75em">*%http://example.org/?task=print_form%*</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">Use %ForceType% or %mod_rewrite% for even cleaner URLs.</blurb>
+<blurb fontsize="3.75em">*%http://example.org/app/print-form%*</blurb>
+</slide>

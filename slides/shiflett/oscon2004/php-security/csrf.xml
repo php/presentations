@@ -1,0 +1,14 @@
+<slide>
+<title>Cross-Site Request Forgeries</title>
+<blurb> </blurb>
+<blurb fontsize="4em">Cross-site request forgeries...</blurb>
+<list>
+	<bullet>Exploit the trust a site has for a particular user.</bullet>
+</list>
+<list>
+	<bullet>Generally involve Web sites that rely on the identity of the users.</bullet>
+</list>
+<list>
+	<bullet>Perform HTTP requests of the attacker's choosing.</bullet>
+</list>
+</slide>

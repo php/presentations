@@ -1,0 +1,6 @@
+<slide>
+<title>Register Globals</title>
+<blurb fontsize="4em">The standard example.</blurb>
+<example filename="code/register-globals-1.php" result="0" />
+<blurb fontsize="4em">Is this OK if %register_globals% is disabled?</blurb>
+</slide>

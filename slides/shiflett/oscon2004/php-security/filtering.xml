@@ -1,0 +1,11 @@
+<slide>
+<title>Data Filtering</title>
+<blurb fontsize="3.75em">The cornerstone of Web application security.</blurb>
+<blurb> </blurb>
+<blurb fontsize="3.75em">Begins with a good design that helps developers to...</blurb>
+<list>
+	<bullet>Ensure that data filtering cannot be bypassed,</bullet>
+	<bullet>Ensure that invalid data cannot be mistaken for valid data, and</bullet>
+	<bullet>Identify the origin of data.</bullet>
+</list>
+</slide>

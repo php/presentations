@@ -1,0 +1,9 @@
+<slide>
+<title>Data Filtering</title>
+<blurb fontsize="4em">*Include Method* involves having a single script
+responsible for data filtering and ensuring that this is always included as
+appropriate.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">The *%auto_prepend_file%* directive can make sure this
+script is always included.</blurb>
+</slide>

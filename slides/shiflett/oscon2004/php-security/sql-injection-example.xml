@@ -1,0 +1,7 @@
+<slide>
+<title>SQL Injection</title>
+<blurb fontsize="4em">Is this a username?</blurb>
+<example filename="code/sql-injection-username.php" result="0" />
+<blurb fontsize="4em">Just look at our query now...</blurb>
+<example filename="code/sql-injection-example.php" result="0" />
+</slide>

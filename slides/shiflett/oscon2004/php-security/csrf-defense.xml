@@ -1,0 +1,17 @@
+<slide>
+<title>Cross-Site Request Forgeries</title>
+<blurb> </blurb>
+<blurb fontsize="4em">CSRF Defense.</blurb>
+<list fontsize="4em">
+	<bullet>Use %POST% rather than %GET% in forms.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Use %$_POST% rather than rely on %register_globals% (or %$_REQUEST%).</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Do not focus on convenience.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Force the use of your own forms.</bullet>
+</list>
+</slide>

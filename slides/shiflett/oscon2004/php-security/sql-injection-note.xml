@@ -1,0 +1,9 @@
+<slide>
+<title>SQL Injection</title>
+<blurb fontsize="4em">Some database clients allow multiple queries.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">*%ext/mysql%* does not.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">*%ext/mysqli%* does, but only explicitly through
+%mysqli_multi_query()%. Don't use this if you can help it.</blurb>
+</slide>

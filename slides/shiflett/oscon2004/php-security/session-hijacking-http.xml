@@ -1,0 +1,5 @@
+<slide>
+<title>Session Hijacking</title>
+<blurb fontsize="4em">Find consistency within requests.</blurb>
+<example filename="code/session-hijacking-http.php" result="0" />
+</slide>

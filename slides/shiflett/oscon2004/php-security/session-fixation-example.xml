@@ -1,0 +1,5 @@
+<slide>
+<title>Session Fixation</title>
+<blurb fontsize="4em">*%session_start()%* isn't enough.</blurb>
+<example filename="code/session-fixation.php" result="1" />
+</slide>

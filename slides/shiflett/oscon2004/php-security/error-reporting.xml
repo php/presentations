@@ -1,0 +1,11 @@
+<slide>
+<title>Error Reporting</title>
+<blurb fontsize="4em">*%error_reporting%* - Always set to %E_ALL%.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">*%display_errors%* - Set to %On% in development and
+%Off% in production.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">*%log_errors%* - Set to %On% in production.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">*%error_log%* - Set to the desired location of the error log.</blurb>
+</slide>

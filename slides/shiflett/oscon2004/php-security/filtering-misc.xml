@@ -1,0 +1,9 @@
+<slide>
+<title>Data Filtering</title>
+<blurb fontsize="4em">Use a strict naming convention. A *%$clean%* array is
+just one example.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">Understand the timing of your scripts. Once it begins,
+the entire HTTP request has been received. Not until it finishes is the
+response sent.</blurb>
+</slide>

@@ -1,0 +1,13 @@
+<slide>
+<title>Register Globals</title>
+<blurb fontsize="4em">Since you should initialize variables anyway, why disable
+%register_globals%?</blurb>
+<list fontsize="3.5em">
+	<bullet>Disabling %register_globals% reduces the risk without reducing
+	notification.</bullet>
+</list>
+<list fontsize="3.5em">
+	<bullet>Setting %error_reporting% to %E_ALL% increases notification
+	without increasing risk. Use this.</bullet>
+</list>
+</slide>

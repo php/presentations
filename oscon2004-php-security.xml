@@ -1,0 +1,74 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP Security</title>
+<event>OSCON 2004</event>
+<location>Portland, Oregon</location>
+<date>July 26, 2004</date>
+<speaker>Chris Shiflett</speaker>
+<email>shiflett@php.net</email>
+<url>http://shiflett.org/talks/oscon2004/php-security</url>
+<slide>slides/shiflett/oscon2004/php-security/titlepage.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/outline.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/security.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/basic-steps.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/register-globals.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/register-globals-example-1.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/register-globals-example-2.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/register-globals-misc.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-dispatch.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-dispatch-example.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-dispatch-misc.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-include.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-include-example.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-include-form.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-example-email.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-example-colors.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-example-int.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-example-float.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/filtering-misc.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/error-reporting.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/spoofed-form.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/spoofed-form-example.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/spoofed-http.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/spoofed-client.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/xss.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/xss-board.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/xss-example.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/xss-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/xss-board-improved.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/csrf.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/csrf-http-request.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/csrf-http-response.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/csrf-example.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/csrf-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/csrf-board.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/csrf-board-improved.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/db-credentials.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/db-credentials-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/db-credentials-better.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/sql-injection.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/sql-injection-example.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/sql-injection-note.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/sql-injection-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/session-fixation.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/session-fixation-example.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/session-fixation-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/session-hijacking.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/session-hijacking-http.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/session-hijacking-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/session-hijacking-fingerprint.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/shared-session-exposed.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/shared-session-db.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/shared-filesystem.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/shared-defense.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/more-information.xml</slide>
+<slide>slides/shiflett/oscon2004/php-security/thankyou.xml</slide>
+</presentation>

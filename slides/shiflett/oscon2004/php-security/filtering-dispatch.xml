@@ -1,0 +1,10 @@
+<slide>
+<title>Data Filtering</title>
+<blurb fontsize="4em">*Dispatch Method* involves only exposing a single script
+to the Web. All other modules are included as needed.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">Eliminates backdoors and makes it easy to maintain the
+proper control flow.</blurb>
+<blurb> </blurb>
+<blurb fontsize="3em">*%http://example.org/dispatch.php?task=print_form%*</blurb>
+</slide>

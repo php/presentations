@@ -1,0 +1,8 @@
+<slide>
+<title>Exposed Session Data</title>
+<blurb fontsize="4em">If you use %/tmp% like everyone else, other users can
+write scripts to read your session data store.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">*%safe_mode*% only protects against PHP scripts. Do your
+potential attackers not know any other languages?</blurb>
+</slide>

@@ -1,0 +1,15 @@
+<slide>
+<title>Register Globals</title>
+<list fontsize="4em">
+	<bullet>Is *not* a security vulnerability.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>But, it *is* a risk and a bad practice.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Disabled by default in versions >= 4.1.0.</bullet>
+</list>
+<list fontsize="4em">
+	<bullet>Use %$_GET% and %$_POST% instead.</bullet>
+</list>
+</slide>
