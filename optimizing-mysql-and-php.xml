@@ -1,0 +1,19 @@
+<presentation
+  template="php2"
+>
+<topic>PHP</topic>
+<title>Optimizing MySQL and PHP</title>
+<event>International PHP Conference</event>
+<location>Frankfurt, Germany</location>
+<date>November 4, 2003</date>
+<speaker>Jim Winstead</speaker>
+<email>jimw@apache.org</email>
+<url>http://talks.php.net/optimizing-mysql-and-php</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- stuff goes here -->
+
+<slide>slides/community/fin.xml</slide>
+
+</presentation>
