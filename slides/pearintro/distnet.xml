@@ -1,0 +1,20 @@
+<slide title="PEAR Package Registry">
+ <list fontsize="4em">
+  <bullet>pear.php.net</bullet>
+  <bullet>HTML interface</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>Documentation</bullet>
+  <bullet>Release Uploads</bullet>
+  <bullet>Package Browsing</bullet>
+ </list>
+ <list fontsize="4em">
+  <bullet>XML-RPC interface</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>browsing, retrieving info</bullet>
+  <bullet>manage releases</bullet>
+  <bullet>list upgrades</bullet>
+  <bullet>misc. administration methods</bullet>
+ </list>
+</slide>    

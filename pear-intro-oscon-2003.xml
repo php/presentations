@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation
+    jskeyboard="1"
+    template="php"
+    logo1="/pres2/presentations/slides/pearintro/pearsmall.gif"
+    logo2="/pres2/presentations/slides/soap/activestate_logo.gif"
+    navbarbackground="#A68C53"
+    backgroundfixed="true"
+    backgroundimage = "/pres2/presentations/slides/soap/activestate_background.jpg"
+    backgroundcol="#EFECDD"
+    navsize="1.4em">
+<title>Intro to PEAR</title>
+<topic>PEAR</topic>
+<event>ActiveState Corporation</event>
+<location>OSCON, Portland</location>
+<date>July 9, 2003</date>
+<speaker>Shane Caraveo</speaker>
+<company>ActiveState Corporation</company>
+<email>shanec@ActiveState.com</email>
+<url>talks.php.net</url>
+<slide>slides/pearintro/titlepage.xml</slide>
+<slide>slides/pearintro/agenda.xml</slide>
+<slide>slides/pearintro/whatispear0.xml</slide>
+<slide>slides/pearintro/whatispear1.xml</slide>
+<slide>slides/pearintro/whatispear2.xml</slide>
+<slide>slides/pearintro/whatispecl1.xml</slide>
+<slide>slides/pearintro/whatispfc.xml</slide>
+<slide>slides/pearintro/packages1.xml</slide>
+<slide>slides/pearintro/packages2.xml</slide>
+<slide>slides/pearintro/versioning.xml</slide>
+<slide>slides/pearintro/cs1.xml</slide>
+<slide>slides/pearintro/tools1.xml</slide>
+<slide>slides/pearintro/tools2.xml</slide>
+<slide>slides/pearintro/distnet.xml</slide>
+<slide>slides/pearintro/devcom.xml</slide>
+<slide>slides/pearintro/licensing.xml</slide>
+<slide>slides/pearintro/obtaining.xml</slide>
+<slide>slides/pearintro/usinginstaller1.xml</slide>
+<slide>slides/pearintro/usinginstaller2.xml</slide>
+<slide>slides/pearintro/usinginstaller3.xml</slide>
+<slide>slides/pearintro/include.xml</slide>
+<slide>slides/pearintro/errors1.xml</slide>
+<slide>slides/pearintro/errors2.xml</slide>
+<slide>slides/pearintro/errors3.xml</slide>
+<slide>slides/pearintro/errors4.xml</slide>
+<slide>slides/pearintro/errors5.xml</slide>
+<slide>slides/pearintro/errors6.xml</slide>
+<slide>slides/pearintro/amazon1.xml</slide>
+</presentation>

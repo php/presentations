@@ -1,0 +1,15 @@
+<slide title="Package Concept">
+ <list fontsize="4em">
+  <bullet>PEAR Packages</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>Small Independent Projects</bullet>
+  <bullet>Registered on pear.php.net</bullet>
+  <bullet>Distributed and Installed Separately</bullet>
+  <bullet>State: alpha, beta, stable, snapshot, devel</bullet>
+  <bullet>Leads, developers, helpers</bullet>
+  <bullet>Code Organization</bullet>
+  <bullet>Available through Releases</bullet>
+  <bullet>Dependencies: pkg, ext, php, prog, os, sapi, zend, rtlib</bullet>
+ </list>
+</slide>    

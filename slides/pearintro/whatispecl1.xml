@@ -1,0 +1,15 @@
+<slide title="What is PECL?">
+<list fontsize="4em">
+<bullet>PHP Extension Code Library</bullet>
+<bullet>Extensions Written in C/C++</bullet>
+<bullet>Code Follows PHP Coding Standards</bullet>
+<bullet>PHP Extensions Will Move to PECL</bullet>
+<bullet>Uses PEAR installer</bullet>
+<bullet>Example packages</bullet>
+</list>
+<list marginleft="2em" fontsize="4em">
+<bullet>apc, apd, bcompiler, iisfunc, printer</bullet>
+<bullet>mailparse, phpdoc, python, satellite</bullet>
+<bullet>session_pgsql, soap, threads, xmms, ...</bullet>
+</list>
+</slide>    

@@ -1,0 +1,15 @@
+<slide title="PEAR Tools (2)">
+ <list fontsize="4em">
+  <bullet>PEAR Installer Functions:</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>install / upgrade / uninstall / download</bullet>
+  <bullet>list upgrades</bullet>
+  <bullet>upgrade-all</bullet>
+  <bullet>package, sign and release packages</bullet>
+  <bullet>generate RPM spec files</bullet>
+  <bullet>browse locally installed packages</bullet>
+  <bullet>browse remotely available packages</bullet>
+  <bullet>search package registry</bullet>
+ </list>
+</slide>    

@@ -1,0 +1,17 @@
+<slide title="Using the Gtk Installer">
+ <list fontsize="4em">
+  <bullet>Requires PHP-GTK</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>Not available through PECL, yet</bullet>
+ </list>
+ <list fontsize="4em">
+  <bullet>Installing the Gtk Installer UI</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>%pear install PEAR_Frontend_Gtk%</bullet>
+ </list>
+ <list fontsize="4em">
+  <bullet>Demonstration</bullet>
+ </list>
+</slide>    

@@ -1,0 +1,18 @@
+<slide title="Obtaining PEAR">
+ <list fontsize="4em">
+  <bullet>Bundled with PHP</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>Lags behind (PHP releases take too long)</bullet>
+ </list>
+ <list fontsize="4em">
+  <bullet>go-pear</bullet>
+ </list>
+ <list marginleft="2em" fontsize="3em">
+  <bullet>%lynx -source go-pear.org | php%</bullet>
+  <bullet>%wget http://go-pear.org -O gopear.php%</bullet>
+  <bullet>Up to date!</bullet>
+  <bullet>Web version available</bullet>
+  <bullet>Doesn't work too great on Windows/MacOS X yet</bullet>
+ </list>
+</slide>    

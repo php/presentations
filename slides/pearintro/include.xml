@@ -1,0 +1,11 @@
+<slide title="Including Files">
+ <list fontsize="4em">
+  <bullet>Including Files</bullet>
+ </list>
+ <list fontsize="4em" marginleft="2em">
+  <bullet>Configure your include_path</bullet>
+  <bullet>require_once / include_once</bullet>
+  <bullet>always include what you use</bullet>
+  <bullet>(do not include what you do not use)</bullet>
+ </list>
+</slide>    

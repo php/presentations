@@ -1,0 +1,20 @@
+<slide title="Using the Web Installer">
+ <list fontsize="4em">
+  <bullet>Installing the Web Installer UI</bullet>
+ </list>
+ <list marginleft="2em" fontsize="3em">
+  <bullet>%pear install PEAR_Frontend_Web%</bullet>
+  <bullet>Create a web directory</bullet>
+  <bullet>/php/pear will have to be writable</bullet>
+  <bullet>Deal with your security!</bullet>
+  <bullet>Write a small script</bullet>
+ </list>
+ <example type="php" fontsize="1.5em">
+  <text><![CDATA[<?php
+$useDHTML = true;
+require_once "PEAR/WebInstaller.php";
+?>]]></text></example>
+ <list fontsize="4em">
+  <bullet>Demonstration</bullet>
+ </list>
+</slide>    

@@ -1,0 +1,17 @@
+<slide title="PEAR::setErrorHandling">
+ <list fontsize="4em">
+  <bullet>Global default handling</bullet>
+ </list>
+ <example type="php" fontsize="1.5em">
+  <text><![CDATA[<?php
+PEAR::setErrorHandling(PEAR_ERROR_DIE);
+?>]]></text></example>
+ <list fontsize="4em">
+  <bullet>Per-object default handling</bullet>
+ </list>
+ <example type="php" fontsize="1.5em">
+  <text><![CDATA[<?php
+$object->setErrorHandling(PEAR_ERROR_DIE,
+                          "<blink>%s</blink>");
+?>]]></text></example>
+</slide>    

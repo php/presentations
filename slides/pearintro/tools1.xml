@@ -1,0 +1,14 @@
+<slide title="PEAR Tools">
+ <list fontsize="4em">
+  <bullet>The PEAR Installer</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>Uses the PEAR Package Format</bullet>
+  <bullet>Cross-Platform</bullet>
+  <bullet>Multiple User Interfaces (CLI, Gtk, Web)</bullet>
+  <bullet>Can be wrapped in for example RPM</bullet>
+  <bullet>Queries central package registry</bullet>
+  <bullet>Builds extensions from source</bullet>
+  <bullet>MD5 checksums and GPG signatures</bullet>
+ </list>
+</slide>    

@@ -1,0 +1,12 @@
+<slide title="Package Concept (2)">
+ <list fontsize="4em">
+  <bullet>Why not use .rpm/.deb/.jar/.xyz?</bullet>
+ </list>
+ <list marginleft="2em" fontsize="4em">
+  <bullet>Portability</bullet>
+  <bullet>Integration the wrong way</bullet>
+  <bullet>Need specialized tools anyway</bullet>
+  <bullet>Design for wrapping in other formats</bullet>
+  <bullet>Proof of concept: "pear makerpm"</bullet>
+ </list>
+</slide>    
