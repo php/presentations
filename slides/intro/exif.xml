@@ -1,0 +1,20 @@
+<slide title="EXIF">
+<example 
+	title="Reading EXIF Headers from a JPEG"
+	result="1"
+><![CDATA[<?php
+$data = exif_read_data('slides/intro/p0004557.jpg'); 
+foreach($data as $key=>$val) {
+	if(is_array($val)) {
+		foreach($val as $k=>$v) {
+			echo $key."[$k]: $v<br />\n";
+		}
+	} else 
+		echo "$key: ".@substr($val,0,40)."<br />\n";
+}
+?>]]></example>
+<example 
+	title="Fetching an embedded thumbnail"
+	filename="slides/intro/exif_thumb.php"
+/>
+</slide>
