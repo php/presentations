@@ -126,5 +126,16 @@ Total User Time    =    0.08
   0.0  0.00  0.25   0.00  0.01   0.00  0.00     6   0.0000    0.0017          208 make_image
 ]]></example>
 
+<example type="shell" fontsize="1.6em" marginleft="1em" marginright="1em" title="KCacheGrind Output"><![CDATA[
+www:~> cd /tmp
+www:/tmp> ls -lat pprof.*
+-rw-r--r--  1 nobody 4294967295  62771 Apr 17 07:36 pprof.02466.0
+-rw-r--r--  1 nobody 4294967295 269311 Apr 17 07:36 pprof.02465.0
+-rw-r--r--  1 nobody 4294967295  62779 Apr 17 07:34 pprof.02464.0
+www:/tmp> pprof2calltree -f pprof.02465.0
+Writing kcachegrind compatible output to cachegrind.out.pprof.02465.0
+www:/tmp> kcachegrind cachegrind.out.pprof.02465.0
+]]></example>
+
 <link leader="Xdebug can profile as well: " href="http://www.xdebug.org/docs-profiling.php"/>
 </slide>
