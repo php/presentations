@@ -1,0 +1,11 @@
+<slide title="Shell Command Injection">
+  <list>
+    <li>There can't be command injection if there's no command -- do you really need to run an external program?</li>
+    <li>Plenty of PHP built-ins for file operations:</li>
+  </list>
+<list marginleft="2em">
+    <li>%mkdir()%</li><li>%rmdir()%</li><li>%copy()%</li>
+    <li>%move()%</li><li>%unlink()%</li><li>%chmod()%</li>
+    <li>%chown()%</li><li>%chgrp()%</li><li>%...%</li>
+  </list>
+</slide>

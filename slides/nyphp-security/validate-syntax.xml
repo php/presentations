@@ -1,0 +1,8 @@
+<slide title="Validating Data">
+<list>
+    <li> Turn off %register_globals% and rely on %$_GET%, %$_POST%, %$_COOKIE%, and %$_REQUEST%</li>
+    <li> Test submitted data for expected syntax:</li>
+  </list>
+<example><![CDATA[if (is_numeric($_POST['age'])) { ... }]]></example>
+<example><![CDATA[if (strlen(trim($_GET['address']))) { ... }]]></example>
+</slide>

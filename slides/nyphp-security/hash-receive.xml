@@ -1,0 +1,14 @@
+<slide title="Detect Data Tampering with Hashes">
+  <list title="Checking the hash">
+    <li>When you get the data back, re-hash</li>
+    <li>Compare received and calculated hashes</li>
+  </list>
+  <example title="Receiving and verifying the cookie">
+list($cookie_id,$cookie_hash) = explode('-',$_COOKIE['id']);
+if (md5($secret_word.$cookie_id) == $cookie_hash) {
+    $id = $cookie_id;
+} else {
+    die('Invalid cookie.');
+}
+  </example>
+</slide>

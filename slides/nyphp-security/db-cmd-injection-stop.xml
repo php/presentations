@@ -1,0 +1,7 @@
+<slide title="Stopping Database Command Injection">
+  <example title="Use the %?% placeholder with PEAR DB"><![CDATA[$sth = $dbh->query('INSERT INTO songs (title,artist) VALUES (?,?)', array($title, $artist));]]></example>
+<example title="Use %strtr()% to escape %%% and %_% before escaping %'%"><![CDATA[$title = $dbh->quote($title);
+$title = strtr($title, array('_' => '\_', '%' => '\%'));
+$sth = $dbh->query("DELETE FROM songs WHERE title LIKE $title");]]></example>
+<blurb title="You can also use %mysql_real_escape_string()% or %addslashes()%"/>
+</slide>

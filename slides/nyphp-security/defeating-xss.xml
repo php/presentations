@@ -1,0 +1,8 @@
+<slide title="Defeating XSS">
+<blurb>Before displaying, modify user input to defang scripts:</blurb>
+<example title="HTML Entities"><![CDATA[$ok = htmlspecialchars($bad,ENT_QUOTES); // < > & " ']]></example>
+<example title="Parentheses"><![CDATA[$ok = strtr($bad, array('(' => '&040;', ')' => '&041;'));]]></example>
+<example title="HTML and PHP tags">$ok = strip_tags($bad);</example>
+  <example title="UTF-8 Encodiing">$iso_8859_1 = utf8_decode($bad);</example>
+
+</slide>

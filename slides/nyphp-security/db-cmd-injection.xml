@@ -1,0 +1,12 @@
+<slide title="Database Command Injection">
+  <example title="Escape %'% %%% and %_% or users can write their own queries">DELETE FROM songs WHERE title LIKE '$title'
+// What if $title =  "%' OR 'a' = 'a"?
+DELETE FROM songs WHERE title LIKE '%' OR 'a' = 'a'
+// All rows are deleted!
+  </example>
+<example>INSERT INTO songs (title, artist) VALUES ('$title','$artist')
+// What if $title = "a','b'),('c" and $artist = "d"
+INSERT INTO songs (title, artist) VALUES ('a','b'),('c','d')
+// Multiple records inserted!
+</example>  
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Topics">
+  <blurb talign="center" fontsize="4em" title="Vulnerabilities">
+    <blurb></blurb>
+    <blurb title="Validating Data">
+      Making sure you're getting what you think you're getting
+    </blurb>
+    <blurb title="Preventing Cross-Site Scripting">
+      Don't let one user run client-side code on another user's browser
+    </blurb>
+    <blurb title="Preventing Command Injection">
+      Don't let a malicious user monkey around with your database or filesystem.
+    </blurb>
+  </blurb>
+</slide>

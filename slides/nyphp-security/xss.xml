@@ -1,0 +1,13 @@
+<slide title="Cross-Site Scripting">
+<list>
+<li>Interactive features of your site are used as unwitting carriers of client-side attacks</li>
+  </list>
+<list>
+<li> Anywhere you display external input:</li>
+  </list>
+<list marginleft="2em">
+<li> User profile </li>
+<li> Forums</li>
+    <li> Error pages (the URL is external input)</li>
+  </list>
+</slide>

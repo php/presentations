@@ -1,0 +1,11 @@
+<slide title="Detect Data Tampering with Hashes">
+  <list title="Sending the hash">
+    <li>For cookies or hidden form fields</li>
+    <li>Hash the data with a secret word</li>
+    <li>Include the hash in the cookie or form</li>
+  </list>
+  <example title="Sending the cookie">$secret_word = 'salt-baked squid';
+$id = 31415926;
+$hash = md5($secret_word.$id);
+setcookie('id',$id.'-'.$hash);</example>
+</slide>

@@ -1,0 +1,15 @@
+<slide title="More Information">
+  <list marginbottom="0em" title="PHP Security Resources">
+    <li>This presentation: <![CDATA[<a href="http://www.sklar.com/talks/nyphp-security">http://www.sklar.com/talks/nyphp-security</a>]]></li>
+    <li>PHP Manual - Chapter 5 ("Security"): <![CDATA[<a href="http://www.php.net/security">http://www.php.net/security</a>]]></li>
+    <li><![CDATA[<a href="http://www.oreilly.com/catalog/progphp">Programming PHP</a>]]> - Chapter 8 ("Security")</li>
+    <li>Open Web Application Security Project: <![CDATA[<a href="http://www.owasp.org">http://www.owasp.org</a>]]></li>
+    <li>PHP and the OWASP Top Ten: <![CDATA[<a href="http://www.sklar.com/page/article/owasp-top-ten">http://www.sklar.com/page/article/owasp-top-ten</a>]]></li>
+    <li><![CDATA[<a href="http://www.oreilly.com/catalog/phpckbk">PHP Cookbook</a>]]> Recipes:</li>
+  </list>
+  <list margintop="0em" marginleft="2em">
+    <li>Validating Data: 9.7, 14.3</li>
+    <li> XSS: 8.8, 9.8</li>
+    <li>Command Injection: 10.9, 18.20  </li>
+  </list>  
+</slide>

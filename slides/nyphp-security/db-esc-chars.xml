@@ -1,0 +1,4 @@
+<slide title="Database Escape Characters">
+  <example title="Escape %'% to prevent errors">SELECT * FROM songs WHERE title LIKE 'Don't Be Cruel'</example>
+  <example title="Escape %%% and %_% to prevent unexpected wildcarding">SELECT * FROM solutions WHERE concentration LIKE '10%'</example>
+</slide>

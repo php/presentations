@@ -1,0 +1,28 @@
+<presentation>
+  <topic>PHP</topic>
+  <title>PHP Web Application Security Vulnerabilities</title>
+  <event>NYPHP</event>
+  <location>New York, NY</location>
+  <date>February 25, 2003</date>
+  <speaker>David Sklar</speaker>
+  <email>sklar@sklar.com</email>
+  <url>http://www.sklar.com/</url>
+  
+  <slide>slides/nyphp-security/titlepage.xml</slide>
+  <slide>slides/nyphp-security/toc.xml</slide>
+  <slide>slides/nyphp-security/validate-syntax.xml</slide>
+  <slide>slides/nyphp-security/validate-value.xml</slide>
+  <slide>slides/nyphp-security/hash-send.xml</slide>
+  <slide>slides/nyphp-security/hash-receive.xml</slide>
+  <slide>slides/nyphp-security/xss.xml</slide>
+  <slide>slides/nyphp-security/defeating-xss.xml</slide>
+  <slide>slides/nyphp-security/command-injection.xml</slide>
+  <slide>slides/nyphp-security/db-esc-chars.xml</slide>
+  <slide>slides/nyphp-security/db-cmd-injection.xml</slide>
+  <slide>slides/nyphp-security/db-cmd-injection-stop.xml</slide>
+  <slide>slides/nyphp-security/shell-cmd-injection.xml</slide>
+  <slide>slides/nyphp-security/esc-shell-args.xml</slide>
+  <slide>slides/nyphp-security/esc-shell-cmds.xml</slide>
+  <slide>slides/nyphp-security/more-info.xml</slide>
+
+</presentation>
