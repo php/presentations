@@ -1,0 +1,24 @@
+<slide title="php.net Tips">
+<blurb title="Quick manual lookup">
+To quickly look up a PHP function go to %php.net/strlen%
+</blurb>
+<blurb title="Manual Notes">
+At the bottom of every page of the online manual you will find user-contributed notes.
+There is usually a lot of good information (and some bad) in these notes.
+</blurb>
+<blurb title="Searching">
+The search box at the top of the page can be used to search the manual, entire site, mailing lists or the bug database.
+</blurb>
+<blurb title="short cuts">
+Use %Alt-S% to move your cursor to the search box quickly, or on the manual pages you can use %Alt-L% to jump to the function
+lookup field.
+</blurb>
+<blurb title="Show me the code!">
+Every page of the site has a %show source% link at the bottom so you can see the PHP source behind that page.
+</blurb>
+<blurb title="Use a mirror">
+In the bottom right corner you will find a %mirror sites% link.  Please choose a mirror near you.
+As a general rule, each country will have a number of mirror sites named &lt;country_code&gt;.php.net.
+For example, %de.php.net%, %de2.php.net%, %kr.php.net%, %kr2.php.net%.
+</blurb>
+</slide>

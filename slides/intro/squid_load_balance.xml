@@ -1,0 +1,54 @@
+<slide title="Load Balancing with Squid">
+
+<blurb>
+There are two primary ways to configure Squid to be a load balancer.
+</blurb>
+
+<blurb title="Private /etc/hosts">
+The easiest is to simply list multiple ips for the %httpd_accel_host% in
+your %/etc/hosts% file and Squid will automatically round-robin across
+the backend servers.
+</blurb>
+
+<blurb title="Use cache_peer">
+This is more complex.  Squid has advanced support for communicating with
+other caches.  It just so happens that this communication happens over HTTP
+so you can set Squid up to treat the web servers you wish to load balance
+as peer caches.  The configuration would look something like this:
+</blurb>
+
+<example><![CDATA[httpd_accel_host www.visible-domain.com
+httpd_accel_uses_host_header on
+never_direct allow all
+cache_peer server1 parent 80 0 no-query round-robin
+cache_peer server2 parent 80 0 no-query round-robin
+cache_peer server3 parent 80 0 no-query round-robin
+]]></example>
+
+<blurb>%no-query% in the above tells Squid not to try to send ICP (Internet Cache Protocol)
+requests to the Apache servers.  You could turn on the %echo% port on each server and redirect
+these ICP requests to there which would make this system automatically detect a server that is
+down.</blurb>
+
+<blurb title="Avoiding Redirectors">
+It is generally a good idea to avoid external redirectors.  A lot of things can be 
+done directly in Squid's config file.  For example:
+</blurb>
+
+<example><![CDATA[acl domain1 dstdomain www.domain1.com
+acl domain2 dstdomain www.domain2.com
+acl domain3 dstdomain www.domain3.com
+cache_peer_access server1 allow domain1
+cache_peer_access server2 allow domain2
+cache_peer_access server3 allow domain3
+cache_peer_access server1 deny all
+cache_peer_access server2 deny all
+cache_peer_access server3 deny all
+]]></example>
+
+<blurb>This would configure Squid to send requests for pages on certain domains to
+certain backend servers.  These backend servers could actually be aliases to different
+ips on the same server if you wanted to run multiple Apache instances on different ports
+on the same box.</blurb>
+
+</slide>

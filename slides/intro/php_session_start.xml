@@ -1,0 +1,23 @@
+<slide title="PHP Sessions">
+
+<blurb title="Starting a Session">
+To start a session use session_start() and to register a variable
+in this session use the $_SESSION array.
+</blurb>
+<example width="50em"><![CDATA[<?php
+  session_start();
+  $_SESSION['my_var'] = 'Hello World';
+?>]]></example>
+
+<blurb>
+If register_globals is enabled then your session variables will be
+available as normal variables on subsequent pages.  Otherwise they
+will only be in the $_SESSION array.
+</blurb>
+
+<example width="50em"><![CDATA[<?php
+  session_start();
+  echo $_SESSION['my_var'];
+?>]]></example>
+
+</slide>

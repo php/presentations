@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Apache ErrorHandler">
+<blurb>
+An interesting Apache configuration trick is that you can tell Apache to pass 
+requests that generate a given error to a PHP script.
+</blurb>
+<example title="httpd.conf"><![CDATA[ErrorHandler 404 /error.php
+]]></example>
+<blurb>
+Later on we will use this to do some very interesting things.
+</blurb>
+</slide>

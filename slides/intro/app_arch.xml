@@ -1,0 +1,8 @@
+<slide title="App Architecture">
+<blurb>
+A typical architecture for a PHP application.  The template layer should have
+as little business logic as possible.  As you go down you have less presentation
+and more business logic.
+</blurb>
+<image filename="php_app_arch.png" align="center"/>
+</slide>

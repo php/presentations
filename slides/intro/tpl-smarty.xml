@@ -1,0 +1,15 @@
+<slide title="Smarty">
+<link href="http://smarty.php.net/" align="center">http://smarty.php.net/</link>
+<list>
+ <bullet>Probably the most complex and complete system</bullet>
+ <bullet>Loops</bullet>
+ <bullet>Conditional sections</bullet>
+ <bullet>Variable modifiers</bullet>
+ <bullet>Plugins</bullet>
+ <bullet>Built-in functions</bullet>
+ <bullet>Configuration files</bullet>
+ <bullet>More... (See Andrei and Sterling's tutorial.)</bullet>
+</list>
+<example title="Code" filename="smarty.php" />
+<example title="Template" filename="smarty.tpl" />
+</slide>

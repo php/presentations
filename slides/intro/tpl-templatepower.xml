@@ -1,0 +1,13 @@
+<slide title="TemplatePower">
+<link href="http://templatepower.codocad.com" align="center">http://templatepower.codocad.com</link>
+<list>
+ <bullet>Nested dynamic blocks</bullet>
+ <bullet>Block/file includes</bullet>
+ <bullet>Ignore tag</bullet>
+ <bullet>Save/load parsed templates</bullet>
+ <bullet>Database template support</bullet>
+</list>
+<example title="Code" filename="templatepower.php" fontsize="1.3em"/>
+<example title="Template" filename="templatepower.tpl" type="system" />
+<example title="Output" filename="templatepower.php" hide="1" result="1" />
+</slide>

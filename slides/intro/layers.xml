@@ -1,0 +1,126 @@
+<slide title="Simplistic Example">
+
+<blurb>
+In terms of a real-world example of what goes in these 4 different layers, assume we
+are writing a database-backed application that needs to fetch a user record containing
+various fields.  This is a very common thing to do in a web app.  Our template layer 
+might look something like this:
+</blurb>
+
+<example title="php.ini" type="shell">
+auto_prepend_file = "./helpers.inc"
+include_path = "/usr/local/lib/php"
+</example>
+
+<example title="Template Layer"><![CDATA[<?title('Example Page')?>
+<?greeting()?>
+<h1>Heading 1</h1>
+  <p>
+    Page content
+  </p>
+<h1>Heading 2</h1>
+  <p>
+    Yada Yada
+  </p>
+<h1>Heading 3</h1>
+  <p>
+    Page content
+  </p>
+<?footer()?>
+]]></example>
+
+<example title="Template Helpers"><![CDATA[<?php
+  include "logic.inc";
+  echo '<?xml version="1.0" encoding="UTF-8"?>';
+?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xml:lang="en" lang="en">
+<?php
+  $user = get_user_record($_COOKIE['user_id']);
+  function greeting() {
+    global $user;
+    echo "Hi " .$user['first_name'] ."!<br />\n";
+    if($age=birthday($user)) {
+      echo "Congratulations, today is your ";
+      echo "$age birthday!<br />\n";
+    }
+  } 
+  function title($title) {
+    echo "<head><title>$title</title></head>\n";
+	echo "<body>\n";
+  }
+  function footer() {
+    echo "</body>\n</html>";
+  }
+?>]]></example>
+
+<example title="Business Logic" fontsize="1.75em"><![CDATA[<?php
+  function get_user_record($id) {
+    mysql_connect('localhost');
+    mysql_select_db('users');
+    $res = mysql_query("select * from users where id='$id'");
+    if(!$res) echo mysql_error();
+    else $row = mysql_fetch_array($res);
+    return $row;
+  }
+  function birthday($user) {
+    if(strftime('%m %d')==strftime('%m %d',$user['bday'])) 
+      $age = strftime('%Y') - strftime('%Y',$user['bday']);
+      if(($age%100)>10 && ($age%100)<20) $ap='th';
+      else switch($age%10) {
+        case 1: $ap = 'st'; break;
+        case 2: $ap = 'nd'; break;
+        case 3: $ap = 'rd'; break;
+        default:  $ap = 'th'; break; 
+      }
+      return $age.$ap;
+    else 
+      return false;
+  }
+?>]]></example>
+
+<blurb>
+In this case the final layer written in C contains the ~mysql_*~ functions, and the ~date()~
+function.  These happen to be standard PHP functions.  If ~birthday()~ is called many times on
+every single request and since how you figure out if it is someone's birthday is unlikely
+to change very often, this may be a good candidate to translate into C.  Although, in this
+example, the birthday function is probably too simple to see much of a performance improvement.
+On the other hand, other than a little bit of added parameter parsing, if you compare the C
+version of ~birthday()~ to the PHP version, it isn't that much harder to write it in C.
+</blurb>
+
+<example title="C Layer" fontsize="1.5em"><![CDATA[
+PHP_FUNCTION(birthday)
+{
+  time_t timestamp, now;
+  struct tm *ta1, tmbuf1, *ta2, tmbuf2;
+  int age;
+  char ret_age[8];
+
+  if (zend_parse_parameters(1 TSRMLS_CC, "l", &timestamp) == FAILURE)
+      return;
+
+  ta1 = php_localtime_r(&timestamp, &tmbuf1);
+  time(&now);
+  ta2 = php_localtime_r(&now, &tmbuf2);
+
+  if(tmbuf1.tm_mday==tmbuf2.tm_mday && tmbuf1.tm_mon==tmbuf2.tm_mon) {
+      age = tmbuf2.tm_year - tmbuf1.tm_year;
+      if((age%100)>10 && (age%100)<19) sprintf(ret_age,"%dth",age);
+      else switch(age % 10) {
+          case 1: sprintf(ret_age,"%dst",age); break;
+          case 2: sprintf(ret_age,"%dnd",age); break;
+          case 3: sprintf(ret_age,"%drd",age); break;
+          default:sprintf(ret_age,"%dth",age); break;
+      }
+  } else {
+      RETURN_FALSE;
+  }
+  RETURN_STRING(ret_age,1);
+}
+]]></example>
+
+</slide>

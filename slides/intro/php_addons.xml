@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Installing Related Libraries">
+<blurb>
+Before installing or building PHP you will need to install the various libraries
+you are planning on having PHP use.  We will be using the pdflib library later on
+in this course.  Here is how you would download, compile and install this library.
+</blurb>
+
+<example title="pdflib" type="shell" fontsize="1.3em"><![CDATA[
+% wget http://www.pdflib.com/pdflib/download/pdflib-4.0.3.tar.gz
+% tar zxvf pdflib-4.0.3.tar.gz
+% cd pdflib-4.0.3
+% ./configure  --enable-php=no --without-java --without-tcl
+% make
+% make install 
+]]></example>
+
+<blurb>
+But, for the most part you should be able to download the appropriate -devel package
+from whataver Linux distribution you are on.  
+</blurb>
+
+</slide>

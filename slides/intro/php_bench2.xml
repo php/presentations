@@ -1,0 +1,119 @@
+<slide title="Benchmarking Results">
+
+<example type="shell" title="An http_load run" fontsize="1.5em">
+% http_load -parallel 5 -fetches 5000 url.txt
+5000 fetches, 5 max parallel, 2.954e+07 bytes, in 12.5082 seconds
+5908 mean bytes/connection
+399.739 fetches/sec, 2.36166e+06 bytes/sec
+msecs/connect: 0.242907 mean, 9.246 max, 0.195 min
+msecs/first-response: 10.7645 mean, 130.136 max, 2.114 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+<table columns="2" border="0" width="100%" align="center" fontsize="3em">
+<cell>No Opcode cache</cell><cell>254 requests/sec</cell>
+<cell>With APC2 cache</cell><cell>399 requests/sec</cell>
+<cell>With IonCube (phpa) cache</cell><cell>350 requests/sec</cell>
+</table>
+
+<blurb>It is also interesting to look at what your server is doing while you
+hammer it with http_load:</blurb>
+
+<example type="shell" title="Load without opcode cache" fontsize="1.5em" marginleft="0em" marginright="0em">
+   procs                      memory    swap          io     system         cpu
+ r  b  w   swpd   free   buff  cache  si  so    bi    bo   in    cs  us  sy  id
+11  0  0  90000   3844   4928  73152   0   0     0     0 2854   450  87  13   0
+11  0  1  90000   5280   4944  73128   0   8     0   160 2934   450  88  12   0
+13  0  0  90000   3928   4944  73164   0   0     0     0 3002   595  87  13   0
+12  0  1  90000   3892   4944  73184   0   0     0     0 2928   515  82  18   0
+ 9  0  0  90000   3896   4944  73200   0   0     0     0 2970   602  79  21   0
+12  0  1  90000   3840   4952  73220   0   0     0    12 2948   517  80  20   0
+11  0  1  90000   3956   4952  73240   0   0     0     0 2916   522  91   9   0
+ 9  0  1  90000   3952   4952  73256   0   0     0     0 2996   547  89  11   0
+11  0  1  90000   3916   4952  73276   0   0     0     0 2949   534  81  19   0
+13  0  1  90000   3896   4952  73296   0   0     0     0 2886   516  86  14   0
+11  0  1  90000   3876   4960  73312   0   0     0    12 2887   547  90  10   0
+11  0  1  90000   3864   4960  73332   0   0     0     0 2931   531  85  15   0
+12  0  1  90000   3844   4960  73348   0   0     0     0 3013   579  89  11   0
+12  0  1  90000   3952   4960  73368   0   0     0     0 2999   508  87  13   0
+12  0  1  90000   3928   4968  73388   0   0     0    12 3022   600  79  21   0
+</example>
+
+<example type="shell" title="Load with APC2 cache" fontsize="1.5em" marginleft="0em" marginright="0em">
+   procs                      memory    swap          io     system         cpu
+ r  b  w   swpd   free   buff  cache  si  so    bi    bo   in    cs  us  sy  id
+11  0  0  90000   3904   4712  72212   0   0     0     0 4494   596  78  22   0
+10  0  1  90000   5280   4680  72160   0   0     0     0 4422   596  77  23   0
+11  0  1  90000   5176   4688  72192   0   0     0    12 4500   791  85  15   0
+ 9  0  0  90000   5224   4688  72092   0   0     0     0 4541   702  79  21   0
+11  0  1  90000   5152   4688  72120   0   0     0     0 4495   885  88  12   0
+10  0  1  90000   5216   4688  72020   0   0     0     0 4513   674  73  27   0
+11  0  1  90000   5132   4688  72048   0   0     0     0 4477   794  82  18   0
+11  0  1  90000   5200   4688  71952   0   0     0   128 4476   701  80  20   0
+10  0  1  90000   5296   4688  71852   0   0     0     0 4486   770  76  24   0
+11  0  1  90000   5224   4688  71880   0   0     0     0 4524   698  82  18   0
+11  0  0  90000   5144   4688  71908   0   0     0     0 4481   788  78  22   0
+11  0  1  90000   5196   4688  71808   0   0     0     0 4504   684  74  26   0
+11  0  1  90000   5116   4688  71836   0   0     0   128 4463   792  80  20   0
+10  0  1  90000   5172   4688  71740   0   0     0     0 4539   681  80  20   0
+12  0  1  90000   5228   4688  71640   0   0     0     0 4503   747  74  26   0
+</example>
+
+<example type="shell" title="Load with IonCube cache" fontsize="1.5em" marginleft="0em" marginright="0em">
+   procs                      memory    swap          io     system         cpu
+ r  b  w   swpd   free   buff  cache  si  so    bi    bo   in    cs  us  sy  id
+11  0  1  86084   5196   6284  54104   0   0     0     4 4078   632  75  25   0
+12  0  1  86084   5132   6284  54132   0   0     0     0 4024   593  78  22   0
+12  0  1  86084   5204   6284  54052  32   4    32     4 3996   705  66  34   0
+12  0  1  86084   5180   6292  54076   0   0     0   140 3979   678  74  26   0
+11  0  1  86084   5148   6292  54104   0   0     0     0 3980   740  70  30   0
+10  0  1  86084   5256   6292  54000   0   0     0     0 3945   660  82  18   0
+10  0  1  86084   5228   6292  54024   0   0     0     0 4025   663  75  25   0
+12  0  1  86084   5200   6292  54052   0   0     0     0 3967   692  82  18   0
+11  0  1  86084   5180   6292  54076   0   0     0     0 3994   688  76  24   0
+11  0  1  86084   5156   6292  54100   0   0     0     0 4023   641  71  29   0
+11  0  1  86144   5264   6292  54012   0   0     0     0 3993   719  78  22   0
+10  0  1  86144   5232   6292  54036   0   0     0     0 3967   655  80  20   0
+12  0  1  86144   5208   6292  54060   0   0     0     0 3946   732  78  22   0
+11  0  0  86144   5180   6292  54088   0   0     0   128 4011   637  76  24   0
+10  0  1  86144   3856   6292  54112   0   0     0     0 3983   664  80  20   0
+11  0  1  86160   3976   6292  54080   0  28     0    28 3932   639  80  20   0
+</example>
+
+<blurb>
+Our benchmark test was deliberately designed to have quite a bit of PHP processing
+and not a whole lot of output.  6k is somewhat small for a web page.  If instead
+we have a whole lot of output, chances are we will be io-bound instead of cpu-bound.
+If you are io-bound, there is little sense in optimizing at the PHP level.
+</blurb>
+
+<example type="shell" title="Evidence of an io-bound test" fontsize="1.5em" marginleft="0em" marginright="0em">
+   procs                      memory    swap          io     system         cpu
+ r  b  w   swpd   free   buff  cache  si  so    bi    bo   in    cs  us  sy  id
+ 4  0  0  94928   5204   2228  29812   0   0     0     0 4813  1660  19  24  58
+ 7  0  0  94928   5200   2228  29812   0   0     0     0 4828  1614   7  33  60
+ 6  0  0  94928   5176   2248  29812   0   0     4    24 4823  1688  13  20  68
+ 7  0  0  94928   5172   2248  29816   0   0     0     0 4815  1670   8  38  54
+ 5  0  0  94928   5168   2248  29816   0   0     0     0 4840  1647  12  23  66
+ 5  0  0  94928   5168   2248  29816   0   0     0     0 4821  1663  12  28  60
+ 5  0  0  94928   5164   2248  29820   0   0     0     0 4843  1664  11  25  64
+ 5  0  0  94928   5152   2256  29820   0   0     0    12 4791  1687   9  26  65
+ 4  0  0  94936   5276   2256  29820   0   8     0     8 4853  1665  14  25  62
+ 6  0  0  94936   5284   2256  29824   0   0     0     0 4805  1670   7  28  65
+ 6  0  0  94936   5268   2256  29824   0   0     0     0 4823  1676   8  25  67
+ 6  0  0  94936   5244   2256  29824  24   0    24     0 4803  1700   9  32  59
+ 5  0  0  94936   5228   2264  29824   0   0     0    12 4865  1762  12  23  66
+</example>
+
+<example type="shell" title="Things to try if you are io-bound">
+[php.ini]
+output_handler = ob_gzhandler
+</example>
+
+<example type="shell">
+[httpd.conf]
+LoadModule gzip_module lib/apache/mod_gzip.so
+</example>
+
+</slide>

@@ -1,0 +1,37 @@
+<slide title="*.php.net">
+<blurb title="www.php.net">
+www.php.net is the center of all things PHP.
+</blurb>
+<blurb title="talks.php.net">
+Many talks given around the world at conferences and user group meetings are collected here.
+</blurb>
+<blurb title="news.php.net">
+A web interface for the mailing lists, or you can connect to it via an NNTP news reader.
+</blurb>
+<blurb title="pear.php.net">
+The PHP Extension and Application Repository site.
+</blurb>
+<blurb title="bugs.php.net">
+This is the bug tracking system.  If you think you have found a bug, go here and check to 
+see if it has already been reported, if not, report it here.
+</blurb>
+<blurb title="qa.php.net">
+The PHP Quality Assurance team coordinate their efforts through this site.
+</blurb>
+<blurb title="cvs.php.net">
+PHP uses CVS for source code revision control.  Point your web browser at this site for a
+web view of the files in CVS, or use a CVS client and connect directly via the pserver protocol.
+</blurb>
+<blurb title="bonsai.php.net,lxr.php.net">
+These sites are closely related to cvs.php.net in that they provide information about the PHP source code.
+</blurb>
+<blurb title="gtk.php.net">
+Home of the PHP-GTK project.
+</blurb>
+<blurb title="smarty.php.net">
+The home of the Smarty template engine for PHP.
+</blurb>
+<blurb title="snaps.php.net">
+Snapshot builds directly from CVS generated every couple of hours are available here.
+</blurb>
+</slide>

@@ -1,0 +1,27 @@
+<slide title="Benchmarking">
+
+<blurb>
+Let's have a look at how we might benchmark and subsequently tune a PHP server.
+</blurb>
+
+<link href="http://apc.communityconnect.com/sources/apc-cvs.tar.gz">http://apc.communityconnect.com/sources/apc-cvs.tar.gz</link>
+<link href="http://www.ioncube.com/">http://www.ioncube.com</link>
+
+<example type="shell" fontsize="1.5em">
+CPU: Pentium III 700MHz
+RAM: 128M
+</example>
+
+<blurb>Our test script includes 2 files, defines 3 functions, loops a bit and outputs about %6k% of data.
+</blurb>
+
+<blurb>For testing I am using %http_load% from acme.com and the default SendBufferSize</blurb>
+
+<example type="shell">
+#  To change this on Linux, cat a larger number 
+#  into /proc/sys/net/core/wmem_max in your 
+#  httpd startup script
+SendBufferSize 65535
+</example>
+
+</slide>

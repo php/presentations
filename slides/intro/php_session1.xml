@@ -1,0 +1,11 @@
+<slide title="PHP Sessions">
+
+<blurb>
+In larger environments, there are also multiple web servers where requests
+may be round-robined across or perhaps a load balancer is distributing the
+requests across the server farm.
+</blurb>
+
+<image align="middle" filename="session2.png" />
+
+</slide>

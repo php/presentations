@@ -1,0 +1,18 @@
+<slide title="Load Balancing">
+
+<blurb title="The Easy (And Expensive) Solution">
+You can buy dedicated boxes that do all sorts of advanced load balancing 
+for you.  Some popular ones are:
+</blurb>
+
+<list>
+<li>Cisco CSS</li>
+<li>Foundry ServerIron</li>
+<li>Intel Netstructure</li>
+<li>F5 BIG-IP</li>
+</list>
+
+<blurb>If you are on Linux you could also try LVS.  See |ff1111|www.LinuxVirtualServer.org|.
+</blurb>
+
+</slide>

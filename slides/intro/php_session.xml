@@ -1,0 +1,16 @@
+<slide title="PHP Sessions">
+
+<blurb title="HTTP is Stateless">
+There is nothing in the HTTP protocol that will tie subsequent requests together.
+This is a common problem faced by web developers when working on sites that require
+a shopping-cart type of functionality.
+</blurb>
+
+<blurb>
+Additionally, given Apache's multi-process architecture, subsequent requests from the same
+user may be handled by different processes.
+</blurb>
+
+<image align="middle" filename="session1.png" />
+
+</slide>

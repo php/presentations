@@ -1,0 +1,99 @@
+<slide title="PEAR Examples">
+
+<example type="shell"><![CDATA[prompt:~> pear list
+Installed packages:
+===================
++----------------+----------+--------+
+| Package        | Version  | State  |
+| Archive_Tar    | 0.9      | stable |
+| Console_Getopt | 0.11     | beta   |
+| DB             | 1.2      | stable |
+| Mail           | 1.0      | stable |
+| Net_Sieve      | 0.8      | stable |
+| Net_Socket     | 1.0.1    | stable |
+| PEAR           | 0.91-dev | beta   |
+| XML_Parser     | 1.0      | stable |
+| XML_RPC        | 1.0.3    | stable |
+| XML_RSS        | 0.9.1    | stable |
+| XML_Tree       | 1.1      | stable |
++----------------+----------+--------+]]></example>
+
+<example type="shell"><![CDATA[prompt:~> pear remote-list
+Available packages:
+===================
++----------------------+---------+
+| Package              | Version |
+| Archive_Tar          | 0.9     |
+| Auth                 | 1.0.2   |
+| Auth_HTTP            | 1.0.1   |
+| Benchmark            | 1.1     |
+| Cache                | 1.5.1   |
+| Config               | 0.3.1   |
+| Crypt_CBC            | 0.3     |
+| Crypt_Rc4            | 0.1     |
+| Date                 | 1.1     |
+| DB                   | 1.3     |
+| DB_ado               | 1.1     |
+| DB_Pager             | 0.7     |
+| File                 | 1.0.2   |
+| File_Find            | 0.1     |
+| File_SearchReplace   | 1.0     |
+| HTML_Common          | 1.0     |
+| HTML_QuickForm       | 2.3     |
+| HTML_Table           | 1.1     |
+| HTML_TreeMenu        | 1.0.3   |
+| HTTP                 | 1.1     |
+| HTTP_Request         | 1.0     |
+| HTTP_Upload          | 0.8     |
+| Log                  | 1.2     |
+| Mail                 | 1.0     |
+| Mail_Mime            | 1.2     |
+| Net_CheckIP          | 1.0.1   |
+| Net_Curl             | 0.1     |
+| Net_Dig              | 0.1     |
+| Net_Geo              | 1.0     |
+| Net_NNTP             | 0.1     |
+| Net_Ping             | 1.0.1   |
+| Net_POP3             | 1.1     |
+| Net_Portscan         | 1.0.1   |
+| Net_Sieve            | 0.8     |
+| Net_SMTP             | 1.0     |
+| Net_Socket           | 1.0.1   |
+| Net_URL              | 1.0.3   |
+| Net_UserAgent_Detect | 1.0     |
+| Numbers_Roman        | 0.1     |
+| Pager                | 1.0.4   |
+| Payment_Clieop       | 0.1     |
+| PEAR                 | 0.9     |
+| PHPUnit              | 0.3     |
+| Science_Chemistry    | 1.0.2   |
+| System_Command       | 1.0     |
+| XML_CSSML            | 1.1     |
+| XML_fo2pdf           | 0.97    |
+| XML_image2svg        | 0.1     |
+| XML_Parser           | 1.0     |
+| XML_RPC              | 1.0.3   |
+| XML_RSS              | 0.9.1   |
+| XML_Transformer      | 0.3     |
+| XML_Tree             | 1.1     |
++----------------------+---------+]]></example>
+
+<example type="shell"><![CDATA[prompt:~> pear list-upgrades
+Available Upgrades (stable):
+============================
++---------+---------+------+
+| Package | Version | Size |
+| DB      | 1.3     | 58kB |
++---------+---------+------+]]></example>
+
+<example type="shell"><![CDATA[prompt:~> pear upgrade DB
+downloading DB-1.3.tgz ...
+...done: 59,332 bytes
+upgrade ok: DB 1.3]]></example>
+
+<example type="shell"><![CDATA[prompt:~> pear install PHPUnit
+downloading PHPUnit-0.3.tgz ...
+...done: 7,284 bytes
+install ok: PHPUnit 0.3]]></example>
+
+</slide>

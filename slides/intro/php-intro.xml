@@ -1,0 +1,13 @@
+<slide title="The PHP Way">
+<blurb>
+PHP was created as a framework for writing web applications in C or C++
+and making it easy to expose the business logic of these applications to
+a powerful presentation-layer templating language.
+</blurb>
+<image align="center" filename="php-intro.png"/>
+<blurb>
+Most people don't really use PHP this way.  Over the years the templating
+language improved both in scope and performance to the point where entire
+web apps could be written in it.
+</blurb>
+</slide>

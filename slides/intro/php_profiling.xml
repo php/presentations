@@ -1,0 +1,82 @@
+<slide title="Profiling PHP">
+
+<blurb title="Why Profile?">
+Because your assumptions of how things work behind the scenes are not 
+always correct.  By profiling your code you can identify where the 
+bottlenecks are quantitatively.
+</blurb>
+
+<blurb title="How?">
+PEAR/Pecl to the rescue!
+</blurb>
+
+<example type="shell"><![CDATA[
+www:~> pear install apd
+downloading apd-0.4p1.tgz ...
+...done: 39,605 bytes
+16 source files, building
+running: phpize
+PHP Api Version        : 20020918
+Zend Module Api No     : 20020429
+Zend Extension Api No  : 20021010
+building in /var/tmp/pear-build-root/apd-0.4p1
+running: /tmp/tmprFlAqf/apd-0.4p1/configure
+running: make
+apd.so copied to /tmp/tmprFlAqf/apd-0.4p1/apd.so
+install ok: apd 0.4p1
+]]></example>
+
+<blurb>Woohoo!</blurb>
+
+<example type="shell" fontsize="1.2em"><![CDATA[
+www:~> pear info apd
+About apd-0.4p1
+===============
++-----------------+--------------------------------------------------+
+| Package         | apd                                              |
+| Summary         | A full-featured engine-level profiler/debugger   |
+| Description     | APD is a full-featured profiler/debugger that is |
+|                 | loaded as a zend_extension. It aims to be an     |
+|                 | analog of C's gprof or Perl's Devel::DProf.      |
+| Maintainers     | George Schlossnagle <george@omniti.com> (lead)   |
+| Version         | 0.4p1                                            |
+| Release Date    | 2002-11-25                                       |
+| Release License | PHP License                                      |
+| Release State   | stable                                           |
+| Release Notes   | Fix for pre-4.3 versions of php                  |
+| Last Modified   | 2002-12-02                                       |
++-----------------+--------------------------------------------------+
+]]></example>
+
+<example type="shell" fontsize="1em"><![CDATA[
+www:~> pear config-show
+Configuration:
+==============
++----------------------+-----------------+-------------------------------------+
+| PEAR executables     | bin_dir         | /usr/local/bin                      |
+| directory            |                 |                                     |
+| PEAR documentation   | doc_dir         | /usr/local/lib/php/docs             |
+| directory            |                 |                                     |
+| |ffff11|PHP extension|        | |ffff11|ext_dir|         | |ffff11|/usr/local/lib/php/extensions/no-de| |
+| |ffff11|directory|            |                 | |ffff11|bug-non-zts-20020429|                |
+| PEAR directory       | php_dir         | /usr/local/lib/php                  |
+| PEAR Installer cache | cache_dir       | /tmp/pear/cache                     |
+| directory            |                 |                                     |
+| PEAR data directory  | data_dir        | /usr/local/lib/php/data             |
+| PEAR test directory  | test_dir        | /usr/local/lib/php/tests            |
+| Cache TimeToLive     | cache_ttl       | <not set>                           |
+| Preferred Package    | preferred_state | stable                              |
+| State                |                 |                                     |
+| Unix file mask       | umask           | 18                                  |
+| Debug Log Level      | verbose         | 1                                   |
+| HTTP Proxy Server    | http_proxy      | <not set>                           |
+| Address              |                 |                                     |
+| PEAR server          | master_server   | pear.php.net                        |
+| PEAR password (for   | password        | <not set>                           |
+| maintainers)         |                 |                                     |
+| PEAR username (for   | username        | <not set>                           |
+| maintainers)         |                 |                                     |
++----------------------+-----------------+-------------------------------------+
+
+]]></example>
+</slide>

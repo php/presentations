@@ -1,0 +1,32 @@
+<slide title="Tuning">
+
+<example title="include_path" type="shell">
+include_path = "/usr/share/pear:."
+</example>
+
+<example><![CDATA[<?php
+    include './template_helpers.inc';
+    include 'business_logic.inc';
+?>]]></example>
+
+<example title="open_basedir" type="shell" fontsize="1.75em">
+open_basedir = "/usr/share/htdocs/:/usr/share/pear/"
+</example>
+
+<blurb>open_basedir checking adds some extra syscalls to every file operation.  It can be useful,
+but it is rather expensive, so turn it off if you don't think you need it.</blurb>
+
+<example title="variables_order" type="shell">
+variables_order = "GPC"
+</example>
+<example><![CDATA[<?php
+    echo $_SERVER['DOCUMENT_ROOT'];
+    echo getenv('DOCUMENT_ROOT'); 
+?>]]></example>
+
+<table columns="2" border="0" width="100%" align="center" fontsize="3em">
+<cell>PHP 4.3 w/ APC2 and EGPCS</cell><cell>399 requests/sec</cell>
+<cell>PHP 4.3 w/ APC2 and GPC</cell><cell>513 requests/sec</cell>
+</table>
+
+</slide>

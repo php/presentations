@@ -1,0 +1,32 @@
+<slide>
+<title>PEAR</title>
+<image align="right" filename="pecl.png"/>
+<image align="left" filename="pear.png"/>
+
+<blurb title="*P*HP *E*xtension and *A*pplication *R*epository">
+A unified repository of code written in both PHP and C complete with
+a dependency-checking installer.
+</blurb>
+
+<list title="What is PEAR?">
+  <li>PEAR is designed to let you install and maintain packages for PHP in a very easy manner</li>
+  <li>Similar in idea and intent as CPAN for Perl</li>
+  <li>Only very high quality packages are allowed into PEAR</li>
+  <li>All PEAR packages follow a specific coding guidelines</li>
+  <li>PECL (pronounced Pickle) is subset of PEAR
+    <li>PECL stands for *P*HP *E*xtension *C*ode *L*ibrary</li>
+    <li>PECL is made up of C and C++ code, not PHP</li>
+    <li>PECL packages are modules for PHP, which add additional functionality to PHP</li>
+    <li>They are still installed and treated as normal PEAR packages</li>
+   </li>
+   <li>Why use PEAR?
+    <li>PEAR contains many packages which add additional functionality to PHP</li>
+    <li>Using some of this functionality can save time and money</li>
+  </li>
+  <li>How do I get PEAR?
+   <li>PEAR is automatically compiled along with PHP, so you should already have it!</li>
+  </li>
+</list>
+
+<link align="center" href="http://pear.php.net" leader="See: " fontsize="4em">|77AA77|http://pear.php.net|</link>
+</slide>

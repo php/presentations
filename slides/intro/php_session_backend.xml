@@ -1,0 +1,27 @@
+<slide title="Custom Backend">
+<blurb>
+You can change the session backend datastore from a script using
+session_module_name().
+</blurb>
+<example><![CDATA[<?php
+  session_module_name("files");  // ASCII files
+
+  session_module_name("mm");     // Shared memory
+
+  session_module_name("user");   // Custom session backend
+?>]]></example>
+
+<blurb>
+You can also define your own custom session backend datastore using the 
+session_set_save_handler() function.
+</blurb>
+
+<example><![CDATA[<?php
+  session_set_save_handler("myOpen", "myClose",
+                         "myRead", "myWrite",
+                         "myDestroy", "myGC");
+?>]]></example>
+<blurb>
+You would then write these 6 functions.
+</blurb>
+</slide>

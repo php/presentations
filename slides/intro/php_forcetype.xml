@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Apache Forcetype">
+<blurb>
+Another Apache configuration trick is to use the %ForceType% directive to
+force specific urls to be treated as PHP scripts:
+</blurb>
+<example title="httpd.conf"><![CDATA[<Location /products>
+  ForceType application/x-httpd-php
+</Location>
+]]></example>
+<blurb>
+Again, we will put this to use later on.
+</blurb>
+</slide>

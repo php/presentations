@@ -1,0 +1,13 @@
+<slide title="PHP">
+<link href="http://www.php.net/" align="center">http://www.php.net/</link>
+<list>
+ <bullet>Full progamming language</bullet>
+ <bullet>Include files</bullet>
+ <bullet>Loops and conditional statements</bullet>
+ <bullet>User-defined functions</bullet>
+ <bullet>Etc.</bullet>
+</list>
+<example title="Code" filename="php.php" />
+<example title="Template" filename="php.tpl" />
+<example title="Output" filename="php.php" result="1" hide="1" />
+</slide>

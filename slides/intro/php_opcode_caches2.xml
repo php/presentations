@@ -1,0 +1,21 @@
+<slide title="PHP Opcode Caches">
+
+<blurb>
+There are a number of them out there.
+</blurb>
+
+<list>
+<li>APC - open source</li>
+<li>IonCube Accelerator - free, but closed source</li>
+<li>Zend Cache - commercial</li>
+</list>
+
+<blurb title="Installation">
+Typically very trivial.  For IonCube, for example, in your php.ini add:
+</blurb>
+
+<example type="shell" fontsize="1.4em">
+zend_extension = "/usr/local/lib/php/php_accelerator_1.3.3r2.so"
+</example>
+
+</slide>

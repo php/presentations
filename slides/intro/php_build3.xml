@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Building PHP from source">
+<blurb title="PHP as a static Apache module">
+PHP can also be built as a static module directly into your Apache httpd
+process.  On some systems this will be fractionally faster, but it makes
+it a bit less convenient to upgrade PHP as you have to rebuild Apache as well.
+The procedure for doing this is:
+</blurb>
+
+<example type="shell" fontsize="1.3em"><![CDATA[
+% ./configure --with-apache=/usr/local/src/apache_1.3.22 \
+              --with-mysql=/usr
+% make
+% make install
+% cd /usr/local/src/apache_1.3.22
+% ./configure --activate-module=src/modules/php4/libphp4.a
+% make
+% make install
+]]></example>
+
+</slide>

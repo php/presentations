@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Building PHP from source">
+<blurb>
+Grab a tarball (.tar.gz file) from %php.net/downloads.php% or a CVS snapshot
+from %snaps.php.net%.
+</blurb>
+<example type="shell"><![CDATA[
+% tar zxvf php-4.3.0.tar.gz
+% cd php-4.3.0
+% ./configure --help
+]]></example>
+<example type="shell" fontsize="0.85em"><![CDATA[
+|bbbbbb|`configure' configures this package to adapt to many kinds of systems.|
+
+|6666ff|Usage:| ./configure [OPTION]... [VAR=VALUE]...
+
+|bbbbbb|To assign environment variables (e.g., CC, CFLAGS...), specify them as|
+|bbbbbb|VAR=VALUE.  See below for descriptions of some of the useful variables.|
+
+|bbbbbb|Defaults for the options are specified in brackets.|
+
+|6666ff|Configuration:|
+  -h, --help              display this help and exit
+      --help=short        display options specific to this package
+      --help=recursive    display the short help of all the included packages
+  -V, --version           display version information and exit
+  -q, --quiet, --silent   do not print `checking...' messages
+      --cache-file=FILE   cache test results in FILE [disabled]
+  -C, --config-cache      alias for `--cache-file=config.cache'
+  -n, --no-create         do not create output files
+      --srcdir=DIR        find the sources in DIR [configure dir or `..']
+
+|6666ff|Installation directories:|
+  --prefix=PREFIX         install architecture-independent files in PREFIX
+                          [/usr/local]
+  --exec-prefix=EPREFIX   install architecture-dependent files in EPREFIX
+                          [PREFIX]
+
+|bbbbbb|By default, `make install' will install all the files in|
+|bbbbbb|`/usr/local/bin', `/usr/local/lib' etc.  You can specify|
+|bbbbbb|an installation prefix other than `/usr/local' using `--prefix',|
+|bbbbbb|for instance `--prefix=$HOME'.|
+
+|bbbbbb|For better control, use the options below.|
+
+|6666ff|Fine tuning of the installation directories:|
+  --bindir=DIR           user executables [EPREFIX/bin]
+  --sbindir=DIR          system admin executables [EPREFIX/sbin]
+  --libexecdir=DIR       program executables [EPREFIX/libexec]
+  --datadir=DIR          read-only architecture-independent data [PREFIX/share]
+  --sysconfdir=DIR       read-only single-machine data [PREFIX/etc]
+  --sharedstatedir=DIR   modifiable architecture-independent data [PREFIX/com]
+  --localstatedir=DIR    modifiable single-machine data [PREFIX/var]
+  --libdir=DIR           object code libraries [EPREFIX/lib]
+  --includedir=DIR       C header files [PREFIX/include]
+  --oldincludedir=DIR    C header files for non-gcc [/usr/include]
+  --infodir=DIR          info documentation [PREFIX/info]
+  --mandir=DIR           man documentation [PREFIX/man]
+
+|6666ff|System types:|
+  --build=BUILD     configure for building on BUILD [guessed]
+  --host=HOST       build programs to run on HOST [BUILD]
+
+|6666ff|Optional Features:|
+  --disable-FEATURE       do not include FEATURE (same as --enable-FEATURE=no)
+  --enable-FEATURE[=ARG]  include FEATURE [ARG=yes]
+
+|6666ff|SAPI modules:|
+
+  --disable-cli           Disable building CLI version of PHP
+                           (this forces --without-pear).
+  --enable-embed=TYPE     Enable building of embedded SAPI library
+                           TYPE is either 'shared' or 'static'. TYPE=shared
+  --enable-roxen-zts      Build the Roxen module using Zend Thread Safety.
+  --disable-cgi           Disable building CGI version of PHP
+  --enable-force-cgi-redirect
+                          Enable the security check for internal server
+                           redirects.  You should use this if you are
+                           running the CGI version with Apache.
+  --enable-discard-path   If this is enabled, the PHP CGI binary
+                           can safely be placed outside of the
+                           web tree and people will not be able
+                           to circumvent .htaccess security.
+  --enable-fastcgi        If this is enabled, the cgi module will
+                           be built with support for fastcgi also.
+  --disable-path-info-check  If this is disabled, paths such as
+                           /info.php/test?a=b will fail to work.
+
+|6666ff|General settings:|
+
+  --enable-debug          Compile with debugging symbols.
+  --enable-safe-mode      Enable safe mode by default.
+  --enable-sigchild       Enable PHP's own SIGCHLD handler.
+  --enable-magic-quotes   Enable magic quotes by default.
+  --disable-rpath         Disable passing additional runtime library
+                          search paths
+  --enable-libgcc         Enable explicitly linking against libgcc
+  --disable-short-tags    Disable the short-form start tag by default.
+  --enable-dmalloc        Enable dmalloc
+  --disable-ipv6          Disable IPv6 support
+
+|6666ff|Extensions:|
+
+  --with-EXTENSION=shared[,PATH]
+
+|bbbbbb|    NOTE: Not all extensions can be build as 'shared'.|
+
+    |bbbbbb|Example:| --with-foobar=shared,/usr/local/foobar/
+
+      |bbbbbb|o Builds the foobar extension as shared extension.|
+      |bbbbbb|o foobar package install prefix is /usr/local/foobar/|
+
+ --disable-all   Disable all extensions enabled by default.
+ --enable-all    Enable all extensions.
+
+  --enable-bcmath         Enable bc style precision math functions.
+  --enable-calendar       Enable support for calendar conversion
+  --disable-ctype         Disable ctype functions
+  --enable-dba            Build DBA with builtin modules
+  --enable-dbase          Enable the bundled dbase library
+  --enable-dbx            Enable dbx
+  --enable-dio            Enable direct I/O support
+  --enable-exif           Enable EXIF (metadata from images) support
+  --enable-filepro        Enable the bundled read-only filePro support.
+  --enable-ftp            Enable FTP support
+  --enable-gd-native-ttf  GD: Enable TrueType string function.
+  --enable-mbstring       Enable multibyte string support
+  --disable-mbregex       Disable multibyte regex support
+  --enable-mime-magic     Enable mime_magic support
+  --disable-overload      Disable user-space object overloading support.
+  --enable-pcntl          Enable experimental pcntl support (CLI/CGI only)
+  --disable-posix         Disable POSIX-like functions
+  --disable-session       Disable session support
+  --enable-shmop          Enable shmop support
+  --enable-ucd-snmp-hack  Enable UCD SNMP hack
+  --enable-soap           Enable soap support
+  --enable-sockets        Enable sockets support
+  --enable-sysvmsg        Enable sysvmsg support
+  --enable-sysvsem        Enable System V semaphore support.
+  --enable-sysvshm        Enable the System V shared memory support.
+  --disable-tokenizer     Disable tokenizer support
+  --enable-wddx           Enable WDDX support.
+  --disable-xml           Disable XML support using bundled expat lib
+  --enable-xslt           Enable xslt support.
+  --enable-yp             Include YP support.
+
+|6666ff|Other settings:|
+
+  --enable-versioning     Export only required symbols.
+                          See INSTALL for more information
+  --enable-shared=PKGS    build shared libraries default=yes
+  --enable-static=PKGS    build static libraries default=yes
+  --enable-fast-install=PKGS  optimize for fast installation default=yes
+  --disable-libtool-lock  avoid locking (might break parallel builds)
+  --enable-experimental-zts   This will most likely break your build
+  --disable-inline-optimization If building zend_execute.lo fails, try
+                                this switch.
+  --enable-memory-limit   Compile with memory limit support.
+  --enable-zend-multibyte Compile with zend multibyte support.
+
+|6666ff|Optional Packages:|
+  --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+  --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+  --with-aolserver=DIR    Specify path to the installed AOLserver
+  |ffff11|--with-apxs=FILE|        Build shared Apache 1.x module. FILE is the optional
+                           pathname to the Apache apxs tool; defaults to "apxs".
+  --with-apache=DIR       Build Apache 1.x module. DIR is the top-level Apache
+                           build directory, defaults to /usr/local/apache.
+  --with-mod_charset      Enable transfer tables for mod_charset (Rus Apache).
+  --with-apxs2=FILE       EXPERIMENTAL: Build shared Apache 2.0 module. FILE is the optional
+                           pathname to the Apache apxs tool; defaults to "apxs".
+  --with-apache-hooks=FILE
+                          EXPERIMENTAL: Build shared Apache 1.x module. FILE is the optional
+                           pathname to the Apache apxs tool; defaults to "apxs".
+  --with-apache-hooks-static=DIR
+                          EXPERIMENTAL: Build Apache 1.x module. DIR is the top-level Apache
+                           build directory, defaults to /usr/local/apache.
+  --with-caudium=DIR      Build PHP as a Pike module for use with Caudium
+                           DIR is the Caudium server dir, with the default value
+                           /usr/local/caudium/server.
+  --with-fastcgi=SRCDIR   Build PHP as FastCGI application
+  --with-isapi=DIR        Build PHP as an ISAPI module for use with Zeus.
+  --with-milter=DIR       Build PHP as Milter application
+  --with-nsapi=DIR        Build PHP as NSAPI module for use with iPlanet.
+  --with-phttpd=DIR       Build PHP as phttpd module
+  --with-pi3web=DIR       Build PHP as Pi3Web module
+  --with-roxen=DIR        Build PHP as a Pike module. DIR is the base Roxen
+                           directory, normally /usr/local/roxen/server.
+  --with-servlet=DIR      Include servlet support. DIR is the base install
+                           directory for the JSDK.  This SAPI prereqs the
+                           java extension must be built as a shared dl.
+  --with-thttpd=SRCDIR    Build PHP as thttpd module
+  --with-tux=MODULEDIR    Build PHP as a TUX module (Linux only)
+  --with-webjames=SRCDIR  Build PHP as a WebJames module (RISC OS only)
+  --with-layout=TYPE      Sets how installed files will be laid out.  Type is
+                           one of "PHP" (default) or "GNU"
+  --with-config-file-path=PATH
+                          Sets the path in which to look for php.ini,
+                           defaults to PREFIX/lib
+  --with-config-file-scan-dir=PATH
+  --with-pear=DIR         Install PEAR in DIR (default PREFIX/lib/php)
+  --without-pear          Do not install PEAR
+  --with-exec-dir=DIR     Only allow executables in DIR when in safe mode
+                           defaults to /usr/local/php/bin
+  --with-openssl=DIR      Include OpenSSL support (requires OpenSSL >= 0.9.5)
+  --with-zlib=DIR         Include ZLIB support (requires zlib >= 1.0.9).
+  --with-zlib-dir=<DIR>   Define the location of zlib install directory
+  --with-bz2=DIR          Include BZip2 support
+  --with-cpdflib=DIR      Include cpdflib support (requires cpdflib >= 2).
+  --with-jpeg-dir=DIR     jpeg dir for cpdflib 2.x
+  --with-tiff-dir=DIR     tiff dir for cpdflib 2.x
+  --with-crack=DIR        Include crack support.
+  --with-curl=DIR         Include CURL support
+  --with-curlwrappers     Use CURL for url streams
+  --with-cyrus            Include Cyrus IMAP support
+  --with-db               Include old xDBM support (deprecated use --with-dba)
+  --with-gdbm=DIR         Include GDBM support
+  --with-ndbm=DIR         Include NDBM support
+  --with-db4=DIR          Include Berkeley DB4 support
+  --with-db3=DIR          Include Berkeley DB3 support
+  --with-db2=DIR          Include Berkeley DB2 support
+  --with-dbm=DIR          Include DBM support
+  --with-cdb=DIR          Include CDB support
+  --with-flatfile         Include FlatFile support
+
+  --with-dom=DIR          Include DOM support (requires libxml >= 2.4.14).
+                           DIR is the libxml install directory.
+  --with-zlib-dir=DIR     DOMXML: Set the path to libz install prefix.
+  --with-dom-xslt=DIR     DOMXML: Include DOM XSLT support (requires libxslt >= 1.0.18).
+                           DIR is the libxslt install directory.
+  --with-dom-exslt=DIR    DOMXML: Include DOM EXSLT support (requires libxslt >= 1.0.18).
+                           DIR is the libexslt install directory.
+  --with-fam              Include fam support
+  --with-fbsql=DIR        Include FrontBase support. DIR is the FrontBase base directory.
+  --with-fdftk=DIR        Include FDF support.
+  --with-fribidi=DIR      Include FriBidi support (requires FriBidi >= 0.10.4).
+  --with-gd=DIR           Include GD support where DIR is GD install prefix.
+                          If DIR is not set, the bundled GD library will be used.
+  --with-jpeg-dir=DIR     GD: Set the path to libjpeg install prefix.
+  --with-png-dir=DIR      GD: Set the path to libpng install prefix.
+  --with-zlib-dir=DIR     GD: Set the path to libz install prefix.
+  --with-xpm-dir=DIR      GD: Set the path to libXpm install prefix.
+  --with-ttf=DIR          GD: Include FreeType 1.x support
+  --with-freetype-dir=DIR GD: Set the path to FreeType 2 install prefix.
+  --with-t1lib=DIR        GD: Include T1lib support.
+  --with-gettext=DIR      Include GNU gettext support.
+  --with-gmp              Include GNU MP support
+  --with-hwapi=DIR        Include official Hyperwave API support
+  --with-hyperwave        Include Hyperwave support
+  --with-iconv=DIR        Include iconv support
+  --with-imap=DIR         Include IMAP support. DIR is the c-client install prefix.
+  --with-kerberos=DIR     IMAP: Include Kerberos support. DIR is the Kerberos install dir.
+  --with-imap-ssl=DIR     IMAP: Include SSL support. DIR is the OpenSSL install dir.
+  --with-informix=DIR     Include Informix support.  DIR is the Informix base
+                           install directory, defaults to ${INFORMIXDIR:-nothing}.
+  --with-ingres=DIR       Include Ingres II support. DIR is the Ingres
+                           base directory (default $II_SYSTEM/II/ingres)
+  --with-interbase=DIR    Include InterBase support.  DIR is the InterBase base
+                           install directory, defaults to /usr/interbase
+  --with-ircg             Include IRCG support
+  --with-ircg-config=PATH IRCG: Path to the ircg-config script
+  --with-java=DIR         Include Java support. DIR is the JDK base install directory.
+                           This extension is always built as shared.
+  --with-ldap=DIR         Include LDAP support.
+  --with-mcal=DIR         Include MCAL support.
+  --with-mcrypt=DIR       Include mcrypt support.
+  --with-mcve=DIR         Include MCVE support
+  --with-mhash=DIR        Include mhash support.
+  --with-ming=DIR         Include MING support
+  --with-mnogosearch=DIR
+                          Include mnoGoSearch support.  DIR is the mnoGoSearch
+                           base install directory, defaults to /usr/local/mnogosearch.
+  --with-msession=DIR     Include msession support
+  --with-msql=DIR         Include mSQL support.  DIR is the mSQL base
+                           install directory, defaults to /usr/local/Hughes.
+  |ffff11|--with-mysql=DIR|        Include MySQL support. DIR is the MySQL base directory.
+                           If unspecified, the bundled MySQL library will be used.
+  |ffff11|--with-mysql-sock=DIR|   MySQL: Location of the MySQL unix socket pointer.
+                           If unspecified, the default locations are searched.
+  --with-zlib-dir=DIR     MySQL: Set the path to libz install prefix.
+  --with-ncurses=DIR      Include ncurses support (CLI/CGI only).
+  --with-oci8=DIR         Include Oracle-oci8 support. Default DIR is ORACLE_HOME.
+  --with-adabas=DIR       Include Adabas D support.  DIR is the Adabas base
+                           install directory, defaults to /usr/local.
+  --with-sapdb=DIR        Include SAP DB support.  DIR is SAP DB base
+                           install directory, defaults to /usr/local.
+  --with-solid=DIR        Include Solid support.  DIR is the Solid base
+                           install directory, defaults to /usr/local/solid
+  --with-ibm-db2=DIR      Include IBM DB2 support.  DIR is the DB2 base
+                           install directory, defaults to /home/db2inst1/sqllib
+  --with-empress=DIR      Include Empress support.  DIR is the Empress base
+                           install directory, defaults to \$EMPRESSPATH.
+                           From PHP4, this option only supports Empress Version
+                           8.60 and above
+  --with-empress-bcs=DIR
+                          Include Empress Local Access support.  DIR is the
+                           Empress base install directory, defaults to
+                           \$EMPRESSPATH.  From PHP4, this option only supports
+                           Empress Version 8.60 and above.
+  --with-birdstep=DIR     Include Birdstep support.  DIR is the Birdstep base
+                           install directory, defaults to /usr/local/birdstep.
+  --with-custom-odbc=DIR  Include a user defined ODBC support.
+                           The DIR is ODBC install base directory,
+                           which defaults to /usr/local.
+                           Make sure to define CUSTOM_ODBC_LIBS and
+                           have some odbc.h in your include dirs.
+                           E.g., you should define following for
+                           Sybase SQL Anywhere 5.5.00 on QNX, prior to
+                           run configure script:
+                              CPPFLAGS=\"-DODBC_QNX -DSQLANY_BUG\"
+                              LDFLAGS=-lunix
+                              CUSTOM_ODBC_LIBS=\"-ldblib -lodbc\".
+  --with-iodbc=DIR        Include iODBC support.  DIR is the iODBC base
+                           install directory, defaults to /usr/local.
+  --with-esoob=DIR        Include Easysoft OOB support. DIR is the OOB base
+                           install directory,
+                           defaults to /usr/local/easysoft/oob/client.
+  --with-unixODBC=DIR     Include unixODBC support.  DIR is the unixODBC base
+                           install directory, defaults to /usr/local.
+  --with-openlink=DIR     Include OpenLink ODBC support.  DIR is the
+                           OpenLink base install directory, defaults to
+                           /usr/local.  This is the same as iODBC.
+  --with-dbmaker=DIR      Include DBMaker support.  DIR is the DBMaker base
+                           install directory, defaults to where the latest
+                           version of DBMaker is installed (such as
+                           /home/dbmaker/3.6).
+  --with-oracle=DIR       Include Oracle-oci7 support.  Default DIR is
+                           ORACLE_HOME.
+  --with-ovrimos=DIR      Include Ovrimos SQL Server support. DIR is the
+                           Ovrimos libsqlcli install directory.
+  --without-pcre-regex    Do not include Perl Compatible Regular Expressions
+                           support. Use --with-pcre-regex=DIR to specify DIR
+                           where PCRE's include and library files are located,
+                           if not using bundled library.
+  --with-pdflib=DIR       Include PDFlib support.
+  --with-jpeg-dir=DIR     PDFLIB: define libjpeg install directory.
+                                     (OPTIONAL for PDFlib v4)
+  --with-png-dir=DIR      PDFLIB: define libpng install directory.
+                                     (OPTIONAL for PDFlib v4)
+  --with-zlib-dir=DIR     PDFLIB: define libz install directory.
+                                     (OPTIONAL for PDFlib v4)
+  --with-tiff-dir=DIR     PDFLIB: define libtiff install directory.
+                                     (OPTIONAL for PDFlib v4)
+  --with-pfpro=DIR        Include Verisign Payflow Pro support.
+  --with-pgsql=DIR        Include PostgreSQL support.  DIR is the PostgreSQL
+                           base install directory, defaults to /usr/local/pgsql.
+  --with-pspell=DIR       Include PSPELL support.
+                           This replaces the old ASPELL extension.
+  --with-qtdom            Include QtDOM support (requires Qt >= 2.2.0).
+  --with-libedit=DIR      Include libedit readline replacement (CLI/CGI only).
+  --with-readline=DIR     Include readline support (CLI/CGI only).
+  --with-recode=DIR       Include recode support.
+  --with-mm=DIR           Include mm support for session storage
+  --with-snmp=DIR         Include SNMP support.
+  --with-regex=TYPE       regex library type: system, apache, php. Default: php
+                           WARNING: Do NOT use unless you know what you are doing!
+  --with-swf=DIR          Include swf support
+  --with-sybase=DIR       Include Sybase-DB support.  DIR is the Sybase home
+                           directory, defaults to /home/sybase.
+  --with-sybase-ct=DIR    Include Sybase-CT support.  DIR is the Sybase home
+                           directory. Defaults to /home/sybase.
+  --with-expat-dir=DIR    XML: external libexpat install dir
+  --with-xmlrpc=DIR       Include XMLRPC-EPI support.
+  --with-expat-dir=DIR    XMLRPC-EPI: libexpat dir for XMLRPC-EPI.
+  --with-iconv-dir=DIR    XMLRPC-EPI: iconv dir for XMLRPC-EPI.
+  --with-xslt-sablot=DIR  XSLT: Enable the sablotron backend.
+  --with-expat-dir=DIR    XSLT: libexpat dir for Sablotron.
+  --with-iconv-dir=DIR    XSLT: iconv dir for Sablotron.
+  --with-sablot-js=DIR    XSLT: enable JavaScript support for Sablotron.
+  --with-yaz=DIR          Include YAZ support (ANSI/NISO Z39.50).
+                           DIR is the YAZ bin install directory.
+  --with-zip=DIR          Include ZIP support (requires zziplib >= 0.10.6).
+  --with-gnu-ld           assume the C compiler uses GNU ld default=no
+  --with-pic              try to use only PIC/non-PIC objects default=use both
+  --with-tsrm-pth=pth-config    Use GNU Pth.
+  --with-tsrm-st
+  --with-tsrm-pthreads    Use POSIX threads (default)
+
+|6666ff|Some influential environment variables:|
+  CC          C compiler command
+  CFLAGS      C compiler flags
+  LDFLAGS     linker flags, e.g. -L<lib dir> if you have libraries in a
+              nonstandard directory <lib dir>
+  CPPFLAGS    C/C++ preprocessor flags, e.g. -I<include dir> if you have
+              headers in a nonstandard directory <include dir>
+  CPP         C preprocessor
+  CXX         C++ compiler command
+  CXXFLAGS    C++ compiler flags
+  CXXCPP      C++ preprocessor
+
+|bbbbbb|Use these variables to override the choices made by `configure' or to help|
+|bbbbbb|it to find libraries and programs with nonstandard names/locations.|
+]]></example>
+</slide>

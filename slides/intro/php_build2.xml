@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Building PHP from source">
+<blurb>
+If you just do a %./configure &amp;&amp; make &amp;&amp; make install% with no arguments
+you will get the command-line %php% interpreter installed in %/usr/local/bin%
+</blurb>
+
+<blurb>
+Normally you will want to build the DSO (Dynamic Shared Object) Apache
+Module version of PHP and you will probably want to link against your
+own MySQL client libraries:
+</blurb>
+
+<example type="shell" fontsize="1.5em"><![CDATA[
+% ./configure --with-apxs=/usr/sbin/apxs --with-mysql=/usr
+% make
+% make install
+]]></example>
+
+<example title="Typical configure flags" type="shell"><![CDATA[
+./configure --with-pdflib=/usr/local \
+            --with-gd \
+            --with-freetype-dir=/usr \
+            --enable-gd-native-ttf \
+            --enable-gd-imgstrttf \
+            --with-jpeg-dir=/usr \
+            --with-png-dir=/usr \
+            --with-xpm-dir=/usr/X11R6 \
+            --enable-exif \
+            --with-config-file-path=/etc \
+            --with-mysql=/usr \
+            --enable-inline-optimization \
+            --with-zlib \
+            --with-zlib-dir=/usr \
+            --with-expat=/usr \
+            --enable-xslt \
+            --with-xslt-sablot=/usr/local \
+            --with-imap \
+            --with-gettext \
+            --with-kerberos \
+            --with-imap-ssl \
+            --with-mcrypt=/usr/local \
+            --with-ldap \
+            --with-pspell \
+            --with-iconv \
+            --with-ming \
+            --enable-sockets \
+            --with-openssl \
+            --with-apxs
+]]></example>
+
+</slide>

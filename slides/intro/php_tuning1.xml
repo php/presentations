@@ -1,0 +1,12 @@
+<slide title="Tuning">
+
+<list title="Some simple guidelines">
+<item>Try to limit yourself to 5 or less includes per request</item>
+<item>Don't go overboard on OOP.  Use where appropriate.</item>
+<item>Same goes for Layers.  Abstraction, Indirection, abstract classes.</item>
+<item>Everything has a cost</item>
+<item>Watch your regular expressions!</item>
+<item>Cache! Cache! Cache!</item>
+</list>
+
+</slide>

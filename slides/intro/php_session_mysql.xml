@@ -1,0 +1,82 @@
+<slide title="Custom Backend">
+<blurb>
+Let's have a look at an actual custom session backend.  This uses
+MySQL to store the session data.  We could set these right in the
+script, but let's make use of Apache's httpd.conf
+file to set our custom save handler for a portion of our web site.
+</blurb>
+<example><![CDATA[<Directory "/var/html/test">
+    php_value session.save_handler user
+    php_value session.save_path mydb
+    php_value session.name sessions
+</Directory>]]></example>
+
+<example title="The MySQL schema looks like this:" type="shell"><![CDATA[CREATE TABLE sessions (
+	id char(32) NOT NULL,
+	data text,
+	ts timestamp,
+	PRIMARY KEY (id)
+)]]></example>
+
+<example fontsize="1.4em" title="We can now write our handler.  It looks like this:"><![CDATA[<?php
+function open($db,$name) {
+	global $table;
+	mysql_connect('localhost');
+	mysql_select_db($db);
+	$table = $name;
+	return true;
+}
+
+function close() {
+	mysql_close();
+	return true;
+}
+
+function read($id) {
+	global $table;
+	$result = mysql_query("select data from $table where id='$id'");
+	if($result && mysql_num_rows($result)) {
+		return mysql_result($result,0);
+	} else {
+		error_log("read: ".mysql_error()."\n",3,"/tmp/errors.log");
+		return "";
+	}
+}
+
+function write($id, $data) {
+	global $table;
+	$data = addslashes($data);
+	mysql_query("replace into $table (id,data) values('$id','$data')") 
+	  or error_log("write: ".mysql_error()."\n",3,"/tmp/errors.log");
+	return true;
+}
+
+function destroy($id) {
+	global $table;
+	mysql_query("delete from $table where where id='$id'"); 
+}
+
+function gc($max_time) {
+	global $table;
+	mysql_query(
+	  "delete from $table where 
+       UNIX_TIMESTAMP(ts)<UNIX_TIMESTAMP()-$max_time") 
+	  or error_log("gc: ".mysql_error(). "\n",3,"/tmp/errors.log");
+	return true;
+}
+
+session_set_save_handler('open','close','read','write','destroy','gc');
+?>]]></example>
+<blurb>
+Our PHP files under /var/html/test then simply need to 
+look something like this:
+</blurb>
+<example><![CDATA[<?php
+  require 'handler.php';
+
+  session_start();
+  session_register('var');
+  $var = "Hello World";
+?>]]></example>
+
+</slide>

@@ -1,0 +1,89 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP</title>
+<event>MySQL Conference</event>
+<location>San Jose</location>
+<url>http://lerdorf.com/mysqlconf.pdf</url>
+<date>April 10, 2003</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/old.xml</slide>
+  <slide>slides/intro/old2.xml</slide>
+  <slide>slides/intro/old3.xml</slide>
+  <slide>slides/intro/php-solution.xml</slide>
+  <slide>slides/intro/php-intro.xml</slide>
+  <slide>slides/intro/numbers.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+</chapter>
+
+<chapter title="MySQL">
+  <slide>slides/intro/guest.xml</slide>
+  <slide>slides/intro/sqlex.xml</slide>
+  <slide>slides/intro/sqlguest.xml</slide>
+  <slide>slides/intro/sqlguest2.xml</slide>
+  <slide>slides/intro/mysql_setup.xml</slide>
+  <slide>slides/intro/mysql_check.xml</slide>
+  <slide>slides/intro/mysql_connect.xml</slide>
+  <slide>slides/intro/mysql_pconnect.xml</slide>
+  <slide>slides/intro/mysql_create.xml</slide>
+  <slide>slides/intro/mysql_insert.xml</slide>
+  <slide>slides/intro/mysql_select.xml</slide>
+  <slide>slides/intro/mysql_time.xml</slide>
+  <slide>slides/intro/mysql_update.xml</slide>
+  <slide>slides/intro/magic_quotes.xml</slide>
+</chapter>
+
+<chapter title="Dynamic Generation">
+  <slide>slides/intro/image.xml</slide>
+  <slide>slides/intro/image_colors6.xml</slide>
+  <slide>slides/intro/image2.xml</slide>
+  <slide>slides/intro/image_text1.xml</slide>
+  <slide>slides/intro/image_text2.xml</slide>
+  <slide>slides/intro/exif.xml</slide>
+  <slide>slides/intro/pdf.xml</slide>
+  <slide>slides/intro/flash_ming.xml</slide>
+  <slide>slides/intro/flash_ming2.xml</slide>
+  <slide>slides/intro/image_cache.xml</slide>
+  <slide>slides/intro/pi.xml</slide>
+  <slide>slides/intro/errdoc.xml</slide>
+  <slide>slides/intro/funky.xml</slide>
+</chapter>
+
+<chapter title="Optimization">
+  <slide>slides/intro/opt.xml</slide>
+  <slide>slides/intro/mysql_opt.xml</slide>
+  <slide>slides/intro/mysql_udf.xml</slide>
+  <slide>slides/intro/squid1.xml</slide>
+  <slide>slides/intro/squid2.xml</slide>
+  <slide>slides/intro/squid_load_balance.xml</slide>
+  <slide>slides/intro/load_balance.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+</chapter>
+
+<chapter title="Performance">
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/intro/php_opcode_caches2.xml</slide>
+  <slide>slides/intro/php_bench1.xml</slide>
+  <slide>slides/intro/php_bench2.xml</slide>
+  <slide>slides/intro/php_tuning2.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/php_profiling2.xml</slide>
+</chapter>
+
+<chapter title="PHP5">
+  <slide>slides/intro/php5.xml</slide>
+  <slide>slides/intro/resources.xml</slide>
+</chapter>
+
+</presentation>

@@ -1,0 +1,19 @@
+<slide title="Efficient image caching">
+<blurb>
+First, set up an ErrorDocument 404 handler for your images directory.
+</blurb>
+<example type="shell"><![CDATA[<Directory /home/doc_root/images>
+    ErrorDocument 404 /images/generate.php
+</Directory>]]></example>
+<blurb>
+Then generate.php looks like this:
+</blurb>
+<example
+	fontsize="1.5em"
+	filename="generate.php"
+/>
+<blurb>
+The URL, http://localhost/images/button_test_000000.png produces this image:
+</blurb>
+<image filename="button_test_000000.png"/>
+</slide>

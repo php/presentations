@@ -1,0 +1,33 @@
+<slide title="PHP5">
+
+<list title="New General Features">
+<bullet>Get rid of stdio completely</bullet>
+<bullet>Stream servers and contexts</bullet>
+<bullet>ADT (Advanced Data Types) extension</bullet>
+<bullet>Mono Extension</bullet>
+<bullet>RPC Extension</bullet>
+<bullet>Bundled Curl support</bullet>
+</list>
+
+<list title="New OO Features">
+<bullet>Better Object Overloading</bullet>
+<bullet>Namespaces</bullet>
+<bullet>try/catch exceptions</bullet>
+<bullet>__construct() and __destruct() methods</bullet>
+<bullet>Private, Protected and Public methods and properties</bullet>
+<bullet>Static methods and properties</bullet>
+<bullet>Final properties</bullet>
+<bullet>Constant properties</bullet>
+<bullet>__autoload</bullet>
+<bullet>Abstract classes</bullet>
+<bullet>Interfaces</bullet>
+<bullet>class type hinting</bullet>
+<bullet>SPL</bullet>
+</list>
+
+<list title="New Engine Features">
+<bullet>Opcode overloading</bullet>
+<bullet>Ability to add new opcodes</bullet>
+</list>
+
+</slide>
