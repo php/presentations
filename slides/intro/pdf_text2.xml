@@ -8,7 +8,7 @@ PDF_set_parameter().</blurb>
    pdf_set_parameter($p,"strikeout","true");
    pdf_show_xy($p,"Text",50,100); ?>]]></example>
 
-<table title="Text Rendering" width="100%" columns="4">
+<table title="Text Rendering" width="70%" columns="4">
 <cell bold="1" fontsize="3em">0</cell><cell>Normal</cell> <cell bold="1" fontsize="3em">4</cell> <cell>Normal Text - add to clipping path</cell>
 <cell bold="1" fontsize="3em">1</cell><cell>Stroke text (outline)</cell> <cell bold="1" fontsize="3em">5</cell> <cell>Stroke text - add to clipping path</cell>
 <cell bold="1" fontsize="3em">2</cell><cell>Fill and stroke text</cell> <cell bold="1" fontsize="3em">6</cell> <cell>Fill and stroke text - add to clipping path</cell>

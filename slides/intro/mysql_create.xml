@@ -5,9 +5,9 @@
 <example result="1" title="Create a DB"><![CDATA[<?
   mysql_connect('localhost');
   if(mysql_query("CREATE DATABASE foo")) {
-	echo "Database foo created";
+    echo "Database foo created";
   } else {
-	echo mysql_error();
+    echo mysql_error();
   }
 ?>]]></example>
 

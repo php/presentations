@@ -27,7 +27,7 @@ $font = PDF_findfont($p,"CANDY","host",1);
 Fonts can also be defined in the pdflib.upr file.  
 </blurb>
 
-<table title="Character Encodings" columns="2">
+<table title="Character Encodings" columns="2" width="60%">
 <cell bold="1">winansi</cell><cell>Windows code page 1252,a superset of ISO 8859-1</cell>
 <cell bold="1">macroman</cell><cell>Mac Roman encoding,i.e.,the default Macintosh character set</cell>
 <cell bold="1">ebcdic</cell><cell>EBCDIC code page 1047 as used on IBM AS/400 and S/390 systems</cell>
