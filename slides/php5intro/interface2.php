@@ -10,13 +10,13 @@ class Person implements ISerializable {
 	public $name;
 
 	function sleep() {
-		file_set_contents(SERIALIZED, 
-			serialize($this->name)
-		);
+		$f = fopen(SERIALIZED,'w');
+		fwrite($f,serialize($this->name));
+		fclose($f);
 	}
 
 	function wakeup() {
-		$this->name = unserialize(
+		$this->name = @unserialize(
 		file_get_contents(SERIALIZED)
 		);
 	}

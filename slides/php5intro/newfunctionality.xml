@@ -1,14 +1,16 @@
 <slide title="New Functionality">
 <list>
 <bullet>Revamped Internals</bullet>
-<bullet>Namespaces</bullet>
-<bullet>Exceptions</bullet>
 <bullet>*Real* Object Orientation</bullet>
+<bullet>Exceptions</bullet>
 <bullet>Improved Streams API</bullet>
+<bullet>Bundled SQLite</bullet>
+<bullet>New XML extensions based on libXML-2</bullet>
 <bullet>SPL</bullet>
 <bullet>The ~ADT~ extension</bullet>
 <bullet>RPC extension</bullet>
 <bullet>~Mono~ extension</bullet>
 <bullet>Bundled ~cURL~ library</bullet>
+
 </list>
 </slide>

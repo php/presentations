@@ -4,11 +4,10 @@ class DBM {
 	private $file;
 
 	function __construct($file) {
-		$this->members = unserialize(
+		$this->file = $file;
+		$this->members = @unserialize(
 			file_get_contents($file)
 		);
-
-		$this->file = $file;
 	}
 
 	function __get($name) {
@@ -20,9 +19,9 @@ class DBM {
 	}
 
 	function __destruct() {
-		file_set_contents($this->file, 
-			serialize($this->members)
-		);
+		$f = fopen($this->file,'w');
+		fwrite($f,serialize($this->members));
+		fclose($f);
 	}
 }
 

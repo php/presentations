@@ -1,6 +1,6 @@
 <?php
 class dba_reader 
-	implements spl::iterator {
+	implements spl_iterator {
     public $db = NULL;
 
     function __construct($file, $handler) 
@@ -18,7 +18,7 @@ class dba_reader
 }
 
 class dba_iter 
-	implements spl::sequence_assoc 
+	implements spl_sequence_assoc 
 {
     private $obj;
     private $key = NULL;

@@ -1,16 +1,23 @@
 <?php
-class Brand {
-	final public $type = 'Softdrink';
-	public $name;
-}
 
-class Pepsi extends Brand {
-	public $type = 'Laxative';
-	function __construct() {
-		$this->name = 'Pepsi';
+class Brand {
+	final function show() {
+		echo "The Pepsi Generation\n";
 	}
 }
 
-$p = new Pepsi();
-echo "{$p->name} is {$p->type}\n";
+final class BrandX extends Brand {
+}
+
+$t = new Brand();
+$t->show();
+
+class BetterBrand extends BrandX {
+	function show() {
+		echo "Coke is better\n";
+	}
+}
+
+$t = new BetterBrand();
+$t->show();
 ?>
