@@ -1,0 +1,14 @@
+<slide title="Better Content Caching">
+
+<blurb fontsize="4em">
+As nice as PHP caching is, it is still slow, and who wants to spend time implementing it?
+</blurb>
+
+<blurb fontsize="3em">
+Fortunately, both Zend and MMcache developers have realized this need and developed a content caching
+mechanism into their PHP acceleration packages.
+</blurb>
+
+<example fontsize="1.4em" filename="guestbook2.php" title="MMCache Content Cache" />
+
+</slide>

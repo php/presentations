@@ -1,0 +1,20 @@
+<slide title="Static vs Dynamic">
+
+<blurb fontsize="4em">
+For maximum performance compile PHP statically into apache (|00AA00|up to 20% speed increase|)
+</blurb>
+
+<example title="Static Compile of PHP" fontsize="2em"><![CDATA[
+# PHP 
+./configure --with-apache=/path/to/apache_source
+
+# Apache
+./configure --activate-module=src/modules/php4/libphp4.a
+
+]]></example>
+
+<blurb>
+|FF0000|Increased speed comes at a cost of a slightly longer installation procedure, requiring Apache recompile every time PHP is upgraded.|
+</blurb>
+
+</slide>

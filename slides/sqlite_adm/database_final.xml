@@ -1,0 +1,10 @@
+<slide title="Closing a Database">
+
+<blurb fontsize="4em">
+Once the data has been written it is time to close the database and free any resources
+associated with the database handle.
+</blurb>
+
+<example filename="database_final.php" />
+
+</slide>

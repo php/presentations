@@ -1,0 +1,10 @@
+<slide title="Single Query">
+
+<blurb fontsize="4em">
+For instances such as our check_if_exists(), SQLite also introduces %sqlite_single_query()% that can be
+used to combine data retrieval with query execution.
+</blurb>
+
+<example filename="database_pop11.php" />
+
+</slide>

@@ -1,0 +1,16 @@
+<slide title="Content Caching">
+
+<blurb fontsize="3em">
+Often enough output of PHP scripts can remain static for an extended period of time. In these cases, 
+certain actions can be eliminated, resulting in a faster script execution.
+</blurb>
+
+<blurb title="Pre-generation" fontsize="3em">
+When the content changes, generate static versions of the affected pages, taking PHP out of the equation completely. 
+</blurb>
+
+<blurb title="On demand" fontsize="3em">
+Same as pre-generation, only the content is not generated until the 1st request for the specified content arrives.
+</blurb>
+
+</slide>

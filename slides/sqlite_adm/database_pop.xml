@@ -1,0 +1,9 @@
+<slide title="Populating Database">
+
+<blurb fontsize="4em">
+Now that the table schema is in place, lets populate the database with our IP data.
+</blurb>
+
+<example filename="database_pop.php" />
+
+</slide>

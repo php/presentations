@@ -1,0 +1,17 @@
+<slide title="Content Reduction">
+
+<image filename="vice.gif" align="right" />
+
+<blurb fontsize="4em">
+One way to make pages appear faster is to reduce the amount of data that needs to be sent.
+</blurb>
+
+<break lines="2" />
+
+<list fontsize="4em" title="Benefits of Content Reduction">
+	<bullet>Less data to send, leads to smaller bandwidth bill.</bullet>
+	<bullet>Pages appear faster for the users, especially those on slower connections.</bullet>
+	<bullet>Less network IO, frees up server processes faster.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,16 @@
+<slide title="PHP Configuration (php.ini)">
+
+<blurb fontsize="4em">
+PHP configuration directives can have significant impact on performance of PHP applications.
+</blurb>
+
+<list fontsize="3.4em">
+	<bullet>Make sure that %register_globals% is disabled (default since 4.2.0)</bullet>
+	<bullet>Disable %magic_quotes_*% directives.</bullet>
+	<bullet fontsize="2em" marginleft="2em">|FF0000|make sure your applications will escape input when necessary|</bullet>
+	<bullet>Turn off %expose_php%</bullet>
+	<bullet>Turn off %register_argc_argv% for non-cli SAPIs</bullet>
+	<bullet>Unless absolutely necessary do not enable %always_populate_raw_post_data%</bullet>
+</list>
+
+</slide>

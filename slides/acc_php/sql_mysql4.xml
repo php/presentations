@@ -1,0 +1,16 @@
+<slide title="SQL: MySQL 4.0">
+
+<image filename="database_sm.gif" align="right" />
+
+<blurb fontsize="4em">
+If you are using MySQL 3.23.X, consider switching to MySQL 4.0.
+</blurb>
+
+<list fontsize="4em" title="Performance Advantages">
+	<bullet>Query Cache</bullet>
+	<bullet>Sub-Queries (as of 4.0.4)</bullet>
+	<bullet>Faster bulk inserts</bullet>
+	<bullet>Improved %FULLTEXT%</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Index Creation">
+
+<blurb fontsize="4em">
+Unlike in MySQL where indexes can be a part of the table definition in SQLite they need to be
+created independently.
+</blurb>
+
+<example filename="index_create.php" />
+
+</slide>

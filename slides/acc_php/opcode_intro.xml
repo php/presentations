@@ -1,0 +1,15 @@
+<slide title="OPcode Caching">
+
+<blurb fontsize="4em">
+The first step in the script execution is the conversion of said script into
+a series instructions (opcodes), which the Zend Engine can understand and run.
+</blurb>
+
+<image filename="cache.jpg" align="center" />
+
+<blurb fontsize="4em">
+Since scripts rarely change, an obvious optimization is to cache the opcodes so
+that the scripts do not need to be parsed every time.
+</blurb>
+
+</slide>

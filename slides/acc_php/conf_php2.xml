@@ -1,0 +1,14 @@
+<slide title="PHP Configuration Cont.">
+	
+<blurb fontsize="4em">
+For non-persistent SAPIs like CLI prevent long searches for php.ini, by placing the file where PHP would
+look for it first.
+</blurb>	
+	
+<example title="PHP CLI"><![CDATA[/usr/local/lib/php-cli.ini]]></example>
+
+<example title="PHP CGI"><![CDATA[/usr/local/lib/php-cgi-fcgi.ini
+or
+./php-cgi-fcgi.ini]]></example>
+
+</slide>

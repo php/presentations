@@ -1,0 +1,14 @@
+<slide title="Content Caching in PHP Cont.">
+
+<break />
+
+<example fontsize="1.4em" filename="guestbook.php" />
+
+<example fontsize="1.4em" title="Implementing cache without modifying the script"><![CDATA[# Add to .htaccess
+php_value auto_prepend_file "/path/to/cache.php"
+
+# Or to virtual host entry in httpd.conf
+php_admin_value auto_prepend_file "/path/to/cache.php"]]>
+</example>
+
+</slide>

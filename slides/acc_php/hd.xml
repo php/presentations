@@ -1,0 +1,21 @@
+<slide title="Harddrive Tweaking">
+
+<image align="right" filename="harddrive.jpg" />
+
+<blurb fontsize="3.6em">
+Use the %hdparm% utility to maximize the performance of your harddrive.
+</blurb>
+
+<list>
+	<bullet>%-c1% - set IDE 32-bit IO setting</bullet>
+	<bullet>%-d1% - enable DMA</bullet>
+	<bullet>%-u1% - enable IRQ unmasking</bullet> 
+	<bullet>%-m16% - turn on multicount</bullet>
+	<bullet>%-X 34|66|100% - transfer mode</bullet>
+</list>
+
+<blurb fontsize="3.6em">
+Benchmark your drive via %hdparm -tT /dev/[drive]%
+</blurb>
+
+</slide>

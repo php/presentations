@@ -1,0 +1,17 @@
+<slide title="Apache Configuration">
+
+<image filename="apache.jpg" align="right" />
+
+<blurb fontsize="4em">
+Since the webserver plays an important part in the request serving process, it is important to tune it. A big part of this
+is the Apache child creation process.
+</blurb>
+
+<list fontsize="3.3em">
+	<bullet>%StartServers% set to avg. # of requests you'd expect.</bullet>
+	<bullet>%MaxSpareServers% keep this number high, to allow Apache to gracefully handle traffic spikes.</bullet>
+	<bullet>%MaxClients% keep this number at about 2/5 of the maximum processes your server can handle.</bullet>
+	<bullet>%MaxRequestsPerChild% ideally unlimited (0), but practically should be limited to a large number.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,16 @@
+<slide title="SQL">
+
+<image filename="database.gif" align="right" />
+
+<blurb fontsize="4em">
+Virtually every script uses some database system. How it is used can be the difference between
+a fast script and an extremely slow one.
+</blurb>
+
+<break lines="4" />
+
+<blurb fontsize="4em">
+All optimizations can be for naught if the SQL queries executed are slow.
+</blurb>
+
+</slide>

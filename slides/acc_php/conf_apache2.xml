@@ -1,0 +1,14 @@
+<slide title="Apache Configuration Cont.">
+
+<image filename="apache.jpg" align="right" />
+
+<list title="Reducing File IO" fontsize="4em">
+	<bullet>Keep %DirectoryIndex% file list as short as possible.</bullet>
+	<bullet>Whenever possible disable .htaccess via %AllowOverride none%</bullet>
+	<bullet>Use %Options FollowSymLinks% to simplify file access process in Apache</bullet>
+	<bullet>Avoid using %mod_rewrite% or at least complex regexs</bullet>
+	<bullet>If logs are unnecessary disable them.</bullet>
+	<bullet>If logging is a must, log everything to 1 file, and break it up during analysis stage.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,19 @@
+<slide title="File IO Cont.">
+
+<blurb fontsize="4em">
+Always use full path file path when opening files, to avoid expensive normalization of the file's
+path.
+</blurb>
+
+<example fontsize="4em"><![CDATA[<?php
+include "/path/to/file.php";
+// or
+include "./file.php";
+?>]]></example>
+
+<blurb fontsize="4em">
+This is very important even if you use opcode cache, since the paths of includes and normal files will
+still need to be resolved.
+</blurb>
+
+</slide>

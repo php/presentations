@@ -1,0 +1,12 @@
+<slide title="Error Handling">
+
+<image filename="bsod.jpg" align="right" />
+
+<blurb fontsize="4em">
+It is inevitable that some queries will fail and to resolve the 
+problem a mechanism is needed to detect and log those queries.
+</blurb>
+
+<example filename="database_pop3.php" />
+
+</slide>

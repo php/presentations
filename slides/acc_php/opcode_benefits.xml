@@ -1,0 +1,10 @@
+<slide title="OPcode Cache Benefits">
+
+<list fontsize="4.5em">
+	<bullet padding="0.6em">Script parsing performed only once.</bullet>
+	<bullet padding="0.6em">Significant reduction in FileIO.</bullet>
+	<bullet padding="0.6em">Faster execution, thanks to optimized opcodes.</bullet>
+	<bullet padding="0.6em">Elimination of certain function calls by the optimizer.</bullet>
+</list>
+
+</slide>

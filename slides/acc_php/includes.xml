@@ -1,0 +1,13 @@
+<slide title="File IO">
+
+<blurb fontsize="4em">
+Most PHP scripts perform File IO operations, whether it be inclusion of scripts or opening
+or writing to files. One common mistake made by developers often makes these operations much
+slower then necessary.
+</blurb>
+
+<example title="How %NOT% to open files" fontsize="4em"><![CDATA[<?php
+include "file.php";
+?>]]></example>
+
+</slide>

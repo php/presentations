@@ -1,0 +1,12 @@
+<slide title="RAM Disk Cont.">
+
+<list title="Advantages" fontsize="4em">
+	<bullet>Significant improvement in all File IO operations.</bullet>
+	<bullet>Easy to use.</bullet>
+</list>
+
+<list title="Disadvantages" fontsize="4em">
+	<bullet>Can end up using A LOT of memory.</bullet>
+</list>
+
+</slide>

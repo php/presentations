@@ -1,0 +1,23 @@
+<slide title="Managing Your IO">
+
+<image filename="xfer.png" align="center" />
+
+<break />
+
+<list fontsize="3.6em">
+	<bullet>Optimize PHP to Apache communication via %output_buffering%.</bullet>
+
+	<bullet>Increase Apache buffer via %SendBufferSize%.</bullet>
+
+	<bullet>Optimize Kernel to Client communication by tunning kernel network buffers.
+	%/proc/sys/net/ipv4/tcp_wmem% and %/proc/sys/net/ipv4/tcp_mem%
+	</bullet>
+</list>
+
+<blurb fontsize="3.6em">
+
+
+</blurb>
+
+
+</slide>

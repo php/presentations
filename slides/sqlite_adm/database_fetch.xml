@@ -1,0 +1,10 @@
+<slide title="Fetching Data">
+
+<blurb fontsize="4em">
+To insert all rows we need to fetch the previously inserted countries and insert their ids with the IP
+record data.
+</blurb>
+
+<example filename="database_pop8.php" />
+
+</slide>

@@ -1,0 +1,22 @@
+<slide title="Content Reduction: CSS">
+
+<image filename="vice.gif" align="right" />
+
+<blurb fontsize="4em">
+Another way to reduce content, is to replace bulky legacy HTML elements with CSS.
+</blurb>
+
+<list fontsize="3.6em" title="Advantages">
+	<bullet>20-30% smaller pages.</bullet>
+	<bullet>CSS can be moved to static files and be served independently.</bullet>
+	<bullet>In some cases makes the browser render page faster.</bullet>
+	<bullet>More flexible layout.</bullet>
+</list>
+
+<list fontsize="3.6em" title="Disadvantages">
+	<bullet>Can be A LOT of manual labor.</bullet>
+	<bullet>Older browsers (Netscape 4.0) do not support CSS.</bullet>
+	<bullet>Some CSS is rendered differently or is unsupported all together.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Multi-column result sets">
+
+<blurb fontsize="4em">
+Since 'single' functions cannot handle multi-column data, SQLite provides the
+alternative in the form of %sqlite_fetch_all()% for multi-column result sets.
+</blurb>
+
+<example result="1" filename="fetch_all.php" />
+
+</slide>

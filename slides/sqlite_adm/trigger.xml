@@ -1,0 +1,9 @@
+<slide title="Triggers">
+
+<blurb fontsize="4em">
+Sqlite's trigger supports allows the automation of tasks normally requiring separate queries.
+</blurb>
+
+<example title="Count then IP ranges of each country" type="php" filename="trigger.php" />
+
+</slide>

@@ -1,0 +1,17 @@
+<slide title="Compile what you need">
+
+<image filename="bloat.jpg" align="center" />
+
+<blurb fontsize="4em">
+Avoid useless bloat and compile only the extensions you need.
+</blurb>
+
+<blurb fontsize="4em">
+Extensions that are rarely used, should be compiled as shared modules and loaded by the few scripts requiring them.
+</blurb>
+
+<blurb fontsize="4em">
+%--disable-all% is your friend.
+</blurb>
+
+</slide>

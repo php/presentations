@@ -1,0 +1,20 @@
+<slide title="Content Reduction: Compression">
+
+<image filename="vice.gif" align="right" />
+
+<blurb fontsize="4em">
+The easiest way to reduce amount of sent data is by compressing it.
+</blurb>
+
+<list fontsize="3.6em" title="Advantages">
+	<bullet>Text output drastically reduced.</bullet>
+	<bullet>Requires no or very little modification to the code.</bullet>
+	<bullet>Supported by majority of modern browsers.</bullet>
+</list>
+
+<list fontsize="3.6em" title="Disadvantages">
+	<bullet>May increase CPU load by up to 10%</bullet>
+	<bullet>Some browsers claim to support it, but really don't.</bullet>
+</list>
+
+</slide>

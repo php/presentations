@@ -1,0 +1,9 @@
+<slide title="Views">
+
+<blurb fontsize="4em">
+Views allow complex queries to be simplified for shorter &amp; simpler user-land queries.
+</blurb>
+
+<example type="php" filename="view.php" />
+
+</slide>

@@ -1,0 +1,27 @@
+<slide title="SQL: Right Tool for the Job">
+
+<image filename="postgresql.gif" align="right" />
+
+<blurb fontsize="4em">
+It is important that you choose the %right% database system for your needs.
+</blurb>
+
+<break lines="2" />
+
+<image filename="oracle.gif" align="right" />
+
+<blurb fontsize="4em">
+An overly complex database system, who's features you do not use will only hinder performance.
+</blurb>
+
+<break lines="2" />
+
+<image filename="mysql.gif" align="right" />
+
+<blurb fontsize="4em">
+At the same time be cautious with overly simple database systems that lack features you may need.
+</blurb>
+
+
+
+</slide>

@@ -1,0 +1,17 @@
+<slide title="RAM Disk">
+
+<blurb fontsize="4em">
+One way to accelerate File IO operations is by moving the files to a RAM disk.
+</blurb>
+
+<blurb fontsize="4em">
+On Linux this is extremely simple todo using via %tmpfs%.
+</blurb>
+
+<example title="tmpfs acceleration"><![CDATA[# Speed Up /tmp Directory
+mount --bind -ttmpfs /tmp /tmp
+
+# Accelerate Scripts Directory
+mount --bind -ttmpfs /home/webroot /home/webroot]]></example>
+
+</slide>

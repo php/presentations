@@ -1,0 +1,10 @@
+<slide title="Fetching all rows">
+
+<blurb fontsize="4em">
+In addition to being able to retrieve single row &amp; column data as a string
+%sqlite_single_query()% can be a convenient tool for fetching multi-row results.
+</blurb>
+
+<example result="1" filename="single_all.php" />
+
+</slide>

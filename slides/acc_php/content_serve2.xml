@@ -1,0 +1,25 @@
+<slide title="Static Content Web Servers">
+
+<blurb fontsize="3.6em" title="Web Servers ideal for serving static requests" />
+
+<break />
+
+<list fontsize="3em" title="TUX - kernel-based web server">
+	<bullet>Virtual Host support.</bullet>
+</list>
+
+<break />
+
+<list fontsize="3em" title="thttpd - tiny/turbo/throttling HTTP server">
+	<bullet>Non-blocking I/O is good.</bullet>
+	<bullet>Throttling capabilities.</bullet>
+</list>
+
+<break />
+
+<list fontsize="3em" title="lighttpd">
+	<bullet>On the fly compression.</bullet>
+	<bullet>Excellent virtual host support.</bullet>
+</list>
+
+</slide>

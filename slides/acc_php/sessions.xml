@@ -1,0 +1,16 @@
+<slide title="Sessions">
+
+<blurb fontsize="4em">
+Common element of various PHP scripts are sessions.
+</blurb>
+
+<list title="Generic Session Optimizations" fontsize="3.6em">
+	<bullet>Don't use %session.auto_start%.</bullet>
+	<bullet>Do not enable %session.use_trans_sid%</bullet>
+	<bullet>Whenever possible set %session.cache_limiter% to %private_no_expire%</bullet>
+	<bullet>Assign each user (vhost) it's own sessions directory.</bullet>
+	<bullet>For large sites consider using %session.save_path = "N;/path"%</bullet>
+	<bullet>If possible avoid automatic garbage collection.</bullet>
+</list>
+
+</slide>

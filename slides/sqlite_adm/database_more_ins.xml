@@ -1,0 +1,9 @@
+<slide title="More Inserts">
+
+<example filename="database_pop7.php" />
+
+<blurb title="Problem" fontsize="3em">
+Only the entries with unique countries are being inserted.
+</blurb>
+
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Transactions">
+
+<image filename="transaction.jpg" align="right" />
+
+<blurb fontsize="4em">
+One of the SQL92 features SQLite supports is transactions. This feature can be used to significantly
+accelerate applications that need to perform large number of write queries.
+</blurb>
+
+<break />
+
+<example filename="database_pop12.php" />
+
+</slide>
