@@ -1,0 +1,21 @@
+<slide title="PHP Tree5 Layout">
+
+<example fontsize="1.5em" type="shell">% cvs -d:pserver:cvsread@cvs.php.net:/repository co php4</example>
+
+<list title="Contents of php4/">
+ <bullet>%Zend/% - the Zend Engine</bullet>
+ <bullet>%TSRM/% - the thread-safe resource manager</bullet>
+ <bullet>%main/% - the basics</bullet>
+ <bullet>%ext/% - Extensions</bullet>
+ <bullet>%ext/standard/% - the standard functions</bullet>
+ <bullet>%ext/mysql/%</bullet>
+ <bullet>%ext/imap/%</bullet>
+ <bullet>%ext/hyperwave/%</bullet>
+ <bullet>...</bullet>
+ <bullet>%sapi/% - the Server API</bullet>
+ <bullet>%sapi/apache/%</bullet>
+ <bullet>%sapi/cgi/%</bullet>
+ <bullet>%sapi/isapi/%</bullet>
+ <bullet>...</bullet>
+</list>
+</slide>

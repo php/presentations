@@ -9,7 +9,7 @@ And then if your resource holds a complex datatype of some sort, typedef it as
 well at the top of your .c file (on in your header file):
 </blurb>
 
-<example type="c"><![CDATA[static int le_test;
+<example fontsize="1.5em" type="c"><![CDATA[static int le_test;
 
 typedef struct _test_le_struct {
     char *name;
@@ -20,7 +20,7 @@ typedef struct _test_le_struct {
 Next we need to create a resource destructor function.
 </blurb>
 
-<example type="c"><![CDATA[static void _php_free_test(zend_rsrc_list_entry *rsrc TSRMLS_DC) {
+<example fontsize="1.5em" type="c"><![CDATA[static void _php_free_test(zend_rsrc_list_entry *rsrc TSRMLS_DC) {
     test_le_struct *test_struct = (test_le_struct *)rsrc->ptr;
 
     efree(test_struct->name);
@@ -30,19 +30,21 @@ Next we need to create a resource destructor function.
 <blurb>
 Then in our MINIT function we declare/initialize our resource:
 </blurb>
-<example type="c"><![CDATA[le_test = zend_register_list_destructors_ex(_php_free_test, NULL, "test", module_number);]]></example>
+<example fontsize="1.5em" type="c"><![CDATA[le_test = zend_register_list_destructors_ex(_php_free_test,
+                                            NULL, "test", module_number);]]></example>
 
 
 <blurb>
 Then we might have a function that looks like this that returns a resource:
 </blurb>
 
-<example type="c"><![CDATA[PHP_FUNCTION(my_init) {
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_init) {
     char *name = NULL;
     int name_len, age;
     test_le_struct *test_struct;
 
-    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "sl", &name, &name_len, &age) == FAILURE) {
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC,
+                              "sl", &name, &name_len, &age) == FAILURE) {
         return;
     }
     test_struct = emalloc(sizeof(test_le_struct));
@@ -55,16 +57,18 @@ Then we might have a function that looks like this that returns a resource:
 Followed by other functions that then take a resource as an argument and do something with it:
 </blurb>
 
-<example type="c"><![CDATA[PHP_FUNCTION(my_get)
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_get)
 {
     test_le_struct *test_struct;
     pval *res;
 
-    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "r", &res) == FAILURE) {
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC,
+                              "r", &res) == FAILURE) {
         return;
     }
 
-    ZEND_FETCH_RESOURCE(test_struct, test_le_struct *, &res, -1, "test", le_test);
+    ZEND_FETCH_RESOURCE(test_struct, test_le_struct *,
+                        &res, -1, "test", le_test);
 
     if(!test_struct) RETURN_FALSE;
 

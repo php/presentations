@@ -14,9 +14,9 @@ if(isset($url)) {
   xmms_play(5);
 }
 $song = xmms_current();
-$list = xmms_playlist(range($song[\'pos\']-5, $song[\'pos\']+5));
+$list = xmms_playlist(range($song['pos']-5, $song['pos']+5));
 foreach($list as $pos=>$plsong) {
-  echo "$pos: ".$plsong[\'title\']."<br>\n";
+  echo "$pos: ".$plsong['title']."<br>\n";
 }
 sleep(10);
 xmms_stop();

@@ -9,8 +9,10 @@ follow the instructions for creating a global variable from the last slide.
 Then in your .c file add:
 </blurb>
 
-<example type="c"><![CDATA[PHP_INI_BEGIN()
-    STD_PHP_INI_ENTRY("test.some_integer", "0", PHP_INI_ALL, OnUpdateInt, some_integer, zend_test_globals, test_globals)
+<example fontsize="1.5em" type="c"><![CDATA[PHP_INI_BEGIN()
+    STD_PHP_INI_ENTRY("test.some_integer", "0",
+                      PHP_INI_ALL, OnUpdateInt,
+		      some_integer, zend_test_globals, test_globals)
 PHP_INI_END()]]></example>
 
 <blurb>

@@ -28,9 +28,13 @@ The structure of a typical extension contains the following components:
     STANDARD_MODULE_PROPERTIES
 };]]></example>
 
-<example title="PHP_INI_BEGIN" type="c"><![CDATA[PHP_INI_BEGIN()
-    STD_PHP_INI_ENTRY("xmms.value",      "42", PHP_INI_ALL, OnUpdateInt, global_value, zend_xmms_globals, xmms_globals)
-    STD_PHP_INI_ENTRY("xmms.string", "xmmsbar", PHP_INI_ALL, OnUpdateString, global_string, zend_xmms_globals, xmms_globals)
+<example fontsize="1.5em" title="PHP_INI_BEGIN" type="c"><![CDATA[PHP_INI_BEGIN()
+    STD_PHP_INI_ENTRY("xmms.value",      "42",
+                      PHP_INI_ALL, OnUpdateInt, global_value,
+		      zend_xmms_globals, xmms_globals)
+    STD_PHP_INI_ENTRY("xmms.string", "xmmsbar",
+                      PHP_INI_ALL, OnUpdateString, global_string,
+		      zend_xmms_globals, xmms_globals)
 PHP_INI_END()]]></example>
 
 <example title="PHP_MINIT_FUNCTION" type="c"><![CDATA[PHP_MINIT_FUNCTION(xmms)
@@ -55,7 +59,7 @@ PHP_INI_END()]]></example>
     return SUCCESS;
 }]]></example>
 
-<example title="PHP_MINFO_FUNCTION" type="c"><![CDATA[PHP_MINFO_FUNCTION(xmms)
+<example fontsize="1.5em" title="PHP_MINFO_FUNCTION" type="c"><![CDATA[PHP_MINFO_FUNCTION(xmms)
 {
     php_info_print_table_start();
     php_info_print_table_header(2, "xmms support", "enabled");
@@ -64,13 +68,14 @@ PHP_INI_END()]]></example>
     DISPLAY_INI_ENTRIES();
 }]]></example>
 
-<example title="functions" type="c"><![CDATA[PHP_FUNCTION(confirm_xmms_compiled)
+<example fontsize="1.5em" title="functions" type="c"><![CDATA[PHP_FUNCTION(confirm_xmms_compiled)
 {
     char *arg = NULL;
     int arg_len, len;
     char string[256];   
     
-    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &arg, &arg_len) == FAILURE) {
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC,
+                              "s", &arg, &arg_len) == FAILURE) {
         return;
     }
 

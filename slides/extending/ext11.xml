@@ -3,12 +3,13 @@
 To do real parameter handling, use the %zend_parse_parameters()%
 function.
 </blurb>
-<example type="c"><![CDATA[PHP_FUNCTION(return_arg)
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(return_arg)
 {
     int argc = ZEND_NUM_ARGS();
     long arg;
 
-    if (zend_parse_parameters(argc TSRMLS_CC, "l", &arg) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "l", &arg) == FAILURE)
         return;
 
 	RETURN_LONG(arg);
@@ -19,12 +20,13 @@ You can make it an optional argument by putting a "%|%" in the
 argument format string.  Like this:
 </blurb>
 
-<example type="c"><![CDATA[PHP_FUNCTION(return_arg)
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(return_arg)
 {
     int argc = ZEND_NUM_ARGS();
     long arg;
 
-    if (zend_parse_parameters(argc TSRMLS_CC, "|l", &arg) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "|l", &arg) == FAILURE)
         return;
 
 	if(argc) RETURN_LONG(arg)
@@ -50,7 +52,7 @@ So, for example, a function that takes a string, an integer, and array and an
 optional resource would look like this:
 </blurb>
 
-<example type="c"><![CDATA[PHP_FUNCTION(complex_func)
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(complex_func)
 {
     int argc = ZEND_NUM_ARGS();
     char *str = NULL;
@@ -60,11 +62,14 @@ optional resource would look like this:
     zval *arr = NULL;
     zval *res = NULL;
 
-    if (zend_parse_parameters(argc TSRMLS_CC, "sla|r", &str, &str_len, &arg, &arr, &res) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "sla|r", &str, &str_len,
+			      &arg, &arr, &res) == FAILURE)
         return;
 
 	if (res) {
-		ZEND_FETCH_RESOURCE(???, ???, res, res_id, "???", ???_rsrc_id);
+		ZEND_FETCH_RESOURCE(???, ???, res, res_id,
+		                    "???", ???_rsrc_id);
 	}
 
 	RETURN_FALSE;

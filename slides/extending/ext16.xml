@@ -7,7 +7,7 @@ globals are placed in a struct and passed around.  To add global variables to
 your extension, first define them in your header file:
 </blurb>
 
-<example type="c"><![CDATA[ZEND_BEGIN_MODULE_GLOBALS(test)
+<example fontsize="1.5em" type="c"><![CDATA[ZEND_BEGIN_MODULE_GLOBALS(test)
     int   some_integer;
     char *some_string;
 ZEND_END_MODULE_GLOBALS(test)
@@ -23,7 +23,7 @@ ZEND_END_MODULE_GLOBALS(test)
 Then in your .c file:
 </blurb>
 
-<example type="c"><![CDATA[ZEND_DECLARE_MODULE_GLOBALS(foo)
+<example fontsize="1.5em" type="c"><![CDATA[ZEND_DECLARE_MODULE_GLOBALS(foo)
 
 static void php_foo_init_globals(zend_foo_globals *foo_globals)
 {
@@ -35,7 +35,7 @@ static void php_foo_init_globals(zend_foo_globals *foo_globals)
 And in your MINIT function:
 </blurb>
 
-<example type="c"><![CDATA[ZEND_INIT_MODULE_GLOBALS(foo, php_foo_init_globals, NULL);]]></example>
+<example fontsize="1.5em" type="c"><![CDATA[ZEND_INIT_MODULE_GLOBALS(foo, php_foo_init_globals, NULL);]]></example>
 
 <blurb>
 Now, anywhere you need to get/set one of these variables, use 
@@ -47,12 +47,12 @@ available, but if you write your own utility functions you either have to call
 yet, pass in the TSRM struct.  Like this:
 </blurb>
 
-<example type="c"><![CDATA[test_utility_function(my_arg TSRMLS_CC);]]></example>
+<example fontsize="1.5em" type="c"><![CDATA[test_utility_function(my_arg TSRMLS_CC);]]></example>
 
 <blurb>
 And the function is declared using:
 </blurb>
 
-<example type="c"><![CDATA[static void test_utility_function(int my_arg TSRMLS_DC)]]></example>
+<example fontsize="1.5em" type="c"><![CDATA[static void test_utility_function(int my_arg TSRMLS_DC)]]></example>
 
 </slide>

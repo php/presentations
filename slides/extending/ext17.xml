@@ -32,7 +32,7 @@ To access the default MIME type, you would use:
 And to access the request_uri you would use:
 </blurb>
 
-<example type="c">SG(request_info).request_uri)</example>
+<example type="c">SG(request_info).request_uri</example>
 
 <blurb title="Executor Globals">
 These are run-time globals.  The ones you are likely to be interested in are
@@ -41,8 +41,9 @@ the user-space $foo variable from the current global context, you would do
 this:
 </blurb>
 
-<example type="c"><![CDATA[  pval **tmp;
-  if(zend_hash_find(&EG(symbol_table), "foo", 4, (void **)&tmp) == SUCCESS) {
+<example fontsize="1.5em" type="c"><![CDATA[  pval **tmp;
+  if(zend_hash_find(&EG(symbol_table),
+                    "foo", 4, (void **)&tmp) == SUCCESS) {
     RETURN_STRINGL(Z_STRVAL_PP(tmp), Z_STRLEN_PP(tmp), 1);
   } else {
     RETURN_FALSE;

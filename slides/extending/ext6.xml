@@ -5,7 +5,7 @@
 <blurb title="The config.m4 file">
 The *config.m4* file adds any extension-specific configuration options.  If
 your extension relies on external libraries and header files, you need to
-define those in this file and uncomment the *--with-xmms*> section.  If your
+define those in this file and uncomment the *--with-xmms* section.  If your
 extension does not rely on any external libraries, uncomment the
 *--enable-xmms* section.
 </blurb>

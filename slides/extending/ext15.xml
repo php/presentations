@@ -6,7 +6,7 @@ The first thing to do is to declare an extension-wide global class ptr along
 with the methods available in this object you are creating.
 </blurb>
 
-<example type="c"><![CDATA[static zend_class_entry *my_class_entry_ptr;
+<example fontsize="1.5em" type="c"><![CDATA[static zend_class_entry *my_class_entry_ptr;
 static zend_function_entry php_my_class_functions[] = {
     PHP_FE(add,  NULL)
     PHP_FALIAS(del,           my_del,     NULL)
@@ -18,7 +18,7 @@ static zend_function_entry php_my_class_functions[] = {
 Next, in our module_init function we initialize and register our class definition.
 </blurb>
 
-<example type="c"><![CDATA[PHP_MINIT_FUNCTION(test) {
+<example fontsize="1em" type="c"><![CDATA[PHP_MINIT_FUNCTION(test) {
     zend_class_entry my_class_entry;
 
     INIT_CLASS_ENTRY(my_class_entry, "my_class", php_my_class_functions);
@@ -30,7 +30,7 @@ Next, in our module_init function we initialize and register our class definitio
 And then we create our object factory function which will return an instantiated object.
 </blurb>
 
-<example type="c"><![CDATA[PHP_FUNCTION(my_object) {
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_object) {
 {
     char *fn = NULL;
     int argc = ZEND_NUM_ARGS();
@@ -39,15 +39,21 @@ And then we create our object factory function which will return an instantiated
     double price;
     zend_bool setting;
 
-    if (zend_parse_parameters(argc TSRMLS_CC, "sbld", &fn, &fn_len, &setting, &length, &price) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "sbld", &fn, &fn_len,
+			      &setting, &length, &price) == FAILURE)
         return;
 
     object_init_ex(return_value, my_class_entry_ptr);
 
-    add_property_stringl(return_value, "filename", fn, fn_len, 1);
-    add_property_bool(return_value, "toggle", setting?0:1);
-    add_property_long(return_value, "length", length);
-    add_property_double(return_value, "price", price);
+    add_property_stringl(return_value,
+                         "filename", fn, fn_len, 1);
+    add_property_bool   (return_value,
+                         "toggle", setting ? 0 : 1);
+    add_property_long   (return_value,
+                         "length", length);
+    add_property_double (return_value,
+                         "price", price);
 }]]></example>
 
 <blurb>
@@ -72,7 +78,7 @@ to have a constructor run for it.  eg.
 Then create a constructor function:
 </blurb>
 
-<example type="c"><![CDATA[PHP_FUNCTION(my_class) {
+<example fontsize="1.5em" type="c"><![CDATA[PHP_FUNCTION(my_class) {
     char *fn = NULL;
     int argc = ZEND_NUM_ARGS();
     int fn_len;
@@ -80,7 +86,9 @@ Then create a constructor function:
     double price;
     zend_bool setting;
 
-    if (zend_parse_parameters(argc TSRMLS_CC, "sbld", &fn, &fn_len, &setting, &length, &price) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC,
+                              "sbld", &fn, &fn_len,
+			      &setting, &length, &price) == FAILURE)
         return;
 
     add_property_stringl(this_ptr, "filename", fn, fn_len, 1);
@@ -97,8 +105,9 @@ Note the use of %this_ptr% here.
 If you want to access properties from within one of the methods, you can do this:
 </blurb>
 
-<example type="c"><![CDATA[pval **tmp;
-if(zend_hash_find(HASH_OF(this_ptr), "my_property", 11, (void **)&tmp) == SUCCESS) {
+<example fontsize="1.5em" type="c"><![CDATA[pval **tmp;
+if(zend_hash_find(HASH_OF(this_ptr),
+                  "my_property", 11, (void **)&tmp) == SUCCESS) {
     convert_to_string_ex(tmp);
     php_printf("my_property is set to %s\n", Z_STRVAL_PP(tmp));
 }]]></example>
