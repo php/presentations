@@ -1,11 +1,11 @@
 <?
 Header('Content-Type: image/png');
 $height = 600;
-$txt = 'CArL the Engineer';
+$txt = 'Carl in his strawberry hat';
 $size = ImageTTFBbox(25,0,'timesi',$txt);
 $txt_w = abs($size[2]-$size[0]);
 $txt_h = abs($size[6]-$size[1]);
-$bg = ImageCreateFromJpeg('p0004557.jpg');
+$bg = ImageCreateFromJpeg('img_resize.jpg');
 $img_width = imagesx($bg);
 $img_height = imagesy($bg);
 $width = ($height)/$img_height * $img_width;

@@ -1,5 +1,5 @@
 <slide title="GD 1/2">
-<example title="CreateFrom and Bounding Box Math" filename="slides/intro/txt2.php" />
+<example fontsize="1.5em" title="CreateFrom and Bounding Box Math" filename="slides/intro/txt2.php" />
 
 <example fontsize="1.5em"><![CDATA[<IMG src="txt2.php?text=<?echo urlencode($text)?>&si=<?echo $si?>">]]></example>
 

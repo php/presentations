@@ -11,7 +11,7 @@ Recall our file-driven guestbook example from earlier.  We are
 going to convert this into an SQL-driven guestbook by first creating a
 database, then a schema for the table where we will store the data and then we
 will modify the code.</blurb>
-<example fontsize="1.2em"><![CDATA[<h1>Welcome to my Guestbook</h1>
+<example fontsize="1.5em"><![CDATA[<h1>Welcome to my Guestbook</h1>
   <h2>Please write me a little note below</h2>
   <form action="<? echo $PHP_SELF?>" method="POST">
   <textarea cols=40 rows=5 name="note"></textarea>

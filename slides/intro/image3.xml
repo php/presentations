@@ -3,12 +3,12 @@
 	hide="1" 
 	result="1"
 	fontsize="0.5em"
-	marginleft="0.2em"
-	marginright="0.2em"
+	marginleft="0.1em"
+	marginright="0.1em"
 ><![CDATA[<?php
  if(empty($text)) $text = 'php'; 
  if(empty($si)) $si=30;
- echo "<P class=\"huge\"> <IMG src=\"slides/intro/tshirt.png\" align=middle> + <IMG src=\"slides/intro/blank.png\" align=middle> = <IMG src=\"slides/intro/tshirt.php?si=$si&text=".urlencode($text)."\" align=middle>";
+ echo "<P class=\"huge\"> <IMG src=\"slides/intro/tshirt.png\" align=middle>+<IMG src=\"slides/intro/blank.png\" align=middle>=<IMG src=\"slides/intro/tshirt.php?si=$si&text=".urlencode($text)."\" align=middle>";
  echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";
  echo "Text1: <input type=text name=text value=\"$text\"> Size: <input type=text name=si value=\"$si\"> <input type=submit name=\" Go! \">\n";
  echo "</form>\n";
