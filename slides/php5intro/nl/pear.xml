@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PEAR</title>
+
+	<image align="right" filename="pear.gif" />
+	<list marginleft="2em" fontsize="3.5em">
+		<bullet>PHP Extension and Application Repository</bullet>
+		<bullet>Commandline tool voor beheer.</bullet>
+		<bullet>Dependency checking.</bullet>
+	</list>
+	<break />
+
+	<example fontsize="1.1em"><![CDATA[[derick@kossu derick]$ sudo pear -v install Net_DIME
+downloading Net_DIME-0.3.tgz ...
+...done: 6,740 bytes
+install ok: Net_DIME 0.3]]></example>
+
+	<example fontsize="1.1em"><![CDATA[[derick@kossu derick]$ sudo pear list-upgrades
+Available Upgrades (beta):
+==========================
+Package        Version  Size  
+DB             1.4.0    60kB  
+HTML_QuickForm 3.0Beta2 60kB  
+Net_SMTP       1.2.3    6.1kB]]></example>
+
+	<example fontsize="1.1em"><![CDATA[[derick@kossu derick]$ sudo pear list-all | head -6
+All packages:
+=============
+Package                  Latest   Local    
+apd                      0.4p2             
+bcompiler                0.4      0.4      
+PHPDoc                   0.1.0    0.1.0    ]]></example>
+
+
+</slide>

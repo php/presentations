@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Xdebug</title>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="4.5em">
+		<bullet>Geen 'echo' debugging meer nodig</bullet>
+		<bullet>Zend extensie</bullet>
+		<bullet type="none" marginleft="2em">zend_extension=/path/to/xdebug.so</bullet>
+		<bullet type="none" marginleft="2em">zend_extension_ts=C:/path/to/xdebug.dll</bullet>
+		<bullet>Grijpt in in de standaard error handler</bullet>
+		<bullet type="none" marginleft="2em">en in de uitvoering van functies</bullet>
+	</list>
+
+</slide>

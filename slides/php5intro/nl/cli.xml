@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>CLI</title>
+
+	<list marginleft="2em" fontsize="3.5em" effect="slide">
+		<bullet>Command Line Interface</bullet>
+		<bullet>Eigenlijk niet nieuw in PHP 5, maar PHP 4.2.0</bullet>
+		<bullet>Ideaal voor shell scripts</bullet>
+	</list>
+	<break />
+
+	<example fontsize="1.4em"><![CDATA[[derick@kossu nl]$ php -v
+PHP 5.0.0-dev (cli) (built: May 20 2003 11:06:44)
+Copyright (c) 1997-2003 The PHP Group
+Zend Engine v2.0.0-dev, Copyright (c) 1998-2003 Zend Technologies]]></example>
+
+</slide>

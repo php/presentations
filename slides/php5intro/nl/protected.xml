@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Protected</title>
+
+	<list marginleft="1em" effect="slide" fontsize="3.3em">
+		<bullet>Alleen toegankelijk voor eigen class en afgeleidde classes.</bullet>
+		<bullet>Handig in packages.</bullet>
+	</list>
+	<break lines="1" />
+
+    <example fontsize="1.05em"><![CDATA[<?php
+	class Bedroom {
+		protected $action;
+
+		function __construct() {
+			$this->action = 'fun';
+		}
+
+		protected function peek() {
+			echo $this->action. "\n";
+		}
+	}
+
+	class Keyhole extends Bedroom {
+		function peek() {
+			echo $this->action. "\n";
+		}
+	}
+
+	$kh = new Keyhole();
+	$kh->peek();
+
+	$br = new Bedroom();
+	$br->peek();           /* Werkt niet */
+? >]]></example>
+</slide>

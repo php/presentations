@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>__set() en __get()</title>
+
+	<list marginleft="3em" effect="slide" fontsize="2.5em">
+		<bullet>Afvangen van gebruik properties</bullet>
+		<bullet>In combinatie met private</bullet>
+		<bullet>Als vervanging voor 'dynamic properties'</bullet>
+	</list>
+
+	<break />
+
+    <example fontsize="1em"><![CDATA[<?php
+	class OSses {
+		private $names = array();
+
+		public function __set($name, $value) {
+			if (!in_array($name, array('windows', 'dos'))) {
+				$this->names[$name] = $value;
+			}
+		}
+
+		public function getNames() {
+			return $this->names;
+		}
+	}
+
+	$osses = new OSses();
+	$osses->linux = 'rocks';
+	$osses->windows = 'blows';
+
+	var_dump($osses->getNames());
+? >]]></example>
+
+    <example fontsize="1em"><![CDATA[array(1) {
+  ["linux"]=>
+  string(5) "rocks"
+}]]></example>
+</slide>

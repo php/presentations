@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Objectmodel in PHP 4</title>
+
+	<image align="center" filename="old-noref.png" />
+
+	<list marginleft="3em" effect="slide" fontsize="3.5em">
+		<bullet>Pass by value</bullet>
+		<bullet>Gebruik overal references...</bullet>
+		<bullet marginleft="5em" type="none">bij aanroep en zelfs bij instantiatie.</bullet>
+	</list>
+
+</slide>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>CLI Tricks</title>
+
+	<break />
+	<image marginleft="4em" align="right" filename="asp.png" />
+	<list marginleft="2em" fontsize="3.5em" effect="slide">
+		<bullet>Dit is nieuw in PHP 5</bullet>
+		<bullet>Bewerken van stdin</bullet>
+	</list>
+
+	<break lines="3" />
+
+	<example fontsize="1.1em"><![CDATA[-B <begin_code>  Run PHP <begin_code> before processing input lines
+-R <code>        Run PHP <code> for every input line
+-F <file>        Parse and execute <file> for every input line
+-E <end_code>    Run PHP <end_code> after processing all input lines]]></example>
+
+	<break lines="2" />
+
+	<example fontsize="1.5em"><![CDATA[$ find . |
+	php -B '$l = 0;'
+	    -R '$l+=count(file($argn));'
+	    -E 'echo "Lines: $l\n";']]></example>
+
+	<example fontsize="1.5em"><![CDATA[Lines: 102643]]></example>
+
+</slide>

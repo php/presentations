@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Nested Namespaces</title>
+
+    <example fontsize="1.3em"><![CDATA[<?php
+namespace Languages:Perl {
+	class Execute {
+		function statement($cmd) {
+			$cmd = escapeshellcmd($cmd);
+			system("echo $cmd | perl");
+		}
+	}
+}
+
+$e = new Languages:Perl::Execute;
+$e->statement("print 'Hello World!'");
+? >]]></example>
+
+	<image marginright="2em" filename="nesting.jpg" align="right" />
+
+	<list marginleft="2em" fontsize="3.5em" effect="slide">
+		<bullet>Het voegt niets toe...</bullet>
+		<bullet type="none" marginleft="4em">behalve verwarring :)</bullet>
+	</list>
+</slide>

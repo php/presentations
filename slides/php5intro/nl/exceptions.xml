@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Exceptions</title>
+
+	<blurb> </blurb>
+	<blurb>PHP 4:</blurb>
+	<example fontsize="1.2em"><![CDATA[<?php
+	if (@mysql_connect('localhost', 'root', 'ut34FblY:')) {
+		if (@mysql_select_db('game')) {
+			$r = mysql_query('SELECT * FROM news ORDER BY date DESC LIMIT 1');
+
+			...]]></example>
+
+	<blurb> </blurb>
+	<blurb>PHP 5:</blurb>
+	<example fontsize="1.2em"><![CDATA[<?php
+	try {
+		mysql_connect('localhost', 'root', 'ut34FblY:'));
+		mysql_select_db('game');
+		$r = mysql_query('SELECT * FROM news ORDER BY date DESC LIMIT 1');
+	} catch (Exception $e) {
+		/* Do recovery */
+		exit();
+	}]]></example>
+</slide>

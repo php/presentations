@@ -1,0 +1,49 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#3C5BB4"
+	stylesheet="presentations/slides/srm/style.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Meer PHP met PHP 5</title>
+<event>Spring Conference 2003</event>
+<location>Ede, The Nederlands</location>
+<date>May 22, 2003</date>
+<speaker>Derick Rethans</speaker>
+<email>d.rethans@jdimedia.nl</email>
+<url>http://pres.derickrethans.nl/php5intro</url>
+<slide>slides/ze-xdebug/title.xml</slide>
+
+<slide>slides/php5intro/nl/oldobjectmodel.xml</slide>
+<slide>slides/php5intro/nl/oldobjectmodel2.xml</slide>
+<slide>slides/php5intro/nl/newobjectmodel.xml</slide>
+<slide>slides/php5intro/nl/clone.xml</slide>
+<slide>slides/php5intro/nl/structors.xml</slide>
+<slide>slides/php5intro/nl/private.xml</slide>
+<slide>slides/php5intro/nl/protected.xml</slide>
+<slide>slides/php5intro/nl/setget.xml</slide>
+<slide>slides/php5intro/nl/call.xml</slide>
+<slide>slides/php5intro/nl/exceptions.xml</slide>
+<slide>slides/php5intro/nl/namespaces.xml</slide>
+<slide>slides/php5intro/nl/nestednamespaces.xml</slide>
+<slide>slides/php5intro/nl/pear.xml</slide>
+<slide>slides/php5intro/nl/pecl.xml</slide>
+<slide>slides/php5intro/nl/cli.xml</slide>
+<slide>slides/php5intro/nl/cli-funkyness.xml</slide>
+<slide>slides/php5intro/nl/gtk-pear-inst.xml</slide>
+<slide>slides/php5intro/nl/gtk-simple.xml</slide>
+<slide>slides/php5intro/nl/xml.xml</slide>
+<slide>slides/php5intro/nl/domxml-load.xml</slide>
+<slide>slides/php5intro/nl/simplexml-load.xml</slide>
+<slide>slides/php5intro/nl/simplexml-change.xml</slide>
+
+<slide>slides/php5intro/nl/xdebug.xml</slide>
+<slide>slides/php5intro/nl/xdebug-cb-dump.xml</slide>
+<slide>slides/php5intro/nl/xdebug-trace.xml</slide>
+<slide>slides/php5intro/nl/xdebug-profile.xml</slide>
+<slide>slides/php5intro/nl/xdebug-demo.xml</slide>
+
+<slide>slides/php5intro/nl/questions.xml</slide>
+<slide>slides/php5intro/nl/resources.xml</slide>
+
+</presentation>

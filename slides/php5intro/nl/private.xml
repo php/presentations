@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Private</title>
+
+	<list marginleft="3em" effect="slide" fontsize="3.5em">
+		<bullet>'Strengste' access level</bullet>
+		<bullet>Alleen toegankelijk voor eigen class.</bullet>
+		<bullet>Afdwingen gebruik get()/set() functies</bullet>
+	</list>
+	<break lines="1" />
+
+    <example fontsize="1.3em"><![CDATA[<?php
+
+	class Bedroom {
+		private $action;
+
+		function __construct() {
+			$this->action = 'fun';
+		}
+	}
+
+	$br = new Bedroom();
+	echo $br->action. "\n";
+
+? >]]></example>
+
+    <example fontsize="1.3em"><![CDATA[Fatal error: Cannot access private property bedroom::$action in - on line 12]]></example>
+</slide>

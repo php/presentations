@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Constructors/Destructors</title>
+
+	<image align="center" filename="construction.png" />
+
+	<list marginleft="3em" effect="slide" fontsize="3.5em">
+		<bullet>Nieuw type constructors: __construct().</bullet>
+		<bullet>Eindelijk destructors: __destruct().</bullet>
+	</list>
+	<break lines="1" />
+
+    <example fontsize="1em"><![CDATA[<?php
+
+	class Construction {
+		var $area;
+		function __construct($area) {
+			$this->$area = $area;
+		}
+		function __destruct() {
+			echo "Leaving {$this->area}\n";
+		}
+	}
+	
+	$c = new Construction('London');
+	$vegas = $c;
+	$vegas->area = "Las Vegas";
+
+	echo "\$c = NULL\n";
+	$c = NULL;
+	echo "\$vegas = NULL\n";
+	$vegas = NULL;
+? >]]></example>
+
+    <example fontsize="1em"><![CDATA[$c = NULL
+$vegas = NULL
+Leaving Las Vegas
+EOS]]></example>
+</slide>

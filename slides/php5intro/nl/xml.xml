@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Parsing XML</title>
+
+	<image align="center" filename="xml.gif" />
+
+	<blurb>Example XML to parse:</blurb>
+
+	<example fontsize="1.2em"><![CDATA[<books>
+	<book>
+		<title>The Grapes of Wrath</title>
+		<author>John Steinbeck</author>
+	</book>
+	<book>
+		<title>The Pearl</title>
+		<author>John Steinbeck</author>
+	</book>
+</books>]]></example>
+
+	<blurb>Expected output:</blurb>
+
+	<example fontsize="1.2em"><![CDATA[The Grapes of Wrath was written by John Steinbeck
+The Pearl was written by John Steinbeck]]></example>
+
+
+</slide>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PECL</title>
+
+	<image align="right" filename="pecl.gif" />
+	<list marginleft="2em" fontsize="3.5em" effect="slide">
+		<bullet>PHP Extension Code Library</bullet>
+		<bullet>Siberia</bullet>
+		<bullet>Shared extensions</bullet>
+		<bullet>Zelfde tool als voor PEAR</bullet>
+		<bullet>Toekomstig thuis voor alle extensies</bullet>
+	</list>
+	<break />
+
+	<example fontsize="1.4em"><![CDATA[[derick@kossu nl]$ sudo pear -v install http://files.derickrethans.nl/xdebug-1.2.0.tgz
+downloading xdebug-1.2.0.tgz ...
+...done: 58,608 bytes
+28 source files, building
+running: phpize
+PHP Api Version        : 20020918
+Zend Module Api No     : 20020429
+Zend Extension Api No  : 20021010
+building in /var/tmp/pear-build-root/xdebug-1.2.0
+running: /tmp/tmpXOqy3A/xdebug-1.2.0/configure
+running: make
+xdebug.so copied to /tmp/tmpXOqy3A/xdebug-1.2.0/xdebug.so
+install ok: xdebug 1.2.0]]></example>
+
+</slide>

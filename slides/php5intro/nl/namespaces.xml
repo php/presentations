@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Namespaces</title>
+
+    <example fontsize="1.3em"><![CDATA[<?php
+namespace Language {
+
+    class Perl {
+        function exec_stmt($stmt) {
+            $command = escapeshellcmd($stmt);
+            system("echo $command | perl");
+        }
+    }
+
+    class PHP {
+        function exec_stmt($stmt) {
+            eval($stmt);
+        }
+    }
+}
+
+$p = new Language::Perl;
+$p->exec_stmt("print 'Hello Freaky Deaky World!'");
+? >]]></example>
+
+	<list marginleft="2em" fontsize="3.5em" effect="slide">
+		<bullet>Class bibliotheken</bullet>
+		<bullet>PEAR: PHP Extension and Application Repository</bullet>
+	</list>
+</slide>
