@@ -1,0 +1,43 @@
+<slide title="More PHP-GTK">
+
+<php><![CDATA[<?flush()?>]]></php>
+
+<example 
+	title="Selection List"
+	filename="slides/intro/gtklist.php"
+	hide="1"
+	result="1"
+	localhost="1"
+	type="system"
+/>
+
+<php><![CDATA[<?flush()?>]]></php>
+
+<example 
+	title="File Selector"
+	filename="slides/intro/gtkfileselection.php"
+	hide="1"
+	localhost="1"
+	result="1"
+	type="system"
+/>
+
+<php><![CDATA[<?flush()?>]]></php>
+
+<example 
+	title="Scribble"
+	filename="slides/intro/gtkscribble.php"
+	hide="1"
+	localhost="1"
+	result="1"
+	type="system"
+/>
+
+<php><![CDATA[<?flush()?>]]></php>
+
+<example title="Glade Support"><![CDATA[<?php
+   $glade = &new GladeXML('my_interface.glade');
+   gtk::main();
+?>]]></example>
+
+</slide>

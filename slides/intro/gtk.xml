@@ -1,0 +1,11 @@
+<slide title="PHP-GTK">
+<php><![CDATA[<?flush()?>]]></php>
+<example 
+	title="A PHP-GTK Hello World script"
+	filename="slides/intro/gtkhello.php"
+	fontsize="1.5em"
+	localhost="1"
+	result="1"
+	type="system"
+/>
+</slide>

@@ -1,0 +1,49 @@
+<slide title="MySQL Replication">
+<blurb>
+As of version 3.23.15 (try to use 3.23.29 or later), MySQL supports one-way replication.
+Since most web applications usually have more reads than writes, an architecture which
+distributes reads across multiple servers can be very beneficial.
+</blurb>
+<image filename="slides/intro/repl1.png" align="center"/>
+<blurb>
+In typical MySQL fashion, setting up replication is trivial.  On your master server add this
+to your "my.cnf" file:
+</blurb>
+<example type="shell">[mysqld]
+log-bin
+server-id=1</example>
+<blurb>
+And add a replication user id for slaves to log in as:
+</blurb>
+<example type="shell"><![CDATA[GRANT FILE ON *.* TO repl@"%" IDENTIFIED BY 'foobar';]]></example>
+
+<blurb>
+Then on your slave servers:
+</blurb>
+<example type="shell">[mysqld]
+set-variable = max_connections=200
+log-bin
+master-host=192.168.0.1
+master-user=repl
+master-password=foobar
+master-port=3306
+server-id=2</example>
+<blurb>
+Make sure each slave has its own unique server-id.  And since these will be read-only slaves, 
+you can start them with these options to speed them up a bit:
+</blurb>
+<example type="shell" marginleft="1em" marginright="1em">--skip-bdb --low-priority-updates --delay-key-write-for-all-tables</example>
+<blurb>
+Stop your master server.  Copy the table files to each of your slave servers.  Restart
+the master, then start all the slaves.  And you are done.  Combining MySQL replication
+with a Squid reverse cache and redirector and you might have an architecture like this:
+</blurb>
+<image filename="slides/intro/repl2.png" align="center"/>
+<blurb>
+You would then write your application to send all database writes to the master server and
+all reads to the local slave.  It is also possible to set up two-way replication, but you would
+need to supply your own application-level logic to maintain atomicity of distributed writes.
+And you lose a lot of the advantages of this architecture if you do this as the writes would
+have to go to all the slaves anyway.
+</blurb>
+</slide>
