@@ -5,8 +5,8 @@
  <bullet>Page building happens in PHP code</bullet>
  <bullet>Written for PHP 3, needs a little polish for PHP 4</bullet>
 </list>
-<example filename="slides/pragmatic/fasttemplate.php" />
-<example title="Main Template" filename="slides/pragmatic/fasttemplate.tpl" />
-<example title="Option Template" filename="slides/pragmatic/fasttemplate-option.tpl" />
-<example title="Output" filename="slides/pragmatic/fasttemplate.php" hide="1" result="1" />
+<example filename="fasttemplate.php" />
+<example title="Main Template" filename="fasttemplate.tpl" />
+<example title="Option Template" filename="fasttemplate-option.tpl" />
+<example title="Output" filename="fasttemplate.php" hide="1" result="1" />
 </slide>

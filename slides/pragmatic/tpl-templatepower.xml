@@ -7,7 +7,7 @@
  <bullet>Save/load parsed templates</bullet>
  <bullet>Database template support</bullet>
 </list>
-<example title="Code" filename="slides/pragmatic/templatepower.php" />
-<example title="Template" filename="slides/pragmatic/templatepower.tpl" type="system" />
-<example title="Output" filename="slides/pragmatic/templatepower.php" hide="1" result="1" />
+<example title="Code" filename="templatepower.php" />
+<example title="Template" filename="templatepower.tpl" type="system" />
+<example title="Output" filename="templatepower.php" hide="1" result="1" />
 </slide>

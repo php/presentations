@@ -6,7 +6,7 @@ Javascript language, PHP is server-side and all PHP tags will be
 replaced by the server before anything is sent to the web browser.
 </blurb>
 
-<image align="center" filename="slides/intro/serverside.png" />
+<image align="center" filename="serverside.png" />
 
 <blurb>So if the HTML file contains:</blurb>
 

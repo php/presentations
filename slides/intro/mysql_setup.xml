@@ -1,7 +1,7 @@
 <slide title="Setup">
 
 <example title="Check your PHP Setup for MySQL support"><![CDATA[<? phpinfo() ?>]]></example>
-<image filename="slides/intro/mysql_info.png" align="center"/>
+<image filename="mysql_info.png" align="center"/>
 
 <blurb title="If not enabled">
 Very rare since a MySQL client library is distributed with PHP and built into PHP

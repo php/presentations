@@ -6,5 +6,5 @@ We'll download a URL with Python and print the results.
 <example 
    fontsize="1.2em" 
    type="python"
-   filename="slides/scripting/http.py"/>
+   filename="http.py"/>
 </slide>           

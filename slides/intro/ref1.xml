@@ -4,12 +4,12 @@
     $bar = 'World';
 ?>]]></example>
 
-<image marginleft="5em" filename="slides/intro/ref1.png"/>
+<image marginleft="5em" filename="ref1.png"/>
 
 <example><![CDATA[<?php
     $bar = & $foo;
 ?>]]></example>
 
-<image marginleft="5em" filename="slides/intro/ref2.png"/>
+<image marginleft="5em" filename="ref2.png"/>
 
 </slide>

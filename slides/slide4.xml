@@ -1,10 +1,11 @@
 <slide title="A slide">
 <blurb>
 In our presentation definition file we named our first slide %slides/foo/intro.xml%, so
-create this file with your favourite text editor.  Here is a simple example that just
+create this file with your favourite text editor.  The path is relative to the presentation
+directory configured in your config.php file.  Here is a simple example that just
 has a slide title and a blurb of text with a title.
 </blurb>
-<example filename="slides/slide5.xml" />
+<example filename="slide5.xml" />
 <blurb>
 Don't worry about indenting the tags if you don't feel like it.  It is not required.
 </blurb>

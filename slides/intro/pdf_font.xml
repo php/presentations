@@ -21,7 +21,7 @@ PDF_set_parameter($p,"FontOutline",
 $font = PDF_findfont($p,"CANDY","host",1); 
 ?>]]></example>
 
-<example filename="slides/intro/pdf_font_ex1.php" hide="1" result="1" type="iframe" title="CANDY Font Example"/>
+<example filename="pdf_font_ex1.php" hide="1" result="1" type="iframe" title="CANDY Font Example"/>
 
 <blurb>
 Fonts can also be defined in the pdflib.upr file.  
@@ -35,7 +35,7 @@ Fonts can also be defined in the pdflib.upr file.
 <cell bold="1">host</cell><cell>Macroman on the Mac,ebcdic on EBCDIC-based systems,and winansi on all other</cell>
 </table>
 
-<example filename="slides/intro/pdf_font_ex2.php"
+<example filename="pdf_font_ex2.php"
 		 title="Font Example"
 		 result="1"
 		 type="iframe"

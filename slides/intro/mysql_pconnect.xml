@@ -10,6 +10,6 @@ echo $conn;
 <bullet>Make sure you match up max_connections and MaxClients</bullet>
 </list>
 
-<image filename="slides/intro/pconnect.png" align="center" />
+<image filename="pconnect.png" align="center" />
 
 </slide>

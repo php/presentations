@@ -3,7 +3,7 @@
 Used to display images.
 </blurb>
 <example><![CDATA[<image title="Baby Carl" 
-       filename="slides/intro/carl.jpg" 
+       filename="carl.jpg" 
        align="center"
 />]]></example>
 
@@ -14,6 +14,6 @@ Used to display images.
 <cell>effect</cell><cell></cell>
 </table>
 
-<image align="center" title="Baby Carl" filename="slides/intro/carl.jpg" />
+<image align="center" title="Baby Carl" filename="intro/carl.jpg" />
 
 </slide>

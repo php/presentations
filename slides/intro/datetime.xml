@@ -17,7 +17,7 @@
   else $str .= " $mins minutes";
   echo "CArL is now $str old";
 ?>]]></example>
-<image filename="slides/intro/carl.jpg" align="center" />
+<image filename="carl.jpg" align="center" />
 
 <blurb title="Calendar Conversions">
 Converts between calendars (Julian, Gregorian, Mayan, etc)

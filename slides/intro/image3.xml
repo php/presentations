@@ -15,7 +15,7 @@
 ?>]]></example>
 
 <example
-	filename="slides/intro/tshirt.php"
+	filename="tshirt.php"
 	fontsize="1.5em"
 />
 <example fontsize="1.5em"><![CDATA[<IMG src="tshirt.php?text=<?echo urlencode($text)?>&si=<?echo $si?>">]]></example>

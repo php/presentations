@@ -13,10 +13,10 @@ Then generate.php looks like this:
 </blurb>
 <example
 	fontsize="1.5em"
-	filename="slides/intro/generate.php"
+	filename="generate.php"
 />
 <blurb>
 The URL, http://localhost/images/button_test_000000.png produces this image:
 </blurb>
-<image filename="slides/intro/button_test_000000.png"/>
+<image filename="button_test_000000.png"/>
 </slide>

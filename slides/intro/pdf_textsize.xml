@@ -4,7 +4,7 @@ The hardest part of creating a PDF document this way is to keep control of block
 know the height of a block of text in order to handle pagination correctly in multipage documents.
 </blurb>
 
-<image filename="slides/intro/pdf.png" align="center" />
+<image filename="pdf.png" align="center" />
 
 <list title="Font Characteristics">
 <bullet>fontsize</bullet>

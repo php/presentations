@@ -7,7 +7,7 @@ for it to work.  Compare these two:
 </blurb>
 <example 
 	title="With alpha blending"
-	filename="slides/intro/image_text_ex3.php?blend=1"
+	filename="image_text_ex3.php?blend=1"
 	fontsize="1.5em"
 	result="1"
 	type="genimage"
@@ -18,7 +18,7 @@ If we turn off alpha blending or use a negative color index we get:
 </blurb>
 <example 
 	title="Without alpha blending"
-	filename="slides/intro/image_text_ex3.php?blend=1"
+	filename="image_text_ex3.php?blend=1"
 	hide="1"
 	result="1"
 	type="genimage"
@@ -27,7 +27,7 @@ If we turn off alpha blending or use a negative color index we get:
 <blurb>
 If we zoom in on the 'A' we can really see the anti-aliasing at work:
 </blurb>
-<image filename="slides/intro/2a.png" align="center" />
-<image filename="slides/intro/1a.png" align="center" />
+<image filename="2a.png" align="center" />
+<image filename="1a.png" align="center" />
 
 </slide>

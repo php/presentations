@@ -5,7 +5,7 @@
  <bullet>Can set variables and blocks to be ignored</bullet>
  <bullet>The name isn't entirely inaccurate</bullet>
 </list>
-<example filename="slides/pragmatic/bugi.php" />
-<example type="system" filename="slides/pragmatic/bugi.tpl" />
-<example filename="slides/pragmatic/bugi.php" hide="1" result="1" />
+<example filename="bugi.php" />
+<example type="system" filename="bugi.tpl" />
+<example filename="bugi.php" hide="1" result="1" />
 </slide>

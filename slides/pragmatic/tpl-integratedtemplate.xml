@@ -4,7 +4,7 @@
  <bullet>Variables and nested blocks</bullet>
  <bullet>Also has a wrapper class to make it compatible with PHPLIB template system</bullet>
 </list>
-<example title="Code" filename="slides/pragmatic/integratedtemplate.php" />
-<example title="Template" filename="slides/pragmatic/integratedtemplate.tpl" type="system" />
-<example title="Output" filename="slides/pragmatic/integratedtemplate.php" hide="1" result="1" />
+<example title="Code" filename="integratedtemplate.php" />
+<example title="Template" filename="integratedtemplate.tpl" type="system" />
+<example title="Output" filename="integratedtemplate.php" hide="1" result="1" />
 </slide>

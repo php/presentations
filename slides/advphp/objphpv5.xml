@@ -1,13 +1,13 @@
 <slide title="PHP5 OO">
 <blurb title="Object Model">Object model is brand spanking new!</blurb>
 <blurb title="Private">Private and Protected member variables are now available</blurb>
-<example fontsize="1.2em" filename="slides/advphp/privateprotected.php"/>
+<example fontsize="1.2em" filename="privateprotected.php"/>
 <blurb title="Cloning">You are able to make direct copies of objects with PHPv5, furthermore
 you can define functions that are called when the objects are copied.</blurb>
-<example fontsize="1.2em" filename="slides/advphp/clone.php"/>
+<example fontsize="1.2em" filename="clone.php"/>
 <blurb title="Nested Classes">In PHPv5 you can have classes within classes.  This allows for many
  neat features, most importantly, classes can function as namespaces.</blurb>
-<example fontsize="1.2em" filename="slides/advphp/classclass.php"/>
+<example fontsize="1.2em" filename="classclass.php"/>
 <blurb title="Constants">Classes may now contain constants</blurb>
 <example fontsize="1.2em"><![CDATA[<?php
 class foo {
@@ -56,7 +56,7 @@ $obj = new MyDestructableClass();
 ?>]]>
 </example>
 <blurb title="Exceptions!">The new OO model will support exceptions ala Java</blurb>
-<example fontsize="1.2em" filename="slides/advphp/exceptions.php"/>
+<example fontsize="1.2em" filename="exceptions.php"/>
 
 <blurb title="Object Dereferencing">You can now directly dereference objects 
 returned from functions.</blurb>

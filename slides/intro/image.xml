@@ -1,5 +1,5 @@
 <slide title="GD 1/2" outputbackground="#5b69a6">
-<example title="Creating a PNG with a TrueType font" filename="slides/intro/txt.php" />
+<example title="Creating a PNG with a TrueType font" filename="txt.php" />
 
 <example><![CDATA[<IMG src="txt.php?text=<?echo urlencode($text)?>">]]></example>
 

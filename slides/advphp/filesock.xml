@@ -4,5 +4,5 @@ The basic way to deal with sockets in php is to use the
 %fsockopen()% function, and then use the standard php 
 file interface.
 </blurb>
-<example filename="slides/advphp/socks1.php" fontsize="1.2em"/>
+<example filename="socks1.php" fontsize="1.2em"/>
 </slide>

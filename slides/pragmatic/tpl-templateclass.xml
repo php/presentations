@@ -7,7 +7,7 @@
  <bullet>Special PostgreSQL and MySQL handling</bullet>
  <bullet>Bug: loop names must be lowercase!</bullet>
 </list>
-<example title="Code" filename="slides/pragmatic/templateclass.php" />
-<example title="Template" filename="slides/pragmatic/templateclass.tpl" type="system" />
-<example title="Output" filename="slides/pragmatic/templateclass.php" hide="1" result="1" />
+<example title="Code" filename="templateclass.php" />
+<example title="Template" filename="templateclass.tpl" type="system" />
+<example title="Output" filename="templateclass.php" hide="1" result="1" />
 </slide>

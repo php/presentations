@@ -85,6 +85,6 @@ We now use PHP's xslt functions to apply the stylesheet to the XML:
  xslt_free($p);
 ?>]]></example>
 
-<example hide="1" title="Here is the result" result="1" type="iframe" filename="slides/intro/fm.html"/>
+<example hide="1" title="Here is the result" result="1" type="iframe" filename="fm.html"/>
 
 </slide>
