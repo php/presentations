@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>The WebDAV base class</title>
+
+ <blurb title="The abstract %HTTP_WebDAV_Server% base class">
+  The actual PHP framework for writing a customized WebDAV
+  server is implemented as an abstract base class.
+ </blurb>
+ <blurb>
+  The class already takes care of most of the protocol specific
+  stuff like:
+ </blurb>
+ <list>
+  <li> HTTP header parsing </li>
+  <li> XML parsing and generation </li>
+  <li> authentication </li>
+  <li> type conversions </li>
+  <li> status codes </li>
+  <li> lock checks </li>
+  <li> the %OPTIONS% reply </li>
+  <li> partial %GET% and %PUT% requests </li>
+  <li> known client 'issues' </li>
+  <li> ... </li>
+ </list>
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>What is WebDAV?</title>
+ <list>
+  <li> *Web-based Distributed Authoring and Versioning* </li>
+  <li> Goal: enable *interoperability* of tools for distributed web authoring </li>
+  <li> Turns the web into a *writable* medium  </li>
+  <li> Applies to all kinds of content - not just HTML and images  </li>
+  <li> Based on extensions to HTTP  </li>
+  <li> Uses XML for properties, control, status  </li>
+  <li> RFC 2518 (Core) and RFC 3253 (DeltaV) </li>
+ </list>
+</slide>

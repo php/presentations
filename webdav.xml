@@ -1,0 +1,26 @@
+<presentation>
+ <title>WebDAV server implementation with Apache and PHP</title>
+ <event>ApacheCon US 2003</event>
+ <location>Las Vegas, NV</location>
+ <date>Nov 18, 2003</date>
+ <speaker>Hartmut Holzgraefe</speaker>
+ <navmode>html</navmode>
+ <basefontsize>12pt</basefontsize>
+ <topic>WebDAV</topic>
+ <slide>slides/webdav/what_is_webdav.xml</slide>
+ <slide>slides/webdav/how_does_it_work.xml</slide>
+ <slide>slides/webdav/sample_request.xml</slide>
+
+ <slide>slides/webdav/why_php.xml</slide>
+ <slide>slides/webdav/baseclass.xml</slide>
+ <slide>slides/webdav/extend_class.xml</slide>
+ <slide>slides/webdav/webdav_levels.xml</slide>
+
+ <slide>slides/webdav/GET_1.xml</slide>
+ <slide>slides/webdav/GET_2.xml</slide>
+
+ <slide>slides/webdav/PUT_1.xml</slide>
+ <slide>slides/webdav/PUT_2.xml</slide>
+ <slide>slides/webdav/PUT_3.xml</slide>
+
+</presentation>

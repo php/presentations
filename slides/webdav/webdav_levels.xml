@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>WebDAV conformance levels</title>
+
+ <blurb title="For a minimal Server">
+  you only need to implement %GET()%, %PUT()% and %PROPFIND()%.
+  Such a minimal server is not at all compliant to the sepcs
+  but may already work with some clients.
+ </blurb>
+
+ <blurb title="For a DAV level 1 compliant server">
+  you also need %COPY()%, %MOVE()%, %DELETE()% and %PROPPATCH()%.
+ </blurb>
+
+ <blurb title="A DAV level 2 complient server">
+  has to implement locking, so you also need %LOCK()%, %UNLOCK()%
+  and %CHECKLOCK()%.
+ </blurb>
+
+ <blurb title="A versioning server">
+  as specified in RFC 3253 is beyond the current scope 
+  of the this PHP package.
+ </blurb>
+</slide>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Why PHP?</title>
+
+ <list title="Why PHP? Why not just use Apache %mod_dav%?">  
+  <li> no additional binaries needed, just pure PHP code </li>
+  <li> not necessarily bound to a single server or API </li> 
+  <li> easy to extend </li>
+  <li> all needed bits included (XML parser, HTTP header and content access ...)  </li>
+ </list>
+</slide>

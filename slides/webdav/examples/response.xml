@@ -1,0 +1,18 @@
+HTTP/1.1 207 Multi-Status
+Content-Type: text/xml; charset="utf-8"
+Content-Length: ...
+
+<?xml version="1.0" encoding="utf-8" ?>
+<D:multistatus xmlns:D="DAV:">
+ <D:response>
+  <D:href>http://www.foo.bar/container/</D:href>
+   <D:propstat>
+    <D:prop>
+     <D:getcontentlength>12345</getcontentlength>
+    </D:prop>
+    <D:prop xmlns:R="http://www.foo.bar/boxschema/">
+     <R:bigbox>
+      <R:BoxType>Box type A</R:BoxType>
+     </R:bigbox>
+     <R:author>
+...

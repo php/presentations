@@ -1,0 +1,10 @@
+PROPFIND  /container/ HTTP/1.1
+Host: www.foo.bar
+Depth: 1
+Content-Type: text/xml; charset="utf-8"
+Content-Length: ...
+
+<?xml version="1.0" ?>
+<D:propfind xmlns:D="DAV:">
+  <D:allprop/>
+</D:propfind>

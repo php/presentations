@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Storing content with %PUT()%</title>
+ <blurb>
+  The HTTP %PUT% request method is used to write data to a resource on the server.
+  The %PUT()% method is called by the base class with the following elements of
+  its parameter array filled:
+ </blurb>
+ <list> 
+  <li>'%path%': the resource the received data should be put into</li>
+  <li>'%content_length%': the number of bytes transfered</li>
+  <li>'%content_type%': the content type of the data transfered</li>
+  <li>'%stream%': a PHP stream you can read the actual data from</li>
+  <li>'%ranges%': an array of byte range specifications to be written on partial requests</li>
+ </list>
+ <blurb>
+  As with the %GET()% method you may either handle a %PUT% request yourself or just return
+  a writable stream and have the base class write to it.
+ </blurb>
+</slide>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Extending the base class</title>
+ <blurb>
+  Extending the base class requires that you add
+  methods to it that map to WebDAV specific 
+  request methods. These methods receive and return
+  all relevant information in the form of PHP arrays.
+  You do not have to deal with XML and header parsing 
+  / generation as this is already taken care of by
+  the baseclass.
+ </blurb>
+
+ <list title="Possible methods">
+  <li>%GET()%</li>
+  <li>%PUT()%</li>
+  <li>%COPY()%</li>
+  <li>%MOVE()%</li>
+  <li>%DELETE()%</li>
+  <li>%PROPFIND()%</li>
+  <li>%PROPPATCH()%</li>
+  <li>%LOCK()%</li>
+  <li>%UNLOCK()%</li>
+  <li>%CHECKLOCK()%</li>
+  <li>%CHECKAUTH()%</li>
+ </list>
+</slide>

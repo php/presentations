@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>A sample request</title>
+  <example fontsize="1em" 
+	title="Request all metadata for a directory and its contents" 
+	filename="examples/request.xml"/>
+
+  <example fontsize="1em" 
+	title="Shortened response" 
+	filename="examples/response.xml"/>
+
+</slide>
+
+

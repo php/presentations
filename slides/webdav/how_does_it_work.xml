@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>How does it work?</title>
+ <list>
+  <li> Layered on HTTP/1.1 using its extension facilities </li>
+  <li> New methods, for example: %COPY%, %MKCOL%, %PROPFIND%, %CHECKOUT% </li>
+  <li> New headers </li>
+  <li> Some slight changes to existing methods semantics </li>
+  <li> RFC 2518 ("core"): pretty straight-forward </li>
+  <li> RFC 3253 (versioning): complex </li>
+ </list>
+</slide>

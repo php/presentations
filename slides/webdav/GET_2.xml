@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>%GET()% (cont.)</title>
+ <blurb>
+  As an alternative you may just return a readable PHP stream
+  together with size and modification time information from
+  the %GET()% method. By doing so you do not have to deal
+  with HTTP header generation yourself and get support for
+  partial %GET% requests without taking further action as
+  an additional benefit.
+ </blurb>
+ <example fontsize="1em" filename="examples/GET2.php"/>
+ <blurb>
+  Note that no further error checking is needed on calling %fopen()% 
+  here. The base class will take appropriate action if
+  the returned stream is not a PHP resource or not readable.
+ </blurb>
+</slide>

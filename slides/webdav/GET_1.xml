@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Getting content with %GET()%</title>
+ <blurb>
+  A WebDAV %GET% request can be handled similar to a normal
+  HTTP %GET% request. Just make sure that you always set
+  appropriate %Content-Length:% and %Last-Modified:% headers
+  before returning the actual content.
+ </blurb>
+ <blurb>
+  The path of the requested resource is passed to %GET()% 
+  in the parameter element '%path%':
+ </blurb>
+ <example filename="examples/GET1.php" fontsize="1em"/>
+</slide>
