@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <presentation
     jskeyboard="1"
-    template="php"
+    template="php2"
     logo1="images/animated_elephant.gif"
+    navbarheight="3em"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    titlesize="2em"
     navsize="1.4em">
 <title>State of the Elephant</title>
 <topic>PHP</topic>
