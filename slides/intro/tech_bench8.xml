@@ -1,0 +1,40 @@
+<slide title="String Manip to C">
+
+<example title="Original"><![CDATA[<?php
+foreach($parts as $part) {
+    $new[] = strtoupper(substr($part,0,2)).substr($part,2);
+}
+?>]]></example>
+
+<example title="myupper()" fontsize="1.8em"><![CDATA[<?php
+foreach($parts as $part) {
+    $new[] = myupper($part);
+}
+?>]]></example>
+
+<break lines="1" />
+
+<example fontsize="1.5em"><![CDATA[PHP_FUNCTION(myupper)
+{
+    char *str;
+    int strlen;
+
+    if (zend_parse_parameters(ZEND_NUM_ARGS(), "s", &str, &strlen) == FAILURE)
+        return;
+
+    str[0] = toupper(str[0]);
+    str[1] = toupper(str[1]);
+    RETURN_STRINGL(str,strlen,1);
+}]]></example>
+
+<example type="shell" title="myupper()" fontsize="1.5em">
+5000 fetches, 5 max parallel, 4.9e+07 bytes, in 26.5051 seconds
+9800 mean bytes/connection
+188.643 fetches/sec, 1.8487e+06 bytes/sec
+msecs/connect: 0.22962 mean, 0.991 max, 0.166 min
+msecs/first-response: 24.9912 mean, 749.49 max, 4.939 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+</slide>

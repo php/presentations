@@ -16,7 +16,7 @@ template API.
 
 <example title="Poll Template"><![CDATA[<?php
 start_poll(1);
-$os = array("FreeBSD", "Linux","OSX", "Windows", "Other");
+$os = array("FreeBSD","Linux","OSX","Windows","Other");
 ?>
 <p class="purpose">
 Please answer a couple of questions for us.

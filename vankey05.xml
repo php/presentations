@@ -1,0 +1,94 @@
+<presentation 
+	template="php2" 
+	navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+60 Minutes
+
+PHP has become amazingly popular due to its simple pragmatic approach
+to solving the web problem. Sometimes we forget some of the complexities
+that are inherent to any web application. In this talk Rasmus will give
+a brief overview of the new unified XML implementation in PHP5 which
+brings PHP's pragmatism to XML handling followed by a step-by-step
+approach to designing, implementing, securing and optimizing your PHP code.
+-->
+<topic>PHP</topic>
+<title>Pragmatic PHP</title>
+<event>PHP West</event>
+<location>Vancouver</location>
+<date>January 14, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/vankey05</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/problem_solving.xml</slide>
+<slide>slides/intro/php5q2.xml</slide>
+
+<slide>slides/intro/worries.xml</slide>
+<slide>slides/intro/overflows.xml</slide>
+<slide>slides/intro/dumb.xml</slide>
+<slide>slides/intro/input_filter.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<!--
+<slide>slides/intro/conf.xml</slide>
+-->
+
+<!--
+Security Concerns
+Input Filtering Solution?
+Performance Considerations  - handling constants and server variables
+                            - prefer-non-pic
+                            - syscalls
+-->
+<slide>slides/intro/tortech_goals.xml</slide>
+
+<chapter title="Design">
+  <slide>slides/intro/design.xml</slide>
+  <slide>slides/intro/urlapi.xml</slide>
+  <slide>slides/intro/pi.xml</slide>
+<!--
+  <slide>slides/intro/errdoc.xml</slide>
+-->
+  <slide>slides/intro/file_layout.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+</chapter>
+
+<chapter title="Implement">
+  <slide>slides/intro/poll1.xml</slide>
+  <slide>slides/intro/poll2.xml</slide>
+  <slide>slides/intro/poll3.xml</slide>
+</chapter>
+
+<chapter title="Performance">
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/intro/new_apc.xml</slide>
+  <slide>slides/intro/php_opcode_caches3.xml</slide>
+  <slide>slides/intro/tech_bench1.xml</slide>
+  <slide>slides/intro/tech_bench1a.xml</slide>
+  <slide>slides/intro/tech_bench2.xml</slide>
+  <slide>slides/intro/new_bench3.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/new_apc.xml</slide>
+  <slide>slides/intro/tech_benchapc1.xml</slide>
+  <slide>slides/intro/tech_benchminit.xml</slide>
+  <slide>slides/intro/tech_bench5.xml</slide>
+  <slide>slides/intro/tech_bench6.xml</slide>
+  <slide>slides/intro/tech_bench7.xml</slide>
+  <slide>slides/intro/tech_bench8.xml</slide>
+  <slide>slides/intro/tech_bench4.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+  <slide>slides/intro/repl3.xml</slide>
+  <slide>slides/intro/stop.xml</slide>
+</chapter>
+
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

@@ -1,0 +1,34 @@
+<slide title="PHP Config">
+
+<blurb>
+A little-known PHP build option lets you have multiple .ini files which can be very
+handy.
+</blurb>
+
+<example><![CDATA[--with-config-file-scan-dir=/etc/php]]></example>
+
+<example title="Some Suggestions" fontsize="1.8em"><![CDATA[include_path = /usr/local/lib/php:.
+display_errors = Off
+max_execution_time = 30
+post_max_size = 8M
+file_uploads = Off
+safe_mode = Off
+enable_dl = Off
+display_startup_errors = Off
+log_errors = On
+error_reporting = E_ALL
+html_errors = Off
+track_errors = Off
+magic_quotes_gpc = Off
+magic_quotes_runtime = Off
+magic_quotes_sybase = Off
+expose_php = Off
+allow_url_fopen = Off
+register_globals = Off
+register_argc_argv = On
+variables_order = "GPC"
+gpc_order = "GPC"
+extension = input_filter.so
+]]></example>
+
+</slide>

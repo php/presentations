@@ -1,0 +1,234 @@
+<slide title="Benchmarking">
+
+<blurb>
+Let's have a look at how we might benchmark and subsequently tune a PHP server.  
+I use %http_load% from acme.com to do the actual testing.
+</blurb>
+
+<example title="This is our benchmark script" fontsize="1.5em"><![CDATA[
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>Simple PHP Benchmark</title></head>
+<body>
+<h1>String Manipulation</h1>
+<p>
+<?php
+$str = 'This is just a silly benchmark that doesn\'t do anything useful.';
+$str .= 'Here we are just uppercasing the first two characters of every word ';
+$str .= 'in this long string';
+$parts = explode(' ',$str);
+foreach($parts as $part) {
+	$new[] = strtoupper(substr($part,0,2)).substr($part,2);
+}
+echo implode(' ',$new);
+?>
+</p>
+<p>
+<h1>Including 3 files</h1>
+<p>
+<?php
+@chdir("presentations/slides/yahoo/tb");
+include './bench_config.inc';
+include './bench_include1.inc';
+include './bench_include2.inc';
+?>
+</p>
+<h1>for-loop and calling a function many times</h1>
+<p>
+<?php
+$a = range(1,200);
+$b = range(200,1);
+for($i=0; $i<200; $i++) {
+	echo foo($a[$i],$b[$i]);
+}
+?>
+</p>
+<h1>Define and Instantiate an object and call some methods</h2>
+<p>
+<?php
+class test_class {
+	var $test_var1;
+	var $test_var2;
+	var $test_var3;
+	var $test_var4;
+
+	function test_class() {
+		$this->test_var1 = 111;
+		$this->test_var2 = 222;
+		$this->test_var3 = 333;
+		$this->test_var4 = 444;
+	}
+	function get_props_sum() {
+		return $this->test_var1 + $this->test_var2 + $this->test_var3 + $this->test_var4;
+	}
+	function set_var1($value) {
+		$this->test_var1 = $value;
+		echo "test_var1 property set to $value<br />\n";
+		return true;
+	}
+	function set_var2($value) {
+		$this->test_var2 = $value;
+		echo "test_var2 property set to $value<br />\n";
+		return true;
+	}
+	function set_var3($value) {
+		$this->test_var3 = $value;
+		echo "test_var3 property set to $value<br />\n";
+		return true;
+	}
+	function set_var4($value) {
+		$this->test_var4 = $value;
+		echo "test_var4 property set to $value<br />\n";
+		return true;
+	}
+	function disp() {
+		echo "<pre>";
+		print_r($this);
+		echo "</pre>";
+	}
+}
+
+$obj = new test_class();
+echo $obj->get_props_sum();
+$obj->set_var1('test1');
+$obj->set_var2(123);
+$obj->set_var3($a);  /* Array from previous test */
+$obj->set_var4(array(1,2,3,4,5,6,7,8,9));
+$obj->disp();
+?>
+<h1>And finally a bit of XML and XSLT</h1>
+<?php
+$xml = domxml_open_file('menu.xml');
+$xsl = domxml_xslt_stylesheet_file('menu.xsl');
+$out = $xsl->process($xml);
+echo $out->dump_mem();
+?>
+</p>
+</body>
+</html>]]></example>
+
+<example title="bench_include1.inc" fontsize="1.5em"><![CDATA[
+<h1>Some defines</h1>
+<?php
+define("MYMOD_VERSION","1.234-alpha");
+for($i=0; $i<1000; $i++) {
+	define(sprintf("MY_CONST_%04d",$i),$i);
+}
+echo MYMOD_VERSION;
+echo MY_CONST_0001;
+echo MY_CONST_0002;
+echo MY_CONST_0003;
+echo MY_CONST_0004;
+echo MY_CONST_0005;
+echo MY_CONST_0006;
+echo MY_CONST_0007;
+echo MY_CONST_0008;
+echo MY_CONST_0009;
+echo MY_CONST_0010;
+echo MY_CONST_0011;
+echo MY_CONST_0012;
+echo MY_CONST_0012;
+echo MY_CONST_0013;
+echo MY_CONST_0014;
+echo MY_CONST_0015;
+echo MY_CONST_0016;
+echo MY_CONST_0017;
+echo MY_CONST_0018;
+echo MY_CONST_0019;
+echo MY_CONST_0020;
+?>]]></example>
+
+<example title="bench_include1.inc" fontsize="1.5em"><![CDATA[<?php
+function foo($arg1, $arg2) {
+    if($arg1>$arg2) return $arg1;
+    elseif($arg1<$arg2) return $arg2;
+    else return 'xxx';
+}
+?>]]></example>
+
+<example title="bench_include2.inc" fontsize="1.5em"><![CDATA[
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+This is just a bunch of plain text in an include file.<br />
+]]></example>
+
+<example title="menu.xml" fontsize="1.5em" type="xml"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<breakfast_menu>
+ <food>
+  <name>Belgian Waffles</name>
+  <price>$5.95</price>
+  <description>two of our famous Belgian Waffles with 
+               plenty of real maple syrup</description>
+  <calories>650</calories>
+ </food>
+ <food>
+  <name>Strawberry Belgian Waffles</name>
+  <price>$7.95</price>
+  <description>light Belgian waffles covered with strawberries
+               and whipped cream</description>
+  <calories>900</calories>
+ </food>
+ <food>
+  <name>Berry-Berry Belgian Waffles</name>
+  <price>$8.95</price>
+  <description>light Belgian waffles covered with an assortment of
+               fresh berries and whipped cream</description>
+  <calories>900</calories>
+ </food>
+ <food>
+  <name>French Toast</name>
+  <price>$4.50</price>
+  <description>thick slices made from our homemade sourdough bread</description>
+  <calories>600</calories>
+ </food>
+ <food>
+  <name>Homestyle Breakfast</name>
+  <price>$6.95</price>
+  <description>two eggs, bacon or sausage, toast, and 
+               our ever-popular hash browns</description>
+  <calories>950</calories>
+ </food>
+</breakfast_menu>
+]]></example>
+
+<example title="menu.xsl" fontsize="1.5em" type="xsl"><![CDATA[<xsl:stylesheet version="1.0" 
+              xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                  xmlns="http://www.w3.org/TR/xhtml1/strict">
+  <xsl:template match="/">
+    <xsl:for-each select="breakfast_menu/food">
+      <div style="background-color:teal;color:white;padding:4px">
+        <span style="font-weight:bold;color:white">
+          <xsl:value-of select="name"/>
+        </span>
+        - <xsl:value-of select="price"/>
+      </div>
+      <div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
+        <xsl:value-of select="description"/>
+        <span style="font-style:italic">
+          (<xsl:value-of select="calories"/> calories per serving)
+        </span>
+      </div>
+    </xsl:for-each>
+  </xsl:template>
+</xsl:stylesheet>
+]]></example>
+</slide>

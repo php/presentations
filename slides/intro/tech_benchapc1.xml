@@ -1,0 +1,33 @@
+<slide title="Benchmarking Results">
+
+<example type="shell" title="After adding APC" fontsize="1.5em">
+5000 fetches, 5 max parallel, 5.1645e+07 bytes, in 66.1261 seconds
+10329 mean bytes/connection
+*75.6131* fetches/sec, 781008 bytes/sec
+msecs/connect: 0.21676 mean, 0.939 max, 0.174 min
+msecs/first-response: 64.1843 mean, 1074.19 max, 12.774 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+<example title="Using apc_load_constants()"><![CDATA[<?php
+if(!apc_load_constants('bench_constants')) {
+    $constants = array("MYMOD_VERSION"=>"1.234-alpha");
+    for($i=0; $i<1000; $i++) {
+        $constants[sprintf("MY_CONST_%04d", $i)] = $i;
+    }
+    apc_define_constants('bench_constants', $constants);
+}
+?>]]></example>
+
+<example type="shell" title="With apc_load_constants()" fontsize="1.5em">
+5000 fetches, 5 max parallel, 5.1645e+07 bytes, in 46.0241 seconds
+10329 mean bytes/connection
+*108.639* fetches/sec, 1.12213e+06 bytes/sec
+msecs/connect: 0.225471 mean, 0.938 max, 0.174 min
+msecs/first-response: 44.1477 mean, 805.834 max, 8.793 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Benchmarking Results">
+<break lines="5" />
+
+<example type="shell">
+  67 requests/sec         Base Optimized PHP 4.3
+  75 requests/sec         Add APC
+ 108 requests/sec         APC+apc_load_constants()
+ 139 requests/sec         APC+MINIT Constants
+ 153 requests/sec         APC+MINIT+FastXSL
+ 186 requests/sec         APC+MINIT+Cheat
+ 188 requests/sec         APC+MINIT+Cheat+OO in C
+ 188 requests/sec         APC+MINIT+Cheat+OO in C+myupper
+</example>
+
+<break lines="2" />
+
+<blurb fontsize="8em" align="center">
+STOP!
+</blurb>
+</slide>

@@ -1,0 +1,31 @@
+<slide title="MINIT">
+
+<blurb>apc_load_constants() is ok, but writing your own simple PHP
+extension and using the Module Init (MINIT) hook is much better</blurb>
+
+<example title="MINIT Constants" fontsize="1.5em"><![CDATA[PHP_MINIT_FUNCTION(mymod)
+{
+    int i;
+    char s[] = "MY_CONST_XXXX";
+    char num[] = "0000";
+
+    REGISTER_STRING_CONSTANT("MYMOD_VERSION", "1.234-alpha", 
+	                         CONST_CS | CONST_PERSISTENT);
+    for(i=0; i<1000; i++) {
+        sprintf(s+9,"%04d",i);
+        REGISTER_LONG_CONSTANT(s, i, CONST_CS | CONST_PERSISTENT);
+    }
+    return SUCCESS;
+}?>]]></example>
+
+<example type="shell" title="Using MINIT Instead" fontsize="1.5em">
+5000 fetches, 5 max parallel, 5.1645e+07 bytes, in 35.9252 seconds
+10329 mean bytes/connection
+*139.178* fetches/sec, 1.43757e+06 bytes/sec
+msecs/connect: 0.234849 mean, 7.323 max, 0.174 min
+msecs/first-response: 34.366 mean, 706.119 max, 6.764 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+</slide>

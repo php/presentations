@@ -1,0 +1,103 @@
+<slide title="Direct Attacks">
+
+<blurb title="Overflows" />
+<blurb>
+It is a bit difficult to talk about buffer overflows because we
+tend to fix them as soon as we discover them.  But some overflows
+we have hit in the past include problems in:
+</blurb>
+
+<list>
+<bullet>serialize/unserialize</bullet>
+<bullet>pack/unpack</bullet>
+<bullet>jpg algorithm</bullet>
+<bullet>exif header field overflows</bullet>
+<bullet>static buffer in getMimeHeaders() in ycore++</bullet>
+</list>
+
+<blurb>
+There is also a current issue in most libc realpath() calls that is
+troublesome.
+</blurb>
+
+<example title="realpath man page" fontsize="1.4em"><![CDATA[REALPATH(3)            FreeBSD Library Functions Manual            REALPATH(3)
+
+NAME
+     realpath - returns the canonicalized absolute pathname
+
+LIBRARY
+     Standard C Library (libc, -lc)
+
+SYNOPSIS
+     #include <sys/param.h>
+     #include <stdlib.h>
+
+     char *
+     realpath(const char *pathname, char resolved_path[MAXPATHLEN]);
+
+DESCRIPTION
+     The realpath() function resolves all symbolic links, extra ``/'' charac-
+     ters and references to /./ and /../ in pathname, and copies the resulting
+     absolute pathname into the memory referenced by resolved_path.  The
+     resolved_path argument must refer to a buffer capable of storing at least
+     MAXPATHLEN characters.
+
+     The realpath() function will resolve both absolute and relative paths and
+     return the absolute pathname corresponding to pathname.  All but the last
+     component of pathname must exist when realpath() is called.
+
+RETURN VALUES
+     The realpath() function returns resolved_path on success.  If an error
+     occurs, realpath() returns NULL, and resolved_path contains the pathname
+     which caused the problem.
+
+ERRORS
+     The function realpath() may fail and set the external variable errno for
+     any of the errors specified for the library functions chdir(2), close(2),
+     fchdir(2), lstat(2), open(2), readlink(2) and getcwd(3).
+
+CAVEATS
+     This implementation of realpath() differs slightly from the Solaris
+     implementation.  The 4.4BSD version always returns absolute pathnames,
+     whereas the Solaris implementation will, under certain circumstances,
+     return a relative resolved_path when given a relative pathname.
+
+SEE ALSO
+     getcwd(3)
+
+HISTORY
+     The realpath() function call first appeared in 4.4BSD.
+]]></example>
+
+<example title="Imagine this C code" fontsize="1.8em"><![CDATA[ #define DOCROOT "/home/y/share/htdocs"
+ #define SCRIPT  "my_script"
+
+ int len = sizeof(DOCROOT) 
+           + sizeof(SCRIPT);
+           + strlen(user_input);
+
+ char *path = (char *)malloc(len+1);
+ char safe_path[MAXPATHLEN];
+
+ snprintf(path, len, "%s/%s/%s", DOCROOT, user_input, SCRIPT);
+ if(realpath(path, safe_path)) {
+   DIR *dir = opendir(safe_path);
+   ...
+ }
+]]></example>
+
+<example title="Problem code in FreeBSD realpath.c"><![CDATA[...
+resolved_len = strlcat(resolved, next_token, PATH_MAX);
+if (resolved_len >= PATH_MAX) {
+    errno = ENAMETOOLONG;
+    return (NULL);
+}
+...
+]]></example>
+
+<blurb>
+It makes sure we never get a string back longer than PATH_MAX, but
+the silent strlcat truncation of the tokenized source path is a big problem!
+</blurb>
+
+</slide>

@@ -1,0 +1,27 @@
+<slide title="Speed Up XSLT">
+
+<example title="Replace DomXML"><![CDATA[<?php
+$xml = domxml_open_file('menu.xml');
+$xsl = domxml_xslt_stylesheet_file('menu.xsl');
+$out = $xsl->process($xml);
+echo $out->dump_mem();
+?>]]></example>
+
+<example title="With FastXSL"><![CDATA[<?php
+$xml = fastxsl_xml_parsefile('menu.xml');
+$res = fastxsl_prmcache_transform('menu.xsl',$xml);
+echo fastxsl_prmcache_tostring('menu.xsl',$res);
+?>]]></example>
+
+<break lines="1" />
+
+<example type="shell" title="FastXSL" fontsize="1.5em">
+5000 fetches, 5 max parallel, 5.16e+07 bytes, in 32.6279 seconds
+10320 mean bytes/connection
+*153.243* fetches/sec, 1.58147e+06 bytes/sec
+msecs/connect: 0.230745 mean, 1.294 max, 0.174 min
+msecs/first-response: 30.8827 mean, 845.914 max, 6.218 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+</slide>

@@ -1,0 +1,24 @@
+<slide title="Direct Attacks">
+
+<blurb title="Dumb things" />
+<blurb>
+Don't do dumb things!
+</blurb>
+
+<example><![CDATA[<?php
+    system($user_data);
+?>]]></example>
+
+<example><![CDATA[<?php
+    include "$path/$user_data";
+?>]]></example>
+
+<example><![CDATA[<?php
+    eval($user_data);
+?>]]></example>
+
+<blurb title="Others">
+preg_replace with /e option, exec(), popen(), passthru, and backticks ``
+</blurb>
+
+</slide>

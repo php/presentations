@@ -1,11 +1,11 @@
 <slide title="Benchmarking Results">
 
 <example type="shell" title="An http_load run" fontsize="1.5em">
-5000 fetches, 5 max parallel, 5.145e+07 bytes, in 15.4981 seconds
-10290 mean bytes/connection
-322.619 fetches/sec, 3.31975e+06 bytes/sec
-msecs/connect: 1.24853 mean, 13.075 max, 0.034 min
-msecs/first-response: 10.0517 mean, 2406.17 max, 2.888 min
+5000 fetches, 5 max parallel, 5.1645e+07 bytes, in 74.0229 seconds
+10329 mean bytes/connection
+*67.5466* fetches/sec, 697689 bytes/sec
+msecs/connect: 0.219601 mean, 1.106 max, 0.171 min
+msecs/first-response: 72.1792 mean, 1209.1 max, 14.354 min
 HTTP response codes:
   code 200 -- 5000
 </example>
@@ -15,21 +15,19 @@ raw numbers and have a look at what your server is actually doing.  Use %vmstat%
 </blurb>
 
 <example type="shell" title="Base PHP Load" fontsize="1.5em" marginleft="1em" marginright="0em">
-procs -----------memory---------- ---swap-- -----io---- --system-- ----cpu----
- r  b   swpd   free   buff  cache   si   so    bi    bo   in    cs us sy id wa
- 3  0      0 695840  17452 150176    0    0     0     0 1005  2001 92  8  0  0
- 2  0      0 694936  17452 150212    0    0     0     0 1014  2013 94  6  0  0
- 3  0      0 693848  17452 150248    0    0     0     0 1004  1965 92  8  0  0
- 4  0      0 691840  17452 150284    0    0     0     0 1015  1963 92  8  0  0
- 5  0      0 691712  17452 150320    0    0     0     0 1008  1956 91  9  0  0
- 6  0      0 691648  17452 150356    0    0     0     0 1011  1971 92  8  0  0
- 1  0      0 691432  17452 150392    0    0     0     0 1003  1948 92  8  0  0
- 1  0      0 691368  17452 150424    0    0     0     0 1013  1956 90 10  0  0
- 1  0      0 691240  17452 150460    0    0     0     0 1003  1936 94  6  0  0
- 1  0      0 691176  17452 150496    0    0     0     0 1015  1953 92  8  0  0
- 2  0      0 691112  17452 150532    0    0     0     0 1007  1954 92  8  0  0
- 3  0      0 691048  17452 150568    0    0     0     0 1012  1961 92  8  0  0
- 1  0      0 690920  17452 150604    0    0     0     0 1007  1944 92  8  0  0
+6:33am riddler:~> vmstat 1
+ procs      memory      page                    disks     faults      cpu
+ r b w     avm    fre  flt  re  pi  po  fr  sr ad0 ad2   in   sy  cs us sy id
+ 5 1 0  175880  59292  491   0   0   0 408   0   0   0  858 7725 128 90 10  0
+ 5 1 0  175844  59296  481   0   0   0 414   0   0   6  869 7714 133 85 15  0
+ 5 1 0  175880  59256  492   0   0   0 414   0   0   0  873 7798 114 82 18  0
+ 5 1 0  175880  59248  472   0   0   0 402   0   2   1  848 7599 146 89 11  0
+ 5 1 0  175880  59232  479   0   0   0 408   0   0   0  858 7649 130 89 11  0
+ 5 1 0  176232  59244  479   0   0   0 414   0   1   0  863 7673 144 82 18  0
+ 5 1 0  171444  59256  790   0   0   0 672   0   3   0  826 7770 158 91  9  0
+ 5 1 0  171480  59216  478   0   0   0 402   0   0   0  843 7626 139 89 11  0
+ 5 1 0  171444  59224  480   0   0   0 414   0   0   0  862 7673 124 90 10  0
+ 5 1 0  171516  59168  491   0   0   0 408   0   0   0  846 7699 147 87 13  0
 </example>
 
 <blurb>

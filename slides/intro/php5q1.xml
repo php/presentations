@@ -1,0 +1,46 @@
+<slide title="PHP5">
+
+<example title="Objects Are References" result="0"><![CDATA[<?php
+$a = new my_class;
+$b = clone $a;
+?>]]></example>
+
+<example title="New constructor/destructor naming" result="0"><![CDATA[<?php
+class my_class {
+  function __construct() {
+    echo "Constructor";
+  }
+  function __destruct() {
+    echo "Destructor";
+  }
+}
+?>]]></example>
+
+<example title="PPP" result="0"><![CDATA[<?php
+class my_class {
+  public $a;
+  protected $b;
+  private $c;
+}
+?>]]></example>
+
+<example title="Overloaded Properties and Methods" result="0"><![CDATA[<?php
+class my_class {
+  function __set($name, $value) { }
+  function __get($name) { }
+  function __call($name, $args) { }
+}
+?>]]></example>
+
+<example title="Exceptions" result="0"><![CDATA[<?php
+try {
+  mysql_connect('localhost');
+  mysql_select_db('game');
+  $r = mysql_query('SELECT * FROM news');
+} catch (Exception $e) {
+  /* Do recovery */
+  exit();
+}
+?>]]></example>
+
+</slide>

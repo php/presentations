@@ -1,0 +1,101 @@
+<slide title="Move OO to Extension">
+
+<example title="test_class"><![CDATA[<?php
+class test_class {
+    var $test_var1;
+    var $test_var2;
+    var $test_var3;
+    var $test_var4;
+
+    function test_class() {
+        $this->test_var1 = 111;
+        $this->test_var2 = 222;
+        $this->test_var3 = 333;
+        $this->test_var4 = 444;
+    }
+    function get_props_sum() {
+        return $this->test_var1 + $this->test_var2 +
+               $this->test_var3 + $this->test_var4;
+    }
+    ...
+?>]]></example>
+
+<example title="After" fontsize="1.8em"><![CDATA[<?php
+class my_test_class extends test_class {
+    function set_var1($value) {
+        $this->test_var1 = $value;
+        echo "test_var1 property set to $value<br />\n";
+        return true;
+    }
+    ...     
+?>]]></example>
+
+<break lines="1" />
+
+<example fontsize="1.5em"><![CDATA[static zend_class_entry *test_class_entry_ptr;
+
+static zend_function_entry php_test_class_functions[] = {
+    PHP_FE(test_class, NULL)
+    PHP_FE(get_props_sum,    NULL)
+    {NULL, NULL, NULL}
+};
+
+PHP_MINIT_FUNCTION(mymod)
+{
+    int i;
+    char s[] = "MY_CONST_XXXX";
+    char num[] = "0000";
+    zend_class_entry test_class_entry;
+
+    INIT_CLASS_ENTRY(test_class_entry, "test_class", php_test_class_functions);
+    test_class_entry_ptr = zend_register_internal_class(&test_class_entry);
+
+    REGISTER_STRING_CONSTANT("MYMOD_VERSION", "1.234-alpha", 
+	                         CONST_CS | CONST_PERSISTENT);
+    for(i=0; i<1000; i++) {
+        sprintf(s+9,"%04d",i);
+        REGISTER_LONG_CONSTANT(s, i, CONST_CS | CONST_PERSISTENT);
+    }
+    return SUCCESS;
+}
+
+PHP_FUNCTION(test_class)
+{
+    add_property_long(this_ptr, "test_var1", 111);
+    add_property_long(this_ptr, "test_var2", 222);
+    add_property_long(this_ptr, "test_var3", 333);
+    add_property_long(this_ptr, "test_var4", 444);
+}
+
+PHP_FUNCTION(get_props_sum)
+{
+    long sum = 0L;
+    zval **tmp;
+
+    zend_hash_find(HASH_OF(this_ptr), "test_var1", sizeof("test_var1"),
+	               (void **)&tmp);
+    sum += Z_LVAL_PP(tmp);
+    zend_hash_find(HASH_OF(this_ptr), "test_var2", sizeof("test_var2"),
+	               (void **)&tmp);
+    sum += Z_LVAL_PP(tmp);
+    zend_hash_find(HASH_OF(this_ptr), "test_var3", sizeof("test_var3"),
+	               (void **)&tmp);
+    sum += Z_LVAL_PP(tmp);
+    zend_hash_find(HASH_OF(this_ptr), "test_var4", sizeof("test_var4"),
+	               (void **)&tmp);
+    sum += Z_LVAL_PP(tmp);
+
+    RETURN_LONG(sum);
+}]]></example>
+
+<example type="shell" title="test_class in C" fontsize="1.5em">
+5000 fetches, 5 max parallel, 4.9e+07 bytes, in 26.4851 seconds
+9800 mean bytes/connection
+*188.786* fetches/sec, 1.8501e+06 bytes/sec
+msecs/connect: 0.227158 mean, 4.357 max, 0.171 min
+msecs/first-response: 24.9438 mean, 639.423 max, 4.976 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+</slide>

@@ -1,0 +1,61 @@
+<slide title="Cheat">
+
+<blurb>
+And when you can't win the fight fairly, cheat!
+</blurb>
+
+<example title="Who needs XSL anyway?"><![CDATA[<?php
+$xml = domxml_open_file('menu.xml');
+$xsl = domxml_xslt_stylesheet_file('menu.xsl');
+$out = $xsl->process($xml);
+echo $out->dump_mem();
+?>]]></example>
+
+<example title="Cheat!" fontsize="1.8em"><![CDATA[<?php
+$menu = apc_fetch('menu');
+if(!$menu) {
+  $dom = domxml_open_file('menu.xml');
+  $root = $dom->document_element();
+  $node = $root->first_child();
+  $i=0;
+  while($node) {
+    $subnode = $node->first_child();
+    while($subnode) {
+      if(isset($subnode->tagname)) {
+        $menu[$i][$subnode->tagname] = $subnode->get_content();
+      }
+      $subnode = $subnode->next_sibling();
+    }
+    $i++;
+    $node = $node->next_sibling();
+  }
+  apc_store('menu',$menu);
+}
+foreach($menu as $item) {
+echo <<<EOT
+<div style="background-color:teal;color:white;padding:4px">
+  <span style="font-weight:bold;color:white">$item[name]</span>
+  - $item[price]
+</div>
+<div style="margin-left:20px;margin-bottom:1em;font-size:10pt">
+  $item[description]
+  <span style="font-style:italic">($item[calories] calories per serving)</span>
+</div>
+EOT;
+
+}
+?>]]></example>
+
+<break lines="1" />
+
+<example type="shell" title="CheatXSL" fontsize="1.5em">
+5000 fetches, 5 max parallel, 4.8985e+07 bytes, in 26.8186 seconds
+9797 mean bytes/connection
+*186.438* fetches/sec, 1.82653e+06 bytes/sec
+msecs/connect: 0.229313 mean, 3.551 max, 0.175 min
+msecs/first-response: 25.2418 mean, 639.892 max, 5.021 min
+HTTP response codes:
+  code 200 -- 5000
+</example>
+
+</slide>
