@@ -1,6 +1,7 @@
 <presentation
     animate='1'
-    jskeyboard='1'>
+    jskeyboard='1'
+	navmode="flash">
 <title>This Presentation System</title>
 <topic>Presentation System</topic>
 <navmode>html</navmode>

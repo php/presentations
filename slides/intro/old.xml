@@ -2,7 +2,7 @@
 <blurb>
 Handling simple data coming from a form took something like this to do in C:
 </blurb>
-<example fontsize="1.75em"><![CDATA[#include <stdio.h>
+<example fontsize="1.75em" ><![CDATA[#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
