@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Do use PHP!</title>
+
+	<blurb fontsize="5em"> </blurb>
+	<blurb fontsize="5em">but </blurb>
+	<list effect="slide" fontsize="4.5em">
+		<bullet>Use as much static content as possible</bullet>
+		<bullet>Cache dynamic generated content</bullet>
+		<bullet>Use as less database queries as possible</bullet>
+	</list>
+</slide>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Server side caching</title>
+
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Caching dynamic content</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Pregenerating content</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Creating pages on demand</bullet>
+	</list>
+</slide>

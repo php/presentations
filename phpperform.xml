@@ -1,0 +1,46 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#3C5BB4"
+    stylesheet="presentations/slides/phpperform/style.css"
+    navsize="1.4em"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Boosting The Performance&lt;br /&gt;of your PHP Applications</title>
+<event>PHP International Conference 2002</event>
+<location>Frankfurt, Germany</location>
+<date>November 4, 2002</date>
+<speaker>Sterling Hughes &amp; Derick Rethans &lt;br /&gt;</speaker>
+<email>sterling@bumblebury.com / d.rethans@jdimedia.nl</email>
+<slide>slides/phpperform/title.xml</slide>
+<slide>slides/phpperform/intro.xml</slide>
+
+<slide>slides/phpperform/caching.xml</slide>
+<slide>slides/phpperform/static1.xml</slide>
+<slide>slides/phpperform/static2.xml</slide>
+<slide>slides/phpperform/static3.xml</slide>
+<slide>slides/phpperform/static_ex1.xml</slide>
+<slide>slides/phpperform/static_ex2.xml</slide>
+<slide>slides/phpperform/static_procon.xml</slide>
+<slide>slides/phpperform/pregen1.xml</slide>
+<slide>slides/phpperform/pregen_ex1.xml</slide>
+<slide>slides/phpperform/pregen_procon.xml</slide>
+<slide>slides/phpperform/ondemand1.xml</slide>
+<slide>slides/phpperform/ondemand_ex1.xml</slide>
+<slide>slides/phpperform/ondemand_procon.xml</slide>
+
+<slide>slides/phpperform/database1.xml</slide>
+<slide>slides/phpperform/visitation1.xml</slide>
+<slide>slides/phpperform/visitation2.xml</slide>
+<slide>slides/phpperform/visitation3.xml</slide>
+<slide>slides/phpperform/visitation4.xml</slide>
+
+<slide>slides/phpperform/extern.xml</slide>
+<slide>slides/phpperform/extern_apc.xml</slide>
+<slide>slides/phpperform/extern_ioncube.xml</slide>
+<slide>slides/phpperform/extern_zend.xml</slide>
+<slide>slides/phpperform/extern_comparison.xml</slide>
+<slide>slides/phpperform/extern_benchmark.xml</slide>
+
+<slide>slides/phpperform/extern_srm.xml</slide>
+</presentation>
