@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em" title="Running Testsuite">
+
+	<example fontsize="0.8em"><![CDATA[<?php
+class CropString {
+	function cropString($str, $length)
+	{
+		if (strlen($str) > $length - 3) {
+			$lines = split("\n", wordwrap($str, $length - 3));
+			$this->result = $lines[0]. "...";
+		} else {
+			$this->result = $str;
+		}
+	}
+?>]]></example>
+
+	<example fontsize="0.8em"><![CDATA[<?php
+	require_once 'crop_string.class.php';
+	require_once 'PHPUnit.php';
+
+	class CropStringTest extends PHPUnit_TestCase {
+		function CropStringTest($name) {
+			PHPUnit_TestCase::PHPUnit_TestCase($name);
+		}
+
+		function emptyTest() {
+			$cstring = new CropString('', 1);
+			$this->assertTrue($cstring->result == '');
+		}
+		function fooTest() {
+			$cstring = new CropString('foo', 1);
+			$this->assertTrue($cstring->result == 'foo...');
+		}
+		function helloWorldTest() {
+			$cstring = new CropString('Hello world', 1);
+			$this->assertTrue($cstring->result == 'Hello...');
+		}
+	}
+	$suite = new PHPUnit_TestSuite();
+	$suite->addTest(new CropStringTest('emptyTest'));
+	$suite->addTest(new CropStringTest('fooTest'));
+	$suite->addTest(new CropStringTest('helloWorldTest'));
+	$result = PHPUnit::run($suite);
+	echo $result->toString();
+?>]]></example>
+</slide>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em" title="Testing">
+	<image align="right" filename="monkey_typing.png" />
+
+	<example fontsize="0.7em"><![CDATA[<?php
+	function crop_string ($str, $length)
+	{
+		if (strlen($str) > $length - 3) {
+			$lines = split("\n", wordwrap($str, $length - 3));
+			return $lines[0]. "...";
+		} else {
+			return $str;
+		}
+	}
+?>]]></example>
+
+	<example fontsize="0.7em"><![CDATA[<?php
+	include 'lib.php';
+
+	$tests = array (
+		'crop_string' => array(
+			array('foo...', 'foo', 1),
+			array('foo...', 'foo', 3),
+			array('foo', 'foo', 7),
+			array('', '', 1),
+			array('', '', 7),
+			array('Hello...', 'Hello world', 1),
+			array('Hello...', 'Hello world', 7),
+			array('Hello world', 'Hello world', 17),
+		),
+	);
+	$functions = get_defined_functions();
+	$functions = $functions['user'];
+
+	foreach ($functions as $function) {
+		if (isset($tests[$function])) {
+			$i = 0;
+
+			foreach ($tests[$function] as $test) {
+				$i++;
+				switch (count($test)) {
+					case 2: $res = $function($test[1]); break; 
+					case 3: $res = $function($test[1], $test[2]); break; 
+				}
+
+				if ($res != $test[0]) {
+					echo "FAILED test $function, $i: Expected '{$test[0]}' got '$res'\n";
+				} else {
+					echo "PASSED test $function, $i\n";
+				}
+			}
+		}
+	}
+?>]]></example>
+</slide>

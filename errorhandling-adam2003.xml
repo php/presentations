@@ -36,6 +36,7 @@
 
 <!-- Preventing -->
 <slide>slides/errorhandling/user-input.xml</slide>
+<slide>slides/errorhandling/user-input2.xml</slide>
 <slide>slides/errorhandling/check-return-value.xml</slide>
 
 <!-- Dry theory -->
@@ -45,16 +46,19 @@
 
 <!-- Testing! -->
 <slide>slides/errorhandling/function-lib.xml</slide>
-<slide>slides/errorhandling/test-all-paths1.xml</slide>
-<slide>slides/errorhandling/test-all-paths2.xml</slide>
 
 <slide>slides/errorhandling/phpunit1.xml</slide>
 <slide>slides/errorhandling/phpunit2.xml</slide>
-<slide>slides/errorhandling/phpunit3.xml</slide>
-<slide>slides/errorhandling/phpunit4.xml</slide>
-<slide>slides/errorhandling/phpunit5.xml</slide>
 
 <!-- Still problems? Debug! -->
+<slide>slides/errorhandling/debug.xml</slide>
+<slide>slides/errorhandling/xdebug.xml</slide>
+<slide>slides/errorhandling/xdebug-cb-dump.xml</slide>
+<slide>slides/errorhandling/xdebug-trace.xml</slide>
+<slide>slides/errorhandling/xdebug-profile.xml</slide>
+<slide>slides/errorhandling/xdebug-demo.xml</slide>
+
+<slide>slides/errorhandling/weaverslave.xml</slide>
 
 <slide>slides/errorhandling/questions.xml</slide>
 <slide>slides/errorhandling/resources.xml</slide>

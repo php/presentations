@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>User Input</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+
+	<list effect="slide" fontsize="5em">
+		<bullet>Users are evil!</bullet>
+		<bullet>register_globals == evil</bullet>
+		<bullet>$_GET, $_POST, $_COOKIE, $_REQUEST, $_ENV, $_SERVER</bullet>
+	</list>
+</slide>

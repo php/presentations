@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>User Input (2)</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+
+	<list effect="slide" fontsize="5em">
+		<bullet>Cross Site Scripting</bullet>
+		<bullet>SQL injection</bullet>
+		<bullet>String cut attacks</bullet>
+		<bullet>include() and eval()</bullet>
+	</list>
+</slide>
