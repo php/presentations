@@ -1,0 +1,29 @@
+<slide title='Example class'>
+ <blurb title='The plan'>
+  Let's write a class and then create a package definition to distribute it.
+  Our example class will be able to apply an array of regular expressions to an
+  array of input strings. 
+ </blurb>
+ <blurb>
+  We will try and follow the PEAR naming conventions, to play nice with the
+  other packages and make the users life simpler.
+ </blurb>
+ <blurb fontsize='3em' align='center' effect='hide'>
+  Meet ... MondoRegex!
+ </blurb>
+ <example effect='hide'><![CDATA[<?php
+class MondoRegex {
+ var $_reList = array;
+ var $_matchList = array();
+
+ function MondoRegex($reList = "") {}
+ function setRegexList($reList) {}
+ function match($inputList) {}
+ function matchAll($inputList) {}
+ function getMatches() {}
+ function getMatchesForKey($reName) {}
+ function getMatchKeys() {}
+}
+?>]]>
+ </example>
+</slide>

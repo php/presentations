@@ -1,0 +1,23 @@
+<slide title='Contents'>
+ <list title='Tools to make your (coding) life simpler' type='darrow'>
+  <bullet>PEAR package manager: what it provides and how to use it</bullet>
+  <bullet>PhpDocumentor: In-code documentation (PHPDoc tags)</bullet>
+ </list>
+ <list title='An example class' type='darrow'>
+  <bullet>PEAR Naming conventions</bullet>
+  <bullet>Documenting the code</bullet>
+  <bullet>Writing a package description and deploying the package</bullet>
+ </list>
+ <!-- list title="Miscellaneous tools" titlesize='1.5em' type='darrow' aligntitle='center'>
+  <bullet>Vim/Gvim, ctags, and vim plugins ("php collection", taglist.vim, etc.)</bullet>
+  <bullet>Dia + Autodia + dia2code</bullet>
+  <bullet>Umbrello + umi2code</bullet>
+ </list -->
+ <list type='bullet' marginleft='-0.5em'>
+  <bullet>Summary</bullet>
+  <bullet>Useful links</bullet>
+ </list>
+ <blurb>
+  Along the way, we'll have some "Live demo" breaks %;-)%
+ </blurb>
+</slide>

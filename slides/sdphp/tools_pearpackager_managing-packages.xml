@@ -1,0 +1,21 @@
+<slide title='Managing packages'>
+ <example type='shell' title='Install'><![CDATA[$ pear install PEAR_Frontend_Web
+ downloading PEAR_Frontend_Web-0.3.tgz ...
+ ...done: 32,821 bytes
+ requires package `Net_UserAgent_Detect'
+ PEAR_Frontend_Web: dependencies failed
+$ pear install Net_UserAgent_Detect
+ downloading Net_UserAgent_Detect-1.0.tgz ...
+ ...done: 7,699 bytes
+ install ok: Net_UserAgent_Detect 1.0
+$ pear install PEAR_Frontend_Web
+ downloading PEAR_Frontend_Web-0.3.tgz ...
+ ...done: 32,821 bytes
+ install ok: PEAR_Frontend_Web 0.3]]></example>
+ <example type='shell' title='Uninstall'><![CDATA[$ pear uninstall PEAR_Info
+ uninstall ok: PEAR_Info]]></example>
+ <example type='shell' title='Upgrade'><![CDATA[$ pear upgrade HTML_QuickForm
+ downloading HTML_QuickForm-3.0.tgz ...
+ ...done: 62,379 bytes
+ upgrade ok: HTML_QuickForm 3.0]]></example>
+</slide>

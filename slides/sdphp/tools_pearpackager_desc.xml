@@ -1,0 +1,28 @@
+<slide title='PEAR package manager'>
+ <blurb>
+  The PEAR package manager (%*pear*%) is the swiss-army tool for:
+ </blurb>
+ <list type='bullet'>
+  <bullet>Installing, upgrading and uninstalling packages from PEAR, Horde, etc.</bullet>
+  <bullet>Building PECL extensions (e.g.: apd, xmms, etc.)</bullet>
+  <bullet>Getting information on local and remote packages.</bullet>
+  <bullet>Managing user package list/upgrade preferences.</bullet>
+  <bullet>Check for dependencies</bullet>
+  <bullet>Validating and creating your own distributable packages.</bullet>
+  <bullet>Creating RPM spec files.</bullet>
+  <bullet>Managing PEAR CVS releases: tagging, signing, etc.</bullet>
+ </list>
+ <blurb>
+  And the cool thing is that it is (most likely) already installed on your
+  system (PHP version 4.3.0 or newer).
+ </blurb>
+ <blurb>
+  It is also smart, it groks XML-RPC (like when talking to PEAR's or Horde's
+  site), HTTP (when using a full URL), or even a local tarball on your disk.
+ </blurb>
+ <example type='shell' title='... and if you do not have it' fontsize='1.5em'><![CDATA[
+ $ wget http://pear.php.net/go-pear
+ $ php -f go-pear
+ (... follow the instructions ...)
+]]></example>
+</slide>

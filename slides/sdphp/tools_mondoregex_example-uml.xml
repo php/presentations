@@ -1,0 +1,32 @@
+<slide title='MondoRegex - UML'>
+ <blurb>
+  There are more tools than the ones for editing the code, and for generating
+  the documentation. We can also generate (... drum roll ...) UML diagrams!
+ </blurb>
+ <blurb>
+  Of course, we could use our favorite diagram drawing program (e.g. *Dia*) and
+  write an UML diagram, but we are *lazy*, so we use automatic ways of dealing
+  with the problem. Enter *Autodia*.
+ </blurb>
+ <list title='Autodia: from code to UML'>
+  <bullet>Is a tool that can analyze your code and generate a good (although a little
+   messy at first) UML diagram of your classes.</bullet>
+  <blurb>It understand Java, Perl, PHP, SQL, and others (soon Python
+   too).</blurb>
+  <blurb>It is written in Perl, but we will not hold that against it %;-)%,
+   because the code is quite readable and well organized.</blurb>
+ </list>
+ <image title='Running Autodia on MondoRegex.php'
+  filename='images/mondoregex_uml-raw.png' align='center'/>
+ <image title='... and after some cleaning'
+  filename='images/mondoregex_uml.png' align='center'/>
+ <blurb title='dia2code: from UML to code'>
+  You can also go the other way, if you have a nice UML diagram, you can
+  generate PHP (or Java, or Perl, etc.) with dia2code.
+ </blurb>
+ <blurb title='Another alternative: Umbrello and xmi2code'>
+  *Umbrello* is a specialized tool (unlike Dia), and supports the "standard" XMI
+  format, and the companion project *xmi2code* can produce code from your UML
+  description.
+ </blurb>
+</slide>

@@ -1,0 +1,30 @@
+<slide title='phpDocumentor'>
+ <blurb title="From http://www.phpdoc.org/">
+  "... phpDocumentor is the most advanced automatic documentation system written for
+  PHP, in PHP ..."
+ </blurb>
+ <list title='Features:'>
+  <bullet>Uses a tokenizer-based parser which is twice as fast as its old parser</bullet>
+  <bullet>Uses docblock templates to cut down on repetition</bullet>
+  <bullet>Ability to parse any PHP file, regardless of documentation
+   format</bullet>
+  <bullet>Conforms loosely to the JavaDOC protocol, and will be familiar to
+   Java programmers</bullet>
+  <bullet>Documents all includes, constants, functions, static functions,
+   classes, methods, static variables, class variables, and can document
+   global variables and external tutorials</bullet>
+  <bullet>Auto-linking to pre-defined PHP functions</bullet>
+  <bullet>Output in HTML, CHM, PDF, XML DocBook formats</bullet>
+  <bullet>Templateable with many bundled templates</bullet>
+  <bullet>Can generate DocBook XML, using the XML:DocBook:peardoc2 templates</bullet>
+  <bullet>Has a CSV:dia2code Converter generates output that can be used to create a UML 
+   diagram, and generate code from the diagram using Harald Fielkers dia2code
+   project</bullet>
+  <bullet>Automatic linking to elements in any documented package</bullet>
+  <bullet>Documents name conflicts between packages to help avoid PHP errors</bullet>
+  <bullet>Error/warning tracking system</bullet>
+  <bullet>Alphabetical indexing of all elements by package and overall</bullet>
+  <bullet>Class trees</bullet>
+  <bullet>... and a lot more</bullet>
+ </list>
+</slide>

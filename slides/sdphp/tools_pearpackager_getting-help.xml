@@ -1,0 +1,43 @@
+<slide title='Getting help'>
+ <example type='shell' fontsize='1.5em'><![CDATA[$ pear help options
+Options:
+     -v         increase verbosity level (default 1)
+     -q         be quiet, decrease verbosity level
+     -c file    find user configuration in `file'
+     -C file    find system configuration in `file'
+     -d foo=bar set user config variable `foo' to `bar'
+     -D foo=bar set system config variable `foo' to `bar'
+     -G         start in graphical (Gtk) mode
+     -s         store user configuration
+     -S         store system configuration
+     -u foo     unset `foo' in the user configuration
+     -h, -?     display help/usage (this message)
+     -V         version information]]></example>
+ <example type='shell' fontsize='1.5em'><![CDATA[$ pear help makerpm
+pearcmd.php makerpm [options] <package-file>
+
+Creates an RPM .spec file for wrapping a PEAR package inside an RPM
+package.  Intended to be used from the SPECS directory, with the PEAR
+package tarball in the SOURCES directory:
+
+$ pear makerpm ../SOURCES/Net_Socket-1.0.tgz
+Wrote RPM spec file PEAR::Net_Geo-1.0.spec
+$ rpm -bb PEAR::Net_Socket-1.0.spec
+...
+Wrote: /usr/src/redhat/RPMS/i386/PEAR::Net_Socket-1.0-1.i386.rpm
+
+Options:
+  -t FILE, --spec-template=FILE
+        Use FILE as RPM spec file template
+  -p FORMAT, --rpm-pkgname=FORMAT
+        Use FORMAT as format string for RPM package name, %s is replaced
+        by the PEAR package name, defaults to "PEAR::%s".]]></example>
+ <example type='shell' fontsize='1.5em'><![CDATA[$ pear config-help preferred_state
+Config help for preferred_state
+===============================
+Name            Type Description
+preferred_state set  the installer will prefer releases with 
+                     this state when installing packages without 
+                     a version or state specified
+                     Valid set: stable beta alpha devel snapshot]]></example>
+</slide>

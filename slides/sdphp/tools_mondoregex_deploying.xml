@@ -1,0 +1,26 @@
+<slide title='Deploying MondoRegex'>
+ <example type='shell' title='Creating the tarball' fontsize='1.5em'><![CDATA[
+$ pear package-validate
+Validation: 0 error(s), 0 warning(s)
+
+$ pear package
+Analyzing MondoRegex.php
+Package /path/to/my/devel/dir/MondoRegex-0.1.0.tgz done
+
+$ pear install MondoRegex-0.1.0.tgz
+install ok: MondoRegex 0.1.0
+
+$ php -f test.php
+TESTING MondoRegex
+Using match
+...
+
+$ cp MondoRegex-0.1.0.tgz /path/to/my/server/dir/packages/
+]]></example>
+ <example type='shell' title='... later that day, somewhere on the net' fontsize='1.5em'><![CDATA[
+$ pear install http://coolphpstuff.com/packages/MondoRegex-0.1.0.tgz
+downloading MondoRegex-0.1.0.tgz...
+...done: 1,895 bytes
+install ok: MondoRegex 0.1.0
+]]></example>
+</slide>

@@ -1,0 +1,35 @@
+<slide title='Documentation example'>
+ <example title="PHPUnit/Assert.php" fontsize="1.4em"><![CDATA[
+(...)
+/**
+ * A set of assert methods.
+ *
+ * @package PHPUnit
+ * @author  Sebastian Bergmann <sb@sebastian-bergmann.de>
+ *          Based upon JUnit, see http://www.junit.org/ for details.
+ */
+class PHPUnit_Assert {
+    /**
+    * @var    boolean
+    * @access private
+    */
+    var $_looselyTyped = false;
+
+    /**
+    * Asserts that two variables are equal.
+    *
+    * @param  mixed
+    * @param  mixed
+    * @param  string
+    * @param  mixed
+    * @access public
+    */
+    function assertEquals($expected, $actual, $message = '', $delta = 0) {
+        if ((is_array($actual)  && is_array($expected)) ||
+            (is_object($actual) && is_object($expected))) {
+            if (is_array($actual) && is_array($expected)) {
+                ksort($actual);
+                ksort($expected);
+            }
+(...)]]></example>
+</slide>

@@ -1,0 +1,23 @@
+<slide title='Summary'>
+ <list title='The PEAR package manager'>
+  <bullet>Makes installation, upgrades and uninstalls a simple tasks.</bullet>
+  <bullet>Simplifies the packaging and deployment of code.</bullet>
+  <bullet>Can even be used to generate RPMs.</bullet>
+  <bullet>Has 3 different interfaces, keeps happy the GUI and command line fans.</bullet>
+  <bullet>Is (most likely) included already in your installation. Use it.</bullet>
+ </list>
+ <list title='Documentation' type='darrow'>
+  <bullet>Writing PHPDoc-style docs is simple and requires little effort</bullet>
+  <bullet>phpDocumentor is a great, free tool. Use it.</bullet>
+  <bullet>API documentation is useful, not only for your own development, but also
+  for the users of your code.</bullet>
+ </list>
+ <blurb title='OTher Tools'>
+  We have seen other tools along the way:
+</blurb>
+ <list type='arrow'>
+  <bullet>Vim + plugins to make PHP editing simpler.</bullet>
+  <bullet>Dia, AutoDia and dia2code: UML diagrams, and a 'round-trip' design cycle</bullet>
+  <bullet>Umbrello and umi2code: Another UML tool that plays well with PHP</bullet>
+ </list>
+</slide>

@@ -1,0 +1,37 @@
+<slide title='Listing packages'>
+ <example type='shell' title='Local'><![CDATA[$ pear list
+ Installed packages:
+ ===================
+ Package             Version    State
+ Archive_Tar         1.1        stable
+ Auth                1.2.0      stable
+ Auth_SASL           1.0.0      stable
+ Benchmark           1.2.1      stable
+ Cache_Lite          1.1        stable
+ ...]]></example>
+ <example type='shell' title='Local and remote'><![CDATA[$ pear list-all
+ All packages:
+ =============
+ Package                  Latest     Local
+ apd                      0.4p2      0.4p2
+ bcompiler                0.4
+ Inline_C                 0.1
+ mono                     0.3.1
+ PHPDoc                   0.1.0
+ PHPUnit                  0.6.1      0.6.1
+ python                   0.7.0
+ Validate                 0.1.2
+ Var_Dump                 0.3        0.3
+ ...]]></example>
+ <example type='shell' title='Finding out available upgrades'><![CDATA[$ pear list-upgrades
+ Available Upgrades (alpha):
+ ===========================
+ Package        Version    Size
+ apd            0.4        39kB
+ HTML_QuickForm 3.0        61kB
+ LiveUser       0.61       57kB
+ PhpDocumentor  1.2.0      2410kB
+
+$ pear upgrade-all
+(... and the magic continues ...)]]></example>
+</slide>

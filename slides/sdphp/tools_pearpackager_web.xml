@@ -1,0 +1,8 @@
+<slide title='Web manager'>
+ <image title='... or using a good old web browser' 
+  filename='images/packagemanager_web.png' align='center'/>
+ <example type='shell'><![CDATA[ $ pear install Net_UserAgent_Detect
+ $ pear install PEAR_FrontEnd_Web
+ $ ln -s /usr/local/lib/php/PEAR/WebInstaller.php \
+   /path/to/my/server/admindir/WebInstaller.php]]></example>
+</slide>

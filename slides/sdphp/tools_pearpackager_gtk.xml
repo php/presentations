@@ -1,0 +1,5 @@
+<slide title='GTK manager'>
+ <image title='... or if you like GUIs and have php-gtk' 
+  filename='images/packagemanager_gtk.png' align='center'/>
+ <example type='shell'><![CDATA[$ pear install PEAR_FrontEnd_Gtk]]></example>
+</slide>

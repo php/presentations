@@ -1,0 +1,30 @@
+<slide title='Naming conventions'>
+ <blurb>
+  From the 'Coding Standards' section of the PEAR Manual
+  (http://pear.php.net/manual/).
+ </blurb>
+ <list type='number' marginright='1em'>
+  <bullet>
+   Classes should be given descriptive names, e.g. *TemperatureControl*,
+   *HTML_Table*.
+  </bullet>
+  <bullet>
+   Public method and variable names should follow the 'Camel caps' (aka 'Studly caps') 
+   convention, except for the class constructor, e.g. *addRow()*,
+   *HTML_Table()*.
+  </bullet>
+  <bullet>
+   Private method and variable names should start with an underscore '*_*', e.g.
+   *_formatBorder()*, *$this->_numRows*.
+  </bullet>
+  <bullet>
+   Constants should be all uppercase and prefixed with the name of the
+   package, e.g. define('*MATH_STATS_CUMMULATIVE*',1);
+  </bullet>
+  <bullet>
+   If you need to define _global_ variables, their names should be prefixed
+   with the package name and start with an underscore, e.g.
+   $GLOBALS['*_PEAR_default_error_mode*']
+  </bullet>
+ </list>
+</slide>

@@ -1,0 +1,37 @@
+<slide title='PhpDocumentor: tags'>
+ <table title='Regular tags' column='2' border='1' width='90%' align='center'>
+  <cell bold='1'>Tag</cell><cell bold='1'>Description</cell>
+  <cell>@abstract</cell><cell>indicates an abstract method</cell>
+  <cell>@access</cell><cell>public or private</cell>
+  <cell>@author</cell><cell>author name &lt;author@email&gt;</cell>
+  <cell>@copyright</cell><cell>name and date</cell>
+  <cell>@deprecated</cell><cell>description</cell>
+  <cell>@deprec</cell><cell>alias for deprecated</cell>
+  <cell>@example</cell><cell>/path/to/example</cell>
+  <cell>@exception</cell><cell>Javadoc-compatible, use as needed</cell>
+  <cell>@global</cell><cell>type $globalvarname or description of global variable usage in a function</cell>
+  <cell>@ignore</cell><cell>element will be ignored in documentation</cell>
+  <cell>@param</cell><cell>type [$varname] description</cell>
+  <cell>@return</cell><cell>type description</cell>
+  <cell>@name</cell><cell>procpagealias or $globalvaralias</cell>
+  <cell>@magic</cell><cell>phpdoc.de compatibility</cell>
+  <cell>@package</cell><cell>package name</cell>
+  <cell>@see</cell><cell>name of another element that can be documented, produces a link to it in the documentation</cell>
+  <cell>@since</cell><cell>a version or a date</cell>
+  <cell>@static</cell><cell>indicates a static method or variable</cell>
+  <cell>@staticvar</cell><cell>type description of static variable usage in a function</cell>
+  <cell>@subpackage</cell><cell>sub package name, groupings inside of a project</cell>
+  <cell>@throws</cell><cell>Javadoc-compatible, use as needed</cell>
+  <cell>@todo</cell><cell>phpdoc.de compatibility</cell>
+  <cell>@var</cell><cell>type a data type for a class variable</cell>
+  <cell>@version</cell><cell>version</cell>
+ </table>
+ <table title='Inline tags' column='2' border='1' width='90%' align='center'>
+  <cell bold='1'>Tag</cell><cell bold='1'>Description</cell>
+  <cell>@link</cell><cell>URL</cell>
+  <cell>@source</cell><cell>display function source in the description</cell>
+  <cell>@tutorial</cell><cell>path to the tutorial documentation</cell>
+  <cell>@inheritdoc</cell><cell>copy documentation from the parent document block</cell>
+  <cell>@internal</cell><cell>private information for advanced developers only</cell>
+ </table>
+</slide>

@@ -1,0 +1,39 @@
+<slide title='Command line manager'>
+ <example type='shell' fontsize='1.5em'><![CDATA[
+$ pear
+Usage: pearcmd.php [options] command [command-options] <parameters>
+Type "pearcmd.php help options" to list all options.
+Type "pearcmd.php help <command>" to get the help for the specified command.
+Commands:
+build                  Build an Extension From C Source
+clear-cache            Clear XML-RPC Cache
+config-get             Show One Setting
+config-help            Show Information About Setting
+config-set             Change Setting
+config-show            Show All Settings
+cvsdiff                Run a "cvs diff" for all files in a package
+cvstag                 Set CVS Release Tag
+download               Download Package
+info                   Display information about a package
+install                Install Package
+list                   List Installed Packages
+list-all               List All Packages
+list-upgrades          List Available Upgrades
+login                  Connects and authenticates to remote server
+logout                 Logs out from the remote server
+makerpm                Builds an RPM spec file from a PEAR package
+package                Build Package
+package-dependencies   Show package dependencies
+package-validate       Validate Package Consistency
+remote-info            Information About Remote Packages
+remote-list            List Remote Packages
+run-tests              Run Regression Tests
+search                 Search remote package database
+shell-test             Shell Script Test
+sign                   Sign a package distribution file
+uninstall              Un-install Package
+upgrade                Upgrade Package
+upgrade-all            Upgrade All Packages
+
+]]></example>
+</slide>

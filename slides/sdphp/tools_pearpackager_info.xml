@@ -1,0 +1,33 @@
+<slide title='Getting information'>
+ <example type='shell' title='Local' fontsize='1.5em'><![CDATA[$ pear info apd
+About apd-0.4p2
+===============
+Provides
+Package         apd
+Summary         A full-featured engine-level profiler/debugger
+Description     APD is a full-featured profiler/debugger that is
+                loaded as a zend_extension. It aims to be an
+                analog of C's gprof or Perl's Devel::DProf.
+Release License PHP License
+Maintainers     George Schlossnagle <george@omniti.com> (lead)
+Version         0.4p2
+Release Date    2002-11-25
+Release State   stable
+Release Notes   Fixed build for 4.3
+Last Modified   2003-06-02]]></example>
+ <example type='shell' title='Remote' fontsize='1.4em'><![CDATA[$ pear remote-info Math_Stats
+Package details:
+================
+Latest      0.9.0beta2
+Installed   0.9.0beta2
+Package     Math_Stats
+License     PHP
+Category    Math
+Summary     Classes to calculate statistical parameters
+Description Package to calculate statistical parameters of numerical arrays
+            of data. The data can be in a simple numerical array, or in a
+            cummulative numerical array. A cummulative array, has the value
+            as the index and the number of repeats as the value for the
+            array item, e.g. $data = array(3=>4, 2.3=>5, 1.25=>6, 0.5=>3).
+            Nulls can be rejected, ignored or handled as zero values.]]></example>
+</slide>

@@ -1,0 +1,62 @@
+<slide title='MondoRegex (1)'>
+ <blurb>
+  We will first flesh out the methods described before, and add
+  a private method that does the heavy lifting of matching.
+ </blurb>
+ <example role='php' fontsize='1.5em'><![CDATA[<?php
+ class MondoRegex {
+  var $_reList = array;
+  var $_matchList = array();
+
+  function MondoRegex($reList = "") {
+   if (!empty($reList) && is_array($reList))
+    $this->setRegexList($reList);
+  }
+
+  function setRegexList($reList) {
+   if (is_array($reList))
+       $this->_reList = $reList;
+  }
+
+  function match($inputList) {
+   return $this->_reMatch("preg_match", $inputList);
+  }
+
+  function matchAll($inputList) {
+   return $this->_reMatch("preg_match_all", $inputList);
+  }
+
+  function getMatches() {
+   return $this->_matchList;
+  }
+
+  function getMatchesFor($reName) {
+   if (in_array($reName,array_keys($this->_matchList))) {
+    return $this->_matchList[$reName];
+   } else {
+    return false;
+   }
+  }
+
+  function getMatchKeys() {
+   if (empty($this->_matchList)) {
+    return false;
+   } else {
+    return array_keys($this->_matchList);
+   }
+  }
+
+  function _reMatch($reFunc, $inputList) {
+   $this->matchList = array();
+   if (empty($this->_reList) || !array($inputList))
+             return false;
+   foreach ($this->_reList as $reName=>$reStr)
+    foreach ($inputList as $input)
+     if ($reFunc($reStr, $input, &$hits))
+      if (!empty($hits))
+       $this->_matchList[$reName][] = $hits;
+   return !empty($this->_matchList);
+  }
+}
+?>]]></example>
+</slide>

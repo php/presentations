@@ -1,0 +1,9 @@
+<slide title='MondoRegex - API docs'>
+ <example type='shell' title='Running phpDocumentor'><![CDATA[
+$ phpdoc -d /path/to/my/devel/dir \
+-t /path/to/my/devel/dir/apidoc \
+--pear -ti 'MondoRegex' \
+-o 'HTML:frames:default,XML:DocBook/peardoc2:default']]>
+ </example>
+ <image filename='images/api_mondoregex.png' align='center'/>
+</slide>

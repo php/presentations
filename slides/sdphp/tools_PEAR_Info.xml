@@ -1,0 +1,8 @@
+<slide title="Davey's PEAR_Info">
+ <example type='php' fontsize='1.5em'><![CDATA[<?php
+  require_once 'PEAR/Info.php';
+  $info = new PEAR_Info();
+  $info->show();
+?>]]></example>
+ <image filename='images/pear_info.png' align='center'/>
+</slide>
