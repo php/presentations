@@ -1,4 +1,10 @@
-<presentation template="php" navmode="html">
+<presentation 
+	template="php" 
+	navmode="html"
+	backgroundimage="slides/intro/background.png"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
 <topic>PHP</topic>
 <title>PHP - Scripting the Web</title>
 <event>OSCON</event>
