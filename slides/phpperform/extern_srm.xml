@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>SRM</title>
+	<title>SRM: Script Running Machine</title>
 
+	<blurb> </blurb>
+	<list effect="slide" fontsize="4.5em">
+		<bullet>Functions to work with persistent Objects</bullet>
+		<bullet>Bridge between PHP Client and Objects</bullet>
+		<bullet>Objects run in threads</bullet>
+		<bullet>Manage persistent resources and data</bullet>
+	</list>
+
+	<image align="center" filename="banana.jpg" />
 </slide>

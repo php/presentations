@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <slide title="HTML Optimization">
-<list>
+<list fontsize="5em">
 <bullet>Remove All Comments!</bullet>
 <bullet>Meta tags don't work!</bullet>
-<bullet>Use parent html tags to specify child values, when all children have the same value</bullet>
-<bullet>Fully qualify links (ie, personal/images/ not personal/images)</bullet>
+<bullet>Use parent HTML tags to specify child values, when all children have the same value</bullet>
+<bullet>Fully qualify links (ie, personal/images/<![CDATA[<br>]]>not personal/images)</bullet>
 </list>
 
 </slide>

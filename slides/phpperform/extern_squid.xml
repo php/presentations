@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>SRM</title>
+	<title>Squid</title>
 
+	<list effect="slide" fontsize="5em">
+		<bullet>transparent caching</bullet>
+		<bullet>caches HTTP and FTP</bullet>
+	</list>
+	<blurb> </blurb>
+
+	<blurb fontsize="3em">Some effort to use with PHP:</blurb>
+	<example fontsize="1.7em"><![CDATA[<?php
+$tsstring = gmdate("D, d M Y H:i:s ", $timestamp)."GMT";
+
+if ($_SERVER["HTTP_IF_MODIFIED_SINCE"] == $tsstring) {
+    /* The UA has the exact same page we have. */
+    header("HTTP/1.1 304 Not Modified");
+    exit();
+} else {
+    header("Last-Modified: ".$tsstring);
+}
+?>]]></example>
 </slide>

@@ -1,12 +1,14 @@
 <slide title="CSS Optimization">
-<list>
+<blurb> </blurb>
+<list fontsize="4em">
 <bullet>Use CSS instead of incessant &lt;font> tag usage</bullet>
 <bullet>All CSS should be contained in an external file that 
 can be cached.</bullet>
 <bullet>Use short names for CSS attributes</bullet>
-<bullet>Override global html tag attributes using CSS properties</bullet>
+<bullet>Override global HTML tag attributes using CSS properties</bullet>
 <bullet>Use CSS to control table definitions with CSS v2...</bullet>
 </list>
+<blurb> </blurb>
 <example fontsize="1.2em"><![CDATA[<STYLE TYPE="text/css">
 <--
    TABLE {table-layout:fixed; width: 100%}

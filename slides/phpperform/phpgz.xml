@@ -1,4 +1,7 @@
 <slide title="PHP Compression">
+<blurb> </blurb>
+<blurb> </blurb>
+<blurb> </blurb>
 <blurb>
 PHP supports output compression via PHP's ouput buffering features and 
 the zlib extension.
@@ -8,18 +11,20 @@ The simplest way is to use the &lt;code>ob_start ('ob_gzhandler')&lt;/code>
 or use the configuration options &lt;code>zlib.output_compression&lt;/code> 
 and  &lt;code>zlib.compression_level&lt;/code>
 </blurb>
+<blurb> </blurb>
+<blurb> </blurb>
 <blurb title="HTTP_Compress">
 Alternatively, you can use PEAR's excellent HTTP_Compress class that will 
 handle everything related to HTTP_Compression for you...
 </blurb>
 <example fontsize="1.2em" type="php"><![CDATA[<?php
-require_once 'HTTP/Compress.php';
+	require_once 'HTTP/Compress.php';
 
-HTTP_Compress::start ();
-print "Some data\n";
-print "Some more data\n";
-print "Even _more_ data\n";
-HTTP_Compress::output ();
+	HTTP_Compress::start ();
+	print "Some data\n";
+	print "Some more data\n";
+	print "Even _more_ data\n";
+	HTTP_Compress::output ();
 ?>]]>
 </example>
 </slide>

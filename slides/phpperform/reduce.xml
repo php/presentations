@@ -1,8 +1,10 @@
-<slide title="Reducing Output">
-<list title="Less output is good because...">
-<bullet effect="slide">Saves server bandwidth</bullet>
-<bullet effect="slide">Decreases server CPU and Memory usage (well, kinda)</bullet>
-<bullet effect="slide">Has the same effect on the client side</bullet>
-<bullet effect="slide">On large sites, bandwidth is most often the most costly bottleneck</bullet>
-</list>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Reducing Output" fontsize="6em">
+
+	<list title="Less output is good because..." fontsize="5em">
+		<bullet effect="slide">Saves server bandwidth</bullet>
+		<bullet effect="slide">Decreases server CPU and Memory<![CDATA[<br>]]>usage (well, kinda)</bullet>
+		<bullet effect="slide">Has the same effect on the client side</bullet>
+		<bullet effect="slide">On large sites, bandwidth is most<![CDATA[<br>]]>often the most costly bottleneck</bullet>
+	</list>
 </slide>

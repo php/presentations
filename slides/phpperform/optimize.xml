@@ -1,8 +1,11 @@
-<slide title="Optimize">
-<list>
-<bullet effect="slide">Use preprocessors to eliminate whitespace</bullet>
-<bullet effect="slide">If you save 20 bytes per file, and have 1,000,000 hits a day, you've just saved
-20,000,000 extra bytes</bullet>
-<bullet effect="slide">Send content "when ready," and use progressive images</bullet>
-</list>
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Optimize" fontsize="6em">
+
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet effect="slide">Use preprocessors to eliminate<![CDATA[<br>]]>whitespace</bullet>
+		<bullet effect="slide">If you save 20 bytes per file, and have 1,000,000 hits a day, you've just saved
+		20,000,000 extra bytes</bullet>
+		<bullet effect="slide">Send content "when ready", and use progressive images</bullet>
+	</list>
 </slide>
