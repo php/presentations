@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Demonstration - Cluster Management</title>
+	<subtitle>Master Code</subtitle>
+
+	<example><![CDATA[<?php
+$client_last_nr = 0; $task_last_nr = 0;
+$clients = array();  $client_tasks = array();
+
+function register($socket) {
+	$GLOBALS['client_last_nr']++;
+	$GLOBALS['clients'][$GLOBALS['client_last_nr']] = $socket;
+	$GLOBALS['client_tasks'][$client_last_nr] = array();
+
+	echo "Registered client with socket '$socket'\n";
+	return $GLOBALS['client_last_nr'];
+}
+
+function unregister($id) {
+	unset($GLOBALS['clients'][$id], $GLOBALS['client_tasks'][$id]);
+	echo "Unregistered client #$id";
+}
+
+function handle_uploaded_file($hostname, $path, $task_title) {
+	$task_last_nr++;
+
+	foreach ($GLOBALS['clients'] as $id => $obj) {
+		if (is_string($obj)) {
+			$obj = new srm($obj);
+			$GLOBALS['clients'][$id] = $obj;
+		}
+		$GLOBALS['client_tasks'][$id][$task_last_nr] = true;
+		$method = "execute_task_copyfile";
+		$obj->$method($hostname, $path, $task_title);
+	}
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Demonstration - Cluster Management</title>
+	<subtitle>Configuration</subtitle>
+
+	<blurb>Main Server configuration:</blurb>
+	<example><![CDATA[srm {
+    sockname       =  "/tmp/srm.socket.main";
+    logfile        =  "/var/log/srm";
+    disable_tcp_ip = 1;
+}
+
+banana {
+    class_path       = "/dat/dev/php/srm/demo/banana";
+    function_library = "/dat/dev/php/srm/demo/library/main.php";
+}]]></example>
+<break lines="2"/>
+
+	<blurb>Client Server configuration:</blurb>
+	<example><![CDATA[srm {
+    sockname       =  "/tmp/srm.socket.client1";
+    logfile        =  "/var/log/srm";
+    disable_tcp_ip = 1;
+}
+
+banana {
+    class_path       = "/dat/dev/php/srm/demo/banana";
+    function_library = "/dat/dev/php/srm/demo/library/client.php";
+}]]></example>
+</slide>

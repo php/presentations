@@ -2,17 +2,19 @@
 <presentation 
 	template="css" 
 	navmode="html"
+	navbarbackground="#4373b4"
 	navbartopiclinks="0"
-	navbarbackground="#3C5BB4"
+	navColor="#f1fbff"
+	logo1=""
 	stylesheet="presentations/slides/perf/ezp.css"
 	backgroundfixed="1" >
 <topic>SRM</topic>
 <title>Script Running Machine</title>
-<event>PHP Usergroup Meeting Zürich</event>
-<location>Zürich, Switserland</location>
-<date>September 28th, 2004</date>
+<event>Intl. PHP Conference</event>
+<location>Frankfurt, Germany</location>
+<date>Nov 10, 2004</date>
 <speaker>Derick Rethans</speaker>
-<email>dr (at) ez (dot) no</email>
+<email>derick@php.net</email>
 <slide>slides/ze-xdebug/title.xml</slide>
 <slide>slides/srm/online1.xml</slide>
 <slide>slides/srm/persistant1.xml</slide>
@@ -33,8 +35,15 @@
 <slide>slides/srm/configure-and-run.xml</slide>
 <slide>slides/srm/moving.xml</slide>
 
+<slide>slides/srm/demo-cluster-1.xml</slide>
+<slide>slides/srm/demo-cluster-2.xml</slide>
+<slide>slides/srm/demo-cluster-3.xml</slide>
+<slide>slides/srm/demo-cluster-4.xml</slide>
+<slide>slides/srm/demo-cluster-5.xml</slide>
+<slide>slides/srm/demo-cluster-6.xml</slide>
+
 <slide>slides/srm/future3.xml</slide>
 
-<slide>slides/srm/questions.xml</slide>
+<slide>slides/xdebug/questions.xml</slide>
 <slide>slides/srm/resources.xml</slide>
 </presentation>

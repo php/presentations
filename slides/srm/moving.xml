@@ -7,7 +7,7 @@
 	class foo {
 		var $bar = '';
 
-		function foo() {
+		function foo42() {
 			$this->bar = 'foo';
 			return func_get_args();
 		}
@@ -24,10 +24,10 @@
 	include '/usr/local/srm/banana/lib/foo.class.php';
 
 	$f = new foo;
-	$s = new SRM('127.0.0.1', 7777);
+	$s = new SRM('/tmp/srm.socket');
 	$f = new SRMApp($s, $f, 'key2');
 
-	var_dump($f->foo(1, 2, 'bar', 3, 4));
+	var_dump($f->foo42(1, 2, 'bar', 3, 4));
 
 	/* Properties don't work yet */
 	echo $f->bar;

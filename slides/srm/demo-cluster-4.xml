@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Demonstration - Cluster Management</title>
+	<subtitle>Client Code</subtitle>
+
+	<example><![CDATA[<?php
+include './paths.php';
+$client_id = false;
+
+register($_SERVER['SRM_SOCKET']);
+register_shutdown_function('unregister');
+
+function register($sockname) {
+	global $client_id;
+
+	$srm = new SRM(TMP_PATH . 'srm.socket.main');
+	$client_id = $srm->register($sockname);
+	if (!$client_id) {
+		return false;
+	}
+	echo "Registered with ID #$client_id\n";
+	return true;
+}
+
+function unregister() {
+	global $client_id;
+
+	$srm = new SRM(TMP_PATH . 'srm.socket.main');
+	echo "Unregistering client";
+	$srm->unregister($client_id);
+}
+
+function execute_task_copyfile($hostname, $path, $task_title) {
+	echo "scp $hostname:$path /tmp/t.part\nmv /tmp/t.part $path\n";
+	sleep(2);
+}
+?>]]></example>
+</slide>
