@@ -1,0 +1,18 @@
+<slide title="Latest Developments">
+<blurb> </blurb>
+<list marginleft="2em" fontsize="5em">
+<bullet> PEAR and PECL</bullet>
+<bullet> SOAP</bullet>
+<bullet> Zend Engine 2</bullet>
+</list>
+<list marginleft="4em" fontsize="4em">
+ <bullet>New Object model</bullet>
+ <bullet>Unified Constructors and Destructors</bullet>
+ <bullet>Objects are references</bullet>
+ <bullet>Exceptions</bullet>
+</list>
+<list marginleft="2em" fontsize="5em">
+<bullet> User-space overloading</bullet>
+<bullet> SRM</bullet>
+</list>
+</slide>
