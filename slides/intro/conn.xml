@@ -1,0 +1,54 @@
+<slide title="Connection Handling">
+<list title="PHP maintains a connection status bitfield with 3 bits:" fontsize="2.5em">
+<bullet> 0 - NORMAL</bullet>
+<bullet> 1 - ABORTED</bullet>
+<bullet> 2 - TIMEOUT</bullet>
+</list>
+
+<blurb>
+By default a PHP script is terminated when the connection to the client
+is broken and the ABORTED bit is turned on.  This can be changed using the
+ignore_user_abort() function.  The TIMEOUT bit is
+set when the script timelimit is exceed.  This timelimit can be set using
+set_time_limit().
+</blurb>
+
+<example><![CDATA[<?php
+set_time_limit(0);
+ignore_user_abort(true);
+/* code which will always run to completion */
+?>]]></example>
+
+<blurb>
+You can call connection_status() to check on the status
+of a connection. 
+</blurb>
+
+<example><![CDATA[<?php
+ignore_user_abort(true);
+echo "some output";
+if(connection_status()==0) {
+	// Code that only runs when the connection is still alive
+} else {
+	// Code that only runs on an abort 
+}
+?>]]></example>
+
+<blurb>
+You can also register a function which will be called at the end of
+the script no matter how the script was terminated.
+</blurb>
+
+<example><![CDATA[<?php
+function foo() {
+    if(connection_status() & 1) 
+		error_log("Connection Aborted",0);
+    if(connection_status() & 2) 
+		error_log("Connection Timed Out",0);
+	if(!connection_status()) 
+		error_log("Normal Exit",0);
+}
+register_shutdown_function('foo');
+?>]]></example>
+
+</slide>

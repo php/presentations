@@ -1,0 +1,22 @@
+<slide title="Returning References">
+<example width="40em" rwidth="2em" result="1" title="Passing arguments to a function by reference"><![CDATA[<?php
+function inc(& $b) {
+	$b++;
+}
+$a = 1;
+inc($a);
+echo $a;
+?>]]></example>
+
+<blurb>
+A function may return a reference to data as opposed to a copy
+</blurb>
+<example><![CDATA[<?php
+function & get_data() {
+	$data = "Hello World";
+	return $data;
+}
+$foo = & get_data();
+?>]]></example>
+
+</slide>

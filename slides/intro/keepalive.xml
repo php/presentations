@@ -1,0 +1,42 @@
+<slide title="Keep-Alive">
+<blurb>
+When a keep-alive request is granted the established socket is kept open
+after each keep-alive response.  Note that a keep-alive response is only 
+possible when the response includes a content-length header.  
+</blurb>
+<example fontsize="6em" type="html" hide="1" result="1" outputbackground="#cccccc"><![CDATA[<table border=0 width=100%><tr><td bgcolor=#000000>
+  <table border=0 cellpadding=2 cellspacing=2 width=100%>
+   <tr>
+	<td bgcolor=#000000 width=15%><font color=#ffffff size=+2>request 1</font></td>
+	<td bgcolor=#000000 width=35%><font color=#ffffff size=+2>request 2</font></td>
+	<td bgcolor=#000000 width=20%><font color=#ffffff size=+2>request 3</font></td>
+	<td bgcolor=#000000 width=30%><font color=#ffffff size=+2>request 4</font></td>
+   </tr>
+   <tr>
+    <td bgcolor=#7f7040 width=10%><font size=+2>20 bytes</font></td>
+    <td bgcolor=#aff030 width=40%><font size=+2>120 bytes</font></td>
+    <td bgcolor=#ffa0f0 width=20%><font size=+2>60 bytes</font></td>
+    <td bgcolor=#df4060 width=30% align=left><font size=+2>?? bytes</font></td>
+   </tr>
+  </table>
+</td></tr></table>]]></example>
+
+<blurb>
+You cannot rely on the keep-alive feature for any sort of application-level
+session state maintenance.
+</blurb>
+<example title="Using Output Buffering to get content-length"><![CDATA[<?php
+	ob_start();
+	echo "Your Data";
+	$l = ob_get_length();
+	Header("Content-length: $l");
+	ob_end_flush();
+?>]]></example>
+
+<blurb>
+You will have to weigh the trade-off between the extra cpu and memory that
+output buffering takes against the increased effciency of being able to use keep-alive
+connections for your dynamic pages.
+</blurb>
+
+</slide>

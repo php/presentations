@@ -1,7 +1,7 @@
 <?
 Header('Content-Type: image/png');
 $height = 600;
-$txt = 'CaRL the Engineer';
+$txt = 'CArL the Engineer';
 $size = ImageTTFBbox(25,0,'timesi',$txt);
 $txt_w = abs($size[2]-$size[0]);
 $txt_h = abs($size[6]-$size[1]);

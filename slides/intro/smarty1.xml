@@ -5,7 +5,7 @@ The idea behind a templating system is to separate logic from layout.  The Smart
 good job of doing this.  Here we will convert our basic guestbook example to use Smarty.  
 </blurb>
 
-<example type="shell"><![CDATA[% ls -R
+<example type="shell" fontsize="1.5em"><![CDATA[% ls -R
 .:
 config/      smartyguest.php       templates/      templates_c/
 
