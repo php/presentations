@@ -1,19 +1,19 @@
-<slide title="File I/O">
-<list title="File I/O Problems" fontsize="2.2em">
+<slide title="File I/O" fontsize="5em">
+<list title="File I/O Problems" fontsize="3em">
 <bullet>Disk access is slower than memory access (duh!)</bullet>
 <bullet>Simultaeneous write/write operations cause data corruption. Therefore locking
 must occur.</bullet>
 <bullet>Locking is slow</bullet>
 </list>
 
-<list title="File I/O Tips" fontsize="2.2em">
-<bullet effect="slide">Use the disk in concentrated bits, meaning do all your writing
+<list marginleft="-2em" title="File I/O Tips" fontsize="3em">
+<bullet effect="slide">Use the disk in concentrated bits, meaning do all<![CDATA[<br>]]>your writing
 together.</bullet>
 <bullet effect="slide">Do Not Read Large Files Into Memory!</bullet>
 <bullet effect="slide">Do Not Read Small Files From Disk!</bullet>
-<bullet effect="slide">Employ caching to access frequently used data stored in memory</bullet>
-<bullet effect="slide">Try and put write operations where they will cause the least loss 
-in user experience (remember, web pages are chunked!)</bullet>
+<bullet effect="slide">Employ caching to access frequently used data<![CDATA[<br>]]>  stored in memory</bullet>
+<bullet effect="slide">Try and put write operations where they will<![CDATA[<br>]]> cause the least loss 
+in user experience (remember,<![CDATA[<br>]]> web pages are chunked!)</bullet>
 </list>
 
 </slide>
