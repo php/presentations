@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation
+    jskeyboard="1"
+    template="php"
+    navmode="html"
+    logo2="/pres2/presentations/slides/soap/activestate_logo.gif"
+    navbarbackground="#A68C53"
+    backgroundfixed="true"
+    backgroundimage = "/pres2/presentations/slides/soap/activestate_background.jpg"
+    backgroundcol="#EFECDD"
+    navsize="1.4em">
+
+<topic>PHP</topic>
+<title>Introduction to PHP 5</title>
+<event>ActiveState Corporation</event>
+<location>OSCON, Portland</location>
+<date>July 10, 2003</date>
+<speaker>Shane Caraveo</speaker>
+<email>shanec@ActiveState.com</email>
+<url>http://talks.php.net/</url>
+
+<slide>slides/php5intro/blanktitlepage.xml</slide>
+<slide>slides/php5intro/newfunctionality.xml</slide>
+<slide>slides/php5intro/internals1.xml</slide>
+<slide>slides/php5intro/exceptions.xml</slide>
+<slide>slides/php5intro/exceptions1.xml</slide>
+<slide>slides/php5intro/variables.xml</slide>
+<slide>slides/php5intro/oldoo.xml</slide>
+<slide>slides/php5intro/newoo1.xml</slide>
+<slide>slides/php5intro/construct.xml</slide>
+<slide>slides/php5intro/destruct.xml</slide>
+<slide>slides/php5intro/ppp.xml</slide>
+<slide>slides/php5intro/ppp1.xml</slide>
+<slide>slides/php5intro/ppp2.xml</slide>
+<slide>slides/php5intro/ppp3.xml</slide>
+<slide>slides/php5intro/static.xml</slide>
+<slide>slides/php5intro/svariables.xml</slide>
+<slide>slides/php5intro/static1.xml</slide>
+<slide>slides/php5intro/final.xml</slide>
+<slide>slides/php5intro/const.xml</slide>
+<slide>slides/php5intro/copy.xml</slide>
+<slide>slides/php5intro/copy1.xml</slide>
+<slide>slides/php5intro/deref.xml</slide>
+<slide>slides/php5intro/autoload.xml</slide>
+<slide>slides/php5intro/overload.xml</slide>
+<slide>slides/php5intro/overload1.xml</slide>
+<slide>slides/php5intro/abstract.xml</slide>
+<slide>slides/php5intro/abstract1.xml</slide>
+<slide>slides/php5intro/interfaces.xml</slide>
+<slide>slides/php5intro/interfaces1.xml</slide>
+<slide>slides/php5intro/typehint.xml</slide>
+<slide>slides/php5intro/spl.xml</slide>
+<slide>slides/php5intro/streams.xml</slide>
+<slide>slides/php5intro/thankyou.xml</slide>
+
+</presentation>
