@@ -1,0 +1,8 @@
+<slide>
+<title>Stream Servers</title>
+<blurb>
+PHP 5's new stream API supports stream servers: a simple, standard replacement
+for the sockets extension.
+</blurb>
+<example filename="streamserver.php" fontsize="1.8em" />
+</slide>
