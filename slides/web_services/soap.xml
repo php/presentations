@@ -1,0 +1,23 @@
+<slide title="SOAP">
+
+<blurb align="center" fontsize="4.2em">The road to hell is paved with good intentions.</blurb>
+<image filename="road_to_hell.jpg" align="right" />
+	
+<list fontsize="4em">
+	<bullet>Formerly Simple Object Access Protocol.</bullet>
+	<bullet>A messaging format primary used for RPC.</bullet>
+	<bullet>Uses XML.</bullet>
+	<bullet>View Source protocol.</bullet>
+</list>
+
+<break lines="2" />
+
+<list title="Brief History" fontsize="4em">
+	<bullet>Initial release, Babylon 2800 B.C</bullet>
+	<bullet>XML-RPC was originally SOAP (1998ish)</bullet>
+	<bullet>SOAP 1.0, Microsoft 1999</bullet>
+	<bullet>SOAP 1.1, IBM and Microsoft 2000</bullet>
+	<bullet>SOAP 1.2, W3C present time</bullet>
+</list>
+
+</slide>

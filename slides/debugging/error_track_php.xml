@@ -1,0 +1,18 @@
+<slide title="Automatic Backtraces">
+
+<break lines="2" />
+
+<blurb fontsize="3em">
+In most cases adding load of parameters for debugging to nearly every function is not only
+impractical, but also extremely time consuming.
+</blurb>
+
+<image filename="busy.jpg" align="center" />
+
+<blurb fontsize="3em">
+Fortunately, as of PHP 4.3.0 there is a much more convenient alternative in the form of %debug_backtrace()% 
+and %print_debug_backtrace()%.
+|FF0000|The later is only avaliable in PHP 5.0|
+</blurb>
+
+</slide>

@@ -1,0 +1,23 @@
+<slide title="'REAL' Debuggers">
+
+<list fontsize="3em">
+	<bullet>Xdebug (%http://www.xdebug.org/%)</bullet>
+		<bullet marginleft="3em" fontsize="2em">|00AA00|Separate Client &amp; Server.|</bullet>
+		<bullet marginleft="3em" fontsize="2em">|00AA00|GUI &amp; CLI interfaces.|</bullet>
+		<bullet marginleft="3em" fontsize="2em">|00AA00|Cross-platform.|</bullet>
+		
+	<bullet>DBG (%http://dd.cron.ru/dbg/%)</bullet>
+		<bullet marginleft="3em" fontsize="2em">|00AA00|DDD interface.|</bullet>
+		<bullet marginleft="3em" fontsize="2em">|FF0000|*NIX only.|</bullet>
+	
+	<bullet>APD (%http://pecl.php.net/apd/%)</bullet>
+		<bullet marginleft="3em" fontsize="2em">|00AA00|Excellent profiler.|</bullet>
+		<bullet marginleft="3em" fontsize="2em">|FF0000|No so good at debugging.|</bullet>
+	
+	<bullet>Zend Studio (%http://www.zend.com/%)</bullet>
+		<bullet marginleft="3em" fontsize="2em">|00AA00|Cross-platform.|</bullet>
+		<bullet marginleft="3em" fontsize="2em">|00AA00|Easy GUI.|</bullet>
+		<bullet marginleft="3em" fontsize="2em">|FF0000|$$$ Por favor.|</bullet>
+</list>
+
+</slide>

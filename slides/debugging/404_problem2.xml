@@ -1,0 +1,26 @@
+<slide title="404: File not Found">
+
+<blurb fontsize="4em">
+One of the difficulties with solving 404s is due to the log files
+provided by most web servers lacking the necessary information to solve
+the problem.
+</blurb>
+
+<example fontsize="1em" title="Apache Log Excerpt"><![CDATA[
+[Wed Sep 18 12:51:32 2002] [error] [client 64.231.84.210] File does not exist: /home/www/scripts/root.exe
+[Wed Sep 18 12:51:32 2002] [error] [client 64.231.84.210] File does not exist: /home/www/MSADC/root.exe
+[Wed Sep 18 12:51:33 2002] [error] [client 64.231.84.210] File does not exist: /home/www/c/winnt/system32/cmd.exe
+[Wed Sep 18 12:51:34 2002] [error] [client 64.231.84.210] File does not exist: /home/www/d/winnt/system32/cmd.exe
+[Wed Sep 18 12:51:34 2002] [error] [client 64.231.84.210] File does not exist: /home/www/scripts/..%5c../winnt/system32/cmd.exe
+[Wed Sep 18 12:51:35 2002] [error] [client 64.231.84.210] unrecognized FrontPage request: /home/www/_vti_bin
+[Wed Sep 18 12:51:35 2002] [error] [client 64.231.84.210] File does not exist: /home/www/_mem_bin/..%5c../..%5c../..%5c../winnt/system32/cmd.exe
+[Sun Sep 22 15:18:54 2002] [error] [client 127.0.0.1] File does not exist: /home/www/horde/chora/cvs.php
+[Wed Sep 18 12:51:36 2002] [error] [client 64.231.84.210] File does not exist: /home/www/msadc/..%5c../..%5c../..%5c/..Á../..Á../..Á../winnt/system32/cmd.exe
+[Wed Sep 18 12:51:36 2002] [error] [client 64.231.84.210] File does not exist: /home/www/scripts/..Á../winnt/system32/cmd.exe
+[Wed Sep 18 12:51:38 2002] [error] [client 64.231.84.210] File does not exist: /home/www/scripts/..À¯../winnt/system32/cmd.exe
+[Wed Sep 18 12:51:38 2002] [error] [client 64.231.84.210] File does not exist: /home/www/scripts/..Á../winnt/system32/cmd.exe
+[Wed Sep 18 12:51:40 2002] [error] [client 64.231.84.210] File does not exist: /home/www/scripts/..%5c../winnt/system32/cmd.exe
+[Wed Sep 18 12:51:41 2002] [error] [client 64.231.84.210] File does not exist: /home/www/scripts/..%2f../winnt/system32/cmd.exe
+]]></example>
+
+</slide>

@@ -1,0 +1,19 @@
+<slide title="SQLite Advantages">
+<image filename="in-use.jpg" align="right" />
+<blurb title="Why use SQLite?"/>
+<list>
+	<bullet fontsize="2.5em">Speed</bullet>
+		<bullet marginleft="1.5em">In many cases at least 2-3 times faster then MySQL/PostgreSQL.</bullet>
+		<bullet marginleft="1.5em">Fast PHP interface.</bullet>
+		<bullet marginleft="1.5em">No socket and/or TCP/IP overhead.</bullet>
+	<bullet fontsize="2.5em">Functionality</bullet>
+		<bullet marginleft="1.5em">Sub-selects, Triggers, Transactions, Views.</bullet>
+		<bullet marginleft="1.5em">Up to 2TB of data storage.</bullet>
+		<bullet marginleft="1.5em">Small memory footprint.</bullet>
+		<bullet marginleft="1.5em">Self-contained: no external dependencies.</bullet>
+		<bullet marginleft="1.5em">Atomic commit and rollback protect data integrity.</bullet>
+		<bullet marginleft="1.5em">Easily movable database.</bullet>
+	<bullet fontsize="2.5em">Security</bullet>
+		<bullet marginleft="1.5em">Each user has their own completely independent database(s).</bullet>
+</list>
+</slide>

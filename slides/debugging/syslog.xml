@@ -1,0 +1,23 @@
+<slide title="Syslog">
+
+<image filename="critical.jpg" align="right" />
+
+<blurb fontsize="4em">
+Some errors/bugs are more critical then others and may require immidiate attention.
+</blurb>
+
+<break />
+
+<blurb fontsize="4em">
+Or you may want to have all your error messages (php, system, etc...) in one place for 
+ease of monitoring.
+</blurb>
+
+<break />
+
+<blurb fontsize="4em">
+In these cases instead of using %error_log% or custom %error_handler% you may want to use
+a system logger, %syslog%.
+</blurb>
+
+</slide>

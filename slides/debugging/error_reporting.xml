@@ -1,0 +1,28 @@
+<slide title="Error Reporting">
+
+<image filename="trap.jpg" align="right" />
+
+<blurb fontsize="4em">
+By default PHP does not show notices that often can be signs of greater problems.
+</blurb>
+
+<list title="Why Enable E_NOTICE?" fontsize="3em">
+	<bullet>Warns about un-initialized variables.</bullet>
+	<bullet>Identifies deprecated behavior.</bullet>
+	<bullet>Various non-critical issues that could potentially cause problems.</bullet>
+</list>
+
+<example title="How?"><![CDATA[# Inside PHP.ini
+error_reporting = E_ALL
+
+# Inside httpd.conf or .htacess
+php_value error_reporting 2047
+
+# Inside a script
+<?php
+ini_set("error_reporting", E_ALL);
+/* or */
+error_reporting(E_ALL);
+?>]]></example>
+
+</slide>

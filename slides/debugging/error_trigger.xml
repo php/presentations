@@ -1,0 +1,24 @@
+<slide title="Triggering Errors">
+
+<image filename="droppedbomb.jpg" align="right" />
+
+<blurb fontsize="3em">
+In most situations when encountering an unexpected condition within a script it is better
+to stop execution rather then allowing script to proceed potentially causing further 
+errors and complicating debugging process.
+</blurb>
+
+<break />
+
+<blurb fontsize="3em">
+To help simplify the process PHP has a %trigger_error()% function that can be used to
+both log the error to the error log as well as terminate execution if need be.
+</blurb>
+
+<example><![CDATA[<?php
+if (!($fp = @fopen("some_file", "r"))) {
+	trigger_error("Failed to open 'some_file'", E_USER_ERROR);
+}
+?>]]></example>
+
+</slide>

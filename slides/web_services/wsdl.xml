@@ -1,0 +1,9 @@
+<slide title="WSDL">
+
+<blurb fontsize="3em" title="Web Service Description Language (WSDL)">
+Machine readable description (XML) of a web service. Used here to define server's methods and parameters.
+</blurb>
+
+<example filename="wsdl.php" hide="1" result="1" fontsize="1.4em" />
+
+</slide>

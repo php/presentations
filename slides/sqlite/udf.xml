@@ -1,0 +1,9 @@
+<slide title="PHP in SQL Binary Data">
+
+<blurb fontsize="4em">
+When dealing with binary data there needs to be another step to ensure binary safety and prevent data corruption.
+</blurb>
+
+<example result="1" type="php" filename="udf.php" />
+
+</slide>

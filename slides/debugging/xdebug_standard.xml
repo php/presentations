@@ -1,0 +1,12 @@
+<slide title="Xdebug: Basic Features">
+
+<blurb fontsize="3em">
+Right of the bat, Xdebug goes to work and improving PHP's own debugging facilities
+to simplify debugging process.
+</blurb>
+
+<image title="New and improved var_dump()" filename="var_dump.jpg" align="center"/>
+
+<image title="More detailed error reporting mechanism" filename="error_h.jpg" align="center"/>
+
+</slide>

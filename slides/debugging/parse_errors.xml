@@ -1,0 +1,15 @@
+<slide title="Parse Errors">
+
+<blurb fontsize="4em">
+Typos are not limited to users, but developers as well. Except that in developers'
+case the usually result in parse errors.
+</blurb>
+
+<image align="center" filename="dev.jpg" />
+
+<blurb fontsize="4em">
+Parse error are unavoidable, after average day (day ~= 48 hours), however their
+appearance in production code is.
+</blurb>
+
+</slide>

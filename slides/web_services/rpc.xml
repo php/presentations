@@ -1,0 +1,26 @@
+<slide title="XML-RPC">	
+
+<blurb fontsize="4em">
+XML-RPC is a set of implementations that allow software running on disparate operating systems, running in different environments to make procedure calls over the Internet.
+</blurb>
+
+<blurb fontsize="4em">
+It's design goal is to be as simple as possible. |FF0000|I like it already|
+</blurb>
+
+<blurb fontsize="4em">
+Like in WDDX there are a number of supported data types
+</blurb>
+
+<list fontsize="3em">
+	<bullet>32-bit signed integer (-12)</bullet>
+	<bullet>boolean (0 or 1)</bullet>
+	<bullet>ASCII string (hello world)</bullet>
+	<bullet>doubles/floats (-12.214)</bullet>
+	<bullet>date/time ISO8601 (YYYYMMDD HH:MM:SS)</bullet>
+	<bullet>base64-encoded binary (eW91IGNhbid0IHJlYWQgdGhpcyE=)</bullet>
+	<bullet>stucts (objects)</bullet>
+	<bullet>arrays</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,15 @@
+<slide title="Xdebug: Tracing Cont.">
+
+<blurb fontsize="3em">
+The trace itself can be printed to screen via %xdebug_dump_function_trace()% or returned
+in a form of an array through %xdebug_get_function_trace()%.
+</blurb>
+
+<image filename="get_trace.jpg" align="center" />
+
+<blurb fontsize="3em">
+The traces can be made even more informative, by enabling %xdebug.collect_params% option,
+which would make Xdebug display the arguments passed to every function.
+</blurb>
+
+</slide>

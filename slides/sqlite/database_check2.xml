@@ -1,0 +1,23 @@
+<slide title="Data Retrieval Cont.">
+
+<blurb fontsize="4em">
+Plain %sqlite_fetch_array()% is quite inefficient since both numeric and string keys
+are created and don't even use them.
+</blurb>
+
+<example filename="database_pop5.php" />
+
+<blurb fontsize="3em">
+By specifying %SQLITE_NUM% or %SQLITE_ASSOC% we can tell SQLite what keys should be used
+in the result array. Since creation of numeric keys is faster then string keys, in our particular
+case it is better to use %SQLITE_NUM%.
+</blurb>
+
+<blurb title="FYI" fontsize="3em">
+SQLite's %sqlite_fetch_array()% is actually faster then equivalent functions in other database extensions
+since the data is not stored twice. SQLite does a copy on write duplicate, which means that unless the result
+is modified only one instance is stored and the only overhead of using both numeric &amp; string keys is the key
+creation process.
+</blurb>
+
+</slide>

@@ -1,0 +1,15 @@
+<slide title="ECHO Debugging">
+
+<blurb fontsize="4em">
+When everything else fails, nothing can replace a well placed %echo%.
+</blurb>
+
+<example filename="echo.php" type="php" />
+
+<blurb fontsize="4em">
+Liberally sprinkled %echo% around various portions of the code can help you
+narrow down the problematic code and if you're lucky maybe even find the exact
+cause quickly. 
+</blurb>
+
+</slide>

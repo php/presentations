@@ -1,0 +1,9 @@
+<slide title="Dedicated Environment">
+<image align="left" filename="Diagram2.png"/>
+<list fontsize="4em">
+	<bullet>Less active databases.</bullet>
+	<bullet>Greater application separation.</bullet>
+	<bullet>Reduced resource utilization.</bullet>
+	<bullet>Easy to move applications between servers.</bullet>
+</list>
+</slide>

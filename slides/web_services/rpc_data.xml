@@ -1,0 +1,16 @@
+<slide title="Under the hood">	
+
+<blurb fontsize="4em">
+XML-RPC is not a format intended for human consumption. It is a serialized data representation intended
+to be generated and read by a computer.
+</blurb>
+
+<image filename="boring.gif" align="center" />
+
+<blurb fontsize="4em">
+However this does not mean XML-RPC is a binary format, which is competely unreadable, it is just incredibly
+boring to read.
+</blurb>
+
+</slide>
+ 

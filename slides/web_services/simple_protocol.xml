@@ -1,0 +1,10 @@
+<slide>
+<title>Ilia's Simple Protocol</title>
+
+<blurb>
+The server accepts a client request via the HTTP GET and send a respone using Ilia's Proprietry Internet Protocol (IPIP) built on top of
+the HTTP protocol.
+</blurb>
+<example filename="ipip_server.php" fontsize="1.6em" />
+
+</slide>

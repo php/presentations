@@ -1,0 +1,10 @@
+<slide title="XML-RPC Cons">
+
+<list fontsize="4em" title="XML-RPC sucks because...">
+<bullet>Simplicity limits functionality.</bullet>
+<bullet>No new functionality being added.</bullet>
+<bullet>PHP parsers can be rather slow for large documents.</bullet>
+<bullet>Not completely buzzword compliant</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,10 @@
+<slide title="404: Typos Cont.">
+
+<blurb fontsize="3em">
+Unfortunately, %pspell% and %sqlite% may not always avaliable, so there 
+may be need for a simpler alternative that does not depend on any extensions.
+</blurb>
+
+<example title="Metaphone matching" filename="metaphone.php" type="php" />
+
+</slide>

@@ -1,0 +1,9 @@
+<slide title="XML-RPC Client">
+
+<blurb fontsize="4em">
+The script below uses PHP implementation of XML_RPC to retrieve a list of latest version of PEAR packages.
+</blurb>	
+	
+<example fontsize="2em" filename="xmlrpc_client.php" />
+
+</slide>

@@ -1,0 +1,9 @@
+<slide title="User Input Validation">
+
+<blurb fontsize="3em" title="An ounce of prevention is worth a pound of cure!">
+Always consider the worst possible situation and add code to prevent problems.
+</blurb>
+
+<example filename="user_prev.php" type="php" />
+
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Real Power of DOM">
+
+<blurb fontsize="4em">
+The real power of DOM comes from the ability to easily modify the given XML structure and generate
+output XML with the minimum amount of effort.
+</blurb>
+
+<example filename="dom_forum.inc.php" fontsize="2em" />
+
+</slide>

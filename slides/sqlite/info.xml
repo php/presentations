@@ -1,0 +1,31 @@
+<slide title="Fetching SQL Structure">
+
+<blurb fontsize="3.5em">
+Often when working with database you need to check for existence of tables and indexes and validate their structure.
+Unlike MySQL, SQLite does not have native API for this purpose, so you need to execute queries to fetch 
+this information by yourself.
+</blurb> 
+
+<blurb fontsize="3.5em">
+In SQLite table structure is stored inside two internal tables, %sqlite_master% 
+for regular tables and %sqlite_temp_master% for temporary ones and is represented 
+by 4 columns.
+</blurb>
+
+<blurb marginleft="2em" fontsize="2.5em" title="type">
+Indicates whether the current entity is a table, index or something else.
+</blurb>
+
+<blurb marginleft="2em" fontsize="2.5em" title="name">
+Name of the entity, such as table or index name.
+</blurb>
+
+<blurb marginleft="2em" fontsize="2.5em" title="tbl_name">
+The name of the table the current entity affects. For tables this is the same as name.
+</blurb>
+
+<blurb marginleft="2em" fontsize="2.5em" title="sql">
+The SQL query needed to create the current entity. For tables this will contain the complete CREATE TABLE query.
+</blurb>
+
+</slide>

@@ -1,0 +1,24 @@
+<slide title="PRAGMA">
+
+<blurb fontsize="4em">
+PRAGMA is way to set various SQLite options that will either take permanent affect or only the current connection.
+</blurb>
+
+<blurb fontsize="3em" title="cache_size">
+This option determines the size of the memory cache SQLite may use. The value of this option is represented by pages, each
+page is roughly equivalent to 1.5K of memory. By default cache_size is set to 2000 (~2.86 megabytes).
+</blurb>
+
+<blurb fontsize="3em" title="count_changes">
+Whether or not to count the number of affected rows after each operation. Turning it off may give a slight performance boost,
+however it will effectively disable sqlite_changes(). This option is disabled by default.
+</blurb>
+
+<break />
+
+<blurb fontsize="3em">
+If you want to make the setting permanent, rather the a session setting, you need to prefix %default_%
+to the option name.
+</blurb>
+
+</slide>

@@ -1,0 +1,9 @@
+<slide title="IP Match Client">
+
+<blurb fontsize="4em">
+Now that the database is ready let's see how complex is our IP matching going to end up looking.
+</blurb>
+
+<example result="1" filename="ip_match_client.php" />
+
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Profiling">
+
+<blurb fontsize="4em">
+Your code may work fine, but 'some bug' may only allow you to run a few requests at a time.
+This calls for a profiler that can analyze code and detect implementation inefficiencies, which
+are yet another form of a bug.
+</blurb>
+
+<image filename="profile.jpg" align="center" />
+
+</slide>

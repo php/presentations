@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<methodCall>
+	<methodName>package.info</methodName>
+	<params>
+		<param>
+			<value>
+				<string>XML_RPC</string>
+			</value>
+		</param>
+	</params>
+</methodCall>

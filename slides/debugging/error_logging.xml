@@ -1,0 +1,21 @@
+<slide title="Error Logging">
+
+<image filename="evil.jpg" align="center" title="See no evil, hear no evil..." />
+
+<blurb fontsize="3em">
+Users rarely report errors and often may not even notice the erroneous behaviour.
+Therefor it is absolutely critical to log errors to ensure that is a record of the problem.
+</blurb>
+
+<example title="PHP's Error Logging Facility"><![CDATA[# Inside PHP.ini
+error_log = /home/vhost/logs/php_error_log
+display_errors = Off
+log_errors_max_len = 0
+]]></example>
+
+<list>
+	<bullet>Since the errors are being logged there is no need to display them on screen.</bullet>
+	<bullet>Do not limit the error length so the error message is never cutoff.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Persistent Connections">
+
+<blurb fontsize="3.5em">
+Like other database extensions SQLite allows creation of persistent connections that eliminate the connection initialization overhead.
+</blurb>
+
+<example><![CDATA[<?php
+$db = sqlite_popen("/path/to/database", 0666, $error)
+	or die("Failed to connect because: ".$error);
+?>]]>
+</example>
+
+<list fontsize="3.2em" title="Caution">
+	<bullet>Can result in undefined behavior if the database is rebuilt (Ex. VACUUM).</bullet>
+	<bullet>May cause problems in environments with a small open file handle limit.</bullet>
+	<bullet>Decreases reliability if certain tuning options are used.</bullet>
+</list>
+
+</slide>

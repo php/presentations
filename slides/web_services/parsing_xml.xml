@@ -1,0 +1,30 @@
+<slide title="XML Processing">
+
+<blurb fontsize="4em">
+Parsing of the XML in PHP can be done via two methodologies, SAX (Simple API for XML) &amp; DOM (Document Object Model).
+</blurb>
+
+<image filename="gears.jpg" align="center" />
+
+<blurb><![CDATA[
+<table class="index" border="0" cellpadding=5 align="center" >
+<tr>
+	<th width="50%" align="left" style="font-size: 2em;">DOM</th>
+	<th width="50%" align="left" style="font-size: 2em;">SAX</th>
+</tr>
+<tr>
+	<td style="font-size: 1.8em; color: blue;">Good for small documents</td>
+	<td style="font-size: 1.8em; color: green;">Event driven, good for large documents</td>
+<tr>
+<tr>
+	<td style="font-size: 1.8em; color: blue;">Simpler to use (less code)</td>
+	<td style="font-size: 1.8em; color: green;">More memory effecient (if dom tree is not built)</td>
+<tr>
+<tr>
+	<td style="font-size: 1.8em; color: blue;">Easier to generate XML</td>
+	<td style="font-size: 1.8em; color: green;">Faster for remote sources.</td>
+</tr>
+</table>
+]]></blurb>
+
+</slide>

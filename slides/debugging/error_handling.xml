@@ -1,0 +1,17 @@
+<slide title="Error Handling">
+
+<image filename="bomb.jpg" align="right" />
+
+<blurb fontsize="4em">
+In many instances the default error handling mechanism is simply too limited. 
+In those cases you need a more flexible error handling mechanism that can do 
+exactly what you need.
+</blurb>
+
+<list title="Native error handler disadvantages" fontsize="3em">
+	<bullet>Prior to PHP 4.3.0 error lengths limited to 1024 bytes.</bullet>
+	<bullet>Errors can only be stored on the file system.</bullet>
+	<bullet>Includes useless information.</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,16 @@
+<slide title="Error Tracking Problem Cont.">
+
+<example title="Log Entry"><![CDATA[Fatal error: Unknown column 'abc' in 'where clause' in script.php on line 7]]></example>
+
+<blurb fontsize="3em">
+This message is mostly useless. Other then indicating that a query had failed,
+it offers little information on which query and why.
+</blurb>
+
+<break />
+
+<blurb fontsize="3em">
+Time must now be wasted tracking down the mysteriously failing query instead of fixing it.
+</blurb>
+
+</slide>

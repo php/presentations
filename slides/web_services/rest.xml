@@ -1,0 +1,21 @@
+<slide title="REST">
+
+<blurb fontsize="4em">
+REpresentational State Transfer, the art of NOT reinventing the wheel.
+</blurb>
+
+<break lines="3" />
+
+<blurb fontsize="4em">
+Requests made via common HTTP menthods such as GET, POST, PUT, etc... The response
+comes in a form of XML that the client needs to parse.
+</blurb>
+
+<break lines="3" />
+
+<blurb fontsize="4em">
+So very very simple and most importantly does not require any unusual extensions or 
+classes.
+</blurb>
+
+</slide>

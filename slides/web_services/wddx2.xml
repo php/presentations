@@ -1,0 +1,11 @@
+<slide title="WDDX Parsing">
+
+<blurb fontsize="4em">
+Packet Parsing is done using the %wddx_deserialize()% function. It returns an associated array
+containing elements created based on the data in the packet.
+</blurb>
+
+<example hide="1" result="1" type="php" fontsize="1.6em" filename="wddx_parse.php" />
+
+</slide>
+

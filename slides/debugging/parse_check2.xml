@@ -1,0 +1,17 @@
+<slide title="Parse Error Detection">
+
+<blurb fontsize="4em">
+In PHP 5.0 you don't even need php-cli to validate syntax,
+thanks to the %php_check_syntax()% function.
+</blurb>
+
+<example><![CDATA[<?php
+$php_files = glob("*.php");
+foreach ($php_files as $file) {
+	if (!php_check_syntax($file, $error)) {
+        	echo "syntax error '{$error}' inside '{$file}'\n";
+	}
+}
+?>]]></example>
+
+</slide>

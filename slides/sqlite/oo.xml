@@ -1,0 +1,14 @@
+<slide title="OO Interface">
+
+<blurb fontsize="4em">
+One of the SQLite's biggest features is the native OO interface that is available in the PHP5 version
+of the extension.
+</blurb>
+
+<list fontsize="4em" title="Benefits">
+	<bullet padding="0.5em">Shorter &amp; simpler code.</bullet>
+	<bullet padding="0.5em">In most cases faster code.</bullet>
+	<bullet padding="0.5em">Can be easily extended.</bullet>
+</list>
+
+</slide>

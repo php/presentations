@@ -1,0 +1,15 @@
+<slide title="Shared Environment">
+<image align="left" filename="Diagram1.png"/>
+<list fontsize="4em">
+	<bullet>Hosting Providers</bullet>
+		<bullet marginleft="2em" fontsize="2em">No need to setup databases.</bullet>
+		<bullet marginleft="2em" fontsize="2em">No complex databases permissions.</bullet>
+		<bullet marginleft="2em" fontsize="2em">Easy to track disk usage.</bullet>
+		<bullet marginleft="2em" fontsize="2em">Greater security</bullet>
+
+	<bullet>Users</bullet>
+		<bullet marginleft="2em" fontsize="2em">Easy to add/delete databases.</bullet>
+		<bullet marginleft="2em" fontsize="2em">Greater freedom of action.</bullet>
+		<bullet marginleft="2em" fontsize="2em">Can easily move databases between servers/providers.</bullet>
+</list>
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Multi-column results Cont.">
+
+<blurb fontsize="4em">
+As with single functions, array retrieval can be combined with query execution for
+greater efficiency.
+</blurb>
+
+<example result="1" filename="fetch_all2.php" />
+
+</slide>

@@ -1,0 +1,22 @@
+<slide>
+<title>PHP and XML</title>
+
+<blurb fontsize="4em">
+PHP has a number of ways to create and parse XML documents.
+</blurb>
+
+<list fontsize="3.5em">
+<bullet>XML extension (enabled by default) uses bundled %Expat% by James Clark.</bullet>
+  <bullet type="none" marginleft="2em">|0000FF|Will use %GNOME XML library% (libxml2) in PHP 5.0|</bullet>
+<bullet>DOM XML extension (--with-dom)</bullet>
+  <bullet type="none" marginleft="2em">|0000FF|Enabled by default in PHP 5.0|</bullet>
+<bullet>XML-RPC extension (--with-xmlrpc, uses bundled %libxmlrpc%)</bullet>
+<bullet>Simplexml (PHP 5.0 only)</bullet>
+  <bullet type="none" marginleft="2em">|0000FF|Enabled by default in PHP 5.0|</bullet>
+<bullet>SOAP (PHP 5.0 only)</bullet>
+  <bullet type="none" marginleft="2em">|0000FF|bundled with PHP 5.0|</bullet>
+<bullet>WDDX (--enable-wddx)</bullet>
+  <bullet type="none" marginleft="2em">|0000FF|not really xml|</bullet>
+</list>
+
+</slide>

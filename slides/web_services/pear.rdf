@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<rss version="0.93">
+<channel>
+  <title>PEAR</title>
+  <link>http://pear.php.net/</link>
+  <description>This is a list containing the latest releases from PEAR.</description>
+  <language>en</language>
+  <image>
+    <url>http://pear.php.net/gifs/pearsmall.gif</url>
+    <title>PEAR</title>
+    <link>http://pear.php.net/</link>
+    <width>104</width>
+    <height>50</height>
+  </image>
+
+  <item>
+    <title>APC 2.0</title>
+    <pubDate>2003-07-01 04:18:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=220&amp;version=2.0</link>
+    <description>Complete rework.</description>
+  </item>
+  <item>
+    <title>SOAP 0.7.4</title>
+    <pubDate>2003-06-30 14:38:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=87&amp;version=0.7.4</link>
+    <description>Fixes when behind a proxy.
+Other bugfixes.</description>
+  </item>
+  <item>
+    <title>PECL_Gen 0.6.1</title>
+    <pubDate>2003-06-29 19:40:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=219&amp;version=0.6.1</link>
+    <description>typo fix in package.xml dependencies entry for XML_Parser</description>
+  </item>
+  <item>
+    <title>PECL_Gen 0.6.0</title>
+    <pubDate>2003-06-29 19:19:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=219&amp;version=0.6.0</link>
+    <description>Moved from php5/scripts to PEAR.</description>
+  </item>
+  <item>
+    <title>Mail 1.1.1</title>
+    <pubDate>2003-06-26 18:59:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=72&amp;version=1.1.1</link>
+    <description>Minor fixes with newlines in headers.</description>
+  </item>
+  <item>
+    <title>XML_HTMLSax 1.1</title>
+    <pubDate>2003-06-26 16:33:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=203&amp;version=1.1</link>
+    <description>* Bug fixes to Attribute_Parser to cope with newline, tag, forward slash and whitespace issues.</description>
+  </item>
+  <item>
+    <title>XML_SaxFilters 0.1.0</title>
+    <pubDate>2003-06-26 01:42:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=218&amp;version=0.1.0</link>
+    <description>To use the HTMLSaxParser provided by XML_SaxFilters you need to install
+PEAR::XML_HTMLSax.</description>
+  </item>
+  <item>
+    <title>html_parse 0.1</title>
+    <pubDate>2003-06-24 16:45:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=217&amp;version=0.1</link>
+    <description>- first experimental draft</description>
+  </item>
+  <item>
+    <title>uuid 0.9</title>
+    <pubDate>2003-06-24 09:28:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=216&amp;version=0.9</link>
+    <description>Initial 'official' beta release.</description>
+  </item>
+  <item>
+    <title>dbplus 0.9</title>
+    <pubDate>2003-06-24 09:10:00</pubDate>
+    <link>http://pear.php.net/package-info.php?pacid=215&amp;version=0.9</link>
+    <description>Initial 'official' beta release.</description>
+  </item>
+
+</channel>
+</rss>

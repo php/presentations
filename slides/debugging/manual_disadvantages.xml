@@ -1,0 +1,14 @@
+<slide title="ECHO Debugging Cont.">
+
+<list title="Problems" fontsize="4em">
+	<bullet>Can be extremely time consuming.</bullet>
+	<bullet>Very limited information.</bullet>
+	<bullet>Good chance 'debug' code will slip into production.</bullet>
+	<bullet>Not real-time.</bullet>
+</list>
+
+<blurb fontsize="4em">
+Another words, unless you absolutely have to, try to avoid ECHO debugging.
+</blurb>
+
+</slide>

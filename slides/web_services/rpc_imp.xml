@@ -1,0 +1,35 @@
+<slide title="XML-RPC implementaions in PHP">
+
+<blurb fontsize="4em">
+In PHP almost everything is a choice, XML-RPC is no different.
+</blurb>
+
+<blurb><![CDATA[
+<table class="index" border="0" cellpadding=5 width="90%" align="center" >
+<tr>
+	<th width="50%" align="left" style="font-size: 2em;">PEAR::XML-RPC</th>
+	<th width="50%" align="left" style="font-size: 2em;">ext/xmlrpc</th>
+</tr>
+<tr>
+	<td style="font-size: 1.8em; color: red;">Written in PHP (slower)</td>
+	<td style="font-size: 1.8em; color: green;">Written in C (faster)</td>
+<tr>
+<tr>
+	<td style="font-size: 1.8em; color: green;">Installed by default</td>
+	<td style="font-size: 1.8em; color: red;">You must enable it yourself</td>
+<tr>
+<tr>
+	<td style="font-size: 1.8em; color: green;">Stable</td>
+	<td style="font-size: 1.8em; color: green;">Still Experimental</td>
+</tr>
+<tr>
+	<td style="font-size: 1.8em; color: red;">No Documentation</td>
+	<td style="font-size: 1.8em; color: green;">Some basic documentation avaliable</td>
+<tr>
+
+</table>
+]]></blurb>
+
+<image filename="scale.jpg" align="center" />
+
+</slide>

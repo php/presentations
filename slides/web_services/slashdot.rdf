@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://my.netscape.com/rdf/simple/0.9/">
+
+<channel>
+<title>Slashdot</title>
+<link>http://slashdot.org/</link>
+<description>News for nerds, stuff that matters</description>
+</channel>
+
+<image>
+<title>Slashdot</title>
+<url>http://images.slashdot.org/topics/topicslashdot.gif</url>
+<link>http://slashdot.org/</link>
+</image>
+
+<item>
+<title>Bill Gates On Linux</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/1440202</link>
+</item>
+
+<item>
+<title>Dreamworks, Sinbad &amp;amp; Linux</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/1348206</link>
+</item>
+
+<item>
+<title>Panther Analysis Getting Underway</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/1324243</link>
+</item>
+
+<item>
+<title>OpenContent Closes Its Doors</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/1247224</link>
+</item>
+
+<item>
+<title>Ostrich Lessons In Oregon?</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/123227</link>
+</item>
+
+<item>
+<title>Opensource Code More Refined Than Closed?</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/127241</link>
+</item>
+
+<item>
+<title>MP3.com Removes "High-Bandwidth" Streams</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/1159224</link>
+</item>
+
+<item>
+<title>Beta Ogg Vorbis Firmware For The Neuros [updated]</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/0349228</link>
+</item>
+
+<item>
+<title>CD Duplicator Refuses Linux Job, Citing MS Contract</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/0249231</link>
+</item>
+
+<item>
+<title>Building A (Serious) Home Network From Scratch</title>
+<link>http://slashdot.org/article.pl?sid=03/07/01/0112216</link>
+</item>
+
+<textinput>
+<title>Search Slashdot</title>
+<description>Search Slashdot stories</description>
+<name>query</name>
+<link>http://slashdot.org/search.pl</link>
+</textinput>
+
+</rdf:RDF>

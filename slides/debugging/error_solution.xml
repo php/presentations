@@ -1,0 +1,10 @@
+<slide title="Error Tracking Solution">
+
+<blurb fontsize="3em">
+PHP has four magic constants, %__FILE__%, %__LINE__%, %__FUNCTION__% and %__CLASS__% that can be
+used to backtrack to the source of the problem.
+</blurb>
+
+<example fontsize="2em" type="php" filename="error_solution.php" />
+
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Input Tracking">
+
+<blurb fontsize="3em">
+Some errors can only be duplicated with certain specific input, which is
+probably why they slipped un-noticed during testing. To solve these problems
+it may be important to log all user input.
+</blurb>
+
+<example filename="input_log.php" result="1" type="php" />
+
+</slide>

@@ -1,0 +1,14 @@
+<slide title="PHP Interface to SQLite">
+
+<image filename="elephant.jpg" align="right" />
+
+<list fontsize="3.5em">
+	<bullet padding="0.5em">Brand new, legacy free code.</bullet>
+	<bullet padding="0.5em">Developed by Wez Furlong &amp; Marcus Boerger in April 2003.</bullet>
+		<bullet marginleft="3em">PECL for PHP 4.3.X</bullet>
+		<bullet marginleft="3em">Bundled with PHP 5</bullet>
+	<bullet padding="0.5em">Fastest database library interface.</bullet>
+	<bullet padding="0.5em">Library &amp; Database both part of the extension</bullet>
+	<bullet padding="0.5em">Stable</bullet>
+</list>
+</slide>

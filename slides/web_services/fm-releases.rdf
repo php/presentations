@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:fm="http://freshmeat.net/backend/fm-releases-0.1.dtd"
+>
+  <channel rdf:about="http://freshmeat.net/">
+    <title>freshmeat.net</title>
+    <link>http://freshmeat.net/</link>
+    <description>freshmeat.net maintains the Web's largest index of Unix and cross-platform open source software. Thousands of applications are meticulously cataloged in the freshmeat.net database, and links to new code are added daily.</description>
+    <dc:language>en-us</dc:language>
+    <dc:subject>Technology</dc:subject>
+    <dc:publisher>freshmeat.net</dc:publisher>
+    <dc:creator>freshmeat.net contributors</dc:creator>
+    <dc:rights>Copyright (c) 1997-2003 OSDN</dc:rights>
+    <dc:date>2003-07-01T14:50+00:00</dc:date>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127904/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127903/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127901/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127900/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127899/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127898/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127897/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127877/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127894/" />
+        <rdf:li rdf:resource="http://freshmeat.net/releases/127893/" />
+      </rdf:Seq>
+    </items>
+    <image rdf:resource="http://images.freshmeat.net/button.gif" />
+    <textinput rdf:resource="http://freshmeat.net/search/" />
+  </channel>
+  <image rdf:about="http://images.freshmeat.net/button.gif">
+    <title>freshmeat.net</title>
+    <url>http://images.freshmeat.net/button.gif</url>
+    <link>http://freshmeat.net/</link>
+  </image>
+  <item rdf:about="http://freshmeat.net/releases/127904/">
+    <title>Hotlist 0.2.0 </title>
+    <link>http://freshmeat.net/releases/127904/</link>
+    <description>A very simple URL manager.</description>
+    <dc:date>2003-07-01T07:31-06:00</dc:date>
+    <fm:screenshot_url></fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127903/">
+    <title>AdaOpenGL 0.10 </title>
+    <link>http://freshmeat.net/releases/127903/</link>
+    <description>An Ada binding for OpenGL.</description>
+    <dc:date>2003-07-01T07:23-06:00</dc:date>
+    <fm:screenshot_url>http://images.freshmeat.net/screenshots/34259_thumb.png</fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127901/">
+    <title>DRT 0.3.2 </title>
+    <link>http://freshmeat.net/releases/127901/</link>
+    <description>Design recovery/reverse engineering tool for interactive graphical applications.</description>
+    <dc:date>2003-07-01T07:16-06:00</dc:date>
+    <fm:screenshot_url>http://images.freshmeat.net/screenshots/31407_thumb.png</fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127900/">
+    <title>O-Zone's EDITor 0.1.0pre1 </title>
+    <link>http://freshmeat.net/releases/127900/</link>
+    <description>A simple but powerful editor for coders.</description>
+    <dc:date>2003-07-01T07:14-06:00</dc:date>
+    <fm:screenshot_url>http://images.freshmeat.net/screenshots/37523_thumb.jpg</fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127899/">
+    <title>Licq 1.2.7 </title>
+    <link>http://freshmeat.net/releases/127899/</link>
+    <description>An advanced graphical ICQ clone.</description>
+    <dc:date>2003-07-01T06:17-06:00</dc:date>
+    <fm:screenshot_url>http://images.freshmeat.net/screenshots/5768_thumb.jpg</fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127898/">
+    <title>eSKUeL 1.0.3 </title>
+    <link>http://freshmeat.net/releases/127898/</link>
+    <description>A MySQL database managment tool written in PHP.</description>
+    <dc:date>2003-07-01T06:15-06:00</dc:date>
+    <fm:screenshot_url></fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127897/">
+    <title>white_dune 0.25beta32 (Development)</title>
+    <link>http://freshmeat.net/releases/127897/</link>
+    <description>A graphical VRML97 editor and animation tool.</description>
+    <dc:date>2003-07-01T06:13-06:00</dc:date>
+    <fm:screenshot_url>http://images.freshmeat.net/screenshots/19822_thumb.jpg</fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127877/">
+    <title>GTK-Lsof 0.9.14 </title>
+    <link>http://freshmeat.net/releases/127877/</link>
+    <description>a simple GTK 2 GUI for lsof.</description>
+    <dc:date>2003-07-01T06:04-06:00</dc:date>
+    <fm:screenshot_url>http://images.freshmeat.net/screenshots/32106_thumb.jpg</fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127894/">
+    <title>rss2html 0.1.2 </title>
+    <link>http://freshmeat.net/releases/127894/</link>
+    <description>Converts RSS RDF files into HTML</description>
+    <dc:date>2003-07-01T04:54-06:00</dc:date>
+    <fm:screenshot_url></fm:screenshot_url>
+  </item>
+  <item rdf:about="http://freshmeat.net/releases/127893/">
+    <title>tki2xml 1.1 </title>
+    <link>http://freshmeat.net/releases/127893/</link>
+    <description>A script for converting tkined/scotty files to XML.</description>
+    <dc:date>2003-07-01T04:53-06:00</dc:date>
+    <fm:screenshot_url></fm:screenshot_url>
+  </item>
+  <textinput rdf:about="http://freshmeat.net/search/">
+    <title>Search freshmeat.net</title>
+    <description>Search freshmeat.net projects</description>
+    <name>q</name>
+    <link>http://freshmeat.net/search/</link>
+  </textinput>
+</rdf:RDF>

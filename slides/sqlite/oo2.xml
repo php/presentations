@@ -1,0 +1,16 @@
+<slide title="OO Interface Cont.">
+
+<blurb fontsize="4em">
+The OO does have it's share of problems, which should be considered.
+</blurb>
+
+<break />
+
+<list fontsize="4em" title="Disadvantages">
+	<bullet padding="0.5em">Cannot open persistent connections.</bullet>
+	<bullet padding="0.5em">There is not 'close' method to terminate connection.</bullet>
+	<bullet padding="0.5em">In some instances can be a little slower.</bullet>
+	<bullet padding="0.5em">PHP5 only.</bullet>
+</list>
+
+</slide>

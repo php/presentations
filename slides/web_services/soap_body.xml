@@ -1,0 +1,16 @@
+<slide>
+	<title>SOAP Body</title>
+
+<blurb fontsize="3.5em">The SOAP %Body% contains the document payload</blurb>
+
+<example title="SOAP :: Document Literal"><![CDATA[<?xml version="1.0"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+<Header />
+<Body>
+	<purge xmlns="http://fud.prohost.org/message">
+		<documentid>298</documentid>
+	</purge>
+</Body>
+</Envelope>]]></example>	
+	
+</slide>

@@ -1,0 +1,13 @@
+<slide title="PHP Implementations">
+
+<image filename="complex.gif" align="right" />
+
+<list fontsize="4.0em">
+	<bullet>PEAR::SOAP</bullet>
+		<bullet marginleft="4em" fontsize="2em">|00AA00|Easy to use|, but |FF0000|slow|</bullet>
+	<bullet>PECL::SOAP</bullet>
+		<bullet marginleft="4em" fontsize="2em">|00AA00|Fast|, but |FF0000|experimental|</bullet>
+	<bullet>NuSOAP</bullet>
+</list>
+
+</slide>

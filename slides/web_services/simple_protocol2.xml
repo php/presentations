@@ -1,0 +1,9 @@
+<slide>
+<title>IPIP Client</title>
+
+<blurb>
+The client parses the sent data according to the rules of the IPIP and generates data for the user.
+</blurb>
+
+<example filename="ipip_client.php" fontsize="1.6em" />
+</slide>

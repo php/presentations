@@ -1,0 +1,14 @@
+<slide title="Improved 404 Handling">
+
+<blurb fontsize="4em">
+Use web server's 404 handling mechanism to create custom error handler that can 
+do a better job at both tracking the errors and giving a user presentable output.
+</blurb>
+
+<break />
+
+<example title="Defining 404 Handler (Apache)"><![CDATA[ErrorDocument 404 /404.php]]></example>
+
+<example fontsize="1.8em" filename="404_logging.php" title="PHP error tracker" type="php"/>
+
+</slide>

@@ -1,0 +1,10 @@
+<slide title="Automatic Syntax Validation">
+
+<blurb fontsize="4em">
+As nice as PHP's syntax checking tools are, it is easy to forget
+to validate files and allow errors to sneak into production code.
+</blurb>
+
+<example title="Automatic Syntax Checking" filename="parse_cvs.php" type="php" />
+
+</slide>

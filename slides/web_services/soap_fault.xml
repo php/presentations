@@ -1,0 +1,20 @@
+<slide title="SOAP Fault">
+
+<blurb fontsize="4em">Faults can be of four basic types: VersionMismatch, MustUnderstand,
+Client and Server:</blurb>
+
+
+<list fontsize="3.5em">
+	<bullet>VersionMismatch: invalid namespace for the SOAP Envelope</bullet>
+	<bullet>MustUnderstand: a required header was not understood by the server</bullet>
+	<bullet>Client: the message sent by the client was not properly formed, or did
+not contain the necessary information to fulfill the request.</bullet>
+	<bullet>Server: the message could not be processed</bullet>
+</list>
+
+<blurb fontsize="4em">Faults can also contain other information, such as a
+basic message describing the fault, the URI of the originator of the fault, and a
+detail field that can be used to provide additional information on the fault.
+</blurb>
+
+</slide>

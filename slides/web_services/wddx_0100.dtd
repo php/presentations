@@ -1,0 +1,35 @@
+<!ELEMENT wddxPacket (header, data)>
+<!ATTLIST wddxPacket version CDATA #FIXED "1.0">
+           
+<!ELEMENT header (comment?)>
+<!ELEMENT comment (#PCDATA)>
+<!ELEMENT data (null | boolean | number | dateTime | string | array | struct | recordset | binary)>
+<!ELEMENT null EMPTY>
+<!ATTLIST null type CDATA #IMPLIED>
+<!ELEMENT boolean EMPTY>
+<!ATTLIST boolean value (true | false) #REQUIRED type CDATA #IMPLIED>
+                                                       
+<!ELEMENT string (#PCDATA | char)*>
+<!ATTLIST string type CDATA #IMPLIED>
+                                                                  
+<!ELEMENT char EMPTY>
+<!ATTLIST char code CDATA #REQUIRED>
+                                                                             
+<!ELEMENT number (#PCDATA)>
+<!ATTLIST number type CDATA #IMPLIED>
+                                                                                        
+<!ELEMENT dateTime (#PCDATA)>
+<!ATTLIST dateTime type CDATA #IMPLIED>
+<!ELEMENT array (null | boolean | number | dateTime | string | array | struct | recordset | binary)*>
+<!ATTLIST array length CDATA #REQUIRED type CDATA #IMPLIED>
+<!ELEMENT struct (var*)>
+<!ATTLIST struct type CDATA #IMPLIED>
+<!ELEMENT var (null | boolean | number | dateTime | string | array | struct | recordset | binary)>
+<!ATTLIST var name CDATA #REQUIRED>
+<!ELEMENT recordset (field*)>
+<!ATTLIST recordset rowCount CDATA #REQUIRED
+fieldNames CDATA #REQUIRED type CDATA #IMPLIED>
+<!ELEMENT field (null | boolean | number | dateTime | string | binary)*>
+<!ATTLIST field name CDATA #REQUIRED>
+<!ELEMENT binary (#PCDATA)>
+<!ATTLIST binary encoding CDATA #FIXED "base64" length CDATA #IMPLIED type CDATA #IMPLIED>

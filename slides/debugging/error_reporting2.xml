@@ -1,0 +1,23 @@
+<slide title="Error Reporting Cont.">
+
+<image filename="trap.jpg" align="right" />
+
+<blurb fontsize="4em">
+PHP 5.0 also introduces E_STRICT, which is primarily used to indicate functionality
+that has been deprecated in PHP5.
+</blurb>
+
+<example title="PHP 5.0 Error Reporting"><![CDATA[# Inside PHP.ini
+error_reporting = E_ALL | E_STRICT
+
+# Inside httpd.conf or .htacess
+php_value error_reporting 4095
+
+# Inside a script
+<?php
+ini_set("error_reporting", E_ALL | E_STRICT);
+/* or */
+error_reporting(E_ALL | E_STRICT);
+?>]]></example>
+
+</slide>

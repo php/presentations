@@ -1,0 +1,29 @@
+<wddxPacket version='1.0'>
+  <header>
+    <comment>My PHP Packet</comment>
+  </header>
+  <data>
+    <struct>
+      <var name='a'>
+        <number>1</number>
+      </var>
+      <var name='b'>
+        <array length='3'>
+          <number>1</number>
+          <number>2</number>
+          <number>3</number>
+        </array>
+      </var>
+      <var name='c'>
+        <struct>
+          <var name='php_class_name'>
+            <string>foo</string>
+          </var>
+          <var name='bar'>
+            <number>1</number>
+          </var>
+        </struct>
+      </var>
+    </struct>
+  </data>
+</wddxPacket>

@@ -1,0 +1,11 @@
+<slide title="ECHO Debugging Cont.">
+
+<blurb fontsize="4em">
+PHP includes %print_r()% and %var_dump()% functions that can be used
+to print complex data structures like objects and arrays that %echo%
+cannot print.
+</blurb>
+
+<example filename="echo2.php" type="php" />
+
+</slide>

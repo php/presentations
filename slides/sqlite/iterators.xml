@@ -1,0 +1,9 @@
+<slide title="SQLite Iterators">
+
+<blurb fontsize="4em">
+Yet another method of retrieving information from a query, using iterators.
+</blurb>
+
+<example result="1" type="php" filename="itter.php" />
+
+</slide>

@@ -1,0 +1,35 @@
+<slide title="DOM or SAX?">
+
+<blurb align="center" fontsize="4em">
+Utimately, what is better, DOM or Sax?
+</blurb>
+
+<image filename="boxing.jpg" align="center" />
+
+<blurb><![CDATA[
+<table class="index" border="0" cellpadding=5 align="center" >
+<tr>
+	<th width="50%" align="left" style="font-size: 2em;">DOM</th>
+	<th width="50%" align="left" style="font-size: 2em;">SAX</th>
+</tr>
+<tr>
+	<td style="font-size: 1.8em; color: red;">Unstable/Experimental</td>
+	<td style="font-size: 1.8em; color: green;">Mostly Stable &amp; enabled by default</td>
+<tr>
+<tr>
+	<td style="font-size: 1.8em; color: green;">Very easy to create/modify XML documents</td>
+	<td style="font-size: 1.8em; color: red;">Any xml creation must happen manually</td>
+<tr>
+<tr>
+	<td style="font-size: 1.8em; color: red;">Not really very simple (until PHP 5.0)</td>
+	<td style="font-size: 1.8em; color: green;">Can be made exteremly simple</td>
+</tr>
+<tr>
+	<td style="font-size: 1.8em; color: green;">Faster Parser</td>
+	<td style="font-size: 1.8em; color: red;">Parsing process can be quite slow</td>
+</tr>
+
+</table>
+]]></blurb>
+
+</slide>

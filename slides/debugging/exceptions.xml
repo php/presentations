@@ -1,0 +1,16 @@
+<slide title="Exception">
+
+<blurb fontsize="4em">
+In PHP5 there is yet another error trapping mechanism, exceptions.
+Exceptions, allow error tracking inside an entire block of code
+with just a few lines.
+</blurb>
+
+<image filename="exception.jpg" align="center" />
+
+<blurb fontsize="4em">
+Unfortunately, only newest PHP extensions can throw exceptions and do
+so only when working with OO interface.
+</blurb>
+
+</slide>

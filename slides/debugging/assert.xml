@@ -1,0 +1,11 @@
+<slide title="Assertion">
+
+<blurb fontsize="3em">
+Instead of checking return values of every function and calling %trigger_error()% on failure,
+you can use a simpler alternative in the form of %assert()% that can accomplish the virtually 
+the same with a lot less code.
+</blurb>
+
+<example filename="assert.php" type="php" />
+
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Multiple Databases">
+
+<blurb fontsize="3.5em">
+For performance reasons you often will wish to separate data into multiple databases so that locks on one table do
+no affect other operations. However at one point or another you'll want to use data between the various databases.
+Fortunately SQLite allows for such an operation, allowing for linking of multiple databases.
+</blurb>
+
+<example result="1" filename="attach_db.php" />
+
+</slide>

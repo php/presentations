@@ -1,0 +1,28 @@
+<slide title="PRAGMA II">
+
+<blurb fontsize="3em" title="synchronous">
+This is perhaps the most import option you can control as it has significant impact on both the performance and
+data integrity of your SQLite database. 
+</blurb>
+
+<blurb fontsize="2.5em" title="NORMAL">
+Default setting, which offers a fair blend between performance and data integrity
+</blurb>
+
+<blurb fontsize="2.5em" title="NONE">
+Performance oriented setting, which increases performance but increases danger of data-loss due to power, application failure.
+</blurb>
+
+<blurb fontsize="2.5em" title="FULL">
+In this mode there is virtually no change any data would be lost, however this results in significantly diminished performance.
+</blurb>
+
+<example><![CDATA[<?php
+$db = new sqlite_db("./db.sqlite");
+
+// PRAGMA parameters are set via sqlite_query()
+$db->query("PRAGMA default_synchronous=OFF");
+?>]]>
+</example>
+
+</slide>

@@ -1,0 +1,28 @@
+<slide title="Error Handling Trick">
+
+<break />
+
+<example><![CDATA[<?php
+$db = sqlite_open("/path/to/database");
+
+while (1) {
+	$ses_id = md5(mt_rand());
+	if (@sqlite_query("INSERT INTO session_table (ses_id) VALUES('".$ses_id."')", $db)) {
+		// success, unique session generated
+		break;
+	}
+	$errno = sqlite_last_error($db);
+	if ($errno != SQLITE_CONSTRAINT) {
+		// some error (not duplicate key) occurred
+		die(sqlite_error_string($errno));
+	}
+}
+?>]]>
+</example>
+
+<list fontsize="3.2em">
+	<bullet>Lock free operation, queries do not need to wait for the processes to finish.</bullet>
+	<bullet>Fewer queries are executed.</bullet>
+</list>
+
+</slide>

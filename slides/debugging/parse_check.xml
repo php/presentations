@@ -1,0 +1,16 @@
+<slide title="Parse Error Detection">
+
+<blurb fontsize="4em">
+Simple validation of entire directories using php-cli.
+</blurb>
+
+<example><![CDATA[
+# one directory at a time
+ls -1 *.php *.inc | xargs -n1 php -l
+
+# entire directory tree
+find -name \*.php -o -name \*.inc | xargs -n1 php -l
+]]></example>
+
+</slide>
+

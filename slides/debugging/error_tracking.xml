@@ -1,0 +1,22 @@
+<slide title="Error Tracking">
+
+<blurb fontsize="4.5em">
+Just because errors are being tracked, it does not mean the information that is tracked is useful.
+</blurb>
+
+<example fontsize="1em"><![CDATA[
+[08-Feb-2004 15:24:07] PHP Warning:  mcrypt_generic_init(): Key size too large; supplied length: 48, max: 24 in class.crypto.inc.php on line 218
+[08-Feb-2004 15:24:07] PHP Warning:  mcrypt_generic_init(): Iv size incorrect; supplied length: 16, needed: 8 in class.crypto.inc.php on line 218
+[08-Feb-2004 15:24:13] PHP Warning:  mcrypt_generic_init(): Key size too large; supplied length: 48, max: 24 in class.crypto.inc.php on line 218
+[08-Feb-2004 15:24:13] PHP Warning:  mcrypt_generic_init(): Iv size incorrect; supplied length: 16, needed: 8 in class.crypto.inc.php on line 218
+[08-Feb-2004 15:24:13] PHP Warning:  Delimiter must not be alphanumeric or backslash in post.php on line 2627
+[08-Feb-2004 15:24:13] PHP Warning:  Delimiter must not be alphanumeric or backslash in post.php on line 2629
+[16-Feb-2004 12:59:04] PHP Warning:  uniqid() expects at least 1 parameter, 0 given in Command line code on line 1
+[16-Feb-2004 12:59:04] PHP Warning:  uniqid() expects at least 1 parameter, 0 given in Command line code on line 1
+[16-Feb-2004 12:59:04] PHP Warning:  uniqid() expects at least 1 parameter, 0 given in Command line code on line 1
+[16-Feb-2004 12:59:04] PHP Warning:  uniqid() expects at least 1 parameter, 0 given in Command line code on line 1
+[11-Feb-2004 15:00:34] PHP Warning:  assert() Assertion failed in a.php on line 13
+
+]]></example>
+
+</slide>

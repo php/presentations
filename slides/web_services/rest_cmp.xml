@@ -1,0 +1,14 @@
+<slide title="Is Rest the Best?">
+
+<list title="Advantages" fontsize="4em">
+	<bullet>Simple</bullet>
+	<bullet>Numerous stable and effecient implementations (XML, SimpleXML, DOM)</bullet>
+	<bullet>No need to bother with various protocols</bullet>
+</list>
+
+<list title="Disadvantages" fontsize="4em">
+	<bullet>Too Simple</bullet>
+	<bullet>Limited to HTTP protocol</bullet>
+</list>
+
+</slide>

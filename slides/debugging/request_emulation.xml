@@ -1,0 +1,15 @@
+<slide title="Request Emulation">
+
+<blurb fontsize="3em">
+Some errors can only be replicated though complex series of operations.
+Another words you need someone or something to make a genuine request 
+to replicate the bug.
+</blurb>
+
+<blurb fontsize="3em">
+Fortunately, PHP includes a %cURL% extension, which can do just that. 
+</blurb>
+
+<example filename="curl.php" />
+
+</slide>

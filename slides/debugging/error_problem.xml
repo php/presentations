@@ -1,0 +1,9 @@
+<slide title="Error Tracking Problem">
+
+<blurb fontsize="4em">
+The biggest problem with error tracking, is that you get information about the effect and not the cause. 
+</blurb>
+
+<example fontsize="2em" type="php" filename="error_problem.php" />
+
+</slide>

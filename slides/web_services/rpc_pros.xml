@@ -1,0 +1,11 @@
+<slide title="XML-RPC Pros">
+
+<list title="What's to like about XML-RPC?" fontsize="4em">
+<bullet>Extremely easy to understand, implement, and debug.</bullet>
+<bullet>Uncomplicated syntax</bullet>
+<bullet>Fast, especially so if C extension is used</bullet>
+<bullet>Thanks to PEAR can work with virtually any PHP version</bullet>
+<bullet>Stable</bullet>
+</list>
+
+</slide>

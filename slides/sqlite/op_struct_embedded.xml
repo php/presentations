@@ -1,0 +1,10 @@
+<slide title="Embedded Environment">
+<image align="left" filename="Diagram3.png"/>
+
+<list fontsize="4em">
+	<bullet>No external dependencies.</bullet>
+	<bullet>Portable.</bullet>
+	<bullet>Extremely fast.</bullet>
+	<bullet>Can be used at temporary data storage (memory only databases).</bullet>
+</list>
+</slide>

@@ -1,0 +1,16 @@
+<slide title="Xdebug: Tracing">
+
+<blurb fontsize="3em">
+Xdebug is capable of generating a trace of the entire script, allowing you to easily see
+the flow of the code. The traces can be printed to screen or logged to a file for future
+analysis.
+</blurb>
+
+<blurb fontsize="3em">
+The tracing can be started manually via %xdebug_start_trace()% or automatically through the
+%xdebug.auto_trace% option.
+</blurb>
+
+<image filename="dump_trace.jpg" align="center" />
+
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Unit Testing">
+
+<blurb fontsize="3em">
+PHPUnit is a Unit Testing Suite, loosely based on %JUnit%.
+</blurb>
+
+<blurb fontsize="3em">
+It allows for easy creation of regression tests that can be used to
+determine whether potions of the code meet various operational parameters.
+</blurb>
+
+<example filename="unit.php" result="1" />
+
+</slide>

@@ -1,0 +1,7 @@
+<slide title="SOAP Server">
+
+<example filename="soap_server.php" fontsize="2em" title="SOAP Server w/PECL::SOAP" />
+
+<example result="1" filename="soap_client2.php" fontsize="2em" title="SOAP Client w/PECL::SOAP" />
+
+</slide>

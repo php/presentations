@@ -1,0 +1,12 @@
+<slide title="User Input">
+
+<image filename="users.jpg" align="right" />
+
+<blurb fontsize="4em">
+Many errors in PHP, or any other scripting language can be traced to invalid
+user input, which was not properly validated by the application.
+</blurb>
+
+<example filename="user_input.php" type="php" title="Common Errors" />
+
+</slide>

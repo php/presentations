@@ -1,0 +1,17 @@
+<slide title="Unbuffered Queries">
+
+<blurb fontsize="4em">
+Like MySQL, SQLite supports unbuffered queries that can be used to more efficiently retrieve data.
+</blurb>
+
+<example filename="database_pop9.php" />
+
+<list>
+	<bullet>|00AA00|15-30% performance increase depending on the number of rows fetched.|</bullet>
+	<bullet>|00AA00|Data is available right away, don't need to wait for all data to be pre-fetched.|</bullet>
+	<bullet>|00AA00|Lower memory utilization.|</bullet>
+	<bullet>|FF0000|Can only move forward one row at a time.|</bullet>
+	<bullet>|FF0000|Each row can only be accessed once.|</bullet>
+</list>
+
+</slide>

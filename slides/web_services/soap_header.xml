@@ -1,0 +1,18 @@
+<slide>
+	<title>SOAP Header</title>
+	
+<example><![CDATA[<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+ 
+<soap:Header>
+<m:Trans xmlns:m="http://www.example.com/header/" soap:mustUnderstand="1">
+234
+</m:Trans>
+</soap:Header>
+  
+<soap:Body></soap:Body>
+</soap:Envelope>
+]]></example>
+</slide>

@@ -1,0 +1,44 @@
+<slide title="debug_backtrace() Example">
+
+<example fontsize="1.8em" title="Sample Output"><![CDATA[Array
+(
+    [0] => Array
+        (
+            [file] => script.php
+            [line] => 18
+            [function] => query_wrapper
+            [args] => Array
+                (
+                    [0] => SELECT * FROM msg WHERE id=abc
+                )
+        )
+
+    [1] => Array
+        (
+            [file] => script.php
+            [line] => 25
+            [function] => get_message
+            [args] => Array
+                (
+                    [0] => abc
+                )
+        )
+
+    [2] => Array
+        (
+            [file] => script.php
+            [line] => 28
+            [function] => foo
+            [args] => Array
+                (
+                )
+        )
+)]]></example>
+
+<example title="Practical Application" fontsize="2em" type="php" filename="error_track_ex.php" />
+
+<example fontsize="1.8em" title="End Result"><![CDATA[script.php:41 foo()
+script.php:38 get_message(abc)
+script.php:31 query_wrapper(SELECT * FROM msg WHERE id=abc)]]></example>
+
+</slide>

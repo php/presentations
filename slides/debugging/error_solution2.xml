@@ -1,0 +1,10 @@
+<slide title="Error Tracking Solution Cont.">
+
+<example title="Log Entry"><![CDATA[Fatal error: Failed executing query 'SELECT * FROM msg WHERE id=abc' on script.php:26 inside foo()]]></example>
+
+<blurb fontsize="3em">
+With the added information it is trivial to determine what is the real cause of the problem
+and fix it. 
+</blurb>
+
+</slide>
