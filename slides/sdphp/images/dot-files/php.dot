@@ -1,0 +1,100 @@
+digraph PHPCommunityFull{
+	compound = true;
+	rankdir = LR;
+	orientation = landscape;
+	remincross = true;
+
+	subgraph cluster0 {
+		label = "PHP";
+		style = filled;
+		color = cyan;
+		Internals -> QA [dir = both];
+		Internals -> Extensions [dir = both];
+		QA -> Extensions [dir = both];
+		Internals -> "PHP Documentation" [dir = both];
+		QA -> "PHP Documentation" [dir = both];
+		Extensions -> "PHP Documentation" [dir = both];
+		"PHP Documentation" [shape=box];
+	}
+	Extensions -> PECL;
+	
+	subgraph cluster1 {
+		label = "PHP Documentation teams";
+		style = filled;
+		color = lightsalmon;
+		English-> Arabic;
+		English-> Czech;
+		English-> Chinese;
+		Chinese -> Traditional;
+		Chinese -> "Honk Kong Cantonese";
+		Chinese -> Simplified;
+		English-> German;
+		English-> Greek;
+		English-> Spanish;
+		English-> French;
+		English-> Finnish;
+		English-> Hebrew;
+		English-> Hungarian;
+		English-> Indonesian;
+		English-> Italian;
+		English-> Japanese;
+		English-> Korean;
+		English-> Lithuanian;
+		English-> Dutch;
+		English-> Polish;
+		English-> "Bazilian Portuguese";
+		English-> Romanian;
+		English-> Russian;
+		English-> Slovak;
+		English-> Slovenian;
+		English-> Swedish;
+		English-> Turkish;
+	}
+	"PHP Documentation" -> English [lhead=cluster1];
+
+	subgraph cluster2 {
+		label = "PEAR";
+		lableloc = bottom;
+		style = filled
+		color = yellowgreen;
+		"PEAR Developers" -> "PEAR Documentation" [dir = both];
+		"PEAR Developers" -> PEAR_QA [dir = both];
+		"PEAR Documentation" -> PEAR_QA [dir = both];
+		"PEAR Documentation" [shape=box];
+	}
+
+	PECL -> "PEAR Documentation";
+
+	subgraph cluster3 {
+		label = "PEAR Documentation teams";
+		style = filled;
+		color = lightgrey;
+		"PEARDOC:\nEnglish" -> "PEARDOC:\nFrench";
+		"PEARDOC:\nEnglish" -> "PEARDOC:\nDutch";
+		"PEARDOC:\nEnglish" -> "PEARDOC:\nRussian";
+	}
+	Internals -> "PEAR Developers" [ltail=cluster0, lhead=cluster2, minlen=3];
+	"PHP Documentation" -> "PEAR Documentation";
+	"PEAR Documentation" -> "PEARDOC:\nEnglish" [lhead=cluster3];
+
+	subgraph cluster4 {
+		label = "PHP-GTK";
+		color = black;
+		PHP_GTK_Core -> PHP_GTK_DOC [dir=both];
+		PHP_GTK_DOC [shape=box];
+	}
+
+	Internals -> PHP_GTK_Core [ltail=cluster0, lhead=cluster4, minlen=2];
+	PECL [shape=hexagon];
+
+	subgraph cluster5 {
+		label = "PHP-GTK Documentation teams";
+		"PHP-GTK-DOC:\nEnglish" -> "PHP-GTK-DOC:\nCzech";
+		"PHP-GTK-DOC:\nEnglish" -> "PHP-GTK-DOC:\nGerman";
+		"PHP-GTK-DOC:\nEnglish" -> "PHP-GTK-DOC:\nSpanish";
+		"PHP-GTK-DOC:\nEnglish" -> "PHP-GTK-DOC:\nFrench";
+		"PHP-GTK-DOC:\nEnglish" -> "PHP-GTK-DOC:\n...";
+	}
+	PHP_GTK_DOC -> "PHP-GTK-DOC:\nEnglish" [lhead=cluster5];
+
+}

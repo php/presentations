@@ -1,0 +1,22 @@
+digraph PHPCore{
+	concentrate = true;
+	compound = true;
+
+	subgraph cluster0 {
+		label = "PHP";
+		style = filled;
+		color = cyan;
+		Internals -> QA [dir = both];
+		Internals -> Extensions [dir = both];
+		QA -> Extensions [dir = both];
+		Internals -> "PHP Documentation" [dir = both];
+		QA -> "PHP Documentation" [dir = both];
+		Extensions -> "PHP Documentation" [dir = both];
+		"PHP Documentation" [shape=box];
+	}
+
+	PEAR -> Internals [lhead=cluster0,minlen=2];
+	Programmers -> Extensions [lhead=cluster0,minlen=1];
+	Advocates -> QA [lhead=cluster0,minlen=1];
+	"End users" -> "PHP Documentation" [lhead=cluster0,minlen=1];
+}

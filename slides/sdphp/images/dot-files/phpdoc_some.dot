@@ -1,0 +1,15 @@
+digraph PHPDOC_some{
+	nodesep = 0.1
+	ordering = out;
+
+		label = "PHP Documentation teams";
+		English -> Arabic;
+		English -> Chinese;
+		Chinese -> Traditional;
+		Chinese -> "Honk Kong Cantonese";
+		Chinese -> Simplified;
+		English -> German;
+		English -> Spanish;
+		English -> "...";
+		English -> Turkish;
+}

@@ -1,0 +1,64 @@
+<presentation 
+ template="php2" 
+ logo1="images/animated_elephant.gif"
+ titlecolor="#1111aa"
+ navbarbackground="#ffffff"
+ navbarheight="4.1em"
+ subtitlesize='3em'
+>
+<topic>PHP</topic>
+<title>PHP: The Language. The Ecosystem.</title>
+<event>COSST Symposium (http://cosst.ieee-occs.org/)</event>
+<location>Newport Beach, CA</location>
+<url>http://talks.php.net/show/cosst2003_php-ecosystem</url>
+<date>October 18, 2003</date>
+<speaker>Jesus M. Castagnetto</speaker>
+<email>jmcastagnetto@php.net</email>
+
+<slide>slides/sdphp/sdphp_titlepage.xml</slide>
+<slide>slides/sdphp/cosst2003_toc.xml</slide>
+<chapter title="Language">
+ <slide>slides/sdphp/the_language.xml</slide>
+ <slide>slides/sdphp/lang_philosophy.xml</slide>
+ <slide>slides/intro/serverside.xml</slide>
+ <slide>slides/intro/arch.xml</slide>
+ <slide>slides/intro/platforms.xml</slide>
+ <slide>slides/intro/ext.xml</slide>
+ <slide>slides/intro/numbers.xml</slide>
+ <slide>slides/intro/embed2.xml</slide>
+ <slide>slides/intro/basics.xml</slide>
+ <slide>slides/intro/forms2.xml</slide>
+ <slide>slides/intro/syntax.xml</slide>
+ <slide>slides/intro/typing.xml</slide>
+ <!-- slide>slides/intro/arrays.xml</slide -->
+ <slide>slides/intro/funcs.xml</slide>
+ <slide>slides/intro/oop.xml</slide>
+ <slide>slides/intro/regex.xml</slide>
+ <slide>slides/intro/sql.xml</slide>
+ <slide>slides/intro/sqlex.xml</slide>
+ <slide>slides/sdphp/gd2_example.xml</slide>
+ <slide>slides/intro/pdf.xml</slide>
+ <slide>slides/pearintro/whatispear0.xml</slide>
+ <slide>slides/pearintro/whatispear1.xml</slide>
+ <slide>slides/pearintro/whatispear2.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_managing-packages.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_gtk.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_web.xml</slide>
+ <slide>slides/soap/whatissoap.xml</slide>
+ <slide>slides/soap/pear.xml</slide>
+ <slide>slides/soap/simpleclient2.xml</slide>
+ <slide>slides/soap/simpleclient-run.xml</slide>
+</chapter>
+
+<chapter title="Ecosystem">
+ <slide>slides/sdphp/the_ecosystem.xml</slide>
+ <slide>slides/sdphp/why_ecosystem.xml</slide>
+ <slide>slides/sdphp/phpcommunity_birdseyeview.xml</slide>
+ <slide>slides/sdphp/phpcommunity_phpcore.xml</slide>
+ <slide>slides/sdphp/phpcommunity_phpdoc.xml</slide>
+ <slide>slides/sdphp/phpcommunity_pear.xml</slide>
+ <slide>slides/sdphp/phpcommunity_allcommunities.xml</slide>
+ <slide>slides/sdphp/phpcommunity_resources.xml</slide>
+</chapter>
+
+</presentation>

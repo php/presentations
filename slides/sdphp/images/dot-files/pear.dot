@@ -1,0 +1,36 @@
+digraph PEARCommunity{
+	label = "The PEAR Communities";
+	compound = true;
+	rankdir = TB;
+	/*orientation = landscape; */
+/*	remincross = true; */
+
+	subgraph cluster2 {
+		label = "PEAR";
+		style = filled
+		color = yellowgreen;
+		Core -> Developers [dir = both];
+		Core -> Documentation [dir = both];
+		Core -> QA [dir = both];
+		Developers -> Documentation [dir = both];
+		Developers -> QA [dir = both];
+		Documentation -> QA [dir = both];
+		Documentation [shape=box];
+	}
+
+	subgraph cluster3 {
+		label = "PEAR Documentation teams";
+		style = filled;
+		color = lightgrey;
+		English -> French;
+		English -> Dutch;
+		English -> Russian;
+	}
+
+	Documentation -> English [lhead=cluster3];
+
+	Programmers -> Developers [lhead=cluster2];
+	"Article\nwriters" -> Developers [lhead=cluster2];
+	"End Users" -> Developers [lhead=cluster2];
+
+}

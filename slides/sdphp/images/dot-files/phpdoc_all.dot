@@ -1,0 +1,34 @@
+digraph PHPDOC_all{
+	nodesep = 0.1
+	rankdir = T;
+	orientation = landscape;
+	ordering = out;
+	/*label = "PHP Documentation teams";*/
+	English-> Arabic;
+	English-> Czech;
+	English-> Chinese;
+	Chinese -> Traditional;
+	Chinese -> "Honk Kong Cantonese";
+	Chinese -> Simplified;
+	English-> German;
+	English-> Greek;
+	English-> Spanish;
+	English-> French;
+	English-> Finnish;
+	English-> Hebrew;
+	English-> Hungarian;
+	English-> Indonesian;
+	English-> Italian;
+	English-> Japanese;
+	English-> Korean;
+	English-> Lithuanian;
+	English-> Dutch;
+	English-> Polish;
+	English-> "Bazilian Portuguese";
+	English-> Romanian;
+	English-> Russian;
+	English-> Slovak;
+	English-> Slovenian;
+	English-> Swedish;
+	English-> Turkish;
+}
