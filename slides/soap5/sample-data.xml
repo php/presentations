@@ -1,0 +1,9 @@
+<slide title="Data Types">
+<list>
+<bullet>Uses object overloading</bullet>
+<bullet>Uses class interfaces</bullet>
+<bullet>Can be serialized, or provide it's own</bullet>
+</list>
+
+<example fontsize="1.6em" filename="sample-data.php" />
+</slide>

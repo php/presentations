@@ -1,0 +1,12 @@
+<slide title="Server">
+<list>
+<bullet>Full WSDL Support</bullet>
+<bullet>Simplified API</bullet>
+<bullet>Server Handlers use interfaces</bullet>
+<bullet>Testable with PHPUnit</bullet>
+<bullet>Liberal with what it recieves</bullet>
+<bullet>Interoperable with what it sends</bullet>
+</list>
+
+<example fontsize="1.6em" filename="sample-server-handler.php" />
+</slide>

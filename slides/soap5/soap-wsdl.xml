@@ -1,0 +1,11 @@
+<slide title="WSDL">
+<list>
+<bullet>Handles Imported WSDL and Schema</bullet>
+<bullet>Serializes SOAP requests using WSDL validation</bullet>
+<bullet>Generates source code from WSDL and Schema</bullet>
+<bullet>FUTURE: Generate WSDL from Class Interfaces</bullet>
+<bullet>FUTURE: Generate Schema from Class Interfaces</bullet>
+</list>
+
+<example fontsize="1.6em" filename="soap-wsdl.php" />
+</slide>

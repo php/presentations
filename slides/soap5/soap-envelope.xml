@@ -1,0 +1,10 @@
+<slide title="Envelope">
+<list title="SOAP_Envelope DOMDocument class">
+<bullet>Lighten the load and do it yourself</bullet>
+<bullet>Knows how to de/serialize</bullet>
+<bullet>Handles the transport of data</bullet>
+<bullet>Use XPath, Validate it, whatever!</bullet>
+</list>
+
+<example fontsize="1.6em" filename="soap-envelope.php" />
+</slide>

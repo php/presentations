@@ -1,0 +1,10 @@
+<slide title="Streams">
+<list>
+<bullet>All XML support uses PHP Streams</bullet>
+<bullet>You can filter stream data prior to parsing by libXML</bullet>
+<bullet>Write your own stream handlers</bullet>
+<bullet>Internal support for HTTP, HTTPS, TCP, and much more</bullet>
+</list>
+<example fontsize="1.6em" filename="streams.php" />
+
+</slide>

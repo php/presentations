@@ -1,0 +1,8 @@
+<slide title="Schema">
+<list>
+<bullet>Does the hard work of de/serialization</bullet>
+<bullet>FUTURE: Generate Schema from Class Interfaces</bullet>
+</list>
+
+<example fontsize="1.6em" filename="soap-schema.php" />
+</slide>
