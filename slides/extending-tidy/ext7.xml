@@ -14,6 +14,8 @@ The structure of a typical extension contains the following components:
 
 <example title="function_entry" type="c"><![CDATA[function_entry tidy_functions[] = {
     PHP_FE(confirm_tidy_compiled,    NULL)
+    PHP_FE(tidy_create,    NULL)
+    PHP_FE(example_function, { 2, BYREF_FORCE, BYREF_NONE } )
     {NULL, NULL, NULL}
 };]]></example>
 

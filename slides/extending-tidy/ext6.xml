@@ -10,6 +10,56 @@ extension does not rely on any external libraries, uncomment the
 *--enable-tidy* section.
 </blurb>
 
+<example title="config.m4 file" type="shell"><![CDATA[dnl config.m4 for extension tidy
+
+PHP_ARG_WITH(tidy, for tidy support,
+[  --with-tidy             Include tidy support])
+
+if test "$PHP_TIDY" != "no"; then
+  # --with-tidy -> check with-path
+  SEARCH_PATH="/usr/local /usr"
+  SEARCH_FOR="/include/tidy/tidy.h" 
+  if test -r $PHP_TIDY/; then # path given as parameter
+    TIDY_DIR=$PHP_TIDY
+  else # search default path list
+    AC_MSG_CHECKING([for tidy files in default path])
+    for i in $SEARCH_PATH ; do
+      if test -r $i/$SEARCH_FOR; then
+        TIDY_DIR=$i
+        AC_MSG_RESULT(found in $i)
+      fi
+    done
+  fi
+  dnl
+  if test -z "$TIDY_DIR"; then
+    AC_MSG_RESULT([not found])
+    AC_MSG_ERROR([Please reinstall the tidy distribution])
+  fi
+
+  # --with-tidy -> add include path
+  PHP_ADD_INCLUDE($TIDY_DIR/include)
+
+  # --with-tidy -> check for lib and symbol presence
+  LIBNAME=tidy # you may want to change this
+  LIBSYMBOL=tidyReleaseDate # you most likely want to change this 
+
+  PHP_CHECK_LIBRARY($LIBNAME,$LIBSYMBOL,
+  [
+    PHP_ADD_LIBRARY_WITH_PATH($LIBNAME, $TIDY_DIR/lib, TIDY_SHARED_LIBADD)
+    AC_DEFINE(HAVE_TIDYLIB,1,[ ])
+  ],[
+    AC_MSG_ERROR([wrong tidy lib version or lib not found])
+  ],[
+    -L$TIDY_DIR/lib -lm -ldl
+  ])
+  dnl
+  PHP_SUBST(TIDY_SHARED_LIBADD)
+
+  PHP_EXTENSION(tidy, $ext_shared)
+dnl PHP_NEW_EXTENSION(tidy, tidy.c, $ext_shared)
+fi
+]]></example>
+
 <example title="Configure, build and install" type="shell"><![CDATA[% ./configure
 % make
 % cp modules/tidy.so /usr/local/lib/php]]></example>
