@@ -1,0 +1,13 @@
+<slide title="Error Handling">
+<break/>
+<image filename="stonehenge.jpg" align="right" marginright="1.0em"/>
+<break lines="5"/>
+<blurb fontsize="4.0em">
+Error handling is *not* about stupidity prevention.  That's data validation.
+</blurb>
+<blurb fontsize="4.0em">We'll cover some of the trickier issues of data validation in the ~Security~ portion of this talk.
+</blurb>
+<blurb fontsize="4.0em">
+Error handling is fault tolerance, if it breaks, it shouldn't fall to pieces.
+</blurb>
+</slide>

@@ -1,0 +1,15 @@
+<slide title="cURL">
+<break/>
+<list fontsize="4.0em">
+<bullet>cURL is the swiss army knife of URL requests.</bullet>
+<bullet>PHP's cURL extension is some of the best written 
+code in the universe.</bullet>
+<bullet marginleft="4.0em" effect="slide" type="none">|ff3333|~*cough cough*~|</bullet>
+<bullet>Can easily grok</bullet>
+<bullet marginleft="2.0em">HTTP(S) %POST%, %GET%, %PUT%, %DELETE%</bullet>
+<bullet marginleft="2.0em">Proxy Authentication (%Basic%, %NTLM%, %Digest%)</bullet>
+<bullet marginleft="2.0em">Non blocking transfers on multiple sources</bullet>
+<bullet marginleft="2.0em">Content Compression</bullet>
+<bullet>cURL is faster than Streams and Fopen wrappers</bullet>
+</list>
+</slide>

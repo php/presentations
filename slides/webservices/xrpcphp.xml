@@ -1,0 +1,15 @@
+<slide title="XML-RPC and PHP">
+<break/>
+<blurb fontsize="3.5em">
+For production applications where you control the wire, 
+XML-RPC is *currently* the best solution for PHP.
+</blurb>
+<list title="Why?" fontsize="3.5em">
+<bullet>PHP's XML-RPC support is efficient</bullet>
+<bullet>PHP's SOAP support is terrible</bullet>
+<bullet marginleft="2.0em">On a language level</bullet>
+<bullet marginleft="2.0em">*And* on an IDE level</bullet>
+<bullet>In |cc0000|~*90%*~| of the cases, it is what you need</bullet>
+<bullet marginleft="3.0em" type="none">... |0000cc|~*54%*~| of presenters make up figures</bullet>
+</list>
+</slide>

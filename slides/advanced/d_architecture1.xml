@@ -1,0 +1,14 @@
+<slide title="Architecture">
+<break/>
+<image filename="doi.jpg" align="right" marginright="1.0em"/>
+<break lines="6"/>
+<list fontsize="4.0em">
+<bullet>Use Wikis</bullet>
+<bullet type="none" marginleft="2.0em">... Wikis associate dates with entries</bullet>
+<bullet type="none" marginleft="2.0em">... Wikis assign blame</bullet>
+<bullet>Run LXR and Bonsai on your CVS tree, keep them updated daily</bullet>
+<bullet>You can learn alot just by breaking things</bullet>
+<bullet type="none" marginleft="2.0em">... Good regression tests on the whole system itself are invaluable</bullet>
+<bullet>Date your architecture diagrams</bullet>
+</list>
+</slide>

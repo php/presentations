@@ -1,0 +1,16 @@
+<slide title="XML-RPC">
+<image filename="weirdsisters-small.jpg" align="right"/>
+<break lines="2"/>
+<blurb fontsize="4.0em">
+XML-RPC is the predecessor to SOAP, created by Dave Winer of UserLand Software (now Harvard) and Don Box of DevelopMentor (now Microsoft).
+</blurb>
+<blurb fontsize="4.0em">
+From a semantical point of view, SOAP is simpler.
+</blurb>
+<blurb fontsize="4.0em">
+But XML-RPC is very simple to implement, simple to understand and simple to use.
+</blurb>
+<blurb fontsize="4.0em">
+It describes the method, not the data.
+</blurb>
+</slide>

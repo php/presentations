@@ -1,13 +1,9 @@
-<slide title="SOAP Doc Cont.">
-<image filename="mice-small.jpg" align="right"/>
-<break lines="8"/>
-<blurb fontsize="4.5em">Simplest SOAP Document</blurb>
+<slide title="View Source">
 <break/>
-<example><![CDATA[<?xml version="1.0"?>
-<Envelope xmlns="http://soapinterop.org"/>
-  <Header>
-  </Header>
-  <Body>
-  </Body>
-</Envelope>]]></example>
+<image filename="mice-small.jpg" align="right" marginright="1.0em"/>
+<break lines="8"/>
+<blurb align="center" fontsize="4.0em">
+SOAP is a ~View Source~ protocol.  It takes advantage of XML's strengths and 
+allows for classification within the procedure call.
+</blurb>
 </slide>

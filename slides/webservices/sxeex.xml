@@ -1,0 +1,22 @@
+<slide title="SimpleXML">
+<break/>
+<example title="A Sample Pres2 File"><![CDATA[<slide title="Hello World">
+<list>
+ <bullet>These are a few</bullet>
+ <bullet>Sample Bullets</bullet>
+ <bullet>This should be simple to parse</bullet>
+ <bullet>But with SAX and DOM it is hell</bullet>
+</list>
+</slide>]]></example>
+<break lines="2"/>
+<example title="SimpleXML code"><![CDATA[<?php
+$s = simplexml_load_string($data);
+echo $s->title;
+echo "<ul>\n";
+foreach ($s->list->bullet as $bullet) {
+	echo " <li>$bullet</li>\n";
+}
+echo "</ul>\n";
+?>]]></example>
+
+</slide>

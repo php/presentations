@@ -1,2 +1,15 @@
 <slide title="API Documentation">
+<break/>
+<image filename="doi.jpg" align="right" marginright="1.0em"/>
+<break lines="6"/>
+<blurb fontsize="4.0em">
+Good API documentation is an essential component of any application.  
+</blurb>
+<blurb fontsize="4.0em">
+Complex systems have confusing APIs that evolve and mutilate over time.
+</blurb>
+<blurb fontsize="4.0em">
+PHP projects require less API documentation for each ~LOC~ than other systems.
+</blurb>
+
 </slide>

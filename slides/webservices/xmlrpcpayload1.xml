@@ -1,0 +1,16 @@
+<slide title="XML-RPC">
+<break/>
+<image filename="weirdsisters-small.jpg" align="right" marginright="1.0em"/>
+<break lines="8"/>
+<example><![CDATA[<?xml version="1.0"?>
+<methodCall>
+ <methodName>package.listAll</methodName>
+ <params>
+  <param>
+   <value>
+    <boolean>1</boolean>
+   </value>
+  </param>
+ </params>
+</methodCall>]]></example>
+</slide>

@@ -1,0 +1,14 @@
+<slide title="SOAP Doc Cont.">
+<break/>
+<image filename="mice-small.jpg" align="right" marginright="1.0em"/>
+<break lines="4"/>
+<blurb fontsize="4.5em">Simplest SOAP Document</blurb>
+<break/>
+<example><![CDATA[<?xml version="1.0"?>
+<Envelope xmlns="http://soapinterop.org"/>
+  <Header>
+  </Header>
+  <Body>
+  </Body>
+</Envelope>]]></example>
+</slide>

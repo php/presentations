@@ -1,0 +1,19 @@
+<slide title="PHP &amp; WS">
+<break/>
+<blurb fontsize="3.5em">
+PHP supports HTTP, and XML-RPC webservices out of the box.
+</blurb>
+<blurb fontsize="3.5em">
+PHP supports SOAP via the %PEAR::SOAP% library.
+</blurb>
+<blurb fontsize="3.5em">
+There is also a SOAP client in PECL, which is 100x faster than the 
+PEAR::SOAP library.
+</blurb>
+<list>
+<bullet marginleft="4.0em" type="none" fontsize="2.5em" effect="slide">
+Unfortunately it actually works about as often as I say the word 
+~bifurcate~.
+</bullet>
+</list>
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Tastes So Good">
+<break/>
+<image filename="pear-small.jpg" align="right"/>
+<blurb fontsize="3.5em">
+The following example gets a list of packages from %PEAR%, and displays them on your
+machine.
+</blurb>
+<blurb fontsize="3.5em">
+In real life you would use the %pear list-all% command.  
+</blurb>
+<example filename="pear.php"/>
+</slide>

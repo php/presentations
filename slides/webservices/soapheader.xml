@@ -1,0 +1,21 @@
+<slide title="SOAP Header">
+<break/>
+<image filename="mice-small.jpg" align="right" marginright="1.0em"/>
+<break/>
+<blurb fontsize="3.5em">The SOAP Header is very much akin to a %HTTP% header.</blurb>
+<blurb fontsize="3.5em">SOAP aims to be transport independent (%HTTP%, 
+%SMTP%, %send()%)</blurb>
+<break/>
+<example title="Sample SOAP Header"><![CDATA[<?xml version="1.0"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+ <Header>
+  <authinfo xmlns="http://www.edwardbear.org/auth/schema/">
+   <username>Sterling</username>
+   <password>IHonLeiSiebnTognInEuropa</password>
+  </authinfo>
+ </Header>
+ <Body>
+ </Body>
+</Envelope>]]>
+</example>
+</slide>

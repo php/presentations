@@ -1,0 +1,15 @@
+<slide title="API Documentation">
+<break/>
+<image filename="doi.jpg" align="right" marginright="1.0em"/>
+<break lines="6"/>
+<list fontsize="4.0em">
+<bullet>API documentation consists of *two* components.</bullet>
+<bullet marginleft="2.0em">Generated API docs.. Function definitions and summaries (%doxygen%, %PHPDocumentor%).</bullet>
+<bullet marginleft="2.0em">Handwritten API documentation.  Usage summaries, tutorials, email responses.</bullet>
+<bullet>One without the other is like:</bullet>
+<bullet marginleft="4.0em" type="none">... Siegfried without Roy</bullet>
+<bullet marginleft="4.0em" type="none">... Ebert with that annoying new guy</bullet>
+<bullet marginleft="4.0em" type="none">... Microsoft without Satan</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,22 @@
+<slide title="SOAP Body">
+<break/>
+<image filename="mice-small.jpg" align="right" marginright="1.0em"/>
+<break/>
+<blurb fontsize="3.5em">The SOAP %Body% contains the document payload</blurb>
+<blurb fontsize="3.5em">This payload exists in two forms</blurb>
+<list>
+<bullet marginleft="2.0em" fontsize="2.6em">Document Literal</bullet>
+<bullet marginleft="2.0em" fontsize="2.6em">|0000ff|[Deprecated]| Section 5 Encoding (Pedantic typing)</bullet>
+</list>
+<break/>
+<example title="SOAP :: Document Literal"><![CDATA[<?xml version="1.0"?>
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+ <Header>
+ </Header>
+ <Body>
+  <purge xmlns="http://www.edwardbear.org/distrib">
+   <documentid>12884</documentid>
+  </purge>
+ </Body>
+</Envelope>]]></example>
+</slide>

@@ -1,6 +1,7 @@
 <slide title="SOAP">
-<image filename="mice-small.jpg" align="right"/>
-<break lines="6"/>
+<break/>
+<image filename="mice-small.jpg" align="right" marginright="1.0em"/>
+<break lines="4"/>
 <blurb fontsize="4.0em">
 SOAP is a messaging format, not an RPC format
 </blurb>

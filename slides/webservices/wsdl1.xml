@@ -1,5 +1,6 @@
 <slide title="Welcome to the jungle">
-<image filename="mice-small.jpg" align="right"/>
-<break lines="10"/>
+<break/>
+<image filename="mice-small.jpg" align="right" marginright="1.0em"/>
+<break lines="6"/>
 <example filename="simple.wsdl" fontsize="1.9em"/>
 </slide>

@@ -1,0 +1,9 @@
+<slide title="PHPDocumentor">
+<break/>
+<image filename="doi.jpg" align="right" marginright="1.0em"/>
+<break lines="4"/>
+<blurb fontsize="4.0em">Javadoc style API documentation</blurb>
+<blurb fontsize="4.0em">Available in PEAR (and used by all PEAR classes)</blurb>
+<break/>
+<example type="shell"><![CDATA[# pear install PHPDoc]]></example>
+</slide>

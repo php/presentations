@@ -3,7 +3,7 @@
 <break lines="2"/>
 <blurb fontsize="4.5em">Use %cherry%!</blurb>
 <break/>
-<example><![CDATA[% cherry -c 100 -n 10000 -v --similair http://localhost/
+<example><![CDATA[% cherry -c 100 -n 10000 -v --similar http://localhost/
 getting initial data from http://localhost/... done
 generating rabin 64 checksums... done
 stress testing...
