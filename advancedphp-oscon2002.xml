@@ -1,0 +1,77 @@
+<presentation 
+	template="php" 
+	navmode="flash"
+    backgroundcol="#EEEE33"
+    logo1="php_logo.gif"
+>
+  <topic>PHP</topic> <title>Advanced PHP</title> <event>O'Reilly Open
+    Source Convention</event> <location>San Diego,
+    California</location> <date>July 23, 2002</date> <speaker>Sterling
+    Hughes</speaker> <email>sterling@php.net</email>
+  <url>http://pres.blog.at/show/advancedphp-oscon2002</url>
+  <slide>slides/advphp/titlepage.xml</slide>
+  <slide>slides/advphp/perf_intr.xml</slide>
+  <slide>slides/advphp/mjrblock.xml</slide>
+  <slide>slides/advphp/prf_socket.xml</slide>
+  <slide>slides/advphp/prf_fileio.xml</slide>
+  <slide>slides/advphp/prf_sqlquery.xml</slide>
+  <slide>slides/advphp/static.xml</slide>
+  <slide>slides/advphp/prf_pregen.xml</slide>
+  <slide>slides/advphp/prf_squid.xml</slide>
+  <slide>slides/advphp/prf_caching.xml</slide>
+  <slide>slides/advphp/prf_caching_example.xml</slide>
+  <slide>slides/advphp/reduce.xml</slide>
+  <slide>slides/advphp/optimize.xml</slide>
+  <slide>slides/advphp/htmloptimize.xml</slide>
+  <slide>slides/advphp/cssoptimize.xml</slide>
+  <slide>slides/advphp/httpoptimization.xml</slide>
+  <slide>slides/advphp/mrinf_opt.xml</slide>
+  <slide>slides/advphp/compress.xml</slide>
+  <slide>slides/advphp/phpgz.xml</slide>
+  <slide>slides/advphp/modgz.xml</slide>
+  <slide>slides/advphp/mrinf_gz.xml</slide>
+  <slide>slides/advphp/cluster.xml</slide>
+  <slide>slides/advphp/loadbal.xml</slide>
+  <slide>slides/advphp/issues.xml</slide>
+  <slide>slides/advphp/implclust.xml</slide>
+  <slide>slides/advphp/mrinf_cl.xml</slide>
+  <slide>slides/advphp/oop.xml</slide>
+  <slide>slides/advphp/classes.xml</slide>
+  <slide>slides/advphp/objects.xml</slide>
+  <slide>slides/advphp/aggregate.xml</slide>
+  <slide>slides/advphp/overload.xml</slide>
+  <slide>slides/advphp/objtips.xml</slide>
+  <slide>slides/advphp/objphpv5.xml</slide>
+  <slide>slides/advphp/mrinf_oo.xml</slide>
+  <slide>slides/advphp/curlintr.xml</slide>
+  <slide>slides/advphp/basics.xml</slide>
+  <slide>slides/advphp/proxy.xml</slide>
+  <slide>slides/advphp/curlssl.xml</slide>
+  <slide>slides/advphp/postcurl.xml</slide>
+  <slide>slides/advphp/curl_ex.xml</slide>
+  <slide>slides/advphp/mrinf_crl.xml</slide>
+  <slide>slides/advphp/commphp.xml</slide>
+  <slide>slides/advphp/filesock.xml</slide>
+  <slide>slides/advphp/socketext.xml</slide>
+  <slide>slides/advphp/tcpclient.xml</slide>
+  <slide>slides/advphp/udpconn.xml</slide>
+  <slide>slides/advphp/server.xml</slide>
+  <slide>slides/advphp/nobio.xml</slide>
+  <slide>slides/advphp/serverex.xml</slide>
+  <slide>slides/advphp/mrinf_sck.xml</slide>
+  <slide>slides/advphp/shm_intro.xml</slide>
+  <slide>slides/advphp/sem.xml</slide>
+  <slide>slides/advphp/shmop.xml</slide>
+  <slide>slides/advphp/shex.xml</slide>
+  <slide>slides/advphp/mrinf_shm.xml</slide>
+  <slide>slides/advphp/phpext.xml</slide>
+  <slide>slides/advphp/zip01.xml</slide>
+  <slide>slides/advphp/zip02.xml</slide>
+  <slide>slides/advphp/zip03.xml</slide>
+  <slide>slides/advphp/zip04.xml</slide>
+  <slide>slides/advphp/zip05.xml</slide>
+  <slide>slides/advphp/zip06.xml</slide>
+  <slide>slides/advphp/zip07.xml</slide>
+  <slide>slides/advphp/mrinf_ex.xml</slide>
+  <slide>slides/advphp/bye.xml</slide>
+</presentation>
