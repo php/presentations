@@ -2,7 +2,7 @@
 
 <blurb>PHP has an HTML-centric approach.  The same script in PHP became:</blurb>
 
-<example><![CDATA[<html><header><title>Form Example</title></header>
+<example><![CDATA[<html><head><title>Form Example</title></head>
 <body><h1>My Example Form</h1>
 <form action="form.phtml" method="POST">
 Name: <input type="text" name="name">
