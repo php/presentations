@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://SBGCarRentalService.sbg.travel.ws.dsdata.co.uk" xmlns:intf="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:impl="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk" xmlns="http://schemas.xmlsoap.org/wsdl/"><wsdl:types><schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://SBGCarRentalService.sbg.travel.ws.dsdata.co.uk"><import namespace="http://schemas.xmlsoap.org/soap/encoding/"/><complexType name="CarRentalQuoteResponse"><sequence><element name="request" nillable="true" type="tns1:CarRentalQuoteRequest"/><element name="companyName" nillable="true" type="xsd:string"/><element name="rate" type="xsd:float"/><element name="currency" nillable="true" type="xsd:string"/><element name="carType" nillable="true" type="xsd:string"/><element name="mileage" nillable="true" type="xsd:string"/><element name="tax" nillable="true" type="xsd:string"/><element name="roadTax" nillable="true" type="xsd:string"/><element name="surcharges" nillable="true" type="xsd:string"/><element name="cDW" nillable="true" type="xsd:string"/><element name="pAI" nillable="true" type="xsd:string"/><element name="errorOccurred" type="xsd:boolean"/><element name="scrapeError" type="xsd:boolean"/><element name="errorMessage" nillable="true" type="xsd:string"/></sequence></complexType><complexType name="CarRentalQuoteRequest"><sequence><element name="companyName" nillable="true" type="xsd:string"/><element name="carType" nillable="true" type="xsd:string"/><element name="pickupLocation" nillable="true" type="xsd:string"/><element name="pickupDate" nillable="true" type="xsd:dateTime"/><element name="returnLocation" nillable="true" type="xsd:string"/><element name="returnDate" nillable="true" type="xsd:dateTime"/><element name="country" nillable="true" type="xsd:string"/><element name="currency" nillable="true" type="xsd:string"/></sequence></complexType></schema><schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"><import namespace="http://schemas.xmlsoap.org/soap/encoding/"/><complexType name="ArrayOf_tns2_CarRentalQuoteResponse"><complexContent><restriction base="soapenc:Array"><attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:CarRentalQuoteResponse[]"/></restriction></complexContent></complexType><element name="ArrayOf_tns2_CarRentalQuoteResponse" nillable="true" type="impl:ArrayOf_tns2_CarRentalQuoteResponse"/><complexType name="ArrayOf_xsd_string"><complexContent><restriction base="soapenc:Array"><attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/></restriction></complexContent></complexType><element name="ArrayOf_xsd_string" nillable="true" type="impl:ArrayOf_xsd_string"/></schema></wsdl:types>
+  <wsdl:message name="getCurrenciesRequest">
+  </wsdl:message>
+  <wsdl:message name="getLocationsResponse">
+    <wsdl:part name="getLocationsReturn" type="intf:ArrayOf_xsd_string"/>
+  </wsdl:message>
+  <wsdl:message name="getQuotesResponse">
+    <wsdl:part name="getQuotesReturn" type="intf:ArrayOf_tns2_CarRentalQuoteResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getCountriesResponse">
+    <wsdl:part name="getCountriesReturn" type="intf:ArrayOf_xsd_string"/>
+  </wsdl:message>
+  <wsdl:message name="getCarTypesResponse">
+    <wsdl:part name="getCarTypesReturn" type="intf:ArrayOf_xsd_string"/>
+  </wsdl:message>
+  <wsdl:message name="getQuotesRequest">
+    <wsdl:part name="carType" type="xsd:string"/>
+    <wsdl:part name="country" type="xsd:string"/>
+    <wsdl:part name="currency" type="xsd:string"/>
+    <wsdl:part name="pickupDate" type="xsd:dateTime"/>
+    <wsdl:part name="pickupLocation" type="xsd:string"/>
+    <wsdl:part name="returnDate" type="xsd:dateTime"/>
+    <wsdl:part name="returnLocation" type="xsd:string"/>
+    <wsdl:part name="clientID" type="xsd:string"/>
+    <wsdl:part name="userEmail" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getCountriesRequest">
+  </wsdl:message>
+  <wsdl:message name="getCurrenciesResponse">
+    <wsdl:part name="getCurrenciesReturn" type="intf:ArrayOf_xsd_string"/>
+  </wsdl:message>
+  <wsdl:message name="getLocationsRequest">
+    <wsdl:part name="country" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getCarTypesRequest">
+  </wsdl:message>
+  <wsdl:portType name="CarRentalQuotes">
+    <wsdl:operation name="getQuotes" parameterOrder="carType country currency pickupDate pickupLocation returnDate returnLocation clientID userEmail">
+      <wsdl:input name="getQuotesRequest" message="intf:getQuotesRequest"/>
+      <wsdl:output name="getQuotesResponse" message="intf:getQuotesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCountries">
+      <wsdl:input name="getCountriesRequest" message="intf:getCountriesRequest"/>
+      <wsdl:output name="getCountriesResponse" message="intf:getCountriesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getLocations" parameterOrder="country">
+      <wsdl:input name="getLocationsRequest" message="intf:getLocationsRequest"/>
+      <wsdl:output name="getLocationsResponse" message="intf:getLocationsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencies">
+      <wsdl:input name="getCurrenciesRequest" message="intf:getCurrenciesRequest"/>
+      <wsdl:output name="getCurrenciesResponse" message="intf:getCurrenciesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getCarTypes">
+      <wsdl:input name="getCarTypesRequest" message="intf:getCarTypesRequest"/>
+      <wsdl:output name="getCarTypesResponse" message="intf:getCarTypesResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CarRentalQuotesSoapBinding" type="intf:CarRentalQuotes">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getQuotes">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getQuotesRequest">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:input>
+      <wsdl:output name="getQuotesResponse">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCountries">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCountriesRequest">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:input>
+      <wsdl:output name="getCountriesResponse">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLocations">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getLocationsRequest">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:input>
+      <wsdl:output name="getLocationsResponse">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrencies">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCurrenciesRequest">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:input>
+      <wsdl:output name="getCurrenciesResponse">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCarTypes">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCarTypesRequest">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:input>
+      <wsdl:output name="getCarTypesResponse">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:SBGCarRentalQuotes.sbg.travel.ws.dsdata.co.uk"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CarRentalQuotesService">
+    <wsdl:port name="CarRentalQuotes" binding="intf:CarRentalQuotesSoapBinding">
+      <wsdlsoap:address location="http://wavendon.dsdata.co.uk/axis/services/CarRentalQuotes"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
