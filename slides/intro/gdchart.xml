@@ -1,0 +1,37 @@
+<slide title="gdchart">
+<example
+    title="Line Chart"
+    filename="gdchart_line.php"
+    fontsize="1.4em"
+    result="1"
+    type="genimage"
+/>
+<example
+    title="Line Chart with custom axes"
+    filename="gdchart_line2.php"
+    fontsize="1.4em"
+    result="1"
+    type="genimage"
+/>
+<example
+    title="3D Area Chart"
+    filename="gdchart_area.php"
+    fontsize="1.4em"
+    result="1"
+    type="genimage"
+/>
+<example
+    title="Pie Chart"
+    filename="gdchart_pie.php"
+    fontsize="1.4em"
+    result="1"
+    type="genimage"
+/>
+<example
+    title="Combo High-Low-Close Chart"
+    filename="gdchart_hlc.php"
+    fontsize="1.4em"
+    result="1"
+    type="genimage"
+/>
+</slide>
