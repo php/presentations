@@ -1,7 +1,7 @@
 <slide title="Encoding Strings">
-<example title="HTML" result="yes"><![CDATA[<?php echo htmlspecialchars("This & that are <problems>.");?>]]></example>
+<example title="HTML" result="1"><![CDATA[<?php echo htmlspecialchars("This & that are <problems>.");?>]]></example>
 
-<example title="Base64" result="yes"><![CDATA[<?php
+<example title="Base64" result="1"><![CDATA[<?php
  echo ($encoded = base64_encode(
            "A rose by any other name..."));
  echo ($decoded = base64_decode($encoded));

@@ -1,5 +1,5 @@
 <slide title="Basic Data Types">
-<example title="Numbers (integers and real)" result="yes"><![CDATA[<?php
+<example title="Numbers (integers and real)" result="1"><![CDATA[<?php
     $a = 1234;
     $b = 0777;
     $c = 0xff;
@@ -7,13 +7,13 @@
     echo "$a $b $c $d<br />\n";
 ?>]]></example>
 
-<example title="Strings" result="yes"><![CDATA[<?php
+<example title="Strings" result="1"><![CDATA[<?php
     $name = 'Rasmus $last'; // Single-quoted
     $str  = "Hi $name\n";   // Double-quoted
     echo $str;
 ?>]]></example>
 
-<example title="Booleans" result="yes"><![CDATA[<?php
+<example title="Booleans" result="1"><![CDATA[<?php
     $greeting = true;
     if($greeting) {
         echo "Hi Carl";
@@ -26,7 +26,7 @@
 <bullet>Automatic conversion done</bullet>
 </list>
 
-<example result="yes"><![CDATA[<?php
+<example result="1"><![CDATA[<?php
     echo 5 + "1.5" + "10e2";]]></example>
 
 </slide>

@@ -1,5 +1,5 @@
 <slide title="Embedding PHP Tags">
-<example title="The 4 available tag styles" result="yes"><![CDATA[<html>
+<example title="The 4 available tag styles" result="1"><![CDATA[<html>
 <body>
 <? echo 'Short Tags - Most common' ?>
 <br />

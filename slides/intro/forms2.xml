@@ -1,11 +1,11 @@
 <slide title="Form Handling">
-<example title="Traditional Form Handling" result="yes"><![CDATA[<form action="<?=$PHP_SELF?>" method="POST">
+<example title="Traditional Form Handling" result="1"><![CDATA[<form action="<?=$PHP_SELF?>" method="POST">
 Your name: <input type=text name=name><br>
 You age: <input type=text name=age><br>
 <input type=submit>
 </form>]]></example>
 
-<example title="Receiving Script" result="yes" condition="name"><![CDATA[Hi <?echo $name?>.  
+<example title="Receiving Script" result="1" condition="name"><![CDATA[Hi <?echo $name?>.  
 You are <?echo $age?> years old.]]></example>
 
 <blurb title="Register Globals">

@@ -23,7 +23,7 @@
   $cart->add_item(170923, 2);
 ?>]]></example>
 
-<example title="Static Method calls" result="yes"><![CDATA[<?php
+<example title="Static Method calls" result="1"><![CDATA[<?php
   class foo {
     function bar() {
         echo "bar() called";
@@ -37,7 +37,7 @@
 <title>Calling methods in your parent class</title>
 This can be handy if you need to chain your constructors.
 </blurb>
-<example result="yes"><![CDATA[<?php
+<example result="1"><![CDATA[<?php
   class foo2 {
     function foo2() {
         echo "Constructor for foo2";
