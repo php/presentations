@@ -6,8 +6,8 @@
 
 	<list marginleft="3em" effect="slide" fontsize="3.5em">
 		<bullet>Pass by value</bullet>
-		<bullet>Gebruik overal references...</bullet>
-		<bullet marginleft="5em" type="none">bij aanroep en zelfs bij instantiatie.</bullet>
+		<bullet>Use of references needed almost everywhere...</bullet>
+		<bullet marginleft="5em" type="none">at call time, and even during instantiation.</bullet>
 	</list>
 
 </slide>

@@ -3,7 +3,7 @@
 	<title>Clone</title>
 
 	<list marginleft="3em" fontsize="3.5em">
-		<bullet>Impliciet clonen</bullet>
+		<bullet>Implicit cloning</bullet>
 	</list>
 
 	<break />
@@ -28,5 +28,6 @@
 	
 ? >]]></example>
 
-    <example fontsize="1.3em"><![CDATA[Segmentation fault (core dumped)]]></example>
+    <example fontsize="1.3em"><![CDATA[linux
+windows]]></example>
 </slide>

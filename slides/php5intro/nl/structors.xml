@@ -2,16 +2,15 @@
 <slide fontsize="6em">
 	<title>Constructors/Destructors</title>
 
-	<image align="center" filename="construction.png" />
-
-	<list marginleft="3em" effect="slide" fontsize="3.5em">
-		<bullet>Nieuw type constructors: __construct().</bullet>
-		<bullet>Eindelijk destructors: __destruct().</bullet>
+	<list marginleft="0em" effect="slide" fontsize="3.5em">
+		<bullet>New type constructors: __construct().</bullet>
+		<bullet>Finally destructors: __destruct().</bullet>
 	</list>
-	<break lines="1" />
 
-    <example fontsize="1em"><![CDATA[<?php
+	<image align="right" margintop="2em" marginright="6em" filename="construction.png" />
+	<break />
 
+    <example fontsize="0.9em"><![CDATA[<?php
 	class Construction {
 		var $area;
 		function __construct($area) {
