@@ -8,7 +8,7 @@ class sterling extends dali {
 		echo "this is corny ";
 		echo "impressionism humor.";
 		echo "\n<br />\n";
-	}
+	} 
 }
 
 $s = new sterling;
