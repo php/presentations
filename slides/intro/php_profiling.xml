@@ -43,7 +43,7 @@ apd_set_pprof_trace();
 The use the command-line tool called %pprofp%:
 </blurb>
 
-<example type="shell" fontsize="1.2em" marginleft="1em" marginright="1em"><![CDATA[wwww: ~> pprofp
+<example type="shell" fontsize="1.5em" marginleft="1em" marginright="1em"><![CDATA[wwww: ~> pprofp
 pprofp <flags> <trace file>
     Sort options
     -a          Sort by alphabetic names of subroutines.
@@ -66,7 +66,7 @@ pprofp <flags> <trace file>
     -T          Display uncompressed call tree.
 ]]></example>
 
-<example type="shell" fontsize="1em" marginleft="1em" marginright="1em"><![CDATA[
+<example type="shell" fontsize="1.2em" marginleft="1em" marginright="1em"><![CDATA[
 % pprofp -z /tmp/pprof.48478
  
 Trace for /home/y/share/htdocs/bench_main.php
@@ -95,7 +95,7 @@ Total User Time    =    0.01
   0.0  0.00  0.00   0.00  0.00   0.00  0.00     1   0.0000    0.0000            0 explode
 ]]></example>
 
-<example type="shell" fontsize="1em" marginleft="1em" marginright="1em"><![CDATA[
+<example type="shell" fontsize="1.2em" marginleft="1em" marginright="1em"><![CDATA[
 Trace for /home/rasmus/phpweb/index.php
 Total Elapsed Time =    0.69
 Total System Time  =    0.01
@@ -137,5 +137,4 @@ Writing kcachegrind compatible output to cachegrind.out.pprof.02465.0
 www:/tmp> kcachegrind cachegrind.out.pprof.02465.0
 ]]></example>
 
-<link leader="Xdebug can profile as well: " href="http://www.xdebug.org/docs-profiling.php"/>
 </slide>
