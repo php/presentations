@@ -1,0 +1,46 @@
+<slide title="PHP CLI">
+
+ <blurb>As of version 4.3.0 PHP has a robust, reliable command-line interface.</blurb>
+
+ <example fontsize="1em" type="shell"><![CDATA[10:32 > php -h
+Usage: php [options] [-f] <file> [args...]
+       php [options] -r <code> [args...]
+       php [options] [-- args...]
+  -a               Run interactively
+  -c <path>|<file> Look for php.ini file in this directory
+  -n               No php.ini file will be used
+  -d foo[=bar]     Define INI entry foo with value 'bar'
+  -e               Generate extended information for debugger/profiler
+  -f <file>        Parse <file>.
+  -h               This help
+  -i               PHP information
+  -l               Syntax check only (lint)
+  -m               Show compiled in modules
+  -r <code>        Run PHP <code> without using script tags <?..?>
+  -s               Display colour syntax highlighted source.
+  -v               Version number
+  -w               Display source with stripped comments and whitespace.
+  -z <file>        Load Zend extension <file>.
+
+  args...          Arguments passed to script. Use -- args when first argument 
+                   starts with - or script is read from stdin]]>
+</example>
+
+<blurb>This means that you can use it instead of Perl, Python, shell scripts, if you so desire:</blurb>
+
+<example fontsize="1em" type="shell">#!/usr/bin/php 
+ &lt;?php
+ echo "Hello World\n";</example>
+
+<blurb>Or directly evaluate a piece of code:</blurb>
+
+<example fontsize="1em" type="shell"><![CDATA[10:35 > php -r 'for($i = 1; $i < 7; $i++) { echo "$i^2: ", ($i*$i),  "\n"; }'
+1^2: 1
+2^2: 4
+3^2: 9
+4^2: 16
+5^2: 25
+6^2: 36]]></example>
+
+
+</slide>

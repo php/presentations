@@ -1,0 +1,56 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP</title>
+<event>Northeastern ACM Chapter Talk</event>
+<location>Boston</location>
+<url>http://talks.php.net/northe</url>
+<date>May 5, 2003</date>
+<speaker>Andrei Zmievski</speaker>
+<company>Overture Services, Inc.</company>
+<email>andrei@php.net</email>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/old.xml</slide>
+  <slide>slides/intro/old2.xml</slide>
+  <slide>slides/intro/old3.xml</slide>
+  <slide>slides/northe/hello.xml</slide>
+  <slide>slides/intro/php-solution.xml</slide>
+  <slide>slides/intro/php-intro.xml</slide>
+  <slide>slides/intro/platforms.xml</slide>
+  <slide>slides/intro/ext.xml</slide>
+</chapter>
+
+<chapter title="Usage and Community">
+  <slide>slides/intro/numbers.xml</slide>
+  <slide>slides/community/group.xml</slide>
+  <slide>slides/intro/timeline.xml</slide>
+  <slide>slides/community/cvs.xml</slide>
+  <slide>slides/northe/docs.xml</slide>
+  <slide>slides/community/mail-lists.xml</slide>
+  <slide>slides/community/conferences.xml</slide>
+  <slide>slides/community/usergroups.xml</slide>
+  <slide>slides/community/sites.xml</slide>
+</chapter>
+
+<chapter title="Cool Beans">
+  <slide>slides/northe/php-cli.xml</slide>
+  <slide>slides/intro/gtk.xml</slide>
+  <slide>slides/intro/gtk2.xml</slide>
+  <slide>slides/northe/activescript.xml</slide>
+</chapter>
+
+<chapter title="Future">
+  <slide>slides/intro/php5.xml</slide>
+</chapter>
+
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

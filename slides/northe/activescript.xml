@@ -1,0 +1,33 @@
+<slide title="ActiveScript">
+ <list fontsize="2.5em" title="Once registered on your system (using regsvr32), you will be able to use PHP script in any ActiveScript compliant host.  The list includes:">
+  <bullet>Client-side script in Internet Explorer</bullet>
+  <bullet>Windows Script Host</bullet>
+  <bullet>ASP and ASP.NET</bullet>
+  <bullet>Windows Script Components / Behaviours</bullet>
+  <bullet>MS Scriptlet control</bullet>
+</list>
+
+<example fontsize="1.5em" title="Registering the DLL" type="shell">C:\&gt; regsvr32 php4activescript.dll</example>
+
+<example fontsize="1.5em" title="Client-side script in Internet Explorer"><![CDATA[<script language="ActivePHP">
+  $window->alert("Hello");
+</script>
+]]></example>
+
+<example fontsize="1.5em" title="Windows Script Host"><![CDATA[Create a .wsf file like this:
+<job id="test">
+  <script language="ActivePHP">
+    $WScript->Echo("Hello");
+  </script>
+</job>
+]]></example>
+
+<example fontsize="1.5em" title="ASP and ASP.NET"><![CDATA[<%@language=ActivePHP %>
+<% $Response->Write("Hello"); %>
+]]></example>
+
+<example fontsize="1.5em" title="Windows Script Components / Behaviours">Use language="ActivePHP" on your &lt;script&gt; tags</example>
+
+<example fontsize="1.5em" title="MS Scriptlet control">Set the language property to "ActivePHP"</example>
+
+</slide>

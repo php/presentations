@@ -1,6 +1,6 @@
 <slide title="PHP-GTK Code Generator">
 
- <list title="What the heck is it?" fontsize="4em">
+ <list title="What the heck is it?" fontsize="3.5em">
   <bullet>PHP-GTK consists of about 100 classes, 1000 methods, and 600 constants..</bullet>
   <bullet>..not counting the extensions</bullet>
   <bullet>Writing them by hand would become mind-numbingly tedious</bullet>

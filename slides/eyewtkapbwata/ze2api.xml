@@ -5,7 +5,7 @@
   <bullet>Ability to override opcode handlers</bullet>
   <bullet>Streams subsystem API: new filters implementation, socket transport
    abstraction, memory mapping API, socket servers, SSL/crypto API for
-   transports</bullet>
+   transports (technically not part of ZE2)</bullet>
  </list>
  <example title="Object handlers" fontsize="1.5em"><![CDATA[  add_ref
   del_ref
