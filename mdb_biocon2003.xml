@@ -1,8 +1,7 @@
 <presentation
     jskeyboard="1"
-    stylesheet="presentations/slides/mdb/styles.css.php"
     logo1="presentations/slides/mdb/images/mdb_logo_trans.gif"
-    navsize="1.4em">
+    navbarbackground="#0000ff">
 <title>Creating and Using Multi-protocol Bioinformatic Web Services</title>
 <topic>Bioinformatics</topic>
 <event>Bioinformatics Technology Conference (BioCon 2003)</event>
