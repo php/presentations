@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Execution trace to file (computerized)</title>
+	<image filename="tracefile-computerized.png"/>
+	<break/>
+	<example class="code_large" fontsize="1.7em">xdebug.auto_trace=1     ; enable tracing
+xdebug.trace_format=1   ; selects computerized format
+xdebug.trace_options=0  ; sets extra option (1 = append)</example>
+</slide>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Code Coverage - Result</title>
+
+	<image align="right" filename="ccoverage-end.png"/>
+	<blurb>
+		xdebug_start_code_coverage() -- starts collecting data
+		xdebug_stop_code_coverage() -- stops collecting data
+		xdebug_get_code_coverage() -- returns coverage data
+	</blurb>
+	
+</slide>

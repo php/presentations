@@ -3,12 +3,11 @@
 	<title>Execution trace to file</title>
 	<image filename="../perf/tracefile.png" align="right"/>
 
-	<example fontsize="1.7em">xdebug.auto_trace=1            ; enable tracing
+	<example class="code_large" fontsize="1.7em">xdebug.auto_trace=1            ; enable tracing
 xdebug.trace_output_dir=/tmp   ; trace output directory
 xdebug.trace_output_name=crc32 ; tracefile extension
 xdebug.collect_params=0        ; parameter collection
 xdebug.collect_includes=1      ; collecting includes
-xdebug.extended_info=0         ; 'extended' code
-                               ; generation
+xdebug.extended_info=0         ; extended code generation
 xdebug.show_mem_delta=1        ; memory difference</example>
 </slide>

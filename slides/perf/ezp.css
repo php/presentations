@@ -61,6 +61,16 @@ div.blurb {
 	font-size: 24px;
 }
 
+div.large_blurb {
+	font-size: 32px;
+}
+
+div.q_mark {
+	text-align: center;
+	margin-left: 250px;
+	font-size: 480px;
+}
+
 div.shadow, code {
 	font-size: 18px; width: 640px;
 }
