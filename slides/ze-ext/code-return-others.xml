@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Returning from a function</title>
+
+	<blurb> </blurb>
+	<blurb nomarkup="true" fontsize="1.8em"><![CDATA[<pre>
+<a name="line1"> 1</a> <font color="#2040a0">RETURN_NULL</font><font color="4444FF">(</font><font color="4444FF">)</font>
+
+<a name="line3"> 3</a> <font color="#2040a0">zend_bool</font> <font color="#2040a0">b</font><font color="4444FF">;</font>
+<a name="line4"> 4</a> <font color="#2040a0">RETURN_BOOL</font><font color="4444FF">(</font><font color="#2040a0">b</font><font color="4444FF">)</font>
+<a name="line5"> 5</a> <font color="#2040a0">RETURN_FALSE</font>
+<a name="line6"> 6</a> <font color="#2040a0">RETURN_TRUE</font>
+
+<a name="line8"> 8</a> <strong>long</strong> <font color="#2040a0">l</font><font color="4444FF">;</font>
+<a name="line9"> 9</a> <font color="#2040a0">RETURN_LONG</font><font color="4444FF">(</font><font color="#2040a0">l</font><font color="4444FF">)</font>
+
+<a name="line11">11</a> <strong>double</strong> <font color="#2040a0">d</font><font color="4444FF">;</font>
+<a name="line12">12</a> <font color="#2040a0">RETURN_DOUBLE</font><font color="4444FF">(</font><font color="#2040a0">d</font><font color="4444FF">)</font>
+
+<a name="line14">14</a> <strong>char</strong> <font color="4444FF">*</font><font color="#2040a0">s</font><font color="4444FF">;</font>
+<a name="line15">15</a> <strong>int</strong>   <font color="#2040a0">l</font><font color="4444FF">;</font>
+<a name="line16">16</a> <strong>int</strong>   <font color="#2040a0">duplicate</font><font color="4444FF">;</font>
+
+<a name="line17">17</a> <font color="#2040a0">RETURN_STRING</font><font color="4444FF">(</font><font color="#2040a0">s</font>, <font color="#2040a0">duplicate</font><font color="4444FF">)</font>
+<a name="line18">18</a> <font color="#2040a0">RETURN_STRINGL</font><font color="4444FF">(</font><font color="#2040a0">s</font>, <font color="#2040a0">l</font>, <font color="#2040a0">duplicate</font><font color="4444FF">)</font>
+
+<a name="line19">19</a> <font color="#2040a0">RETURN_EMPTY_STRING</font><font color="4444FF">(</font><font color="4444FF">)</font>
+
+<a name="line21">21</a> <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">r</font><font color="4444FF">;</font>
+<a name="line22">22</a> <font color="#2040a0">RETURN_RESOURCE</font><font color="4444FF">(</font><font color="#2040a0">r</font><font color="4444FF">)</font>
+</pre>]]></blurb>
+</slide>

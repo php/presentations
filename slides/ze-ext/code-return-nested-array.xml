@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+    <title>Returning a 2D array</title>
+
+    <blurb> </blurb>
+    <blurb nomarkup="true" fontsize="1.8em"><![CDATA[<pre>
+<a name="line285">285</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_array</font><font color="4444FF">)</font>
+<a name="line286">286</a> <font color="4444FF"><strong>{</strong></font>
+<a name="line287">287</a>     <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line288">288</a>     <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+<a name="line289">289</a>     <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+<a name="line290">290</a>     <font color="#2040a0">aa_context</font> <font color="4444FF">*</font><font color="#2040a0">ac</font><font color="4444FF">;</font>
+<a name="line291">291</a>     <strong>char</strong> <font color="4444FF">*</font><font color="#2040a0">buffer</font><font color="4444FF">;</font>
+<a name="line292">292</a>     <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">line</font><font color="4444FF">;</font>
+<a name="line293">293</a>     <strong>int</strong> <font color="#2040a0">i</font>, <font color="#2040a0">j</font><font color="4444FF">;</font>
+
+<a name="line302">302</a>     <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">array_init</font><font color="4444FF">(</font><font color="#2040a0">return_value</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line303">303</a>         <font color="#2040a0">RETURN_FALSE</font><font color="4444FF">;</font>
+<a name="line304">304</a>     <font color="4444FF"><strong>}</strong></font>
+<a name="line305">305</a>     
+<a name="line306">306</a>     <font color="#2040a0">buffer</font> <font color="4444FF">=</font> <font color="#2040a0">ecalloc</font><font color="4444FF">(</font><font color="#2040a0">aa_scrheight</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font> <font color="4444FF">*</font> <font color="#2040a0">aa_scrwidth</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font> <font color="4444FF">+</font> <font color="#FF0000">1</font>, <font color="#FF0000">1</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line307">307</a>     <font color="#2040a0">memcpy</font><font color="4444FF">(</font><font color="#2040a0">buffer</font>, <font color="#2040a0">aa_text</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font>, <font color="#2040a0">aa_scrheight</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font> <font color="4444FF">*</font> <font color="#2040a0">aa_scrwidth</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line308">308</a> 
+<a name="line309">309</a>     <strong>for</strong> <font color="4444FF">(</font><font color="#2040a0">i</font> <font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">;</font> <font color="#2040a0">i</font> <font color="4444FF">&lt;</font> <font color="#2040a0">aa_scrheight</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font><font color="4444FF">;</font> <font color="#2040a0">i</font><font color="4444FF">+</font><font color="4444FF">+</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line310">310</a>         <font color="#2040a0">MAKE_STD_ZVAL</font><font color="4444FF">(</font><font color="#2040a0">line</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line311">311</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">array_init</font><font color="4444FF">(</font><font color="#2040a0">line</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line312">312</a>             <font color="#2040a0">FREE_ZVAL</font><font color="4444FF">(</font><font color="#2040a0">line</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line313">313</a>             <strong>return</strong><font color="4444FF">;</font>
+<a name="line314">314</a>         <font color="4444FF"><strong>}</strong></font>
+<a name="line315">315</a>         <strong>for</strong> <font color="4444FF">(</font><font color="#2040a0">j</font> <font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">;</font> <font color="#2040a0">j</font> <font color="4444FF">&lt;</font> <font color="#2040a0">aa_scrwidth</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font><font color="4444FF">;</font> <font color="#2040a0">j</font><font color="4444FF">+</font><font color="4444FF">+</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
+<a name="line316">316</a>             <font color="#2040a0">add_index_stringl</font><font color="4444FF">(</font><font color="#2040a0">line</font>, <font color="#2040a0">j</font>, <font color="#2040a0">buffer</font> <font color="4444FF">+</font> <font color="4444FF">(</font><font color="4444FF">(</font><font color="#2040a0">aa_scrwidth</font><font color="4444FF">(</font><font color="#2040a0">ac</font><font color="4444FF">)</font> <font color="4444FF">*</font> <font color="#2040a0">i</font><font color="4444FF">)</font><font color="4444FF">)</font> <font color="4444FF">+</font> <font color="#2040a0">j</font>, <font color="#FF0000">1</font>, <font color="#FF0000">1</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line317">317</a>         <font color="4444FF"><strong>}</strong></font>
+<a name="line318">318</a>         <font color="#2040a0">add_index_zval</font><font color="4444FF">(</font><font color="#2040a0">return_value</font>, <font color="#2040a0">i</font>, <font color="#2040a0">line</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line319">319</a>     <font color="4444FF"><strong>}</strong></font>
+<a name="line320">320</a>     <font color="#2040a0">efree</font><font color="4444FF">(</font><font color="#2040a0">buffer</font><font color="4444FF">)</font><font color="4444FF">;</font>
+<a name="line321">321</a> <font color="4444FF"><strong>}</strong></font>
+</pre>]]></blurb>
+</slide>

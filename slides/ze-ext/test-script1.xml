@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Test script</title>
+
+	<blurb> </blurb>
+	<blurb>test1.php:</blurb>
+	<example fontsize="1.4em"><![CDATA[<?php
+    dl("/dat/dev/php/aalib/modules/aalib.so");
+
+    /* Open .gif file */
+    $jpg = imagecreatefromgif("/home/derick/php_logo_c.gif");
+    $x = imagesx($jpg);
+    $y = imagesy($jpg);
+
+    $a = aa_init();
+    for ($i = 0; $i < $x; $i++) {
+        for ($j = 0; $j < $y; $j++) {
+            aa_put_pixel($a, $i, $j / 2, imagecolorat($jpg, $i, $j));
+        }
+    }
+    aa_render($a, 40, 0, 0, -10);
+    echo aa_get_all($a);
+? >
+]]></example>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<image filename="aalib.png" align="center"/>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+</slide>
