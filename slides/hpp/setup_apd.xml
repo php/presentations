@@ -1,5 +1,8 @@
 <slide title="Setting up APD">
+<image filename="100000000000005C0000005C29D61F11.jpg" align="right"/>
 <blurb>Install APD via PEAR</blurb>
+<blurb><![CDATA[<br/>]]>
+</blurb>
 <example type="shell"><![CDATA[]$ pear install apd
 ]$ cp apd.so /absolute/path/to/php_apd.so]]></example>
 <blurb>Then add the following to your %php.ini% file</blurb>
