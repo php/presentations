@@ -1,0 +1,6 @@
+<slide title="Exceptions">
+<blurb>PHP 5 supports the concept of exceptions via %try% and %catch%.</blurb>
+<example filename="trycatch.php" type="php"/>
+<blurb>Custom Exceptions are also supported.</blurb>
+<example filename="trycatch1.php" type="php"/>
+</slide>

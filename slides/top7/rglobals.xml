@@ -1,0 +1,22 @@
+<slide title="Register Globals">
+<blurb fontsize="4.0em">Register Globals is evil and you should disable it</blurb>
+<example type="php"><![CDATA[<?php
+if ($name == "Sterling") {
+	$loggedin = 1;
+}
+
+if ($loggedin) {
+	echo "Super Secret Information\n<br />";
+}
+?>]]></example>
+<blurb fontsize="3.5em">Use %$_FILES%, %$_GET%, %$_POST%, %$_COOKIE%, %$_REQUEST% instead.</blurb>
+<example type="php"><![CDATA[<?php
+if ($_GET['name'] == "Sterling") {
+	$loggedin = 1;
+}
+
+if ($loggedin) {
+	echo "Super Secret and Somewhat Safe Information\n<br />";
+}
+?>]]></example>
+</slide>

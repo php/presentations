@@ -1,0 +1,11 @@
+<slide title="Database Queries">
+<blurb>To escape database queries use the %AddSlashes()% function.</blurb>
+<example result="1" type="php"><![CDATA[<?php
+$user = "' OR id='1";
+$query = "SELECT * FROM table WHERE id='%s'";
+
+var_dump(sprintf($query, $user));
+print "\n<br />\n";
+var_dump(sprintf($query, AddSlashes($user)));
+?>]]></example>
+</slide>

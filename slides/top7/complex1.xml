@@ -1,0 +1,7 @@
+<slide title="Objects cont...">
+<blurb>
+Objects must be explicitly defined as references in PHPv4, otherwise they
+will be copy-on-write like all other PHP variables.
+</blurb>
+<example filename="objects_ex1.php" result="1"/>
+</slide>

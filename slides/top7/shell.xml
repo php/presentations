@@ -1,0 +1,4 @@
+<slide title="Shell Commands">
+<blurb>To escape shell commands use the %escapeshellcmd()% and %escapeshellarg()% functions.</blurb>
+<example filename="shell_command.php" result="1" type="php"/>
+</slide>
