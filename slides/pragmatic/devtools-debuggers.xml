@@ -1,0 +1,17 @@
+<slide title="Debuggers">
+<blurb>APD (http://apd.communityconnect.com/)</blurb>
+<list>
+ <bullet>Dumps profiling information</bullet>
+ <bullet>Provides functions for dumping the callstack, lists of resources</bullet>
+ <bullet>Allows replacing built-in functions</bullet>
+</list>
+
+<blurb>DBG (http://dd.cron.ru/dbg/)</blurb>
+<list>
+ <bullet>Interactive debugging</bullet>
+ <bullet>Includes debugging client</bullet>
+ <bullet>Breakpoints</bullet>
+ <bullet>Integrates with other debuggers (DDD, MS Visual Studio)</bullet>
+ <bullet>Can output profiling information</bullet>
+</list>
+</slide>
