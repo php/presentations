@@ -1,9 +1,9 @@
 <slide title="ImageColorAt" outputbackground="#222222">
-
 <example title="Using ImageColorAt()" result="1" rfontsize="1.7em" ><![CDATA[
-<img src="presentations/slides/intro/php-tiny.jpg"><br />
+<? $image = "presentations/slides/intro/php-tiny.jpg"; ?>
+<img src="<?=$image?>"><br />
 <?
-    $im = imagecreatefromjpeg('presentations/slides/intro/php-tiny.jpg');
+    $im = imagecreatefromjpeg($image);
     $dx = imagesx($im);
     $dy = imagesy($im);
     for($y = 0; $y < $dy; $y++) {

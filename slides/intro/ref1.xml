@@ -4,7 +4,7 @@
     $bar = 'World';
 ?>]]></example>
 
-<image marginleft="5em" filename="ref1.png"/>
+<image marginleft="5em" filename="ref1.png" clear="left"/>
 
 <example><![CDATA[<?php
     $bar = & $foo;

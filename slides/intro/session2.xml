@@ -6,11 +6,14 @@ Default session settings are set in your php.ini file:
 session.save_path=/tmp          ; where to store flat files
 session.name = PHPSESSID        ; Name of session (cookie name)
 session.auto_start = 0          ; init session on req startup
+session.use_cookies = 1         ; whether cookies should be used
+session.use_only_cookies = 0    ; force only cookies to be used
 session.cookie_lifetime = 0     ; 0 = session cookie
 session.cookie_path = /         ; path for which cookie is valid
 session.cookie_domain =         ; the cookie domain 
 session.serialize_handler = php ; serialization handler (wddx|php)
-session.gc_probability = 1      ; garbage collection prob. (in %)
+session.gc_probability = 1      ; garbage collection prob.
+session.gc_dividend    = 100    ; If 100, then above is in %
 session.gc_maxlifetime = 1440   ; garbage collection max lifetime
 session.referer_check =         ; filter out external URL\'s
 session.entropy_length = 0      ; # of bytes from entropy source
