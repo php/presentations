@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<extension name="x3">
+ <summary>My first Extension</summary>
+ <logo src='x2.png' mimetype='image/png'/>
+ <release>
+  <version>0.1</version>
+  <date>2002-02-28</date>
+  <state>alpha</state>
+  <license>php</license>
+  <notes>
+      - first experimental draft
+  </notes>
+ </release>
+
+ <deps language="cpp"/>
+
+ <functions>
+  <function name="foobar">
+   <proto>string foobar(void)</proto>
+   <summary>A dummy function</summary>
+   <description>
+This function returns a static string.
+   </description>
+   <code>
+RETURN_STRING("foobar", 1);
+   </code>
+  </function>
+ </functions>
+
+</extension>

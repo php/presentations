@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>A fancy %phpinfo()%</title>
+ <blurb>
+  Now our %phpinfo()% entry looks like this:
+
+<![CDATA[
+<hr>
+<h3 style="text-align: center;">x2</h3>
+<table align="center" border="0" cellpadding="3" width="600" style="border-collapse: collapse;">
+<tr style="background-color: #cccccc; color: #000000;"><td style="border: 1px solid #000000; font-size: 75%; vertical-align: baseline;">
+<img src='/~hartmut/phpinfo.php?=X2_LOGO_ID' align='right' alt='image' border='0'>
+<p>My first Extension</p>
+<p>Version 0.1alpha (2002-02-28)</p>
+<p><b>Authors:</b></p>
+<p>Hartmut Holzgraefe &lt;hartmut@php.net&gt;</p>
+</td></tr>
+</table><br />
+]]>
+
+ </blurb>
+</slide>

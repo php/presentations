@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Testing the Extension</title>
+ <blurb>
+  Even without having specified anything but the extensions name 
+  we now already have:
+ </blurb>
+ <list>
+  <li>a ready-to-compile source tree</li>
+  <li>a loadable extension module</li>
+  <li>a %phpinfo()% entry</li>
+ </list>
+ <example filename="examples/x1.phpinfo" fontsize="1em"/>
+ <blurb>
+  Nothing really usefull but not too bad for less than five minutes of work.
+ </blurb>
+</slide>

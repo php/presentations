@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Invocation</title>
+ <blurb>
+  Creating the actual extension source is as easy as:
+ </blurb>
+ <example filename="examples/x1.log" fontsize="1em"/>
+ <blurb>
+  This will create the following directory from *%x1.xml%*:
+ </blurb>
+ <example filename="examples/x1.tree" fontsize="1em"/>
+</slide>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Adding a function</title>
+ <blurb>
+  A fancy %phpinfo()% is nice to have, but what PHP
+  extensions really are about is functionality, so
+  lets add a function to our extension:
+ </blurb>
+ <example filename="examples/x3.snippet" linenumbers="1" format="xml" fontsize="1em"/>
+</slide>
+

@@ -1,0 +1,25 @@
+ <functions>
+  <function name="foobar">
+   <proto>string foobar(string foo, int bar)</proto>
+   <summary>A dummy function</summary>
+   <description>
+This function returns a given string 'foo' 'bar' times.
+   </description>
+   <code>
+<![CDATA[
+int i, len;
+char *newstr;
+
+len = foo_len * bar;
+
+newstr = (char *)emalloc(len + 1);
+*newstr = '\0';
+
+for (i=0; i<bar; i++) {
+  strcat(newstr, foo);
+}
+
+RETURN_STRINGL(newstr, len, 0);
+]]>
+   </code>
+  </function>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<extension name="x2">
+ <summary>My first Extension</summary>
+ <logo src='x2.png' mimetype='image/png'/>
+
+ <maintainers>
+  <maintainer>        
+   <user>hholzgra</user>
+   <name>Hartmut Holzgraefe</name>
+   <email>hartmut@php.net</email>
+   <role>lead</role>
+  </maintainer>
+ </maintainers>
+
+ <release>
+  <version>0.1</version>
+  <date>2002-02-28</date>
+  <state>alpha</state>
+  <license>php</license>
+  <notes>
+      - first experimental draft
+  </notes>
+ </release>
+
+</extension>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>%&amp;lt;extension&amp;gt;%</title>
+ <blurb>
+  The *%&amp;lt;extension&amp;gt;%* tag is the top level tag of 
+  every extension description. The name of the extension is specified
+  in its *%name%* attribute. A minimal extension looks like this:
+ </blurb>
+ <example type="xml" linenumbers="true" filename="examples/x1.xml" fontsize="1em"/>
+</slide>

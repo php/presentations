@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>PECL_GEN</title>
+ <list title="PECL_Gen is">
+  <li>an XML based PHP extension code generator</li>
+  <li>replacing the older %ext_skel% script</li>
+  <li>implemented using PHP 5 and PEAR only</li> 
+ </list>
+
+ <list title="PECL_Gen creates">
+  <li>functions</li>
+  <li>constants</li>
+  <li>%php.ini% configuration directives</li>
+  <li>resource types</li>
+  <li>per thread global variables</li>
+  <li>%configure%, %Makefile% and VisualStudio project files</li>
+  <li>documentation</li>
+ </list>
+</slide>
