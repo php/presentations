@@ -68,7 +68,7 @@
         }
         
         /* Recurse along the children to generate the remaining nodes */
-        if($node->has_children()) {
+        if($node->hasChildren()) {
             foreach($node->child as $child) {
                 dump_tree($child, $indent + 3);
             }

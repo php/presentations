@@ -1,6 +1,5 @@
 <?php
-	$tidy = tidy_parse_file("http://www.php.net/");
-	$tidy->setopt("output-xhtml", true);
-	$tidy->clean_repair();
+	$tidy = tidy_parse_file("http://www.php.net/", array('output-xhtml' => true));
+	$tidy->cleanRepair();
 	echo $tidy;
 ?>

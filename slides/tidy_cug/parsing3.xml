@@ -10,17 +10,16 @@ class tidy_node {
     public $type;
     public $id;        /* $id Not always available, depends on type */
     
-    public tidy_attr $attribute[];
     public tidy_node $child[];
     
-    public function has_children();
+    public function hasChildren();
     
-    public function is_comment();
-    public function is_html();
-    public function is_text();
-    public function is_jste();
-    public function is_asp();
-    public function is_php();
+    public function isComment();
+    public function isHtml();
+    public function isText();
+    public function isJste();
+    public function isAsp();
+    public function isPhp();
     
 }
 ?>]]></example>

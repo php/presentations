@@ -3,10 +3,10 @@
 	$tidy = new tidy_doc();
 	
 	/* Parse a remote URL via Streams */
-	$tidy->parse_file("http://www.coggeshall.org/");
+	$tidy->parseFile("http://www.coggeshall.org/");
 
 	/* Clean and repair the HTML document */
-	$tidy->clean_repair();
+	$tidy->cleanRepair();
 
 	/* Access the error buffer */
 	$error_buf = $tidy->error_buf;
