@@ -1,0 +1,30 @@
+<slide title="Sessions">
+
+<blurb title="Starting a Session">
+To start a session use session_start() and to register a variable
+in this session use session_register().
+</blurb>
+<example width="50em"><![CDATA[<?php
+  session_start();
+  session_register('my_var');
+  $my_var = 'Hello World';
+?>]]></example>
+
+<blurb>
+You can check if a variable is already registered in a session using
+session_is_registered()
+</blurb>
+<example width="50em"><![CDATA[<?php
+  if (!session_is_registered("my_var")) {
+      session_register("my_var");
+  }
+?>]]></example>
+
+<blurb>
+The $HTTP_SESSION_VARS array contains all the variables in the current
+session.  If register_globals is enabled (which it is by default) then
+the session variables will automatically be available in the global namespace
+as well.
+</blurb>
+
+</slide>
