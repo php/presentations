@@ -4,7 +4,7 @@
 <example><![CDATA[<IMG src="txt.php?text=<?echo urlencode($text)?>">]]></example>
 
 <example hide="1" result="1" rwidth="650"><![CDATA[<?if(!empty($text)) {
-  echo "<IMG src=\"slides/intro/txt.php?text=".urlencode($text)."\">";
+  echo "<IMG src=\"presentations/slides/intro/txt.php?text=".urlencode($text)."\">";
  } else $text = 'Cool Dynamic Images!';
  echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";
  echo "<input type=text name=text value=\"$text\">\n";
