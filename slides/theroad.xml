@@ -1,0 +1,301 @@
+<slide title="The Road to PHP">
+<list>
+<title>From PHP 0.0 to PHP 3.0</title>
+<bullet>1994 - Started writing CGI scripts in C and Perl</bullet>
+<bullet>1995 - Combined many CGI scripts into a smaller set of more generic binaries</bullet>
+<bullet>June 8, 1995 - First official 1.0 release</bullet>
+</list>
+<example fontsize="1.5em"><![CDATA[From: rasmus@io.org (Rasmus Lerdorf)
+Subject: Announce: Personal Home Page Tools (PHP Tools)
+Date: 1995/06/08
+Message-ID: <3r7pgp$aa1@ionews.io.org>#1/1
+organization: none
+newsgroups: comp.infosystems.www.authoring.cgi
+
+Announcing the Personal Home Page Tools (PHP Tools) version 1.0.
+
+These tools are a set of small tight cgi binaries written in C.
+They perform a number of functions including:
+
+. Logging accesses to your pages in your own private log files
+. Real-time viewing of log information
+. Providing a nice interface to this log information
+. Displaying last access information right on your pages
+. Full daily and total access counters
+. Banning access to users based on their domain
+. Password protecting pages based on users' domains
+. Tracking accesses ** based on users' e-mail addresses **
+. Tracking referring URL's - HTTP_REFERER support
+. Performing server-side includes without needing server support for it
+. Ability to not log accesses from certain domains (ie. your own)
+. Easily create and display forms
+. Ability to use form information in following documents
+
+Here is what you don't need to use these tools:
+
+. You do not need root access - install in your ~/public_html dir
+. You do not need server-side includes enabled in your server
+. You do not need access to Perl or Tcl or any other script interpreter
+. You do not need access to the httpd log files
+
+The only requirement for these tools to work is that you have
+the ability to execute your own cgi programs.  Ask your system
+administrator if you are not sure what this means.
+
+The tools also allow you to implement a guestbook or any other
+form that needs to write information and display it to users
+later, in about 2 minutes.
+
+The tools are in the public domain distributed under the GNU
+Public License.  Yes, that means they are free!
+
+For a complete demonstration of these tools, point your browser
+at: http://www.io.org/~rasmus
+
+--
+Rasmus Lerdorf
+rasmus@io.org
+http://www.io.org/~rasmus]]></example>
+<list>
+<bullet>September 18, 1995 Version 1.90: Wrote a &quot;real&quot; parser to improve tag replacement language</bullet>
+<bullet>October 9, 1995 Version 1.91: Combined the FI (Form Interpreter) with the Tools to form a single binary</bullet>
+<bullet>October 17, 1995 Version 1.92: First public release of PHP/FI</bullet>
+<bullet>October 19, 1995 Version 1.93: Sample ChangeLog:</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Changed msqlsethost() function name to msql_connect() to be consistent</bullet>
+<bullet>Added multiple result cursors to mSQL support</bullet>
+<bullet>Changed syntax of msql_result() function</bullet>
+<bullet>Added msql_freeresult() function</bullet>
+<bullet>Added msql_fieldname() function</bullet>
+<bullet>Added msql_fieldtype() function</bullet>
+<bullet>Added msql_fieldlen() function</bullet>
+<bullet>Added msql_fieldflags() function</bullet>
+<bullet>Added msql_numrows() function</bullet>
+<bullet>Added msql_numfields() function</bullet>
+<bullet>Updated demo_msql.html to reflect above changes</bullet>
+<bullet>Fixed various minor things to get it to compile cleanly on SunOS4.1.3</bullet>
+<bullet>Fixed msql library detection problem</bullet>
+</list>
+<list>
+<bullet>Oct. 22, 1995 Version 1.94</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Fixed numerical variable name bug in var.c</bullet>
+<bullet>Fixed potential floating point exception core dump</bullet>
+<bullet>Fixed Arithmetic snafu</bullet>
+<bullet>Fixed unary minus bug</bullet>
+<bullet>Fixed include command bug</bullet>
+<bullet>Change in acc.c to convert domain name and e-mail address to lower case
+  before doing a match.</bullet>
+<bullet>Change in file.c to look for given file relative to location of php binary
+  if file cannot be found relative to server's root_dir.</bullet>
+<bullet>Change in file.c to force loading of either index.html or Overview.html if the
+  given path is a directory</bullet>
+<bullet>Added guestbook to examples directory</bullet>
+<bullet>Fixed day of week bug in date.c</bullet>
+<bullet>Added support for brackets in conditional expressions</bullet>
+<bullet>Fixed sort bug and made sort function type aware</bullet>
+<bullet>Fixed bug in Exit() - I was closing a null fp in some cases</bullet>
+</list>
+<list>
+<bullet>Oct. 30 Version 1.95</bullet>
+</list>
+<list marginleft="2em">
+<bullet>Fixed ?config problem related to matching on e-mail addresses</bullet>
+<bullet>Added ability to edit entries in example guestbook</bullet>
+<bullet>Added YYMAXDEPTH 50000 definition to parse.y to eliminate stack overflows in
+  older versions of bison</bullet>
+<bullet>Added support for Tom Boutell's GD library</bullet>
+<bullet>Added ImageCreate(), ImageDestroy(), ImageGif(), ImageSetPixel(), 
+  ImageLine(), ImageRectangle(), ImageFilledRectangle(),
+  ImageArc(), ImageFillToBorder(), ImageFill(), ImageColorAllocate(),
+  ImageColorTransparent(), ImageInterlace() functions</bullet>
+<bullet>Added tempnam() function</bullet>
+<bullet>Added unlink() function</bullet>
+<bullet>Added rename() function</bullet>
+<bullet>Added sleep() function</bullet>
+<bullet>Added ?url to Location directive on external E-mail and Password forms
+  enabling people to write these external forms and use $argv[0] as the
+  form to go to once an e-mail address/password has been entered</bullet>
+<bullet>Added the ability to specify an array variable in the exec() call to
+  store all lines of output from the given Unix command in</bullet>
+<bullet>Fixed linenumber report inconsistency in error message when file had a while loop</bullet>
+<bullet>Added Max() and Min() functions to return the maximum or minimum element of an array</bullet>
+<bullet>Improved the docs/php.html documentation</bullet>
+<bullet>Fixed bug in file...() functions</bullet>
+<bullet>Added ImagePolygon() and ImageFilledPolygon() functions which take a
+  PHP array of x,y points as arguments</bullet>
+<bullet>Changed msql_result() to ensure it never returned NULL</bullet>
+<bullet>Changed echo command to not print an error if argument is NULL</bullet>
+<bullet><![CDATA[Rewrote FixFilename function to allow ~username expansion.  Also made
+  it chdir() to the directory where the current html file is located to
+  allow relative paths in the &lt;IMG&gt; tag.  Also made it first try to
+  load index.html and then Overview.html if given filename is a directory.]]></bullet>
+<bullet>Added PATH_DIR variable to be only the directory portion of PATH_INFO</bullet>
+<bullet>Fixed potential bug in Exec()/System() functions</bullet>
+<bullet>Optimized stat code to remove redundant calls</bullet>
+<bullet>Added PHP_PUB_DIRNAME and PHP_ROOT_DIR configurable options to php.h</bullet>
+<bullet>Added ImageChar(), ImageCharUp(), ImageString() and ImageStringUp() functions</bullet>
+<bullet>Added survey.html example</bullet>
+<bullet>Added traditional GET method support</bullet>
+<bullet>Added explanation to php.html on how to propogate e-mail addresses using new GET
+  method support</bullet>
+</list>
+<list>
+<bullet>November 1, 1995 Version 1.96: Highlight - 64-bit DEC Alpha fixes</bullet>
+<bullet>November 7, 1995 Version 1.97: Multiple mSQL connection support</bullet>
+<bullet>November 18, 1995 Version 1.98: Added += -= mktime(), file functions</bullet>
+<bullet>December 8, 1995 Version 1.99: Added &amp;= |= and GPL license</bullet>
+<bullet>January 24, 1996 Version 1.99a: magic_quotes, file upload, usleep</bullet>
+<bullet>February 5, 1996 Version 1.99b: Y2K bug fix, $$var support, initial ODBC work</bullet>
+<bullet>February 12, 1996 Version 1.99c: Added @, lots of documentation</bullet>
+<bullet>February 19, 1996 Version 1.99d: setlocale(), regression test system</bullet>
+<bullet>March 6, 1996 Version 1.99e: NSAPI redirection module, socket and microtime funcs</bullet>
+<bullet>March 8, 1996 Version 1.99f: msql_listtables(), msql_tablename()</bullet>
+<bullet>March 18, 1996 Version 1.99g: reset(), end(), next(), key(), msql_listdbs()</bullet>
+<bullet>March 26, 1996 Version 1.99h: Added register support to regular expression functions</bullet>
+<bullet>April 2, 1996 Version 1.99i: Ouch!  Non-code related bug.  My hand broke.</bullet>
+<bullet>April 10, 1996 Version 1.99j: User-defined functions added</bullet>
+<bullet>April 10, 1996 Version 1.99k: Postgres95 support added</bullet>
+</list>
+<example fontsize="1.5em"><![CDATA[From: rasmus@madhaus.utcs.utoronto.ca (Rasmus Lerdorf)
+Subject: ANNOUNCE: PHP/FI Server-side HTML-Embedded Scripting Language
+Date: 1996/04/16
+Newsgroups: comp.infosystems.www.authoring.cgi
+
+PHP/FI is a server-side HTML embedded scripting language.  It has built-in
+access logging and access restriction features and also support for
+embedded SQL queries to mSQL and/or Postgres95 backend databases.
+
+It is most likely the fastest and simplest tool available for creating 
+database-enabled web sites.
+
+It will work with any UNIX-based web server on every UNIX flavour out
+there.  The package is completely free of charge for all uses including
+commercial.
+
+Feature List:
+
+. Access Logging
+  Log every hit to your pages in either a dbm or an mSQL database.
+  Having hit information in a database format makes later analysis easier.
+. Access Restriction
+  Password protect your pages, or restrict access based on the refering URL
+  plus many other options.
+. mSQL Support
+  Embed mSQL queries right in your HTML source files
+. Postgres95 Support
+  Embed Postgres95 queries right in your HTML source files
+. DBM Support
+  DB,DBM,NDBM and GDBM are all supported
+. RFC-1867 File Upload Support
+  Create file upload forms
+. Variables, Arrays, Associative Arrays
+. User-Defined Functions with static variables + recursion 
+. Conditionals and While loops
+  Writing conditional dynamic web pages could not be easier than with
+  the PHP/FI conditionals and looping support
+. Extended Regular Expressions
+  Powerful string manipulation support through full regexp support
+. Raw HTTP Header Control
+  Lets you send customized HTTP headers to the browser for advanced 
+  Features such as cookies.
+. Dynamic GIF Image Creation
+  Thomas Boutell's GD library is supported through an easy-to-use set of
+  tags.
+
+It can be downloaded from the File Archive at: <URL:http://www.vex.net/php>
+
+--
+Rasmus Lerdorf
+rasmus@vex.net]]></example>
+<list>
+<bullet>April 23, 1996 Version 1.99l: First Apache 1.1 Module Support</bullet>
+<bullet>April 25, 1996 Version 1.99m: Make backward compatible with Apache 1.0</bullet>
+<bullet>April 30, 1996 Version 1.99n: Added $PHP_SELF</bullet>
+<bullet>May 7, 1996 Version 1.99o: Add curly brace support</bullet>
+<bullet>May 11, 1996 Version 1.99p: All sorts of stack related memory management fixes</bullet>
+<bullet>May 17, 1996 Version 1.99q: Added FastCGI support, popen(), eval()</bullet>
+<bullet>May 22, 1996 Version 1.99r: Added feof(), fgetss()</bullet>
+<bullet>May 31, 1996 Version 1.99s: Change from right to left recursion in parser</bullet>
+<bullet>June 12, 1996 Version 2.0b1: SetCookie() and automated cookie handling added</bullet>
+<bullet>June 13, 1996 Version 2.0b2: Fix cookie code to work with Apache 1.0</bullet>
+<bullet>July 18, 1996 Version 2.0b3: Virtual(), link(), symlink(), rmdir()</bullet>
+<bullet>August 7, 1996 Version 2.0b4: urldecode(), readlink(), linkinfo()</bullet>
+<bullet>August 23, 1996 Version 2.0b5: PassThru(), ignore cr/lf's before first tag</bullet>
+<bullet>September 10, 1996 Version 2.0b6: $argc,$argv support, StripSlashes(), AddSlashes()</bullet>
+<bullet>September 22, 1996 Version 2.0b7: Apache 1.2 DSO support, ereg*() support</bullet>
+<bullet>November 13, 1996 Version 2.0b8: parse_str(), # comments</bullet>
+<bullet>December 5, 1996 Version 2.0b9: UniqId(), First Win95/NT support, Solid DB, mail(), mSQL 2.0</bullet>
+<bullet>January 12, 1997 Version 2.0b10: Sybase support, MySQL support</bullet>
+<bullet>April 23, 1997 Version 2.0b11: ReadFile(), SNMP, Safe Mode, and Stig added umask(), and Oracle support</bullet>
+<bullet>June 16, 1997 Version 2.0b12: Lots of bug fixes</bullet>
+<bullet>October 29, 1997 Version 3.0a1: First alpha release based on new parser from Zeev and Andi</bullet>
+<bullet>November 6, 1997 Version 3.0a2: Migrate lots of stuff from PHP 2 to PHP 3</bullet>
+<bullet>November 12, 1997 Version 2.0: Make parser understand &lt;?...?&gt; for forward compatibility with PHP 3</bullet>
+<bullet>November 23, 1997 Version 3.0a3: $GLOBALS array, parse_url()</bullet>
+<bullet>December 3, 1997 Version 3.0a4: // comments, Sybase-CT</bullet>
+<bullet>December 8, 1997 Version 3.0b1: bc, auto_append/prepend</bullet>
+<bullet>December 22, 1997 Version 3.0b2: single-quoted strings</bullet>
+<bullet>January 9, 1998 Version 2.0.1: Bug fixes</bullet>
+<bullet>January 17, 1998 Version 3.0b3: MySQL for Windows support</bullet>
+<bullet>February 2, 1998 Version 3.0b4: Win32 fixes</bullet>
+<bullet>February 24, 1998 Version 3.0b5: Concat operator changed from + to .</bullet>
+<bullet>March 2, 1998 Version 3.0b6: IMAP extension</bullet>
+<bullet>March 23, 1998 Version 3.0RC1: Raima DB, fhttpd support</bullet>
+<bullet>March 30, 1998 Version 3.0RC2: number_format()</bullet>
+<bullet>March 31, 1998 Version 3.0RC3: Apache DSO build mechanism</bullet>
+<bullet>April 18, 1998 Version 3.0RC4: Apache API changes</bullet>
+<bullet>May 23, 1998 Version 3.0RC5: MySQL fixes, strpos(), zlib extension, constants, GD-TTF support</bullet>
+<bullet>June 6, 1998 Version 3.0: strrpos(), trim(), LDAP fixes</bullet>
+</list>
+<example fontsize="1.5em"><![CDATA[
+                        FOR IMMEDIATE RELEASE
+
+                           PHP 3.0 RELEASED
+
+June 6, 1998 -- The PHP Development Team announced the release of
+PHP 3.0, the latest release of the server-side scripting solution already
+in use on over 70,000 World Wide Web sites.
+
+This all-new version of the popular scripting language includes support
+for all major operating systems (Windows 95/NT, most versions of Unix,
+and Macintosh) and web servers (including Apache, Netscape servers,
+WebSite Pro, and Microsoft Internet Information Server).
+
+PHP 3.0 also supports a wide range of databases, including Oracle, Sybase,
+Solid, MySQ, mSQL, and PostgreSQL, as well as ODBC data sources.
+
+New features include persistent database connections, support for the
+SNMP and IMAP protocols, and a revamped C API for extending the language
+with new features.
+
+"PHP is a very programmer-friendly scripting language suitable for
+people with little or no programming experience as well as the
+seasoned web developer who needs to get things done quickly.  The
+best thing about PHP is that you get results quickly," said
+Rasmus Lerdorf, one of the developers of the language.
+
+"Version 3 provides a much more powerful, reliable and efficient
+implementation of the language, while maintaining the ease of use and
+rapid development that were the key to PHP's success in the past",
+added Andi Gutmans, one of the implementors of the new language core.
+
+"At Circle Net we have found PHP to be the most robust platform for
+rapid web-based application development available today," said Troy
+Cobb, Chief Technology Officer at Circle Net, Inc.  "Our use of PHP
+has cut our development time in half, and more than doubled our client
+satisfaction.  PHP has enabled us to provide database-driven dynamic
+solutions which perform at phenomenal speeds."
+
+PHP 3.0 is available for free download in source form and binaries for
+several platforms at http://www.php.net/.
+
+The PHP Development Team is an international group of programmers who
+lead the open development of PHP and related projects.
+
+
+For more information, the PHP Development Team can be contacted at
+core@php.net]]></example>
+</slide>
