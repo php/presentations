@@ -1,0 +1,50 @@
+<presentation template="php" navmode="html">
+<topic>PHP</topic>
+<title>Hacking the PHP Source and Community</title>
+<event>PHPCon 2003</event>
+<location>New York, NY</location>
+<date>April 25, 2002</date>
+<speaker>Jim Winstead</speaker>
+<email>jimw@apache.org</email>
+<url>http://talks.php.net/hacking-2003</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/extending/why.xml</slide>
+
+<slide>slides/intro/arch.xml</slide>
+
+<slide>slides/extending/tree-layout.xml</slide>
+
+<slide>slides/extending/ext1.xml</slide>
+<slide>slides/extending/ext2.xml</slide>
+<slide>slides/extending/ext3.xml</slide>
+<slide>slides/extending/ext4.xml</slide>
+<slide>slides/extending/ext5.xml</slide>
+<slide>slides/extending/ext6.xml</slide>
+<slide>slides/extending/ext7.xml</slide>
+<slide>slides/extending/ext8.xml</slide>
+<slide>slides/extending/ext9.xml</slide>
+<slide>slides/extending/ext10.xml</slide>
+<slide>slides/extending/ext11.xml</slide>
+<slide>slides/extending/ext12.xml</slide>
+<slide>slides/extending/ext13.xml</slide>
+<slide>slides/extending/ext14.xml</slide>
+<slide>slides/extending/ext15.xml</slide>
+<slide>slides/extending/ext16.xml</slide>
+<slide>slides/extending/ext17.xml</slide>
+<slide>slides/extending/ext18.xml</slide>
+<slide>slides/extending/ext19.xml</slide>
+<slide>slides/extending/ext20.xml</slide>
+
+<slide>slides/community/why.xml</slide>
+
+<slide>slides/community/cvs.xml</slide>
+<slide>slides/community/bugs.xml</slide>
+<slide>slides/community/docs.xml</slide>
+<slide>slides/community/mail-lists.xml</slide>
+<slide>slides/community/usergroups.xml</slide>
+
+<slide>slides/community/fin.xml</slide>
+
+</presentation>
