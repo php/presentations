@@ -1,0 +1,60 @@
+<presentation 
+ template="php2" 
+ titlecolor="#1111aa"
+ logo1="presentations/slides/sdphp/sdphp_logo.png"
+ navbarbackground="#ffffff"
+ navbarheight="4.1em"
+ subtitlesize='3em'
+>
+<!-- navbarbackground="url(images/trans-ffffff.png)" -->
+<topic>PHP</topic>
+<title>Making your (coding) life simpler</title>
+<subtitle>or 'Using freely available tools for fun and profit'</subtitle>
+<event>SDPHP monthly meeting</event>
+<location>San Diego</location>
+<url>http://www.sdphp.net/</url>
+<date>June 5, 2003</date>
+<speaker>Jesus M. Castagnetto</speaker>
+<email>jesusmc@php.net</email>
+
+<slide>slides/sdphp/tools_title.xml</slide>
+<slide>slides/sdphp/tools_toc.xml</slide>
+<chapter title="Tools">
+ <slide>slides/sdphp/tools_pearpackager_desc.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_commands.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_gtk.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_web.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_managing-packages.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_listing.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_info.xml</slide>
+ <slide>slides/sdphp/tools_PEAR_Info.xml</slide>
+ <slide>slides/sdphp/tools_pearpackager_getting-help.xml</slide>
+ <slide>slides/sdphp/tools_phpdocumentor_desc.xml</slide>
+ <slide>slides/sdphp/tools_phpdocumentor_doctags.xml</slide>
+ <slide>slides/sdphp/tools_phpdocumentor_example.xml</slide>
+</chapter>
+
+<chapter title="A Complete Example - MondoRegex">
+ <slide>slides/sdphp/tools_mondoregex_desc.xml</slide>
+ <slide>slides/sdphp/tools_pear-naming-conventions.xml</slide>
+ <slide>slides/sdphp/tools_mondoregex_bare-code.xml</slide>
+ <slide>slides/sdphp/tools_mondoregex_with-doctags.xml</slide>
+ <slide>slides/sdphp/tools_mondoregex_screenshot.xml</slide>
+ <slide>slides/sdphp/tools_mondoregex_example-apidocs.xml</slide>
+ <slide>slides/sdphp/tools_mondoregex_example-uml.xml</slide>
+ <slide>slides/sdphp/tools_mondoregex_package-desc.xml</slide>
+ <slide>slides/sdphp/tools_mondoregex_deploying.xml</slide>
+</chapter>
+
+<!-- chapter title="Miscellaneous tools">
+ <slide>slides/sdphp/tools_vim-ctags-plugins.xml</slide>
+ <slide>slides/sdphp/tools_beautify.xml</slide>
+ <slide>slides/sdphp/tools_dia.xml</slide>
+ <slide>slides/sdphp/tools_autodia-and-dia2code.xml</slide>
+ <slide>slides/sdphp/tools_umbrello-and-umi2code.xml</slide>
+</chapter -->
+
+<slide>slides/sdphp/tools_summary.xml</slide>
+<slide>slides/sdphp/tools_more-info.xml</slide>
+
+</presentation>
