@@ -3,7 +3,7 @@
 	titlecolor="#660066"
 	navbarbackground="url(images/trans-ffffff.png)"
 	logo1="images/php-yahoo-95x50.png"
-	titlesize="3em"
+	titlesize="2em"
 	navbarheight="4.1em"
 >
 
@@ -18,7 +18,6 @@
   <slide>slides/titlepage.xml</slide>
   <slide>slides/intro/php-many.xml</slide>
   <slide>slides/intro/numbers.xml</slide>
-  <slide>slides/intro/platforms.xml</slide>
   <slide>slides/intro/serverside.xml</slide>
   <slide>slides/intro/embed2.xml</slide>
   <slide>slides/intro/basics.xml</slide>

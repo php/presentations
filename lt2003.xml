@@ -1,0 +1,40 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Do you PHP?</title>
+<event>Linuxtag</event>
+<location>Karlsruhe</location>
+<date>July 11, 2003</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://lerdorf.com/lt2003.pdf</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/php-many.xml</slide>
+  <slide>slides/intro/php-basic.xml</slide>
+  <slide>slides/intro/php-template.xml</slide>
+  <slide>slides/intro/php-scripting.xml</slide>
+  <slide>slides/intro/php-framework.xml</slide>
+  <slide>slides/intro/numbers.xml</slide>
+  <slide>slides/intro/yahoo-numbers.xml</slide>
+  <slide>slides/intro/php-intro.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+  <slide>slides/intro/layers.xml</slide>
+  <slide>slides/intro/input_filter.xml</slide>
+  <slide>slides/intro/cpp.xml</slide>
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_bench1.xml</slide>
+  <slide>slides/intro/php_bench2.xml</slide>
+  <slide>slides/intro/php_bench3.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/stop.xml</slide>
+</chapter>
+
+</presentation>

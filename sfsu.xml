@@ -1,0 +1,40 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP and Open Source</title>
+<location>San Francisco</location>
+<date>May 7, 2003</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://lerdorf.com/sfsu.pdf</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/stack.xml</slide>
+  <slide>slides/intro/ms.xml</slide>
+  <slide>slides/intro/alternative.xml</slide>
+  <slide>slides/intro/simple.xml</slide>
+  <slide>slides/intro/old.xml</slide>
+  <slide>slides/intro/old2.xml</slide>
+  <slide>slides/intro/old3.xml</slide>
+  <slide>slides/intro/numbers.xml</slide>
+  <slide>slides/intro/php-solution.xml</slide>
+  <slide>slides/intro/simple_form.xml</slide>
+  <slide>slides/intro/image.xml</slide>
+  <slide>slides/intro/image_colors6.xml</slide>
+  <slide>slides/intro/image2.xml</slide>
+  <slide>slides/intro/image_text2.xml</slide>
+  <slide>slides/intro/exif.xml</slide>
+  <slide>slides/intro/pdf.xml</slide>
+  <slide>slides/intro/flash_ming.xml</slide>
+  <slide>slides/intro/flash_ming2.xml</slide>
+  <slide>slides/intro/resources.xml</slide>
+</chapter>
+
+</presentation>

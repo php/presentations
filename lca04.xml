@@ -1,0 +1,103 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP Tips and Tricks</title>
+<event>LCA 2004</event>
+<location>Adelaide</location>
+<date>Jan.14, 2004</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://lerdorf.com/lca04.pdf</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/php-many.xml</slide>
+  <slide>slides/intro/php-template.xml</slide>
+  <slide>slides/intro/numbers.xml</slide>
+  <slide>slides/intro/best.xml</slide>
+  <slide>slides/intro/serverside.xml</slide>
+  <slide>slides/intro/embed2.xml</slide>
+</chapter>
+
+<chapter title="Extensions">
+  <slide>slides/intro/gdchart.xml</slide>
+  <slide>slides/intro/pdf.xml</slide>
+  <slide>slides/intro/flash_ming.xml</slide>
+  <slide>slides/intro/pear.xml</slide>
+  <slide>slides/php5intro/nl/pecl.xml</slide>
+</chapter>
+
+<chapter title="PHP and MySQL">
+  <slide>slides/intro/mysql_setup.xml</slide>
+  <slide>slides/intro/mysql_check.xml</slide>
+  <slide>slides/intro/mysql_connect.xml</slide>
+  <slide>slides/intro/mysql_pconnect.xml</slide>
+  <slide>slides/intro/mysql_create.xml</slide>
+  <slide>slides/intro/mysql_insert.xml</slide>
+  <slide>slides/intro/mysql_select.xml</slide>
+  <slide>slides/intro/mysql_time.xml</slide>
+  <slide>slides/intro/mysql_update.xml</slide>
+  <slide>slides/intro/magic_quotes.xml</slide>
+  <slide>slides/intro/squid1.xml</slide>
+  <slide>slides/intro/squid2.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+</chapter>
+
+<chapter title="Architecture">
+  <slide>slides/intro/pi.xml</slide>
+  <slide>slides/intro/errdoc.xml</slide>
+  <slide>slides/intro/image_cache.xml</slide>
+  <slide>slides/intro/funky.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+  <slide>slides/intro/layers.xml</slide>
+</chapter>
+
+<chapter title="Security">
+  <slide>slides/intro/safemode.xml</slide>
+  <slide>slides/intro/security1.xml</slide>
+  <slide>slides/intro/security2.xml</slide>
+  <slide>slides/intro/security3.xml</slide>
+  <slide>slides/intro/security4.xml</slide>
+  <slide>slides/intro/security5.xml</slide>
+</chapter>
+
+<chapter title="PHP5">
+  <slide>slides/intro/php5_refclone.xml</slide>
+  <slide>slides/intro/php5_construct.xml</slide>
+  <slide>slides/intro/php5_private.xml</slide>
+  <slide>slides/intro/php5_protected.xml</slide>
+  <slide>slides/intro/php5_setget.xml</slide>
+  <slide>slides/intro/php5_call.xml</slide>
+  <slide>slides/intro/php5_exceptions.xml</slide>
+  <slide>slides/intro/streams.xml</slide>
+  <slide>slides/intro/cli-awk.xml</slide>
+  <slide>slides/intro/php5_domxml-load.xml</slide>
+  <slide>slides/intro/simplexml1.xml</slide>
+  <slide>slides/intro/simplexml2.xml</slide>
+  <slide>slides/intro/sqlite1.xml</slide>
+  <slide>slides/intro/sqlite2.xml</slide>
+</chapter>
+
+<chapter title="Performance">
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/yahoo/opt/php_opcode_caches2.xml</slide>
+  <slide>slides/hpp/when_optimize.xml</slide>
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_bench1.xml</slide>
+  <slide>slides/intro/php_bench2.xml</slide>
+  <slide>slides/intro/php_bench3.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/xdebug.xml</slide>
+  <slide>slides/intro/stop.xml</slide>
+</chapter>
+
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

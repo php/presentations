@@ -1,0 +1,32 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Do you PHP?</title>
+<event>Linux Bangalore 2003</event>
+<location>Bangalore</location>
+<date>Dec.3, 2003</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://lerdorf.com/lb1.pdf</url>
+
+<slide>slides/titlepage.xml</slide>
+<slide>slides/intro/php-many.xml</slide>
+<slide>slides/intro/php-template.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+<slide>slides/intro/best.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/embed2.xml</slide>
+<slide>slides/intro/gdchart.xml</slide>
+<slide>slides/intro/pdf.xml</slide>
+<slide>slides/intro/flash_ming.xml</slide>
+<slide>slides/intro/app_arch.xml</slide>
+<slide>slides/intro/layers.xml</slide>
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

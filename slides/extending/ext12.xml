@@ -8,8 +8,7 @@ it like this:
     int argc = ZEND_NUM_ARGS();
     zval **tmp, *arr = NULL;
 
-    if (zend_parse_parameters(argc TSRMLS_CC,
-                              "a", &arr) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC, "a", &arr) == FAILURE)
         return;
 
     zend_hash_internal_pointer_reset(Z_ARRVAL_P(arr));
@@ -27,7 +26,7 @@ Here the call to %zend_parse_parameters()% does the type check.  If
 the user passes a non-array to this function s/he will get a message that looks like this:
 </blurb>
 
-<example fontsize="1em" type="shell"><![CDATA[foo.php(4) : Warning - my_arr() expects argument 1 to be array, integer given]]></example>
+<example fontsize="1.4em" type="shell"><![CDATA[foo.php(4) : Warning - my_arr() expects argument 1 to be array, integer given]]></example>
 
 <blurb>
 If you wanted to write a function that could take either an array of integers
@@ -40,8 +39,7 @@ you do do it like this:
     int argc = ZEND_NUM_ARGS();
     zval **tmp, *arg = NULL;
 
-    if (zend_parse_parameters(argc TSRMLS_CC,
-                              "z", &arg) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC, "z", &arg) == FAILURE)
         return;
 
     switch(Z_TYPE_P(arg)) {

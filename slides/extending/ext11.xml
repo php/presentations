@@ -8,11 +8,10 @@ function.
     int argc = ZEND_NUM_ARGS();
     long arg;
 
-    if (zend_parse_parameters(argc TSRMLS_CC,
-                              "l", &arg) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC, "l", &arg) == FAILURE)
         return;
 
-	RETURN_LONG(arg);
+    RETURN_LONG(arg);
 }]]></example>
 
 <blurb>
@@ -25,12 +24,11 @@ argument format string.  Like this:
     int argc = ZEND_NUM_ARGS();
     long arg;
 
-    if (zend_parse_parameters(argc TSRMLS_CC,
-                              "|l", &arg) == FAILURE)
+    if (zend_parse_parameters(argc TSRMLS_CC, "|l", &arg) == FAILURE)
         return;
 
-	if(argc) RETURN_LONG(arg)
-	else RETURN_FALSE
+    if(argc) RETURN_LONG(arg)
+    else RETURN_FALSE
 }]]></example>
 
 <blurb>
@@ -64,15 +62,14 @@ optional resource would look like this:
 
     if (zend_parse_parameters(argc TSRMLS_CC,
                               "sla|r", &str, &str_len,
-			      &arg, &arr, &res) == FAILURE)
+                              &arg, &arr, &res) == FAILURE)
         return;
 
-	if (res) {
-		ZEND_FETCH_RESOURCE(???, ???, res, res_id,
-		                    "???", ???_rsrc_id);
-	}
+    if (res) {
+        ZEND_FETCH_RESOURCE(???, ???, res, res_id, "???", ???_rsrc_id);
+    }
 
-	RETURN_FALSE;
+    RETURN_FALSE;
 }]]></example>
 
 </slide>
