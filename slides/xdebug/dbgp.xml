@@ -2,10 +2,9 @@
 <slide fontsize="6em">
 	<title>DBGp mode</title>
 
-	<break lines="2"/>
 	<list fontsize="4em">
 		<bullet>Input commands as "command line parameters"</bullet>
-		<bullet fontsize="2.5em">%|229922|property_get| *-n* $foo->property *-d* 2 *-i* 81%</bullet>
+		<bullet>%|229922|property_get| *-n* $foo *-d* 2 *-i* 81%</bullet>
 		<bullet>Output data as *documented* XML:</bullet>
 	</list>
 	<break />
@@ -15,9 +14,8 @@
 [NULL]]]></example>
 	<break />
 	<list fontsize="4em">
-		<bullet>Cross-language: PHP, Python, Perl, Tcl, XSLT</bullet>
+		<bullet>Cross-language: PHP, Python, Perl...</bullet>
 		<bullet>Supported in Xdebug 2</bullet>
-		<bullet>Client implementation in Maguma Studio 2,</bullet>
-		<bullet marginleft="16em" type="none">ActiveState's Komodo</bullet>
+		<bullet>Clients: Komodo, Maguma Workbench</bullet>
 	</list>
 </slide>

@@ -6,6 +6,6 @@
 	<image filename="local-vars.png" align="center"/>
 
 	<break lines="3" />
-	<example fontsize="2em">xdebug.show_local_vars=1  ; enable showing local vars in
-                          ; in error messages</example>
+	<example fontsize="2em">; enable showing local vars in in error messages
+xdebug.show_local_vars=1</example>
 </slide>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Remote Interfaces</title>
-
+<!--
 	<list fontsize="5em" marginleft="2em">
 		<bullet>PHP 3 debugger mode</bullet>
 	</list>
@@ -10,14 +10,14 @@
 		<bullet marginleft="5em" type="none">interface for PHP 3</bullet>
 		<bullet>Available in Xdebug 1.x and 2.x</bullet>
 	</list>
-
+-->
 	<list fontsize="5em" marginleft="2em">
 		<bullet>GDB debugger mode</bullet>
 	</list>
 	<list fontsize="3.5em" marginleft="4em">
 		<bullet>GDB like environment</bullet>
-		<bullet>Two output possibilities: plain text and XML</bullet>
-		<bullet>Available in Xdebug 1.x and 2.x</bullet>
+		<bullet>Two output possibilities: text and XML</bullet>
+		<bullet>Available in Xdebug 1.3.x and 2.x</bullet>
 	</list>
 
 	<list fontsize="5em" marginleft="2em">

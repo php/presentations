@@ -7,12 +7,8 @@
 		<bullet>Input commands the same</bullet>
 		<bullet>%option response_format 1%</bullet>
 		<bullet>Output in 'proprietary' XML</bullet>
-		<bullet>Easier parsing for debug clients...</bullet>
-	</list>
-	<list effect="slide" fontsize="5em">
-		<bullet type="none" marginleft="3em">... but not for people</bullet>
+		<bullet>Easier parsing for debug clients... but not for people</bullet>
 	</list>
 
-	<break lines="5"/>
-	<image filename="gdb-xml.png" align="center"/>
+	<image filename="gdb-xml.png" align="right"/>
 </slide>

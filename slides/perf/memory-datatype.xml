@@ -8,27 +8,22 @@
 	<li>From 11MB to 7MB</li>
 	</list>
 
-	<example fontsize="1em">
-@@ -157,8 +157,15 @@
- */
- function &amp;create( $dataTypeString )
+	<example fontsize="1em">function &amp;create( $dataTypeString )
  {
-     $types =&amp; $GLOBALS["eZDataTypes"];
-     $def = null;
-+    if ( !isset( $types[$dataTypeString] ) )
-+    {
-+        eZDataType::loadAndRegisterType( $dataTypeString );
-+    }
+   $types =&amp; $GLOBALS["eZDataTypes"];
+   $def = null;
++  if ( !isset( $types[$dataTypeString] ) )
++  {
++    eZDataType::loadAndRegisterType($dataTypeString);
++  }
 +
-     if ( isset( $types[$dataTypeString] ) )
-     {
-         $className = $types[$dataTypeString];
+   if ( isset( $types[$dataTypeString] ) )
+   {
+     $className = $types[$dataTypeString];
 @@ -709,6 +716,4 @@
-     var $Name;
+   var $Name;
  }
 
--eZDataType::loadAndRegisterAllTypes();
--
-	</example>
+-eZDataType::loadAndRegisterAllTypes();</example>
 	
 </slide>

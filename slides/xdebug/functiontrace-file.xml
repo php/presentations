@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Execution trace to file</title>
-	<image filename="tracefile.png" align="center"/>
+	<image filename="../perf/tracefile.png" align="right"/>
 
-	<break />
-	<example fontsize="1.7em">xdebug.auto_trace=1               ; enable tracing
-xdebug.trace_output_dir=/tmp      ; configure trace output directory
-xdebug.trace_output_name=crc32    ; configure tracefile extension
-xdebug.collect_params=0           ; disable parameter collection
-xdebug.collect_includes=1         ; enable collecting filenames to include
-xdebug.extended_info=0            ; disable 'extended' code generation
-xdebug.show_mem_delta=1           ; show difference in memory usage before
-                                  ; and after call</example>
+	<example fontsize="1.7em">xdebug.auto_trace=1            ; enable tracing
+xdebug.trace_output_dir=/tmp   ; trace output directory
+xdebug.trace_output_name=crc32 ; tracefile extension
+xdebug.collect_params=0        ; parameter collection
+xdebug.collect_includes=1      ; collecting includes
+xdebug.extended_info=0         ; 'extended' code
+                               ; generation
+xdebug.show_mem_delta=1        ; memory difference</example>
 </slide>

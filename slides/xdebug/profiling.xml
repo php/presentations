@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Profiling</title>
-	<image filename="pg1.png" align="center"/>
+	<image filename="pg1.png" align="right"/>
 
-	<break />
 	<example fontsize="1.7em">xdebug.profiler_enable=1          ; enable profiler
-xdebug.profile_output_dir=/tmp    ; configure profile output directory
-xdebug.profile_output_name=crc32  ; configure profilefile extension</example>
+xdebug.profile_output_dir=/tmp    ; output directory
+xdebug.profile_output_name=crc32  ; file extension</example>
 </slide>

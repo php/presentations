@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Apache Sucks!</title>
+	<title>Apache Is Slow!</title>
 
 	<list>
-	<li>If you're using PHP as DSO module</li>
+	<li>When you're using PHP as DSO module</li>
 	<li>So use static compiled modules</li>
 	</list>
 

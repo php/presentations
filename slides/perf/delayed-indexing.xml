@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>No Indexes for Now!</title>
+
+	<list>
+	<li>Search Engine</li>
+	<li>Indexing takes Time</li>
+	<li>Delay Indexing to Cron Job</li>
+	<li>Publishing is Faster</li>
+	</list>
+	<break lines="2"/>
+
+	<example>[SearchSettings]
+DelayedIndexing=enabled</example>
+	
+</slide>
