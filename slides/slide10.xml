@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Files">
+  <table title="*File Layout*" columns="2" border="1" width="75%" padding="5">
+  <cell>config.php-dist</cell><cell>Rename to config.php and customize</cell>
+  <cell>index.php</cell><cell>Main presentation list page</cell>
+  <cell>show.php</cell><cell>Slide navigation and control</cell>
+  <cell>objects.php</cell><cell>Display code</cell>
+  <cell>presentations/</cell><cell>Directory of presentation XML files</cell>
+  <cell>slides/</cell><cell>Directory of slide XML files</cell>
+  </table>
+
+</slide>
