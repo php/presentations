@@ -15,6 +15,7 @@ it like this:
     zend_hash_internal_pointer_reset(Z_ARRVAL_P(arr));
     while (zend_hash_get_current_data(Z_ARRVAL_P(arr),
                                       (void **)&tmp) == SUCCESS) {
+	SEPARATE_ZVAL(tmp);
         convert_to_long_ex(tmp);
         php_printf("%ld\n",Z_LVAL_PP(tmp));
         zend_hash_move_forward(Z_ARRVAL_P(arr));
