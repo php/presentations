@@ -1,0 +1,17 @@
+<slide title="Sockets">
+
+<list title="Performance Problems" fontsize="2.2em">
+<bullet>Makes you network dependent (TCP/IP)</bullet>
+<bullet>Communication protocol overheads (TCP/IP, especially)</bullet>
+</list>
+
+<list title="Performance Tips" fontsize="2.2em">
+<bullet effect="slide">When dealing with local sockets consider other
+options like pipes or shared memory.</bullet>
+<bullet effect="slide">Establishing a connection is the most costly 
+part of the TCP/IP layer.  Think carefully about re-using pre-existing connections.</bullet>
+<bullet effect="slide">When transfering large chunks of data, consider using
+a compression/encryption method to lower bandwidth</bullet>
+</list>
+
+</slide>

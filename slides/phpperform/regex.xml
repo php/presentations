@@ -1,0 +1,24 @@
+<slide title="Regular Expressions">
+<blurb title="Slow Regexps">
+Its often beneficial to replace regular expressions with simpler functions
+that have the same effect.
+</blurb>
+<example fontsize="1.2em" title="With Regular Expression"><![CDATA[<?php
+if (preg_match ('/(.*)\@(.*)/', $data, $matches)) {
+    print $matches[2];
+}
+?>]]></example>
+
+<example fontsize="1.2em" title="Without Regular Expressions"><![CDATA[<?php
+$pos = strrpos ('@', $data);
+if ($pos !== false) {
+    print substr ($data, $pos);
+}
+?>]]></example>
+
+<blurb title="Fast Regexps">
+In other cases it may help to use regular expressions instead of custom parse
+routines in your PHP code.
+</blurb>
+
+</slide>

@@ -1,0 +1,16 @@
+<slide title="mod_gzip">
+<blurb>
+Mod_gzip is a superb apache module which handles gzip compression and 
+data caching.  It offers signifigant increases in compression performance
+to the homebrewed PHP solutions.
+</blurb>
+
+<list title="mod_gzip features">
+<bullet effect="slide">Compression statistics</bullet>
+<bullet effect="slide">The ability to chose compression via MIME type and 
+Filename</bullet>
+<bullet effect="slide">You can exclude compression for certain browsers</bullet>
+<bullet effect="slide">Can cache compression results</bullet>
+</list>
+
+</slide>
