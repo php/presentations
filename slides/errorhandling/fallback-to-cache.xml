@@ -6,12 +6,9 @@
 	<image align="center" filename="mysql-error-cache.png" />
 
 	<blurb> </blurb>
-	<example fontsize="1.2em"
-	    filename="il-error-handle.php"
-	    result="0"
-	/>
+
 	<list effect="slide" fontsize="4.5em">
-		<bullet>Always check return values</bullet>
-		<bullet>@ operator</bullet>
+		<bullet>Store generated pages in cache</bullet>
+		<bullet>When no connection, use the cached page</bullet>
 	</list>
 </slide>

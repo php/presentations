@@ -13,11 +13,11 @@
     $filename = $_SERVER['DOCUMENT_ROOT'] . ltrim($_SERVER['REQUEST_URI'], '/');
 
     ob_start();
-? >
+?>
 <html>
 <head><title><?php echo "Info about $search_string"; ?></title></head>
 <body>
-<?php echo "<h1>$search_string:</h1>\n"; ? >
+<?php echo "<h1>$search_string:</h1>\n"; ?>
 </body>
 <?php
     $data = ob_get_contents();
@@ -26,6 +26,6 @@
     $f = fopen($filename, "w");
     fwrite($f, $data);
     fclose($f);
-? >
+?>
 ]]></example>
 </slide>
