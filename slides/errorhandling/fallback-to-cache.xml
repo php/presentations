@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Fallback</title>
+
+	<blurb> </blurb>
+	<image align="center" filename="mysql-error-cache.png" />
+
+	<blurb> </blurb>
+	<example fontsize="1.2em"
+	    filename="il-error-handle.php"
+	    result="0"
+	/>
+	<list effect="slide" fontsize="4.5em">
+		<bullet>Always check return values</bullet>
+		<bullet>@ operator</bullet>
+	</list>
+</slide>

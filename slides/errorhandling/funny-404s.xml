@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>404 pages</title>
+
+	<image align="center" filename="404s.png" />
+
+	<example fontsize="1em">ErrorDocument 404 /my404page.html</example>
+</slide>

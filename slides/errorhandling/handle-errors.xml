@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Handle errors!</title>
+
+	<blurb> </blurb>
+	<image align="center" filename="mysql-error-handle.png" />
+
+	<blurb> </blurb>
+	<example fontsize="1.2em"><![CDATA[<?php
+	if (@mysql_connect('localhost', 'root', 'ut34FblY:')) {
+		if (@mysql_select_db('game')) {
+			$r = mysql_query('SELECT * FROM news ORDER BY date DESC LIMIT 1');
+
+			...]]></example>
+
+	<list effect="slide" fontsize="4.5em">
+		<bullet>Always check return values</bullet>
+		<bullet>@ operator</bullet>
+	</list>
+</slide>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Displaying errors</title>
+
+	<list effect="slide" fontsize="4em">
+		<bullet>display_errors = On</bullet>
+		<bullet>display_startup_errors = Off</bullet>
+		<bullet>html_errors = On/Off</bullet>
+		<bullet>error_prepend_string/error_append_string</bullet>
+		<bullet>docref_root/docref_ext</bullet>
+	</list>
+	<example fontsize="1em">docref_root="http://landonize.it/?how=url&amp;amp;theme=classic&amp;amp;
+											filter=Landon&amp;amp;url=http%3A%2F%2Fwww.php.net%2F"
+docref_ext=""</example>
+	<image align="center" filename="landonize.png" />
+</slide>

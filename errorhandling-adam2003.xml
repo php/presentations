@@ -1,0 +1,62 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#3C5BB4"
+	stylesheet="presentations/slides/errorhandling/style.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Error Handling</title>
+<event>International PHP Conference Amsterdam</event>
+<location>Amsterdam, the Netherlands</location>
+<date>May 9th, 2003</date>
+<speaker>Derick Rethans</speaker>
+<email>d.rethans@jdimedia.nl</email>
+<url>http://pres.derickrethans.nl/errorhandling</url>
+
+<slide>slides/ze-xdebug/title.xml</slide>
+
+<!-- 404 errors and handling there off -->
+<slide>slides/errorhandling/standard-404.xml</slide>
+<slide>slides/errorhandling/funny-404s.xml</slide>
+<slide>slides/errorhandling/redir-404.xml</slide>
+<slide>slides/errorhandling/search-404.xml</slide>
+<slide>slides/errorhandling/rasmus-trick.xml</slide>
+
+<!-- Database connection problems / other server side problems -->
+<slide>slides/errorhandling/cannot-connect.xml</slide>
+<slide>slides/errorhandling/handle-errors.xml</slide>
+
+<!-- PHP error control functions -->
+<slide>slides/errorhandling/error-reporting.xml</slide>
+<slide>slides/errorhandling/display-errors.xml</slide>
+<slide>slides/errorhandling/log-errors.xml</slide>
+
+<!-- Trick -->
+<slide>slides/errorhandling/fallback-to-cache.xml</slide>
+
+<!-- Preventing -->
+<slide>slides/errorhandling/user-input.xml</slide>
+<slide>slides/errorhandling/check-return-value.xml</slide>
+
+<!-- Dry theory -->
+<slide>slides/errorhandling/syntactical.xml</slide>
+<slide>slides/errorhandling/semantical.xml</slide>
+<slide>slides/errorhandling/miscalculation.xml</slide>
+
+<!-- Testing! -->
+<slide>slides/errorhandling/function-lib.xml</slide>
+<slide>slides/errorhandling/test-all-paths1.xml</slide>
+<slide>slides/errorhandling/test-all-paths2.xml</slide>
+
+<slide>slides/errorhandling/phpunit1.xml</slide>
+<slide>slides/errorhandling/phpunit2.xml</slide>
+<slide>slides/errorhandling/phpunit3.xml</slide>
+<slide>slides/errorhandling/phpunit4.xml</slide>
+<slide>slides/errorhandling/phpunit5.xml</slide>
+
+<!-- Still problems? Debug! -->
+
+<slide>slides/errorhandling/questions.xml</slide>
+<slide>slides/errorhandling/resources.xml</slide>
+
+</presentation>

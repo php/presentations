@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Redir on 404</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<example fontsize="2em">ErrorDocument 404 /error.php</example>
+	<blurb> </blurb>
+	<example fontsize="1.5em"><![CDATA[<?php
+	header("Location: http://example.com/");
+? >]]></example>
+
+	<blurb> </blurb>
+	<list effect="slide" fontsize="4em">
+		<bullet>Pro: Hides errors from users</bullet>
+		<bullet>Pro: Easy to implement</bullet>
+		<bullet>Con: Nobody knows what went wrong</bullet>
+		<bullet>Con: Retyping of URL required on spelling errors</bullet>
+	</list>
+</slide>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Syntactical Errors</title>
+
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet>Parse Errors</bullet>
+	</list>
+	<blurb><![CDATA[<br />
+<table align='center' border='1' cellspacing='0'>
+<tr><td bgcolor='#ffbbbb' colspan="3"><b>Parse error</b>: parse error in <b>/home/httpd/html/test/parse.php</b> on line <b>3</b><br />
+<tr><th bgcolor='#aaaaaa' colspan='3'>Call Stack</th></tr>
+<tr><th bgcolor='#cccccc'>#</th><th bgcolor='#cccccc'>Function</th><th bgcolor='#cccccc'>Location</th></tr>
+</table>]]></blurb>
+	<list fontsize="5em">
+		<bullet>Never on a production box</bullet>
+		<bullet>%php -l%</bullet>
+	</list>
+	<blurb> </blurb>
+	<example fontsize="1.5em"><![CDATA[[derick@kossu test]$ php -l parse.php
+Parse error: parse error in parse.php on line 3]]></example>
+</slide>

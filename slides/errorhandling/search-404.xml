@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Search on 404</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<example fontsize="2em">ErrorDocument 404 /search.php</example>
+
+	<blurb> </blurb>
+	<blurb fontsize="3em">search.php:</blurb>
+	<example fontsize="1em"><![CDATA[<?php
+    $search_string = basename($_SERVER['REQUEST_URI']);
+    $filename = $_SERVER['DOCUMENT_ROOT'] . ltrim($_SERVER['REQUEST_URI'], '/');
+
+    ob_start();
+? >
+<html>
+<head><title><?php echo "Info about $search_string"; ?></title></head>
+<body>
+<?php echo "<h1>$search_string:</h1>\n"; ? >
+</body>
+<?php
+    $data = ob_get_contents();
+    ob_clean();
+    echo $data."\n(In error handler, saved to $filename)";
+    $f = fopen($filename, "w");
+    fwrite($f, $data);
+    fclose($f);
+? >
+]]></example>
+</slide>

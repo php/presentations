@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Miscalculations</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<image align="left" filename="991202fail2.jpg" />
+	<example fontsize="1.4em"><![CDATA[<?php
+	function course_correction($x, $y, $z, $speed)
+	{
+		if ($x * $x * $y * $y * $z > $speed) {
+			$speed = $speed - 5;
+		}
+		return $speed;
+	}
+
+	$speed = 34;
+	echo course_correction(2, 2, 2, $speed);
+? >]]></example>
+	<blurb>Output:</blurb>
+	<example fontsize="1.4em">34</example>
+</slide>
