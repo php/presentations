@@ -1,6 +1,6 @@
 <slide title="Hooks">
 <blurb>PHP supports the %set_error_handler()% and %trigger_error()% function 
 in order to allow you to easily trap application errors.</blurb>
-<example type="php" filename="custerrorhandler.php" result="1"/>
+<example fontsize="1.7em" type="php" filename="custerrorhandler.php" result="1"/>
 
 </slide>

@@ -4,7 +4,7 @@
 Hello, {$name}!
 ]]></example>
 
-<example title="PHP Code"><![CDATA[<?
+<example fontsize="1.5em" title="PHP Code"><![CDATA[<?
 define(SMARTY_DIR,'/usr/local/lib/php/Smarty/');
 require(SMARTY_DIR.'Smarty.class.php');
 
