@@ -25,13 +25,8 @@ name="Remote MDB Viewer" target="_blank">
 <blurb>
 The remote viewer is being used by several web sites, among them:
 </blurb>
-<link leader='CaBP database:'>
- http://structbio.vanderbilt.edu/cabp_database/
-</link>
-<link leader='IMB at Jena:'>
- http://www.imb-jena.de/
-</link>
-<link leader='PROMISE:'>
- http://bioinf.leeds.ac.uk/promise/
-</link>
+<link leader='CaBP database: ' target='_blank' href='http://structbio.vanderbilt.edu/cabp_database/'/>
+<link leader='IMB at Jena: ' target='_blank' href='http://www.imb-jena.de/'/>
+<link leader='PROMISE: ' target='_blank' href='http://bioinf.leeds.ac.uk/promise/'/>
+<link leader='* Mirror of PROMISE: ' target='_blank' href='http://metallo.scripps.edu/PROMISE/'/>
 </slide>
