@@ -1,0 +1,28 @@
+<slide>
+	<title>Wrappers</title>
+
+	<blurb>
+		Wrappers are...
+	</blurb>
+	
+	<list>
+		<bullet>objects that link streams into the filesystem layer of PHP.</bullet>
+		<bullet>named after the fopen wrapper functions from earlier releases.</bullet>
+		<bullet>often mistaken for streams and vice versa.</bullet>
+	</list>
+
+	<blurb>
+		You need to implement a wrapper if you want to...
+	</blurb>
+	
+	<list>
+		<bullet>
+			%fopen()% or %include()% custom streams or protocols.
+		</bullet>
+		<bullet>
+			%opendir()% or %stat()% paths and files in your
+			custom protocol.
+		</bullet>
+	</list>
+
+</slide>

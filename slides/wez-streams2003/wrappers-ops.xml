@@ -1,0 +1,34 @@
+<slide>
+	<title>Wrapper Operations</title>
+
+	<blurb>
+		Wrappers provide a ~factory~ method that is responsible for
+		returning a stream when it the wrapper is invoked using:
+	</blurb>
+	
+	<list>
+		<bullet>%fopen()%/%include()%</bullet>
+		<bullet>%opendir()%</bullet>
+		<bullet>%stat()% (only fully implemented in PHP 5)</bullet>.
+	</list>
+
+	<blurb>
+		Wrappers can to store a pointer to their own instance specific
+		data in %stream->wrapperthis%.
+	</blurb>
+
+	<blurb>
+		Make sure that you use the
+		%stream_closer% hook to release any resources allocated by your
+		wrapper when the stream is shutdown.
+	</blurb>
+
+	<blurb>
+		You can also override the %fstat()% call for the stream (useful
+		when the actual implementation !== the actual resource).
+	</blurb>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

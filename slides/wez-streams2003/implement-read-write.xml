@@ -1,0 +1,30 @@
+<slide>
+	<title>Read &amp; Write</title>
+
+	<example fontsize="1.4em" linenumbers="true">size_t my_read(php_stream *stream,
+		char *buf, size_t count TSRMLS_DC)
+{
+	int readret;	
+	struct my_stream_data *data = stream->abstract;
+	readret = read(data->filedes, buf, count);
+	if (readret &lt;= 0) {
+		return 0;
+	}
+	return readret;
+}
+
+size_t my_write(php_stream *stream,
+		const char *buf, size_t count TSRMLS_DC)
+{
+	int wrote;	
+	struct my_stream_data *data = stream->abstract;
+	wrote = write(data->filedes, buf, count);
+	if (wrote &lt;= 0) {
+		return 0;
+	}
+	return wrote;
+}</example>
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

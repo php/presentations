@@ -1,0 +1,37 @@
+<slide>
+	<title>Filter Architecture</title>
+
+	<list>
+		<bullet>
+			Filters are OO (just like the streams and wrappers).
+		</bullet>
+		<bullet>
+			We use a bucket-brigade (similar concept to Apache2 filters)
+		</bullet>
+		<bullet>
+			Brigade is a doubly-linked list that contains a number of data buckets
+			chained together.
+		</bullet>
+		<bullet>
+			No need to maintain/realloc a monolithic buffer.
+		</bullet>
+		<bullet>
+			meta-buckets can contain information about EOF conditions.
+		</bullet>
+		<bullet>
+			Useful structure since the data and EOF events may occur
+			on separate invocations of %fread()%.
+		</bullet>
+		<bullet>
+			For filters that simply pass through data,
+			buckets can be passed on to next filter without
+			the overhead of %memcpy()%/%malloc()% - just re-link filter
+			into the next brigade.
+		</bullet>
+		<bullet>
+			Separate stacks for reading and writing.
+		</bullet>
+	
+	</list>
+
+</slide>

@@ -1,0 +1,27 @@
+<slide>
+	<title>Returning Streams</title>
+
+	<blurb>
+		Returning Streams from your own %PHP_FUNCTION()%s is easy too:
+	</blurb>
+
+	<example fontsize="1.5em" linenumbers="true">PHP_FUNCTION(example_open)
+{
+	php_stream *stream;
+
+	if (ZEND_NUM_ARGS() != 0) {
+		WRONG_PARAM_COUNT;
+	}
+	
+	stream = php_stream_open_wrapper(
+		"http://www.php.net",
+		"rb", REPORT_ERRORS, NULL);
+
+	php_stream_to_zval(stream, return_value);
+
+}</example>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

@@ -1,0 +1,32 @@
+<slide>
+	<title>Using Streams</title>
+
+	<blurb>
+		Opening up an URL and reading data from it is simple using the Streams API:
+	</blurb>
+
+	<example fontsize="1.5em" linenumbers="true">php_stream *stream;
+
+stream = php_stream_open_wrapper("http://www.php.net",
+		"rb", REPORT_ERRORS, NULL);
+
+if (stream == NULL) {
+	return;
+}
+		
+while (!php_stream_eof(stream)) {
+	char buf[1024];
+
+	if (php_stream_gets(stream, buf, sizeof(buf)) {
+		php_printf("%s", buf);
+	} else {
+		break;
+	}
+}
+php_stream_close(stream);</example>
+
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

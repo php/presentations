@@ -1,0 +1,49 @@
+<presentation>
+	<title>Streams and Filters</title>
+	<topic>Streams</topic>
+	<event>International PHP Conference, Spring Edition</event>
+	<location>Amsterdam</location>
+	<date>May 9th, 2003</date>
+	
+	<navmode>html</navmode>
+	<speaker>Wez Furlong</speaker>
+	<email>wez@php.net</email>
+	
+	<slide>slides/wez-streams2003/intro-what.xml</slide>
+	<slide>slides/wez-streams2003/intro-why.xml</slide>
+	<slide>slides/wez-streams2003/intro-doing.xml</slide>
+
+	<slide>slides/wez-streams2003/intro-using.xml</slide>
+	<slide>slides/wez-streams2003/intro-accepting.xml</slide>
+	<slide>slides/wez-streams2003/intro-returning.xml</slide>
+
+	<slide>slides/wez-streams2003/implement-intro.xml</slide>
+	<slide>slides/wez-streams2003/implement-whatsin.xml</slide>
+	<slide>slides/wez-streams2003/implement-abstract.xml</slide>
+	<slide>slides/wez-streams2003/implement-read-write.xml</slide>
+	<slide>slides/wez-streams2003/implement-flush-seek.xml</slide>
+	<slide>slides/wez-streams2003/implement-close-ops.xml</slide>
+	<slide>slides/wez-streams2003/implement-open.xml</slide>
+	<slide>slides/wez-streams2003/implement-summary.xml</slide>
+	
+	<slide>slides/wez-streams2003/wrappers.xml</slide>
+	<slide>slides/wez-streams2003/wrappers-ops.xml</slide>
+	<slide>slides/wez-streams2003/wrappers-ops-struct.xml</slide>
+	<slide>slides/wez-streams2003/wrappers-opener.xml</slide>
+	<slide>slides/wez-streams2003/wrappers-registering.xml</slide>
+	<slide>slides/wez-streams2003/wrappers-using.xml</slide>
+
+	<slide>slides/wez-streams2003/filters-intro.xml</slide>
+	<slide>slides/wez-streams2003/filters-price.xml</slide>
+	<slide>slides/wez-streams2003/filters-architecture.xml</slide>
+	<slide>slides/wez-streams2003/filters-read.xml</slide>
+	<slide>slides/wez-streams2003/filters-write.xml</slide>
+	<slide>slides/wez-streams2003/filters-api.xml</slide>
+
+	<slide>slides/wez-streams2003/summary.xml</slide>
+	<slide>slides/wez-streams2003/outro.xml</slide>
+	
+</presentation>
+<!--
+vim:sw=2 ts=2
+-->

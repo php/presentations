@@ -1,0 +1,33 @@
+<slide>
+	<title>your own wrapper</title>
+
+	<list>
+		<bullet>declare wrapper operations</bullet>
+		<bullet>declare wrapper instance</bullet>
+		<bullet>register (and unregister!) with the streams layer</bullet>
+	</list>
+
+	<blurb>
+		Let's replace the %example_open()% function with a wrapper
+		so that %fopen("example:///path/to/file")% does the same job.
+	</blurb>
+	
+<example fontsize="1.4em" linenumbers="true">php_stream_wrapper_ops example_wops = {
+	example_opener, /* stream_opener */
+	NULL, /* stream_closer hook */
+	NULL, /* fstat hook */
+	NULL, /* stat hook */
+	NULL, /* diropen()er */,
+	"example wrapper"
+};
+
+php_stream_wrapper example_wrapper = {
+	&amp;example_wops, /* bind the methods to the instance */
+	NULL,	/* no wrapper instance specific data */
+	0,	/* not a url that requires network access */
+};</example>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

@@ -1,0 +1,28 @@
+<slide>
+	<title>Flush &amp; Seek</title>
+
+	<example fontsize="1.4em" linenumbers="true">int my_flush(php_stream *stream TSRMLS_DC)
+{
+	struct my_stream_data *data = stream->abstract;
+	
+	return fsync(data->fildes);
+}
+
+int my_seek(php_stream *stream,
+	off_t offset, int whence, off_t *newoffset TSRMLS_DC)
+{
+	int seekret;	
+	struct my_stream_data *data = stream->abstract;
+	
+	seekret = lseek(data->filedes, offset, whence);
+	if (seekret == (off_t)-1) {
+		return -1;
+	}
+	*newoffset = seekret;
+	return 0;
+}</example>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

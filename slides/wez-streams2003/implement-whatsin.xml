@@ -1,0 +1,33 @@
+<slide>
+	<title>What's in a Stream?</title>
+
+	<blurb>
+		Streams are Object Orientated.
+	</blurb>
+
+	<list>
+		<bullet>Each class of Stream has its own ~operations~ structure.</bullet>
+		<bullet>It defines the methods that can be called for that class of stream</bullet>
+		<bullet>Each instance of a given class share the same operations structure.</bullet>
+		<bullet>Each instance has its own abstract data pointer to hold instance
+			specific data (such as the underlying file/resource handles).</bullet>
+	</list>
+
+	<blurb>
+		To implement your own stream you need to define an operations structure and
+		the methods that apply to your stream.  The core methods are:
+	</blurb>
+
+	<list>
+		<bullet>%write()% - write data to the stream</bullet>
+		<bullet>%read()% - read data from the stream</bullet>
+		<bullet>%close()% - shutdown/release the stream</bullet>
+		<bullet>%flush()% - ensure data is flushed to storage</bullet>
+		<bullet>%seek()% - move to an offset within the stream</bullet>
+	</list>
+
+	
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

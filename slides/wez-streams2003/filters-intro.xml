@@ -1,0 +1,28 @@
+<slide>
+	<title>Filtering</title>
+
+	<blurb>
+		Filters...
+	</blurb>
+
+	<list>
+		<bullet>transparently transform data read from or written to a stream</bullet>
+		<bullet>can be "stacked" into a pipeline</bullet>
+		<bullet>filter stacks can have any number of filtration steps</bullet>
+		<bullet>read and write operations can have separate filter stacks</bullet>
+	</list>
+
+	<blurb>
+		PHP 5.x will feature a number of stock filters:
+	</blurb>
+
+	<list>
+		<bullet>case folding</bullet>
+		<bullet>codeset conversion</bullet>
+		<bullet>Compression: zlib and bzip2</bullet>
+		<bullet>HTTP 1.1 chunk encoder/decoder</bullet>
+		<bullet>Crypto: mcrypt</bullet>
+	</list>
+
+
+</slide>

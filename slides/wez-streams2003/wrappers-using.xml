@@ -1,0 +1,31 @@
+<slide>
+	<title>Using the wrapper</title>
+
+	<blurb>
+		Remember the %example_open()% function and its usage:
+	</blurb>
+
+	<example fontsize="1.4em">&lt;?php
+$fp = example_open("/path/to/file");
+fwrite($fp, "hello there\n");
+rewind($fp);
+echo fgets($fp);
+?&gt;</example>
+
+	<blurb>
+		We can now use the example:// protocol scheme to access
+		our custom streams via %fopen()%, %include()%, %readfile()%
+		%copy()% etc.
+	</blurb>
+
+	<example fontsize="1.4em">&lt;?php
+$fp = fopen("example:///path/to/file");
+fwrite($fp, "hello there\n");
+rewind($fp);
+echo fgets($fp);
+?&gt;</example>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

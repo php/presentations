@@ -1,0 +1,38 @@
+<slide>
+	<title>Filter Read</title>
+
+	<blurb>
+		Reading is pull-based and works like this:
+	</blurb>
+	<list>
+		<bullet>
+			%php_stream_read()% or %fread()% requests ~n~ bytes to be placed
+			into a buffer.
+		</bullet>
+		<bullet>
+			The topmost filter on the read stack returns the data from its own buffered brigade,
+			if any, splitting buckets if required.
+		</bullet>
+		<bullet>
+			If it doesn't have enough data, it asks the next filter in the stack
+			for some more data.
+		</bullet>
+		<bullet>
+			This process repeats until the actual underlying stream is hit.
+		</bullet>
+		<bullet>
+			The stream reads a chunk of data and returns it to the filter.
+		</bullet>
+		<bullet>
+			The data moves along the brigades, perhaps being transformed
+			along the way.
+		</bullet>
+		<bullet>
+			Topmost filter gets the data and stores it in the buffer.
+		</bullet>
+		<bullet>
+			Process repeats until the buffer is filled or there is
+			no more data available from the stream.
+		</bullet>
+	</list>
+</slide>

@@ -1,0 +1,28 @@
+<slide>
+	<title>the catch...</title>
+	<blurb>
+		Filters sound great... but everything comes with a price.
+	</blurb>
+
+	<list>
+		<bullet>Filtered streams are essentially FIFOs</bullet>
+		<bullet>%fseek()% is not possible</bullet>
+		<bullet>PHP 5 only</bullet>
+	</list>
+
+	<blurb>
+		One of the aims of the filter API is code re-use; bzip2 stream
+		is really just a file stream with bzip2 (de)compression added on top.
+		So why not code it that way?
+	</blurb>
+	
+	<blurb>
+		Consider writing a more complex custom stream if you really must be able to %fseek()%.
+	</blurb>
+
+	<blurb>
+		There ~is~ a filter API in 4.3.x, but it is not compatible with
+		the much better PHP 5 API, so I'm not telling anyone how to use it.
+	</blurb>
+	
+</slide>	

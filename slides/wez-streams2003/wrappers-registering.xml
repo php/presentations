@@ -1,0 +1,32 @@
+<slide>
+	<title>hooks</title>
+
+	<blurb>
+		Need to make two more changes to your extension before
+		it will work...
+	</blurb>
+	
+	<list>
+		<bullet>register with the streams layer (MINIT)</bullet>
+		<bullet>unregister from the streams layer (MSHUTDOWN)</bullet>
+	</list>
+	
+<example fontsize="1.4em" linenumbers="true">PHP_MINIT_FUNCTION(example)
+{
+	...
+	php_register_url_stream_wrapper("example",
+		&amp;example_wrapper TSRMLS_CC);
+	...
+}
+
+PHP_MSHUTDOWN_FUNCTION(example)
+{
+	...
+	php_unregister_url_stream_wrapper("example" TSRMLS_CC);
+	...
+};</example>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

@@ -1,0 +1,29 @@
+<slide>
+	<title>Accepting Streams</title>
+
+	<blurb>
+		Accepting Streams as parameters to %PHP_FUNCTION()%s is easy:
+	</blurb>
+
+	<example fontsize="1.5em" linenumbers="true">PHP_FUNCTION(example_write)
+{
+	zval *zstream;	
+	php_stream *stream;
+
+	if (FAILURE == zend_parse_parameters(
+			ZEND_NUM_ARGS() TSRMLS_CC,
+			"r", &amp;zstream)) {
+		return;
+	}
+
+	php_stream_from_zval(stream, &amp;zstream);
+
+	php_stream_write(stream, "hello\n");
+}</example>
+
+<blurb>*Note:* You must ~*NOT*~ %php_stream_close()% a stream passed in from a script</blurb>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

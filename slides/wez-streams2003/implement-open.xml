@@ -1,0 +1,32 @@
+<slide>
+	<title>Open</title>
+
+	<blurb>
+		And finally, we can write a function to open the stream:
+	</blurb>
+
+	<example fontsize="1.4em" linenumbers="1">PHP_FUNCTION(example_open)
+{
+	char *filename;
+	long filename_len;
+	php_stream *stream;
+	struct my_stream_data *data;
+
+	if (FAILURE == zend_parse_parameters(
+			ZEND_NUM_ARGS() TSRMLS_CC, "s", &amp;filename,
+			&amp;filename_len)) {
+		return;
+	}
+
+	data = emalloc(sizeof(struct my_stream_data));
+	data->filedes = open(filename, O_RDWR);
+
+	stream = php_stream_alloc(&amp;my_ops, data, NULL, "r+");
+
+	php_stream_to_zval(stream, return_value);
+}</example>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

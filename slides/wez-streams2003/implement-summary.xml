@@ -1,0 +1,33 @@
+<slide>
+	<title>Implemented</title>
+
+	<blurb>
+		Now we have implemented our very own file stream.
+		The script that uses it might look like this:
+	</blurb>
+
+	<example fontsize="1.4em">&lt;?php
+$fp = example_open("/path/to/file");
+fwrite($fp, "hello there\n");
+rewind($fp);
+echo fgets($fp);
+?&gt;</example>
+	<blurb>
+		Outputs:
+	</blurb>
+	<example type="screen" fontsize="1.4em">hello there</example>
+
+	<blurb>
+		Key points:
+	</blurb>
+	
+	<list>
+		<bullet>Custom opener function.</bullet>
+		<bullet>Returned stream works with %fread()%, %fwrite()% etc.</bullet>
+		<bullet>Not covered ~cast~, ~fstat~ and ~option~ interface.</bullet>
+	</list>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

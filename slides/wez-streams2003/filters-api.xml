@@ -1,0 +1,35 @@
+<slide>
+	<title>Filter API</title>
+
+	<blurb>
+		Each filter "class" implements a single method - %filter()% -
+		which is called whenever a brigade is ready to be processed
+		(writing/push mode), or whenever the caller would like
+		some buckets from its output brigade (reading/pull mode).
+	</blurb>
+
+	<blurb>
+		Each instance of a filter has a pair of brigades to hold
+		buckets either pending transformation or consumption by the
+		next filter in the chain.
+	</blurb>
+
+	<example fontsize="1.4em" linenumbers="true">typedef struct _php_stream_filter_ops {
+
+       php_stream_filter_status_t (*filter)(
+               php_stream *stream,
+               php_stream_filter *thisfilter,
+               php_stream_bucket_brigade *buckets_in,
+               php_stream_bucket_brigade *buckets_out,
+               size_t *bytes_consumed,
+               int flags
+               TSRMLS_DC);
+
+       void (*dtor)(php_stream_filter *thisfilter TSRMLS_DC);
+
+       const char *label;
+
+} php_stream_filter_ops;</example>
+		
+
+</slide>

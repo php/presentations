@@ -1,0 +1,32 @@
+<slide>
+	<title>Abstract</title>
+
+	<blurb>
+		Each instance of a stream has an ~abstract~ data pointer that can hold 
+		underlying resource handle(s) and other stateful data required by your
+		stream.
+	</blurb>
+
+	<blurb>
+		Lets see how to write a very simple file based stream, using
+		POSIX IO.
+	</blurb>
+
+	<example fontsize="1.5em" linenumbers="true">struct my_stream_data {
+		int filedes;
+}</example>
+
+	<blurb>
+		When we create our stream, we will store a pointer to the above structure
+		in the ~abstract~ field of the stream structure.
+	</blurb>
+
+	<blurb>
+		We can now move on and write the core operations for our stream...
+	</blurb>
+
+	
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

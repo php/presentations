@@ -1,0 +1,28 @@
+<slide>
+	<title>Implementing Streams</title>
+
+	<blurb>
+		You might want (or need) to implement your own new kind of Stream if:
+	</blurb>
+
+	<list>
+		<bullet>PHP does not provide one for you.</bullet>
+		<bullet>It is too complicated to re-use a stock implementation.</bullet>
+	</list>
+
+	<blurb>
+		It is a good idea to re-use the PHP provided implementations for plain files
+		and network streams because:
+	</blurb>
+
+	<list>
+		<bullet>Handle platform specific quirks.</bullet>
+		<bullet>Support advanced features (casting, memory mapping).</bullet>
+		<bullet>Save you time and effort!</bullet>
+	</list>
+		
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

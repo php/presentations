@@ -1,0 +1,32 @@
+<slide>
+	<title>Stream Opener</title>
+
+	<blurb>
+		Essentially the same code as %example_open()% function
+		we saw earlier.
+	</blurb>
+
+	<example fontsize="1.4em" linenumbers="1">php_stream *example_opener(php_stream_wrapper *wrapper,
+		char *filename, char *mode, int options,
+		char **opened_path, php_stream_context *context
+		STREAMS_DC TSRMLS_DC)
+{
+	php_stream *stream;
+	struct my_stream_data *data;
+
+	filename += sizeof("example://") - 1;
+	
+	data = emalloc(sizeof(struct my_stream_data));
+	data->filedes = open(filename, O_RDWR);
+
+	stream = php_stream_alloc(&amp;my_ops, data, NULL, mode);
+
+	if (opened_path) {
+		*opened_path = estrdup(filename);
+	}
+
+	return stream;
+}</example>
+
+
+</slide>

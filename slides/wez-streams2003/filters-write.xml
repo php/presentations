@@ -1,0 +1,33 @@
+<slide>
+	<title>Filter Write</title>
+
+	<blurb>
+		Writing is push-based and works like this:
+	</blurb>
+	<list>
+		<bullet>
+			%php_stream_write()% or %fwrite()% sends ~n~ bytes to be
+			written to the stream.
+		</bullet>
+		<bullet>
+			A bucket is created from the buffer.
+		</bullet>
+		<bullet>
+			The bucket is pushed to the topmost filter on the write stack.
+		</bullet>
+		<bullet>
+			We wind the handle on the filter; it may tranforms buckets,
+			and pushes them onto the next filter.
+		</bullet>
+		<bullet>
+			repeat the last step until we hit the the underlying stream.
+		</bullet>
+		<bullet>
+			Each bucket is written to the underlying stream.
+		</bullet>
+		<bullet>
+			Process repeats until one of the steps filters in the stack
+			produces no output buckets.
+		</bullet>
+	</list>
+</slide>

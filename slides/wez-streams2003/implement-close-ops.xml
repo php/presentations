@@ -1,0 +1,33 @@
+<slide>
+	<title>Close</title>
+
+	<example fontsize="1.4em" linenumbers="0">int my_close(php_stream *stream,
+		int close_handle TSRMLS_DC)
+{
+	struct my_stream_data *data = stream->abstract;
+
+	if (close_handle) {
+		close(data->filedes);
+	}
+	efree(data);
+	
+	return 0;
+}</example>
+
+	<blurb>
+		Now, we can declare the operations structure.
+	</blurb>
+
+	<example fontsize="1.4em" linenumbers="0">php_stream_ops my_ops = {
+		my_write, my_read,
+		my_close, my_flush,
+		"my stream",
+		my_seek, NULL,
+		NULL, NULL,
+		NULL
+};</example>
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

@@ -1,0 +1,20 @@
+<slide>
+	<title>Summing Up</title>
+	<blurb>
+		We've seen how to implement streams and wrappers and had a hint of the new filter API in PHP 5.
+	</blurb>
+	<blurb>
+		You can apply this knowledge to...
+	</blurb>
+	<list>
+		<bullet>Implement additional URL protocols (eg: LDAP)</bullet>
+		<bullet>Virtual Filesystem Layers by hooking %opendir()% and %stat()%
+		       eg: transparent webdav access</bullet>
+		<bullet>Write reusable filters</bullet>
+	</list>
+
+	<blurb>
+		You can do most of the above in PHP script too - we have user-space mappings for many of these features.
+	</blurb>
+
+</slide>

@@ -1,0 +1,18 @@
+<slide>
+	<title>what are they?</title>
+
+	<list>
+		<bullet>Simplest case: File pointer from %fopen()%</bullet>
+		<bullet>Represent any object or resource with ~streamable~ behaviour</bullet>
+		<bullet>Sockets (network)</bullet>
+		<bullet>Pipes/FIFOs (executed programs)</bullet>
+		<bullet>Memory buffers</bullet>
+		<bullet>Anything else that data can be written to and read from in chunks</bullet>
+	</list>
+	
+
+
+</slide>
+<!--
+vim:sw=2 ts=2
+-->

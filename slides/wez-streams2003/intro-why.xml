@@ -1,0 +1,26 @@
+<slide>
+	<title>Why?</title>
+
+	<blurb>
+		Before Streams, many functions in PHP were using a nightmare mess to
+		handle sockets and regular files.  It worked, but it sucked.
+	</blurb>
+
+	<blurb>
+		Then we wanted to support SSL - something needed to change.
+	</blurb>
+
+	<blurb>
+		Goals of the Streams API:
+	</blurb>
+	
+	<list>
+		<bullet>Clear and easy to use</bullet>
+		<bullet>Extensible to support other types of streams</bullet>
+		<bullet>Maintainable</bullet>
+	</list>
+	
+</slide>
+<!--
+vim:sw=2 ts=2
+-->
