@@ -5,64 +5,33 @@
 </preference-set>
 <file name="advanced.xml" url="advanced.xml">
 </file>
+<file name="tools.xml" url="tools.xml">
+</file>
+<folder name="presentations">
+<file name="soap-phpcon-sf2002.xml" url="file:///D:/src/pres2/presentations/soap-phpcon-sf2002.xml">
+</file>
+<file name="soap.xml" url="file:///D:/src/pres2/presentations/soap.xml">
+</file>
+<file name="soapbc1.xml" url="file:///D:/src/pres2/presentations/soapbc1.xml">
+</file>
+<file name="soap-linuxworld-sf2002.xml" url="file:///D:/src/pres2/presentations/soap-linuxworld-sf2002.xml">
+</file>
+<file name="styles.css.php" url="styles.css.php">
+</file>
+<file name="slide1.xml" url="slide1.xml">
+</file>
+<file name="title.xml" url="title.xml">
+</file>
+</folder>
+<folder name="Agenda's">
 <file name="agenda.xml" url="agenda.xml">
+</file>
+<file name="agenda2.xml" url="agenda2.xml">
 </file>
 <file name="agenda_multilanguage.xml" url="agenda_multilanguage.xml">
 </file>
-<file name="attachments2.xml" url="attachments2.xml">
-</file>
-<file name="attachments3.xml" url="attachments3.xml">
-</file>
-<file name="dime.xml" url="dime.xml">
-</file>
-<file name="document-perl.xml" url="document-perl.xml">
-</file>
-<file name="document.xml" url="document.xml">
-</file>
-<file name="document2.xml" url="document2.xml">
-</file>
-<file name="document3.xml" url="document3.xml">
-</file>
-<file name="headers.xml" url="headers.xml">
-</file>
-<file name="headers2.xml" url="headers2.xml">
-</file>
-<file name="implementations.xml" url="implementations.xml">
-</file>
-<file name="installation.xml" url="installation.xml">
-</file>
-<file name="interop.xml" url="interop.xml">
-</file>
-<file name="interop2.xml" url="interop2.xml">
-</file>
-<file name="mime.xml" url="mime.xml">
-</file>
-<file name="other.xml" url="other.xml">
-</file>
-<file name="pear.xml" url="pear.xml">
-</file>
-<file name="perlsoap.xml" url="perlsoap.xml">
-</file>
-<file name="phpsoap.xml" url="phpsoap.xml">
-</file>
-<file name="pythonsoap.xml" url="pythonsoap.xml">
-</file>
-<file name="resources.xml" url="resources.xml">
-</file>
-<file name="resources2.xml" url="resources2.xml">
-</file>
-<file name="server1.xml" url="server1.xml">
-</file>
-<file name="server2.xml" url="server2.xml">
-</file>
-<file name="serveremail.xml" url="serveremail.xml">
-</file>
-<file name="serverfault.xml" url="serverfault.xml">
-</file>
-<file name="serverheader.xml" url="serverheader.xml">
-</file>
-<file name="serverwsdl.xml" url="serverwsdl.xml">
-</file>
+</folder>
+<folder name="Other Languages">
 <file name="simple-perl-client-no-wsdl.xml" url="simple-perl-client-no-wsdl.xml">
 </file>
 <file name="simple-perl-client.xml" url="simple-perl-client.xml">
@@ -73,52 +42,121 @@
 </file>
 <file name="simple-python-client.xml" url="simple-python-client.xml">
 </file>
-<file name="simple.wsdl" url="simple.wsdl">
+<file name="pythonsoap.xml" url="pythonsoap.xml">
 </file>
-<file name="simpleclient1.xml" url="simpleclient1.xml">
+<file name="soapsmtp-perl.xml" url="soapsmtp-perl.xml">
 </file>
-<file name="slide1.xml" url="slide1.xml">
+<file name="perlsoap.xml" url="perlsoap.xml">
+</file>
+<file name="document-perl.xml" url="document-perl.xml">
+</file>
+</folder>
+<folder name="Protocols">
+<file name="soapsmtp.xml" url="soapsmtp.xml">
 </file>
 <file name="smtp.xml" url="smtp.xml">
+</file>
+<file name="serveremail.xml" url="serveremail.xml">
+</file>
+</folder>
+<folder name="Intro To SOAP">
+<file name="whatissoap.xml" url="whatissoap.xml">
+</file>
+<file name="soaphistory.xml" url="soaphistory.xml">
 </file>
 <file name="soap.xml" url="soap.xml">
 </file>
 <file name="soapenvelope.xml" url="soapenvelope.xml">
 </file>
-<file name="soapsmtp-perl.xml" url="soapsmtp-perl.xml">
+<file name="dime.xml" url="dime.xml">
 </file>
-<file name="soapsmtp.xml" url="soapsmtp.xml">
-</file>
-<file name="styles.css.php" url="styles.css.php">
-</file>
-<file name="title.xml" url="title.xml">
-</file>
-<file name="tools.xml" url="tools.xml">
+<file name="mime.xml" url="mime.xml">
 </file>
 <file name="usingsoap.xml" url="usingsoap.xml">
 </file>
-<file name="whatissoap.xml" url="whatissoap.xml">
-</file>
 <file name="wsdl.xml" url="wsdl.xml">
-</file>
-<file name="wsdl2.xml" url="wsdl2.xml">
 </file>
 <file name="wsdlexample.xml" url="wsdlexample.xml">
 </file>
-<file name="agenda2.xml" url="agenda2.xml">
+<file name="wsdlparts.xml" url="wsdlparts.xml">
+</file>
+<file name="other.xml" url="other.xml">
 </file>
 <file name="other2.xml" url="other2.xml">
 </file>
+<file name="other3.xml" url="other3.xml">
+</file>
 <file name="protocols.xml" url="protocols.xml">
 </file>
-<file name="wsdlparts.xml" url="wsdlparts.xml">
+</folder>
+<folder name="Implementations">
+<file name="implementations.xml" url="implementations.xml">
 </file>
-<file name="interop3.xml" url="interop3.xml">
+<file name="pear.xml" url="pear.xml">
 </file>
-<file name="soaphistory.xml" url="soaphistory.xml">
+<file name="phpsoap.xml" url="phpsoap.xml">
+</file>
+<file name="installation.xml" url="installation.xml">
+</file>
+</folder>
+<folder name="Resources">
+<file name="resources.xml" url="resources.xml">
+</file>
+<file name="resources2.xml" url="resources2.xml">
+</file>
+</folder>
+<folder name="Simple Clients">
+<file name="simple.wsdl" url="simple.wsdl">
+</file>
+<file name="simpleclient1.xml" url="simpleclient1.xml">
 </file>
 <file name="simpleclient2.xml" url="simpleclient2.xml">
 </file>
-<file name="soap-phpcon-sf2002.xml" url="file:///D:/src/pres2/presentations/soap-phpcon-sf2002.xml">
+</folder>
+<folder name="Interoperability">
+<file name="interop.xml" url="interop.xml">
 </file>
+<file name="interop3.xml" url="interop3.xml">
+</file>
+<file name="interop2.xml" url="interop2.xml">
+</file>
+</folder>
+<folder name="headers">
+<file name="headers.xml" url="headers.xml">
+</file>
+<file name="headers2.xml" url="headers2.xml">
+</file>
+<file name="serverheader.xml" url="serverheader.xml">
+</file>
+</folder>
+<folder name="WSDL">
+<file name="wsdl2.xml" url="wsdl2.xml">
+</file>
+<file name="serverwsdl.xml" url="serverwsdl.xml">
+</file>
+</folder>
+<folder name="Faults">
+<file name="serverfault.xml" url="serverfault.xml">
+</file>
+</folder>
+<folder name="Simple Servers">
+<file name="server1.xml" url="server1.xml">
+</file>
+<file name="server2.xml" url="server2.xml">
+</file>
+</folder>
+<folder name="Attachments">
+<file name="attachments2.xml" url="attachments2.xml">
+</file>
+<file name="attachments3.xml" url="attachments3.xml">
+</file>
+</folder>
+<folder name="Document Style">
+<file name="document.xml" url="document.xml">
+</file>
+<file name="document2.xml" url="document2.xml">
+</file>
+<file name="document3.xml" url="document3.xml">
+</file>
+</folder>
 </project>
