@@ -1,0 +1,10 @@
+<slide title="A Simple Clock" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb>
+  "Hello, World" programs are boring. Let's do something a little more
+  interesting.
+ </blurb>
+ <link align="center" text="Clock" href="presentations/slides/gtk/clock.php" />
+ <example fontsize="1ex" filename="clock.php"  />
+
+</slide>

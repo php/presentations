@@ -1,0 +1,32 @@
+<slide title="Main Loop" logo1="images/php-gtk.gif" navColor="#b0c2d3" navsize="1.4em">
+
+ <blurb fontsize="2.3ex">
+  Sometimes you want to have a piece of code be called periodically. Register a
+  ~timeout~ function, and the main loop will call it after the specified time has
+  elapsed. If you want to stop being called, return %FALSE% from the function.
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  function do_something_every_second($arg1, $arg2)
+  {
+      /* do useful thing */
+      return true;
+  }
+  gtk::timeout_add(1000, 'do_something_every_second', $my_arg1, $my_arg2);
+  gtk::main();
+?>]]></example>
+
+
+ <blurb fontsize="2.3ex">
+  If you want to monitor a socket, pipe, or a file for data available for
+  reading or writing, you can do it with %gtk::input_add()% function.
+  Pass it the resource to be watched, the input condition, and the callback with
+  optional data.
+ </blurb>
+ <example fontsize="1ex"><![CDATA[<?php
+  function show_log($stream, $condition, $my_data) { }
+  $stream = ...; // open the log via pipe, for example
+  gtk::input_add($stream, GDK_INPUT_READ, 'show_log', $some_data);
+  gtk::main();
+?>]]></example>
+
+</slide>
