@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Gathering data</title>
+	<break lines="5"/>
+	<list marginleft="0em" fontsize="4em">
+		<bullet>By hooking into the execution of functions</bullet>
+		<bullet>By reading the memory usage</bullet>
+		<bullet>By scanning compiled code (for used vars)</bullet>
+		<bullet>By remembering locations of variables</bullet>
+	</list>
+	<image align="right" marginright="2em" filename="sim6a.jpg"/>
+
+</slide>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Xdebug</title>
+	<blurb> </blurb>
+	<list fontsize="4.5em">
+		<bullet>Stacktraces</bullet>
+		<bullet>Functiontraces</bullet>
+		<bullet marginleft="2em">parameters to functions</bullet>
+		<bullet marginleft="2em">function/methodname, classname</bullet>
+		<bullet marginleft="2em">file:line locations</bullet>
+		<bullet marginleft="2em">memory allocation</bullet>
+		<bullet>Profiling</bullet>
+		<bullet>Script execution analysis</bullet>
+	</list>
+
+</slide>
