@@ -1,4 +1,4 @@
 <Files ~ "\.inc$">
-	Order allow, deny
+	Order allow,deny
 	Deny from all
 </Files> 
