@@ -16,6 +16,7 @@ class Wiki
 
     function process($contents)
     {
+        // First, substitute macros
         if (preg_match_all('/{([a-z-]+)\s*([^}]*?)}/s', $contents, $matches)) {
             list($strings, $funcs, $args) = $matches;
             for ($i = 0; $i < sizeof($strings); $i++) {
@@ -23,18 +24,18 @@ class Wiki
                 $contents = str_replace($strings[$i], $replace, $contents);
             }
         }
-        if (preg_match_all('#\b([A-Z]+[a-z]+[A-Z\d][A-Za-z\d]*)\b#s', $contents, $matches)) {
-            list($strings, $nodes) = $matches;
+        // Finally, add Wiki-links
+        if (preg_match_all('#(.*?)\b([A-Z]+[a-z]+[A-Z\d][A-Za-z\d]*)\b(.*?)#s', $contents, $matches)) {
+            list(, $pre_text, $nodes, $post_text) = $matches;
             $self = $_SERVER['SCRIPT_NAME'];
-            for ($i = 0; $i < sizeof($strings); $i++) {
-//                if (Wiki::nodeExists($nodes[$i])) {
-                    $spaced = Wiki::formatWord($nodes[$i]);
-                    $replace = "<a href=\"{$self}/{$nodes[$i]}\">$spaced</a>";
-                    $contents = str_replace($strings[$i], $replace, $contents, 1);
-//                }
+            $tmp = '';
+            for ($i = 0; $i < sizeof($nodes); $i++) {
+                $spaced = Wiki::formatWord($nodes[$i]);
+                $replace = "<a href=\"{$self}/{$nodes[$i]}\">$spaced</a>";
+                $tmp .= $pre_text[$i] . $replace . $post_text[$i];
             }
+            $contents = $tmp;
         }
-        //$contents = str_replace('@@@', "{$self}/", $contents);
         return nl2br($contents);
     }
 
