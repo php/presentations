@@ -1,0 +1,55 @@
+<slide title="Styles 2/3" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em" title="Changing widget's style">
+  Widget's style can be accessed via 'style' property. However, that
+  property is not writeable directly, so the style needs to be changed
+  via set_style() method of GtkWidget.
+ </blurb>
+
+ <blurb fontsize="3em">
+  Most of GtkStyle fields are settable directly, but with GC's special
+  care has to be taken due to current deficiencies in the Zend engine.
+  Which GtkStyle properties are used for drawing depends totally on
+  the widget. GtkButton for example, draws its background using 'bg'
+  color, but GtkLabel draws its string using 'fg_gc' context.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  $win = &new GtkWindow();
+  $win->set_border_width(5);
+  $win->set_usize(100, 100);
+
+  $button = &new GtkButton('Press me');
+  $button->connect('clicked', 'press_me');
+  $win->add($button);
+
+  $win->show_all();
+  
+  gtk::main();
+
+  function press_me($button)
+  {
+      $style = $button->style;
+      $style = $style->copy();
+      $cmap = $button->get_colormap(); 
+      $color = $cmap->alloc('#406090');
+      $style->bg[GTK_STATE_NORMAL] = $color;
+      $button->set_style($style);
+
+      $label = $button->child;
+      $style = $label->style;
+      $style = $style->copy();
+      $style->font = gdk::font_load('-*-helvetica-bold-r-*-*-*-140-*-*-*-*-*-*');
+      $label->set_style($style);
+  }
+?>]]></example>
+
+ <blurb fontsize="3em">
+  In this example we change the style of the button and its label.
+  Note that we copy the style first before changing its properties.
+  Its usually a good idea to do so, however, copying a style nulls out
+  the GC properties. In that case you can try rebuilding the GCs by
+  hand.
+ </blurb>
+
+</slide>

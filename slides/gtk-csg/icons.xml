@@ -1,0 +1,33 @@
+<slide title="Application Icons" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  Application's icon can be used for various purposes by the window managers on
+  Windows and Unix: it can identify the application when it is minimized to the
+  desktop, for example, or it can be displayed next to application's name in
+  the taskbar, etc.
+ </blurb>
+
+ <blurb fontsize="3em">
+  Unfortunately, Gtk+ 1.2.x for Win32 does not support setting the icon
+  programmatically. But on other platforms one should do this:
+ </blurb>
+
+ <example fontsize="1.7em"><![CDATA[<?php
+  // create top-level application window
+  $win = &new GtkWindow();
+  // make sure GdkWindow is created
+  $win->realize();
+  $gdkwin = $win->window;
+  list($pixmap, $mask) =
+     gdk::pixmap_create_from_xpm($gdkwin, null, "icon.xpm");
+  $gdkwin->set_icon(null, $pixmap, $mask);
+?>]]></example>
+
+
+ <blurb fontsize="3em">
+  The first parameter to set_icon() is a GdkWindow which can serve as an icon
+  for the window when it is minimized. Only certain window managers support
+  this functionality, though.
+ </blurb>
+
+</slide>

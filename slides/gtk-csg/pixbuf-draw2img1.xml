@@ -1,0 +1,32 @@
+<slide title="Drawables -> Images 1/2" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  It is possible (albeit a bit complicated) to go the other way and create a
+  GdkPixbuf image from a GdkDrawable. This can be used to take a pixmap that
+  had something drawn on with GDK operations and then scale it or composite
+  over another image, or capture contents of an arbitrary window.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+ GdkPixbuf gdkpixbuf::get_from_drawable(GdkPixbuf   $dest,
+                                        GdkDrawable $src,
+                                        GdkColormap $colormap,
+                                        int         $src_x,
+                                        int         $src_y,
+                                        int         $dest_x,
+                                        int         $dest_y,
+                                        int         $width,
+                                        int         $height)
+?>]]></example>
+
+ <blurb fontsize="3em">
+  Note that this function is not a GdkPixbuf method, since $dest can
+  be a null. If $dest is null, the function will create a GdkPixbuf of
+  the dimensions given by $width and $height and will transfer the
+  graphical contents of the specified drawable to the pixbuf. In this
+  case, $dest_x and $dest_y have to be 0. If $dest is not null, then
+  the function will transfer the pixmap at the destination
+  coordinates.
+ </blurb>
+
+</slide>

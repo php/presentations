@@ -1,0 +1,61 @@
+<slide title="Styles 1/3" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  A style stored GDK resources to be used when drawing widgets, and,
+  thus, can be used to customize the appearance of the application. 
+  Although it is possible to change the style of the widget
+  programmatically, it is advisable instead to rely on the .rc
+  (resource) files so that the customization is left up to the user.
+ </blurb>
+
+ <example title="Structure of GtkStyle" fontsize="1.5em"><![CDATA[<?php
+  class GtkStyle {
+      GdkColor  $black;
+      GdkColor  $white;
+
+      GdkGC     $black_gc;
+      GdkGC     $white_gc;
+      
+      GdkFont   $font;
+
+      GdkColor  $fg[5];
+      GdkColor  $bg[5];
+      GdkColor  $light[5];
+      GdkColor  $dark[5];
+      GdkColor  $mid[5];
+      GdkColor  $text[5];
+      GdkColor  $base[5];
+
+      GdkGC     $fg_gc[5];
+      GdkGC     $bg_gc[5];
+      GdkGC     $light_gc[5];
+      GdkGC     $dark_gc[5];
+      GdkGC     $mid_gc[5];
+      GdkGC     $text_gc[5];
+      GdkGC     $base_gc[5];
+
+      GdkPixmap $bg_pixmap[5];
+  }
+
+?>]]></example>
+
+ <blurb fontsize="3em">
+  'black' and 'white' colors simply stored the corresponding colors
+  for easy access. Same goes for 'black_gc' and 'white_gc'.
+ </blurb>
+
+ <blurb fontsize="3em">
+  The rest of the arrays all have 5 elements each, corresponding to 5
+  possible widget states: normal, active, prelight, selected, and
+  insensitive. So, if the widget is prelighted (cursor over it), its
+  foreground color may be different than normal and can be accessed
+  as $style->fg[GTK_STATE_PRELIGHT].
+ </blurb>
+
+ <blurb fontsize="3em">
+  Foreground and background are self-explanatory. Light/mid/dark
+  normally contain values that are automatically computed from fg/bg
+  ones. Text is drawn using 'text' and 'base' colors.
+ </blurb>
+
+</slide>

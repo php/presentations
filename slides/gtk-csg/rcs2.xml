@@ -1,0 +1,56 @@
+<slide title="Resource Files 2/2" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  The full syntax of the resources files is described online at:
+ </blurb>
+ <link marginleft="5ex">http://developer.gnome.org/doc/API/gtk/gtk-resource-files.html</link>
+
+ <blurb fontsize="3em">
+  Definining styles is not very difficult:
+ </blurb>
+
+ <example type="php" fontsize="1.5em"><![CDATA[style 'name ' [ = 'parent'] {
+    fg[state]       = <color>
+    bg[state]       = <color>
+    base[state]     = <color>
+    text[state]     = <color>
+    bg_texts[state] = <color>
+    font            = <font>
+    fontset         = <font>
+ }]]></example>
+
+ <blurb fontsize="3em">
+  Where 'name' is the name you give this particular style, 'parent' is
+  the name of the parent style the attributes of which this one will
+  inherit. &amp;lt;color&amp;gt; can be specified as a string "#rrrrggggbbbb",
+  "#rrrgggbbb", "#rrggbb", or "#rgb", where r g, and b are hex digits,
+  or as a triplet of floats { r, g, b }.
+ </blurb>
+
+ <blurb fontsize="3em">
+  As an example:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[style 'button' {
+    bg[NORMAL] = { #ccc }
+}
+
+style 'button_list' = 'button'
+{
+    font = "-adobe-helvetica-medium-r-normal--*-100-*-*-*-*-*-*"
+    bg[PRELIGHT] = { 0, 0.75, 0 }
+}
+
+widget "main window.*GtkScrolledWindow.*GtkButton*" style "button_list"
+]]></example>
+
+ <blurb fontsize="3em">
+  Note that the wildcards are important: "**GtkScrolledWindow*" makes
+  sure that it applies to the scroll window inside "main window" even
+  if it's bundled in a box or something like that, and "**GtkButton**"
+  says that the button can be packed up in a box and that the style
+  will also apply to the child of the button, that is, label. Without
+  the final asterisk the button label font would not be affected.
+ </blurb>
+
+</slide>

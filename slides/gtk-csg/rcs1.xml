@@ -1,0 +1,47 @@
+<slide title="Resource Files 1/2" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  GTK+ provides resource file mechanism for configuring various
+  aspects of the operation of a program at runtime. Most of the time,
+  though, resource files are used for changing styles of the
+  application's widgets.
+ </blurb>
+
+
+ <blurb fontsize="3em">
+  Application should load its resource file using rc_parse() function:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  gtk::rc_parse(dirname($argv[0]).'/myapp.rc');
+?>]]></example>
+
+ <blurb fontsize="3em">
+  This will load myapp.rc file loaded in the same directory as the application.
+ </blurb>
+
+ <blurb fontsize="3em" title="Syntax">
+  A resource file defines a number of styles and attaches them to
+  particular widgets. The attachment is done by the widget,
+  widget_class, and class declarations. As an example of such a
+  statement:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[widget "mywindow.*.GtkEntry" style "my-entry-class"]]></example>
+
+ <blurb fontsize="3em">
+  This attaches the style "my-entry-class" to all widgets whose widget
+  class matches the pattern "mywindow.*.GtkEntry". The patterns are
+  given in the standard shell glob syntax. The "?" wildcard
+  matches any character, while "*" matches zero or more of any
+  character. The three types of matching are against the widget path,
+  the class path and the class heirarchy. Both the widget and the
+  class paths consists of a "." separated list of all the parents of
+  the widget and the widget itself from outermost to innermost. The
+  difference is that in the widget path, the name assigned by
+  GtkWiget::set_name() is used if present, otherwise the class name of
+  the widget, while for the widget path, the class name is always
+  used.
+ </blurb>
+
+</slide>

@@ -1,0 +1,40 @@
+<slide title="Drawables -> Images 2/2" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  An important point about the colormap. If the source drawable does
+  not have a colormap, a compatible one needs to be provided. If you
+  are capturing contents of a window then GdkWindow::get_colormap()
+  method can be used.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  // Here we create a pixmap, draw something on it, then convert it
+  // to a GdkPixbuf and scale and composite it over a checkerboard
+  // pattern.
+
+  // $window is a GtkWindow we created previously
+  $window->realize();
+
+  $pm = &new GdkPixmap($window->window, 300, 300);
+  $win = $window->window;
+  $cmap = $window->get_colormap();
+  $c = $cmap->alloc('orange');
+  $c1 = $cmap->alloc('white');
+  $c2 = $cmap->alloc('gray50');
+  $gc = $win->new_gc();
+  $gc->foreground = $c;
+  $gc->line_width = 3;
+  gdk::draw_rectangle($pm, $window->style->white_gc, true, 0, 0, 300, 300);
+  gdk::draw_line($pm, $gc, 0, 0, 300, 300);
+  gdk::draw_line($pm, $gc, 0, 300, 300, 0);
+  gdk::draw_arc($pm, $gc, true, 100, 100, 100, 100, 64 * 45, 64 * 90);
+  gdk::draw_arc($pm, $gc, true, 100, 100, 100, 100, 64 * 225, 64 * 90);
+
+  $pixbuf = gdkpixbuf::get_from_drawable(null, $pm, $cmap,
+                                         0, 0, 0, 0, 300, 300);
+  $pixbuf = $pixbuf->composite_color_simple(500, 200, GDK_INTERP_BILINEAR,
+                                            200, 8, $c1->pixel, $c2->pixel);
+
+  // Display pixbuf as before
+?>]]></example>
+</slide>

@@ -1,0 +1,64 @@
+<slide title="Scaling/compositing 4/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  The more advanced methods are these:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  scale(GdkPixbuf     $dest,
+        int           $dest_x,
+        int           $dest_y,
+        int           $dest_width,
+        int           $dest_height,
+        double        $offset_x,
+        double        $offset_y,
+        double        $scale_x,
+        double        $scale_y,
+        GdkInterpType $interp_type)
+
+  composite(GdkPixbuf     $dest, 
+            int           $dest_x, 
+            int           $dest_y,
+            int           $dest_width,
+            int           $dest_height, 
+            double        $offset_x,
+            double        $offset_y,
+            double        $scale_x,
+            double        $scale_y, 
+            GdkInterpType $interp_type,
+            int           $overall_alpha)
+
+  composite_color(GdkPixbuf     $dest,
+                  int           $dest_x,
+                  int           $dest_y,
+                  int           $dest_width,
+                  int           $dest_height,
+                  double        $offset_x,
+                  double        $offset_y,
+                  double        $scale_x,
+                  double        $scale_y,
+                  GdkInterpType $interp_type,
+                  int           $overall_alpha,
+                  int           $check_x,
+                  int           $check_y,
+                  int           $check_size,
+                  int           $color1,
+                  int           $color2)
+?>]]></example>
+
+ <blurb fontsize="3em">
+  The parameters for these methods are very similar. Both scale() and
+  composite() creates a transformation of the source image by scaling
+  by $scale_x and $scale_y then translating by $offset_x and
+  $offset_y, then rendering the rectangle ($dest_x, $dest_y,
+  $dest_width, $dest_height) of the resulting image onto the
+  destination image replacing the previous contents. The composite()
+  method has an additional $overall_alpha parameter specifying the
+  transparency of the source image when it's composited.
+ </blurb>
+
+ <blurb fontsize="3em">
+  The composite_color() is one monster method that can be used to
+  replace all the methods seen so far.
+ </blurb>
+</slide>

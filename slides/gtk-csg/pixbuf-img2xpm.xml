@@ -1,0 +1,40 @@
+<slide title="Images -> Pixmaps" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  Sometimes it is necessary to make pixmaps/bitmaps out of the
+  gdk-pixbuf images, since GDK only works with pixmaps. There are a
+  couple of ways of doing this. One would be to create a GdkPixmap the
+  size of the GdkPixbuf and then use render_to_drawable() method as
+  we've done before. But there a convenience method that can be used.
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  array render_pixmap_and_mask(int $alpha_threshold)
+?>]]></example>
+ <blurb fontsize="3em">
+  The returned array will contain the pixmap and the mask for the 
+  image. $alpha_threshold specifies a value (0..255); the opacity of
+  each pixel is compared to this value to determine whether the pixel
+  will be transparent or not (bilevel only).
+ </blurb>
+
+ <blurb fontsize="3em">
+  So, if we want to draw a 3/4 circle in the center of an image:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  $cmap = gdk::colormap_get_system();
+  $c = $cmap->alloc('purple');
+
+  list($mp, $mm) = $pixbuf->render_pixmap_and_mask(0);
+  $window = $area->window;
+  $gc = $window->new_gc();
+  $gc->foreground = $c;
+  $gc->clip_mask = $mm;
+  gdk::draw_arc($mp, $gc, true, $mp->width/2 - 100, $mp->height/2 - 100,
+                200, 200, 90 * 64, 270 * 64);
+  gdk::draw_pixmap($area->window, $area->style->fg_gc[GTK_STATE_NORMAL],
+                   $mp, 0, 0, 0, 0, $mp->width, $mp->height);
+?>]]></example>
+
+</slide>

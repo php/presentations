@@ -1,0 +1,20 @@
+<slide title="Styles 3/3" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  To change the GC in a style:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  $gc = $style->fg_gc[GTK_STATE_NORMAL];
+  $gc->foreground = $color;
+  $style->fg_gc[GTK_STATE_NORMAL] = $gc;
+?>]]></example>
+
+ <blurb fontsize="3em">
+  Manipulating widget style properties by hand is very cumbersome and
+  is also prone to clash with the theme that the user has chosen for
+  themselves. Instead, try to use resource files when you need to
+  provide control over widgets' appearance.
+ </blurb>
+
+</slide>

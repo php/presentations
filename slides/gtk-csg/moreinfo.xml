@@ -1,0 +1,17 @@
+<slide title="More Info" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  More info about particular GDK and GdkPixbuf functions and methods can be
+  found at the following URLs:
+ </blurb>
+
+ <link leader="GDK 1.x: " marginleft="5ex">http://developer.gnome.org/doc/API/gdk/index.html</link>
+ <link leader="GDK 2.x: " marginleft="5ex">http://developer.gnome.org/doc/API/2.0/gdk/index.html</link>
+ <link leader="gdk-pixbuf: " marginleft="5ex">http://developer.gnome.org/doc/API/2.0/gdk-pixbuf/index.html</link>
+
+ <blurb fontsize="3em">
+  PHP-GTK currently supports only GDK 1.x but GDK 2.x documentation may have
+  better documentation for methods existing in 1.x as well.
+ </blurb>
+
+</slide>

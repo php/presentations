@@ -1,0 +1,53 @@
+<slide title="Rendering 1/2" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  To display an image, you need to render it onto a GdkDrawable, such
+  as GdkWindow of a drawing area or to a GdkPixmap which is then
+  displayed in the usual ways.
+ </blurb>
+
+ <example fontsize="1.7em"><![CDATA[<?php
+  GdkPixbuf::render_to_drawable(GdkDrawable  $drawable,
+                                GdkGC        $gc,
+                                int          $src_x,
+                                int          $src_y,
+                                int          $dest_x,
+                                int          $dest_y,
+                                int          $width,
+                                int          $height,
+                                GdkRgbDither $dither,
+                                int          $x_dither,
+                                int          $y_dither)
+?>]]></example>
+
+ <blurb title="$drawable">
+  the drawable to render the image to
+ </blurb>
+
+ <blurb title="$gc">
+  GC specifying rendering parameters
+ </blurb>
+
+ <blurb title="$src_x, $src_y">
+  start coordinates within the source image
+ </blurb>
+
+ <blurb title="$dest_x, $dest_y">
+  destination coordinates within the drawable
+ </blurb>
+
+ <blurb title="$widget, $height">
+  the dimensions of the rectangle to render
+ </blurb>
+
+ <blurb title="$dither">
+  dithering type - only makes sense on 8-bit or 16-bit displays.
+  Use GDK_RGB_DITHER_NORMAL for most of cases.
+ </blurb>
+
+ <blurb title="$x_dither, $y_dither">
+  dithering offset - useful only on 8/16-bit displays when scrolling
+  or re-rendering sub-regions of the image
+ </blurb>
+
+</slide>

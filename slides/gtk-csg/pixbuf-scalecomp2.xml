@@ -1,0 +1,39 @@
+<slide title="Scaling/compositing 2/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  Very often in image editing programs one needs to composite an image
+  (with or without an alpha channel) over a checkerboard pattern, to
+  indicate the transparency of the image. This method makes it
+  fairly easy to scale the image and composite it in such way:
+ </blurb>
+
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  GdkPixbuf  composite_color_simple(int           $dest_width,
+                                    int           $dest_height,
+                                    GdkInterpType $interp_type,
+                                    int           $overall_alpha,
+                                    int           $check_size,
+                                    int           $color1,
+                                    int           $color2)
+?>]]></example>
+
+ <blurb fontsize="3em">
+  The first 3 parameters are the same ones as for scale_simple(). The
+  rest are as follows:
+ </blurb>
+
+ <blurb fontsize="3em" title="$overall_alpha">
+  an integer in the 0..255 range specifying the overall level of
+  transparency for the image.
+ </blurb>
+
+ <blurb fontsize="3em" title="$check_size">
+  the size of the checks in the checkerboard pattern (has to be a power of 2).
+ </blurb>
+
+ <blurb fontsize="3em" title="$color1, $color2">
+  the colors of the checks ('pixel' property of GdkColor)
+ </blurb>
+
+</slide>

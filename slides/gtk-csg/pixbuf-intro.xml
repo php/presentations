@@ -1,0 +1,28 @@
+<slide title="gdk-pixbuf: Intro" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  While XPM is a common enough image format, sometimes you want to work
+  with industry standards, such as JPEG, PNG, or GIF (if you can't stop
+  yourself). Welcome to gdk-pixbuf.
+ </blurb>
+
+ <blurb fontsize="3em">
+  gdk-pixbuf is a library for image loading and manipulation. It supports
+  BMP, GIF, ICO, JPEG, PNG, PNM, RAS, TIFF, and XBM/XPM image formats,
+  can render images to drawables, scale and composite images against
+  various backgrounds, create pixmaps/masks out of images, and so on.
+ </blurb>
+
+ <blurb fontsize="3em">
+  PHP-GTK provides interface to some of the more common functions of the
+  gdk-pixbuf library. Unfortunately, gdk-pixbuf support is not yet
+  available on Windows platforms.
+ </blurb>
+
+ <blurb fontsize="3em">
+  gdk-pixbuf extension defines a GdkPixbuf class which is used to represent an
+  in-memory image data. All operations on the image are carried out by invoking
+  methods of that class.
+ </blurb>
+
+</slide>

@@ -1,0 +1,37 @@
+<slide title="Scaling/compositing 1/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  gdk-pixbuf provides several methods for scaling images and
+  compositing one image over another or over a checkerboard pattern.
+  The methods are divided into "simple" and "industrial-strength"
+  versions. The simple ones are sufficient most of the time, and
+  underneath they use the more advanced ones transparently.
+ </blurb>
+
+ <blurb fontsize="3em">
+  To make scaled copy of an image, this method can be used:
+ </blurb>
+
+ <example fontsize="1.5em"><![CDATA[<?php
+  GdkPixbuf  scale_simple(int           $dest_width,
+                          int           $dest_height,
+                          GdkInterpType $interp_type)
+?>]]></example>
+
+ <blurb fontsize="3em">
+  It takes the desired dimensions to scale to and the interpolation
+  type constant, which can be:
+ </blurb>
+
+ <list>
+  <bullet>GDK_INTERP_NEAREST  (fastest and lowest quality mode)</bullet>
+  <bullet>GDK_INTERP_BILINEAR (best quality/speed balance)</bullet>
+  <bullet>GDK_INTERP_TILES    (resembles PostScript image operator)</bullet>
+  <bullet>GDK_INTERP_HYPER    (slowest and highest quality mode)</bullet>
+ </list>
+
+ <blurb fontsize="3em">
+  The method will scale the image according to the specified interpolation
+  algorithm and return the result.
+ </blurb>
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Scaling/compositing 3/4" logo1="images/php-gtk.gif">
+
+ <blurb fontsize="3em">
+  For example, if we want to take an image, scale it to
+  600 x 600, make it a bit transparent, and composite it over a white
+  and gray checkerboard pattern, we could do this:
+ </blurb>
+
+ <example fontsize="1.7em"><![CDATA[<?php
+  $pixbuf = GdkPixbuf::new_from_file('shape.png');
+
+  $cmap = gdk::colormap_get_system();
+  $c1 = $cmap->alloc('white');
+  $c2 = $cmap->alloc('gray50');
+
+  $pixbuf = $pixbuf->composite_color_simple(600, 600, GDK_INTERP_BILINEAR,
+                                            230, 8, $c1->pixel, $c2->pixel);
+?>]]></example>
+
+</slide>
