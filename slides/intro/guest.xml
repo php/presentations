@@ -3,7 +3,7 @@
 <blurb title="Guestbook Example">
 A very simple guestbook example to illustrate basic file handling.
 </blurb>
-<example result="1" anchor="results"><![CDATA[<html><head><title>My Guestbook</title></head>
+<example result="1" anchor="results" rfontsize="1.5em"><![CDATA[<html><head><title>My Guestbook</title></head>
 <body>
 <h1>Welcome to my Guestbook</h1>
 <h2>Please write me a little note below</h2>

@@ -1,0 +1,27 @@
+<slide title="Database Support">
+<list title="SQL">
+<bullet> Adabas D</bullet>
+<bullet> Empress</bullet>
+<bullet> IBM DB2</bullet>
+<bullet> Informix</bullet>
+<bullet> Ingres</bullet>
+<bullet> Interbase</bullet>
+<bullet> Frontbase</bullet>
+<bullet> mSQL</bullet>
+<bullet> Direct MS-SQL</bullet>
+<bullet> MySQL</bullet>
+<bullet> ODBC</bullet>
+<bullet> Ovrimos</bullet>
+<bullet> Oracle (OCI7,OCI8)</bullet>
+<bullet> PostgreSQL</bullet>
+<bullet> Raima Velocis</bullet>
+<bullet> Solid</bullet>
+<bullet> Sybase</bullet>
+<bullet> DB++</bullet>
+</list>
+<list title="Others">
+<bullet>dBase</bullet>
+<bullet>filePro (read-only)</bullet>
+<bullet>dbm (ndbm, gdbm, Berkeley db)</bullet>
+</list>
+</slide>
