@@ -1,0 +1,21 @@
+<slide title="Using the Tidy parser">
+    <blurb title="And here is the output..."/>
+    <example fontsize="1.6em" title="ext/tidy/examples/dumpit5.php output"><![CDATA[
+ + [EMPTY] (Root Node)
+    + HTML (Start Node)
+       + HEAD (Start Node)
+          + TITLE (Start Node)
+             + [EMPTY] (Text Node)
+                 |
+                 +---- Value: 'Example basic HTML document'
+       + BODY (Start Node)
+       |
+       +---- Attributes
+                  +-- bgcolor
+                   |     +-- Value: #FFFFFF
+          + B (Start Node)
+             + [EMPTY] (Text Node)
+                 |
+                 +---- Value: 'Hello, World!'
+]]></example>
+</slide>

@@ -1,0 +1,11 @@
+<slide title="The Tidy Node">
+<blurb title="What the properities mean"/>
+<list>
+    <bullet>%$value% - The value of the current node, and all subnodes combined</bullet>
+    <bullet>%$name% - The name of the node (generally the HTML tag)</bullet>
+    <bullet>%$type% - The type of node (discussed in next slide)</bullet>
+    <bullet>%$id% - The ID of the node (not always available, depends on type)</bullet>
+    <bullet>%$attribute% - An associative array of attributes for the node</bullet>
+    <bullet>%$child% - An indexed array of all the children of this node</bullet>
+</list>
+</slide>

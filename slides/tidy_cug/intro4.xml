@@ -1,0 +1,9 @@
+<slide title="Controlling Tidy">
+<blurb title="Don't want a complete HTML document?">
+    Tidy has a wide range of configuration options that allow you to manipulate
+    how the output of tidy will look. In this case, you can use the 'show-body-only'
+    option to keep tidy from creating a full HTML document.
+</blurb>
+<example type="php" filename="intro4_ex1.php"  title="Setting options"/>
+<example type="xml" filename="intro4_ex1_res.html" title="Result"/>
+</slide> 

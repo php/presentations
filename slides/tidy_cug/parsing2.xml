@@ -1,0 +1,21 @@
+<slide title="Jumping into a document">
+<image filename="tree.gif" align="center" width="300" height="200"/>
+<example fontsize="1.6em" title="Given a basic HTML document..."><![CDATA[<HTML>
+    <HEAD>
+        <TITLE>Example basic HTML document</TITLE>
+    </HEAD>
+    <BODY BGCOLOR=#FFFFFF>
+        <B>Hello, World!</B>
+    </BODY>
+</HTML>]]>
+</example>
+<example fontsize="1.6em" title="You can Access a given 'jump node' like so.."><![CDATA[
+<?php
+    $tidy = tidy_parse_file("myhtmldoc.html");
+    
+    $root = $tidy->root();
+    $html = $tidy->html();
+    $head = $tidy->head();
+    $body = $tidy->body();
+?>]]></example>
+</slide>

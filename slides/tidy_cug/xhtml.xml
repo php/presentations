@@ -1,0 +1,7 @@
+<slide title="Converting To XHTML">
+    <blurb title="Automatically coverting HTML to XHTML">
+    Tidy can also quickly convert HTML to XHTML documents. For
+    instance, the php.net homepage:
+    </blurb>
+    <example filename="xhtml_ex1.php" title="Converting to XHTML"/>
+</slide> 

@@ -1,0 +1,107 @@
+<slide title="Configuration Options">
+<blurb title="Tidy configuration options">
+The following is a list of all of the configuration options supported by tidy
+<![CDATA[
+<HR/>
+<CENTER>
+<table border="0" cellpadding="3" width="600">
+<tr class="h"><th>Tidy Configuration Directive</th><th>Value</th></tr>
+
+<tr><td class="e">indent-spaces </td><td class="v">0 </td></tr>
+<tr><td class="e">wrap </td><td class="v">68 </td></tr>
+<tr><td class="e">tab-size </td><td class="v">8 </td></tr>
+<tr><td class="e">char-encoding </td><td class="v">1 </td></tr>
+<tr><td class="e">input-encoding </td><td class="v">3 </td></tr>
+<tr><td class="e">output-encoding </td><td class="v">1 </td></tr>
+
+<tr><td class="e">newline </td><td class="v">0 </td></tr>
+<tr><td class="e">doctype-mode </td><td class="v">1 </td></tr>
+<tr><td class="e">doctype </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">repeated-attributes </td><td class="v">1 </td></tr>
+<tr><td class="e">alt-text </td><td class="v"><i>no value</i> </td></tr>
+
+<tr><td class="e">slide-style </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">error-file </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">output-file </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">write-back </td><td class="v">FALSE </td></tr>
+<tr><td class="e">markup </td><td class="v">TRUE </td></tr>
+
+<tr><td class="e">show-warnings </td><td class="v">TRUE </td></tr>
+<tr><td class="e">quiet </td><td class="v">FALSE </td></tr>
+<tr><td class="e">indent </td><td class="v">0 </td></tr>
+<tr><td class="e">hide-endtags </td><td class="v">FALSE </td></tr>
+<tr><td class="e">input-xml </td><td class="v">FALSE </td></tr>
+<tr><td class="e">output-xml </td><td class="v">FALSE </td></tr>
+
+<tr><td class="e">output-xhtml </td><td class="v">FALSE </td></tr>
+<tr><td class="e">output-html </td><td class="v">FALSE </td></tr>
+<tr><td class="e">add-xml-decl </td><td class="v">FALSE </td></tr>
+<tr><td class="e">uppercase-tags </td><td class="v">FALSE </td></tr>
+<tr><td class="e">uppercase-attributes </td><td class="v">FALSE </td></tr>
+<tr><td class="e">bare </td><td class="v">FALSE </td></tr>
+
+<tr><td class="e">clean </td><td class="v">FALSE </td></tr>
+<tr><td class="e">logical-emphasis </td><td class="v">FALSE </td></tr>
+<tr><td class="e">drop-proprietary-attributes </td><td class="v">FALSE </td></tr>
+<tr><td class="e">drop-font-tags </td><td class="v">FALSE </td></tr>
+<tr><td class="e">drop-empty-paras </td><td class="v">TRUE </td></tr>
+<tr><td class="e">fix-bad-comments </td><td class="v">TRUE </td></tr>
+
+<tr><td class="e">break-before-br </td><td class="v">FALSE </td></tr>
+<tr><td class="e">split </td><td class="v">FALSE </td></tr>
+<tr><td class="e">numeric-entities </td><td class="v">FALSE </td></tr>
+<tr><td class="e">quote-marks </td><td class="v">FALSE </td></tr>
+<tr><td class="e">quote-nbsp </td><td class="v">TRUE </td></tr>
+<tr><td class="e">quote-ampersand </td><td class="v">TRUE </td></tr>
+
+<tr><td class="e">wrap-attributes </td><td class="v">FALSE </td></tr>
+<tr><td class="e">wrap-script-literals </td><td class="v">FALSE </td></tr>
+<tr><td class="e">wrap-sections </td><td class="v">TRUE </td></tr>
+<tr><td class="e">wrap-asp </td><td class="v">TRUE </td></tr>
+<tr><td class="e">wrap-jste </td><td class="v">TRUE </td></tr>
+<tr><td class="e">wrap-php </td><td class="v">TRUE </td></tr>
+
+<tr><td class="e">fix-backslash </td><td class="v">TRUE </td></tr>
+<tr><td class="e">indent-attributes </td><td class="v">FALSE </td></tr>
+<tr><td class="e">assume-xml-procins </td><td class="v">FALSE </td></tr>
+<tr><td class="e">add-xml-space </td><td class="v">FALSE </td></tr>
+<tr><td class="e">enclose-text </td><td class="v">FALSE </td></tr>
+<tr><td class="e">enclose-block-text </td><td class="v">FALSE </td></tr>
+
+<tr><td class="e">keep-time </td><td class="v">FALSE </td></tr>
+<tr><td class="e">word-2000 </td><td class="v">FALSE </td></tr>
+<tr><td class="e">tidy-mark </td><td class="v">FALSE </td></tr>
+<tr><td class="e">gnu-emacs </td><td class="v">FALSE </td></tr>
+<tr><td class="e">gnu-emacs-file </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">literal-attributes </td><td class="v">FALSE </td></tr>
+
+<tr><td class="e">show-body-only </td><td class="v">FALSE </td></tr>
+<tr><td class="e">fix-uri </td><td class="v">TRUE </td></tr>
+<tr><td class="e">lower-literals </td><td class="v">TRUE </td></tr>
+<tr><td class="e">hide-comments </td><td class="v">FALSE </td></tr>
+<tr><td class="e">indent-cdata </td><td class="v">FALSE </td></tr>
+<tr><td class="e">force-output </td><td class="v">TRUE </td></tr>
+
+<tr><td class="e">show-errors </td><td class="v">6 </td></tr>
+<tr><td class="e">ascii-chars </td><td class="v">TRUE </td></tr>
+<tr><td class="e">join-classes </td><td class="v">FALSE </td></tr>
+<tr><td class="e">join-styles </td><td class="v">TRUE </td></tr>
+<tr><td class="e">escape-cdata </td><td class="v">FALSE </td></tr>
+<tr><td class="e">language </td><td class="v"><i>no value</i> </td></tr>
+
+<tr><td class="e">ncr </td><td class="v">TRUE </td></tr>
+<tr><td class="e">output-bom </td><td class="v">2 </td></tr>
+<tr><td class="e">replace-color </td><td class="v">FALSE </td></tr>
+<tr><td class="e">css-prefix </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">new-inline-tags </td><td class="v"><i>no value</i> </td></tr>
+
+<tr><td class="e">new-blocklevel-tags </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">new-empty-tags </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">new-pre-tags </td><td class="v"><i>no value</i> </td></tr>
+<tr><td class="e">accessibility-check </td><td class="v">0 </td></tr>
+<tr><td class="e">vertical-space </td><td class="v">FALSE </td></tr>
+
+<tr><td class="e">punctuation-wrap </td><td class="v">FALSE </td></tr>
+</table></center>]]>
+</blurb>
+</slide>

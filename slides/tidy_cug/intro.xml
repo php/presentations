@@ -1,0 +1,17 @@
+<slide title="Tidying up your HTML">
+<blurb title="Why'd I show up to talk about tidy?">
+    Because Tidy is a really cool technology for today's dynamic web environment
+</blurb>
+<blurb title="Why do you care?">
+    What tidy can do for you:
+</blurb>
+<list>
+    <bullet>Make your HTML Completely web-standards compliant automatically</bullet>
+    <bullet>Identify potential problems with your markup</bullet>
+    <bullet>Make your web sites load faster</bullet>
+    <bullet>Validate and repair user-submitted markup</bullet>
+    <bullet>Extract all of the URLs from any web page in 21 lines of code *without regular expressions*</bullet>
+    <bullet>Convert malformed HTML documents into XHTML 1.0 documents automatically</bullet>
+    <bullet>Never use a regular expression for screen scraping again</bullet>
+</list>
+</slide>

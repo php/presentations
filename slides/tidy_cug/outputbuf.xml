@@ -1,0 +1,14 @@
+<slide title="Tidy Output Buffering">
+	<blurb title="Tidy also supports output buffering">
+		The function %ob_tidyhandler()% is available for use with PHP
+		output buffering to automatically parse, clean and repair output
+		based on the %tidy.default_config% directive.
+	</blurb>
+	<example title="Using tidy output buffering"><![CDATA[<?php
+	ob_start("ob_tidyhandler");
+	/* Data output here...*/
+?>]]></example>
+	<blurb>Alternatively, you can set the %tidy.clean_output% php.ini directive to true to
+	automatically clean output. </blurb>
+	<blurb>*BE WARNED: Tidy does _not_ check the content type of the output!*</blurb>
+</slide> 

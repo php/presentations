@@ -1,0 +1,15 @@
+<slide title="Smarty output filter">
+<blurb title="Smarty output filter plugin">
+   Here is a quick output filter plugin I wrote for use on one of my sites
+   that uses tidy and Smarty (http://smarty.php.net/). 
+</blurb>
+<example type="php" title="A Smarty Output filter"><![CDATA[<?php
+function smarty_outputfilter_tidyrepairhtml($source, &$smarty)
+{
+    if(extension_loaded('tidy')) {
+    	return tidy_repair_string($source);
+    } 
+}
+?>]]>
+</example>
+</slide>

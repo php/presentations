@@ -1,0 +1,25 @@
+<slide title="Other useful parsing tidbits">
+    <blurb title="Pulling Tables out of documents">
+   When you display the value for a particular node, you recieve
+   the entire contents of that node plus all of its children nodes.
+   Thus, entire tables can be pulled out of HTML documents regardless
+   of complexity just by saying:
+   </blurb>
+   <example><![CDATA[<?php
+   
+   if($node->id == TIDY_TAG_TABLE) {
+         echo $node->value;
+   }
+?>]]></example>
+   <blurb title="Nodes are overloaded, too!">
+Just as was the case with tidy documents, the %tidy_node% class is
+overloaded, meaning you can treat an instance of the object just
+as if it were any other string:
+   </blurb>
+   <example><![CDATA[<?php
+   
+   if($node->id == TIDY_TAG_TABLE) {
+      echo $node;
+   }
+?>]]></example>
+</slide>

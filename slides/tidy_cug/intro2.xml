@@ -1,0 +1,8 @@
+<slide title="Web standard in a snap">
+<blurb title="With Tidy, complying with web standards is easy">
+    Tidy has a great markup parser which intelligently corrects a wide range of errors:
+</blurb>
+<example type="xml" filename="intro2_ex1.html" title="Input HTML"/>
+<example type="php" filename="intro2_ex1.php"  title="Clean it up with Tidy"/>
+<example type="xml" filename="intro2_ex1_res.html" title="Output HTML"/>
+</slide>

@@ -1,0 +1,17 @@
+<slide title="Save bandwidth with Tidy">
+<blurb title="You can save considerable bandwidth with tidy as well">
+    Consider the following ran against a copy of the php.net home page:
+</blurb>
+<example fontsize="1.6em" filename="bandwidth_ex1.php" title="Saving bandwidth with tidy"/>
+<blurb title="After tidy is finished, compare the file sizes.."/>
+<example type="html" fontsize="1.6em" title="Before and after...">
+<![CDATA[<pre>
+-rw-rw-r--    1 john     john        <b>27066</b> Jan  3 04:11 php.html
+-rw-rw-r--    1 john     john        <b>26193</b> Jan  3 04:11 php_tidy.html</pre>
+]]>
+</example>
+<blurb title="Without losing maintainability, tidy has saved 873 bytes per request">
+    That might not seem like a lot, but when you serve 100,000 hits a day you save
+    *87.3 megabytes a day* in bandwidth.
+</blurb>
+</slide> 

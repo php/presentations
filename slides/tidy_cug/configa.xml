@@ -1,0 +1,14 @@
+<slide title="Controlling Options">
+<blurb title="Retrieving configuration options">
+    Options can be retrieved a number of ways
+</blurb>
+<list>
+    <bullet>At runtime using %tidy_getopt()% or the %getopt()% method</bullet>
+    <bullet>Saving the configuration using %tidy_save_config()% or the %save_config()% method</bullet>
+    <bullet>Temporarily saving the configuration using %tidy_snapshot_config()% / %snapshot_config()%
+    and restoring using %tidy_restore_config()% / %restore_config()%</bullet>
+</list>
+<blurb>
+    The configuration can also be reset to the default using %tidy_reset_config()% (uses %tidy.default_config%)
+</blurb>
+</slide> 

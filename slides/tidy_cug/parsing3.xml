@@ -1,0 +1,27 @@
+<slide title="The Tidy Node">
+<blurb title="A tidy node is a PHP object">
+    Each node is an instance of the internal %tidy_node% class with the following structure:
+</blurb>
+<example title="The tidy_node class" fontsize="1.6em"><![CDATA[<?php
+class tidy_node {
+
+    public $value;
+    public $name;
+    public $type;
+    public $id;        /* $id Not always available, depends on type */
+    
+    public tidy_attr $attribute[];
+    public tidy_node $child[];
+    
+    public function has_children();
+    
+    public function is_comment();
+    public function is_html();
+    public function is_text();
+    public function is_jste();
+    public function is_asp();
+    public function is_php();
+    
+}
+?>]]></example>
+</slide>

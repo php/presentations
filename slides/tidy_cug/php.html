@@ -1,0 +1,461 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"><html><head>
+ 
+ <title>PHP: Hypertext Preprocessor</title><link rel="stylesheet" href="PHP:%20Hypertext%20Preprocessor_files/style.css">
+ <link rel="stylesheet" href="PHP:%20Hypertext%20Preprocessor_files/phpnet.css">
+ <link rel="shortcut icon" href="http://static.php.net/www.php.net/favicon.ico">
+ <script language="Javascript" type="text/javascript" src="PHP:%20Hypertext%20Preprocessor_files/userprefs.js"></script>
+ <!-- base href="http://www.php.net/index.php" --></head>
+
+<body bgcolor="#ffffff" text="#000000" link="#000099" alink="#0000ff" vlink="#000099" onload="boldEvents(); searchHistory();">
+
+<!--UdmComment-->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tbody><tr bgcolor="#9999cc">
+  <td align="center" rowspan="2" width="126"><a href="http://www.php.net/"><img src="PHP:%20Hypertext%20Preprocessor_files/php.gif" alt="PHP" width="120" height="67" hspace="3"></a></td>
+  <td> </td>
+ </tr>
+ <tr bgcolor="#9999cc">
+  <td align="right" valign="bottom">
+<a href="http://www.php.net/downloads.php" class="small">downloads</a> | <a href="http://www.php.net/docs.php" class="small">documentation</a> | <a href="http://www.php.net/FAQ.php" class="small">faq</a> | <a href="http://www.php.net/support.php" class="small">getting help</a> | <a href="http://www.php.net/mailing-lists.php" class="small">mailing lists</a> | <a href="http://bugs.php.net/" class="small">reporting bugs</a> | <a href="http://www.php.net/sites.php" class="small">php.net sites</a> | <a href="http://www.php.net/links.php" class="small">links</a> | <a href="http://www.php.net/my.php" class="small">my php.net</a> 
+  </td>
+ </tr>
+ <tr bgcolor="#333366"><td colspan="2"><img src="PHP:%20Hypertext%20Preprocessor_files/spacer.gif" width="1" height="1" border="0" alt=""></td></tr>
+ <tr bgcolor="#666699">
+   <td align="right" valign="top" colspan="2" class="quicksearch">
+    <form method="post" action="/search.php" class="thin" name="topsearch">
+<small><span title="Keyboard shortcut: Alt+S (Win), Ctrl+S (Apple)"><u>s</u>earch for</span></small>
+<input class="small" type="text" name="pattern" value="" size="30" accesskey="s">
+<small>in the</small>
+<select name="show" class="small"><option value="quickref" selected="selected">function list</option><option value="wholesite">whole site</option><option value="manual">online documentation [en]</option><option value="bugdb">bug database</option><option value="maillist">general mailing list</option><option value="devlist">developer mailing list</option><option value="phpdoc">documentation mailing list </option></select>
+<input type="image" src="PHP:%20Hypertext%20Preprocessor_files/small_submit_white.gif" alt="search" align="baseline"> 
+</form>
+   </td>
+ </tr>
+ <tr bgcolor="#333366"><td colspan="3"><img src="PHP:%20Hypertext%20Preprocessor_files/spacer.gif" width="1" height="1" border="0" alt=""></td></tr> 
+</tbody></table>
+<!--/UdmComment-->
+
+
+<table border="0" cellpadding="0" cellspacing="0">
+ <tbody><tr valign="top">
+  <td width="200" bgcolor="#f0f0f0">
+   <table width="100%" cellpadding="2" cellspacing="0" border="0">
+    <tbody><tr valign="top"><td class="sidebar">
+<h3>What is PHP?</h3>
+<p>
+ <acronym title="recursive acronym for PHP: Hypertext Preprocessor">PHP</acronym>
+ is a widely-used general-purpose scripting language that is
+ especially suited for Web development and can be embedded into HTML.
+ If you are new to PHP and want to get some idea
+ of how it works, try the <a href="http://www.php.net/tut.php">introductory tutorial</a>.
+ After that, check out the online <a href="http://www.php.net/docs.php">manual</a>,
+ and the example archive sites and some of the other resources
+ available in the <a href="http://www.php.net/links.php">links section</a>.
+</p>
+<p>
+ Ever wondered how popular PHP is? see the
+ <a href="http://www.php.net/usage.php">Netcraft Survey</a>.
+</p>
+<p>
+ PHP is a project of the
+ <a href="http://www.apache.org/">Apache Software Foundation</a>.
+</p>
+
+<h3><a href="http://www.php.net/thanks.php">Thanks To</a></h3>
+<ul class="simple">
+ <li><a href="http://www.easydns.com/?V=698570efeb62a6e2">easyDNS</a></li>
+ <li><a href="http://www.directi.com/">Directi</a></li>
+ <li><a href="http://promote.pair.com/direct.pl?php.net">pair Networks</a></li>
+ <li><a href="http://www.ev1servers.net/">EV1Servers</a></li>
+ <li><a href="http://www.servercentral.net/">Server Central</a></li>
+ <li><a href="http://www.redundant.com/">Redundant Networks</a></li>
+ <li><a href="http://www.simplicato.com/?a=1007">Simplicato</a></li>
+ <li><a href="http://www.rackspace.com/?supbid=php.net">Rackspace</a></li>
+</ul>
+<h3>Related sites</h3>
+<ul class="simple">
+ <li><a href="http://www.apache.org/">Apache</a></li>
+ <li><a href="http://www.mysql.com/">MySQL</a></li>
+ <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
+ <li><a href="http://www.zend.com/">Zend Technologies</a></li>
+</ul>
+<h3>Community</h3>
+<ul class="simple">
+ <li><a href="http://www.linuxfund.org/">LinuxFund.org</a></li>
+ <li><a href="http://www.osdn.org/">OSDN</a></li>
+</ul>
+
+<h3>Syndication</h3>
+<p>
+ You can grab our news as an RSS feed via a daily dump in a file
+ named <a href="http://www.php.net/news.rss">news.rss</a>.
+</p>
+
+<h3>Contact</h3>
+<p>
+ Please submit website bugs in the
+ <a href="http://bugs.php.net/">bug system</a>.
+</p></td></tr>
+   </tbody></table>
+  </td>
+  <td bgcolor="#cccccc" background="PHP:%20Hypertext%20Preprocessor_files/checkerboard.gif" width="1"><img src="PHP:%20Hypertext%20Preprocessor_files/spacer.gif" width="1" height="1" border="0" alt=""></td>
+  <td>
+   <table cellpadding="10" cellspacing="0" width="100%">
+    <tbody><tr><td valign="top">
+
+<h1>PHP 4.3.4RC2 released</h1>
+<p>
+ <span class="newsdate">[20-Oct-2003]</span>
+ <a href="http://qa.php.net/">PHP 4.3.4RC2</a> has been released for testing.
+ This release candidate is hopefully the final release candidate prior to the
+ 4.3.4 release and should be very stable. Please test this release as much as 
+ possible, so that any remaining issues can be uncovered and resolved prior to 
+ the final release.
+</p>
+<p>
+ List of changes can be found in the 
+ <a href="http://cvs.php.net/diff.php/php-src/NEWS?r1=1.1247.2.412&amp;r2=1.1247.2.442">NEWS</a>
+ file.
+</p>
+
+<hr>
+
+<a href="http://www.directionphp.biz/"><img src="PHP:%20Hypertext%20Preprocessor_files/directionphp.png" alt="Direction|PHP" width="99" height="128" style="float: right;"></a>
+<h1>Monthly PHP Magazine in French launched!</h1>
+<p>
+ <span class="newsdate">[15-Oct-2003]</span>
+ <a href="http://www.nexen.net/">Nexen.net</a> has launched Direction|PHP,
+ the first PHP and MySQL dedicated magazine in French. This monthly publication
+ features indeep coverage of PHP industry, business and user cases and technical
+ articles from PHP|Architect.
+</p>
+<p>
+ For more information, read the <a href="http://www.directionphp.biz/index.php">Direction|PHP website</a> (in French).
+</p>
+
+<hr>
+
+<a href="http://www.apachecon.com/"><img src="PHP:%20Hypertext%20Preprocessor_files/apachecon2003.jpg" alt="ApacheCon" width="135" height="45" style="float: right;"></a>
+<h1>ApacheCon 2003, the Global Hub for All Things Apache</h1>
+<p>
+ <span class="newsdate">[11-Oct-2003]</span>
+ The <a href="http://www.apachecon.com/">official conference
+ of the Apache Software Foundation</a> will be held November 16-20,
+ 2003 in Las Vegas. More than 60 sessions highlight core and
+ next-generation Apache server tools, offering a wide
+ range of beginner, intermediate and advanced sessions.
+ Learn firsthand the latest developments in Apache, as
+ well as key open source projects, including PHP, Perl,
+ XML, Java, MySQL, and WebDAV.
+</p>
+
+<hr>
+
+<a href="http://www.phpcruise.com/"><img src="PHP:%20Hypertext%20Preprocessor_files/phpcruise.png" alt="php|cruise" width="162" height="29" style="float: right;"></a>
+<h1>php|cruise: The World's First Ever PHP-only Cruise</h1>
+<p>
+ <span class="newsdate">[20-Sep-2003]</span>
+  The publishers of php|architect have announced <a href="http://www.phparch.com/cruise/">php|cruise</a>, a five-day cruise to the
+  Bahamas Islands featuring a lot of fun and over thirty different
+  sessions dedicated to PHP from well known experts like Wez Furlong, Alan
+  Knowles and John Coggeshall. 
+</p>
+<p>
+ The cruise will take place March 1st to 5th, 2004. The organizers have
+ <a href="http://www.phparch.com/cruise/contest/">announced a contest</a> to
+ give away one free place on the cruise.
+</p>
+
+<hr>
+
+<a href="http://www.zend.com/zend/php_survey_results.php"><img src="PHP:%20Hypertext%20Preprocessor_files/zendtech_logo.gif" alt="Zend Technologies" width="150" height="77" style="float: right;"></a>
+<h1>PHP Usage Survey Results</h1>
+<p>
+ <span class="newsdate">[18-Sep-2003]</span>
+ <a href="http://www.zend.com/zend/php_survey_results.php">Check out</a> the results
+ of the PHP Usage Survey conducted by Zend Technologies, including feedback
+ from thousands of PHP users around the world.  Thanks for all who contributed!
+</p>
+
+<hr>
+
+<a href="http://weblabor.hu/php-doc-chm"><img src="PHP:%20Hypertext%20Preprocessor_files/chmhelp.gif" alt="CHM" width="48" height="48" style="float: right;"></a>
+<h1>PHP Manual CHM Edition - 12th build</h1>
+<p>
+ <span class="newsdate">[06-Sep-2003]</span>
+ The 12th build of the extended CHM edition is out now, and
+ <a href="http://www.php.net/get/php_manual_chm_12.zip/from/a/mirror">available for download</a>.
+ This build contains updated content and user notes, as well as fixes the
+ bugs found in the previous build. A new optional "phpZ" skin is also
+ introduced in this release, courtesy of Gonzalo De la Pena Andreu. For
+ more information, visit <a href="http://weblabor.hu/php-doc-chm/">the
+ homepage of this edition.</a>
+</p>
+
+<hr>
+
+<a href="http://www.phpconference.de/2003/index_en.php"><img src="PHP:%20Hypertext%20Preprocessor_files/international_conference_2003.gif" alt="International PHP Conference 2003" width="120" height="77" style="float: right;"></a>
+<h1>International PHP Conference 2003 program online</h1>
+<p>
+ <span class="newsdate">[05-Sep-2003]</span>
+ The organisers of the
+ <a href="http://www.phpconference.de/2003/index_en.php">International
+ PHP Conference</a> which will take place for the third time in Frankfurt,
+ Germany from Nov. 2 to 5, 2003 have announced the conference program.
+ The conference board which consists of Bjoern Schotte, Zak
+ Greant, Zeev Suraski, Thies Arntzen and Jan Lehnardt has chosen more than
+ 40 sessions for the main program on Nov. 4 and 5 and 7 in-depth
+ Power Workshops for the pre conference program on Nov. 2 and 3. Among the
+ prominent speaking crowd is Zeev Suraski, Ken Coar and many others. See
+ <a href="http://www.phpconference.de/2003/index_en.php">the conference
+ website</a> for more information.
+</p>
+
+<hr>
+
+<a href="http://servercentral.net/"><img src="PHP:%20Hypertext%20Preprocessor_files/server_central.gif" alt="Server Central" width="120" height="120" style="float: right;"></a>
+<h1>Server Central Donates Server</h1>
+<p>
+ <span class="newsdate">[28-Aug-2003]</span>
+ Chicago-based company <a href="http://servercentral.net/">Server Central</a>
+ has donated PHP.net a brand new server with a gigabit connection. The box is
+ a quad 2.4GHz machine with 2GB ram, so we're going to be using it to power
+ our more resource-intensive tasks, including building the manual. Thanks,
+ Server Central!
+</p>
+
+<hr>
+
+<h1>European Open Source Development Threatened!</h1>
+<p>
+ <span class="newsdate">[27-Aug-2003]</span>
+ Today sees an international day of protest against the move by the EU to
+ make obtaining a patent easier within Europe. Such patents may cause Open
+ Source software such as PHP to infringe on existing licenses and new ones, 
+ meaning we would no longer be safe to distribute PHP within Europe. Contact
+ your EU Representative to get this cruicial vote blocked. Find out more at
+ the <a href="http://swpat.ffii.org/">campaign website</a> 
+</p>
+ 
+<hr>
+
+<a href="http://www.php-con.com/"><img src="PHP:%20Hypertext%20Preprocessor_files/phpcon_2003.gif" alt="php{con west 2003" width="120" height="60" style="float: right;"></a>  
+
+<h1>php{con west is announced</h1>
+<p>
+ <span class="newsdate">[26-Aug-2003]</span>
+ php{con returns to the San Francisco Bay Area with new sessions, PHP gurus
+ and a whole new day of PHP-intensive learning. Their program features a full
+ day of tutorials, three technical session tracks over two days, an all day 
+ coding marathon, Code Sprint, social events, works in progress, and
+ presentations from PHP luminaries. Early Bird discounts end on September
+ 26th. See the full program and register online at
+ <a href="http://www.php-con.com/">their website</a>
+</p>
+
+<hr>
+
+<h1>PHP 4.3.3 released!</h1>
+<p>
+ <span class="newsdate">[25-Aug-2003]</span>
+ The PHP developers are proud to announce the immediate availability of
+ <a href="http://www.php.net/release_4_3_3.php">PHP 4.3.3</a>. This release contains a large
+ number of bug fixes and we <strong>strongly</strong> recommend that all
+ users of PHP upgrade to this version. Full list of fixes can be found in
+ the <a href="http://www.php.net/ChangeLog-4.php#4.3.3">NEWS</a> file.
+</p>
+
+<hr>
+
+<a href="http://www.activestate.com/Corporate/ActiveAwards/"><img src="PHP:%20Hypertext%20Preprocessor_files/activestate_logo.gif" alt="ActiveState" width="115" height="50" style="float: right;"></a>
+<h1>Active Awards 2003 Winners</h1>
+
+<p>
+ <span class="newsdate">[15-Aug-2003]</span>
+ The <a href="http://www.activestate.com/Corporate/ActiveAwards/">Active Awards</a>
+ are held annually to honor members of the open source community who actively
+ contribute to open source languages and display excellence in their programming
+ efforts. Programmers' Choice Award winners were nominated and chosen by the open
+ source community. Activators' Choice Award winners were chosen by ActiveState's
+ development team.
+</p>
+<p>
+ This year's nominees were: Monte Ohrt, Paul S. Owen, Stanislav Malyshev,
+ Stig Bakken and Wez Furlong. The Programmers' Choice winner is
+ <strong>Stig Bakken</strong>, the father of PEAR. The Activators' Choice
+ winner is <strong>Ilia Alshanetsky</strong>, member of the PHP Quality
+ Assurance team, developer of the fudforum package, and a major contributor
+ to PHP development.
+</p>
+
+<hr>
+
+<h1>PHP.net news history</h1>
+
+<p>
+ <span class="newsdate">[15-Aug-2003]</span>
+ Ever wonder what was the original PHP 3.0 release announcement, what
+ where the choices when the PHP: Hypertext Preprocessor name was
+ choosen, or since when you can use URL shortcuts to access pieces
+ of our site? We have digged up some of the most interesting news
+ items published on PHP.net since January 1998, when the site started
+ to serve its visitors. You can find these <a href="http://www.php.net/news-2003.php">in
+ the news archives</a>. There is also some historical information in
+ <a href="http://www.php.net/history">the manual's history appendix</a>.
+</p>
+
+<hr>
+
+<h1>Select mirror for redirection</h1>
+
+<p>
+ <span class="newsdate">[13-Aug-2003]</span>
+ The www.php.net site tries to do the best to choose close mirrors based
+ on all available data when redirecting users to mirror sites. Sometimes
+ close mirror sites are unfortunately not the fastest. This is why we have
+ added the mirror site selection possibility to <a href="http://www.php.net/my.php">our My
+ PHP.net service</a>, which enables users to select a specific mirror
+ site for redirections.
+</p>
+
+<hr>
+
+<a href="http://www.php-mag.net/"><img src="PHP:%20Hypertext%20Preprocessor_files/php-mag.gif" alt="PHP Magazine" width="130" height="38" style="float: right;"></a> 
+
+<h1>PHP Magazine web site now with daily news</h1>
+
+<p>
+ <span class="newsdate">[12-Aug-2003]</span>
+ <a href="http://www.php-mag.net/">The International PHP Magazine web site</a>
+ now offers daily news for PHP professionals and beginners from all over the
+ world, helping them to stay up-to-date with the latest news on PHP and
+ related technologies.
+</p>
+
+<hr>
+
+<h1>URL Shortcuts and Site Search</h1>
+
+<p>
+ <span class="newsdate">[29-Jul-2003]</span>
+ After many of our users requested a change in how
+ <a href="http://www.php.net/urlhowto.php">our URL shortcuts</a> behave when someone mistypes
+ a shortcut, the default behaviour now is to look for a function name
+ instead of performing a documentation search on Google. Those, who were
+ satisfied with the Google search, can <a href="http://www.php.net/my.php">set their
+ preference at the My PHP.net page</a>. We are working on a better
+ onsite search solution, Google is used temporarily to search our site.
+</p>
+
+<hr>
+
+<p class="center"><a href="http://www.php.net/news-2003.php">News Archive</a></p>
+
+</td></tr></tbody></table></td><td bgcolor="#cccccc" background="PHP:%20Hypertext%20Preprocessor_files/checkerboard.gif" width="1"><img src="PHP:%20Hypertext%20Preprocessor_files/spacer.gif" width="1" height="1" border="0" alt=""></td>
+<td width="185" bgcolor="#f0f0f0">
+ <table width="100%" cellpadding="4" cellspacing="0">
+  <tbody><tr valign="top"><td class="sidebar"><div align="center"><h3>This mirror sponsored by:</h3>
+<a href="http://www.webhostingtalk.com/"><img src="PHP:%20Hypertext%20Preprocessor_files/mirror.gif" alt="Web Hosting Talk" height="125" width="125"></a></div><br><hr>
+<h3>Upcoming Events <a href="http://www.php.net/submit-event.php">[add]</a></h3>
+<h4 class="eventmonth">October</h4>
+<h4>User Group Events</h4>
+<span class="event_USA" style="font-weight: bold;">27. <a href="http://www.php.net/cal.php?id=1099">Long Island PHP Users Group</a></span><br>
+<span class="event_USA" style="font-weight: bold;">28. <a href="http://www.php.net/cal.php?id=409">New York</a></span><br>
+<span class="event_USA" style="font-weight: bold;">28. <a href="http://www.php.net/cal.php?id=384">AzPHP</a></span><br>
+<span class="event_DEU">29. <a href="http://www.php.net/cal.php?id=713">Munich</a></span><br>
+<span class="event_DEU">30. <a href="http://www.php.net/cal.php?id=484">Hamburg</a></span><br>
+<h4>Conferences</h4>
+<span class="event_USA" style="font-weight: bold;">24. <a href="http://www.php.net/cal.php?id=1095">php-con West 2003</a></span><br>
+<span class="event_ITA">24. <a href="http://www.php.net/cal.php?id=1110">First italian PHP day</a></span><br>
+<h4>Training</h4>
+<span class="event_USA" style="font-weight: bold;">24. <a href="http://www.php.net/cal.php?id=1050">PHP/MySQL Bootcamp</a></span><br>
+<span class="event_USA" style="font-weight: bold;">24. <a href="http://www.php.net/cal.php?id=1087">PHP/MySQL Bootcamp 5 Days (MD)</a></span><br>
+<span class="event_CAN">24. <a href="http://www.php.net/cal.php?id=1105">PHP/MySQL Open Systems Web Dev</a></span><br>
+<span class="event_USA" style="font-weight: bold;">24. <a href="http://www.php.net/cal.php?id=1121">PHP Programming Online Marathon</a></span><br>
+<span class="event_USA" style="font-weight: bold;">26. <a href="http://www.php.net/cal.php?id=780">OSSuite Training</a></span><br>
+<span class="event_USA" style="font-weight: bold;">27. <a href="http://www.php.net/cal.php?id=1132">Online MySQL course</a></span><br>
+<span class="event_NLD">27. <a href="http://www.php.net/cal.php?id=1035">PHP Programming en PHP Advanced</a></span><br>
+<span class="event_USA" style="font-weight: bold;">27. <a href="http://www.php.net/cal.php?id=1079">LogiCreate PHP Training</a></span><br>
+<span class="event_DEU">27. <a href="http://www.php.net/cal.php?id=1083">Apache/PHP/MySQL-Workshop</a></span><br>
+<span class="event_USA" style="font-weight: bold;">27. <a href="http://www.php.net/cal.php?id=1101">AMP Technology Training</a></span><br>
+<span class="event_GBR">28. <a href="http://www.php.net/cal.php?id=231">UK PHP Training</a></span><br>
+<span class="event_USA" style="font-weight: bold;">28. <a href="http://www.php.net/cal.php?id=1116">PHP Training in San Francisco</a></span><br>
+<h4 class="eventmonth">November</h4>
+<h4>User Group Events</h4>
+<span class="event_USA" style="font-weight: bold;">1. <a href="http://www.php.net/cal.php?id=96">Chicago</a></span><br>
+<span class="event_USA" style="font-weight: bold;">5. <a href="http://www.php.net/cal.php?id=661">PHP/LAMP Denver</a></span><br>
+<span class="event_USA" style="font-weight: bold;">6. <a href="http://www.php.net/cal.php?id=76">SEMPUG</a></span><br>
+<span class="event_USA" style="font-weight: bold;">6. <a href="http://www.php.net/cal.php?id=109">SDPHP (San Diego, CA)</a></span><br>
+<span class="event_DEU">6. <a href="http://www.php.net/cal.php?id=272">Hannover</a></span><br>
+<span class="event_CAN">6. <a href="http://www.php.net/cal.php?id=1133">PHPQuebec - Montreal</a></span><br>
+<span class="event_USA" style="font-weight: bold;">6. <a href="http://www.php.net/cal.php?id=561">Meetup Day</a></span><br>
+<span class="event_AUS">6. <a href="http://www.php.net/cal.php?id=1127">Sydney PHP Group meeting</a></span><br>
+<span class="event_USA" style="font-weight: bold;">6. <a href="http://www.php.net/cal.php?id=1005">Omaha PHP Users Group Meetup</a></span><br>
+<span class="event_DEU">7. <a href="http://www.php.net/cal.php?id=95">Frankfurt</a></span><br>
+<span class="event_DEU">7. <a href="http://www.php.net/cal.php?id=153">Köln/Bonn</a></span><br>
+<span class="event_ESP">7. <a href="http://www.php.net/cal.php?id=240">Reunión mensual</a></span><br>
+<span class="event_CAN">11. <a href="http://www.php.net/cal.php?id=1134">PHPQuebec - Quebec</a></span><br>
+<span class="event_USA" style="font-weight: bold;">12. <a href="http://www.php.net/cal.php?id=104">Twin Cities</a></span><br>
+<span class="event_CAN">13. <a href="http://www.php.net/cal.php?id=960">Vancouver</a></span><br>
+<span class="event_DEU">15. <a href="http://www.php.net/cal.php?id=79">Stuttgart</a></span><br>
+<span class="event_USA" style="font-weight: bold;">15. <a href="http://www.php.net/cal.php?id=1131">Kansas City</a></span><br>
+<span class="event_USA" style="font-weight: bold;">19. <a href="http://www.php.net/cal.php?id=474">Seattle</a></span><br>
+<span class="event_CAN">19. <a href="http://www.php.net/cal.php?id=651">Calgary</a></span><br>
+<span class="event_NZL">19. <a href="http://www.php.net/cal.php?id=837">Wellington NZ</a></span><br>
+<span class="event_USA" style="font-weight: bold;">24. <a href="http://www.php.net/cal.php?id=1099">Long Island PHP Users Group</a></span><br>
+<span class="event_USA" style="font-weight: bold;">25. <a href="http://www.php.net/cal.php?id=409">New York</a></span><br>
+<span class="event_USA" style="font-weight: bold;">25. <a href="http://www.php.net/cal.php?id=384">AzPHP</a></span><br>
+<span class="event_DEU">26. <a href="http://www.php.net/cal.php?id=713">Munich</a></span><br>
+<span class="event_DEU">27. <a href="http://www.php.net/cal.php?id=484">Hamburg</a></span><br>
+<span class="event_ITA">29. <a href="http://www.php.net/cal.php?id=1136">Changes in PHP 5/Zend Engine 2.0</a></span><br>
+<h4>Conferences</h4>
+<span class="event_DEU">2. <a href="http://www.php.net/cal.php?id=1014">International PHP Conference</a></span><br>
+<span class="event_USA" style="font-weight: bold;">16. <a href="http://www.php.net/cal.php?id=1125">ApacheCon 2003</a></span><br>
+<h4>Training</h4>
+<span class="event_PHL">1. <a href="http://www.php.net/cal.php?id=1097">Extreme PHP</a></span><br>
+<span class="event_USA" style="font-weight: bold;">1. <a href="http://www.php.net/cal.php?id=1121">PHP Programming Online Marathon</a></span><br>
+<span class="event_ESP">3. <a href="http://www.php.net/cal.php?id=338">MySQL Spain</a></span><br>
+<span class="event_ESP">3. <a href="http://www.php.net/cal.php?id=445">PHP-Madrid</a></span><br>
+<span class="event_ESP">3. <a href="http://www.php.net/cal.php?id=456">Curso PHP Madrid</a></span><br>
+<span class="event_DEU">3. <a href="http://www.php.net/cal.php?id=641">PHP E-Learning/Germany</a></span><br>
+<span class="event_ESP">3. <a href="http://www.php.net/cal.php?id=998">Curso on-line ActionScript / PHP</a></span><br>
+<span class="event_YUG">3. <a href="http://www.php.net/cal.php?id=1124">AlefBrain PHP Training</a></span><br>
+<span class="event_ESP">4. <a href="http://www.php.net/cal.php?id=841">Curso on-line de PHP-MySQL</a></span><br>
+<span class="event_USA" style="font-weight: bold;">8. <a href="http://www.php.net/cal.php?id=1051">Intro to PHP</a></span><br>
+<span class="event_USA" style="font-weight: bold;">10. <a href="http://www.php.net/cal.php?id=1128">RAMP Training &amp; Certification</a></span><br>
+<span class="event_NLD">10. <a href="http://www.php.net/cal.php?id=1025">PHP Advanced Programming</a></span><br>
+<span class="event_NLD">19. <a href="http://www.php.net/cal.php?id=1023">CIW Dynamic Server Pages (DSP)</a></span><br>
+<span class="event_NLD">24. <a href="http://www.php.net/cal.php?id=1036">PHP Programming en PHP Advanced</a></span><br>
+<span class="event_NLD">24. <a href="http://www.php.net/cal.php?id=1028">PHP Programming</a></span><br>
+<span class="event_GBR">24. <a href="http://www.php.net/cal.php?id=1129">"Technology for PHP", UK</a></span><br>
+<span class="event_GBR">25. <a href="http://www.php.net/cal.php?id=231">UK PHP Training</a></span><br>
+<span class="event_USA" style="font-weight: bold;">25. <a href="http://www.php.net/cal.php?id=1117">PHP Training in San Francisco</a></span><br>
+<span class="event_GBR">25. <a href="http://www.php.net/cal.php?id=1130">"PHP Programming", UK</a></span><br>
+<span class="event_BRA">27. <a href="http://www.php.net/cal.php?id=1137">PHP Brasil - Training</a></span><br>
+<span class="event_USA" style="font-weight: bold;">30. <a href="http://www.php.net/cal.php?id=780">OSSuite Training</a></span><br></td></tr>
+ </tbody></table>
+<img src="PHP:%20Hypertext%20Preprocessor_files/spacer.gif" width="175" height="1" border="0" alt=""></td>
+</tr></tbody></table>
+
+<!--UdmComment-->
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+ <tbody><tr bgcolor="#333366"><td><img src="PHP:%20Hypertext%20Preprocessor_files/spacer.gif" width="1" height="1" border="0" alt=""></td></tr>
+ <tr bgcolor="#9999cc">
+  <td align="right" valign="bottom">
+<a href="http://www.php.net/source.php?url=/index.php" class="small">show source</a> | <a href="http://www.php.net/credits.php" class="small">credits</a> | <a href="http://www.php.net/sitemap.php" class="small">sitemap</a> | <a href="http://www.php.net/mirrors.php" class="small">mirror sites</a>   </td>
+ </tr>
+ <tr bgcolor="#333366"><td><img src="PHP:%20Hypertext%20Preprocessor_files/spacer.gif" width="1" height="1" border="0" alt=""></td></tr>
+</tbody></table>
+
+<table border="0" cellspacing="0" cellpadding="6" width="100%">
+ <tbody><tr valign="top" bgcolor="#cccccc">
+  <td><small><a href="http://www.php.net/copyright.php">Copyright © 2001-2003 The PHP Group</a><br>All rights reserved.</small></td>
+  <td align="right"><small>
+   <a href="http://www.php.net/mirror.php">This mirror</a> generously provided by:
+   <a href="http://www.webhostingtalk.com/">Web Hosting Talk</a><br>
+   Last updated: Sat Oct 25 11:11:43 2003 EDT   </small>
+  </td>
+ </tr>
+</tbody></table>
+<!--/UdmComment-->
+</body></html>

@@ -1,0 +1,7 @@
+<slide title="Using the Tidy parser">
+    <blurb title="Dumping the document tree">
+        Here is another quick example I wrote. In this example, I use the tidy parser to navigate the entire document
+        tree and display it. Taken from %ext/tidy/examples/dumpit5.php%
+    </blurb>
+    <example fontsize="1.6em" filename="dumpit5.php" title="Dumping the document tree"/>
+</slide>

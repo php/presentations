@@ -1,0 +1,30 @@
+<slide title="The Tidy Node">
+<blurb title="Node Types and IDs">
+    There are 14 different types of nodes, each is represented by a PHP constant
+</blurb>
+<list>
+    <bullet>%TIDY_NODETYPE_ROOT%  - The root node of the tree</bullet>
+    <bullet>%TIDY_NODETYPE_DOCTYPE% - The DOCTYPE of the tree</bullet>
+    <bullet>%TIDY_NODETYPE_COMMENT% - A comment</bullet>
+    <bullet>%TIDY_NODETYPE_PROCINS% - ????</bullet>
+    <bullet>%TIDY_NODETYPE_TEXT% - A text element of the tree</bullet>
+    <bullet>*%TIDY_NODETYPE_START%* - The start of a markup tag</bullet>
+    <bullet>*%TIDY_NODETYPE_END%* - The end of a markup tag</bullet>
+    <bullet>*%TIDY_NODETYPE_STARTEND%* - A tag that does not have an end (one-liner)</bullet>
+    <bullet>%TIDY_NODETYPE_CDATA% - A CDATA block</bullet>
+    <bullet>%TIDY_NODETYPE_SECTION% - A section block</bullet>
+    <bullet>%TIDY_NODETYPE_ASP% - An ASP code block</bullet>
+    <bullet>%TIDY_NODETYPE_JSTE% - A JSTE code block</bullet>
+    <bullet>%TIDY_NODETYPE_PHP% - A PHP code block</bullet>
+    <bullet>%TIDY_NODETYPE_XMLDECL% - A XML Declaration</bullet>
+</list>
+<blurb title="Node IDs">
+    For those types listed in bold above, a node ID is also associated which
+    maps to a known HTML tag. These IDs are represented by constants of the form
+    TIDY_TAG_%TAGNAME% WHERE %TAGNAME% is the HTML tag (such as 'A', 'BODY', etc.)
+</blurb>
+<list>
+    <bullet>%TIDY_TAG_A% - A node for an %A% tag</bullet>
+    <bullet>%TIDY_TAG_BODY% - A node for a %BODY% tag</bullet>
+</list>
+</slide>

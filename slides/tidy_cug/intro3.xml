@@ -1,0 +1,7 @@
+<slide title="Identifying problems">
+<blurb title="Not only can tidy fix things, it can tell you what went wrong:">
+    Tidy has a great markup parser which intelligently corrects a wide range of errors:
+</blurb>
+<example type="php" filename="intro3_ex1.php"  title="Displaying the error buffer"/>
+<example type="xml" filename="intro3_ex1_res.html" title="Result"/>
+</slide> 

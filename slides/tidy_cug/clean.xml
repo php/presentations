@@ -1,0 +1,9 @@
+<slide title="Converting To Stylesheets">
+    <blurb title="Automatically converting documents not using CSS">
+    Tidy can convert documents using &lt;FONT&gt; tags to CSS automatically,
+    just set the %clean% option to %true%
+    </blurb>
+    <example type="xml" filename="clean_ex1.html" title="Input"/>
+    <example filename="clean_ex1.php" title="Converting to CSS"/>
+    <example type="xml" filename="clean_ex1_res.html" title="Result"/>
+</slide> 

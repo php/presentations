@@ -1,0 +1,15 @@
+<slide title="So what's different From 4 to 5?">
+<blurb title="The changes between tidy in 4.3.x and tidy in 5.0.0">
+     Simply put, the differences between 4.3.x and 5.0.0 versions of tidy (tidy versions 1.0 and 2.0) are significant
+</blurb>
+<blurb>
+     In Tidy for 1.0, you could only manipulate one document at once. Although Tidy 1.0 worked in PHP 5 (allowing for
+     some of the parsing abilities you've seen), the API has since been refactored to be easier to use
+</blurb>
+<example title="Tidy 1.0"><![CDATA[<?php
+   tidy_parse_file("http://www.coggeshall.org/");
+   tidy_clean_repair();
+   echo tidy_get_output();
+?>]]></example>
+<blurb title="Tidy 1.0 is still maintained for the 4.3.x branch, but will no longer be improved"/>
+</slide>

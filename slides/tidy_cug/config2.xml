@@ -1,0 +1,7 @@
+<slide title="Controlling Options">
+<blurb title="Configuration Files">
+    Configuration files are generally simple text documents, but can be created using PHP
+</blurb>
+<example title="Creating a configuration File" filename="config2_ex1.php"/>
+<example type="text" title="Resulting configuration file" filename="myconfig.tcfg"/>
+</slide> 

@@ -1,0 +1,6 @@
+<slide title="Beautify HTML">
+    <blurb title="On the flipside, Tidy can also beautify HTML for easy reading"/>
+    <example type="xml" fontsize="1.0em" filename="function.tidy-get-output.html" title="From this..."/>
+    <example type="php" filename="beauty_ex1.php"/>
+    <example type="xml" fontsize="1.0em" filename="beauty_ex1_res.html" title="To this..."/>
+</slide> 

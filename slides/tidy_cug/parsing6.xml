@@ -1,0 +1,12 @@
+<slide title="Using the Tidy parser">
+    <blurb title="Bye bye, regular expressions!">
+        Thanks to the tidy parser, no longer do you have to rely on regular expressions
+        to extract content from another HTML document. Rather, you can use a much more
+        maintainable solution!
+    </blurb>
+    <blurb>
+        In the following example (found in the ext/tidy/examples/ directory), I use the
+        tidy parser to extract all of the links from an arbitary HTML document
+    </blurb>
+    <example fontsize="1.6em" filename="urlgrab5.php" title="Grabbing URLs from an HTML document"/>
+</slide>

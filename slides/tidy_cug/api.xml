@@ -1,0 +1,10 @@
+<slide title="Incredibly Flexible API">
+<blurb title="Objects? Procedural? Pick your Pleasure!">
+    The tidy PHP extension in PHP 5 has a incredibly flexible API which
+    allows you to use procedural or object oriented syntax. In fact, you
+    can even use both at the same time!
+</blurb>
+<example type="php" filename="api_ex1.php" title="Procedural API"/>
+<example type="php" filename="api_ex2.php" title="Object Oriented API"/>
+<example type="php" filename="api_ex3.php" title="Mix and Match"/>
+</slide> 

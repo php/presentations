@@ -1,0 +1,17 @@
+<slide title="Parsing with Tidy">
+    <blurb title="Wait! There's More!">
+    As powerful as tidy already is, the PHP tidy extension also
+    makes parsing and navigating an HTML document tree a snap!
+    </blurb>
+    <blurb title="Accessing Document Nodes">
+        Tidy allows you to "jump into" a document tree at key
+        points and from there navigate your way using object constructs
+    </blurb>
+    <blurb title="Just call one of these four methods to get started.."/>
+    <list>
+        <bullet> %root()% -- Begin at the start of the document</bullet>
+        <bullet> %head()% -- Begin at the &lt;HEAD&gt; tag</bullet>
+        <bullet> %html()% -- Begin at the &lt;HTML&gt; tag</bullet>
+        <bullet> %body()% -- Begin at the &lt;BODY&gt; tag</bullet>
+    </list>
+</slide> 

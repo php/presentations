@@ -1,0 +1,13 @@
+<slide title="Controlling Options">
+<blurb title="Tidy Configuration Options">
+    Tidy configuration options represent the bulk of the power of the tidy extension.
+    By adjusting these values you can change the behavior of tidy to match your needs.
+</blurb>
+<blurb title="Configuration options can be set a number of ways"/>
+<list>
+    <bullet>Specifying a default configuration file using the %tidy.default_config% php.ini directive</bullet>
+    <bullet>Setting options at run time using %tidy_setopt()% or the %setopt()% method</bullet>
+    <bullet>Loading a configuration file at run time using %tidy_load_config()% or the %load_config()% method</bullet>
+    <bullet>Specifying a configuration file when available as a function parameter i.e. %tidy_repair_file()%</bullet>
+</list>
+</slide> 
