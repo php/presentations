@@ -4,5 +4,23 @@
 
 	<break lines="4"/>
 	<blurb fontsize="4em">
+	strr(i)pos() now searches the full needle inside the haystack, and not
+	only the first character of it.
 	</blurb>
+
+	<example fontsize="1.3em"><![CDATA[<?php
+	$haystack = "There are now ten more countries in Europe";
+	$needle   = "The Netherlands";
+
+	$pos = strrpos($haystack, $needle);
+	var_dump($pos);
+? <]]></example>
+
+	<blurb fontsize="2.5em">PHP 4:</blurb>
+
+	<example fontsize="1em"><![CDATA[int(0)]]></example>
+
+	<blurb fontsize="2.5em">PHP 5:</blurb>
+
+	<example fontsize="1em"><![CDATA[bool(false)]]></example>
 </slide>
