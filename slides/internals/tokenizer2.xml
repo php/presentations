@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Parsing: Example (2)</title>
+
+	<example fontsize="1.2em"><![CDATA[<?php
+    function apply_magic(&$a) {
+        $a = $a + rand(0,3);
+    }
+? >]]></example>
+
+	<example type="text" fontsize="1.1em"><![CDATA[T_OPEN_TAG                [<?php\n]
+T_WHITESPACE              [    ]
+T_FUNCTION                [function]
+T_WHITESPACE              [ ]
+T_STRING                  [apply_magic]
+                          [(]
+                          [&]
+T_VARIABLE                [$a]
+                          [)]
+T_WHITESPACE              [ ]
+                          [{]
+T_WHITESPACE              [\n        ]
+T_VARIABLE                [$a]
+T_WHITESPACE              [ ]
+                          [=]
+T_WHITESPACE              [ ]
+T_VARIABLE                [$a]
+T_WHITESPACE              [ ]
+                          [+]
+T_WHITESPACE              [ ]
+T_STRING                  [rand]
+                          [(]
+T_LNUMBER                 [0]
+                          [,]
+T_LNUMBER                 [3]
+                          [)]
+                          [;]
+T_WHITESPACE              [\n    ]
+                          [}]
+T_WHITESPACE              [\n]
+T_CLOSE_TAG               [? >]]]></example>
+</slide>

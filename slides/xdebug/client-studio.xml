@@ -2,7 +2,11 @@
 <slide fontsize="6em">
 	<title>Maguma Studio</title>
 
-	<blurb> </blurb>
+	<break/>
+	<image align="right" marginright="8em" filename="maguma-logo.png"/>
 	<image align="center" filename="studio.png"/>
+	<list fontsize="5em" marginleft="4em">
+		<bullet>Version 2 supports DBGp</bullet>
+	</list>
 	
 </slide>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Gathering debug data 2</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list fontsize="5em">
+		<bullet>Memory footprint</bullet>
+	</list>
+	<list fontsize="4em" marginleft="2em">
+		<bullet>Script memory</bullet>
+		<bullet>emalloc()</bullet>
+		<bullet>--enable-memory-limit</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Time index</bullet>
+	</list>
+	<list fontsize="4em" marginleft="2em">
+		<bullet>Simple profiling</bullet>
+	</list>
+</slide>

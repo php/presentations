@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Input: Apache/CGI</title>
+
+	<break />
+	<list fontsize="4.5em">
+		<bullet>CGI binary is linked to mime-type:</bullet>
+	</list>
+	<break />
+	<example><![CDATA[ScriptAlias /php/ /usr/local/bin/php-cgi
+AddType application/x-httpd-php .php
+Action application/x-httpd-php "/php/php.exe"]]></example>
+	<break />
+
+	<list fontsize="4.5em">
+		<bullet>On a request, Apache:</bullet>
+		<bullet marginleft="1.5em" fontsize="2.5em">checks if there is a handler for the mime type</bullet>
+		<bullet marginleft="1.5em" fontsize="2.5em">fills in needed environment variables</bullet>
+		<bullet marginleft="1.5em" fontsize="2.5em">executes the CGI processor</bullet>
+	</list>
+</slide>

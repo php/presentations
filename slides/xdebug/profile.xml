@@ -5,7 +5,7 @@
 	<image align="center" filename="profile.png"/>
 	
 	<blurb> </blurb>
-	<list effect="slide" fontsize="4.5em">
+	<list fontsize="4.5em">
 		<bullet>Basic profiling.</bullet>
 		<bullet>xdebug_start_profile()</bullet>
 		<bullet>xdebug_dump_function_profile(mode)</bullet>

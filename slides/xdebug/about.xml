@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Xdebug</title>
-	<blurb> </blurb>
+	<break lines="2"/>
 	<list fontsize="4.5em">
+		<bullet>Protects against infinite recursion</bullet>
+		<bullet>|ff0000|Colored| |00ff00|var||0000ff|_dump|()</bullet>
 		<bullet>Stacktraces</bullet>
 		<bullet>Functiontraces</bullet>
 		<bullet marginleft="2em">parameters to functions</bullet>
@@ -11,6 +13,7 @@
 		<bullet marginleft="2em">memory allocation</bullet>
 		<bullet>Profiling</bullet>
 		<bullet>Script execution analysis</bullet>
+		<bullet>"Remote" debugging</bullet>
 	</list>
 
 </slide>

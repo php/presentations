@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>GDB mode/XML</title>
+
+	<break lines="4"/>
+	<list fontsize="5em">
+		<bullet>Input commands the same</bullet>
+		<bullet>%option response_format 1%</bullet>
+		<bullet>Output in 'proprietary' XML</bullet>
+		<bullet>Easier parsing for debug clients...</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet type="none" marginleft="3em">... but not for people</bullet>
+	</list>
+
+	<break lines="5"/>
+	<image filename="gdb-xml.png" align="center"/>
+</slide>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Parsing: Example (1)</title>
+
+	<blurb fontsize="4em">Tokenizer extension:</blurb>
+
+	<blurb>magic.php:</blurb>
+	<example fontsize="1.7em"><![CDATA[<?php
+    function apply_magic(&$a) {
+        $a = $a + rand(0,3);
+    }
+? >]]></example>
+
+	<blurb>tokenize.php:</blurb>
+	<example fontsize="1.7em"><![CDATA[<?php
+    foreach (token_get_all($script) as $token) {
+        if (count($token) == 2) {
+            printf ("%-25s [%s]\n", token_name($token[0]), $token[1]);
+        } else {
+            printf ("%-25s [%s]\n", "", $token[0]);
+        }
+    }
+? >]]></example>
+
+</slide>

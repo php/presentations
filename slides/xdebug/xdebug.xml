@@ -5,7 +5,7 @@
 	<blurb> </blurb>
 	<blurb> </blurb>
 	<blurb> </blurb>
-	<list effect="slide" fontsize="4.5em">
+	<list fontsize="4.5em">
 		<bullet>No more "echo' debugging"</bullet>
 		<bullet>Zend extension</bullet>
 		<bullet type="none" marginleft="2em">zend_extension=/path/to/xdebug.so</bullet>

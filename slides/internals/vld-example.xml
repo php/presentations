@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Compiling: Example</title>
+
+	<blurb>fibonacci.php:</blurb>
+	<example fontsize="1.5em"><![CDATA[<?php
+	$cache = array();
+
+	function fibonacci($nr) {
+		global $cache;
+
+		if (isset($cache[$nr])) {
+			return $cache[$nr];
+		}
+		switch ($nr) {
+			case 0:
+				die("Invalid Nr\n");
+			case 1:
+				return 1;
+			case 2:
+				return 1;
+			default:
+				$r = fibonacci($nr - 2) + fibonacci($nr - 1);
+				$cache[$nr] = $r;
+				return $r;
+		}
+	}
+
+	echo fibonacci($argv[1])."\n";
+? >]]></example>
+</slide>

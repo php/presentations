@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Compiling</title>
+
+	<break lines="7"/>
+	<list fontsize="5em">
+		<bullet>Interpreting tokens</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Generating execution units</bullet>
+	</list>
+	<list fontsize="5em">
+		<bullet>Generating class and function tables</bullet>
+	</list>
+
+</slide>

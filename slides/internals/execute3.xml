@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Executing: Example (1)</title>
+
+	<blurb> </blurb>
+	<blurb>test.inc:</blurb>
+	<example fontsize="1.7em"><![CDATA[<?php 
+    function foo () {
+        echo "bar\n";
+    }
+	echo "inc\n";
+? >
+]]></example>
+
+	<blurb> </blurb>
+	<blurb>test.php</blurb>
+	<example fontsize="1.7em"><![CDATA[<?php  
+    echo "foo\n";
+    include "test.inc";
+    foo();
+    echo "more bar\n";
+? >
+]]></example>
+</slide>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Resources</title>
+
+	<break lines="3" /> 
+	<image align="center" filename="xdebug-logo.png" />
+
+	<break lines="6" /> 
+	<link fontsize="3em" marginleft="2em" leader="These Slides: " href="http://pres.derickrethans.nl" target="_new"/>
+	<link fontsize="3em" marginleft="2em" leader="Xdebug site: " href="http://xdebug.org" target="_new"/>
+	<link fontsize="3em" marginleft="2em" leader="DBGp specification: " href="http://xdebug.org/docs-dbgp.php" target="_new"/>
+
+	<break lines="3" /> 
+	<link fontsize="3em" marginleft="2em" leader="PHP: " href="http://www.php.net" target="_new"/>
+	<link fontsize="3em" marginleft="2em" leader="Questions?: " href="derick@xdebug.org" target="_new"/>
+</slide>
