@@ -1,0 +1,16 @@
+<slide title="Templates">
+<block>
+Templates (known as &quot;form XObjects&quot; in the PDF world) 
+are useful when you need to repeat something on multiple pages.  By putting the repeated
+PDF sequences in a template, the generated PDF file is smaller.
+</block>
+
+<example
+	title="Template Example"
+	filename="slides/intro/pdf_templates_ex1.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+</slide>

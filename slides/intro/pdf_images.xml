@@ -1,0 +1,33 @@
+<slide title="Images">
+
+<list title="Formats">
+<bullet> PNG (alpha-channel is lost)</bullet>
+<bullet> JPEG (Progressive jpegs supported in Acrobat 4, not 3)</bullet>
+<bullet> GIF (no interlacing is allowed, only first image of an animated gif will be loaded)</bullet>
+<bullet> TIFF</bullet>
+<bullet> CCITT compressed image data</bullet>
+<bullet> Raw image data</bullet>
+</list>
+
+<example
+	title="Image Example 1"
+	filename="slides/intro/pdf_images_ex1.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+<blurb title="Scaling an Image">
+We saw in the previous example how to scale an image linearly.  We can also 
+scale non-linearly.  To do this we scale the coordinate system appropriately:
+</blurb>
+
+<example
+	title="Image Example 2"
+	filename="slides/intro/pdf_images_ex2.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+</slide>

@@ -1,0 +1,17 @@
+<slide title="Patterns">
+<block>
+Patterns are somewhat similar to templates except they are used in place
+of colours.  You can either stroke or fill things with a pattern.  Here
+we define a circular path, set the thickness to 30 and stroke the path
+with a pattern which contains a french flag image.
+</block>
+
+<example
+	title="Pattern Example"
+	filename="slides/intro/pdf_patterns_ex1.php"
+	fontsize="1.5em"
+	result="1"
+	type="iframe"
+/>
+
+</slide>
