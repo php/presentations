@@ -1,0 +1,69 @@
+<slide title='method.metallopdb'>
+<example title='Using method.metallopdb from the XML-RPC API' result='1'
+fontsize='1.0em' rfontsize='1.5em' outputbackground='#ffffdd'>
+<![CDATA[
+<?php
+error_reporting(1);
+require_once "XML/RPC.php";
+$host = 'metallo.scripps.edu';
+$port = 80;
+$xmlrpc_uri = '/services/xmlrpc.php';
+
+function &rpc_call(&$client, &$msg) {
+	$r=$client->send($msg);
+	if (!$r) {
+		print "<PRE>ERROR: couldn't send message</PRE>\n";
+		return 0;
+	} else {
+		if (!$r->faultCode()) {
+			return $r->value();
+		} else {
+			print "Fault: ";
+			print "Code: " . $r->faultCode() . 
+				" Reason '" .$r->faultString()."'<BR>";
+			return 0;
+		}
+	}
+}
+
+function toTable2($arr) {
+	$fields = array_keys($arr[0]);
+	$nfields = count($fields);
+	$ndata = count($arr);
+	$out = "<table border=1>\n";
+	for ($i=0; $i<$ndata; $i++) {
+		$out .= "<tr align='center'>\n<th colspan='2'>ROW: ".($i + 1)."</th>\n</tr>\n";
+		for ($j=0; $j<$nfields; $j++) {
+			$out .= "<tr>\n<th align='center'>".$fields[$j]."</th>\n";
+			$out .= "<td>".htmlspecialchars($arr[$i][$fields[$j]])."</td>\n</tr>\n";
+		}
+	}
+	$out .= "</table>\n";
+	return $out;
+}
+
+$c=new XML_RPC_Client($xmlrpc_uri, $host, $port);
+
+$metal = new XML_RPC_Value('zn');
+$mode = new XML_RPC_Value('random');
+$count = new XML_RPC_Value(5, $GLOBALS['XML_RPC_Int']);
+$format = new XML_RPC_Value('array');
+$method = 'method.metallopdb';
+$fmt = "<h3>Parameters: metal='%s', mode='%s', count=%d, format='%s'</h3>";
+printf($fmt, $metal->scalarval(), $mode->scalarval(), 
+			$count->scalarval(), $format->scalarval());
+
+$msg = new XML_RPC_Message($method, array($metal, $mode, $count, $format));
+$r = $c->send($msg);
+$v = $r->value();
+if (!$r->faultCode()) {
+	echo toTable2(XML_RPC_decode($v));
+} else {
+	echo "<pre>\n";
+	echo "ERROR: ".$r->faultCode()." -- ".$r->faultString();
+	echo "</pre>\n";
+}
+?>
+]]>
+</example>
+</slide>

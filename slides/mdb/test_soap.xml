@@ -1,0 +1,66 @@
+<slide title='Test SOAP'>
+<example title='Using the methods sql, metallopdb and rssmetallopdb'
+result='1' rfontsize='1.2em' fontsize='1.2em'
+outputbackground='#ffffdd'>
+<![CDATA[
+<?php 
+require_once 'SOAP/Client.php';
+$SOAP_OBJECT_STRUCT=false;
+$url = 'http://metallo.scripps.edu:80/services/soap.php';
+$ns = 'urn:MDB_SOAP_Server';
+$c = new SOAP_Client($url);
+
+function niceOut($obj) {
+	echo "<table border='1'>\n<tr>\n<td bgcolor='#eeeeee'>\n";
+	print_rec($obj);
+	echo "\n</td>\n</tr>\n</table>\n";
+}
+
+function print_rec($obj) {
+	if (is_string($obj)) {
+		echo "<pre>\n$obj\n</pre>\n";
+	} else {
+		foreach ($obj as $key=>$val) {
+			if (is_array($val) || is_object($val)) {
+				echo "<b>$key</b>:\n".print_rec($val)."<br>\n";
+			} else {
+				echo "<b>$key</b>: $val<br>\n";
+			}
+		}
+	}
+}
+
+?>
+<h2>Excercizing the sql method</h2>
+[query: 'select source_id,description from protein limit 3']
+<?php
+$ret = $c->call('sql',array('query'=>'select source_id,description from protein limit 3'),$ns);
+niceOut($ret);
+?>
+<hr>
+<h2>Making a deliberate error using the metallopdb method</h2>
+[metal: zn][mode: first][count: -3]
+<?php
+$ret = $c->call('metallopdb',array('metal'=>'zn', 'mode'=>'first','count'=>-3),$ns);
+if (PEAR::isError($ret))
+	echo "<br><b>OOPS we got an error</b>\n";
+niceOut($ret);
+?>
+<hr>
+<h2>Using the metallopdb method correctly</h2>
+[metal:zn][mode: random][count: 3]
+<?php
+$ret = $c->call('metallopdb', array('metal'=>'zn', 'mode'=>'random',
+'count'=>3), $ns);
+niceOut($ret);
+?>
+<hr>
+<h2>Using the rssmetallopdb method</h2>
+[metal: zn][mode: last][count: 3]
+<?php
+$ret = $c->call('rssmetallopdb', array('metal'=>'zn', 'mode'=>'last', 'count'=>3), $ns);
+niceOut(htmlspecialchars(base64_decode($ret)));
+?>
+]]>
+</example>
+</slide>
