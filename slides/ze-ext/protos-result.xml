@@ -10,94 +10,94 @@
 </head>
 <body bgcolor="#ffffff" text="#000000">
 <pre>
-<a name="line1"> 1</a> <font color="#444444">/*
-<a name="line2"> 2</a>   +----------------------------------------------------------------------+
-<a name="line3"> 3</a>   | PHP Version 4                                                        |
-<a name="line4"> 4</a>   +----------------------------------------------------------------------+
-<a name="line5"> 5</a>   | Copyright (c) 1997-2002 The PHP Group                                |
-<a name="line6"> 6</a>   +----------------------------------------------------------------------+
-<a name="line7"> 7</a>   | This source file is subject to version 2.02 of the PHP license,      |
-<a name="line8"> 8</a>   | that is bundled with this package in the file LICENSE, and is        |
-<a name="line9"> 9</a>   | available at through the world-wide-web at                           |
-<a name="line10">10</a>   | http://www.php.net/license/2_02.txt.                                 |
-<a name="line11">11</a>   | If you did not receive a copy of the PHP license and are unable to   |
-<a name="line12">12</a>   | obtain it through the world-wide-web, please send a note to          |
-<a name="line13">13</a>   | license@php.net so we can mail you a copy immediately.               |
-<a name="line14">14</a>   +----------------------------------------------------------------------+
-<a name="line15">15</a>   | Author:                                                              |
-<a name="line16">16</a>   +----------------------------------------------------------------------+
-<a name="line17">17</a> 
-<a name="line18">18</a>   $Id: protos-result.xml,v 1.1 2002-12-04 21:07:22 derick Exp $ 
-<a name="line19">19</a> */</font>
-<a name="line20">20</a> 
-<a name="line21">21</a> <font color="0000ff"><strong>#ifndef PHP_AALIB_H</strong></font>
-<a name="line22">22</a> <font color="0000ff"><strong>#define PHP_AALIB_H</strong></font>
-<a name="line23">23</a> 
-<a name="line24">24</a> <strong>extern</strong> <font color="#2040a0">zend_module_entry</font> <font color="#2040a0">aalib_module_entry</font><font color="4444FF">;</font>
-<a name="line25">25</a> <font color="0000ff"><strong>#define phpext_aalib_ptr &amp;aalib_module_entry</strong></font>
-<a name="line26">26</a> 
-<a name="line27">27</a> <font color="0000ff"><strong>#ifdef PHP_WIN32</strong></font>
-<a name="line28">28</a> <font color="0000ff"><strong>#define PHP_AALIB_API __declspec(dllexport)</strong></font>
-<a name="line29">29</a> <font color="0000ff"><strong>#else</strong></font>
-<a name="line30">30</a> <font color="0000ff"><strong>#define PHP_AALIB_API</strong></font>
-<a name="line31">31</a> <font color="0000ff"><strong>#endif</strong></font>
-<a name="line32">32</a> 
-<a name="line33">33</a> <font color="0000ff"><strong>#ifdef ZTS</strong></font>
-<a name="line34">34</a> <font color="0000ff"><strong>#include <font color="#008000">&quot;TSRM.h&quot;</font></strong></font>
-<a name="line35">35</a> <font color="0000ff"><strong>#endif</strong></font>
-<a name="line36">36</a> 
-<a name="line37">37</a> <font color="#2040a0">PHP_MINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line38">38</a> <font color="#2040a0">PHP_MSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line39">39</a> <font color="#2040a0">PHP_RINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line40">40</a> <font color="#2040a0">PHP_RSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line41">41</a> <font color="#2040a0">PHP_MINFO_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line42">42</a> 
-<a name="line43">43</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">confirm_aalib_compiled</font><font color="4444FF">)</font><font color="4444FF">;</font>   <font color="#444444">/* For testing, remove later. */</font>
-<a name="line44">44</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_init</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line45">45</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_height</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line46">46</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_width</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line47">47</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_put_pixel</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line48">48</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_render</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line49">49</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_all</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line50">50</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_lines</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line51">51</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_array</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line52">52</a> 
-<a name="line53">53</a> <font color="#444444">/* 
-<a name="line54">54</a>         Declare any global variables you may need between the BEGIN
-<a name="line55">55</a>         and END macros here:     
-<a name="line56">56</a> 
-<a name="line57">57</a> ZEND_BEGIN_MODULE_GLOBALS(aalib)
-<a name="line58">58</a>         int   global_value;
-<a name="line59">59</a>         char *global_string;
-<a name="line60">60</a> ZEND_END_MODULE_GLOBALS(aalib)
-<a name="line61">61</a> */</font>
-<a name="line62">62</a> 
-<a name="line63">63</a> <font color="#444444">/* In every utility function you add that needs to use variables 
-<a name="line64">64</a>    in php_aalib_globals, call TSRM_FETCH(); after declaring other 
-<a name="line65">65</a>    variables used by that function, or better yet, pass in TSRMLS_CC
-<a name="line66">66</a>    after the last function argument and declare your utility function
-<a name="line67">67</a>    with TSRMLS_DC after the last declared argument.  Always refer to
-<a name="line68">68</a>    the globals in your function as AALIB_G(variable).  You are 
-<a name="line69">69</a>    encouraged to rename these macros something shorter, see
-<a name="line70">70</a>    examples in any other php module directory.
-<a name="line71">71</a> */</font>
-<a name="line72">72</a> 
-<a name="line73">73</a> <font color="0000ff"><strong>#ifdef ZTS</strong></font>
-<a name="line74">74</a> <font color="0000ff"><strong>#define AALIB_G(v) TSRMG(aalib_globals_id, zend_aalib_globals *, v)</strong></font>
-<a name="line75">75</a> <font color="0000ff"><strong>#else</strong></font>
-<a name="line76">76</a> <font color="0000ff"><strong>#define AALIB_G(v) (aalib_globals.v)</strong></font>
-<a name="line77">77</a> <font color="0000ff"><strong>#endif</strong></font>
-<a name="line78">78</a> 
-<a name="line79">79</a> <font color="0000ff"><strong>#endif <font color="#444444"> /* PHP_AALIB_H */</font></strong></font>
-<a name="line80">80</a> 
-<a name="line81">81</a> 
-<a name="line82">82</a> <font color="#444444">/*
-<a name="line83">83</a>  * Local variables:
-<a name="line84">84</a>  * tab-width: 4
-<a name="line85">85</a>  * c-basic-offset: 4
-<a name="line86">86</a>  * indent-tabs-mode: t
-<a name="line87">87</a>  * End:
-<a name="line88">88</a>  */</font>
+ 1 <font color="#444444">/*
+ 2   +----------------------------------------------------------------------+
+ 3   | PHP Version 4                                                        |
+ 4   +----------------------------------------------------------------------+
+ 5   | Copyright (c) 1997-2002 The PHP Group                                |
+ 6   +----------------------------------------------------------------------+
+ 7   | This source file is subject to version 2.02 of the PHP license,      |
+ 8   | that is bundled with this package in the file LICENSE, and is        |
+ 9   | available at through the world-wide-web at                           |
+10   | http://www.php.net/license/2_02.txt.                                 |
+11   | If you did not receive a copy of the PHP license and are unable to   |
+12   | obtain it through the world-wide-web, please send a note to          |
+13   | license@php.net so we can mail you a copy immediately.               |
+14   +----------------------------------------------------------------------+
+15   | Author:                                                              |
+16   +----------------------------------------------------------------------+
+17 
+18   $Id: protos-result.xml,v 1.2 2002-12-05 07:41:06 derick Exp $ 
+19 */</font>
+20 
+21 <font color="0000ff">#ifndef PHP_AALIB_H</font>
+22 <font color="0000ff">#define PHP_AALIB_H</font>
+23 
+24 extern <font color="#2040a0">zend_module_entry</font> <font color="#2040a0">aalib_module_entry</font><font color="4444FF">;</font>
+25 <font color="0000ff">#define phpext_aalib_ptr &amp;aalib_module_entry</font>
+26 
+27 <font color="0000ff">#ifdef PHP_WIN32</font>
+28 <font color="0000ff">#define PHP_AALIB_API __declspec(dllexport)</font>
+29 <font color="0000ff">#else</font>
+30 <font color="0000ff">#define PHP_AALIB_API</font>
+31 <font color="0000ff">#endif</font>
+32 
+33 <font color="0000ff">#ifdef ZTS</font>
+34 <font color="0000ff">#include <font color="#008000">&quot;TSRM.h&quot;</font></font>
+35 <font color="0000ff">#endif</font>
+36 
+37 <font color="#2040a0">PHP_MINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
+38 <font color="#2040a0">PHP_MSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
+39 <font color="#2040a0">PHP_RINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
+40 <font color="#2040a0">PHP_RSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
+41 <font color="#2040a0">PHP_MINFO_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font><font color="4444FF">;</font>
+42 
+43 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">confirm_aalib_compiled</font><font color="4444FF">)</font><font color="4444FF">;</font>   <font color="#444444">/* For testing, remove later. */</font>
+44 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_init</font><font color="4444FF">)</font><font color="4444FF">;</font>
+45 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_height</font><font color="4444FF">)</font><font color="4444FF">;</font>
+46 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_width</font><font color="4444FF">)</font><font color="4444FF">;</font>
+47 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_put_pixel</font><font color="4444FF">)</font><font color="4444FF">;</font>
+48 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_render</font><font color="4444FF">)</font><font color="4444FF">;</font>
+49 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_all</font><font color="4444FF">)</font><font color="4444FF">;</font>
+50 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_lines</font><font color="4444FF">)</font><font color="4444FF">;</font>
+51 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_array</font><font color="4444FF">)</font><font color="4444FF">;</font>
+52 
+53 <font color="#444444">/* 
+54         Declare any global variables you may need between the BEGIN
+55         and END macros here:     
+56 
+57 ZEND_BEGIN_MODULE_GLOBALS(aalib)
+58         int   global_value;
+59         char *global_string;
+60 ZEND_END_MODULE_GLOBALS(aalib)
+61 */</font>
+62 
+63 <font color="#444444">/* In every utility function you add that needs to use variables 
+64    in php_aalib_globals, call TSRM_FETCH(); after declaring other 
+65    variables used by that function, or better yet, pass in TSRMLS_CC
+66    after the last function argument and declare your utility function
+67    with TSRMLS_DC after the last declared argument.  Always refer to
+68    the globals in your function as AALIB_G(variable).  You are 
+69    encouraged to rename these macros something shorter, see
+70    examples in any other php module directory.
+71 */</font>
+72 
+73 <font color="0000ff">#ifdef ZTS</font>
+74 <font color="0000ff">#define AALIB_G(v) TSRMG(aalib_globals_id, zend_aalib_globals *, v)</font>
+75 <font color="0000ff">#else</font>
+76 <font color="0000ff">#define AALIB_G(v) (aalib_globals.v)</font>
+77 <font color="0000ff">#endif</font>
+78 
+79 <font color="0000ff">#endif <font color="#444444"> /* PHP_AALIB_H */</font></font>
+80 
+81 
+82 <font color="#444444">/*
+83  * Local variables:
+84  * tab-width: 4
+85  * c-basic-offset: 4
+86  * indent-tabs-mode: t
+87  * End:
+88  */</font>
 
 </pre>
 </body>
@@ -112,348 +112,348 @@
 </head>
 <body bgcolor="#ffffff" text="#000000">
 <pre>
-<a name="line1">  1</a> <font color="#444444">/*
-<a name="line2">  2</a>   +----------------------------------------------------------------------+
-<a name="line3">  3</a>   | PHP Version 4                                                        |
-<a name="line4">  4</a>   +----------------------------------------------------------------------+
-<a name="line5">  5</a>   | Copyright (c) 1997-2002 The PHP Group                                |
-<a name="line6">  6</a>   +----------------------------------------------------------------------+
-<a name="line7">  7</a>   | This source file is subject to version 2.02 of the PHP license,      |
-<a name="line8">  8</a>   | that is bundled with this package in the file LICENSE, and is        |
-<a name="line9">  9</a>   | available at through the world-wide-web at                           |
-<a name="line10"> 10</a>   | http://www.php.net/license/2_02.txt.                                 |
-<a name="line11"> 11</a>   | If you did not receive a copy of the PHP license and are unable to   |
-<a name="line12"> 12</a>   | obtain it through the world-wide-web, please send a note to          |
-<a name="line13"> 13</a>   | license@php.net so we can mail you a copy immediately.               |
-<a name="line14"> 14</a>   +----------------------------------------------------------------------+
-<a name="line15"> 15</a>   | Author:                                                              |
-<a name="line16"> 16</a>   +----------------------------------------------------------------------+
-<a name="line17"> 17</a> 
-<a name="line18"> 18</a>   $Id: protos-result.xml,v 1.1 2002-12-04 21:07:22 derick Exp $ 
-<a name="line19"> 19</a> */</font>
-<a name="line20"> 20</a> 
-<a name="line21"> 21</a> <font color="0000ff"><strong>#ifdef HAVE_CONFIG_H</strong></font>
-<a name="line22"> 22</a> <font color="0000ff"><strong>#include <font color="#008000">&quot;config.h&quot;</font></strong></font>
-<a name="line23"> 23</a> <font color="0000ff"><strong>#endif</strong></font>
-<a name="line24"> 24</a> 
-<a name="line25"> 25</a> <font color="0000ff"><strong>#include <font color="#008000">&quot;php.h&quot;</font></strong></font>
-<a name="line26"> 26</a> <font color="0000ff"><strong>#include <font color="#008000">&quot;php_ini.h&quot;</font></strong></font>
-<a name="line27"> 27</a> <font color="0000ff"><strong>#include <font color="#008000">&quot;ext/standard/info.h&quot;</font></strong></font>
-<a name="line28"> 28</a> <font color="0000ff"><strong>#include <font color="#008000">&quot;php_aalib.h&quot;</font></strong></font>
-<a name="line29"> 29</a> 
-<a name="line30"> 30</a> <font color="#444444">/* If you declare any globals in php_aalib.h uncomment this:
-<a name="line31"> 31</a> ZEND_DECLARE_MODULE_GLOBALS(aalib)
-<a name="line32"> 32</a> */</font>
-<a name="line33"> 33</a> 
-<a name="line34"> 34</a> <font color="#444444">/* True global resources - no need for thread safety here */</font>
-<a name="line35"> 35</a> <strong>static</strong> <strong>int</strong> <font color="#2040a0">le_aalib</font><font color="4444FF">;</font>
-<a name="line36"> 36</a> 
-<a name="line37"> 37</a> <font color="#444444">/* {{{ aalib_functions[]
-<a name="line38"> 38</a>  *
-<a name="line39"> 39</a>  * Every user visible function must have an entry in aalib_functions[].
-<a name="line40"> 40</a>  */</font>
-<a name="line41"> 41</a> <font color="#2040a0">function_entry</font> <font color="#2040a0">aalib_functions</font><font color="4444FF">[</font><font color="4444FF">]</font> <font color="4444FF">=</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line42"> 42</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">confirm_aalib_compiled</font>,  <font color="#2040a0">NULL</font><font color="4444FF">)</font>           <font color="#444444">/* For testing, remove later. */</font>
-<a name="line43"> 43</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_init</font>, <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line44"> 44</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_height</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line45"> 45</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_width</font>,     <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line46"> 46</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_put_pixel</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line47"> 47</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_render</font>,       <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line48"> 48</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_all</font>,      <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line49"> 49</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_lines</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line50"> 50</a>         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_array</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
-<a name="line51"> 51</a>         <font color="4444FF"><strong>{</strong></font><font color="#2040a0">NULL</font>, <font color="#2040a0">NULL</font>, <font color="#2040a0">NULL</font><font color="4444FF"><strong>}</strong></font>      <font color="#444444">/* Must be the last line in aalib_functions[] */</font>
-<a name="line52"> 52</a> <font color="4444FF"><strong>}</strong></font><font color="4444FF">;</font>
-<a name="line53"> 53</a> <font color="#444444">/* }}} */</font>
-<a name="line54"> 54</a> 
-<a name="line55"> 55</a> <font color="#444444">/* {{{ aalib_module_entry
-<a name="line56"> 56</a>  */</font>
-<a name="line57"> 57</a> <font color="#2040a0">zend_module_entry</font> <font color="#2040a0">aalib_module_entry</font> <font color="4444FF">=</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line58"> 58</a> <font color="0000ff"><strong>#if ZEND_MODULE_API_NO &gt;= 20010901</strong></font>
-<a name="line59"> 59</a>         <font color="#2040a0">STANDARD_MODULE_HEADER</font>,
-<a name="line60"> 60</a> <font color="0000ff"><strong>#endif</strong></font>
-<a name="line61"> 61</a>         <font color="#008000">&quot;aalib&quot;</font>,
-<a name="line62"> 62</a>         <font color="#2040a0">aalib_functions</font>,
-<a name="line63"> 63</a>         <font color="#2040a0">PHP_MINIT</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,
-<a name="line64"> 64</a>         <font color="#2040a0">PHP_MSHUTDOWN</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,
-<a name="line65"> 65</a>         <font color="#2040a0">PHP_RINIT</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,               <font color="#444444">/* Replace with NULL if there's nothing to do at request start */</font>
-<a name="line66"> 66</a>         <font color="#2040a0">PHP_RSHUTDOWN</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,   <font color="#444444">/* Replace with NULL if there's nothing to do at request end */</font>
-<a name="line67"> 67</a>         <font color="#2040a0">PHP_MINFO</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,
-<a name="line68"> 68</a> <font color="0000ff"><strong>#if ZEND_MODULE_API_NO &gt;= 20010901</strong></font>
-<a name="line69"> 69</a>         <font color="#008000">&quot;0.1&quot;</font>, <font color="#444444">/* Replace with version number for your extension */</font>
-<a name="line70"> 70</a> <font color="0000ff"><strong>#endif</strong></font>
-<a name="line71"> 71</a>         <font color="#2040a0">STANDARD_MODULE_PROPERTIES</font>
-<a name="line72"> 72</a> <font color="4444FF"><strong>}</strong></font><font color="4444FF">;</font>
-<a name="line73"> 73</a> <font color="#444444">/* }}} */</font>
-<a name="line74"> 74</a> 
-<a name="line75"> 75</a> <font color="0000ff"><strong>#ifdef COMPILE_DL_AALIB</strong></font>
-<a name="line76"> 76</a> <font color="#2040a0">ZEND_GET_MODULE</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
-<a name="line77"> 77</a> <font color="0000ff"><strong>#endif</strong></font>
-<a name="line78"> 78</a> 
-<a name="line79"> 79</a> <font color="#444444">/* {{{ PHP_INI
-<a name="line80"> 80</a>  */</font>
-<a name="line81"> 81</a> <font color="#444444">/* Remove comments and fill if you need to have entries in php.ini
-<a name="line82"> 82</a> PHP_INI_BEGIN()
-<a name="line83"> 83</a>     STD_PHP_INI_ENTRY(&quot;aalib.global_value&quot;,      &quot;42&quot;, PHP_INI_ALL, OnUpdateInt, global_value, zend_aalib_globals, aalib_globals)
-<a name="line84"> 84</a>     STD_PHP_INI_ENTRY(&quot;aalib.global_string&quot;, &quot;foobar&quot;, PHP_INI_ALL, OnUpdateString, global_string, zend_aalib_globals, aalib_globals)
-<a name="line85"> 85</a> PHP_INI_END()
-<a name="line86"> 86</a> */</font>
-<a name="line87"> 87</a> <font color="#444444">/* }}} */</font>
-<a name="line88"> 88</a> 
-<a name="line89"> 89</a> <font color="#444444">/* {{{ php_aalib_init_globals
-<a name="line90"> 90</a>  */</font>
-<a name="line91"> 91</a> <font color="#444444">/* Uncomment this function if you have INI entries
-<a name="line92"> 92</a> static void php_aalib_init_globals(zend_aalib_globals *aalib_globals)
-<a name="line93"> 93</a> {
-<a name="line94"> 94</a>         aalib_globals-&gt;global_value = 0;
-<a name="line95"> 95</a>         aalib_globals-&gt;global_string = NULL;
-<a name="line96"> 96</a> }
-<a name="line97"> 97</a> */</font>
-<a name="line98"> 98</a> <font color="#444444">/* }}} */</font>
-<a name="line99"> 99</a> 
-<a name="line100">100</a> <font color="#444444">/* {{{ PHP_MINIT_FUNCTION
-<a name="line101">101</a>  */</font>
-<a name="line102">102</a> <font color="#2040a0">PHP_MINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
-<a name="line103">103</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line104">104</a>         <font color="#444444">/* If you have INI entries, uncomment these lines 
-<a name="line105">105</a>         ZEND_INIT_MODULE_GLOBALS(aalib, php_aalib_init_globals, NULL);
-<a name="line106">106</a>         REGISTER_INI_ENTRIES();
-<a name="line107">107</a>         */</font>
-<a name="line108">108</a>         <strong>return</strong> <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
-<a name="line109">109</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line110">110</a> <font color="#444444">/* }}} */</font>
-<a name="line111">111</a> 
-<a name="line112">112</a> <font color="#444444">/* {{{ PHP_MSHUTDOWN_FUNCTION
-<a name="line113">113</a>  */</font>
-<a name="line114">114</a> <font color="#2040a0">PHP_MSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
-<a name="line115">115</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line116">116</a>         <font color="#444444">/* uncomment this line if you have INI entries
-<a name="line117">117</a>         UNREGISTER_INI_ENTRIES();
-<a name="line118">118</a>         */</font>
-<a name="line119">119</a>         <strong>return</strong> <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
-<a name="line120">120</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line121">121</a> <font color="#444444">/* }}} */</font>
-<a name="line122">122</a> 
-<a name="line123">123</a> <font color="#444444">/* Remove if there's nothing to do at request start */</font>
-<a name="line124">124</a> <font color="#444444">/* {{{ PHP_RINIT_FUNCTION
-<a name="line125">125</a>  */</font>
-<a name="line126">126</a> <font color="#2040a0">PHP_RINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
-<a name="line127">127</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line128">128</a>         <strong>return</strong> <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
-<a name="line129">129</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line130">130</a> <font color="#444444">/* }}} */</font>
-<a name="line131">131</a> 
-<a name="line132">132</a> <font color="#444444">/* Remove if there's nothing to do at request end */</font>
-<a name="line133">133</a> <font color="#444444">/* {{{ PHP_RSHUTDOWN_FUNCTION
-<a name="line134">134</a>  */</font>
-<a name="line135">135</a> <font color="#2040a0">PHP_RSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
-<a name="line136">136</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line137">137</a>         <strong>return</strong> <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
-<a name="line138">138</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line139">139</a> <font color="#444444">/* }}} */</font>
-<a name="line140">140</a> 
-<a name="line141">141</a> <font color="#444444">/* {{{ PHP_MINFO_FUNCTION
-<a name="line142">142</a>  */</font>
-<a name="line143">143</a> <font color="#2040a0">PHP_MINFO_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
-<a name="line144">144</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line145">145</a>         <font color="#2040a0">php_info_print_table_start</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line146">146</a>         <font color="#2040a0">php_info_print_table_header</font><font color="4444FF">(</font><font color="#FF0000">2</font>, <font color="#008000">&quot;aalib support&quot;</font>, <font color="#008000">&quot;enabled&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line147">147</a>         <font color="#2040a0">php_info_print_table_end</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line148">148</a> 
-<a name="line149">149</a>         <font color="#444444">/* Remove comments if you have entries in php.ini
-<a name="line150">150</a>         DISPLAY_INI_ENTRIES();
-<a name="line151">151</a>         */</font>
-<a name="line152">152</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line153">153</a> <font color="#444444">/* }}} */</font>
-<a name="line154">154</a> 
-<a name="line155">155</a> 
-<a name="line156">156</a> <font color="#444444">/* Remove the following function when you have succesfully modified config.m4
-<a name="line157">157</a>    so that your module can be compiled into PHP, it exists only for testing
-<a name="line158">158</a>    purposes. */</font>
-<a name="line159">159</a> 
-<a name="line160">160</a> <font color="#444444">/* Every user-visible function in PHP should document itself in the source */</font>
-<a name="line161">161</a> <font color="#444444">/* {{{ proto string confirm_aalib_compiled(string arg)
-<a name="line162">162</a>    Return a string to confirm that the module is compiled in */</font>
-<a name="line163">163</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">confirm_aalib_compiled</font><font color="4444FF">)</font>
-<a name="line164">164</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line165">165</a>         <strong>char</strong> <font color="4444FF">*</font><font color="#2040a0">arg</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line166">166</a>         <strong>int</strong> <font color="#2040a0">arg_len</font>, <font color="#2040a0">len</font><font color="4444FF">;</font>
-<a name="line167">167</a>         <strong>char</strong> <font color="#2040a0">string</font><font color="4444FF">[</font><font color="#FF0000">256</font><font color="4444FF">]</font><font color="4444FF">;</font>
-<a name="line168">168</a> 
-<a name="line169">169</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;s&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">arg</font>, <font color="4444FF">&amp;</font><font color="#2040a0">arg_len</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line170">170</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line171">171</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line172">172</a> 
-<a name="line173">173</a>         <font color="#2040a0">len</font> <font color="4444FF">=</font> <font color="#2040a0">sprintf</font><font color="4444FF">(</font><font color="#2040a0">string</font>, <font color="#008000">&quot;Congratulations! You have successfully modified ext/%.78s/config.m4. Module %.78s is now compiled into PHP.&quot;</font>, <font color="#008000">&quot;aalib&quot;</font>, <font color="#2040a0">arg</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line174">174</a>         <font color="#2040a0">RETURN_STRINGL</font><font color="4444FF">(</font><font color="#2040a0">string</font>, <font color="#2040a0">len</font>, <font color="#FF0000">1</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line175">175</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line176">176</a> <font color="#444444">/* }}} */</font>
-<a name="line177">177</a> <font color="#444444">/* The previous line is meant for vim and emacs, so it can correctly fold and 
-<a name="line178">178</a>    unfold functions in source code. See the corresponding marks just before 
-<a name="line179">179</a>    function definition, where the functions purpose is also documented. Please 
-<a name="line180">180</a>    follow this convention for the convenience of others editing your code.
-<a name="line181">181</a> */</font>
-<a name="line182">182</a> 
-<a name="line183">183</a> <font color="#444444">/* {{{ proto resource aa_init()
-<a name="line184">184</a>    Initialize the AA library */</font>
-<a name="line185">185</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_init</font><font color="4444FF">)</font>
-<a name="line186">186</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line187">187</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font> <font color="4444FF">!</font><font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line188">188</a>                 <font color="#2040a0">WRONG_PARAM_COUNT</font><font color="4444FF">;</font>
-<a name="line189">189</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line190">190</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_init: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line191">191</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line192">192</a> <font color="#444444">/* }}} */</font>
-<a name="line193">193</a> 
-<a name="line194">194</a> <font color="#444444">/* {{{ proto int aa_get_screen_height(resource c)
-<a name="line195">195</a>    Get the screen height */</font>
-<a name="line196">196</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_height</font><font color="4444FF">)</font>
-<a name="line197">197</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line198">198</a>         <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line199">199</a>         <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
-<a name="line200">200</a>         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line201">201</a> 
-<a name="line202">202</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
-<a name="line203">203</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line204">204</a> 
-<a name="line205">205</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line206">206</a>                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line207">207</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line208">208</a> 
-<a name="line209">209</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_screen_height: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line210">210</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line211">211</a> <font color="#444444">/* }}} */</font>
-<a name="line212">212</a> 
-<a name="line213">213</a> <font color="#444444">/* {{{ proto int aa_get_screen_width(resource c)
-<a name="line214">214</a>    Get the screen width */</font>
-<a name="line215">215</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_width</font><font color="4444FF">)</font>
-<a name="line216">216</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line217">217</a>         <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line218">218</a>         <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
-<a name="line219">219</a>         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line220">220</a> 
-<a name="line221">221</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
-<a name="line222">222</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line223">223</a> 
-<a name="line224">224</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line225">225</a>                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line226">226</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line227">227</a> 
-<a name="line228">228</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_screen_width: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line229">229</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line230">230</a> <font color="#444444">/* }}} */</font>
-<a name="line231">231</a> 
-<a name="line232">232</a> <font color="#444444">/* {{{ proto void aa_put_pixel(resource c, int x, int y, int value)
-<a name="line233">233</a>    Draw a pixel */</font>
-<a name="line234">234</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_put_pixel</font><font color="4444FF">)</font>
-<a name="line235">235</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line236">236</a>         <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line237">237</a>         <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
-<a name="line238">238</a>         <strong>long</strong> <font color="#2040a0">x</font><font color="4444FF">;</font>
-<a name="line239">239</a>         <strong>long</strong> <font color="#2040a0">y</font><font color="4444FF">;</font>
-<a name="line240">240</a>         <strong>long</strong> <font color="#2040a0">value</font><font color="4444FF">;</font>
-<a name="line241">241</a>         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line242">242</a> 
-<a name="line243">243</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;rlll&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="4444FF">&amp;</font><font color="#2040a0">x</font>, <font color="4444FF">&amp;</font><font color="#2040a0">y</font>, <font color="4444FF">&amp;</font><font color="#2040a0">value</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
-<a name="line244">244</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line245">245</a> 
-<a name="line246">246</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line247">247</a>                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line248">248</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line249">249</a> 
-<a name="line250">250</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_put_pixel: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line251">251</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line252">252</a> <font color="#444444">/* }}} */</font>
-<a name="line253">253</a> 
-<a name="line254">254</a> <font color="#444444">/* {{{ proto void aa_render(resource c [, int contrast [, int dither [, int inversion [, int randomval]]]])
-<a name="line255">255</a>    Render the image */</font>
-<a name="line256">256</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_render</font><font color="4444FF">)</font>
-<a name="line257">257</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line258">258</a>         <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line259">259</a>         <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
-<a name="line260">260</a>         <strong>long</strong> <font color="#2040a0">contrast</font><font color="4444FF">;</font>
-<a name="line261">261</a>         <strong>long</strong> <font color="#2040a0">dither</font><font color="4444FF">;</font>
-<a name="line262">262</a>         <strong>long</strong> <font color="#2040a0">inversion</font><font color="4444FF">;</font>
-<a name="line263">263</a>         <strong>long</strong> <font color="#2040a0">randomval</font><font color="4444FF">;</font>
-<a name="line264">264</a>         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line265">265</a> 
-<a name="line266">266</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r|llll&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="4444FF">&amp;</font><font color="#2040a0">contrast</font>, <font color="4444FF">&amp;</font><font color="#2040a0">dither</font>, <font color="4444FF">&amp;</font><font color="#2040a0">inversion</font>, <font color="4444FF">&amp;</font><font color="#2040a0">randomval</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
-<a name="line267">267</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line268">268</a> 
-<a name="line269">269</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line270">270</a>                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line271">271</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line272">272</a> 
-<a name="line273">273</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_render: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line274">274</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line275">275</a> <font color="#444444">/* }}} */</font>
-<a name="line276">276</a> 
-<a name="line277">277</a> <font color="#444444">/* {{{ proto string aa_get_all(resource c)
-<a name="line278">278</a>    Get the result as one string */</font>
-<a name="line279">279</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_all</font><font color="4444FF">)</font>
-<a name="line280">280</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line281">281</a>         <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line282">282</a>         <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
-<a name="line283">283</a>         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line284">284</a> 
-<a name="line285">285</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
-<a name="line286">286</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line287">287</a> 
-<a name="line288">288</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line289">289</a>                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line290">290</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line291">291</a> 
-<a name="line292">292</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_all: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line293">293</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line294">294</a> <font color="#444444">/* }}} */</font>
-<a name="line295">295</a> 
-<a name="line296">296</a> <font color="#444444">/* {{{ proto array aa_get_lines(resource c)
-<a name="line297">297</a>    Get the result with one line in an array element */</font>
-<a name="line298">298</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_lines</font><font color="4444FF">)</font>
-<a name="line299">299</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line300">300</a>         <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line301">301</a>         <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
-<a name="line302">302</a>         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line303">303</a> 
-<a name="line304">304</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
-<a name="line305">305</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line306">306</a> 
-<a name="line307">307</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line308">308</a>                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line309">309</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line310">310</a> 
-<a name="line311">311</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_lines: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line312">312</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line313">313</a> <font color="#444444">/* }}} */</font>
-<a name="line314">314</a> 
-<a name="line315">315</a> <font color="#444444">/* {{{ proto array aa_get_array(resource c)
-<a name="line316">316</a>    Get the result with one element per pixel */</font>
-<a name="line317">317</a> <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_array</font><font color="4444FF">)</font>
-<a name="line318">318</a> <font color="4444FF"><strong>{</strong></font>
-<a name="line319">319</a>         <strong>int</strong> <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line320">320</a>         <strong>int</strong> <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
-<a name="line321">321</a>         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
-<a name="line322">322</a> 
-<a name="line323">323</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
-<a name="line324">324</a>                 <strong>return</strong><font color="4444FF">;</font>
-<a name="line325">325</a> 
-<a name="line326">326</a>         <strong>if</strong> <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF"><strong>{</strong></font>
-<a name="line327">327</a>                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line328">328</a>         <font color="4444FF"><strong>}</strong></font>
-<a name="line329">329</a> 
-<a name="line330">330</a>         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_array: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
-<a name="line331">331</a> <font color="4444FF"><strong>}</strong></font>
-<a name="line332">332</a> <font color="#444444">/* }}} */</font>
-<a name="line333">333</a> 
-<a name="line334">334</a> 
-<a name="line335">335</a> <font color="#444444">/*
-<a name="line336">336</a>  * Local variables:
-<a name="line337">337</a>  * tab-width: 4
-<a name="line338">338</a>  * c-basic-offset: 4
-<a name="line339">339</a>  * End:
-<a name="line340">340</a>  * vim600: noet sw=4 ts=4 fdm=marker
-<a name="line341">341</a>  * vim&lt;600: noet sw=4 ts=4
-<a name="line342">342</a>  */</font>
+  1 <font color="#444444">/*
+  2   +----------------------------------------------------------------------+
+  3   | PHP Version 4                                                        |
+  4   +----------------------------------------------------------------------+
+  5   | Copyright (c) 1997-2002 The PHP Group                                |
+  6   +----------------------------------------------------------------------+
+  7   | This source file is subject to version 2.02 of the PHP license,      |
+  8   | that is bundled with this package in the file LICENSE, and is        |
+  9   | available at through the world-wide-web at                           |
+ 10   | http://www.php.net/license/2_02.txt.                                 |
+ 11   | If you did not receive a copy of the PHP license and are unable to   |
+ 12   | obtain it through the world-wide-web, please send a note to          |
+ 13   | license@php.net so we can mail you a copy immediately.               |
+ 14   +----------------------------------------------------------------------+
+ 15   | Author:                                                              |
+ 16   +----------------------------------------------------------------------+
+ 17 
+ 18   $Id: protos-result.xml,v 1.2 2002-12-05 07:41:06 derick Exp $ 
+ 19 */</font>
+ 20 
+ 21 <font color="0000ff">#ifdef HAVE_CONFIG_H</font>
+ 22 <font color="0000ff">#include <font color="#008000">&quot;config.h&quot;</font></font>
+ 23 <font color="0000ff">#endif</font>
+ 24 
+ 25 <font color="0000ff">#include <font color="#008000">&quot;php.h&quot;</font></font>
+ 26 <font color="0000ff">#include <font color="#008000">&quot;php_ini.h&quot;</font></font>
+ 27 <font color="0000ff">#include <font color="#008000">&quot;ext/standard/info.h&quot;</font></font>
+ 28 <font color="0000ff">#include <font color="#008000">&quot;php_aalib.h&quot;</font></font>
+ 29 
+ 30 <font color="#444444">/* If you declare any globals in php_aalib.h uncomment this:
+ 31 ZEND_DECLARE_MODULE_GLOBALS(aalib)
+ 32 */</font>
+ 33 
+ 34 <font color="#444444">/* True global resources - no need for thread safety here */</font>
+ 35 static int <font color="#2040a0">le_aalib</font><font color="4444FF">;</font>
+ 36 
+ 37 <font color="#444444">/* {{{ aalib_functions[]
+ 38  *
+ 39  * Every user visible function must have an entry in aalib_functions[].
+ 40  */</font>
+ 41 <font color="#2040a0">function_entry</font> <font color="#2040a0">aalib_functions</font><font color="4444FF">[</font><font color="4444FF">]</font> <font color="4444FF">=</font> <font color="4444FF">{</font>
+ 42         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">confirm_aalib_compiled</font>,  <font color="#2040a0">NULL</font><font color="4444FF">)</font>           <font color="#444444">/* For testing, remove later. */</font>
+ 43         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_init</font>, <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 44         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_height</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 45         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_width</font>,     <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 46         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_put_pixel</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 47         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_render</font>,       <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 48         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_all</font>,      <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 49         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_lines</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 50         <font color="#2040a0">PHP_FE</font><font color="4444FF">(</font><font color="#2040a0">aa_get_array</font>,    <font color="#2040a0">NULL</font><font color="4444FF">)</font>
+ 51         <font color="4444FF">{</font><font color="#2040a0">NULL</font>, <font color="#2040a0">NULL</font>, <font color="#2040a0">NULL</font><font color="4444FF">}</font>      <font color="#444444">/* Must be the last line in aalib_functions[] */</font>
+ 52 <font color="4444FF">}</font><font color="4444FF">;</font>
+ 53 <font color="#444444">/* }}} */</font>
+ 54 
+ 55 <font color="#444444">/* {{{ aalib_module_entry
+ 56  */</font>
+ 57 <font color="#2040a0">zend_module_entry</font> <font color="#2040a0">aalib_module_entry</font> <font color="4444FF">=</font> <font color="4444FF">{</font>
+ 58 <font color="0000ff">#if ZEND_MODULE_API_NO &gt;= 20010901</font>
+ 59         <font color="#2040a0">STANDARD_MODULE_HEADER</font>,
+ 60 <font color="0000ff">#endif</font>
+ 61         <font color="#008000">&quot;aalib&quot;</font>,
+ 62         <font color="#2040a0">aalib_functions</font>,
+ 63         <font color="#2040a0">PHP_MINIT</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,
+ 64         <font color="#2040a0">PHP_MSHUTDOWN</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,
+ 65         <font color="#2040a0">PHP_RINIT</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,               <font color="#444444">/* Replace with NULL if there's nothing to do at request start */</font>
+ 66         <font color="#2040a0">PHP_RSHUTDOWN</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,   <font color="#444444">/* Replace with NULL if there's nothing to do at request end */</font>
+ 67         <font color="#2040a0">PHP_MINFO</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>,
+ 68 <font color="0000ff">#if ZEND_MODULE_API_NO &gt;= 20010901</font>
+ 69         <font color="#008000">&quot;0.1&quot;</font>, <font color="#444444">/* Replace with version number for your extension */</font>
+ 70 <font color="0000ff">#endif</font>
+ 71         <font color="#2040a0">STANDARD_MODULE_PROPERTIES</font>
+ 72 <font color="4444FF">}</font><font color="4444FF">;</font>
+ 73 <font color="#444444">/* }}} */</font>
+ 74 
+ 75 <font color="0000ff">#ifdef COMPILE_DL_AALIB</font>
+ 76 <font color="#2040a0">ZEND_GET_MODULE</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
+ 77 <font color="0000ff">#endif</font>
+ 78 
+ 79 <font color="#444444">/* {{{ PHP_INI
+ 80  */</font>
+ 81 <font color="#444444">/* Remove comments and fill if you need to have entries in php.ini
+ 82 PHP_INI_BEGIN()
+ 83     STD_PHP_INI_ENTRY(&quot;aalib.global_value&quot;,      &quot;42&quot;, PHP_INI_ALL, OnUpdateInt, global_value, zend_aalib_globals, aalib_globals)
+ 84     STD_PHP_INI_ENTRY(&quot;aalib.global_string&quot;, &quot;foobar&quot;, PHP_INI_ALL, OnUpdateString, global_string, zend_aalib_globals, aalib_globals)
+ 85 PHP_INI_END()
+ 86 */</font>
+ 87 <font color="#444444">/* }}} */</font>
+ 88 
+ 89 <font color="#444444">/* {{{ php_aalib_init_globals
+ 90  */</font>
+ 91 <font color="#444444">/* Uncomment this function if you have INI entries
+ 92 static void php_aalib_init_globals(zend_aalib_globals *aalib_globals)
+ 93 {
+ 94         aalib_globals-&gt;global_value = 0;
+ 95         aalib_globals-&gt;global_string = NULL;
+ 96 }
+ 97 */</font>
+ 98 <font color="#444444">/* }}} */</font>
+ 99 
+100 <font color="#444444">/* {{{ PHP_MINIT_FUNCTION
+101  */</font>
+102 <font color="#2040a0">PHP_MINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
+103 <font color="4444FF">{</font>
+104         <font color="#444444">/* If you have INI entries, uncomment these lines 
+105         ZEND_INIT_MODULE_GLOBALS(aalib, php_aalib_init_globals, NULL);
+106         REGISTER_INI_ENTRIES();
+107         */</font>
+108         return <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
+109 <font color="4444FF">}</font>
+110 <font color="#444444">/* }}} */</font>
+111 
+112 <font color="#444444">/* {{{ PHP_MSHUTDOWN_FUNCTION
+113  */</font>
+114 <font color="#2040a0">PHP_MSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
+115 <font color="4444FF">{</font>
+116         <font color="#444444">/* uncomment this line if you have INI entries
+117         UNREGISTER_INI_ENTRIES();
+118         */</font>
+119         return <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
+120 <font color="4444FF">}</font>
+121 <font color="#444444">/* }}} */</font>
+122 
+123 <font color="#444444">/* Remove if there's nothing to do at request start */</font>
+124 <font color="#444444">/* {{{ PHP_RINIT_FUNCTION
+125  */</font>
+126 <font color="#2040a0">PHP_RINIT_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
+127 <font color="4444FF">{</font>
+128         return <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
+129 <font color="4444FF">}</font>
+130 <font color="#444444">/* }}} */</font>
+131 
+132 <font color="#444444">/* Remove if there's nothing to do at request end */</font>
+133 <font color="#444444">/* {{{ PHP_RSHUTDOWN_FUNCTION
+134  */</font>
+135 <font color="#2040a0">PHP_RSHUTDOWN_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
+136 <font color="4444FF">{</font>
+137         return <font color="#2040a0">SUCCESS</font><font color="4444FF">;</font>
+138 <font color="4444FF">}</font>
+139 <font color="#444444">/* }}} */</font>
+140 
+141 <font color="#444444">/* {{{ PHP_MINFO_FUNCTION
+142  */</font>
+143 <font color="#2040a0">PHP_MINFO_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aalib</font><font color="4444FF">)</font>
+144 <font color="4444FF">{</font>
+145         <font color="#2040a0">php_info_print_table_start</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+146         <font color="#2040a0">php_info_print_table_header</font><font color="4444FF">(</font><font color="#FF0000">2</font>, <font color="#008000">&quot;aalib support&quot;</font>, <font color="#008000">&quot;enabled&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+147         <font color="#2040a0">php_info_print_table_end</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+148 
+149         <font color="#444444">/* Remove comments if you have entries in php.ini
+150         DISPLAY_INI_ENTRIES();
+151         */</font>
+152 <font color="4444FF">}</font>
+153 <font color="#444444">/* }}} */</font>
+154 
+155 
+156 <font color="#444444">/* Remove the following function when you have succesfully modified config.m4
+157    so that your module can be compiled into PHP, it exists only for testing
+158    purposes. */</font>
+159 
+160 <font color="#444444">/* Every user-visible function in PHP should document itself in the source */</font>
+161 <font color="#444444">/* {{{ proto string confirm_aalib_compiled(string arg)
+162    Return a string to confirm that the module is compiled in */</font>
+163 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">confirm_aalib_compiled</font><font color="4444FF">)</font>
+164 <font color="4444FF">{</font>
+165         char <font color="4444FF">*</font><font color="#2040a0">arg</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+166         int <font color="#2040a0">arg_len</font>, <font color="#2040a0">len</font><font color="4444FF">;</font>
+167         char <font color="#2040a0">string</font><font color="4444FF">[</font><font color="#FF0000">256</font><font color="4444FF">]</font><font color="4444FF">;</font>
+168 
+169         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;s&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">arg</font>, <font color="4444FF">&amp;</font><font color="#2040a0">arg_len</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+170                 return<font color="4444FF">;</font>
+171         <font color="4444FF">}</font>
+172 
+173         <font color="#2040a0">len</font> <font color="4444FF">=</font> <font color="#2040a0">sprintf</font><font color="4444FF">(</font><font color="#2040a0">string</font>, <font color="#008000">&quot;Congratulations! You have successfully modified ext/%.78s/config.m4. Module %.78s is now compiled into PHP.&quot;</font>, <font color="#008000">&quot;aalib&quot;</font>, <font color="#2040a0">arg</font><font color="4444FF">)</font><font color="4444FF">;</font>
+174         <font color="#2040a0">RETURN_STRINGL</font><font color="4444FF">(</font><font color="#2040a0">string</font>, <font color="#2040a0">len</font>, <font color="#FF0000">1</font><font color="4444FF">)</font><font color="4444FF">;</font>
+175 <font color="4444FF">}</font>
+176 <font color="#444444">/* }}} */</font>
+177 <font color="#444444">/* The previous line is meant for vim and emacs, so it can correctly fold and 
+178    unfold functions in source code. See the corresponding marks just before 
+179    function definition, where the functions purpose is also documented. Please 
+180    follow this convention for the convenience of others editing your code.
+181 */</font>
+182 
+183 <font color="#444444">/* {{{ proto resource aa_init()
+184    Initialize the AA library */</font>
+185 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_init</font><font color="4444FF">)</font>
+186 <font color="4444FF">{</font>
+187         if <font color="4444FF">(</font><font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font> <font color="4444FF">!</font><font color="4444FF">=</font> <font color="#FF0000">0</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+188                 <font color="#2040a0">WRONG_PARAM_COUNT</font><font color="4444FF">;</font>
+189         <font color="4444FF">}</font>
+190         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_init: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+191 <font color="4444FF">}</font>
+192 <font color="#444444">/* }}} */</font>
+193 
+194 <font color="#444444">/* {{{ proto int aa_get_screen_height(resource c)
+195    Get the screen height */</font>
+196 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_height</font><font color="4444FF">)</font>
+197 <font color="4444FF">{</font>
+198         int <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+199         int <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+200         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+201 
+202         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+203                 return<font color="4444FF">;</font>
+204 
+205         if <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+206                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
+207         <font color="4444FF">}</font>
+208 
+209         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_screen_height: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+210 <font color="4444FF">}</font>
+211 <font color="#444444">/* }}} */</font>
+212 
+213 <font color="#444444">/* {{{ proto int aa_get_screen_width(resource c)
+214    Get the screen width */</font>
+215 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_screen_width</font><font color="4444FF">)</font>
+216 <font color="4444FF">{</font>
+217         int <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+218         int <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+219         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+220 
+221         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+222                 return<font color="4444FF">;</font>
+223 
+224         if <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+225                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
+226         <font color="4444FF">}</font>
+227 
+228         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_screen_width: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+229 <font color="4444FF">}</font>
+230 <font color="#444444">/* }}} */</font>
+231 
+232 <font color="#444444">/* {{{ proto void aa_put_pixel(resource c, int x, int y, int value)
+233    Draw a pixel */</font>
+234 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_put_pixel</font><font color="4444FF">)</font>
+235 <font color="4444FF">{</font>
+236         int <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+237         int <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+238         long <font color="#2040a0">x</font><font color="4444FF">;</font>
+239         long <font color="#2040a0">y</font><font color="4444FF">;</font>
+240         long <font color="#2040a0">value</font><font color="4444FF">;</font>
+241         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+242 
+243         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;rlll&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="4444FF">&amp;</font><font color="#2040a0">x</font>, <font color="4444FF">&amp;</font><font color="#2040a0">y</font>, <font color="4444FF">&amp;</font><font color="#2040a0">value</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+244                 return<font color="4444FF">;</font>
+245 
+246         if <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+247                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
+248         <font color="4444FF">}</font>
+249 
+250         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_put_pixel: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+251 <font color="4444FF">}</font>
+252 <font color="#444444">/* }}} */</font>
+253 
+254 <font color="#444444">/* {{{ proto void aa_render(resource c [, int contrast [, int dither [, int inversion [, int randomval]]]])
+255    Render the image */</font>
+256 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_render</font><font color="4444FF">)</font>
+257 <font color="4444FF">{</font>
+258         int <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+259         int <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+260         long <font color="#2040a0">contrast</font><font color="4444FF">;</font>
+261         long <font color="#2040a0">dither</font><font color="4444FF">;</font>
+262         long <font color="#2040a0">inversion</font><font color="4444FF">;</font>
+263         long <font color="#2040a0">randomval</font><font color="4444FF">;</font>
+264         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+265 
+266         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r|llll&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="4444FF">&amp;</font><font color="#2040a0">contrast</font>, <font color="4444FF">&amp;</font><font color="#2040a0">dither</font>, <font color="4444FF">&amp;</font><font color="#2040a0">inversion</font>, <font color="4444FF">&amp;</font><font color="#2040a0">randomval</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+267                 return<font color="4444FF">;</font>
+268 
+269         if <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+270                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
+271         <font color="4444FF">}</font>
+272 
+273         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_render: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+274 <font color="4444FF">}</font>
+275 <font color="#444444">/* }}} */</font>
+276 
+277 <font color="#444444">/* {{{ proto string aa_get_all(resource c)
+278    Get the result as one string */</font>
+279 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_all</font><font color="4444FF">)</font>
+280 <font color="4444FF">{</font>
+281         int <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+282         int <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+283         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+284 
+285         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+286                 return<font color="4444FF">;</font>
+287 
+288         if <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+289                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
+290         <font color="4444FF">}</font>
+291 
+292         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_all: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+293 <font color="4444FF">}</font>
+294 <font color="#444444">/* }}} */</font>
+295 
+296 <font color="#444444">/* {{{ proto array aa_get_lines(resource c)
+297    Get the result with one line in an array element */</font>
+298 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_lines</font><font color="4444FF">)</font>
+299 <font color="4444FF">{</font>
+300         int <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+301         int <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+302         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+303 
+304         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+305                 return<font color="4444FF">;</font>
+306 
+307         if <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+308                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
+309         <font color="4444FF">}</font>
+310 
+311         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_lines: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+312 <font color="4444FF">}</font>
+313 <font color="#444444">/* }}} */</font>
+314 
+315 <font color="#444444">/* {{{ proto array aa_get_array(resource c)
+316    Get the result with one element per pixel */</font>
+317 <font color="#2040a0">PHP_FUNCTION</font><font color="4444FF">(</font><font color="#2040a0">aa_get_array</font><font color="4444FF">)</font>
+318 <font color="4444FF">{</font>
+319         int <font color="#2040a0">argc</font> <font color="4444FF">=</font> <font color="#2040a0">ZEND_NUM_ARGS</font><font color="4444FF">(</font><font color="4444FF">)</font><font color="4444FF">;</font>
+320         int <font color="#2040a0">c_id</font> <font color="4444FF">=</font> <font color="4444FF">-</font><font color="#FF0000">1</font><font color="4444FF">;</font>
+321         <font color="#2040a0">zval</font> <font color="4444FF">*</font><font color="#2040a0">c</font> <font color="4444FF">=</font> <font color="#2040a0">NULL</font><font color="4444FF">;</font>
+322 
+323         if <font color="4444FF">(</font><font color="#2040a0">zend_parse_parameters</font><font color="4444FF">(</font><font color="#2040a0">argc</font> <font color="#2040a0">TSRMLS_CC</font>, <font color="#008000">&quot;r&quot;</font>, <font color="4444FF">&amp;</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">=</font><font color="4444FF">=</font> <font color="#2040a0">FAILURE</font><font color="4444FF">)</font> 
+324                 return<font color="4444FF">;</font>
+325 
+326         if <font color="4444FF">(</font><font color="#2040a0">c</font><font color="4444FF">)</font> <font color="4444FF">{</font>
+327                 <font color="#2040a0">ZEND_FETCH_RESOURCE</font><font color="4444FF">(</font>???, ???, <font color="4444FF">&amp;</font><font color="#2040a0">c</font>, <font color="#2040a0">c_id</font>, <font color="#008000">&quot;???&quot;</font>, ???<font color="#2040a0">_rsrc_id</font><font color="4444FF">)</font><font color="4444FF">;</font>
+328         <font color="4444FF">}</font>
+329 
+330         <font color="#2040a0">php_error</font><font color="4444FF">(</font><font color="#2040a0">E_WARNING</font>, <font color="#008000">&quot;aa_get_array: not yet implemented&quot;</font><font color="4444FF">)</font><font color="4444FF">;</font>
+331 <font color="4444FF">}</font>
+332 <font color="#444444">/* }}} */</font>
+333 
+334 
+335 <font color="#444444">/*
+336  * Local variables:
+337  * tab-width: 4
+338  * c-basic-offset: 4
+339  * End:
+340  * vim600: noet sw=4 ts=4 fdm=marker
+341  * vim&lt;600: noet sw=4 ts=4
+342  */</font>
 
 </pre>
 </body>
