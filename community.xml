@@ -9,11 +9,6 @@
 <url>http://conf.php.net/community</url>
 
 <!--
-* History
-* People
-* CVS
-* Bug System
-* Documentation
 * Mailing Lists
 ** as news groups
 ** comp.lang.php
@@ -24,8 +19,29 @@
 
 <slide>slides/intro/titlepage.xml</slide>
 
-<slide>slides/community/mail-lists.xml</slide>
+<!-- * History -->
+<slide>slides/intro/theroad.xml</slide>
+<slide>slides/state/timeline.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+
+<!-- * People -->
+
+<slide>slides/community/group.xml</slide>
+
+<!-- * CVS -->
+<slide>slides/community/cvs.xml</slide>
+
+<!-- * Bug System -->
 <slide>slides/community/bugs.xml</slide>
+
+<!-- * Documentation -->
+
+<!-- * Mailing Lists -->
+<slide>slides/community/mail-lists.xml</slide>
+
+<!-- * Conferences -->
+
+<!-- * User Groups -->
 
 <slide>slides/community/fin.xml</slide>
 
