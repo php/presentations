@@ -1,0 +1,46 @@
+<presentation
+	template="php" 
+	navmode="html"
+	backgroundrepeat="1"
+	backgroundfixed="1"
+>
+<topic>PHP</topic>
+<title>Tidying up your HTML with PHP</title>
+<copyright>(c) Copyright 2004 John Coggeshall</copyright>
+<event>Chicago User Group</event>
+<location>Chicago, IL</location>
+<date>Jan 3rd, 2004</date>
+<speaker>John Coggeshall</speaker>
+<url>http://www.coggeshall.org/</url>
+<email>john@php.net</email>
+<navmode>html</navmode>
+<slide>slides/tidy_cug/titlepage.xml</slide>
+<slide>slides/tidy_cug/intro.xml</slide>
+<slide>slides/tidy_cug/api.xml</slide>
+<slide>slides/tidy_cug/intro2.xml</slide>
+<slide>slides/tidy_cug/intro3.xml</slide>
+<slide>slides/tidy_cug/config.xml</slide>
+<slide>slides/tidy_cug/configa.xml</slide>
+<slide>slides/tidy_cug/config2.xml</slide>
+<slide>slides/tidy_cug/tidyopts.xml</slide>
+<slide>slides/tidy_cug/repair.xml</slide>
+<slide>slides/tidy_cug/intro4.xml</slide>
+<slide>slides/tidy_cug/clean.xml</slide>
+<slide>slides/tidy_cug/xhtml.xml</slide>
+<slide>slides/tidy_cug/bandwidth.xml</slide>
+<slide>slides/tidy_cug/beauty.xml</slide>
+<slide>slides/tidy_cug/parsing.xml</slide>
+<slide>slides/tidy_cug/parsing2.xml</slide>
+<slide>slides/tidy_cug/parsing3.xml</slide>
+<slide>slides/tidy_cug/parsing4.xml</slide>
+<slide>slides/tidy_cug/parsing5.xml</slide>
+<slide>slides/tidy_cug/parsing6.xml</slide>
+<slide>slides/tidy_cug/parsing7.xml</slide>
+<slide>slides/tidy_cug/parsing8.xml</slide>
+<slide>slides/tidy_cug/parsing9.xml</slide>
+<slide>slides/tidy_cug/from4to5.xml</slide>
+<slide>slides/tidy_cug/outputbuf.xml</slide>
+<slide>slides/tidy_cug/smarty.xml</slide>
+<slide>slides/tidy_cug/thankyou.xml</slide>
+</presentation>
+    
