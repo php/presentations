@@ -1,4 +1,5 @@
 <slide title="cThreads">
+<link href="http://www.parallelport.de/cthreads.html" align="center">http://www.parallelport.de/cthreads.html</link>
 <list>
  <bullet>Uses HTTP basic authentication for logins</bullet>
  <bullet>Stores messages in text files</bullet>
@@ -8,5 +9,6 @@
  <bullet>Little customization, but fairly lightweight and straightforward code</bullet>
 </list>
 
-<!-- TODO: screenshot -->
+<image align="center" filename="slides/pragmatic/cforum.png" />
+
 </slide>

@@ -1,11 +1,11 @@
 <slide title="phpBB">
+<link href="http://www.phpbb.com/" align="center">http://www.phpbb.com/</link>
 <list>
- <bullet>http://www.phpbb.com/</bullet>
  <bullet>MySQL/PostgreSQL/Microsoft SQL Server/Access-driven</bullet>
  <bullet>Browser-based install script</bullet>
  <bullet>Browser-based administration</bullet>
  <bullet>Mix of configuration settings and files for customization</bullet>
 </list>
 
-<!-- TODO: screenshot -->
+<image align="center" filename="slides/pragmatic/phpbb.png" />
 </slide>

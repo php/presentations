@@ -1,6 +1,6 @@
 <slide title="w-agora">
+<link href="http://www.w-agora.net/" align="center">http://www.w-agora.net/</link>
 <list>
- <bullet>http://www.w-agora.net/</bullet>
  <bullet>MySQL/PostgreSQL/Oracle/Microsoft SQL Server-driven</bullet>
  <bullet>Browser-based install script</bullet>
  <bullet>Browser-based administration</bullet>
@@ -8,5 +8,5 @@
  <bullet>Can tie into external user database</bullet>
 </list>
 
-<!-- TODO: screenshot -->
+<image align="center" filename="slides/pragmatic/wagora.png" />
 </slide>

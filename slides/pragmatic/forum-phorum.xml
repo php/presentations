@@ -1,6 +1,6 @@
 <slide title="Phorum">
+<link href="http://www.phorum.org/" align="center">http://www.phorum.org/</link>
 <list>
- <bullet>http://www.phorum.org/</bullet>
  <bullet>MySQL/PostgreSQL-driven</bullet>
  <bullet>Browser-based install script</bullet>
  <bullet>Browser-based administration</bullet>
@@ -10,5 +10,5 @@
  <bullet>Two-way NNTP integration via Papercut (http://papercut.org)</bullet>
 </list>
 
-<!-- TODO: screenshot -->
+<image align="center" filename="slides/pragmatic/phorum.png" />
 </slide>

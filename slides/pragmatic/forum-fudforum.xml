@@ -1,11 +1,10 @@
 <slide title="FUDforum">
+<link href="http://fud.prohost.org/" align="center">http://fud.prohost.org/</link>
 <list>
- <bullet>http://fud.prohost.org/</bullet>
  <bullet>MySQL-driven</bullet>
  <bullet>Browser-based install script</bullet>
  <bullet>Feature-rich</bullet>
  <bullet>Browser-based configuration, including templates</bullet>
 </list>
-
-<!-- TODO: screenshot -->
+<image align="center" filename="slides/pragmatic/fudforum.png" />
 </slide>

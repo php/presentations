@@ -1,9 +1,10 @@
 <slide title="L-Forum">
+<link href="http://l-forum.x-php.net/" align="center">http://l-forum.x-php.net/</link>
 <list>
- <bullet>http://www.l-forum.w-wa.pl/</bullet>
  <bullet>MySQL/PostgreSQL-driven</bullet>
  <bullet>No logins required (but saves email/name in cookie)</bullet>
  <bullet>Browser-based configuration</bullet>
  <bullet>Simple theme system (variables and files)</bullet>
 </list>
+<image align="center" filename="slides/pragmatic/lforum.png" />
 </slide>
