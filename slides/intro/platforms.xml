@@ -1,6 +1,6 @@
-<slide title="Platforms">
+<slide title="Platforms" layout="2columns">
 
-<list title="Operating Systems Supported">
+<list title="Operating Systems" fontsize="2.5em">
 <bullet>UNIX (all variants)</bullet>
 <bullet>Win32 (NT/W95/W98/W2000)</bullet>
 <bullet>QNX</bullet>
@@ -11,7 +11,8 @@
 <bullet>OS/390 (experimental)</bullet>
 <bullet>AS/400 (experimental)</bullet>
 </list>
-<list title="Server Interfaces (SAPI Modules)">
+<divide />
+<list title="Server Interfaces" fontsize="2.5em">
 <bullet>Apache module (UNIX,Win32)</bullet>
 <bullet>CGI/FastCGI</bullet>
 <bullet>thttpd </bullet>

@@ -1,4 +1,4 @@
-<slide title="Database Support">
+<slide title="Database Support" layout="2columns">
 <list title="SQL">
 <bullet> Adabas D</bullet>
 <bullet> Empress</bullet>
@@ -19,6 +19,7 @@
 <bullet> Sybase</bullet>
 <bullet> DB++</bullet>
 </list>
+<divide />
 <list title="Others">
 <bullet>dBase</bullet>
 <bullet>filePro (read-only)</bullet>
