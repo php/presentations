@@ -24,4 +24,7 @@
 	<blurb fontsize="3.5em">PHP 5:</blurb>
     <example fontsize="1.3em"><![CDATA[TheNetherlands]]></example>
 
+	<blurb fontsize="3.5">
+		The same is true for get_parent_class() and get_class_methods().
+	</blurb>
 </slide>
