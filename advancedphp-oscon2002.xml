@@ -10,10 +10,8 @@
   <event>O'Reilly Open Source Convention</event> 
   <location>San Diego, California</location> 
   <date>July 23, 2002</date> 
-  <speaker>Sterling Hughes</speaker> 
-  <email>sterling@php.net</email>
-  <speaker>Andrei Zmievski, FAST Search &amp; Transfer</speaker>
-  <email>andrei@php.net</email>
+  <speaker>Sterling Hughes &amp; Andrei Zmievski (FAST Search &amp; Transfer) &lt;br /&gt;</speaker> 
+  <email>sterling@php.net / andrei@php.net</email>
   <url>http://pres.blog.at/show/advancedphp-oscon2002</url>
   <slide>slides/advphp/titlepage.xml</slide>
   <slide>slides/advphp/perf_intr.xml</slide>
