@@ -20,6 +20,7 @@
 <slide>slides/hpp/compiler_caches.xml</slide>
 <slide>slides/hpp/lifecycle.xml</slide>
 <slide>slides/hpp/how_ccache.xml</slide>
+<slide>slides/hpp/hdparm.xml</slide>
 <slide>slides/hpp/io_sizes.xml</slide>
 <slide>slides/hpp/data_path.xml</slide>
 <slide>slides/hpp/sys_ob.xml</slide>
@@ -48,7 +49,11 @@
 <slide>slides/hpp/denormalization.xml</slide>
 <slide>slides/hpp/summarizations.xml</slide>
 <slide>slides/hpp/summarization_example.xml</slide>
-<slide>slides/hpp/idiosyncrasies.xml</slide>
+<slide>slides/hpp/oracle_opt.xml</slide>
+<slide>slides/hpp/mysql_opt.xml</slide>
+<slide>slides/hpp/mysql_opt1.xml</slide>
+<slide>slides/hpp/mysql_opt2.xml</slide>
+<slide>slides/hpp/mysql_opt3.xml</slide>
 <slide>slides/hpp/lazy_initialization.xml</slide>
 <slide>slides/hpp/lazy_initialization1.xml</slide>
 <slide>slides/hpp/internal_functions.xml</slide>
