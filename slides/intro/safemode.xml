@@ -1,0 +1,56 @@
+<slide title="Safe Mode">
+<blurb>
+Safe Mode is an attempt to solve the shared-server security problem.
+It is architecturally incorrect to try to solve this problem at the PHP 
+level, but since the alternatives at the web server and OS levels aren't 
+very realistic, many people, especially ISP's, use safe mode for now.
+</blurb>
+<example title="The configuration directives that control safe mode are:"><![CDATA[safe_mode = Off
+open_basedir = 
+safe_mode_exec_dir =
+safe_mode_allowed_env_vars = PHP_
+safe_mode_protected_env_vars = LD_LIBRARY_PATH
+disable_functions =]]></example>
+
+<blurb>
+When safe_mode is on, PHP checks to see if the owner of the current
+script matches the owner of the file to be operated on by a file function.
+</blurb>
+<example type="shell" fontsize="1.6em" title="For example:"><![CDATA[-rw-rw-r--    1 rasmus   rasmus       33 Jul  1 19:20 script.php
+-rw-r--r--    1 root     root       1116 May 26 18:01 /etc/passwd]]></example>
+
+<blurb>
+Running this script.php
+</blurb>
+<example><![CDATA[<?php
+readfile('/etc/passwd');
+?>]]></example>
+
+<blurb>
+results in this error when safe mode is enabled:
+</blurb>
+<example examplebackground="#eeee33" fontsize="1.5em" type="html"><![CDATA[<b>Warning</b>:  SAFE MODE Restriction in effect.  The script whose uid is 500 is not allowed to access /etc/passwd owned by uid 0 in <b>/docroot/script.php</b> on line <b>2</b>]]></example>
+<blurb>
+If instead of safe_mode, you set an open_basedir directory then all file operations will be 
+limited to files under the specified directory.   For example (Apache httpd.conf example):
+</blurb>
+<example><![CDATA[<Directory /docroot>
+php_admin_value open_basedir /docroot
+</Directory>]]></example>
+
+<blurb>
+If you run the same script.php with this open_basedir setting then this is the result:
+</blurb>
+<example examplebackground="#eeee33" fontsize="1.5em" type="html"><![CDATA[<b>Warning</b>: open_basedir restriction in effect. File is in wrong directory in
+<b>/docroot/script.php</b> on line <b>2</b>]]></example>
+
+<blurb>
+You can also disable individual functions.  If we add this to our php.ini file:
+</blurb>
+<example><![CDATA[disable_functions readfile,system]]></example>
+<blurb>
+Then we get this output:
+</blurb>
+<example examplebackground="#eeee33" fontsize="1.5em" type="html"><![CDATA[<b>Warning</b>:  readfile() has been disabled for security reasons in <b>/docroot/script.php</b> on line <b>2</b>]]></example>
+
+</slide>
