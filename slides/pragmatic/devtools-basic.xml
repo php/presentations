@@ -1,0 +1,20 @@
+<slide title="Basic Tools">
+<list title="Server Software">
+ <bullet>Apache (http://httpd.apache.org/)</bullet>
+ <bullet>PHP (http://www.php.net/)</bullet>
+</list>
+<example type="shell">apt-get install apache php4</example>
+<blurb>
+ Windows users can use something like EasyPHP (http://easyphp.org/) to get a
+ basic Apache, MySQL, and PHP install running.
+</blurb>
+<list title="Editors">
+ <bullet>vim (http://vim.org)</bullet>
+ <bullet>emacs (http://xemacs.org, http://gnu.org/software/emacs)</bullet>
+ <bullet>Notepad</bullet>
+ <bullet>TextPad (http://textpad.com)</bullet>
+ <bullet>EditPlus (http://editplus.com)</bullet>
+ <bullet>Macromedia Dreamweaver</bullet>
+ <bullet>etc....</bullet>
+</list>
+</slide>
