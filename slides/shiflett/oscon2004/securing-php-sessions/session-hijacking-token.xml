@@ -1,0 +1,6 @@
+<slide>
+<title>Session Hijacking</title>
+<blurb fontsize="4em">If you don't trust the consistency of anything, a
+unique token is better than nothing.</blurb>
+<example filename="code/session-hijacking-token.php" result="0" />
+</slide>

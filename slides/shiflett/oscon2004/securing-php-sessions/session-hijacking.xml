@@ -1,0 +1,10 @@
+<slide>
+<title>Session Hijacking</title>
+<blurb fontsize="4em">Again, *%session_start()%* isn't enough.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">Don't use IP address for identification!</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">Assume the session identifier is captured.</blurb>
+<blurb> </blurb>
+<blurb fontsize="4em">Complicate impersonation.</blurb>
+</slide>

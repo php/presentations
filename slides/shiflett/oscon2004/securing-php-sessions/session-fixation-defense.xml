@@ -1,0 +1,5 @@
+<slide>
+<title>Session Fixation</title>
+<blurb fontsize="4em">*%session_regenerate_id%* is your friend.</blurb>
+<example filename="code/session-fixation-defense.php" result="0" />
+</slide>
