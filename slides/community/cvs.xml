@@ -1,10 +1,10 @@
 <slide title="CVS">
 <list>
- <bullet>598 users</bullet>
+ <bullet>572 users</bullet>
  <bullet>Using pserver authentication</bullet>
  <bullet>All checkins go to mailing lists</bullet>
 </list>
 
-<image align="center" filename="slides/community/php4-files.png" />
-<image align="center" filename="slides/community/php4-lines.png" />
+<image title="Files" align="center" filename="slides/community/php4-file.png" />
+<image title="Lines of Code" align="center" filename="slides/community/php4-line.png" />
 </slide>
