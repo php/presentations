@@ -1,0 +1,18 @@
+<slide title="Template System">
+<image filename="../../../images/blank.gif" align="center" width="1" height="20" />
+<list fontsize="5em">
+<bullet>A mechanism to separate logic from layout.</bullet>
+</list>
+<image filename="../../../images/blank.gif" align="center" width="1" height="20" />
+<list fontsize="5em">
+<bullet>The defining characteristic is where and how the intersection between logic and layout is done.</bullet>
+</list>
+<image filename="../../../images/blank.gif" align="center" width="1" height="20" />
+<list fontsize="5em">
+<bullet>PHP is a general-purpose templating system.</bullet>
+</list>
+<image filename="../../../images/blank.gif" align="center" width="1" height="20" />
+<list fontsize="5em">
+<bullet>Any general-purpose templating system will eventually become PHP.</bullet>
+</list>
+</slide>

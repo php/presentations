@@ -1,0 +1,50 @@
+<slide title="Streams and filters">
+
+<break />
+
+<example><![CDATA[<?php
+    echo "<pre>";
+	print_r(stream_get_wrappers());     
+	print_r(stream_get_filters());     
+    echo "</pre>";
+?>]]></example>
+
+<example fontsize="1.8em"><![CDATA[Array
+(
+    [0] => php
+    [1] => file
+    [2] => http
+    [3] => ftp
+    [4] => compress.zlib
+)
+
+Array
+(
+    [0] => string.rot13
+    [1] => string.toupper
+    [2] => string.tolower
+    [3] => string.strip_tags
+    [4] => convert.*
+)]]></example>
+
+<example title="Examples" fontsize="1.4em"><![CDATA[<?php
+readfile("php://filter/read=string.toupper/resource=http://www.example.com");
+
+$fp = fopen("compress.zlib://foo-bar.txt.gz", "wb");
+
+$httpsfile = file_get_contents("https://www.example.com/foo.txt");
+
+$sock = fsockopen("ssl://secure.example.com", 443, $errno, $errstr, 30);
+
+?>]]></example>
+
+<example title="stream_copy_to_stream" fontsize="1.4em"><![CDATA[<?php
+$src = fopen('http://www.example.com','r');
+$dest1 = fopen('first1k.txt','w');
+$dest2 = fopen('remainder.txt','w');
+
+stream_copy_to_stream($src, $dest1, 1024);
+stream_copy_to_stream($src, $dest2); 
+?>]]></example>
+
+</slide>

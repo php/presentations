@@ -1,0 +1,26 @@
+<slide title="Integrating PHP">
+
+<list title="Making it all talk to each other">
+<bullet>C</bullet>
+<bullet>C++</bullet>
+<bullet>Shared Libraries</bullet>
+<bullet>ELF</bullet>
+<bullet>runtime linker</bullet>
+</list>
+
+<example title="No Function-scoped Static Objects"><![CDATA[void example() {
+   static std::string str;
+}]]></example>
+
+<blurb>gcc 3.x has %-fuse-cxa-atexit% and your libc needs to support __cxa_atexit() in
+order to solve this problem.  Other than that, if you can't change the code, patch PHP
+to not dlclose() the shared extensions on shutdown to avoid the crash.  
+See %http://lerdorf.com/dlclose.txt% for the patch.</blurb>
+
+<blurb title="Throwing C++ exceptions">
+If a C++ shared library is loaded by a C runtime, like PHP, you could end up with weird
+%__throw()% problems.  An annoying workaround is to link your C runtime against %libstdc++.so%
+to prevent the linker from pulling in the %__throw% symbol from %libgcc.a%.
+</blurb>
+
+</slide>

@@ -1,0 +1,18 @@
+<slide title="PHP5 OO - Exceptions">
+<example title="PHP4:"><![CDATA[<?php
+if (mysql_connect('localhost')) {
+   if (mysql_select_db('game')) {
+      $r = mysql_query('SELECT * FROM news');
+
+      ...]]></example>
+
+<example title="PHP5:"><![CDATA[<?php
+try {
+	mysql_connect('localhost');
+	mysql_select_db('game');
+	$r = mysql_query('SELECT * FROM news');
+} catch (Exception $e) {
+	/* Do recovery */
+	exit();
+}]]></example>
+</slide>

@@ -1,0 +1,13 @@
+<slide title="Simple RDF">
+
+<blurb fontsize="3em">World's Easiest RDF parser?</blurb>
+<example fontsize="2em" result="0"><![CDATA[<?php
+$rdf = simplexml_load_file('rss_feed.rdf');
+echo $rdf->channel->title;
+foreach ($rdf->channel->item as $item) {
+    echo '<a href="'.$item->link.'">' .
+         $item->title .
+         '</a>';
+}
+?>]]></example>
+</slide>

@@ -24,9 +24,4 @@ variables_order = "GPC"
     echo getenv('DOCUMENT_ROOT'); 
 ?>]]></example>
 
-<table columns="2" border="0" width="100%" align="center" fontsize="3em">
-<cell>PHP 4.3 w/ APC2 and EGPCS</cell><cell>399 requests/sec</cell>
-<cell>PHP 4.3 w/ APC2 and GPC</cell><cell>513 requests/sec</cell>
-</table>
-
 </slide>

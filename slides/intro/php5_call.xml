@@ -1,0 +1,21 @@
+<slide title="PHP5 OO - call">
+<blurb>
+__call() is used to catch method calls the same way __get() and __set() is used to
+catch property accesses
+</blurb>
+
+<example><![CDATA[<?php
+class hello {
+    function __call($name, $args) {
+        echo "Hello ".ucfirst($name)."!\n";
+    }
+}
+
+$h = new hello;
+$h->rusty();
+$h->anton();
+?>]]></example>
+
+<example><![CDATA[Hello Rusty!
+Hello Anton!]]></example>
+</slide>

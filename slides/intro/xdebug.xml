@@ -1,0 +1,45 @@
+<slide title="xdebug">
+
+<example title="Installing Xdebug" fontsize="1.3em" type="shell"><![CDATA[pear -v install http://files.derickrethans.nl/xdebug-1.3.0.tgz
++ create dir /usr/local/lib/php/docs/xdebug
+52 source files, building
+building in /tmp/tmpH4fmdM/xdebug-1.3.0
+running: phpize
+Configuring for:
+  PHP Api Version:   20020918
+  Zend Module Api No:   20020429
+  Zend Extension Api No:   20021010
+building in /var/tmp/pear-build-root/xdebug-1.3.0
+running: /tmp/tmpH4fmdM/xdebug-1.3.0/configure
+checking build system type... i686-redhat-linux-gnu
+checking host system type... i686-redhat-linux-gnu
+checking for gcc... gcc
+checking for C compiler default output... a.out
+...
+Build process completed successfully
+Installing 'xdebug.so' at ext_dir (/usr/local/lib/php/extensions/no-debug-non-zts-20020429/xdebug.so)
+about to commit 16 file operations
+successfully committed 16 file operations
+install ok: xdebug 1.3.0]]></example>
+
+
+<example title="Stack trace" result="1"><![CDATA[<?php
+	xdebug_start_trace();
+	function a() {
+		b();
+	}
+	function b() {
+		xdebug_dump_function_trace();
+	}
+	a();
+?>]]></example>
+
+<example title="Modified error handler" result="1"><![CDATA[<?php
+	echo $a[1];
+?>]]></example>
+
+<example title="Modified var_dump()" result="1"><![CDATA[<?php
+	var_dump($_COOKIE);
+?>]]></example>
+
+</slide>

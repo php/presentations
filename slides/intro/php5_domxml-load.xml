@@ -1,0 +1,25 @@
+<slide title="DOMXML load">
+
+<example><![CDATA[<?php
+$doc = domxml_open_file('book.xml');
+$root = $doc->child_nodes();
+$root = $root[0];
+$books = $root->child_nodes();
+
+foreach ($books as $book) {
+  if (@$book->tagname == 'book') {
+    $content = $book->child_nodes();
+    foreach ($content as $elem) {
+      if (@$elem->tagname == 'author') {
+        $author = $elem->get_content();
+      }
+      if (@$elem->tagname == 'title') {
+        $title = $elem->get_content();
+      }
+    }
+    echo "{$title} was written by {$author}\n";
+  }
+}
+?>]]></example>
+
+</slide>

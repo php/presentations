@@ -1,0 +1,22 @@
+<slide title="Simple XML">
+<blurb>No more SAX parsing and we get DTD validation and XPath queries</blurb>
+
+<example title="Book XML File"><![CDATA[<books>
+  <book>
+    <title>The Grapes of Wrath</title>
+    <author>John Steinbeck</author>
+  </book>
+  <book>
+    <title>The Pearl</title>
+    <author>John Steinbeck</author>
+  </book>
+</books>]]></example>
+<example title="Book PHP File"><![CDATA[<?php
+$books = simplexml_load_file('book.xml');
+
+foreach ($books->book as $book) {
+  echo "{$book->title} was written 
+        by {$book->author}<br>\n";
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,32 @@
+<slide title="PHP5 OO - Protected">
+
+<blurb>
+Only accessable/callable by the same, or an inherited class.
+</blurb>
+
+<example><![CDATA[<?php
+class Bedroom {
+	protected $action;
+
+	function __construct() {
+		$this->action = 'fun';
+	}
+
+	protected function peek() {
+		echo $this->action. "\n";
+	}
+}
+
+class Keyhole extends Bedroom {
+	function peek() {
+		echo $this->action. "\n";
+	}
+}
+
+$kh = new Keyhole();
+$kh->peek();
+
+$br = new Bedroom();
+$br->peek();           /* Doesn't work */
+?>]]></example>
+</slide>

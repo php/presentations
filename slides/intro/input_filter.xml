@@ -1,0 +1,25 @@
+<slide title="Input Filtering">
+<blurb>
+Security in a web application boils down to always checking any
+user-supplied input data.
+</blurb>
+
+<list title="Exploits">
+<bullet>%readfile($filename)%</bullet>
+<bullet>%system($cmd)%</bullet>
+<bullet>file uploads into document_root</bullet>
+<bullet>XSS - Cross Site Scripting hacks</bullet>
+</list>
+
+<example title="Input Filter hook"><![CDATA[PHP_MINIT_FUNCTION(my_input_filter)
+{
+    sapi_register_input_filter(my_sapi_input_filter);
+    return SUCCESS;
+}]]></example>
+
+<blurb>
+For a complete example, see %README.input_filter% in the PHP 5 source distribution.
+For PHP4, you will have to patch your source with http://lerdorf.com/input_filter.txt
+</blurb>
+
+</slide>

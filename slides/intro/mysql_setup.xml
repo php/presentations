@@ -4,9 +4,7 @@
 <image filename="mysql_info.png" align="center"/>
 
 <blurb title="If not enabled">
-Very rare since a MySQL client library is distributed with PHP and built into PHP
-by default.  However, it is possible to build PHP without MySQL support.  Some
-possible fixes:
+Some possible ways to enable MySQL support:
 </blurb>
 <example type="shell"><![CDATA[apt-get install php-mysql]]></example>
 <example type="shell"><![CDATA[rpm -Uvh php-mysql-4.2.2-1.i386.rpm]]></example>

@@ -1,0 +1,19 @@
+<slide title="Is it Worth It?">
+<blurb title="Architecture" />
+<image filename="sys_arch.png" align="center"/>
+<blurb title="Hardware">
+5 Dual Processor machines with a good amount of disk and RAM.  $3,000 per machine. 
+A good quality Switch.  $1,000.  Total: _$16,000_.
+</blurb>
+<table columns="2" border="0" width="100%" align="left" fontsize="3em" title="Software">
+<cell>Microsoft® Windows® Server Enterprise 2003 25 Client x 5</cell><cell>. . $3,919</cell>
+<cell>Internet Security and Acceleration Server (per cpu) x 2</cell><cell>. . $5,999</cell>
+<cell>SQL Server 2000 Enterprise Edition (per cpu) x 2</cell><cell>. $19,999</cell>
+<cell>Exchange Enterprise Server (25 CALs)</cell><cell>. . $6,999</cell>
+<cell>Commerce Server (per cpu) x 6</cell><cell>. $6,999</cell>
+<cell>Application Server (per cpu) x 6</cell><cell>. . $2,999</cell>
+<cell>Content Management Server 2002 (per cpu) x 2</cell><cell align="right">. $39,101</cell>
+<cell>MSDN Universal Subscription per developer x 2</cell><cell align="right">. . $2,799</cell>
+<cell>Total:</cell><cell>_$266,174_</cell>
+</table>
+</slide>

@@ -1,0 +1,42 @@
+<slide title="PHP5 OO - References">
+
+<example title="In PHP4" result="1"><![CDATA[<?php
+    class OS {
+        var $name;
+        function OS($name) {
+            $this->name = $name;
+        }
+    }
+
+    function changeName(&$obj, $name) {
+        $obj->name = $name;
+    }
+
+    $linux = new OS('linux');
+    $win = $linux;
+    changeName($win, 'windows');
+    echo $linux->name. "<br />\n";
+    echo $win->name;
+?>]]></example>
+
+<example title="In PHP5"><![CDATA[<?php
+    class OS {
+        var $name;
+        function OS($name) {
+            $this->name = $name;
+        }
+    }
+
+    function changeName($obj, $name) {
+        $obj->name = $name;
+    }
+
+    $linux = new OS('linux');
+    $win = $linux->__clone();
+    changeName($win, 'windows');
+    echo $linux->name. "\n";
+    echo $win->name;
+?>]]></example>
+
+
+</slide>

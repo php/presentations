@@ -1,0 +1,23 @@
+<slide title="PHP5 OO - Private">
+<list>
+	<bullet>'Strongest' access level</bullet>
+	<bullet>Can only be accessed/called from the same class</bullet>
+	<bullet>Force use of get()/set() functions to access properties</bullet>
+</list>
+<break lines="1" />
+
+<example><![CDATA[<?php
+class Bedroom {
+	private $action;
+
+	function __construct() {
+		$this->action = 'fun';
+	}
+}
+
+$br = new Bedroom();
+echo $br->action. "\n";
+?>]]></example>
+
+<example><![CDATA[Fatal error: Cannot access private property bedroom::$action in foo.php on line 12]]></example>
+</slide>
