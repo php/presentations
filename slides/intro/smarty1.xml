@@ -1,0 +1,62 @@
+<slide title="Smarty Templating System">
+<link leader="See " href="http://www.phpinsider.com/php/code/Smarty/"/>
+<blurb>
+The idea behind a templating system is to separate logic from layout.  The Smarty Template system does a
+good job of doing this.  Here we will convert our basic guestbook example to use Smarty.  
+</blurb>
+
+<example type="shell"><![CDATA[% ls -R
+.:
+config/      smartyguest.php       templates/      templates_c/
+
+./templates:
+smartyguest.tpl
+
+./templates_c:
+smartyguest.tpl.php]]></example>
+
+<blurb>
+We separate the HTML from the PHP code into 
+templates/smartyguest.tpl and
+./smartyguest.php respectively.
+</blurb>
+
+<example title="templates/smartyguest.tpl"><![CDATA[<html><head><title>My Guestbook</title></head>
+<body>
+<h1>Welcome to my Guestbook</h1>
+<h2>Please write me a little note below</h2>
+<form action="{$SCRIPT_NAME}" method="POST">
+<textarea cols=40 rows=5 name="note" wrap=virtual></textarea>
+<input type="submit" value=" Send it ">
+</form>
+<h2>The entries so far:</h2>
+{section name=msgs loop=$notes}
+  {$notes[msgs].id} {$notes[msgs].ts} {$notes[msgs].comment}<br>
+{/section}
+</body></html>]]></example>
+
+<example title="smartyguest.php"><![CDATA[<?php
+require('Smarty.class.php');
+
+$smarty = new Smarty;
+$smarty->debugging = true;
+
+mysql_connect('localhost','nobody');
+mysql_select_db('mydb');
+
+/* insert new note */
+if(isset($note)) {
+	$ts = date("Y-m-d H:i:s");
+	mysql_query("insert into comments values 
+                 (0,'$note','$ts')");
+}
+
+/* read existing notes */
+$result = mysql_query('select * from comments');
+if(!$result) echo mysql_error();
+while($notes[]=mysql_fetch_array($result,MYSQL_ASSOC));
+$smarty->assign('notes',$notes);
+
+$smarty->display("smartyguest.tpl");
+?>]]></example>
+</slide>
