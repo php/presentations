@@ -3,7 +3,7 @@
 class my_class
 {
 	public $from_db, $row_num=0;
-	public $passwd;
+	private $passwd;
 
 	/* constructor sets the row number 
 	 * and sets a flag indicating
