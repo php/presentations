@@ -1,0 +1,16 @@
+<slide title="Input Abstraction">
+<image align="right" marginright="1.5em"
+       filename="pollock.jpeg" 
+/> 
+  <list title="Advantages">
+    <bullet>Handy to reuse code in both contexts</bullet>
+    <bullet>No duplicated effort</bullet>
+    <bullet>Fewer Bugs</bullet>
+  </list>
+
+  <list title="Web Server vs. Command Line">
+    <bullet>Form, Cookies, Server environment variables</bullet>
+    <bullet>Command line options, Environment variables, User</bullet>
+  </list>
+
+</slide>

@@ -1,0 +1,21 @@
+<slide title="Manual Export">
+  <list title="Manual Export">
+    <bullet>Staging Server is just a series of files</bullet>
+    <bullet>Need to jump through a few hoops</bullet>
+  </list>
+
+<example><![CDATA[mkdir www.example.com-tmp
+cd www.example.com-tmp
+cvs export -r HEAD www.example.com
+mv www.example.com www.example.com-old
+mv www.example.com-tmp www.example.com
+rm -rf www.example.com-old
+]]></example>
+
+  <list title="Notes">
+    <bullet>Always get clean copy</bullet>
+    <bullet>*No* CVS files in web tree</bullet>
+    <bullet>Easy to modify to use tags</bullet>
+  </list>
+
+</slide>

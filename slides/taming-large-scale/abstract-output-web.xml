@@ -1,0 +1,18 @@
+<slide title="Web Output Abstraction">
+  <list title="HTML &amp; Errors">
+    <bullet>HTML: &amp;lt;pre&amp;gt;, &amp;lt;br /&amp;gt;</bullet>
+    <bullet>Errors: error_log(), display_errors=off</bullet>
+  </list>
+
+<example><![CDATA[<?php
+if ($r = mysql_query($sql)) {
+    // good
+} else {
+    if ($ONLINE) {
+        print "Please come back later.<br />";
+        error_log("[DB][$sql]");
+    }
+}
+?>
+]]></example>
+</slide>

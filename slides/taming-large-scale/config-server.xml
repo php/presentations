@@ -1,0 +1,13 @@
+<slide title="Server Configuration">
+<image filename="homerclone.jpeg" align="right" marginright="2em"/>
+<list title="Servers Should Be Clones">
+<bullet>Developer, Staging, and Live servers should be as identical as possible</bullet>
+<bullet>Hardware, where relevant: disk type and size, crypto, networking</bullet>
+<bullet>System Software: OS, kernel, drivers and modules</bullet>
+<bullet>Application Software: PHP, web server, database</bullet>
+<bullet>Application Configuration: args to %configure%, supporting libraries and their locations</bullet>
+<bullet>Build configuration files like %httpd.conf% with scripts to easily substitute locally-specific info</bullet>
+</list>
+
+
+</slide>

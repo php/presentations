@@ -1,0 +1,34 @@
+RCS file: /opt/repository/www.example.com/docroot/index.php,v
+Working file: index.php
+head: 1.4
+branch:
+locks: strict
+access list:
+symbolic names:
+	start: 1.1.1.1
+	initialimport: 1.1.1
+keyword substitution: kv
+total revisions: 5;	selected revisions: 5
+description:
+----------------------------
+revision 1.4
+date: 2003/03/24 16:21:01;  author: sklar;  state: Exp;  lines: +2 -0
+removed beloved <blink> tags
+----------------------------
+revision 1.3
+date: 2002/12/10 15:50:48;  author: monkey;  state: Exp;  lines: +1 -2
+added banana catalog
+----------------------------
+revision 1.2
+date: 2002/12/10 15:42:01;  author: elephant;  state: Exp;  lines: +8 -0
+removed frightening mouse references
+----------------------------
+revision 1.1
+date: 2002/12/10 02:24:24;  author: adam;  state: Exp;
+branches:  1.1.1;
+Initial revision
+----------------------------
+revision 1.1.1.1
+date: 2002/12/10 02:24:24;  author: sklar;  state: Exp;  lines: +0 -0
+the index page
+=============================================================================

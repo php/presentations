@@ -1,0 +1,45 @@
+<presentation>
+  <topic>PHP</topic>
+  <title>Taming Large Scale PHP Projects</title>
+<location>New York, NY</location>
+<event>PHPCon East</event>
+<date>April 25, 2003</date>
+<speaker>Adam Trachtenberg, David Sklar</speaker>
+<url>http://talks.php.net/taming-large-scale</url>
+
+  <slide>slides/taming-large-scale/titlepage.xml</slide>
+  <slide>slides/taming-large-scale/topics.xml</slide>
+  <slide>slides/taming-large-scale/header-cvs.xml</slide>
+  <slide>slides/taming-large-scale/cvs.xml</slide>
+  <slide>slides/taming-large-scale/cvs-concepts.xml</slide>
+  <slide>slides/taming-large-scale/cvs-basic-ops-1.xml</slide>
+  <slide>slides/taming-large-scale/cvs-basic-ops-2.xml</slide>
+  <slide>slides/taming-large-scale/cvs-branches.xml</slide>
+  <slide>slides/taming-large-scale/cvs-branch-trunk.xml</slide>
+  <slide>slides/taming-large-scale/cvs-trading-branches.xml</slide>
+  <slide>slides/taming-large-scale/cvs-staging.xml</slide>
+  <slide>slides/taming-large-scale/cvs-staging-up-manual.xml</slide>
+  <slide>slides/taming-large-scale/cvs-staging-up-automatic.xml</slide>
+  <slide>slides/taming-large-scale/cvs-staging-export-manual.xml</slide>
+  <slide>slides/taming-large-scale/production-server.xml</slide>
+  <slide>slides/taming-large-scale/rsync.xml</slide>
+  <slide>slides/taming-large-scale/header-config.xml</slide>
+  <slide>slides/taming-large-scale/config.xml</slide>
+  <slide>slides/taming-large-scale/config-hostnames.xml</slide>
+  <slide>slides/taming-large-scale/config-db.xml</slide>
+  <slide>slides/taming-large-scale/config-server.xml</slide>
+  <slide>slides/taming-large-scale/header-io.xml</slide>
+  <slide>slides/taming-large-scale/abstract-input.xml</slide>
+  <slide>slides/taming-large-scale/abstract-input-web.xml</slide>
+  <slide>slides/taming-large-scale/abstract-input-cl.xml</slide>
+  <slide>slides/taming-large-scale/abstract-output.xml</slide>
+  <slide>slides/taming-large-scale/abstract-output-web.xml</slide>
+  <slide>slides/taming-large-scale/abstract-output-cl.xml</slide>
+  <slide>slides/taming-large-scale/abstract-output-function.xml</slide>
+  <slide>slides/taming-large-scale/conclusion.xml</slide>
+
+<slide>slides/taming-large-scale/header-bonus.xml</slide>
+<slide>slides/taming-large-scale/other-tools.xml</slide>
+<slide>slides/taming-large-scale/cvs-merge-multi.xml</slide>
+<slide>slides/taming-large-scale/php-ini.xml</slide>
+</presentation>

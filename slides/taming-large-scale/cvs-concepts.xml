@@ -1,0 +1,13 @@
+<slide title="CVS Concepts">
+<image filename="tree.gif" align="right" marginright="2em"/>
+<list fontsize="2.5em">
+    <bullet>*Repository:* where CVS keeps files that contain the contents and metadata of the files you're managing</bullet>
+
+    <bullet>*Working Copy:* an editable version of a set of files managed by CVS</bullet>
+
+    <bullet>*Trunk:* The default set of revisions to the files CVS manages.</bullet>
+    <bullet>*Branch:* An alternate set of revisions to files. There can be many branches. </bullet>
+    <bullet>*Merge:* To incorporate a set of revisions into a file or group of files. The revisions can come from the trunk or a branch.</bullet>
+    <bullet>*Tag:* A symbolic name given to the state of a file at a particular time in its history. You can apply the same tag to many files at once.</bullet>
+  </list>
+</slide>

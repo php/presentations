@@ -1,0 +1,9 @@
+<slide title="DB Configuration">
+<list title="Database Configuration">
+<bullet>Developers and Staging can share a common database</bullet>
+<bullet>To simplify copying data from staging to live database, store last modified time and last "made live" time for each record.</bullet>
+</list>
+<image filename="db-copy-grid.jpg" align="center"/>
+<list><bullet>Occasionally copy data from live to staging database to keep testing environment current: users, message board posts, etc.</bullet>
+</list>
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Merging Branches">
+<image filename="merging.gif" align="right" marginright="2em"/>
+<list title="Merging a Branch">
+    <bullet>In a checked out copy of the trunk:</bullet>
+    <bullet>%cvs update -j more-purple%</bullet>
+    <bullet>Review changes, resolve conflicts</bullet>
+    <bullet>%cvs commit -m "merged more-purple"%</bullet>
+  </list>
+<image align="center" filename="merge-1.jpg"/>
+</slide>
+

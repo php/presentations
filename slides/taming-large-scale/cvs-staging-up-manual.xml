@@ -1,0 +1,16 @@
+<slide title="Manual Update">
+  <list title="Manual Update">
+    <bullet>Staging Server is checked out copy</bullet>
+  </list>
+
+<example>% cd /www/www.example.com
+% cvs update -dP
+</example>
+
+  <list title="Notes">
+    <bullet>You control update timing</bullet>
+    <bullet>Slow, non-atomic</bullet>
+    <bullet>Places CVS files in web tree</bullet>
+  </list>
+
+</slide>

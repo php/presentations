@@ -1,0 +1,14 @@
+<slide title="Trading Branches">
+<image filename="tradingplaces1.jpg" align="right" marginright="2em"/>
+ <list title="Trading Branches">
+    <bullet>Billy Ray creates a branch and commits changes to it</bullet>
+    <bullet>Lewis checks out that branch:</bullet>
+    <bullet>%cvs checkout -r our-shared-branch%</bullet>
+    <bullet>Lewis commits changes to the branch</bullet>
+    <bullet>Billy Ray updates her checked out copy with %cvs update%</bullet>
+    <bullet>Billy Ray makes more changes and commits them</bullet>
+    <bullet>Lewis updates his checked out copy with %cvs update%</bullet>
+    <bullet>Lewis makes more changes and commits them</bullet>
+    <bullet>... repeat as desired</bullet>
+  </list>
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Web Input Abstraction">
+  <list title="Usual Suspects">
+    <bullet>$_GET, $_POST, $_COOKIE, $_SERVER</bullet>
+  </list>
+
+<example><![CDATA[<?php
+if ($ONLINE) {
+    $userid = $_COOKIE['userid'];
+    $form = $_GET;
+    $database = $_SERVER['database']
+}
+?>
+]]></example>
+</slide>

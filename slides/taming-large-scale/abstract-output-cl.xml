@@ -1,0 +1,18 @@
+<slide title="Command Line Output Abstraction">
+  <list title="ASCII &amp; Errors">
+    <bullet>ASCII: \n</bullet>
+    <bullet>Errors: print, error_log(), display_errors=on</bullet>
+  </list>
+
+<example><![CDATA[<?php
+if ($r = mysql_query($sql)) {
+    // good
+} else {
+    if (! $ONLINE) {
+        print "Database Error: Can't Connect\n";
+        error_log("[DB][$sql]");
+    }
+}
+?>
+]]></example>
+</slide>

@@ -1,0 +1,16 @@
+<slide title="Output Abstraction">
+<image align="right" marginright="1.5em"
+       filename="rothko.jpeg" 
+/> 
+  <list title="Advantages">
+    <bullet>Handy to reuse code in both contexts</bullet>
+    <bullet>No duplicated effort</bullet>
+    <bullet>Fewer Bugs</bullet>
+  </list>
+
+  <list title="Web Server vs. Command Line">
+    <bullet>HTML, Hide Errors</bullet>
+    <bullet>ASCII, Show Errors</bullet>
+  </list>
+
+</slide>

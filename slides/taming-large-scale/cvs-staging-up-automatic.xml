@@ -1,0 +1,18 @@
+<slide title="Automatic Update">
+  <list title="Automatic Update">
+    <bullet>Staging Server is checked out copy</bullet>
+    <bullet>CVS *automatically* keeps it in sync</bullet>
+    <bullet>Edit %Loginfo%</bullet>
+  </list>
+
+<example><![CDATA[^www.example.com (date; cat; (sleep 2; cd /www/www.example.com; 
+ cvs -q update -dP) &) >> $CVSROOT/CVSROOT/updatelog 2>&1
+]]></example>
+
+  <list title="Notes">
+    <bullet>Never forget</bullet>
+    <bullet>Slow, non-atomic</bullet>
+    <bullet>Places CVS files in web tree</bullet>
+  </list>
+
+</slide>

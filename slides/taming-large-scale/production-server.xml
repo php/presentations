@@ -1,0 +1,9 @@
+<slide title="Production Server">
+  <list title="CVS Update">
+    <bullet>Just like manual CVS update</bullet>
+    <bullet>Need to have CVS on production server</bullet>
+    <bullet>Production machine needs to talk to staging server</bullet>
+  </list>
+
+
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Command line Input Abstraction">
+  <list title="New Suspects">
+    <bullet>$argc, $argv, Environment variables</bullet>
+  </list>
+
+<example><![CDATA[<?php
+if (! $ONLINE) {
+    $userid = 'webmaster';
+
+    include_once 'Console/Getopt.php';
+    $o = new Console_Getopt;
+    $opts = $o->getopt($o->readPHPArgv(),'',array('debug','name=','size==')); 
+    $form = $opts[0];
+
+    $database = getenv('DATABASE');
+}
+?>
+]]></example>
+</slide>

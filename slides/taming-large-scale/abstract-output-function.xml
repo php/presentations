@@ -1,0 +1,25 @@
+<slide title="Output Abstraction Function">
+
+<example title="Simplify Your Code"><![CDATA[<?php
+function msg($usr_msg, $dev_msg, $log_msg) {
+    if ($GLOBALS['ONLINE']) {
+        print "$usr_msg<br />";
+    } else {
+        print "$dev_msg\n";
+    }
+    error_log($log_msg);
+}
+
+if ($r = mysql_query($sql)) {
+    // good
+} else {
+    msg("Please come back later.",
+        "Database Error: Can't Connect",
+        "[DB][$sql]");
+    }
+}
+
+
+?>
+]]></example>
+</slide>

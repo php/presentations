@@ -3,7 +3,7 @@
 PHP scripts that talk to databases all look similar to the code below.  Connect
 to the database, select a database, send a query and loop through the results.
 </blurb>
-<example fontsize="1.75em"><![CDATA[<?php
+  <example fontsize="1.75em"><![CDATA[<?php
   mysql_pconnect("db.server.com","username","password");
   mysql_select_db("products");
   $result = mysql_query("SELECT * FROM details");

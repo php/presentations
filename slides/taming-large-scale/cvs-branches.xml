@@ -1,0 +1,12 @@
+<slide title="Using Branches">
+  <list marginleft="0em" title="Creating a Branch">
+    <bullet>%cvs checkout www.example.com%</bullet>
+</list>
+<image align="right" marginright="2em" filename="branch-1.jpg"/>
+<list>    <bullet>%cd www.example.com%</bullet>
+    <bullet>%cvs tag -b more-purple%</bullet>
+    <bullet>%cvs update -r more-purple%</bullet>
+    <bullet>Edit %styles.css%</bullet>
+    <bullet>%cvs commit -m "Now there's plenty of purple"%</bullet>
+  </list>
+</slide>

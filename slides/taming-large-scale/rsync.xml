@@ -1,0 +1,28 @@
+<slide title="rsync">
+  <list title="rsync">
+    <bullet>Always get clean copy</bullet>
+    <bullet>*No* CVS files in web tree</bullet>
+    <bullet>Easy to modify to use tags</bullet>
+  </list>
+
+
+<example><![CDATA[#!/usr/bin/php
+<?php
+$src = '/www/www.example.com/';
+$dest = 'www@live.example.com:/www/www.example.com/';
+
+$opts =  '--copy-links --perms --times '
+       . '--recursive --delete  --force --rsh=ssh '
+       . '--compress --verbose';
+
+$return = `rsync $opts $src $dest 2>&1`;
+?>
+]]></example>
+
+  <list title="Notes">
+    <bullet>*BE CAREFUL* (--dry-run)</bullet>
+    <bullet>rsync is efficient and flexible</bullet>
+    <bullet>rsync is fast: binary files</bullet>
+    <bullet>Easy to modify for multiple machines</bullet>
+  </list>
+</slide>

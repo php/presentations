@@ -1,0 +1,9 @@
+<slide title="Configuration">
+
+<list title="Three Levels of Servers:" effect="slide">
+<bullet> <![CDATA[<img src="/home/sklar/cvs/pres-slides/slides/taming-large-scale/adam.png">]]>Individual Developer</bullet>
+<bullet><![CDATA[<img src="/home/sklar/cvs/pres-slides/slides/taming-large-scale/ti-994a.png">]]>Staging/Testing</bullet>
+<bullet><![CDATA[<img src="/home/sklar/cvs/pres-slides/slides/taming-large-scale/atari800.png">]]>Production/Live</bullet>
+</list>
+</slide>
+

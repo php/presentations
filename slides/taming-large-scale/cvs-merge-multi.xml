@@ -1,0 +1,21 @@
+<slide title="Merging from a Branch">
+<image filename="branches.gif" align="right" marginright="2em"/>
+<list fontsize="2em" title="Merging Repeatedly from a Branch">
+<bullet>Alice creates a branch %alice-mods% and commits changes to it</bullet>
+<bullet>Bob creates his own branch:
+<bullet>%cvs checkout -r bob-better-mods%</bullet>
+</bullet>
+<bullet>Bob merges changes from Alice's branch into his branch:
+<bullet>%cvs update -j alice-mods%</bullet></bullet>
+<bullet>Bob immediately tags Alice's branch to mark his merge:
+<bullet>%cvs rtag -F -r alice-mods alice-mods-bob%</bullet>
+</bullet>
+<bullet>Alice commits some more changes to her branch</bullet>
+<bullet>Bob merges those new changes into his branch using the tag he set to mark his previous merge:
+<bullet>%cvs update -j alice-mods-bob -j alice-mods%</bullet>
+</bullet>
+<bullet>Bob immediately updates his merge-marking tag:
+<bullet>%cvs rtag -F -r alice-mods alice-mods-bob%</bullet>
+</bullet>
+</list>
+</slide>

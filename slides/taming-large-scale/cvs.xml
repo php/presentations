@@ -1,0 +1,10 @@
+<slide title="Why use CVS?">
+<image filename="hydra.gif" align="left"/>
+  <list title="What's So Great About CVS?">
+    <bullet> Record change history: who, what, when </bullet>
+    <bullet> Revert files to previous versions </bullet>
+    <bullet> Easily share code among developers </bullet>
+    <bullet> Manage multiple versions simultaneously </bullet>
+<bullet>Portable, lots of front-ends and editor integration</bullet>
+  </list>
+</slide>

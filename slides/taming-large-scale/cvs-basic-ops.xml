@@ -1,0 +1,19 @@
+<slide title="CVS Basics">
+  <list title="Making Changes">
+    <bullet> Checkout: %cvs checkout www.example.com%</bullet>
+    <bullet> Change to working directory: %cd www.example.com%</bullet>
+    <bullet> Edit files: %emacs -nw index.php%</bullet>
+    <bullet> Commit changes: %cvs commit -m "Added search box" index.php%</bullet>
+  </list>
+
+  <list title="Getting Changes">
+    <bullet> Update: %cvs update%</bullet>
+    <bullet> Resolve conflicts if necessary</bullet>
+  </list>
+
+  <list title="See History">
+    <bullet>%cvs log index.php%</bullet>
+  </list>
+  <example fontsize="1em" filename="cvslog.txt"/>
+  
+</slide>
