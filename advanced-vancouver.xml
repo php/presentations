@@ -1,0 +1,83 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Advanced PHP</title>
+<event>Vancouver PHP Conference</event>
+<location>Vancouver, CA</location>
+<url>http://talks.php.net/show/advanced-vancouver</url>
+<date>January 22, 2004</date>
+<speaker>Sterling Hughes</speaker>
+
+<slide>slides/advanced/titlepage-vancouver.xml</slide>
+<slide>slides/advanced/adv_what.xml</slide>
+<slide>slides/advanced/t_intro.xml</slide>
+<slide>slides/advanced/t_golden.xml</slide>
+<slide>slides/advanced/t_basic.xml</slide>
+<slide>slides/advanced/t_unit.xml</slide>
+<slide>slides/advanced/t_unit_phpunit.xml</slide>
+<slide>slides/advanced/t_unit_phpunit1.xml</slide>
+<slide>slides/advanced/t_unit_phpunit2.xml</slide>
+<slide>slides/advanced/t_unit_phpunit3.xml</slide>
+<slide>slides/advanced/t_unit_phpunit4.xml</slide>
+<slide>slides/advanced/t_stress.xml</slide>
+<slide>slides/advanced/t_stress1.xml</slide>
+<slide>slides/advanced/t_stress2.xml</slide>
+<slide>slides/advanced/d_intro.xml</slide>
+<slide>slides/advanced/d_source.xml</slide>
+<slide>slides/advanced/d_bad.xml</slide>
+<slide>slides/advanced/d_bad1.xml</slide>
+<slide>slides/advanced/d_good.xml</slide>
+<slide>slides/advanced/d_knowledge.xml</slide>
+<slide>slides/advanced/d_knowledge1.xml</slide>
+<slide>slides/advanced/d_architecture.xml</slide>
+<slide>slides/advanced/d_architecture1.xml</slide>
+<slide>slides/advanced/d_api.xml</slide>
+<slide>slides/advanced/d_api1.xml</slide>
+<slide>slides/advanced/d_phpdoc.xml</slide>
+<slide>slides/advanced/d_phpdoc1.xml</slide>
+<slide>slides/advanced/e_handling.xml</slide>
+<slide>slides/advanced/e_handling1.xml</slide>
+<slide>slides/advanced/e_handling2.xml</slide>
+<slide>slides/advanced/e_recieving.xml</slide>
+<slide>slides/advanced/e_recieving1.xml</slide>
+<slide>slides/advanced/e_recieving2.xml</slide>
+<slide>slides/advanced/e_recieving3.xml</slide>
+<slide>slides/advanced/e_shielding.xml</slide>
+<slide>slides/advanced/e_logging.xml</slide>
+<slide>slides/advanced/e_logging1.xml</slide>
+<slide>slides/advanced/s_security.xml</slide>
+<slide>slides/advanced/s_security1.xml</slide>
+<slide>slides/advanced/s_injection.xml</slide>
+<slide>slides/advanced/s_injection1.xml</slide>
+<slide>slides/advanced/s_validation.xml</slide>
+<slide>slides/advanced/s_validation1.xml</slide>
+<slide>slides/advanced/s_encrypt.xml</slide>
+<slide>slides/advanced/s_encrypt1.xml</slide>
+<slide>slides/advanced/s_encrypt2.xml</slide>
+<slide>slides/advanced/s_arch.xml</slide>
+<slide>slides/advanced/p_perf.xml</slide>
+<slide>slides/advanced/p_ccache.xml</slide>
+<slide>slides/advanced/p_ccache1.xml</slide>
+<slide>slides/advanced/p_ccache2.xml</slide>
+<slide>slides/advanced/p_cacheability.xml</slide>
+<slide>slides/advanced/p_squid.xml</slide>
+<slide>slides/advanced/p_truisms.xml</slide>
+<slide>slides/advanced/p_profiling.xml</slide>
+<slide>slides/advanced/p_apd.xml</slide>
+<slide>slides/advanced/p_apd1.xml</slide>
+<slide>slides/advanced/p_apd2.xml</slide>
+<slide>slides/advanced/p_apd3.xml</slide>
+<slide>slides/advanced/p_benchmark.xml</slide>
+<slide>slides/advanced/p_benchmark1.xml</slide>
+<slide>slides/advanced/p_benchmark2.xml</slide>
+<slide>slides/advanced/p_io.xml</slide>
+<slide>slides/advanced/p_gzip.xml</slide>
+<slide>slides/advanced/thanks.xml</slide>
+
+</presentation>
