@@ -3,12 +3,14 @@
  <title>MDB table handler</title>
 
  <blurb>
-  The MDB table handler (that i am working on right now)
-  will provide:
+  I am also working on a MySQL table handler based on the
+  mdbtools library. This table handler will provide the
+  following features:
  </blurb>
 
  <list>
   <li>native read access to Access data</li>
+  <li>using indexes where possible</li>
   <li>full MySQL SQL syntax support</li>
   <li>joins over Access and MySQL tables possible</li>
   <li>Access data may be updated at any time by replacing the MDB file</li>

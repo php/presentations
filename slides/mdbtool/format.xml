@@ -3,7 +3,12 @@
  <title>MDB File Format</title>
 
  <blurb>
-  MDB files contain all Access data objects
+  Access keeps all its database and programming objects
+  in a single file with the extension .MDB
+ </blurb>
+
+ <blurb>
+  A MDB file contains seperate sections for:
  </blurb>
 
  <list>
@@ -13,5 +18,10 @@
   <li>reports</li>
   <li>VBA code</li> 
  </list>
+
+ <blurb>
+  When dealing with a MDB file we are usually only interested
+  in the data table contents.
+ </blurb>
 
 </slide>

@@ -1,522 +1,64 @@
-MSysObjects:
-Array
-(
-    [0] => Array
-        (
-            [name] => Id
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [1] => Array
-        (
-            [name] => ParentId
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [2] => Array
-        (
-            [name] => Name
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [3] => Array
-        (
-            [name] => Type
-            [type] => 3
-            [size] => 2
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [4] => Array
-        (
-            [name] => DateCreate
-            [type] => 8
-            [size] => 8
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [5] => Array
-        (
-            [name] => DateUpdate
-            [type] => 8
-            [size] => 8
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [6] => Array
-        (
-            [name] => Owner
-            [type] => 9
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [7] => Array
-        (
-            [name] => Flags
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [8] => Array
-        (
-            [name] => Database
-            [type] => 12
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [9] => Array
-        (
-            [name] => Connect
-            [type] => 12
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [10] => Array
-        (
-            [name] => ForeignName
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [11] => Array
-        (
-            [name] => RmtInfoShort
-            [type] => 9
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [12] => Array
-        (
-            [name] => RmtInfoLong
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [13] => Array
-        (
-            [name] => Lv
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [14] => Array
-        (
-            [name] => LvProp
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [15] => Array
-        (
-            [name] => LvModule
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [16] => Array
-        (
-            [name] => LvExtra
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-)
-
-
-MSysACEs:
-Array
-(
-    [0] => Array
-        (
-            [name] => ObjectId
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [1] => Array
-        (
-            [name] => SID
-            [type] => 9
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [2] => Array
-        (
-            [name] => ACM
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [3] => Array
-        (
-            [name] => FInheritable
-            [type] => 1
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-)
-
-
-MSysQueries:
-Array
-(
-    [0] => Array
-        (
-            [name] => ObjectId
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [1] => Array
-        (
-            [name] => Attribute
-            [type] => 2
-            [size] => 1
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [2] => Array
-        (
-            [name] => Order
-            [type] => 9
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [3] => Array
-        (
-            [name] => Name1
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [4] => Array
-        (
-            [name] => Name2
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [5] => Array
-        (
-            [name] => Expression
-            [type] => 12
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [6] => Array
-        (
-            [name] => Flag
-            [type] => 3
-            [size] => 2
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-)
-
-
-MSysRelationships:
-Array
-(
-    [0] => Array
-        (
-            [name] => szRelationship
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [1] => Array
-        (
-            [name] => grbit
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [2] => Array
-        (
-            [name] => ccolumn
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [3] => Array
-        (
-            [name] => icolumn
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [4] => Array
-        (
-            [name] => szObject
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [5] => Array
-        (
-            [name] => szColumn
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [6] => Array
-        (
-            [name] => szReferencedObject
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [7] => Array
-        (
-            [name] => szReferencedColumn
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-)
-
-
-MSysModules2:
-Array
-(
-    [0] => Array
-        (
-            [name] => Name
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [1] => Array
-        (
-            [name] => Type
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [2] => Array
-        (
-            [name] => Version
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [3] => Array
-        (
-            [name] => ReplicationVersion
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [4] => Array
-        (
-            [name] => Flags
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [5] => Array
-        (
-            [name] => Module
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [6] => Array
-        (
-            [name] => Form
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [7] => Array
-        (
-            [name] => TypeInfo
-            [type] => 11
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-)
-
-
-MSysModules:
-Array
-(
-    [0] => Array
-        (
-            [name] => __A__
-            [type] => 10
-            [size] => 255
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-)
-
-
-Tabelle1:
-Array
-(
-    [0] => Array
-        (
-            [name] => ID
-            [type] => 4
-            [size] => 4
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 1
-        )
-
-    [1] => Array
-        (
-            [name] => f1
-            [type] => 10
-            [size] => 50
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-    [2] => Array
-        (
-            [name] => f2
-            [type] => 12
-            [size] => 0
-            [prec] => 0
-            [scale] => 0
-            [isfixed] => 0
-        )
-
-)
-
-
+<html>
+ <head><title>MDB tables -&gt; HTML</title></head>
+<body>
+<h1>Cities</h1>
+<table border='1'>
+ <tr><th>Province Code</th><th>City Code</th><th>City</th><th>Population</th></tr>
+ <tr><td>AB</td><td>CAL</td><td>Calgary</td><td>671326</td></tr>
+ <tr><td>AB</td><td>EDM</td><td>Edmonton</td><td>785465</td></tr>
+ <tr><td>AB</td><td>LET</td><td>Lethbridge</td><td>58841</td></tr>
+ <tr><td>BC</td><td>KEL</td><td>Kelowna</td><td>89730</td></tr>
+ <tr><td>BC</td><td>VAN</td><td>Vancouver</td><td>1380729</td></tr>
+ <tr><td>BC</td><td>VIC</td><td>Victoria</td><td>255547</td></tr>
+ <tr><td>MB</td><td>BRA</td><td>Brandon</td><td>38708</td></tr>
+ <tr><td>MB</td><td>THO</td><td>Thompson</td><td>14729</td></tr>
+ <tr><td>MB</td><td>WIN</td><td>Winnipeg</td><td>625304</td></tr>
+ <tr><td>NB</td><td>FRE</td><td>Fredricton</td><td>44352</td></tr>
+ <tr><td>NB</td><td>MON</td><td>Moncton</td><td>55468</td></tr>
+ <tr><td>NB</td><td>SAI</td><td>Saint John</td><td>76381</td></tr>
+ <tr><td>NF</td><td>COR</td><td>Cornerbrook</td><td>22700</td></tr>
+ <tr><td>NF</td><td>MOU</td><td>Mount Pearl</td><td>20200</td></tr>
+ <tr><td>NF</td><td>STJ</td><td>St. John's</td><td>96200</td></tr>
+ <tr><td>NS</td><td>DAR</td><td>Dartmouth</td><td>65243</td></tr>
+ <tr><td>NS</td><td>HAL</td><td>Halifax</td><td>295900</td></tr>
+ <tr><td>NS</td><td>SYD</td><td>Sydney</td><td>119470</td></tr>
+ <tr><td>NUN</td><td>IQA</td><td>Iqaluit</td><td>4220</td></tr>
+ <tr><td>NUN</td><td>RAN</td><td>Rankin Inlet</td><td>2058</td></tr>
+ <tr><td>NWT</td><td>HAY</td><td>Hay River</td><td>2964</td></tr>
+ <tr><td>NWT</td><td>TUK</td><td>Tuktoyaktuk</td><td>2011</td></tr>
+ <tr><td>NWT</td><td>YEL</td><td>Yellowknife</td><td>11753</td></tr>
+ <tr><td>ON</td><td>HAM</td><td>Hamilton</td><td>557029</td></tr>
+ <tr><td>ON</td><td>OTT</td><td>Ottawa</td><td>819263</td></tr>
+ <tr><td>ON</td><td>TOR</td><td>Toronto</td><td>3427168</td></tr>
+ <tr><td>PEI</td><td>CHA</td><td>Charlottetown</td><td>53868</td></tr>
+ <tr><td>PEI</td><td>SUM</td><td>Summerside</td><td>15614</td></tr>
+ <tr><td>QC</td><td>LAV</td><td>Laval</td><td>284164</td></tr>
+ <tr><td>QC</td><td>MTR</td><td>Montreal</td><td>2921357</td></tr>
+ <tr><td>QC</td><td>QUE</td><td>Quebec City</td><td>603267</td></tr>
+ <tr><td>SK</td><td>PRI</td><td>Prince Albert</td><td>40841</td></tr>
+ <tr><td>SK</td><td>REG</td><td>Regina</td><td>186521</td></tr>
+ <tr><td>SK</td><td>SAS</td><td>Saskatoon</td><td>200665</td></tr>
+ <tr><td>YK</td><td>DAW</td><td>Dawson</td><td>896</td></tr>
+ <tr><td>YK</td><td>WAT</td><td>Watson Lake</td><td>826</td></tr>
+ <tr><td>YK</td><td>WHI</td><td>Whitehorse</td><td>15199</td></tr>
+</table>
+<p>Rows: 37</p><hr>
+<h1>Provinces</h1>
+<table border='1'>
+ <tr><th>Province Code</th><th>Province</th><th>Capital City</th><th>Population</th><th>Percent</th><th>Date Created</th></tr>
+ <tr><td>AB</td><td>Alberta</td><td>Edmonton</td><td>2375278</td><td>9.3</td><td>09/01/05 00:00:00</td></tr>
+ <tr><td>BC</td><td>British Columbia</td><td>Victoria</td><td>2889207</td><td>11.4</td><td>07/22/41 00:00:00</td></tr>
+ <tr><td>MB</td><td>Manitoba</td><td>Winnipeg</td><td>1063000</td><td>4.2</td><td>07/17/40 00:00:00</td></tr>
+ <tr><td>NB</td><td>New Brunswick</td><td>Fredricton</td><td>710442</td><td>2.8</td><td>07/03/37 00:00:00</td></tr>
+ <tr><td>NF</td><td>Newfoundland</td><td>Saint John's</td><td>568349</td><td>2.2</td><td>03/31/49 00:00:00</td></tr>
+ <tr><td>NS</td><td>Nova Scotia</td><td>Halifax</td><td>873199</td><td>3.4</td><td>07/03/37 00:00:00</td></tr>
+ <tr><td>NUN</td><td>Nunavut</td><td>Iqaluit</td><td>24730</td><td>0.1</td><td>04/01/99 00:00:00</td></tr>
+ <tr><td>NWT</td><td>Northwest Territories</td><td>Yellowknife</td><td>52238</td><td>0.2</td><td>07/17/40 00:00:00</td></tr>
+ <tr><td>ON</td><td>Ontario</td><td>Toronto</td><td>9113515</td><td>35.9</td><td>07/03/37 00:00:00</td></tr>
+ <tr><td>PEI</td><td>Prince Edward Island</td><td>Charlottetown</td><td>126646</td><td>0.5</td><td>07/04/43 00:00:00</td></tr>
+ <tr><td>QC</td><td>Quebec</td><td>Quebec City</td><td>6540276</td><td>25.8</td><td>07/03/37 00:00:00</td></tr>
+ <tr><td>SK</td><td>Saskatchewan</td><td>Regina</td><td>1010198</td><td>4</td><td>09/01/05 00:00:00</td></tr>
+ <tr><td>YK</td><td>Yukon Territories</td><td>Whitehorse</td><td>23504</td><td>0.1</td><td>06/15/68 00:00:00</td></tr>
+</table>
+<p>Rows: 13</p><hr>
+</body>

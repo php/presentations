@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Getting Type Names</title>
+
+ <blurb>
+  You can decode type codes using the mdb_type_name() function:
+ </blurb>
+
+ <example type="php" filename="type2.php" fontsize="1em">
+ </example>
+
+ <example filename="type2.txt" fontsize="1em">
+ </example>
+
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>MDB functions #5</title>
+
+ <blurb>
+  You can change the date/time format using
+ </blurb>
+
+ <example filename="ref5.txt" fontsize="1em">
+ </example>
+
+ <blurb>
+  The format specifiers are the same as with
+  the PHP function strftime().
+ </blurb>
+
+</slide>

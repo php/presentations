@@ -2,9 +2,23 @@
 <slide>
  <title>ODBC</title>
 
- <list title="A transfer with ODBC">
+ <blurb>
+  A data transfer with ODBC is a rather comfortable way 
+  of transfering data from one database to another.
+ </blurb>
+
+ <blurb>
+  In the case of Access it:
+ </blurb>
+
+ <list>
   <li>requires Access ODBC drivers installed</li>
   <li>also requires an ODBC driver for the target database</li>
-  <li>only works with local or network file access to the MDB file</li>
+  <li>requires local or net file access to the MDB file</li>
  </list>
+
+ <blurb>
+  The fact that Access is only available for certain platforms
+  is a big obstacle here.
+ </blurb>
 </slide>

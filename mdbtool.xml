@@ -1,8 +1,8 @@
 <presentation navbarbackground="#DAE6EA">
  <title>Using Microsoft Acess Databases without ODBC</title>
- <event>LinuxTag 2004</event>
- <location>Karlsruhe</location>
- <date>June 24 2004</date>
+ <event>PHP Conference 2004</event>
+ <location>Frankfurt</location>
+ <date>November 9 2004</date>
  <speaker>Hartmut Holzgraefe</speaker>
  <navmode>html</navmode>
  <basefontsize>12pt</basefontsize>
@@ -15,8 +15,13 @@
  <slide>slides/mdbtool/format.xml</slide>
  <slide>slides/mdbtool/transfer.xml</slide>
  <slide>slides/mdbtool/copymdb.xml</slide>
+
  <slide>slides/mdbtool/export.xml</slide>
+ <slide>slides/mdbtool/fieldlength.xml</slide>
+ <slide>slides/mdbtool/tabsep.xml</slide>
  <slide>slides/mdbtool/csv.xml</slide>
+ <slide>slides/mdbtool/xml.xml</slide>
+
  <slide>slides/mdbtool/odbc.xml</slide>
 
  <slide>slides/mdbtool/mdbtool.xml</slide>
@@ -24,11 +29,28 @@
  <slide>slides/mdbtool/clib.xml</slide>
 
  <slide>slides/mdbtool/php.xml</slide>
- <slide>slides/mdbtool/phpex.xml</slide>
+
+ <slide>slides/mdbtool/ref1.xml</slide>
+
+
  <slide>slides/mdbtool/phpex1.xml</slide>
+
+
+ <slide>slides/mdbtool/ref2.xml</slide>
+
  <slide>slides/mdbtool/phpex2.xml</slide>
 
- <slide>slides/mdbtool/mysql.xml</slide>
+ <slide>slides/mdbtool/ref3.xml</slide>
+ <slide>slides/mdbtool/type2.xml</slide>
+
+ <slide>slides/mdbtool/ref4.xml</slide>
+ <slide>slides/mdbtool/phpex3.xml</slide>
+
+ <slide>slides/mdbtool/ref5.xml</slide>
+
+ <slide>slides/mdbtool/limits.xml</slide>
+ <slide>slides/mdbtool/conclusion.xml</slide>
+
  <slide>slides/mdbtool/myhandler.xml</slide>
  <slide>slides/mdbtool/myhandler2.xml</slide>
  <slide>slides/mdbtool/myinfile.xml</slide>

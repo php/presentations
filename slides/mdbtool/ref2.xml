@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>MDB functions #2</title>
+
+ <blurb>
+  Further info on a tables structure is available with:
+ </blurb>
+
+ <example filename="ref2.txt" fontsize="1em">
+ </example>
+
+ Field information includes column name, type and size
+ plus precision info for floating point fields.
+
+</slide>

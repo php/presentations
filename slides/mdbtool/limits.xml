@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Limitations</title>
+
+ <blurb>
+  The following limitations exist with the current
+  PECL extension:
+ </blurb>
+
+ <list>
+  <li>requires mdbtools 0.6pre1</li>
+  <li>Text fields only up to 16KB</li> 
+  <li>No OLE support yet</li>
+  <li>no dates before 1900</li>
+ </list>
+
+</slide>

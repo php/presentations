@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>XML formats</title>
+
+ <blurb>
+  XML formats have well defined encoding rules and can 
+  contain both table and schema data. They only have
+  two big disadvantages in my eyes:
+ </blurb>
+
+ <list>
+  <li>space efficiency</li>
+  <li>no good representation of binary data</li>
+ </list>
+
+</slide>

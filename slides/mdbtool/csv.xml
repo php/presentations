@@ -2,10 +2,20 @@
 <slide>
  <title>CSV</title>
 
- <list title="CSV">
-  <li>uses a delimiter character, usually *;*</li>
-  <li>encapsulates strings in *'...'* so that text can contain *;*</li>
+ <blurb>
+  CSV is the most flexible format of these and most common these days:
+
+ </blurb>
+
+ <list>
+  <li>it uses a delimiter character, usually *,* or *;*</li>
+  <li>it encapsulates strings in *'...'*</li>
+  <li>so text can contain the field delimiter character</li>
   <li>no real (formal) specifications</li>
   <li>not all implementations support line breaks in data</li>
  </list>
+
+ <blurb>
+  PHP supports CSV with its fgetcsv() function.
+ </blurb>
 </slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>MDB functions #1</title>
+
+ <blurb>
+  The first thing you need is to open a MDB file:  
+ </blurb>
+
+ <example filename="ref1.txt" fontsize="1em">
+ </example>
+
+ <blurb>
+  You can find out what tables are included in a file:
+ </blurb>
+
+ <example filename="ref1b.txt" fontsize="1em">
+ </example>
+
+</slide>

@@ -3,13 +3,15 @@
  <title>Transfering Access Data</title>
 
  <blurb>
-  There are three common ways to transfer Access Data
+  There are three different ways to transfer the
+  data from within an Access database to another 
+  system:
  </blurb>
 
  <list>
-  <li>copy MDB files</li>
-  <li>ODBC</li>
-  <li>export to text</li> 
+  <li>copy the complete MDB files</li>
+  <li>use ODBC to read the data</li>
+  <li>export to text, usually CSV</li> 
  </list>
 
 </slide>

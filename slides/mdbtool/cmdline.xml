@@ -2,7 +2,11 @@
 <slide>
  <title>Command line tools</title>
 
- <list title="mdbtool provides some usefull command line tools">
+ <blurb>
+  mdbtools provides some usefull command line tools:
+ </blurb>
+
+ <list>
   <li>_mdbtables_  shows names of tables in a MDB file</li>
   <li>_mdbexport_  extracts table data as CSV</li>
   <li>_mdbschema_  generates SQL schema definitions</li>

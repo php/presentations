@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Access Type IDs</title>
+
+ <list>
+  <li>*1* - Boolean</li>
+  <li>*2* - Byte</li>
+  <li>*3* - Integer</li>
+  <li>*4* - Long Integer</li>
+  <li>*5* - Money</li>
+  <li>*6* - Float</li>
+  <li>*7* - Double</li>
+  <li>*8* - DateTime</li>
+  <li>*10* - Text</li>
+  <li>*11* - OLE</li>
+  <li>*12* - Memo/Hyperlink</li>
+ </list>
+
+</slide>

@@ -1,0 +1,3 @@
+array mdb_fetch_row(resource)
+
+array mdb_fetch_assoc(resource)

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Fixed Field Length</title>
+
+ <blurb>
+  Fixed field length formats reserve the maximum lenght of a field for each
+  data row. As the field length is known no field or line terminators are 
+  needed, but:
+ </blurb>
+
+ <list>
+  <li>the field length information itself is not included</li>
+  <li>space is wasted for textual fields</li>
+  <li>use of long VARCHAR or BLOB fields is unrealistic </li>
+ </list>
+
+ <blurb>
+  This format is hardly ever used these days.
+ </blurb>
+</slide>

@@ -8,7 +8,15 @@
  </blurb>
  <blurb>
   But this requires that Access is also installed
-  on the target system.
+  on the target system. This leads to the following 
+  problems:
  </blurb>
+
+ <list>
+  <li>you need licensed copies for both systems</li>
+  <li>you may run into version differences</li>
+  <li>the 2nd system might be using an platform for which Access is not available</li>
+ </list>
+
 
 </slide>

@@ -3,15 +3,18 @@
  <title>Export to text</title>
 
  <blurb>
-  There are three common text representations for 
+  There are four common text representations for 
   Database tables: 
  </blurb>
  <list>
   <li>fixed field length</li>
   <li>TAB separated</li>
   <li>CSV</li>
+  <li>XML</li>
  </list>
  <blurb>
-  CSV is the most common these days
+  All but XML formats represent table data for one table only. 
+  They neither support multiple tables nor do they 
+  preserve the table schema.
  </blurb>
 </slide>

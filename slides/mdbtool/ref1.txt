@@ -1,0 +1,3 @@
+resource mdb_open(string filename)
+
+void     mdb_close(resource db)

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Tab Separated Fields</title>
+
+ <blurb>
+  This format uses the TAB character as a field separator.
+  This works well as long the data itself does not contain
+  TABs.
+ </blurb>
+ <blurb>
+  The format is also very hard to read for human
+  eyes as TABs are usually expanded to spaces and not 
+  distinguishable from these on display.
+ </blurb>
+
+</slide>

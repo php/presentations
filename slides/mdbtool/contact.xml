@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
- <title>Contact</title>
+ <title>References</title>
 
  <blurb>
-  hartmut@mysql.de
+  You can reach me here: hartmut@mysql.com
  </blurb>
+
+ <blurb>
+  Further information is available here:
+ </blurb>
+
+ <list>
+  <li>mdbtools home: http://mdbtools.sf.net/</li>
+  <li>PECL extension: http://pecl.php.net/mdbtool</li>
+  <li>Slides: http://talks.php.net/show/mdbtool</li>
+ </list>
 
 </slide>
