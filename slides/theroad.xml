@@ -5,7 +5,7 @@
 <bullet>1995 - Combined many CGI scripts into a smaller set of more generic binaries</bullet>
 <bullet>June 8, 1995 - First official 1.0 release</bullet>
 </list>
-<example fontsize="1.5em"><![CDATA[From: rasmus@io.org (Rasmus Lerdorf)
+<example fontsize="1.5em" type="plain"><![CDATA[From: rasmus@io.org (Rasmus Lerdorf)
 Subject: Announce: Personal Home Page Tools (PHP Tools)
 Date: 1995/06/08
 Message-ID: <3r7pgp$aa1@ionews.io.org>#1/1
@@ -159,7 +159,7 @@ http://www.io.org/~rasmus]]></example>
 <bullet>April 10, 1996 Version 1.99j: User-defined functions added</bullet>
 <bullet>April 10, 1996 Version 1.99k: Postgres95 support added</bullet>
 </list>
-<example fontsize="1.5em"><![CDATA[From: rasmus@madhaus.utcs.utoronto.ca (Rasmus Lerdorf)
+<example fontsize="1.5em" type="plain"><![CDATA[From: rasmus@madhaus.utcs.utoronto.ca (Rasmus Lerdorf)
 Subject: ANNOUNCE: PHP/FI Server-side HTML-Embedded Scripting Language
 Date: 1996/04/16
 Newsgroups: comp.infosystems.www.authoring.cgi
@@ -250,7 +250,7 @@ rasmus@vex.net]]></example>
 <bullet>May 23, 1998 Version 3.0RC5: MySQL fixes, strpos(), zlib extension, constants, GD-TTF support</bullet>
 <bullet>June 6, 1998 Version 3.0: strrpos(), trim(), LDAP fixes</bullet>
 </list>
-<example fontsize="1.5em"><![CDATA[
+<example fontsize="1.5em" type="plain"><![CDATA[
                         FOR IMMEDIATE RELEASE
 
                            PHP 3.0 RELEASED
