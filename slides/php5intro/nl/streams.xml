@@ -7,7 +7,7 @@
 		<bullet marginleft="2em">php://</bullet>
 		<bullet marginleft="2em">http://, https://, ftp://, ftps://</bullet>
 		<bullet marginleft="2em">compression.gzip://, compression.bz2://</bullet>
-		<bullet>Gebruikers streams (register_filter() )</bullet>
+		<bullet>User streams (register_streams() )</bullet>
 		<bullet>Filters (php://filter)</bullet>
 	</list>
 

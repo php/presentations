@@ -24,6 +24,6 @@ foreach ($books as $book) {
         echo "{$title} was written by {$author}\n";
     }
 }
-?>]]></example>
+? >]]></example>
 
 </slide>
