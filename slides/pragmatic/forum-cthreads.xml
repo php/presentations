@@ -1,0 +1,12 @@
+<slide title="cThreads">
+<list>
+ <bullet>Uses HTTP basic authentication for logins</bullet>
+ <bullet>Stores messages in text files</bullet>
+ <bullet>Only thread names are displayed at top level (no message counts)</bullet>
+ <bullet>Thread display is frame-based</bullet>
+ <bullet>Voting plugin</bullet>
+ <bullet>Little customization, but fairly lightweight and straightforward code</bullet>
+</list>
+
+<!-- TODO: screenshot -->
+</slide>

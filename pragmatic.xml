@@ -12,6 +12,8 @@
 <url>http://conf.php.net/pragmatic</url>
 <slide>slides/intro/titlepage.xml</slide>
 <slide>slides/pragmatic/agenda.xml</slide>
+
+<!-- short intro to php -->
 <slide>slides/pragmatic/php-helloworld.xml</slide>
 <slide>slides/pragmatic/php-shorttags.xml</slide>
 <slide>slides/pragmatic/php-variables.xml</slide>
@@ -21,6 +23,8 @@
 <slide>slides/pragmatic/php-controlstructures.xml</slide>
 <slide>slides/pragmatic/php-looping.xml</slide>
 <slide>slides/pragmatic/php-functions.xml</slide>
+
+<!-- survey of development tools -->
 <slide>slides/pragmatic/devtools-basic.xml</slide>
 <slide>slides/pragmatic/devtools-phpedit.xml</slide>
 <slide>slides/pragmatic/devtools-phped.xml</slide>
@@ -28,6 +32,8 @@
 <slide>slides/pragmatic/devtools-phpmole.xml</slide>
 <slide>slides/pragmatic/devtools-commercial.xml</slide>
 <slide>slides/pragmatic/devtools-debuggers.xml</slide>
+
+<!-- using database -->
 <slide>slides/pragmatic/db-overview.xml</slide>
 <slide>slides/pragmatic/db-raw.xml</slide>
 <slide>slides/pragmatic/db-mysql.xml</slide>
@@ -40,4 +46,35 @@
 <slide>slides/pragmatic/db-adodb.xml</slide>
 <!-- <slide>slides/pragmatic/db-phplib.xml</slide> -->
 <slide>slides/pragmatic/db-tools.xml</slide>
+
+<!-- templates section goes here. -->
+
+<slide>slides/pragmatic/break.xml</slide>
+<slide>slides/pragmatic/agenda.xml</slide>
+
+<!-- setting up an online store -->
+
+<slide>slides/pragmatic/store-freetrade.xml</slide>
+<slide>slides/pragmatic/store-marketplus.xml</slide>
+<slide>slides/pragmatic/store-oscommerce.xml</slide>
+<slide>slides/pragmatic/store-phorsale.xml</slide>
+<slide>slides/pragmatic/store-phpshop.xml</slide>
+
+<slide>slides/pragmatic/store-payment.xml</slide>
+
+<!-- adding a message board -->
+
+<slide>slides/pragmatic/forum-cthreads.xml</slide>
+<slide>slides/pragmatic/forum-fudforum.xml</slide>
+<slide>slides/pragmatic/forum-lforum.xml</slide>
+<slide>slides/pragmatic/forum-neoboard.xml</slide>
+<slide>slides/pragmatic/forum-phorum.xml</slide>
+<slide>slides/pragmatic/forum-phpbb.xml</slide>
+<slide>slides/pragmatic/forum-wagora.xml</slide>
+<slide>slides/pragmatic/forum-zorum.xml</slide>
+
+<!-- setting up an intranet -->
+
+<slide>slides/pragmatic/fin.xml</slide>
+
 </presentation>
