@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Introductie</title>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="4.5em">
+		<bullet>PHP: Hypertext Preprocessor</bullet>
+		<bullet>Ontstaan in 1997</bullet>
+		<bullet>Apache module</bullet>
+		<bullet marginleft="3em">maar ook IIS, Iplanet, thttpd...</bullet>
+		<bullet>MySQL integratie</bullet>
+		<bullet marginleft="3em">maar ook MSSQL, Oracle, PGSql...</bullet>
+	</list>
+
+</slide>

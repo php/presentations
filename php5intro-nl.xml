@@ -14,6 +14,9 @@
 <url>http://pres.derickrethans.nl/php5intro</url>
 <slide>slides/ze-xdebug/title.xml</slide>
 
+<slide>slides/php5intro/nl/intro.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+<slide>slides/php5intro/nl/project.xml</slide>
 <slide>slides/php5intro/nl/oldobjectmodel.xml</slide>
 <slide>slides/php5intro/nl/oldobjectmodel2.xml</slide>
 <slide>slides/php5intro/nl/newobjectmodel.xml</slide>
@@ -36,6 +39,8 @@
 <slide>slides/php5intro/nl/domxml-load.xml</slide>
 <slide>slides/php5intro/nl/simplexml-load.xml</slide>
 <slide>slides/php5intro/nl/simplexml-change.xml</slide>
+
+<slide>slides/php5intro/nl/streams.xml</slide>
 
 <slide>slides/php5intro/nl/xdebug.xml</slide>
 <slide>slides/php5intro/nl/xdebug-cb-dump.xml</slide>

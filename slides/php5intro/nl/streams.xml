@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Streams and filters</title>
+
+	<list effect="slide" fontsize="4.5em">
+		<bullet>Streams?</bullet>
+		<bullet marginleft="2em">php://</bullet>
+		<bullet marginleft="2em">http://, https://, ftp://, ftps://</bullet>
+		<bullet marginleft="2em">compression.gzip://, compression.bz2://</bullet>
+		<bullet>Gebruikers streams (register_filter() )</bullet>
+		<bullet>Filters (php://filter)</bullet>
+	</list>
+
+	<break lines="2" />
+	<example fontsize="1.2em"><![CDATA[<?php
+/* This will output the contents of 
+   www.example.com entirely in uppercase */
+readfile("php://filter/read=string.toupper/resource=http://www.example.com");
+
+/* This will do the same as above except it will ROT13 encode it */
+readfile("php://filter/read=string.rot13/resource=http://www.example.com");
+? >]]></example>
+
+</slide>
