@@ -5,10 +5,10 @@
   After generating and compiling the new extension
   we can test it using the folling small script:
  </blurb>
- <example filename="examples/x3.php" fontsize="1em"/>
+ <example filename="examples/x3.php" fontsize="1.5em"/>
  <blurb>
   And, as expected, the result of this little script is %'foobar'%
  </blurb>
- <example filename="examples/x3.result" fontsize="1em"/>
+ <example filename="examples/x3.result" fontsize="1.5em"/>
 </slide>
 

@@ -2,8 +2,19 @@
 <slide>
  <title>Makefile fragments</title>
  <blurb>
-  to be done ...
+  Some extensions may require additional Makefile or config.m4 code
+  that can't be created by PECL_Gen.
  </blurb>
- <example filename="examples/makefile_fragment.snippet" fontsize="1em"/>
+ <blurb>
+  Makefile code can be added using a %&amp;lt;makefile%&amp;gt; tag within
+  %&amp;lt;deps&amp;gt;% section. The tag data is written to a Makefile.fragment
+  file and registered within config.m4.
+ </blurb>
+ <blurb>
+  Additions to config.m4 itself can be put into a %&amp;lt;configm4&amp;gt;% tag
+  within %&amp;lt;deps&amp;gt;%. You can control whether the code is put near
+  the beginning or the end of config.m4 using the %position=top% or
+  %position=bottom% attribute.
+ </blurb>
 </slide>
 

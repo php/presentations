@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Your Gain using PECL_Gen</title>
+ <blurb>
+  When looking at lines of code alone PECL_Gen 
+  doesn't seem to help that much:
+ </blurb>
+ <example filename="examples/linecount" fontsize="1em"/>
+ <blurb>
+  But you have to take into account that:
+ </blurb>
+ <list>
+  <li>part of the XML lines are just contaniner and end tags</li>
+  <li>the XML parts are less error prone</li>
+  <li>we didn't count documentation generated, package.xml ...</li>
+ </list>
+
+</slide>
+

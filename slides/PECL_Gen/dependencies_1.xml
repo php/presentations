@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>Headers and Libraries</title>
+ <blurb>
+  Needed header files and libraries are specified using the
+  %&amp;lt;header&amp;gt;% and %&lt;lib&gt;% tags.
+ </blurb>
+ <blurb>
+  %&amp;lt;header&amp;gt;% just takes a filename as it would be used
+  in an %#include% directive.
+ </blurb>
+ <blurb>
+  %&amp;lt;lib&amp;gt;% takes a library basename and the name of a 
+  function known to be in the library so that configure can
+  test for it.
+ </blurb>
+ <example filename="examples/deps1.snippet" fontsize="1.5em"/>
+</slide>
+

@@ -2,35 +2,31 @@
 <slide>
  <title>%--with%</title>
  <blurb>
- When building an extension on Unix-like systems or within the Cygwin
-environment under Windows the configure  script will try to figure out
-where external libraries and header files needed by an extension are
-installed on the target system. Using a "with" option it is possible
-to specify where to actually look for libraries and headers. This way
-it is possible to override search paths if things are not installed in
-the default system paths or to specify the exact version of a package
-to be used if multiple versions are installed on the target system.
-</blurb>
+  The %--with% configure option is used to enable extensions that
+  require external libraries. %--with% takes the installation prefix
+  for that library as an optional argument.
+ </blurb>
 
 <blurb>
-The %&amp;lt;with&amp;gt;% tag takes three attributes: name=... for the actual name of
-the "with" option, testfile for the relative path of a file to check
-for while running the configure script and a list of default paths to
-check if no path is given as an argument to the "with" option in
-defaults.
+The %&amp;lt;with&amp;gt;% tag takes three attributes: 
 </blurb>
+<list>
+<li>%name=% for the actual name of the "with" option</li>
+<li>%testfile% for the relative path of a file to check for while running the configure script</li>
+<li> a list of default paths to check</li>
+</list>
 
 
 <blurb>
-Name and defaults are set to the extension base name and
-"/usr:/usr/local" if no values are given. The testfile attribute is
+%name% and %defaults% are set to the extension base name and
+"%/usr:/usr/local%" if no values are given. The testfile attribute is
 mandatory.
 </blurb>
 
 <blurb>
 Textual data enclosed by the %&amp;lt;with&amp;gt;% is used to describe the "with"
 option in the output of configure --help calls.
- </blurb>
+</blurb>
  
  <example filename="examples/with.snippet" fontsize="1em"/>
 </slide>

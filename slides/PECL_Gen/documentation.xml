@@ -2,7 +2,12 @@
 <slide>
  <title>Documentation</title>
  <blurb>
-  to be done ...
+  DocBook XML documentation templates are generated from the 
+  %&lt;summary&gt;% and %&lt;description&gt;% tags.
+ </blurb>
+ <blurb>
+  The generated DocBook files are ready to be put into the
+  PHP manual.
  </blurb>
 </slide>
 

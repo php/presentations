@@ -1,0 +1,35 @@
+<!-- Defining a resource -->
+<resource name="my_FILE" payload="FILE" alloc="no">
+ <description>
+  A simple FILE resource
+ </description>
+ <destruct>
+  fclose(resource);
+ </destruct>
+</resource>
+
+<!-- creating and returning a resource -->
+<function name="my_fopen">
+ <proto>resource my_FILE my_fopen(string name, string mode)</proto>
+ <code>
+   return_res = fopen(name, mode);
+   if (!return_res) RETURN_FALSE;
+ </code>
+</function>
+
+<!-- removing a resource -->
+<function name="my_fclose">
+ <proto>void my_fclose(resoure my_FILE file)</proto>
+ <code> 
+  zend_list_delete(Z_LVAL_P(file)); // there should be a Macro
+ </code>
+</function>
+
+<!-- using a resource payload -->
+<function>
+ <proto>void my_fputs(resource my_FILE file, string text)</proto>
+ <code>
+  fputs(res_file, text);
+ </code>
+</function>
+

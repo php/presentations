@@ -2,8 +2,16 @@
 <slide>
  <title>Resources</title>
  <blurb>
-  to be done ...
+  Resources are needed to handle custom C datatypes. 
  </blurb>
- <example filename="examples/resource.snippet" fontsize="1em"/>
+ <blurb>
+  Each resource type has its own registration list that is cleaned up
+  on script end. Resources usually need a destructor callback that 
+  takes care of freeing memory etc.
+ </blurb>
+ <blurb>
+  PECL_Gen takes care of most of the resource registration details.
+ </blurb>
+ <example filename="examples/resource.snippet" fontsize="1.5em"/>
 </slide>
 

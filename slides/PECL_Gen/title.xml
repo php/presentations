@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
  <title>PECL_GEN</title>
- <list title="PECL_Gen is">
+
+ <blurb>PECL_Gen is</blurb>
+ <list>
   <li>an XML based PHP extension code generator</li>
   <li>replacing the older %ext_skel% script</li>
   <li>implemented using PHP 5 and PEAR only</li> 
  </list>
 
- <list title="PECL_Gen creates">
+ <blurb>it creates</blurb>
+ <list>
   <li>functions</li>
   <li>constants</li>
   <li>%php.ini% configuration directives</li>

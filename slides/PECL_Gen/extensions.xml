@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>PHP Extensions</title>
+ <blurb fontsize="3em">
+  PHP supports so called Extensions implemented in C or C++.
+  Extensions can be compiled into PHP itself or loadable at
+  runtime.
+ </blurb>
+ <blurb fontsize="3em">
+  Extensions can implement PHP functions and classes.
+ </blurb>
+ <blurb fontsize="3em">
+  Reasons for using an extension instead of plain PHP code
+  are either performance or interfacing to an existing C/C++
+  library.
+ </blurb>
+</slide>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+ <title>ext_skel</title>
+ <blurb>
+  So far the only tool supporting extension writers was ext_skel:
+ </blurb>
+
+ <list>
+  <li>takes a function prototype list as input</li>
+  <li>requires sh, awk, sed</li>
+  <li>generated code needs manual editing</li>
+  <li>changes are lost on re-running ext_skel</li>
+ </list>
+</slide>
+

@@ -1,15 +1,18 @@
 <presentation>
  <title>PECL_Gen - a code generator for PHP extensions</title>
- <event>PAWS - PHP and Web Standards Conference</event>
- <location>Manchester</location>
- <date>...rescheduled...</date>
+ <event>International PHP Conference 2004</event>
+ <location>Frankfurt</location>
+ <date>November 9, 2004</date>
  <speaker>Hartmut Holzgraefe</speaker>
  <navmode>html</navmode>
  <basefontsize>12pt</basefontsize>
  <topic>Internals</topic>
  <logo1>images/animated_elephant.gif</logo1>
 
+ <slide>slides/PECL_Gen/extensions.xml</slide>
+ <slide>slides/PECL_Gen/ext_skel.xml</slide>
  <slide>slides/PECL_Gen/title.xml</slide>
+ <slide>slides/PECL_Gen/gain.xml</slide>
  <slide>slides/PECL_Gen/modes.xml</slide>
  <slide>slides/PECL_Gen/extension_tag.xml</slide>
  <slide>slides/PECL_Gen/invocation.xml</slide>
@@ -30,16 +33,17 @@
  <slide>slides/PECL_Gen/returning_3.xml</slide>
  <slide>slides/PECL_Gen/special_functions.xml</slide>
  <slide>slides/PECL_Gen/constants.xml</slide>
- <slide>slides/PECL_Gen/php_ini.xml</slide>
  <slide>slides/PECL_Gen/globals.xml</slide>
+ <slide>slides/PECL_Gen/php_ini.xml</slide>
  <slide>slides/PECL_Gen/resources.xml</slide>
  <slide>slides/PECL_Gen/custom_code.xml</slide>
  <slide>slides/PECL_Gen/dependencies.xml</slide>
+ <slide>slides/PECL_Gen/dependencies_1.xml</slide>
  <slide>slides/PECL_Gen/dependencies_2.xml</slide>
  <slide>slides/PECL_Gen/makefile_fragments.xml</slide>
  <slide>slides/PECL_Gen/documentation.xml</slide>
  <slide>slides/PECL_Gen/tests.xml</slide>
  <slide>slides/PECL_Gen/classes.xml</slide>
- <slide>slides/PECL_Gen/streams.xml</slide>
+<!-- <slide>slides/PECL_Gen/streams.xml</slide> -->
  <slide>slides/PECL_Gen/outlook.xml</slide>
 </presentation>
