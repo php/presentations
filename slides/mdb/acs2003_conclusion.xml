@@ -1,7 +1,7 @@
 <slide title="Summary">
- <list type='darrow' marginright="1.5em" fontsize='3.5em' effect='slide'>
+ <list type='darrow' marginright="1.5em">
   <bullet>
-   Share data <!--embedding modules directly, --> using a standarized file format
+   Share data using a standarized file format
    (e.g. RSS, CML), better yet, via a standard 
    web services protocol: REST, XML-RPC, SOAP.
   </bullet>
