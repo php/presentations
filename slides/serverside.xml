@@ -1,0 +1,24 @@
+<slide title="Server-Side">
+
+<blurb title="PHP is a Server-side language">
+Even though it is embedded in HTML files much like the client-side
+Javascript language, PHP is server-side and all PHP tags will be 
+replaced by the server before anything is sent to the web browser.
+</blurb>
+
+<image align="center" filename="slides/serverside.png" />
+
+<blurb>So if the HTML file contains:</blurb>
+
+<example><![CDATA[<html>
+<?php echo "Hello World"?>
+</html>]]></example>
+
+<blurb>
+What the end user would see with a "view source" in the browser would be:
+</blurb>
+<example><![CDATA[<html>
+Hello World
+</html>]]></example>
+
+</slide>

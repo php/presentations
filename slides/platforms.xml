@@ -1,0 +1,31 @@
+<slide title="Platforms">
+
+<list title="Operating Systems Supported">
+<bullet>UNIX (all variants)</bullet>
+<bullet>Win32 (NT/W95/W98/W2000)</bullet>
+<bullet>QNX</bullet>
+<bullet>MacOS (WebTen)</bullet>
+<bullet>OSX</bullet>
+<bullet>OS/2</bullet>
+<bullet>BeOS</bullet>
+<bullet>OS/390 (experimental)</bullet>
+<bullet>AS/400 (experimental)</bullet>
+</list>
+<list title="Server Interfaces (SAPI Modules)">
+<bullet>Apache module (UNIX,Win32)</bullet>
+<bullet>CGI/FastCGI</bullet>
+<bullet>thttpd </bullet>
+<bullet>fhttpd</bullet>
+<bullet>phttpd</bullet>
+<bullet>ISAPI (IIS, Zeus)</bullet>
+<bullet>NSAPI (Netscape iPlanet)</bullet>
+<bullet>Java servlet </bullet>
+<bullet>AOLServer</bullet>
+<bullet>Roxen/Caudium module</bullet>
+<bullet>SRM (Script Running Machine)</bullet>
+<bullet>Apache 2.0 module (Experimental)</bullet>
+<bullet>Tux (experimental)</bullet>
+<bullet>pi3web (experimental)</bullet>
+</list>
+
+</slide>

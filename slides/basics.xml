@@ -1,0 +1,38 @@
+<slide title="Language Basics">
+
+<blurb title="Variables and Expressions" />
+<example width="30em"><![CDATA[<?php
+	$foo = 1;
+	$bar = "Testing";
+	$xyz = 3.14;
+	$foo = $foo + 1;
+?>]]></example>
+
+<blurb title="Arrays" />
+<example width="30em"><![CDATA[<?php
+	$foo[1] = 1;  
+	$foo[2] = 2;
+	$bar[1][2] = 3;
+?>]]></example>
+	
+<blurb title="Functions" />
+<example width="30em"><![CDATA[<?php
+	phpinfo();
+	foo();
+	$len = strlen($foo);
+?>]]></example>
+
+<blurb title="Control Structures" />
+<example width="30em"><![CDATA[<?php
+	while($foo) {
+		...
+	}
+?>]]></example>
+
+<blurb title="Output" />
+<example width="30em"><![CDATA[<?php
+	echo $foo;
+	printf(".2f",$price);
+?>]]></example>
+
+</slide>
