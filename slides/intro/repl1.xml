@@ -32,7 +32,8 @@ server-id=2</example>
 Make sure each slave has its own unique server-id.  And since these will be read-only slaves, 
 you can start them with these options to speed them up a bit:
 </blurb>
-<example type="shell" marginleft="1em" marginright="1em">--skip-bdb --low-priority-updates --delay-key-write-for-all-tables</example>
+<example type="shell">--skip-bdb --low-priority-updates
+--delay-key-write-for-all-tables</example>
 <blurb>
 Stop your master server.  Copy the table files to each of your slave servers.  Restart
 the master, then start all the slaves.  And you are done.  Combining MySQL replication
