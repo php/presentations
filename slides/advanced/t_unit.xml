@@ -1,0 +1,10 @@
+<slide title="Unit Testing">
+<image filename="testing.jpg" align="right"/>
+<blurb><![CDATA[<br/><br/>]]></blurb>
+<list>
+<bullet>Testing Small Portions (~Units~) of Code</bullet>
+<bullet>Make Sure Nothing Breaks (~Regression Tests~)</bullet>
+<bullet>Write Your Tests</bullet>
+<bullet>Write The Code That Satisfies Those Tests</bullet>
+</list>
+</slide>
