@@ -2,4 +2,16 @@
 <slide fontsize="6em">
 	<title>Creating pages on demand 1</title>
 
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<list effect="slide" fontsize="5em">
+		<bullet>Only regenerate page when requested</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Most pages are never requested</bullet>
+	</list>
+	<list effect="slide" fontsize="5em">
+		<bullet>Use the 404-trick</bullet>
+	</list>
 </slide>
