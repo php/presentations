@@ -12,6 +12,7 @@ image of your gdchart graph if you have a static legend.
     fontsize="1.4em"
     result="1"
     type="genimage"
+	rwidth="49em"
 />
 <example
     title="Line Chart with custom axes"
@@ -19,6 +20,7 @@ image of your gdchart graph if you have a static legend.
     fontsize="1.4em"
     result="1"
     type="genimage"
+	rwidth="49em"
 />
 <example
     title="3D Area Chart"
@@ -26,6 +28,7 @@ image of your gdchart graph if you have a static legend.
     fontsize="1.4em"
     result="1"
     type="genimage"
+	rwidth="49em"
 />
 <example
     title="Pie Chart"
@@ -33,6 +36,7 @@ image of your gdchart graph if you have a static legend.
     fontsize="1.4em"
     result="1"
     type="genimage"
+	rwidth="49em"
 />
 <example
     title="Combo High-Low-Close Chart"
@@ -40,5 +44,6 @@ image of your gdchart graph if you have a static legend.
     fontsize="1.2em"
     result="1"
     type="genimage"
+	rwidth="49em"
 />
 </slide>
