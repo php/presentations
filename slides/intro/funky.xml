@@ -1,6 +1,6 @@
-<slide title="Funky Cacheing">
+<slide title="Funky Caching">
 <blurb>
-An interesting way to handle cacheing is to have all 404's redirected to a PHP
+An interesting way to handle caching is to have all 404's redirected to a PHP
 script.
 </blurb>
 <example type="shell">ErrorDocument 404 /generate.php</example>

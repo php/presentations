@@ -12,7 +12,7 @@ of your script.
 <example title="Setting a Last-Modified Header"><![CDATA[<?header('Last-Modified: '.
          gmdate('D, d M Y H:i:s',getlastmod()).' GMT')?>]]></example>
 
-<example title="Avoid all Cacheing"><![CDATA[<?php
+<example title="Avoid all Caching"><![CDATA[<?php
 Header('Cache-Control: no-cache, must-revalidate');
 Header('Pragma: no-cache');
 Header('Expires: Mon,26 Jul 1980 05:00:00 GMT');
