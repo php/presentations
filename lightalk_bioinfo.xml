@@ -1,0 +1,24 @@
+<presentation
+    jskeyboard="1"
+    stylesheet="slides/mdb/styles.css.php"
+    logo2="slides/mdb/mdb_logo.gif"
+    navsize="1.4em">
+<title>Why We Need People With Programming Experience in Bioinformatics</title>
+<topic>Bioinformatics</topic>
+<event>OSCON (PHP Lighting Talks)</event>
+<location>San Diego</location>
+<date>July 26, 2002</date>
+<speaker>Jesus M. Castagnetto, Ph.D.</speaker>
+<company>The Scripps Research Institute</company>
+<email>jesusmc@scripps.edu</email>
+<url>http://metallo.scripps.edu/talks</url>
+<slide>slides/mdb/ltalk_title.xml</slide>
+<slide>slides/mdb/bioinformatics.xml</slide>
+<slide>slides/mdb/bioinfo_research.xml</slide>
+<slide>slides/mdb/biomolecules.xml</slide>
+<slide>slides/mdb/central_dogma.xml</slide>
+<slide>slides/mdb/genomics.xml</slide>
+<slide>slides/mdb/struct_bioinfo.xml</slide>
+<slide>slides/mdb/how_to_help.xml</slide>
+<slide>slides/mdb/recommended_reading.xml</slide>
+</presentation>

@@ -1,0 +1,68 @@
+<presentation
+    jskeyboard="1"
+    logo2="slides/mdb/mdb_logo.gif"
+    navsize="1.4em">
+<title>Creating Web Services for a Web Application with XML and PHP.
+(MDB Web Services: A Case Study)</title>
+<topic>Bioinformatics</topic>
+<event>OSCON</event>
+<location>San Diego</location>
+<date>July 24, 2002</date>
+<speaker>Jesus M. Castagnetto, Ph.D.</speaker>
+<company>The Scripps Research Institute</company>
+<email>jesusmc@scripps.edu</email>
+<url>http://metallo.scripps.edu/talks</url>
+<slide>slides/mdb/oscon2002.xml</slide>
+<slide>slides/mdb/oscon2002_toc-1.xml</slide>
+<slide>slides/mdb/biointro.xml</slide>
+<slide>slides/mdb/biomol-1.xml</slide>
+<slide>slides/mdb/biomol-2.xml</slide>
+<slide>slides/mdb/biomol-3.xml</slide>
+<slide>slides/mdb/biomol-4.xml</slide>
+<slide>slides/mdb/biomol-5.xml</slide>
+<slide>slides/mdb/biomol-6.xml</slide>
+<slide>slides/mdb/biomol-7.xml</slide>
+<slide>slides/mdb/biosizes.xml</slide>
+<slide>slides/mdb/central_dogma.xml</slide>
+<slide>slides/mdb/bioinformatics.xml</slide>
+<slide>slides/mdb/bioinfo_research.xml</slide>
+<slide>slides/mdb/complexity.xml</slide>
+<slide>slides/mdb/pdb_stats.xml</slide>
+<slide>slides/mdb/hemoglobin.xml</slide>
+<slide>slides/mdb/oscon2002_toc-2.xml</slide>
+<slide>slides/mdb/mdb_background.xml</slide>
+<slide>slides/mdb/mdb_desc.xml</slide>
+<slide>slides/mdb/1hca.xml</slide>
+<slide>slides/mdb/mdb_tiers.xml</slide>
+<slide>slides/mdb/good_biodbs.xml</slide>
+<slide>slides/mdb/api_solution.xml</slide>
+<slide>slides/mdb/mdb_as_lib.xml</slide>
+<slide>slides/mdb/mdb_first_api.xml</slide>
+<slide>slides/mdb/imb_jena.xml</slide>
+<slide>slides/mdb/remote_viewer.xml</slide>
+<slide>slides/mdb/oscon2002_toc-3.xml</slide>
+<slide>slides/mdb/mdb_arch.xml</slide>
+<slide>slides/mdb/api_implementation.xml</slide>
+<slide>slides/mdb/sqlquery.xml</slide>
+<slide>slides/mdb/getpdbfrommetal.xml</slide>
+<slide>slides/mdb/http_api.xml</slide>
+<slide>slides/mdb/http_introspection.xml</slide>
+<slide>slides/mdb/test_api_sql.xml</slide>
+<!--
+<slide>slides/mdb/cached_test_http-api2.xml</slide>
+<slide>slides/mdb/rssapplet.xml</slide>
+<slide>slides/mdb/xmlrpc_soap_libs.xml</slide>
+<slide>slides/mdb/xmlrpc_api.xml</slide>
+<slide>slides/mdb/xmlrpc_method.sql.xml</slide>
+<slide>slides/mdb/xmlrpc_method.metallopdb.xml</slide>
+<slide>slides/mdb/soap_api.xml</slide>
+<slide>slides/mdb/test_soap.xml</slide>
+<slide>slides/mdb/xml_apps_used.xml</slide>
+-->
+<slide>slides/mdb/oscon2002_toc-4.xml</slide>
+<!--
+<slide>slides/mdb/conclusion.xml</slide>
+<slide>slides/mdb/metallo_people.xml</slide>
+<slide>slides/mdb/rec_reading.xml</slide>
+-->
+</presentation>
