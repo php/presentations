@@ -1,0 +1,8 @@
+<slide>
+<title>Structured Access</title>
+<blurb>
+The Easiest way to access XML structures is via the %xml_parse_into_struct()%
+function.
+</blurb>
+<example filename="parseinto.php" />
+</slide>
