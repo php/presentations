@@ -4,7 +4,7 @@
   To change the GC in a style:
  </blurb>
 
- <example fontsize="1.5em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.5em"><![CDATA[<?php
   $gc = $style->fg_gc[GTK_STATE_NORMAL];
   $gc->foreground = $color;
   $style->fg_gc[GTK_STATE_NORMAL] = $gc;

@@ -7,7 +7,7 @@
   method can be used.
  </blurb>
 
- <example fontsize="1.5em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.5em"><![CDATA[<?php
   // Here we create a pixmap, draw something on it, then convert it
   // to a GdkPixbuf and scale and composite it over a checkerboard
   // pattern.

@@ -6,7 +6,7 @@
   and gray checkerboard pattern, we could do this:
  </blurb>
 
- <example fontsize="1.7em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.7em"><![CDATA[<?php
   $pixbuf = GdkPixbuf::new_from_file('shape.png');
 
   $cmap = gdk::colormap_get_system();

@@ -22,7 +22,7 @@
   So, if we want to draw a 3/4 circle in the center of an image:
  </blurb>
 
- <example fontsize="1.5em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.5em"><![CDATA[<?php
   $cmap = gdk::colormap_get_system();
   $c = $cmap->alloc('purple');
 

@@ -12,7 +12,7 @@
   programmatically. But on other platforms one should do this:
  </blurb>
 
- <example fontsize="1.7em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.7em"><![CDATA[<?php
   // create top-level application window
   $win = &new GtkWindow();
   // make sure GdkWindow is created

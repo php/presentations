@@ -7,7 +7,7 @@
   have to be set manually.
  </blurb>
 
- <example fontsize="1.5em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.5em"><![CDATA[<?php
   // create a default GC
   $gc = $window->new_gc();
 

@@ -14,7 +14,7 @@
   color, but GtkLabel draws its string using 'fg_gc' context.
  </blurb>
 
- <example fontsize="1.5em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.5em"><![CDATA[<?php
   $win = &new GtkWindow();
   $win->set_border_width(5);
   $win->set_usize(100, 100);

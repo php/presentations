@@ -10,7 +10,7 @@
   Complete example:
  </blurb>
 
- <example fontsize="1.7em"><![CDATA[<?php
+ <example linenumbers="1" fontsize="1.7em"><![CDATA[<?php
   $win = &new GtkWindow();
   $win->realize();
 
