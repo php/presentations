@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PECL - PHP Extension Code Library</title>
+
+	<list marginleft="0em" fontsize="3.5em" title="What is it">
+		<bullet>Shared extensions</bullet>
+		<bullet>Makes use of the 'pear' tool</bullet>
+		<bullet>Future home for all extensions</bullet>
+	</list>
+
+	<break />
+
+	<list marginleft="0em" fontsize="3.5em" title="What does it deliver">
+		<bullet>Authentication</bullet>
+		<bullet>Console</bullet>
+		<bullet>Database</bullet>
+		<bullet>File Formats</bullet>
+ 		<bullet>TML</bullet>
+		<bullet>Images</bullet>
+		<bullet>Internationalisation</bullet>
+		<bullet>Mail</bullet>
+		<bullet>Networking</bullet>
+		<bullet>Payment</bullet>
+ 		<bullet>HP</bullet>
+		<bullet>Streams</bullet>
+		<bullet>System</bullet>
+		<bullet>Text</bullet>
+		<bullet>Tools and Utilities</bullet>
+	</list>
+
+	<break />
+
+	<list marginleft="0em" fontsize="3.5em" title="Highlights">
+		<bullet>FFI - Foreign function Interface</bullet>
+		<bullet>SOAP - Simple Object Access Protocol</bullet>
+		<bullet>Date - the upcoming way to handle date and time</bullet>
+		<bullet>Payment systems</bullet>
+	</list>
+
+</slide>
