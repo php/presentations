@@ -1,0 +1,50 @@
+<presentation 
+	template="php" 
+	navmode="html"
+	navbarbackground="#3C5BB4"
+	stylesheet="presentations/slides/srm/style.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>PHP Introduction</title>
+<event>eZ Publish Summer Conference</event>
+<location>Skien, Norway</location>
+<date>August 22nd, 2003</date>
+<speaker>Derick Rethans</speaker>
+<email>d.rethans@jdimedia.nl</email>
+<url>http://pres.derickrethans.nl/ezcamp</url>
+<slide>slides/ze-xdebug/title.xml</slide>
+
+<!-- Project -->
+<slide>slides/php5intro/nl/intro.xml</slide>
+<slide>slides/intro/numbers.xml</slide>
+<slide>slides/php5intro/nl/project.xml</slide>
+
+<!-- Pear -->
+<slide>slides/php5intro/nl/pear.xml</slide>
+<slide>slides/php5intro/nl/pecl.xml</slide>
+
+<!-- New stuff (OO) -->
+<slide>slides/state2003/changes5.xml</slide>
+<slide>slides/php5intro/nl/structors.xml</slide>
+<slide>slides/php5intro/nl/setget.xml</slide>
+<slide>slides/php5intro/nl/exceptions.xml</slide>
+
+<!-- XML stuff in PHP 5 -->
+<slide>slides/php5intro/nl/xml.xml</slide>
+<slide>slides/php5intro/nl/domxml-load.xml</slide>
+<slide>slides/php5intro/nl/simplexml-load.xml</slide>
+<slide>slides/php5intro/nl/simplexml-change.xml</slide>
+
+<!-- XDebug -->
+<slide>slides/xdebug/about.xml</slide>
+<slide>slides/xdebug/cb-dump.xml</slide>
+<slide>slides/xdebug/client-studio.xml</slide>
+
+<!-- SQLite -->
+<slide>slides/php5intro/sqlite.xml</slide>
+<slide>slides/php5intro/sqlite-ex.xml</slide>
+
+<slide>slides/php5intro/phpmagazine.xml</slide>
+<slide>slides/php5intro/ez-resources.xml</slide>
+
+</presentation>
