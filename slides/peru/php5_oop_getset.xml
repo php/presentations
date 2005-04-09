@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Poniendo y sacando valores">
+<blurb>
+PHP 5 permite que se definan métodos generales
+(%__get()% y %__set()%) para acceder
+a las variables de una clase, cuando esta no existe explicitamente.
+</blurb>
+<example type="php" result="1"><![CDATA[<?php
+	class Secretos {
+		private $claves = array ('jorge'=>'ogrej', 'diana'=>'azul123');
+
+		function __get($varName) {
+            if (array_key_exists($varName, $this->claves)) {
+                return $this->claves[$varName];
+            }
+		}
+
+		function __set($varName, $value) {
+            $this->claves[$varName] = $value;
+		}
+
+	}
+
+	$obj = new Secretos();
+	$obj->hugo = 'gregorian-chants_rewl';
+	echo "La clave de Diana es {$obj->diana}<br />\n";
+	echo "Hugo prefiere {$obj->hugo}, <br />\n";
+	echo "Mientras que Jorge astutamente usa {$obj->jorge}\n";
+?>
+]]></example>
+</slide>

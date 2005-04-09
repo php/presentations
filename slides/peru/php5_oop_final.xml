@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Miembros finales">
+<blurb>
+En PHP 5, una clase puede ser declarada como *final*, para prevenir
+que sea extendida:
+</blurb>
+<example type="php" filename="ejemplos/final.php" result="0"/>
+<blurb>
+Y para mayor control aún, los métodos pueden ser declarados finales, para
+que no puedan ser redefinidos en una sub-clase.
+</blurb>
+<example type="php" filename="ejemplos/final2.php" result="0"/>
+</slide>

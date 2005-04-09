@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Intercepción de llamadas a métodos">
+<blurb>
+Cuando un método no esta explicitamente declarado para un objeto,
+PHP 5 puede pasar la ejecución a un método especial llamado %__call()%.
+</blurb>
+<example type="php" fontsize="1.6em"><![CDATA[<?php
+    class Delegador {
+        private gato;
+        private perro;
+        
+        function __construct() {
+            $this->gato = new Gato();
+            $this->perro = new Perro()
+        }
+        
+        function __call($methodName, $args) {
+            if ($methodName == 'maulla') {
+                return $this->gato->maulla($args);
+            } else (
+                return $this->perro->$methodName($args);
+            }
+        }
+    }
+    
+    $obj = new Delegador();
+    echo $obj->ladra('fuerte');  // usa al perro
+    echo $obj->maulla('suave');  // usa al gato
+    echo $obj->muerde(); // el perro de nuevo
+?>]]>
+</example>
+</slide>
+

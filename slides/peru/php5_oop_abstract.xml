@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Clases Abstractas">
+<blurb>
+ Una clase abstracta no puede ser instanciada directamente, y sirve como
+ base para una serie de otras clases que la extienden e implementan sus
+ métodos.
+</blurb>
+<example type="php" filename="ejemplos/abstract.php"
+ fontsize="1.6em" result="1" />
+</slide>

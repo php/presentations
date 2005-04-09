@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Flujos (Streams) y Filtros">
+<blurb>
+En PHP 5 casi cualquier operación que involucra el leer o
+escribir hacia un recurso, emplea las interfazes
+de flujos (streams) y de filtros.
+</blurb>
+<list>
+<bullet>Existen varios filtros predefinidos (e.j. rot13)</bullet>
+<bullet>Soporte directo y simple para http://, https:// ftp:// ftps://</bullet>
+<bullet>Streams de compresión predefinidos (compression.zlib://, compress.bzip2://)</bullet>
+<bullet>Los flujos y filtros se pueden concatenar directamente para hacer operaciones complejas en el contenido de datos</bullet>
+<bullet>Se pueden definir flujos y filtros fácilmente en PHP.</bullet>
+</list>
+<break/>
+<example title="Ejemplo de filtrar información" 
+ filename="ejemplos/filter.php" result="0" type="php"/>
+<break />
+<example title="Definiendo un nuevo filtro" 
+ filename="ejemplos/filter2.php" result="0" type="php"/>
+</slide>

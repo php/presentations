@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Excepciones">
+<blurb>
+PHP 5 soporta el generar (*throw*), e interceptar (*catch*) excepciones
+usando una sintaxis similar a la usada en Java. Todas las excepciones se
+basan en la clase estándar %Exception%.
+</blurb>
+<example type="php" result="1"><![CDATA[<?php
+
+    class Calc {
+        static function log($num) {
+            if ($num < 0) {
+                throw new Exception('Logaritmo de un '.
+                            'negativo es indefinido');
+            } else {
+                return log($num);
+            }
+        }
+    }
+
+	try {
+        Calc::log(-15);
+	} catch (Exception $e) {
+		echo $e->getMessage();
+	}
+?>]]></example>
+</slide>

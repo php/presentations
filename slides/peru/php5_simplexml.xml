@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Extension: SimpleXML">
+<blurb>
+En PHP 5, las extensiones relacionadas a XML se basan ahora
+en la librería libxml2 (DOM, XSL). Además, el lenguaje ofrece
+la extensión %simplexml% que permite manipular archivos de XML
+en forma sencilla y directa, usando los métodos conocidos de 
+manjeo de objetos.
+</blurb>
+<blurb>
+Por ejemplo, tengamos el siguiente archivo:
+</blurb>
+<example title="[libros.xml]" filename="ejemplos/libros.xml" type="xml"/>
+<example title="Procesando con simplexml" 
+filename="ejemplos/simplexml.php" type="php" result="1"/>
+</slide>

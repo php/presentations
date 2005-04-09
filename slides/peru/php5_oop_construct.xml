@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Constructor/Destructor Uniformizados">
+<blurb>
+ En PHP 4, el constructor era una función con el mismo
+ nombre que la clase.
+</blurb>
+<example type="php" result="0"><![CDATA[<?php
+  class Trompito {
+    function Trompito($tipo_de_madera) { /* ... */ }
+  }
+?>]]></example>
+<blurb>
+ En PHP 5, los constructores se llaman %__construct()%, 
+ y los destructores %__destruct()%.
+</blurb>
+<example type="php" result="0"><![CDATA[<?php
+  class Trompazo {
+    function __construct($tipo_de_madera) { /* ... */ }
+    function __destruct() { /* ... */ }
+  }
+?>]]></example>
+<blurb>
+Por compatibilidad, aún se soportan los constructores al estilo de PHP 4.
+</blurb>
+</slide>
