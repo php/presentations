@@ -1,0 +1,40 @@
+<slide title='Estándares de código'>
+ <blurb>
+  Hay ciertas reglas y estándares para el código que esta en PEAR:
+ </blurb>
+ <list type='number'>
+  <bullet>
+   Las clases deben de tener un nombre descriptivo, e.j.
+   *TemperatureControl*, *HTML_Table*.
+  </bullet>
+  <bullet>
+   Los miembros públicos deben de seguir la convención de 'Camel caps',
+   excepto por el constructor de la clase, e.j.
+   *addRow()*, *solveEquation()*, *HTML_Table()*.
+  </bullet>
+  <bullet>
+   Los miembros privados deben de empezar con un subrayado "%_%", e.j.
+   *_validate()*, *$this->_numRows*.
+  </bullet>
+  <bullet>
+   Las constantes deberan ser todas en mayúsculas y prefijadas con
+   el nombre del paquete, e.j.
+   define('*MATH_STATS_CUMMULATIVE*',1);
+  </bullet>
+  <bullet>
+   Si se necesitan variable globales, sus nombres deben de estar prefijados
+   por el nombre del paquete y empezar con un subrayado, e.j.
+   $GLOBALS['*_PEAR_default_error_mode*']
+  </bullet>
+  <bullet>
+   En general, se prefiere que haya una clase por archivo, aunque se pueden
+   dar excepciones que tengan una razón válida (performance por ejemplo).
+  </bullet>
+  <bullet>
+   Los nombres de los paquetes siguen una jerarquía llana, que debe reflejar 
+   la estructura de los directorios en los que va a ser instalado, e.j. el
+   paquete HTML_QuickForm_Controller, será instalado en
+   HTML/QuickForm/Controller.
+  </bullet>
+ </list>
+</slide>

@@ -6,7 +6,6 @@ usando una sintaxis similar a la usada en Java. Todas las excepciones se
 basan en la clase estándar %Exception%.
 </blurb>
 <example type="php" result="1"><![CDATA[<?php
-
     class Calc {
         static function log($num) {
             if ($num < 0) {
@@ -18,10 +17,10 @@ basan en la clase estándar %Exception%.
         }
     }
 
-	try {
+ try {
         Calc::log(-15);
-	} catch (Exception $e) {
-		echo $e->getMessage();
-	}
+ } catch (Exception $e) {
+  echo $e->getMessage();
+ }
 ?>]]></example>
 </slide>

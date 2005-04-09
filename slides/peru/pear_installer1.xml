@@ -1,0 +1,57 @@
+<slide title='El comando "pear"'>
+ <blurb>
+  Cuando se instala PHP desde código, uno de los comandos que se añaden al
+  sistema es "%pear%", el cual es el manejador de paquetes (creación,
+  instalación, desinstalación, etc.) de PEAR.
+ </blurb>
+ <example type="shell"><![CDATA[$ pear help
+Commands:
+build                  Build an Extension From C Source
+bundle                 Unpacks a Pecl Package
+channel-add            Add a Channel
+channel-alias          Specify an alias to a channel name
+channel-delete         Remove a Channel From the List
+channel-discover       Initialize a Channel from its server
+channel-info           Retrieve Information on a Channel
+channel-update         Update an Existing Channel
+clear-cache            Clear XML-RPC Cache
+config-create          Create a Default configuration file
+config-get             Show One Setting
+config-help            Show Information About Setting
+config-set             Change Setting
+config-show            Show All Settings
+convert                Convert a package.xml 1.0 to package.xml 2.0 format
+cvsdiff                Run a "cvs diff" for all files in a package
+cvstag                 Set CVS Release Tag
+download               Download Package
+download-all           Downloads each available package from the default channel
+info                   Display information about a package
+install                Install Package
+list                   List Installed Packages In The Default Channel
+list-all               List All Packages
+list-channels          List Available Channels
+list-files             List Files In Installed Package
+list-upgrades          List Available Upgrades
+login                  Connects and authenticates to remote server
+logout                 Logs out from the remote server
+makerpm                Builds an RPM spec file from a PEAR package
+package                Build Package
+package-dependencies   Show package dependencies
+package-validate       Validate Package Consistency
+remote-info            Information About Remote Packages
+remote-list            List Remote Packages
+run-scripts            Run Post-Install Scripts bundled with a package
+run-tests              Run Regression Tests
+search                 Search remote package database
+shell-test             Shell Script Test
+sign                   Sign a package distribution file
+uninstall              Un-install Package
+update-channels        Update the Channel List
+upgrade                Upgrade Package
+upgrade-all            Upgrade All Packages
+Usage: pear [options] command [command-options] <parameters>
+Type "pear help options" to list all options.
+Type "pear help shortcuts" to list all command shortcuts.
+Type "pear help <command>" to get the help for the specified command.
+]]></example>
+</slide>

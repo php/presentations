@@ -1,0 +1,5 @@
+<slide title='Una GUI en tu navegador'>
+ <image title='... o si no usa tu navegador de web'
+  filename='images/packagemanager_web.png' align='center'/>
+ <example type='shell'><![CDATA[$ pear install PEAR_FrontEnd_Web]]></example>
+</slide>

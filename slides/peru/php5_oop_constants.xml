@@ -6,15 +6,15 @@ clase, que se comportan en forma similar a las constantes globales
 (%define()%).
 </blurb>
 <example type="php" result="1"><![CDATA[<?php
-	class TLD {
+ class TLD {
         /* ... */
-		const PERU = 'pe';
+  const PERU = 'pe';
         /* ... */
-	}
-	
-	define ('PERU', '51');
+ }
+ 
+ define ('PERU', '51');
 
-	echo 'Perú: tld='.TLD::PERU.', código='.PERU;
+ echo 'Perú: tld='.TLD::PERU.', código='.PERU;
 
 ?>]]>
 </example>

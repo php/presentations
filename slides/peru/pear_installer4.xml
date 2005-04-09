@@ -1,0 +1,63 @@
+<slide title='Consiguiendo información'>
+<example type="shell" title="Acerca de un paquete instalado"><![CDATA[$ pear info Math_Quaternion
+ABOUT MATH_QUATERNION-0.7.1
+===========================
+Provides               Classes:
+Package                Math_Quaternion
+Summary                Classes that define Quaternions and their
+                       operations
+Description            Classes that represent and manipulate
+                       quaternions. Contain definitions
+                       for basic arithmetic functions in a static
+                       class.
+                       Quaternions are an extension of the idea of
+                       complex numbers, and
+                       a quaternion is defined as:
+                        q = a + b*i + c*j + d*k
+                       In 1844 Hamilton described a system in which
+                       numbers were composed of
+                       a real part and 3 imaginary and independent
+                       parts (i,j,k), such that:
+                        i^2 = j^2 = k^2 = -1 and
+                        ij = k, jk = i, ki = j and
+                        ji = -k, kj = -i, ik = -j
+                       The above are known as "Hamilton's rules"
+Maintainers            Jesus M. Castagnetto <jmcastagnetto@php.net>
+                       (lead)
+Version                0.7.1
+Release Date           2003-01-17
+Release License        PHP
+Release State          beta
+Release Notes          Quaternion manipulation package.
+Package.xml Version    1.0
+Last Installed Version - None -
+Last Modified          2005-04-09
+]]></example>
+<example type="shell" title="Acerca de un paquete remoto"><![CDATA[$ pear remote-info PHP_Compat
+PACKAGE DETAILS:
+================
+Latest      1.3.1
+Installed   - no -
+Package     PHP_Compat
+License     PHP License
+Category    PHP
+Summary     Provides missing functionality for older
+            versions of PHP
+Description PHP_Compat provides missing functionality in the
+            form of constants and functions for older
+            versions of PHP.
+
+            Note: PHP_Compat can be used without installing
+            PEAR.
+            1) Download the package by clicking the
+            "Download" link.
+            2) Find the file you need. Each function is in
+            its own file, e.g. array_walk_recursive.php.
+            3) Place this file somewhere in your
+            include_path.
+            4) Include it, e.g. <?php require_once
+            'array_walk_recursive.php';?>
+            The function is now ready to be used.
+]]></example>
+
+</slide>

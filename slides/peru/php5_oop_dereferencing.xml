@@ -6,7 +6,7 @@ a través de una propiedad o método de otro objeto. Habia que hacer copias
 intermedias:
 </blurb>
 <example type="php" result="0"><![CDATA[<?php
-	$obj1 = new CoolObject();
+ $obj1 = new CoolObject();
 
     // en PHP 4 se hacia
     $tmp = $obj1->getFooObject();
@@ -16,7 +16,7 @@ intermedias:
 En cambio, en PHP 5 referencias indirectas (también llamadas derefencias),
 son permitidas.</blurb>
 <example type="php" result="0"><![CDATA[<?php
-	echo $obj1->getFooObject()->result;
+ echo $obj1->getFooObject()->result;
 ?>]]></example>
 </slide>
 

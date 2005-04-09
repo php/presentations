@@ -6,27 +6,27 @@ para satisfacer automáticament la resolución de las declaraciones
 de clases cuando el programa esta corriendo.
 </blurb>
 <example title="[archivo: Math/Matrix.php]" type="php"><![CDATA[<?php
-	class Math_Matrix {
+ class Math_Matrix {
         /* ... */
-	}
+ }
 ?>]]>
 </example>
 <example title="[archivo: Math/Quaternion.php]" type="php"><![CDATA[<?php
-	class Math_Quaternion {
+ class Math_Quaternion {
         /* ... */
-	}
+ }
 ?>]]>
 </example>
 <example title="[archivo: calculos.php]" type="php"><![CDATA[<?php
 
-	function __autoload($classname) {
+ function __autoload($classname) {
         list($math, $fname) = explode('_', $classname);
-		include_once "{$math}/{$fname}.php";
-	}
+  include_once "{$math}/{$fname}.php";
+ }
 
-	$m = new Math_Matrix();
-	$q = new Math_Quaternion();
+ $m = new Math_Matrix();
+ $q = new Math_Quaternion();
 
 ?>]]></example>
 </slide>
-	
+ 

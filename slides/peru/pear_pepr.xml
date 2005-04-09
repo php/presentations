@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="PEPr: Manejando nuevas propuestas">
+ <blurb>
+  PEPr fue creado para hacer mas fácil y transparente el proceso de proponer
+  un nuevo paquete a ser incluido en PEAR. 
+ </blurb>
+ <break/>
+ <blurb>
+  El proceso de propuesta es bien directo y linear:
+ </blurb>
+ <list>
+  <bullet>Discusión en pear-dev de la idea/código</bullet>
+  <bullet>Escritura de un borrador de propuesta (opcional)</bullet>
+  <bullet>Poner la propuesta a los comentarios de los otros desarrolladores,
+   y cambiarla en respuesta a las ideas intercambiadas</bullet>
+  <bullet>Sujetar la propuesta a votación general</bullet>
+ </list>
+ <break/>
+ <blurb>
+  Un paquete se aprueba si tiene *5 o más puntos positivos* al final del
+  periodo de votación. Pasado esto, el desarrollador añade el paquete
+  a la lista de los ofrecidos en PEAR, y empieza el ciclo de desarrollo
+  normal.
+ </blurb>
+</slide>
