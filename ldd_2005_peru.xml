@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentation
+ navbarbackground="#ffffff"
+ template="css"
+ navmode="html" 
+ jskeyboard="1"
+ navbartopiclinks="0"
+ stylesheet="presentations/slides/peru/style.css"
+>
+<title>PHP 5 y PEAR:
+Una visión global</title>
+<topic>PHP 5</topic>
+<event>Linux Developer Day 2005</event>
+<location>Lima, Perú</location>
+<date>April 09, 2005</date>
+<speaker>Jesus M. Castagnetto, Ph.D.</speaker>
+<email>jmcastagnetto@php.net</email>
+<url>http://talks.php.net/</url>
+
+ <slide>slides/peru/ldd2005_title.xml</slide>
+ <slide>slides/peru/ldd2005_toc.xml</slide>
+
+ <chapter title="PHP 5">
+  <slide>slides/peru/php5_titulo.xml</slide>
+  <slide>slides/peru/php5_oop_reference.xml</slide>
+  <slide>slides/peru/php5_oop_cloning.xml</slide>
+  <slide>slides/peru/php5_oop_construct.xml</slide>
+  <slide>slides/peru/php5_oop_ppp.xml</slide>
+  <slide>slides/peru/php5_oop_static.xml</slide>
+  <slide>slides/peru/php5_oop_final.xml</slide>
+  <slide>slides/peru/php5_oop_constants.xml</slide>
+  <slide>slides/peru/php5_oop_dereferencing.xml</slide>
+  <slide>slides/peru/php5_oop_autoclassloading.xml</slide>
+  <slide>slides/peru/php5_oop_getset.xml</slide>
+  <slide>slides/peru/php5_oop_call.xml</slide>
+  <slide>slides/peru/php5_oop_abstract.xml</slide>
+  <slide>slides/peru/php5_oop_interfaces.xml</slide>
+  <slide>slides/peru/php5_oop_exceptions.xml</slide>
+  <slide>slides/peru/php5_oop_typehinting.xml</slide>
+  <slide>slides/peru/php5_simplexml.xml</slide>
+  <slide>slides/peru/php5_sqlite.xml</slide>
+  <slide>slides/peru/php5_streams_filters.xml</slide>
+ </chapter>
+
+ <chapter title="PEAR y PECL">
+  <slide>slides/peru/pear_titulo.xml</slide>
+ </chapter>
+
+</presentation>
