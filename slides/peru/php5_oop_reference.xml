@@ -3,7 +3,7 @@
  En PHP 5, los objetos son *siempre* pasados por referencia, no
  copiados como en PHP 4.
  </blurb>
-<example filename="ejemplos/reference.php" result="1" />
+<example filename="ejemplos/reference.php" result="0" />
 <break lines="2"/>
 </slide>
 

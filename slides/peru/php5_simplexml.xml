@@ -12,5 +12,5 @@ Por ejemplo, tengamos el siguiente archivo:
 </blurb>
 <example title="[libros.xml]" filename="ejemplos/libros.xml" type="xml"/>
 <example title="Procesando con simplexml" 
-filename="ejemplos/simplexml.php" type="php" result="1"/>
+filename="ejemplos/simplexml.php" type="php" result="0"/>
 </slide>

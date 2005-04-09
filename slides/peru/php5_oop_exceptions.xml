@@ -5,7 +5,7 @@ PHP 5 soporta el generar (*throw*), e interceptar (*catch*) excepciones
 usando una sintaxis similar a la usada en Java. Todas las excepciones se
 basan en la clase estándar %Exception%.
 </blurb>
-<example type="php" result="1"><![CDATA[<?php
+<example type="php" result="0"><![CDATA[<?php
     class Calc {
         static function log($num) {
             if ($num < 0) {

@@ -4,7 +4,7 @@
 Cuando un método no esta explicitamente declarado para un objeto,
 PHP 5 puede pasar la ejecución a un método especial llamado %__call()%.
 </blurb>
-<example type="php" result="1"><![CDATA[<?php
+<example type="php" result="0"><![CDATA[<?php
     class Delegador {
         private gato;
         private perro;

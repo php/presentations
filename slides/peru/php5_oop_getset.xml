@@ -5,7 +5,7 @@ PHP 5 permite que se definan métodos generales
 (%__get()% y %__set()%) para acceder
 a las variables de una clase, cuando esta no existe explicitamente.
 </blurb>
-<example type="php" result="1"><![CDATA[<?php
+<example type="php" result="0"><![CDATA[<?php
  class Secretos {
   private $claves = array ('jorge'=>'ogrej', 'diana'=>'azul123');
 

@@ -5,27 +5,27 @@ En PHP 5 se pueden definir interfazes, que se empleen para asegurarse
 de que una clase en particular provee un conjunto dado de métodos con
 un patrón determinado:
 </blurb>
-<example type="php" result="1"><![CDATA[<?php
-	interface Printable {
-		function getFormattedString();
-	}
+<example type="php" result="0"><![CDATA[<?php
+ interface Printable {
+  function getFormattedString();
+ }
 
-	class Vector3D implements Printable {
-	    private $x, $y, $z;
-	    function __construct($x, $y, $z) {
-	       $this->x = $x;
-	       $this->y = $y;
-	       $this->z = $z;
-	    }
-		function getFormattedString() {
+ class Vector3D implements Printable {
+     private $x, $y, $z;
+     function __construct($x, $y, $z) {
+        $this->x = $x;
+        $this->y = $y;
+        $this->z = $z;
+     }
+  function getFormattedString() {
             return "[{$this->x}, {$this->y}, {$this->z}]";
-		}
-	}
+  }
+ }
 
-	$v1 = new Vector3D(1.2, 4.2, sqrt(2));
-	if($v1 instanceof Printable) {
-		echo "v1 es: ".$v1->getFormattedString();
-	}
+ $v1 = new Vector3D(1.2, 4.2, sqrt(2));
+ if($v1 instanceof Printable) {
+  echo "v1 es: ".$v1->getFormattedString();
+ }
 ?>]]>
 </example>
 </slide>
