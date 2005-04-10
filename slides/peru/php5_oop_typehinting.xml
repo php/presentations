@@ -6,48 +6,6 @@ no es declarado estrictamente (es decir, un lenguaje libremente tipeado),
 pero en PHP 5 es posible el aludir al tipo de objeto que se espera como
 parámetro en un método o función.
 </blurb>
-<example type="php" result="1"><![CDATA[<?php
-    abstract class Combustible {
-        abstract function usar();
-    }
-
-	class Kerosene extends Combustible {
-		function usar() {
-			return "¡Glub, glub, glub!<br />";
-		}
-	}
-	
-	class Gasolina extends Combustible {
-		function usar() {
-            return "¡Tink, tink, tink!<br />";
-		}
-	}
-	
-	class Cocina {
-	   function llenar(Kerosene $comb) {
-	       echo 'cocina: '.$comb->usar();
-	   }
-	}
-
-	class Carcocha {
-		function llenar(Combustible $comb) {
-			echo 'carcocha: '.$comb->usar();
-		}
-	}
-
-    $kero = new Kerosene();
-    $gas = new Gasolina();
-    
-    $combi = new Carcocha();
-    $coci = new Cocina();
-    
-    // no hay problema
-	$combi->llenar($kero);
-	$combi->llenar($gas);
-	
-	$coci->llenar($kero);
-	// la línea siguiente generaria un error
-	// $coci->llenar($gas);
-?>]]>
-</example>
+<example type="php" filename="ejemplos/typehinting.php"/>
+<example title="... ejecutando esto para mostrar el error" filename="ejemplos/typehinting.out"/>
 </slide>

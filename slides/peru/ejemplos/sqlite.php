@@ -1,6 +1,5 @@
-<ul>
 <?php
-    $fname = 'presentations/slides/peru/ejemplos/direcciones.sqlite';
+    $fname = 'direcciones.sqlite';
     @unlink($fname);
     $db = new SQLiteDatabase($fname);
     $sql = "CREATE TABLE emails (
@@ -20,7 +19,6 @@
     $rows = $db->arrayQuery("SELECT DISTINCT nombre,correo FROM emails");
     
     foreach ($rows as $row) {
-        echo "<li><b>{$row['nombre']}</b>, {$row['correo']}</li>\n";
+        echo "- {$row['nombre']}, {$row['correo']}\n";
     }
 ?>    
-</ul>

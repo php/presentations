@@ -4,10 +4,13 @@
 En PHP 5, una clase puede ser declarada como *final*, para prevenir
 que sea extendida:
 </blurb>
-<example type="php" filename="ejemplos/final.php" result="0"/>
+<example type="php" filename="ejemplos/final.php"/>
+<example title="al ejecutar se produce el error" filename="ejemplos/final.out"/>
 <blurb>
 Y para mayor control aún, los métodos pueden ser declarados finales, para
 que no puedan ser redefinidos en una sub-clase.
 </blurb>
 <example type="php" filename="ejemplos/final2.php" result="0"/>
+<example type="y cuando corre el se genera" filename="ejemplos/final2.out"/>
+<break/>
 </slide>

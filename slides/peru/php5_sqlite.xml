@@ -24,5 +24,6 @@ SQLite es una de las más interesantes extensiones nuevas en PHP 5, pues ofrece:
  de procedimientos, etc.
 </bullet>
 </list>
-<example title="Usando SQLite" filename="ejemplos/sqlite.php" result="0"/>
+<example title="Usando SQLite" filename="ejemplos/sqlite.php"/>
+<example title="... obtenemos como resultado" filename="ejemplos/sqlite.out"/>
 </slide>

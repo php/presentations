@@ -5,17 +5,7 @@ PHP 5 soporta la declaración de constantes específicas a una
 clase, que se comportan en forma similar a las constantes globales
 (%define()%).
 </blurb>
-<example type="php" result="0"><![CDATA[<?php
- class TLD {
-        /* ... */
-  const PERU = 'pe';
-        /* ... */
- }
- 
- define ('PERU', '51');
-
- echo 'Perú: tld='.TLD::PERU.', código='.PERU;
-
-?>]]>
-</example>
+<example type="php" filename="ejemplos/constants.php"/>
+<example title="... corriendo el ejemplo resulta en"
+filename="ejemplos/constants.out"/>
 </slide>

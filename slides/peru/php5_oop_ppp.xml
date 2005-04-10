@@ -10,5 +10,7 @@ se puede definir explicitamente usando las palabras clave:
 %private%, %public%, y %protected% cuando se declaran variables
 y métodos.
 </blurb>
-<example type="php" filename="ejemplos/oop_ppp.php" result="0"/>
+<example type="php" filename="ejemplos/oop_ppp.php"/>
+<example title="el ejecutar el código, produce:" filename="ejemplos/oop_ppp.out"/>
+<break/>
 </slide>

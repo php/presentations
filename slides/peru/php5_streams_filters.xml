@@ -15,7 +15,12 @@ de flujos (streams) y de filtros.
 <break/>
 <example title="Ejemplo de filtrar información" 
  filename="ejemplos/filter.php" result="0" type="php"/>
-<break />
+ <example title="Resultado" 
+ filename="ejemplos/filter.out"/>
+<break/>
 <example title="Definiendo un nuevo filtro" 
  filename="ejemplos/filter2.php" result="0" type="php"/>
+<example title="Resultado" 
+ filename="ejemplos/filter2.out"/>
+<break/>
 </slide>

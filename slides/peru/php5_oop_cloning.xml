@@ -4,12 +4,15 @@
 Como los objetos son pasados por referencia, para poder copiar
 un objeto, tenemos que clonarlo usando *clone*.
 </blurb>
-<example type="php" filename="ejemplos/clone.php" result="0"/>
+<example type="php" filename="ejemplos/clone.php"/>
+<example title="... ejecutemos este código:" filename="ejemplos/clone.out"/>
 <blurb>
 Si hay necesidad de mayor control, se tiene que implementar el
 método %__clone()%. Asi que el ejemplo anterior ahora sería:
 </blurb>
-<example type="php" filename="ejemplos/clone2.php" result="0"/>
+<example type="php" filename="ejemplos/clone2.php"/>
+<example title="... y ahora obtenemos"
+filename="ejemplos/clone2.out"/>
 </slide>
 
 
