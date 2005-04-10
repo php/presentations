@@ -2,7 +2,7 @@
 <?php
     $fname = 'presentations/slides/peru/ejemplos/direcciones.sqlite';
     @unlink($fname);
-    $db = new SQLiteDatabase($fname)
+    $db = new SQLiteDatabase($fname);
     $sql = "CREATE TABLE emails (
                 id INTEGER PRIMARY KEY,
                 nombre STRING NOT NULL,
