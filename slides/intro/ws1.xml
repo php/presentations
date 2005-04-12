@@ -1,0 +1,39 @@
+<slide title="Web Services">
+<blurb>
+With PHP5's solid XML support and improved internal OOP support, Web Services are now a natural fit for PHP.
+Most people seem to think of SOAP when we say Web Services, so here is the obligatory SOAP example:
+</blurb>
+<example fontsize="1.4em"><![CDATA[<?php
+$amazon_index = array(
+  'DVD', 'Photo', 'Electronics', 'OfficeProducts', 'HealthPersonalCare', 
+  'Toys', 'Baby', 'VideoGames', 'MusicTracks', 'OutdoorLiving', 
+  'Blended', 'MusicalInstruments', 'Magazines', 'DigitalMusic',
+  'Jewelry', 'Video', 'Tools', 'PCHardware', 'SportingGoods',
+  'Classical', 'Software', 'Books', 'VHS', 'Wireless', 'Restaurants',
+  'Music', 'GourmetFood', 'Miscellaneous', 'Kitchen', 'WirelessAccessories',
+  'Merchants', 'Beauty', 'Apparel'
+);
+
+function amazon($index, $keywords, $timeout=7200) {
+  $dest_file = "/tmp/aws_{$index}_".md5($keywords);
+  if(file_exists($dest_file) && filemtime($dest_file) > (time()-$timeout)) {
+    $result = unserialize(file_get_contents($dest_file));
+  } else {
+    $aws = new SoapClient('http://webservices.amazon.com/'.
+               'AWSECommerceService/US/AWSECommerceService.wsdl',
+               array("trace" => 1)); 
+    $result = $aws->ItemSearch(array(
+        'SubscriptionId'=>'XXXXXXXXXXXXXX',
+        'AssociateTag'=>'lerdorf-20',
+        'Request'=>array(array('SearchIndex'=>$index, 
+                               'Keywords'=>$keywords))
+      )
+    );
+    $tmpf = tempnam('/tmp','YWS');
+    file_put_contents($tmpf, serialize($result));
+    rename($tmpf, $dest_file);
+  }
+  return $result;
+}
+?>]]></example>
+</slide>

@@ -1,19 +1,20 @@
 <slide title="Direct Attacks">
 
+<image filename="dewie5.gif" align="right" marginright="10"/>
 <blurb title="Dumb things" />
 <blurb>
 Don't do dumb things!
 </blurb>
 
-<example><![CDATA[<?php
+<example marginright="25"><![CDATA[<?php
     system($user_data);
 ?>]]></example>
 
-<example><![CDATA[<?php
+<example marginright="25"><![CDATA[<?php
     include "$path/$user_data";
 ?>]]></example>
 
-<example><![CDATA[<?php
+<example marginright="25"><![CDATA[<?php
     eval($user_data);
 ?>]]></example>
 

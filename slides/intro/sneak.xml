@@ -1,0 +1,38 @@
+<slide title="REST services from Yahoo!">
+<list>
+<bullet>Web Search</bullet>
+<bullet>Web Search with Context</bullet>
+<bullet>Creative Commons Web Search</bullet>
+<bullet>News Search</bullet>
+<bullet>Image Search</bullet>
+<bullet>Local Search</bullet>
+<bullet>Video Search</bullet>
+</list>
+<blurb>
+And a new one that isn't public yet.  
+</blurb>
+<list>
+<bullet>Context Extraction Service</bullet>
+</list>
+<example type="shell" fontsize="1.3em"> _Parameter       Value                                Description                          _
+ appid     string (required) The application ID. See Application IDs for more information.
+ context   string (required) The context to extract terms from (UTF-8 encoded).
+ query     string            An optional query to help with the extraction process.</example>
+<example title="Example" fontsize="1.4em" result="1"><![CDATA[<?php
+$context = "Italian sculptors and painters of the renaissance favored the Virgin Mary for inspiration.";
+$url = 'http://api.search.yahoo.com/ContentAnalysisService/V1/termExtraction';
+$post = "query=madonna&appid=RESTDemo&context=".rawurlencode($context);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+$xml = simplexml_load_string(curl_exec($ch));
+curl_close($ch);
+echo $xml->asXML();
+?>]]></example>
+
+<blurb>
+
+</blurb>
+</slide>

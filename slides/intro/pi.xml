@@ -3,7 +3,7 @@
 $PATH_INFO is your friend when it comes to creating clean URLS.  Take for
 example this URL:
 </blurb>
-<example>http://www.company.com/products/routers</example>
+<example format="text">http://www.company.com/products/routers</example>
 <blurb>
 If the Apache configuration contains this block:
 </blurb>

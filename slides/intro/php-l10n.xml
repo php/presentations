@@ -1,0 +1,12 @@
+<slide title="l10n">
+<blurb fontsize="4em">
+There isn't much localization support directly in PHP.  A few things can help out.
+</blurb>
+
+<list fontsize="4em">
+<bullet>Generated templates</bullet>
+<bullet>setlocale</bullet>
+<bullet>gettext</bullet>
+</list>
+
+</slide>

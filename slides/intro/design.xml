@@ -1,5 +1,5 @@
 <slide title="Design">
-<break lines="2" />
+<break lines="1" />
 <list title="Outside-in and Inside-out view" fontsize="4em">
 <bullet> What do outsiders (users) see looking in?</bullet>
 <bullet> What do insiders (developers) see looking out?</bullet>
@@ -13,7 +13,7 @@
 <list title="Inside-out" fontsize="4em">
 <bullet>File Layout</bullet>
 <bullet>Separation of layout from business logic</bullet>
+<bullet>Application API</bullet>
 <bullet>Server Architecture and Load Balancing</bullet>
 </list>
-
 </slide>

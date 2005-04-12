@@ -1,5 +1,10 @@
 <slide title="Tuning">
 
+<example title="./configure" type="shell">
+./configure --with-apxs=/usr/sbin/apxs --without-pic \
+            --with-config-file-scan-dir=/etc/php
+</example>
+
 <example title="include_path" type="shell">
 include_path = "/usr/share/pear:."
 </example>
@@ -14,7 +19,7 @@ open_basedir = "/usr/share/htdocs/:/usr/share/pear/"
 </example>
 
 <blurb>open_basedir checking adds some extra syscalls to every file operation.  It can be useful,
-but it is rather expensive, so turn it off if you don't think you need it.</blurb>
+but it is rather expensive, so turn it off if you don't you need it.</blurb>
 
 <example title="variables_order" type="shell">
 variables_order = "GPC"

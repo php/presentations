@@ -1,12 +1,12 @@
 <slide title="Worries">
 
+<image filename="dewie9.gif" align="left" marginleft="10" />
 <break lines="2" />
-
-<blurb align="center" fontsize="8em">Indirect Attacks</blurb>
+<blurb align="left" fontsize="8em">Indirect Attacks</blurb>
 <blurb marginleft="5em" fontsize="5em">* XSS - Cross-site scripting attacks</blurb>
 <blurb marginleft="5em" fontsize="5em">* Spoofing</blurb>
 
-<blurb align="center" fontsize="8em">Direct Attacks</blurb>
+<blurb marginleft="2.8em" fontsize="8em">Direct Attacks</blurb>
 <blurb marginleft="5em" fontsize="5em">* Buffer Overflows</blurb>
 <blurb marginleft="5em" fontsize="5em">* Path tricks</blurb>
 <blurb marginleft="5em" fontsize="5em">* Application logic attacks</blurb>

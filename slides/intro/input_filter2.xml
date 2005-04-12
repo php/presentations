@@ -11,12 +11,12 @@ to filter their input.  We'll need to spoonfeed again.
 <break lines="6" />
 
 <example title="API?"><![CDATA[<?php
-    $name = pfilt(POST, 'name');  /* Default filter */
-    $age  = pfilt(POST, 'age', PFILT_INTEGER);  
-    $addr = pfilt(POST, 'addr', PFILT_TEXT, 'UTF-8');
+    $name = filter(POST, 'name');  /* Default filter */
+    $age  = filter(POST, 'age', PFILT_INTEGER);  
+    $addr = filter(POST, 'addr', PFILT_TEXT, 'UTF-8');
 ?>]]></example>
 
-<example title="Config"><![CDATA[input_filter.default = PFILT_TEXT
+<example title="Config"><![CDATA[input_filter.default = FILTER_TEXT
 ]]></example>
 
 <example title="Strip or Escape?"><![CDATA[abc;123{def}

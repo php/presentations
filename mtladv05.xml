@@ -1,0 +1,125 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+90 Minutes
+-->
+<topic>PHP</topic>
+<title>Advanced PHP</title>
+<event>PHP Québec</event>
+<location>Montréal</location>
+<date>March 31, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/mtladv05</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/mtl_agenda.xml</slide>
+
+<slide>slides/intro/security_agenda.xml</slide>
+
+<chapter title="Security">
+<slide>slides/intro/worries.xml</slide>
+<slide>slides/intro/overflows.xml</slide>
+<slide>slides/intro/dumb.xml</slide>
+<slide>slides/intro/input_filter.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+</chapter>
+
+<slide>slides/intro/large_teams_agenda.xml</slide>
+
+<chapter title="Large developer teams">
+  <slide>slides/intro/large.xml</slide>
+  <slide>slides/intro/tools_dev.xml</slide>
+  <slide>slides/intro/phpt_dev.xml</slide>
+</chapter>
+
+<slide>slides/intro/high_complexity_agenda.xml</slide>
+
+<chapter title="High-complexity applications">
+  <slide>slides/intro/max_dev.xml</slide>
+  <slide>slides/intro/design.xml</slide>
+  <slide>slides/intro/urlapi.xml</slide>
+  <slide>slides/intro/pi.xml</slide>
+  <slide>slides/intro/errdoc.xml</slide>
+  <slide>slides/intro/file_layout.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+  <slide>slides/intro/poll1.xml</slide>
+  <slide>slides/intro/poll2.xml</slide>
+  <slide>slides/intro/poll3.xml</slide>
+</chapter>
+
+<slide>slides/intro/high_traffic_agenda.xml</slide>
+
+<chapter title="High-traffic Applications">
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_tuning2.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/xdebug_profile.xml</slide>
+  <slide>slides/intro/pecl_gen.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+  <slide>slides/intro/repl3.xml</slide>
+</chapter>
+
+
+<slide>slides/intro/i18n_l10n_agenda.xml</slide>
+
+<chapter title="I18n and L10n">
+<slide>slides/intro/php-template.xml</slide>
+<slide>slides/intro/php-template1.xml</slide>
+<slide>slides/intro/php-i18n.xml</slide>
+<slide>slides/intro/php-l10n.xml</slide>
+</chapter>
+
+<slide>slides/intro/php5_agenda.xml</slide>
+<chapter title="PHP5">
+<slide>slides/intro/php5q2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/sneak.xml</slide>
+</chapter>
+
+<!--
+Security Concerns
+Input Filtering Solution?
+Performance Considerations  - handling constants and server variables
+                            - prefer-non-pic
+                            - syscalls
+-->
+
+<!--
+<chapter title="Performance">
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/php_opcode_caches.xml</slide>
+  <slide>slides/intro/php_opcode_caches-split.xml</slide>
+  <slide>slides/intro/new_apc.xml</slide>
+  <slide>slides/intro/php_opcode_caches3.xml</slide>
+  <slide>slides/intro/tech_bench1.xml</slide>
+  <slide>slides/intro/tech_bench1a.xml</slide>
+  <slide>slides/intro/tech_bench2.xml</slide>
+  <slide>slides/intro/new_bench3.xml</slide>
+  <slide>slides/intro/php_profiling.xml</slide>
+  <slide>slides/intro/new_apc.xml</slide>
+  <slide>slides/intro/tech_benchapc1.xml</slide>
+  <slide>slides/intro/tech_benchminit.xml</slide>
+  <slide>slides/intro/tech_bench5.xml</slide>
+  <slide>slides/intro/tech_bench6.xml</slide>
+  <slide>slides/intro/tech_bench7.xml</slide>
+  <slide>slides/intro/tech_bench8.xml</slide>
+  <slide>slides/intro/tech_bench4.xml</slide>
+  <slide>slides/intro/repl1.xml</slide>
+  <slide>slides/intro/repl3.xml</slide>
+  <slide>slides/intro/stop.xml</slide>
+</chapter>
+-->
+
+<slide>slides/intro/resources.xml</slide>
+
+</presentation>

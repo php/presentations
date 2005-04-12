@@ -1,0 +1,92 @@
+<slide>
+ <title>PECL_Gen</title>
+ <blurb>
+ PECL_Gen replaces ext_skel in PHP5
+ </blurb>
+<example fontsize="1.5em" format="xml"><![CDATA[<?xml version="1.0"?>
+<extension name="myext">
+ <summary>My Cool Extension</summary>
+ <logo src="myext.png" mimetype="image/png" />
+
+ <maintainers>
+  <maintainer>        
+   <user>rasmus</user>
+   <name>Rasmus Lerdorf</name>
+   <email>rasmus@php.net</email>
+   <role>lead</role>
+  </maintainer>
+ </maintainers>
+
+ <release>
+  <version>0.1</version>
+  <date>2005-04-01</date>
+  <state>alpha</state>
+  <license>php</license>
+  <notes>
+      - This is cool
+  </notes>
+ </release>
+
+ <deps language="c" platform="unix">
+  <header name="math.h"/>
+  <lib    name="m" function="floor"/>
+ </deps>
+
+ <constant name="MYMODE" type="int" value="1" />
+ <global name="foo" type="long" value="42"/>
+
+ <function role="internal" name="MINIT">
+  <code>init();</code>
+ </function>
+
+ <function name="get_foo">
+  <proto>int get_foo(void)</proto>
+  <code>
+    RETURN_LONG(MYEXT_G(foo));
+  </code>
+ </function>
+
+ <function name="foobar">
+  <proto>string foobar(void)</proto>
+  <summary>A dummy function</summary>
+  <description>
+   This function returns a static string.
+  </description>
+  <code>
+   RETURN_STRING("foobar", 1);
+  </code>
+ </function>
+
+</extension>]]></example>
+
+ <example fontsize="1.5em" type="shell"><![CDATA[$ pecl-gen myext.xml
+
+Creating 'myext' extension in '/home/rasmus/myext'
+Your extension has been created in directory myext.
+See myext/README for further instructions.
+]]></example>
+ <blurb>
+  This will create the following directory:
+ </blurb>
+ <example fontsize="1.5em" format="text"><![CDATA[myext
+|-- EXPERIMENTAL
+|-- README
+|-- config.m4
+|-- manual
+|   `--myext 
+|       |-- configure.xml
+|       |-- functions
+|       `-- reference.xml
+|-- package.xml
+|-- php_myext.h
+|-- tests
+|-- myext.c
+`-- myext.dsp]]></example>
+ <example fontsize="1.5em" type="shell"><![CDATA[$ cd myext
+$ phpize
+$ ./configure
+$ make
+$ sudo make install]]></example>
+
+</slide>
+

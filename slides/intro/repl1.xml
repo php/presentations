@@ -1,6 +1,6 @@
 <slide title="MySQL Replication">
 <blurb>
-As of version 3.23.15 (try to use 3.23.29 or later), MySQL supports one-way replication.
+MySQL supports one-way replication.
 Since most web applications usually have more reads than writes, an architecture which
 distributes reads across multiple servers can be very beneficial.
 </blurb>
@@ -15,12 +15,8 @@ server-id=1</example>
 <blurb>
 And add a replication user id for slaves to log in as:
 </blurb>
-<example type="shell"><![CDATA[GRANT FILE ON *.* TO repl@"%" IDENTIFIED BY 'foobar';]]></example>
+<example type="shell" fontsize="1.7em"><![CDATA[GRANT REPLICATION SLAVE ON *.* TO repl@"%" IDENTIFIED BY 'foobar';]]></example>
 
-<blurb>
-If you are using MySQL 4.0.2 or later, replace %FILE% with %REPLICATION SLAVE% in the above.
-Then on your slave servers:
-</blurb>
 <example type="shell">[mysqld]
 set-variable = max_connections=200
 log-bin

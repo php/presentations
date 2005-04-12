@@ -1,0 +1,38 @@
+<slide title="Large-Scale PHP">
+
+<break lines="5" />
+<blurb marginleft="150px" fontsize="6em"> Security </blurb>
+
+<blurb marginleft="150px" fontsize="6em"> Large developer teams </blurb>
+<!--
+<list marginleft="3" fontsize="3em">
+  <bullet>Source Control</bullet>
+  <bullet>Mailing Lists</bullet>
+  <bullet>Bug tracking</bullet>
+  <bullet>Regression testing</bullet>
+  <bullet>Maximize development resources</bullet>
+</list>
+-->
+<blurb marginleft="150px" fontsize="6em"> High-complexity applications </blurb>
+<!--
+<list marginleft="3" fontsize="3em">
+  <bullet>Separate Layout from business logic</bullet>
+  <bullet>Clean modular internal APIs</bullet>
+</list>
+-->
+<blurb marginleft="150px" fontsize="6em"> High-traffic Applications </blurb>
+<!--
+<list marginleft="3" fontsize="3em">
+  <bullet>Profile</bullet>
+  <bullet>Optimize</bullet>
+  <bullet>Scalable Architecture</bullet> 
+</list>
+-->
+<blurb marginleft="150px" fontsize="6em"> I18n and L10n </blurb>
+<!--
+<list marginleft="3" fontsize="3em">
+  <bullet>Runtime vs. Generation-time Templating</bullet>
+  <bullet>Template Management</bullet>
+</list>
+-->
+</slide>

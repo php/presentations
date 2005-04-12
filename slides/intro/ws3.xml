@@ -1,0 +1,43 @@
+<slide title="No more SOAP!">
+<blurb>
+SOAP makes my head hurt.  Let's look at some stuff we can all actually understand instead.
+</blurb>
+<example title="Take a pinch of RSS" result="1" rfontsize="1.2em"><![CDATA[<?php
+$url = 'http://buzz.yahoo.com/feeds/buzzoverl.xml';
+$xml = simplexml_load_file($url);
+foreach($xml->channel->item as $item) {
+  $ret[(string)$item->title] = (string)$item->link;
+}
+echo "<pre>"; print_r($ret); echo "</pre>";
+?>]]></example>
+
+<example fontsize="1.6em" title="Add a spoonful of REST"><![CDATA[<?php
+$srv  = 'http://api.search.yahoo.com/ImageSearchService/V1/imageSearch';
+foreach($ret as $key=>$link) {
+  $url = $srv . "?query=$key&appid=RESTDemo";
+  $obj = simplexml_load_file($url);
+}
+?>]]></example>
+
+<example type="shell" title="A thimble of gradeschool math">x^2/a^2 + y^2/b^2 = 1</example>
+
+<blurb>And we end up with something like this</blurb>
+
+<link align="center" fontsize="5em" href="http://buzz.progphp.com/">http://buzz.progphp.com</link>
+
+<blurb>By the way, throwing a cache layer between you and whatever remote service you are
+accessing tends to be a good idea.  In our case we can do it like this:</blurb>
+
+<example fontsize="1.6em"><![CDATA[<?php
+$tmp = '/tmp/'.md5($q);
+if(!file_exists($tmp) || filemtime($tmp) < (time()-7200)) {
+   $stream = fopen($url,'r');
+   $tmpf = tempnam('/tmp','YWS');
+   file_put_contents($tmpf, $stream);
+   fclose($stream);
+   rename($tmpf, $tmp);
+}
+$obj = simplexml_load_file(file_get_contents($tmp));
+?>]]></example>
+
+</slide>

@@ -1,0 +1,116 @@
+<slide title="PHPT">
+<blurb>
+PHPT is a simple test framework for PHP.
+</blurb>
+
+<example title="hello.phpt" fontsize="1.75em"><![CDATA[--TEST--
+Hello World test
+--FILE--
+<?php
+	echo "Hello World";
+?>
+--EXPECT--
+Hello World]]></example>
+
+<example title="filter.phpt" fontsize="1.75em"><![CDATA[--TEST--
+Input Filter test
+--SKIPIF--
+if(!extension_loaded('input_filter')) print "skip";
+--POST--
+a=<b>1</b>
+--GET--
+b=<i>2</i>
+--FILE--
+<?php
+	echo $_POST['a'];
+	echo $_GET['b'];
+?>
+--EXPECT--
+12]]></example>
+
+<example fontsize="1.75em" type="shell" title="phpt output"><![CDATA[TIME START 2003-10-15 10:19:50
+====================================
+PASS Hello World test [hello.phpt]
+PASS Input Filter test [filter.phpt]
+ 
+====================================
+TIME END 2003-10-15 10:19:50
+====================================
+TEST RESULT SUMMARY
+------------------------------------
+Number of tests :    2
+Tests skipped   :    0 ( 0.0%)
+Tests warned    :    0 ( 0.0%)
+Tests failed    :    0 ( 0.0%)
+Tests passed    :    2 (100.0%)
+------------------------------------
+Time taken      :    0 seconds
+====================================]]></example>
+
+<example fontsize="1.75em" type="shell" title="phpt failed test output"><![CDATA[TIME START 2003-10-15 10:32:48
+====================================
+PASS Hello World test [hello.phpt]
+FAIL Input Filter test [filter.phpt]
+ 
+====================================
+TIME END 2003-10-15 10:32:48
+====================================
+TEST RESULT SUMMARY
+------------------------------------
+Number of tests :    2
+Tests skipped   :    0 ( 0.0%)
+Tests warned    :    0 ( 0.0%)
+Tests failed    :    1 (50.0%)
+Tests passed    :    1 (50.0%)
+------------------------------------
+Time taken      :    0 seconds
+====================================
+ 
+====================================
+FAILED TEST SUMMARY
+------------------------------------
+YIV test [filter.phpt]
+====================================
+Some tests failed and a complete report has
+been saved to /tmp/php_test_results_20031015.txt]]></example>
+
+<example fontsize="1.75em" type="shell" title="failed test detailed output"><![CDATA[====================================================
+/home/rasmus/t/filter.phpt
+====================================================
+--TEST--
+YIV test
+--SKIPIF--
+if(!extension_loaded('input_filter')) print "skip";
+--POST--
+a=<b>1</b>
+--GET--
+b=<i>2</i>
+--FILE--
+<?php
+        echo $_POST['a'];
+        echo $_GET['b'];
+?>
+--EXPECT--
+1 2
+
+====================================================
+---- EXPECTED OUTPUT
+1 2
+---- ACTUAL OUTPUT
+12
+---- FAILED]]></example>
+
+
+<table columns="2" title="PHPT Sections">
+<cell>--TEST--</cell><cell>title of the test</cell>
+<cell>--SKIPIF--</cell><cell>php code which prints &quot;skip&quot;</cell>
+<cell>--POST--</cell><cell>POST variables passed to test script</cell>
+<cell>--GET--</cell><cell>GET variables passed to test script</cell>
+<cell>--INI--</cell><cell>each line contains an ini setting e.g. foo=bar</cell>
+<cell>--FILE--</cell><cell>the test script</cell>
+<cell>--EXPECT--</cell><cell>the expected output from the test script</cell>
+<cell>--EXPECTF--</cell><cell>sscanf version of expected output</cell>
+<cell>--EXPECTREGEX--</cell><cell>regex version of expected output</cell>
+</table>
+
+</slide>

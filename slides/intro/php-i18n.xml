@@ -1,0 +1,18 @@
+<slide title="i18n">
+<blurb fontsize="4em">PHP's strings are binary safe and mostly oblivious to character encodings and
+everything is fine if you just pass the data through.  If you need to manipulate it you will need
+to do some work.</blurb>
+
+<list fontsize="4em">
+<bullet>setlocale</bullet>
+<bullet>utf8_decode</bullet>
+<bullet>iconv</bullet>
+<bullet>mbstring</bullet>
+<bullet>preg_* functions support UTF-8</bullet>
+<bullet>pecl/translit</bullet>
+<bullet>Full ICU-based Unicode Support eventually</bullet>
+</list>
+
+<example title="php.ini">default_charset = "utf-8"</example>
+
+</slide>
