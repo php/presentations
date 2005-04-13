@@ -12,7 +12,6 @@ we have hit in the past include problems in:
 <bullet>pack/unpack</bullet>
 <bullet>jpg algorithm</bullet>
 <bullet>exif header field overflows</bullet>
-<bullet>static buffer in getMimeHeaders() in ycore++</bullet>
 </list>
 
 <blurb>
