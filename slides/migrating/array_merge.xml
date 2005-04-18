@@ -5,9 +5,9 @@
 	<blurb fontsize="4em">
 	array_merge() no longer accepts non-array parameters to merge.
 	</blurb>
-<break lines="2"/>
+
 	<example fontsize="1.3em"><![CDATA[<?php
-	$scandinavia = array('Denmark', 'Norway', 'Sweden', 'Finland');
+	$scandinavia = array('Denmark', 'Norway', 'Finland');
 	$uk = "The UK";
 
 	$europe = array_merge($scandinavia, $uk);
@@ -17,18 +17,15 @@
 
 <break lines="2"/>
 	<blurb fontsize="2.5em">PHP 4:</blurb>
-<break/>
     <example fontsize="1em"><![CDATA[Array
 (
 	[0] => Denmark
 	[1] => Norway
-	[2] => Sweden
-	[3] => Finland
-	[4] => The UK
+	[2] => Finland
+	[3] => The UK
 ) ]]></example>
 
 <break lines="2"/>
 	<blurb fontsize="2.5em">PHP 5:</blurb>
-<break/>
     <example fontsize="1.5em"><![CDATA[Warning: array_merge(): Argument #2 is not an array in - on line 7]]></example>
 </slide>

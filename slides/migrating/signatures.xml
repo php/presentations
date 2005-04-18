@@ -20,7 +20,6 @@
 
 <break lines="2"/>
 	<blurb fontsize="3.5em">PHP 5:</blurb>
-<break/>
     <example fontsize="1.3em"><![CDATA[Strict Standards: Declaration of Europe::get_countries() should be compatible with that of Scandinavia::get_countries() in - on line 14]]></example>
 
 </slide>

@@ -12,14 +12,12 @@
 
 <break lines="2"/>
 	<blurb fontsize="3.5em">PHP 4:</blurb>
-<break/>
     <example fontsize="1.3em"><![CDATA[-2127356109 2167611187
 -1 4294967295
 -1 4294967295]]></example>
 
 <break lines="2"/>
 	<blurb fontsize="3.5em">PHP 5:</blurb>
-<break/>
     <example fontsize="1.3em"><![CDATA[-2127356109 2167611187
 false 0
 -1 4294967295]]></example>

@@ -17,7 +17,7 @@
 	echo (int) $jurop, "\n";
 	echo (int) $dutchieland, "\n";
 ?>]]></example>
-<break/>
+
 	<blurb fontsize="2.5em">output:</blurb>
     <example fontsize="1.3em"><![CDATA[Object id #1
 Object id #2

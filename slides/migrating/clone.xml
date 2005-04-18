@@ -20,9 +20,7 @@
 	$linux = new OS('linux');
 	$win = clone $linux;
 	changeName($win, 'windows');
-	echo $linux->name. "\n";
-	echo $win->name;
-	
+	echo $linux->name, "\n", $win->name;
 ?>]]></example>
 
 	<break/>

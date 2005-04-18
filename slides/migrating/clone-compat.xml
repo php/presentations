@@ -22,9 +22,7 @@
 	$linux = new OS('linux');
 	$win = $linux;
 	changeName($win, 'windows');
-	echo $linux->name. "\n";
-	echo $win->name;
-	
+	echo $linux->name, "\n", $win->name;
 ?>]]></example>
 <break/>
 	<blurb fontsize="2.5em">output:</blurb>

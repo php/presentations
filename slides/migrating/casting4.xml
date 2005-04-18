@@ -13,7 +13,6 @@
 	$jurop = new Country;
 	$dutchieland = new Country;
 	$dutchieland->set_name('The Netherlands');
-
 	echo (int) $jurop, "\n";
 	echo (int) $dutchieland, "\n";
 ?>]]></example>
@@ -22,8 +21,8 @@
     <example fontsize="1.3em"><![CDATA[0
 1]]></example>
 
+	<blurb>In PHP 4 *(int) $object* results in:</blurb>
 	<list>
-		<bullet marginleft="0em">In PHP 4 *(int) $object* results in:</bullet>
 		<bullet marginleft="2em">"0" when there are no properties set</bullet>
 		<bullet marginleft="2em">"1" when there are properties set</bullet>
 	</list>

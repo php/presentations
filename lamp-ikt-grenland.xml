@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>LAMP</topic>
+<title>What LAMP can do for you</title>
+<event>IKT Grenland</event>
+<location>Porsgrunn, Norway</location>
+<date>Apr 15, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://ez.no/</url>
+<slide>slides/lamp/title.xml</slide>
+<slide>slides/lamp/the-lamp-stack.xml</slide>
+<slide>slides/lamp/comparison.xml</slide>
+<slide>slides/lamp/linux.xml</slide>
+<slide>slides/lamp/apache.xml</slide>
+<slide>slides/lamp/apache-usage.xml</slide>
+<slide>slides/lamp/mysql.xml</slide>
+<slide>slides/lamp/php.xml</slide>
+<slide>slides/lamp/php-usage.xml</slide>
+<slide>slides/lamp/history.xml</slide>
+<slide>slides/lamp/hybrids.xml</slide>
+
+<slide>slides/lamp/open_vs_closed.xml</slide>
+<slide>slides/lamp/open_vs_closed-terms.xml</slide>
+<slide>slides/lamp/copyright-licence.xml</slide>
+<slide>slides/lamp/licensing.xml</slide>
+<slide>slides/lamp/lamp_con.xml</slide>
+<slide>slides/lamp/lamp_pro.xml</slide>
+<slide>slides/lamp/lamp_examples.xml</slide>
+<slide>slides/lamp/patents.xml</slide>
+</presentation>

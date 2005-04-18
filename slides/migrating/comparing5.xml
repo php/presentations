@@ -10,7 +10,6 @@
 			$this->area = $area;
 		}
 	}
-
 	$deutschland = new Country('West Europe');
 	$die_schweiz = new Country('West Europe');
 

@@ -151,7 +151,6 @@ div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.b
 	background: #eee;
 	font-size: 23px;
 	width: 100%;
-	font-weight: bold;
 }
 div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 	margin-left: 20px;

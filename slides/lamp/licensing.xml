@@ -1,0 +1,17 @@
+<slide>
+<title>LAMP Licensing Issues</title>
+<list>
+	<bullet>*GPL:* Copyleft licenses - ensure that the software or derivates
+	always stay Free too. ~(Linux)~</bullet>
+</list><list>
+	<bullet>*BSD-Style:* License that basically allows you to do everything
+	with the software, even making it closed source, although usually some
+	restrictions apply. ~(Apache and PHP)~</bullet>
+</list><list>
+	<bullet>*GPL and proprietary:* Dual-licensed because GPL might be "too"
+	free. ~(MySQL, eZ publish)~</bullet>
+</list><list>
+	<bullet>*FLOSS Exception:* Exception to the GPL so that Free Software can
+	use MySQL's client libraries. ~(MySQL client library)~</bullet>
+</list>
+</slide>

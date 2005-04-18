@@ -18,11 +18,9 @@
 
 <break lines="2"/>
 	<blurb fontsize="2.5em">PHP 4:</blurb>
-<break/>
 	<example fontsize="1em"><![CDATA[int(0)]]></example>
 
 <break lines="2"/>
 	<blurb fontsize="2.5em">PHP 5:</blurb>
-<break/>
 	<example fontsize="1em"><![CDATA[bool(false)]]></example>
 </slide>
