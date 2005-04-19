@@ -4,19 +4,19 @@
 	<subtitle>Usage</subtitle>
 
 	<example><![CDATA[<?php
-	echo "This is a simulation of uploading a file.\nHere we go:\n\n";
+echo "This is a simulation of uploading a file.\nHere we go:\n\n";
 
-	echo "Uploading file"; flush();
-	for ($i = 0; $i < 3; $i++) {
-		sleep(1);
-		echo "..."; flush();
-	}
-	echo "Done\n\n\n";
-	
-	echo "Now we register the uploaded file with the SRM daemon... ";
-	$s = new SRM('/tmp/srm.socket.main');
-	$s->handle_uploaded_file('host', '/path/to/file', 'Our New File');
-	echo "Done!\n";
+echo "Uploading file"; flush();
+for ($i = 0; $i < 3; $i++) {
+	sleep(1);
+	echo "..."; flush();
+}
+echo "Done\n\n\n";
+
+echo "Now we register the uploaded file with the SRM daemon... ";
+$s = new SRM('/tmp/srm.socket.main');
+$s->handle_uploaded_file('host', '/path/to/file', 'Our New File');
+echo "Done!\n";
 ?>
 ]]></example>
 </slide>

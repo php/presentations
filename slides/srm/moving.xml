@@ -2,34 +2,32 @@
 <slide fontsize="6em">
 	<title>Moving Objects</title>
 
-	<blurb fontsize="3em">foo.class.php:</blurb>
+	<blurb fontsize="3em">pizza.class.php:</blurb>
 	<example fontsize="2em"><![CDATA[<?php
-	class foo {
-		var $bar = '';
+class pizza {
+	var $ingredients = array();
 
-		function foo42() {
-			$this->bar = 'foo';
-			return func_get_args();
-		}
-
-		function echo_bar() {
-			echo $this->bar;
-		}
+	function get_price() {
+		return 4.12;
 	}
+
+	function set_ingredients($ingredients) {
+		$this->ingredients = $ingredients;
+	}
+}
 ?>]]></example>
 	<break lines="2"/>
 
-	<blurb fontsize="3em">Script (objmove.php):</blurb>
+	<blurb fontsize="3em">Script (pizza-test.php):</blurb>
 	<example fontsize="2em"><![CDATA[<?php
-	include '/usr/local/srm/banana/lib/foo.class.php';
+include '/usr/local/srm/banana/lib/foo.class.php';
 
-	$f = new foo;
-	$s = new SRM('/tmp/srm.socket');
-	$f = new SRMApp($s, $f, 'key2');
+$pizza = new foo;
+$s = new SRM('/tmp/srm.socket');
+$pizza = new SRMApp($s, $f, 'quatro_fromaggi');
 
-	var_dump($f->foo42(1, 2, 'bar', 3, 4));
-
-	/* Properties don't work yet */
-	echo $f->bar;
+echo $pizza->get_price(), "\n";
+$pizza->set_ingredients(
+	array('cheese', 'cheese', 'cheese', 'cheese'));
 ?>]]></example>
 </slide>

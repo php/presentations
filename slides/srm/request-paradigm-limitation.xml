@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Request Paradigm</title>
+	<subtitle>Limitations</subtitle>
+
+	<list>
+		<bullet>No state preserving (except for sleep/wakeup and sessions)</bullet>
+		<bullet>Nothing is persistent</bullet>
+		<bullet>Re-loading data takes time: Parsing a large (9MB) XML document takes about 1.2 seconds with PHP 5.1-dev</bullet>
+	</list>
+</slide>
