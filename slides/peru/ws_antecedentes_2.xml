@@ -5,15 +5,15 @@
  </blurb>
  <list>
   <bullet>
-   DCE (Distributed Computing Environment) y RPC (Remote Procedure Call): 
+   *DCE* (Distributed Computing Environment) y *RPC* (Remote Procedure Call): 
    Un estándar del Open Group, 1993.
   </bullet>
   <bullet>
-   COM (1993)/DCOM (1996): Especificaciones de Microsoft para componentes
+   *COM* (1993) y *DCOM* (1996): Especificaciones de Microsoft para componentes
    corriendo en distintas computadoras, pero limitada a MS Windows.
   </bullet>
   <bullet>
-   Sun RMI (Remote Method Invocation, 1996): Especificación para la
+   Sun *RMI* (Remote Method Invocation, 1996): Especificación para la
    intercomunicación de programas escritos en Java.
   </bullet>
  </list>

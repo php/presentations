@@ -5,14 +5,14 @@
  </blurb>
  <list>
   <bullet>
-   Se le puede conectar, publicar, y localizar a travéz de registros distribuidos
+   Se le puede *conectar, publicar, y localizar a travéz de registros distribuidos*
    (los cuales actuan también como servicios de web).
   </bullet>
   <bullet>
-   Es potencialmente configurable al momento de ejecución.
+   Es potencialmente *configurable al momento de ejecución*.
   </bullet>
   <bullet>
-   Puede ser compuesto con otros servicios en forma dinámica y en
+   Puede ser *compuesto con otros servicios en forma dinámica*, y en
    respuesta al contexto y eventos.
   </bullet>
  </list>
