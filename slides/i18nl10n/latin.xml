@@ -3,29 +3,28 @@
 	<title>ISO-8859 and Latin Character Sets</title>
 
 	<list>
-		<bullet>ISO-8859: Group of often used character sets</bullet>
-		<bullet>latin-X: Group of character sets based on the "latin" set</bullet>
+		<bullet>ISO-8859-X: Often used character sets</bullet>
+		<bullet>latin-X: Subset of ISO-8859-X</bullet>
 		<bullet>Contains most of European's characters</bullet>
 		<bullet>Adds 96 characters to ASCII (A0 - FF)</bullet>
 	</list>
-	<break />
-	<example class="bit_larger"><![CDATA[  ISO
-  8859  Latin  Usage                                           Example
-    1     1    West European languages                         é ë ç å
-    2     2    Central and East European languages             š Č ř
-    3     3    Southeast European and miscellaneous languages
-    4     4    Scandinavian/Baltic languages
-    5          Latin/Cyrillic                                  Б Ж П д
-    6          Latin/Arabic                                    ق ﭻ ﺕ]]></example>
-	<example class="bit_larger"><![CDATA[    7          Latin/Greek                                     α ζ π ώ
-    8          Latin/Hebrew                                    א ט צ מ]]></example>
-	<example class="bit_larger"><![CDATA[    9     5    Latin-1 modification for Turkish                Ş ş İ ÿ
-   10     6    Lappish/Nordic/Eskimo languages
-   11          Latin/Thai                                      ฃ ฌ ท ฬ
-   13     7    Baltic Rim languages
-   14     8    Celtic
-   15     9    West European languages                         € 
-   16    10    Romanian                                        Đ Ę Ț đ]]></example>
+	<example class="bit_larger"><![CDATA[ ISO
+ 8859  Latin  Usage                                           Example
+   1    1    West European languages                         é ë ç å
+   2    2    Central and East European languages             š Č ř
+   3    3    Southeast European and miscellaneous languages
+   4    4    Scandinavian/Baltic languages
+   5         Latin/Cyrillic                                  Б Ж П д
+   6         Latin/Arabic                                    ق ﭻ ﺕ]]></example>
+	<example class="bit_larger"><![CDATA[   7         Latin/Greek                                     α ζ π ώ
+   8         Latin/Hebrew                                    א ט צ מ]]></example>
+	<example class="bit_larger"><![CDATA[   9    5    Latin-1 modification for Turkish                Ş ş İ ÿ
+  10    6    Lappish/Nordic/Eskimo languages
+  11         Latin/Thai                                      ฃ ฌ ท ฬ
+  13    7    Baltic Rim languages
+  14    8    Celtic
+  15    9    West European languages                         € 
+  16   10    Romanian                                        Đ Ę Ț đ]]></example>
 </slide>
 <!--
 vim: encoding=utf8

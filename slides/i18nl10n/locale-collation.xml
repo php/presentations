@@ -5,10 +5,8 @@
 
 	<example class="bit_larger" result="1"><![CDATA[<pre><?php
 	$b = $a = array("øks", "ærlig", "åtte", "øyeblikk");
-
 	setlocale(LC_COLLATE, 'C');
 	sort($a); print_r($a);
-
 	setlocale(LC_COLLATE, 'no_NO.UTF8');
 	sort($b, SORT_LOCALE_STRING); print_r($b);
 ?>]]></example>

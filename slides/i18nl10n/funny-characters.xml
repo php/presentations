@@ -7,18 +7,19 @@
 
 <break lines="2"/>
 	<blurb>What we did first:</blurb>
-	<example class="bit_larger" result="0"><![CDATA["Håtveit på 8. plass" to "h_tveit_p_8_plass"]]></example>
+	<example class="bit_larger" result="0"><![CDATA["HÃ¥tveit pÃ¥ 8. plass" to "h_tveit_p_8_plass"]]></example>
 
 <break lines="2"/>
 	<blurb>What we do now:</blurb>
-	<example class="bit_larger" result="0"><![CDATA["Håtveit på 8. plass" to "haatveit_paa_8_plass"]]></example>
+	<example class="bit_larger" result="0"><![CDATA["HÃ¥tveit pÃ¥ 8. plass" to "haatveit_paa_8_plass"]]></example>
 
 <break lines="2"/>
 	<blurb>How we do this:</blurb>
 	<example class="bit_larger" encoding="latin1" result="0"><![CDATA[<?php
-$string = "Håtveit på 8. plass";
+$string = "HÃ¥tveit pÃ¥ 8. plass";
 $res = transliterate($string,
-	array('normalize_ligature', 'lowercase_latin', 'space_to_underscores'),
+	array('normalize_ligature', 'lowercase_latin',
+	      'space_to_underscores'),
 	'utf-8', 'utf-8');
 ?>]]></example>
 

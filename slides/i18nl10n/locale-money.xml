@@ -15,7 +15,8 @@ foreach ($locales as $country => $locale) {
   setlocale(LC_MONETARY, $locale);
   $nr = 31415.92654;
   echo "<b>$country</b>\t",
-    money_format("[%i]", $nr), "    \t", money_format("[%n]", $nr), "\n";
+    money_format("[%i]", $nr), "    \t",
+    money_format("[%n]", $nr), "\n";
 }
 ?></pre>]]></example>
 </slide>

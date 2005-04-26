@@ -14,8 +14,9 @@ END;
 
 	$string = iconv("utf-8", "ucs-2", $string);
 	$res = transliterate($string, array(
-		'decompose_currency_signs', 'decompose_special', 'normalize_numbers',
-		'han_transliterate', 'uppercase_cyrillic', 'normalize_ligature',
+		'decompose_currency_signs', 'decompose_special',
+		'normalize_numbers', 'han_transliterate',
+		'uppercase_cyrillic', 'normalize_ligature',
 		'diacritical_remove'));
 	echo iconv('ucs-2', 'utf-8', $res);
 ?>]]></example>

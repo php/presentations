@@ -15,10 +15,10 @@
 ήδη γνωστή.
 END;
 
-
 	$string = iconv("utf-8", "ucs-2", $string);
 	$res = transliterate($string, array(
-		'han_transliterate', 'hebrew_transliterate', 'greek_transliterate'));
+		'han_transliterate', 'hebrew_transliterate',
+		'greek_transliterate'));
 	echo nl2br(iconv('ucs-2', 'utf-8', $res));
 ?>]]></example>
 
