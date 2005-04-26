@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Debugging</topic>
+<title>Practical Debugging Techniques</title>
+<event>php|tropics</event>
+<location>Cancun, Mexico</location>
+<date>February 27th, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://files.derickrethans.nl/xdebug-tropics.pdf</url>
+<slide>slides/xdebug/title.xml</slide>
+
+<!-- 1. INTRODUCTION -->
+
+<!-- BASIC STUFF -->
+<slide>slides/xdebug/infinite.xml</slide>
+<slide>slides/xdebug/vardump.xml</slide>
+<slide>slides/xdebug/stacktrace.xml</slide>
+<slide>slides/xdebug/local-vars2.xml</slide>
+
+<!-- SUPER GLOBALS -->
+<slide>slides/xdebug/superglobals.xml</slide>
+
+<!-- TRACING -->
+<slide>slides/xdebug/functiontrace-file.xml</slide>
+
+<!-- 2a. INSTALLING XDEBUG -->
+<slide>slides/xdebug/xdebug-install.xml</slide>
+<!-- 2b. SETTINGS -->
+<slide>slides/xdebug/xdebug-settings.xml</slide>
+
+<!-- 3. DEBUG THIS APPLICATION -->
+<slide>slides/xdebug/practical-1.xml</slide>
+
+<!-- 4. REMOTE INTERFACES -->
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/dbgp.xml</slide>
+
+<slide>slides/xdebug/dbgp-common.xml</slide> <!-- -i, encoding, __, init -->
+<slide>slides/xdebug/dbgp-features.xml</slide> <!-- feature_get, feature_set -->
+<slide>slides/xdebug/dbgp-continuation.xml</slide> <!-- run, step_*, stop, detach -->
+<slide>slides/xdebug/dbgp-breakpoints.xml</slide> <!-- breakpoint_* -->
+<slide>slides/xdebug/dbgp-breakpoint-types.xml</slide> <!-- breakpoint_* -->
+<slide>slides/xdebug/dbgp-stack.xml</slide> <!-- stack_depth, stack_get -->
+<slide>slides/xdebug/dbgp-context.xml</slide> <!-- context_names, context_get -->
+<slide>slides/xdebug/dbgp-types.xml</slide> <!-- typemap_get, property_* -->
+<slide>slides/xdebug/dbgp-properties.xml</slide> <!-- typemap_get, property_* -->
+<slide>slides/xdebug/dbgp-cheat-sheet.xml</slide>
+
+<!-- CLIENTS -->
+<slide>slides/xdebug/client-komodo.xml</slide>
+<slide>slides/xdebug/client-workbench.xml</slide>
+<slide>slides/xdebug/client-trustudio.xml</slide>
+
+<!-- 5. DEBUG THIS APP REMOTELY -->
+<slide>slides/xdebug/practical-2.xml</slide>
+
+<!-- END -->
+<slide>slides/php5intro/nl/p5pp.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+<!-- CODE COVERAGE -->
+<slide>slides/xdebug/ccoverage1.xml</slide>
+<slide>slides/xdebug/ccoverage2.xml</slide>
+<slide>slides/xdebug/ccoverage3.xml</slide>
+
+</presentation>
