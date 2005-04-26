@@ -18,7 +18,14 @@ mysql_connect('localhost', 'root');
 mysql_select_db('encryption');
 
 $username = $_POST['username'];
-$password = sha1($_POST['password']);
+$password = sha1('SECRET' . $_POST['password']);
+
+/* Init mcrypt environment */
+$td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
+$iv_size  = mcrypt_enc_get_iv_size($td);
+$key_size = mcrypt_enc_get_key_size($td);
+$key = $iv = substr(sha1($_POST['password']), 0, $key_size);
+mcrypt_generic_init($td, $key, $iv);
 
 /* Retrieve data */
 $q = <<<END
@@ -30,13 +37,6 @@ $res = mysql_query($q);
 if (mysql_num_rows($res) == 1) {
     list($id, $username, $password, $adres, $ccnr) =
         mysql_fetch_row($res);
-
-    /* Init mcrypt environment */
-    $td = @mcrypt_module_open('rijndael-256', '', 'cfb', '');
-    $iv_size  = mcrypt_enc_get_iv_size($td);
-    $key_size = mcrypt_enc_get_key_size($td);
-    $key = $iv = substr($password, 0, $key_size);
-    mcrypt_generic_init($td, $key, $iv);
 
     /* Decrypt data */
     echo "Retrieved data:<br/>\n";
