@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/encryption/phptropics.css"
+	backgroundfixed="1" >
+<topic>Security</topic>
+<title>Playing Safe: PHP and Encryption</title>
+<event>php|tropics</event>
+<location>Cancun, Mexico</location>
+<date>May 14th, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/encryption/title.xml</slide>
+
+<!-- Crypto Intro -->
+<slide>slides/encryption/quote-gov.xml</slide>
+<slide>slides/encryption/algorithms.xml</slide>
+<slide>slides/encryption/rotational.xml</slide>
+<slide>slides/encryption/transposition.xml</slide>
+<slide>slides/encryption/asymmetric.xml</slide>
+
+<!-- Hash functions -->
+<slide>slides/encryption/hash.xml</slide>
+<slide>slides/encryption/hash-example.xml</slide>
+<slide>slides/encryption/hash-2104.xml</slide>
+<slide>slides/encryption/hash-mysql-old.xml</slide>
+<slide>slides/encryption/hash-mysql.xml</slide>
+<slide>slides/encryption/hash-mysql-auth.xml</slide>
+<slide>slides/encryption/hash-mysql-auth2.xml</slide>
+<slide>slides/encryption/quote-fail.xml</slide>
+<slide>slides/encryption/hash-paying1.xml</slide>
+<slide>slides/encryption/hash-paying-quote.xml</slide>
+<slide>slides/encryption/hash-paying2.xml</slide>
+<slide>slides/encryption/hash-paying3.xml</slide>
+
+<!-- Symmetric -->
+<slide>slides/encryption/symmetric.xml</slide>
+<slide>slides/encryption/modes.xml</slide>
+<slide>slides/encryption/mode-ecb.xml</slide>
+<slide>slides/encryption/mode-cfb.xml</slide>
+
+<!-- mcrypt examples -->
+<slide>slides/encryption/mcrypt-generic.xml</slide>
+<slide>slides/encryption/mcrypt-crypt.xml</slide>
+<slide>slides/encryption/mcrypt-cavearts.xml</slide>
+<slide>slides/encryption/mcrypt-supported.xml</slide>
+<slide>slides/encryption/mcrypt-bug26733.xml</slide>
+<slide>slides/encryption/mcrypt-iv.xml</slide>
+<slide>slides/encryption/quote-false.xml</slide>
+
+<!-- storing data -->
+<slide>slides/encryption/store-data-in-db.xml</slide>
+<slide>slides/encryption/store-data-in-db-ex-store.xml</slide>
+<slide>slides/encryption/store-data-in-db-ex-retrieve.xml</slide>
+<slide>slides/encryption/store-data-in-db-why-ssl.xml</slide>
+
+<slide>slides/xdebug/questions.xml</slide>
+<slide>slides/encryption/puzzle2.xml</slide>
+<slide>slides/encryption/resources.xml</slide>
+
+</presentation>

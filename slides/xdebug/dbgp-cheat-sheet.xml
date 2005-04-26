@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Cheat Sheet</title>
+
+	<blurb class="small_blurb">%breakpoint_set *-t* [type] *-f* [filename] *-n* [lineno]%</blurb>
+	<blurb class="small_blurb">% *-a* [classname] *-m* [functionname]%</blurb>
+	<blurb class="small_blurb">~types: line, call, return, exception, conditional~</blurb>
+	<break/>
+
+	<blurb class="small_blurb">%breakpoint_list%</blurb>
+	<blurb class="small_blurb">%breakpoint_get -d 3140002%</blurb>
+	<blurb class="small_blurb">%breakpoint_remove -d 3140001%</blurb>
+	<break/>
+
+	<blurb>%run -i 8%</blurb>
+	<blurb>%step_into -i 8%</blurb>
+	<blurb>%step_over -i 8%</blurb>
+	<blurb>%step_out -i 8%</blurb>
+	<break/>
+
+	<blurb>%stack_depth -i 9%</blurb>
+	<blurb>%stack_get -i 11%</blurb>
+	<blurb>%context_names -i 10%</blurb>
+	<blurb>%context_get -i 12 -d 0 -c 0%</blurb>
+	<break/>
+
+	<blurb>%property_get -i 16 -d 0 -n a%</blurb>
+	<blurb>%property_set -i 18 -d 0 -n $a -- OA==%</blurb>
+</slide>

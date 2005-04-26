@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Installing Xdebug</title>
+
+	<blurb>Linux, FreeBSD, MacOSX:</blurb>
+	<list>
+		<bullet>%pear install http://pecl.php.net/get/xdebug%</bullet>
+		<bullet>Add to php.ini: %zend_extension="/usr/local/php/modules/xdebug.so"%</bullet>
+	</list>
+	
+	<blurb>Windows:</blurb>
+	<list>
+		<bullet>Download Xdebug from http://xdebug.org</bullet>
+		<bullet>Add to php.ini: %zend_extension*_ts*="c:/php/modules/php_xdebug.dll"%</bullet>
+	</list>
+</slide>
