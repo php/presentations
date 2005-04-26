@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="XML-RPC (2)">
+ <blurb>
+  XML-RPC documenta la forma de codificar
+  datos, y el protocolo a seguir para
+  la comunicación e intercambio de estos datos entre
+  aplicaciones de web.
+ </blurb>
+ <break />
+ <blurb>
+  XML-RPC es un protocolo sencillo y con un vocabulario mejor
+  definido que el de REST.
+ </blurb>
+ <break />
+ <image title="Interacción de aplicaciones usando XML-RPC [1]" 
+ filename="images/xmlrpc.jpg" align="center"/>
+ <break />
+ <blurb fontsize="1em">
+  [1] http://www.xml-rpc.com/
+ </blurb>
+</slide>

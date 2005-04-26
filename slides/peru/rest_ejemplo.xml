@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="El servicio REST de Amazon (AWS)">
+<example title="Ejecutando una búsqueda"
+type="php" filename="ejemplos/rest_amazon_ex.php"/>
+<example type="text" filename="ejemplos/rest_amazon.txt" title="Resultado"/>
+</slide>

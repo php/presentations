@@ -1,0 +1,29 @@
+<wddxPacket version='1.0'>
+  <header>
+    <comment>Propiedades de usuario</comment>
+  </header>
+  <data>
+    <struct>
+      <var name='usuario'>
+        <struct>
+          <var name='name'>
+            <string>John Q. Public</string>
+          </var>
+          <var name='email'>
+            <string>jqp@example.com</string>
+          </var>
+          <var name='account'>
+            <struct>
+              <var name='type'>
+                <string>editor</string>
+              </var>
+              <var name='scope'>
+                <string>global</string>
+              </var>
+            </struct>
+          </var>
+        </struct>
+      </var>
+    </struct>
+  </data>
+</wddxPacket>

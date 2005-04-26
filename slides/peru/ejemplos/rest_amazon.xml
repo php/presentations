@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ItemSearchResponse 
+ xmlns="http://webservices.amazon.com/AWSECommerceService/2005-03-23">
+
+  <OperationRequest>
+    <HTTPHeaders>
+      <Header Name="UserAgent"></Header>
+    </HTTPHeaders>
+    <RequestId>0BAFWMVCWTAW48P37DW7</RequestId>
+    <Arguments>
+      <Argument Name="Service" Value="AWSECommerceService">
+      </Argument>
+      <Argument Name="SearchIndex" Value="Books"></Argument>
+      <Argument Name="SubscriptionId" Value="ABCFOOBARXYZ13579">
+      </Argument>
+      <Argument Name="Keywords" Value="PHP"></Argument>
+      <Argument Name="Sort" Value="salesrank"></Argument>
+      <Argument Name="Operation" Value="ItemSearch"></Argument>
+    </Arguments>
+    <RequestProcessingTime>
+    0.149166822433472</RequestProcessingTime>
+  </OperationRequest>
+  <Items>
+    <Request>
+      <IsValid>True</IsValid>
+      <ItemSearchRequest>
+        <Keywords>PHP</Keywords>
+        <SearchIndex>Books</SearchIndex>
+        <Sort>salesrank</Sort>
+      </ItemSearchRequest>
+    </Request>
+    <TotalResults>349</TotalResults>
+    <TotalPages>35</TotalPages>
+    <Item>
+      <ASIN>1893115518</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=1893115518%2526location=/o/ASIN/1893115518%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>W. J. Gilmore</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>Beginning PHP 5 and MySQL: From Novice to
+        Professional</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>0321186486</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=0321186486%2526location=/o/ASIN/0321186486%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>Larry Ullman</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>PHP and MySQL for Dynamic Web Sites: Visual QuickPro
+        Guide</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>0672326728</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=0672326728%2526location=/o/ASIN/0672326728%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>Luke Welling</Author>
+        <Author>Laura Thomson</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>PHP and MySQL Web Development (3rd Edition)
+        (Developer's Library)</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>1590593502</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=1590593502%2526location=/o/ASIN/1590593502%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>Rachel Andrew</Author>
+        <Author>Allan Kent</Author>
+        <Author>David Powers</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>Php Web Development With Macromedia Dreamweaver Mx
+        2004</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>0596005431</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=0596005431%2526location=/o/ASIN/0596005431%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>Hugh E. Williams</Author>
+        <Creator Role="Editor">David Lane</Creator>
+        <ProductGroup>Book</ProductGroup>
+        <Title>Web Database Applications with PHP &amp; MySQL, 2nd
+        Edition</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>0596005601</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=0596005601%2526location=/o/ASIN/0596005601%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>David Sklar</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>Learning PHP 5</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>0782143377</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=0782143377%2526location=/o/ASIN/0782143377%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>Eric Rosebrock</Author>
+        <Author>Eric Filson</Author>
+        <Author>Eric Rosebrock</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>Setting Up LAMP: Getting Linux, Apache, MySQL, and
+        PHP Working Together</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>1565926811</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=1565926811%2526location=/o/ASIN/1565926811%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>David Sklar</Author>
+        <Author>Adam Trachtenberg</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>PHP Cookbook</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>0975240218</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=0975240218%2526location=/o/ASIN/0975240218%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>Kevin Yank</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>Build Your Own Database Driven Website Using PHP and
+        MySQL, 3rd Edition</Title>
+      </ItemAttributes>
+    </Item>
+    <Item>
+      <ASIN>1590593804</ASIN>
+      <DetailPageURL>
+      http://www.amazon.com/exec/obidos/redirect?tag=ws%26link_code=xm2%26camp=2025%26creative=165953%26path=http://www.amazon.com/gp/redirect.html%253fASIN=1590593804%2526location=/o/ASIN/1590593804%25253FSubscriptionId=ABCFOOBARXYZ13579</DetailPageURL>
+      <ItemAttributes>
+        <Author>Matt Zandstra</Author>
+        <ProductGroup>Book</ProductGroup>
+        <Title>Php 5 Objects, Patterns, Practice</Title>
+      </ItemAttributes>
+    </Item>
+  </Items>
+</ItemSearchResponse>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Servicios de Web: Definición (2)">
+ <blurb>
+ (continuación)
+ </blurb>
+ <list>
+  <bullet>
+   Se le puede conectar, publicar, y localizar a travéz de registros distribuidos
+   (los cuales actuan también como servicios de web).
+  </bullet>
+  <bullet>
+   Es potencialmente configurable al momento de ejecución.
+  </bullet>
+  <bullet>
+   Puede ser compuesto con otros servicios en forma dinámica y en
+   respuesta al contexto y eventos.
+  </bullet>
+ </list>
+</slide>

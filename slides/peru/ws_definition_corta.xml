@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Servicios de Web: Definición (2)">
+ <break lines="3"/>
+ <blurb>
+ ... y más sucintamente:
+ </blurb>
+ <break lines="2"/>
+ <blurb>
+  Un Servicio de Web (Web Service, *WS*) es una aplicación con la
+  cual otras aplicaciones se pueden 
+  *_comunicar a través de una red_*, 
+  generalmente usando XML para transferir la información entre
+  los componentes y con un acoplamiento laxo entre ellos.
+ </blurb>
+</slide>

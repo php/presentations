@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Servicios de Web: Beneficios (2)">
+ <blurb>
+ (continuación)
+ </blurb>
+ <list>
+  <bullet>
+   *Modularidad y Granularidad*: A diferencia de DCOM y EJB en el que los
+   componentes estan finamente definidos y que poseen interdependencias
+   intrinsecas, la arquitectura de WS pone 
+   énfasis en el uso de piezas grandes y no interdependientes. De ese modo
+   se necesitan menos conexiones entre los componentes, y el costo de crear
+   un sistema es menor.
+  </bullet>
+  <bullet>
+   *Reusabilidad*: La modularidad permite el simple reuso de servicios
+   en diferentes contextos, lo cual hace que la creación de nuevos
+   sistemas basados en dichos servicios se ejecute más eficiente y
+   rápidamente.
+  </bullet>
+ </list>    
+</slide>

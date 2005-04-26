@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="SOAP: Lo bueno y lo malo">
+ <blurb>
+  Lo bueno:
+  </blurb>
+ <list>
+  <bullet>Es posible el cambiar cada porción del mensaje.</bullet>
+  <bullet>Permite procesamiento flexible de la información.</bullet>
+  <bullet>Puede hacer uso de nuevas tecnologias de WS que usen XML.</bullet>
+  <bullet>Es la última moda en WS %:-)%</bullet>
+ </list>
+ <blurb>
+  Lo malo:
+ </blurb>
+ <list>
+  <bullet>Es en ocasioned innecesariamente complejo</bullet>
+  <bullet>Casi todas las librerias implementan por defecto RPC,
+   excepto .Net que usa mensajes basados en documentos. Esto causa
+   mucho dolores de cabeza.
+   </bullet>
+   <bullet>Existen muchas cosas aún no bien definidas: seguridad,
+   transacciones, orquestración, etc.</bullet>
+ </list>
+</slide>

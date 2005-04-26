@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Agenda">
+ <list>
+  <bullet>
+   Servicios de Web: definición y tecnologías.
+  </bullet>
+  <bullet>
+   *REST* (REpresentational State Transfer): Arquitectura de la web
+   que puede ser empleada para implementar servicios.
+ </bullet>
+ <bullet>
+  *XML-RPC* (XML Remote Procedure Call): Define un modo sencillo para
+  realizar llamadas a procedimientos remotos en servicios de web.
+ </bullet>
+ <bullet>
+  *SOAP* (Simple Object Access Protocol): Define 
+  protocolos y codificación de los paquetes entre un
+  cliente y un servicio de web, asi como estándares para definir e
+  interpretar tipos complejos, serialización de datos, simultaneidad
+  de la interacción, etc.
+ </bullet>
+</list>
+</slide>

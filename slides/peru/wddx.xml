@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="WDDX">
+ <blurb>
+  WDDX (Web Distributed Data Exchange) es un mecanismo para
+  el intercambio de estructuras complejas de datos entre
+  aplicaciones.
+ </blurb>
+ <break />
+ <blurb>
+  Fué desarrollado por Allaire (ahora Macromedia) en 1998 como un
+  modo por el cual dos o más aplicaciones de web se pudieran comunicar
+  entre si.
+ </blurb>
+ <break />
+ <blurb>
+  Caracteristicas:
+ </blurb>
+ <list>
+  <bullet>Simple de usar</bullet>
+  <bullet>Flexible</bullet>
+  <bullet>Rápido</bullet>
+  <bullet>Trabaja a través de los protocolos comunes (HTTP, FTP, etc.)</bullet>
+ </list>
+ <break />
+ <blurb>
+  Referencia: http://www.openwddx.org/
+ </blurb>
+</slide>

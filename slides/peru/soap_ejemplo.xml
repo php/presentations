@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="SOAP: Ejemplo">
+<example title="Obtener factores de conversión"
+type="php" filename="ejemplos/soap_ex.php"/>
+<example type="text" filename="ejemplos/soap_ex.txt" title="Resultado"/>
+</slide>

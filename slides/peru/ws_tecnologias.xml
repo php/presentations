@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Servicios de Web: Tecnologías">
+ <blurb>
+  (La sopa de letras)
+ </blurb>
+ <list>
+  <bullet>
+   *Transporte*: TCP/IP, HTTP, SMTP.
+  </bullet>
+  <bullet>
+   *Protocolo*: REST, XML-RPC, SOAP.
+  </bullet>
+  <bullet>
+   *Representación de la información*: WDDX (Web Distributed Data eXchange), 
+   XML Schema, Schematron, etc.
+  </bullet>
+  <bullet>
+   *Descripción*: WSDL (Web Services Description Language).
+  </bullet>
+  <bullet>
+   *Registro y descubrimiento*: UDDI (Universal Description, Discovery, and
+   Integration).
+  </bullet>
+  <bullet>
+   *Otras*: Transacciones (WS-Transaction), Seguridad (WS-Security, 
+   XML Signatures, etc.), 
+   Orquestración (BEPL4WS), Interacción Asincrónica (WS-ASAP),
+   etc.
+  </bullet>
+ </list>
+</slide>
