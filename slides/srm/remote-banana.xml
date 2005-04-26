@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Moving Objects</title>
+	<title>Instantiating Objects</title>
 
 	<blurb fontsize="3em">pizza.class.php:</blurb>
 	<example fontsize="2em"><![CDATA[<?php
@@ -20,11 +20,8 @@ class pizza {
 
 	<blurb fontsize="3em">Script (pizza-test.php):</blurb>
 	<example fontsize="2em"><![CDATA[<?php
-include '/usr/local/srm/banana/lib/pizza.class.php';
-
-$pizza = new pizza;
 $s = new SRM('/tmp/srm.socket');
-$pizza = new SRMApp($s, $f, 'quatro_fromaggi');
+$pizza = new SRMApp($s, 'pizza');
 
 echo $pizza->get_price(), "\n";
 $pizza->set_ingredients(

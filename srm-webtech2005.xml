@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <presentation 
 	template="css" 
 	navmode="html"
@@ -11,9 +11,9 @@
 <topic>SRM</topic>
 <title>Enterprise PHP with SRM in eZ publish</title>
 <event>Webtech 2005</event>
-<location>Sofia, Bulgaria</location>
+<location>София, България</location>
 <date>Apr 22, 2005</date>
-<speaker>Derick Rethans</speaker>
+<speaker>Дерик Ретанс</speaker>
 <email>dr@ez.no</email>
 <slide>slides/ze-xdebug/title.xml</slide>
 
@@ -35,6 +35,9 @@
 
 <slide>slides/srm/interact.xml</slide>
 
+<slide>slides/srm/remote-banana.xml</slide>
+<slide>slides/srm/remote-banana-diagram.xml</slide>
+
 <slide>slides/srm/moving.xml</slide>
 <slide>slides/srm/remote-pizza.xml</slide>
 
@@ -48,5 +51,6 @@
 <slide>slides/srm/future3.xml</slide>
 
 <slide>slides/xdebug/questions.xml</slide>
+<slide>slides/php5intro/nl/p5pp.xml</slide>
 <slide>slides/srm/resources.xml</slide>
 </presentation>
