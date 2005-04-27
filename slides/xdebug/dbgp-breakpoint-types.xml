@@ -12,7 +12,7 @@
 -x  exception
 --  expression]]></example>
 
-	<break/>
+	<break lines="2"/>
 
 	<blurb>Different breakpoint types:</blurb>
 	<blurb class="small_blurb">- ~line~: on a file/line combination (req: *-f* and *-n*)</blurb>

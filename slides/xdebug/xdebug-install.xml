@@ -3,14 +3,17 @@
 	<title>Installing Xdebug</title>
 
 	<blurb>Linux, FreeBSD, MacOSX:</blurb>
-	<list>
-		<bullet>%pear install http://pecl.php.net/get/xdebug%</bullet>
-		<bullet>Add to php.ini: %zend_extension="/usr/local/php/modules/xdebug.so"%</bullet>
-	</list>
+	<break/>
+	<example class="code_large">pear install http://pecl.php.net/get/xdebug</example>
+	<break/>
+	<blurb class="small_blurb">Add to php.ini:</blurb>
+	<example class="code_large">zend_extension="/usr/local/php/modules/xdebug.so"</example>
 	
+<break lines="2"/>
 	<blurb>Windows:</blurb>
-	<list>
-		<bullet>Download Xdebug from http://xdebug.org</bullet>
-		<bullet>Add to php.ini: %zend_extension*_ts*="c:/php/modules/php_xdebug.dll"%</bullet>
-	</list>
+	<break/>
+	<blurb class="small_blurb">Download Xdebug from http://xdebug.org</blurb>
+	<break/>
+	<blurb class="small_blurb">Add to php.ini:</blurb>
+	<example class="code_large">zend_extension_ts="c:/usr/local/php/modules/xdebug.so"</example>
 </slide>

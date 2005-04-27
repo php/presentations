@@ -51,8 +51,7 @@ margin-top: 120px;
 top: 150px;
 width: 733px;
 height: 600px;
-overflow: auto;
-overflow: -moz-scrollbars-vertical;
+overflow: none;
 }
 ul.pres {
 list-style: circle;
@@ -148,10 +147,14 @@ div.shadow, code {
 }
 
 div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
-	background: #eee;
 	font-size: 23px;
 	width: 100%;
 }
+
+div.bit_larger, div.bit_larger_output {
+	background-image: url(presentations/slides/encryption/cbg.png);
+}
+
 div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -159,19 +162,17 @@ div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 
 div.large code, div.large {
 	font-size: 32px;
-	background: #eee;
 	font-weight: bold;
 	margin-left: 20px;
 	margin-right: 20px;
 }
 
 div.highlight code, div.highlight {
-	background: #fffc00;
 	font-weight: bold;
 }
 
 div.code_small, div.code_medium, div.code_large, div.example {
-	background: #eee;
+	background-image: url(presentations/slides/encryption/cbg.png);
 }
 div.code_small code {
 	font-size: 12px;

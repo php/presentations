@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Storing Sensitive Data in a DB</title>
+	<title>Unencrypted Connections</title>
 
     <example type="shell"><![CDATA[POST /show.php/playingsafe-quebec-2005/27 HTTP/1.1
 Host: pres

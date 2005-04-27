@@ -5,13 +5,12 @@
 	<image align="center" filename="cfb.png"/>
 
 	<list marginleft="-2em" fontsize="3em" marginright="2em">
-		<bullet type="none">CFB: text is xor'ed with encrypted output of the IV; cipher output is new IV for next block</bullet>
+		<bullet type="none">CFB: text is xor'ed with encrypted output of IV; cipher output is new IV for next block</bullet>
 	</list>
 
-	<break lines="1"/>
 	<image align="center" filename="ofb.png"/>
 
 	<list marginleft="-2em" fontsize="3em" marginright="2em">
-		<bullet type="none">OFB: text is xor'ed with the encrypted output of the IV; encrypted output is new IV for next block</bullet>
+		<bullet type="none">OFB: text is xor'ed with encrypted output of IV; encrypted output is new IV for next block</bullet>
 	</list>
 </slide>

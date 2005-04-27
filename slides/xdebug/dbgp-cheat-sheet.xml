@@ -2,28 +2,32 @@
 <slide fontsize="6em">
 	<title>DBGp Cheat Sheet</title>
 
+	<blurb>Execution:</blurb>
+	<blurb class="small_blurb">%run%</blurb>
+	<blurb class="small_blurb">%step_into%</blurb>
+	<blurb class="small_blurb">%step_over%</blurb>
+	<blurb class="small_blurb">%step_out%</blurb>
+	<break/>
+
+	<blurb>Breakpoints:</blurb>
 	<blurb class="small_blurb">%breakpoint_set *-t* [type] *-f* [filename] *-n* [lineno]%</blurb>
 	<blurb class="small_blurb">% *-a* [classname] *-m* [functionname]%</blurb>
 	<blurb class="small_blurb">~types: line, call, return, exception, conditional~</blurb>
 	<break/>
 
 	<blurb class="small_blurb">%breakpoint_list%</blurb>
-	<blurb class="small_blurb">%breakpoint_get -d 3140002%</blurb>
-	<blurb class="small_blurb">%breakpoint_remove -d 3140001%</blurb>
+	<blurb class="small_blurb">%breakpoint_get *-d* [breakpoint_id]%</blurb>
+	<blurb class="small_blurb">%breakpoint_remove *-d* [breakpoint_id]%</blurb>
 	<break/>
 
-	<blurb>%run -i 8%</blurb>
-	<blurb>%step_into -i 8%</blurb>
-	<blurb>%step_over -i 8%</blurb>
-	<blurb>%step_out -i 8%</blurb>
+	<blurb>Working with stack:</blurb>
+	<blurb class="small_blurb">%stack_depth%</blurb>
+	<blurb class="small_blurb">%stack_get%</blurb>
+	<blurb class="small_blurb">%context_names%</blurb>
+	<blurb class="small_blurb">%context_get *-d* [depth] *-c* [context_id]%</blurb>
 	<break/>
 
-	<blurb>%stack_depth -i 9%</blurb>
-	<blurb>%stack_get -i 11%</blurb>
-	<blurb>%context_names -i 10%</blurb>
-	<blurb>%context_get -i 12 -d 0 -c 0%</blurb>
-	<break/>
-
-	<blurb>%property_get -i 16 -d 0 -n a%</blurb>
-	<blurb>%property_set -i 18 -d 0 -n $a -- OA==%</blurb>
+	<blurb>Working with variables:</blurb>
+	<blurb class="small_blurb">%property_get *-d* [depth] *-n* [varname]%</blurb>
+	<blurb class="small_blurb">%property_set *-d* [depth] *-n* [varname] *--* [uuencoded_data]%</blurb>
 </slide>

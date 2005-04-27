@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="3.5em">
+	<title>Future</title>
+
+	<list>
+		<bullet>PHP 5.2 will support full Unicode based on ICU (IBMs Components for Unicode)</bullet>
+		<bullet>ICU has functions for character sets, conversion, collation and localization (and more)</bullet>
+		<bullet>Transliteration build on top of ICU features</bullet>
+	</list>
+</slide>
