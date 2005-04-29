@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>What is Wrong Here?</title>
+
+	<example>&lt;?php 
+	$sql = "
+		SELECT card_num, card_name, card_expiry 
+		FROM   credit_cards 
+		WHERE  uid = '{$_GET['uid']}'
+	"; 
+?></example>
+
+	<break/>
+	<example>http://example.com/script.php?uid=42</example>
+	<break/>
+	<example>SELECT card_num, card_name, card_expiry 
+FROM   credit_cards 
+WHERE  uid = '42'</example>
+
+<div effect="hide">
+	<break lines="4"/>
+	<blurb>!</blurb>
+	<break/>
+	<example>http://example.com/script.php?uid=42'%20or%20''='</example>
+	<break/>
+	<example>SELECT card_num, card_name, card_expiry 
+FROM   credit_cards 
+WHERE  uid = '42' or ''=''</example>
+</div>
+
+</slide>

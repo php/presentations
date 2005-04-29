@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Casting</title>
+
+	<example>&lt;?php 
+	$uid = (int) $_GET['uid'];
+	$sql = "
+		SELECT card_num, card_name, card_expiry 
+		FROM   credit_cards 
+		WHERE  uid = '{$uid}'
+	"; 
+?></example>
+
+	<break/>
+	<example>http://example.com/script.php?uid=42</example>
+	<break/>
+	<example>SELECT card_num, card_name, card_expiry 
+FROM   credit_cards 
+WHERE  uid = '42'</example>
+
+<div effect="hide">
+	<break lines="4"/>
+	<blurb>!</blurb>
+	<break/>
+	<example>http://example.com/script.php?uid=42'%20or%20''='</example>
+	<break/>
+	<example>SELECT card_num, card_name, card_expiry 
+FROM   credit_cards 
+WHERE  uid = '42' or ''=''</example>
+</div>
+
+</slide>

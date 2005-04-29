@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>What is Wrong Here?</title>
+
+	<example><![CDATA[<html>
+	<head>
+		<title>Example</title>
+	</head>
+	<body>
+		Name: <?php echo $_GET['name']; ?>
+	</body>
+</html>]]>
+</example>
+
+	<break/>
+	<example>http://example.com/script.php?name=derick</example>
+	<break/>
+	<blurb>Name: derick</blurb>
+
+<div effect="hide">
+	<break lines="4"/>
+	<blurb>!</blurb>
+	<break/>
+	<example>http://example.com/script.php?name=&lt;script&gt;alert('!');&lt;/script&gt;</example>
+	<break lines="3"/>
+	<image filename="xss.png" align="center"/>
+</div>
+
+</slide>
