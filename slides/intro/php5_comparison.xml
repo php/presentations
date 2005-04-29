@@ -1,0 +1,22 @@
+<slide title="Comparing Objects">
+<blurb fontsize="3em">
+You can compare objects using *==* and *===*. 
+</blurb>
+<example result="1"><![CDATA[<?php
+  class some_class {
+    public $var = 'foo';
+  }
+  $a = new some_class;
+  $b = $a;
+  $c = clone $a;
+  $d = clone $a;
+  $d->var = 'bar';
+
+  var_dump($a==$b);  echo '<br />';
+  var_dump($a===$b); echo '<br />';
+  var_dump($a==$c);  echo '<br />';
+  var_dump($a===$c); echo '<br />';
+  var_dump($a==$d);  echo '<br />';
+  var_dump($a===$d); echo '<br />';
+?>]]></example>
+</slide>

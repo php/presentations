@@ -1,0 +1,22 @@
+<slide title="New Image Filtering">
+<break lines="1" />
+<example result="0" fontsize="2em"><![CDATA[<?php
+       header('Content-type: image/jpeg');
+       $i = imagecreatefromjpeg('carl.jpg');
+       imagefilter($i, IMG_FILTER_NEGATE);
+       imagejpeg($i);
+?>]]></example> 
+<example title="Original" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=-1" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_NEGATE" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=0" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_GRAYSCALE" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=1" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_BRIGHTNESS" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=2" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_CONTRAST" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=3" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_COLORIZE" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=4" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_EDGEDETECT" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=5" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_EMBOSS" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=6" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_GRAYSCALE + IMG_FILTER_EMBOSS" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=11" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_GAUSSIAN_BLUR" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=7" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_SELECTIVE_BLUR" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=8" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_MEAN_REMOVAL" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=9" fontsize="1.5em" result="1" hide="1" type="genimage" />
+<example title="IMG_FILTER_SMOOTH" outputbackground="#000000" rwidth="816" align="center" filename="php5_image_ex.php?filt=10" fontsize="1.5em" result="1" hide="1" type="genimage" />
+</slide>

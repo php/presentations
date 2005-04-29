@@ -1,0 +1,10 @@
+<slide title="Problem Solving Exercise">
+<break />
+<example title="Start Simple" result="1"><![CDATA[<?php
+  $cnt_file = '/tmp/'.basename(__FILE__).'.cnt';;
+  $num = (int)@file_get_contents($cnt_file);
+  $num++;
+  file_put_contents($cnt_file, $num); 
+  echo "File has been accessed $num times";
+?>]]></example>
+</slide>

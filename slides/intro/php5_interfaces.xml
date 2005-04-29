@@ -1,0 +1,35 @@
+<slide title="Interfaces">
+<break />
+<example result="1"><![CDATA[<?php
+interface abc {
+   public function setVariable($name, $var);
+   public function getVariable($name);
+}
+
+class my_abc implements abc {
+   private $vars = array();
+
+   public function setVariable($name, $var) {
+       $this->vars[$name] = $var;
+   }
+
+   public function getVariable($name) {
+       return $this->vars[$name];
+   }
+}
+$test = new my_abc;
+$test->setVariable('foo','bar');
+echo $test->getVariable('foo');
+?>]]></example>
+
+<blurb fontsize="4em">Now, how about if we don't implement the interface correctly:</blurb>
+<example result="0"><![CDATA[<?php
+class my_other_class implements abc {
+    function __construct() {
+        $this->test = 'something';
+    }
+}
+?>]]></example>
+<example hide="1" result="1">Fatal error: Class my_other_class contains 2 abstract methods and must therefore be declared abstract (abc::setVariable, abc::getVariable) in script.php on line 2</example>
+
+</slide>

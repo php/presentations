@@ -1,0 +1,61 @@
+<slide title="Iteration">
+<break />
+<example result="1"><![CDATA[<?php
+class misc_class { 
+  public  $var1 = "abc";
+  public  $var2 = 123;
+  public  $var3 = "def";
+  private $var4 = 456;
+}
+$test = new misc_class;
+foreach($test as $key=>$value)
+  echo "$key = $value<br />\n";
+?>]]></example>
+<blurb fontsize="4em">
+You can overload PHP's internal iterator by redefining the *rewind()*, *current()*, *key()*, *next()* and *valid()* methods like this:
+</blurb>
+<example result="1" fontsize="1.5em"><![CDATA[<?php
+class MyIterator implements Iterator {
+   private $var = array();
+
+   public function __construct($array) {
+       if (is_array($array)) {
+           $this->var = $array;
+       }
+   }
+   public function rewind() {
+       echo "rewinding<br />\n";
+       reset($this->var);
+   }
+   public function current() {
+       $var = current($this->var);
+       echo "current: $var<br />\n";
+       return $var;
+   }
+   public function key() {
+       $var = key($this->var);
+       echo "key: $var<br />\n";
+       return $var;
+   }
+   public function next() {
+       $var = next($this->var);
+       echo "next: $var<br />\n";
+       return $var;
+   }
+   public function valid() {
+       $var = $this->current() !== false;
+       echo "valid: {$var}<br />\n";
+       return $var;
+   }
+}
+
+$it = new MyIterator(array(1,2,3));
+foreach ($it as $key=>$value) {
+   echo "$key: $value<br />\n";
+}
+?>]]></example>
+
+<blurb fontsize="4em">
+If you just want to override some of them, use the *IteratorAggregate* class.
+</blurb>
+</slide>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Local variables">
+<break lines="3" />
+<example style="shell">; enable showing local vars in error messages
+xdebug.show_local_vars=1</example>
+<image filename="../xdebug/local-vars2.png" align="center"/>
+</slide>

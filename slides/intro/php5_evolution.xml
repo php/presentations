@@ -1,0 +1,20 @@
+<slide title="Evolutionary Changes">
+
+<break />
+
+<image filename="../php5_intro/evolution.jpg" align="right" marginright="2em" />
+
+<list fontsize="5em">
+<bullet>Improved Performance.</bullet>
+<bullet>Some New Standard Functions.</bullet>
+<bullet>Improved Streams Support</bullet>
+<bullet>New &amp; Exciting Bugs</bullet>
+</list>
+
+<break />
+
+<blurb fontsize="5em">
+Language internals remain mostly the same.
+</blurb>
+
+</slide>

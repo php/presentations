@@ -1,0 +1,11 @@
+<slide title="Problem Solving Exercise">
+<break />
+<example title="How About this?" result="1"><![CDATA[<?php
+  $cnt_file = '/tmp/'.basename(__FILE__).'.cnt';;
+  $fp = fopen($cnt_file, 'a');
+  fwrite($fp,'.');
+  fclose($fp);
+  $num = filesize($cnt_file);
+  echo "File has been accessed $num times";
+?>]]></example>
+</slide>

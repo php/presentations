@@ -1,0 +1,15 @@
+<slide title="Static and Const">
+<break />
+<example result="1"><![CDATA[<?php
+class a_class { 
+  const VAL = 'Something';
+  public static $var = " Interesting";
+
+  public static function foo() {
+    return self::$var;
+  }
+}
+echo a_class::VAL;
+echo a_class::foo();
+?>]]></example>
+</slide>

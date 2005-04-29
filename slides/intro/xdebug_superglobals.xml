@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Superglobals">
+
+<example type="shell">;show all GET variables in error messages
+xdebug.dump.GET=*
+; show the login and password POST variables
+xdebug.dump.POST=login,password
+; show the PHP's session cookie
+xdebug.dump.COOKIE=PHPSESSID</example>
+<image filename="../xdebug/superglobals.png" align="center"/>
+</slide>

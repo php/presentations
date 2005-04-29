@@ -1,0 +1,15 @@
+<slide title="Final">
+<break />
+<example><![CDATA[<?php
+  class my_main_class {
+    public function foo() { }
+    final public function bar() { }
+  }
+
+  class my_other_class extends my_main_class {
+    public function foo() { }
+    public function bar() { }
+  }
+?>]]></example>
+<example hide="1" result="1">Fatal error: Cannot override final method my_main_class::bar() in script.php on line 9</example>
+</slide>

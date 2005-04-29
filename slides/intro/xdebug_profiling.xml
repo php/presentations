@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Profiling">
+<break />
+<image filename="../xdebug/pg1.png" align="center"/>
+
+<example class="code_large">xdebug.profiler_enable=1          ; enable profiler
+xdebug.profile_output_dir=/tmp    ; output directory
+xdebug.profile_output_name=crc32  ; file extension</example>
+</slide>

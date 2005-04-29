@@ -1,0 +1,23 @@
+<slide title="Revolutionary Changes">
+
+<break />
+
+<image filename="../php5_intro/che.gif" align="right" marginright="2em" />
+
+<list fontsize="4em">
+<bullet>OO support completely rewritten</bullet>
+<bullet>Much improved XML support</bullet>
+<bullet>SQLite</bullet>
+<bullet>MySQLi</bullet>
+<bullet>Tidy</bullet>
+<bullet>Many extensions moved to PECL</bullet>
+</list>
+<blurb fontsize="5em">And in PHP 5.1</blurb>
+
+<list fontsize="4em">
+<bullet>PDO</bullet>
+<bullet>xmlreader/xmlwriter</bullet>
+<bullet>Performance Improvements</bullet>
+</list>
+
+</slide>

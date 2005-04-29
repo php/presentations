@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="Code Coverage">
+<example title="Testing App" fontsize="1.5em" rfontsize="1.5em" result="1"><![CDATA[<?php
+  echo "Output:\n\n";
+  xdebug_start_code_coverage();
+  include 'presentations/slides/intro/tests/basic.t';
+  $cc = xdebug_get_code_coverage();
+  xdebug_stop_code_coverage();
+
+  $clean = array();
+  $clean[$test] = $cc[$test];
+ 
+  foreach ($clean as $file => $cc) {
+    echo "<pre>";
+    $fc = file($file);
+    $line_nos = array_keys($cc);
+    foreach ($fc as $ln => $line) {
+      if (in_array($ln + 1, $line_nos)) {
+        $bgc = "aaaaaa";
+      } else {
+        $bgc = "dddddd";
+      }
+      echo "<div style='background-color: #$bgc'>";
+      echo @sprintf("%3d [%2d]:\t", $ln + 1, $cc[$ln + 1]);
+      echo htmlspecialchars($line);
+      echo "</div>";
+    }
+    echo "</pre>";
+  }
+?>]]></example>
+</slide>

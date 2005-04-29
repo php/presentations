@@ -1,0 +1,49 @@
+<slide title="Idea">
+<blurb>
+This is a C program that generates an HTML page with a table populated from an SQL query.
+</blurb>
+<example type="c" fontsize="1.4em"><![CDATA[#include <stdio.h>
+#include <stdlib.h>
+#include "mysql.h"
+
+MYSQL mysql;
+
+void err(void) {
+    fprintf(stderr, "%s\n", mysql_error(&mysql) );
+    exit(1);
+}
+
+int gen_page() {
+    puts("<html><body><table>");
+    if(!(mysql_connect(&mysql,"host","user","passwd"))) err();	
+    if(mysql_select_db(&mysql,"my_db")) err();
+    if(mysql_query(&mysql,"SELECT * FROM my_table")) err();
+    if(!(res = mysql_store_result(&mysql))) err();
+    while((row = mysql_fetch_row(res))) {
+        puts("<tr>");
+        for (i=0 ; i < mysql_num_fields(res); i++) 
+            printf("<td>%s</td>\n",row[i]);
+        puts("</tr>");
+    }
+    puts("</table></body></html>");
+
+    if (!mysql_eof(res)) err();
+    mysql_free_result(res);
+    mysql_close(&mysql);
+}]]></example>
+<blurb>
+Here is the same thing in PHP which produces the same output.
+</blurb>
+<example type="php" fontsize="1.4em"><![CDATA[<html><body><table>
+<?php
+  mysql_connect("host","user","passwd") or die(mysql_error());	
+  $res = mysql_db_query("my_db","SELECT * FROM my_table") or die(mysql_error());
+  while(($row = mysql_fetch_row($res))) {
+      echo "<tr>";
+      for ($i=0 ; $i < mysql_num_fields($res); $i++) 
+          printf("<td>%s</td>\n",$row[$i]);
+      echo "</tr>";
+  }
+?>
+</table></body></html>]]></example>
+</slide>

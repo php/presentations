@@ -1,0 +1,23 @@
+<slide title="Autoload and __toString()">
+<example title="Base.inc"><![CDATA[<?php
+abstract class Base {
+  public function __toString() {
+    return '<pre>'.print_r($this,TRUE).'</pre>';
+  }
+}
+?>]]></example>
+<example title="script.php" result="1"><![CDATA[<?php
+function __autoload($class) {
+    echo "autoload called for $class\n";
+    require "presentations/slides/intro/$class.inc";
+}
+
+class my_class2 extends Base { 
+  function __construct($arg) {
+    $this->prop = $arg; 
+  }
+}
+$test = new my_class2('foo');
+echo $test;
+?>]]></example>
+</slide>

@@ -1,0 +1,55 @@
+<slide title="Reflection API">
+<break />
+<example><![CDATA[<?php
+class Reflection { }
+interface Reflector { }
+class ReflectionException extends Exception { }
+class ReflectionFunction implements Reflector { }
+class ReflectionParameter implements Reflector { }
+class ReflectionMethod extends ReflectionFunction { }
+class ReflectionClass implements Reflector { }
+class ReflectionObject extends ReflectionClass { }
+class ReflectionProperty implements Reflector { }
+class ReflectionExtension implements Reflector { }
+?>]]></example>
+
+<blurb fontsize="3em">Using this API you can poke things to see how they are put together.  For example,
+using *ReflectionClass* you can look at a class:</blurb>
+
+<example result="1" rfontsize="1.5em"><![CDATA[<?php
+  class my_test_class {
+    public  $var1 = 'foo';
+    private $var2 = 'bar';
+    function __construct() {
+       echo $this->var1;
+    }
+  }
+
+  echo "<pre>";
+  Reflection::export(new ReflectionClass('my_test_class'));
+  echo "</pre>";
+?>]]></example>
+
+<blurb fontsize="3em">We can of course also use Reflection to look at the ReflectionClass</blurb>
+
+<example result="1" rfontsize="1.5em"><![CDATA[<?php
+  echo "<pre>";
+  Reflection::export(new ReflectionClass('ReflectionClass'));
+  echo "</pre>";
+?>]]></example>
+
+<blurb fontsize="3em">We saw that ReflectionClass implements the Reflector interface.  </blurb>
+<example result="1" rfontsize="1.5em"><![CDATA[<?php
+  echo "<pre>";
+  Reflection::export(new ReflectionClass('Reflector'));
+  echo "</pre>";
+?>]]></example>
+
+<blurb fontsize="3em">Or we can have a look at PHP's internal Exception class.  </blurb>
+<example result="1" rfontsize="1.5em"><![CDATA[<?php
+  echo "<pre>";
+  Reflection::export(new ReflectionClass('Exception'));
+  echo "</pre>";
+?>]]></example>
+
+</slide>

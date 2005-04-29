@@ -1,0 +1,13 @@
+<slide title="Problem Solving Exercise">
+<break />
+<blurb fontsize="4em">
+Create a simple hit counter that meets the following requirements:
+</blurb>
+<list>
+<bullet> Each Page has a separate counter </bullet>
+<bullet> Hits reporting should show hourly hit distribution over a 24-hour window </bullet>
+</list>
+<blurb fontsize="4em">
+Where do we start?  What do we need to solve this problem?
+</blurb>
+</slide>

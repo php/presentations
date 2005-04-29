@@ -1,0 +1,18 @@
+<slide title="Object Type Hinting">
+<break />
+<example><![CDATA[<?php
+  class the_class {
+    public $var = 'foo';
+  }
+  class my_other_class {
+    public function __construct(the_class $obj) {
+      echo $obj->var;
+    }
+  }
+  $a = new the_class;
+  $b = new my_other_class($a);
+  $c = new my_other_class($b);
+?>]]></example>
+<example hide="1" result="1"><![CDATA[foo<br />
+Fatal error: Argument 1 must be an instance of the_class in script.php on line 6]]></example>
+</slide>

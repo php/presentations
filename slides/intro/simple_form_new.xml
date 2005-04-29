@@ -1,0 +1,11 @@
+<slide title="Form Handling">
+<example title="Form Handling" result="1"><![CDATA[<form action="<?php echo $PHP_SELF?>" method="POST">
+Your name: <input type="text" name="name" /><br />
+You age: <input type="text" name="age" /><br />
+<input type="submit" />
+</form>]]></example>
+
+<example title="Receiving Script" result="1" condition="name"><![CDATA[Hi <?php echo $_POST['name']?>.
+You are <?php echo $_POST['age']?> years old.]]></example>
+
+</slide>

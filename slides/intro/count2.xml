@@ -1,0 +1,15 @@
+<slide title="Problem Solving Exercise">
+<break />
+<example title="Add Locking" result="1"><![CDATA[<?php
+  $cnt_file = '/tmp/'.basename(__FILE__).'.cnt';;
+  $fp = fopen($cnt_file, 'r+');
+  flock($fp, LOCK_EX);
+  $num = (int)@fgets($fp);
+  $num++;
+  rewind($fp);
+  fputs($fp, $num); 
+  flock($fp, LOCK_UN);
+  fclose($fp);
+  echo "File has been accessed $num times";
+?>]]></example>
+</slide>

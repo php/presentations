@@ -1,0 +1,25 @@
+<slide title="Controlling Cloning">
+<break />
+<example result="1"><![CDATA[<?php
+class my_class3 { 
+  static $instances = 0;
+  public $instance;
+
+  public function __construct() {
+    $this->instance = ++self::$instances;
+  }
+  public function __clone() {
+    $this->instance = ++self::$instances;
+  }
+}
+$test = new my_class3;
+$test2 = clone $test;
+echo $test->instance;
+echo "<br />\n";
+echo $test2->instance;
+?>]]></example>
+<blurb fontsize="4em">
+Note that we are not overriding the cloning with our __clone() method.  Think of it as a fixup that is
+called after the actual copy has been done.
+</blurb>
+</slide>
