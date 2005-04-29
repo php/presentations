@@ -1,18 +1,24 @@
 <slide title="PHP5 OO - *structors">
 
-<example title="Constructors and Destructors"><![CDATA[<?php
+<example title="Constructors and Destructors" result="1"><![CDATA[<?php
     class OS {
         function __construct($name) {
-            echo "begin";
+            echo "Constructor called<br />";
         }
 
         function __destruct() {
-            echo "done";
+            echo "Destructor called<br />";
         }
     }
 
     $linux = new OS('linux');
+    echo "Step 1<br />";
+    $ref   = $linux;
+    echo "Step 2<br />";
     $linux = NULL;
+    echo "Step 3<br />";
+    $ref = NULL;
+    echo "Step 4<br />";
 ?>]]></example>
 
 </slide>

@@ -2,30 +2,13 @@
 
 <break />
 
-<example><![CDATA[<?php
+<example result="1"><![CDATA[<?php
     echo "<pre>";
 	print_r(stream_get_wrappers());     
 	print_r(stream_get_filters());     
+	print_r(stream_get_transports());     
     echo "</pre>";
 ?>]]></example>
-
-<example fontsize="1.8em" hide="1" result="1"><![CDATA[Array<br />
-(<br />
-    [0] => php<br />
-    [1] => file<br />
-    [2] => http<br />
-    [3] => ftp<br />
-    [4] => compress.zlib<br />
-)<br />
-<br />
-Array<br />
-(<br />
-    [0] => string.rot13<br />
-    [1] => string.toupper<br />
-    [2] => string.tolower<br />
-    [3] => string.strip_tags<br />
-    [4] => convert.*<br />
-)]]></example>
 
 <example title="Examples" fontsize="1.4em"><![CDATA[<?php
 readfile("php://filter/read=string.toupper/resource=http://www.example.com");
@@ -47,4 +30,10 @@ stream_copy_to_stream($src, $dest1, 1024);
 stream_copy_to_stream($src, $dest2); 
 ?>]]></example>
 
+<example title="file_put_contents" fontsize="1.4em"><![CDATA[<?php
+$stream = fopen($url,'r');
+$dest1 = fopen('first1k.txt','w');
+stream_copy_to_stream($stream, $dest1, 1024);
+file_put_contents('remainder.txt', $stream);
+?>]]></example>
 </slide>

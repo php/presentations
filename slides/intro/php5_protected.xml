@@ -1,7 +1,7 @@
 <slide title="PHP5 OO - Protected">
 
 <blurb>
-Only accessable/callable by the same, or an inherited class.
+Only accessible/callable by the same, or an inherited class.
 Here we see a call to a protected method from the global scope 
 being rejected.
 </blurb>
@@ -33,6 +33,6 @@ $br->peek();           /* Doesn't work */
 ?>]]></example>
 
 <example hide="1" result="1"><![CDATA[fun<br />
-Fatal error: Call to protected method Bedroom::peek() from context '' in script.php on line 24]]></example>
+Fatal error: Call to protected method Bedroom::peek() from context 'html' in script.php on line 24]]></example>
 
 </slide>

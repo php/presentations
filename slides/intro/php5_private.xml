@@ -19,5 +19,5 @@ $br = new Bedroom();
 echo $br->action. "\n";
 ?>]]></example>
 
-<example hide="1" result="1"><![CDATA[Fatal error: Cannot access private property bedroom::$action in foo.php on line 12]]></example>
+<example hide="1" result="1"><![CDATA[Fatal error: Cannot access private property bedroom::$action in foo.php on line 11]]></example>
 </slide>

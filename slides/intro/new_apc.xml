@@ -8,8 +8,8 @@
 <bullet>Quick way to load constants from shared memory</bullet>
 </list>
 
-<example title="apc_store/fetch" result="1"><![CDATA[<?php
-  $a = array(1,2,3,4,5);
+<example title="apc_store/fetch"><![CDATA[<?php
+  $a = array(1,2,3);
   apc_store('my_array', $a, 5);
   $a = 0;
   echo "<pre>"; var_dump($a); echo "</pre>";
@@ -17,15 +17,22 @@
   echo "<pre>"; var_dump($b); echo "</pre>";
 ?>]]></example>
 
+<!-- Cheating to make sure the slide will work without APC -->
+<example hide="1" result="1"><![CDATA[<?php
+  $a = array(1,2,3);
+  echo "<pre>"; var_dump($a); echo "</pre>";
+  $b = $a;
+  echo "<pre>"; var_dump($b); echo "</pre>";
+?>]]></example>
+
 <break lines="1" />
 
-<example title="save/load constants" result="1"><![CDATA[<?php
+<example title="save/load constants"><![CDATA[<?php
   if(!apc_load_constants('my_constants')) {
     $constants = array('ABC'=>'testing',
                        'DEF'=>123,
                        'FOO'=>'Bar');
     apc_define_constants('my_constants', $constants);
   }
-  echo ABC,DEF,FOO;
 ?>]]></example>
 </slide>

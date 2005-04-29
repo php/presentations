@@ -1,6 +1,6 @@
 <slide title="URL API">
 <break lines="1" />
-<example fontsize="3em" format="text"><![CDATA[http://www.example.com/a/b?c=1&d=2]]></example>
+<example fontsize="3em" type="link"><![CDATA[ http://www.example.com/a/b?c=1&d=2]]></example>
 <blurb fontsize="4em">|ff0000|/a/b| is what we are looking for</blurb>
 <blurb fontsize="4em">|ff0000|?c=1&amp;d=2| are optional modifiers</blurb>
 </slide>

@@ -1,6 +1,6 @@
 <slide title="PHP5 OO - References">
 
-<example title="In PHP4" result="1"><![CDATA[<?php
+<example title="In PHP4"><![CDATA[<?php
     class OS {
         var $name;
         function OS($name) {
@@ -18,6 +18,9 @@
     echo $linux->name. "<br />\n";
     echo $win->name;
 ?>]]></example>
+
+<example hide="1" result="1"><![CDATA[linux<br />
+windows]]></example>
 
 <example title="In PHP5"><![CDATA[<?php
     class OS {
@@ -37,6 +40,9 @@
     echo $linux->name. "\n";
     echo $win->name;
 ?>]]></example>
+
+<example hide="1" result="1"><![CDATA[linux<br />
+windows]]></example>
 
 
 </slide>

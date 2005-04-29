@@ -7,16 +7,16 @@ dynamic properties.
 
 <example fontsize="2em"><![CDATA[<?php
 class OSses {
-	private $names = array();
+    private $names = array();
 
-	public function __set($name, $value) {
-		if (!in_array($name, array('windows', 'dos')))
-			$this->names[$name] = $value;
-	}
+    public function __set($name, $value) {
+        if (!in_array($name, array('windows', 'dos')))
+            $this->names[$name] = $value;
+    }
 
-	public function getNames() {
-		return $this->names;
-	}
+    public function getNames() {
+        return $this->names;
+    }
 }
 
 $osses = new OSses();
