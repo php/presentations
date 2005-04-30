@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide title="New var_dump()">
+
+<break />
+
+<example result="1"><![CDATA[<?php
+var_dump($pres);
+?>]]></example>
+
+<php><![CDATA[<?php 
+if(extension_loaded('xdebug')) {
+  echo '<img src="../xdebug/vardump.png" />';
+}
+?>]]></php>
+
+</slide>
