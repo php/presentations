@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>mod_security</title>
+
+	<list>
+		<bullet>Apache module</bullet>
+		<bullet>Can be used to avoid certain attack</bullet>
+		<bullet>Is not PHP specific</bullet>
+	</list>
+
+</slide>

@@ -20,13 +20,13 @@ WHERE  uid = '42'</example>
 
 <div effect="hide">
 	<break lines="4"/>
-	<blurb>!</blurb>
+	<blurb>:-)</blurb>
 	<break/>
 	<example>http://example.com/script.php?uid=42'%20or%20''='</example>
 	<break/>
 	<example>SELECT card_num, card_name, card_expiry 
 FROM   credit_cards 
-WHERE  uid = '42' or ''=''</example>
+WHERE  uid = '42'</example>
 </div>
 
 </slide>

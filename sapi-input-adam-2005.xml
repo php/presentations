@@ -39,6 +39,12 @@
 
 <!-- SQLite Input Filter -->
 <slide>slides/input-filter/sif-db-schema.xml</slide> <!-- table diagram -->
+<slide>slides/input-filter/sif-register.xml</slide> <!-- filter registration and signature -->
+<slide>slides/input-filter/sif-init.xml</slide> <!-- reading rules -->
+<slide>slides/input-filter/sif-filter-1.xml</slide> <!-- the filter function (overview) -->
+<slide>slides/input-filter/sif-filter-2.xml</slide> <!-- the filter function (conversion) -->
+<slide>slides/input-filter/sif-filter-3.xml</slide> <!-- the filter function (fallback) -->
+<slide>slides/input-filter/sif-improvements.xml</slide> <!-- future improvements -->
 
 <slide>slides/input-filter/resources.xml</slide>
 

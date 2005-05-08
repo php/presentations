@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Input Filter DB Schema</title>
+	<title>Rules</title>
 
 	<image align="center" filename="sif-db-schema.png" />
+<break lines="2"/>
+	<blurb>For each page you can define:</blurb>
+	<list>
+		<bullet>Which variables have a filter assigned</bullet>
+		<bullet>What the type of that variable should be ^1^</bullet>
+		<bullet>For integers: what range the variable should be in</bullet>
+		<bullet>For text: what filters should be run on the data ^2^</bullet>
+	</list>
+
+<break lines="7"/>
+	<blurb class="small_blurb">^1^ bool, long, double or string</blurb>
+	<blurb class="small_blurb">^2^ not implemented yet</blurb>
 </slide>

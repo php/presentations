@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>SAPI Input filter</title>
+
+	<list>
+		<bullet>Sits between PHP and the webserver</bullet>
+		<bullet>Is used while fetching data from users sources</bullet>
+		<bullet>Can be used to filter data</bullet>
+		<bullet>Prohibit data from entering PHP</bullet>
+		<bullet>Written as a C extension to PHP</bullet>
+		<bullet>Server wide filter</bullet>
+	</list>
+
+</slide>
