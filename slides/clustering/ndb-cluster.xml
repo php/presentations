@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>MySQL Cluster</title>
+
+	<list>
+		<bullet>NDB Support</bullet>
+		<bullet>Multiple replica's for fail-safe</bullet>
+		<bullet>Transactions are atomic cluster wise</bullet>
+	</list>
+
+	<blurb>Different nodes:</blurb>
+	<list>
+		<bullet>Management Node</bullet>
+		<bullet>SQL Nodes</bullet>
+		<bullet>Storage Nodes</bullet>
+	</list>
+
+	<blurb>Problems:</blurb>
+	<list>
+		<bullet>Everything is in-memory</bullet>
+		<bullet>It likes using a lot of memory</bullet>
+	</list>
+</slide>

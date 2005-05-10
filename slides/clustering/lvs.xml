@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Linux Virtual Server</title>
+
+	<list>
+		<bullet>Front End Server: Redirector (Load Balancer)</bullet>
+		<bullet>Uses the load of specific worker servers to determine how to forward</bullet>
+		<bullet>Uses a kernel module for implements transport-layer load balancing inside the Linux kernel, so called Layer-4 switching</bullet>
+		<bullet>Can use different scheduling algorithms</bullet>
+		<bullet>Does *not* provide fail-safe functionality</bullet>
+	</list>
+</slide>

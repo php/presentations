@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Squid as Front Proxy</title>
+
+	<list>
+		<bullet>Squid is a HTTP Caching Proxy</bullet>
+		<bullet>It can also be used as front end proxy</bullet>
+		<bullet>With a redirector script, you can implement a load balancer</bullet>
+	</list>
+
+	<blurb>Squid setup:</blurb>
+	<example>http_port 80
+httpd_accel_host 127.0.0.1
+httpd_accel_port 8080
+
+httpd_accel_single_host on
+httpd_accel_uses_host_header on
+
+redirect_program /usr/local/bin/redirect.sh
+redirect_children 20</example>
+
+<break/>
+	<blurb>Redirector script responsible for:</blurb>
+	<list>
+		<bullet>Rewriting URLs</bullet>
+		<bullet>Distributing the load over the backends</bullet>
+	</list>
+</slide>

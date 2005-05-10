@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Database Replication</title>
+
+	<list>
+		<bullet>Master with multiple slaves</bullet>
+		<bullet>All writes go to the master</bullet>
+		<bullet>All reads go to one of the slaves</bullet>
+	</list>
+
+	<blurb>Problems:</blurb>
+	<list>
+		<bullet>No real fail-safe</bullet>
+		<bullet>Transactions are not atomic over all nodes</bullet>
+	</list>
+</slide>

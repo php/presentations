@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Round Robin DNS</title>
+
+	<list>
+		<bullet>Uses DNS to give out different IPs in a circular fashion</bullet>
+		<bullet>Easy to set-up</bullet>
+		<bullet>Limited control over which server gets requests</bullet>
+	</list>
+
+	<blurb>DNS config:</blurb>
+	<example>www.example.com.  60  IN  A  10.45.67.1
+www.example.com.  60  IN  A  10.45.67.2
+www.example.com.  60  IN  A  10.45.67.3
+www.example.com.  60  IN  A  10.45.67.4</example>
+
+	<list>
+		<bullet>A short TLL is important to avoid caching</bullet>
+	</list>
+</slide>

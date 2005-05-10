@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Scalability</title>
+
+	<list>
+		<bullet>! Processing Speed</bullet>
+		<bullet>A scalable application allows you to keep adding servers without adding (much) overhead</bullet>
+		<bullet>In other words: your application's performance does not suffer from more load (or data size)</bullet>
+	</list>
+</slide>

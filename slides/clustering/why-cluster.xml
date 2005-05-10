@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Reasons To Cluster</title>
+
+	<blurb>Load Balancing:</blurb>
+	<list>
+		<bullet>A single server can not handle the load</bullet>
+		<bullet>Faster machine does not always work</bullet>
+		<bullet>Different bottlenecks: Disk IO, CPU or Network</bullet>
+		<bullet>SMP has inherent problems</bullet>
+	</list>
+	<blurb>High Availability:</blurb>
+	<list>
+		<bullet>Failover Capabilities</bullet>
+		<bullet>High Availability (the 9s)</bullet>
+	</list>
+</slide>

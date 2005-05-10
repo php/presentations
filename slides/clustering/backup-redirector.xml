@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Back-Up redirector</title>
+
+	<list>
+		<bullet>Keepalived also implements failover with VRPP</bullet>
+		<bullet>This allows you to have a Back-Up redirector to take over when the primairy goes down</bullet>
+	</list>
+</slide>
