@@ -19,15 +19,4 @@
 	<blurb class="small_blurb">%breakpoint_get *-d* [breakpoint_id]%</blurb>
 	<blurb class="small_blurb">%breakpoint_remove *-d* [breakpoint_id]%</blurb>
 	<break/>
-
-	<blurb>Working with stack:</blurb>
-	<blurb class="small_blurb">%stack_depth%</blurb>
-	<blurb class="small_blurb">%stack_get%</blurb>
-	<blurb class="small_blurb">%context_names%</blurb>
-	<blurb class="small_blurb">%context_get *-d* [depth] *-c* [context_id]%</blurb>
-	<break/>
-
-	<blurb>Working with variables:</blurb>
-	<blurb class="small_blurb">%property_get *-d* [depth] *-n* [varname]%</blurb>
-	<blurb class="small_blurb">%property_set *-d* [depth] *-n* [varname] *--* [uuencoded_data]%</blurb>
 </slide>

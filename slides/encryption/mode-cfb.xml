@@ -2,15 +2,10 @@
 <slide fontsize="3em">
 	<title>CFB and OFB</title>
 
-	<image align="center" filename="cfb.png"/>
+	<image align="center" filename="cfb.png" pdf-scale="0.8"/>
+	<blurb>CFB: text is xor'ed with encrypted output of IV; cipher output is new IV for next block</blurb>
 
-	<list marginleft="-2em" fontsize="3em" marginright="2em">
-		<bullet type="none">CFB: text is xor'ed with encrypted output of IV; cipher output is new IV for next block</bullet>
-	</list>
 
-	<image align="center" filename="ofb.png"/>
-
-	<list marginleft="-2em" fontsize="3em" marginright="2em">
-		<bullet type="none">OFB: text is xor'ed with encrypted output of IV; encrypted output is new IV for next block</bullet>
-	</list>
+	<image align="center" filename="ofb.png" pdf-scale="0.8" y-offset="7"/>
+	<blurb>OFB: text is xor'ed with encrypted output of IV; encrypted output is new IV for next block</blurb>
 </slide>

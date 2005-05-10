@@ -3,15 +3,8 @@
 	<title>ECB and CBC</title>
 
 	<image align="center" filename="ecb.png"/>
+	<blurb>ECB: each block encrypted independently</blurb>
 
-	<list marginleft="-2em" fontsize="3em" marginright="2em">
-		<bullet type="none">ECB: each block encrypted independently</bullet>
-	</list>
-
-	<break lines="1"/>
-	<image align="center" filename="cbc.png"/>
-
-	<list marginleft="-2em" fontsize="3em" marginright="2em">
-		<bullet type="none">CBC: text block is xor'ed with previous encrypted block</bullet>
-	</list>
+	<image align="center" filename="cbc.png" y-offset="7"/>
+	<blurb>CBC: text block is xor'ed with previous encrypted block</blurb>
 </slide>

@@ -9,5 +9,5 @@
 		<bullet>Impossible to crack when strlen(plain) == strlen(key)</bullet>
 	</list>
 	<break lines="3"/>
-	<image align="center" filename="xor.png"/>
+	<image align="center" filename="xor.png" y-offset="6"/>
 </slide>
