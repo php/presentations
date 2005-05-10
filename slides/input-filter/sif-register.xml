@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Registering an input filter</title>
+
+	<blurb>In your extension's PHP_MINIT_FUNCTION:</blurb>
+<break/>
+	<example><![CDATA[sapi_register_input_filter(sqlite_sapi_input_filter);]]></example>
+
+<break lines="3"/>
+
+	<blurb>The filter function's signature:</blurb>
+<break/>
+	<example><![CDATA[unsigned int sqlite_sapi_input_filter(
+	int arg,                    /* 0 = POST, 1 = GET, 2 = COOKIE */
+	char *var_name,             /* The original variables name */
+	char **val,                 /* The original variables value */
+	unsigned int val_len,       /* The original variables length */
+	unsigned int *new_val_len   /* The length of the modified
+								 * variable */
+)]]></example>
+
+<break lines="3"/>
+	<blurb>The function should return:</blurb>
+	<list>
+		<bullet>0: if the variable should be |ff0000|~discarded~|</bullet>
+		<bullet>1: if the variable should be |00aa00|~registered~|</bullet>
+	</list>
+
+</slide>

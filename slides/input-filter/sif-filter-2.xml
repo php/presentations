@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Filter function</title>
+	<subtitle>Conversion</subtitle>
+
+	<blurb>5a. If we have a matching rule, use it</blurb>
+<break/>
+	<example><![CDATA[if (rule) {
+	switch (rule->type) {
+		case IS_LONG:
+			convert_to_long(new_var);
+			if (rule->range_start != -1 && 
+				Z_LVAL_P(new_var) < rule->range_start)
+			{
+				Z_LVAL_P(new_var) = rule->range_start;
+			}
+			if (rule->range_end != -1 && 
+				Z_LVAL_P(new_var) > rule->range_end)
+			{
+				Z_LVAL_P(new_var) = rule->range_end;
+			}
+			break;
+		case IS_DOUBLE:
+			convert_to_double(new_var);
+			break;
+		case IS_BOOL:
+			convert_to_boolean(new_var);
+			break;
+		case IS_STRING:
+			/* FIXME: Use 'expression' filter here */
+			break;
+	}
+}]]></example>
+
+</slide>

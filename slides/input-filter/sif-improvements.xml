@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Future improvements</title>
+
+	<list>
+		<bullet>Better page matching</bullet>
+		<bullet>Implement 'expression' rules</bullet>
+		<bullet>Implement different fallback algorithms</bullet>
+		<bullet>Make the database location a setting</bullet>
+		<bullet>Release it through PECL</bullet>
+	</list>
+
+</slide>

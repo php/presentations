@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Filter function</title>
+	<subtitle>Overview</subtitle>
+
+	<list>
+		<bullet>1. Retrieve page name from server context</bullet>
+		<bullet>2. Create a hash key to do the rule matching</bullet>
+		<bullet>3. Locate the rule in the hash</bullet>
+		<bullet>4. Create a new variable container (ZVAL) and fill it
+				with the original data</bullet>
+		<bullet>5a. If we have a matching rule, use it</bullet>
+		<bullet>5b. Otherwise fall back (~strip_tags()~)</bullet>
+		<bullet>6. Select the correct array where to save too (%GET%,
+				%POST%, %COOKIE%)</bullet>
+		<bullet>7. Register the modified variable</bullet>
+		<bullet>8. Deny PHP to register the original variable</bullet>
+	</list>
+
+</slide>

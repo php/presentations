@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>DBGp Cheat Sheet (2)</title>
+
+	<blurb>Working with stack:</blurb>
+	<blurb class="small_blurb">%stack_depth%</blurb>
+	<blurb class="small_blurb">%stack_get%</blurb>
+	<blurb class="small_blurb">%context_names%</blurb>
+	<blurb class="small_blurb">%context_get *-d* [depth] *-c* [context_id]%</blurb>
+	<break/>
+
+	<blurb>Working with variables:</blurb>
+	<blurb class="small_blurb">%property_get *-d* [depth] *-n* [varname]%</blurb>
+	<blurb class="small_blurb">%property_set *-d* [depth] *-n* [varname] *--* [uuencoded_data]%</blurb>
+</slide>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Initializing rules</title>
+
+	<blurb>In your extension's PHP_MINIT_FUNCTION:</blurb>
+<break/>
+	<example><![CDATA[zend_hash_init(&(SQLITE_FILTER_G(filter_rules)), 0, NULL,
+	(dtor_func_t) sqlite_filter_rule_dtor, 1);
+
+if (read_rules(TSRMLS_C) != SUCCESS) {
+	return FAILURE;
+}]]></example>
+
+<break lines="3"/>
+
+	<blurb>Reading rules:</blurb>
+<break/>
+	<example><![CDATA[static int read_rules(TSRMLS_D)
+{
+  int          res = SUCCESS;
+  char        *err = NULL;
+  int          sqlite_ret;
+  sqlite_vm   *vm;
+  const char  *tail;
+  const char **row_data, **col_names;
+  int          column_count, i;
+
+  /* Open SQLite database */
+  SQLITE_FILTER_G(sdb) = 
+    sqlite_open("sqlite_filter.sqlite", 0600, &err);
+
+  if (SQLITE_FILTER_G(sdb) == NULL) {
+    sqlite_freemem(err);
+    res = FAILURE;
+    goto cleanup;
+  }
+
+  /* Execute query */
+  sqlite_ret = sqlite_compile(SQLITE_FILTER_G(sdb),
+    "SELECT * FROM page p, variable v WHERE p.page_id = v.page_id",
+    &tail, &vm, &err);
+
+  if (sqlite_ret != SQLITE_OK) {
+    sqlite_freemem(err);
+    res = FAILURE;
+    goto cleanup;
+  }
+
+  /* Fetch data */
+next_row:
+  sqlite_ret = sqlite_step(vm, &column_count,
+    &row_data, &col_names);
+
+  switch (sqlite_ret) {
+    case SQLITE_ROW:
+      store_rule(column_count, (char **) row_data);
+      goto next_row;
+
+    case SQLITE_BUSY:
+    case SQLITE_ERROR:
+    case SQLITE_MISUSE:
+    case SQLITE_DONE:
+    default:
+      if (vm) {
+        sqlite_ret = sqlite_finalize(vm, &err);
+      }
+      vm = NULL;
+      if (sqlite_ret != SQLITE_OK) {
+        sqlite_freemem(err);
+        res = FAILURE;
+        goto cleanup;
+      }
+  }
+  return SUCCESS;
+
+cleanup:
+  return res;
+}]]></example>
+
+</slide>

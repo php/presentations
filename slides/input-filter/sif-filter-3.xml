@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Filter function</title>
+	<subtitle>Fallback</subtitle>
+
+	<blurb>5b. Otherwise fall back (~strip_tags()~)</blurb>
+<break/>
+	<example><![CDATA[{
+	Z_STRLEN_P(new_var) =
+		php_strip_tags(Z_STRVAL_P(new_var), Z_STRLEN_P(new_var),
+		NULL, NULL, 0);
+}
+]]></example>
+
+<break lines="3"/>
+
+	<blurb>Other example default filters might be:</blurb>
+	<list>
+		<bullet>Deny the variable totally</bullet>
+		<bullet>Use ~htmlentities()~</bullet>
+		<bullet>Strip everything not in %[A-Za-z0-9]%</bullet>
+	</list>
+
+</slide>
