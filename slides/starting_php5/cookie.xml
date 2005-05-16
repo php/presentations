@@ -1,0 +1,24 @@
+<slide title="Cookies">
+
+<example title="Setting a Session Cookie"><![CDATA[<? SetCookie('Cookie_Name','value'); ?>]]></example>
+
+<h3>Setting a Persistent Cookie</h3>
+
+<example title="Setting a Persistent Cookie"><![CDATA[<? SetCookie('Cookie_Name','value', 
+             mktime(12,0,0,11,22,2002) ); ?>]]></example>
+
+<example title="Reading a Cookie"><![CDATA[<? echo $Cookie_Name; ?>]]></example>
+<example><![CDATA[<? echo $_COOKIE['Cookie_Name']; ?>]]></example>
+
+<example title="Deleting the Cookies"><![CDATA[<? SetCookie('Cookie_Name',''); ?>]]></example>
+<example><![CDATA[<? SetCookie('Cookie_Name','', 
+             mktime(12,0,0,11,22,1970) ); ?>]]></example>
+
+<blurb title="Other Optional Paramters">
+Path, Domain, and Secure parameters can also be set to restrict a
+cookie to a certain path, domain or in the case of the 
+Secure parameter, limit the cookie to only be
+set if the request came in over an SSL connection.
+</blurb>
+
+</slide>

@@ -1,0 +1,12 @@
+<slide title="Standard Functions Cont.">
+
+<list title="New Functions or Functionality">
+<bullet>%strripos()% - Find position of last occurrence of a case-insensitive string in a string.</bullet>
+<bullet>%mkdir()% - Can now create directories recursively via an additional flag.</bullet>
+<bullet>%php_check_syntax()% - Validate syntax of PHP files.</bullet>
+<bullet>%headers_list()% - Get a list of headers sent to the browser.</bullet>
+<bullet>%time_nanosleep()% - Signal safe, high precision sleep function.</bullet>
+<bullet>A whole series of new array sorting and intersect functions.</bullet>
+</list>
+
+</slide>

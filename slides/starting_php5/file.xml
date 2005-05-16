@@ -1,0 +1,5 @@
+<slide title="Reading a File">
+<example title="readfile()"><![CDATA[<PRE><?php readfile(dirname(__FILE__) . "/cpu_info")?></PRE>]]></example>
+<example hide="1" result="1" filename="file.php" />
+<example title="file_get_contents()" result="1" filename="file.php" />
+</slide>

@@ -1,0 +1,22 @@
+<slide title="Common Operators">
+
+<list>
+<bullet>Math ops: + - * / %</bullet>
+<bullet>Logical: || &amp;&amp; ! and or xor</bullet>
+<bullet>Bitwise: &amp; | ^ ~ &lt;&lt; &gt;&gt;</bullet>
+<bullet>String: .  .=</bullet>
+<bullet>Assignment: = += -= *= /= |= ^= etc.</bullet>
+<bullet>Increment/Decrement: ++ --</bullet>
+<bullet>Comparison: == === != &lt;&gt; !== &lt; &gt; &lt;= &gt;= ?:</bullet>
+</list>
+
+<example title="Some Examples" result="1"><![CDATA[<?php
+	$a = 254 + 1;
+	echo $a   . "<br />";	
+	echo --$a . "<br />";
+	echo ($a & 1) . "<br />";
+	echo ($a & 127) . "<br />";
+	echo ($a >> 1) . "<br />";
+?>]]></example>
+
+</slide>

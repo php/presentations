@@ -1,0 +1,17 @@
+<slide title="PHP Sessions">
+
+<blurb title="The Solution">
+When a user first visits our site we have to give them an identifier and
+ask them nicely to give this something back to us when they visit again.
+Then we tie whatever data we want to have persist across requests to this
+identifier.  This is known as the session ID.
+</blurb>
+
+<blurb>
+PHP has a number of built-in functions that implement this idea of creating
+a unique session id for each visitor and associating data with them.  There 
+is nothing particularly magical about these functions and you can easily
+come up with your own system for dealing with sessions.
+</blurb>
+
+</slide>

@@ -1,0 +1,22 @@
+<slide title="Imlib2">
+<example 
+	hide="1" 
+	result="1"
+	fontsize="0.5em"
+	marginleft="0.1em"
+	marginright="0.1em"
+><![CDATA[<?php
+ if(empty($text)) $text = 'php'; 
+ if(empty($si)) $si=30;
+ echo "<P class=\"huge\"> <IMG src=\"presentations/slides/starting_php5/tshirt.png\" align=middle>+<IMG src=\"presentations/slides/starting_php5/blank.png\" align=middle>=<IMG src=\"presentations/slides/starting_php5/tshirt.php?si=$si&text=".urlencode($text)."\" align=middle>";
+ echo "<form action=\"$PHP_SELF?$QUERY_STRING\" method=POST>\n";
+ echo "Text1: <input type=text name=text value=\"$text\"> Size: <input type=text name=si value=\"$si\"> <input type=submit name=\" Go! \">\n";
+ echo "</form>\n";
+?>]]></example>
+
+<example
+	filename="tshirt.php"
+	fontsize="1.5em"
+/>
+<example fontsize="1.5em"><![CDATA[<IMG src="tshirt.php?text=<?echo urlencode($text)?>&si=<?echo $si?>">]]></example>
+</slide>

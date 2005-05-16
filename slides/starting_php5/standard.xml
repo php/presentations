@@ -1,0 +1,16 @@
+<slide title="Standard Functions">
+
+<blurb>
+Aside from the new extensions and object related changes, a fair number 
+of new functions were added as part of the standard functions extension.
+</blurb>
+
+<list title="New Functions">
+<bullet>%file_put_contents()% - Quickly write or append to a file.</bullet>
+<bullet>%http_build_query()% - Generate URL-encoded query string.</bullet>
+<bullet>%convert_uudecode()% - Decode a uuencoded string.</bullet>
+<bullet>%convert_uuencode()% - Uuencode a string.</bullet>
+<bullet>%str_ireplace()% - Case insensitive equivalent of str_replace() .</bullet>
+</list>
+
+</slide>

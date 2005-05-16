@@ -1,0 +1,23 @@
+<slide title="C-Like File Functions">
+<example title="Reading from a file"><![CDATA[<?php
+    $file = fopen("sample.txt", "r");
+    while (!feof($file)) {
+        echo fgets($file), "<BR>";
+    }
+?>]]></example>
+
+<example title="Reading from a URL"><![CDATA[<?php $file = fopen("http://www.php.net/file.txt", "r"); ?>]]></example>
+
+<H3>Writing to a file</H3>
+<example title="Writing to a file"><![CDATA[<?php
+    $file = fopen("agent.log", "a");
+    fputs($file, $HTTP_USER_AGENT."\n");
+?>]]></example>
+
+<example title="Writing to a file Simplified (PHP5)"><![CDATA[<?php
+    file_put_contents("agent.log", $HTTP_USER_AGENT, FILE_APPEND);
+?>]]></example>
+
+
+
+</slide>

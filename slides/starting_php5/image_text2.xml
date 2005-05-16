@@ -1,0 +1,13 @@
+<slide title="TTF Text">
+<blurb title="TrueType Fonts">
+You can use any TrueType Font that includes a Unicode mapping table.
+Fonts such as Wingdings will not work.
+</blurb>
+<example
+ filename="image_text_ex2.php"
+ fontsize="1.5em"
+ result="1"
+ type="genimage"
+ rwidth="610"
+/>
+</slide>

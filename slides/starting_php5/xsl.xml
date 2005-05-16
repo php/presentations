@@ -1,0 +1,21 @@
+<slide title="XSL">
+
+<image filename="recycle.gif" align="right" />
+
+<blurb>
+%XSL% is the PHP 5 replacement for the older %XSLT% extension.
+</blurb>
+
+<list title="Powered By">
+<bullet>Based on %libxslt%</bullet>
+<bullet>Uses %DOM% extension</bullet>
+</list>
+
+<list title="Features Include:">
+<bullet>Simple API</bullet>
+<bullet>Supports most EXSLT (www.exslt.org)</bullet>
+<bullet>Can transform DOM to DOM, HTML, File or XML</bullet>
+<bullet>Allows PHP functions to be used as XSLT functions</bullet>
+</list>
+
+</slide>

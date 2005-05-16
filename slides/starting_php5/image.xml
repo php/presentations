@@ -1,0 +1,17 @@
+<slide title="GD 1/2" outputbackground="#5b69a6">
+<example title="Creating a PNG with a TrueType font" filename="txt.php" fontsize="1.5em"/>
+
+<example fontsize="1.5em"><![CDATA[<IMG src="txt.php?text=<?php echo urlencode($_GET['text'])?>">]]></example>
+
+<example hide="1" result="1" rwidth="650"><![CDATA[<?php
+if(!empty($_GET['text'])) {
+	echo "<IMG src=\"presentations/slides/starting_php5/txt.php?text=".urlencode($_GET['text'])."\">";
+	$text = htmlspecialchars(stripslashes($_GET['text']));
+} else {
+	$text = 'Cool Dynamic Images!';
+}
+?>
+<form action="<?php echo $PHP_SELF.'?'.$_SERVER['QUERY_STRING']; ?>" method=GET>
+<input type=text name=text value="<?php echo $text; ?>">
+</form>]]></example>
+</slide>

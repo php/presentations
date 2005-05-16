@@ -1,0 +1,10 @@
+<slide title="Interfaces">
+
+<blurb>
+You can now define object interfaces, which is a way to ensure 
+that a given class provides a certain set of functions you can rely on elsewhere.
+</blurb>
+
+<example filename="obj_interface.php" fontsize="1.5em" />
+
+</slide>

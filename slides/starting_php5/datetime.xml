@@ -1,0 +1,7 @@
+<slide title="Date/Time Functions">
+
+<example result="1" title="Simple Date Display"><![CDATA[<?php echo date("M d, Y H:i:s", time()); ?>]]></example>
+
+<example result="1" title="Basic Calendar" filename="cal.php" />
+
+</slide>

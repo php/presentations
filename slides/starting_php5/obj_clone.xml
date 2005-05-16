@@ -1,0 +1,11 @@
+<slide title="Object Cloning">
+
+<image filename="dolly.jpg" align="right" />
+
+<blurb>
+To make a copy of an object ala PHP 4, a special __clone() method should be used.
+</blurb>
+
+<example filename="obj_clone.php" fontsize="1.5em" />
+
+</slide>

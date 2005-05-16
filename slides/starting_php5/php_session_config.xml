@@ -1,0 +1,59 @@
+<slide title="PHP Session Configuration">
+<blurb>
+Default session settings are set in your php.ini file:
+</blurb>
+<example fontsize="1.5em"><![CDATA[session.save_handler = files    ; Flat file backend
+session.save_path=/tmp          ; where to store flat files
+session.name = PHPSESSID        ; Name of session (cookie name)
+session.auto_start = 0          ; init session on req startup
+session.use_cookies = 1         ; whether cookies should be used
+session.use_only_cookies = 0    ; force only cookies to be used
+session.cookie_lifetime = 0     ; 0 = session cookie
+session.cookie_path = /         ; path for which cookie is valid
+session.cookie_domain =         ; the cookie domain 
+session.serialize_handler = php ; serialization handler (wddx|php)
+session.gc_probability = 1      ; garbage collection prob.
+session.gc_dividend    = 100    ; If 100, then above is in %
+session.gc_maxlifetime = 1440   ; garbage collection max lifetime
+session.referer_check =         ; filter out external URL\'s
+session.entropy_length = 0      ; # of bytes from entropy source
+session.entropy_file =          ; addtional entropy source
+session.use_trans_sid = 1       ; use automatic url rewriting
+url_rewriter.tags = "a=href,area=href,frame=src,input=src"
+session.cache_limiter = nocache ; Set cache-control headers
+session.cache_expire = 180      ; expiry for private/public caching]]></example>
+
+<blurb>
+Cache-control is important when it comes to sessions.  You have to be careful
+that end-user client caches aren't caching invalid pages and also that
+intermediary proxy-cache mechanisms don't sneak in and cache pages on you.
+When cache-limiter is set to the default, no-cache, PHP generates a
+set of response headers that look like this:
+</blurb>
+<example fontsize="1.5em"><![CDATA[HTTP/1.1 200 OK
+Date: Sat, 10 Feb 2001 10:21:59 GMT
+Server: Apache/1.3.13-dev (Unix) PHP/4.0.5-dev
+X-Powered-By: PHP/4.0.5-dev
+Set-Cookie: PHPSESSID=9ce80c83b00a4aefb384ac4cd85c3daf; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Connection: close
+Content-Type: text/html]]></example>
+
+<blurb>
+For cache_limiter = private the cache related headers look like this:
+</blurb>
+<example fontsize="1.5em"><![CDATA[Set-Cookie: PHPSESSID=b02087ce4225987870033eba2b6d78c3; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: private, max-age=10800, pre-check=10800]]></example>
+
+<blurb>
+For cache_limiter = public they look like this:
+</blurb>
+
+<example fontsize="1.5em"><![CDATA[Set-Cookie: PHPSESSID=37421e3d0283c667f75481745b25b9ad; path=/
+Expires: Tue, 12 Feb 2001 13:57:16 GMT
+Cache-Control: public, max-age=10800]]></example>
+
+</slide>

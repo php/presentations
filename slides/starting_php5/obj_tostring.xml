@@ -1,0 +1,9 @@
+<slide title="Objects as Strings">
+
+<blurb>
+There is now a special method %__toString()% that can be used to allow objects to be safely used as strings.
+</blurb>
+
+<example filename="obj_tostring.php" fontsize="1.5em" />
+
+</slide>

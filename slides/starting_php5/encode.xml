@@ -1,0 +1,14 @@
+<slide title="Encoding Strings">
+<example title="HTML" result="1"><![CDATA[<?php echo htmlspecialchars("This & that are <problems>.");?>]]></example>
+
+<example title="Base64" result="1"><![CDATA[<?php
+ $encoded = base64_encode("A rose by any other name...");
+ $decoded = base64_decode($encoded);
+ echo "$encoded<br />$decoded";
+?>]]></example>
+
+<blurb title="Others">
+MD5, DES, TripleDES, Blowfish, 3-WAY, SAFER-SK64, SAFER-SK128, TWOFISH, TEA, RC2, 
+GOST in CBC, OFB, CFB and ECB cipher modes as well as RC6 and IDEA
+</blurb>
+</slide>

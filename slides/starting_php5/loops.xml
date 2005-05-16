@@ -1,0 +1,47 @@
+<slide title="Looping Constructs">
+
+<example title="While" result="1"><![CDATA[<?php
+	$i = 0;
+	while($i++ < 10) {
+		echo $i . " ";
+	}
+?>]]></example>
+
+<example title="Do While" result="1"><![CDATA[<?php
+	$i = 0;
+	do {
+		echo $i . " ";
+	} while($i++ < 10);
+?>]]></example>
+
+<example title="For" result="1"><![CDATA[<?php
+	for($i=0; $i<10; $i++) {
+		echo $i . " ";
+	}
+?>]]></example>
+
+<example title="Break/Continue" result="1"><![CDATA[<?php
+	for($i=0; $i<10; $i++) {
+		if($i==5) continue;
+		if($i==8) break;
+		echo $i . " ";
+	}
+?>]]></example>
+
+<blurb>
+Note that %break% and %continue% can take a level argument that tells them how many
+levels to break or continue out of.
+</blurb>
+
+<example title="Nested Loops" result="1"><![CDATA[<?php
+	$done = false;
+	while(!$done) {
+		for($i=0; $i<10; $i++) {
+			if($i==8) break 2;
+			echo $i . " ";
+		}
+	}
+?>]]></example>
+
+
+</slide>

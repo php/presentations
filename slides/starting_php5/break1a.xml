@@ -1,0 +1,10 @@
+<slide title="Answers">
+
+<blurb>
+In PHP recursive functions are being kept track of using the system stack. This mechanism has a very
+limited memory capacity. Excessive recursions may cause it to overflow, resulting in a PHP crash.
+</blurb>
+
+<example filename="mgc_2.php" title="Magic Quotes Normalization Routine v2.0" />
+
+</slide>

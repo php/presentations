@@ -1,0 +1,18 @@
+<slide title="Magic Quotes">
+
+<blurb>By default, PHP will escape these characters for you in any data coming from the
+user in GET, Post or Cookie data.  This magic escaping is known as |ff1111|Magic Quotes| and can
+be configured in your %php.ini% file by setting the |ff1111|magic_quotes_gpc| directive.
+</blurb>
+
+<blurb>The characters affected are \ ' " and NUL (char 0).  If these characters appear in 
+user-supplied data they will be escaped with a \ (backslash).
+</blurb>
+
+<blurb>Some people prefer to turn this feature off and handle escaping data manually using
+the %addslashes()% function.  There is a converse function, %stripslashes()%, which removes
+the backslash characters in an escaped string.
+</blurb>
+
+<example filename="magic_quotes.php" title="Magic Quotes Normalization Routine" />
+</slide>

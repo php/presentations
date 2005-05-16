@@ -1,0 +1,38 @@
+<slide title="Variable Scope">
+
+<blurb title="Global Scope">
+The global scope spans all included files.  That is, $foo
+will be visible in file.php. 
+</blurb>
+
+<example width="35em"><![CDATA[<?php
+    $foo = 1;
+    include 'file.php';
+?>]]></example>
+
+<blurb title="Function Local Scope">
+If you wish to access a global variable from within a function, you have to 
+use the global keyword to tell the function that 
+it should use the variable from the global scope instead of the function's own
+local scope.
+</blurb>
+<example result="1" global="foo" width="35em"><![CDATA[<?php
+function bar() {
+    global $foo;
+
+    echo $foo;
+}
+
+$foo = 1;
+bar();
+?>]]></example>
+
+<example title="Static Variables" result="1" width="35em"><![CDATA[<?php
+function bar2() {
+	static $i=0;
+	return ++$i;
+}
+echo bar2()."<br>\n";
+echo bar2()."<br>\n";
+?>]]></example>
+</slide>

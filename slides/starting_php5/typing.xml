@@ -1,0 +1,39 @@
+<slide title="Basic Data Types">
+<example title="Numbers (integers and real)" result="1"><![CDATA[<?php
+    $a = 1234;
+    $b = 0777;
+    $c = 0xff;
+    $d = 1.25;
+    $e = 10e5;
+    echo "$a $b $c $d $e<br />\n";
+?>]]></example>
+
+<example title="Strings" result="1"><![CDATA[<?php
+    $a = 'can'; $b = 'forms';
+    $str1 = 'Let\'s use literals.'; // Single-quoted
+    $str2 = "\nEmbeded vars {$a} come in many $b.\n";   // Double-quoted
+    $str3 = <<<HEREDOC
+we even support Perl like syntax.
+HEREDOC;
+
+    echo $str1.nl2br($str2).nl2br($str3);
+?>]]></example>
+
+<example title="Booleans" result="1"><![CDATA[<?php
+    $greeting = True;
+    if ($greeting) {
+        echo "Hi There!";
+        $greeting = FALSE;
+    }
+?>]]></example>
+
+<list title="Dynamic Typing">
+<bullet>Don't have to declare types</bullet>
+<bullet>Automatic conversion done</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+    echo 5 + "1.5" + "10e2";
+?>]]></example>
+
+</slide>

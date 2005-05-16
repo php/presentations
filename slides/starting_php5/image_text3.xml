@@ -1,0 +1,36 @@
+<slide title="TTF Text">
+<blurb title="TrueType Fonts and Truecolor Images">
+Unfortunately the current GD-2.0.1 has a bug which prevents truetype
+fonts from being anti-aliased correctly on truecolor images.  This is
+fixed in GD-2.0.2 which unfortunatelyt doesn't exist.  As of PHP 4.3
+we have bundled GD2 with PHP and fixed this and many other bugs.
+</blurb>
+<blurb>
+Compare these two:
+</blurb>
+<example 
+	title="With alpha blending"
+	filename="image_text_ex3.php?blend=1"
+	fontsize="1.5em"
+	result="1"
+	type="genimage"
+	rwidth="730"
+/>
+<blurb>
+If we turn off alpha blending or use a negative color index we get:
+</blurb>
+<example 
+	title="Without alpha blending"
+	filename="image_text_ex3.php?blend=1"
+	hide="1"
+	result="1"
+	type="genimage"
+	rwidth="730"
+/>
+<blurb>
+If we zoom in on the 'A' we can really see the anti-aliasing at work:
+</blurb>
+<image filename="2a.png" align="center" />
+<image filename="1a.png" align="center" />
+
+</slide>

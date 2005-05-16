@@ -1,0 +1,21 @@
+<slide title="User Defined Functions">
+<example title="Typical User Defined Function"><![CDATA[<?php
+function log_data($user, &$data) {
+ mysql_query("INSERT INTO userdata VALUES ('".
+            uniqid()."', '$user', '$data')");
+}
+?>]]></example>
+
+<example title="Pass-by-reference"><![CDATA[<?php log_data($PHP_AUTH_USER, $data); ?>]]></example>
+
+<example title="Default values"><![CDATA[<?php
+function head($title="Default Title") {?>
+    <HTML><HEAD><TITLE>
+    <? echo $title ?>
+    </TITLE></HEAD><BODY><?
+}
+
+head();
+?>]]></example>
+
+</slide>

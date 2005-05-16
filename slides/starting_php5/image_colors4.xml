@@ -1,0 +1,36 @@
+<slide title="Truecolor Colors" outputbackground="#ffffff">
+
+<blurb title="Truecolor color handling">
+For Truecolor images the colors are actually simple 31-bit longs.
+Or, think of them as being composed of 4 bytes arranged like this:
+</blurb>
+
+<image filename="truecolourbytes.png" align="center" />
+
+<blurb>
+The highest or leftmost bit in the alpha channel is not used which means
+the alpha channel can only have values from 0 to 127.  You can use the
+ImageColorAllocate() as with paletted images, but
+you can also specify the color directly.
+</blurb>
+
+<example title="For example:" type="genimage" result="1" fontsize="1.5em" filename="image_colors_ex3.php" rwidth="455"/>
+
+<example fontsize="1.7em" title="This example could also be written like this:"><![CDATA[<?php
+$im  = ImageCreateTruecolor(400,300);
+$white = ImageColorAllocate($im,255,255,255);
+ImageFilledRectangle($im,0,0,399,299,$white);
+$black = ImageColorAllocate($im,0,0,0);
+ImageFilledEllipse($im,200,150,300,300,$black);
+ImageAlphaBlending($im,true);
+$col = ImageColorResolveAlpha($im,0xff,0x11,0x11,0x60);
+ImageFilledRectangle($im,100,0,400,100,$col);
+$col = ImageColorResolveAlpha($im,0xff,0x11,0x11,0x30);
+ImageFilledRectangle($im,100,100,400,200,$col);
+$col = ImageColorResolveAlpha($im,0xff,0x11,0x11,0x10);
+ImageFilledRectangle($im,100,200,400,300,$col);
+Header('Content-Type: image/png');
+ImagePNG($im);
+?>]]></example>
+
+</slide>

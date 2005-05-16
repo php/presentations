@@ -1,0 +1,16 @@
+<slide title="PHP Sessions">
+
+<blurb title="Server Farm">
+By default PHP will store its session data in files on the local filesystem.
+This obviously won't work in a load-balanced architecture as we requests from the
+same session can span servers.  
+</blurb>
+
+<image align="middle" filename="session3.png" />
+
+<blurb>
+Therefore, we will need a way to store our session data in a central datastore
+accessible by all of our web servers.  This is the sort of thing MySQL excels at!
+</blurb>
+
+</slide>

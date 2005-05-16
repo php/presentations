@@ -1,0 +1,15 @@
+<slide title="EXIF">
+<example 
+	title="Reading EXIF Headers from a JPEG"
+	result="1"
+	fontsize="1.7em"
+filename="exif.php" />
+
+<example 
+	title="Fetching an embedded thumbnail"
+	fontsize="1.7em"
+	filename="exif_thumb.php"
+	type="genimage"
+	result="1"
+/>
+</slide>

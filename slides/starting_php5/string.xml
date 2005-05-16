@@ -1,0 +1,15 @@
+<slide title="String Manipulation">
+<example title="substr" result="1"><![CDATA[<?php
+ $str = "Fast String Manipulation";
+ echo substr($str,0,4) . substr($str,-9);
+?>]]></example>
+
+<h3>explode</h3>
+<example title="explode" result="1"><![CDATA[<?php
+ $a = explode(":", "This:string:has:delimiters.");
+ foreach ($a as $value) {
+     echo ($value == "has" ? "had" : $value) . " ";
+ }
+?>]]></example>
+
+</slide>

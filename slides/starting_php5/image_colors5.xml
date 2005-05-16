@@ -1,0 +1,7 @@
+<slide title="Truecolor Colors" outputbackground="#ffffff">
+<blurb title="Truecolor Color Handling">
+Given the nature of the way truecolor colors are constructed, we can
+rewrite our color testing strip using PHP's bitshift operator:
+</blurb>
+<example type="genimage" filename="image_colors_ex4.php" result="1" rwidth="267"/>
+</slide>

@@ -1,0 +1,14 @@
+<slide title="Standard PHP Library">
+
+<blurb>
+%SPL% is a collection of interfaces and classes that are meant to solve standard problems.
+</blurb>
+
+<list type="Solutions">
+<bullet>Directory iterator</bullet>
+<bullet>Recursive directory iterator</bullet>
+<bullet>SimpleXML iterator</bullet>
+<bullet>Ability to extend existing iterators</bullet>
+</list>
+
+</slide>

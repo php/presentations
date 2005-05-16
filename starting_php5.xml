@@ -1,0 +1,134 @@
+<presentation template="php2" titlecolor="#1111aa" navbarbackground="url(images/trans-ffffff.png)" logo1="images/php-med-trans-light.gif" titlesize="2em" navbarheight="4.1em">
+<topic>PHP 5</topic>	
+<title>Starting PHP</title>
+<copyright>(c) Copyright 2005 Ilia Alshanetsky</copyright>
+<event>PHP|Tropics</event>
+<location>Cancun, Mexico</location>
+<date>May 12th 2005</date>
+<speaker>Ilia Alshanetsky</speaker>
+<navmode>html</navmode>
+<url>http://talks.php.net/</url>
+
+<chapter title="General">
+  <slide>slides/starting_php5/titlepage.xml</slide>
+  <slide>slides/starting_php5/whatis.xml</slide>
+  <slide>slides/starting_php5/history.xml</slide>
+  <slide>slides/starting_php5/why.xml</slide>
+  <slide>slides/starting_php5/basic_ex.xml</slide>
+  <slide>slides/starting_php5/tags.xml</slide>
+</chapter>
+
+<chapter title="Language Intro">
+  <slide>slides/starting_php5/basics.xml</slide>
+  <slide>slides/starting_php5/modes.xml</slide>
+  <slide>slides/starting_php5/forms2.xml</slide>
+  <slide>slides/starting_php5/typing.xml</slide>
+  <slide>slides/starting_php5/arrays.xml</slide>
+  <slide>slides/starting_php5/operators.xml</slide>
+  <slide>slides/starting_php5/funcs.xml</slide>
+  <slide>slides/starting_php5/loops.xml</slide>
+
+  <slide>slides/starting_php5/oop.xml</slide>
+  <slide>slides/starting_php5/obj_ref.xml</slide>
+  <slide>slides/starting_php5/obj_ref2.xml</slide>
+  <slide>slides/starting_php5/obj_clone.xml</slide>
+  <slide>slides/starting_php5/obj_clone2.xml</slide>
+  <slide>slides/starting_php5/obj_con_des.xml</slide>
+  <slide>slides/starting_php5/obj_con_des2.xml</slide>
+  <slide>slides/starting_php5/obj_ppp.xml</slide>
+  <slide>slides/starting_php5/obj_ppp2.xml</slide>
+  <slide>slides/starting_php5/obj_static.xml</slide>
+  <slide>slides/starting_php5/obj_final.xml</slide>
+  <slide>slides/starting_php5/obj_const.xml</slide>
+  <slide>slides/starting_php5/obj_indirect.xml</slide>
+  <slide>slides/starting_php5/obj_autoload.xml</slide>
+  <slide>slides/starting_php5/obj_get_set.xml</slide>
+  <slide>slides/starting_php5/obj_method_over.xml</slide>
+  <slide>slides/starting_php5/obj_abstract.xml</slide>
+  <slide>slides/starting_php5/obj_interface.xml</slide>
+  <slide>slides/starting_php5/obj_exceptions.xml</slide>
+  <slide>slides/starting_php5/obj_tostring.xml</slide>
+
+  <slide>slides/starting_php5/datetime.xml</slide>
+  <slide>slides/starting_php5/string.xml</slide>
+  <slide>slides/starting_php5/regex.xml</slide>
+  <slide>slides/starting_php5/encode.xml</slide>
+  <slide>slides/starting_php5/file.xml</slide>
+  <slide>slides/starting_php5/cfile.xml</slide>
+  <slide>slides/starting_php5/scope.xml</slide>
+  <slide>slides/starting_php5/regglobals.xml</slide>
+  <slide>slides/starting_php5/magic_quotes.xml</slide>
+
+	<slide>slides/starting_php5/break1.xml</slide>
+	<slide>slides/starting_php5/break1a.xml</slide>
+
+  <slide>slides/starting_php5/database_support.xml</slide>
+  <slide>slides/starting_php5/db.xml</slide>
+  <slide>slides/starting_php5/header.xml</slide>
+  <slide>slides/starting_php5/cookie.xml</slide>
+</chapter>
+
+<chapter title="Session Management">
+  <slide>slides/starting_php5/php_session.xml</slide>
+  <slide>slides/starting_php5/php_session1.xml</slide>
+  <slide>slides/starting_php5/php_session2.xml</slide>
+  <slide>slides/starting_php5/php_session_start.xml</slide>
+  <slide>slides/starting_php5/php_session_config.xml</slide>
+  <slide>slides/starting_php5/php_session3.xml</slide>
+  <slide>slides/starting_php5/php_session_backend.xml</slide>
+  <slide>slides/starting_php5/php_session_mysql.xml</slide>
+</chapter>
+
+<chapter title="XML">
+  <slide>slides/starting_php5/xml_intro.xml</slide>
+  <slide>slides/starting_php5/simplexml.xml</slide>
+  <slide>slides/starting_php5/dom.xml</slide>
+  <slide>slides/starting_php5/dom_ex.xml</slide>
+  <slide>slides/starting_php5/xsl.xml</slide>
+  <slide>slides/starting_php5/xsl_ex.xml</slide>
+  <slide>slides/starting_php5/soap.xml</slide>
+  <slide>slides/starting_php5/soap_ex.xml</slide>
+  <slide>slides/starting_php5/tidy_intro.xml</slide>
+  <slide>slides/starting_php5/tidy_ex1.xml</slide>
+  <slide>slides/starting_php5/tidy_ex2.xml</slide>
+</chapter>
+
+<chapter title="SQLite">
+  <slide>slides/starting_php5/sqlite_intro.xml</slide>
+  <slide>slides/starting_php5/sqlite_ex.xml</slide>
+  <slide>slides/starting_php5/sqlite_ex2.xml</slide>
+</chapter>
+
+<chapter title="SPL">
+  <slide>slides/starting_php5/spl_intro.xml</slide>
+  <slide>slides/starting_php5/spl_ex1.xml</slide>
+</chapter>
+
+<chapter title="Dynamic Generation">
+  <slide>slides/starting_php5/image.xml</slide>
+  <slide>slides/starting_php5/image_colors1.xml</slide>
+  <slide>slides/starting_php5/image_colors2.xml</slide>
+  <slide>slides/starting_php5/image_colors4.xml</slide>
+  <slide>slides/starting_php5/image_colors5.xml</slide>
+  <slide>slides/starting_php5/image_colors6.xml</slide>
+  <slide>slides/starting_php5/image2.xml</slide>
+  <slide>slides/starting_php5/image2a.xml</slide>
+  <slide>slides/starting_php5/image_text1.xml</slide>
+  <slide>slides/starting_php5/image_text2.xml</slide>
+  <slide>slides/starting_php5/exif.xml</slide>
+  <slide>slides/starting_php5/flash_ming.xml</slide>
+</chapter>
+
+<chapter title="Streams">
+  <slide>slides/starting_php5/streams_intro.xml</slide>
+  <slide>slides/starting_php5/streams_ex1.xml</slide>
+  <slide>slides/starting_php5/streams_ex2.xml</slide>
+</chapter>
+
+	<slide>slides/starting_php5/break2.xml</slide>
+	<slide>slides/starting_php5/break2a.xml</slide>
+
+
+<slide>slides/starting_php5/thankyou.xml</slide>
+
+</presentation>

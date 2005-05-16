@@ -1,0 +1,10 @@
+<slide title="Class Constants">
+
+<blurb>
+PHP 5 allows class specific constants, which works just like regular constants, but are limited
+to the scope of the given class.
+</blurb>
+
+<example filename="obj_const.php" fontsize="1.5em" />
+
+</slide>

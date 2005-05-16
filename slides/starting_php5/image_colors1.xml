@@ -1,0 +1,14 @@
+<slide title="Colours" outputbackground="#ffffff">
+<blurb title="Color Handling">
+For images with an 8-bit indexed palette it can be tricky to manage 
+colors.
+</blurb>
+<example type="genimage" filename="image_colors_ex1.php" result="1" rwidth="312"/>
+
+<list fontsize="2.5em" title="For paletted images the following functions can be useful:">
+<bullet>ImageColorClosest</bullet>
+<bullet>ImageColorExact</bullet>
+<bullet>ImageColorDeallocate</bullet>
+</list>
+
+</slide>
