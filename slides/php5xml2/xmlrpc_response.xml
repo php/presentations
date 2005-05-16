@@ -1,0 +1,28 @@
+<slide title="XMLRPC Response Source">
+
+<example title="Response"><![CDATA[<?xml version="1.0" encoding="iso-8859-1"?>
+<methodResponse>
+<params>
+ <param>
+  <value>
+   <struct>
+    <member>
+     <name>packageid</name>
+     <value>
+      <string>17</string>
+     </value>
+    </member>
+    <member>
+     <name>name</name>
+     <value>
+      <string>XML_RPC</string>
+     </value>
+    </member>
+   </struct>
+  </value>
+ </param>
+</params>
+</methodResponse>]]></example>
+
+</slide>
+ 

@@ -1,0 +1,21 @@
+<slide title="XSLT via XSL Extension">
+
+<image filename="transformer.gif" align="right" />
+
+<blurb fontsize="3em">
+XSLT is a language designed to facilitate XML transformations, in XML itself. 
+</blurb>
+
+<list>
+<bullet>Uses DOM extension</bullet>
+<bullet>Supports most EXSLT (www.exslt.org)</bullet>
+<bullet>Transform DOM to DOM, HTML, File or XML</bullet>
+</list>
+
+<break />
+
+<blurb fontsize="2.5em">
+Replacement for XSLT extension in PHP 4. 
+</blurb>
+
+</slide>

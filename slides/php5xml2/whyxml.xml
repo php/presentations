@@ -1,0 +1,21 @@
+<slide>
+<title>Why Use XML?</title>
+
+<blurb>
+There are a number of good reasons to use XML, however it is important
+to note that XML is not a "one size fit all" solution.
+</blurb>
+
+<image filename="buzzword.gif" align="right" />
+
+<list>
+	<bullet>Completely platform independent.</bullet>
+	<bullet>Most languages can easily parse it.</bullet>
+	<bullet>Fairly simple syntax.</bullet>
+	<bullet>Not limited to a particular protocol.</bullet>
+	<bullet>Unicode Support</bullet>
+	<bullet>Buzzword compliance.</bullet>
+</list>
+
+
+</slide>

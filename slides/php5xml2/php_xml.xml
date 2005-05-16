@@ -1,0 +1,22 @@
+<slide>
+<title>PHP 5 and XML</title>
+
+<image filename="choices.jpg" align="right" />	
+
+<blurb>
+In PHP 5 working with XML can be done in any number of ways, via a whole
+series of extensions.
+</blurb>
+
+<list>
+<bullet>XML extension</bullet>
+<bullet>DOM</bullet>
+<bullet>XML-RPC</bullet>
+<bullet>Simplexml</bullet>
+<bullet>SOAP</bullet>
+<bullet>XML Reader (PECL)</bullet>
+<bullet>XML Writer (PECL)</bullet>
+
+</list>
+
+</slide>

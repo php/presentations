@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="urn:whoisDataService.whois.comms.ws.dsdata.co.uk" 
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" 
+	xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:apachesoap="http://xml.apache.org/xml-soap" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:intf="urn:whoisDataService.whois.comms.ws.dsdata.co.uk" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:impl="urn:whoisDataService.whois.comms.ws.dsdata.co.uk" 
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:whoisDataService.whois.comms.ws.dsdata.co.uk">
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="WhoisRequest">
+        <sequence>
+          <element name="domain" nillable="true" type="xsd:string"/>
+          <element name="clientID" nillable="true" type="xsd:string"/>
+          <element name="emailAddress" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <element name="WhoisRequest" nillable="true" type="impl:WhoisRequest"/>
+      <complexType name="WhoisResult">
+        <sequence>
+          <element name="result" type="xsd:int"/>
+          <element name="resultDescription" nillable="true" type="xsd:string"/>
+          <element name="server" nillable="true" type="xsd:string"/>
+          <element name="domainName" nillable="true" type="xsd:string"/>
+          <element name="resultText" nillable="true" type="xsd:string"/>
+          <element name="registrar" nillable="true" type="xsd:string"/>
+          <element name="registrarURL" nillable="true" type="xsd:string"/>
+          <element name="registrant" nillable="true" type="xsd:string"/>
+          <element name="status" nillable="true" type="xsd:string"/>
+          <element name="nameServers" nillable="true" type="xsd:string"/>
+          <element name="registrantAddress" nillable="true" type="xsd:string"/>
+          <element name="country" nillable="true" type="xsd:string"/>
+          <element name="updatedOn" nillable="true" type="xsd:dateTime"/>
+          <element name="createdOn" nillable="true" type="xsd:dateTime"/>
+          <element name="expiresOn" nillable="true" type="xsd:dateTime"/>
+        </sequence>
+      </complexType>
+      <complexType name="ArrayOfWhoisResult">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="impl:WhoisResult[]"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <element name="ArrayOfWhoisResult" nillable="true" type="impl:ArrayOfWhoisResult"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="getWhoisDataResponse">
+    <wsdl:part name="getWhoisDataReturn" type="intf:ArrayOfWhoisResult"/>
+  </wsdl:message>
+  <wsdl:message name="getWhoisDataRequest">
+    <wsdl:part name="in0" type="intf:WhoisRequest"/>
+  </wsdl:message>
+  <wsdl:portType name="WhoisData">
+    <wsdl:operation name="getWhoisData" parameterOrder="in0">
+      <wsdl:input name="getWhoisDataRequest" message="intf:getWhoisDataRequest"/>
+      <wsdl:output name="getWhoisDataResponse" message="intf:getWhoisDataResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WhoisDataSoapBinding" type="intf:WhoisData">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getWhoisData">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getWhoisDataRequest">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:whoisDataService.whois.comms.ws.dsdata.co.uk"/>
+      </wsdl:input>
+      <wsdl:output name="getWhoisDataResponse">
+        <wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:whoisDataService.whois.comms.ws.dsdata.co.uk"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WhoisDataService">
+    <wsdl:port name="WhoisData" binding="intf:WhoisDataSoapBinding">
+      <wsdlsoap:address location="http://wavendon.dsdata.co.uk/axis/services/WhoisData"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

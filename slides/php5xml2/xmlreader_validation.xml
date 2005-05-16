@@ -1,0 +1,10 @@
+<slide title="XmlReader XML Validation">
+
+<blurb>
+Aside from parsing XML documents, XmlReader can also be used to quickly validate them.
+</blurb>
+
+
+<example filename="xmlread_valid1.php" hide="0" result="1" type="php" fontsize="1.4em" />
+
+</slide>

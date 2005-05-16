@@ -1,0 +1,14 @@
+<slide title="SOAP Document Rules">
+
+<blurb fontsize="4.0em">
+A SOAP Document must meet the following requirements
+</blurb>
+
+<list fontsize="4.0em">
+	<bullet>Must have a top-level %Envelope% namespaced to %http://schemas.xmlsoap.org/soap/envelope/%</bullet>
+	<bullet>Must contain %Body% element</bullet>
+	<bullet>May contain an optional %Header% and %Fault% elements</bullet>
+	<bullet>The contents of %Header% and %Body% must be properly namespaced</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,16 @@
+<slide title="XmlWriter">
+
+<blurb fontsize="5em" align="center">
+XmlWriter
+</blurb>
+
+<image filename="writer.gif" align="right" />
+
+<list fontsize="3em">
+<bullet>Writes XML Streams directly to disk or memory</bullet>
+<bullet>Based on LibXML 2</bullet>
+<bullet>Procedural API Only</bullet>
+<bullet>Newest XML Extension (PECL)</bullet>
+</list>
+
+</slide>
