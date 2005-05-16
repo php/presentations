@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rdf:RDF
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns="http://my.netscape.com/rdf/simple/0.9/">
+
+<channel>
+<title>Slashdot: </title>
+<link>http://slashdot.org/</link>
+<description>News for nerds, stuff that matters</description>
+</channel>
+
+<image>
+<title>Slashdot: </title>
+<url>http://images.slashdot.org/topics/topicslashdot.gif</url>
+<link>http://slashdot.org/</link>
+</image>
+
+<item>
+<title>Microsoft Accepts Most EU Demands, But Not Over Source</title>
+<link>http://yro.slashdot.org/article.pl?sid=05/04/05/020225&amp;from=rss</link>
+</item>
+
+<item>
+<title>Google Experiments with Video Blogging</title>
+<link>http://slashdot.org/article.pl?sid=05/04/05/0148205&amp;from=rss</link>
+</item>
+
+<item>
+<title>Yankee Group Survey Says Windows, Linux TCO Equal</title>
+<link>http://linux.slashdot.org/article.pl?sid=05/04/05/007214&amp;from=rss</link>
+</item>
+
+<item>
+<title>VIA Epia SP 13000 Review</title>
+<link>http://hardware.slashdot.org/article.pl?sid=05/04/04/2258241&amp;from=rss</link>
+</item>
+
+<item>
+<title>The Baby Bootstrap?</title>
+<link>http://ask.slashdot.org/article.pl?sid=05/04/04/2112240&amp;from=rss</link>
+</item>
+
+<item>
+<title>A Plasmonic Revolution for Computer Chips?</title>
+<link>http://science.slashdot.org/article.pl?sid=05/04/04/219236&amp;from=rss</link>
+</item>
+
+<item>
+<title>What Ever Happened to 'Toothing'?</title>
+<link>http://slashdot.org/article.pl?sid=05/04/04/2054256&amp;from=rss</link>
+</item>
+
+<item>
+<title>U.S. Blogger Breaches Canadian Publication Ban</title>
+<link>http://yro.slashdot.org/article.pl?sid=05/04/04/1940214&amp;from=rss</link>
+</item>
+
+<item>
+<title>Mark Shuttleworth Answers At Length</title>
+<link>http://interviews.slashdot.org/article.pl?sid=05/04/04/1859255&amp;from=rss</link>
+</item>
+
+<item>
+<title>The Rocky TiVo-DirecTV Relationship</title>
+<link>http://slashdot.org/article.pl?sid=05/04/04/1751222&amp;from=rss</link>
+</item>
+
+<textinput>
+<title>Search Slashdot</title>
+<description>Search Slashdot stories</description>
+<name>query</name>
+<link>http://slashdot.org/search.pl</link>
+</textinput>
+
+</rdf:RDF>
