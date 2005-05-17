@@ -1,0 +1,65 @@
+<presentation template="php2" titlecolor="#1111aa" navbarbackground="url(images/trans-ffffff.png)" logo1="images/php-med-trans-light.gif" titlesize="2em" navbarheight="4.1em">
+<topic>XML</topic>	
+<title>PHP 5 and WebServices</title>
+<copyright>(c) Copyright 2005 Ilia Alshanetsky</copyright>
+<event>PHP Quebec 2005</event>
+<location>Quebec, Canada</location>
+<speaker>Ilia Alshanetsky</speaker>
+<navmode>html</navmode>
+<url>http://talks.php.net/</url>
+
+<slide>slides/php5xml2/titlepage.xml</slide>
+
+<slide>slides/web_services/server_client.xml</slide>
+<slide>slides/web_services/protocol.xml</slide>
+<slide>slides/web_services/protocol_layers.xml</slide>
+
+<slide>slides/web_services/simple_protocol.xml</slide>
+<slide>slides/web_services/simple_protocol2.xml</slide>
+<slide>slides/web_services/simple_problems.xml</slide>
+
+<slide>slides/php5xml2/xml.xml</slide>
+
+<slide>slides/php5xml2/php_xml.xml</slide>
+
+<slide>slides/php5xml2/parsing_xml.xml</slide>
+
+<slide>slides/php5xml2/sax.xml</slide>
+<slide>slides/php5xml2/sax2.xml</slide>
+
+<slide>slides/php5xml2/simplexml.xml</slide>
+<slide>slides/php5xml2/simplexml_ex.xml</slide>
+
+<slide>slides/php5xml2/xpath.xml</slide>
+
+<slide>slides/php5xml2/simplexml_xpath.xml</slide>
+<slide>slides/php5xml2/simplexml_mod.xml</slide>
+<slide>slides/php5xml2/simplexml_problem.xml</slide>
+
+<slide>slides/php5xml2/dom.xml</slide>
+<slide>slides/php5xml2/dom_access.xml</slide>
+<slide>slides/php5xml2/dom_access2.xml</slide>
+<slide>slides/php5xml2/dom_xpath.xml</slide>
+<slide>slides/php5xml2/dom_create.xml</slide>
+<slide>slides/php5xml2/dom_modify.xml</slide>
+<slide>slides/php5xml2/dom_html.xml</slide>
+
+<slide>slides/php5xml2/xmlrpc.xml</slide>
+<slide>slides/php5xml2/xmlrpc_request.xml</slide>
+<slide>slides/php5xml2/xmlrpc_response.xml</slide>
+<slide>slides/php5xml2/xmlrpc_server.xml</slide>
+<slide>slides/php5xml2/xmlrpc_client.xml</slide>
+<slide>slides/php5xml2/xmlrpc_cons_pros.xml</slide>
+
+<slide>slides/php5xml2/soap.xml</slide>
+<slide>slides/php5xml2/soap_doc.xml</slide>
+<slide>slides/php5xml2/soap_doc_ex.xml</slide>
+<slide>slides/php5xml2/soap_fault_ex.xml</slide>
+<slide>slides/php5xml2/soap_server.xml</slide>
+<slide>slides/php5xml2/soap_wsdl.xml</slide>
+<slide>slides/php5xml2/soap_client.xml</slide>
+<slide>slides/php5xml2/soap_cons_pros.xml</slide>
+
+<slide>slides/php5xml2/thankyou.xml</slide>
+
+</presentation>
