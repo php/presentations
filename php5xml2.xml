@@ -1,0 +1,86 @@
+<presentation template="php2" titlecolor="#1111aa" navbarbackground="url(images/trans-ffffff.png)" logo1="images/php-med-trans-light.gif" titlesize="2em" navbarheight="4.1em">
+<topic>XML</topic>	
+<title>PHP 5 and XML</title>
+<copyright>(c) Copyright 2005 Ilia Alshanetsky</copyright>
+<event>PHP West</event>
+<location>Vancouver, Canada</location>
+<date>January 14th 2005</date>
+<speaker>Ilia Alshanetsky</speaker>
+<navmode>html</navmode>
+<url>http://talks.php.net/</url>
+
+<slide>slides/php5xml2/titlepage.xml</slide>
+
+<slide>slides/php5xml2/whatis.xml</slide>
+<slide>slides/php5xml2/whyxml.xml</slide>
+
+<slide>slides/php5xml2/xml.xml</slide>
+
+<slide>slides/php5xml2/php_xml.xml</slide>
+
+<slide>slides/php5xml2/parsing_xml.xml</slide>
+
+<slide>slides/php5xml2/php_xml2.xml</slide>
+
+<slide>slides/php5xml2/libs.xml</slide>
+
+<slide>slides/php5xml2/sax.xml</slide>
+<slide>slides/php5xml2/sax2.xml</slide>
+<slide>slides/php5xml2/sax3.xml</slide>
+
+<slide>slides/php5xml2/xmlreader.xml</slide>
+<slide>slides/php5xml2/xmlreader_vs_sax.xml</slide>
+<slide>slides/php5xml2/xmlreader_ex.xml</slide>
+<slide>slides/php5xml2/xmlreader_validation.xml</slide>
+<slide>slides/php5xml2/xmlreader_sum.xml</slide>
+
+<slide>slides/php5xml2/xmlwriter.xml</slide>
+<slide>slides/php5xml2/xmlwriter_ex.xml</slide>
+<slide>slides/php5xml2/xmlwriter_ex2.xml</slide>
+<slide>slides/php5xml2/xmlwriter_ex3.xml</slide>
+<slide>slides/php5xml2/xmlwriter_sum.xml</slide>
+
+<slide>slides/php5xml2/simplexml.xml</slide>
+<slide>slides/php5xml2/simplexml_ex.xml</slide>
+
+<slide>slides/php5xml2/xpath.xml</slide>
+
+<slide>slides/php5xml2/simplexml_xpath.xml</slide>
+<slide>slides/php5xml2/simplexml_mod.xml</slide>
+<slide>slides/php5xml2/simplexml_dom.xml</slide>
+<slide>slides/php5xml2/simplexml_problem.xml</slide>
+
+<slide>slides/php5xml2/dom.xml</slide>
+<slide>slides/php5xml2/dom_access.xml</slide>
+<slide>slides/php5xml2/dom_access2.xml</slide>
+<slide>slides/php5xml2/dom_access3.xml</slide>
+<slide>slides/php5xml2/dom_xpath.xml</slide>
+<slide>slides/php5xml2/dom_create.xml</slide>
+<slide>slides/php5xml2/dom_modify.xml</slide>
+<slide>slides/php5xml2/dom_validate.xml</slide>
+<slide>slides/php5xml2/dom_validate2.xml</slide>
+<slide>slides/php5xml2/dom_html.xml</slide>
+
+<slide>slides/php5xml2/xmlrpc.xml</slide>
+<slide>slides/php5xml2/xmlrpc_request.xml</slide>
+<slide>slides/php5xml2/xmlrpc_response.xml</slide>
+<slide>slides/php5xml2/xmlrpc_server.xml</slide>
+<slide>slides/php5xml2/xmlrpc_client.xml</slide>
+<slide>slides/php5xml2/xmlrpc_cons_pros.xml</slide>
+
+<slide>slides/php5xml2/soap.xml</slide>
+<slide>slides/php5xml2/soap_doc.xml</slide>
+<slide>slides/php5xml2/soap_doc_ex.xml</slide>
+<slide>slides/php5xml2/soap_fault_ex.xml</slide>
+<slide>slides/php5xml2/soap_server.xml</slide>
+<slide>slides/php5xml2/soap_wsdl.xml</slide>
+<slide>slides/php5xml2/soap_client.xml</slide>
+<slide>slides/php5xml2/soap_cons_pros.xml</slide>
+
+<slide>slides/php5xml2/xslt.xml</slide>
+<slide>slides/php5xml2/xslt_stylesheet.xml</slide>
+<slide>slides/php5xml2/xslt_ex.xml</slide>
+
+<slide>slides/php5xml2/thankyou.xml</slide>
+
+</presentation>
