@@ -4,8 +4,8 @@
 
 	<list>
 		<bullet>Front End Server: Redirector (Load Balancer)</bullet>
-		<bullet>Uses the load of specific worker servers to determine how to forward</bullet>
-		<bullet>Uses a kernel module for implements transport-layer load balancing inside the Linux kernel, so called Layer-4 switching</bullet>
+		<bullet>Can use the load of specific worker servers to determine how to forward</bullet>
+		<bullet>Uses a kernel module that implements transport-layer load balancing inside the Linux kernel, so called Layer-4 switching</bullet>
 		<bullet>Can use different scheduling algorithms</bullet>
 		<bullet>Does *not* provide fail-safe functionality</bullet>
 	</list>

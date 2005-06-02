@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp-gausta.css"
+	backgroundfixed="1" >
+<topic>Performance</topic>
+<title>Clustering and Caching</title>
+<event>eZ Camp 2005</event>
+<location>Gaustablikk, Norway</location>
+<date>Jun 3rd, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/clustering/title.xml</slide>
+
+<slide>slides/clustering/why-cluster.xml</slide>
+
+<slide>slides/clustering/cluster1.xml</slide>
+
+<slide>slides/clustering/cluster3.xml</slide>
+<slide>slides/clustering/lvs.xml</slide>
+
+<slide>slides/clustering/cluster5.xml</slide>
+<slide>slides/clustering/keepalived.xml</slide>
+<slide>slides/clustering/backup-redirector.xml</slide>
+
+<slide>slides/clustering/cluster6.xml</slide>
+<slide>slides/clustering/data-replication.xml</slide>
+
+<slide>slides/clustering/cluster7.xml</slide>
+<slide>slides/clustering/ndb-cluster.xml</slide>
+
+<slide>slides/clustering/sync-data.xml</slide>
+<slide>slides/clustering/sync-data-text.xml</slide>
+<slide>slides/clustering/data-storage.xml</slide>
+
+<slide>slides/clustering/static-cache-diagram.xml</slide>
+<slide>slides/clustering/static-cache-words-and-numbers.xml</slide>
+<slide>slides/clustering/static-cache-config.xml</slide>
+
+<slide>slides/clustering/resources.xml</slide>
+
+</presentation>

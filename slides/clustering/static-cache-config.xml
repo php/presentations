@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Static Cache</title>
+	<subtitle>Configuration</subtitle>
+
+	<blurb>staticcache.ini:</blurb>
+	<example>[CacheSettings]
+HostName=localhost
+MaxCacheDepth=4
+
+CachedURLArray[]
+CachedURLArray[]=/news*
+CachedURLArray[]=/weblog*
+
+CachedSiteAccesses[]
+CachedSiteAccesses[]=news_en
+CachedSiteAccesses[]=news_fr
+
+AlwaysUpdateArray[]
+AlwaysUpdateArray[]=/</example>
+
+	<list>
+		<bullet>~CachedURLArray~: Which URLs should be statically cached</bullet>
+		<bullet>~CachedSiteAccesses~: For which site accesses should we cache</bullet>
+		<bullet>~AlwaysUpdateArray~: Which nodes should always have it's static cache regenerated when publishing content</bullet>
+	</list>
+</slide>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Static Cache</title>
+
+	<list>
+		<bullet>Uses Apache %mod_rewrite% to check if files exist</bullet>
+		<bullet>New cache files are written on publish</bullet>
+		<bullet>Configuration can determine which nodes should always be updated</bullet>
+	</list>
+
+	<example>RewriteEngine On
+
+RewriteCond   /dat/ez.no/static/index.html -f
+RewriteRule  ^/$              /static/index.html [L]
+RewriteCond   /dat/ez.no/static/index.html -f
+RewriteRule  ^$               /static/index.html [L]
+
+RewriteCond   %{REQUEST_METHOD}       !^POST$
+RewriteCond   /dat/ez.no/static$1/index.html -f
+RewriteRule   ^(.*)$  /static$1/index.html [L]
+
+RewriteRule !\.(gif|css|jpg|png|jar|ico|js)$ /index.php</example>
+</slide>

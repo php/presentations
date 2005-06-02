@@ -15,6 +15,6 @@ www.example.com.  60  IN  A  10.45.67.3
 www.example.com.  60  IN  A  10.45.67.4</example>
 
 	<list>
-		<bullet>A short TLL is important to avoid caching</bullet>
+		<bullet>A short TTL is important to avoid caching</bullet>
 	</list>
 </slide>

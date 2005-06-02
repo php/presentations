@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Objectmodel in PHP 4</title>
 
-	<image align="center" filename="old-noref.png" />
+	<image align="center" filename="old-noref.png" pdf-scale="1"/>
 
 	<list marginleft="3em" fontsize="3.5em">
 		<bullet>Pass by value</bullet>
