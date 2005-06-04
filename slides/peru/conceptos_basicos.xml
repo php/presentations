@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Conceptos Básicos">
+
+<example title="Variables y Expresiones" width="30em"><![CDATA[<?php
+ $foo = 1;
+ $bar = "Probando";
+ $xyz = 3.14;
+ $foo = $foo + 1;
+?>]]></example>
+
+<example title="Arreglos" width="30em"><![CDATA[<?php
+ $foo[1] = 1;  
+ $foo[2] = 2;
+ $bar[1][2] = 3;
+?>]]></example>
+ 
+<example title="Funciones" width="30em"><![CDATA[<?php
+ phpinfo();
+ foo();
+ $len = strlen($foo);
+?>]]></example>
+
+<example title="Estructuras de control" width="30em"><![CDATA[<?php
+ while($foo) {
+  ...
+ }
+?>]]></example>
+
+<example title="Producción de resultados" width="30em"><![CDATA[<?php
+ echo $foo;
+ printf(".2f",$price);
+?>]]></example>
+
+</slide>

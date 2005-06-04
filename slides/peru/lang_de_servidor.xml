@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Trabaja en el servidor">
+
+<blurb>
+ *PHP es un lenguaje de servidor*:
+ Aunque se puede embeber PHP en archivos de HTML como un lenguaje
+ de cliente (ej. Javascript), PHP corre en el servidor y todas las
+ instrucciones son ejecutadas y reemplazadas por el servidor de
+ web antes de enviarlo al navegador de web.
+</blurb>
+
+<image align="center" filename="../intro/serverside.png" />
+
+<blurb>De manera que si un archivo de HTML contiene:</blurb>
+
+<example><![CDATA[<html>
+  <head><title>Ejemplo</title></head>
+  <body>
+  <?php echo "PHP significa: PHP Hypertext Preprocessor"; ?>
+  </body>
+</html>]]></example>
+
+<blurb>
+ Lo que el usuario leeria si viera el código fuente de la página en su
+ navegador, seria:
+</blurb>
+<example><![CDATA[<html>
+  <head><title>Ejemplo</title></head>
+  <body>
+  PHP significa: PHP Hypertext Preprocessor
+  </body>
+</html>]]></example>
+
+</slide>

@@ -1,0 +1,26 @@
+<slide title="Ejemplo de SQL">
+<blurb>
+ En los programas de PHP que se conectan a bases de datos, el procedimiento
+ es casi siempre similar al código a continuación: se hace la conexión al
+ servidor de base de datos, seleccionar la base de datos, ejecutar la
+ búsqueda, y finalmente iterar en los resultados.
+</blurb>
+<break lines="2"/>
+  <example title='Usado MySQL'><![CDATA[<?php
+  $db = mysql_connect("db.server.com","username","password");
+  mysql_select_db("productos", $db);
+  $result = mysql_query("SELECT * FROM detalles", $db);
+  if ($result) {
+     echo "<TABLE>\n";
+     echo "<TR><TH>Name</TH><TH>Description</TH></TR>\n";
+     while ($a = mysql_fetch_array($result)) {
+        echo "<TR><TD>{$a['nombre']}</TD>";
+        echo "<TD>{$a['descr']}</TD></TR>";
+     }
+     echo "</TABLE>";
+  } else {
+     echo "<P>No hay productos</P>";
+  }
+?>]]></example>
+<break lines="2"/>
+</slide>

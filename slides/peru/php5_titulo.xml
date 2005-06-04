@@ -2,10 +2,10 @@
 <slide title="PHP 5">
  <blurb>*¿Qué hay de nuevo en PHP 5?*</blurb>
  <list type="darrow" fontsize="3.5em">
-  <bullet effect="hide">Soporte para Programación Orientada a Objetos</bullet>
-  <bullet effect="hide">SimpleXML: una forma directa y simple de manipular XML</bullet>
-  <bullet effect="hide">SQLite: base de datos sencilla pero poderosa</bullet>
-  <bullet effect="hide">Streams y Filtros</bullet>
-  <bullet effect="hide">... y mucho más (SPL, SOAP, DOM, XSL, Tidy, etc.)</bullet>
+  <bullet>Soporte para Programación Orientada a Objetos</bullet>
+  <bullet>SimpleXML: una forma directa y simple de manipular XML</bullet>
+  <bullet>SQLite: base de datos sencilla pero poderosa</bullet>
+  <bullet>Streams y Filtros</bullet>
+  <bullet>... y mucho más (SPL, SOAP, DOM, XSL, Tidy, etc.)</bullet>
  </list>
 </slide>

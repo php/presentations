@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="PHP es muy usado">
+<blurb>Reporte de Netcraft de Diciembre 2004</blurb>
+<list>
+<bullet>18,455,683 Dominios.  1,317,871 direcciones de IP</bullet>
+</list>
+<image filename="../intro/phpstats.png" align="center"/>
+<link href="http://www.netcraft.com" leader="Source: " align="center" marginright="6em">Netcraft</link>
+
+<blurb>Reporte de módulos de Apache de Septiembre 2004 (SecuritySpace)</blurb>
+<list>
+<bullet>%10,933,256 Servidores de Apache%</bullet>
+<bullet>% 5,405,907 (49.44\%) PHP%</bullet>
+<bullet>% 2,952,183 (27.00\%) OpenSSL%</bullet>
+<bullet>% 2,868,311 (26.23\%) mod_ssl%</bullet>
+<bullet>% 2,114,853 (19.34\%) Frontpage%</bullet>
+<bullet>% 1,542,833 (14.11\%) mod_perl%</bullet>
+<bullet>%   583,005  (5.33\%) mod_log_bytes%</bullet>
+<bullet>%   562,279  (5.14\%) mod_bwlimited%</bullet>
+<bullet>%   456,107  (4.17\%) DAV%</bullet>
+<bullet>%   430,484  (3.94\%) mod_throttle%</bullet>
+<bullet>%   361,366  (3.31\%) mod_jk%</bullet>
+<bullet>%   276,478  (2.53\%) mod_fastcgi%</bullet>
+<bullet>%   187,720  (1.72\%) mod_auth_pam%</bullet>
+</list>
+<link href="http://www.securityspace.com/s_survey/data/index.html" leader="Source: ">SecuritySpace.com</link>
+
+</slide>

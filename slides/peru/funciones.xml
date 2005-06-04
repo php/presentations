@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Funciones definidas por el usuario">
+<example title="Una función típica y simple"><![CDATA[<?php
+function log_data(&$db, $user, &$data) {
+   mysql_query("INSERT INTO userdata VALUES ('".
+              uniqid()."', '$user', '$data')", $db);
+}
+?>]]></example>
+
+<example title="Pasar por referencia">
+<![CDATA[<?php 
+   log_data($db, $PHP_AUTH_USER, $data);
+?>]]></example>
+
+<example title="Valores por defecto"><![CDATA[<?php
+function hacer_cafe($tazas, $azucar=false, $otros='') {
+   $cafe_en_polvo = 2 * $tazas; // cucharadas
+   $agua_caliente = 250 * tazas; // volumen en ml
+   $cafe = pasar_en_cafetera($cafe_en_polvo, $agua_caliente);
+   if ($azucar) {
+      $cafe = mezclar($cafe, $azucar);
+   }
+   if ($otros != '') {
+      $cafe = agregar_otros($cafe, $otros);
+   }
+   return $cafe;
+}
+
+// cafe solo, 1 taza
+$solo = hacer_cafe(1);
+
+// cafe con azúcar para 3
+$tres = hacer_cafe(3, true);
+
+// cafe con leche para dos y con azúcar
+$dos = hacer_cafe(2, true, 'leche');
+
+?>]]></example>
+
+</slide>

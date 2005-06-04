@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Plataformas">
+
+ <blurb>*Sistemas Operativos*</blurb>
+ <list>
+  <bullet>UNIX (todas las variantes, incluyendo Linux)</bullet>
+  <bullet>Win32 (NT/W95/W98/W2000)</bullet>
+  <bullet>QNX</bullet>
+  <bullet>MacOS (WebTen)</bullet>
+  <bullet>OSX</bullet>
+  <bullet>OS/2</bullet>
+  <bullet>BeOS</bullet>
+  <bullet>OS/390 (experimental)</bullet>
+  <bullet>AS/400 (experimental)</bullet>
+ </list>
+ <blurb>*Interfaces a Servidores*</blurb>
+ <list>
+  <bullet>Módulo de Apache 1.x (UNIX,Win32)</bullet>
+  <bullet>CGI/FastCGI</bullet>
+  <bullet>thttpd </bullet>
+  <bullet>fhttpd</bullet>
+  <bullet>phttpd</bullet>
+  <bullet>ISAPI (IIS, Zeus)</bullet>
+  <bullet>NSAPI (Netscape iPlanet)</bullet>
+  <bullet>Java servlet </bullet>
+  <bullet>AOLServer</bullet>
+  <bullet>Módulo de Roxen/Caudium</bullet>
+  <bullet>SRM (Script Running Machine)</bullet>
+  <bullet>Módulo de Apache 2.x</bullet>
+  <bullet>Tux (experimental)</bullet>
+  <bullet>pi3web (experimental)</bullet>
+ </list>
+
+</slide>

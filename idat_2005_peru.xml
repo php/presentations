@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentation
+ navbarbackground="#ffffff"
+ template="css"
+ navmode="html" 
+ jskeyboard="1"
+ navbartopiclinks="0"
+ stylesheet="presentations/slides/peru/idat2005_style.css"
+>
+<title>PHP: Una visión global</title>
+<subtitle>El lenguaje, su uso, y la comunidades que lo hacen
+crecer</subtitle>
+<topic>PHP</topic>
+<event>Charla en IDAT</event>
+<location>Lima, Perú</location>
+<date>2005-06-04</date>
+<speaker>Jesus M. Castagnetto, Ph.D.</speaker>
+<email>jmcastagnetto@php.net</email>
+<url>http://talks.castagnetto.org/</url>
+
+ <slide>slides/peru/idat2005_title.xml</slide>
+ <slide>slides/peru/idat2005_toc.xml</slide>
+
+ <chapter title="Introducción">
+  <slide>slides/peru/el_lenguaje.xml</slide>
+  <slide>slides/peru/filosofia_del_lenguaje.xml</slide>
+  <slide>slides/peru/lang_de_servidor.xml</slide>
+  <slide>slides/peru/arquitectura.xml</slide>
+  <slide>slides/peru/plataformas.xml</slide>
+  <slide>slides/peru/extensiones.xml</slide>
+  <slide>slides/peru/estadisticas_de_uso.xml</slide>
+  <slide>slides/peru/embeber_php.xml</slide>
+  <slide>slides/peru/conceptos_basicos.xml</slide>
+  <slide>slides/peru/formularios.xml</slide>
+  <slide>slides/peru/sintaxis.xml</slide>
+  <slide>slides/peru/tipos.xml</slide>
+  <slide>slides/peru/arreglos.xml</slide>
+  <slide>slides/peru/funciones.xml</slide>
+  <slide>slides/peru/oop.xml</slide>
+  <slide>slides/peru/oop_php5.xml</slide>
+  <slide>slides/peru/regex.xml</slide>
+ </chapter>
+
+ <chapter title="Extensiones">
+  <slide>slides/peru/ejemplos_de_uso.xml</slide>
+  <slide>slides/peru/sql.xml</slide>
+  <slide>slides/peru/sql_ejemplo.xml</slide>
+  <slide>slides/peru/gd2_imgresize.xml</slide>
+  <slide>slides/intro/pdf.xml</slide>
+  <slide>slides/peru/ming_flash.xml</slide>
+  <slide>slides/peru/ming_flash_rss.xml</slide>
+  <slide>slides/peru/php5_sqlite.xml</slide>
+  <slide>slides/peru/php5_simplexml.xml</slide>
+ </chapter>
+
+ <chapter title="Las comunidades">
+  <slide>slides/peru/las_comunidades.xml</slide>
+  <slide>slides/peru/ecosistema_de_comunidades.xml</slide>
+  <slide>slides/peru/comunidad_visiongeneral.xml</slide>
+  <slide>slides/peru/comunidad_grupocentral.xml</slide>
+  <slide>slides/peru/comunidad_documentacion.xml</slide>
+  <slide>slides/peru/pear_comunidad1.xml</slide>
+  <slide>slides/peru/pear_comunidad2.xml</slide>
+  <slide>slides/peru/comunidad_todas.xml</slide>
+ </chapter>
+
+ <chapter title="PEAR y PECL">
+  <slide>slides/peru/pear_titulo.xml</slide>
+  <slide>slides/peru/pear_que_es.xml</slide>
+  <slide>slides/peru/pear_metas.xml</slide>
+  <slide>slides/peru/pear_pepr.xml</slide>
+  <slide>slides/peru/pear_codingstandards.xml</slide>
+  <slide>slides/peru/pear_installer1.xml</slide>
+  <slide>slides/peru/pear_installer2.xml</slide>
+  <slide>slides/peru/pear_installer3.xml</slide>
+  <slide>slides/peru/pear_installer4.xml</slide>
+  <slide>slides/peru/pear_installer_gtk.xml</slide>
+  <slide>slides/peru/pear_installer_web.xml</slide>
+  <slide>slides/peru/pear_packages.xml</slide>
+  <slide>slides/peru/pear_pearinfo.xml</slide>
+  <!--
+  <slide>slides/peru/pear_channels.xml</slide>
+  <slide>slides/peru/pear_newpackagedef.xml</slide>
+  -->
+ </chapter>
+
+ <chapter title="Final">
+  <slide>slides/peru/idat2005_conclusion.xml</slide>
+  <slide>slides/peru/gracias.xml</slide>
+  <slide>slides/peru/recursos.xml</slide>
+ </chapter>
+</presentation>

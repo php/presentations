@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Filosofía del diseño">
+ <list>
+  <bullet fontsize="5em" margintop="1em">
+   Una solución *pragmática* al problema de desarrolar aplicaciones de Web.
+  </bullet>
+  <bullet fontsize="5em" margintop="1em">
+   Una solución *directa* y obvia para un problema simple.
+  </bullet>
+  <bullet fontsize="5em" margintop="1em">
+   *Escalabilidad* debido a su |ff0000|simplicidad|
+  </bullet>
+  <bullet align="center" margintop='3em'>
+   Acuerdense de la Navaja de Occam: "Entia non sunt multiplicanda praeter necessitatem"
+   (es decir: No busques una solución compleja si una mas simple existe)
+  </bullet>
+ </list>
+</slide>

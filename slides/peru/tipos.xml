@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Tipos básicos de datos">
+<example title="Números (enteros y reales)" result="1"><![CDATA[<?php
+    $a = 1234;
+    $b = 0777;
+    $c = 0xff;
+    $d = 1.25;
+    echo "$a $b $c $d<br />\n";
+?>]]></example>
+
+<example title="Cadenas" result="1"><![CDATA[<?php
+    $name = 'Rasmus $last'; // Comillas simples
+    $str  = "Hola $name\n"; // Comillas dobles
+    echo $str;
+?>]]></example>
+
+<example title="Booleanos" result="1"><![CDATA[<?php
+    $greeting = true;
+    if($greeting) {
+        echo "Hola todos";
+        $greeting = false;
+    }
+?>]]></example>
+
+<blurb>*Asignación dinámica de tipos*</blurb>
+<list>
+ <bullet>No se necesita declarar el tipo de una variable</bullet>
+ <bullet>Las conversiones entre tipos son automáticas (aunque también se
+  pueden forzar)</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+    echo 5 + "1.5" + "10e2";
+?>]]></example>
+
+</slide>

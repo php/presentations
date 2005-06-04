@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Incluyendo PHP">
+<example title="Los 4 estilos de marcado" result="1"><![CDATA[<html>
+<body>
+<ul>
+<li>
+<? echo 'Marcas cortas - Com&uacute;n en c&oacute;digo antig&uuml;o' ?>
+</li>
+<li>
+<?php echo 'Marcas completas - Portable y lo recomendado' ?>
+</li>
+<li>
+<%= 'ASP Tags, poco portable y no muy usado' %>
+</li>
+<li>
+<script language="php">
+ echo 'Marcado bien verboso - raramente usado';
+</script>
+</li>
+</ul>
+</body>
+</html>]]></example>
+</slide>

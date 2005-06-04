@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Programación Orientada a Objetos">
+
+<example title="Definición de una clase"><![CDATA[<?php
+  class Inventario {
+    var $articulos;
+    function agregar_articulo($artnr, $num) {
+        $this->articulos[$artnr] += $num;
+    }  
+  } 
+?>]]></example>
+
+<example title="Heredando de una clase con constructor"><![CDATA[<?php
+  class InventarioNombrado extends Inventario {
+    var $dueno;
+    function InventarioNombrado($nombre) {
+        $this->dueno = $nombre;
+    }
+  } 
+?>]]></example>
+
+<example title="Invocación"><![CDATA[<?php
+  $inv = new InventorioNombrado("NerdChullos");
+  $inv->agregar_articulo(170923, 2);
+?>]]></example>
+
+<example title="Llamadas estaticas a métodos" result="1"><![CDATA[<?php
+  class Conversiones {
+     function PulgadasACentimetros($npulg) {
+        return 2.54 * $npulg;
+     }
+  }
+
+  echo '5 pulgadas son '.Conversiones::PulgadasACentimetros(5).' centimetros';
+?>]]></example>
+<break lines='2'/>
+<blurb>
+ *Llamar a métodos en la clase padre*. Esto es útil cuando se necesita
+ el concatenar los constructores.
+</blurb>
+<example result="1"><![CDATA[<?php
+  class Felino {
+    function Felino() {
+        echo "Constructor de Felino";
+    }
+  }
+
+  class Gato extends Felino {
+    function Gato() {
+        echo "Constructor de Gato<br />\n";
+        $name = get_parent_class($this);
+        parent::$name();
+    }
+  }
+
+  $a = new Gato();
+?>]]></example>
+
+<br clear='2'/>
+</slide>

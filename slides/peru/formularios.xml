@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Manejo de formularios">
+<example title="Manejo tradicional de formularions" 
+ result="1"><![CDATA[<form action="<?=$PHP_SELF?>" method="POST">
+Nombre: <input type="text" name="nombre"><br>
+Edad: <input type="text" name="edad"><br>
+<input type="submit" value="Enviar">
+</form>]]></example>
+
+<example title="Programa que recibe los datos" result="1"
+ condition="nombre"><![CDATA[Hola <?php echo $nombre; ?>.  
+Tu edad es <?php echo $edad; ?> a&ntilde;os.]]></example>
+<break lines="2" />
+<blurb>
+ *Acerca de register_globals*:
+ El ejemplo anterior depende de que register_globals este activo. Esto hace
+ que los valores del formulario sean añadidos automaticamente a los valores
+ globales, pero el hacer esto puede conducir a escribir código inseguro si no
+ se hacen los chequeos del caso. Para combatir este problema, desde la
+ *versión 4.2* de PHP en adelante, register_globals esta desactivado por
+ defecto.
+</blurb>
+<break lines="2" />
+<example title="Asumiendo register_globals desactivado" result="1"
+ condition="nombre">
+<![CDATA[Hola <?php echo $_POST['nombre']; ?>.  
+Tu edad es <?php echo $_POST['edad']; ?> a&ntilde;os.]]></example>
+</slide>

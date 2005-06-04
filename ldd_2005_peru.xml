@@ -5,7 +5,7 @@
  navmode="html" 
  jskeyboard="1"
  navbartopiclinks="0"
- stylesheet="presentations/slides/peru/style.css"
+ stylesheet="presentations/slides/peru/ldd2005_style.css"
 >
 <title>PHP 5 y PEAR:
 Una visión global</title>
@@ -66,6 +66,6 @@ Una visión global</title>
  <chapter title="Final">
   <slide>slides/peru/ldd2005_conclusion.xml</slide>
   <slide>slides/peru/ldd2005_conclusion2.xml</slide>
-  <slide>slides/peru/ldd2005_gracias.xml</slide>
+  <slide>slides/peru/gracias.xml</slide>
  </chapter>
 </presentation>

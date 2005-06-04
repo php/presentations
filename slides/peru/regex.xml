@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Expresiones regulares">
+ <blurb>*Compatibles con POSIX*</blurb>
+<example title="Regex POSIX" result="1"><![CDATA[<?php
+echo ereg_replace('ceviche estaba muy ([[:alpha:]]+)', 
+             'arroz con fritangita es bien \1', 
+       'El ceviche estaba muy sabroso.');
+?>]]></example>
+
+<blurb>*Al estilo de Perl*</blurb>
+<example title="Regex PCRE" result="1"><![CDATA[<?php
+echo preg_replace('/ceviche ([\w\s]+)/', 
+          'majas \1', 
+    'El ceviche estaba muy sabroso.');
+?>]]></example>
+</slide>

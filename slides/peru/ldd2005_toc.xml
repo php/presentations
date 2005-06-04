@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <slide title="Agenda">
  <list>
-  <bullet effect="hide">
+  <bullet>
   *PHP 5*:
   Una visión global de los cambios en PHP 5, y una discusión somera de
   algunas extensiones interesantes.
  </bullet>
- <bullet effect="hide">
+ <bullet>
   *PEAR*:
   Qué es PEAR, que ofrece,
   y como funciona. Finalmente, mencionaré algunos planes futuros del proyecto

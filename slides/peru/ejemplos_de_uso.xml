@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide title="Usando PHP">
+<break lines="5"/>
+<blurb align="center">*Ejemplos prácticos de uso de PHP*</blurb>
+<list>
+ <bullet>SQL: uso de bases de datos</bullet>
+ <bullet>GD2: manipulación de imágenes.</bullet>
+ <bullet>PDF: creación de PDF</bullet>
+ <bullet>Flash (Ming): generación de Flash, manipulación de RSS</bullet>
+ <bullet>SQLite: base de datos simple y ligera</bullet>
+ <bullet>SimpleXML: simple manejo de XML</bullet>
+</list>
+</slide>
