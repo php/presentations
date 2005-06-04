@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:slash="http://slashcode.com/rss/1.0/modules/Slash/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+<channel rdf:about="http://barrapunto.com/">
+<title>Barrapunto</title>
+<link>http://barrapunto.com/</link>
+<description>La informaci&#243;n que te interesa</description>
+<dc:language>es</dc:language>
+<dc:rights>Copyright &amp;copy; 2003, Barrapunto</dc:rights>
+<dc:date>2005-06-04T16:13:06+00:00</dc:date>
+<dc:publisher>Barrapunto S.L.</dc:publisher>
+<dc:creator>webmaster@barrapunto.com</dc:creator>
+<dc:subject>Software libre</dc:subject>
+<syn:updatePeriod>hourly</syn:updatePeriod>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updateBase>1970-01-01T00:00+00:00</syn:updateBase>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/04/121242" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/04/097203" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/03/1539200" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/04/0821237" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/04/081219" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/04/0117221" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/03/2152226" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/03/1657252" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/03/1559245" />
+  <rdf:li rdf:resource="http://barrapunto.com/article.pl?sid=05/06/03/160219" />
+ </rdf:Seq>
+</items>
+<image rdf:resource="http://barrapunto.com/topics/topicbarrapunto.png" />
+<textinput rdf:resource="http://barrapunto.com/search.pl" />
+</channel>
+
+<image rdf:about="http://barrapunto.com/topics/topicbarrapunto.png">
+<title>Barrapunto</title>
+<url>http://barrapunto.com/topics/topicbarrapunto.png</url>
+<link>http://barrapunto.com/</link>
+</image>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/04/121242">
+<title>La ministra responder&#225; "on line" acerca del Plan Antipirater&#237;a</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/04/121242</link>
+<dc:creator>Yonderboy</dc:creator>
+<dc:date>2005-06-04T11:55:32+00:00</dc:date>
+<dc:subject>Copyleft</dc:subject>
+<slash:department>mal-plan</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>es</slash:section>
+<slash:comments>40</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/04/097203">
+<title>Apple se pasa a Intel</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/04/097203</link>
+<dc:creator>Candyman</dc:creator>
+<dc:date>2005-06-04T08:59:39+00:00</dc:date>
+<dc:subject>apple</dc:subject>
+<slash:department>las-ranas-cr&#237;an-pelo</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>articles</slash:section>
+<slash:comments>135</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/03/1539200">
+<title>PS3 sin disco duro de serie</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/03/1539200</link>
+<dc:creator>Candyman</dc:creator>
+<dc:date>2005-06-04T08:38:50+00:00</dc:date>
+<dc:subject>juegos</dc:subject>
+<slash:department>el-chocolate-del-loro</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>articles</slash:section>
+<slash:comments>56</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/04/0821237">
+<title>Madfox: Firefox "compatible" con IE</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/04/0821237</link>
+<dc:creator>Candyman</dc:creator>
+<dc:date>2005-06-04T08:21:05+00:00</dc:date>
+<dc:subject>Mozilla</dc:subject>
+<slash:department>se-me-hab&#237;a-escapado</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>softlibre</slash:section>
+<slash:comments>23</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/04/081219">
+<title>&#191;Se puede vivir en containers?</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/04/081219</link>
+<dc:creator>Candyman</dc:creator>
+<dc:date>2005-06-04T07:58:42+00:00</dc:date>
+<dc:subject>Cultura hacker</dc:subject>
+<slash:department>&#161;me-encanta-que-te-encante,-encanto!</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>articles</slash:section>
+<slash:comments>42</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/04/0117221">
+<title>KDE se une al "Summer of Code" de Google</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/04/0117221</link>
+<dc:creator>rvr</dc:creator>
+<dc:date>2005-06-04T01:14:59+00:00</dc:date>
+<dc:subject>kde</dc:subject>
+<slash:department>los-summerios</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>softlibre</slash:section>
+<slash:comments>9</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/03/2152226">
+<title>"Brasil y la ofensiva Linux", en la BBC</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/03/2152226</link>
+<dc:creator>Yonderboy</dc:creator>
+<dc:date>2005-06-03T21:36:24+00:00</dc:date>
+<dc:subject>reinolinux</dc:subject>
+<slash:department>cerrando-la-brecha-digital</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>articles</slash:section>
+<slash:comments>17</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/03/1657252">
+<title>Firewall de Contingencia</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/03/1657252</link>
+<dc:creator>fernand0</dc:creator>
+<dc:date>2005-06-03T16:38:44+00:00</dc:date>
+<dc:subject>internet</dc:subject>
+<slash:department>fernand0</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>articles</slash:section>
+<slash:comments>30</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/03/1559245">
+<title>KOffice 1.4, a punto de salir del horno</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/03/1559245</link>
+<dc:creator>rvr</dc:creator>
+<dc:date>2005-06-03T15:56:58+00:00</dc:date>
+<dc:subject>kde</dc:subject>
+<slash:department>la-kocina-de-argui&#241;ano</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>softlibre</slash:section>
+<slash:comments>23</slash:comments>
+</item>
+
+<item rdf:about="http://barrapunto.com/article.pl?sid=05/06/03/160219">
+<title>Tutorial sobre 'podcasts' bajo PalmOS</title>
+<link>http://barrapunto.com/article.pl?sid=05/06/03/160219</link>
+<dc:creator>rvr</dc:creator>
+<dc:date>2005-06-03T15:52:37+00:00</dc:date>
+<dc:subject>pda</dc:subject>
+<slash:department>palmitos</slash:department>
+<slash:hitparade></slash:hitparade>
+<slash:section>articles</slash:section>
+<slash:comments>4</slash:comments>
+</item>
+
+<textinput rdf:about="http://barrapunto.com/search.pl">
+<title>Search Barrapunto</title>
+<description>Search Barrapunto stories</description>
+<name>query</name>
+<link>http://barrapunto.com/search.pl</link>
+</textinput>
+
+</rdf:RDF>
