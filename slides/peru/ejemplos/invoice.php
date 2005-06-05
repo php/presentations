@@ -1,6 +1,8 @@
 <?php
 if (!extension_loaded('pdf')) {
-    echo '<a href="invoice.pdf">Bajar la factura</a>';
+    echo 'Este servidor no puede generar PDFs, ';
+    echo 'pero puedes bajar <a href="invoice.pdf">la factura</a> ';
+    echo 'previamente generada por este programa';
     exit;
 }
 $pdf = pdf_new();
