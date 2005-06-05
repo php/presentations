@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<slide title="Generación dinámica de PDF">
+<slide title="Generación dinámica de PDFs">
 
 <example
- title="Una factura en PDF"
+ title="Una factura PDF"
  fontsize="1.5em"
  result="1"
- filename="../intro/invoice.php"
+ filename="ejemplos/invoice.php"
+ type="iframe"
 />
 </slide>
