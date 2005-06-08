@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Date Class</title>
+
+	<example><![CDATA[<?php
+	class Date {
+		function __construct(/*int*/ timestamp);
+		function __construct(Date dateObj);
+
+		function setTimezone(/*string*/ timezone);
+		function modify(/*string*/ modify_string);
+	}
+?>]]></example>
+<break/>
+</slide>
+

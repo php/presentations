@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Date/Time Functions in PHP 5.1</title>
+	<subtitle>String Formats</subtitle>
+
+	<blurb>"American" formats:</blurb>
+	<example>9/11                    4:08 pm
+12/22/78                8:51:00 am</example>
+<break/>
+
+	<blurb>"Combined" formats:</blurb>
+	<example>Sat, 24 Apr 2004 21:48:40 +0200
+2001-11-29T13:20:01.123-05:00</example>
+<break/>
+
+	<blurb>Descriptive formats:</blurb>
+	<example>tomorrow                last saturday
+four months ago         +40 days 2 hours</example>
+<break/>
+
+	<blurb>Textual formats:</blurb>
+	<example>December 22. 1978       22-december-78</example>
+<break/>
+
+	<blurb>All ISO 8601 formats:</blurb>
+	<example>1978/12/22              1978-12-22              70-4-25
+13:03:12.45678          15:57:41.0 pdt          13:03 CEST
+13:03:12.45678 +0100    13:03:12.45678 CEST     04:05 -0930
+15:57-8                 231431 CEST             23:41F</example>
+<break/>
+
+	<blurb>Database specific formats:</blurb>
+	<example>1999-Jan-08
+1999.238</example>
+</slide>
+

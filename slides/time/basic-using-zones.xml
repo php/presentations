@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Using Timezones</title>
+
+	<blurb>Specifying timezone abbreviation while parsing:</blurb>
+	<example><![CDATA[<?php
+	$ts = Date::strtotime("1978-12-22 09:15 CET");
+?>]]></example>
+<break lines="3"/>
+
+	<blurb>Specifying timezone identifier while parsing:</blurb>
+	<example><![CDATA[<?php
+	$ts = Date::strtotime("1978-12-22 09:15 Europe/Oslo");
+?>]]></example>
+<break lines="3"/>
+
+	<blurb>Setting a default timezone:</blurb>
+	<example><![CDATA[<?php
+	Date::setDefaultTimezone("Europe/Oslo");
+	$ts = Date::strtotime("1978-12-22 09:15");
+?>]]></example>
+</slide>
+

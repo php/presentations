@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Problems</title>
+	<subtitle>Daylight Savings Time (Indiana)</subtitle>
+
+	<image align="right" filename="indiana.png"/>
+	<blurb>Three different rules:</blurb>
+	<list>
+		<bullet>Most counties: Eastern, no DST</bullet>
+		<bullet>Counties |ff5555|close| to Chicago and Evansvile: Central, DST</bullet>
+		<bullet>Counties |5555ff|close| to Cincinnatti and Lousville: Eastern, DST</bullet>
+	</list>
+</slide>
+

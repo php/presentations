@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Static Cache</title>
+	<subtitle>Updating</subtitle>
+
+	<blurb>On publish:</blurb>
+	<list>
+		<bullet>The published node's cache</bullet>
+		<bullet>The parent node's cache of the published node</bullet>
+		<bullet>Everything from the ~AlwaysUpdateArray~ array</bullet>
+	</list>
+<break/>
+
+	<blurb>With a script:</blurb>
+	<break/>
+	<example>php bin/php/makestaticcache.php -s ezno -f</example>
+<break lines="2"/>
+
+	<blurb>Nodes are cached as:</blurb>
+	<break/>
+	<list>
+		<bullet>The 'fancy' url name (news/my_article)</bullet>
+		<bullet>content/view/full/~nodeid~</bullet>
+	</list>
+</slide>

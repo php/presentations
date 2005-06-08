@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Date/Time Functions in PHP 4 and PHP 5.0</title>
+
+	<list>
+		<bullet>~checkdate()~ -- Validate a Gregorian date</bullet>
+		<bullet>~date()~ / ~gmdate()~ -- Format a local/GMT time/date</bullet>
+		<bullet>~getdate()~ -- Get date/time information (from a timestamp)</bullet>
+		<bullet>~gettimeofday()~ -- Get current time (as an array)</bullet>
+		<bullet>~localtime()~ -- Get the local time (as an array)</bullet>
+		<bullet>~mktime()~ / ~gmmktime()~ -- Get Unix timestamp for a date</bullet>
+		<bullet>~strftime()~ / ~gmstrftime()~ -- Format a local/GMT time/date according to locale settings</bullet>
+		<bullet>~strtotime()~ -- Parse about any English textual datetime description into a Unix timestamp</bullet>
+	</list>
+</slide>
+

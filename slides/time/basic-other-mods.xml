@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Other modifications</title>
+
+	<list>
+		<bullet>The ~date()~ / ~gmdate()~ and ~strftime()~ functions can also accepts a Date object instead of a timestamp</bullet>
+		<bullet>The ~getdate()~ function also accepts a Date object as first parameter</bullet>
+		<bullet>The ~Date::mktime()~ and ~Date::gmmktime()~ functions return a Date object</bullet>
+		<bullet>The ~localtime()~ function also accepts a Date object as first parameter</bullet>
+		<bullet>~Date::time()~ returns a Date object representing the current time</bullet>
+		<bullet>All other date related functions are aliased into the Date class as static methods</bullet>
+	</list>
+</slide>
+

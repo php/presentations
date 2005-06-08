@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Date/Time Functions in PHP 4 and PHP 5.0</title>
+	<subtitle>Limitations</subtitle>
+
+	<list>
+		<bullet>Uses Unix timestamp as base unit (seconds since 1970-01-01, 00:00 GMT)</bullet>
+		<bullet>Only 32 bit integers for timestamps (1902 to 2038)</bullet>
+		<bullet>Limited to only positive numbers on some Operating Systems (1970 to 2038)</bullet>
+		<bullet>~strtotime()~ is buggy and very complex</bullet>
+		<bullet>No way of dealing correctly with timezones</bullet>
+		<bullet>Some functions are Operating System dependent</bullet>
+	</list>
+</slide>
+

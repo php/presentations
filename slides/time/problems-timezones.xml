@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Problems</title>
+	<subtitle>Timezones</subtitle>
+
+	<image align="center" filename="zones.png"/>
+
+	<list>
+		<bullet>Most places have whole-hour timezone offsets</bullet>
+		<bullet>Some places have half-hour or even quarter-hour timezone offsets</bullet>
+		<bullet>Some places change timezones during the year</bullet>
+	</list>
+</slide>

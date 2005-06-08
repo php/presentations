@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Date/Time Functions in PHP 5.1</title>
+	<subtitle>Improvements</subtitle>
+
+	<list>
+		<bullet>64 bit timestamps (more than Sun's life)</bullet>
+		<bullet>~strtotime()~ has been rewritten</bullet>
+		<bullet>Nothing is Operating System dependent</bullet>
+		<bullet>Full support for timezones, DST, date modifications</bullet>
+	</list>
+</slide>
+

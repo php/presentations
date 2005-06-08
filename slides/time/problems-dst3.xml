@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Problems</title>
+	<subtitle>Other problems with DST and timezones</subtitle>
+
+	<image align="center" filename="dst-strange.png"/>
+
+	<list>
+		<bullet>|5555ff|Australia| has vertical timezones</bullet>
+		<bullet>|55ff55|Brazil| changes change-over dates every year</bullet>
+		<bullet>Lord Howe Island (Australia) moves only half an hour between DST and non-DST</bullet>
+		<bullet>|ff5555|Nepal| uses an quarter of an hour offsets</bullet>
+		<bullet>And this continues for a while...</bullet>
+	</list>
+</slide>
+

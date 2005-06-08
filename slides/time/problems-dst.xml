@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Problems</title>
+	<subtitle>Daylight Savings Time</subtitle>
+
+	<list>
+		<bullet>Artificial time offset to save "daylight"</bullet>
+		<bullet>Not all countires/areas use it</bullet>
+		<bullet>Switches are not done at the same time for all areas</bullet>
+		<bullet>There are plenty of exceptions</bullet>
+	</list>
+
+	<image align="center" filename="usa-zones.png"/>
+</slide>
+

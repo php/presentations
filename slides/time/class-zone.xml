@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Timezone Class</title>
+
+	<example><![CDATA[<?php
+	class Timezone {
+		function __construct(/*string*/ identifier);
+
+		function getOffset(Date dateObj);
+		function loadFromAbbreviation(/*string*/ abbr);
+	}
+?>]]></example>
+</slide>
+

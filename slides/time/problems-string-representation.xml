@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Problems with Dates and Time</title>
+	<subtitle>Date representation</subtitle>
+
+	<blurb>Ambiguities:</blurb>
+	<example class="bit_larger">06 08 04</example>
+	<list>
+		<bullet>August 6th, 2004</bullet>
+		<bullet>June 8th, 2004</bullet>
+		<bullet>August 4th, 2006</bullet>
+	</list>
+<break lines="2"/>
+
+	<blurb>Unreadable:</blurb>
+	<example class="bit_larger">20040425010541</example>
+	<list>
+		<bullet>April 25th, 2005, 01:05:41</bullet>
+	</list>
+<break lines="2"/>
+
+
+	<blurb>"Weird" formats:</blurb>
+	<example class="bit_larger">third saturday
+2004-03-10 16:33:17.11403+01
+2001-11-29T13:20:01.123-05:00
+23:41:00.0Z
+04:05:07.789 +0930
+1999.238</example>
+
+</slide>

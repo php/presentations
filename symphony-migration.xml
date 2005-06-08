@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>PHP 5</topic>
+<title>Migrating from PHP 4 to PHP 5</title>
+<event>php|symphony</event>
+<location>On-line</location>
+<date>May 27, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<slide>slides/migrating/title.xml</slide>
+
+<!-- NEW STUFF -->
+<slide>slides/php5intro/nl/oldobjectmodel2.xml</slide>
+<slide>slides/php5intro/nl/newobjectmodel.xml</slide>
+<slide>slides/migrating/clone.xml</slide>
+<slide>slides/migrating/clone-compat.xml</slide>
+
+<slide>slides/php5_intro/obj_static.xml</slide>
+<slide>slides/php5_intro/obj_final.xml</slide>
+<slide>slides/php5_intro/obj_const.xml</slide>
+<slide>slides/php5_intro/obj_indirect.xml</slide>
+
+<slide>slides/php5_intro/obj_autoload.xml</slide>
+<slide>slides/php5_intro/obj_get_set.xml</slide>
+<slide>slides/php5_intro/obj_method_over.xml</slide>
+
+<slide>slides/php5_intro/obj_abstract.xml</slide>
+<slide>slides/php5_intro/obj_interface.xml</slide>
+
+<slide>slides/php5_intro/obj_exceptions.xml</slide>
+<slide>slides/php5_intro/obj_tostring.xml</slide>
+
+<slide>slides/php5_intro/spl_intro.xml</slide>
+<slide>slides/php5_intro/spl_ex1.xml</slide>
+
+<!-- COMPAT CHANGES (OO) -->
+<slide>slides/migrating/casting4.xml</slide>
+<slide>slides/migrating/casting5.xml</slide>
+<slide>slides/migrating/comparing4.xml</slide>
+<slide>slides/migrating/comparing5.xml</slide>
+<slide>slides/migrating/compat-mode.xml</slide>
+
+<slide>slides/migrating/this.xml</slide>
+<slide>slides/migrating/get_class.xml</slide>
+<slide>slides/migrating/e_strict.xml</slide>
+<slide>slides/migrating/var_vs_public.xml</slide>
+<slide>slides/migrating/constructors.xml</slide>
+<slide>slides/migrating/automagic_objects.xml</slide>
+<slide>slides/migrating/signatures.xml</slide>
+<slide>slides/migrating/define-before-use.xml</slide>
+
+<!-- COMPAT CHANGES (OTHERS -->
+<slide>slides/migrating/array_merge.xml</slide>
+<slide>slides/migrating/strrpos.xml</slide>
+<slide>slides/migrating/ip2long.xml</slide>
+<slide>slides/migrating/cli.xml</slide>
+<slide>slides/migrating/mysql.xml</slide>
+
+<!-- XML STUFF -->
+<slide>slides/php5_intro/xml_intro.xml</slide>
+<slide>slides/php5_intro/simplexml.xml</slide>
+
+<slide>slides/php5_intro/dom.xml</slide>
+<slide>slides/php5_intro/dom_ex.xml</slide>
+
+<slide>slides/php5_intro/xsl.xml</slide>
+<slide>slides/php5_intro/xsl_ex.xml</slide>
+
+<slide>slides/php5_intro/soap.xml</slide>
+<slide>slides/php5_intro/soap_ex.xml</slide>
+
+<slide>slides/php5_intro/sqlite_intro.xml</slide>
+<slide>slides/php5_intro/sqlite_ex.xml</slide>
+<slide>slides/php5_intro/sqlite_ex2.xml</slide>
+
+<!-- OTHER COOL STUFF -->
+<slide>slides/php5_intro/tidy_intro.xml</slide>
+<slide>slides/php5_intro/tidy_ex1.xml</slide>
+<slide>slides/php5_intro/tidy_ex2.xml</slide>
+
+<slide>slides/php5_intro/streams_intro.xml</slide>
+<slide>slides/php5_intro/streams_ex1.xml</slide>
+<slide>slides/php5_intro/streams_ex2.xml</slide>
+
+<slide>slides/xdebug/questions.xml</slide>
+<slide>slides/migrating/resources.xml</slide>
+</presentation>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Parsing Dates</title>
+
+	<blurb>Parsing strings for date time information with the ~strtotime()~ function:</blurb>
+	<example><![CDATA[<?php
+	$ts = strtotime("2005-07-11 22:16:50 CEST");
+?>]]></example>
+<break/>
+
+	<blurb>With initial timestamp:</blurb>
+	<example><![CDATA[<?php
+	$date = strtotime("2005-07-11 22:16:50 CEST");
+	$ts = strtotime("next week", $date);
+?>]]></example>
+<break/>
+
+	<blurb>The timestamps returned are still 32 bit signed integers as this is all that PHP supports.</blurb>
+	
+</slide>
+
