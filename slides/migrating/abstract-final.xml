@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Abstract and Final</title>
+
+	<image align="right" marginright="1em" filename="abstract-final.jpg"/>
+
+<example><![CDATA[<?php
+class baz {
+	final function foo() {}
+	function bar() {}
+}
+// Works:
+class foo2 extends baz {
+	function bar() {} 
+}
+// Won't work:
+class foo3 extends baz {
+	function foo() {}
+}
+
+// Implementing class must implement all methods
+// specified in the abstract class
+abstract class ab {
+	abstract public function test();
+}
+
+class imp_ab extends ab {
+	public function test() { 
+		echo "implemented class was called";
+	}
+}
+?>]]></example>
+</slide>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>PPP</title>
+	<subtitle>var--, (public, private, protected)++</subtitle>
+
+	<blurb>PHP 4:</blurb>
+	<list>
+		<bullet>~var~: all scopes can access it</bullet>
+	</list>
+	<blurb>Only for properties</blurb>
+<break lines="5"/>
+
+	<blurb>PHP 5:</blurb>
+	<list>
+		<bullet>~public~: all scopes can access it</bullet>
+		<bullet>~protected~: local and derived objects can access it</bullet>
+		<bullet>~private~: only local object access it</bullet>
+	</list>
+	<blurb>For properties and methods</blurb>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Class Constants</title>
+
+	<image align="right" marginright="1em" filename="constant.gif"/>
+
+<example><![CDATA[<?php
+class foo {
+	const file_name = __FILE__;
+}
+
+// will print current file name
+echo foo::file_name; 
+?>]]></example>
+
+<break lines="2"/>
+	<blurb>Can not be modified (obviously)</blurb>
+</slide>
+

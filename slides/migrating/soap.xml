@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>New Tools</title>
+	<subtitle>SOAP</subtitle>
+
+	<image align="right" marginright="1em" filename="soap.jpg"/>
+
+	<blurb>
+	The %SOAP% extension is a fast and fairly complete interface for creating
+	and working with SOAP web-services.
+	</blurb>
+<break lines="2"/>
+
+<example><![CDATA[<?php
+// instantiate SOAP client object
+$client = new SoapObject( "http://example.com/soap_server.php",
+                          "urn:Object");
+echo $client->version(); // call version() method
+?>]]></example>
+<break/>
+
+	<list title="Capabilities">
+		<bullet>WSDL Code Generation improved</bullet>
+		<bullet>Schema Code Generation added!</bullet>
+		<bullet>Smaller code base, easier to extend</bullet>
+		<bullet>Streams API support</bullet>
+		<bullet>Uses DOM</bullet>
+		<bullet>Cleaner code, better organized</bullet>
+		<bullet>Makes use of new OO support in PHP 5</bullet>
+	</list>
+</slide>
+

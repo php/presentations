@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Constructors and Destructors</title>
+
+	<image align="right" marginright="1em" filename="ctor-dtor.jpg"/>
+
+	<blurb>Constructors:</blurb>
+	<list>
+		<bullet>Preferred name is ~__construct()~</bullet>
+		<bullet>Old naming style still works</bullet>
+	</list>
+<break lines="3"/>
+
+	<blurb>Destructors:</blurb>
+	<list>
+		<bullet>~__destruct()~</bullet>
+		<bullet>Are called when there are no more references to the object's handle</bullet>
+		<bullet>Beware for shut-down order</bullet>
+	</list>
+
+</slide>
+

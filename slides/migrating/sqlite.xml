@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>New Tools</title>
+	<subtitle>SQLite</subtitle>
+
+	<image align="right" marginright="1em" filename="light.jpg"/>
+
+	<blurb>
+	</blurb>
+
+<example><![CDATA[<?php
+/* open connection to memory database */
+$db = new SQLiteDatabase(":memory:");
+
+/* execute a regular query */
+$db->query("CREATE TABLE test(a,b)");
+$db->query("INSERT INTO test VALUES('1','2')");
+
+/* retrieve data using an unbuffered query */
+$r = $db->unbufferedQuery("SELECT * FROM test", SQLITE_ASSOC);
+
+/* use object iterators to retrieve the data */
+foreach ($r as $row) {
+	var_dump($row);
+}
+?>]]></example>
+<break/>
+
+<list type="Features">
+<bullet>Bundled with PHP 5 (including library)</bullet>
+<bullet>Fast and easy interface to 'flatfiles'</bullet>
+<bullet>Implements most of SQL92</bullet>
+<bullet>Supports both OO and procedural API</bullet>
+<bullet>No daemon required</bullet>
+<bullet>Can use PHP to extend SQL language</bullet>
+</list>
+
+</slide>
+

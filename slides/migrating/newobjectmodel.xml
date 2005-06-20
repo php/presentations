@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Objectmodel in PHP 5</title>
+
+	<image align="center" filename="newoo.png" pdf-scale="1"/>
+	<list marginleft="2em" fontsize="3.5em">
+		<bullet>Pass by reference</bullet>
+		<bullet>Objects are referenced by a handle.</bullet>
+	</list>
+
+</slide>

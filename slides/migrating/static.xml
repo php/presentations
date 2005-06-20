@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Static</title>
+
+	<image align="right" marginright="1em" filename="static.jpg"/>
+
+<example><![CDATA[<?php
+class foo {
+	static $bar = 123;
+	
+	static function baz() {
+		return 456;
+	}
+}
+
+echo foo::$bar; // will print 123
+echo foo::baz(); // will print 456
+?>]]></example>
+
+<break lines="2"/>
+	<blurb>Incompatible:</blurb>
+	<list>
+		<bullet>In PHP 5 $this will never be available when a method is defined
+		as static, not even the $this from the scope where a static method was
+		called from.</bullet>
+	</list>
+</slide>
+

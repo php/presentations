@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Autoload</title>
+
+	<image align="right" marginright="1em" filename="autoload.jpg"/>
+
+<example result="1"><![CDATA[<?php
+function __autoload($class) {
+	$fname = str_replace('_', '/', $class);
+	$fname = str_replace('eZ/', '', $fname);
+	$fname = strtolower($fname);
+	$fname .= '.php';
+
+	echo "Loading $fname...<br/>";
+	@include_once($fname);
+}
+
+$class = new eZ_Content_Object_Treenode;
+?>]]></example>
+</slide>
+

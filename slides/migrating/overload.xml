@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Overloading</title>
+	<subtitle>__get(), __set() and __call()</subtitle>
+
+	<image align="right" marginright="1em" filename="overload.jpg"/>
+
+<example><![CDATA[<?php
+class foo {
+	private $int_data = array();
+
+	function __get($var_name) {
+		return $this->int_data[$var_name];
+	}
+
+	function __set($var_name, $value)
+	{
+		$this->int_data[$var_name] = urlencode($value);
+	}
+
+	function __call($name, $args)
+	{
+		switch ($name) {
+			case 'add':
+				return array_sum($args);
+	}
+}
+
+$a = new foo();
+$a->bar = "random value";
+echo $a->bar; // will print random+value
+echo $a->add(1,2); // will print 3
+?>]]></example>
+</slide>
+

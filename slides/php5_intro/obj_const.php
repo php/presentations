@@ -3,5 +3,6 @@ class foo {
 	const file_name = __FILE__;
 }
 
-echo foo::file_name; // will print current file name
+// will print current file name
+echo foo::file_name;
 ?>

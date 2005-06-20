@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Incompabilities</title>
+	<subtitle>Casting objects</subtitle>
+
+	<image align="right" marginright="1em" filename="cast.gif"/>
+
+<example><![CDATA[<?php
+	class Country {
+		function set_name($name) {
+			$this->name = $name;
+		}
+	}
+
+	$jurop = new Country;
+	$dutchieland = new Country;
+	$dutchieland->set_name('The Netherlands');
+	echo (int) $jurop, "\n";
+	echo (int) $dutchieland, "\n";
+?>]]></example>
+<break/>
+
+	<blurb>In PHP 4 *(int) $object* results in:</blurb>
+	<list>
+		<bullet marginleft="2em">"0" when there are no properties set</bullet>
+		<bullet marginleft="2em">"1" when there are properties set</bullet>
+	</list>
+<break/>
+	<blurb>In PHP 5 *(int) $object* results in:</blurb>
+	<list>
+		<bullet marginleft="2em">"Object id #" + Object ID</bullet>
+		<bullet marginleft="2em">unless *zend.ze1_compatibility_mode = 1*</bullet>
+	</list>
+</slide>
+

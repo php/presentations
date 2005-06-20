@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>New Tools</title>
+	<subtitle>SimpleXML</subtitle>
+
+	<image align="right" marginright="1em" filename="simple.jpg"/>
+
+	<blurb>
+	SimpleXML provides a simple way to parse XML documents
+	that is natively available in PHP.
+	</blurb>
+
+<example><![CDATA[<?php
+$xml = '<articles>
+<article id="1">
+	<title>Something Happened</title>
+	<author>Random Person</author>
+</article>
+<article id="2">
+	<title>Something Else Happened</title>
+	<author>Different Person</author>
+</article>
+</articles>';
+
+/* load & parse XML string */
+$art = simplexml_load_string($xml);
+foreach ($art as $article) {
+	echo 'Id: ' . $article['id'];
+	echo 'Title: ' . $article->title;
+	echo 'Author: ' . $article->author;
+}
+?>]]></example>
+<break/>
+
+</slide>
+

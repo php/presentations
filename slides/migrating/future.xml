@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Upcoming Goodies in PHP 5.5/6.0</title>
+	<subtitle>Unicode support</subtitle>
+
+	<image align="right" marginright="1em" filename="future.jpg"/>
+
+	<list>
+		<bullet>Native Unicode string type</bullet>
+		<bullet>Updated language semantics</bullet>
+		<bullet>Relevant functions understand Unicode</bullet>
+		<bullet>ICU: IBM Components for Unicode</bullet>
+		<bullet>Backwards compatible</bullet>
+	</list>
+
+</slide>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Upcoming Goodies in PHP 5.1</title>
+	<subtitle>New Date/Time support</subtitle>
+
+	<image align="right" marginright="1em" filename="datetime.jpg"/>
+
+	<list>
+		<bullet>64 bit timestamps (more than Sun's life)</bullet>
+		<bullet>~strtotime()~ has been rewritten</bullet>
+		<bullet>Nothing is Operating System dependent</bullet>
+		<bullet>Full support for timezones, DST, date modifications</bullet>
+	</list>
+
+</slide>
+

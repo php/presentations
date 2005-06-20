@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Exceptions</title>
+
+	<image align="right" marginright="1em" filename="except-police.jpg"/>
+
+	<blurb>Exception handling is intended to facilitate use of reasonable
+	mechanisms for handling erroneous or exceptional situations that arise in
+	programs. They are *not* meant for control of code-flow.</blurb>
+<break lines="3"/>
+
+	<example><![CDATA[<?php
+try { /* begin exception block */
+	$fp = fopen(__FILE__, "r");
+	if (!$fp) {
+		/* throw exception, error occurred */
+		throw new Exception('no such file', 9);
+	}
+} catch (Exception $e) {
+	echo $e->getCode(); // error code
+	echo $e->getFile(); // file where exception was thrown
+	echo $e->getLine(); // line on which exception was thrown
+	echo $e->getMessage(); // error message
+	print_r($e->getTrace()); // print backtrace
+}
+?>]]></example>
+
+</slide>
+

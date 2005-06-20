@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>New Tools</title>
+	<subtitle>SPL</subtitle>
+
+	<blurb>
+		%SPL% is a collection of interfaces and classes that are meant to solve
+		standard problems.
+	</blurb>
+	<list>
+		<bullet>Directory iterator</bullet>
+		<bullet>Recursive directory iterator</bullet>
+		<bullet>SimpleXML iterator</bullet>
+		<bullet>Ability to extend existing iterators</bullet>
+	</list>
+
+	<example><![CDATA[<?php
+// Create directory iterator based on current directory
+$dir = new DirectoryIterator(dirname(__FILE__));
+
+// While there are valid entries
+while ($dir->valid()) {
+	// Check if we are dealing with a file
+	if ($dir->isFile()) {
+		// print file name & its size
+		echo 'Name: ', $dir->getFilename(), ', ',
+			 'Size: ', $dir->getSize(), '<br />';
+	}
+	// move to next entry
+	$dir->next();
+}
+?>]]></example>
+</slide>
