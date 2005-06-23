@@ -1,0 +1,61 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="3.55em"
+>
+<!--
+
+1 Hour
+
+PHP has become amazingly popular due to its simple pragmatic approach
+to solving the web problem. Sometimes we forget some of the complexities
+that are inherent to any web application. Forgetting or not 
+understanding the underlying complexities can lead to a number of
+performance and security problems.
+
+In this talk we will cover some of the recent pragmatic approaches to 
+complex problems PHP has already tackled, but more importantly we will
+look at a number of outstanding issues that consistently trip up PHP
+users and try to provide some solutions and guidelines for writing 
+faster and more secure PHP applications.
+
+-->
+
+<topic>PHP</topic>
+<title>Pragmatic PHP</title>
+<event>Linuxtag</event>
+<location>Karlsruhe</location>
+<date>June 23, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/lt2005</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/intro/max_dev.xml</slide>
+  <slide>slides/intro/count0.xml</slide>
+  <slide>slides/intro/count1.xml</slide>
+  <slide>slides/intro/count2.xml</slide>
+  <slide>slides/intro/count3.xml</slide>
+  <slide>slides/intro/count4.xml</slide>
+  <slide>slides/intro/count5.xml</slide>
+  <slide>slides/intro/design.xml</slide>
+  <slide>slides/intro/php-template.xml</slide>
+  <slide>slides/intro/app_arch.xml</slide>
+  <slide>slides/intro/poll1.xml</slide>
+  <slide>slides/intro/poll2.xml</slide>
+  <slide>slides/intro/poll3.xml</slide>
+  <slide>slides/intro/php_tuning1.xml</slide>
+  <slide>slides/intro/new_apc.xml</slide>
+  <slide>slides/intro/php_opcode_caches3.xml</slide>
+  <slide>slides/intro/php_june05_bm.xml</slide>
+  <slide>slides/intro/security_agenda.xml</slide>
+  <slide>slides/intro/input_filter.xml</slide>
+  <slide>slides/intro/input_filter2.xml</slide>
+  <slide>slides/intro/lt2005_res.xml</slide>
+</chapter>
+
+</presentation>

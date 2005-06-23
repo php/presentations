@@ -19,9 +19,10 @@ to filter their input.  We'll need to spoonfeed again.
 <example title="Config"><![CDATA[input_filter.default = FILTER_TEXT
 ]]></example>
 
-<example title="Strip or Escape?"><![CDATA[abc;123{def}
+<example title="Strip, Escape or NULL?"><![CDATA[abc;123{def}
 
 abc 123 def
 abc%3B123%7Bdef%7D]]></example>
 
+<blurb title="Taint Mode?"> </blurb>
 </slide>

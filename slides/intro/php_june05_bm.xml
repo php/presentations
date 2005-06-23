@@ -1,0 +1,25 @@
+<slide title="PHP 5.1 Support!">
+
+<image filename="php-yahoo-big.png" align="right"/>
+
+<blurb fontsize="4em">
+Yahoo! has enhanced the APC opcode cache to support PHP-5.1.
+</blurb>
+
+<example type="shell" title="" fontsize="1.5em">
+PHP-4.3.11 (optimized)       176.135 fetches/sec
+PHP-5.1 SWITCH               195.344 fetches/sec
+PHP-5.1 GOTO                 198.707 fetches/sec
+PHP-5.1 CALL                 199.342 fetches/sec
+PHP-4.3.11 (optimized) APC   209.342 fetches/sec
+PHP-5.1 CALL APC             252.968 fetches/sec
+</example>
+
+<blurb>
+The different VM models in PHP5.1 are very compiler sensitive.  The following 
+tests were run on a FreeBSD-4.3 system and compiled with gcc-2.95.  On more 
+modern compilers you should theoretically see better numbers from the GOTO VM, 
+but the differences are usually not all that dramatic.
+</blurb>
+
+</slide>
