@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Tipos básicos de datos">
-<example title="Números (enteros y reales)" result="1"><![CDATA[<?php
+<?xml version="1.0"?>
+<slide title="Tipos b&#225;sicos de datos">
+<example title="N&#250;meros (enteros y reales)" result="1"><![CDATA[<?php
     $a = 1234;
     $b = 0777;
     $c = 0xff;
@@ -22,10 +22,10 @@
     }
 ?>]]></example>
 
-<blurb>*Asignación dinámica de tipos*</blurb>
+<blurb>*Asignaci&#243;n din&#225;mica de tipos*</blurb>
 <list>
  <bullet>No se necesita declarar el tipo de una variable</bullet>
- <bullet>Las conversiones entre tipos son automáticas (aunque también se
+ <bullet>Las conversiones entre tipos son autom&#225;ticas (aunque tambi&#233;n se
   pueden forzar)</bullet>
 </list>
 

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Programación Orientada a Objetos">
+<?xml version="1.0"?>
+<slide title="Programaci&#243;n Orientada a Objetos">
 
-<example title="Definición de una clase"><![CDATA[<?php
+<example title="Definici&#243;n de una clase"><![CDATA[<?php
   class Inventario {
     var $articulos;
     function agregar_articulo($artnr, $num) {
@@ -19,12 +19,12 @@
   } 
 ?>]]></example>
 
-<example title="Invocación"><![CDATA[<?php
+<example title="Invocaci&#243;n"><![CDATA[<?php
   $inv = new InventorioNombrado("NerdChullos");
   $inv->agregar_articulo(170923, 2);
 ?>]]></example>
 
-<example title="Llamadas estaticas a métodos" result="1"><![CDATA[<?php
+<example title="Llamadas estaticas a m&#233;todos" result="1"><![CDATA[<?php
   class Conversiones {
      function PulgadasACentimetros($npulg) {
         return 2.54 * $npulg;
@@ -35,7 +35,7 @@
 ?>]]></example>
 <break lines='2'/>
 <blurb>
- *Llamar a métodos en la clase padre*. Esto es útil cuando se necesita
+ *Llamar a m&#233;todos en la clase padre*. Esto es &#250;til cuando se necesita
  el concatenar los constructores.
 </blurb>
 <example result="1"><![CDATA[<?php

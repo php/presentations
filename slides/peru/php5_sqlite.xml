@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Extension: SQLite">
 <blurb>
-SQLite es una de las más interesantes extensiones nuevas en PHP 5, pues ofrece: 
+SQLite es una de las m&#225;s interesantes extensiones nuevas en PHP 5, pues ofrece: 
 </blurb>
 <list>
 <bullet>
@@ -10,17 +10,17 @@ SQLite es una de las más interesantes extensiones nuevas en PHP 5, pues ofrece:
 </bullet>
 <bullet>
  Un reemplazo directo para pasar de almacenar datos en archivos sencillos,
- a un sistema que cumple con la mayoria de los estándares de SQL92.
+ a un sistema que cumple con la mayoria de los est&#225;ndares de SQL92.
 </bullet>
 <bullet>
- Una extensión que esta construida y es parte integrante de la distribución
+ Una extensi&#243;n que esta construida y es parte integrante de la distribuci&#243;n
  de PHP 5, por lo cual podemos confiar que este instalada por defecto.
 </bullet>
 <bullet>
  Tiene una API que puede emplear objetos o funciones en igual medida.
 </bullet>
 <bullet>
- Puede usar PHP para extender el lenguaje de búsqueda mediante la definición
+ Puede usar PHP para extender el lenguaje de b&#250;squeda mediante la definici&#243;n
  de procedimientos, etc.
 </bullet>
 </list>

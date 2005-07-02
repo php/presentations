@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Constructor/Destructor Uniformizados">
 <blurb>
- En PHP 4, el constructor era una función con el mismo
+ En PHP 4, el constructor era una funci&#243;n con el mismo
  nombre que la clase.
 </blurb>
 <example type="php" result="0"><![CDATA[<?php
@@ -20,6 +20,6 @@
   }
 ?>]]></example>
 <blurb>
-Por compatibilidad, aún se soportan los constructores al estilo de PHP 4.
+Por compatibilidad, a&#250;n se soportan los constructores al estilo de PHP 4.
 </blurb>
 </slide>

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title='Estándares de código'>
+<?xml version="1.0"?>
+<slide title='Est&#225;ndares de c&#243;digo'>
  <blurb>
-  Hay ciertas reglas y estándares para el código que esta en PEAR:
+  Hay ciertas reglas y est&#225;ndares para el c&#243;digo que esta en PEAR:
  </blurb>
  <list type='number'>
   <bullet>
@@ -9,7 +9,7 @@
    *TemperatureControl*, *HTML_Table*.
   </bullet>
   <bullet>
-   Los miembros públicos deben de seguir la convención de 'Camel caps',
+   Los miembros p&#250;blicos deben de seguir la convenci&#243;n de 'Camel caps',
    excepto por el constructor de la clase, e.j.
    *addRow()*, *solveEquation()*, *HTML_Table()*.
   </bullet>
@@ -18,7 +18,7 @@
    *_validate()*, *$this->_numRows*.
   </bullet>
   <bullet>
-   Las constantes deberan ser todas en mayúsculas y prefijadas con
+   Las constantes deberan ser todas en may&#250;sculas y prefijadas con
    el nombre del paquete, e.j.
    define('*MATH_STATS_CUMMULATIVE*',1);
   </bullet>
@@ -29,12 +29,12 @@
   </bullet>
   <bullet>
    En general, se prefiere que haya una clase por archivo, aunque se pueden
-   dar excepciones que tengan una razón válida (performance por ejemplo).
+   dar excepciones que tengan una raz&#243;n v&#225;lida (performance por ejemplo).
   </bullet>
   <bullet>
-   Los nombres de los paquetes siguen una jerarquía llana, que debe reflejar 
+   Los nombres de los paquetes siguen una jerarqu&#237;a llana, que debe reflejar 
    la estructura de los directorios en los que va a ser instalado, e.j. el
-   paquete HTML_QuickForm_Controller, será instalado en
+   paquete HTML_QuickForm_Controller, ser&#225; instalado en
    HTML/QuickForm/Controller.
   </bullet>
  </list>

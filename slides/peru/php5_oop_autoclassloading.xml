@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Cargando clases automágicamente">
+<?xml version="1.0"?>
+<slide title="Cargando clases autom&#225;gicamente">
 <blurb>
-Puedes definir una función global llamada %__autload()% que se use
-para satisfacer automáticament la resolución de las declaraciones
+Puedes definir una funci&#243;n global llamada %__autload()% que se use
+para satisfacer autom&#225;ticament la resoluci&#243;n de las declaraciones
 de clases cuando el programa esta corriendo.
 </blurb>
 <example title="[archivo: Math/Matrix.php]" type="php"><![CDATA[<?php

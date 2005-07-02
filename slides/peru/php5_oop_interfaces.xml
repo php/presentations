@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Interfazes">
 <blurb>
 En PHP 5 se pueden definir interfazes, que se empleen para asegurarse
-de que una clase en particular provee un conjunto dado de métodos con
-un patrón determinado:
+de que una clase en particular provee un conjunto dado de m&#233;todos con
+un patr&#243;n determinado:
 </blurb>
 <example type="php" filename="ejemplos/interfaces.php"/>
-<example title="... ejecutando el código produce" 
+<example title="... ejecutando el c&#243;digo produce" 
 filename="ejemplos/interfaces.out"/>
 </slide>

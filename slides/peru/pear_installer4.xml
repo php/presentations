@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title='Consiguiendo información'>
+<?xml version="1.0"?>
+<slide title='Consiguiendo informaci&#243;n'>
 <example type="shell" title="Acerca de un paquete instalado"><![CDATA[$ pear info Math_Quaternion
 ABOUT MATH_QUATERNION-0.7.1
 ===========================

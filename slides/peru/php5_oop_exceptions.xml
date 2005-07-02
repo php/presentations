@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Excepciones">
 <blurb>
 PHP 5 soporta el generar (*throw*), e interceptar (*catch*) excepciones
 usando una sintaxis similar a la usada en Java. Todas las excepciones se
-basan en la clase estándar %Exception%.
+basan en la clase est&#225;ndar %Exception%.
 </blurb>
 <example type="php" filename="ejemplos/exceptions.php"/>
 <example title="... y ejecutando esto vemos"

@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Conceptos Básicos">
+<?xml version="1.0"?>
+<slide title="Conceptos B&#225;sicos">
 
 <example title="Variables y Expresiones" width="30em"><![CDATA[<?php
  $foo = 1;
@@ -26,7 +26,7 @@
  }
 ?>]]></example>
 
-<example title="Producción de resultados" width="30em"><![CDATA[<?php
+<example title="Producci&#243;n de resultados" width="30em"><![CDATA[<?php
  echo $foo;
  printf(".2f",$price);
 ?>]]></example>

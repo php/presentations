@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Accesibilidad de miembros de objetos">
 <blurb>
-En PHP 4, no habia restricción en cuanto al acceso de los
-miembros (variables y métodos) de un objeto. 
+En PHP 4, no habia restricci&#243;n en cuanto al acceso de los
+miembros (variables y m&#233;todos) de un objeto. 
 </blurb>
 <blurb>
 En PHP 5, el acceso a propiedades
 se puede definir explicitamente usando las palabras clave: 
 %private%, %public%, y %protected% cuando se declaran variables
-y métodos.
+y m&#233;todos.
 </blurb>
 <example type="php" filename="ejemplos/oop_ppp.php"/>
-<example title="el ejecutar el código, produce:" filename="ejemplos/oop_ppp.out"/>
+<example title="el ejecutar el c&#243;digo, produce:" filename="ejemplos/oop_ppp.out"/>
 <break/>
 </slide>

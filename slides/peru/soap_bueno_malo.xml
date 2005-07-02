@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="SOAP: Lo bueno y lo malo">
  <blurb>
   Lo bueno:
   </blurb>
  <list>
-  <bullet>Es posible el cambiar cada porción del mensaje.</bullet>
-  <bullet>Permite procesamiento flexible de la información.</bullet>
+  <bullet>Es posible el cambiar cada porci&#243;n del mensaje.</bullet>
+  <bullet>Permite procesamiento flexible de la informaci&#243;n.</bullet>
   <bullet>Puede hacer uso de nuevas tecnologias de WS que usen XML.</bullet>
-  <bullet>Es la última moda en WS %:-)%</bullet>
+  <bullet>Es la &#250;ltima moda en WS %:-)%</bullet>
  </list>
  <blurb>
   Lo malo:
@@ -18,7 +18,7 @@
    excepto .Net que usa mensajes basados en documentos. Esto causa
    mucho dolores de cabeza.
    </bullet>
-   <bullet>Existen muchas cosas aún no bien definidas: seguridad,
-   transacciones, orquestración, etc.</bullet>
+   <bullet>Existen muchas cosas a&#250;n no bien definidas: seguridad,
+   transacciones, orquestraci&#243;n, etc.</bullet>
  </list>
 </slide>

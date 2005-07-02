@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="PHP 5">
- <blurb>*¿Qué hay de nuevo en PHP 5?*</blurb>
+ <blurb>*&#191;Qu&#233; hay de nuevo en PHP 5?*</blurb>
  <list type="darrow" fontsize="3.5em">
-  <bullet>Soporte para Programación Orientada a Objetos</bullet>
+  <bullet>Soporte para Programaci&#243;n Orientada a Objetos</bullet>
   <bullet>SimpleXML: una forma directa y simple de manipular XML</bullet>
   <bullet>SQLite: base de datos sencilla pero poderosa</bullet>
   <bullet>Streams y Filtros</bullet>
-  <bullet>... y mucho más (SPL, SOAP, DOM, XSL, Tidy, etc.)</bullet>
+  <bullet>... y mucho m&#225;s (SPL, SOAP, DOM, XSL, Tidy, etc.)</bullet>
  </list>
 </slide>

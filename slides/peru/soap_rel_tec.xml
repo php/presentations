@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="SOAP: Tecnologías Relacionadas">
+<?xml version="1.0"?>
+<slide title="SOAP: Tecnolog&#237;as Relacionadas">
  <list>
   <bullet>*WSDL*: Web Services Description Language. Describe la
-  interfaz de un servicio, los métodos implementados, los tipos de
-  parámetros permitidos, las respuestas, y los modos de operación (RPC
+  interfaz de un servicio, los m&#233;todos implementados, los tipos de
+  par&#225;metros permitidos, las respuestas, y los modos de operaci&#243;n (RPC
   o mensajes orientados a documentos.</bullet>
   <bullet>*UDDI*: Universal Description, Discovery, and Integration.
-  Permite el registro de servicios, la búsqueda y descubrimiento interactivo
-  y programático de estos, asi como el retornar un descripción de la
-  localización del servicio y su interfaz.</bullet>
+  Permite el registro de servicios, la b&#250;squeda y descubrimiento interactivo
+  y program&#225;tico de estos, asi como el retornar un descripci&#243;n de la
+  localizaci&#243;n del servicio y su interfaz.</bullet>
   <bullet>*XML Schema*: Para definir nuevos tipos y estructuras de
   datos complejas.</bullet>
-  <bullet>*XML Namespaces*: Permite el indicar el ámbito y contexto en el
-  cual un elemento de XML es definido, de manera que no exista colisión con
+  <bullet>*XML Namespaces*: Permite el indicar el &#225;mbito y contexto en el
+  cual un elemento de XML es definido, de manera que no exista colisi&#243;n con
   otro elemento del mismo nombre en otro URI</bullet>
  </list>
 </slide>

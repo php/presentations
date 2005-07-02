@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="REST (2)">
  <blurb>
- (continuación)
+ (continuaci&#243;n)
  </blurb>
  <break />
  <blurb>
-  Este diseño tiene las siguientes caracteristicas:
+  Este dise&#241;o tiene las siguientes caracteristicas:
  </blurb>
  <list type="alpha" fontsize="2.5em" marginright="1em">
   <bullet>
-   Permite una simple interoperación entre agentes que de
-   otro modos estarían no coordinados (clientes de web,
+   Permite una simple interoperaci&#243;n entre agentes que de
+   otro modos estar&#237;an no coordinados (clientes de web,
    indexadores, servidores de web, etc.)
   </bullet>
   <bullet>
-   La semántica de HTTP constituye un lenguaje de coordinación, y de una
-   generalidad suficiente como para se usado en cualquier patrón de comunicación
-   deseado. Sus métodos lo hacen equivalente a protocolos de envio de
+   La sem&#225;ntica de HTTP constituye un lenguaje de coordinaci&#243;n, y de una
+   generalidad suficiente como para se usado en cualquier patr&#243;n de comunicaci&#243;n
+   deseado. Sus m&#233;todos lo hacen equivalente a protocolos de envio de
    mensajes y/o de llamadas a funciones.
   </bullet>
   <bullet>
    El ofrecer un nuevo servicio es tan sencillo como publicar un 
    nuevo URI en la web (e.j. http://www.example.com/mi_servicio/),
-   y retornar un documento de XML válido como respuesta.
+   y retornar un documento de XML v&#225;lido como respuesta.
   </bullet>
  </list>
 </slide>

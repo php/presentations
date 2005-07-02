@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Servicios de Web: Beneficios (5)">
  <blurb>
- (continuación)
+ (continuaci&#243;n)
  </blurb>
  <list>
   <bullet>
-   *Facilidad para la Integración de Tecnologías Nuevas y Existentes*: Como
+   *Facilidad para la Integraci&#243;n de Tecnolog&#237;as Nuevas y Existentes*: Como
    los componentes en WS son modulares y exponen una interfaz estandarizada,
    podemos integrar sistemas antigüos (e.j. un base de datos en una Mainframe),
    a un sistema basado en servicios creando un componente adecuado. De la misma
-   manera, podemos integrar nuevas tecnologías (e.j. XML Security, XML Binary)
+   manera, podemos integrar nuevas tecnolog&#237;as (e.j. XML Security, XML Binary)
    en forma directa y bien definida.
   </bullet>
  </list>    

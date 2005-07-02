@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Servicios de Web: Beneficios (3)">
  <blurb>
- (continuación)
+ (continuaci&#243;n)
  </blurb>
  <list>
    <bullet>
-   *Menor costo*: La reusabilidad y la orientación a una arquitectura
+   *Menor costo*: La reusabilidad y la orientaci&#243;n a una arquitectura
    basada en servicios, hace que el ciclo de desarrollo sea mas efectivo
-   en el uso de recursos. Esto, sumado al alto grado de estandarización de
-   los protocolos y operaciones, implica que también se ve reducido el
+   en el uso de recursos. Esto, sumado al alto grado de estandarizaci&#243;n de
+   los protocolos y operaciones, implica que tambi&#233;n se ve reducido el
    costo de interconerctarse a servicios ofrecidos por otras entidades
    con las que colaboramos.
   </bullet>
   <bullet>
    *Acoplamiento Laxo*: Cuando se enlazan o acoplan dos sistemas, existe
-   la tentación de tomar atajos y hacer algo que use alguna caracteristica
+   la tentaci&#243;n de tomar atajos y hacer algo que use alguna caracteristica
    intrinseca de los sistemas (e.j. ambos usan el mismo tipo de servidor 
-   de base de datos). El problema de hacer un acoplamiento tan fuerte (integración),
+   de base de datos). El problema de hacer un acoplamiento tan fuerte (integraci&#243;n),
    es que cambios en un subsistema van a afectar al resto 
-   en una forma difícil de predecir. En WS, la tendencia es hacia un 
-   acoplamiente laxo entre componentes, porque esto permite una más fácil
-   y robusta composición de estos en un sistema mayor, pues los componentes
+   en una forma dif&#237;cil de predecir. En WS, la tendencia es hacia un 
+   acoplamiente laxo entre componentes, porque esto permite una m&#225;s f&#225;cil
+   y robusta composici&#243;n de estos en un sistema mayor, pues los componentes
    se comunican e interactuan en una forma predecible y bien definida.
   </bullet>
  </list>    

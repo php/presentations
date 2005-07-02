@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Soporte de Bases de Datos">
  <blurb>*SQL*</blurb>
  <list>
@@ -25,7 +25,7 @@
 <blurb>*Otras*</blurb>
 <list>
 <bullet>dBase</bullet>
-<bullet>filePro (sólo lectura)</bullet>
+<bullet>filePro (s&#243;lo lectura)</bullet>
 <bullet>dbm (ndbm, gdbm, Berkeley db)</bullet>
 </list>
 <break lines="2"/>

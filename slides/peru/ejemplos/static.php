@@ -17,6 +17,6 @@
     $var2 = Singleton::getInstance();
 
     if ($var1 === $var2) {
-        echo 'El patrón de diseño de Singleton se pasa';
+        echo 'El patr&#243;n de dise&#241;o de Singleton se pasa';
     }
 ?>

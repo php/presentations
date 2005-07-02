@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Referencias a Objetos">
 <blurb>
  En PHP 5, los objetos son *siempre* pasados por referencia, no
  copiados como en PHP 4.
  </blurb>
  <example filename="ejemplos/reference.php" type="php" result="0"/>
- <example title="... y ejecutando este código resulta en:"
+ <example title="... y ejecutando este c&#243;digo resulta en:"
   filename="ejemplos/reference.out"/>
 <break lines="2"/>
 </slide>

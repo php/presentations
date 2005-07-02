@@ -1,21 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Servicios de Web: Antecedentes (1)">
  <blurb>
-  La tecnología de servicios de web (WS), no existe en un vacío histórico. Es
+  La tecnolog&#237;a de servicios de web (WS), no existe en un vac&#237;o hist&#243;rico. Es
   el resultado mas reciente de un esfuerzo para poder integrar componentes
-  modulares, dinámicos, y distribuidos en forma eficiente y portable.
+  modulares, din&#225;micos, y distribuidos en forma eficiente y portable.
  </blurb>
  <break />
  <blurb>
-  Entre las tecnologías que anteceden a los WS estan:
+  Entre las tecnolog&#237;as que anteceden a los WS estan:
  </blurb>
  <list>
   <bullet>
    *EDI* (Electronic Data Exchange, ~1960) y *RosettaNet* (arquitectura federada de
-   componentes, 1998): Estándares internacionales para negocios.
+   componentes, 1998): Est&#225;ndares internacionales para negocios.
   </bullet>
   <bullet>
-   *CORBA* (Common Object Request Broker Architecture): Un estándar del
+   *CORBA* (Common Object Request Broker Architecture): Un est&#225;ndar del
    OMG (Object Management Group), 1992.
   </bullet>
  </list>

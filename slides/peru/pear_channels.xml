@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Nuevo: Canales de distribución">
+<?xml version="1.0"?>
+<slide title="Nuevo: Canales de distribuci&#243;n">
  <blurb>
   En PEAR 1.4 (en alfa en este momento), hay soporte para canales de
-  distribución de código que no venga directamente de pear.php.net,
+  distribuci&#243;n de c&#243;digo que no venga directamente de pear.php.net,
   de este modo programadores que hacen sus propios paquetes y sistemas
-  puede beneficiarse de la infraestructura de manejo e instalación de PEAR.
+  puede beneficiarse de la infraestructura de manejo e instalaci&#243;n de PEAR.
  </blurb>
  <blurb>
   Los canales son definidos en un channel.xml, y proveen:
@@ -14,7 +14,7 @@
    Una forma efectiva y robusta de distribuir dependencias.
   </bullet>
   <bullet>
-   Un método simple de instalar programas complejos que esten usando
+   Un m&#233;todo simple de instalar programas complejos que esten usando
    librerias y paquetes de diversa procedencia.
   </bullet>
   <bullet>
@@ -25,10 +25,10 @@
   </bullet>
  </list>
  <blurb>
-  Crear un canal de distribución propio no es difícil, hay ya instrucciones
+  Crear un canal de distribuci&#243;n propio no es dif&#237;cil, hay ya instrucciones
   extra-oficiales de los programadores que estan desarrollando el sistema
   de canales. Ver, por ejemplo, el Blog de Greg [1],
- y el artículo completo de Tobias [2].
+ y el art&#237;culo completo de Tobias [2].
  </blurb>
  <link leader="[1] " href="http://greg.chiaraquartet.net/" target="_blank"/>
  <link leader="[2] "

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="PHP es muy usado">
 <blurb>Reporte de Netcraft de Diciembre 2004</blurb>
 <list>
@@ -7,7 +7,7 @@
 <image filename="../intro/phpstats.png" align="center"/>
 <link href="http://www.netcraft.com" leader="Source: " align="center" marginright="6em">Netcraft</link>
 
-<blurb>Reporte de módulos de Apache de Septiembre 2004 (SecuritySpace)</blurb>
+<blurb>Reporte de m&#243;dulos de Apache de Septiembre 2004 (SecuritySpace)</blurb>
 <list>
 <bullet>%10,933,256 Servidores de Apache%</bullet>
 <bullet>% 5,405,907 (49.44\%) PHP%</bullet>

@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Servicios de Web: Antecedentes (2)">
  <blurb>
- (continuación)
+ (continuaci&#243;n)
  </blurb>
  <list>
   <bullet>
    *DCE* (Distributed Computing Environment) y *RPC* (Remote Procedure Call): 
-   Un estándar del Open Group, 1993.
+   Un est&#225;ndar del Open Group, 1993.
   </bullet>
   <bullet>
    *COM* (1993) y *DCOM* (1996): Especificaciones de Microsoft para componentes
    corriendo en distintas computadoras, pero limitada a MS Windows.
   </bullet>
   <bullet>
-   Sun *RMI* (Remote Method Invocation, 1996): Especificación para la
-   intercomunicación de programas escritos en Java.
+   Sun *RMI* (Remote Method Invocation, 1996): Especificaci&#243;n para la
+   intercomunicaci&#243;n de programas escritos en Java.
   </bullet>
  </list>
 </slide>

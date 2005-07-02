@@ -1,17 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Conclusiones (1)">
  <list>
   <bullet>
    PHP 5 ha logrado mejorar enormenente el soporte para clases y objetos, sin
-   detrimentar el soporte a un estilo de programación procedural clásico.
+   detrimentar el soporte a un estilo de programaci&#243;n procedural cl&#225;sico.
   </bullet>
   <bullet>
    Algunas nuevas extensiones como SQLite y SimpleXML, hacen posible el escribir sistemas
-   en los que los únicos requerimientos sean Apache y PHP.
+   en los que los &#250;nicos requerimientos sean Apache y PHP.
   </bullet>
   <bullet>
    Con flujos (streams) y filtros, uno solo esta limitado por la propia
-   imaginación. En principio podemos procesar sencilla y consistentemente
+   imaginaci&#243;n. En principio podemos procesar sencilla y consistentemente
    cualquier fuente de datos.
   </bullet>
  </list>

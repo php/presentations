@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Poniendo y sacando valores">
 <blurb>
-PHP 5 permite que se definan métodos generales
+PHP 5 permite que se definan m&#233;todos generales
 (%__get()% y %__set()%) para acceder
 a las variables de una clase, cuando esta no existe explicitamente.
 </blurb>

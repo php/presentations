@@ -1,30 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="REST">
  <blurb>
-  *REST* es el acrónimo de *RE*presentational *S*tate *T*ransfer, 
-  el cual es un término acuñado por Roy Fielding [1] en su disertación
+  *REST* es el acr&#243;nimo de *RE*presentational *S*tate *T*ransfer, 
+  el cual es un t&#233;rmino acu&#241;ado por Roy Fielding [1] en su disertaci&#243;n
   de tesis (Ph.D.), cuando intentava describir formalmente el estilo
   arquitecural de la Web.
  </blurb>
  <blurb>
-  El argumento es que los métodos de HTTP (GET, POST, PUT, etc.)
+  El argumento es que los m&#233;todos de HTTP (GET, POST, PUT, etc.)
   definen un grupo limitado de *verbos* que pueden ser aplicados
-  a un (en principio) número infinito de *nombres* (Universal Resource
+  a un (en principio) n&#250;mero infinito de *nombres* (Universal Resource
   Identifiers, URIs).
  </blurb>
  <blurb>
-  Este diseño tiene las siguientes caracteristicas:
+  Este dise&#241;o tiene las siguientes caracteristicas:
  </blurb>
  <list type="alpha" fontsize="2.5em" marginright="1em">
   <bullet>
-   Permite una simple interoperación enter agentes que de
-   otro modos estarían no coordinados (clientes de web,
+   Permite una simple interoperaci&#243;n enter agentes que de
+   otro modos estar&#237;an no coordinados (clientes de web,
    indexadores, servidores de web, etc.)
   </bullet>
   <bullet>
-   La semántica de HTTP constituye un lenguaje de coordinación, y de una
-   generalidad suficiente como para se usado en cualquier patrón de comunicación
-   deseado. Sus métodos lo hacen equivalente a protocolos de envio de
+   La sem&#225;ntica de HTTP constituye un lenguaje de coordinaci&#243;n, y de una
+   generalidad suficiente como para se usado en cualquier patr&#243;n de comunicaci&#243;n
+   deseado. Sus m&#233;todos lo hacen equivalente a protocolos de envio de
    mensajes y/o de llamadas a funciones.
   </bullet>
   <bullet>

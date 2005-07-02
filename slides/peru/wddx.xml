@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="WDDX">
  <blurb>
   WDDX (Web Distributed Data Exchange) es un mecanismo para
@@ -7,8 +7,8 @@
  </blurb>
  <break />
  <blurb>
-  Fué desarrollado por Allaire (ahora Macromedia) en 1998 como un
-  modo por el cual dos o más aplicaciones de web se pudieran comunicar
+  Fu&#233; desarrollado por Allaire (ahora Macromedia) en 1998 como un
+  modo por el cual dos o m&#225;s aplicaciones de web se pudieran comunicar
   entre si.
  </blurb>
  <break />
@@ -18,8 +18,8 @@
  <list>
   <bullet>Simple de usar</bullet>
   <bullet>Flexible</bullet>
-  <bullet>Rápido</bullet>
-  <bullet>Trabaja a través de los protocolos comunes (HTTP, FTP, etc.)</bullet>
+  <bullet>R&#225;pido</bullet>
+  <bullet>Trabaja a trav&#233;s de los protocolos comunes (HTTP, FTP, etc.)</bullet>
  </list>
  <break />
  <blurb>

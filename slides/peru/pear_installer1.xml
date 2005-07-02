@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title='El comando "pear"'>
  <blurb>
-  Cuando se instala PHP desde código, uno de los comandos que se añaden al
-  sistema es "%pear%", el cual es el manejador de paquetes (creación,
-  instalación, desinstalación, etc.) de PEAR.
+  Cuando se instala PHP desde c&#243;digo, uno de los comandos que se a&#241;aden al
+  sistema es "%pear%", el cual es el manejador de paquetes (creaci&#243;n,
+  instalaci&#243;n, desinstalaci&#243;n, etc.) de PEAR.
  </blurb>
  <example type="shell"><![CDATA[$ pear help
 Commands:

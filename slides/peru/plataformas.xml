@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Plataformas">
 
  <blurb>*Sistemas Operativos*</blurb>
@@ -15,7 +15,7 @@
  </list>
  <blurb>*Interfaces a Servidores*</blurb>
  <list>
-  <bullet>Módulo de Apache 1.x (UNIX,Win32)</bullet>
+  <bullet>M&#243;dulo de Apache 1.x (UNIX,Win32)</bullet>
   <bullet>CGI/FastCGI</bullet>
   <bullet>thttpd </bullet>
   <bullet>fhttpd</bullet>
@@ -24,9 +24,9 @@
   <bullet>NSAPI (Netscape iPlanet)</bullet>
   <bullet>Java servlet </bullet>
   <bullet>AOLServer</bullet>
-  <bullet>Módulo de Roxen/Caudium</bullet>
+  <bullet>M&#243;dulo de Roxen/Caudium</bullet>
   <bullet>SRM (Script Running Machine)</bullet>
-  <bullet>Módulo de Apache 2.x</bullet>
+  <bullet>M&#243;dulo de Apache 2.x</bullet>
   <bullet>Tux (experimental)</bullet>
   <bullet>pi3web (experimental)</bullet>
  </list>

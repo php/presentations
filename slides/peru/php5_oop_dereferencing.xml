@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Referencia indirecta">
 <blurb>
-En PHP 4, no se podía acceder a una propiedad o método indirectamente
-a través de una propiedad o método de otro objeto. Habia que hacer copias
+En PHP 4, no se pod&#237;a acceder a una propiedad o m&#233;todo indirectamente
+a trav&#233;s de una propiedad o m&#233;todo de otro objeto. Habia que hacer copias
 intermedias:
 </blurb>
 <example type="php" result="0"><![CDATA[<?php
@@ -13,7 +13,7 @@ intermedias:
     echo $tmp->result;
  ?>]]></example>
 <blurb>
-En cambio, en PHP 5 referencias indirectas (también llamadas derefencias),
+En cambio, en PHP 5 referencias indirectas (tambi&#233;n llamadas derefencias),
 son permitidas.</blurb>
 <example type="php" result="0"><![CDATA[<?php
  echo $obj1->getFooObject()->result;

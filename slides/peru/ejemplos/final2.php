@@ -7,7 +7,7 @@
     
     class Daltonico extends PaletaDeColores {
 
-        // esta redefinición causa un error
+        // esta redefinicion causa un error
         function nombreDelColor($r, $g, $b) {
             return 'gris';
         }

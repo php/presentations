@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Intercepción de llamadas a métodos">
+<?xml version="1.0"?>
+<slide title="Intercepci&#243;n de llamadas a m&#233;todos">
 <blurb>
-Cuando un método no esta explicitamente declarado para un objeto,
-PHP 5 puede pasar la ejecución a un método especial llamado %__call()%.
+Cuando un m&#233;todo no esta explicitamente declarado para un objeto,
+PHP 5 puede pasar la ejecuci&#243;n a un m&#233;todo especial llamado %__call()%.
 </blurb>
 <example type="php" result="0"><![CDATA[<?php
     class Delegador {

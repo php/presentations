@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="XML-RPC (1)">
  <blurb>
-  "... Es una especificación y un grupo de implementaciones
+  "... Es una especificaci&#243;n y un grupo de implementaciones
   que permiten que programas corriendo en diferentes sistemas
   operativos, corriendo en diferentes entornos, hagan llamadas
-  a prodecimientos a través de la Internet ..." [1]
+  a prodecimientos a trav&#233;s de la Internet ..." [1]
  </blurb>
  <break />
  <blurb>
   "... Es hacer llamadas remotas a procedimientos usando HTTP como
-  transporte y XML para la codificación. XML-RPC esta diseñado para
+  transporte y XML para la codificaci&#243;n. XML-RPC esta dise&#241;ado para
   ser lo mas simple posible, y a la vez permitir que estructuras
   complejas de datos sean transmitidas, procesadas, y obtenidas ..." [1]
  </blurb>

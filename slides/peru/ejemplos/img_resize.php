@@ -17,8 +17,8 @@
     $img_width = imagesx($bg);
     $img_height = imagesy($bg);
     $width = ($height)/$img_height * $img_width;
-    $sizing =  "Imágen original: $img_width x $img_height\r\n";
-    $sizing .= "    Imágen nueva: $width x $height";
+    $sizing =  "Imagen original: $img_width x $img_height\r\n";
+    $sizing .= "    Imagen nueva: $width x $height";
 
     // creando la imágen final
     $im = ImageCreateTrueColor($width,$height);

@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="SOAP">
  <list>
   <bullet>Inicialmente se expandia a: Simple Object Access Protocol</bullet>
-  <bullet>Es un formato para mensajes y un protocolo de comunicación</bullet>
-  <bullet>Se usa generalmente para hacer RPC. También se pueden
+  <bullet>Es un formato para mensajes y un protocolo de comunicaci&#243;n</bullet>
+  <bullet>Se usa generalmente para hacer RPC. Tambi&#233;n se pueden
   usar mensajes basados en documentos.</bullet>
   <bullet>Usa XML y tecnologias relacionadas, para formato y 
-  expandir las capacidades del protocolo básico</bullet>
+  expandir las capacidades del protocolo b&#225;sico</bullet>
   <bullet>
    Paquetes constan de un encabezado (SOAP Header), el cual contiene
-   metainformación acerca del contenido (SOAP Body).
+   metainformaci&#243;n acerca del contenido (SOAP Body).
   </bullet>
  </list>
 </slide>

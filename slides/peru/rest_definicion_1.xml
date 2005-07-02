@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="REST (1)">
  <blurb>
-  *REST* es el acrónimo de *RE*presentational *S*tate *T*ransfer. 
+  *REST* es el acr&#243;nimo de *RE*presentational *S*tate *T*ransfer. 
   En pocas palabras: *el arte de no reinventar la rueda*
  </blurb>
  <break />
  <blurb>
-  REST es un término acuñado por Roy Fielding [1] en su disertación
-  de tesis (Ph.D.), cuando describió formalmente el estilo
+  REST es un t&#233;rmino acu&#241;ado por Roy Fielding [1] en su disertaci&#243;n
+  de tesis (Ph.D.), cuando describi&#243; formalmente el estilo
   arquitecural de la Web.
  </blurb>
  <break />
  <blurb>
-  El argumento es que los métodos de HTTP (GET, POST, PUT, etc.)
+  El argumento es que los m&#233;todos de HTTP (GET, POST, PUT, etc.)
   definen un grupo limitado de *verbos* que pueden ser aplicados
-  a un (en principio) número infinito de *nombres* (Universal Resource
+  a un (en principio) n&#250;mero infinito de *nombres* (Universal Resource
   Identifiers, URIs).
  </blurb>
  <break />
  <blurb fontsize="1em">
   [1] Roy Fielding 
   "_Architectural Styles and the Design of Network-based Software Architectures_",
-  disertación de Ph.D., University of California, Irvine (2000).
+  disertaci&#243;n de Ph.D., University of California, Irvine (2000).
  </blurb>
 </slide>

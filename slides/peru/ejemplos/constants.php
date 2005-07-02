@@ -7,6 +7,6 @@
  
  define ('PERU', '51');
 
- echo 'Perú: tld='.TLD::PERU.', código='.PERU;
+ echo 'Per&#250;: tld='.TLD::PERU.', c&#243;digo='.PERU;
 
 ?>

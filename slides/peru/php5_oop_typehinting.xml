@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Aludir al tipo de los datos">
 <blurb>
 PHP es un lenguaje en el que el tipo de datos asociado a una variable
 no es declarado estrictamente (es decir, un lenguaje libremente tipeado), 
 pero en PHP 5 es posible el aludir al tipo de objeto que se espera como
-parámetro en un método o función.
+par&#225;metro en un m&#233;todo o funci&#243;n.
 </blurb>
 <example type="php" filename="ejemplos/typehinting.php"/>
 <example title="... ejecutando esto para mostrar el error" filename="ejemplos/typehinting.out"/>

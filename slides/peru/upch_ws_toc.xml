@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Agenda">
  <list>
   <bullet>
-   Servicios de Web: definición y tecnologías.
+   Servicios de Web: definici&#243;n y tecnolog&#237;as.
   </bullet>
   <bullet>
    *REST* (REpresentational State Transfer): Arquitectura de la web
@@ -14,10 +14,10 @@
  </bullet>
  <bullet>
   *SOAP* (Simple Object Access Protocol): Define 
-  protocolos y codificación de los paquetes entre un
-  cliente y un servicio de web, asi como estándares para definir e
-  interpretar tipos complejos, serialización de datos, simultaneidad
-  de la interacción, etc.
+  protocolos y codificaci&#243;n de los paquetes entre un
+  cliente y un servicio de web, asi como est&#225;ndares para definir e
+  interpretar tipos complejos, serializaci&#243;n de datos, simultaneidad
+  de la interacci&#243;n, etc.
  </bullet>
 </list>
 </slide>

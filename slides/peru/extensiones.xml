@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Extensiones">
  <list>
   <bullet> GD (GIF, JPEG, PNG, WBMP)</bullet>
@@ -9,23 +9,23 @@
   <bullet> MCAL</bullet>
   <bullet> IMSP</bullet>
   <bullet> IPTC</bullet>
-  <bullet> BC/GMP (matemáticas de precisión arbitraria)</bullet>
+  <bullet> BC/GMP (matem&#225;ticas de precisi&#243;n arbitraria)</bullet>
   <bullet> Hyperwave</bullet>
   <bullet> Interpretador de XML</bullet>
-  <bullet> Generación de PDF</bullet>
+  <bullet> Generaci&#243;n de PDF</bullet>
   <bullet> FDF (formularios de PDF)</bullet>
-  <bullet> Semáforos de System V y memoria compartida</bullet>
-  <bullet> DCOM (sólo Win32)</bullet>
+  <bullet> Sem&#225;foros de System V y memoria compartida</bullet>
+  <bullet> DCOM (s&#243;lo Win32)</bullet>
   <bullet> Conectividad a Java</bullet>
   <bullet> mnogosearch (soporte de udmsearch)</bullet>
   <bullet> Cybermut</bullet>
   <bullet> Iconv</bullet>
   <bullet> Satellite</bullet>
   <bullet> Curl</bullet>
-  <bullet> gettext (Internacionalización de GNU)</bullet>
+  <bullet> gettext (Internacionalizaci&#243;n de GNU)</bullet>
   <bullet> zlib (IO comprimido)</bullet>
-  <bullet> Conversión de grupo de caracteres/texto (UTF-8, Cyrillic, Hebrew)</bullet>
-  <bullet> Extensión para las capacidades del navegador de web</bullet>
+  <bullet> Conversi&#243;n de grupo de caracteres/texto (UTF-8, Cyrillic, Hebrew)</bullet>
+  <bullet> Extensi&#243;n para las capacidades del navegador de web</bullet>
   <bullet> EXIF</bullet>
   <bullet> SWF (Flash)</bullet>
   <bullet> ASPELL/PSPELL</bullet>

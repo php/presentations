@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Miembros estáticos de clases">
+<?xml version="1.0"?>
+<slide title="Miembros est&#225;ticos de clases">
 <blurb>
-Los miembros de una clase (variables y métodos) pueden declararse
-estáticos, de modo que sean accesibles fuera de una instancia de
+Los miembros de una clase (variables y m&#233;todos) pueden declararse
+est&#225;ticos, de modo que sean accesibles fuera de una instancia de
 la dicha clase.
 </blurb>
 <example type="php" filename="ejemplos/static.php"/>

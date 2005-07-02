@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Arreglos">
 <example title="Arreglos Ordenados"><![CDATA[<?php
     $a[0] = 1;
@@ -7,14 +7,14 @@
 ?>]]></example>
 
 <example title="Arreglos Associativos"><![CDATA[<?php
-$catch_it['gato'] = "ratón";
+$catch_it['gato'] = "rat&#243;n";
 $catch_it['tigre'] = "venado";
 ?>]]></example>
 <break lines="3"/>
-<blurb>*Manipulación de arreglos*</blurb>
+<blurb>*Manipulaci&#243;n de arreglos*</blurb>
 <list>
 <bullet>Ordenamiento: sort(), rsort(), ksort(), usort(), array_multisort()</bullet>
-<bullet>Iteración: reset(), end(), next(), each(), current(), key(), array_walk()</bullet>
+<bullet>Iteraci&#243;n: reset(), end(), next(), each(), current(), key(), array_walk()</bullet>
 <bullet>Avanzado: array_diff(), array_intersect(), array_merge(),
 array_merge_recursive(), array_slice(), array_splice(), y mucho mas...</bullet>
 </list>

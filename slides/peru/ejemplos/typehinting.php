@@ -5,13 +5,13 @@
 
 	class Kerosene extends Combustible {
 		function usar() {
-			return "¡Glub, glub, glub!";
+			return "Glub, glub, glub!";
 		}
 	}
 	
 	class Gasolina extends Combustible {
 		function usar() {
-            return "¡Tink, tink, tink!";
+            return "Tink, tink, tink!";
 		}
 	}
 	

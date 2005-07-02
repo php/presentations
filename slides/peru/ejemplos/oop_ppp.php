@@ -31,7 +31,7 @@
 
     $loro = new Animal(1, 'ave');
     $loro->nombre = 'silencioso';  // no hay problema
-    $loro->verificarID(); // genera un error, método privado
+    $loro->verificarID(); // genera un error, metodo privado
     
     $verde = new Iguana('verde');
     echo $verde->tipo; // genera un error, propiedad protegida

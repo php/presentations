@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Ejemplo de SQL">
 <blurb>
  En los programas de PHP que se conectan a bases de datos, el procedimiento
- es casi siempre similar al código a continuación: se hace la conexión al
+ es casi siempre similar al c&#243;digo a continuaci&#243;n: se hace la conexi&#243;n al
  servidor de base de datos, seleccionar la base de datos, ejecutar la
- búsqueda, y finalmente iterar en los resultados.
+ b&#250;squeda, y finalmente iterar en los resultados.
 </blurb>
 <break lines="2"/>
   <example title='Usado MySQL'><![CDATA[<?php

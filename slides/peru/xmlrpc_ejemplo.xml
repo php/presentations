@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="XML-RPC: Ejemplo">
-<example title="Obtener información de 'Math_Quaternion'"
+<example title="Obtener informaci&#243;n de 'Math_Quaternion'"
 type="php" filename="ejemplos/xmlrpc_ex.php"/>
 <example type="text" filename="ejemplos/xmlrpc_ex.txt" title="Resultado"/>
 </slide>

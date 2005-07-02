@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Miembros finales">
 <blurb>
 En PHP 5, una clase puede ser declarada como *final*, para prevenir
@@ -7,7 +7,7 @@ que sea extendida:
 <example type="php" filename="ejemplos/final.php"/>
 <example title="al ejecutar se produce el error" filename="ejemplos/final.out"/>
 <blurb>
-Y para mayor control aún, los métodos pueden ser declarados finales, para
+Y para mayor control a&#250;n, los m&#233;todos pueden ser declarados finales, para
 que no puedan ser redefinidos en una sub-clase.
 </blurb>
 <example type="php" filename="ejemplos/final2.php" result="0"/>

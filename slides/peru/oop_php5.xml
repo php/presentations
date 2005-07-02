@@ -1,29 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Objetos en PHP 5">
  <list>
   <bullet>Constructores (%__construct()%) 
    y destructores (%__destruct()%) unificados</bullet>
   <bullet>*PPP*: Private, Protected, Public. Se puede
-   restringir el alcance de variables y métodos</bullet>
+   restringir el alcance de variables y m&#233;todos</bullet>
   <bullet>Objetos son *siempre pasados por referencia*,
    de manera que si se necesita una copia se hace por
    clonamiento (%__clone()%)</bullet>
   <bullet>Interceptores para el accesso a variables (%__get()%,
-   %__set()%) y métodos (%__call()%)</bullet>
-  <bullet>Implementación de *interfazes* y de clases *abstractas*
+   %__set()%) y m&#233;todos (%__call()%)</bullet>
+  <bullet>Implementaci&#243;n de *interfazes* y de clases *abstractas*
    (similar a Java)</bullet>
   <bullet>Referencia indirecta. Si un metodo genera un objeto, se puede
    acceder a las propiedades de este directamente:
    %$obj->crearGato()->maullar()%.</bullet>
-  <bullet>Excepciones: métodos en objetos pueden generar excepciones,
+  <bullet>Excepciones: m&#233;todos en objetos pueden generar excepciones,
    nuevas excepciones se pueden definir, y se usa "%try ... catch ...%"
    para poder manipularlas.</bullet>
   <bullet>Clases pueden implementar constantes (%const%)</bullet>
-  <bullet>Métodos pueden ser marcados como estáticos (%static%)</bullet>
-  <bullet>Clases y métodos pueden ser marcados como finales (%final%)
+  <bullet>M&#233;todos pueden ser marcados como est&#225;ticos (%static%)</bullet>
+  <bullet>Clases y m&#233;todos pueden ser marcados como finales (%final%)
    para evitar que sean extendidos/modificados.</bullet>
-  <bullet>En la definición de métodos se puede aludir al tipo de
-   objeto aceptado como parámetro: %function alimentar(Gato $michi)%.</bullet>
+  <bullet>En la definici&#243;n de m&#233;todos se puede aludir al tipo de
+   objeto aceptado como par&#225;metro: %function alimentar(Gato $michi)%.</bullet>
   <bullet>... y aun hay mas</bullet>
  </list>
 </slide>

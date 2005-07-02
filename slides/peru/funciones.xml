@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Funciones definidas por el usuario">
-<example title="Una función típica y simple"><![CDATA[<?php
+<example title="Una funci&#243;n t&#237;pica y simple"><![CDATA[<?php
 function log_data(&$db, $user, &$data) {
    mysql_query("INSERT INTO userdata VALUES ('".
               uniqid()."', '$user', '$data')", $db);
@@ -29,10 +29,10 @@ function hacer_cafe($tazas, $azucar=false, $otros='') {
 // cafe solo, 1 taza
 $solo = hacer_cafe(1);
 
-// cafe con azúcar para 3
+// cafe con az&#250;car para 3
 $tres = hacer_cafe(3, true);
 
-// cafe con leche para dos y con azúcar
+// cafe con leche para dos y con az&#250;car
 $dos = hacer_cafe(2, true, 'leche');
 
 ?>]]></example>

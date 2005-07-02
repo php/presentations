@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Servicios de Web: Beneficios (4)">
  <blurb>
- (continuación)
+ (continuaci&#243;n)
  </blurb>
  <list>
   <bullet>
-   *Reducción de la Fragilidad del Sistema*: El tener un diseño y tecnología
+   *Reducci&#243;n de la Fragilidad del Sistema*: El tener un dise&#241;o y tecnolog&#237;a
    que nos fuerza a usa componentes que no estan fuertemente acoplados, nos
-   permite el que los cambios de uno de ellos (implementación, plataforma,
+   permite el que los cambios de uno de ellos (implementaci&#243;n, plataforma,
    lenguaje, etc.), no afecten a los demas. Al mismo tiempo hace que sea
-   relativamente fácil el reemplazar un servicio componente por otro que ofrezca
+   relativamente f&#225;cil el reemplazar un servicio componente por otro que ofrezca
    la misma (o similar) interfaz.
   </bullet>
   <bullet>
    *Escalabilidad*: El poder modularizar no solo los componentes, pero
-   también la conectividad entre ellos, hace que podamos desarrollar soluciones
-   de uso múltiple, de tal manera que, por ejemplo, el costo de añadir un nuevo
-   cliente para nuestro sistema sea mínimo o no existente.
+   tambi&#233;n la conectividad entre ellos, hace que podamos desarrollar soluciones
+   de uso m&#250;ltiple, de tal manera que, por ejemplo, el costo de a&#241;adir un nuevo
+   cliente para nuestro sistema sea m&#237;nimo o no existente.
   </bullet>
  </list>    
 </slide>

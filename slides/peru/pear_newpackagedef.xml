@@ -1,25 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <slide title="Nuevo: Mejorando los paquetes">
  <blurb>
-  También en PEAR 1.4, se ha incluido una actualización completa de
+  Tambi&#233;n en PEAR 1.4, se ha incluido una actualizaci&#243;n completa de
   la forma como se describen los paquetes, y como debe de manejarse:
  </blurb>
  <list>
   <bullet>
-   Una forma más general de describir dependencias, de tal manera que se
-   puedan definir no solo paquetes opcionales y requeridos, si no también
+   Una forma m&#225;s general de describir dependencias, de tal manera que se
+   puedan definir no solo paquetes opcionales y requeridos, si no tambi&#233;n
    versiones recomendadas o requeridas, asi como la posibilidad de que estos
-   provengan de diferentes canales de distribución.
+   provengan de diferentes canales de distribuci&#243;n.
   </bullet>
   <bullet>
-   Definición de nuevos roles para los archivos, y las tareas asociadas con
-   cada nuevo rol. Esto es crítico para sistemas integrados (por ejemplo un
-   CMS, o un Bulletin Board), en los cuales se requiere una organización
-   específica del código instalado.
+   Definici&#243;n de nuevos roles para los archivos, y las tareas asociadas con
+   cada nuevo rol. Esto es cr&#237;tico para sistemas integrados (por ejemplo un
+   CMS, o un Bulletin Board), en los cuales se requiere una organizaci&#243;n
+   espec&#237;fica del c&#243;digo instalado.
   </bullet>
   <bullet>
    Posibilidad de definir tareas y scripts que corran luego de finalizada la
-   instalación del código, para finalizar la configuración del sistema,
+   instalaci&#243;n del c&#243;digo, para finalizar la configuraci&#243;n del sistema,
    o simplemente para limpiar archivos temporales.
   </bullet>
  </list>

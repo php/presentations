@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<slide title="Servicios de Web: Definición">
+<?xml version="1.0"?>
+<slide title="Servicios de Web: Definici&#243;n">
  <blurb>
   Un Servicio de Web (Web Service, *WS*) es un componente o programa que
   que es accessible via la Internet, y que tiene las siguientes caracteristicas:
  </blurb>
  <list>
   <bullet>
-   Es autónomo: ejecuta un proceso (o grupo de procesos) en forma unitaria y atómica.
+   Es aut&#243;nomo: ejecuta un proceso (o grupo de procesos) en forma unitaria y at&#243;mica.
   </bullet>
   <bullet>
-   Proporciona una descripción estandarizada de lo que ofrece.
+   Proporciona una descripci&#243;n estandarizada de lo que ofrece.
   </bullet>
   <bullet>
    Recibe y retorna valores claramente definidos en su interface.
@@ -19,14 +19,14 @@
    plataformas y los lenguajes en que los sistemas hayan sido implementados.
   </bullet>
   <bullet>
-   Se le puede conectar, publicar, y localizar a travéz de registros distribuidos
-   (los cuales actuan también como servicios de web).
+   Se le puede conectar, publicar, y localizar a trav&#233;z de registros distribuidos
+   (los cuales actuan tambi&#233;n como servicios de web).
   </bullet>
   <bullet>
-   Es potencionalmente configurable al momento de ejecución.
+   Es potencionalmente configurable al momento de ejecuci&#243;n.
   </bullet>
   <bullet>
-   Puede ser compuesto con otros en forma dinámica o estática.
+   Puede ser compuesto con otros en forma din&#225;mica o est&#225;tica.
   </bullet>
  </list>
 </slide>
