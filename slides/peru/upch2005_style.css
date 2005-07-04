@@ -1,0 +1,213 @@
+<!-- /* stolen, ehem, modified from Derick's stylesheet */ -->
+<style title="Default" type="text/css">
+body {
+	font-size: 10pt;
+	margin-left:175px;
+	margin-right:0em;
+	margin-bottom:0em;
+	background: #fff;
+	background-image: url(presentations/slides/peru/images/upchbackground.jpg);
+	background-attachment: fixed;
+	overflow: -moz-scrollbars-none;
+}
+div.sticky {
+	margin: 0;
+	position: fixed;
+	top: 0em;
+	left: 175px;
+	right: auto;
+	bottom: auto;
+}
+div.navbar {
+padding: 4;
+margin: 0;
+height: 14em;
+font-family: verdana, tahoma, arial, helvetica, sans-serif;
+z-index: 99;
+}
+div.navbar_title, div.navbar_title a, div.subtitle {
+	font-size: 32px;
+	color: #698fe5;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 20px;
+}
+div.subtitle {
+	margin-top: 5px;
+	font-size: 24;
+	font-weight: normal;
+	font-style: italic;
+}
+
+div.navbar_nr a {
+font-size: 16px;
+color: #77a;
+text-decoration: none;
+position: fixed;
+right: 10px;
+bottom: 0px;
+}
+div.mainarea {
+margin-top: 50px;
+top: 120px;
+width: 98%;
+height: 620px;
+overflow: auto;
+overflow: -moz-scrollbars-vertical;
+}
+ul.pres {
+list-style: circle;
+font-size: 24pt;
+}
+
+
+ul.level2 {
+	list-style: circle;
+	font-size: 20pt;
+	margin-left: 40px;
+	margin-top: -15px;
+}
+
+li.pres_bullet {
+font-size: 28pt;
+margin-right: 40px;
+}
+
+li.pres_bullet_nr {
+font-size: 28pt;
+margin-right: 40px;
+list-style-type: decimal;
+}
+
+ul.large div li.pres_bullet
+{
+	font-size: 40pt;
+}
+	
+ul.small div li.pres_bullet
+{
+	font-size: 20pt;
+}
+
+div.title_blurb {
+	font-size: 80px;
+	color: #000;
+	text-align: center;
+	font-weight: bold;
+}
+	
+div.small_blurb {
+	font-size: 24px;
+}
+
+div.blurb, div.bit_larger_output_text {
+	font-size: 28pt;
+	width: 100%;
+}
+
+div.bit_larger_output_text {
+	margin-top: 10px;
+}
+
+div.x_small_blurb {
+	font-size: 0.5em;
+}
+
+div.large_blurb {
+	font-size: 32pt;
+}
+
+div.large_blurb_center {
+	font-size: 48px;
+	text-align: center;
+}
+
+div.quote {
+	font-size: 48px;
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+div.quote_attr {
+	font-size: 32px;
+	text-align: right;
+	margin-right: 40px;
+}
+
+div.xx_large_blurb_center {
+	font-size: 80px;
+	text-align: center;
+}
+
+div.q_mark {
+	text-align: center;
+	font-size: 480px;
+}
+
+div.shadow, code {
+	font-size: 18px; width: 640px;
+}
+
+div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
+	background: #eee;
+	font-size: 23px;
+	width: 100%;
+	font-weight: bold;
+}
+div.example, div.highlight, div.bit_larger, div.bit_larger_output {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+div.large code, div.large {
+	font-size: 32px;
+	background: #eee;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+div.highlight code, div.highlight {
+	background: #fffc00;
+	font-weight: bold;
+}
+
+div.code_small, div.code_medium, div.code_large, div.example {
+	background: #eee;
+}
+div.code_small code {
+	font-size: 12px;
+}
+div.code_medium code, div.code_medium pre {
+	font-size: 20px;
+}
+div.code_large code, div.code_large pre {
+	font-size: 24px;
+}
+div.example pre {
+    font-size: 23px;
+}
+
+div.event, div.event-date, div.event-presenter {
+	text-align: center;
+	font-size:  32pt;
+}
+
+div.pres-url-small {
+	text-align: center;
+	font-size:  24pt;
+}
+
+img.spaced {
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+table {
+	font-size: 20pt;
+}
+</style>
