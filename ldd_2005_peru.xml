@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <presentation
  navbarbackground="#ffffff"
  template="css"
@@ -7,11 +7,10 @@
  navbartopiclinks="0"
  stylesheet="presentations/slides/peru/ldd2005_style.css"
 >
-<title>PHP 5 y PEAR:
-Una visión global</title>
+<title>PHP 5 y PEAR: Una visi&#243;n global</title>
 <topic>PHP 5</topic>
 <event>Linux Developer Day 2005</event>
-<location>Lima, Perú</location>
+<location>Lima, Per&#250;</location>
 <date>April 09, 2005</date>
 <speaker>Jesus M. Castagnetto, Ph.D.</speaker>
 <email>jmcastagnetto@php.net</email>
