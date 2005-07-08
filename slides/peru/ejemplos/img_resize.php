@@ -10,7 +10,7 @@
     $txt_w = abs($size[2]-$size[0]);
     $txt_h = abs($size[6]-$size[1]);
 
-    // cargando la imágen original
+    // cargando la imagen original
     $bg = ImageCreateFromJpeg('../../sdphp/images/jmc_nephew.jpg');
 
     // calculando las nuevas dimensiones
@@ -20,7 +20,7 @@
     $sizing =  "Imagen original: $img_width x $img_height\r\n";
     $sizing .= "    Imagen nueva: $width x $height";
 
-    // creando la imágen final
+    // creando la imagen final
     $im = ImageCreateTrueColor($width,$height);
     ImageCopyResampled($im,$bg,0,0,0,0,
             $width,$height,$img_width,$img_height);

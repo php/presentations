@@ -7,9 +7,9 @@ if (!extension_loaded('pdf')) {
 }
 $pdf = pdf_new();
 pdf_open_file($pdf);
-pdf_set_info($pdf, "Author","Jesús M. Castagnetto");
+pdf_set_info($pdf, "Author","Jes&#250;s M. Castagnetto");
 pdf_set_info($pdf, "Title","Ejemplo de Factura");
-pdf_set_info($pdf, "Creator", "Jesús M. Castagnetto");
+pdf_set_info($pdf, "Creator", "Jes&#250;s M. Castagnetto");
 pdf_set_info($pdf, "Subject", "Ejemplo de Factura");
 
 $sizes = array('a4'=>'595x842', 'letter'=>'612x792', 'legal'=>'612x1008');

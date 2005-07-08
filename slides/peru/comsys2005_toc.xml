@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<slide title="Agenda">
+ <blurb>
+  *PHP 5:*
+ </blurb>
+ <list>
+  <bullet>
+   Una visi&#243;n general del lenguaje.
+  </bullet>
+  <bullet>
+   El modelo de programaci&#243;n de objetos en PHP 5.
+  </bullet>
+  <bullet>
+   Discusi&#243;n de algunas extensiones interesantes.
+  </bullet>
+ </list>
+ <break lines="2"/>
+ <blurb>
+  *PEAR:*
+ </blurb>
+ <list>
+  <bullet>
+   Qu&#233; es PEAR y que ofrece.
+  </bullet>
+  <bullet>
+   Como la comunidad se organiza y gobierna.
+  </bullet>
+  <bullet>
+   Mecanismos para proponer y aceptar un paquete en PEAR.
+  </bullet>
+ </list>
+</slide>
