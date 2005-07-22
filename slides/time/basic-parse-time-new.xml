@@ -2,23 +2,15 @@
 <slide>
 	<title>Parsing Dates - Take #2</title>
 
-	<blurb>Parsing strings for date time information with the ~strtotime()~ function:</blurb>
+	<blurb>Parsing strings for date time information with the ~date_create()~ function:</blurb>
 	<example><![CDATA[<?php
-	$ts = Date::strtotime("2005-07-11 22:16:50 CEST");
+	$ts = date_create("2005-07-11 22:16:50");
 ?>]]></example>
 <break/>
 
-	<blurb>With initial timestamp:</blurb>
-	<example><![CDATA[<?php
-	$date = Date::strtotime("2005-07-11 22:16:50 CEST");
-	$ts = Date::strtotime("next week", $date);
-?>]]></example>
-<break/>
-
-	<blurb>The function calls are exactly the same, except that they will not
-	return an integer, but instead they return a Date object which is a wrapper
-	around a 64 bit integer (with some additional functionality
-	ofcourse).</blurb>
+	<blurb>This function will not return the timestamp as an integer, but
+	instead returns a Date object which is a wrapper around a 64 bit
+	integer (with some additional functionality ofcourse).</blurb>
 	
 </slide>
 

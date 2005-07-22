@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Modifying Dates</title>
+
+	<blurb>Modifying dates and times:</blurb>
+	<example result="1"><![CDATA[<?php
+	date_default_timezone_set("Europe/Oslo");
+	$ts = date_create("now");
+	echo $ts->format(DATE_RFC2822), "<br/>\n";
+
+	echo $ts->modify("+2 days");
+	echo $ts->format(DATE_RFC2822), "<br/>\n";
+
+	echo $ts->modify("third month");
+	echo $ts->format(DATE_RFC2822), "<br/>\n";
+
+	echo $ts->modify("Friday +3 weeks");
+	echo $ts->format(DATE_RFC2822), "<br/>\n";
+
+	echo $ts->modify("next friday");
+	echo $ts->format(DATE_RFC2822), "<br/>\n";
+?>]]></example>
+</slide>

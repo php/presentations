@@ -3,7 +3,7 @@
 	<title>Future</title>
 
 	<list>
-		<bullet>PHP 5.2 will support full Unicode based on ICU (IBMs Components for Unicode)</bullet>
+		<bullet>PHP 5.5 / 6 will support full Unicode based on ICU (IBMs Components for Unicode)</bullet>
 		<bullet>ICU has functions for character sets, conversion, collation and localization (and more)</bullet>
 		<bullet>Transliteration build on top of ICU features</bullet>
 	</list>

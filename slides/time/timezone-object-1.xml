@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Using Timezones</title>
+	<subtitle>The Timezone Object</subtitle>
+
+	<blurb>Creating a timezone resource:</blurb>
+	<example><![CDATA[<?php
+	$tz = timezone_open("Asia/Singapore");
+?>]]></example>
+<break lines="3"/>
+
+	<blurb>Using the timezone when parsing a string with a date representation:</blurb>
+	<example><![CDATA[<?php
+	$tz = timezone_open("Pacific/Honolulu");
+	$ts = date_create("1978-12-22 09:15", $tz);
+?>]]></example>
+<break lines="3"/>
+
+	<blurb>A passed timezone object does not override a *parsed* timezone:</blurb>
+	<example><![CDATA[<?php
+	$tz = timezone_open("Pacific/Honolulu");
+	$ts1 = date_create("1978-12-22 09:15 CET", $tz);
+	$ts2 = date_create("1978-12-22 09:15 Europe/Amsterdam", $tz);
+?>]]></example>
+</slide>

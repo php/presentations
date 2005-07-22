@@ -40,13 +40,19 @@
 <!-- PHP - CODE EXAMPLES -->
 <slide>slides/time/basic-parse-time.xml</slide>
 <slide>slides/time/basic-parse-time-new.xml</slide>
-<slide>slides/time/basic-using-zones.xml</slide>
-<slide>slides/time/basic-other-mods.xml</slide>
-<slide>slides/time/class-date.xml</slide>
-<slide>slides/time/class-zone.xml</slide>
 
+<!-- DATE EXAMPLES -->
+<slide>slides/time/date-format.xml</slide>
+<slide>slides/time/date-modify.xml</slide>
+<slide>slides/time/basic-using-zones.xml</slide>
+<slide>slides/time/default-timezone.xml</slide>
+<slide>slides/time/timezone-object-1.xml</slide>
+<slide>slides/time/timezone-object-2.xml</slide>
+<slide>slides/time/date-timezone.xml</slide> <!-- set/get -->
+<slide>slides/time/timezone-utilities-1.xml</slide>
+<slide>slides/time/timezone-utilities-2.xml</slide>
 
 <!-- EXIT -->
 <slide>slides/php5intro/nl/p5pp.xml</slide> <!-- PHP and locales -->
-<slide>slides/i18nl10n/resources.xml</slide> <!-- resources -->
+<slide>slides/time/resources.xml</slide> <!-- resources -->
 </presentation>

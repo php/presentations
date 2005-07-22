@@ -4,10 +4,12 @@
 	<subtitle>Improvements</subtitle>
 
 	<list>
-		<bullet>64 bit timestamps (more than Sun's life)</bullet>
+		<bullet>64 bit timestamps</bullet>
 		<bullet>~strtotime()~ has been rewritten</bullet>
 		<bullet>Nothing is Operating System dependent</bullet>
 		<bullet>Full support for timezones, DST, date modifications</bullet>
+		<bullet>New format modifiers: %e% for timezone identifier and %o% for ISO Year</bullet>
+		<bullet>Advanced date handling functions</bullet>
 	</list>
 </slide>
 

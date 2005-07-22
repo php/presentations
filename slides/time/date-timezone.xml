@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Using Timezones</title>
+	<subtitle>Changing timezones</subtitle>
+
+	<blurb>Using the timezone when parsing a string with a date representation:</blurb>
+	<example result="1"><![CDATA[<?php
+	$tz1 = timezone_open("Pacific/Honolulu");
+	$tz2 = timezone_open("Europe/Amsterdam");
+	$tz3 = timezone_open("Australia/Melbourne");
+
+	$ts = date_create("1978-12-22 09:15", $tz1);
+	echo $ts->getTimezone()->getName(), ': ',
+		$ts->format(DATE_RFC822), "<br/>";
+
+	$ts->setTimezone($tz2);
+	echo $ts->getTimezone()->getName(), ': ',
+		$ts->format(DATE_RFC822), "<br/>";
+
+	date_timezone_set($ts, $tz3);
+	echo timezone_name_get(date_timezone_get($ts)), ': ',
+		date_format($ts, DATE_RFC822);
+?>]]></example>
+<break lines="3"/>
+
+</slide>

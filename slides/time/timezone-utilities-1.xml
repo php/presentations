@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Timezones Utilities</title>
+	<subtitle>Transition Times</subtitle>
+
+	<blurb>Creating a timezone resource:</blurb>
+	<example result="1"><![CDATA[<?php
+	$tz = timezone_open("Europe/Amsterdam");
+	$trs = timezone_transistions_get($tz);
+	$trs = $tz->getTransistions();
+
+	echo "<pre>\n";
+	foreach ($trs as $tr) {
+		printf("%20s %7d %d %s\n",
+			$tr['time'], $tr['offset'],
+			$tr['isdst'], $tr['abbr']);
+	}
+?>]]></example>
+</slide>
