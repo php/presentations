@@ -1,0 +1,134 @@
+<slide title="OOP">
+<break lines="1" />
+<image filename="marcus.jpg" marginright="2em" align="right"/>
+
+<example title="Objects Are References" result="0" marginright="30em"><![CDATA[<?php
+$a = new my_class;
+$b = clone $a;
+?>]]></example>
+
+<example title="New constructor/destructor naming" result="0" marginright="30em"><![CDATA[<?php
+class my_class {
+  function __construct() {
+    echo "Constructor";
+  }
+  function __destruct() {
+    echo "Destructor";
+  }
+}
+?>]]></example>
+
+<example title="PPP" result="0" marginright="30em"><![CDATA[<?php
+class my_class {
+  public $a;
+  protected $b;
+  private $c;
+}
+?>]]></example>
+
+<example title="Overloaded Properties and Methods" result="0"><![CDATA[<?php
+class my_class {
+  function __set($name, $value) { }
+  function __get($name) { }
+  function __call($name, $args) { }
+}
+?>]]></example>
+
+<example title="Object type hinting"><![CDATA[<?php
+  class the_class {
+    public $var = 'foo';
+  }
+  class my_other_class {
+    public function __construct(the_class $obj) {
+      echo $obj->var;
+    }
+  }
+  $a = new the_class;
+  $b = new my_other_class($a);
+  $c = new my_other_class($b);
+?>]]></example>
+<example hide="1" result="1"><![CDATA[foo<br />
+Fatal error: Argument 1 must be an instance of the_class in script.php on line 6]]></example>
+
+<example title="Interfaces" result="1"><![CDATA[<?php
+interface abc {
+   public function setVariable($name, $var);
+   public function getVariable($name);
+}
+
+class my_abc implements abc {
+   private $vars = array();
+
+   public function setVariable($name, $var) {
+       $this->vars[$name] = $var;
+   }
+
+   public function getVariable($name) {
+       return $this->vars[$name];
+   }
+}
+$test = new my_abc;
+$test->setVariable('foo','bar');
+echo $test->getVariable('foo');
+?>]]></example>
+
+<example title="Bad Interface" result="0"><![CDATA[<?php
+class my_other_class implements abc {
+   public function setVariable($name, $var) {
+       $this->vars[$name] = $var;
+   }
+}
+?>]]></example>
+<example hide="1" result="1">Fatal error: Class my_other_class contains 1 abstract method and must therefore be declared abstract or implement the remaining methods (abc::getVariable) script.php on line 2</example>
+
+<example title="final"><![CDATA[<?php
+  class my_main_class {
+    public function foo() { }
+    final public function bar() { }
+  }
+
+  class my_other_class extends my_main_class {
+    public function foo() { }
+    public function bar() { }
+  }
+?>]]></example>
+<example hide="1" result="1">Fatal error: Cannot override final method my_main_class::bar() in script.php on line 9</example>
+
+<example title="Base.inc"><![CDATA[<?php
+abstract class Base {
+  public function __toString() {
+    return '<pre>'.print_r($this,TRUE).'</pre>';
+  }
+}
+?>]]></example>
+<example title="Autoload" result="1"><![CDATA[<?php
+function __autoload($class) {
+    echo "autoload called for $class\n";
+    require "presentations/slides/keynotes/$class.inc";
+}
+
+class my_class2 extends Base { 
+  function __construct($arg) {
+    $this->prop = $arg; 
+  }
+}
+$test = new my_class2('foo');
+echo $test;
+?>]]></example>
+
+
+<example title="Exceptions" result="0"><![CDATA[<?php
+try {
+  mysql_connect('localhost');
+  mysql_select_db('game');
+  $r = mysql_query('SELECT * FROM news');
+} catch (Exception $e) {
+  /* Do recovery */
+  exit();
+}
+?>]]></example>
+
+<blurb fontsize="5em">And more... Reflection, Iteration, Comparison.</blurb>
+<blurb fontsize="5em">Go read http://php.net/oop5</blurb>
+
+</slide>

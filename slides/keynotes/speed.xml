@@ -1,0 +1,44 @@
+<slide title="Performance">
+
+<image filename="zeev_andi.jpg" marginright="1em" align="right"/>
+<table title="Realworld benchmark" columns="4" border="0" width="50%" fontsize="2em">
+<cell> </cell><cell>FudForum 2.6.15</cell><cell>Gallery v1.5.1-RC2-cvs-b6</cell><cell></cell>
+<cell> </cell><cell>Message Thread(*)</cell><cell>Album View (9 thumbs)</cell><cell></cell>
+<cell>PHP 4.4 Base</cell><cell align="right" bgcolor="#ccddcc">51.5</cell><cell align="right" bgcolor="#ccddcc">9.4</cell><cell></cell>
+<cell>PHP 5.0</cell><cell align="right" bgcolor="#ccccdd">42.1</cell><cell align="right" bgcolor="#ccccdd">8.2</cell><cell></cell>
+<cell>PHP 5.1</cell><cell align="right" bgcolor="#ccccdd">45.5</cell><cell align="right" bgcolor="#ccccdd">9.2</cell><cell></cell>
+<cell></cell> <cell></cell> <cell></cell> <cell></cell>
+<cell>PHP 4.4 APC 3.0.6</cell><cell align="right" bgcolor="#ccddcc">145.0</cell><cell align="right" bgcolor="#ccccdd">23.4</cell><cell></cell>
+<cell>PHP 5.0 APC 3.0.6</cell><cell align="right" bgcolor="#ccccdd">140.0</cell><cell align="right" bgcolor="#ccccdd">26.2</cell><cell></cell>
+<cell>PHP 5.1 APC 3.0.6</cell><cell align="right" bgcolor="#ccccdd">142.6</cell><cell align="right" bgcolor="#ccddcc">29.8</cell><cell></cell>
+</table>
+
+<break lines="14"/>
+
+<example title="Benchmark details" fontsize="1.1em" marginright="0em" marginleft="1em">
+(*) Cleared fud26_ses table between each test
+
+Client: OS-X 10.4.2 1.5GHz PPC-G4 1G RAM running http_load -parallel 5
+Server: Ubuntu Linux kernel 2.6.10, 1.8GHz AMD Athlon, 1G RAM, cpu bound during test
+Network: 100baseT crossover, no other traffic
+Apache 1.3.33
+
+PHP 4.4 Configure Line
+./configure --with-gd --with-jpeg-dir=/usr --with-freetype-dir=/usr --enable-gd-native-ttf \
+            --with-freetype-dir=/usr --enable-gd-imgstrttf --with-jpeg-dir=/usr --with-png-dir=/usr \
+            --enable-mbstring --with-xpm-dir=/usr/X11R6 --enable-exif --with-config-file-path=/etc \
+            --with-mysql=/usr --with-zlib --with-zlib-dir=/usr --with-expat=/usr --with-imap \
+            --with-gettext --with-kerberos --with-imap-ssl --with-mcrypt=/usr/local --with-iconv \
+            --enable-sockets --with-openssl --with-dom --with-dom-xslt --with-dom-exslt \
+            --without-pic --enable-ftp --with-mime-magic --with-snmp --with-apxs=/usr/bin/apxs
+
+PHP 5.0/5.1 Configure Line
+./configure --with-pdflib=/usr/local --with-gd --with-jpeg-dir=/usr --with-freetype-dir=/usr \
+            --enable-gd-native-ttf --with-freetype-dir=/usr --enable-gd-imgstrttf --with-jpeg-dir=/usr \
+            --with-png-dir=/usr --with-xpm-dir=/usr/X11R6 --enable-exif --with-config-file-path=/etc/php5 \
+            --with-mysql=/usr --with-zlib --with-zlib-dir=/usr --with-expat=/usr --with-imap \
+            --with-gettext --with-kerberos --with-imap-ssl --with-mcrypt=/usr/local --with-iconv \
+            --enable-sockets --with-openssl --with-apxs=/usr/bin/apxs --without-pic --disable-pdo \
+            --enable-soap --with-xmlreader --with-xsl --enable-ftp --with-curl --prefix=/usr/local/php5 
+</example>
+</slide>

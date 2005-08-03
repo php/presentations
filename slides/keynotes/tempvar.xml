@@ -1,0 +1,39 @@
+<slide title="PHP 4.4">
+
+<image filename="derick_chris.jpg" marginright="3em" align="right"/>
+
+<blurb title="It's all about Temp Vars">
+</blurb>
+<example title="Temp Var Example" result="0" marginright="30em"><![CDATA[<?php
+function foo() {
+  $a = "abc";
+  return $a;
+}
+$b = foo();
+?>]]></example>
+
+<example title="Spot the problem" result="0" marginright="30em"><![CDATA[<?php
+function foo() {
+   return 3;
+}
+function bar(&$arg) {
+   $arg = "banana";
+}
+bar(foo());
+?>]]></example>
+<example title="In PHP5 this now gives" hide="1" result="1">
+Fatal error: Only variables can be passed by reference in foo.php on line 8</example>
+
+<example title="And here too" result="1"><![CDATA[<?php
+function & blah($arg) {
+  if(strlen($arg)) {
+    return $arg.'d';
+  }
+  else return null;
+}
+$foo = "abc";
+$a = blah($foo);
+echo $a;
+?>]]></example>
+
+</slide>

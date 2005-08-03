@@ -1,0 +1,39 @@
+<presentation 
+	template="php2" 
+	titlecolor="#1111aa"
+	navbarbackground="url(images/trans-ffffff.png)"
+	logo1="images/php-med-trans-light.gif"
+	titlesize="2em"
+	navbarheight="4.1em"
+>
+<!--
+45 Minutes
+Take a fun romp through the current happenings and characters that make up PHP. Other topics likely to be covered are:
+
+- New features in PHP 5.1
+- An overview of some cool new PECL extensions
+- PHP 5.2 preview
+- Unicode support
+- A general solution to input filtering and data validation
+-->
+<topic>PHP</topic>
+<title>State of PHP</title>
+<date>Aug.3, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/oscon05</url>
+
+<chapter title="Introduction">
+  <slide>slides/titlepage.xml</slide>
+  <slide>slides/keynotes/dev1.xml</slide>
+  <slide>slides/keynotes/dev2.xml</slide>
+  <slide>slides/keynotes/tempvar.xml</slide>
+  <slide>slides/keynotes/xml.xml</slide>
+  <slide>slides/keynotes/oop.xml</slide>
+  <slide>slides/keynotes/pdo.xml</slide>
+  <slide>slides/keynotes/mysqli.xml</slide>
+  <slide>slides/keynotes/speed.xml</slide>
+  <slide>slides/keynotes/unicode.xml</slide>
+  <slide>slides/keynotes/qa.xml</slide>
+</chapter>
+
+</presentation>
