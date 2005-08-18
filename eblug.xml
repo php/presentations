@@ -1,0 +1,69 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+90 Minutes
+-->
+<topic>PHP</topic>
+<title>PHP</title>
+<event>EBLUG Talk</event>
+<location>Fremont</location>
+<date>Aug.17, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+
+<slide>slides/keynotes/dev1.xml</slide>
+<slide>slides/keynotes/dev2.xml</slide>
+
+<slide>slides/intro/max_dev.xml</slide>
+<slide>slides/intro/count0.xml</slide>
+<slide>slides/intro/count1.xml</slide>
+<slide>slides/intro/count2.xml</slide>
+<slide>slides/intro/count3.xml</slide>
+<slide>slides/intro/count4.xml</slide>
+<slide>slides/intro/count5.xml</slide>
+<slide>slides/intro/design.xml</slide>
+<slide>slides/intro/php-template.xml</slide>
+<slide>slides/intro/app_arch.xml</slide>
+<slide>slides/intro/poll1.xml</slide>
+<slide>slides/intro/poll2.xml</slide>
+<slide>slides/intro/poll3.xml</slide>
+<slide>slides/intro/php_tuning1.xml</slide>
+<slide>slides/intro/new_apc.xml</slide>
+<slide>slides/intro/php_opcode_caches3.xml</slide>
+<slide>slides/intro/php_june05_bm.xml</slide>
+
+<slide>slides/intro/tech_bench1.xml</slide>
+<slide>slides/intro/tech_bench2.xml</slide>
+<slide>slides/intro/php_profiling.xml</slide>
+<slide>slides/intro/tech_benchapc1.xml</slide>
+<slide>slides/intro/tech_benchminit.xml</slide>
+<slide>slides/intro/tech_bench5.xml</slide>
+<slide>slides/intro/tech_bench6.xml</slide>
+<slide>slides/intro/pecl_gen.xml</slide>
+
+<slide>slides/intro/repl1.xml</slide>
+<slide>slides/intro/repl3.xml</slide>
+<slide>slides/intro/security_agenda.xml</slide>
+<slide>slides/intro/input_filter.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+
+<slide>slides/keynotes/xml.xml</slide>
+<slide>slides/intro/sqlite1.xml</slide>
+<slide>slides/intro/sqlite2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+
+<slide>slides/intro/eblug_ref.xml</slide>
+</presentation>
