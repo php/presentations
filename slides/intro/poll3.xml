@@ -1,6 +1,6 @@
 <slide title="Application Logic">
 
-<example title="SQL Schema" marginleft="1em" marginright="0em" fontsize="1.6em" type="php"><![CDATA[CREATE TABLE poll_votes (
+<example title="SQL Schema" marginleft="1em" marginright="0em" fontsize="1.5em" type="php"><![CDATA[CREATE TABLE poll_votes (
   user_name varchar(32) binary NOT NULL default '',
   poll_id smallint(6) NOT NULL default '0',
   question smallint(6) NOT NULL default '0',
@@ -19,7 +19,7 @@ CREATE TABLE poll_results (
   INDEX (poll_id)
 ) TYPE=MyISAM;]]></example>
 
-<example title="Logic Layer" marginleft="1em" marginright="0em" fontsize="1.6em"><![CDATA[<?php
+<example title="Logic Layer" marginleft="1em" marginright="0em" fontsize="1.5em"><![CDATA[<?php
 
 function db_connect() {
   mysql_pconnect("localhost","poll_user","password");

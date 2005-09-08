@@ -4,12 +4,12 @@
 In our template helper layer we implement our frontend API.
 </blurb>
 
-<example title="Helper Layer" fontsize="1.6em" marginright="0em" marginleft="1em"><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<example title="Helper Layer" fontsize="1.5em" marginright="0em" marginleft="1em"><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
   <head>
     <base href="http://php.net" />
     <title>Questionnaire</title>
-    <style type="text/css" media="screen">@import "/poll/style.css";</style>
+    <style type="text/css">@import "/poll/style.css";</style>
   </head>
 <body>
 <h3>Questionnaire</h3>

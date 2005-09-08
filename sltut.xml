@@ -1,0 +1,109 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+180 Minutes
+-->
+<topic>PHP</topic>
+<title>PHP Tutorial</title>
+<event>FOSSSL-05</event>
+<location>Colombo, Sri Lanka</location>
+<date>Sept.7, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/intro/embed2.xml</slide>
+<slide>slides/intro/basics.xml</slide>
+<slide>slides/intro/modes.xml</slide>
+<slide>slides/intro/forms3.xml</slide>
+<slide>slides/intro/syntax.xml</slide>
+<slide>slides/intro/typing.xml</slide>
+<slide>slides/intro/arrays.xml</slide>
+<slide>slides/intro/funcs.xml</slide>
+
+<slide>slides/keynotes/dev1.xml</slide>
+<slide>slides/keynotes/dev2.xml</slide>
+
+<slide>slides/intro/max_dev.xml</slide>
+<slide>slides/intro/count0.xml</slide>
+<slide>slides/intro/count1.xml</slide>
+<slide>slides/intro/count2.xml</slide>
+<slide>slides/intro/count3.xml</slide>
+<slide>slides/intro/count4.xml</slide>
+<slide>slides/intro/count5.xml</slide>
+
+<chapter title="PHP5">
+<slide>slides/intro/php5_agenda.xml</slide>
+<slide>slides/intro/php5_evolution.xml</slide>
+<slide>slides/intro/php5_revolution.xml</slide>
+<slide>slides/intro/php5_refclone.xml</slide>
+<slide>slides/intro/php5_construct.xml</slide>
+<slide>slides/intro/php5_private.xml</slide>
+<slide>slides/intro/php5_protected.xml</slide>
+<slide>slides/intro/php5_setget.xml</slide>
+<slide>slides/intro/php5_call.xml</slide>
+<slide>slides/intro/php5_exceptions.xml</slide>
+<slide>slides/intro/php5_static.xml</slide>
+<slide>slides/intro/php5_autoload.xml</slide>
+<slide>slides/intro/php5_interfaces.xml</slide>
+<slide>slides/intro/php5_final.xml</slide>
+<slide>slides/intro/php5_hinting.xml</slide>
+<slide>slides/intro/php5_iteration.xml</slide>
+<slide>slides/intro/php5_clone.xml</slide>
+<slide>slides/intro/php5_comparison.xml</slide>
+<slide>slides/intro/php5_reflection.xml</slide>
+
+<slide>slides/intro/streams.xml</slide>
+<slide>slides/intro/sqlite1.xml</slide>
+<slide>slides/intro/sqlite2.xml</slide>
+<slide>slides/intro/php5q2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/php5_image.xml</slide>
+</chapter>
+
+<slide>slides/intro/design.xml</slide>
+<slide>slides/intro/php-template.xml</slide>
+<slide>slides/intro/php-template1.xml</slide>
+<slide>slides/intro/php-i18n.xml</slide>
+<slide>slides/intro/php-l10n.xml</slide>
+<slide>slides/intro/unicode1.xml</slide>
+<slide>slides/intro/app_arch.xml</slide>
+<slide>slides/intro/poll1.xml</slide>
+<slide>slides/intro/poll2.xml</slide>
+<slide>slides/intro/poll3.xml</slide>
+<slide>slides/intro/php_tuning1.xml</slide>
+<slide>slides/intro/new_apc.xml</slide>
+<slide>slides/intro/php_opcode_caches3.xml</slide>
+<slide>slides/intro/php_june05_bm.xml</slide>
+
+<slide>slides/intro/tech_bench1.xml</slide>
+<slide>slides/intro/tech_bench2.xml</slide>
+<slide>slides/intro/php_profiling.xml</slide>
+<slide>slides/intro/tech_benchapc1.xml</slide>
+<slide>slides/intro/tech_benchminit.xml</slide>
+<slide>slides/intro/tech_bench5.xml</slide>
+<slide>slides/intro/tech_bench6.xml</slide>
+<slide>slides/intro/pecl_gen.xml</slide>
+
+<slide>slides/intro/repl1.xml</slide>
+<slide>slides/intro/repl3.xml</slide>
+
+<slide>slides/intro/security_agenda.xml</slide>
+<slide>slides/intro/input_filter.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+
+<slide>slides/intro/sltut_ref.xml</slide>
+</presentation>

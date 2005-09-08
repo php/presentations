@@ -9,7 +9,7 @@ if ($db) {
 
   $result = sqlite_query($db,'select bar from foo');
   $record = sqlite_fetch_array($result);
-  echo "<pre>"; print_r($record); echo "</pre>";
+  var_export($record);
 } else {
   die ($sqliteerror);
 }

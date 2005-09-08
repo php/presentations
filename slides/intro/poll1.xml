@@ -14,7 +14,7 @@ content people to create new polls and we want to provide them with a flexible
 template API.
 </blurb>
 
-<example title="Poll Template"><![CDATA[<?php
+<example title="Poll Template" fontsize="1.9em"><![CDATA[<?php
 start_poll(1);
 $os = array("FreeBSD","Linux","OSX","Windows","Other");
 ?>

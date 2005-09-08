@@ -16,8 +16,10 @@
  appid     string (required) The application ID. See Application IDs for more information.
  context   string (required) The context to extract terms from (UTF-8 encoded).
  query     string            An optional query to help with the extraction process.</example>
+
 <example title="Example" fontsize="1.4em" rfontsize="1.3em" result="1"><![CDATA[<?php
-$context = "Italian sculptors and painters of the renaissance favored the Virgin Mary for inspiration.";
+$context = "Italian sculptors and painters of the ".
+           "renaissance favored the Virgin Mary for inspiration.";
 $url = 'http://api.search.yahoo.com/ContentAnalysisService/V1/termExtraction';
 $post = "query=madonna&appid=RESTDemo&context=".rawurlencode($context);
 $ch = curl_init();
@@ -27,8 +29,10 @@ curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
 $xml = simplexml_load_string(curl_exec($ch));
 curl_close($ch);
-$config = array('indent'=>TRUE, 'indent-attributes'=>TRUE, 'wrap-attributes'=>TRUE,'input-xml'=>TRUE, 'output-xml'=>TRUE);
-echo nl2br(str_replace(' ','&nbsp;',htmlspecialchars(tidy_parse_string($xml->asXML(),$config))));
+$config = array('indent'=>TRUE, 'indent-attributes'=>TRUE,
+                'wrap-attributes'=>TRUE,'input-xml'=>TRUE, 'output-xml'=>TRUE);
+echo nl2br(str_replace(' ','&nbsp;',
+     htmlspecialchars(tidy_parse_string($xml->asXML(),$config))));
 ?>]]></example>
 
 </slide>
