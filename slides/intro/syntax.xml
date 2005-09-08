@@ -1,5 +1,5 @@
 <slide title="Language Syntax">
-<example title="C-Like Syntax" fontsize="1.8em" width="40em"><![CDATA[<?
+<example title="C-Like Syntax" fontsize="1.8em" width="50em"><![CDATA[<?
 for ($loop = -5; $loop < 5; $loop++) {
     if ($i < 0) {
         echo "-";

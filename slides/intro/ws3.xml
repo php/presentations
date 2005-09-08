@@ -37,7 +37,7 @@ if(!file_exists($tmp) || filemtime($tmp) < (time()-7200)) {
    fclose($stream);
    rename($tmpf, $tmp);
 }
-$obj = simplexml_load_file(file_get_contents($tmp));
+$obj = simplexml_load_file($tmp);
 ?>]]></example>
 
 </slide>

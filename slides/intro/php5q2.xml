@@ -1,18 +1,18 @@
 <slide title="PHP5 XML">
 
-<example title="All XML handling based on libxml2" result="0"><![CDATA[<?php
+<example title="All XML handling based on libxml2" result="0" marginright="1em"><![CDATA[<?php
 $dom = new domDocument;
 $dom->load('data.xml');
 ?>]]></example>
 
-<example title="XSL" result="0"><![CDATA[<?php
+<example title="XSL" result="0" marginright="1em"><![CDATA[<?php
 $domxsl = domDocument::load('stylesheet.xsl');
 $proc = new xsltProcessor;
 $proc->importStyleSheet($domxsl);
 echo $proc->transformToXML($dom);
 ?>]]></example>
 
-<example title="XPath" result="0"><![CDATA[<?php
+<example title="XPath" result="0" marginright="1em" fontsize="1.8em"><![CDATA[<?php
 $ctx = new domXPath($dom);
 $result = $ctx->query(
   '/breakfast_menu/food[@itemno > 3]/price/text()');
@@ -22,11 +22,49 @@ foreach($result as $node) {
 }
 ?>]]></example>
 
-<example title="SimpleXML" result="0"><![CDATA[<?php
+<example title="SimpleXML" result="0" marginright="1em" fontsize="1.8em"><![CDATA[<?php
   $menu = simplexml_load_file('menu.xml');
   foreach ($menu->food as $item) {
     echo "{$item->price}\t{$item->name}<br />\n";
   }
 ?>]]></example>
+
+<example title="SimpleXML" result="0" fontsize="1.4em" marginright="1em"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1"?>
+<breakfast_menu>
+ <food>
+  <name>Belgian Waffles</name>
+  <price>$5.95</price>
+  <description>two of our famous Belgian Waffles with 
+               plenty of real maple syrup</description>
+  <calories>650</calories>
+ </food>
+ <food>
+  <name>Strawberry Belgian Waffles</name>
+  <price>$7.95</price>
+  <description>light Belgian waffles covered with strawberries
+               and whipped cream</description>
+  <calories>900</calories>
+ </food>
+ <food>
+  <name>Berry-Berry Belgian Waffles</name>
+  <price>$8.95</price>
+  <description>light Belgian waffles covered with an assortment of
+               fresh berries and whipped cream</description>
+  <calories>900</calories>
+ </food>
+ <food>
+  <name>French Toast</name>
+  <price>$4.50</price>
+  <description>thick slices made from our homemade bread</description>
+  <calories>600</calories>
+ </food>
+ <food>
+  <name>Homestyle Breakfast</name>
+  <price>$6.95</price>
+  <description>two eggs, bacon or sausage, toast, and 
+               our ever-popular hash browns</description>
+  <calories>950</calories>
+ </food>
+</breakfast_menu>]]></example>
 
 </slide>

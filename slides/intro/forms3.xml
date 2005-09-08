@@ -1,0 +1,21 @@
+<slide title="Form Handling">
+<example title="Traditional Form Handling" result="0"><![CDATA[<form action="action.php" method="POST">
+Your name: <input type=text name=name><br>
+You age: <input type=text name=age><br>
+<input type=submit>
+</form>]]></example>
+
+<example hide="1" result="1"><![CDATA[<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
+Your name: <input type=text name=name><br>
+You age: <input type=text name=age><br>
+<input type=submit>
+</form>]]></example>
+
+<example title="action.php" result="1" condition="name"><![CDATA[<?php
+$name = htmlspecialchars($_POST['name']);
+$age = htmlspecialchars($_POST['age']);
+?>
+Hi <?php echo $name ?>.  
+You are <?php echo $age ?> years old.]]></example>
+
+</slide>

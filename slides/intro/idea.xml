@@ -36,13 +36,14 @@ Here is the same thing in PHP which produces the same output.
 </blurb>
 <example type="php" fontsize="1.4em"><![CDATA[<html><body><table>
 <?php
-  mysql_connect("host","user","passwd") or die(mysql_error());	
-  $res = mysql_db_query("my_db","SELECT * FROM my_table") or die(mysql_error());
+  mysql_connect('host','user','passwd') or die(mysql_error());	
+  $res = mysql_db_query('my_db','SELECT * FROM my_table') 
+         or die(mysql_error());
   while(($row = mysql_fetch_row($res))) {
-      echo "<tr>";
+      echo '<tr>';
       for ($i=0 ; $i < mysql_num_fields($res); $i++) 
-          printf("<td>%s</td>\n",$row[$i]);
-      echo "</tr>";
+          echo "<td>{$row[$i]}</td>\n";
+      echo '</tr>';
   }
 ?>
 </table></body></html>]]></example>

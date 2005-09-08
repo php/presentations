@@ -1,0 +1,33 @@
+<slide title="Flickr API">
+<blurb>
+Flickr also has a REST interface
+</blurb>
+
+<example title="REST Query to get public photos" result="0" fontsize="1em"><![CDATA[http://flickr.com/services/rest/?method=flickr.people.getPublicPhotos&user_id=56053642@N00&api_key=...]]></example>
+
+<example title="Returned XML" result="0" fontsize="1.4em"><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<rsp stat="ok">
+  <photos page="1" pages="1" perpage="100" total="2">
+    <photo id="39006009" owner="56053642@N00" secret="f2086066d5" server="33"
+           title="IMG_7564.JPG" ispublic="1" isfriend="0" isfamily="0" />
+    <photo id="39006000" owner="56053642@N00" secret="4ec57bd51f" server="28"
+           title="IMG_7551.JPG" ispublic="1" isfriend="0" isfamily="0" />
+  </photos>
+</rsp>]]></example>
+
+<example fontsize="1.2em" title="We can parse it like this"><![CDATA[<?php
+function photo_url($p, $size='s', $ext='jpg') {
+ return "http://photos{$p['server']}.flickr.com/{$p['id']}_{$p['secret']}_{$size}.{$ext}";
+}
+$xml = simplexml_load_file($url);
+$perpage = $xml->photos['perpage'];
+$total = $xml->photos['total'];
+
+foreach($xml->photos->photo as $photo) {
+  echo '<a href="'.$photo_url($photo.'m').'">';
+  echo '<img src="'.$photo_url($photo).'" height="75" width="75" />';
+  echo '<br />'.$photo['title'].'</a><br />';
+}
+?>]]></example>
+
+</slide>

@@ -20,8 +20,9 @@
 <!-- Cheating to make sure the slide will work without APC -->
 <example hide="1" result="1"><![CDATA[<?php
   $a = array(1,2,3);
-  echo "<pre>"; var_dump($a); echo "</pre>";
   $b = $a;
+  $a = 0;
+  echo "<pre>"; var_dump($a); echo "</pre>";
   echo "<pre>"; var_dump($b); echo "</pre>";
 ?>]]></example>
 
