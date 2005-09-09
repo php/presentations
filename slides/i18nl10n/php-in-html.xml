@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>PHP and HTML</title>
+
+	<list>
+		<bullet>PHP's strength is its embedding in HTML.</bullet>
+		<bullet>These HTML blocks should be in the same encoding as the PHP script embedded in it.</bullet>
+		<bullet>Embedded HTML will be converted to the output encoding.</bullet>
+	</list>
+<break lines="2"/>
+
+	<example result="1"><![CDATA[<?php
+	$string = "⿈黈"; echo $string[0];
+?>旭<?php
+	echo $string[1];
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

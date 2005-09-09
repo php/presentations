@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>String Conversion</title>
+
+	<list>
+		<bullet>There will never be any implicit conversion from or to Binary Strings.</bullet>
+		<bullet>The setting %unicode.from_error_subst_char% can be used to specify a hex value that should be used if a character can not be converted.</bullet>
+	</list>
+
+	<blurb>Autoconversion of strings:</blurb>
+	<example result="1"><![CDATA[<?php
+	$native = (string) "blåbær";
+	var_inspect($native);
+	echo "<br/>\n";
+
+	$native .= "øl";
+	var_inspect($native);
+]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

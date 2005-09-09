@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Unicode Is More</title>
+
+	<list>
+		<bullet>Unicode is a multi-linguage character set</bullet>
+		<bullet>Standard encodings: UTF-8, UTF-16 and UTF-32</bullet>
+		<bullet>Defines algorithms for plenty of issues (Collation, Bidi, Normalization)</bullet>
+		<bullet>It defines properties for characters:</bullet>
+	</list>
+
+	<example><![CDATA[Å
+00C5;LATIN CAPITAL LETTER A WITH RING ABOVE;Lu;0;L;0041 030A;;;;
+	N;LATIN CAPITAL LETTER A RING;;;00E5;
+
+Ǆ
+01C4;LATIN CAPITAL LETTER DZ WITH CARON;Lu;0;L;<compat> 0044 017D;;;;
+	N;LATIN CAPITAL LETTER D Z HACEK;;;01C6;01C5
+
+Å
+212B;ANGSTROM SIGN;Lu;0;L;00C5;;;;
+	N;ANGSTROM UNIT;;;00E5;
+]]></example>
+</slide>

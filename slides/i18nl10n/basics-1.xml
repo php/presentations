@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>How is It Going To Work?</title>
+
+	<list>
+		<bullet>UTF-16 as internal encoding</bullet>
+		<bullet>All functions and operators work on Normalized Composed Characters (NFC)</bullet>
+		<bullet>All identifiers can contain Unicode characters</bullet>
+		<bullet>Internationalization is explicit, not implicit</bullet>
+		<bullet>You can turn off Unicode semantics if you don't need it</bullet>
+	</list>
+</slide>

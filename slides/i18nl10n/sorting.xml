@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Sorting Strings</title>
+	<subtitle>The French Are Weird</subtitle>
+
+	<blurb>
+		How would you sort: *côté* (side), *côte* (coast), *cote* (dimension), *coté* (with dimensions)?
+	</blurb>
+	
+	<break/>
+	<blurb>
+		Logical is: cote, cot*é*, c*ô*te, c*ô*t*é*
+	</blurb>
+
+<div effect="hide">
+	<break/>
+	<blurb>
+		But the french do it like: cote, c*ô*te, cot*é*, c*ô*t*é*
+	</blurb>
+
+	<break lines="4"/>
+	<blurb>The french are not the only ones with "weird" sorting!</blurb>
+
+	<list>
+		<bullet>In Lithuanian, *y* is sorted between *i* and *k*.</bullet>
+		<bullet>In traditional Spanish *ch* is treated as a single letter, and sorted between *c* and *d*.</bullet>
+		<bullet>In Swedish *v* and *w* are considered variant forms of the same letter.</bullet>
+		<bullet>In German dictionaries, *öf* would come before *of*. In phone books the situation is the exact opposite.</bullet>
+	</list>
+</div>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

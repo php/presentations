@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Localization and Internationalization</topic>
+<title>PHP 6 and Unicode</title>
+<event>php|works 2005</event>
+<location>Toronto, Canada</location>
+<date>September 15th, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/clustering/title.xml</slide>
+
+
+<!-- CHARSETS -->
+<slide>slides/i18nl10n/what-languages.xml</slide> <!-- what is the problem actually? -->
+<slide>slides/i18nl10n/definitions1.xml</slide>
+<slide>slides/i18nl10n/definitions2.xml</slide>
+
+<!-- THE CHALLENGE -->
+<slide>slides/i18nl10n/challenges.xml</slide>
+<slide>slides/i18nl10n/challenges2.xml</slide>
+<slide>slides/i18nl10n/sorting.xml</slide>
+<slide>slides/i18nl10n/convert.xml</slide>
+
+<!-- PHP NOW -->
+<slide>slides/i18nl10n/php-can-do-it-now.xml</slide>
+<slide>slides/i18nl10n/php-now-iconv.xml</slide>
+<slide>slides/i18nl10n/php-now-mbstring.xml</slide>
+<slide>slides/i18nl10n/php-now-locales.xml</slide>
+
+<!-- UNICODE -->
+<slide>slides/i18nl10n/unicode.xml</slide>
+<slide>slides/i18nl10n/composition.xml</slide>
+<slide>slides/i18nl10n/properties.xml</slide>
+
+<!-- PHP SOON -->
+<slide>slides/i18nl10n/goals-1.xml</slide>
+<slide>slides/i18nl10n/basics-1.xml</slide>
+<slide>slides/i18nl10n/surrogates.xml</slide> <!-- how does the encoding work? -->
+<slide>slides/i18nl10n/icu.xml</slide>
+<slide>slides/i18nl10n/roadmap.xml</slide>
+<slide>slides/i18nl10n/unicode-semantics.xml</slide>
+
+<!-- STRINGS -->
+<slide>slides/i18nl10n/string-types.xml</slide>
+<slide>slides/i18nl10n/string-literals.xml</slide>
+<slide>slides/i18nl10n/string-binary.xml</slide>
+<slide>slides/i18nl10n/string-escape.xml</slide>
+
+<!-- DIFFERENT ENCODINGS -->
+<slide>slides/i18nl10n/encoding-overview.xml</slide>
+<slide>slides/i18nl10n/script-encoding.xml</slide>
+<slide>slides/i18nl10n/script-encoding-pragma.xml</slide>
+<slide>slides/i18nl10n/runtime-encoding.xml</slide>
+<slide>slides/i18nl10n/http-input-encoding.xml</slide>
+<slide>slides/i18nl10n/http-output-encoding.xml</slide>
+<slide>slides/i18nl10n/fallback-encoding.xml</slide>
+
+
+<!-- CONVERSIONS -->
+<slide>slides/i18nl10n/conversion.xml</slide>
+<slide>slides/i18nl10n/characters-not-bytes.xml</slide>
+
+<!-- ARRAY KEYS -->
+<slide>slides/i18nl10n/array-keys.xml</slide>
+
+<!-- INLINE HTML -->
+<slide>slides/i18nl10n/php-in-html.xml</slide>
+
+<!-- PHP's STRING FUNCTIONS -->
+<slide>slides/i18nl10n/upgrading-functions.xml</slide>
+
+<!-- LOCALES -->
+
+
+<!-- EXIT -->
+<slide>slides/i18nl10n/resources.xml</slide> <!-- resources -->
+</presentation>

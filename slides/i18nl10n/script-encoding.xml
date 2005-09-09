@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Script Encoding</title>
+
+	<list>
+		<bullet>Is used by the parser to read in your script</bullet>
+		<bullet>Determines how string literals and identifiers are handled</bullet>
+		<bullet>Can be set with an ini setting (script_encoding) or with an inline "pragma"</bullet>
+		<bullet>No matter what the script's encoding is, the resulting string is always a Unicode string (or identifier)</bullet>
+	</list>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

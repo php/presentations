@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Do We Need Something New?</title>
+
+	<list>
+		<bullet>PHP only deals with bytes, not characters.</bullet>
+		<bullet>PHP doesn't know anything about encodings.</bullet>
+		<bullet>Having a binary image in a string is nice, but not if you need
+		to deal with i18n</bullet>
+	</list>
+</slide>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>HTTP Output Encoding</title>
+
+	<list>
+		<bullet>Is used as encoding for the output of the script</bullet>
+		<bullet>Script output is encoding on the fly</bullet>
+		<bullet>Binary strings will never be automatically converted</bullet>
+	</list>
+
+	<blurb>On the fly encoding:</blurb>
+	<example result="1"><![CDATA[<?php
+	declare(encoding="iso-8859-1");
+	ini_set('unicode.output_encoding', 'utf-8');
+	
+	$str = "rødbærsyltetøy<br/>";
+	$bstr = b"rødbærsyltetøy<br/>";
+
+	echo $str, $bstr;
+?>]]></example>
+</slide>

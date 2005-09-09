@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Anything Else That Sucks?</title>
+	<subtitle>Locales in PHP</subtitle>
+
+	<list>
+		<bullet>Some of PHP's functions can make use of POSIX-locales</bullet>
+		<bullet>But that's only a few of them</bullet>
+		<bullet>Those locales are system dependent (different names, rules, etc...)</bullet>
+		<bullet>They are not always available</bullet>
+	</list>
+<!--
+vim: encoding=utf8
+-->
+</slide>

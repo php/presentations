@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Script Encoding</title>
+	<subtitle>Setting Script Encoding With declare()</subtitle>
+
+	<blurb>Interpreting an iso-8859-1 script as UTF-8:</blurb>
+	<example result="1"><![CDATA[<?php
+	declare(encoding="iso-8859-1");
+	$str = "blå = 靑";
+	var_inspect($str);
+?>]]></example>
+<break lines="3"/>
+
+	<blurb>Interpreting an UTF-8 script as UTF-8:</blurb>
+	<example result="1"><![CDATA[<?php
+	declare(encoding="utf-8");
+	$str = "blå = 靑";
+	var_inspect($str);
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

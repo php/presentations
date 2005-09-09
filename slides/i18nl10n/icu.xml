@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>How Will It Be Implemented?</title>
+
+	<blurb>ICU: IBMs Components for Unicode</blurb>
+	<list>
+		<bullet>Unicode is extremely complex, with ICU we don't have to implement it ourselves</bullet>
+		<bullet>ICU has a lot of features, is fast, stable, portable, extensible, Open Source and well maintained and supported</bullet>
+	</list>
+
+	<blurb>ICU Features</blurb>
+	<list>
+		<bullet>Character, String and Text processing</bullet>
+		<bullet>Text Transformations</bullet>
+		<bullet>Encoding Conversions</bullet>
+		<bullet>Collation</bullet>
+		<bullet>Localization: date, time, number, currency formatting</bullet>
+	</list>
+</slide>

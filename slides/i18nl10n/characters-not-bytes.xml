@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Characters, not Bytes!</title>
+
+	<list>
+		<bullet>All functions and operators work on Code Points (characters) and not Code Units (bytes)</bullet>
+		<bullet>Backward compatible if you only used single byte encodings before</bullet>
+		<bullet>This does create overhead though, as we need to scan through a whole string</bullet>
+	</list>
+
+	<blurb>String Indexes:</blurb>
+	<example result="1"><![CDATA[<?php
+	$string = "⿈旭"; // bytes are: 0xE9 0xBB 0x83 0xE6 0x97 0xAD
+	
+	echo $string[1];
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Literal Escapes</title>
+
+	<blurb>When Unicode semantics are enabled, you can use the \uXXXX and
+	\UXXXXXX escape sequences to specific Unicode code points</blurb>
+<break lines="2"/>
+
+	<example result="1"><![CDATA[
+<?php // script is encoded in UTF-8
+$str = "金 is equivalent with \u91d1<br/>\n";
+echo $str, "<br/>\n";
+
+echo "𐂃 is equivalent with:<br/>\n";
+echo "- \U010083<br/>\n";
+echo "- \C{LINEAR B IDEOGRAM B105 EQUID}";
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

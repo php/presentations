@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Roadmap</title>
+
+	<list type="number">
+		<bullet>|008800|Support Unicode in the Engine|</bullet>
+		<bullet>|008800|Upgrade exist||FF8800|ing functions|</bullet>
+		<bullet>|008800|Add new| |FF8800|functions for explicit i18n/l10n support|</bullet>
+		<bullet>|FF3300|Expose ICU's features|</bullet>
+	</list>
+</slide>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>String Literals</title>
+	<subtitle>string -> string, unicode</subtitle>
+
+	<blurb>Unicode Semantics are *off*:</blurb>
+	<example><![CDATA[<?php // script is encoded in UTF-8
+$str = "hallo daar!";
+echo gettype($str), ': ', strlen($str), "\n";
+
+$str = "привет!";
+echo gettype($str), ': ', strlen($str), "\n";
+?>]]></example>
+	<blurb>outputs:</blurb>
+	<example>string: 11
+string: 13</example>
+<break/>
+
+	<blurb>Unicode Semantics are *on*:</blurb>
+	<example><![CDATA[<?php // script is encoded in UTF-8
+$str = "hallo daar!";
+echo gettype($str), ': ', strlen($str), "\n";
+
+$str = "привет!";
+echo gettype($str), ': ', strlen($str), "\n";
+?>]]></example>
+	<blurb>outputs:</blurb>
+	<example>unicode: 11
+unicode: 7</example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

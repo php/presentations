@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>UTF 16 Surrogates</title>
+
+	<blurb>
+		As UTF-16 is supposed to encode the full Unicode character set.	</blurb>
+	<list>
+		<bullet>UTF-16 uses a double two-byte sequence for characters outside the BMP</bullet>
+		<bullet>Special ranges in the Unicode range are used for this</bullet>
+	</list>
+	<example><![CDATA[byte 1 = 1101 10yy yyyy yyyy
+byte 2 = 1101 11xx xxxx xxxx
+
+MUSICAL SYMBOL SIXTEENTH NOTE
+(0x1d161)     1101 10yy yyyy yyyy  1101 11xx xxxx xxxx
+              ---- --++ +111 0100  ---- --01 0110 0001
+			  ========================================
+              1101 1000 0111 0100  1101 1101 0110 0001
+                   0xd8      0x74       0xdd      0x61]]></example>
+	<list>
+		<bullet>Code *point*: a character</bullet>
+		<bullet>Code *unit*: a two-byte sequence with UTF-16</bullet>
+	</list>
+		
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

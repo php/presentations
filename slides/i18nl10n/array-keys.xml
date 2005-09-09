@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Array Keys</title>
+
+	<list>
+		<bullet>All string types can be used as array keys.</bullet>
+		<bullet>Behavior depends on %unicode_semantics% setting.</bullet>
+	</list>
+
+	<blurb>
+		With Unicode semantics on:
+	</blurb>
+	<list>
+		<bullet>(string)"key" and (unicode)"key" index the same element</bullet>
+	</list>
+<break/>
+
+	<blurb>
+		With Unicode semantics off:
+	</blurb>
+	<list>
+		<bullet>(string)"key" and (unicode)"key" index a *different* element</bullet>
+	</list>
+
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

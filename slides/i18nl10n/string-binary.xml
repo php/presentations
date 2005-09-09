@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>B1nary String Literals</title>
+	<subtitle>string -> binary</subtitle>
+
+	<list>
+		<bullet>Binary string literals are explicit</bullet>
+		<bullet>The actual variable's contents depend on the script encoding</bullet>
+	</list>
+
+	<example result="1"><![CDATA[<?php // script is encoded in UTF-8
+function varc($s) {
+	for ($i = 0; $i < strlen($s); ++$i)
+		echo sprintf("%02X ", ord($s[$i]));
+	echo "<br/>\n";
+}
+
+$s1 = b'weed';
+$s2 = b"qua\x72k";
+$s3 = b<<<EOBS
+	gold = 金
+EOBS;
+
+	echo varc($s1), varc($s2), varc($s3), "\n";
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

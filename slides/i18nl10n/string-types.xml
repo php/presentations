@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>String Types</title>
+
+	<list>
+		<bullet>*binary*: Used to represent binary data, for example the contents of a JPEG file.</bullet>
+	</list>
+	<example>.  P  N  G   .  .  .  .   .  .  .   .  I  H  D  R
+89 50 4E 47  0D 0A 1A 0A  00 00 00 0D  49 48 44 52</example>
+<break/>
+
+	<list>
+		<bullet>*string*: Native string, encoded with the current script's encoding. For backwards compatibility.</bullet>
+	</list>
+	<example>B  l  å      b  æ     r   ø     l 
+62 6C C3 A5  62 C3 A6 72  C3 A8 6C</example>
+<break/>
+
+	<list>
+		<bullet>*unicode*: Strings, internally encoded in UTF-16.</bullet>
+	</list>
+	<example>B     l      å     b      æ     r      ø     l 
+62 00 6C 00  E5 00 62 00  E6 00 72 00  F8 00 6C 00</example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

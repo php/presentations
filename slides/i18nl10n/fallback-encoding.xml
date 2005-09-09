@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Fallback Encoding</title>
+
+	<list>
+		<bullet>Used if any of the other encoding settings is not set</bullet>
+		<bullet>Easy way of configuring all encoding settings</bullet>
+		<bullet>Defaults to UTF-8 if it's not set</bullet>
+	</list>
+
+	<blurb>INI Settings Recap:</blurb>
+	<example><![CDATA[unicode.script_encoding = "UTF-8"         
+	Source encoding for your script
+
+unicode.runtime_encoding = "iso-8859-15"
+	Internal encoding used for "native strings"
+	
+unicode.from_error_subst_char = "2f"
+	Hex value of substitution character
+	
+unicode.http_input_encoding = "UTF-8"
+	Default encoding for HTTP input variables
+	
+unicode.output_encoding = "UTF-8"
+	Encoding used for script output
+
+unicode.fallback_encoding = "UTF-8"
+	Fallback encoding]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

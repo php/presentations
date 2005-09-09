@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Runtime Encoding</title>
+
+	<list>
+		<bullet>Determines which encoding to attach to Native Strings</bullet>
+		<bullet>Also used when functions are not upgraded to support Unicode yet</bullet>
+	</list>
+<break/>
+	<blurb>Encoding problems:</blurb>
+	<example result="1"><![CDATA[<?php
+	ini_set('unicode.runtime_encoding', 'iso-8859-5');
+	ini_set('unicode.from_error_subst_char', '2D');
+	$food = 'blåbær != блабар';
+	$food2 = (string) $food;
+	$food3 = (unicode) $food2;
+	echo $food, '<br/>', $food2, '<br/>', $food3, "<br/>\n";
+?>]]></example>
+</slide>

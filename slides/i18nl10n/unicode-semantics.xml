@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>How Do We Turn It On?</title>
+
+	<list>
+		<bullet>With an INI setting: %unicode_semantics%</bullet>
+		<bullet>It can be turned on "per-request"</bullet>
+		<bullet>(Almost) no behavioral changes when it's not enabled</bullet>
+		<bullet>The setting does not mean you won't have any Unicode strings</bullet>
+	</list>
+</slide>

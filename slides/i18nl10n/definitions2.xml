@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Definitions</title>
+	<subtitle>Examples</subtitle>
+
+	<blurb>Character Set</blurb>
+	<list>
+		<bullet>a b c d e f g h i ... q r s t u v w x y z å æ ø</bullet>
+		<bullet>α β γ δ ε ζ η θ ι κ ... σ τ υ φ χ ψ ω</bullet>
+	</list>
+<break/>
+
+	<blurb>Character Encoding Form</blurb>
+	<list>
+		<bullet>iso-8859-1: a = *97*, ë = *235*</bullet>
+		<bullet>iso-8859-7: a = *97*, α = *225*, ω = *249*</bullet>
+		<bullet>Unicode: a = *97*, ë = *235*, ω = *969*</bullet>
+	</list>
+<break/>
+
+	<blurb>Character Encoding Sequence</blurb>
+	<list>
+		<bullet>iso-8859-1: a = *0x61*, ë = *0xEB*</bullet>
+		<bullet>UTF-8: a = *0x61*, ë = *0xC3* *0xAB*, ω = *0xCF* *0x89*</bullet>
+		<bullet>UTF-16: a = *0x00 0x61*, ë = *0x00* *0xEB*, ω = *0x03* *0xC9*</bullet>
+	</list>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

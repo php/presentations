@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>mbstring</title>
+	<subtitle>Multi Byte Support!</subtitle>
+
+	<list>
+		<bullet>Handles certain encoding problems for you</bullet>
+		<bullet>Updates string functions by "overloading" them</bullet>
+	</list>
+
+<div effect="hide">
+	<blurb>But it doesn't solve:</blurb>
+	<blurb>|ff0000|localization, sorting, searching *and* you still work with binary data only!|</blurb>
+</div>
+<!--
+vim: encoding=utf8
+-->
+</slide>

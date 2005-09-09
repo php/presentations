@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Iconv</title>
+	<subtitle>Character Set Conversions</subtitle>
+
+	<list>
+		<bullet>Is part of glibc</bullet>
+		<bullet>BSD requires an external library</bullet>
+		<bullet>Enabled by default in PHP 5</bullet>
+		<bullet>Supports 100s of character sets</bullet>
+	</list>
+
+<div effect="hide">
+	<blurb>But it doesn't solve:</blurb>
+	<blurb>|ff0000|localization, sorting, searching, encoding detection *and* you still work with binary data only!|</blurb>
+</div>
+<!--
+vim: encoding=utf8
+-->
+</slide>

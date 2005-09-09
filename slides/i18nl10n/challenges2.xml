@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>i18n challenges</title>
+	<subtitle>InternationalizatioN</subtitle>
+
+	<list>
+		<bullet>Support for multiple encodings: conversion, detection,
+		processing...</bullet>
+		<bullet>Support for multiple language in different encodings and
+		scripts</bullet>
+	</list>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

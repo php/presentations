@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>HTTP Input Encoding</title>
+
+	<list>
+		<bullet>In Unicode mode, we need to make sure incoming HTTP variables are correctly converted to Unicode</bullet>
+		<bullet>GET requests never come with encoding attached</bullet>
+		<bullet>POST requests sometimes come with encoding attached, but it might be wrong</bullet>
+		<bullet>If there is no encoding found, PHP can use the %http_input_encoding% setting</bullet>
+		<bullet>Frequently the input variables are in the same encoding as the page where they where send from</bullet>
+		<bullet>But sometimes not, so an application can ask to recode them</bullet>
+	</list>
+</slide>

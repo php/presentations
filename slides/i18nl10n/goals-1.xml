@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>What Do We Want for PHP?</title>
+
+	<list>
+		<bullet>Native Unicode strings</bullet>
+		<bullet>A clear separation between Binary, Native (Encoded) Strings and Unicode Strings</bullet>
+		<bullet>Unicode string literals</bullet>
+		<bullet>Updated language semantics</bullet>
+		<bullet>Where possible, upgrade the existing functions</bullet>
+		<bullet>Backwards compability</bullet>
+		<bullet>PHP should do what most people will expect</bullet>
+		<bullet>Make complex things possible, without making using strings in PHP complex</bullet>
+		<bullet>Must be as good as Java's support</bullet>
+	</list>
+</slide>
