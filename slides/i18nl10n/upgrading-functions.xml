@@ -3,7 +3,12 @@
 	<title>Upgrading Functions</title>
 
 	<list>
-		<bullet></bullet>
+		<bullet>PHP has a few thousand functions</bullet>
+		<bullet>About half of them use a parameter parsing API</bullet>
+		<bullet>This API can be modified to do automatic conversions</bullet>
+		<bullet>Upgrade will be a continuing process</bullet>
+		<bullet>Requires cooperation from extension maintainers</bullet>
+		<bullet>Guidelines are important</bullet>
 	</list>
 <!--
  # vim: encoding=utf8

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>PHP Streams</title>
+
+	<list>
+		<bullet>PHP has a streams-based IO</bullet>
+		<bullet>Generalized file, network, data compression, and other
+		operations</bullet>
+		<bullet>Streams will operate on binary strings by default</bullet>
+	</list>
+
+	<example result="1"><![CDATA[<?php
+	$f = fopen('../presentations/slides/i18nl10n/test-file.txt', 'r');
+	$data = fread($f, 32);
+	var_dump($data);
+
+	$udata = unicode_decode($data, 'latin1');
+	var_dump($udata);
+?>]]></example>
+	
+</slide>

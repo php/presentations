@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>ICU Locales</title>
+	<subtitle>Functions</subtitle>
+
+	<blurb>Functions that are modified to use ICU locales:</blurb>
+	<list>
+		<bullet>*str_word_count()*</bullet>
+		<bullet>*strtoupper()* and *strtolower()*</bullet>
+	</list>
+
+	<blurb>Functions that do not use locale information:</blurb>
+	<list>
+		<bullet>*ucfirst()* and *ucwords()*</bullet>
+		<bullet>*strnatcasecmp()*, *strnatcmp()* and *stristr()*</bullet>
+		<bullet>*strcmp()* and *strncmp()*</bullet>
+	</list>
+
+	<blurb>Additional functions:</blurb>
+	<list>
+		<bullet>*i18n_loc_set_default()*</bullet>
+		<bullet>*strtotitle()* (name not known yet)</bullet>
+		<bullet>*i18n_format_number()* and *i18n_parse_number()*</bullet>
+	</list>
+</slide>

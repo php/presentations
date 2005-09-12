@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>PHP Streams</title>
+	<subtitle>Filters</subtitle>
+
+	<blurb>Explicit filter:</blurb>
+	<example result="1"><![CDATA[<?php
+	$f = fopen('../presentations/slides/i18nl10n/test-file.txt', 'r');
+	stream_filter_append($f, 'unicode.from.latin1');
+	$data = fread($f, 32);
+	var_dump($data);
+?>]]></example>
+<break lines="2"/>
+
+	<blurb>Default filter:</blurb>
+	<example result="1"><![CDATA[<?php
+	$ctx = stream_context_get_default();
+	stream_context_set_params(
+		$ctx, array('input_encoding' => 'latin1'));
+	$f = fopen('../presentations/slides/i18nl10n/test-file.txt', 'rt');
+	$data = fread($f, 32);
+	var_dump($data);
+?>]]></example>
+	
+</slide>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>i18n Extensions</title>
+
+	<list>
+		<bullet>*i18n_core*: always enabled, functions to set the locale, the
+		locale aware string functions. String searching API.</bullet>
+		<bullet>*i18n_regexp*: Unicode aware regular expressions</bullet>
+		<bullet>*i18n_translit*: PECL/translit extension, integrated with ICU's
+		transliteration</bullet>
+		<bullet>*i18n_...*: Other specialized extensions, such as
+		normalization, break iteration...</bullet>
+	</list>
+</slide>

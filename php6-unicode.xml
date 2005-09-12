@@ -9,7 +9,7 @@
 	stylesheet="presentations/slides/perf/ezp.css"
 	backgroundfixed="1" >
 <topic>Localization and Internationalization</topic>
-<title>PHP 6 and Unicode</title>
+<title>Unicode and PHP 6.0: A Look at the Future</title>
 <event>php|works 2005</event>
 <location>Toronto, Canada</location>
 <date>September 15th, 2005</date>
@@ -77,10 +77,23 @@
 
 <!-- PHP's STRING FUNCTIONS -->
 <slide>slides/i18nl10n/upgrading-functions.xml</slide>
+<slide>slides/i18nl10n/upgrading-guidelines.xml</slide>
 
 <!-- LOCALES -->
+<slide>slides/i18nl10n/upgrading-locale.xml</slide>
+<slide>slides/i18nl10n/upgrading-locale-funcs.xml</slide>
+<slide>slides/i18nl10n/locale-example.xml</slide>
+<slide>slides/i18nl10n/locale-example-arrays.xml</slide>
+<slide>slides/i18nl10n/unicode-extensions.xml</slide>
 
+<!-- IDS -->
+<slide>slides/i18nl10n/unicode-identifiers.xml</slide>
+
+<!-- STREAMS -->
+<slide>slides/i18nl10n/streams1.xml</slide>
+<slide>slides/i18nl10n/streams2.xml</slide>
 
 <!-- EXIT -->
+<slide>slides/i18nl10n/when.xml</slide>
 <slide>slides/i18nl10n/resources.xml</slide> <!-- resources -->
 </presentation>

@@ -12,11 +12,7 @@
 byte 2 = 1101 11xx xxxx xxxx
 
 MUSICAL SYMBOL SIXTEENTH NOTE
-(0x1d161)     1101 10yy yyyy yyyy  1101 11xx xxxx xxxx
-              ---- --++ +111 0100  ---- --01 0110 0001
-			  ========================================
-              1101 1000 0111 0100  1101 1101 0110 0001
-                   0xd8      0x74       0xdd      0x61]]></example>
+(0x1d161) => 0xd8 0x74 0xdd 0x61]]></example>
 </slide>
 <!--
 vim: encoding=utf8

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Guidelines</title>
+
+	<list>
+		<bullet>Behavior of functions should not change</bullet>
+		<bullet>Search/comparison functions work in binary mode</bullet>
+		<bullet>Case mapping functions use simple case-mapping</bullet>
+		<bullet>Combining sequences do not influence matching</bullet>
+		<bullet>Formatting functions do not use ICU API</bullet>
+	</list>
+</slide>

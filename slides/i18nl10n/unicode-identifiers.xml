@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Identifiers</title>
+
+	<example result="1"><![CDATA[<?php
+	function 誅(&$兽)
+	{
+		$兽 = "斃";
+	}
+	
+	$彪 = "tiger";
+	誅($彪);
+
+	var_dump($彪);
+?>]]></example>
+
+</slide>

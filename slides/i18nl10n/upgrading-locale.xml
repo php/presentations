@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>ICU Locales</title>
+
+	<list>
+		<bullet>ICU comes with it's own Locale information</bullet>
+		<bullet>PHP currently uses POSIX locales for some functions only</bullet>
+		<bullet>Those functions need to be modified</bullet>
+	</list>
+</slide>

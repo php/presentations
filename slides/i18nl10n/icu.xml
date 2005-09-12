@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>How Will It Be Implemented?</title>
 
-	<blurb>ICU: IBMs Components for Unicode</blurb>
+	<blurb>ICU: International Components for Unicode</blurb>
 	<list>
 		<bullet>Unicode is extremely complex, with ICU we don't have to implement it ourselves</bullet>
 		<bullet>ICU has a lot of features, is fast, stable, portable, extensible, Open Source and well maintained and supported</bullet>
