@@ -2,24 +2,25 @@
 <slide fontsize="6em">
 	<title>Input: Apache module</title>
 
-	<break />
-	<list fontsize="4.5em">
-		<bullet>PHP registers handlers for:</bullet>
-		<bullet marginleft="1.5em" fontsize="2.5em">Mime types:</bullet>
-		<bullet marginleft="4em" fontsize="2em">%application/x-httpd-php%</bullet>
-		<bullet marginleft="4em" fontsize="2em">%application/x-httpd-php-source%</bullet>
-
-		<bullet marginleft="1.5em" fontsize="2.5em">Others:</bullet>
-		<bullet marginleft="4em" fontsize="2em">%text/html% (Apache xbithack)</bullet>
-		<bullet marginleft="4em" fontsize="2em">%php-script% (Apache 2)</bullet>
-
+	<blurb>PHP registers handlers for:</blurb>
+	<blurb>Mime types:</blurb>
+	<list>
+		<bullet>%application/x-httpd-php%</bullet>
+		<bullet>%application/x-httpd-php-source%</bullet>
 	</list>
-	<list fontsize="4.5em">
-		<bullet>On a request, Apache:</bullet>
-		<bullet marginleft="1.5em" fontsize="2.5em">checks if there is a handler for the mime type</bullet>
-		<bullet marginleft="1.5em" fontsize="2.5em">opens the file</bullet>
-		<bullet marginleft="1.5em" fontsize="2.5em">fills a meta data record</bullet>
-		<bullet marginleft="1.5em" fontsize="2.5em">hands PHP a filepointer</bullet>
+
+	<blurb>Others:</blurb>
+	<list>
+		<bullet>%text/html% (Apache xbithack)</bullet>
+		<bullet>%php-script% (Apache 2)</bullet>
+	</list>
+
+	<blurb>On a request, Apache:</blurb>
+	<list>
+		<bullet>checks for the MIME type handler</bullet>
+		<bullet>opens the file</bullet>
+		<bullet>fills a meta data record</bullet>
+		<bullet>hands PHP a filepointer</bullet>
 	</list>
 
 </slide>

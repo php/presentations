@@ -8,14 +8,10 @@
 		<bullet>Lexical analyze script source</bullet>
 		<bullet>Divide into logical blocks of characters</bullet>
 		<bullet>Give special blocks a meaning</bullet>
-		<bullet>%flex%</bullet>
+		<bullet>%flex% (but only 2.5.4!)</bullet>
 	</list>
 
-	<blurb> </blurb>
-	<blurb> </blurb>
-	<blurb> </blurb>
-
-	<blurb>Our friend Mr Parse Error: </blurb>
+	<blurb>The Parse Error: </blurb>
 
 	<example><![CDATA[Parse error: parse error,
 unexpected T_CLASS, expecting ',' or ';' in - on line 2

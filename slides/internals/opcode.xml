@@ -2,20 +2,13 @@
 <slide fontsize="6em">
 	<title>Compiling: Oparrays</title>
 
-	<blurb> </blurb>
-	<blurb> </blurb>
-	<list fontsize="5em">
-		<bullet>Oparrays</bullet>
-	</list>
+	<blurb>Oparrays</blurb>
 	<list fontsize="4em" marginleft="2em">
 		<bullet>Compiled code</bullet>
 		<bullet>One for every script element</bullet>
 	</list>
 
-	<blurb> </blurb>
-	<list fontsize="5em">
-		<bullet>Opcode</bullet>
-	</list>
+	<blurb>Opcode</blurb>
 	<list fontsize="4em" marginleft="2em">
 		<bullet>Basic execution unit</bullet>
 		<bullet>Two operands</bullet>

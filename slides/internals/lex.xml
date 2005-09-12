@@ -2,8 +2,7 @@
 <slide fontsize="6em">
 	<title>Parsing: Tokenize</title>
 
-	<break lines="4"/>
-	<image align="center" filename="tokenize.png"/>
-	<break lines="2"/>
-	<blurb align="center" fontsize="6em">Syntax highlighting = Tokenizing</blurb>
+	<blurb>Syntax highlighting = Tokenizing</blurb>
+<break lines="3"/>
+	<image filename="tokenize.png"/>
 </slide>

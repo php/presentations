@@ -2,14 +2,16 @@
 <slide fontsize="6em">
 	<title>Parsing: Example (1)</title>
 
-	<blurb fontsize="4em">Tokenizer extension:</blurb>
+	<blurb>Tokenizer extension:</blurb>
+<break/>
 
 	<blurb>magic.php:</blurb>
 	<example fontsize="1.7em"><![CDATA[<?php
     function apply_magic(&$a) {
         $a = $a + rand(0,3);
     }
-? >]]></example>
+?>]]></example>
+<break/>
 
 	<blurb>tokenize.php:</blurb>
 	<example fontsize="1.7em"><![CDATA[<?php
@@ -20,6 +22,6 @@
             printf ("%-25s [%s]\n", "", $token[0]);
         }
     }
-? >]]></example>
+?>]]></example>
 
 </slide>

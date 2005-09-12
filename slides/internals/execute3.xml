@@ -2,18 +2,17 @@
 <slide fontsize="6em">
 	<title>Executing: Example (1)</title>
 
-	<blurb> </blurb>
 	<blurb>test.inc:</blurb>
 	<example fontsize="1.7em"><![CDATA[<?php 
     function foo () {
         echo "bar\n";
     }
 	echo "inc\n";
-? >
+?>
 ]]></example>
+<break lines="2"/>
 
-	<blurb> </blurb>
-	<blurb>test.php</blurb>
+	<blurb>test.php:</blurb>
 	<example fontsize="1.7em"><![CDATA[<?php  
     echo "foo\n";
     include "test.inc";

@@ -1,0 +1,11 @@
+<slide>
+	<title>Compiler Caches</title>
+	<subtitle>Serialization</subtitle>
+
+	<image align="center" filename="serialize.png"/>
+<break lines="3"/>
+	<list>
+		<bullet>Serialization into SHM</bullet>
+		<bullet>Direct execution from SHM (mostly)</bullet>
+	</list>
+</slide>

@@ -6,7 +6,7 @@
     function apply_magic(&$a) {
         $a = $a + rand(0,3);
     }
-? >]]></example>
+?>]]></example>
 
 	<example type="text" fontsize="1.1em"><![CDATA[T_OPEN_TAG                [<?php\n]
 T_WHITESPACE              [    ]

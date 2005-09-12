@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>By-Reference Example</title>
+	<subtitle>Deux</subtitle>
+
+	<example result="1"><![CDATA[<?php
+function get_filename_parts($file)
+{
+	$extension = end(explode(".", $file));
+	$filename = substr($file, 0, -(strlen($extension)+1) );
+	return array($filename, $extension);
+}
+
+var_dump(get_filename_parts(__FILE__));
+
+?>]]></example>
+
+</slide>

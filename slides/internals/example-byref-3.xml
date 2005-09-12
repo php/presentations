@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>By-Reference Example</title>
+	<subtitle>Three</subtitle>
+
+	<example result="1"><![CDATA[<?php
+function &dosomething($a)
+{
+	$b = false;
+	return empty($a) ? $b: $a;
+}
+
+$a = 42;
+$foo =& dosomething($a);
+?>]]></example>
+
+</slide>
