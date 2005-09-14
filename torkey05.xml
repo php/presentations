@@ -1,0 +1,47 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+60 Minutes
+-->
+<topic>PHP</topic>
+<title>PHP</title>
+<event>PHP|Works 2005</event>
+<location>Toronto</location>
+<date>Sep 14, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/lamp/failfast.xml</slide>
+
+<slide>slides/keynotes/dev1.xml</slide>
+<slide>slides/keynotes/dev2.xml</slide>
+<slide>slides/intro/php44.xml</slide>
+<slide>slides/keynotes/tempvar.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/keynotes/xml.xml</slide>
+<slide>slides/keynotes/oop.xml</slide>
+<slide>slides/keynotes/pdo.xml</slide>
+<slide>slides/keynotes/speed.xml</slide>
+<slide>slides/keynotes/unicode.xml</slide>
+<slide>slides/intro/sqlite1.xml</slide>
+<slide>slides/intro/sqlite2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ajax.xml</slide>
+
+<slide>slides/intro/torkey05_ref.xml</slide>
+</presentation>
