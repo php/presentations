@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Classnames</title>
+
+	<list>
+		<bullet>Pre-fixed: for namespacing</bullet>
+		<bullet>Readable: for sanity</bullet>
+		<bullet>Slightly Mangled: for clarity</bullet>
+	</list>
+
+<break/>
+	<blurb>ezcMail vs. Mail</blurb>
+<break/>
+	<blurb>ezcTestSuite vs. PHPUnit2_Framework_TestSuite</blurb>
+<break/>
+	<blurb>ezcMailSmtpTransport vs. ezcMailSMTPTransport</blurb>
+
+</slide>

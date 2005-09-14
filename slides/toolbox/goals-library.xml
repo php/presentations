@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Library Goals</title>
+
+	<list>
+		<bullet>Provide a solid platform for PHP application development</bullet>
+		<bullet>Clean and simple API</bullet>
+		<bullet>Keep backward compatibility for longer periods of time</bullet>
+		<bullet>Stable and few regressions</bullet>
+	</list>
+		
+</slide>

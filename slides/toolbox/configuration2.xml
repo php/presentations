@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Configuration</title>
+	<subtitle>More settings</subtitle>
+
+	<blurb>When there are a lot of options:</blurb>
+	<list>
+		<bullet>Use constructor for most used ones</bullet>
+		<bullet>Provide defaults for all others</bullet>
+		<bullet>Add a *setOptions()* function that accepts an array with options</bullet>
+	</list>
+
+</slide>

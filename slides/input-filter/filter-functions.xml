@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Input Filter</title>
+	<subtitle>Data Accessing Functions</subtitle>
+
+	<example>mixed input_get (int source, string name, string filter
+			[, mixed filter_options, [ string characterset ] ]);</example>
+	<list>
+		<bullet>Returns the filtered variable $name from source $source. It
+		uses the filter as specified in $filter, and additional options to the
+		filter through $filter_options.</bullet>
+	</list>
+<break lines="2"/>
+
+	<example>bool filter_data (mixed variable, string filter
+			[, mixed filter_options, [ string characterset ] ]);</example>
+	<list>
+		<bullet>Filters the user supplied variable $variable with the filter
+		$filter using the options as specified in $filter_options. This
+		function modifies the original variable, and returns false if the
+		filter failed, or true if it was succesfull. </bullet>
+	</list>
+</slide>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Autoload Arrays</title>
+
+	<blurb>Using the classname's part as path elements makes ugly paths:</blurb>
+
+	<example><![CDATA[
+ezcMailTransportMta           => mail/transport/mta.php
+ezcMailTransportSmtp          => mail/transport/smtp.php
+ezcMailException              => mail/exception.php
+ezcMailTransportSmtpException => mail/transport/smtp/exception.php
+]]></example>
+<break/>
+
+	<blurb>More logical names (mail_autoload.php):</blurb>
+	<example><![CDATA[
+ezcMailTransportMta           => transports/transport_mta.php
+ezcMailTransportSmtp          => transports/transport_smtp.php
+ezcMailException              => exceptions/mail_exception.php
+ezcMailTransportSmtpException => exceptions/transport_smtp_exception.php
+]]></example>
+<break lines="2"/>
+	<blurb>Some problems:</blurb>
+	<list>
+		<bullet>Clashes in first part of the classname</bullet> 
+		<bullet>Needs installation into correct place for development</bullet>
+	</list>
+</slide>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Input Filter</title>
+	<subtitle>Logical Filters</subtitle>
+
+	<list>
+		<bullet>*int*: Returns the data as an integer.</bullet>
+		<bullet>*boolean*: Returns true for '1' and true and 'false' for '0' and 'false'.</bullet>
+		<bullet>*float*: Returns the data as a floating point value.</bullet>
+		<bullet>*regexp*: Matches the input value as a string against the
+		regular expression. If there is a match then the string is returned,
+		otherwise the filter returns "false". Remarks: Only available if pcre
+		has been compiled into PHP.</bullet>
+	</list>
+	
+</slide>

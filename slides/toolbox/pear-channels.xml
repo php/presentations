@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>PEAR Channels</title>
+
+	<list>
+		<bullet>Allows external entities to setup "PEAR" Servers</bullet>
+		<bullet>Dependency Validation</bullet>
+		<bullet>Aggregated Into http://pearaside.net</bullet>
+	</list>
+
+	<blurb>A channel defines:</blurb>
+	<list>
+		<bullet>The channel name.</bullet>
+		<bullet>An optional suggested user alias for the channel.</bullet>
+		<bullet>A brief summary of the channel's purpose.</bullet>
+		<bullet>An optional package to perform custom validation of packages on both download and packaging.</bullet>
+		<bullet>A list of protocols supported by a channel (XML-RPC, SOAP, and REST are supported).</bullet>
+		<bullet>A list of mirrors and the protocols they support.</bullet>
+	</list>
+		
+</slide>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Extensions</topic>
+<title>The PHP Toolbox</title>
+<event>php|works 2005</event>
+<location>Toronto, Canada</location>
+<date>September 15th, 2005</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/clustering/title.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/toolbox/me.xml</slide>
+<slide>slides/toolbox/talk-about.xml</slide>
+
+<!-- GOALS -->
+<slide>slides/toolbox/goals-library.xml</slide>
+<slide>slides/toolbox/goals-process.xml</slide>
+
+<!-- PEAR -->
+<slide>slides/toolbox/pear-general.xml</slide>
+<slide>slides/toolbox/pear-package-mess.xml</slide>
+<slide>slides/toolbox/pear-low-quality.xml</slide>
+
+<!-- PACKAGES -->
+<slide>slides/toolbox/package-definition.xml</slide>
+
+<!-- CHANNELS -->
+<slide>slides/toolbox/pear-channels.xml</slide>
+
+<!-- ARCHITECTURE -->
+<slide>slides/toolbox/orig-deps.xml</slide>
+<slide>slides/toolbox/dependencies.xml</slide>
+<slide>slides/toolbox/new-deps.xml</slide>
+
+<!-- CLASSNAMES -->
+<slide>slides/toolbox/classnames.xml</slide>
+
+<!-- AUTOLOAD -->
+<slide>slides/toolbox/autoload.xml</slide>
+<slide>slides/toolbox/autoload-arrays.xml</slide>
+
+<!-- DOCUMENTATION -->
+<slide>slides/toolbox/documentation.xml</slide>
+
+<!-- CONFIGURATION FOR CLASSES -->
+<slide>slides/toolbox/configuration.xml</slide>
+<slide>slides/toolbox/configuration2.xml</slide>
+
+<!-- DEBUG/TRIGGERERROR -->
+<slide>slides/toolbox/debugging.xml</slide>
+
+<!-- VERSIONING -->
+<slide>slides/toolbox/versioning.xml</slide>
+<slide>slides/toolbox/versioning-example.xml</slide>
+
+<!-- ========================= -->
+
+<!-- INPUT FILTER -->
+<slide>slides/input-filter/what-is-wrong1.xml</slide>
+<slide>slides/input-filter/sapi-input-filter.xml</slide> <!-- sapi input filter -->
+<slide>slides/input-filter/filter-strip-all.xml</slide> <!-- rasmus 1st filter suggestion (strip all, raw accessor) -->
+<slide>slides/input-filter/filter-accessor.xml</slide> <!-- rasmus 2st filter suggestion (accessor only) -->
+<slide>slides/input-filter/filter-functions.xml</slide>
+<slide>slides/input-filter/filter-filters-sanitizing.xml</slide>
+<slide>slides/input-filter/filter-filters.xml</slide>
+
+<!-- TRANSLIT -->
+<slide>slides/i18nl10n/transliteration.xml</slide>
+<slide>slides/i18nl10n/funny-characters.xml</slide> <!-- æ -> ae -->
+<slide>slides/i18nl10n/cyrillic.xml</slide> <!-- cyrillic -->
+<slide>slides/i18nl10n/other-transliterations.xml</slide> <!-- chinese, greek, hebrew, korean -->
+<slide>slides/i18nl10n/normalize.xml</slide> <!-- curly->normal quotes, punctuation, diacritics -->
+<slide>slides/i18nl10n/other-filters.xml</slide> <!-- currency signs, copyright -->
+
+<!-- DATE/TIME -->
+<slide>slides/time/problems-timezone-abbr.xml</slide>
+<slide>slides/time/problems-dst.xml</slide>
+<slide>slides/time/current-limitations.xml</slide>
+<slide>slides/time/improvements-overview.xml</slide>
+<slide>slides/time/improvements-timezones.xml</slide>
+<slide>slides/time/basic-parse-time-new.xml</slide>
+
+<!-- DATE EXAMPLES -->
+<slide>slides/time/date-format.xml</slide>
+<slide>slides/time/date-modify.xml</slide>
+<slide>slides/time/basic-using-zones.xml</slide>
+<slide>slides/time/default-timezone.xml</slide>
+<slide>slides/time/timezone-object-1.xml</slide>
+<slide>slides/time/timezone-object-2.xml</slide>
+<slide>slides/time/date-timezone.xml</slide> <!-- set/get -->
+<slide>slides/time/timezone-utilities-1.xml</slide>
+<slide>slides/time/timezone-utilities-2.xml</slide>
+
+<!-- DBSCHEMA -->
+
+
+
+</presentation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Component Versioning</title>
+
+	<blurb>Versions for components have three elements: x.y.z, which have the
+	following meaning:</blurb>
+
+	<list>
+		<bullet>*x*: major version number. A component with major version 0 can
+		never be released publically (beta). It will only increase when there
+		is a backwards compatible break in the component's API.</bullet>
+
+		<bullet>*y*: minor version number, is used for all feature
+		additions.</bullet>
+
+		<bullet>*z*: mini version number, is used to denote bugfixes only. This
+		third part can also be a string in the set: (alpha, beta1, beta2,
+		beta~N~, rc1, rc2, rc~N~).</bullet>
+	</list>
+
+	<blurb>*x* and *y* show the version number of the component, the *z* is an
+	addition showing the state (beta etc) or which bugfix release it
+	is.</blurb>
+
+</slide>

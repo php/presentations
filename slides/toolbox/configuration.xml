@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Configuration</title>
+
+	<blurb>Current:</blurb>
+	<example><![CDATA[<?php
+class eZTranslationCache {
+	function cacheDirectory() {
+		require_once 'lib/ezutils/classes/ezini.php';
+		$ini =& eZINI::instance();
+		$locale = $ini->variable( 'RegionalSettings', 'Locale' );
+	}
+}
+?>]]></example>
+<break/>
+
+	<blurb>That would make almost all components depend on *eZINI*, and that's
+	something we want to avoid.</blurb>
+<break/>
+
+	<blurb>New:</blurb>
+	<example><![CDATA[<?php
+class ezcTranslationCache {
+	protected $region;
+
+	function __constructor( $region ) {
+		$this->region = $region;
+	}
+}
+?>]]></example>
+</slide>

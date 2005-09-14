@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Input Filter</title>
+	<subtitle>Sanitizing Filters</subtitle>
+
+	<list>
+		<bullet>*string*: Returns the input variable stripped of XML/HTML tags and other things that can cause XSS problems.</bullet>
+		<bullet>*encoded*: Encodes all 'special' characters as URL encoded values.</bullet>
+		<bullet>*special_chars*: Encodes all 'special' characters as XML entities.</bullet>
+		<bullet>*unsafe_raw*: Returns the input variable as-is.</bullet>
+		<bullet>*email*: Removes all characters that can not be part of a correctly formed e-mail address.</bullet>
+		<bullet>*url*: Removes all characters that can not be part of a correctly formed URI.</bullet>
+		<bullet>*number_int*: Removes everything [^0-9].</bullet>
+		<bullet>*number_float*: Removes everything [^0-9.].</bullet>
+		<bullet>*magic_quotes*: BC filter for people who like magic quotes.</bullet>
+	</list>	
+
+</slide>

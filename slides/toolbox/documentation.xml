@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Documentation</title>
+
+	<blurb>Documentation:</blurb>
+	<list>
+		<bullet>Makes a library usable</bullet>
+		<bullet>API documentation</bullet>
+		<bullet>Examples</bullet>
+		<bullet>Test Cases</bullet>
+	</list>
+<break lines="2"/>
+
+	<blurb>PHP Documentator:</blurb>
+	<list>
+		<bullet>Made for PHP</bullet>
+		<bullet>In use by PEAR</bullet>
+		<bullet>Supported by PHP IDEs</bullet>
+	</list>
+
+</slide>

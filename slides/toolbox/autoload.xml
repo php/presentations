@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Autoload</title>
+
+	<example result="1"><![CDATA[<?php
+function __autoload( $className )
+{
+	$path = preg_replace( '/([A-Z])/', '/\\1', $className );
+	$path = strtolower( $path );
+	$path = str_replace( 'ezc/', '', $path ) . '.php';
+	echo "Loading $path...\n";
+	@include_once $path;
+}
+
+$a = new ezcMailSmtpTransport;
+?>]]></example>
+
+</slide>

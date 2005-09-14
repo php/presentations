@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Debugging</title>
+
+	<blurb>Current:</blurb>
+	<example><![CDATA[<?php
+    function timestamp( $name )
+    {
+        if ( !isset( $this->Timestamps[$name] ) ) {
+            eZDebug::writeError( "...", '...::timestamp' );
+            return false;
+        }
+        return $this->Timestamps[$name];
+    }
+?>]]></example>
+<break/>
+
+	<blurb>That would make almost all components depend on *eZDebug*, and that's
+	something we want to avoid too.</blurb>
+<break/>
+
+	<blurb>New:</blurb>
+	<example><![CDATA[<?php
+class ezcBase {
+	function debug() { }
+}
+
+set_error_handler(array('ezcBase', 'debug'));
+
+trigger_error( "[template] File not found", E_USER_ERROR );
+?>]]></example>
+</slide>

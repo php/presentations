@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Transliteration</title>
+	<subtitle>Introduction</subtitle>
+
+	<list>
+		<bullet>Non-Latin scripts can't be used in a lot of cases, f.e.</bullet>
+		<bullet>Extended-"ASCII" can also not be used</bullet>
+		<bullet>Transliteration converts characters to other characters</bullet>
+		<bullet>Existing extension in PECL: pecl/translit</bullet>
+		<bullet>New extension based on ICU follows soon: i18n_translit</bullet>
+	</list>
+
+</slide>
+<!--
+vim: encoding=utf8
+-->
