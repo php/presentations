@@ -1,0 +1,40 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+60 Minutes
+-->
+<topic>PHP</topic>
+<title>XSS and friends</title>
+<event>PHP|Works 2005</event>
+<location>Toronto</location>
+<date>Sep 15, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/torxss</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/xss.xml</slide>
+<slide>slides/intro/xss1.xml</slide>
+<slide>slides/intro/xss2.xml</slide>
+<slide>slides/intro/xss3.xml</slide>
+<slide>slides/intro/xss_common.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/intro/scanmus.xml</slide>
+<slide>slides/intro/filter.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+
+<slide>slides/intro/offtopic_apc.xml</slide>
+<slide>slides/intro/new_apc.xml</slide>
+<slide>slides/intro/php_opcode_caches3.xml</slide>
+<slide>slides/intro/php_june05_bm.xml</slide>
+
+<slide>slides/intro/torxss_ref.xml</slide>
+</presentation>

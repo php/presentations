@@ -1,0 +1,25 @@
+<slide title="Signing data">
+
+<blurb>
+Whenever you are passing data around either in hidden form fields or cookies, it is a good idea
+to sign it to make sure you get back exactly what you generated.
+</blurb>
+
+<example title="Generating the Hash" fontsize="1.6em" type="php" result="0"><![CDATA[<form action="action.php" method="POST">
+<input type="hidden" name="H[name]" value="<?php echo $Oname?>"/>
+<input type="hidden" name="H[age]" value="<?php echo $Oage?>"/>
+<?php $sign = md5('name'.$Oname.'age'.$Oage.$secret); ?>
+<input type="hidden" name="hash" value="<?php echo $sign?>"" />
+</form>]]></example>
+
+<example title="Validating the Hash" fontsize="1.6em" result="0"><![CDATA[<?php
+$str = "";
+foreach($_POST['H'] as $key=>$value) {
+  $str .= $key.$value;
+}
+if($_POST['hash'] != md5($str.$secret)) {
+  echo "Hidden form data modified"; exit;
+}
+?>]]></example>
+
+</slide>

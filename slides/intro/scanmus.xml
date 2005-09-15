@@ -1,0 +1,18 @@
+<slide title="But...">
+<break lines="1" />
+
+<blurb fontsize="4em">
+Protecting against XSS and other data hacks is easy enough.  The hard part is ensuring you
+haven't forgotten a case.  So what can we do?
+</blurb>
+
+<blurb fontsize="4em">
+One approach is to test thoroughly.  Inject bad data in all possible inputs to your
+application and test the output.  Easier said than done.
+</blurb>
+
+<break lines="2"/>
+
+<blurb fontsize="10em" align="center">Scanmus Demo</blurb>
+
+</slide>

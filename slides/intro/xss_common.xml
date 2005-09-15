@@ -1,0 +1,14 @@
+<slide title="Common Problems">
+<break lines="2" />
+
+<list fontsize="6em">
+<bullet>404 page</bullet>
+<bullet>Search Page</bullet>
+<bullet>PHP_SELF</bullet>
+<bullet>Host header </bullet>
+<bullet>$_GET, $_POST, $_COOKIE</bullet>
+<bullet>$_SERVER</bullet>
+<bullet>?var=1 vs. ?var[]=1</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,32 @@
+<slide title="While you are at it">
+DB Injection - ? placeholder, prepare/execute, mysql_real_escape_string
+Shell Injection - escapeshellarg
+
+<example title="DB" fontsize="1.5em" marginright="0em" result="0"><![CDATA[<?php 
+$Dname = mysql_real_escape_string($_POST['name']);
+$Dage  = (int)$_POST['age'];
+$row = mysql_query("select from users where name='$Dname' and age='$Dage'");
+?>]]></example>
+
+<blurb>Or use ? parameters in PEAR::DB and PDO.  PDO also supports named parameters.</blurb>
+
+<example title="Named Parameters" fontsize="1.5em" marginright="0em" result="0"><![CDATA[<?php 
+$pdo = new PDO('mysql:dbname=testdb');
+
+$sql = 'SELECT name, colour, calories
+        FROM fruit
+        WHERE calories < :calories AND colour = :colour';
+$prep = $pdo->prepare($sql);
+$prep->execute(array(':calories' => 150, ':colour' => 'red'));
+$red = $prep->fetchAll();
+$prep->execute(array(':calories' => 175, ':colour' => 'yellow'));
+$yellow = $prep->fetchAll();
+?>]]></example>
+
+<example title="Shell" fontsize="1.5em" marginright="0em" result="1"><![CDATA[<?php 
+$_POST['name'] = "/tmp;cat /etc/passwd";
+
+$Sname = escapeshellarg($_POST['name']);
+system("ls $Sname 2>&1");
+?>]]></example>
+</slide>

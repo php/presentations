@@ -1,28 +1,17 @@
-<slide title="Input Filtering - Future">
+<slide title="pecl/filter">
 
-<image filename="spoon.jpg" align="right" />
-<break lines="7" />
+<break lines="2" />
 
-<blurb>
-Nobody is going to use that hook!  People don't seem to understand how
-to filter their input.  We'll need to spoonfeed again.
-</blurb>
+<example title="Config"><![CDATA[input_filter.paranoid_admin_default_filter = stripped]]></example>
 
-<break lines="6" />
+<example title="API" marginleft="1em" marginright="0em"><![CDATA[<?php
+$email   = input_get(INPUT_POST, 'name', FS_EMAIL);
+$age     = input_get(INPUT_POST, 'age', FS_NUMBER_INT);  
+$url     = input_get(INPUT_COOKIE, 'url', FS_URL);  
+$raw_msg = input_get(INPUT_POST, 'msg', FS_UNSAFE_RAW);  
+$options = input_array(INPUT_GET, 'options', FS_ENCODED);
 
-<example title="API?"><![CDATA[<?php
-    $name = filter(POST, 'name');  /* Default filter */
-    $age  = filter(POST, 'age', PFILT_INTEGER);  
-    $addr = filter(POST, 'addr', PFILT_TEXT, 'UTF-8');
+$data = filter_data($user_data, FS_STRIPPED);
 ?>]]></example>
 
-<example title="Config"><![CDATA[input_filter.default = FILTER_TEXT
-]]></example>
-
-<example title="Strip, Escape or NULL?"><![CDATA[abc;123{def}
-
-abc 123 def
-abc%3B123%7Bdef%7D]]></example>
-
-<blurb title="Taint Mode?"> </blurb>
 </slide>

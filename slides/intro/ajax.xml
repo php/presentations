@@ -1,0 +1,76 @@
+<slide title="Ajax in 90 seconds">
+<break lines="1" />
+<image filename="ajax.png" align="center" />
+<example title="rpc.js" fontsize="1.75em" marginright="0em"><![CDATA[function createRequestObject() {
+  var ro;
+  ro = window.XMLHttpRequest 
+       ? new XMLHttpRequest() : 
+         new ActiveXObject("Microsoft.XMLHTTP");
+  return ro;
+}
+
+var http = createRequestObject();
+
+function sndReq(action) {
+  http.open('get', 'rpc.php?action='+action);
+  http.onreadystatechange = handleResponse;
+  http.send(null);
+}
+
+function handleResponse() {
+  if(http.readyState == 4){
+    var response = http.responseText;
+    var update = new Array();
+
+    if(response.indexOf('|') != -1) {
+      update = response.split('|');
+      document.getElementById(update[0]).innerHTML = update[1];
+    }
+  }
+}]]></example>
+
+<blurb>
+This creates a request object along with a send request and handle
+response function.  So to actually use it, you could include this js in
+your page.  Then to make one of these backend requests you would tie it
+to something.  Like an onclick event or a straight href like this:
+</blurb>
+
+<example fontsize="2em" marginright="0em"><![CDATA[ <a href="javascript:sndReq('foo')">[foo]</a>]]></example>
+
+<blurb>That means that when someone clicks on that link what actually happens
+is that a backend request to rpc.php?action=foo will be sent.</blurb>
+
+<example title="rpc.php" marginright="0em"><![CDATA[<?php
+  switch($_REQUEST['action']) {
+    case 'foo':
+      /* do something */
+      echo "foo|foo done";
+      break;
+    ...
+  }
+?>]]></example>
+<blurb>
+Now, look at handleResponse.  It parses the "foo|foo done" string and
+splits it on the '|' and uses whatever is before the '|' as the dom
+element id in your page and the part after as the new innerHTML of that
+element.  That means if you have a div tag like this in your page:
+</blurb>
+<example marginright="45em"><![CDATA[<div id="foo">
+</div>]]></example>
+
+<blurb>Once you click on that link, that will dynamically be changed to:</blurb>
+
+<example marginright="45em"><![CDATA[<div id="foo">
+  foo done
+</div>]]></example>
+
+<blurb>Expanding this approach a bit to send multiple parameters in the
+request, for example, would be really simple.  Something like:</blurb>
+
+<example fontsize="1.9em"><![CDATA[function sndReqArg(action,arg) {
+  http.open('get', 'rpc.php?action='+action+'&arg='+arg);
+  http.onreadystatechange = handleResponse;
+  http.send(null);
+}]]></example>
+</slide>

