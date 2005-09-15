@@ -1,0 +1,16 @@
+<slide title="Default Filtering">
+
+<blurb>Input filter hook added in PHP 5.0's C API</blurb>
+
+<example title="Input Filter hook"><![CDATA[PHP_MINIT_FUNCTION(my_input_filter)
+{
+    sapi_register_input_filter(my_sapi_input_filter);
+    return SUCCESS;
+}]]></example>
+
+<blurb>
+For a complete example, see %README.input_filter% in the PHP 5 source distribution and pecl/filter.
+For PHP4, you will have to patch your source with http://lerdorf.com/php/input_filter.txt
+</blurb>
+
+</slide>
