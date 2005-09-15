@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>E_RECOVERABLE_ERROR</title>
+	<subtitle>Between E_ERROR and E_WARNING</subtitle>
+
+<example><![CDATA[<?php
+   class Foo {
+   }
+
+   function blah (Foo $a)
+   {
+   }
+
+   function error()
+   {
+       $a = func_get_args();
+       var_dump($a);
+   }
+
+   set_error_handler('error');
+
+   blah (new StdClass);
+   echo "ALIVE!\n";
+?>
+]]></example>
+	<list>
+		<bullet>Used if there is a fatal error which doesn't leave the engine in an unstable state.</bullet>
+		<bullet>If not handled in a user defined error handler -> E_FATAL.</bullet>
+	</list>
+	
+</slide>

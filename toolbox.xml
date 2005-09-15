@@ -48,6 +48,7 @@
 <!-- AUTOLOAD -->
 <slide>slides/toolbox/autoload.xml</slide>
 <slide>slides/toolbox/autoload-arrays.xml</slide>
+<slide>slides/toolbox/autoload-exception-problem.xml</slide>
 
 <!-- DOCUMENTATION -->
 <slide>slides/toolbox/documentation.xml</slide>
@@ -62,6 +63,9 @@
 <!-- VERSIONING -->
 <slide>slides/toolbox/versioning.xml</slide>
 <slide>slides/toolbox/versioning-example.xml</slide>
+
+<!-- E_RECOVERABLE_ERROR -->
+<slide>slides/toolbox/e_recoverable.xml</slide>
 
 <!-- ========================= -->
 
@@ -100,8 +104,6 @@
 <slide>slides/time/date-timezone.xml</slide> <!-- set/get -->
 <slide>slides/time/timezone-utilities-1.xml</slide>
 <slide>slides/time/timezone-utilities-2.xml</slide>
-
-<!-- DBSCHEMA -->
 
 
 

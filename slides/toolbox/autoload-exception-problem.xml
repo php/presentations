@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf8"?>
+<slide fontsize="6em">
+	<title>Autoload and Exceptions</title>
+
+	<example><![CDATA[<?php
+	try
+	{
+	}
+	catch( ezcA $e )
+	{
+	}
+?>]]></example>
+<break lines="2"/>
+
+	<blurb>
+		This would always call the __autoload() function to load the exception
+		class, even if it's not needed.
+	</blurb>
+	
+</slide>
