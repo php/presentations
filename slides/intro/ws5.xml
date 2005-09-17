@@ -21,7 +21,7 @@ function photo_url($p, $size='s', $ext='jpg') {
 }
 $url = "http://flickr.com/services/rest/?method=flickr.people.getPublicPhotos".
        "&user_id=56053642@N00&per_page=2&api_key=3aba8184848f9263b80795c95529bcd1";
-$xml = simplexml_load_file($url);
+$xml = @simplexml_load_file($url) or die("Unable to contact Flickr");
 $perpage = $xml->photos['perpage'];
 $total = $xml->photos['total'];
 

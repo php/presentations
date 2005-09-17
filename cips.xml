@@ -1,0 +1,51 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+60 Minutes
+-->
+<topic>PHP</topic>
+<title>PHP</title>
+<event>CIPS</event>
+<location>Toronto</location>
+<date>Sep 16, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/lamp/failfast.xml</slide>
+<slide>slides/lamp/the-lamp-stack.xml</slide>
+<slide>slides/lamp/comparison.xml</slide>
+<slide>slides/lamp/apache-usage.xml</slide>
+<slide>slides/lamp/php-usage.xml</slide>
+<slide>slides/lamp/history.xml</slide>
+
+<slide>slides/keynotes/dev1.xml</slide>
+<slide>slides/keynotes/dev2.xml</slide>
+
+<slide>slides/intro/app_arch.xml</slide>
+<slide>slides/intro/scale1.xml</slide>
+<slide>slides/intro/scale.xml</slide>
+<slide>slides/intro/repl3.xml</slide>
+
+<slide>slides/intro/php5q2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+
+<slide>slides/intro/cips_ref.xml</slide>
+
+<slide>slides/intro/ajax.xml</slide>
+<slide>slides/intro/unicode1.xml</slide>
+
+</presentation>

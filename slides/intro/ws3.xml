@@ -2,13 +2,15 @@
 <blurb>
 SOAP makes my head hurt.  Let's look at some stuff we can all actually understand instead.
 </blurb>
-<example title="Take a pinch of RSS" result="1" rfontsize="1.2em"><![CDATA[<?php
+<example title="Take a pinch of RSS" result="1" fontsize="1.6em" rfontsize="1.2em"><![CDATA[<?php
 $url = 'http://buzz.yahoo.com/feeds/buzzoverl.xml';
-$xml = simplexml_load_file($url);
-foreach($xml->channel->item as $item) {
-  $ret[(string)$item->title] = (string)$item->link;
-}
-echo "<pre>"; print_r($ret); echo "</pre>";
+$xml = @simplexml_load_file($url);
+if($xml) {
+  foreach($xml->channel->item as $item) {
+    $ret[(string)$item->title] = (string)$item->link;
+  }
+  echo "<pre>"; print_r($ret); echo "</pre>";
+} else echo "Can't get to Yahoo!";
 ?>]]></example>
 
 <example fontsize="1.6em" title="Add a spoonful of REST"><![CDATA[<?php
