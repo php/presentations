@@ -2,7 +2,7 @@
 <blurb>
 SOAP makes my head hurt.  Let's look at some stuff we can all actually understand instead.
 </blurb>
-<example title="Take a pinch of RSS" result="1" fontsize="1.6em" rfontsize="1.2em"><![CDATA[<?php
+<example title="Take a pinch of RSS" result="1" fontsize="1.6em" rfontsize="1.2em" required_extension="simplexml"><![CDATA[<?php
 $url = 'http://buzz.yahoo.com/feeds/buzzoverl.xml';
 $xml = @simplexml_load_file($url);
 if($xml) {

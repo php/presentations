@@ -17,7 +17,7 @@
  context   string (required) The context to extract terms from (UTF-8 encoded).
  query     string            An optional query to help with the extraction process.</example>
 
-<example title="Example" fontsize="1.4em" rfontsize="1.3em" result="1"><![CDATA[<?php
+<example title="Example" fontsize="1.4em" rfontsize="1.3em" result="1" required_extension="tidy"><![CDATA[<?php
 $context = "Italian sculptors and painters of the ".
            "renaissance favored the Virgin Mary for inspiration.";
 $url = 'http://api.search.yahoo.com/ContentAnalysisService/V1/termExtraction';
