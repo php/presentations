@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Counting results of SELECT statement</title>
+<blurb>A very popular MySQL idiom is to use the return value of %mysql_query()% to
+reflect the number of rows that will be returned by the SELECT statement that was
+issued.</blurb>
+<list>
+<bullet>But in most database APIs, the return value from executing a SELECT statement is simply true or false reflecting success or failure.</bullet>
+<bullet>If your database supports scrollable cursors, and you request a scrollable cursor when you issue your SELECT statement, you *will* get an accurate count of the number of rows in the result set.</bullet>
+<bullet>Most times, however, you can either issue a separate SELECT COUNT(*)
+if you actually want the number of rows, or just try fetching the first row from the result set.</bullet>
+<bullet>For small result sets, you can use %PDO::fetchAll()% to return all of the rows in the result set. The %ibm_db2% extension that Apache Derby requires will probably implement a %db2_fetch_all()% function in the near future to provide the equivalent functionality.</bullet>
+<bullet>You can also step through the results of a forward-only cursor until the fetch call fails and increment a counter to find out how many rows are in the result set.</bullet>
+</list>
+</slide>

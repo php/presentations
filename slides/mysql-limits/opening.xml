@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Assessing the depth of penetration</title>
+<blurb>
+First, let's find every PHP file where the application calls a mysql function:
+</blurb>
+<example>find . -name '*.php' -exec grep -Hil 'mysql_' {} \; 
+
+-H with filename
+-i ignore case (because PHP is case-insensitive, MYSQL_ is possible but quite rare)
+-l list only the filename, with no context for the match
+</example>
+<blurb>
+Results in:
+</blurb>
+<example>./FREDts/content/geshi/geshi/php-brief.php
+./FREDts/content/geshi/geshi/php.php
+./components/com_user/user.php
+./installation/install2.php
+./installation/install4.php
+./installation/index.php
+./modules/mod_stats.php
+./administrator/components/com_checkin/admin.checkin.php
+./administrator/components/com_admin/admin.admin.html.php
+./includes/feedcreator.class.php
+./includes/phpInputFilter/class.inputfilter.php
+./includes/database.php
+./includes/getids.php
+</example>
+<blurb>
+Hmm. FRED doesn't offer a clean separation of database functionality,
+either by database (everything is calling the %mysql_% functions directly inline)
+or by type of functionality (for example, there isn't a %*_db.php% file corresponding
+to each subdirectory).
+</blurb>
+<blurb>
+One way of proceeding would be to abstract the database functionality into a
+separate layer so that the correct database implementation can be loaded based
+on a configuration option.
+</blurb>
+</slide>
+
+

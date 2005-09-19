@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navsize="1.5em"
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="1"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/mysql-limits/yuck.css"
+	backgroundfixed="1" >
+<topic>Databases</topic>
+<title>LIMIT Yourself to MySQL No More</title>
+<event>php|works 2005</event>
+<location>Toronto, Ontario</location>
+<date>September 17th, 2005</date>
+<speaker>Dan Scott</speaker>
+<email>dan@coffeecode.net</email>
+<url>http://coffeecode.net/</url>
+
+<slide>slides/mysql-limits/title.xml</slide>
+<slide>slides/mysql-limits/intro.xml</slide>
+<slide>slides/mysql-limits/why-not-mysql.xml</slide>
+<slide>slides/mysql-limits/subject.xml</slide>
+<slide>slides/mysql-limits/target.xml</slide>
+<slide>slides/mysql-limits/opening.xml</slide>
+<slide>slides/mysql-limits/intertwining.xml</slide>
+<slide>slides/mysql-limits/limit.xml</slide>
+<slide>slides/mysql-limits/counting.xml</slide>
+<slide>slides/mysql-limits/reinventing.xml</slide>
+<slide>slides/mysql-limits/abstraction.xml</slide>
+<slide>slides/mysql-limits/abstraction-2.xml</slide>
+<slide>slides/mysql-limits/schemas.xml</slide>
+<slide>slides/mysql-limits/schemas-time.xml</slide>
+<slide>slides/mysql-limits/schemas-indexes.xml</slide>
+<slide>slides/mysql-limits/schemas-schemas.xml</slide>
+<slide>slides/mysql-limits/wrapping-up.xml</slide>
+<slide>slides/mysql-limits/resources.xml</slide>
+<slide>slides/mysql-limits/thank-you.xml</slide>
+
+</presentation>

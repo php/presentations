@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Reflections</title>
+<list>
+<bullet>Portability is hard. Refactoring an application that was hardcoded for a single database is a daunting task.</bullet>
+<bullet>Make your porting life easier by basing your application on standard SQL, then optimizing with database-specific tweaks where needed.</bullet>
+<bullet>There's a lot to be said for using the Model-View-Controller pattern to design your application. If your model is implemented in text files or a database partitioned over dozens of servers, the view and controller elements of the application shouldn't even notice.</bullet>
+<bullet>If each page in your application requires lots of nested dynamic includes as a result of your desire to support multiple databases, and it is affecting performance, consider designing the application installer as a simple precompiler that resolves all of the database-based includes at install time and places them statically in your pages.</bullet>
+<bullet>If you are using PHP 5.x, consider using PDO as your primary native database access interface. You won't have to worry about significant API differences, and will be able to focus on plain old SQL and database differences instead.</bullet>
+<bullet>If you are using PHP 4.x, consider using a database abstraction layer (MDB2, ADOdb, PEAR::DB) with an opcode cache to minimize API differences. Remember that it might take time for new database APIs to be added to any particular abstraction.</bullet>
+<bullet>You might be surprised by what databases your users are going to want to run your application on in the future. Leave some room in your design to accept their generous contribution of a model that supports their database.</bullet>
+</list>
+</slide>

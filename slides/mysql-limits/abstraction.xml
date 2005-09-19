@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Database abstractions</title>
+<blurb>
+Well, so far so good. But while FRED appears to be defining a database access
+abstraction in %includes/database.php%, the implementation is hardcoded for
+MySQL using the %mysql% extension, which somewhat defeats the purpose of
+abstracting an interface. Let's take a quick look for our favourite MySQL keyword
+to see where the real work is being done:
+</blurb>
+
+<example><![CDATA[daniels@dullard:~/phpworks> find . -name '*.php' -exec grep -Hil 'LIMIT' {} \;
+./FREDts/content/geshi/geshi/xml.php
+./FREDts/content/geshi/geshi/css.php
+./FREDts/content/geshi/geshi/sql.php
+./FREDts/content/geshi/geshi/php-brief.php
+./FREDts/content/geshi/geshi/html4strict.php
+./FREDts/content/geshi/geshi/javascript.php
+./FREDts/content/geshi/geshi/php.php
+./FREDts/content/geshi/geshi.php
+./FREDts/content/mospaging.php
+./components/com_rss/rss.php
+./components/com_content/content.html.php
+./components/com_content/content.php
+./components/com_banners/banners.php
+./components/com_newsfeeds/newsfeeds.html.php
+./installation/install4.php
+./modules/mod_latestnews.php
+./modules/mod_banners.php
+./modules/mod_sections.php
+./modules/mod_archive.php
+./modules/mod_mostread.php
+./modules/mod_newsflash.php
+./administrator/components/com_contact/admin.contact.php
+./administrator/components/com_content/admin.content.php
+./administrator/components/com_messages/admin.messages.html.php
+./administrator/components/com_messages/admin.messages.php
+./administrator/components/com_menumanager/admin.menumanager.html.php
+./administrator/components/com_menumanager/admin.menumanager.php
+./administrator/components/com_typedcontent/admin.typedcontent.php
+./administrator/components/com_FREDts/admin.FREDts.php
+./administrator/components/com_syndicate/admin.syndicate.php
+./administrator/components/com_statistics/admin.statistics.html.php
+./administrator/components/com_statistics/admin.statistics.php
+./administrator/components/com_poll/admin.poll.php
+./administrator/components/com_modules/admin.modules.php
+./administrator/components/com_sections/admin.sections.php
+./administrator/components/com_categories/admin.categories.php
+./administrator/components/com_banners/admin.banners.html.php
+./administrator/components/com_banners/admin.banners.php
+./administrator/components/com_config/admin.config.php
+./administrator/components/com_newsfeeds/admin.newsfeeds.php
+./administrator/components/com_templates/admin.templates.php
+./administrator/components/com_languages/admin.languages.php
+./administrator/components/com_weblinks/admin.weblinks.php
+./administrator/components/com_frontpage/admin.frontpage.php
+./administrator/components/com_admin/admin.admin.html.php
+./administrator/components/com_menus/admin.menus.php
+./administrator/components/com_menus/admin.menus.html.php
+./administrator/components/com_trash/admin.trash.php
+./administrator/components/com_trash/admin.trash.html.php
+./administrator/components/com_users/admin.users.html.php
+./administrator/components/com_users/admin.users.php
+./administrator/modules/mod_popular.php
+./administrator/modules/mod_latest.php
+./administrator/modules/mod_logged.php
+./administrator/modules/mod_fullmenu.php
+./administrator/modules/mod_components.php
+./administrator/includes/pcl/pcltar.lib.php
+./administrator/includes/pageNavigation.php
+./index.php
+./includes/frontend.html.php
+./includes/Cache/Lite.php
+./includes/domit/php_text_cache.php
+./includes/gacl_api.class.php
+./includes/sef.php
+./includes/pathway.php
+./includes/FRED.php
+./includes/database.php
+./includes/patTemplate/patTemplate.php
+./includes/patTemplate/patTemplate/Modifier/Surround.php
+./includes/phpmailer/class.smtp.php
+./includes/pageNavigation.php
+]]>
+</example>
+</slide>

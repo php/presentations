@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>The target database</title>
+<blurb>The goal I will be working towards is porting this application so that it will run
+against a standards-compliant database.  Yes, *standards* is a loaded term.</blurb>
+<blurb>We'll be looking at porting to Apache Derby, which has as its project charter the
+goal of being the SQL92 standards-compliant database engine for the Apache DB project.</blurb>
+<link leader="Apache Derby project - " href="http://db.apache.org/derby" />
+<blurb>When you write for Apache Derby, you gain almost complete upwards compatibility with DB2
+(a standards-compliant and standards-setting database).</blurb>
+<blurb>~Full disclosure~: I wrote a book on Apache Derby coming out in the next couple of months,
+and as an IBM employee DB2 pays my mortgage and puts food on my table.</blurb>
+</slide>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Intertwining</title>
+<blurb>
+So let's look at the most obvious file in the list: %includes/database.php%:
+</blurb>
+<example><![CDATA[class database {
+       /* ... */
+       /**
+        * Database object constructor
+        * @param string Database host
+        * @param string Database user name
+        * @param string Database user password
+        * @param string Database name
+        * @param string Common prefix for all tables
+        */
+        function database( $host='localhost', $user, $pass, $db, $table_prefix ) {
+                // perform a number of fatality checks, then die gracefully
+                if (!function_exists( 'mysql_connect' )) {
+                        //or die( 'FATAL ERROR: MySQL support not available.  Please check your configuration.' );
+                        $mosSystemError = 1;
+                        $basePath = dirname( __FILE__ );
+                        include $basePath . '/../configuration.php';
+                        include $basePath . '/../offline.php';
+                        exit();
+                }]]></example>
+<blurb>
+Well, we immediately see the assumptions about MySQL being the one and only
+database that FRED will ever connect to. One approach to opening up this file
+structure to support multiple databases would be:
+</blurb>
+<list>
+<bullet type="number">Turn %database.php% into a directory</bullet>
+<bullet type="number">Include database-specific implementations inside that directory</bullet>
+<bullet type="number">Load the right implementation based on a configuration directive</bullet>
+</list>
+<example><![CDATA[includes/database/adodb.php
+includes/database/ibm_db2.php
+includes/database/ibm_db2_derby.php
+includes/database/mdb2.php
+includes/database/mysql.php
+includes/database/oci8.php
+includes/database/pgsql.php]]></example>
+</slide>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>LIMITing success</title>
+<blurb>
+%includes/database.php% also gives us our first encounter with the LIMIT clause:
+</blurb>
+<example><![CDATA[function move( $dirn, $where='' ) {
+                $k = $this->_tbl_key;
+
+                $sql = "SELECT $this->_tbl_key, ordering FROM $this->_tbl";
+
+                if ($dirn < 0) {
+                        $sql .= "\nWHERE ordering < $this->ordering";
+                        $sql .= ($where ? "\n   AND $where" : '');
+                        $sql .= "\nORDER BY ordering DESC\nLIMIT 1";
+                } else if ($dirn > 0) {
+                        $sql .= "\nWHERE ordering > $this->ordering";
+                        $sql .= ($where ? "\n   AND $where" : '');
+                        $sql .= "\nORDER BY ordering\nLIMIT 1";
+                }]]>
+</example>
+<blurb>
+In this case, it appears that the LIMIT clause is being used because the
+application wants to prevent MySQL from returning every row in the result
+set. Most other databases will simply return the first row when requested,
+and nothing more, avoiding the whole problem of having to artificially
+limit your result set.
+</blurb>
+<blurb>
+If you do have a legitimate requirement for limiting the rows returned by
+a query in this fashion, and your database does not support the LIMIT clause
+(MySQL, PostgreSQL, SQLite do) there are a number of quasi-standard approaches
+you can take depending on the database you are running against:
+</blurb>
+<list>
+<bullet>Forward-only cursors: calling %db2_fetch_row()% or %PDO->fetch()% steps through the rows in the result set, without retrieving them,
+until you reach the row(s) that you actually want to return. Fetching until the call fails will also let you count the approximate number of rows in the result set.</bullet>
+<bullet>Scrollable cursors: calling %db2_fetch_row()% or %PDO->fetch()% with a specified row number enables you to skip to the right section and retrieve only the rows you want. Not supported by Apache Derby.</bullet>
+<bullet>Standard SQL2003 approach: Subselect %ROW_NUMBER OVER(ORDER BY ~column~) AS number, ~column~% -- but this is currently only supported by DB2 and Oracle, so we cannot rely on that for Apache Derby.</bullet>
+</list>
+<example><![CDATA[SELECT * FROM (
+    SELECT ROW_NUMBER OVER (ORDER BY column) AS rownum, id, cost
+    FROM items
+    WHERE cost < 595
+)
+WHERE rownum >= 10 AND rownum <= 20
+]]></example>
+</slide>

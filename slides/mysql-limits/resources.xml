@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Resources</title>
+<blurb>*Apache Derby*</blurb>
+<link leader="Apache Derby project- " href="http://db.apache.org/derby" />
+<link leader="Apache Derby: Off to the Races- " href="http://www.amazon.com/exec/obidos/tg/detail/-/0131855255" />
+<link leader="ibm_db2 extension for PHP- " href="http://php.net/ibm_db2" />
+<blurb>*SQL Portability*</blurb>
+<link leader="A Gentle Introduction to SQL (includes SQL92 BNF) - " href="http://sqlzoo.net" />
+<link leader="Comparison of different SQL implementations - " href="http://troels.arvin.dk/db/rdbms/" />
+<link leader="SQL in a Nutshell- " href="http://www.oreilly.com/catalog/sqlnut2" />
+<link leader="SQL API Portability: Mysql-isms To Be Avoided for API Portability- " href="http://home.fnal.gov/~dbox/SQL_API_Portability.html" />
+<blurb>*Database abstraction layers*</blurb>
+<link leader="ADOdb- " href="http://adodb.sourceforge.net" />
+<link leader="MDB2- " href="http://pear.php.net/mdb2" />
+<link leader="PEAR::DB- " href="http://pear.php.net/db" />
+<blurb>*Standard PHP API for database access*</blurb>
+<link leader="PHP Data Objects (PDO)- " href="http://php.net/pdo" />
+</slide>

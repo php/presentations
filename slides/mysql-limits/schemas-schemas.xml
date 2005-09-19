@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Creating schemas portably</title>
+<blurb>
+Database abstraction layers also try to solve the problem of creating portable schemas.
+</blurb>
+<list>
+<bullet>
+Both MDB2_Schema and ADOdb XML Schema (AXMLS) define an XML format (different formats, of course), that their respective abstraction layer can use to create a schema for different databases.
+</bullet>
+<bullet>
+Both handle basic data types, as well as more sophisticated features like sequences, auto-increment columns, UNIQUE and NOT NULL constraints, indexes, and primary keys.
+</bullet>
+</list>
+<example type="sql" title="MDB2_Schema example"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1" ?>
+<database>
+
+ <name><variable>database</variable></name>
+ <create><variable>create</variable></create>
+ <overwrite><variable>overwrite</variable></overwrite>
+
+ <table>
+
+  <name>ce_bad_word</name>
+
+  <declaration>
+
+   <field>
+    <name>badword_id</name>
+    <type>integer</type>
+    <notnull>true</notnull>
+    <default>0</default>
+   </field>
+
+   <field>
+    <name>word</name>
+    <type>text</type>
+    <length>255</length>
+    <notnull>true</notnull>
+    <default> </default>
+   </field>]]></example>
+<example type="sql" title="ADOdb-xmlschema example"><![CDATA[<?xml version="1.0" encoding="ISO-8859-1" ?>
+<schema version="0.2">
+
+  <table name="users">
+    <desc>A typical users table for our application.</desc>
+    <field name="userId" type="I">
+      <descr>A unique ID assigned to each user.</descr>
+
+      <KEY/>
+      <AUTOINCREMENT/>
+    </field>
+    
+    <field name="userName" type="C" size="16"><NOTNULL/></field>
+
+    
+    <index name="userName">
+      <descr>Put a unique index on the user name</descr>
+      <col>userName</col>
+      <UNIQUE/>
+
+    </index>
+  </table>]]></example>
+</slide>

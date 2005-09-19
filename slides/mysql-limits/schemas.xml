@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Database schemas</title>
+<blurb>
+So far we have not found any actual schema for the database -- that is, the
+structure of the database tables and columns. This is another area that
+databases tend to differ in rather creative ways. FRED contains all of the
+CREATE TABLE statements in %installation/sql/FRED.sql%. Let's take a look and
+try to spot some potential problems:
+</blurb>
+
+<example type="sql"><![CDATA[CREATE TABLE `#__bannerclient` (
+  `cid` int(11) NOT NULL auto_increment,
+  `name` varchar(60) NOT NULL default '',
+  `extrainfo` text NOT NULL,
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` time default NULL,
+  PRIMARY KEY  (`cid`)
+) TYPE=MyISAM;]]></example>
+
+<list>
+<bullet effect="hide">
+%TYPE=MyISAM%: this clause will make any database other than MySQL choke.
+Note also that the table type gives you speed at the expense of transactions,
+relational integrity, row locking, and other standard database features.
+</bullet>
+
+<bullet effect="hide">
+Quotation marks: most databases do not allow you to put single-quotes around table
+names, column names, and other SQL identifiers and will return an error message.
+You can use double-quotes, but these indicate to the database that the SQL
+identifier will be case-sensitive.
+</bullet>
+
+<bullet effect="hide">
+The auto_increment clause used to define an identity column may not be
+understood by most databases, as this is non-standard DDL. "Standard" DDL
+defines an auto-incrementing column using the GENERATED ALWAYS AS IDENTITY
+clause instead:
+</bullet>
+</list>
+<list class="indent" effect="hide">
+<bullet>DB2 and Apache Derby offer the GENERATED ... IDENTITY CLAUSE</bullet>
+<bullet>PostgreSQL offers the SERIAL data type</bullet>
+<bullet>Microsoft SQL Server offers the IDENTITY data type attribute</bullet>
+<bullet>Oracle uses a combination of sequences and triggers to simulate an identity
+column.</bullet>
+</list>
+
+<list>
+<bullet effect="hide">
+TEXT is a non-standard data type that best maps to a
+VARCHAR(65,535) or CLOB(64K) standard data type.
+</bullet>
+<bullet effect="hide">TINYINT (an integer accepting values from 0-255 or -128 to 128)
+can be mapped best to either a plain old INTEGER or a NUMERIC(3,0).
+In other cases in the DDL, the TINYINT column is defined with a maximum of 1 or 3
+-- this simply reduces the portability of the schema to other databases.
+I would say that a more portable
+approach would be to define a CHECK CONSTRAINT for a plain INTEGER column to
+ensure that the value is less than a defined value -- however, MySQL in turn
+does not support that. Of course, MySQL (until version 5, with STRICT MODE turned on)
+would simply convert a value outside of the defined maximum to the maximum
+value.
+</bullet>
+<bullet effect="hide">The "special" table name prefix %#__% is a way of avoiding table name clashes with other applications stored in the same database. Apache Derby, like most database servers, supports the use of ~schemas~ to provide a namespace for tables. For example, application %dboy%'s tables could be created in the %dboy% schema and accessible as %dboy.table1%, %dboy.table2% without conflicting with %dgirl.table1%, %dgirl.table2% existing in the same database.</bullet>
+</list>
+</slide>

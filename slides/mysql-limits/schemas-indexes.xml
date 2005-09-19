@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<slide>
+<title>Database schemas: indexes</title>
+<blurb>
+Using standard keywords: KEY vs. INDEX
+</blurb>
+<example type="sql"><![CDATA[CREATE TABLE `#__categories` (
+  `id` int(11) NOT NULL auto_increment,
+  -- ...
+  PRIMARY KEY  (`id`),
+  KEY `cat_idx` (`section`,`published`,`access`),
+  KEY `idx_section` (`section`),
+  KEY `idx_access` (`access`),
+  KEY `idx_checkout` (`checked_out`)
+) TYPE=MyISAM;
+]]>
+</example>
+
+<blurb>
+KEY here is not standard SQL -- this is actually a MySQL shortcut for creating
+indexes on columns within the table. The CREATE INDEX statement is a much more
+portable syntax across databases (including MySQL).
+</blurb>
+
+<example type="sql"><![CDATA[CREATE TABLE #__categories (
+  id int(11) NOT NULL auto_increment,
+  -- ...
+  PRIMARY KEY  (id);
+CREATE INDEX cat_idx ON #__categories (section, published, access);
+CREATE INDEX idx_section ON #__categories (section);
+CREATE INDEX idx_access ON #__categories (access);
+CREATE INDEX idx_checkout ON #__categories (checked_out);
+]]>
+</example>
+</slide>

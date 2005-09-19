@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>What I'm here to talk about</title>
+<list>
+<bullet>I'm sick...</bullet>
+<bullet>I really enjoy working with databases</bullet>
+<bullet class="indent">and PHP</bullet>
+<bullet>but many PHP applications are written for MySQL only</bullet>
+<bullet class="indent">and I want to run them on Apache Derby and DB2</bullet>
+</list>
+<blurb>So in this presentation I'm going to step through the process of
+what would be required to convert a large PHP application from being
+limited to running on MySQL to supporting any one of a number of databases,
+without sacrificing performance, and without complicating the design^1^.
+</blurb>
+<blurb>
+^1^ - ~too much~
+</blurb>
+</slide>
+

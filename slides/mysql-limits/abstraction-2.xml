@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Database abstractions (continued)</title>
+<blurb>
+Sure enough, taking a page at random, we can quickly find MySQL-specific SQL
+being issued through the "abstraction" layer:
+</blurb>
+
+<example type="php"><![CDATA[// get the subset (based on limits) of required records
+$query = "SELECT cd.*, cc.title AS category, u.name AS user, v.name as editor"
+. "\n FROM #__contact_details AS cd"
+. "\n LEFT JOIN #__categories AS cc ON cc.id = cd.catid"
+. "\n LEFT JOIN #__users AS u ON u.id = cd.user_id"
+. "\n LEFT JOIN #__users AS v ON v.id = cd.checked_out"
+. $where
+. "\n ORDER BY cd.catid, cd.ordering, cd.name ASC"
+. "\n LIMIT $pageNav->limitstart, $pageNav->limit"
+;
+$database->setQuery( $query );
+$rows = $database->loadObjectList();]]></example>
+
+<blurb>
+So there are some problems here from a portability perspective,
+primarily in the hard-coded non-standard LIMIT clause.
+It is not worth defining a database abstraction layer
+for your application if you are going to issue SQL directly from within every
+other file in your application.
+</blurb>
+<blurb>
+Instead, consider defining a database abstraction with functions,
+or classes and methods, for the functionality required by your application,
+so that other databases can simply implement that interface.
+Then a simple setting in the user's configuration
+file will determine which database they want to use, and which implementation of the
+application logic to invoke.
+</blurb>
+<blurb>For example, instead of defining %Myappdb::issueQuery()%, define %Myapp::getActiveEditors()% with the expected input parameters and expected return values, and let
+the actual database-specific code implement that in the most efficient way.</blurb>
+</slide>

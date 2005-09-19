@@ -1,0 +1,200 @@
+<style title="Default" type="text/css">
+body {
+	font-size: 10pt;
+	margin-top:0em;
+	margin-left:0em;
+	margin-right:0em;
+	margin-bottom:0em;
+	background-image: url(slides/intro/background.png);
+	background-attachment : fixed;
+	background-repeat : repeat
+}
+div.mainarea {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+div.blurb {
+	margin-top: 0.5em;
+	font-size: 2em;
+}
+div.navbar_title {
+	font-size: 2em;
+}
+div.sticky {
+	margin: 0px;
+	position: fixed;
+	top: 0em;
+	left: 0em;
+	right: auto;
+	bottom: auto;
+	width: auto;
+}
+div.bsticky {
+	margin: 0px;
+	position: fixed;
+	top: auto; 
+	left: 0em;
+	right: auto;
+	bottom: 0em;
+	width: 100%;
+}
+div.shadow {
+	background: #777777;
+	padding: 0.5em;
+}
+div.navbar {
+	background: url(images/trans.png) transparent fixed;
+	padding: 4px;
+	margin: 0px;
+        height: 6em;
+	color: #ffffff;
+	font-family: verdana, tahoma, arial, helvetica, sans-serif;
+	z-index: 99;
+}
+div.emcode {
+	background: #cccccc;
+	border: thin solid #000000;
+	padding: 0.5em;
+	font-family: monospace;
+}
+
+div.output {
+	font-family: monospace;
+	background: #eeee33;
+	border: thin solid #000000;
+	padding: 0.5em;
+}
+
+table.index {
+ background: #cccccc;
+ border: thin dotted #000000;                                                                                                 
+ padding: 0.5em;
+ font-family: monospace;
+ font-size: 1.5em;
+}
+
+td.index {
+ background: #cccccc;
+ padding: 1em;
+ font-family: monospace;
+ font-size: 1.5em;
+}
+
+h1 {
+	font-size: 2em;
+}
+p,li {
+	font-size: 2em;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.c2right {
+	margin : 1em 1em 0em 0em; 
+	padding-left : 1%;
+	padding-right : 1%;
+	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 1px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+	border-right-color : inherit; 
+	border-left-color : inherit; 
+	width : 46%; 
+	float : right; 
+}
+.c2rightnb {
+	margin : 1em 1em 0em 0em; 
+	padding-left : 1%;
+	padding-right : 1%;
+	width : 46%; 
+	float : right; 
+}
+.c2left {
+	margin : 1em 1em 0em 0em; 
+	padding-left : 1%;
+   	padding-right : 1%;
+   	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 1px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+   	border-right-color : inherit; 
+   	border-left-color : inherit; 
+   	width : 46%; 
+   	float : left; 
+}
+.c2leftnb {
+	margin : 1em 1em 0em 0em; 
+	padding-left : 1%;
+   	padding-right : 1%;
+   	border-style : none; 
+   	width : 46%; 
+   	float : left; 
+}
+.box {
+	margin : 0em 0em 0em 0em; 
+	padding-left : 1%;
+   	padding-right : 1%;
+   	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 1px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+   	border-right-color : inherit; 
+   	border-left-color : inherit; 
+   	float : left; 
+}
+
+A.linka { text-decoration: none; color: #000000; }
+td.foo {color: #ffffff; font-family: arial,verdana,helvetica; font-size: 70%}
+span.c4 {position: fixed; bottom: 0.5em; right: 4em; top: auto; left: auto; color: #ffffff; font-family: arial,verdana,helvetica; font-size: 70%}
+td.c3 {color: #CC6600; font-family: arial, helvetica, verdana}
+span.c2 {color: #ffffff; font-family: arial,hevetica,verdana}
+span.c5 {position: fixed; bottom: 0.5em; right: 1em; top: auto; left: auto; color: #000000; font-family: arial,verdana,helvetica; font-size: 80%}
+td.c1 {font-family: arial,helvetica,verdana; font-size: 80%}
+tt { font-size: 0.8em; }
+div.link {
+  font-size: 2em;
+}
+
+.indent {
+  margin-left: 2em;
+  font-size: 1.8em;
+}
+.nested-indent {
+  margin-left: 4em;
+  font-size: 1.8em;
+}
+.example-title {
+  font-weight: bold;
+  font-size: 2em;
+}
+ul.indent > div > li {
+  font-size: 1em;
+}
+
+div.example {
+  background-color: #cccccc;
+  font-size: 1.5em;
+  font-family: courier, monospace;
+  border-width: thick;
+  border-style: outset;
+  border-color: #000000;
+}
+
+div.medium-center-blurb {
+  font-size: 3em;
+  text-align: center;
+  padding-top: 1em;
+}
+
+div.big-center-blurb {
+  font-size: 5em;
+  text-align: center;
+  padding-top: 1em;
+}
+</style>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Abstracting database access</title>
+<blurb>
+The %updateOrder()% function contains examples of the custom class in action like:
+</blurb>
+<example type="php"><![CDATA[$this->_db->setQuery( "UPDATE $this->_tbl"
+  . "\nSET ordering='".$orders[$i]->ordering."' WHERE $k='".$orders[$i]->$k."'"
+);
+$this->_db->query();]]></example>
+<blurb>
+Apart from being rather hard to read, we can see that the %setQuery()% and %query()%
+methods are nothing more than painfully crafted reimplementations of %prepare()%
+and %execute()% methods that have existed in most standard database APIs for
+decades, and which has been introduced to PHP is a standard API as
+PHP Data Objects (PDO).
+</blurb>
+<blurb>Let's rewrite this using PDO:
+</blurb>
+<example type="php"><![CDATA[$query = $this->_db->prepare("UPDATE $this->_tbl
+                              SET ordering = ?
+                              WHERE $this->_tbl_key = ?";
+$query->execute(array($orders[$i]->ordering, $orders[$i]->$k));]]></example>
+<blurb>
+While defining a basic database access abstraction layer for your application
+seems like reinventing the wheel when things like PDO, MDB2, ADODB, and PEAR::DB
+already exist, none of these were real options when FRED was being developed. Still,
+a cautionary tale for you: make sure you abstract the right layer of your application.
+</blurb>
+</slide>

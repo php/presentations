@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>The subject application</title>
+<blurb>The application we'll be looking at (name changed to FRED to protect the innocent) is a well-known PHP content management system
+that has been in existence for over five years. No slights are intended against the
+developers of the code -- they created it with the intention of originally supporting
+MySQL alone.</blurb>
+<blurb>But that makes it a perfect candidate for our purposes.</blurb>
+<list>
+<bullet>It reflects a common "V1.0" application development scenario
+resulting from the literal adoption of the LAMP stack.</bullet>
+<bullet>FRED is now morphing into a "commercial support available for a fee" software
+package that requires broader database support.</bullet>
+<bullet>FRED is running into the same problems that we will see as we walk through the code.</bullet>
+</list>
+<blurb>~Note~: I have an idea of how FRED's team is approaching some
+of these problems, and can share those with you along the way, but any
+approach requires trade-offs of some kind.</blurb>
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Why not code purely for MySQL?</title>
+<list>
+<bullet>MySQL allows many interesting variations on standard SQL</bullet>
+<bullet class="indent">In some cases, these can be considered developer-friendly</bullet>
+<bullet class="indent">These can also considered to be hindrances to supporting multiple databases</bullet>
+<bullet>Your hosting service might provide different databases (for example, hub.org offers PHP with PostgreSQL)</bullet>
+<bullet>You may be interested in enhancing your portable, standard database development skills</bullet>
+<bullet>Potential customers of your software might have standardized software environments and required a different database. Prediction from Mark Driver of Gartner Consulting on Sept. 13, 2005:</bullet>
+</list>
+<blurb class="nested-indent">*PHP will become a mainstream enterprise tool.*</blurb>
+<link class="nested-indent" href="http://trends.newsforge.com/trends/05/09/14/0653243.shtml?tid=138&amp;tid=18" />
+<blurb>~Note~: Recent releases of MySQL show that it, too, is adopting more
+standard SQL -- so this presentation should help you port your MySQL application
+to MySQL, as well.</blurb>
+</slide>

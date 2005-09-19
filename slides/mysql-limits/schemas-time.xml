@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+<title>Database schemas: date / time values</title>
+<blurb>
+Another fun one -- there are many columns defined as follows:
+</blurb>
+<example><![CDATA[`checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+]]></example>
+
+<blurb>
+Two problems here:
+</blurb>
+<list>
+<bullet type="number">DATETIME is not a part of standard SQL; SQL92 defines DATE,
+TIME, and TIMESTAMP. TIMESTAMP in MySQL is a special column that automatically
+inserts the current date and time when a row is inserted, which explains why
+they use DATETIME instead. Most other databases use ~special registers~ to request
+a special value, such as %CURRENT TIMESTAMP%.
+</bullet>
+<bullet type="number">Second problem is that TIMESTAMP's string signature
+of YYYY-MM-DD hh:mm:ss should not accept all zeros -- what date and time is pure
+zeros? And in the context of the application, this special value does not actually
+help the data; a NULL value would be just as useful in identifying rows without a
+timestamp.
+</bullet>
+</list>
+</slide>
