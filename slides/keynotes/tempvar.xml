@@ -22,7 +22,7 @@ function bar(&$arg) {
 bar(foo());
 ?>]]></example>
 <example title="In PHP5 this now gives" hide="1" result="1">
-Fatal error: Only variables can be passed by reference in foo.php on line 8</example>
+Strict Standards: Only variables should be passed by reference in file on line 8</example>
 
 <example title="And here too" result="1"><![CDATA[<?php
 function & blah($arg) {

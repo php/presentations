@@ -14,7 +14,7 @@ if($xml) {
 ?>]]></example>
 
 <example fontsize="1.6em" title="Add a spoonful of REST"><![CDATA[<?php
-$srv  = 'http://api.search.yahoo.com/ImageSearchService/V1/imageSearch';
+$srv='http://api.search.yahoo.com/ImageSearchService/V1/imageSearch';
 foreach($ret as $key=>$link) {
   $url = $srv . "?query=$key&appid=RESTDemo";
   $obj = simplexml_load_file($url);
