@@ -1,0 +1,25 @@
+<slide title="PHP and Unicode?">
+<break lines="1"/>
+<image filename="andrei.jpg" marginright="1em" align="right"/>
+
+<blurb fontsize="2.5em">
+New string types: IS_BINARY, IS_STRING and IS_UNICODE
+</blurb>
+
+<example title="Indexing Operator" fontsize="1.6em" marginleft="1em" marginright="28em"><![CDATA[<?php
+$str = "大学"; //bytes are e5 a4 a7 e5 ad a6 
+echo $str{1}; //result is 学 
+$str{0} = 'サ'; // string is now サ学
+               // bytes are e3 82 b5 e5 ad a6
+]]></example>
+
+<example title="Unicode Identifiers" fontsize="1.6em" marginleft="1em" marginright="28em"><![CDATA[<?php
+class コンポーネント { 
+   function コミット {  .. } 
+} 
+
+$プロバイダ = array();
+$プロバイダ[‘רַעְיולוּחַ שָׁנָה’] = new コンポーネント();
+]]></example>
+
+</slide>

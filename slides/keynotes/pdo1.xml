@@ -1,0 +1,17 @@
+<slide title="PDO">
+<break lines="2"/>
+<image filename="wez.jpg" marginright="1em" align="right"/>
+
+<break lines="1" />
+<blurb fontsize="4em" marginleft="0.5em">
+A lightweight, consistent interface for writing database extensions and accessing databases in PHP
+</blurb>
+<example  fontsize="1.3em" marginleft="2em" marginright="23em"><![CDATA[<?php
+$dbh = new PDO('odbc:sample', 'db2inst1', 'ibmdb2');
+
+$cnt = $dbh->exec("DELETE FROM fruit WHERE colour = 'red'");
+
+echo "Deleted $cnt rows.";
+?>]]></example>
+
+</slide>
