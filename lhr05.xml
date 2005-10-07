@@ -1,0 +1,54 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+40 Minutes
+
+  A quick and pragmatic introduction to solving the web problem with PHP.
+  The session will include a summary of the new features in PHP5 such as
+  the rewritten XML support and the new object model.
+-->
+<topic>PHP</topic>
+<title>PHP</title>
+<event>London PHP User Group</event>
+<location>London</location>
+<date>Oct.6, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/lamp/failfast.xml</slide>
+
+<slide>slides/keynotes/dev1.xml</slide>
+<slide>slides/keynotes/dev2.xml</slide>
+<slide>slides/intro/php44.xml</slide>
+<slide>slides/keynotes/tempvar.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/keynotes/xml_1.xml</slide>
+<slide>slides/keynotes/oop.xml</slide>
+<slide>slides/keynotes/pdo1.xml</slide>
+<slide>slides/keynotes/speed.xml</slide>
+<slide>slides/keynotes/unicode1.xml</slide>
+<slide>slides/intro/sqlite1.xml</slide>
+<slide>slides/intro/sqlite2.xml</slide>
+<slide>slides/intro/new_apc.xml</slide>
+<slide>slides/intro/php_opcode_caches3.xml</slide>
+<slide>slides/intro/php_june05_bm.xml</slide>
+<slide>slides/keynotes/web20.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ajax.xml</slide>
+
+<slide>slides/intro/lhr05_ref.xml</slide>
+</presentation>
