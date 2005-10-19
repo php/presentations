@@ -1,0 +1,29 @@
+<slide fontsize="6em">
+<title>PDO</title>
+
+<blurb>
+ The PHP Data Objects (PDO) extension defines a lightweight, consistent
+ interface for accessing databases in PHP. Each database driver that
+ implements the PDO interface can expose database-specific features as
+ regular extension functions.
+</blurb>
+<break/>
+<blurb>Supported databases:</blurb>
+<list>
+	<bullet>DB2</bullet>
+	<bullet>Firebird/Interbase</bullet>
+	<bullet>MS SQL</bullet>
+	<bullet>MySQL</bullet>
+	<bullet>Oracle</bullet>
+	<bullet>ODBC</bullet>
+	<bullet>PostgreSQL</bullet>
+	<bullet>SQLite</bullet>
+</list>
+<example  fontsize="1.3em" align="center" marginleft="10em" marginright="10em"><![CDATA[<?php
+$dbh = new PDO('odbc:sample', 'db2inst1', 'ibmdb2');
+
+$cnt = $dbh->exec("DELETE FROM fruit WHERE colour = 'red'");
+
+echo "Deleted $cnt rows.";
+?>]]></example>
+</slide>
