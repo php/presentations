@@ -1,0 +1,54 @@
+<slide title="XML">
+<break lines="1" />
+
+<php><![CDATA[<?php chdir('presentations/slides/intro');?>]]></php>
+
+<example title="All XML handling based on libxml2" marginleft="2em" marginright="0em" result="0"><![CDATA[<?php
+$dom = new domDocument;
+$dom->load('menu.xml');
+?>]]></example>
+
+<example title="menu.xml" result="1" hide="1" marginleft="2em" marginright="0em" fontsize="1.75em" rfontsize="1.5em"><![CDATA[<?php
+class entities_filter extends php_user_filter {
+  function filter($in, $out, &$consumed, $closing) {
+   while ($bucket = stream_bucket_make_writeable($in)) {
+     $bucket->data = htmlentities($bucket->data);
+     $consumed += $bucket->datalen;
+     stream_bucket_append($out, $bucket);
+   }
+   return PSFS_PASS_ON;
+  }
+} 
+stream_filter_register("entities", "entities_filter");
+echo "<pre>";
+readfile("php://filter/read=entities/resource=menu.xml");
+echo "</pre>";
+?>]]></example>
+
+<example title="XPath" result="1" fontsize="1.5em" marginleft="2em" marginright="0em"><![CDATA[<?php
+$dom = domdocument::load('menu.xml');
+$ctx = new domXPath($dom);
+$result = $ctx->query('/breakfast_menu/food[@itemno > 3]/price/text()');
+foreach($result as $node) {
+  echo $node->nodeValue."<br />\n";
+}
+?>]]></example>
+
+<example title="XSL" result="1" marginleft="2em" marginright="0em"><![CDATA[<?php
+$dom = domdocument::load('menu.xml');
+$domxsl = domDocument::load('menu.xsl');
+$proc = new xsltProcessor;
+$proc->importStyleSheet($domxsl);
+echo $proc->transformToXML($dom);
+?>]]></example>
+
+<example title="SimpleXML" result="1" marginleft="2em"><![CDATA[<?php
+  $menu = simplexml_load_file('menu.xml');
+  foreach ($menu->food as $item) {
+    echo $item['itemno'] . ") ";
+    echo $item->price . " ... ";
+    echo $item->name . "<br />\n";
+  }
+?>]]></example>
+
+</slide>
