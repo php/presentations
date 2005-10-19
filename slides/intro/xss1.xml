@@ -1,7 +1,7 @@
 <slide title="Fixing XSS">
 <break lines="1" />
 
-<example title="Safe Form Handling" result="1"><![CDATA[<form action="<?php echo htmlspecialchars($PHP_SELF)?>" method="POST">
+<example fontsize="1.4em" title="Safe Form Handling" result="1"><![CDATA[<form action="<?php echo htmlspecialchars($PHP_SELF)?>" method="POST">
 Your name: <input type=text name=name><br>
 You age: <input type=text name=age><br>
 <input type=submit>

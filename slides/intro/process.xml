@@ -1,0 +1,10 @@
+<slide title="Large-Scale PHP">
+<blurb>Scaling PHP is all about scaling your backend</blurb>
+<image filename="repl2.png" align="center"/>
+<break lines="1" />
+<blurb>Or bigger</blurb>
+<image filename="repl3.png" align="center"/>
+<break lines="1" />
+<blurb>Debugging and Profiling, look at xdebug (xdebug.org) and apd (pecl/apd)</blurb>
+<image align="center" filename="../xdebug/komodo.png"/>
+</slide>
