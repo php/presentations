@@ -9,20 +9,8 @@ $dom->load('menu.xml');
 ?>]]></example>
 
 <example title="menu.xml" result="1" hide="1" marginleft="2em" marginright="0em" fontsize="1.75em" rfontsize="1.5em"><![CDATA[<?php
-class entities_filter extends php_user_filter {
-  function filter($in, $out, &$consumed, $closing) {
-   while ($bucket = stream_bucket_make_writeable($in)) {
-     $bucket->data = htmlentities($bucket->data);
-     $consumed += $bucket->datalen;
-     stream_bucket_append($out, $bucket);
-   }
-   return PSFS_PASS_ON;
-  }
-} 
-stream_filter_register("entities", "entities_filter");
-echo "<pre>";
-readfile("php://filter/read=entities/resource=menu.xml");
-echo "</pre>";
+$fp = fopen('menu.xml','r');
+while($line = fgets($fp)) echo str_replace(' ','&nbsp;',htmlspecialchars($line))."<br />\n";
 ?>]]></example>
 
 <example title="XPath" result="1" fontsize="1.5em" marginleft="2em" marginright="0em"><![CDATA[<?php
