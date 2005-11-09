@@ -2,11 +2,18 @@
 <list>
 <bullet>Web Search</bullet>
 <bullet>Web Search with Context</bullet>
+<bullet>MyWeb</bullet>
 <bullet>Creative Commons Web Search</bullet>
 <bullet>News Search</bullet>
 <bullet>Image Search</bullet>
 <bullet>Local Search</bullet>
+<bullet>Audio Search</bullet>
 <bullet>Video Search</bullet>
+<bullet>Site Explorer</bullet>
+<bullet>Events (upcoming.org)</bullet>
+<bullet>Flickr</bullet>
+<bullet>Maps</bullet>
+<bullet>Geocoding</bullet>
 <bullet>Context Extraction Service</bullet>
 </list>
 <list>
@@ -18,16 +25,20 @@
  query     string            An optional query to help with the extraction process.</example>
 
 <example title="Example" fontsize="1.4em" rfontsize="1.3em" result="1" required_extension="tidy"><![CDATA[<?php
-$context = "Italian sculptors and painters of the ".
-           "renaissance favored the Virgin Mary for inspiration.";
+$context = <<< EOB
+PHP is a versatile scripting language that is mostly used to solve the web
+problem.  PHP is not a drug, and it is not a Phillipine currency, but chicks
+dig it.  Ok, perhaps chicks don't really dig it, and it is actually a currency, 
+but it is still cool.
+EOB;
 $url = 'http://api.search.yahoo.com/ContentAnalysisService/V1/termExtraction';
-$post = "query=madonna&appid=RESTDemo&context=".rawurlencode($context);
+$post = "query=tool&appid=YahooDemo&context=".rawurlencode($context);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
-$xml = simplexml_load_string(curl_exec($ch)) or die("Can't get to Yahoo!");
+$xml = simplexml_load_string(curl_exec($ch));
 curl_close($ch);
 $config = array('indent'=>TRUE, 'indent-attributes'=>TRUE,
                 'wrap-attributes'=>TRUE,'input-xml'=>TRUE, 'output-xml'=>TRUE);
