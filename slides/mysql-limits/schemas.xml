@@ -54,14 +54,10 @@ VARCHAR(65,535) or CLOB(64K) standard data type.
 </bullet>
 <bullet effect="hide">TINYINT (an integer accepting values from 0-255 or -128 to 128)
 can be mapped best to either a plain old INTEGER or a NUMERIC(3,0).
-In other cases in the DDL, the TINYINT column is defined with a maximum of 1 or 3
--- this simply reduces the portability of the schema to other databases.
-I would say that a more portable
-approach would be to define a CHECK CONSTRAINT for a plain INTEGER column to
-ensure that the value is less than a defined value -- however, MySQL in turn
-does not support that. Of course, MySQL (until version 5, with STRICT MODE turned on)
-would simply convert a value outside of the defined maximum to the maximum
-value.
+In other cases in the DDL, the TINYINT column is defined with a (1) or (3)
+-- this affects the display of the value by left-padding the integer type
+with zeros, which simply reduces the portability of the schema to other
+ databases and the flexibility of the data in the column.
 </bullet>
 <bullet effect="hide">The "special" table name prefix %#__% is a way of avoiding table name clashes with other applications stored in the same database. Apache Derby, like most database servers, supports the use of ~schemas~ to provide a namespace for tables. For example, application %dboy%'s tables could be created in the %dboy% schema and accessible as %dboy.table1%, %dboy.table2% without conflicting with %dgirl.table1%, %dgirl.table2% existing in the same database.</bullet>
 </list>

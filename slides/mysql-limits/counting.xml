@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <slide>
 <title>Counting results of SELECT statement</title>
-<blurb>A very popular MySQL idiom is to use the return value of %mysql_query()% to
-reflect the number of rows that will be returned by the SELECT statement that was
+<blurb>A very popular MySQL idiom is to use the return value of %mysql_num_rows()% to
+reflect the number of rows that will be returned by the last SELECT statement that was
 issued.</blurb>
 <list>
-<bullet>But in most database APIs, the return value from executing a SELECT statement is simply true or false reflecting success or failure.</bullet>
+<bullet>But in most database APIs, the number of rows *affected* by executing a SELECT statement is zero -- and that's what %xx_num_rows()% will return.</bullet>
 <bullet>If your database supports scrollable cursors, and you request a scrollable cursor when you issue your SELECT statement, you *will* get an accurate count of the number of rows in the result set.</bullet>
 <bullet>Most times, however, you can either issue a separate SELECT COUNT(*)
 if you actually want the number of rows, or just try fetching the first row from the result set.</bullet>
