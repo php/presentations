@@ -1,0 +1,50 @@
+<slide title="Geocoding API">
+<blurb>
+Finally, a free geocoding API
+</blurb>
+
+<example title="REST Query to look up an address" result="0" fontsize="1.8em" marginright="0em"><![CDATA[http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=94539]]></example>
+
+<example title="Returned XML" result="0" fontsize="1.4em" marginright="0em"><![CDATA[<ResultSet xsi:schemaLocation="urn:yahoo:maps http://api.local.yahoo.com/MapsService/V1/GeocodeResponse.xsd">
+ <Result precision="zip">
+  <Latitude>37.5173</Latitude>
+  <Longitude>-121.9263</Longitude>
+  <Address/>
+  <City>FREMONT</City>
+  <State>CA</State>
+  <Zip>94539</Zip>
+  <Country>US</Country>
+ </Result>
+</ResultSet>]]></example>
+
+<example fontsize="1.2em" title="We can parse it like this" result="1" marginright="0em" required_extension="simplexml"><![CDATA[<?php
+  $url  = 'http://api.local.yahoo.com/MapsService/V1/geocode';
+  $url .= '?appid=YahooDemo&location=94539';
+  $xml = simplexml_load_file($url); 
+  $ret['precision'] = (string)$xml->Result['precision'];
+  $ret['warning'] = (string)$xml->Result['warning'];
+  foreach($xml->Result->children() as $key=>$val) {
+    if(strlen($val)) $ret[(string)$key] =  (string)$val;
+  }
+  echo "<pre>"; print_r($ret); echo "</pre>";
+?>]]></example>
+
+<example title="Closest Match" result="0" fontsize="1.8em" marginright="0em"><![CDATA[http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=701%20First,%20Sunnyvale]]></example>
+
+<example title="Returned XML" result="0" fontsize="1.4em" marginright="0em"><![CDATA[<ResultSet xsi:schemaLocation="urn:yahoo:maps http://api.local.yahoo.com/MapsService/V1/GeocodeResponse.xsd">
+ <Result precision="address" 
+         warning="The exact location could not be found, 
+                  here is the closest match: 701 First Ave, Sunnyvale, CA 94089">
+  <Latitude>37.416384</Latitude>
+  <Longitude>-122.024853</Longitude>
+  <Address>701 FIRST AVE</Address>
+  <City>SUNNYVALE</City>
+  <State>CA</State>
+  <Zip>94089-1019</Zip>
+  <Country>US</Country>
+ </Result>
+</ResultSet>]]></example>
+
+<link fontsize="3em" marginleft="3em" leader="Docs: " href="http://developer.yahoo.net/maps/"/>
+
+</slide>

@@ -1,0 +1,84 @@
+<slide title="Adding Markers">
+<blurb>
+You can either add markers one by one by calculating a location and adding the marker, or in the Flash API you can
+use an overlay.  There is a very handy GeoRSS overlay that you just feed a Geocoded RSS file to.  Each entry needs
+to have this:
+</blurb>
+
+<example title="GeoRSS Sample Item" result="0" fontsize="1.5em" marginright="0em"><![CDATA[<item>
+  <title>M 3.3, Southern California</title>
+  <description>November 08, 2005 22:03:46 GMT</description>
+  <link>http://earthquake.usgs.gov/recenteqsww/Quakes/ci14197132.htm</link>
+  <geo:lat>33.5325</geo:lat>
+  <geo:long>-116.6910</geo:long>
+  <dc:subject>3</dc:subject>
+  <dc:subject>pasthour</dc:subject>
+  <dc:subject>11.60 km</dc:subject>
+</item>]]></example>
+
+<example title="Adding GeoRSS to the Flash map" result="1" fontsize="1.4em" marginright="0em"><![CDATA[<script type="text/javascript" 
+       src="http://api.maps.yahoo.com/v2.0/fl/javascript/apiloader.js">
+</script>
+<div id="mapContainer" style="height: 500px; width: 930px;"></div>
+<script type="text/javascript">
+var mymap = new Map("mapContainer", "YahooDemo", "San Francisco, CA", 12);
+mymap.addTool(new PanTool(), true);
+mymap.addWidget(new NavigatorWidget()); 
+
+olay = new GeoRSSOverlay(
+      'http://earthquake.usgs.gov/recenteqsww/catalogs/eqs7day-M2.5.xml');           
+mymap.addOverlay(olay);
+
+</script>]]></example>
+
+<blurb>
+Ok, again, disappointing that we didn't need PHP.  But to do the same on the DHTML map we need some PHP help
+</blurb>
+
+<example title="Simple Embedded DHTML map" result="1" fontsize="1.4em" rfontsize="1em" marginright="0em"><![CDATA[<script type="text/javascript" 
+      src="http://api.maps.yahoo.com/ajaxymap?v=2.0&appid=YahooDemo">
+</script>
+<div id="jsmapContainer" style="height: 500px; width: 930px;"></div>
+<?php
+include 'simple_rss.php';
+$url = 'http://earthquake.usgs.gov/recenteqsww/catalogs/eqs7day-M2.5.xml';
+$feed = rss_request($url, $timeout=3600);
+?>
+<script type="text/javascript">
+<?php 
+  $url  = 'http://api.local.yahoo.com/MapsService/V1/geocode';
+  $url .= '?appid=YahooDemo&location=San%20Francisco,CA';
+  $xml = simplexml_load_file($url);
+?>
+var marker = new Array();
+var latlon = new YGeoPoint(<?php echo $xml->Result->Latitude?>,
+                           <?php echo $xml->Result->Longitude?>); 
+var jsmap = new YMap(document.getElementById('jsmapContainer'));
+jsmap.addPanControl();
+jsmap.addZoomLong();
+jsmap.drawZoomAndCenter(latlon, 12);
+<?php 
+$i = 0;
+while(!empty($feed[$i])) {
+  $info = $feed[$i]['title'][0]."<br />";
+  $info .= $feed[$i]['description'][0]."<br />";
+  $info .= '<a href="'.$feed[$i]['link'][0].'">more info</a>';
+  $info = addslashes($info); 
+  $lat = $feed[$i]['lat'][0];
+  $lon = $feed[$i]['long'][0];
+  echo <<<EOB
+  marker[$i] = new YMarker(new YGeoPoint($lat,$lon)); 
+  marker[$i].addLabel("<b>$i</b>"); 
+  YEvent.Capture(marker[$i], 
+                 EventsList.MouseClick, 
+                 new Function("marker[$i].openSmartWindow('$info');")); 
+  jsmap.addOverlay(marker[$i]);
+EOB;
+  flush();
+  $i++;
+  if($i>9) break;
+}
+?>
+</script>]]></example>
+
+</slide>
