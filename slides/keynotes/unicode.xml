@@ -8,8 +8,8 @@ New string types: IS_BINARY, IS_STRING and IS_UNICODE
 
 <example title="Indexing Operator" fontsize="1.6em" marginleft="1em" marginright="28em"><![CDATA[<?php
 $str = "大学"; //bytes are e5 a4 a7 e5 ad a6 
-echo $str{1}; //result is 学 
-$str{0} = 'サ'; // string is now サ学
+echo $str[1]; //result is 学 
+$str[0] = 'サ'; // string is now サ学
                // bytes are e3 82 b5 e5 ad a6
 ]]></example>
 
