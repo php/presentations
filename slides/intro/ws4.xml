@@ -27,7 +27,7 @@
 <example title="Example" fontsize="1.4em" rfontsize="1.3em" result="1" required_extension="tidy"><![CDATA[<?php
 $context = <<< EOB
 PHP is a versatile scripting language that is mostly used to solve the web
-problem.  PHP is not a drug, and it is not a Phillipine currency, but chicks
+problem.  PHP is not a drug, and it is not a Philippine currency, but chicks
 dig it.  Ok, perhaps chicks don't really dig it, and it is actually a currency, 
 but it is still cool.
 EOB;
