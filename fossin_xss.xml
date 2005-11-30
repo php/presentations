@@ -1,0 +1,38 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Tuesday Nov.29 11:15 - 12:00
+This talk will tell you all you want to know about Cross-Site Scripting (XSS) attacks.
+How to generate them, how to prevent them, and how to detect them.  We will also do a
+bit of live XSS checking for anybody brave enough to volunteer their sites. The code
+snippets are all PHP-based, but the concepts covered are not specific to PHP.
+-->
+<topic>PHP</topic>
+<title>XSS</title>
+<event>Foss.in</event>
+<location>Bangalore</location>
+<date>Nov.29, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.lerdorf.com/show/fossin_xss.xml</url>
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/xss.xml</slide>
+<slide>slides/intro/xss1.xml</slide>
+<slide>slides/intro/xss2.xml</slide>
+<slide>slides/intro/xss3.xml</slide>
+<slide>slides/intro/xss_common.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/intro/scanmus.xml</slide>
+<slide>slides/intro/filter.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+
+<slide>slides/intro/fossin_ref.xml</slide>
+</presentation>
