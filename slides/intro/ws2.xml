@@ -15,7 +15,7 @@ function Add($x,$y) {
     return $x+$y;
 }
 
-$server = new SoapServer("./add.wsdl"));
+$server = new SoapServer("./add.wsdl");
 $server->addFunction("Add");
 $server->handle();
 ?>]]></example>
