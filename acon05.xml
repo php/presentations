@@ -1,0 +1,65 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+PHP has become amazingly popular due to its simple pragmatic approach to solving the web problem. Sometimes we forget some of the complexities that are inherent to any web application. When building large-scale web applications with PHP you need to harness the strengths of PHP and apply it correctly. In this talk Rasmus will give a brief overview of the new features in PHP5 including the new unified XML implementation which brings PHP's pragmatism to XML handling followed by a step-by-step approach to correctlt designing, implementing, securing and optimizing your PHP code for large-scale applications.
+-->
+<!--
+  PHP has become amazingly popular due to its simple pragmatic approach
+  to solving the web problem.  The web problem has been changing and   
+  there is a lot of talk about Web 2.0 and the Programmable Web.  PHP is 
+  more relevant than ever as people are combining web service components 
+  to build large-scale rich AJAX-driven web applications.  In this talk 
+  Rasmus will cover the basic building blocks PHP 5 provides for building
+  these rich applications and show plenty of interesting examples along 
+  the way.
+-->
+
+<topic>PHP</topic>
+<title>PHP</title>
+<event>Apachecon</event>
+<location>San Diego</location>
+<date>Dec.14, 2005</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.lerdorf.com/show/acon05</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/lamp/failfast.xml</slide>
+
+<slide>slides/intro/large.xml</slide>
+<slide>slides/intro/whyphp.xml</slide>
+<slide>slides/intro/scale1.xml</slide>
+<slide>slides/intro/scale05_1.xml</slide>
+<slide>slides/intro/scale05_2.xml</slide>
+
+<slide>slides/intro/stack_arch.xml</slide>
+<slide>slides/intro/people_arch.xml</slide>
+<slide>slides/intro/app_arch.xml</slide>
+<slide>slides/intro/process.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/xml_eg.xml</slide>
+
+<slide>slides/keynotes/web20.xml</slide>
+<slide>slides/intro/ajax.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/ws7.xml</slide>
+<slide>slides/intro/ws8.xml</slide>
+<slide>slides/intro/ws9.xml</slide>
+
+<slide>slides/intro/acon05_ref.xml</slide>
+</presentation>
