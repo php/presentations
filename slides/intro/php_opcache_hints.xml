@@ -1,0 +1,102 @@
+<slide title="Opcode Cache Hints">
+
+<blurb>
+  There are a number of things you can do to make sure your cached scripts run fast.
+</blurb>
+
+<blurb title="Never use include_once or require_once">
+  The code for include/require looks like this:
+</blurb>
+<example fontsize="1.4em"><![CDATA[op_array = compile_filename(opline->op2.u.constant.value.lval, inc_filename);]]></example>
+<blurb>
+  That is, we simply call the compiler which in an opcode cached architecture will be
+  intercepted and the opcodes will be pulled from shared memory and fed directly to
+  the executor.  For the include_once case the code looks like this:
+</blurb>
+<example fontsize="1.4em" type="C"><![CDATA[  int dummy = 1;
+  zend_file_handle file_handle;
+  if(SUCCESS == zend_stream_open(inc_filename->value.str.val, &file_handle)) {
+    if(!file_handle.opened_path) {
+      file_handle.opened_path = estrndup(inc_filename->value.str.val, 
+                                         inc_filename->value.str.len);
+    }
+    if(zend_hash_add(&EG(included_files), 
+                     file_handle.opened_path, 
+                     strlen(file_handle.opened_path)+1,
+                     (void *)&dummy, sizeof(int), NULL)==SUCCESS) {
+      op_array = zend_compile_file(&file_handle, ZEND_INCLUDE);
+      zend_destroy_file_handle(&file_handle);
+    } else {
+      zend_file_handle_dtor(&file_handle);
+      failure_retval=1;
+    }
+  } else {
+    if(opline->op2.u.constant.value.lval==ZEND_INCLUDE_ONCE) {
+      zend_message_dispatcher(ZMSG_FAILED_INCLUDE_FOPEN, inc_filename->value.str.val);
+    } else {
+      zend_message_dispatcher(ZMSG_FAILED_REQUIRE_FOPEN, inc_filename->value.str.val);
+    }
+  }?>]]></example>
+<blurb>
+  This rather complex-looking code makes sense in a non-opcode cached architecture because
+  in order to figure out if we have included this file already we need to go through all
+  the same steps as we do when we subsequently need to open the file, so it makes sense to
+  just go ahead an open in it and then feed the opened file handle to the compiler.  This
+  saves a lot of work, but unfortunately it makes very little sense when we plug in an
+  opcode cache.
+</blurb>
+
+<blurb title="Push everything you can into the compile phase">
+  This means that you should never have conditional function or class definitions.  So 
+  avoid code like this:
+</blurb>
+
+<example><![CDATA[<?php
+  if(!function_exists('foobar')) {
+    function foobar() { echo "foobar"; } 
+  }
+?>]]></example>
+
+<blurb>
+  This also means you should avoid implicit conditional operations such as *autoload* and once again the
+  *include_once* and *require_once* mechanisms.  So, always do includes, function declarations and class
+  definitions at the top level of your scripts.  Keep your include trees simple and straightforward and
+  hopefully relative to your including script, or at the very least include from the first directory
+  of your include_path list.
+</blurb>
+
+<blurb title="Take advantage of your cache">
+  A common thing people do is to have some sort of %config.ini% file that they include on every request.
+  Typically such a file looks like this:
+</blurb>
+<example><![CDATA[<?php
+  $config['install_path'] = "/usr/share/htdocs";
+  $config['db_type'] = "mysql";
+  $config['db_user'] = "nobody";
+  $config['db_pwd'] = "";
+?>]]></example>
+<blurb>
+  APC has *apc_store()* and *apc_fetch()* which is perfect for something like this and it
+  is trivial to implement.
+</blurb>
+<example><![CDATA[<?php
+  if(!$config = apc_fetch('config')) {
+    include './config.inc';
+    apc_store('config',$config);
+  }
+?>]]></example>
+<blurb>
+  We break our own rule of avoiding conditional includes, but this is one that will
+  only be done on the very first request after server startup.  And you can always
+  update the config without restarting the server by doing an *apc_store()* on top
+  of it.
+</blurb>
+<blurb>
+  The other way you can do this, which doesn't require an opcode cache nor any shared
+  memory is to make use of the %--with-config-file-scan-dir% mechanism which allows you
+  to specify a directory that will be scanned for ini files.  Any *foo.ini* file in this
+  directory will be read on server startup and you then use *get_cfg_var()* to access the
+  settings.  The one downside to this approach is that you have to restart the server to
+  make any changes to the config.
+</blurb>
+</slide>
