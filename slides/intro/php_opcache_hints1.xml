@@ -1,0 +1,49 @@
+<slide title="Opcode Cache Hints">
+
+<blurb>
+  There are a number of things you can do to make sure your cached scripts run fast.
+</blurb>
+
+<blurb title="Never use include_once or require_once">
+  The code for include/require looks like this:
+</blurb>
+<example fontsize="1.4em"><![CDATA[op_array = compile_filename(opline->op2.u.constant.value.lval, inc_filename);]]></example>
+<blurb>
+  That is, we simply call the compiler which in an opcode cached architecture will be
+  intercepted and the opcodes will be pulled from shared memory and fed directly to
+  the executor.  For the include_once case the code looks like this:
+</blurb>
+<example fontsize="1.4em" type="C"><![CDATA[  int dummy = 1;
+  zend_file_handle file_handle;
+  if(SUCCESS == zend_stream_open(inc_filename->value.str.val, &file_handle)) {
+    if(!file_handle.opened_path) {
+      file_handle.opened_path = estrndup(inc_filename->value.str.val, 
+                                         inc_filename->value.str.len);
+    }
+    if(zend_hash_add(&EG(included_files), 
+                     file_handle.opened_path, 
+                     strlen(file_handle.opened_path)+1,
+                     (void *)&dummy, sizeof(int), NULL)==SUCCESS) {
+      op_array = zend_compile_file(&file_handle, ZEND_INCLUDE);
+      zend_destroy_file_handle(&file_handle);
+    } else {
+      zend_file_handle_dtor(&file_handle);
+      failure_retval=1;
+    }
+  } else {
+    if(opline->op2.u.constant.value.lval==ZEND_INCLUDE_ONCE) {
+      zend_message_dispatcher(ZMSG_FAILED_INCLUDE_FOPEN, inc_filename->value.str.val);
+    } else {
+      zend_message_dispatcher(ZMSG_FAILED_REQUIRE_FOPEN, inc_filename->value.str.val);
+    }
+  }?>]]></example>
+<blurb>
+  This rather complex-looking code makes sense in a non-opcode cached architecture because
+  in order to figure out if we have included this file already we need to go through all
+  the same steps as we do when we subsequently need to open the file, so it makes sense to
+  just go ahead an open in it and then feed the opened file handle to the compiler.  This
+  saves a lot of work, but unfortunately it makes very little sense when we plug in an
+  opcode cache.
+</blurb>
+
+</slide>

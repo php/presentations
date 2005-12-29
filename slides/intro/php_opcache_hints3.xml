@@ -1,0 +1,37 @@
+<slide title="Opcode Cache Hints">
+
+<blurb title="Take advantage of your cache">
+  A common thing people do is to have some sort of %config.ini% file that they include on every request.
+  Typically such a file looks like this:
+</blurb>
+<example><![CDATA[<?php
+  $config['install_path'] = "/usr/share/htdocs";
+  $config['db_type'] = "mysql";
+  $config['db_user'] = "nobody";
+  $config['db_pwd'] = "";
+?>]]></example>
+<blurb>
+  APC has *apc_store()* and *apc_fetch()* which is perfect for something like this and it
+  is trivial to implement.
+</blurb>
+<example><![CDATA[<?php
+  if(!$config = apc_fetch('config')) {
+    include './config.inc';
+    apc_store('config',$config);
+  }
+?>]]></example>
+<blurb>
+  We break our own rule of avoiding conditional includes, but this is one that will
+  only be done on the very first request after server startup.  And you can always
+  update the config without restarting the server by doing an *apc_store()* on top
+  of it.
+</blurb>
+<blurb>
+  The other way you can do this, which doesn't require an opcode cache nor any shared
+  memory is to make use of the %--with-config-file-scan-dir% mechanism which allows you
+  to specify a directory that will be scanned for ini files.  Any *foo.ini* file in this
+  directory will be read on server startup and you then use *get_cfg_var()* to access the
+  settings.  The one downside to this approach is that you have to restart the server to
+  make any changes to the config.
+</blurb>
+</slide>

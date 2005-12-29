@@ -1,0 +1,22 @@
+<slide title="Opcode Cache Hints">
+
+<blurb title="Push everything you can into the compile phase">
+  This means that you should never have conditional function or class definitions.  So 
+  avoid code like this:
+</blurb>
+
+<example><![CDATA[<?php
+  if(!function_exists('foobar')) {
+    function foobar() { echo "foobar"; } 
+  }
+?>]]></example>
+
+<blurb>
+  This also means you should avoid implicit conditional operations such as *autoload* and once again the
+  *include_once* and *require_once* mechanisms.  So, always do includes, function declarations and class
+  definitions at the top level of your scripts.  Keep your include trees simple and straightforward and
+  hopefully relative to your including script, or at the very least include from the first directory
+  of your include_path list.
+</blurb>
+
+</slide>

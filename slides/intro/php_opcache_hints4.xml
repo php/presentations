@@ -1,0 +1,19 @@
+<slide title="Opcode Cache Hints">
+
+<blurb title="Tend towards fewer includes">
+  With an opcode cache you are better off including fewer files that are
+  larger because each include results in a disk-touching %stat()% system call.
+</blurb>
+<example title="Don't"><![CDATA[<?php
+  include 'a.inc';
+  include 'b.inc';
+  include 'c.inc';
+  include 'd.inc';
+  include 'e.inc';
+?>]]></example>
+
+<example title="Do"><![CDATA[<?php
+  include './abcde.inc';
+?>]]></example>
+
+</slide>

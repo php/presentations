@@ -1,0 +1,41 @@
+<slide title="Charset Detection in IE">
+<break lines="1" />
+
+<blurb>Earlier we gave this as an example of how to treat user data for display purposes</blurb>
+
+<example fontsize="1.4em" title="Safe Form Handling" result="0"><![CDATA[<form action="<?php echo htmlspecialchars($PHP_SELF)?>" method="POST">
+Your name: <input type="text" name="name" /><br>
+You age: <input type="text" name="age" /><br>
+<input type="submit" />
+</form>
+<?php
+if($_SERVER['REQUEST_METHOD']=='POST') {
+  $Oname = htmlspecialchars($_POST['name']);
+  $Oage  = (int)$_POST['age'];
+  echo "Hi $Oname, you are $Oage years old.";
+}?>]]></example>
+
+<blurb>We probably all know how braindead Internet Explorer is about how it deals with mime types, but it
+is just as braindead in how it handles character set detection.  If you don't specify a character set in
+the Content-Type response header or in the page itself in an http-equiv META tag, it will scan the first
+4096 bytes of the reponse body looking for bytes it recognizes as a specific character set.  So the above
+form which is safe on all other browsers is not safe on IE for input like this:</blurb>
+
+<example><![CDATA[%2BADw-script%2BAD4-alert(document.cookie)%2BADw-/script%2BAD4-]]></example>
+
+<blurb><![CDATA[This is the string: %|EE2222|&lt;script&gt;alert(document.cookie)&lt;/script&gt;|% written 
+in UTF-7 with %|EE2222|+|% converted to %|EE2222|\%2B|%.]]></blurb>
+
+<blurb>
+For PHP you can get around this by specifying a default charset in your %php.ini% file.  
+</blurb>
+<example><![CDATA[default_charset="UTF-8"]]></example>
+
+<blurb>For non-PHP requests, you can use Apache's %AddDefaultCharset% configuration
+directive which will add the specified charset to any response that does not specify one
+already.  If you simply turn it on, instead of specifying a charset you get Apache's
+internal default of %iso-8859-1%.</blurb>
+
+<example><![CDATA[AddDefaultCharset On]]></example>
+
+</slide>

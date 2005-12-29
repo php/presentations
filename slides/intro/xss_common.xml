@@ -8,7 +8,7 @@
 <bullet>Host header </bullet>
 <bullet>$_GET, $_POST, $_COOKIE</bullet>
 <bullet>$_SERVER</bullet>
-<bullet>?var=1 vs. ?var[]=1</bullet>
+<bullet>Charset detection stupidity in IE</bullet>
 </list>
 
 </slide>
