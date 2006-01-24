@@ -7,17 +7,18 @@
 <bullet> Ok, sometimes you might, but don't do it at runtime</bullet>
 </list>
 
-<list title="System Calls - PHP 5.1 Code Changes">
+<list title="System Calls - Code Changes">
 <bullet> No more than 1 stat() per PHP file per request</bullet>
-<bullet> Add a stat cache to PHP's expand_filepath code</bullet>
 <bullet> Don't stat if Apache has already stat'ed the file</bullet>
 <bullet> Get rid of excessive stats in the streams code</bullet>
+<bullet> PHP 5.1 now has a stat cache to help this</bullet>
 </list>
 
 <list title="System Calls - Scripting Changes">
+<bullet> Use an opcode cache - APC works well</bullet>
 <bullet> Remove ./ from include_path and use relative path includes</bullet>
 <bullet> Use just a single base dir in include_path</bullet>
-<bullet> No open_basedir or safe_mode</bullet>
+<bullet> Avoid include_once/require_once</bullet>
 </list>
 
 </slide>
