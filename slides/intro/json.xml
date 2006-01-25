@@ -1,0 +1,20 @@
+<slide title="JSON">
+<break lines="3" />
+<image filename="json.gif" align="center" />
+<example title="json" fontsize="2em" result="1"><![CDATA[<?php
+$int = 123;
+echo json_encode($int)."<br />\n";
+$str1 = "This is JSON";
+echo json_encode($str1)."<br />\n";
+$str2 = "하이퍼텍";
+echo json_encode($str2)."<br />\n";
+$arr1 = array(1,2,3);
+echo json_encode($arr1)."<br />\n";
+$arr2 = array('numbers'=>$arr1, $str1, $str2);
+echo json_encode($arr2)."<br />\n";
+$obj = new stdClass();
+$obj->a = $arr1;
+echo json_encode($obj)."<br />\n";
+?>]]></example>
+
+</slide>

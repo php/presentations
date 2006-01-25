@@ -1,0 +1,17 @@
+<slide title="Rich Web Apps">
+
+<break lines="1" />
+<blurb fontsize="7em">
+To build one we need...
+</blurb>
+<list>
+<bullet fontsize="3em">server-side language - PHP</bullet>
+<bullet fontsize="3em">to understand backend requests</bullet>
+<bullet fontsize="3em">a wire data format - XML and/or JSON</bullet>
+<bullet fontsize="3em">to figure out web services</bullet>
+<bullet fontsize="3em">some sort of server-side datastore</bullet>
+<bullet fontsize="3em">some sort of file organization (MVC?)</bullet>
+<bullet fontsize="3em">to at least pretend to be secure</bullet>
+<bullet fontsize="3em">plenty of magic smoke</bullet>
+</list>
+</slide>

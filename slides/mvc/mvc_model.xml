@@ -1,0 +1,9 @@
+<slide title="MVC Example">
+<break lines="1" />
+
+<example title="Model - db.inc" fontsize="1.5em" marginright="0em" filename="example/model/db.inc" />
+<example title="Model - items.inc" fontsize="1.5em" marginright="0em" filename="example/model/items.inc" />
+
+<example hide="1" title="view" result="1" type="iframe" outputbackground="#ffffff" filename="example/add.php"/>
+
+</slide>

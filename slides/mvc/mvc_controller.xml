@@ -1,0 +1,8 @@
+<slide title="MVC Example">
+<break lines="1" />
+
+<example title="Controller - add_c.inc" fontsize="1.5em" marginright="0em" type="php" filename="example/add_c.inc" />
+
+<example hide="1" title="view" result="1" type="iframe" outputbackground="#ffffff" filename="example/add.php"/>
+
+</slide>

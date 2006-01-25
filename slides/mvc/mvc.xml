@@ -1,0 +1,14 @@
+<slide title="MVC">
+<blurb>
+You can use an MVC approach if you like.  But avoid the temptation of a single
+monolithic controller.  The controller is part of the presentation layer.
+</blurb>
+<image filename="MVc.png" align="center"/>
+
+<list>
+<bullet type="dot">*Model* - Adds meaning and access to the data behind the application</bullet>
+<bullet type="dot">*View*  - Renders the data from the model</bullet>
+<bullet type="dot">*Controller* - Responds to events and makes changes to the view and model</bullet>
+</list>
+
+</slide>

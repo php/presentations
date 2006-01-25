@@ -1,0 +1,10 @@
+<slide title="5-second RSS parser">
+<break lines="1" />
+<example title="Recent Wiki Changes" fontsize="1.5em" result="1"><![CDATA[<?php
+$url = 'http://wiki.lca2006.linux.org.au/RecentChanges?format=rss';
+foreach(simplexml_load_file($url)->item as $it)
+  echo "<a href='{$it->link}'>{$it->title}</a>
+        {$it->description}<br />\n";
+?>]]></example>
+
+</slide>
