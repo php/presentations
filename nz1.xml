@@ -1,0 +1,63 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Building Rich Web applications with PHP 5 (2 hours)
+
+  PHP has become amazingly popular due to its simple pragmatic approach
+  to solving the web problem.  The web problem has been changing and
+  there is a lot of talk about Web 2.0 and the Programmable Web.  PHP is
+  more relevant than ever as people are combining web service components
+  to build rich AJAX-driven web applications.  In this talk Rasmus will
+  cover the basic building blocks PHP 5 provides for building these rich
+  applications and show plenty of interesting examples along the way.
+-->
+
+<topic>PHP</topic>
+<title>PHP - Rich Web Apps</title>
+<event>LCA 2006</event>
+<location>Dunedin</location>
+<date>Jan.25, 2006</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.lerdorf.com/show/nz1</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/lamp/failfast.xml</slide>
+
+<slide>slides/intro/rich.xml</slide>
+<slide>slides/intro/rich2.xml</slide>
+<slide>slides/intro/ajax.xml</slide>
+<slide>slides/mvc/mvc.xml</slide>
+<slide>slides/mvc/example.xml</slide>
+<slide>slides/mvc/mvc_view1.xml</slide>
+<slide>slides/mvc/mvc_view2.xml</slide>
+<slide>slides/mvc/mvc_view3.xml</slide>
+<slide>slides/mvc/mvc_controller.xml</slide>
+<slide>slides/mvc/mvc_model.xml</slide>
+<slide>slides/intro/json.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/xml_eg.xml</slide>
+<slide>slides/intro/rss_lca.xml</slide>
+
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/ws7.xml</slide>
+<slide>slides/intro/ws8.xml</slide>
+<slide>slides/intro/ws9.xml</slide>
+
+<slide>slides/intro/nz1_ref.xml</slide>
+</presentation>
