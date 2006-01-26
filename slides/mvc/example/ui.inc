@@ -34,13 +34,12 @@ function field($title,$name,$type,$entry,$extra=null) {
     case 'text':
       $size  = isset($extra['size'])  ? $extra['size']  : 64;
       $maxl  = isset($extra['maxl'])  ? $extra['maxl']  : 128;
-      $align = isset($extra['align']) ? $extra['align']  : "left";
       $dir   = isset($extra['dir'])   ? $extra['dir']   : 'LTR';
       
       echo <<<EOB
 <input type="hidden" name="desc_$name" id="desc_$name" value="$title" />
     <input type="text" $readonly class="f" id="f_$name" name="$name" size="$size"
-         maxlength="$maxl" value="$fill" align="$align" dir="$dir" $float
+         maxlength="$maxl" value="$fill" dir="$dir" $float
          onfocus="if(document.all) { addClass(this,'iefocus') } 
                   if (this.value == '$title') { this.value = '' }"
          onblur ="if(document.all) { delClass(this,'iefocus') }
