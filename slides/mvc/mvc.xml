@@ -1,8 +1,11 @@
-<slide title="MVC">
+<slide title="MVC Architecture?">
 <blurb>
-You can use an MVC approach if you like.  But avoid the temptation of a single
-monolithic controller.  The controller is part of the presentation layer.
+MVC is the current buzz in web application architectures.  It comes from
+event-driven desktop application design and doesn't fit into web application
+design very well.  But luckily nobody really knows what MVC means, so we can
+call our presentation layer separation mechanism MVC and move on.
 </blurb>
+
 <image filename="MVc.png" align="center"/>
 
 <list>

@@ -1,0 +1,10 @@
+<slide title="MVC Example">
+<break lines="1" />
+
+<example hide="1" title="view" result="1" type="iframe" outputbackground="#ffffff" filename="example/add.php"/>
+
+<example title="View - add.php" fontsize="1.4em" marginright="0em" filename="example/add.php" />
+
+<example title="Controller - add_c.php" fontsize="1.4em" marginright="0em" filename="example/add_c.inc" />
+
+</slide>
