@@ -1,0 +1,61 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Building Fast and Secure Web Applications (2 hours)
+
+  Building a web application is easy.  Making it fast and secure is
+  hard.  We will explore the dangers of cross-site scripting and do a
+  bit of realtime spellunking to demonstrate just how rampant this
+  problem is.  If you feel brave, volunteer your own sites for Rasmus to
+  prod during the session.  After learning how to avoid these problems
+  we will also have a look at some easy ways to speed up your
+  applications. 
+-->
+<topic>PHP</topic>
+<title>Fast and Secure Web Apps</title>
+<event>LCA</event>
+<location>Dunedin</location>
+<date>Jan.26, 2006</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.lerdorf.com/show/nz2</url>
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/mvc/mvc_xss.xml</slide>
+<slide>slides/intro/xss.xml</slide>
+<slide>slides/intro/xss1.xml</slide>
+<slide>slides/intro/xss2.xml</slide>
+<slide>slides/intro/xss3.xml</slide>
+<slide>slides/intro/xss_common.xml</slide>
+<slide>slides/intro/xss_charset.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/intro/scanmus.xml</slide>
+<slide>slides/intro/filter.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+
+<slide>slides/intro/perf1.xml</slide>
+<slide>slides/intro/perf2.xml</slide>
+
+<slide>slides/intro/new_apc.xml</slide>
+<slide>slides/intro/php_opcode_caches3.xml</slide>
+<slide>slides/intro/php_opcache_hints1.xml</slide>
+<slide>slides/intro/php_opcache_hints2.xml</slide>
+<slide>slides/intro/php_opcache_hints3.xml</slide>
+<slide>slides/intro/php_opcache_hints4.xml</slide>
+
+<slide>slides/intro/php_tuning1.xml</slide>
+<slide>slides/intro/php_profiling.xml</slide>
+<slide>slides/intro/xdebug_profile.xml</slide>
+
+<slide>slides/intro/scale1.xml</slide>
+<slide>slides/intro/large_scale.xml</slide>
+
+<slide>slides/intro/nz2_ref.xml</slide>
+</presentation>
