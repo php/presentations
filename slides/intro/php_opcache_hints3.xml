@@ -34,4 +34,15 @@
   settings.  The one downside to this approach is that you have to restart the server to
   make any changes to the config.
 </blurb>
+<example fontsize="1.6em" result="0"><![CDATA[<?php
+// load_list takes a text file and turns it
+// into a global array cached by APC.
+function load_list($name) {
+  global $$name;
+  if(!$$name = apc_fetch($name)) {
+    $$name = explode("\n",trim(file_get_contents($name.'.txt')));
+    apc_store($name,$$name);
+  }
+}
+?>]]></example>
 </slide>

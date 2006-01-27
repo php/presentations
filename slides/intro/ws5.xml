@@ -17,16 +17,17 @@ Flickr also has a REST interface
 
 <example fontsize="1.2em" title="We can parse it like this" result="1" marginright="0em" required_extension="simplexml"><![CDATA[<?php
 function photo_url($p, $size='s', $ext='jpg') {
- return "http://photos{$p['server']}.flickr.com/{$p['id']}_{$p['secret']}_{$size}.{$ext}";
+ return "http://static.flickr.com/{$p['server']}/{$p['id']}_{$p['secret']}_{$size}.{$ext}";
 }
 $url = "http://flickr.com/services/rest/?method=flickr.people.getPublicPhotos".
        "&user_id=56053642@N00&per_page=2&api_key=3aba8184848f9263b80795c95529bcd1";
 $xml = @simplexml_load_file($url) or die("Unable to contact Flickr");
+
 $perpage = $xml->photos['perpage'];
 $total = $xml->photos['total'];
 
 foreach($xml->photos->photo as $photo) {
-  echo '<a href="'.photo_url($photo,'b').'" target="_blank">';
+  echo '<a href="'.photo_url($photo,'o').'" target="_blank">';
   echo '<img src="'.photo_url($photo).'" height="75" width="75" />';
   echo '<br />'.$photo['title'].'</a><br />';
 }

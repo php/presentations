@@ -1,6 +1,7 @@
 <slide title="XML">
 <break lines="1" />
 
+<php filename="presentations/slides/intro/cd.php"/>
 <!-- <php><![CDATA[<?php chdir('presentations/slides/intro');?>]]></php> -->
 
 <example title="All XML handling based on libxml2" marginleft="2em" marginright="0em" result="0"><![CDATA[<?php
@@ -14,7 +15,7 @@ while($line = fgets($fp)) echo str_replace(' ','&nbsp;',htmlspecialchars($line))
 ?>]]></example>
 
 <example title="XPath" result="1" fontsize="1.5em" marginleft="2em" marginright="0em"><![CDATA[<?php
-$dom = domdocument::load('presentations/slides/intro/menu.xml');
+$dom = domdocument::load('menu.xml');
 $ctx = new domXPath($dom);
 $result = $ctx->query('/breakfast_menu/food[@itemno > 3]/price/text()');
 foreach($result as $node) {
@@ -23,15 +24,15 @@ foreach($result as $node) {
 ?>]]></example>
 
 <example title="XSL" result="1" marginleft="2em" marginright="0em"><![CDATA[<?php
-$dom = domdocument::load('presentations/slides/intro/menu.xml');
-$domxsl = domDocument::load('presentations/slides/intro/menu.xsl');
+$dom = domdocument::load('menu.xml');
+$domxsl = domDocument::load('menu.xsl');
 $proc = new xsltProcessor;
 $proc->importStyleSheet($domxsl);
 echo $proc->transformToXML($dom);
 ?>]]></example>
 
 <example title="SimpleXML" result="1" marginleft="2em"><![CDATA[<?php
-  $menu = simplexml_load_file('presentations/slides/intro/menu.xml');
+  $menu = simplexml_load_file('menu.xml');
   foreach ($menu->food as $item) {
     echo $item['itemno'] . ") ";
     echo $item->price . " ... ";

@@ -25,8 +25,7 @@ var mymap = new Map("mapContainer", "YahooDemo", "San Francisco, CA", 12);
 mymap.addTool(new PanTool(), true);
 mymap.addWidget(new NavigatorWidget()); 
 
-olay = new GeoRSSOverlay(
-      'http://earthquake.usgs.gov/recenteqsww/catalogs/eqs7day-M2.5.xml');           
+olay = new GeoRSSOverlay('http://earthquake.usgs.gov/recenteqsww/catalogs/eqs7day-M2.5.xml');
 mymap.addOverlay(olay);
 
 </script>]]></example>

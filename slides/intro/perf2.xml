@@ -1,0 +1,18 @@
+<slide title="Performance">
+
+<break lines="2" />
+
+<list title="Watch those compiler flags">
+<bullet> Use non-PIC Apache DSO (gcc -prefer-non-pic) by using --without-pic</bullet>
+<bullet> Use platform-specific gcc flags</bullet>
+<bullet> ./configure --disable-all</bullet>
+</list>
+
+<list title="Other Changes">
+<bullet> Plenty of custom extensions and limit RINIT</bullet>
+<bullet> Filter all user data by default</bullet>
+<bullet> No $_COOKIE nor $_ENV for you and use JIT population for $_SERVER</bullet>
+<bullet> Careful use of the session extension</bullet>
+</list>
+
+</slide>

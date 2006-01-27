@@ -22,4 +22,13 @@ modern compilers you should theoretically see better numbers from the GOTO VM,
 but the differences are usually not all that dramatic.
 </blurb>
 
+<example type="shell" title="Try it" fontsize="1.5em">
+~/php51/Zend> php zend_vm_gen.php --with-vm-kind=GOTO
+zend_vm_opcodes.h generated succesfully.
+zend_vm_execute.h generated succesfully.
+cd ..
+./buildconf
+./configure ...
+make
+</example>
 </slide>
