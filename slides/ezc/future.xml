@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Next?</title>
+	<subtitle>Additions for eZ components 1.1</subtitle>
+
+	<blurb>New components:</blurb>
+	<list>
+		<bullet>*Template*: Well, uh, templating</bullet>
+		<bullet>*DatabaseSchema*: DDL manipulation</bullet>
+		<bullet>*Feed*: RSS/ATOM feeds</bullet>
+		<bullet>*Mail*: Parsing mail</bullet>
+		<bullet>*PersistentObject*: Integration with Database Schema</bullet>
+	</list>
+</slide>

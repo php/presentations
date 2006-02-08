@@ -1,0 +1,11 @@
+<slide>
+	<title>Cache</title>
+
+	<example filename='cache.php' result="1"/>
+
+	<list>
+		<bullet>*FilePlain*: Raw data</bullet>
+		<bullet>*FileArray*: var_export() data, include to restore</bullet>
+		<bullet>*FileEvalArray*: var_export() data, eval() to restore</bullet>
+	</list>
+</slide>
