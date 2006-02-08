@@ -1,0 +1,13 @@
+<slide>
+	<title>ImageConversion</title>
+
+	<example filename='imageconversion2.php'/>
+
+<break/>
+	<blurb>Result:</blurb>
+	<image filename='nacreous-small.jpg' pdf-scale="0.4" y-offset="10" x-offset="1" />
+	<image filename='nacreous-grey.jpg' pdf-scale="0.4" y-offset="10" x-offset="11" />
+
+<break lines="20"/>
+	<blurb>&#160;</blurb>
+</slide>

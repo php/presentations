@@ -1,13 +1,13 @@
 <slide fontsize="3.5em">
 <title>Welcome!</title>
-<image align="center" filename="components.png" />
+<image align="center" filename="components.png" pdf-scale="0.7"/>
 
 <break lines="3"/>
 <blurb class="event">RAD for PHP</blurb>
 <break/>
 <blurb class="event-date">PHP Conference UK. London, UK</blurb>
 <break/>
-<blurb class="event-presenter">Derick Rethans &amp;lt;&lt;a href="mailto:dr@ez.no">dr@ez.no&lt;/a>&amp;gt;</blurb>
+<blurb class="event-presenter">Derick Rethans - dr@ez.no</blurb>
 <break/>
-<blurb class="pres-url-small">&lt;a href="http://files.derickrethans.nl/ezc-phpuk6.pdf">http://files.derickrethans.nl/ezc-phpuk6.pdf&lt;/a></blurb>
+<blurb class="pres-url-small">http://files.derickrethans.nl/ezc-phpuk6.pdf</blurb>
 </slide>

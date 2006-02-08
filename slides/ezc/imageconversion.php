@@ -25,12 +25,4 @@ $filters[] = new ezcImageFilter( 'colorspace',
 $converter->createTransformation(
   'prevgrey', $filters, array( 'image/jpeg' )
 );
-
-// Apply transformations
-$converter->transform( 
-  'preview', "$dir/nacreous.jpg", "$dir/nacreous-small.jpg"
-);
-$converter->transform( 
-  'prevgrey', "$dir/nacreous.jpg", "$dir/nacreous-grey.jpg"
-);
 ?>
