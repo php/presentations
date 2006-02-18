@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>By-Reference Example</title>
+	<subtitle>5</subtitle>
+
+	<example result="1" class="bit_larger"><![CDATA[<pre><?php
+	function f(&$a) { return $a; }
+
+	$x = array('a','b','c');
+	foreach (array_keys($x) as $k) {
+		$y =& f($x[$k]);
+		$z[] =& $y;
+	}
+	var_dump($x, $z);]]></example>
+
+</slide>
