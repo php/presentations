@@ -2,6 +2,7 @@
 include './model/db.inc';
 include './model/items.inc';
 if($_SERVER['REQUEST_METHOD']=='POST') {
+  header("Content-type: application/json");
   // Load an item entry from backend and send JSON request to populate form
   if(isset($_POST['load_item'])) {
     $entry = load_items($_POST['load_item']);
@@ -37,6 +38,6 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 
 // Initialize view data
 if(!isset($categories)) load_list('categories');
-if(!isset($item)) $item = array();
+if(!isset($item)) $item = array('cat'=>'');
 $items = load_items();
 ?>

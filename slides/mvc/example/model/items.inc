@@ -61,6 +61,11 @@ function load_items($id=-1) {
   } catch (PDOException $e) {
     db_fatal_error($e->getMessage());
   }
+  // Some databases can do this right in the SELECT
+  // SQLite can't, so we add a formatted column ourselves
+  foreach($rows as $i=>$row) {
+    $rows[$i]['fprice'] = number_format($row['price'],2);
+  }
   return $rows;
 }
 
