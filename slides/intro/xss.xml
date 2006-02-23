@@ -4,7 +4,7 @@
 
 <example title="Traditional Form Handling" result="1"><![CDATA[<form action="<?php echo $PHP_SELF?>" method="POST">
 Your name: <input type=text name=name><br>
-You age: <input type=text name=age><br>
+Your age: <input type=text name=age><br>
 <input type=submit>
 </form>
 <?php
