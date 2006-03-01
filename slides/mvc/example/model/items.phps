@@ -52,7 +52,7 @@ function load_items($id=-1) {
   global $dbh;
   $where = '';
 
-  if($id!=-1) $where = "where id=$id";
+  if($id!=-1) $where = "where id=".(int)$id;
   try {
     if(empty($dbh)) $dbh = db_connect();
     $result = $dbh->query("SELECT * FROM items
