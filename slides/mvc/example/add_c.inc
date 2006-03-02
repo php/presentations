@@ -1,11 +1,12 @@
 <?php
 include './model/db.inc';
 include './model/items.inc';
+$db = new items();
 if($_SERVER['REQUEST_METHOD']=='POST') {
   header("Content-type: application/json");
   // Load an item entry from backend and send JSON request to populate form
   if(isset($_POST['load_item'])) {
-    $entry = load_items($_POST['load_item']);
+    $entry = $db->load($_POST['load_item']);
     $entry[0]['submit'] = 'Modify Item';
     if($entry) echo json_encode(array('formName'=>$_POST['formName'],
                                       'load_item'=>$entry));
@@ -23,10 +24,10 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
   // Save changes and display status message
   $status = "Failure";
   if($_POST['f_submit']=='Modify Item') {
-     $ret = modify_item($_POST);
+     $ret = $db->modify($_POST);
      if($ret) $status = "Modified";
   } else {
-     $ret = new_item($_POST);
+     $ret = $db->insert($_POST);
      if($ret) $status = "Added";
   }
   echo json_encode(array('status'=>$status,
@@ -39,5 +40,5 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 // Initialize view data
 if(!isset($categories)) load_list('categories');
 if(!isset($item)) $item = array('cat'=>'');
-$items = load_items();
+$items = $db->load();
 ?>

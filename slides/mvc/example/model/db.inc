@@ -1,20 +1,23 @@
 <?php
 
-function db_connect() {
-  $dbh = new PDO('sqlite:./model/example.db');
-  $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  return $dbh;
-}
+class db {
+  public $dbh = false;
 
-function db_fatal_error($msg) {
-  echo "<pre>Error!: $msg\n";
-  $bt = debug_backtrace();
-  foreach($bt as $line) {
-    $args = var_export($line['args'], true);
-    echo "{$line['function']}($args) at {$line['file']}:{$line['line']}\n";
+  function connect() {
+    $this->dbh = new PDO('sqlite:./model/example.db');
+    $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
-  echo "</pre>";
-  die();
+
+  protected function fatal_error($msg) {
+    echo "<pre>Error!: $msg\n";
+    $bt = debug_backtrace();
+    foreach($bt as $line) {
+      $args = var_export($line['args'], true);
+      echo "{$line['function']}($args) at {$line['file']}:{$line['line']}\n";
+    }
+    echo "</pre>";
+    die();
+  }
 }
 
 // load_list takes a text file and turns it into a global array cached by APC
