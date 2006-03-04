@@ -11,8 +11,8 @@ class items extends db {
   function insert($item) {
     $t = $_SERVER["REQUEST_TIME"];
     try {
-      if(!$this->dbh) $this->connect();
-      $stmt = $this->dbh->prepare("INSERT INTO items 
+      if(!self::$dbh) $this->connect();
+      $stmt = self::$dbh->prepare("INSERT INTO items 
                                     (id,cat,sdesc,ldesc,price,ctime)
                                    VALUES 
                                     (NULL,:cat,:sdesc,:ldesc,:price,$t)");
@@ -29,8 +29,8 @@ class items extends db {
 
   function modify($item) {
     try {
-      if(!$this->dbh) $this->connect();
-      $stmt = $this->dbh->prepare("UPDATE items SET 
+      if(!self::$dbh) $this->connect();
+      $stmt = self::$dbh->prepare("UPDATE items SET 
                                     cat=:cat, sdesc=:sdesc, 
                                     ldesc=:ldesc, price=:price 
                                    WHERE id=:id");
@@ -51,8 +51,8 @@ class items extends db {
 
     if($id!=-1) $where = "where id=".(int)$id;
     try {
-      if(!$this->dbh) $this->connect();
-      $result = $this->dbh->query("SELECT * FROM items
+      if(!self::$dbh) $this->connect();
+      $result = self::$dbh->query("SELECT * FROM items
                              $where order by ctime desc");
       $rows = $result->fetchAll(PDO::FETCH_ASSOC); 
     } catch (PDOException $e) {

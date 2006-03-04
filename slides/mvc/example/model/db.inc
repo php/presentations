@@ -1,11 +1,11 @@
 <?php
 
 class db {
-  public $dbh = false;
+  protected static $dbh = false;
 
   function connect() {
-    $this->dbh = new PDO('sqlite:./model/example.db');
-    $this->dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    self::$dbh = new PDO('sqlite:./model/example.db');
+    self::$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
 
   protected function fatal_error($msg) {
