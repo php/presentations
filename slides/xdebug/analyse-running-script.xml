@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Analyzing Running Scripts</title>
+
+	<list>
+		<bullet>DBGp, common Debugging protocol</bullet>
+		<bullet>Cross-language: PHP, Python, Perl...</bullet>
+		<bullet>Supported in Xdebug 2</bullet>
+		<bullet>Clients: Komodo, Maguma Workbench, TruStudio (PHP Eclipse Plugin) and many other smaller ones</bullet>
+	</list>
+<break lines="4"/>
+	<blurb>Let's demo this...</blurb>
+</slide>

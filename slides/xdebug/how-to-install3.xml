@@ -1,0 +1,9 @@
+<slide>
+	<title>Installing Xdebug</title>
+	<subtitle>Gotchas</subtitle>
+
+	<list>
+		<bullet>%--enable-versioning% prevent Xdebug from loading</bullet>
+		<bullet>Zend's extensions (optimizer, debugger, cache) prohibit Xdebug (and other non-Zend zend-extensions) from loading</bullet>
+	</list>
+</slide>

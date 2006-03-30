@@ -1,6 +1,6 @@
 <style title="Default" type="text/css">
 body {
-	font-size: 10pt;
+	font-size: 8pt;
 	margin-left:290px;
 	margin-right:0em;
 	margin-bottom:0em;
@@ -24,7 +24,7 @@ font-family: verdana, tahoma, arial, helvetica, sans-serif;
 z-index: 99;
 }
 div.navbar_title, div.navbar_title a, div.subtitle {
-	font-size: 32px;
+	font-size: 26px;
 	color: #698fe5;
 	text-decoration: none;
 	text-align: left;
@@ -33,13 +33,13 @@ div.navbar_title, div.navbar_title a, div.subtitle {
 }
 div.subtitle {
 	margin-top: 5px;
-	font-size: 24;
+	font-size: 18px;
 	font-weight: normal;
 	font-style: italic;
 }
 
 div.navbar_nr a {
-font-size: 16px;
+font-size: 13px;
 color: #77a;
 text-decoration: none;
 position: fixed;
@@ -56,55 +56,61 @@ overflow: -moz-scrollbars-vertical;
 }
 ul.pres {
 list-style: circle;
-font-size: 24pt;
+font-size: 18pt;
 }
 
+ul.numbered
+{
+font-size: 20pt;
+margin-right: 40px;
+list-style-type: decimal;
+}
 
 ul.level2 {
 	list-style: circle;
-	font-size: 20pt;
+	font-size: 16pt;
 	margin-left: 40px;
 	margin-top: -15px;
 }
 
-li.pres_bullet {
-font-size: 28pt;
+li.pres_bullet, div.link {
+font-size: 20pt;
 margin-right: 40px;
 }
 
 li.pres_bullet_nr {
-font-size: 28pt;
+font-size: 20pt;
 margin-right: 40px;
 list-style-type: decimal;
 }
 
 ul.large div li.pres_bullet
 {
-	font-size: 40pt;
+	font-size: 26pt;
 }
 	
 ul.small div li.pres_bullet
 {
-	font-size: 20pt;
+	font-size: 16pt;
 }
 
 div.title_blurb {
-	font-size: 80px;
+	font-size: 64px;
 	text-align: center;
 	font-weight: bold;
 }
 	
 div.small_blurb {
-	font-size: 24px;
+	font-size: 18px;
 }
 
 div.blurb, div.bit_larger_output_text {
-	font-size: 28pt;
+	font-size: 20pt;
 	width: 100%;
 }
 
 div.bit_larger_output_text {
-	margin-top: 10px;
+	margin-top: 8px;
 }
 
 div.x_small_blurb {
@@ -112,45 +118,46 @@ div.x_small_blurb {
 }
 
 div.large_blurb {
-	font-size: 32pt;
+	font-size: 26pt;
 }
 
 div.large_blurb_center {
-	font-size: 48px;
+	font-size: 38px;
 	text-align: center;
 }
 
 div.quote {
-	font-size: 48px;
+	font-size: 32px;
 	text-align: center;
 	margin-left: 40px;
 	margin-right: 40px;
 }
 
 div.quote_attr {
-	font-size: 32px;
+	font-size: 24px;
 	text-align: right;
 	margin-right: 40px;
 }
 
 div.xx_large_blurb_center {
-	font-size: 80px;
+	font-size: 64px;
 	text-align: center;
 }
 
 div.q_mark {
 	text-align: center;
-	font-size: 480px;
+	font-size: 384px;
 }
 
 div.shadow, code {
-	font-size: 18px; width: 640px;
+	font-size: 14px; width: 640px;
 }
 
 div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
 	background: #eee;
-	font-size: 23px;
+	font-size: 16px;
 	width: 100%;
+	font-weight: bold;
 }
 div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 	margin-left: 20px;
@@ -158,7 +165,7 @@ div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 }
 
 div.large code, div.large {
-	font-size: 32px;
+	font-size: 26px;
 	background: #eee;
 	font-weight: bold;
 	margin-left: 20px;
@@ -174,26 +181,27 @@ div.code_small, div.code_medium, div.code_large, div.example {
 	background: #eee;
 }
 div.code_small code {
-	font-size: 12px;
+	font-size: 10px;
 }
 div.code_medium code, div.code_medium pre {
-	font-size: 20px;
+	font-size: 16px;
 }
 div.code_large code, div.code_large pre {
-	font-size: 24px;
+	font-size: 18px;
 }
 div.example pre {
-    font-size: 23px;
+    font-size: 16px;
+	font-weight: bold;
 }
 
 div.event, div.event-date, div.event-presenter {
 	text-align: center;
-	font-size:  32pt;
+	font-size:  26pt;
 }
 
 div.pres-url-small {
 	text-align: center;
-	font-size:  24pt;
+	font-size:  18pt;
 }
 
 img.spaced {
@@ -204,6 +212,6 @@ img.spaced {
 }
 
 table {
-	font-size: 20pt;
+	font-size: 16pt;
 }
 </style>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Timezone and Date tips</title>
+
+	<list>
+		<bullet>Store date/time in a timezone agnostic way: GMT</bullet>
+		<bullet>Use a "Unix" timestamp, perhaps as string: %date("U");%</bullet>
+	</list>
+	
+</slide>

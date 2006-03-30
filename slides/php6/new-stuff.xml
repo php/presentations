@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>New Stuff</title>
+	<subtitle>Adding functionality</subtitle>
+
+	<list>
+		<bullet>64 bit integer</bullet>
+		<bullet>%goto%</bullet>
+		<bullet>late static binding</bullet>
+		<bullet>default opcode cache (APC)</bullet>
+		<bullet>%E_STRICT% on by default</bullet>
+		<bullet>*Full Unicode support*</bullet>
+	</list>
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Timezone Database</title>
+
+	<list>
+		<bullet>Timezones change quicker than PHP releases</bullet>
+		<bullet>pecl extension: timezonedb</bullet>
+		<bullet>Can be used to override the built-in timezones with new rules</bullet>
+	</list>
+<break lines="3"/>
+	<image filename="date-info.png" align="center"/>
+	
+</slide>

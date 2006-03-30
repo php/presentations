@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>The Big Cleanup</title>
+	<subtitle>Removing functionality</subtitle>
+
+	<list>
+		<bullet>%register_globals%</bullet>
+		<bullet>%magic_quotes%</bullet>
+		<bullet>%safe_mode%</bullet>
+		<bullet>%zend.ze1_compatibility% mode</bullet>
+		<bullet>%dl()%</bullet>
+	</list>
+</slide>

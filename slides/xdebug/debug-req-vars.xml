@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Debugging With Request Variables</title>
+
+	<image filename="request-vars.png" align="center"/>
+<break lines="2"/>
+	<blurb>%xdebug.dump.GET=*%</blurb>
+	<blurb>%xdebug.dump.POST=username,password%</blurb>
+<break/>
+	<blurb>Also for: COOKIE, ENV, FILES, REQUEST, SERVER and SESSION</blurb>
+
+</slide>

@@ -3,8 +3,8 @@
 	<title>i18n Extensions</title>
 
 	<list>
-		<bullet>*i18n_core*: always enabled, functions to set the locale, the
-		locale aware string functions. String searching API.</bullet>
+		<bullet>*ext/unicode*: always enabled, functions to set the locale, the
+		locale aware string functions. String searching and collation API.</bullet>
 		<bullet>*i18n_regexp*: Unicode aware regular expressions</bullet>
 		<bullet>*i18n_translit*: PECL/translit extension, integrated with ICU's
 		transliteration</bullet>

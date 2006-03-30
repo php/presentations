@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Execution trace</title>
+
+	<image filename="tracefile-ezc.png" align="center"/>
+
+<break/>
+	<blurb>Available settings:</blurb>
+<break/>
+	<example class="code_large">xdebug.auto_trace=1
+xdebug.trace_output_dir=/tmp
+xdebug.collect_params=1
+xdebug.collect_return=1
+xdebug.trace_options=1</example>
+<break/>
+</slide>

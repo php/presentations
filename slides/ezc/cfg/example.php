@@ -4,7 +4,7 @@ return array (
   array (
     'db' => 
     array (
-      'password' => 'noneofyourbusiness',
+      'password' => 'blåbærsyltetøy',
     ),
   ),
   'comments' => 

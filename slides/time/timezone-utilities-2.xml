@@ -3,7 +3,7 @@
 	<title>Timezones Utilities</title>
 	<subtitle>Abbreviations and Identifiers</subtitle>
 
-	<blurb>All supported timezone idenfiers:</blurb>
+	<blurb>All supported timezone identifiers:</blurb>
 	<example result="1"><![CDATA[<?php
 	$ids = timezone_identifiers_list();
 	echo "Number of identifiers: ", count($ids), "<br/>";
@@ -12,13 +12,15 @@
 ?>]]></example>
 <break lines="2"/>
 
-	<blurb>All supported timezone idenfiers:</blurb>
+	<blurb>All supported timezone identifiers:</blurb>
 	<example result="1"><![CDATA[<?php
 	$abbrs = timezone_abbreviations_list();
 	echo "<pre>\n";
-	foreach ($abbrs as $abbr => $id) {
-		printf("%-4s %6d %d %s\n", strtoupper($abbr),
-			$id['offset'], $id['dst'], $id['timezone_id']);
+	foreach ($abbrs as $abbr => $ids) {
+		foreach ($ids as $id) {
+			printf("%-6s %6d %d %s\n", strtoupper($abbr),
+				$id['offset'], $id['dst'], $id['timezone_id']);
+		}
 	}
 ?>]]></example>
 </slide>

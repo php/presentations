@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Pretty Printing Variables</title>
+
+	<image filename="var_dump.png" align="center"/>
+<break lines="2"/>
+	<blurb>%&amp;lt;?php%</blurb>
+	<blurb>%xdebug_var_dump();%</blurb>
+	<blurb>%?&gt;%</blurb>
+
+</slide>

@@ -1,0 +1,12 @@
+<slide>
+	<title>I Do Not Need a Debugger</title>
+	<subtitle>... yes you do</subtitle>
+
+	<list>
+		<bullet>printf(), var_dump() and echo are good enough</bullet>
+		<bullet>*Xdebug*: Open Source debugger for PHP</bullet>
+		<bullet>It's about 4 years old</bullet>
+		<bullet>Version 2 will be out "soonish"</bullet>
+		<bullet>Even works on Windows</bullet>
+	</list>
+</slide>

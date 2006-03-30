@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Help By Error Messages</title>
+
+	<image filename="stacktrace3a.png" align="center"/>
+	<blurb>... is kinda useles.</blurb>
+<div effect="hide">
+<break lines="2"/>
+	<image filename="stacktrace3b.png" align="center"/>
+	<blurb>%xdebug.collect_params=1% and %xdebug.show_local_vars=1%</blurb>
+</div>
+
+</slide>

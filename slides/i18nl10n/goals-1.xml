@@ -4,7 +4,7 @@
 
 	<list>
 		<bullet>Native Unicode strings</bullet>
-		<bullet>A clear separation between Binary, Native (Encoded) Strings and Unicode Strings</bullet>
+		<bullet>A clear separation between Binary / Native (Encoded) Strings and Unicode Strings</bullet>
 		<bullet>Unicode string literals</bullet>
 		<bullet>Updated language semantics</bullet>
 		<bullet>Where possible, upgrade the existing functions</bullet>

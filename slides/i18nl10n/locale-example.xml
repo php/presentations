@@ -5,10 +5,10 @@
 
 	<example result="1"><![CDATA[<?php
 	i18n_loc_set_default("nl");
-	echo i18n_strtotitle("het ijsselmeer (ĳsselmeer) is ßaf"), "<br/>\n";
+	echo strtotitle("het ijsselmeer (ĳsselmeer) is ßaf"), "<br/>\n";
 
 	i18n_loc_set_default("tr");
-	echo i18n_strtotitle("het ijsselmeer (ĳsselmeer) is ßaf"), "\n";
+	echo strtotitle("het ijsselmeer (ĳsselmeer) is ßaf"), "\n";
 ?>]]></example>
 
 </slide>

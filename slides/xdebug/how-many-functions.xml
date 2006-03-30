@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>How Many Functions</title>
+
+	<example result="1"><![CDATA[<?php
+echo xdebug_get_function_count();
+?>]]></example>
+
+<div effect="hide">
+<break lines="3"/>
+	<example result="1"><![CDATA[<?php
+echo xdebug_get_function_count();
+?>]]></example>
+</div>
+
+</slide>

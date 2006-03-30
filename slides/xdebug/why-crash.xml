@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Protection</title>
+
+	<list>
+		<bullet>Stack overflow in PHP</bullet>
+		<bullet>Infinite recursion</bullet>
+	</list>
+<break/>
+	<blurb>Xdebug protects with:</blurb>
+<break/>
+	<example class="code_large">xdebug.max_nesting_level=4</example>
+<break/>
+
+	<image filename="infinite.png" align="center"/>
+
+</slide>
