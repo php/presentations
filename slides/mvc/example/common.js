@@ -17,7 +17,9 @@ var fN = function callBack(o) {
     YAHOO.util.Dom.setXY(div,[pos[0],pos[1]+40]);
     div.style.visibility = 'visible'
     fnc = function() {
-      if(resp['reset']) { document.forms[resp['formName']].reset(); }
+      if(resp['reset']) { 
+         document.forms[resp['formName']].reset();
+      }
       window.location.reload(false);
     }
     fade(div,2,fnc);

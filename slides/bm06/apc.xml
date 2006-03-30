@@ -1,0 +1,75 @@
+<slide title="APC">
+<break lines="2"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+If we look at the last callgraph again, we see that we are spending close to 40% of our time
+parsing and compiling.  We can eliminate that by using an opcode cache like APC.
+</blurb>
+
+<image marginleft="4em" clear="left" filename="compile.png" title="Callgraph [mysql.out]"/>
+
+<example title="php.ini"><![CDATA[extension = "apc.so"
+apc.enabled=1
+apc.shm_segments=1
+apc.shm_size=32
+apc.num_files_hint=1024
+apc.gc_ttl=3600
+apc.ttl=0
+apc.mmap_file_mask=/tmp/apc.XXXXXX
+apc.filters=
+apc.stat=1
+apc.enable_cli=0]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+*805* requests/second.  Callgraph?  
+</blurb>
+
+<image marginleft="4em" clear="left" filename="open.png" title="Callgraph [apc.out]"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+If we look carefully we see that over 5000 requests we are opening 20000 files.  Main script plus
+4 includes on each request.  This is because *include_once* and *require_once* don't play nice with
+opcode caches right now.  Changing to *require* brings us to *875* requests/second.
+</blurb>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+APC also has a no-stat mode.  If you give it absolute paths, it can skip the stat() call.
+</blurb>
+
+<example title="php.ini"><![CDATA[apc.stat=0]]></example>
+
+<example title="config.inc"><![CDATA[<?php
+$config = array(
+  'db'      => 'mysql',
+  'db_user' => 'nobody41',
+  'db_pwd'  => 'foobar',
+  'db_host' => 'localhost',
+  'db_db'   => 'users',
+  'db_opts' => array(PDO::ERRMODE_EXCEPTION => true,
+                     PDO::ATTR_PERSISTENT => true,
+                     PDO::MYSQL_ATTR_DIRECT_QUERY=>1),
+  'path'    => getcwd()
+);
+?>]]></example>
+
+<example title="index.php" fontsize="1.8em"><![CDATA[<?php
+require "./config.inc";
+require $config['path']."/model.inc";
+require $config['path']."/utils.inc";
+require $config['path']."/head.inc";
+head();
+foreach(articles() as $row) {
+$name = upper($row['name']);
+echo <<<EOB
+<tr><th>$name</th><td>{$row['age']}</td><td>{$row['entry']}</td></tr>
+EOB;
+}
+boo();
+foot();
+?>]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+This takes us to *885* requests/second.  We are down to 2 machines!
+</blurb>
+
+</slide>

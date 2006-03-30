@@ -1,0 +1,36 @@
+<slide title="Let's try MySQL 4.1">
+<break lines="2"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+Non-persistent: *390* requests/second
+</blurb>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+Persistent: *475* requests/second
+</blurb>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+This is with MySQL's query cache enabled.  But Callgrind shows us that we are actually
+calling MySQL's internal prepare/execute API.
+</blurb>
+
+<image marginleft="4em" clear="left" filename="mysql_prep.png" title="Callgraph [mysql.out]"/>
+
+<example title="Use direct queries"><![CDATA[<?php
+$config = array(
+  'db'      => 'mysql',
+  'db_user' => 'nobody',
+  'db_pwd'  => 'foobar',
+  'db_host' => 'localhost',
+  'db_db'   => 'users',
+  'db_opts' => array(PDO::ERRMODE_EXCEPTION => true,
+                     PDO::ATTR_PERSISTENT => true,
+                     PDO::MYSQL_ATTR_DIRECT_QUERY=>1)
+);
+?>]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+That brings us to *500* requests/second.  Down to 4 servers!
+</blurb>
+
+</slide>

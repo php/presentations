@@ -1,0 +1,53 @@
+<slide title="Why is it so slow?">
+<break lines="2"/>
+
+<example title="Let's ask Callgrind" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[
+callgrind --dump-instr=yes --trace-jump=yes -v /usr/sbin/apache -X
+]]></example>
+
+<image marginleft="4em" clear="left" filename="pgssl.png" title="Callgraph [pgssl.out]"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+So, let's turn off ssl in the *postgresql.conf* file and try again.
+</blurb>
+
+<example title="http_load" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[1000 fetches, 5 max parallel, 6e+06 bytes, in 9.19585 seconds
+6000 mean bytes/connection
+|ffff00|108.745| fetches/sec, 652468 bytes/sec
+msecs/connect: 0.321531 mean, 23.129 max, 0.219 min
+msecs/first-response: 44.8532 mean, 412.765 max, 8.065 min
+HTTP response codes:
+  code 200 -- 1000]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+Better, but another look at the callgraph shows we are still spending 10% of our time connecting to the database and more time tearing the
+connection back down.
+</blurb>
+
+<image marginleft="4em" clear="left" filename="pgconnect.png" title="Callgraph [pgconnect.out]"/>
+
+<example title="Turn on persistent connections"><![CDATA[<?php
+$config = array(
+  'db'      => 'pgsql',
+  'db_user' => 'nobody',
+  'db_pwd'  => 'foobar',
+  'db_host' => 'localhost',
+  'db_db'   => 'users',
+  'db_opts' => array(PDO::ERRMODE_EXCEPTION => true,
+                     PDO::ATTR_PERSISTENT => true)
+);
+?>]]></example>
+
+<example title="http_load" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[5000 fetches, 5 max parallel, 3e+07 bytes, in 13.7056 seconds
+6000 mean bytes/connection
+|ffff00|364.815| fetches/sec, 2.18889e+06 bytes/sec
+msecs/connect: 0.316614 mean, 9.299 max, 0.166 min
+msecs/first-response: 10.4774 mean, 7571.28 max, 2.379 min
+HTTP response codes:
+  code 200 -- 5000]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+Ok, we are down to only needing 5 servers now.
+</blurb>
+
+</slide>

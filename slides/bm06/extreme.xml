@@ -1,0 +1,30 @@
+<slide title="Extreme Optimizations">
+<break lines="2"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+A look at our callgraph shows that we are spending some time in *ap_add_common_vars()*
+and *ap_add_cgi_vars()*. 
+</blurb>
+
+<image marginleft="4em" clear="left" filename="add_common.png" title="Callgraph [final.out]"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+We can get rid of these with a custom patch to *sapi/apache/mod_php5.c*.  The patch was
+written by Andrei and you can find it here:
+</blurb>
+
+<link fontsize="3em" marginleft="3em" href="http://www.lerdorf.com/php/sub_env.diff.txt"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+We can squeeze another *20* requests/second out of the system bringing us to *1120* for this
+benchmark with that patch.  It won't go in the main PHP tree, because it moves functionality from
+Apache into PHP and there are various packages like ApacheSSL and mod_ssl that patch and change
+this area of the Apache code, so we have no way of solving this in the general case.
+</blurb>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+Another idea would be to move request_shutdown out of the content handling phase and closing the connection
+before we go through and clean up the request.
+</blurb>
+
+</slide>

@@ -1,0 +1,21 @@
+<slide title="How to Get Rich">
+<break lines="4"/>
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+1. Build tagged, socially networked, Web 2.0ish, Ajaxy thing
+</blurb><blurb fontsize="4em" marginleft="2em" marginright="2em">
+2. Get 500,000 users quickly (and have it actually work)
+</blurb><blurb fontsize="4em" marginleft="2em" marginright="2em">
+3. Profit
+</blurb>
+<break lines="2"/>
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+*500,000* users at an average of *100* front/backend requests daily
+</blurb><blurb fontsize="4em" marginleft="2em" marginright="2em">
+= *578* requests/second.
+</blurb><blurb fontsize="4em" marginleft="2em" marginright="2em">
+x *3* (because your traffic won't be evenly distributed)
+</blurb><blurb fontsize="4em" marginleft="2em" marginright="2em">
+= ~*1700* requests/second.
+</blurb>
+
+</slide>

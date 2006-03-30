@@ -23,7 +23,8 @@ EOB;
   <form name="fItem" action="javascript:postForm('add.php','fItem')">
     <input type="hidden" name="formName" value="fItem" />
     <input type="hidden" name="id" id="f_id" value="" />
-    <input type="text" class="f" id="f_sdesc" name="sdesc" size="39" maxlength="128" value="Short Description" dir="LTR" />
+    <input type="text" class="f" id="f_sdesc" name="sdesc" size="39" 
+           maxlength="128" value="Short Description" dir="LTR" />
     <select class="f" name="cat" id="f_cat" size="1">
       <option selected>Category</option>
 <?php foreach($categories as $cat) echo <<<EOB
@@ -32,8 +33,10 @@ EOB;
 EOB;
 ?>
     </select>
-    <input type="text" class="f" id="f_price" name="price" size="8" maxlength="128" value="Price" dir="RTL" /><br />
-    <textarea style="width: 100%" name="ldesc" class="f" id="f_ldesc" rows="5" wrap="soft">Details</textarea><br />
+    <input type="text" class="f" id="f_price" name="price" size="8"
+           maxlength="128" value="Price" dir="RTL" /><br />
+    <textarea style="width: 100%" name="ldesc" class="f" 
+              id="f_ldesc" rows="5" wrap="soft">Details</textarea><br />
     <input name="f_submit" type="submit" value="Add Item" />
     <input type="reset" value="Clear" />
   </form>

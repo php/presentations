@@ -1,8 +1,6 @@
 <slide title="MVC Example">
 <break lines="1" />
-
-<example title="View - add.php" fontsize="1.4em" marginright="0em" filename="example/add.php" />
-
-<example hide="1" title="view" result="1" type="iframe" outputbackground="#ffffff" filename="example/add.php"/>
-
+<link fontsize="2.5em" marginleft="2em" leader="Example App: " href="http://talks.php.net/presentations/slides/mvc/example/add.php"/>
+<break lines="1" />
+<example title="View - add.php" fontsize="1.7em" marginright="0em" filename="example/add.php" />
 </slide>

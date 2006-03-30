@@ -25,13 +25,14 @@ var mymap = new Map("mapContainer", "YahooDemo", "San Francisco, CA", 12);
 mymap.addTool(new PanTool(), true);
 mymap.addWidget(new NavigatorWidget()); 
 
-olay = new GeoRSSOverlay('http://earthquake.usgs.gov/recenteqsww/catalogs/eqs7day-M2.5.xml');
+olay = new GeoRSSOverlay('http://earthquake.usgs.gov/eqcenter/recenteqsww/catalogs/eqs7day-M2.5.xml');
 mymap.addOverlay(olay);
 
 </script>]]></example>
 
 <blurb>
-Ok, again, disappointing that we didn't need PHP.  But to do the same on the DHTML map we need some PHP help
+Ok, again, disappointing that we didn't need PHP.  But to do the same on the DHTML map we need some PHP help.  Although
+there is actually a DHTML GeoRSS overlay now.
 </blurb>
 
 <example title="Simple Embedded DHTML map" result="1" fontsize="1.4em" rfontsize="1em" marginright="0em"><![CDATA[<script type="text/javascript" 
@@ -40,26 +41,20 @@ Ok, again, disappointing that we didn't need PHP.  But to do the same on the DHT
 <div id="jsmapContainer" style="height: 500px; width: 930px;"></div>
 <?php
 include 'simple_rss.php';
-$url = 'http://earthquake.usgs.gov/recenteqsww/catalogs/eqs7day-M2.5.xml';
+$url = 'http://earthquake.usgs.gov/eqcenter/recenteqsww/catalogs/eqs7day-M2.5.xml';
 $feed = rss_request($url, $timeout=3600);
 ?>
 <script type="text/javascript">
-<?php 
-  $url  = 'http://api.local.yahoo.com/MapsService/V1/geocode';
-  $url .= '?appid=YahooDemo&location=San%20Francisco,CA';
-  $xml = simplexml_load_file($url);
-?>
 var marker = new Array();
-var latlon = new YGeoPoint(<?php echo $xml->Result->Latitude?>,
-                           <?php echo $xml->Result->Longitude?>); 
 var jsmap = new YMap(document.getElementById('jsmapContainer'));
 jsmap.addPanControl();
 jsmap.addZoomLong();
-jsmap.drawZoomAndCenter(latlon, 12);
+jsmap.drawZoomAndCenter("94089", 12);
 <?php 
 $i = 0;
 while(!empty($feed[$i])) {
   $info = $feed[$i]['title'][0]."<br />";
+  $mag = str_replace('.','',substr($info,2,3));
   $info .= $feed[$i]['description'][0]."<br />";
   $info .= '<a href="'.$feed[$i]['link'][0].'">more info</a>';
   $info = addslashes($info); 
@@ -67,7 +62,7 @@ while(!empty($feed[$i])) {
   $lon = $feed[$i]['long'][0];
   echo <<<EOB
   marker[$i] = new YMarker(new YGeoPoint($lat,$lon)); 
-  marker[$i].addLabel("<b>$i</b>"); 
+  marker[$i].addLabel("$mag"); 
   YEvent.Capture(marker[$i], 
                  EventsList.MouseClick, 
                  new Function("marker[$i].openSmartWindow('$info');")); 
@@ -75,7 +70,7 @@ while(!empty($feed[$i])) {
 EOB;
   flush();
   $i++;
-  if($i>9) break;
+  if($i>99) break;
 }
 ?>
 </script>]]></example>

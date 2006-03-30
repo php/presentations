@@ -1,0 +1,76 @@
+<slide title="Initial Benchmark">
+<break lines="2"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+We'll benchmark a representative request to get an initial idea.
+</blurb>
+<example title="index.php"><![CDATA[<?php
+require_once "config.inc";
+require_once "model.inc";
+require_once "utils.inc";
+require_once "head.inc";
+head();
+foreach(articles() as $row) {
+  $name = upper($row['name']);
+  echo <<<EOB
+<tr>
+<th>$name</th><td>{$row['age']}</td><td>{$row['entry']}</td>
+</tr>
+EOB;
+}
+boo();
+foot();
+?>]]></example>
+<example title="config.inc"><![CDATA[<?php
+$config = array(
+  'db'      => 'pgsql',
+  'db_user' => 'nobody',
+  'db_pwd'  => 'foobar',
+  'db_host' => 'localhost',
+  'db_db'   => 'users',
+  'db_opts' => array(PDO::ERRMODE_EXCEPTION => true)
+);
+?>]]></example>
+<example title="model.inc" fontsize="1.3em"><![CDATA[<?php
+function articles() {
+  global $config;
+  try {
+    $dbh = new PDO($config['db'].':host='.$config['db_host'].';dbname='.$config['db_db'],
+                   $config['db_user'],$config['db_pwd'], $config['db_opts']);
+    $q = "select users.name, users.age, data.entry 
+          from users,data where data.name = users.name";
+    $result = $dbh->query($q,PDO::FETCH_ASSOC);
+  } catch (PDOException $e) {
+    echo "Error!: " . $e->getMessage();
+    die();
+  }
+  return $result;
+}
+?>]]></example>
+
+<example title="head.inc"><![CDATA[<?php
+function head() {
+?>
+<html><head><title>Index</title></head>
+<body>
+<table>
+<?php
+}
+
+function foot() {
+?>
+</table></body></html>
+<?php
+}
+?>]]></example>
+
+<example title="utils.inc"><![CDATA[<?php
+function upper($arg) {
+  return strtoupper($arg);
+}
+function boo() {
+  echo "boo";
+}
+?>]]></example>
+
+</slide>

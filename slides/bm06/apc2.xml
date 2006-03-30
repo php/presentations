@@ -1,0 +1,84 @@
+<slide title="APC">
+<break lines="2"/>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+APC has a nice feature where you can store PHP variables in shared memory.  We can use that for our config array.
+</blurb>
+
+<example title="index.php"><![CDATA[<?php
+if(!$config = apc_fetch('config')) {
+  require "./config.inc";
+  apc_store('config',$config);
+}
+...]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+This takes us to *890* requests/second.
+</blurb>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+Of course, we can take this further and also cache the result of the database query for 5 minutes.
+</blurb>
+<example title="model.inc" fontsize="1.3em"><![CDATA[<?php
+function articles() {
+ global $config;
+ if(!$result = apc_fetch('result')) { 
+  try {
+    $dbh = new PDO($config['db'].':host='.$config['db_host'].';dbname='.$config['db_db'],
+                   $config['db_user'],$config['db_pwd'],$config['db_opts']);
+    $q = "select users.name, users.age, data.entry 
+          from users,data where data.name = users.name;";
+    $res = $dbh->query($q,PDO::FETCH_ASSOC);
+    $result = $res->fetchAll();
+    apc_store('result',$result,300);
+  } catch (PDOException $e) {
+    echo "Error!: " . $e->getMessage();
+    die();
+  }
+ }
+ return $result;
+}
+?>]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+This takes us to *1080* requests/second.  
+</blurb>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+A final optimization is to get rid of an include file.  Our *utils.inc* file was a bit useless.
+</blurb>
+
+<example title="utils.inc"><![CDATA[<?php
+function upper($arg) {
+  return strtoupper($arg);
+}
+function boo() {
+  echo "boo";
+}
+?>]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+We can add those 2 functions to *model.inc* and remove the *require* call.  Now we get:
+</blurb>
+
+<example title="http_load" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[15000 fetches, 5 max parallel, 9e+07 bytes, in 13.6243 seconds
+6000 mean bytes/connection
+|ffff00|1100.97| fetches/sec, 6.60585e+06 bytes/sec
+msecs/connect: 0.295239 mean, 17.802 max, 0.114 min
+msecs/first-response: |ffff00|3.61389| mean, 1097.1 max, 0.739 min
+HTTP response codes:
+  code 200 -- 15000]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+Compare with our original:
+</blurb>
+
+<example title="http_load" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[1000 fetches, 5 max parallel, 6e+06 bytes, in 58.1026 seconds
+6000 mean bytes/connection
+|ffff00|17.2109| fetches/sec, 103266 bytes/sec
+msecs/connect: 0.403263 mean, 68.603 max, 0.194 min
+msecs/first-response: |ffff00|284.133| mean, 5410.13 max, 55.735 min
+HTTP response codes:
+  code 200 -- 1000]]></example>
+
+</slide>

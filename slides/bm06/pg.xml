@@ -1,0 +1,34 @@
+<slide title="Results">
+<break lines="2"/>
+<blurb fontsize="3em" marginleft="2em" marginright="2em">
+Hardware: 1.8GHz AMD Athlon, w/ 1GByte RAM and 3ware 7200rpm drives under a 3ware 7500-4 RAID card using
+a full-duplex 100MBit dedicated segment with no other traffic
+</blurb>
+<blurb fontsize="3em" marginleft="2em" marginright="2em">
+Software: Ubuntu Linux 2.6.15, Apache-1.3.34, PHP 5.1.3-dev, PostgreSQL 8.1
+</blurb>
+<example title="http_load" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[7:27pm shiny:~/bm> http_load -parallel 5 -fetches 1000 bm1.txt
+1000 fetches, 5 max parallel, 6e+06 bytes, in 58.1026 seconds
+6000 mean bytes/connection
+|ffff00|17.2109| fetches/sec, 103266 bytes/sec
+msecs/connect: 0.403263 mean, 68.603 max, 0.194 min
+msecs/first-response: |ffff00|284.133| mean, 5410.13 max, 55.735 min
+HTTP response codes:
+  code 200 -- 1000]]></example>
+
+<example title="CPU Bound?" fontsize="1.5em" type="shell" marginright="0em"><![CDATA[8:02pm ubuntu:~> vmstat 1
+procs -----------memory---------- ---swap-- -----io---- --system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in    cs us sy |ffff00|id| wa
+10  0    148  83636 213480 387212    0    0     0     0 1613  1065 90 10  |ffff00|0|  0
+ 5  0    148  87164 213480 387212    0    0     0     0 1460  1013 90 10  |ffff00|0|  0
+ 5  0    148  87288 213480 387216    0    0     0     0 1460   966 91  9  |ffff00|0|  0
+ 7  0    148  84932 213480 387216    0    0     0     0 1459   956 90 10  |ffff00|0|  0
+ 7  0    148  86792 213484 387220    0    0     0   136 1534  1051 93  7  |ffff00|0|  0
+ 7  0    148  86156 213484 387220    0    0     0     0 1484  1003 90 10  |ffff00|0|  0
+ 5  0    148  87768 213484 387224    0    0     0     0 1493  1067 91  9  |ffff00|0|  0]]></example>
+
+<blurb fontsize="4em" marginleft="2em" marginright="2em">
+We need *1700* req/sec and we are at *17* req/sec.  We need 100 servers! 
+</blurb>
+
+</slide>
