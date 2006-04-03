@@ -1,0 +1,35 @@
+<slide title="Remote Execution">
+<list title="Technique">
+<bullet>Attacker executes own code on our server</bullet>
+<bullet marginleft="1em">Usually by including local or remote file</bullet>
+<bullet marginleft="1em">Also by using %eval()% or %exec()% on untrusted data</bullet>
+</list>
+<list title="Risks">
+<bullet>Gain complete control over application</bullet>
+</list>
+<list title="Defense">
+<bullet>Better design of files interconnection</bullet>
+<bullet marginleft="1em">Nicer URL</bullet>
+<bullet marginleft="1em">Validity of filenames and self-inclusion</bullet>
+<bullet marginleft="1em">Protection against running without context</bullet>
+<bullet>If impossible, use %basename()%</bullet>
+<bullet>Turning off %allow_url_fopen% doesn't help</bullet>
+<bullet marginleft="1em">Account on the same machine</bullet>
+<bullet marginleft="1em">%php://input% is not disabled</bullet>
+<bullet>%file_exists% doesn't help in general</bullet>
+</list>
+<blurb type="speaker">
+%file_exists% doesn't take %include_path% into account.
+</blurb>
+<list title="Tasks">
+<bullet>Create a PHP script doing anything you want with target application</bullet>
+<bullet>Use this script on a page including untrusted files</bullet>
+<bullet>Run included page without context</bullet>
+<bullet>Create a script abusing application "protected" by disabled %allow_url_fopen%</bullet>
+</list>
+<blurb type="speaker">
+http://php.vrana.cz/vzajemne-propojeni-souboru.php
+http://php.vrana.cz/vkladani-souboru.php
+http://php.vrana.cz/vkladani-souboru-2.php
+</blurb>
+</slide>

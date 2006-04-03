@@ -1,0 +1,37 @@
+<slide title="Cross Site Scripting">
+<list title="Technique">
+<bullet>Attacker inputs JS code on our page</bullet>
+<bullet marginleft="1em">Usually through HTML forms (discussion, registration, search)</bullet>
+<bullet marginleft="1em">Also URL, RSS rolls, e-mails, ...</bullet>
+<bullet>Not only JS - also design is important</bullet>
+</list>
+<list title="Risks">
+<bullet>Stealing session data</bullet>
+<bullet>Altering page design</bullet>
+<bullet>HTML invalidity</bullet>
+</list>
+<list title="Defense">
+<bullet>Escape all untrusted data, better on output</bullet>
+<bullet marginleft="1em">Usage by other applications</bullet>
+<bullet marginleft="1em">Input from other applications</bullet>
+<bullet marginleft="1em">Trimming caused by longer escaped data</bullet>
+<bullet>Don't use %strip_tags()%</bullet>
+<bullet marginleft="1em">May want to write tags literally</bullet>
+<bullet marginleft="1em">It's strange to use entities</bullet>
+<bullet marginleft="1em">With two parameters - style and JS events</bullet>
+<bullet>Use %htmlspecialchars()% or templates</bullet>
+</list>
+<list title="Escaping priority">
+<bullet>Data displayed to other users (security)</bullet>
+<bullet>Data displayed to user himself (usability)</bullet>
+<bullet>Our own trusted data (phishing)</bullet>
+</list>
+<list title="Tasks">
+<bullet>Write a PHP script to steal sessions</bullet>
+<bullet>Steal sessions on unsecured site</bullet>
+<bullet>Steal sessions on site protected with %strip_tags()%</bullet>
+</list>
+<blurb type="speaker">
+http://php.vrana.cz/cross-site-scripting.php
+</blurb>
+</slide>

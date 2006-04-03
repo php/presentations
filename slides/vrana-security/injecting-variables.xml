@@ -1,0 +1,35 @@
+<slide title="Injecting Variables">
+<list title="Technique">
+<bullet>Attacker changes value of our variable</bullet>
+<bullet marginleft="1em">Usually with %register_globals%</bullet>
+<bullet marginleft="1em">Also from included files</bullet>
+</list>
+<list title="Risks">
+<bullet>Unauthorized gain of access rights</bullet>
+<bullet>SQL injection</bullet>
+<bullet>...</bullet>
+<bullet>Initialize variables</bullet>
+<bullet marginleft="1em">For the sake of security</bullet>
+<bullet marginleft="1em">Separation of included files</bullet>
+</list>
+<list title="Defense">
+<bullet>Initialize all variables</bullet>
+<bullet>Turn off %register_globals%</bullet>
+<bullet>Access outside data through %$_GET% and co.</bullet>
+<bullet>Errors %E_NOTICE% detect some problems</bullet>
+<bullet marginleft="1em">Warns also about working with non-existing keys of initialized array</bullet>
+<bullet marginleft="1em">Doesn't warn about adding elements to uninitialized array</bullet>
+</list>
+<blurb type="speaker">
+The code is full of ugly %(!isset($_GET["search"]) ? "" : $_GET["search"])% statements.
+You are not warned about insecure %$auth["user"] = "root"%.
+</blurb>
+<list title="Tasks">
+<bullet>Fool page with wrong initialization if %register_globals% is enabled</bullet>
+<bullet>Fool page with wrong array initialization hoping that %E_NOTICE% will save its live</bullet>
+</list>
+<blurb type="speaker">
+http://php.vrana.cz/inicializace-promennych.php
+http://php.vrana.cz/promenne-zvenku.php
+</blurb>
+</slide>

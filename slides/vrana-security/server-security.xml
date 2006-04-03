@@ -1,0 +1,20 @@
+<slide title="Server Security">
+<list>
+<bullet>Use current versions</bullet>
+<bullet>Don't rely only on %safe_mode%</bullet>
+<bullet>Much better is usually %open_basedir%</bullet>
+<bullet>Set also %session.save_path% and %upload_tmp_dir%</bullet>
+<bullet>Prohibit errors printing - %display_errors%</bullet>
+<bullet>Beware of files uploaded by users - %engine%</bullet>
+<bullet>Set minimum privileges for a database user</bullet>
+</list>
+<blurb type="speaker">
+Files created by Apache have access to other identically created files even with %safe_mode%.
+Errors can reveal some sensitive information like paths, included files, variable names and so on. Consider input %?id[]=% (*Notice: Array to string conversion*).
+Usually %SELECT%, %INSERT%, %UPDATE%, %DELETE% and %LOCK TABLES% (on some tables) should be enough.
+</blurb>
+<blurb type="speaker">
+http://php.vrana.cz/bezpecnost-weboveho-serveru.php
+http://php.vrana.cz/ukladani-souboru-od-uzivatele.php
+</blurb>
+</slide>

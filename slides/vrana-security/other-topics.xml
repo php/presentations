@@ -1,0 +1,27 @@
+<slide title="Other Topics">
+<list>
+<bullet>Hashing passwords, encrypting credit cards</bullet>
+<bullet marginleft="1em">Simple password (MySQL %ENCODE%)</bullet>
+<bullet marginleft="1em">Asymmetric cryptography (PHP OpenSSL)</bullet>
+<bullet>HTTPS</bullet>
+<bullet marginleft="1em">Self signed - user must pick up his phone</bullet>
+<bullet marginleft="1em">Authorities - study politics of all of them</bullet>
+<bullet>Cross-Site Request Forgery</bullet>
+<bullet>Protecting e-mail forms from spam</bullet>
+<bullet marginleft="1em">%strpos($email, "\n")% is simple solution</bullet>
+</list>
+<blurb type="speaker" title="CSRF">
+Technique: Let logged user perform some action without knowing it (%IMG SRC% or %FORM%+%SCRIPT% on attacker's page).
+Risk: Modify data, display only with other leaks.
+Defense: Referer, parameter in URL, authorization token.
+</blurb>
+<blurb type="speaker">
+Robots can send spam through contact-us form.
+</blurb>
+<blurb type="speaker">
+http://php.vrana.cz/ukladani-hesel.php
+http://php.vrana.cz/ukladani-citlivych-informaci.php
+http://php.vrana.cz/cross-site-request-forgery.php
+http://php.vrana.cz/e-mailovy-formular.php
+</blurb>
+</slide>

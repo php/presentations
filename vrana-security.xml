@@ -1,0 +1,21 @@
+<presentation>
+  <topic>Security</topic>
+  <title>Web Security with PHP</title>
+  <event>IT Underground</event>
+  <location>Prague, Czech Republic</location>
+  <date>February 23, 2006</date>
+  <speaker>Jakub Vrana</speaker>
+  <email>vrana@php.net</email>
+  <url>http://php.vrana.cz/it-underground.php</url>
+
+  <slide>slides/vrana-security/titlepage.xml</slide>
+  <slide>slides/vrana-security/agenda.xml</slide>
+  <slide>slides/vrana-security/cross-site-scripting.xml</slide>
+  <slide>slides/vrana-security/sql-injection.xml</slide>
+  <slide>slides/vrana-security/injecting-variables.xml</slide>
+  <slide>slides/vrana-security/remote-execution.xml</slide>
+  <slide>slides/vrana-security/session-fixation.xml</slide>
+  <slide>slides/vrana-security/server-security.xml</slide>
+  <slide>slides/vrana-security/other-topics.xml</slide>
+  <slide>slides/vrana-security/further-reading.xml</slide>
+</presentation>

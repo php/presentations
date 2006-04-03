@@ -1,0 +1,23 @@
+<slide title="Session Fixation">
+<list title="Technique">
+<bullet>Attacker persuade you to use his session and wait until you log in</bullet>
+</list>
+<list title="Defense">
+<bullet>Call %session_regenerate_id()% after login</bullet>
+<bullet>If cookies can be enforced, it's better to enable %session.use_only_cookies%</bullet>
+</list>
+<list title="Session Variables">
+<bullet>Session Hijacking</bullet>
+<bullet marginleft="1em">IP address can change from time to time</bullet>
+<bullet marginleft="1em">Header %User-Agent%</bullet>
+<bullet>%session.use_trans_sid% - URLs stored:</bullet>
+<bullet marginleft="1em">In browser history and cache</bullet>
+<bullet marginleft="1em">In server log</bullet>
+<bullet marginleft="1em">On other servers through %Referer% header</bullet>
+<bullet marginleft="1em">On printed pages, ...</bullet>
+<bullet>%glob()% doesn't respect %open_basedir%</bullet>
+</list>
+<blurb type="speaker">
+http://php.vrana.cz/zabezpeceni-session-promennych.php
+</blurb>
+</slide>

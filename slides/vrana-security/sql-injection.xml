@@ -1,0 +1,30 @@
+<slide title="SQL Injection">
+<list title="Technique">
+<bullet>Attacker modifies our SQL query</bullet>
+<bullet marginleft="1em">By inputting characters like ' or \ to fields</bullet>
+<bullet marginleft="1em">By using characters where we expect numbers (ID, offset)</bullet>
+<bullet>Again - not only security but also usability</bullet>
+</list>
+<list title="Risks">
+<bullet>Access or modification of secured data</bullet>
+<bullet>Full control with some databases</bullet>
+<bullet marginleft="1em">E.g. SQLite or PostgreSQL allows executing multiple queries in one function</bullet>
+</list>
+<list title="Defense">
+<bullet>Prepared statements, variables binding</bullet>
+<bullet marginleft="1em">Data is not intermingled with a query</bullet>
+<bullet marginleft="1em">The query can't be modified by data</bullet>
+<bullet>Database escaping functions, %intval()%</bullet>
+<bullet>Beware %magic_quotes_gpc%</bullet>
+<bullet marginleft="1em">Must be set or known with any approach</bullet>
+</list>
+<list title="Tasks">
+<bullet>Modify data on unsecured site</bullet>
+<bullet>Delete all data from SQLite database</bullet>
+<bullet>Cause syntax error on a page with wrong escaping</bullet>
+</list>
+<blurb type="speaker">
+http://php.vrana.cz/obrana-proti-sql-injection.php
+http://php.vrana.cz/vypnuti-magic_quotes_gpc.php
+</blurb>
+</slide>
