@@ -6,12 +6,13 @@ I know nothing about Actionscript, nor Flex.  Sorry.
 </blurb>
 
 <example title="Simple Embedded Flash map" result="1" fontsize="1.6em" marginright="0em"><![CDATA[<script type="text/javascript" 
-        src="http://api.maps.yahoo.com/v2.0/fl/javascript/apiloader.js">
+        src="http://api.maps.yahoo.com/v3.0/fl/javascript/apiloader.js?appid=YahooDemo">
 </script>
 <div id="mapContainer" style="height: 400px; width: 930px;"></div>
 <script type="text/javascript">
-var mymap = new Map("mapContainer", "YahooDemo", "Montreal", 6);
+var mymap = new Map("mapContainer","YahooDemo",":-:location:-:",16,MapViews.HYBRID);
 mymap.addTool(new PanTool(), true);
+mymap.addWidget(new SatelliteControlWidget());
 mymap.addWidget(new NavigatorWidget()); 
 </script>]]></example>
 
@@ -22,14 +23,14 @@ PHP to fetch data from a backend to plot.
 </blurb>
 
 <example title="Simple Embedded DHTML map" result="1" fontsize="1.6em" rfontsize="1em" marginright="0em"><![CDATA[<script type="text/javascript"
-       src="http://api.maps.yahoo.com/ajaxymap?v=2.0&appid=YahooDemo">
+       src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=YahooDemo">
 </script>
 <div id="jsmapContainer" style="height: 400px; width: 930px;"></div>
 <script type="text/javascript">
 var jsmap = new YMap(document.getElementById('jsmapContainer'));
-jsmap.addPanControl();
+jsmap.addTypeControl();
 jsmap.addZoomLong();
-jsmap.drawZoomAndCenter("Montreal, Canada", 6);
+jsmap.drawZoomAndCenter(":-:location:-:", 10);
 </script>]]></example>
 
 </slide>
