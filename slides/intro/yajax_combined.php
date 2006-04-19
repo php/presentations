@@ -6,7 +6,7 @@ if(!empty($_GET['loc'])) {
   $lat = $ll['ResultSet']['Result']['Latitude']; 
   $lon = $ll['ResultSet']['Result']['Longitude']; 
   $map = "http://api.local.yahoo.com/MapsService/V1/mapImage?appid=YahooDemo".
-         "&output=php&image_width=500&image_height=500&radius=1500";
+         "&output=php&image_width=450&image_height=450&radius=1500";
   $N = unserialize(file_get_contents("$map&latitude=$lat&longitude=$lon")); 
   $lat = -$lat; $lon = $lon<0 ? 180+$lon : $lon-180;
   $S = unserialize(file_get_contents("$map&latitude=$lat&longitude=$lon")); 
@@ -26,12 +26,12 @@ var fN = function callBack(o) {
   var resp = eval('(' + o.responseText + ')');
   if(!img1) {
     img1 = document.createElement('img'); 
-    img1.src = resp.north; img1.width=500; img2.height=500; img2.border=1;
+    img1.src = resp.north; img1.width=450; img2.height=450; img2.border=1;
     document.body.appendChild(img1);
   } else img1.src = resp.north;
   if(!img2) {
     img2 = document.createElement('img'); 
-    img2.src = resp.south; img2.width=500; img2.height=500; img2.border=1;
+    img2.src = resp.south; img2.width=450; img2.height=450; img2.border=1;
     document.body.appendChild(img2);
   } else img2.src = resp.south;
 } 

@@ -10,7 +10,7 @@ I know nothing about Actionscript, nor Flex.  Sorry.
 </script>
 <div id="mapContainer" style="height: 400px; width: 930px;"></div>
 <script type="text/javascript">
-var mymap = new Map("mapContainer","YahooDemo",":-:location:-:",16,MapViews.HYBRID);
+var mymap = new Map("mapContainer","YahooDemo",":-:location:-:",10,MapViews.HYBRID);
 mymap.addTool(new PanTool(), true);
 mymap.addWidget(new SatelliteControlWidget());
 mymap.addWidget(new NavigatorWidget()); 
@@ -30,7 +30,8 @@ PHP to fetch data from a backend to plot.
 var jsmap = new YMap(document.getElementById('jsmapContainer'));
 jsmap.addTypeControl();
 jsmap.addZoomLong();
-jsmap.drawZoomAndCenter(":-:location:-:", 10);
+jsmap.setMapType('YAHOO_SAT');
+jsmap.drawZoomAndCenter(":-:location:-:", 16);
 </script>]]></example>
 
 </slide>

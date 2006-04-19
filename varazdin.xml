@@ -29,6 +29,9 @@ provides for building these rich applications and show plenty of interesting exa
 
 <slide>slides/intro/titlepage.xml</slide>
 
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/lamp/failfast.xml</slide>
 <slide>slides/intro/rich.xml</slide>
 <slide>slides/intro/rich2.xml</slide>
 <slide>slides/intro/php5.xml</slide>
@@ -44,6 +47,8 @@ provides for building these rich applications and show plenty of interesting exa
 <slide>slides/intro/ws9.xml</slide>
 <slide>slides/intro/yajax.xml</slide>
 <slide>slides/intro/yajax_apc.xml</slide>
+<slide>slides/bm06/profit.xml</slide>
+<!--
 <slide>slides/mvc/mvc.xml</slide>
 <slide>slides/mvc/example.xml</slide>
 <slide>slides/mvc/mvc_view1.xml</slide>
@@ -51,8 +56,7 @@ provides for building these rich applications and show plenty of interesting exa
 <slide>slides/mvc/mvc_view3.xml</slide>
 <slide>slides/mvc/mvc_controller.xml</slide>
 <slide>slides/mvc/mvc_model.xml</slide>
-
-<slide>slides/bm06/profit.xml</slide>
+-->
 <slide>slides/bm06/initial.xml</slide>
 <slide>slides/bm06/pg.xml</slide>
 <slide>slides/bm06/pg_persist.xml</slide>
