@@ -1,0 +1,49 @@
+<slide title="YUI Javascript Libs">
+<blurb>
+</blurb>
+
+<example title="Connection" result="0" fontsize="1.6em" marginright="0em"><![CDATA[YAHOO.util.Connect.setForm(formName);
+YAHOO.util.Connect.asyncRequest('GET',target,callback);]]></example>
+
+<example title="Dom" result="0" fontsize="1.6em" marginright="0em"><![CDATA[var pos = YAHOO.util.Dom.getXY('test');
+YAHOO.util.Dom.setXY('target', pos);
+YAHOO.util.Dom.setStyle('test', 'opacity', 0.5);
+YAHOO.util.Dom.getClientWidth(),
+YAHOO.util.Dom.getClientHeight()
+
+// Test if cursor is within 'test' region
+var targetRegion = YAHOO.util.Dom.getRegion('test');
+var cursorPoint = new YAHOO.util.Point(YAHOO.util.Event.getPageX(e),
+                                       YAHOO.util.Event.getPageY(e));
+var inRegion = targetRegion.contains(cursorPoint);]]></example>
+
+<example title="Event" result="0" fontsize="1.6em" marginright="0em"><![CDATA[function fnCallback(e) { alert("click"); }
+YAHOO.util.Event.addListener("elementid", "click", fnCallback);]]></example>
+
+<example title="Animation" result="0" fontsize="1.6em" marginright="0em"><![CDATA[var myAnim = new YAHOO.util.Anim('test', { height: {to: 10} });
+myAnim.animate();
+
+var myAnim = new YAHOO.util.Motion('test', {points: { to:[10, 10] } });
+myAnim.animate();]]></example>
+
+<example title="Drag and Drop" result="0" fontsize="1.6em" marginright="0em"><![CDATA[var dd1 = new YAHOO.util.DD("elementid1");
+var dd2 = new YAHOO.util.DDTarget("elementid2");]]></example>
+
+<example title="Calendar" result="1" fontsize="1.6em" marginright="0em"><![CDATA[<script src = "/yui/YAHOO.js"></script>
+<script src = "/yui/dom.js"></script>
+<script src = "/yui/event.js"></script>
+<script src = "/yui/dragdrop.js"></script>
+<script src = "/yui/calendar.js"></script>
+<link rel="stylesheet" href="calendar.css" type="text/css">
+<div id="calContainer" style="height:7em;"></div>
+<a href="javascript:alert(cal.getSelectedDates())">Check</a>
+<script>
+dd1 = new YAHOO.util.DD("calContainer");
+cal = new YAHOO.widget.Calendar("cal","calContainer");
+cal.Options.MULTI_SELECT = true;
+cal.render();
+</script>]]></example>
+
+<example title="Sliders" filename="sliders.html" marginleft="1em" marginright="1em" hide="1" outputbackground="#ffffff" result="1" type="iframe"/>
+
+</slide>
