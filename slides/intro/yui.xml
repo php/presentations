@@ -35,8 +35,10 @@ var dd2 = new YAHOO.util.DDTarget("elementid2");]]></example>
 <script src = "/yui/dragdrop.js"></script>
 <script src = "/yui/calendar.js"></script>
 <link rel="stylesheet" href="calendar.css" type="text/css">
+<div style="height:8em;">
 <div id="calContainer" style="height:7em; float:left;"></div>
 <a href="javascript:alert(cal.getSelectedDates())">Check</a>
+</div>
 <script>
 dd1 = new YAHOO.util.DD("calContainer");
 cal = new YAHOO.widget.Calendar("cal","calContainer");
