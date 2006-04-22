@@ -2,6 +2,7 @@
 require 'ezc-setup.php';
 $log = ezcLog::getInstance();
 $log->source = $log->category = NULL;
+
 // Create writers
 $warningWriter = new ezcLogUnixFileWriter(
     "/tmp", "ezc-pres-warning.log", 128
@@ -9,14 +10,16 @@ $warningWriter = new ezcLogUnixFileWriter(
 $errorWriter = new ezcLogUnixFileWriter( 
     "/tmp", "ezc-pres-error.log", 256
 );
+
 // Create filters
 $warningFilter = new ezcLogFilter;
 $warningFilter->severity = ezcLog::WARNING;
-$errorFilter = new ezcLogFilter;
-$errorFilter->severity = ezcLog::ERROR;
 $log->getmapper()->appendRule( 
     new ezcLogFilterRule( $warningFilter, $warningWriter, true )
 );
+
+$errorFilter = new ezcLogFilter;
+$errorFilter->severity = ezcLog::ERROR;
 $log->getmapper()->appendRule( 
     new ezcLogFilterRule( $errorFilter, $errorWriter, true )
 );

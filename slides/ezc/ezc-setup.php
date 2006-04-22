@@ -1,5 +1,5 @@
 <?php
-ini_set( 'include_path', '/home/derick/ezcomponents-1.0:.' );
+ini_set( 'include_path', '/home/httpd/ezcomponents/trunk:.' );
 require 'Base/src/base.php';
 
 function __autoload( $className )
