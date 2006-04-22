@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>When Is The Additional Functionality Available</title>
+
+	<list>
+		<bullet>In PHP 5.1 if you compile PHP with a special flag</bullet>
+		<bullet>In PHP 5.2 by default</bullet>
+	</list>
+<break/>
+	<blurb>Compile like:</blurb>
+	<example>CFLAGS=-DEXPERIMENTAL_DATE_SUPPORT=1 ./configure</example>
+</slide>

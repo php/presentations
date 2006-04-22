@@ -43,6 +43,7 @@
 
 <!-- DATE EXAMPLES -->
 <slide>slides/time/date-format.xml</slide>
+<slide>slides/time/date-format-locale.xml</slide>
 <slide>slides/time/date-modify.xml</slide>
 <slide>slides/time/basic-using-zones.xml</slide>
 <slide>slides/time/default-timezone.xml</slide>
@@ -55,6 +56,8 @@
 
 <!-- TIPS -->
 <slide>slides/time/timezone-tips.xml</slide>
+<slide>slides/time/sun-up-down.xml</slide>
+<slide>slides/time/when.xml</slide>
 
 <!-- EXIT -->
 <slide>slides/time/resources.xml</slide> <!-- resources -->

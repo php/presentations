@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Formatting Dates - Locale Aware</title>
+	<subtitle>Locales with PHP 6</subtitle>
+
+	<example result="1"><![CDATA[<?php
+	date_default_timezone_set("Europe/Oslo");
+	$ts = date_create("December 22nd, 2005 15:41");
+
+	$locales = array('en_US', 'fr_CA', 'nb_NO', 'ru_RU', 'ar_SA', 'ja_JP');
+	foreach ($locales as $locale) {
+		i18n_loc_set_default($locale);
+		echo date_format_locale($ts, DATE_RFC1036), "<br/>\n";
+	}
+?>]]></example>
+</slide>
