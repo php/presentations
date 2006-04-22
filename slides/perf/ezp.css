@@ -214,4 +214,54 @@ img.spaced {
 table {
 	font-size: 16pt;
 }
+
+table.dbtable {
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table.dbtable tr {
+margin: 0px;
+padding: 0px;
+		 background-color: #f00;
+}
+
+table.dbtable td {
+	margin: 0px;
+	padding: 1px 5px 1px 5px;
+	border: thin solid black;
+	background-color: #fff;
+	vertical-align: top;
+}
+
+table.dbtable td.header {
+	font-weight: bold;
+	text-align: center;
+}
+
+table.dbtable td.header-candidate-key {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	color: blue;
+}
+
+table.dbtable td.header-key, table.dbtable td.header-key-moved-to {
+	font-weight: bold;
+	text-align: center;
+	color: red;
+}
+
+table.dbtable td.header-moved, table.dbtable td.moved {
+	border: 1px dotted #aaa;
+	color: #aaa;
+}
+
+table.dbtable td.header-moved, table.dbtable td.header-moved-to {
+	font-weight: bold;
+}
+
+table.dbtable td.header-moved-to, table.dbtable td.moved-to, table.dbtable td.header-key-moved-to {
+	border: 2px solid black;
+}
 </style>
