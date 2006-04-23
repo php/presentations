@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Second Attempt</title>
+	<subtitle>Our data in 1NF</subtitle>
+
+	<table columns="4" class="dbtable" title="Component Developer">
+<cell class="header">Component</cell><cell class="header">Name</cell><cell class="header">C. Code</cell><cell class="header">Country</cell>
+<cell>Base 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>DatabaseSchema 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>File 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>File 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>Translation 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>Translation 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>UserInput 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>UserInput 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+
+<cell>Base 1.1</cell><cell>Sergey</cell><cell>UA</cell><cell>Ukraine</cell>
+<cell>Database 1.0</cell><cell>Sergey</cell><cell>UA</cell><cell>Ukraine</cell>
+<cell>...</cell><cell>...</cell><cell>...</cell><cell>...</cell>
+	</table>
+<break/>
+<div effect="hide">
+<list>
+	<bullet>You can not store developers without component.</bullet>
+	<bullet>Required to update multiple records when somebody moves.</bullet>
+</list>
+</div>
+</slide>

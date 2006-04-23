@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Naming Tables</title>
+
+	<blurb>Two major options:</blurb>
+	<list>
+		<bullet>Singular names: Component, ComponentVersion, Developer, Country</bullet>
+		<bullet>Plural names: Component~s~, ComponentVersion~s~, Developer~s~, Countrie~s~</bullet>
+	</list>
+<break/>
+
+	<blurb>Naming "connection tables" for Many to Many relations:</blurb>
+	<list>
+		<bullet>
+			Include the names of both tables into the name (|ff0000|Developer|
+			+ |0000ff|ComponentVersion| ->
+			|ff0000|Developer||0000ff|ComponentVersion|)
+		</bullet>
+		<bullet>
+			Optionally add ~Relation~ to this name (|ff0000|Developer| +
+			|0000ff|ComponentVersion| ->
+			|ff0000|Developer||0000ff|ComponentVersion|~Relation~)
+		</bullet>
+	</list>
+
+</slide>

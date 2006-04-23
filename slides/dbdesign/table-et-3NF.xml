@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Fourth Attempt</title>
+	<subtitle>Our data in 3NF</subtitle>
+
+	<blurb>
+*3NF*: "All columns must depend directly on the primary key."
+	</blurb>
+<break lines="2" />
+
+	<table columns="3" class="dbtable" title="Developer">
+<cell class="header-key">Name</cell><cell class="header">C. Code</cell><cell class="header-moved">Country</cell>
+<cell>Derick</cell><cell>NL</cell><cell class="moved">Netherlands</cell>
+<cell>Frederik</cell><cell>NO</cell><cell class="moved">Norway</cell>
+<cell>Raymond</cell><cell>NL</cell><cell class="moved">Netherlands</cell>
+<cell>Sergey</cell><cell>UA</cell><cell class="moved">Ukraine</cell>
+	</table>
+
+	<table columns="2" class="dbtable" title="Country">
+<cell class="header-key">C. Code</cell><cell class="header-moved-to">Country</cell>
+<cell>NL</cell><cell class="moved-to">Netherlands</cell>
+<cell>NO</cell><cell class="moved-to">Norway</cell>
+<cell>UA</cell><cell class="moved-to">Ukraine</cell>
+	</table>
+</slide>

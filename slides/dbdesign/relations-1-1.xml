@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Relations</title>
+	<subtitle>One to One relations</subtitle>
+
+	<blurb>
+		Usually does not need a seperate table. But can be useful to save
+		space:
+	</blurb>
+<break lines="8"/>	
+	<image filename="1-1.png" />
+
+</slide>

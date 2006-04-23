@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Second Normal Form</title>
+	<subtitle>2NF</subtitle>
+
+	<break lines="8"/>
+	<blurb class="large_blurb_center">
+Any non-key columns must depend on the entire primary key. In the case of a
+composite primary key, this means that a non-key column cannot depend on only
+part of the composite key.
+	</blurb>
+</slide>

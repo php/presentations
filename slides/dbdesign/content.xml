@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Contents</title>
+
+	<blurb>Design</blurb>
+	<list>
+		<bullet>Table Design</bullet>
+		<bullet>ER Diagrams</bullet>
+		<bullet>Normalization</bullet>
+		<bullet>Relations</bullet>
+		<bullet>Intregity</bullet>
+	</list>
+	<blurb>Performance</blurb>
+	<list>
+		<bullet>Indexes</bullet>
+		<bullet>Denormalization</bullet>
+		<bullet>Triggers</bullet>
+		<bullet>Stored Procedures</bullet>
+	</list>
+	<blurb>Tips &amp; Tricks</blurb>
+	<list>
+		<bullet>Nested Set</bullet>
+		<bullet>Trees</bullet>
+	</list>
+		
+</slide>

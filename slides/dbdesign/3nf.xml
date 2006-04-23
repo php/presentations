@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Third Normal Form</title>
+	<subtitle>3NF</subtitle>
+
+	<break lines="8"/>
+	<blurb class="large_blurb_center">
+All columns must depend directly on the primary key.
+	</blurb>
+</slide>

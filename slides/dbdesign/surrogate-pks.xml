@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Primary Key Mangling</title>
+
+	<table columns="3" class="dbtable" title="DeveloperComponentVersion">
+<cell class="header-key">Component</cell><cell class="header-key">Component Version</cell><cell class="header-key">Developer Name</cell>
+<cell>Base</cell><cell>1.0</cell><cell>Derick</cell>
+<cell>Base</cell><cell>1.1</cell><cell>Sergey</cell>
+	</table>
+	<table columns="3" class="dbtable" title="ComponentVersion">
+<cell class="header-key">Component</cell><cell class="header-key">Component Version</cell><cell class="header">Release Date</cell>
+<cell>Base</cell><cell>1.0</cell><cell>2006-01-07</cell>
+<cell>Base</cell><cell>1.1</cell><cell>~NULL~</cell>
+	</table>
+<div effect="hide">
+	<blurb>to:</blurb>
+	<table columns="2" class="dbtable" title="DeveloperComponentVersion">
+<cell class="header-key">Component Version ID</cell><cell class="header-key">Developer Name</cell>
+<cell>1</cell><cell>Derick</cell>
+<cell>3</cell><cell>Sergey</cell>
+	</table>
+	<table columns="4" class="dbtable" title="ComponentVersion">
+<cell class="header-key">ID</cell><cell class="header-candidate-key">Component</cell><cell class="header-candidate-key">Component Version</cell><cell class="header">Release Date</cell>
+<cell>1</cell><cell>Base</cell><cell>1.0</cell><cell>2006-01-07</cell>
+<cell>3</cell><cell>Base</cell><cell>1.1</cell><cell>~NULL~</cell>
+	</table>
+</div>
+</slide>

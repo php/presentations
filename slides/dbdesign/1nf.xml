@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>First Normal Form</title>
+	<subtitle>1NF</subtitle>
+
+	<break lines="8"/>
+	<blurb class="large_blurb_center">
+All values in each column of a table are atomic. This means that there are no sets of values within a column.
+	</blurb>
+</slide>

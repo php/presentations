@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>First Normal Form Revised</title>
+
+	<blurb>
+*1NF*: "All values in each column of a table are ~atomic~. This means that there are no sets of values within a column."
+	</blurb>
+<break/>
+
+	<table columns="2" class="dbtable" title="Component Developer">
+<cell class="header-key">Component</cell><cell class="header-key">Name</cell>
+<cell>Base 1.0</cell><cell>Derick</cell>
+<cell>DatabaseSchema 1.0</cell><cell>Derick</cell>
+<cell>File 1.0</cell><cell>Derick</cell>
+<cell>...</cell><cell>...</cell>
+	</table>
+
+	<table columns="3" class="dbtable" title="DeveloperComponentVersion">
+<cell class="header-key-moved-to">Component</cell><cell class="header-key-moved-to">Component Version</cell><cell class="header-key">Name</cell>
+<cell class="moved-to">Base</cell><cell class="moved-to">1.0</cell><cell>Derick</cell>
+<cell class="moved-to">DatabaseSchema</cell><cell class="moved-to">1.0</cell><cell>Derick</cell>
+<cell class="moved-to">File</cell><cell class="moved-to">1.0</cell><cell>Derick</cell>
+<cell class="moved-to">...</cell><cell class="moved-to">...</cell><cell>...</cell>
+	</table>
+</slide>

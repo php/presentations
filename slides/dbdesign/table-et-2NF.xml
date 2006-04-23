@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Third Attempt</title>
+	<subtitle>Our data in 2NF</subtitle>
+
+	<blurb>
+*2NF*: "Any non-key columns must depend on the entire ~primary key~. In the case of a
+composite primary key, this means that a non-key column cannot depend on only
+part of the composite key."
+	</blurb>
+<break lines="2" />
+
+	<table columns="4" class="dbtable" title="Component Developer">
+<cell class="header-key">Component</cell><cell class="header-key">Name</cell><cell class="header-moved">C. Code</cell><cell class="header-moved">Country</cell>
+<cell>Base 1.0</cell><cell>Derick</cell><cell class="moved">NL</cell><cell class="moved">Netherlands</cell>
+<cell>DatabaseSchema 1.0</cell><cell>Derick</cell><cell class="moved">NL</cell><cell class="moved">Netherlands</cell>
+<cell>File 1.0</cell><cell>Derick</cell><cell class="moved">NL</cell><cell class="moved">Netherlands</cell>
+<cell>Base 1.1</cell><cell>Sergey</cell><cell class="moved">UA</cell><cell class="moved">Ukraine</cell>
+<cell>Database 1.0</cell><cell>Sergey</cell><cell class="moved">UA</cell><cell class="moved">Ukraine</cell>
+<cell>...</cell><cell>...</cell><cell class="moved">...</cell><cell class="moved">...</cell>
+	</table>
+
+	<table columns="3" class="dbtable" title="Developer">
+<cell class="header-key">Name</cell><cell class="header-moved-to">C. Code</cell><cell class="header-moved-to">Country</cell>
+<cell>Derick</cell><cell class="moved-to">NL</cell><cell class="moved-to">Netherlands</cell>
+<cell>Frederik</cell><cell class="moved-to">NO</cell><cell class="moved-to">Norway</cell>
+<cell>Sergey</cell><cell class="moved-to">UA</cell><cell class="moved-to">Ukraine</cell>
+	</table>
+</slide>

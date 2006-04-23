@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>First Attempt</title>
+
+	<table columns="4" class="dbtable" title="Component Developer">
+<cell class="header">Components</cell><cell class="header">Name</cell><cell class="header">C. Code</cell><cell class="header">Country</cell>
+<cell>Base 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>DatabaseSchema 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>File 1.0, File 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>Translation 1.0, Translation 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+<cell>UserInput 1.0, UserInput 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+
+<cell>Base 1.1</cell><cell>Sergey</cell><cell>UA</cell><cell>Ukraine</cell>
+<cell>Database 1.0, Database 1.1</cell><cell>Sergey</cell><cell>UA</cell><cell>Ukraine</cell>
+<cell>PersistentObject 1.1</cell><cell>Sergey</cell><cell>UA</cell><cell>Ukraine</cell>
+<cell>SystemInformation 1.0</cell><cell>Sergey</cell><cell>UA</cell><cell>Ukraine</cell>
+
+<cell>Database 1.0, Database 1.1</cell><cell>Frederik</cell><cell>NO</cell><cell>Norway</cell>
+<cell>Mail 1.0, Mail 1.1</cell><cell>Frederik</cell><cell>NO</cell><cell>Norway</cell>
+<cell>PersistentObject 1.0</cell><cell>Frederik</cell><cell>NO</cell><cell>Norway</cell>
+	</table>
+<div effect="hide">
+<break/>
+<list>
+	<bullet>It is impossible to find out which component is developed by whom.</bullet>
+<!--	<bullet>You can not store developers without component.</bullet> -->
+</list>
+</div>
+</slide>

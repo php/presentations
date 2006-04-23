@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Primary Keys</title>
+
+	<blurb>
+*2NF*: "Any non-key columns must depend on the entire ~primary key~..."
+	</blurb>
+<break lines="2" />
+	<table columns="4" class="dbtable" title="Component Developer">
+		<cell class="header">Component</cell><cell class="header">Name</cell><cell class="header">C. Code</cell><cell class="header">Country</cell>
+		<cell>Base 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+		<cell>File 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+		<cell>File 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+	</table>
+<break/>
+	<blurb>
+A *primary key* is a value that can be used to identify a unique row in a table.
+	</blurb>
+<break lines="2" />
+
+<div effect="hide">
+	<table columns="4" class="dbtable" title="Component Developer">
+		<cell class="header-key">Component</cell><cell class="header-key">Name</cell><cell class="header">C. Code</cell><cell class="header">Country</cell>
+		<cell>Base 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+		<cell>File 1.0</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+		<cell>File 1.1</cell><cell>Derick</cell><cell>NL</cell><cell>Netherlands</cell>
+	</table>
+<break/>
+
+</div>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Primary Key Mangling</title>
+	<subtitle>or surrogate keys as they are called.</subtitle>
+
+	<table columns="4" class="dbtable" title="ComponentVersion">
+<cell class="header-key">ID</cell><cell class="header-candidate-key">Component</cell><cell class="header-candidate-key">Component Version</cell><cell class="header">Release Date</cell>
+<cell>1</cell><cell>Base</cell><cell>1.0</cell><cell>2006-01-07</cell>
+<cell>3</cell><cell>Base</cell><cell>1.1</cell><cell>~NULL~</cell>
+	</table>
+
+	<list>
+		<bullet>|0000ff|Component, Component Version| was the original primary key and still identifies each record uniquely.</bullet>
+		<bullet>A (combination of) key(s) that identify a record uniquely is called a *candidate key*.</bullet>
+		<bullet>One of the candidate keys can be defined as the primary key (|ff0000|ID| in the example above).</bullet>
+		<bullet>|ff0000|ID| is an artificial key (surrogate key).</bullet>
+		<bullet>A surrogate key is not always required, but can increase performance while joining or selecting.</bullet>
+	</list>
+</slide>
