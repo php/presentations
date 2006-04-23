@@ -2,17 +2,23 @@
 <slide>
 	<title>Sunset/Sunrise</title>
 
-	<example result="1"><![CDATA[<?php
-date_default_timezone_set('America/Montreal');
+	<example result="1"><![CDATA[<pre><font size="5"><?php
+date_default_timezone_set('Europe/Oslo');
 if (isset($_POST['country'])) {
-  $client = new SoapClient('http://geo.derickrethans.nl/geo.wsdl');
-  $info = $client->Location($_POST['country'], $_POST['city']);
-  $lat = $info['lat']; $lon = $info['lon'];
-  $info = date_sun_info(time(), $lon, $lat);
-  echo "Sunrise is at ", date(date::ATOM, $info['sunrise']), "<br/>";
-  echo "Sunset is at ", date(date::RSS, $info['sunset']), "<br/><hr/>";
+  mysql_connect('localhost', 'root'); mysql_select_db('geolocation');
+  $re = mysql_query( "SELECT * FROM city where country='{$_POST['country']}' AND normalized_name='{$_POST['city']}'" );
+  $info = mysql_fetch_assoc( $re );
+  if ($info) {
+    $lat = $info['lat']; $lon = $info['lon'];
+
+    $info = date_sun_info(time(), $lon, $lat);
+    echo "Sunrise is at ", date(date::RSS, $info['sunrise']), "\n";
+    echo "Sunset is at  ", date(date::RSS, $info['sunset']), "\n";
+    echo "Day length is ",
+      round(($info['sunset'] - $info['sunrise']) / 3600, 1), "hrs";
+  }
 }
-?>
+?></font></pre>
 <form method="post">
 Country: <input name="country"/> City: <input name="city"/><br/>
 <input type="submit" value="Check"/>

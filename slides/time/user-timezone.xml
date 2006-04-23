@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>User's Timezone</title>
+	<subtitle>with a little javascript...</subtitle>
+
+	<example result="1"><![CDATA[<?php
+if (!isset($_GET['tzinfo'])) {
+?>
+<html>
+<script type="text/javascript">
+var d = new Date()
+var tza = d.toLocaleString().split(" ").slice(-1)
+var tzo = d.getTimezoneOffset()
+window.location = window.location + '?tzinfo=' + tza + '|' + tzo
+</script>
+</html>
+<?php
+} else {
+    list( $abbr, $offset ) = explode( '|', $_GET['tzinfo'] );
+    echo timezone_name_from_abbr( $abbr, $offset * -60 );
+}
+?>]]></example>
+</slide>
