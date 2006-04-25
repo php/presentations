@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Path Strings</title>
+
+	<example><![CDATA[Id | ParentId | PathString  | Name         | Depth
+---+----------+-------------+--------------+------
+87 |        2 | /87/        | Countries    |  2
+88 |       87 | /87/88/     | Belgium      |  3
+89 |       87 | /87/89/     | Netherlands  |  3
+91 |       89 | /87/89/91/  | Business     |  4
+92 |       89 | /87/89/92/  | Economy      |  4 
+90 |       87 | /87/90/     | Germany      |  3]]></example>
+<break/>
+	<blurb>Selecting a subtree:</blurb>
+<break/>
+	<example><![CDATA[function select_subtree( id )
+{
+	$info =
+		SELECT PathString
+		FROM tree
+		WHERE Id = $id;
+
+	$tree_elements =
+		SELECT *
+		FROM tree
+		WHERE PathString LIKE "$info%";
+
+	return $tree_elements;
+}]]></example>
+</slide>
+  

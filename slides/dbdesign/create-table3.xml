@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>CREATE TABLE</title>
+	<subtitle>part 2</subtitle>
+
+	<table columns="3" class="dbtable" title="Component">
+<cell class="header-key">Name</cell><cell class="header">Priority</cell><cell class="header">Main Developer Name</cell>
+<cell>DatabaseSchema</cell><cell>2</cell><cell>Derick</cell>
+<cell>Database</cell><cell>3</cell><cell>~NULL~</cell>
+	</table>
+<break/>
+	<example><![CDATA[CREATE TABLE component (
+	name VARCHAR(64) NOT NULL,
+	priority INT NOT NULL,
+	main_developer_name VARCHAR(64),
+	PRIMARY KEY (name)
+) ENGINE=InnoDB;]]></example>
+</slide>
+

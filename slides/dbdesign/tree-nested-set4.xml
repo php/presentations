@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Nested Set</title>
+
+	<list>
+		<bullet>Fast for reads and selection</bullet>
+		<bullet>Doesn't scale well with adding nodes</bullet>
+		<bullet>Doesn't scale well with moving nodes/subtrees</bullet>
+	</list>
+</slide>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Assignment #2</title>
+
+	<blurb>Write down (or try with MySQL) the SQL (including possible useful
+	indexes and constraints) of the %flight% and %airport_code% tables from the
+	following diagram:</blurb>
+<break lines="2"/>
+	<image filename="air.png"/>
+
+</slide>

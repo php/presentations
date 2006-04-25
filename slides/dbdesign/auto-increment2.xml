@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Auto Increment</title>
+
+	<blurb>
+		The following has been editted to fix spelling errors and to protect
+		the guilty:
+	</blurb>
+<break/>
+	<example><![CDATA[user: I'm having a problem with my MySQL database :)
+user: I have a Table with Field1, which has auto_increment attribute
+user: Table has three records, with Field1 numbered 1, 2 and 3
+user: now I'm using delete from Table where Field1 = 2 limit 1;
+user: and next id is 4..
+user: but I want it to use 2
+user: I read something about resetting auto_increment.. is that
+      the way to fix it then?
+user: I'll run out of id's otherwise
+user: but the thing is, this company wants to add a lot of
+      pictures to their database
+user: because selling pictures is what they do :)
+user: now I made Field1 unsigned int, but what if it turns out to
+      be not enough?
+user: but, just out of curiosity.. is there a way to fill up gaps
+      with auto_increment? :)]]></example>
+
+	<list>
+		<bullet>unsigned int is enough!</bullet>
+		<bullet>
+			for unsigned int the company has to hire 20 photographers which
+			have to shoot 1000 pictures per day. Then they have to work 588
+			years until you run out of id's
+		</bullet>
+	</list>
+
+</slide>

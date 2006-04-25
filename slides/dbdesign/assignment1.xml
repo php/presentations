@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Assignment #1</title>
+
+	<blurb>Design a database (as ERD) to store the following data:</blurb>
+
+	<list>
+		<bullet>~Derick~ has a ~return~ ticket on ~Monday April 24th, 2006~
+		from ~TRF (Torp)~ to ~MCO (Orlando)~ and back on ~April 29th~</bullet>
+		<bullet>The flight trom ~Torp~ to ~Orlando~ consists of:
+		~TRF to AMS (Amsterdam)~, ~AMS to DTW (Detroit)~ and ~DTW to MCO~,
+		the way back goes ~MCO->MEM (Memphis)->AMS->TRF~</bullet>
+		<bullet>~Flight KL 1212~ leaves ~every day~ at
+		~06:25~ and goes from ~TRF to AMS~</bullet>
+		<bullet>~Flight KL 1221~ leaves on ~all days, except Saturday~
+		at ~15:30~ from ~AMS to TRF~</bullet>
+		<bullet>Flight ~KL 1212~ and ~KL 1221~ takes ~1h40m~</bullet>
+		<bullet>~Derick~ has a ~single~ ticket on ~Saturday May 13th~
+		from ~AMS to TRF~.</bullet>
+	</list>
+
+</slide>

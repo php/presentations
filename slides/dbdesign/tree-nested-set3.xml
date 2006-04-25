@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<slide fontsize="6em">
-	<title>Visitation model 5</title>
+<slide>
+	<title>Nested Set</title>
+	<subtitle>Selecting A Subtree</subtitle>
 
-	<blurb> </blurb>
-	<blurb fontsize="5em">Select a subtree:</blurb>
 	<image align="center" filename="tree5.png" />
 
-	<blurb fontsize="5em">Query:</blurb>
+	<blurb>Query:</blurb>
 <break/>
 	<example><![CDATA[SELECT * FROM directory
 WHERE

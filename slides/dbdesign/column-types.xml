@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Column Types</title>
+
+	<blurb>
+		A column can have a different datatype. Datatypes are often RDBMS
+		dependent, but there are often equivalent types with a slightly
+		different name.
+	</blurb>
+<break/>
+	<blurb>
+		The following types are often available:
+	</blurb>
+	<list>
+		<bullet>*integer*: to store integral numbers</bullet>
+		<bullet>*float*: to store floating point values</bullet>
+		<bullet>*varchar*: to store variable length strings</bullet>
+		<bullet>*char*: to store fixed length strings</bullet>
+		<bullet>*date*: to store dates</bullet>
+		<bullet>*timestamp*: to store timestamps</bullet>
+		<bullet>*blob*: to store (large) amounts binary data</bullet>
+		<bullet>*clob* or *text*: to store (large) amounts of text</bullet>
+	</list>
+		
+</slide>

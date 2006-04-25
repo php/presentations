@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Denormalization</title>
+	<subtitle>Update Problems</subtitle>
+
+	<image filename="denormalization2.png"/>
+	<blurb>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</blurb>
+	<blurb>If some airport changes name, you need to run multiple updates:</blurb>
+<break/>
+  <example><![CDATA[UPDATE airport_code
+	SET airfield_name = 'Montreal Pierre Trudeau'
+	WHERE code = 'YUL';
+
+UPDATE flight_denorm
+	SET from_airfield_name = 'Montreal Pierre Trudeau'
+	WHERE from_airport = 'YUL';
+
+UPDATE flight_denorm
+	SET to_airfield_name = 'Montreal Pierre Trudeau'
+	WHERE to_airport = 'YUL';]]></example>
+
+</slide>
+

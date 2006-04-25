@@ -3,11 +3,13 @@
 	<title>Naming Columns</title>
 
 	<blurb>Normal columns are straight forward.</blurb>
-
+<break/>
 	<blurb>For columns that refer to another table, it is useful to:</blurb>
 	<list>
-		<bullet>
-		</bullet>
+		<bullet>Prefix them with the table name they refer to.</bullet>
+		<bullet>Use the same name as the column name in the table it is referred to.</bullet>
 	</list>
+<break lines="2"/>
+	<image filename="1-n-naming.png" />
 
 </slide>

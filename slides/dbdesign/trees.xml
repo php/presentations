@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Trees</title>
+
+	<blurb>
+		Trees do not really map well to relational databases.
+		The most obvious way of storing them is like:
+	</blurb>
+<image align="right" filename="tree.jpg" marginright="1em"/>
+<break lines="4"/>
+	<table columns="3" class="dbtable" title="Tree">
+		<cell class="header-key">ID</cell><cell class="header">Parent ID</cell><cell class="header">Name</cell>
+		<cell>3</cell><cell>1</cell><cell>Countries</cell>
+		<cell>4</cell><cell>3</cell><cell>Belgium</cell>
+		<cell>5</cell><cell>3</cell><cell>Netherlands</cell>
+		<cell>6</cell><cell>3</cell><cell>Germany</cell>
+		<cell>7</cell><cell>5</cell><cell>Business</cell>
+		<cell>8</cell><cell>5</cell><cell>Economy</cell>
+	</table>
+</slide>

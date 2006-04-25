@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Foreign Keys</title>
+
+	<list>
+		<bullet>Foreign keys act as constraints to guard against data inconsistency</bullet>
+		<bullet>They make sure that data which is refered to is actually there</bullet>
+		<bullet>Can be set-up in such a way so that refered data is automatically removed</bullet>
+	</list>
+
+</slide>

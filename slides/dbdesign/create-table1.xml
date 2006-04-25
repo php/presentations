@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>CREATE TABLE</title>
+
+	<table columns="2" class="dbtable" title="Country">
+<cell class="header-key">Code</cell><cell class="header">Name</cell>
+<cell>NL</cell><cell>Netherlands</cell>
+<cell>NO</cell><cell>Norway</cell>
+	</table>
+
+<break/>
+	<example><![CDATA[CREATE TABLE country (
+	code CHAR(2) NOT NULL,
+	name VARCHAR(64) NOT NULL,
+	PRIMARY KEY (code)
+) ENGINE=InnoDB;]]></example>
+
+<break lines="2"/>
+	<table columns="2" class="dbtable" title="Developer">
+<cell class="header-key">Name</cell><cell class="header">Country Code</cell>
+<cell>Derick</cell><cell>NL</cell>
+<cell>Sergey</cell><cell>NO</cell>
+	</table>
+
+<break/>
+	<example><![CDATA[CREATE TABLE developer (
+	name VARCHAR(64) NOT NULL,
+	country_code CHAR(2) NOT NULL,
+	PRIMARY KEY (name)
+) ENGINE=InnoDB;]]></example>
+</slide>

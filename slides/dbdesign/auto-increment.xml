@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Auto Increment</title>
+
+	<list>
+		<bullet>Generates the 'next' number upon insert</bullet>
+		<bullet>Often used for surrogate keys</bullet>
+		<bullet>In some database not available directly, but only through a sequence</bullet>
+		<bullet>Column must defined as "%integer not null%"</bullet>
+		<bullet>They can not be cleaned up</bullet>
+	</list>
+</slide>

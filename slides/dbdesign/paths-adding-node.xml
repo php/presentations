@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Path Strings</title>
+
+	<example><![CDATA[Id | ParentId | PathString  | Name         | Depth
+---+----------+-------------+--------------+------
+87 |        2 | /87/        | Countries    |  2
+88 |       87 | /87/88/     | Belgium      |  3
+89 |       87 | /87/89/     | Netherlands  |  3
+91 |       89 | /87/89/91/  | Business     |  4
+92 |       89 | /87/89/92/  | Economy      |  4 
+90 |       87 | /87/90/     | Germany      |  3]]></example>
+<break/>
+	<blurb>Adding a node:</blurb>
+<break/>
+	<example><![CDATA[function add_node( parent, name )
+{
+	$parent_info =
+		SELECT *
+		FROM tree
+		WHERE Id = $parent;
+	
+	INSERT INTO tree(Id, Name) VALUES( NULL, $name );
+	
+	$last_id = LAST INSERT ID;
+	UPDATE tree
+		SET
+			ParentId = $parent,
+			PathString = $parent_info['PathString'] . $last_id . "/",
+			Depth = $parent['Depth'] + 1
+		WHERE Id = $last_id
+}]]></example>
+</slide>
+  

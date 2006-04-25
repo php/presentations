@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Intregity</title>
+
+	<list>
+		<bullet>In our current database there is no intregity checking</bullet>
+		<bullet>Data in a table's record might refer to another table without
+		that data being present: inconsistent data</bullet>
+		<bullet>~Referential Intregity~</bullet>
+	</list>
+
+</slide>

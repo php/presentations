@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>NULL</title>
+
+	<list>
+		<bullet>"%NULL%" is a special value</bullet>
+		<bullet>"%NULL%" is neither TRUE or FALSE</bullet>
+		<bullet>"%NULL = NULL%" evaluates to FALSE</bullet>
+		<bullet>"%NULL IS NULL%" evaluates to TRUE</bullet>
+		<bullet>Columns can be defined as "%NULL%" (default) or "%NOT NULL%"</bullet>
+	</list>
+</slide>

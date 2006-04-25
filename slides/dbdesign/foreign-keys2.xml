@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Adding the Foreign Keys</title>
+
+	<image filename="normal-fk1.png"/>
+	
+<blurb>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</blurb>
+	<example><![CDATA[ALTER TABLE developer
+	ADD CONSTRAINT developer_country_code
+	FOREIGN KEY (country_code) REFERENCES country(code);
+	
+ALTER TABLE component
+	ADD CONSTRAINT component_developer_name
+	FOREIGN KEY (main_developer_name) REFERENCES developer(name);
+	]]></example>
+</slide>

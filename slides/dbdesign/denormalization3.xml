@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Denormalization</title>
+	<subtitle>Example 1 (part deux)</subtitle>
+
+	<image filename="denormalization2.png"/>
+	<blurb>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</blurb>
+	<blurb>Usually you always want to display the name of the airfield instead
+	of the airport code. But in the current diagram you always have to use a
+	join for this:</blurb>
+<break/>
+  <example><![CDATA[SELECT tp.date, tp.sequence,
+       fd.from_airfield_name, fd.to_airfield_name
+  FROM trip_part tp
+    JOIN flight_denorm fd ON
+      tp.flight_carrier = fd.carrier AND tp.flight_nr = fd.flight_nr
+  WHERE tp.trip_id = 1
+  ORDER BY tp.sequence;]]></example>
+<break/>
+	<example><![CDATA[+------------+----------+--------------------+------------------+
+| date       | sequence | from_airfield_name | to_airfield_name |
++------------+----------+--------------------+------------------+
+| 2006-04-24 |        1 | Sandefjord         | Amsterdam        |
+| 2006-04-24 |        2 | Amsterdam          | Detroit          |
+| 2006-04-24 |        3 | Detroit            | Orlando          |
++------------+----------+--------------------+------------------+]]></example>
+
+</slide>
+

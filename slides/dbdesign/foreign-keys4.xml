@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Adding the Foreign Keys</title>
+	<subtitle>part 3</subtitle>
+
+	<image filename="delete-fk.png"/>
+	
+<blurb>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</blurb>
+	<example><![CDATA[ALTER TABLE component_version
+	ADD CONSTRAINT component_version_component
+	FOREIGN KEY (component_name)
+		REFERENCES component(name)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE;]]></example>
+
+	<list>
+		<bullet>%ON DELETE CASCADE%: If a by %component_version% referenced
+		value is delete from %component%, also delete all the corresponding
+		records in this table</bullet>
+		<bullet>%ON UPDATE CASCADE%: If a by %component_version% referenced
+		value in %component% changes due to an %UPDATE% query, update the values
+		in %component_version% too</bullet>
+	</list>
+</slide>

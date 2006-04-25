@@ -41,16 +41,53 @@
 <slide>slides/dbdesign/relations-n-m.xml</slide>
 <slide>slides/dbdesign/singular-vs-plural-names.xml</slide>
 <slide>slides/dbdesign/naming-columns.xml</slide>
-<slide>slides/dbdesign/in-sql.xml</slide>
-<slide>slides/dbdesign/column-types.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
-<slide>slides/dbdesign/.xml</slide>
 
+<!-- ASSIGNMENT 1 -->
+<slide>slides/dbdesign/assignment1.xml</slide>
+<slide>slides/dbdesign/break.xml</slide>
+
+<!-- SQL DDL -->
+<slide>slides/dbdesign/column-types.xml</slide>
+<slide>slides/dbdesign/null-values-in-columns.xml</slide>
+<slide>slides/dbdesign/auto-increment.xml</slide>
+<slide>slides/dbdesign/auto-increment2.xml</slide>
+<slide>slides/dbdesign/create-table1.xml</slide>
+<slide>slides/dbdesign/create-table3.xml</slide>
+<slide>slides/dbdesign/create-table2.xml</slide>
+<slide>slides/dbdesign/intregity.xml</slide>
+<slide>slides/dbdesign/foreign-keys.xml</slide>
+<slide>slides/dbdesign/foreign-keys2.xml</slide>
+<slide>slides/dbdesign/foreign-keys3.xml</slide>
+<slide>slides/dbdesign/foreign-keys4.xml</slide>
+
+<slide>slides/dbdesign/index.xml</slide>
+
+<!-- ASSIGNMENT 2 -->
+<slide>slides/dbdesign/assignment2.xml</slide>
+<slide>slides/dbdesign/break.xml</slide>
+
+<!-- DENORMALIZATION/TRIGGERS -->
+<slide>slides/dbdesign/denormalization1.xml</slide>
+<!-- Example 1 -->
+<slide>slides/dbdesign/denormalization2.xml</slide>
+<slide>slides/dbdesign/denormalization3.xml</slide>
+
+<slide>slides/dbdesign/trigger1.xml</slide>
+<slide>slides/dbdesign/trigger2.xml</slide>
+
+<!-- TIPS & TRICKS -->
+<slide>slides/dbdesign/tips.xml</slide>
+<slide>slides/hpp/mysql_opt2.xml</slide>
+<slide>slides/dbdesign/trees.xml</slide>
+<slide>slides/dbdesign/trees2.xml</slide>
+<slide>slides/dbdesign/tree-nested-set1.xml</slide>
+<slide>slides/dbdesign/tree-nested-set2.xml</slide>
+<slide>slides/dbdesign/tree-nested-set3.xml</slide>
+<slide>slides/dbdesign/tree-nested-set4.xml</slide>
+<slide>slides/dbdesign/paths.xml</slide>
+<slide>slides/dbdesign/paths-adding-node.xml</slide>
+<slide>slides/dbdesign/paths-selecting-path.xml</slide>
+<slide>slides/dbdesign/paths-selecting-subtree.xml</slide>
+<slide>slides/dbdesign/questions.xml</slide>
 
 </presentation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Denormalization</title>
+
+	<list>
+		<bullet>Denormalization is the process of reverting a database schema to a lower NF</bullet>
+		<bullet>Denormalization is often done to enhance performance</bullet>
+	</list>
+
+</slide>

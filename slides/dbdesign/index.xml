@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Indexes</title>
+
+	<list>
+		<bullet>An %index% orders data for fast retrieval</bullet>
+		<bullet>Indexes can be used for querying or sorting</bullet>
+		<bullet>Indexes also use memory</bullet>
+	</list>
+
+	<table columns="4" class="dbtable" title="ComponentVersion">
+<cell class="header-key">ID</cell><cell class="header-candidate-key">Component</cell><cell class="header-candidate-key">Component Version</cell><cell class="header">Release Date</cell>
+<cell>1</cell><cell>Base</cell><cell>1.0</cell><cell>2006-01-07</cell>
+<cell>3</cell><cell>Base</cell><cell>1.1</cell><cell>~NULL~</cell>
+	</table>
+<break/>
+
+	<blurb>Searching for all releases in Q1 does not use an index:</blurb>
+<break/>
+	<example><![CDATA[EXPLAIN SELECT * FROM component_version
+	WHERE release_date BETWEEN '2006-01-01' AND '2006-03-31';]]></example>
+<break/>
+
+	<blurb>Create an index with:</blurb>
+<break/>
+	<example><![CDATA[ALTER TABLE component_version
+	ADD INDEX component_version_release_date (release_date);]]></example>
+
+
+<break/>
+</slide>
