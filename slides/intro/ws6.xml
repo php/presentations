@@ -6,7 +6,8 @@ Finally, a free geocoding API
 <example title="REST Query to look up an address" result="0" fontsize="1.8em" marginright="0em"><![CDATA[http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=:-:location:-:]]></example>
 
 <example hide="1" result="1" title="Returned XML"><![CDATA[<?php
-$data = file_get_contents("http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=:-:location:-:");
+$loc = urlencode(':-:location:-:');
+$data = file_get_contents("http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=$loc");
 $data = preg_replace("|<(/.*?)>|","<\\1>\n",$data);
 $data = preg_replace("|\">|","\">\n",$data);
 echo nl2br(htmlspecialchars($data));
@@ -14,7 +15,7 @@ echo nl2br(htmlspecialchars($data));
 
 <example fontsize="1.2em" title="We can parse it like this" result="1" marginright="0em" required_extension="simplexml"><![CDATA[<?php
   $url  = 'http://api.local.yahoo.com/MapsService/V1/geocode';
-  $url .= '?appid=YahooDemo&location=:-:location:-:';
+  $url .= '?appid=YahooDemo&location='.urlencode(':-:location:-:');
   $xml = simplexml_load_file($url); 
   $ret['precision'] = (string)$xml->Result['precision'];
   $ret['warning'] = (string)$xml->Result['warning'];
