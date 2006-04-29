@@ -38,11 +38,11 @@ $config = array(
 );
 ?>]]></example>
 
-<example title="http_load" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[5000 fetches, 5 max parallel, 3e+07 bytes, in 13.7056 seconds
+<example title="http_load" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[5000 fetches, 5 max parallel, 3e+07 bytes, in 14.7368 seconds
 6000 mean bytes/connection
-|ffff00|364.815| fetches/sec, 2.18889e+06 bytes/sec
-msecs/connect: 0.316614 mean, 9.299 max, 0.166 min
-msecs/first-response: 10.4774 mean, 7571.28 max, 2.379 min
+|ffff00|339.286| fetches/sec, 2.03572e+06 bytes/sec
+msecs/connect: 0.404772 mean, 34.54 max, 0.168 min
+msecs/first-response: 10.3008 mean, 94.533 max, 2.332 min
 HTTP response codes:
   code 200 -- 5000]]></example>
 

@@ -2,11 +2,11 @@
 <break lines="2"/>
 
 <blurb fontsize="4em" marginleft="2em" marginright="2em">
-Non-persistent: *390* requests/second
+Non-persistent: *370* requests/second
 </blurb>
 
 <blurb fontsize="4em" marginleft="2em" marginright="2em">
-Persistent: *475* requests/second
+Persistent: *525* requests/second
 </blurb>
 
 <blurb fontsize="4em" marginleft="2em" marginright="2em">
@@ -25,12 +25,21 @@ $config = array(
   'db_db'   => 'users',
   'db_opts' => array(PDO::ERRMODE_EXCEPTION => true,
                      PDO::ATTR_PERSISTENT => true,
-                     PDO::MYSQL_ATTR_DIRECT_QUERY=>1)
+                     PDO::ATTR_EMULATE_PREPARES=>true)
 );
 ?>]]></example>
-
+<blurb>
+PDO::ATTR_EMULATE_PREPARES was added in PHP 5.1.3.  You can use PDO::MYSQL_ATTR_DIRECT_QUERY in earlier versions.
+</blurb>
 <blurb fontsize="4em" marginleft="2em" marginright="2em">
-That brings us to *500* requests/second.  Down to 4 servers!
+That brings us to *580* requests/second.  Down to 3 servers!
+</blurb>
+
+<blurb>
+Note that comparing PostgreSQL to MySQL using MyISAM tables isn't very fair.  If you need transactions, rollbacks
+or row-level locking all of which PostgreSQL provides, you have to use the InnoDB storage handler with MySQL.  The
+same benchmark using InnoDB for both tables in the join gives us *345* requests/second non-persistent without direct queries.
+Turning on direct queries bumps this to *418* requests/second and adding persistent connections gives us *475* requests/second.
 </blurb>
 
 </slide>
