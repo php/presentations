@@ -36,10 +36,11 @@ That brings us to *580* requests/second.  Down to 3 servers!
 </blurb>
 
 <blurb>
-Note that comparing PostgreSQL to MySQL using MyISAM tables isn't very fair.  If you need transactions, rollbacks
-or row-level locking all of which PostgreSQL provides, you have to use the InnoDB storage handler with MySQL.  The
-same benchmark using InnoDB for both tables in the join gives us *345* requests/second non-persistent without direct queries.
-Turning on direct queries bumps this to *418* requests/second and adding persistent connections gives us *475* requests/second.
+The same tests with InnoDB reveal similar numbers.
+</blurb>
+
+<blurb>
+Sqlite3 comes in at around *550* requests/second with persistent connections.
 </blurb>
 
 </slide>
