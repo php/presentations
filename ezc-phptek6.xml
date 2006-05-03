@@ -35,10 +35,8 @@
 <slide>slides/ezc/example-archive.xml</slide>
 <slide>slides/ezc/example-cache.xml</slide>
 
-<slide>slides/ezc/example-consoletools-options.xml</slide>
 <slide>slides/ezc/example-consoletools-table.xml</slide>
 <slide>slides/ezc/example-consoletools-progressbar.xml</slide>
-<slide>slides/ezc/example-userinput.xml</slide>
 
 <slide>slides/ezc/example-execution.xml</slide>
 
@@ -47,8 +45,6 @@
 <slide>slides/ezc/example-persistentobject.xml</slide>
 <slide>slides/ezc/example-database-schema.xml</slide>
 
-<slide>slides/ezc/example-eventlog.xml</slide>
-
 <slide>slides/ezc/example-mail.xml</slide>
 <slide>slides/ezc/example-mail-parse.xml</slide>
 
@@ -56,4 +52,7 @@
 <slide>slides/ezc/future-1.1beta1-1.1.xml</slide>
 <slide>slides/ezc/questions.xml</slide>
 
+<slide>slides/ezc/example-userinput.xml</slide>
+<slide>slides/ezc/example-consoletools-options.xml</slide>
+<slide>slides/ezc/example-eventlog.xml</slide>
 </presentation>

@@ -4,8 +4,8 @@
 	<subtitle>Download bundle</subtitle>
 
 	<blurb>Installation:</blurb>
-	<example><![CDATA[wget http://ez.no/downloads/ezcomponents-1.0.tar.bz2
-tar -xjf ezcomponents-1.0.tar.bz2
+	<example><![CDATA[// download the bundle from http://ez.no/download/ez_components
+tar -xjf ezcomponents-1.1beta1.tar.bz2
 pwd]]></example>
 
 <break lines="3"/>
