@@ -3,7 +3,7 @@
 	<title>Problems</title>
 	<subtitle>Timezones</subtitle>
 
-	<image align="center" filename="zones.png"/>
+	<image align="center" filename="zones.png" pdf-scale="0.8" />
 
 	<list>
 		<bullet>Most places have whole-hour timezone offsets</bullet>
