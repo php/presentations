@@ -10,7 +10,8 @@
 
 	<blurb>String Indexes:</blurb>
 	<example result="1"><![CDATA[<?php
-	$string = "⿈旭"; // bytes are: 0xE9 0xBB 0x83 0xE6 0x97 0xAD
+	$string = "网页搜索";
+	// bytes are: E7 BD 91  E9 A1 B5  E6 90 9C  E7 B4 A2
 	
 	echo $string[1];
 ?>]]></example>

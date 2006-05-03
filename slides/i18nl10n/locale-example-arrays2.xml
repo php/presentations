@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>ICU Locales</title>
+	<subtitle>Array Sorting Example</subtitle>
+
+	<example result="1"><![CDATA[<pre>#  orig  norm  loc   trad
+--------------------------
+<?php
+	$d = $c = $b = $a = array('mapa', 'kilo', 'libro', 'llave', 'loca');
+	sort($b);
+	i18n_loc_set_default('es_VE');
+	sort($c, SORT_LOCALE_STRING);
+	i18n_loc_set_default('es_VE@collation=traditional');
+	sort($d, SORT_LOCALE_STRING);
+
+	for ($i = 0; $i < 5; ++$i) {
+		echo sprintf('%d. %-5s %-5s %-5s %-5s<br/>',
+			$i + 1, $a[$i], $b[$i], $c[$i], $d[$i]);
+	}
+?>]]></example>
+
+<!--
+ # vim: encoding=utf8
+-->
+</slide>
