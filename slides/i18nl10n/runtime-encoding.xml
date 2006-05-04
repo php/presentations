@@ -12,8 +12,8 @@
 	ini_set('unicode.runtime_encoding', 'iso-8859-5');
 	ini_set('unicode.from_error_subst_char', '2D');
 	$food = 'blåbær != блабар';
-	$food2 = (string) $food;
-	$food3 = (unicode) $food2;
+	$food2 = (binary) $food;
+	$food3 = (string) $food2;
 	echo $food, '<br/>', $food2, '<br/>', $food3, "<br/>\n";
 ?>]]></example>
 </slide>

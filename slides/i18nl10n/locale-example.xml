@@ -4,10 +4,10 @@
 	<subtitle>Example</subtitle>
 
 	<example result="1"><![CDATA[<?php
-	i18n_loc_set_default("nl");
+	locale_set_default_3_4("nl");
 	echo strtotitle("het ijsselmeer (ĳsselmeer) is ßaf"), "<br/>\n";
 
-	i18n_loc_set_default("tr");
+	locale_set_default_3_4("tr");
 	echo strtotitle("het ijsselmeer (ĳsselmeer) is ßaf"), "\n";
 ?>]]></example>
 
