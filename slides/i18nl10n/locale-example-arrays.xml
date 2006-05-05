@@ -8,9 +8,9 @@
 <?php
 	$d = $c = $b = $a = array('mapa', 'kilo', 'libro', 'llave', 'loca');
 	sort($b);
-	locale_set_default_3_4('es_VE');
+	locale_set_default('es_VE');
 	sort($c, SORT_LOCALE_STRING);
-	locale_set_default_3_4('es_VE@collation=traditional');
+	locale_set_default('es_VE@collation=traditional');
 	sort($d, SORT_LOCALE_STRING);
 
 	for ($i = 0; $i < 5; ++$i) {
