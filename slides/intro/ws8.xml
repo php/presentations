@@ -32,7 +32,6 @@ jsmap.addTypeControl();
 jsmap.addZoomLong();
 jsmap.setMapType('YAHOO_SAT');
 jsmap.drawZoomAndCenter(":-:location:-:", 13);
-jsmap.addNavigatorControl();
 </script>]]></example>
 
 </slide>

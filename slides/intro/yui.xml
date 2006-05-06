@@ -1,6 +1,6 @@
 <slide title="YUI Javascript Libs">
-<blurb>
-</blurb>
+<break lines="1" />
+<link fontsize="4em" marginleft="3em" href="http://developer.yahoo.com/yui/"/>
 
 <example title="Connection" result="0" fontsize="1.6em" marginright="0em"><![CDATA[YAHOO.util.Connect.setForm(formName);
 YAHOO.util.Connect.asyncRequest('GET',target,callback);]]></example>
