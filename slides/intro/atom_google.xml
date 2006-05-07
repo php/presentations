@@ -1,0 +1,25 @@
+<slide title="Atom parser">
+<break lines="1" />
+<example title="Recent comp.lang.php messages" fontsize="1.4em" rfontsize="1.2em" result="1"><![CDATA[<?php
+$feed = 'http://groups.google.com/group/comp.lang.php/feed/atom_v1_0_msgs.xml';
+$xml  = simplexml_load_file($feed);
+echo "<h1>{$xml->title}</h1><h2>{$xml->subtitle}</h2>";
+foreach($xml->entry as $entry) {
+  $date = date("r",strtotime($entry->updated));
+  echo <<<EOB
+<div style="background: #000; width:54em; padding:2px;">
+  <div style="background: #ffa; padding: 5px;">
+    From: {$entry->author->name}<br />
+    Date: $date<br />
+    Subject: <a href="{$entry->link['href']}">{$entry->title}</a><br />
+  </div>
+  <div style="background: #ffd; padding: 5px; border-top: 2px dotted;">
+    {$entry->summary}<br />
+  </div>
+</div>
+<br clear="left"/>
+EOB;
+}
+?>]]></example>
+
+</slide>
