@@ -19,33 +19,22 @@ $data = filter_data($user_data, FILTER_SANITIZE_STRING);
 function test($data) {
   return strtoupper($data);
 }
-$data1 = "PHP";
-$data2 = "123";
-$data3 = "123abc<>()";
-$data4 = "O'Henry";
-$data5 = "하퍼";
+$data = array("PHP","123","123abc<>()","O'Henry", "하퍼");
+
 echo "<tr><th> </th><td>PHP</td><td>123</td><td>123abc&lt;&gt;()</td>";
 echo "<td>O'Henry</td><td>하퍼</td></tr>\n";
 foreach(input_filters_list() as $filter) {
   if($filter=="validate_regexp") {
-    $result1 = filter_data($data1,input_name_to_filter($filter),array("regexp"=>'/^O.*/'));
-    $result2 = filter_data($data2,input_name_to_filter($filter),array("regexp"=>'/^O.*/'));
-    $result3 = filter_data($data3,input_name_to_filter($filter),array("regexp"=>'/^O.*/'));
-    $result4 = filter_data($data4,input_name_to_filter($filter),array("regexp"=>'/^O.*/'));
-    $result5 = filter_data($data5,input_name_to_filter($filter),array("regexp"=>'/^O.*/'));
+    foreach($data as $k=>$v)
+      $result[$k] = filter_data($v,input_name_to_filter($filter),array("regexp"=>'/^O.*/'));
   } else {
-    $result1 = filter_data($data1,input_name_to_filter($filter),"test");
-    $result2 = filter_data($data2,input_name_to_filter($filter),"test");
-    $result3 = filter_data($data3,input_name_to_filter($filter),"test");
-    $result4 = filter_data($data4,input_name_to_filter($filter),"test");
-    $result5 = filter_data($data5,input_name_to_filter($filter),"test");
+    foreach($data as $k=>$v)
+      $result[$k] = filter_data($v,input_name_to_filter($filter),"test");
   }
   echo "<tr><th align='left'>$filter</th>";
-  echo "<td>".htmlspecialchars($result1)."</td>";
-  echo "<td>".htmlspecialchars($result2)."</td>";
-  echo "<td>".htmlspecialchars($result3)."</td>";
-  echo "<td>".htmlspecialchars($result4)."</td>";
-  echo "<td>".htmlspecialchars($result5)."</td></tr>\n";
+  foreach($result as $v)
+    echo "<td>".htmlspecialchars($v)."</td>";
+  echo "</td></tr>\n";
 }
 ?>
 </table>]]></example>
