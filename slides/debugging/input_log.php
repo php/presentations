@@ -2,7 +2,7 @@
 function input_tracker()
 {
 	$input = '';
-	// itterate through all super-globals
+	// iterate through all super-globals
 	foreach (array('GET', 'POST', 'COOKIE', 'SERVER', 'FILES') as $v) {
 		$var =& $GLOBALS['_'.$v];
 		// if data is avaliable store it

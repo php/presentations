@@ -6,12 +6,12 @@ function head($title="Default") { ?>
  <head>
   <title><?php echo $title?></title>
   <style type="text/css" media="screen">@import "styles.css";</style>
-  <script language="javascript" type="text/javascript" src="/yui/YAHOO.js"></script>
-  <script language="javascript" type="text/javascript" src="/yui/dom.js"></script>
-  <script language="javascript" type="text/javascript" src="/yui/event.js"></script>
-  <script language="javascript" type="text/javascript" src="/yui/connection.js"></script>
-  <script language="javascript" type="text/javascript" src="/yui/animation.js"></script>
-  <script language="javascript" type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="/yui/YAHOO.js"></script>
+  <script type="text/javascript" src="/yui/dom.js"></script>
+  <script type="text/javascript" src="/yui/event.js"></script>
+  <script type="text/javascript" src="/yui/connection.js"></script>
+  <script type="text/javascript" src="/yui/animation.js"></script>
+  <script type="text/javascript" src="common.js"></script>
  </head>
  <body>
   <br />

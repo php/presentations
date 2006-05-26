@@ -1,5 +1,6 @@
 <?php
 // generic database query wrapper 
+// Use pecl/filter or mysql_real_string to avoid sql injection here
 function query_wrapper($query, $file, $line, $class, $function)
 {
 	$r = mysql_query($query);

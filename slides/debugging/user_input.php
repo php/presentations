@@ -1,4 +1,3 @@
-<?php
 	// hack me please
 	include "template/" . $_GET['page'] . ".php";
 
@@ -6,4 +5,3 @@
 	if (intval($_GET['id'])) {
 		$result = mysql_query("SELECT * FROM foo WHERE bar=".$_GET['id']);
 	}
-?>

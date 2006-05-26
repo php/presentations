@@ -1,5 +1,6 @@
 <?php
 // Quickly fetch the ids of needed messages
+// Note - use pecl/filter to avoid sql injection here
 mysql_query("CREATE TEMPORARY TABLE mtmp AS 
 	SELECT id FROM msg WHERE 
 		thread_id={$_GET['th']} AND apr=1 

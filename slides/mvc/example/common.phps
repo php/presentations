@@ -1,4 +1,3 @@
-
 // Catch JSON replies
 var fN = function callBack(o) {
   myDebug(o.responseText);
@@ -17,7 +16,9 @@ var fN = function callBack(o) {
     YAHOO.util.Dom.setXY(div,[pos[0],pos[1]+40]);
     div.style.visibility = 'visible'
     fnc = function() {
-      if(resp['reset']) { document.forms[resp['formName']].reset(); }
+      if(resp['reset']) { 
+         document.forms[resp['formName']].reset();
+      }
       window.location.reload(false);
     }
     fade(div,2,fnc);
@@ -60,20 +61,20 @@ var callback = { success:fN }
 
 // Post form fields from formName to target
 function postForm(target,formName) {
-   YAHOO.util.Connect.setForm(formName);
-   YAHOO.util.Connect.asyncRequest('POST',target,callback);
+  YAHOO.util.Connect.setForm(formName);
+  YAHOO.util.Connect.asyncRequest('POST',target,callback);
 }
 
-function postData(target,postData) {
-   YAHOO.util.Connect.asyncRequest('POST',target,callback,postData);
+function postData(target,data) {
+  YAHOO.util.Connect.asyncRequest('POST',target,callback,data);
 }
 
 function addClass(o,cls) {
-   o.className+=" "+cls;
+  o.className+=" "+cls;
 }
 
 function delClass(o,cls) {
-   o.className=o.className.replace(new RegExp(" "+cls+"\\b"), "");
+  o.className=o.className.replace(new RegExp(" "+cls+"\\b"), "");
 }
 
 function fade(o, dur, fnc) {

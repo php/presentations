@@ -15,5 +15,6 @@ function get_message($id)
 }
 
 // main code
+// Use pecl/filter to avoid sql injection here
 $message = get_message($_GET['id']);
 ?>
