@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Now?</title>
+	<subtitle>Included components in eZ components 1.1</subtitle>
+
+	<list>
+		<bullet>*Archive*: tar (gzip/bzip2) and zip reading and writing</bullet>
+		<bullet>*Base*: base for all components</bullet>
+		<bullet>*Cache*: Caching of data</bullet>
+		<bullet>*Configuration*: Reading/Writing .ini files</bullet>
+		<bullet>*ConsoleTools*: Tools for writing console scripts</bullet>
+		<bullet>*Database*: Database and SQL abstraction layer</bullet>
+		<bullet>*DatabaseSchema*: Database schema manipulation</bullet>
+		<bullet>*Debug*: Debugging utilities</bullet>
+		<bullet>*EventLog*: Logging application events</bullet>
+		<bullet>*EventLogDatabaseTiein*: Database backend for EventLog</bullet>
+	</list>
+
+</slide>

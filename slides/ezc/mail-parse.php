@@ -1,7 +1,8 @@
 <pre><font size="4"><?php
 require 'ezc-setup.php';
 
-$set = new ezcMailMboxSet( fopen( dirname( __FILE__ ) . "/mbox-example.mbox", "rt" ) );
+$mbox = new ezcMailMboxTransport( dirname( __FILE__ ) . "/mbox-example.mbox" );
+$set = $mbox->fetchAll();
 $parser = new ezcMailParser();
 $mail = $parser->parseMail( $set );
 showParts( $mail[0], 0 );

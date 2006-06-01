@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Package Layout</title>
+
+	<blurb>trunk/[packagename]/:</blurb>
+
+	<list>
+		<bullet>*ChangeLog*: Contains the changes for this package.</bullet>
+		<bullet>*CREDITS*, *DESCRIPTION*: Package credits and description.</bullet>
+		<bullet>*DEPS*: A list of packages and versions this package depends on.</bullet>
+		<bullet>*design/*: Design and requirement documents.</bullet>
+		<bullet>*docs/*: Tutorial, examples and other documentation.</bullet>
+		<bullet>*src/*: The source code of a package.</bullet>
+		<bullet>*tests/*: Unit tests.</bullet>
+	</list>
+
+</slide>

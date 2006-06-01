@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Source Layout</title>
+
+	<blurb>trunk/[packagename]/src/:</blurb>
+
+	<list>
+		<bullet>*exceptions/*: Exception classes.</bullet>
+		<bullet>*interfaces/*: Interfaces and abstract classes.</bullet>
+		<bullet>*options/*: Contains option classes (extend from ezcBaseOptions class).</bullet>
+		<bullet>*structs/*: "Struct" classes.</bullet>
+		<bullet>*[dir]/*: Classes grouped logically.</bullet>
+		<bullet>*[package]_autoload.php*: Autoload definition.</bullet>
+		<bullet>*[file].php*: "Main" classes.</bullet>
+	</list>
+
+</slide>

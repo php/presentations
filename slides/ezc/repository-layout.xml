@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Repository Layout</title>
+
+	<blurb>Main directories:</blurb>
+
+	<list>
+		<bullet>*docs/*: Contains articles, some status lists and development
+		~guidelines~.</bullet>
+		<bullet>*release-info/*: For each version a file describing which package
+		and version is part of that release.</bullet>
+		<bullet>*releases/*: %releases/[packagename]/[version]% is a copy of
+		%trunk/[packagename]% at the time a component was released.</bullet>
+		<bullet>*scripts/*: Maintenance scripts.</bullet>
+		<bullet>*trunk/*: Code in development.</bullet>
+	</list>
+
+</slide>

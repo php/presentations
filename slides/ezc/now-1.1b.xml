@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Now?</title>
+	<subtitle>Included components in eZ components 1.1</subtitle>
+
+	<list>
+		<bullet>*Execution*: Handling script execution abortion</bullet>
+		<bullet>*File*: Common file operations</bullet>
+		<bullet>*ImageAnalysis*: Analysing image data (Exif, size)</bullet>
+		<bullet>*ImageConversion*: Manipulating images</bullet>
+		<bullet>*Mail*: Mail creating, sending, receiving and parsing</bullet>
+		<bullet>*PersistentObject*: ORM database layer</bullet>
+		<bullet>*PersistentObjectDatabaseSchemaTiein*: Scripts for generation PersistentObject definitions from database schemas</bullet>
+		<bullet>*PhpGenerator*: Generating PHP files</bullet>
+		<bullet>*SystemInformation*: Obtaining information about a system (CPU, Memory...)</bullet>
+	</list>
+
+</slide>

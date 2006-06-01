@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Tests Layout</title>
+
+	<blurb>trunk/[packagename]/tests/:</blurb>
+
+	<list>
+		<bullet>*suite.php*: Contains the changes for this package.</bullet>
+		<bullet>*[dir]/* and *[file].php*: Contains the test cases, often in
+		the same structure as the source.</bullet>
+	</list>
+
+</slide>

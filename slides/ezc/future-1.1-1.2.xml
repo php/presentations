@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Next?</title>
+	<subtitle>Additions for eZ components 1.2</subtitle>
+
+	<blurb>New components:</blurb>
+	<list>
+		<bullet>*Authentication*</bullet>
+		<bullet>*ContentDiff*</bullet>
+		<bullet>*Feed*: RSS/ATOM feeds</bullet>
+		<bullet>*Graph*: Graphs and diagrams</bullet>
+		<bullet>*SignalObserver*: IPC for PHP applications</bullet>
+		<bullet>*URL*: Obtaining parameters from URLs and creating them</bullet>
+	</list>
+
+	<blurb>Additions to components:</blurb>
+	<list>
+		<bullet>*Database*: Oracle support</bullet>
+		<bullet>*DatabaseSchema*: Support for SQLite, PostGreSQL and Oracle</bullet>
+		<bullet>*Mail*: More authentication mechanisms</bullet>
+		<bullet>*PersistentObject*: Class relations</bullet>
+		<bullet>*Template*: Custom functions and character set support</bullet>
+	</list>
+
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Now?</title>
+	<subtitle>Included components in eZ components 1.1</subtitle>
+
+	<list>
+		<bullet>*Template*: Template processing</bullet>
+		<bullet>*Translation*: Providing translatable string support</bullet>
+		<bullet>*TranslationCacheTiein*: Caching support for Translation</bullet>
+		<bullet>*UserInput*: Form handling and input filtering</bullet>
+	</list>
+
+</slide>

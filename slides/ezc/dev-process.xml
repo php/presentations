@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Development Process</title>
+	<subtitle>How components are developed</subtitle>
+
+	<list type="number">
+		<bullet>Suggest the idea on the components list</bullet>
+		<bullet>Collect feedback and wait until the idea is approved</bullet>
+		<bullet>Write requirements and design document</bullet>
+		<bullet>Announce those docs and ask for comments on the components
+		list</bullet>
+		<bullet>Repeat step 3 to 4 until everybody is happy</bullet>
+		<bullet>Implement class stubs including API docs</bullet>
+		<bullet>For each method do step 8 and 9</bullet>
+		<bullet>Write testcase for method</bullet>
+		<bullet>Write code for method and run test case</bullet>
+		<bullet>In case API needs to be changed, discuss that on the list and
+		repeat step 6 to 9</bullet>
+		<bullet>Make the class documentation more extensive and add some class level examples</bullet>
+		<bullet>Write a tutorial</bullet>
+		<bullet>Ask for review again</bullet>
+	</list>
+		
+</slide>
