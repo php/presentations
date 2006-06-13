@@ -16,7 +16,7 @@
 	<blurb>Additions to components:</blurb>
 	<list>
 		<bullet>*Database*: Oracle support</bullet>
-		<bullet>*DatabaseSchema*: Support for SQLite, PostGreSQL and Oracle</bullet>
+		<bullet>*DatabaseSchema*: Support for SQLite, PostgreSQL and Oracle</bullet>
 		<bullet>*Mail*: More authentication mechanisms</bullet>
 		<bullet>*PersistentObject*: Class relations</bullet>
 		<bullet>*Template*: Custom functions and character set support</bullet>

@@ -1,0 +1,9 @@
+<slide>
+	<title>Installing Xdebug</title>
+	<subtitle>On Windows</subtitle>
+
+	<list>
+		<bullet>Download the .dll for your PHP version from %http://pecl4win.php.net/%</bullet>
+		<bullet>in php.ini add: %zend_extension_ts=c:\php\xdebug.dll%</bullet>
+	</list>
+</slide>

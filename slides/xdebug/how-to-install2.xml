@@ -4,7 +4,6 @@
 
 	<list>
 		<bullet>in php.ini add: %zend_extension=/full/path/to/xdebug.so%</bullet>
-		<bullet>Use %zend_extension_ts% for threaded compiles of PHP (Windows build f.e.)</bullet>
 		<bullet>Use %zend_extension_debug% for debug builds of PHP</bullet>
 	</list>
 </slide>
