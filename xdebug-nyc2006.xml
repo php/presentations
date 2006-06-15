@@ -19,7 +19,9 @@
 <slide>slides/xdebug/title.xml</slide>
 
 <!-- INTRODUCTION -->
-<slide>slides/xdebug/why-debugger.xml</slide>
+<slide>slides/xdebug/why-debugger1.xml</slide>
+<slide>slides/xdebug/why-debugger2.xml</slide>
+<slide>slides/xdebug/why-debugger3.xml</slide>
 <slide>slides/xdebug/how-to-install.xml</slide>
 <slide>slides/xdebug/how-to-install2.xml</slide>
 <slide>slides/xdebug/how-to-install-win.xml</slide>
@@ -28,14 +30,17 @@
 <slide>slides/xdebug/where-error.xml</slide>
 <slide>slides/xdebug/debug-req-vars.xml</slide>
 <slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/how-many-functions.xml</slide>
 <slide>slides/xdebug/how-much-time.xml</slide>
 <slide>slides/xdebug/how-much-memory.xml</slide>
 <slide>slides/xdebug/wtf-happens.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
 <slide>slides/xdebug/which-code-do-i-use.xml</slide>
-<slide>slides/xdebug/how-many-functions.xml</slide>
 <slide>slides/xdebug/profiling.xml</slide>
 <slide>slides/xdebug/profiling2.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
 <slide>slides/xdebug/analyse-running-script.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
 <slide>slides/xdebug/resources.xml</slide>
 
 </presentation>

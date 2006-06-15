@@ -5,7 +5,7 @@
 	<image filename="var_dump.png" align="center"/>
 <break lines="2"/>
 	<blurb>%&amp;lt;?php%</blurb>
-	<blurb>%xdebug_var_dump();%</blurb>
+	<blurb>%xdebug_var_dump(); // or just var_dump()%</blurb>
 	<blurb>%?&gt;%</blurb>
 
 </slide>

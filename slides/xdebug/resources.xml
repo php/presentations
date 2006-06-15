@@ -5,7 +5,9 @@
 	<image filename="xdebug-logo.png" align="center" />
 
 	<link fontsize="3em" marginleft="2em" leader="Xdebug site: " href="http://xdebug.org" target="_new"/>
+	<link fontsize="3em" marginleft="2em" leader="Xdebug documentation: " href="http://xdebug.org/docs.php" target="_new"/>
 	<link fontsize="3em" marginleft="2em" leader="DBGp specification: " href="http://xdebug.org/docs-dbgp.php" target="_new"/>
-
+<break/>
+	<link fontsize="3em" marginleft="2em" leader="These slides: " href=":-:url:-:" target="_new"/>
 	<link fontsize="3em" marginleft="2em" leader="Questions?: " href="derick@xdebug.org" target="_new"/>
 </slide>
