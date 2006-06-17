@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Logging errors</title>
+
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+	<blurb> </blurb>
+
+	<list effect="slide" fontsize="6em">
+		<bullet>log_errors = On</bullet>
+		<bullet>log_errors_max_len = 1024</bullet>
+		<bullet>error_log = /var/log/phperrors</bullet>
+		<bullet>error_log = syslog</bullet>
+	</list>
+</slide>
