@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Different Approach</title>
 
-	<image align="center" filename="path1.png" />
+	<image align="center" filename="path1.png" pdf-scale="0.5"/>
 	<blurb fontsize="5em">Path strings:</blurb>
 <break/>
 	<example><![CDATA[Id | ParentId | PathString  | Name         | Depth

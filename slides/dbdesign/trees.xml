@@ -6,7 +6,7 @@
 		Trees do not really map well to relational databases.
 		The most obvious way of storing them is like:
 	</blurb>
-<image align="right" filename="tree.jpg" marginright="1em"/>
+<image align="right" filename="tree.jpg" marginright="1em" pdf-scale="0.4" y-offset="4"/>
 <break lines="4"/>
 	<table columns="3" class="dbtable" title="Tree">
 		<cell class="header-key">ID</cell><cell class="header">Parent ID</cell><cell class="header">Name</cell>
