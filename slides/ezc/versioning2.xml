@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <slide fontsize="6em">
-	<title>Component Versioning (2)</title>
+	<title>Component Versioning</title>
 
-	<image filename="versioning.png"/>
+	<blurb>eZ components</blurb>
+<break/>
+	<image filename="versioning.png" y-offset="1" />
 
 </slide>
