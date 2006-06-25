@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Installation and Setup</title>
+	<subtitle>Download bundle</subtitle>
+
+	<blurb>Installation:</blurb>
+	<example><![CDATA[// download the bundle from http://ez.no/download/ez_components
+tar -xjf ezcomponents-1.1.tar.bz2
+pwd]]></example>
+
+<break lines="3"/>
+
+	<blurb>Setup:</blurb>
+	<example result='0'><![CDATA[<?php
+ini_set( 'include_path', '/path/to/ecz:.' );
+require 'Base/src/base.php';
+
+function __autoload( $className )
+{
+	ezcBase::autoload( $className );
+}
+?>]]></example>
+</slide>

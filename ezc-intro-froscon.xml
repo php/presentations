@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/php-best-practices/talk.css"
+	backgroundfixed="1" >
+<topic>Component Libraries</topic>
+<title>Enterprise PHP development - eZ components</title>
+<location>St. Augustin, Germany</location>
+<date>June 25nd, 2006</date>
+<event>FrOSCon</event>
+<speaker>Tobias Schlitt</speaker>
+<email>ts@ez.no</email>
+<url>http://files.derickrethans.nl/ezc-state-ezcon.pdf</url>
+
+<!-- start -->
+<slide>slides/ezc-intro-froscon/title.xml</slide>
+<slide>slides/ezc-intro-froscon/aboutme.xml</slide>
+<slide>slides/ezc-intro-froscon/agenda.xml</slide>
+
+
+
+<!-- introduction -->
+<slide>slides/ezc-intro-froscon/introduction.xml</slide>
+<slide>slides/ezc-intro-froscon/whatis.xml</slide>
+<slide>slides/ezc/overview.xml</slide>
+<slide>slides/ezc/contributing.xml</slide>
+<slide>slides/ezc/support.xml</slide>
+<slide>slides/ezc/support-commercial.xml</slide>
+<slide>slides/ezc/now-1.1.xml</slide>
+<slide>slides/ezc/now-1.1b.xml</slide>
+<slide>slides/ezc/now-1.1c.xml</slide>
+<slide>slides/ezc/future-1.1-1.2.xml</slide>
+<slide>slides/ezc-intro-froscon/install-download.xml</slide>
+<slide>slides/ezc/install-pear.xml</slide>
+
+<!-- architecture -->
+<slide>slides/ezc-intro-froscon/architecture.xml</slide>
+<slide>slides/toolbox/goals-library.xml</slide>
+<slide>slides/toolbox/goals-process.xml</slide>
+<slide>slides/toolbox/dependencies.xml</slide>
+<slide>slides/ezc/documentation.xml</slide>
+
+<!-- examples -->
+<slide>slides/ezc-intro-froscon/examples.xml</slide>
+<slide>slides/ezc/install-pear.xml</slide>
+<slide>slides/ezc-intro-froscon/install-download.xml</slide>
+
+<slide>slides/ezc/example-archive.xml</slide>
+<slide>slides/ezc/example-consoletools-progressbar.xml</slide>
+<slide>slides/ezc/example-consoletools-table.xml</slide>
+<slide>slides/ezc/example-eventlog.xml</slide>
+<slide>slides/ezc/example-imageconversion.xml</slide>
+<slide>slides/ezc/example-imageconversion2.xml</slide>
+<slide>slides/ezc/example-mail.xml</slide>
+<slide>slides/ezc/example-mail-parse.xml</slide>
+<slide>slides/ezc/example-persistentobject.xml</slide>
+
+<!-- examples -->
+<slide>slides/ezc-intro-froscon/open.xml</slide>
+<slide>slides/ezc-intro-froscon/questions.xml</slide>
+<slide>slides/ezc-intro-froscon/end.xml</slide>
+
+</presentation>
