@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Cookies and Sessions</title>
+
+	<blurb>The issue: Cookies can easily be modified by users.</blurb>
+	<list>
+		<bullet>Do not store important information in cookies</bullet>
+		<bullet>Can be faked very easily by automated scripts.</bullet>
+	</list>
+	<blurb>The solution: Use ext/session to store user data.</blurb>
+	<list>
+		<bullet>If available, a session ID will be stored in a cookie automatically.</bullet>
+		<bullet>Data will be stored on the servers filesystem or database.</bullet>
+	</list>
+	<blurb>Hint: Never store passwords as clear text or too simple md5 hash.</blurb>
+	<example result="1"><![CDATA[<?php
+function getPasswordHash($user, $password) {
+	return md5('mySite' . $user . $password);
+}
+
+echo getPasswordHash('username', 'password');
+?>]]></example>
+</slide>

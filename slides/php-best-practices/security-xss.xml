@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Output escaping</title>
+
+	<blurb>The issue: Cross site scripting attacks caused by inproper escaping.</blurb>
+	<list>
+		<bullet>Every user input may contain characters which will be interpreted by the displaying programm.</bullet>
+	</list>
+	<example result="1"><![CDATA[<?php
+$text = '<b>Hallo</b> Welt.';
+echo $text;
+echo htmlentities( $text );
+?>]]></example>
+	<blurb>The solution: Use escape functions on output</blurb>
+	<list>
+		<bullet>Remember, that database content may be user input to.</bullet>
+	</list>
+	<blurb>Hint: Consider the context of output, or use a template system which automatically takes care of output escaping</blurb>
+	<example result="0"><![CDATA[<?php
+$config = ezcTemplateConfiguration::getInstance();
+$config->context = new ezcTemplateXhtmlContext();
+
+$t = new ezcTemplate();
+$t->process( "hello_world.ezt" );
+?>]]></example>
+	<blurb>In eZ Template variables are escaped according to the context of the output</blurb>
+	<example result="0"><![CDATA[
+{var $myVar = '<b>Hello world!</b>'}
+{$myVar}
+]]></example>
+	<blurb>To not escape the content of the var, you need to call raw explicitely</blurb>
+	<example result="0"><![CDATA[
+{var $myVar = '<b>Hello world!</b>'}
+{raw $myVar}
+]]></example>
+</slide>

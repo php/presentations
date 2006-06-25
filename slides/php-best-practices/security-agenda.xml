@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Agenda</title>
+
+	<list>
+        <bullet>Variable injection</bullet>
+        <bullet>SQL injection</bullet>
+        <bullet>Input filtering</bullet>
+        <bullet>Output escaping</bullet>
+        <bullet>Security by obscurity</bullet>
+        <bullet>Fix the rights</bullet>
+        <bullet>Configuration</bullet>
+        <bullet>Cookies and Sessions</bullet>
+	</list>
+		
+</slide>

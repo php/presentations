@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Security by obscurity</title>
+
+	<blurb>The issue: Knowledge about paths and extensions makes it easier to exploit your system.</blurb>
+	<list>
+		<bullet>Obscurity can be just an additional feature of your security concept</bullet>
+	</list>
+	<blurb>The solution: Hide information</blurb>
+	<list>
+		<bullet>Never have phpinfo() in your webroot. It exposes information about pathes, extensions and configuration.</bullet>
+		<bullet>Turn off display_errors in your production environment. - Use log_errors instead.</bullet>
+		<bullet>Changing default filetypes and disabling expose_php may help, too.</bullet>
+	</list>
+</slide>

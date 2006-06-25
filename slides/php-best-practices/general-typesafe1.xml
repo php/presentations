@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Type safe coding - 1</title>
+
+	<blurb>The issue: In general PHP is loosely typed.</blurb>
+	<example result="1"><![CDATA[<?php
+$foo = "1";
+$bar = $foo + 1;
+var_dump($foo, $bar);
+?>]]></example>
+	<blurb>The normal comparison operators are loosely typed, too.</blurb>
+	<example result="1"><![CDATA[<?php
+	$int = 1;
+	$string = "1";
+	$bool = true;
+	var_dump($int == $string);
+	var_dump($string == $bool);
+	var_dump($int == $bool);
+?>]]></example>
+	<blurb>This can cause WTF situations</blurb>
+	<example result="1"><![CDATA[<?php
+var_dump( '1' == '1.' );
+?>]]></example>
+	<blurb>This may lead to very common mistakes:</blurb>
+	<example result="1"><![CDATA[<?php
+	function foo($answer) {
+		if ($answer > 10) {
+			return true;
+		} else {
+			return $answer;
+		}
+	}
+	if (foo(11)) {
+		echo "11 is greater 10<br />";
+	}		
+	if (foo(9)) {
+		echo "9 is greater than 10<br />";
+	}
+?>]]></example>
+</slide>

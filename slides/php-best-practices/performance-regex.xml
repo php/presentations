@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Performance - Watch your regex</title>
+
+	<blurb>The issue: Regex can consume a lot of time</blurb>
+	<list>
+		<bullet>Prefer over PCRE over EREG (much more powerful and faster!)</bullet>
+		<bullet>Bad written regex can consume tons of time (backtracking)</bullet>
+		<bullet>C implemented functions are always faster than regex</bullet>
+	</list>
+	<blurb>The solution: Think twice about each regex</blurb>
+	<list>
+		<bullet>Is there really need for a regex or does a PHP function do the trick?</bullet>
+		<bullet>Replace all your EREGs with PCREs</bullet>
+		<bullet>Try to avoid backtracking as much as possible (U modifier, if necessary)</bullet>
+		<bullet>Reading recommendation: Mastering Regular Expressions (http://www.oreilly.com/catalog/regex/)</bullet>
+	</list>
+</slide>

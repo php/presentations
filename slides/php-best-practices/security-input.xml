@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Input validation</title>
+
+	<blurb>The issue: Validating user input is a nasty task.</blurb>
+	<blurb>The solution: use ext/filter oder ext/ctype</blurb>
+	<example result="1"><![CDATA[<?php
+var_dump( ctype_alnum( 'foobar_42' ) );
+var_dump( ctype_alnum( 'Bad Characters $%&/' ) );
+
+var_dump(filter_data('bob@example.com', FILTER_VALIDATE_EMAIL));
+var_dump(filter_data('example.com', FILTER_VALIDATE_URL, FILTER_FLAG_SCHEME_REQUIRED));
+]]></example>
+	<blurb>Hint: For numeric IDs you can simply cast the variable to integer</blurb>
+	<example result="1"><![CDATA[<?php
+var_dump( (int) '42' );
+var_dump( (int) '42; DELETE * FROM users;' );
+var_dump( (int) 'Evil string' );
+?>]]></example>
+</slide>

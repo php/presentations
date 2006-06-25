@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Keep OO within a limit</title>
+
+	<blurb>The issue: PHP5 has cool OO features</blurb>
+	<list>
+		<bullet>OO is cool, but sometimes just overhead</bullet>
+		<bullet>Each object consumes a lot of memory in PHP</bullet>
+		<bullet>Each mezthod call consumes a lot of time in PHP</bullet>
+	</list>
+	<example results="0"><![CDATA[<?php
+	class Integer {
+		protected $value = 0;
+		function __construct($int) {
+			$this->value = $int;
+		}
+	}
+?>]]></example>
+	<blurb>Nice OO, but much too much overhead in PHP</blurb>
+	<blurb>The solution: Knowing where the limits are</blurb>
+	<list>
+		<bullet>Do not implement every data structure as a class, arrays are useful, too</bullet>
+		<bullet>Don&apos;t split methods too much, think, which code you will really re-use</bullet>
+		<bullet>You can always split the code of a method later, when needed</bullet>
+		<bullet>Do you really need a that deep class tree?</bullet>
+		<bullet>Before applying a cool OO pattern, think if it really fits your case</bullet>
+	</list>
+</slide>

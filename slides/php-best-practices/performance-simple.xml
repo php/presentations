@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Simple enhancements</title>
+
+	<blurb>The issue: Often used simple constructs can waste a valid amount of time</blurb>
+
+	<list>
+        <bullet>A main usage of webapplications is string processing.</bullet>
+        <bullet>Look for the most often used constructs in your application</bullet>
+	</list>
+
+	<blurb>The solution: Simple optimizations can save a lot of time</blurb>
+
+	<list>
+	        <bullet>Prefer &apos; over &quot; and save a step of parsing.</bullet>
+	</list>
+	<example result="0"><![CDATA[<?php
+echo 'Hello\nworld.';
+echo "Hello\nworld.";
+?>]]></example>
+
+	<list>
+	        <bullet>Use echo's multiple parameters instead of string concatenation.</bullet>
+	</list>
+	<example result="0"><![CDATA[<?php
+echo 'Hello', $world;
+echo 'Hello ' . $world;
+?>]]></example>
+
+	<list>
+	        <bullet>Always use ++$i instead of $i++</bullet>
+	</list>
+	<example result="0"><![CDATA[<?php
+for ($i = 0; $i < 1000; $i++);
+for ($i = 0; $i < 1000; ++$i);
+?>]]></example>
+		
+</slide>

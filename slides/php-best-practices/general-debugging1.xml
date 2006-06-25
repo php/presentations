@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Using a debugger - 1</title>
+
+	<blurb>The issue: &quot;I don&apos;t need a debugger&quot;.</blurb>
+	<list>
+		<bullet>&quot;var_dump(), print_r() and echo also do the job!&quot;</bullet>
+		<bullet>PHPs error messages are quite useless</bullet>
+		<bullet>A debugger has some really neat features that save time and headache</bullet>
+	</list>
+	<example result="0"><![CDATA[<?php
+function foo() {
+	phpinfo("bar");
+}
+foo();
+?>]]></example>
+	<blurb>Looks in plain PHP like this</blurb>
+	<image align="center" filename="error_plain.png" pdf-scale="0.7"/>
+	<blurb>Looks with a good debugger like this</blurb>
+	<image align="center" filename="error_xdebug.png" pdf-scale="0.7"/>
+</slide>

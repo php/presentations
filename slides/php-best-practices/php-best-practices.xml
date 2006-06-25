@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp-toby.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>PHP best practices - The dos and don'ts</title>
+<event>Free and Open Source software Conference</event>
+<location>St. Augustin, Germany</location>
+<date>June 24th, 2006</date>
+<speaker>Tobias Schlitt &amp; Kore Nordmann</speaker>
+<email>ts@ez.no &amp; kn@ez.no</email>
+
+<!-- Intro -->
+<slide>slides/php-best-practices/title.xml</slide>
+<slide>slides/php-best-practices/aboutme-kore.xml</slide>
+<slide>slides/php-best-practices/aboutme-toby.xml</slide>
+<slide>slides/php-best-practices/agenda.xml</slide>
+
+<!-- About this talk -->
+<slide>slides/php-best-practices/about.xml</slide>
+
+<!-- General -->
+<slide>slides/php-best-practices/general-intro.xml</slide>
+<slide>slides/php-best-practices/general-agenda.xml</slide>
+<slide>slides/php-best-practices/general-typesafe1.xml</slide>
+<slide>slides/php-best-practices/general-typesafe2.xml</slide>
+<slide>slides/php-best-practices/general-typesafe2.xml</slide>
+<slide>slides/php-best-practices/general-shortopen.xml</slide>
+<slide>slides/php-best-practices/general-e_strict.xml</slide>
+<slide>slides/php-best-practices/general-exceptions.xml</slide>
+
+<!-- Security -->
+<slide>slides/php-best-practices/security-intro.xml</slide>
+<slide>slides/php-best-practices/security-agenda.xml</slide>
+<slide>slides/php-best-practices/security-variables-1.xml</slide>
+<slide>slides/php-best-practices/security-variables-2.xml</slide>
+<slide>slides/php-best-practices/security-sql.xml</slide>
+<slide>slides/php-best-practices/security-input.xml</slide>
+<slide>slides/php-best-practices/security-xss.xml</slide>
+<slide>slides/php-best-practices/security-obscurity.xml</slide>
+<slide>slides/php-best-practices/security-rights.xml</slide>
+<slide>slides/php-best-practices/security-configuration-1.xml</slide>
+<slide>slides/php-best-practices/security-configuration-2.xml</slide>
+<slide>slides/php-best-practices/security-cookies.xml</slide>
+
+<!-- Performance -->
+<slide>slides/php-best-practices/performance-intro.xml</slide>
+<slide>slides/php-best-practices/performance-agenda.xml</slide>
+<slide>slides/php-best-practices/performance-cvsphp.xml</slide>
+<slide>slides/php-best-practices/performance-simple.xml</slide>
+<slide>slides/php-best-practices/performance-caching1.xml</slide>
+<slide>slides/php-best-practices/performance-caching2.xml</slide>
+<slide>slides/php-best-practices/performance-regex.xml</slide>
+<slide>slides/php-best-practices/performance-opcodecache1.xml</slide>
+<slide>slides/php-best-practices/performance-opcodecache2.xml</slide>
+<slide>slides/php-best-practices/performance-profiling.xml</slide>
+<slide>slides/php-best-practices/performance-mod_gzip.xml</slide>
+
+
+<!-- High flexibility -->
+<slide>slides/php-best-practices/flexi-intro.xml</slide>
+<slide>slides/php-best-practices/flexi-agenda.xml</slide>
+
+
+
+</presentation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Performance - Agenda</title>
+
+	<list>
+        <bullet>Prefer C over PHP</bullet>
+        <bullet>Simple speed enhancements</bullet>
+		<bullet>Keep OO within a limit</bullet>
+        <bullet>Cache as much as possible</bullet>
+        <bullet>Watch your regex</bullet>
+        <bullet>OP code caching</bullet>
+        <bullet>Profiling</bullet>
+        <bullet>mod_gzip</bullet>
+	</list>
+		
+</slide>

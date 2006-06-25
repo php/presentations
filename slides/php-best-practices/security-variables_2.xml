@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Variable injection - 2</title>
+
+	<blurb>The issue: Variables in include statements can lead to execution of external code</blurb>
+	<list>
+		<bullet>With allow_url_fopen = On (default) external code can be included</bullet>
+	</list>
+	<example result="0"><![CDATA[<?php
+require_once $_GET['action'] . '.php';
+?>]]></example>
+	<blurb>The solution: Validate included files against a whitelist using arrays or switch statements.</blurb>
+	<example result="0"><![CDATA[<?php
+$files = array(
+	'show' => 'show.php',
+	'list' => 'list.php',
+);
+
+if (isset($files[$_GET['action']])) {
+	require_once $files[$_GET['action']];
+} else {
+	echo 'Not a valid action.';
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Configuration - 2</title>
+
+	<blurb>The issue: register_globals is still used in many applications and even for developing</blurb>
+	<list>
+		<bullet>Pollutes the global namespace.</bullet>
+		<bullet>Can overwrite not properly initialized variables.</bullet>
+	</list>
+	<blurb>The solution: Turn off register_globals in development and production environments.</blurb>
+	<list>
+		<bullet>Workarounds could overwrite global variables before PHP 4.4.1 and PHP 5.0.5</bullet>
+		<bullet>Still possible with own importing mechanisms.</bullet>
+		<bullet>Fixed in extract() and import_request_variables().</bullet>
+	</list>
+	<blurb>register_globals and magic_quotes will be removen in PHP 6</blurb>
+</slide>

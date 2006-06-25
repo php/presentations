@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Performance - OP code caching - 1</title>
+
+	<blurb>The issue: Compiling PHP code takes a lot of time</blurb>
+	<list>
+		<bullet>Your PHP code is recompiled on every request</bullet>
+		<bullet>Even if it takes only 0.5 sec per request, this are more than 2 minutes for 250 requests</bullet>
+		<bullet>Compiling a script takes sometimes longer than executing it</bullet>
+	</list>
+	<blurb>The solution: OP code caches</blurb>
+	<list>
+		<bullet>Zend engine compiles PHP code into OP codes before executing it</bullet>
+		<bullet>The generated OP codes do not change until you change the script</bullet>
+		<bullet>An OP code cache saves you from the compile step</bullet>
+	</list>
+	<blurb>Recommendation: OP code caches</blurb>
+	<list>
+		<bullet>APC (open source) http://pecl.php.net/APC</bullet>
+		<bullet>Zend performance suite (commercial) http://zend.com</bullet>
+		<bullet>mmCache (deprecated) http://turck-mmcache.sourceforge.net/</bullet>
+	</list>
+</slide>

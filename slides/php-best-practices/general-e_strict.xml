@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Being E_STRICT</title>
+
+	<blurb>The issue: PHP has a new error level E_STRICT, since PHP 5.0.</blurb>
+	<list>
+		<bullet>E_STRICT forces you to code clean PHP 5 code</bullet>
+		<bullet>Current E_STRICT will most probably become E_FATAL in PHP 6.0</bullet>
+		<bullet>The resolution: Switch E_STRICT on and check your code</bullet>
+	</list>
+	<example result="0"><![CDATA[error_reporting=E_ALL | E_STRICT]]></example>
+	<blurb>Typical E_STRICT error - Usage of outdated is_a() function</blurb>
+	<example result="0"><![CDATA[<?php
+if ( is_a( $object, 'ClassName' ) ) {
+	$object->foo();
+}
+?>]]></example>
+	<blurb>Should be now</blurb>
+	<example result="0"><![CDATA[<?php
+if ( $object instanceof ClassName ) {
+	$object->foo();
+}
+?>]]></example>
+</slide>

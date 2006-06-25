@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - C versus PHP</title>
+
+	<blurb>The issue: PHP functions are faster than userland functions</blurb>
+
+	<list>
+        <bullet>PHP internal functions save a lot of time</bullet>
+        <bullet>Still users tend to write the most basic functions in userland</bullet>
+	</list>
+
+	<blurb>The solution: Read the manual!</blurb>
+
+	<list>
+        <bullet>PHP has wonderful docs! Learn to love them!</bullet>
+        <bullet>Before implementing a basic function on your own, check if it exists in PHP!</bullet>
+        <bullet>If you have very time consuming functions in your code, consider writing them as C extensions</bullet>
+	</list>
+		
+</slide>

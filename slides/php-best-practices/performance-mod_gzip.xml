@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Performance - mod_gzip</title>
+
+	<blurb>The issue: Too few bandwidth</blurb>
+	<list>
+		<bullet>Sometimes CPU power is not an issue</bullet>
+		<bullet>With lots of large data or low bandwidth speed is low, too</bullet>
+		<bullet>Usual performance tips do not help here</bullet>
+	</list>
+	<blurb>The solution: mod_gzip</blurb>
+	<list>
+		<bullet>Compresses your data on the fly</bullet>
+		<bullet>GZIP compression is part of HTTP 1.1</bullet>
+		<bullet>Can reduce the data to transfer up to 80%</bullet>
+		<bullet>Available as an Apache module</bullet>
+	</list>
+	<blurb>http://sourceforge.net/projects/mod-gzip/</blurb>
+</slide>

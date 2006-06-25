@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Do not reinvent the wheel</title>
+
+	<blurb>The issue: "I code everything on my own!"</blurb>
+	<list>
+		<bullet>Some people really code everything themselves</bullet>
+		<bullet>This costs time and causes headache</bullet>
+		<bullet>Errors occur more often in 1-maintained code</bullet>
+	</list>
+	<blurb>The solution: Access libraries like...</blurb>
+	<list>
+		<bullet>eZ components http://ez.no/products/ez_components</bullet>
+		<bullet>Zend Framework http://framework.zend.com/</bullet>
+		<bullet>PEAR http://pear.php.net/</bullet>
+	</list>
+</slide>

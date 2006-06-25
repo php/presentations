@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Fix the permissions</title>
+
+	<blurb>The issue: Wrong access permissions makes it easier to take over your webserver</blurb>
+	<blurb>The solution: Fix your access rights</blurb>
+	<list>
+		<bullet>No writeable and excuteable files in your webroot.</bullet>
+		<bullet>No writeable PHP files.</bullet>
+		<bullet>Disallow external read access to files which contains classes, configuration or application code.</bullet>
+	</list>
+</slide>

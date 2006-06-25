@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Variable injection - 1</title>
+
+	<blurb>The issue: Unintialized variables can lead for unexpected code segments to be executed.</blurb>
+	<example result="0"><![CDATA[<?php
+if (correct_user($_POST['user'], $_POST['password']) {
+    $login = true;
+}
+
+if ($login) {
+    forward_to_secure_environment();
+}
+?>]]></example>
+	<blurb>The solution: Initialize your variables</blurb>
+	<list>
+		<bullet>Never trust ANY user input.</bullet>
+	</list>
+	<blurb>Common XSS example: This request will open an JavaScript alert window with text "XSS".</blurb>
+	<example result="0"><![CDATA[
+<form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+</form>
+
+Request: http://example.com/tests/simple.php/%22%3E%3Cscript%3Ealert('xss')%3C/script%3E%3Cfoo
+]]></example>
+	<blurb>Variables containing user input: $_POST, $_GET, $_REQUEST, $_COOKIE, $_SERVER, ($_ENV)</blurb>
+</slide>

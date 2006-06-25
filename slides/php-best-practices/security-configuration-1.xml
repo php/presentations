@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - Configuration - 1</title>
+
+	<blurb>The issue: Incorrect escaping in data storages and output.</blurb>
+	<list>
+		<bullet>Decreases performance of your complete application</bullet>
+		<bullet>For proper escaping you need strip_slashes() and the storage specific function.</bullet>
+	</list>
+	<blurb>The solution: Turn off magic_quotes in production environment and escape properly.</blurb>
+	<blurb>Undo magic_quotes.</blurb>
+	<example result="0"><![CDATA[<?php
+if (get_magic_quotes_gpc()) {
+        function strip_quotes(&$var) {
+                if (is_array($var) {
+                        array_walk($var, 'strip_quotes');
+                } else {
+                        $var = stripslashes($var);
+		}
+        }
+
+	 // Handle GPC
+        foreach (array('GET','POST','COOKIE') as $v) {
+                if (!empty(${"_".$v})) {
+                        array_walk(${"_".$v}, 'strip_quotes');
+		}
+	}
+}
+?>]]></example>
+	<blurb>Such recursive functions can easily be exploited - this will consume all of the servers memory and crash the script.</blurb>
+	<example result="0"><![CDATA[<?php
+$qry = str_repeat('[]', 1024);
+file_get_contents('http://example.com/site.php?a' . $qry . '=1');
+?>]]></example>
+	<blurb>Use the following faster and safer script.</blurb>
+	<example result="0"><![CDATA[<?php
+if (get_magic_quotes_gpc()) {
+        $in = array(&$_GET, &$_POST, &$_COOKIE);
+        while (list($k,$v) = each($in)) {
+                foreach ($v as $key => $val) {
+                        if (!is_array($val)) {
+                                $in[$k][$key] = stripslashes($val);
+                                continue;
+                        }
+                        $in[] =& $in[$k][$key];
+                }
+        }
+        unset($in);
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Exceptions</title>
+
+	<blurb>The issue: PHP has exceptions now, cool but dangerous.</blurb>
+	<list>
+		<bullet>Exceptions are a great tool for handling exceptional states</bullet>
+		<bullet>Exceptions are often misused and become regulars</bullet>
+		<bullet>Exceptions may make PHP leaking</bullet>
+	</list>
+	<example result="0"><![CDATA[<?php
+function foo() {
+	if ($user_input !== "Hello!") {
+		throw new Exception("User input wrong");
+	}
+}
+?>]]></example>
+	<blurb>Only use exceptions, when your application ends up in an exceptional state</blurb>
+	<example result="0"><![CDATA[<?php
+function bar() {
+	if (connection_timedout()) {
+		throw new Exception("Connection timeout");
+	}
+}
+?>]]></example>
+	<blurb>Exceptions leak a little bit of memory when thrown e.g. out of for loops</blurb>
+	<example result="0"><![CDATA[<?php
+foreach ($i = 1000000; $i > 0; $i--) {
+	throw new Exceptions("Hehe, I'm leaking");
+}
+?>]]></example>
+	<blurb>Allocated memory from the for-loop-header is not freeed correctly.</blurb>
+</slide>

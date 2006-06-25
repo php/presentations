@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Using a debugger - 2</title>
+
+	<blurb>The solution: Use a good debugger!</blurb>
+	<blurb>Recommendation: Xdebug (http://xdebug.org)</blurb>
+	<list>
+		<bullet>Open source</bullet>
+		<bullet>Wide spreaded and used</bullet>
+		<bullet>Integrates as a PHP extension</bullet>
+		<bullet>Integration with IDEs (like Comodo)</bullet>
+		<bullet>Support for profiling and code-coverage analysis</bullet>
+	</list>
+	<blurb>Some other debuggers:</blurb>
+	<list>
+		<bullet>DBG http://dd.cron.ru/</bullet>
+		<bullet>APD http://apd.communityconnect.com/</bullet>
+		<bullet>Zend IDE (commercial) http://zend.com</bullet>
+	</list>
+</slide>

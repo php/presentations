@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Bad short open tags</title>
+
+	<blurb>The issue: PHP allows several open tags beside <![CDATA["&lt;?php"]]>.</blurb>
+	<example result="0"><![CDATA[<?
+	echo "Hello world";
+?>]]></example>
+	<blurb>Or, even worse.</blurb>
+	<example result="0"><![CDATA[<?="Hello world"; ?>]]></example>
+	<blurb>Or worst:</blurb>
+	<example result="0"><![CDATA[<% echo "Hello world"; %>]]></example>
+	<list>
+		<bullet><![CDATA[<?]]> on its own is reserved for XML declaration</bullet>
+		<bullet><![CDATA[<?=]]> is complete invalid XML</bullet>
+		<bullet><![CDATA[<%]]> is ASP style and sucks</bullet>
+		<bullet>All styles beside the official <![CDATA[<?php ... ?>]]> are deprecated</bullet>
+	</list>
+	<blurb>The solution: Stick to standard tags and convert all your scripts!</blurb>
+	<list>
+		<bullet>Guaranteed to be supported further</bullet>
+		<bullet>Represents a valid XML processing instruction</bullet>
+		<bullet>Unique in all PHP documents</bullet>
+	</list>
+</slide>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Codingstandard</title>
+
+	<blurb>The issue: "I code like I want to!"</blurb>
+	<list>
+		<bullet>Other people have difficulties to read the code (open source)</bullet>
+		<bullet>Maybe someone needs to take over maintainance of your code</bullet>
+		<bullet>You might stumble yourself over it once upon a time</bullet>
+	</list>
+	<blurb>The solution: Coding standards</blurb>
+	<list>
+		<bullet>PEAR http://pear.php.net/manual/en/standards.php</bullet>
+		<bullet>eZ systems http://ez.no/products/ez_publish/documentation/development/standards/php</bullet>
+	</list>
+</slide>

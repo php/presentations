@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Performance - Profiling</title>
+
+	<blurb>The issue: It&apos;s hard to find the bottleneck</blurb>
+	<list>
+		<bullet>Even best designed and coded apps maybe slow</bullet>
+		<bullet>Finding the bottleneck is sometimes really hard</bullet>
+		<bullet>Trial and error is time consuming</bullet>
+	</list>
+	<blurb>The solution: Profile your code</blurb>
+	<list>
+		<bullet>A profiler shows you, which parts of your code consumes how many time</bullet>
+		<bullet>The Xdebug debugger already contains a profiler</bullet>
+		<bullet>Profiling shows you the bottlenecks in overview</bullet>
+	</list>
+	<blurb>Recommendation: Profiler</blurb>
+	<list>
+		<bullet>Xdebug (open source) http://xdebug.org</bullet>
+		<bullet>APD (open source) http://pecl.php.net/package/apd</bullet>
+	</list>
+</slide>

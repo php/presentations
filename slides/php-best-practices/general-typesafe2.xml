@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Type safe coding - 2</title>
+
+	<blurb>The solution: Type safe coding.</blurb>
+	<example result="1"><![CDATA[<?php
+$foo = "1";
+$bar = (int)$foo + 1;
+var_dump((int)$foo, $bar);
+?>]]></example>
+	<blurb>Use the type safe comparison operators.</blurb>
+	<example result="1"><![CDATA[<?php
+	$int = 1;
+	$string = "1";
+	$bool = true;
+	var_dump($int === $string);
+	var_dump($string === $bool);
+	var_dump($int === $bool);
+?>]]></example>
+	<blurb>The shown mistake is gone:</blurb>
+	<example result="1"><![CDATA[<?php
+	function foo($answer) {
+		if ($answer > 10) {
+			return true;
+		} else {
+			return $answer;
+		}
+	}
+	if (foo(11) === true) {
+		echo "11 is greater 10<br />";
+	}		
+	if (foo(9) === true) {
+		echo "9 is greater than 10<br />";
+	}
+?>]]></example>
+</slide>

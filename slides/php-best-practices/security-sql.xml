@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Security - SQL injection</title>
+
+	<blurb>The issue: Using userdata in queries often causes users manipulating queries.</blurb>
+	<example result="0"><![CDATA[<?php
+$sql = 'SELECT password FROM user WHERE login = ' . $_GET['login'];
+?>
+
+Request: http://example.com/tests/simple.php?login=username+OR+1
+]]></example>
+	<blurb>The solution: Use databases extensions escape functions</blurb>
+	<example result="0"><![CDATA[<?php
+$sql = 'SELECT password FROM user WHERE login = ' . 
+       mysql_real_escape_string( $_GET['login'] );
+?>]]></example>
+	<blurb>Hint: Even better use prepared statements</blurb>
+	<example result="0"><![CDATA[<?php
+$db = new PDO( ... );
+$stmt = $db->prepare( 'SELECT password FROM user WHERE login = ?' );
+$stmt->execute( array( $_GET['login'] ) );
+?>]]></example>
+</slide>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>General - Caching - 1</title>
+
+	<blurb>The issue: Most content is not dynamic content!</blurb>
+
+	<list>
+        <bullet>90% of the time your website generates the same data again</bullet>
+        <bullet>Each requests results in the same database results</bullet>
+        <bullet>90% of the performance of your server is to perform useles work</bullet>
+	</list>
+
+	<blurb>The solution: Caching, caching, caching</blurb>
+
+	<list>
+        <bullet>Think how often your content (or pieces of it) is regenerated</bullet>
+        <bullet>Cache it in between!</bullet>
+        <bullet>Think about publishing based caching</bullet>
+	</list>
+
+	<blurb>Good caching classes</blurb>
+
+	<list>
+        <bullet>eZ Cache (http://ez.no/products/ez_components)</bullet>
+        <bullet>Cache_Lite (http://pear.php.net/Cache_Lite</bullet>
+	</list>
+		
+</slide>
