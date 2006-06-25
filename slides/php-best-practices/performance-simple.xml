@@ -28,7 +28,7 @@ echo 'Hello ' . $world;
 ?>]]></example>
 
 	<list>
-	        <bullet>Always use ++$i instead of $i++</bullet>
+	        <bullet>Where possible use ++$i instead of $i++</bullet>
 	</list>
 	<example result="0"><![CDATA[<?php
 for ($i = 0; $i < 1000; $i++);
