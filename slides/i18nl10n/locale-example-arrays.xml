@@ -3,7 +3,7 @@
 	<title>ICU Locales</title>
 	<subtitle>Array Sorting Example</subtitle>
 
-	<example result="1"><![CDATA[<pre>#  orig  norm  loc   trad
+	<example><![CDATA[<pre>#  orig  norm  loc   trad
 --------------------------
 <?php
 	$d = $c = $b = $a = array('mapa', 'kilo', 'libro', 'llave', 'loca');
@@ -18,6 +18,10 @@
 			$i + 1, $a[$i], $b[$i], $c[$i], $d[$i]);
 	}
 ?>]]></example>
+	<blurb>Output:</blurb>
+	<blurb class="bit_larger_output"><![CDATA[<pre>#  orig  norm  loc   trad
+--------------------------
+1. mapa  kilo  kilo  kilo <br/>2. kilo  libro libro libro<br/>3. libro llave llave loca <br/>4. llave loca  loca  llave<br/>5. loca  mapa  mapa  mapa <br/>]]></blurb>
 
 <!--
  # vim: encoding=utf8

@@ -4,7 +4,7 @@
 	<subtitle>Example</subtitle>
 
 	<blurb>Comparing strings:</blurb>
-	<example result="1"><![CDATA[<?php
+	<example><![CDATA[<?php
 $coll = new Collator("fr_CA");
 if ($coll->compare("côte", "coté") < 0) {
 	echo "less\n";
@@ -12,9 +12,11 @@ if ($coll->compare("côte", "coté") < 0) {
 	echo "greater\n";
 }
 ?>]]></example>
+	<blurb>Output:</blurb>
+	<blurb class="bit_larger_output">less</blurb>
 <break/>
 	<blurb>Ignore case and accents:</blurb>
-	<example result="1"><![CDATA[<?php
+	<example><![CDATA[<?php
 $coll = new Collator("fr_CA");
 $coll->setStrength(Collator::PRIMARY);
 if ($coll->compare("côte", "cOTé") == 0) {
@@ -23,5 +25,6 @@ if ($coll->compare("côte", "cOTé") == 0) {
 	echo "different\n";
 }
 ?>]]></example>
-
+	<blurb>Output:</blurb>
+	<blurb class="bit_larger_output">same</blurb>
 </slide>

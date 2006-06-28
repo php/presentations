@@ -4,19 +4,23 @@
 	<subtitle>Setting Script Encoding With declare()</subtitle>
 
 	<blurb>Interpreting an iso-8859-1 script as UTF-8:</blurb>
-	<example result="1"><![CDATA[<?php
+	<example><![CDATA[<?php
 	declare(encoding="iso-8859-1");
 	$str = "blå = 青";
 	var_inspect($str);
 ?>]]></example>
+	<blurb>Output:</blurb>
+	<blurb class="bit_larger_output">unicode(10) "blÃ¥ = é" { 0062 006c 00c3 00a5 0020 003d 0020 00e9 009d 0092 }</blurb>
 <break lines="3"/>
 
 	<blurb>Interpreting an UTF-8 script as UTF-8:</blurb>
-	<example result="1"><![CDATA[<?php
+	<example><![CDATA[<?php
 	declare(encoding="utf-8");
 	$str = "blå = 青";
 	var_inspect($str);
 ?>]]></example>
+	<blurb>Output:</blurb>
+	<blurb class="bit_larger_output">unicode(7) "blå = 青" { 0062 006c 00e5 0020 003d 0020 9752 }</blurb>
 <!--
  # vim: encoding=utf8
 -->

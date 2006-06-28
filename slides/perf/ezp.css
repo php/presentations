@@ -165,6 +165,12 @@ div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 	margin-right: 20px;
 }
 
+div.bit_larger_output {
+	background: #e6e300;
+	font-size: 20pt;
+	font-weight: normal;
+}
+
 div.large code, div.large {
 	font-size: 26px;
 	background: #eee;

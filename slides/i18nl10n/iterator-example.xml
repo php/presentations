@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Text Iteration</title>
+	<subtitle>Example</subtitle>
+
+	<example><![CDATA[<?php
+$text = "Pouvez-vous me dire quelle heure il est ? Merci.";
+foreach (new TextIterator($text, TextIterator::LINE) as $u) {
+	if ($u != " ") echo($u),"<br/>\n";
+}
+?>]]></example>
+	<blurb>Output:</blurb>
+	<blurb class="bit_larger_output"><![CDATA[
+Pouvez-<br/>
+vous <br/>
+me <br/>
+dire <br/>
+quelle <br/>
+heure <br/>
+il <br/>
+est ? <br/>
+Merci.<br/>]]></blurb>
+
+</slide>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <slide fontsize="6em">
 	<title>HTTP Output Encoding</title>
 
@@ -9,13 +9,15 @@
 	</list>
 
 	<blurb>On the fly encoding:</blurb>
-	<example result="1"><![CDATA[<?php
+	<example><![CDATA[<?php
 	declare(encoding="iso-8859-1");
 	ini_set('unicode.output_encoding', 'utf-8');
 	
-	$str = "r�db�rsyltet�y<br/>";
-	$bstr = b"r�db�rsyltet�y<br/>";
+	$str = "rødbærsyltetøy<br/>";
+	$bstr = b"rødbærsyltetøy<br/>";
 
 	echo $str, $bstr;
 ?>]]></example>
+	<blurb>Output:</blurb>
+	<blurb class="bit_larger_output"><![CDATA[rÃ¸dbÃ¦rsyltetÃ¸y<br/>rødbærsyltetøy<br/>]]></blurb>
 </slide>
