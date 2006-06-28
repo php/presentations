@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Pretty Printing Variables</title>
 
-	<image filename="var_dump.png" align="center"/>
+	<image filename="var_dump.png" align="center" pdf-scale="0.7"/>
 <break lines="2"/>
 	<blurb>%&amp;lt;?php%</blurb>
 	<blurb>%xdebug_var_dump(); // or just var_dump()%</blurb>

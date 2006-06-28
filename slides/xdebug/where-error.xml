@@ -6,7 +6,7 @@
 	<blurb>... is kinda useles.</blurb>
 <div effect="hide">
 <break lines="2"/>
-	<image filename="stacktrace3b.png" align="center"/>
+	<image filename="stacktrace3b.png" align="center" y-offset="3" pdf-scale="0.7"/>
 	<blurb>%xdebug.collect_params=1% and %xdebug.show_local_vars=1%</blurb>
 </div>
 
