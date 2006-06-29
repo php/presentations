@@ -11,7 +11,7 @@ if(!empty($_GET['loc'])) {
   $lat = -$lat; $lon = $lon<0 ? 180+$lon : $lon-180;
   $S = unserialize(file_get_contents("$map&latitude=$lat&longitude=$lon")); 
   header("Content-type: application/x-json");
-  echo json_encode(array('north'=>$N['Result'],'south'=>$S['Result']));
+  echo json_encode(array('north'=>$N['Result'],'south'=>$S['Result'],'lon'=>$lon));
   exit;
 }
 ?>
