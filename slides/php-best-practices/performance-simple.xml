@@ -15,7 +15,8 @@
 	        <bullet>Prefer &apos; over &quot; and save a step of parsing.</bullet>
 	</list>
 	<example result="0"><![CDATA[<?php
-echo 'Hello\nworld.';
+echo 'Hello
+world.';
 echo "Hello\nworld.";
 ?>]]></example>
 
