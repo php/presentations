@@ -1,0 +1,49 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+
+<topic>PHP</topic>
+<title>Getting Rich with PHP 5</title>
+<event>OSCON 2006</event>
+<location>Portland</location>
+<date>July 26, 2006</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/oscon06</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/rich.xml</slide>
+<slide>slides/intro/rich2.xml</slide>
+
+<slide>slides/bm06/profit.xml</slide>
+<slide>slides/bm06/initial.xml</slide>
+<slide>slides/bm06/pg.xml</slide>
+<slide>slides/bm06/pg_persist.xml</slide>
+<slide>slides/bm06/mysql.xml</slide>
+<slide>slides/bm06/apc.xml</slide>
+<slide>slides/bm06/apc2.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/xml_eg.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/atom_google.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/ws7.xml</slide>
+<slide>slides/intro/ws8.xml</slide>
+<slide>slides/intro/ws9.xml</slide>
+<slide>slides/intro/yajax.xml</slide>
+<slide>slides/intro/yui.xml</slide>
+
+<slide>slides/intro/web2_ref.xml</slide>
+
+</presentation>

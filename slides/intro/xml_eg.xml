@@ -1,9 +1,6 @@
 <slide title="XML">
 <break lines="1" />
 
-<php filename="presentations/slides/intro/cd.php"/>
-<!-- <php><![CDATA[<?php chdir('presentations/slides/intro');?>]]></php> -->
-
 <example title="All XML handling based on libxml2" marginleft="2em" marginright="0em" result="0"><![CDATA[<?php
 $dom = new domDocument;
 $dom->load('menu.xml');
