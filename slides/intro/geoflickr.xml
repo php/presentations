@@ -1,0 +1,32 @@
+<slide title="Geocoded Photos">
+
+<example hide="0" result="1" title="Returned XML"><![CDATA[<?php
+include 'flickr_api.inc';
+include 'secrets.inc';
+if(!isset($_POST['loc'])) $loc = ':-:location:-:';
+$flickr = new Flickr($secrets);
+$url  = 'http://api.local.yahoo.com/MapsService/V1/geocode';
+$url .= '?appid=YahooDemo&location='.urlencode($loc);
+$xml = simplexml_load_file($url)->Result; 
+$lat = (double)$xml->Latitude;
+$lon = (double)$xml->Longitude;
+$rad = (180.0/3.1415926); 
+$x = 2.5; $y = 2.5;
+$dlat = (1/6371) * $rad;
+$minlat = $lat - $dlat; $maxlat = $lat + $dlat;
+$minlon = $lon-(($y*cos($minlat)/6371) * $rad);
+$maxlon = $lon+(($y*cos($maxlat)/6371) * $rad);
+
+$params = array('bbox'=>"$minlon,$minlat,$maxlon,$maxlat");
+$photos = $flickr->photosSearch($params);
+if($photos['photos']) foreach($photos['photos'] as $photo) {
+    $url = $flickr->getPhotoURL($photo);
+    echo '<img src="'.$url.'" height="75" width="75" />';
+} else echo "No photos found";
+?>
+<form action="<?php echo htmlspecialchars($PHP_SELF)?>" method="POST">
+Location: <input type=text name=loc size=60>
+</form>
+]]></example>
+
+</slide>

@@ -1,14 +1,23 @@
 <slide title="Common Problems">
 <break lines="2" />
 
-<list fontsize="6em">
+<list fontsize="5em">
 <bullet>404 page</bullet>
 <bullet>Search Page</bullet>
 <bullet>PHP_SELF</bullet>
-<bullet>Host header </bullet>
 <bullet>$_GET, $_POST, $_COOKIE</bullet>
 <bullet>$_SERVER</bullet>
+<bullet>Expect header stupidity in Apache</bullet>
 <bullet>Charset detection stupidity in IE</bullet>
+<bullet>Arbitary header injection stupidity in IE</bullet>
+<bullet>Host header spoofing stupidity in IE</bullet>
+<bullet>Request splitting stupidity in IE</bullet>
 </list>
+
+<break lines="2" />
+
+<blurb fontsize="5em" align="center">
+|EE1111|The web is broken you can all go home now.|
+</blurb>
 
 </slide>

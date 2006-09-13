@@ -1,8 +1,8 @@
 <slide title="Why is it so slow?">
 <break lines="2"/>
 
-<example title="Let's ask Callgrind" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[
-callgrind --dump-instr=yes --trace-jump=yes -v /usr/sbin/apache -X
+<example title="Let's ask Callgrind" fontsize="1.5em" type="shell" marginright="0em"><![CDATA[
+valgrind --tool=callgrind --dump-instr=yes --trace-jump=yes -v /usr/sbin/apache -X
 ]]></example>
 
 <image marginleft="4em" clear="left" filename="pgssl.png" title="Callgraph [pgssl.out]"/>

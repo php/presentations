@@ -1,0 +1,95 @@
+<slide title="File Upload Progress Bar">
+<break lines="1" />
+
+<example hide="0" result="1" title="Ajax Upload" fontsize="1.6em"><![CDATA[<?php
+if($_SERVER['REQUEST_METHOD']=='POST') {
+  print_r($_POST); print_r($_FILES); exit;
+} ?>
+<html><head>
+<script type="text/javascript" src="/yui/yahoo.js"></script>
+<script type="text/javascript" src="/yui/connection.js"></script>
+<script type="text/javascript">
+var fN = function callBack(o) { 
+ document.getElementById('result').innerHTML='<pre>'+o.responseText+'</pre>';
+}
+var callback = { success:fN, upload:fN }
+function postForm(target,formName,upload) {
+  YAHOO.util.Connect.setForm(formName,true,upload);
+  YAHOO.util.Connect.asyncRequest('POST',target,callback);
+}
+</script>
+</head>
+<body>
+ <form enctype="multipart/form-data" id="upload_form" action="" 
+  onsubmit="postForm('/up.php','upload_form',1); return false;" method="POST">
+  <input type="hidden" name="APC_UPLOAD_PROGRESS" id="progress_key"
+         value="<?php echo uniqid()?>"/>
+  <input type="file" name="file1"/><br/>
+  <input type="file" name="file2"/><br/>
+  <input type="text" name="desc"/><br/>
+  <input type="submit" value="Upload!"/>
+ </form>
+ <div id="result"></div>
+</body>
+</html>
+]]></example>
+
+<blurb>Ok, so we can upload via a backend request, but how do we check the status?</blurb>
+
+<blurb>More backend requests of course!</blurb>
+
+<example hide="0" result="0" title="Server-side Piece" fontsize="1.2em"><![CDATA[<?php
+if($_SERVER['REQUEST_METHOD']=='POST') {
+  $status = apc_fetch('upload_'.$_POST['APC_UPLOAD_PROGRESS']);
+  $status['msg'] = 'blah';
+  echo json_encode($status);
+  exit;
+} else if(isset($_GET['progress_key'])) {
+  $status = apc_fetch('upload_'.$_GET['progress_key']);
+  echo json_encode($status);
+}
+?>]]></example>
+
+<example hide="0" result="0" title="Client-side" fontsize="1.2em"><![CDATA[<script>
+var fP = function callBack(o) {
+  var resp = eval('(' + o.responseText + ')');
+  if(!resp['done']) { 
+    if(resp['total']) {
+      var pct = parseInt(100*(resp['current']/resp['total']));
+      document.getElementById('pbar').style.width = ''+pct+'%';
+      document.getElementById('ppct').innerHTML = " "+pct+"%";
+      document.getElementById('ptxt').innerHTML = resp['current']+" of "+resp['total']+" bytes";
+    }
+    setTimeout("update_progress()",500);
+  } else if(resp['cancel_upload']) {
+    txt="Cancelled after "+resp['current']+" bytes!"; 
+    document.getElementById('ptxt').innerHTML = txt;
+    setTimeout("progress_win.hide();window.location.reload(true);",2000);
+  }
+}
+
+var pcallback = { success:fP }
+
+function update_progress() {
+  progress_key = document.getElementById('progress_key').value;
+  YAHOO.util.Connect.asyncRequest('GET','up.php?progress_key='+progress_key, pcallback);
+}
+
+var progress_win;
+
+function postForm(target,formName) {
+  YAHOO.util.Connect.setForm(formName,true);
+  YAHOO.util.Connect.asyncRequest('POST',target,callback);
+  progress_win = new YAHOO.widget.Panel(...);
+  update_progress();
+}
+</script>
+ <div id="progress_win"> 
+    <div class="hd"></div> 
+    <div class="bd"></div> 
+    <div class="ft"></div> 
+ </div>]]></example>
+
+<link leader="It looks something like this " href="http://progphp.com/progress.php"/>
+<link leader="Source at " href="http://progphp.com/progress.phps"/>
+</slide>

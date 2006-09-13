@@ -1,7 +1,7 @@
 <slide title="Charset Detection in IE">
 <break lines="1" />
 
-<blurb>Earlier we gave this as an example of how to treat user data for display purposes</blurb>
+<blurb>Common approach to treat user data for display purposes</blurb>
 
 <example fontsize="1.4em" title="Safe Form Handling" result="0"><![CDATA[<form action="<?php echo htmlspecialchars($PHP_SELF)?>" method="POST">
 Your name: <input type="text" name="name" /><br>

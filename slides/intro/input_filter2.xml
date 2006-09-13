@@ -24,12 +24,24 @@ $data = array("PHP","123","123abc<>()","O'Henry", "하퍼");
 echo "<tr><th> </th><td>PHP</td><td>123</td><td>123abc&lt;&gt;()</td>";
 echo "<td>O'Henry</td><td>하퍼</td></tr>\n";
 foreach(input_filters_list() as $filter) {
-  if($filter=="validate_regexp") {
-    foreach($data as $k=>$v)
-      $result[$k] = filter_data($v,input_name_to_filter($filter),array("regexp"=>'/^O.*/'));
-  } else {
-    foreach($data as $k=>$v)
-      $result[$k] = filter_data($v,input_name_to_filter($filter),"test");
+  $fn = input_name_to_filter($filter);
+  switch($filter) {
+    case 'validate_regexp':
+      foreach($data as $k=>$v)
+        $result[$k] = filter_data($v,$fn,array("regexp"=>'/^O.*/'));
+      break;
+    case 'callback':
+      foreach($data as $k=>$v)
+        $result[$k] = filter_data($v,$fn,"test");
+      break;
+    case 'validate_url':
+      foreach($data as $k=>$v)
+        $result[$k] = filter_data($v,$fn,FILTER_FLAG_SCHEME_REQUIRED);
+      break;
+    default:
+      foreach($data as $k=>$v)
+        $result[$k] = filter_data($v,$fn);
+      break;
   }
   echo "<tr><th align='left'>$filter</th>";
   foreach($result as $v)

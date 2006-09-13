@@ -12,7 +12,6 @@ if(!empty($_GET['loc'])) {
  <script language="javascript" src="/yui/YAHOO.js"></script>
  <script language="javascript" src="/yui/connection.js"></script>
  <script language="javascript">
-<!--
 var fN = function callBack(o) {
   var resp = eval('(' + o.responseText + ')');
   img = document.createElement('img'); 
@@ -24,7 +23,6 @@ function sendform(target,formName) {
    YAHOO.util.Connect.setForm(formName);
    YAHOO.util.Connect.asyncRequest('GET',target,callback);
 }
-// -->
  </script>
 </head><body>
  <form name="main" action="javascript:sendform('yajax.php','main')">

@@ -1,0 +1,64 @@
+<slide title="File Upload Progress Bar">
+<break lines="1" />
+<blurb>PHP 5.2 has a new set of hooks for checking the progress of a file upload</blurb>
+
+<example hide="0" result="0" title="A familiar upload form" fontsize="1.6em"><![CDATA[<form enctype="multipart/form-data" action="upload.php" method="POST">
+  <input type="hidden" name="UPLOAD_PROGRESS" value="key"/>
+  <input type="file" name="file1"/><br/>
+  <input type="file" name="file2"/><br/>
+  <input type="text" name="desc"/><br/>
+  <input type="submit" value="Upload!"/>
+ </form>]]></example>
+
+<example hide="1" result="1" title="Events"><![CDATA[<pre><b>START</b>:      content_length = 22962
+
+<b>FORMDATA</b>:   post_bytes_processed=5245
+            name=UPLOAD_PROGRESS
+            value=key
+            length=3
+
+<b>FILE_START</b>: post_bytes_processed=5245
+            name=file1
+            filename=animated_elephant.gif
+
+<b>FILE_DATA</b>:  post_bytes_processed=5414
+
+<b>FILE_DATA</b>:  post_bytes_processed=10533
+
+<b>FILE_DATA</b>:  post_bytes_processed=15652
+
+<b>FILE_DATA</b>:  post_bytes_processed=20771
+
+<b>FILE_DATA</b>:  post_bytes_processed=22962
+
+<b>FILE_END</b>:   post_bytes_processed=22962
+            temp_filename=/var/tmp/php8301YZ
+            cancel_upload=0
+
+<b>FILE_START</b>: post_bytes_processed=22962
+            name=file2
+            filename=abstract.txt
+
+<b>FILE_DATA</b>:  post_bytes_processed=22962
+
+<b>FILE_END</b>:   post_bytes_processed=22962
+            temp_filename=/var/tmp/phpNcGVyl
+            cancel_upload=0
+
+<b>FORMDATA</b>:   post_bytes_processed=22962
+            name=desc
+            value=Text Field
+            length=10
+
+<b>EVENT_END</b>:  post_bytes_processed=22962</pre>]]></example>
+
+
+<example hide="1" result="1" title="cancel_upload codes"><![CDATA[#define UPLOAD_ERROR_OK   0  /* File upload succesful */
+#define UPLOAD_ERROR_A    1  /* Uploaded file exceeded upload_max_filesize */
+#define UPLOAD_ERROR_B    2  /* Uploaded file exceeded MAX_FILE_SIZE */
+#define UPLOAD_ERROR_C    3  /* Partially uploaded */
+#define UPLOAD_ERROR_D    4  /* No file uploaded */
+#define UPLOAD_ERROR_E    6  /* Missing /tmp or similar directory */
+#define UPLOAD_ERROR_F    7  /* Failed to write file to disk */
+#define UPLOAD_ERROR_X    8  /* File upload stopped by extension */]]></example>
+</slide>
