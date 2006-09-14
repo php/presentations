@@ -3,7 +3,7 @@
 require 'ezc-setup.php';
 
 // setup feed and content module
-$feed = ezcFeed::create( 'rss2' );
+$feed = new ezcFeed( 'rss2' );
 $feed->title = 'eZ components release feed';
 $feed->link  = 'http://components.ez.no/';
 $feed->description = <<<ENDL

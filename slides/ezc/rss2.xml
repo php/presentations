@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>eZ components release feed</title>
+    <link>http://components.ez.no/</link>
+    <description>This feed shows all the latest components releases.</description>
+    <language>en-us</language>
+    <copyright>eZ systems A.S.</copyright>
+    <pubDate>Thu, 07 Sep 2006 10:33:02 +0200</pubDate>
+    <generator>eZ components</generator>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <item>
+      <title>UserInput 1.0.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_UserInput.html</link>
+      <description>- Refactored to use the new ezcBaseStruct class.
+- Updated documentation.</description>
+      <guid isPermalink="false">748488c4f9d3865afe665b165eb9d53d</guid>
+      <pubDate>Mon, 28 Aug 2006 10:55:25 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Refactored to use the new ezcBaseStruct class.
+- Updated documentation.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Translation 1.1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Translation.html</link>
+      <description>- Refactored to use the new ezcBaseStruct class and properties approach.</description>
+      <guid isPermalink="false">faad1aafd745f127db6fac3bc46c2a46</guid>
+      <pubDate>Mon, 28 Aug 2006 10:55:20 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Refactored to use the new ezcBaseStruct class and properties approach.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>SystemInformation 1.0.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_SystemInformation.html</link>
+      <description>- Refactored to use the new ezcBaseStruct class.</description>
+      <guid isPermalink="false">4c105f21ef02e64fe2cd74a1e2110b93</guid>
+      <pubDate>Mon, 28 Aug 2006 10:55:15 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Refactored to use the new ezcBaseStruct class.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>PhpGenerator 1.0.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_PhpGenerator.html</link>
+      <description>- Updated documentation.
+- Refactored to use the new ezcBaseStruct class.</description>
+      <guid isPermalink="false">a22978c5edc13a50d8cc58309efb1ad8</guid>
+      <pubDate>Mon, 28 Aug 2006 10:55:10 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Updated documentation.
+- Refactored to use the new ezcBaseStruct class.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Mail 1.1.2</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Mail.html</link>
+      <description>- Added the ezcMailPop3Transport::fetchByMessageNr() method that returns an
+  ezcMailPop3Set containing the message with the specified number.
+- Fixed bug #8736: variable transport non-functional.
+- Fixed bug that caused the contentId property of the ezcMailFile class not to
+  be set even if it was available for the related part while parsing
+  multipart/related messages.
+- PHP 5.2 compatibility.</description>
+      <guid isPermalink="false">fff8b66ee9d78e5ea96788b59965d5b8</guid>
+      <pubDate>Mon, 28 Aug 2006 10:55:06 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Added the ezcMailPop3Transport::fetchByMessageNr() method that returns an
+  ezcMailPop3Set containing the message with the specified number.
+- Fixed &lt;a href="http://ez.no/bugs/view/8736"&gt;bug #8736&lt;/a&gt;: variable transport non-functional.
+- Fixed bug that caused the contentId property of the ezcMailFile class not to
+  be set even if it was available for the related part while parsing
+  multipart/related messages.
+- PHP 5.2 compatibility.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>ImageConversion 1.1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_ImageConversion.html</link>
+      <description>- Fixed bug #8712: The x and y parameters for cropping where handled as 
+  coordinates and not as offsets.
+- Refactored to use new ezcBaseStruct and properties approach.</description>
+      <guid isPermalink="false">9a452a5b0722bfe5549ca3e7baaf2267</guid>
+      <pubDate>Mon, 28 Aug 2006 10:55:04 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed &lt;a href="http://ez.no/bugs/view/8712"&gt;bug #8712&lt;/a&gt;: The x and y parameters for cropping where handled as 
+  coordinates and not as offsets.
+- Refactored to use new ezcBaseStruct and properties approach.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Execution 1.0.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Execution.html</link>
+      <description>- Documentation updates.</description>
+      <guid isPermalink="false">1e8b7259354ad54094ea71fbfa1c19ba</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:53 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Documentation updates.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>EventLog 1.0.2</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_EventLog.html</link>
+      <description>- Refactored to use new ezcBaseStruct class and new properties approach.</description>
+      <guid isPermalink="false">78a1ef3c5edd87dc757f7e085ca39409</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:49 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Refactored to use new ezcBaseStruct class and new properties approach.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Debug 1.0.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Debug.html</link>
+      <description>- Refactored to use the new ezcBaseStruct class.
+- PHP 5.2 compatibility.</description>
+      <guid isPermalink="false">393ec9e5ca6ec69f7d053f370a239abe</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:44 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Refactored to use the new ezcBaseStruct class.
+- PHP 5.2 compatibility.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>DatabaseSchema 1.0.2</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_DatabaseSchema.html</link>
+      <description>- Fixed bug #8900: Problem with auto increment and primary keys for MySQL
+  because the skip_primary context was not reset for new tables.
+- Added a new validator to check whether columns marked as 'auto_increment'
+  actually have a primary key defined as well.
+- Implemented FR #8901: Written schemas should indent the XML.
+- Refactored the structs to use the new ezcBaseStruct class.</description>
+      <guid isPermalink="false">f9dd68ddddcbb8d629858d44e5434bb5</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:39 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed &lt;a href="http://ez.no/bugs/view/8900"&gt;bug #8900&lt;/a&gt;: Problem with auto increment and primary keys for MySQL
+  because the skip_primary context was not reset for new tables.
+- Added a new validator to check whether columns marked as 'auto_increment'
+  actually have a primary key defined as well.
+- Implemented FR #8901: Written schemas should indent the XML.
+- Refactored the structs to use the new ezcBaseStruct class.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Database 1.1.2</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Database.html</link>
+      <description>- Fixed bug #8835: Documentation of lOr and lAnd.</description>
+      <guid isPermalink="false">0bda4ff95f223faca0c0533c37611efd</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:34 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed &lt;a href="http://ez.no/bugs/view/8835"&gt;bug #8835&lt;/a&gt;: Documentation of lOr and lAnd.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>ConsoleTools 1.1.2</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_ConsoleTools.html</link>
+      <description>- Fixed bug #8738: Unexpected behaviour with options-&gt;colPadding.
+- Fixed bug #8478: ezcConsoleOutput format (foreground) color 'black' not
+  available. (The fore-/background colors black and gray are now the same and
+  available for fore- and background).
+- PHP 5.2 compatibility.</description>
+      <guid isPermalink="false">b5200604305f92e33ca206cce89b0ff1</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:28 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed &lt;a href="http://ez.no/bugs/view/8738"&gt;bug #8738&lt;/a&gt;: Unexpected behaviour with options-&gt;colPadding.
+- Fixed &lt;a href="http://ez.no/bugs/view/8478"&gt;bug #8478&lt;/a&gt;: ezcConsoleOutput format (foreground) color 'black' not
+  available. (The fore-/background colors black and gray are now the same and
+  available for fore- and background).
+- PHP 5.2 compatibility.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Configuration 1.0.3</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Configuration.html</link>
+      <description>- Refactored to use new ezcBaseStruct class to inherit all the structs from.</description>
+      <guid isPermalink="false">c69c2f1e7d33273f98220967f9083266</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:24 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Refactored to use new ezcBaseStruct class to inherit all the structs from.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Cache 1.1.2</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Cache.html</link>
+      <description>- Refactored property handling.</description>
+      <guid isPermalink="false">223521b196d061261503293ce947b0f7</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:18 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Refactored property handling.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Base 1.1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Base.html</link>
+      <description>- Added the ezcBaseStruct class from which all structs in all components
+  should inherit from.</description>
+      <guid isPermalink="false">50d74d58428714bb0fdb6e1694f4eabe</guid>
+      <pubDate>Mon, 28 Aug 2006 10:54:13 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Added the ezcBaseStruct class from which all structs in all components
+  should inherit from.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Mail 1.1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Mail.html</link>
+      <description>- Partially fixed bug #8694:
+
+  * Don't crash when generating empty mail.
+  * Don't assume that message/ parts are actually rfc822 messages when parsing
+    mail.</description>
+      <guid isPermalink="false">27be6eba037aaca7f56687a65f58ca5d</guid>
+      <pubDate>Mon, 07 Aug 2006 09:11:32 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Partially fixed &lt;a href="http://ez.no/bugs/view/8694"&gt;bug #8694&lt;/a&gt;:
+
+  * Don't crash when generating empty mail.
+  * Don't assume that message/ parts are actually rfc822 messages when parsing
+    mail.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Database 1.1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Database.html</link>
+      <description>- Fixed bug #8360: ezcQueryExpressionOracle::concat() calls non-existing
+  method.
+- Added ezcQuery::resetBinds() which allows you to reset the bound values and
+  parameters associated with a query.</description>
+      <guid isPermalink="false">56bc57cfb1c6868d39f7571e669e423d</guid>
+      <pubDate>Mon, 07 Aug 2006 09:11:28 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed &lt;a href="http://ez.no/bugs/view/8360"&gt;bug #8360&lt;/a&gt;: ezcQueryExpressionOracle::concat() calls non-existing
+  method.
+- Added ezcQuery::resetBinds() which allows you to reset the bound values and
+  parameters associated with a query.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>ConsoleTools 1.1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_ConsoleTools.html</link>
+      <description>- Fixed bug #8525: ConsoleInput::getHelpTable() exits with a fatal error.
+- Fixed bug #8645: Default values not set correctly in ezcConsoleInput.</description>
+      <guid isPermalink="false">e9ef560dd36bb6a4953cab329a3d8ebd</guid>
+      <pubDate>Mon, 07 Aug 2006 09:11:24 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed &lt;a href="http://ez.no/bugs/view/8525"&gt;bug #8525&lt;/a&gt;: ConsoleInput::getHelpTable() exits with a fatal error.
+- Fixed &lt;a href="http://ez.no/bugs/view/8645"&gt;bug #8645&lt;/a&gt;: Default values not set correctly in ezcConsoleInput.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Cache 1.1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Cache.html</link>
+      <description>- Updated tutorial with a new example.</description>
+      <guid isPermalink="false">02e72ff27e9c01fb0c74f3831d41503a</guid>
+      <pubDate>Mon, 07 Aug 2006 09:11:19 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Updated tutorial with a new example.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>DatabaseSchema 1.0.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_DatabaseSchema.html</link>
+      <description>- Fixed a bug that an empty 'is null value' string in the database caused a 
+  PHP warning.</description>
+      <guid isPermalink="false">b34fbc2764c0c5f93ea610a3e21fb376</guid>
+      <pubDate>Mon, 19 Jun 2006 14:49:33 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed a bug that an empty 'is null value' string in the database caused a 
+  PHP warning.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>TranslationCacheTiein 1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_TranslationCacheTiein.html</link>
+      <description>- No changes.</description>
+      <guid isPermalink="false">2b56a02b94d917d59629a19327fb407a</guid>
+      <pubDate>Mon, 12 Jun 2006 13:17:33 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- No changes.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Translation 1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Translation.html</link>
+      <description>- No changes.</description>
+      <guid isPermalink="false">c3222ade251d8acf4a87d157201a1e2d</guid>
+      <pubDate>Mon, 12 Jun 2006 13:17:28 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- No changes.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Template 1.0</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Template.html</link>
+      <description>- Fixed a bug that some indentations were not removed.
+- Fixed a bug that the newlines after a non output block were not removed. 
+- Fixed a bug that fetching an array element was never considered as a
+  possible sub array. E.g. {var $a = array( array("a") )} {foreach $a[0] as $i}
+  gave an error.
+- Fixed a bug that an imported variable with default value got the wrong type. 
+  E.g. {var $myArray = false} {foreach $myArray as $i} gave an error.</description>
+      <guid isPermalink="false">e030ddf42cc57651e95839549837cea4</guid>
+      <pubDate>Mon, 12 Jun 2006 13:17:24 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed a bug that some indentations were not removed.
+- Fixed a bug that the newlines after a non output block were not removed. 
+- Fixed a bug that fetching an array element was never considered as a
+  possible sub array. E.g. {var $a = array( array("a") )} {foreach $a[0] as $i}
+  gave an error.
+- Fixed a bug that an imported variable with default value got the wrong type. 
+  E.g. {var $myArray = false} {foreach $myArray as $i} gave an error.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>SystemInformation 1.0</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_SystemInformation.html</link>
+      <description>- Fixed small CS issues.</description>
+      <guid isPermalink="false">625adcf84419f4b6fd849f16aa7817d3</guid>
+      <pubDate>Mon, 12 Jun 2006 13:17:15 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed small CS issues.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>PersistentObjectDatabaseSchemaTiein 1.0</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_PersistentObjectDatabaseSchemaTiein.html</link>
+      <description>- Fixed bug #8401: PersistentObjectDatabaseSchemaTieIn error if environment is 
+  not correct.</description>
+      <guid isPermalink="false">f12cb725e2b79c452edaac84cd45f6b3</guid>
+      <pubDate>Mon, 12 Jun 2006 13:17:08 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed &lt;a href="http://ez.no/bugs/view/8401"&gt;bug #8401&lt;/a&gt;: PersistentObjectDatabaseSchemaTieIn error if environment is 
+  not correct.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>PersistentObject 1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_PersistentObject.html</link>
+      <description>- Fixed small CS issues.</description>
+      <guid isPermalink="false">3c01d7cf71e77667abed7839213eb5d2</guid>
+      <pubDate>Mon, 12 Jun 2006 13:17:02 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed small CS issues.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>Mail 1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_Mail.html</link>
+      <description>- Fixed CS issues and tests.</description>
+      <guid isPermalink="false">bf152dd722d6c740eb82e14b20795b50</guid>
+      <pubDate>Mon, 12 Jun 2006 13:16:56 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Fixed CS issues and tests.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>ImageConversion 1.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_ImageConversion.html</link>
+      <description>- No changes at all.</description>
+      <guid isPermalink="false">b0d15ddfb0d3b7ddefc5f8b1d0e7d271</guid>
+      <pubDate>Mon, 12 Jun 2006 13:16:53 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- No changes at all.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>File 1.0</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_File.html</link>
+      <description>- Updated documentation and added tutorial.</description>
+      <guid isPermalink="false">ef87c004e5e071973ecbd237d9bd0ad1</guid>
+      <pubDate>Mon, 12 Jun 2006 13:16:43 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Updated documentation and added tutorial.&lt;/pre&gt;</content:encoded>
+    </item>
+    <item>
+      <title>EventLog 1.0.1</title>
+      <link>http://ez.no/doc/components/view/latest/(file)/changelog_EventLog.html</link>
+      <description>- Updated documentation.</description>
+      <guid isPermalink="false">d06b4826a3c97c23febdcb96bbe5fe99</guid>
+      <pubDate>Mon, 12 Jun 2006 13:16:32 +0200</pubDate>
+      <content:encoded>&lt;pre&gt;- Updated documentation.&lt;/pre&gt;</content:encoded>
+    </item>
+  </channel>
+</rss>

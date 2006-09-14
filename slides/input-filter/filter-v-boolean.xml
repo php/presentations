@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Logical filters</title>
+	<subtitle>boolean filter</subtitle>
+
+	<blurb>Returns true for '1', 'on', 'yes' and 'true', false otherwise.</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array();
+$filter = FILTER_VALIDATE_BOOLEAN;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+<break/>
+</slide>

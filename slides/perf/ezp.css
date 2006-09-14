@@ -127,6 +127,10 @@ div.large_blurb_center {
 	text-align: center;
 }
 
+div.blurb_center {
+	text-align: center;
+}
+
 div.quote {
 	font-size: 32px;
 	text-align: center;

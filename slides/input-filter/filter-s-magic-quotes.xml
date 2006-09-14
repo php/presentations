@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters</title>
+	<subtitle>number filters</subtitle>
+
+	<blurb>Filter that applies magic quotes or actually "add_slashes"</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array();
+$filter = FILTER_SANITIZE_MAGIC_QUOTES;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+<break/>
+</slide>

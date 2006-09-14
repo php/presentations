@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Mail</title>
+
+	<blurb>Parsing from:</blurb>
+	<list>
+		<bullet>POP3 Servers</bullet>
+		<bullet>IMAP Servers</bullet>
+		<bullet>MBOX Files</bullet>
+		<bullet>Single Mail Files</bullet>
+		<bullet>Variables</bullet>
+	</list>
+
+	<blurb>Supported formats:</blurb>
+	<list>
+		<bullet>multipart/alternative: text/html mail</bullet>
+		<bullet>multipart/mixed: attachments</bullet>
+		<bullet>multipart/related: HTML mail with inline images</bullet>
+		<bullet>multipart/digest: mailinglist digests</bullet>
+	</list>
+
+</slide>

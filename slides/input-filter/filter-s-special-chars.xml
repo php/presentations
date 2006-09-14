@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters</title>
+	<subtitle>special chars filter</subtitle>
+
+	<blurb>Is basically "html_special_chars", but supports a couple of flags:</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array(
+	'FILTER_FLAG_STRIP_LOW', 'FILTER_FLAG_STRIP_HIGH',
+	'FILTER_FLAG_ENCODE_HIGH',
+);
+$filter = FILTER_SANITIZE_SPECIAL_CHARS;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+</slide>

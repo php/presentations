@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters</title>
+	<subtitle>encode filter</subtitle>
+
+	<blurb>Is basically "url_encode", but supports a couple of flags:</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array(
+	'FILTER_FLAG_STRIP_LOW', 'FILTER_FLAG_STRIP_HIGH'
+);
+$filter = FILTER_SANITIZE_ENCODED;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+</slide>

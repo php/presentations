@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Logical filters</title>
+	<subtitle>IP filter</subtitle>
+
+	<example result="1"><![CDATA[<?php
+$flags = array(
+	'FILTER_FLAG_IPV4', 'FILTER_FLAG_IPV6', 'FILTER_FLAG_NO_RES_RANGE',
+	'FILTER_FLAG_NO_PRIV_RANGE'
+);
+$filter = FILTER_VALIDATE_IP;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+<break/>
+</slide>

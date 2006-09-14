@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>PHP 5.2</title>
+
+	<list>
+		<bullet>Comes with a filter extension</bullet>
+		<bullet>Enabled by default</bullet>
+		<bullet>Provides a default filter</bullet>
+		<bullet>Provides two groups of accessing filters: sanitizing and logical</bullet>
+		<bullet>Filters can have options to configure their behavior</bullet>
+	</list>
+</slide>

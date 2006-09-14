@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Getting Input Arrays</title>
+
+	<example result="1"><![CDATA[<form action="" method="get">
+Number: <input type="text" name="int" maxlength="64" size="64"/><br/>
+String: <input type="text" name="string" maxlength="64" size="64"/><br/>
+<input type="submit"/>
+</form>
+<?php
+$definition = array(
+	'int' => array(
+		'filter' =>  FILTER_VALIDATE_INT,
+		'options' => array( "min_range" => 1, "max_range" => 10 )
+	),
+	'string' => FILTER_SANITIZE_SPECIAL_CHARS
+);
+
+if (isset($_GET['int'])) {
+	$data = input_get_args( INPUT_GET, $definition );
+	var_dump( $data );
+}
+?>]]></example>
+<break/>
+</slide>

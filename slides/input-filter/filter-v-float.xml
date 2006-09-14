@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Logical filters</title>
+	<subtitle>float filter</subtitle>
+
+	<example result="1"><![CDATA[<?php
+$flags = array();
+$filter = FILTER_VALIDATE_FLOAT;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+<break/>
+</slide>

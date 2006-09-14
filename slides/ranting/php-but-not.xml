@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>PHP, but not fully</title>
+
+	<blurb>Roadsend PHP compiler: "an entirely new implementation of PHP that is syntactically and symantically compatible with PHP Group's PHP 4.3.x and the Zend Engine 1"</blurb>
+<break/>
+	<blurb>Quercus: "Caucho Technology's fast, open-source, 100% Java implementation of the PHP language."</blurb>
+<break/>
+	<blurb>php4mono: doesn't support "include". On the roadmap is "will implement a basic library containing standard functions available in PHP"</blurb>
+</slide>

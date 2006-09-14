@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Logical filters</title>
+	<subtitle>url filter</subtitle>
+
+	<example result="1"><![CDATA[<?php
+$flags = array(
+	'FILTER_FLAG_SCHEME_REQUIRED', 'FILTER_FLAG_HOST_REQUIRED',
+	'FILTER_FLAG_PATH_REQUIRED', 'FILTER_FLAG_QUERY_REQUIRED'
+);
+$filter = FILTER_VALIDATE_URL;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+<break/>
+</slide>

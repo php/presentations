@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing Filters</title>
+
+	<list>
+		<bullet>Allows or disallows characters in a string</bullet>
+		<bullet>Does not take care about data formats</bullet>
+		<bullet>Does not transform types, but keeps strings</bullet>
+	</list>
+</slide>

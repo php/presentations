@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Security</topic>
+<title>Input Filter</title>
+<event>php|works 2006</event>
+<location>Toronto, Canada</location>
+<date>Sept 14th, 2006</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/input-filter/title.xml</slide>
+
+<!-- SQL Injection / XSS Intro -->
+<slide>slides/input-filter/what-is-wrong1.xml</slide>
+<slide>slides/input-filter/what-is-wrong2.xml</slide>
+
+<!-- Solutions -->
+<slide>slides/input-filter/casting.xml</slide>
+<slide>slides/input-filter/filtering.xml</slide>
+
+<!-- Server solution -->
+<slide>slides/input-filter/bastions.xml</slide>
+<slide>slides/input-filter/mod_security.xml</slide> <!-- mod_security -->
+<slide>slides/input-filter/bastions2.xml</slide>
+<slide>slides/input-filter/sapi-input-filter.xml</slide> <!-- sapi input filter -->
+
+<slide>slides/input-filter/filter-none.xml</slide> <!-- current status -->
+<slide>slides/input-filter/filter-strip-all.xml</slide> <!-- rasmus 1st filter suggestion (strip all, raw accessor) -->
+<slide>slides/input-filter/filter-accessor.xml</slide> <!-- rasmus 2st filter suggestion (accessor only) -->
+
+<slide>slides/input-filter/php52.xml</slide>
+<slide>slides/input-filter/default-filter.xml</slide>
+
+<slide>slides/input-filter/functions-and-common-flags.xml</slide>
+<slide>slides/input-filter/functions-and-common-flags-array.xml</slide>
+<slide>slides/input-filter/functions-get-args.xml</slide>
+<slide>slides/input-filter/functions-filter-data.xml</slide>
+
+<slide>slides/input-filter/sanitizing-filters.xml</slide>
+<slide>slides/input-filter/filter-s-string.xml</slide>
+<slide>slides/input-filter/filter-s-encoded.xml</slide>
+<slide>slides/input-filter/filter-s-special-chars.xml</slide>
+<slide>slides/input-filter/filter-s-unsafe-raw.xml</slide>
+<slide>slides/input-filter/filter-s-email.xml</slide>
+<slide>slides/input-filter/filter-s-url.xml</slide>
+<slide>slides/input-filter/filter-s-number-int.xml</slide>
+<slide>slides/input-filter/filter-s-number-float.xml</slide>
+<slide>slides/input-filter/filter-s-magic-quotes.xml</slide>
+
+<slide>slides/input-filter/validating-filters.xml</slide>
+<slide>slides/input-filter/filter-v-int.xml</slide>
+<slide>slides/input-filter/filter-v-boolean.xml</slide>
+<slide>slides/input-filter/filter-v-float.xml</slide>
+<slide>slides/input-filter/filter-v-regexp.xml</slide>
+<slide>slides/input-filter/filter-v-validate-url.xml</slide>
+<slide>slides/input-filter/filter-v-validate-email.xml</slide>
+<slide>slides/input-filter/filter-v-validate-ip.xml</slide>
+
+<slide>slides/input-filter/callback-filter.xml</slide>
+<slide>slides/input-filter/filter-c-callback.xml</slide>
+
+<slide>slides/input-filter/resources.xml</slide>
+
+</presentation>

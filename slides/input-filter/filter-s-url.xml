@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters</title>
+	<subtitle>url filter</subtitle>
+
+	<blurb>This only strips out illegal characters, no validation is done!</blurb>
+	<blurb>The allowed characters are: a-z A-Z 0-9 $ - _ . + ! * ' () , { } | \ ^ ~ [ ] ` &lt; > # % " ; / ? : @ &amp; =</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array();
+$filter = FILTER_SANITIZE_URL;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+</slide>

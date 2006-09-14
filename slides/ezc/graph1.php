@@ -1,30 +1,26 @@
 <?php
 require 'ezc-setup.php';
+header( 'Content-Type: image/svg+xml' );
 list( $domains, $ips ) = require 'data-graph1.php';
 
-$chart = ezcGraph::create( 'Line' );
+$chart = new ezcGraphLineChart();
 
 $chart->title = 'PHP Usage Statistics';
-$chart->palette = 'Tango';
-$chart->options->padding = 10;
+$chart->palette = new ezcGraphPaletteTango();
 $chart->options->fillLines = 230;
 
-$chart->legend->symbolSize = 7;
 $chart->legend->title = "Legend";
-$chart->legend->padding = 3;
 
-$chart->options->font = dirname(__FILE__) . '/font.ttf';
-$chart->xAxis->font->maxFontSize = 10;
-$chart->yAxis->grid = '#aaaaaa';
-$chart->yAxis->axisSpace = 0.2;
+$chart->xAxis->font->maxFontSize = 12;
+$chart->yAxis->font->maxFontSize = 12;
 $chart->title->font->maxFontSize = 20;
 
-$chart['domains'] = $domains;
-$chart['domains']->label = 'Domains';
-$chart['ips'] = $ips;
-$chart['ips']->label = 'IP addresses';
+$chart->data['domains'] = new ezcGraphArrayDataSet( $domains );
+$chart->data['domains']->label = 'Domains';
+$chart->data['ips'] = new ezcGraphArrayDataSet( $ips );
+$chart->data['ips']->label = 'IP addresses';
 
-$chart->driver = new ezcGraphGdDriver();
-$chart->render( 700, 400, '/tmp/graph1.png' );
+$chart->driver = new ezcGraphSvgDriver();
+$chart->render( 700, 400, 'php://output' );
 
 ?>

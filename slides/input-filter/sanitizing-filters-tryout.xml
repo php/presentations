@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters try-out</title>
+
+	<example result="1"><![CDATA[<form action="" method="get">
+<input type="text" name="data" maxlength="64" size="64"/>
+<input type="submit"/>
+</form>
+<?php
+if ( isset( $_GET['data'] ) ) {
+	$filter = ini_get('filter.default');
+	echo "The data filterered through '$filter' is:";
+	var_dump( $_GET['data'] );
+}
+?>]]></example>
+</slide>

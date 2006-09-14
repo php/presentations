@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Callback filter</title>
+
+	<example result="1"><![CDATA[<form action="" method="get">
+Data: <input type="text" name="data" maxlength="64" size="64"/><br/>
+<input type="submit"/>
+</form>
+<?php
+$filter = FILTER_CALLBACK;
+$callback = array( 'Validate', 'My' );
+
+if (isset($_GET['data'])) {
+	$data = input_get( INPUT_GET, 'data', $filter, $callback );
+	var_dump( $data );
+}
+
+class Validate {
+	function My( $text ) {
+		if ( $text == 'PHP' ) {
+			$text = 'PHP Rocks!';
+			return $text;
+		}
+		return false;
+	}
+}
+?>]]></example>
+<break/>
+</slide>

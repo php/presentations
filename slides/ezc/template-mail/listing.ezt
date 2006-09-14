@@ -1,0 +1,6 @@
+{use $listing}
+<ul>
+{foreach $listing as $id => $entry}
+<li><a href='index.php?mailNr={$id}' class="nowrap">{$entry}</a></li>
+{/foreach}
+</ul>

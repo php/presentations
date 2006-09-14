@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Logical filters</title>
+	<subtitle>int filter</subtitle>
+
+	<example result="1"><![CDATA[<a name='form'/><?php
+$flags = array( 'FILTER_FLAG_ALLOW_OCTAL', 'FILTER_FLAG_ALLOW_HEX' );
+$filter = FILTER_VALIDATE_INT;
+?>
+<form action="" method="get">
+data: <input type="text" name="data" maxlength="64" size="64"/>
+<table>
+<?php foreach( $flags as $flagName ) {
+echo "<tr><td>$flagName</td><td><input type='checkbox' name='$flagName'/></td></tr>";
+} ?>
+</table>
+Min: <input type="text" name="min"/><br/>Max: <input type="text" name="max"/>
+<input type="submit"/>
+</form>
+<?php
+if (!empty($_GET['min']))
+	$options['min_range'] = (int) $_GET['min'];
+if (!empty($_GET['max']))
+	$options['max_range'] = (int) $_GET['max'];
+if (isset($_GET['data'])) {
+	$o = 0;
+	foreach( $flags as $flagName )
+		if ( isset( $_GET[$flagName] ) )
+			$o |= constant( $flagName );
+	$options['flags'] = $o;
+	$data = input_get( INPUT_GET, 'data', $filter, $options );
+	var_dump( $data );
+}
+?>]]></example>
+<break/>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters</title>
+	<subtitle>number filters</subtitle>
+
+	<blurb>Strips all chars which are not 0-9, + and -, but supports some flags as well.</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array(
+	'FILTER_FLAG_ALLOW_FRACTION', 'FILTER_FLAG_ALLOW_THOUSAND',
+	'FILTER_FLAG_ALLOW_SCIENTIFIC'
+);
+$filter = FILTER_SANITIZE_NUMBER_FLOAT;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+<break/>
+</slide>

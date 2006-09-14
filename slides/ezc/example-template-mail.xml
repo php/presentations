@@ -1,0 +1,13 @@
+<slide>
+	<title>Template</title>
+
+	<example filename='template-mail/oneonly.php'/>
+	<example filename='template-mail/listing.ezt'/>
+
+	<list>
+		<bullet>Variable scoping per file</bullet>
+		<bullet>Output contexts</bullet>
+		<bullet>Custom extensions: functions, blocks</bullet>
+		<bullet>Compiled to PHP code</bullet>
+	</list>
+</slide>

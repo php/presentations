@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Derick's Ranting Hour</title>
+<event>php|works</event>
+<location>Toronto, Canada</location>
+<date>September 14th, 2006</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://files.derickrethans.nl/ranting-phptek6.pdf</url>
+<slide>slides/ranting/title.xml</slide>
+
+<slide>slides/ranting/disclaimer.xml</slide>
+<slide>slides/ranting/not-about-me.xml</slide>
+<slide>slides/ranting/whos-first.xml</slide>
+
+<slide>slides/ranting/title-language.xml</slide>
+<slide>slides/ranting/case-sensivity.xml</slide>
+<slide>slides/ranting/argument-order.xml</slide>
+<!--<slide>slides/ranting/array_merge.xml</slide>-->
+<slide>slides/ranting/goto.xml</slide>
+<slide>slides/ranting/namespaces.xml</slide>
+
+<slide>slides/ranting/title-ecosystem.xml</slide>
+<slide>slides/ranting/we-do-our-best.xml</slide>
+<slide>slides/ranting/bad-bugreports.xml</slide>
+<slide>slides/ranting/bad-bugreports2.xml</slide>
+<slide>slides/ranting/we-re-voluteers.xml</slide>
+<slide>slides/ranting/we-re-voluteers2.xml</slide>
+<slide>slides/ranting/we-re-voluteers3.xml</slide>
+<slide>slides/ranting/journalists.xml</slide>
+<slide>slides/ranting/php-but-not.xml</slide>
+
+</presentation>

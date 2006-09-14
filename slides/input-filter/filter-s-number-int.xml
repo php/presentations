@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters</title>
+	<subtitle>number filters</subtitle>
+
+	<blurb>Strips all chars which are not 0-9, + and -.</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array();
+$filter = FILTER_SANITIZE_NUMBER_INT;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+<break/>
+</slide>

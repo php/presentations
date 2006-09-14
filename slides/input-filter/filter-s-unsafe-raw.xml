@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Sanitizing filters</title>
+	<subtitle>unsafe raw filter</subtitle>
+
+	<blurb>By default doesn't do anything, but supports a couple of flags:</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+$flags = array(
+	'FILTER_FLAG_ENCODE_AMP', 'FILTER_FLAG_ENCODE_LOW',
+	'FILTER_FLAG_ENCODE_HIGH', 'FILTER_FLAG_STRIP_LOW',
+	'FILTER_FLAG_STRIP_HIGH'
+);
+$filter = FILTER_SANITIZE_STRING;
+include 'presentations/slides/input-filter/render-form.php';
+include 'presentations/slides/input-filter/check-data.php';
+?>]]></example>
+</slide>
