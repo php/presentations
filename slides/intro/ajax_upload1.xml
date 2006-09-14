@@ -53,12 +53,12 @@
 <b>EVENT_END</b>:  post_bytes_processed=22962</pre>]]></example>
 
 
-<example hide="1" result="1" title="cancel_upload codes"><![CDATA[#define UPLOAD_ERROR_OK   0  /* File upload succesful */
+<example hide="1" result="1" title="cancel_upload codes"><![CDATA[<pre>#define UPLOAD_ERROR_OK   0  /* File upload succesful */
 #define UPLOAD_ERROR_A    1  /* Uploaded file exceeded upload_max_filesize */
 #define UPLOAD_ERROR_B    2  /* Uploaded file exceeded MAX_FILE_SIZE */
 #define UPLOAD_ERROR_C    3  /* Partially uploaded */
 #define UPLOAD_ERROR_D    4  /* No file uploaded */
 #define UPLOAD_ERROR_E    6  /* Missing /tmp or similar directory */
 #define UPLOAD_ERROR_F    7  /* Failed to write file to disk */
-#define UPLOAD_ERROR_X    8  /* File upload stopped by extension */]]></example>
+#define UPLOAD_ERROR_X    8  /* File upload stopped by extension */</pre>]]></example>
 </slide>

@@ -13,8 +13,8 @@ var fN = function callBack(o) {
  document.getElementById('result').innerHTML='<pre>'+o.responseText+'</pre>';
 }
 var callback = { success:fN, upload:fN }
-function postForm(target,formName,upload) {
-  YAHOO.util.Connect.setForm(formName,true,upload);
+function postForm(target,formName,up) {
+  YAHOO.util.Connect.setForm(formName,up);
   YAHOO.util.Connect.asyncRequest('POST',target,callback);
 }
 </script>
