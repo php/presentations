@@ -9,7 +9,7 @@ $email   = input_get(INPUT_POST, 'name', FILTER_VALIDATE_EMAIL);
 $age     = input_get(INPUT_POST, 'age', FILTER_VALIDATE_INT);  
 $url     = input_get(INPUT_COOKIE, 'url', FILTER_VALIDATE_URL);  
 $raw_msg = input_get(INPUT_POST, 'msg', FILTER_UNSAFE_RAW);  
-$options = input_array(INPUT_GET, 'options', FILTER_SANITIZE_SPECIAL_CHARS);
+$options = input_get(INPUT_GET, 'options', FILTER_SANITIZE_SPECIAL_CHARS);
 
 $data = filter_data($user_data, FILTER_SANITIZE_STRING);
 ?>]]></example>
