@@ -10,7 +10,8 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 <script type="text/javascript" src="/yui/connection.js"></script>
 <script type="text/javascript">
 var fN = function callBack(o) { 
- document.getElementById('result').innerHTML='<pre>'+o.responseText+'</pre>';
+ var result = document.getElementById('result');
+ result.innerHTML='<pre>'+o.responseText+'</pre>';
 }
 var callback = { success:fN, upload:fN }
 function postForm(target,formName,up) {
@@ -21,7 +22,8 @@ function postForm(target,formName,up) {
 </head>
 <body>
  <form enctype="multipart/form-data" id="upload_form" action="" 
-  onsubmit="postForm('/up.php','upload_form',1); return false;" method="POST">
+  onsubmit="postForm('/up.php','upload_form',1); return false;" 
+  method="POST">
   <input type="hidden" name="APC_UPLOAD_PROGRESS" id="progress_key"
          value="<?php echo uniqid()?>"/>
   <input type="file" name="file1"/><br/>
@@ -50,38 +52,38 @@ if($_SERVER['REQUEST_METHOD']=='POST') {
 }
 ?>]]></example>
 
-<example hide="0" result="0" title="Client-side" fontsize="1.2em"><![CDATA[<script>
+<example hide="0" result="0" title="Client-side" fontsize="1.2em" width="94%"><![CDATA[<script>
 var fP = function callBack(o) {
-  var resp = eval('(' + o.responseText + ')');
-  if(!resp['done']) { 
-    if(resp['total']) {
-      var pct = parseInt(100*(resp['current']/resp['total']));
-      document.getElementById('pbar').style.width = ''+pct+'%';
-      document.getElementById('ppct').innerHTML = " "+pct+"%";
-      document.getElementById('ptxt').innerHTML = resp['current']+" of "+resp['total']+" bytes";
-    }
-    setTimeout("update_progress()",500);
-  } else if(resp['cancel_upload']) {
-    txt="Cancelled after "+resp['current']+" bytes!"; 
-    document.getElementById('ptxt').innerHTML = txt;
-    setTimeout("progress_win.hide();window.location.reload(true);",2000);
+ var resp = eval('(' + o.responseText + ')');
+ if(!resp['done']) { 
+  if(resp['total']) {
+   var pct = parseInt(100*(resp['current']/resp['total']));
+   document.getElementById('pbar').style.width = ''+pct+'%';
+   document.getElementById('ppct').innerHTML = " "+pct+"%";
+   document.getElementById('ptxt').innerHTML = resp['current']+" of "+resp['total']+" bytes";
   }
+  setTimeout("update_progress()",500);
+ } else if(resp['cancel_upload']) {
+  txt="Cancelled after "+resp['current']+" bytes!"; 
+  document.getElementById('ptxt').innerHTML = txt;
+  setTimeout("progress_win.hide();window.location.reload(true);",2000);
+ }
 }
 
 var pcallback = { success:fP }
 
 function update_progress() {
-  progress_key = document.getElementById('progress_key').value;
-  YAHOO.util.Connect.asyncRequest('GET','up.php?progress_key='+progress_key, pcallback);
+ progress_key = document.getElementById('progress_key').value;
+ YAHOO.util.Connect.asyncRequest('GET','up.php?progress_key='+progress_key, pcallback);
 }
 
 var progress_win;
 
 function postForm(target,formName) {
-  YAHOO.util.Connect.setForm(formName,true);
-  YAHOO.util.Connect.asyncRequest('POST',target,callback);
-  progress_win = new YAHOO.widget.Panel(...);
-  update_progress();
+ YAHOO.util.Connect.setForm(formName,true);
+ YAHOO.util.Connect.asyncRequest('POST',target,callback);
+ progress_win = new YAHOO.widget.Panel(...);
+ update_progress();
 }
 </script>
  <div id="progress_win"> 
