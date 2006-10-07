@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - External</title>
+
+	<blurb>Xdebug is an open source debugger by Derick Rethans</blurb>
+	<list>
+		<bullet>Actually version 2.0 short before stable release</bullet>
+		<bullet>Provides advances internal PHP functions</bullet>
+		<bullet>Allows tracing</bullet>
+		<bullet>Intergrated profiler</bullet>
+		<bullet>Supports the common GDB and DBGp protocolls for remote communication</bullet>
+		<bullet>No remote IDE supports it, yet (AFAIK)</bullet>
+		<bullet>http://xdebug.org/</bullet>
+	</list>
+</slide>

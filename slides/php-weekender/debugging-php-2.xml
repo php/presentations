@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - PHP internal</title>
+
+	<blurb>var_dump is your friend! Forget about print_r!</blurb>
+	<blurb>We'll see in a bit, why!</blurb>
+	<blurb>Pros</blurb>
+	<list>
+	 <bullet>Easy to add to your code</bullet>
+	 <bullet>Fast way to check simple issues</bullet>
+	 <bullet>Gives detailed information on dumped variable</bullet>
+	 <bullet>Can also view complete objects/arrays</bullet>
+	 <bullet>Also provides type information</bullet>
+	</list>
+	<blurb>Cons</blurb>
+	<list>
+	 <bullet>No environment information</bullet>
+	 <bullet>Complex issues need lots of debugging code</bullet>
+	 <bullet>Dumping lots of variables gives lots of code</bullet>
+	</list>
+	 
+	<example result="1"><![CDATA[<?php
+class Foo {
+    private $foo = "abc";
+	protected $bar = 100;
+	public $baz = "100";
+}
+
+echo "<pre>";
+print_r( new Foo() );
+var_dump(new Foo() );
+var_dump( array( 1, 2, "foo" => "bar" ) );
+echo "</pre>";
+?>]]></example>
+</slide>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/php-best-practices/talk.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>PHP Weekender - PHP best practices</title>
+<event>PHP Weekender</event>
+<location>Dortmund, Germany</location>
+<date>October 8th, 2006</date>
+<speaker>Tobias Schlitt &amp; Kore Nordmann</speaker>
+<email>ts@ez.no &amp; kn@ez.no</email>
+
+<!-- Intro -->
+<slide>slides/php-weekender/title.xml</slide>
+<slide>slides/php-best-practices/aboutme-kore.xml</slide>
+<slide>slides/php-best-practices/aboutme-toby.xml</slide>
+<slide>slides/php-weekender/agenda.xml</slide>
+
+<!-- About this talk -->
+<slide>slides/php-best-practices/about.xml</slide>
+
+<!-- General -->
+<slide>slides/php-best-practices/general-intro.xml</slide>
+<slide>slides/php-best-practices/general-agenda.xml</slide>
+<slide>slides/php-best-practices/general-typesafe1.xml</slide>
+<slide>slides/php-best-practices/general-typesafe2.xml</slide>
+<slide>slides/php-best-practices/general-typesafe2.xml</slide>
+<slide>slides/php-best-practices/general-shortopen.xml</slide>
+<slide>slides/php-best-practices/general-e_strict.xml</slide>
+<slide>slides/php-best-practices/general-exceptions.xml</slide>
+<slide>slides/php-best-practices/general-debugging1.xml</slide>
+<slide>slides/php-best-practices/general-debugging2.xml</slide>
+<slide>slides/php-best-practices/general-codingstandard.xml</slide>
+<slide>slides/php-best-practices/general-documentation.xml</slide>
+
+<!-- OOP -->
+<slide>slides/php-best-practices/objects-intro.xml</slide>
+<slide>slides/php-best-practices/objects-agenda.xml</slide>
+<slide>slides/php-best-practices/objects-comparision.xml</slide>
+<slide>slides/php-best-practices/objects-scope.xml</slide>
+<slide>slides/php-best-practices/objects-static.xml</slide>
+<slide>slides/php-best-practices/objects-exceptions.xml</slide>
+<slide>slides/php-best-practices/objects-abstract.xml</slide>
+<slide>slides/php-best-practices/objects-interfaces.xml</slide>
+
+<!-- Debugging -->
+<slide>slides/php-weekender/debugging-intro.xml</slide>
+<slide>slides/php-weekender/debugging-agenda.xml</slide>
+<slide>slides/php-weekender/debugging-strategies.xml</slide>
+<slide>slides/php-weekender/debugging-php-1.xml</slide>
+<slide>slides/php-weekender/debugging-php-2.xml</slide>
+<slide>slides/php-weekender/debugging-php-3.xml</slide>
+<slide>slides/php-weekender/debugging-external-overview.xml</slide>
+<slide>slides/php-weekender/debugging-external-zend.xml</slide>
+<slide>slides/php-weekender/debugging-external-dbg.xml</slide>
+<slide>slides/php-weekender/debugging-external-apd.xml</slide>
+<slide>slides/php-weekender/debugging-external-xdebug.xml</slide>
+<slide>slides/xdebug/how-to-install.xml</slide>
+<slide>slides/xdebug/how-to-install2.xml</slide>
+<slide>slides/xdebug/how-to-install-win.xml</slide>
+<slide>slides/xdebug/why-crash.xml</slide> <!-- max nesting, function trace -->
+<slide>slides/xdebug/where-error.xml</slide>
+<slide>slides/xdebug/debug-req-vars.xml</slide>
+<slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/how-many-functions.xml</slide>
+<slide>slides/xdebug/wtf-happens.xml</slide>
+<slide>slides/xdebug/which-code-do-i-use.xml</slide>
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/analyse-running-script.xml</slide>
+
+<!-- Security -->
+<slide>slides/php-best-practices/security-intro.xml</slide>
+<slide>slides/php-best-practices/security-agenda.xml</slide>
+<slide>slides/php-best-practices/security-variables_1.xml</slide>
+<slide>slides/php-best-practices/security-variables_2.xml</slide>
+<slide>slides/php-best-practices/security-sql.xml</slide>
+<slide>slides/php-best-practices/security-input.xml</slide>
+<slide>slides/php-best-practices/security-xss.xml</slide>
+<slide>slides/php-best-practices/security-obscurity.xml</slide>
+<slide>slides/php-best-practices/security-permissions.xml</slide>
+<slide>slides/php-best-practices/security-configuration-1.xml</slide>
+<slide>slides/php-best-practices/security-configuration-2.xml</slide>
+<slide>slides/php-best-practices/security-cookies.xml</slide>
+
+<!-- Performance -->
+<slide>slides/php-best-practices/performance-intro.xml</slide>
+<slide>slides/php-best-practices/performance-agenda.xml</slide>
+<slide>slides/php-best-practices/performance-cvsphp.xml</slide>
+<slide>slides/php-best-practices/performance-simple.xml</slide>
+<slide>slides/php-best-practices/performance-oo.xml</slide>
+<slide>slides/php-best-practices/performance-caching1.xml</slide>
+<slide>slides/php-best-practices/performance-caching2.xml</slide>
+<slide>slides/php-best-practices/performance-regex.xml</slide>
+<slide>slides/php-best-practices/performance-opcodecache1.xml</slide>
+<slide>slides/php-best-practices/performance-opcodecache2.xml</slide>
+<slide>slides/php-best-practices/performance-profiling.xml</slide>
+<slide>slides/php-best-practices/performance-mod_gzip.xml</slide>
+
+
+<!-- Open part -->
+<slide>slides/php-best-practices/open-intro.xml</slide>
+<slide>slides/php-best-practices/end.xml</slide>
+
+
+
+</presentation>

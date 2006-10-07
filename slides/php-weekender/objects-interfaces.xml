@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Objects - Interfaces</title>
+
+	<blurb>The issue: Enforce users to respect method signatures in a class.</blurb>
+	<blurb>Multiple interfaces may be implemented by one class.</blurb>
+	<example result="0"><![CDATA[<?php
+class RandomClass implements Countable, Iterator {
+	// You need to define all methods requested by the interfaces
+}
+?>]]></example>
+</slide>

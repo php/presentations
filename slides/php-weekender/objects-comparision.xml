@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Objects - Comparision with PHP 4</title>
+
+	<blurb>The issue: In PHP 4 object orientation was a mess</blurb>
+	<example result="0"><![CDATA[<?php
+// To reference an object
+$object1 = &$object2;
+
+function &return_reference( &$object_to_modify )
+{
+	// Code
+}
+?>]]></example>
+	<blurb>Everything was copied by default, to reference variables you needed &amp;.</blurb>
+	<blurb>No interfaces, no abstract, no static, no scope model for methods and properties.</blurb>
+	<blurb>The solution: Always use PHP 5</blurb>
+	<example result="1"><![CDATA[<?php
+$object1 = new stdClass();
+$object2 = clone $object1;
+var_dump( ( $object1 === $object2) );
+?>]]></example>
+</slide>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Objects - Scope model</title>
+
+	<blurb>The issue: Prevent user from accessing private object values.</blurb>
+	<example result="1"><![CDATA[<?php
+class ScopeModel {
+	private $private;
+	protected $protected;
+	public $public = 'public';
+
+	public function __construct() {
+		// All properties can be accessed inside class
+		$this->private = 'private';
+		$this->protected = 'protected';
+	}
+}
+
+$object = new ScopeModel();
+echo $object->public, "\n";
+
+// Would result in a fatal Error
+// echo $object->private, "\n";
+// echo $object->protected, "\n";
+?>]]></example>
+	<blurb>Protected properties and methods can not be accessed by inherited classes.</blurb>
+</slide>

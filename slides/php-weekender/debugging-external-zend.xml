@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - External</title>
+
+	<blurb>Zend Studio is a commercial PHP IDE by Zend</blurb>
+	<list>
+		<bullet>Uses Java (cross-platform but slow)</bullet>
+		<bullet>Real IDE features (break-points, documenting, ...)</bullet>
+		<bullet>Can do remote debugging</bullet>
+		<bullet>Will not be developed further, but be made an Eclipse extension</bullet>
+		<bullet>http://www.zend.com/de/products/zend_studio</bullet>
+	</list>
+</slide>

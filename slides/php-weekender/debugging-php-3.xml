@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - PHP internal</title>
+
+	<blurb>debug_backtrace gives you a context</blurb>
+	<blurb>Pros</blurb>
+	<list>
+	 <bullet>Easy to add to your code</bullet>
+	 <bullet>Shows you call traces</bullet>
+	 <bullet>Gives detailed environment info</bullet>
+	</list>
+	<blurb>Cons</blurb>
+	<list>
+	 <bullet>Can produce huge masses of output</bullet>
+	</list>
+	 
+	<example result="1"><![CDATA[<?php
+class Foo {
+	public function __construct( $foo ) {
+		$this->init( $foo, 23 );
+	}
+	public function init( $foo, $bar ) {
+		echo "Here is $foo, $bar<br/>";
+		var_dump( debug_backtrace() );
+	}
+}
+
+echo "<pre>";
+$foo = new Foo();
+echo "</pre>";
+?>]]></example>
+</slide>

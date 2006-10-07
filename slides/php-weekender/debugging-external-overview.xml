@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - External</title>
+
+	<blurb>The issue: PHP offers some small debugging facilities, but...</blurb>
+	<blurb>The solution: ...an external debugger</blurb>
+	<list>
+		<bullet>Zend Studio (commercial)</bullet>
+		<bullet>DBG (half-commercial)</bullet>
+		<bullet>APD (open source)</bullet>
+		<bullet>Xdebug (open source)</bullet>
+	</list>
+</slide>

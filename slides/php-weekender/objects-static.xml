@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Objects - Static properties and methods</title>
+
+	<blurb>The issue: Implementing singleton pattern</blurb>
+	<example result="1"><![CDATA[<?php
+class Singleton {
+	private static $instance;
+	public static $static = 42;
+	public $property;
+
+	private function __construct() {
+		$this->property = microtime();
+	}
+
+	public static function getInstance() {
+		if (!isset(self::$instance)) {
+			self::$instance = new Singleton();
+		}
+		return self::$instance;
+	}
+}
+
+var_dump( Singleton::getInstance() );
+var_dump( Singleton::getInstance() );
+?>]]></example>
+	<blurb>PHP 4 could only simulate a singleton with global variables.</blurb>
+	<blurb>Static properties may be accessed without a class instance.</blurb>
+	<example result="1"><![CDATA[<?php
+var_dump( Singleton::$static );
+?>]]></example>
+</slide>

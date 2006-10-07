@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - Strategies</title>
+
+	<blurb>The issue: There exists no bug-free code!</blurb>
+	<blurb>The solution: Debugging is needed.</blurb>
+	<list>
+		<bullet>echo and die</bullet>
+		<bullet>var_dump and print_r</bullet>
+		<bullet>debug_backtrace</bullet>
+		<bullet>Using an external debugger</bullet>
+	</list>
+</slide>

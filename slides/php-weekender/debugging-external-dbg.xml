@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - External</title>
+
+	<blurb>DBG is a commercial debgugger by Dmitri Dmitrienko</blurb>
+	<list>
+		<bullet>Reduced version for free</bullet>
+		<bullet>Provides standard debugging features (break-points, watches,...)</bullet>
+		<bullet>Commercial version has even advanced features and security addons</bullet>
+		<bullet>http://dd.cron.ru/dbg/</bullet>
+	</list>
+</slide>

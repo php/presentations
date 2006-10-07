@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - Xdebug</title>
+
+	<blurb>Installing Xdebug is easy</blurb>
+	<blurb>For Windows:</blurb>
+	<list>
+		<bullet>Download the latest Xdebug binary from http://xdebug.org</bullet>
+		<bullet>Extract the DLL and put it into your PHP directory</bullet>
+		<bullet>Add the following line to your php.ini</bullet>
+		<bullet>zend_extension_ts="c:/your/php/path/xdebugXXX.dll"</bullet>
+	</list>
+	<blurb>For *nix:</blurb>
+	<list>
+		<bullet>$ pear install pecl/xdbug-beta</bullet>
+		<bullet>Add the following line to your php.ini</bullet>
+		<bullet>zend_extension="/your/path/to/modules/xdebug.so"</bullet>
+	</list>
+</slide>

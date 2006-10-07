@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - PHP internal</title>
+
+	<blurb>The simplest way of debugging is adding echo or die calls to your code.</blurb>
+	<blurb>Pros</blurb>
+	<list>
+	 <bullet>Easy to add to your code</bullet>
+	 <bullet>Fast way to check simple issues</bullet>
+	</list>
+	<blurb>Cons</blurb>
+	<list>
+	 <bullet>No environment information</bullet>
+	 <bullet>Complex issues need lots of debugging code</bullet>
+	 <bullet>No type information for echoed variables</bullet>
+	 <bullet>Hard to display complete objects/arrays</bullet>
+    </list>
+	<example result="1"><![CDATA[<?php
+function foo() {
+    echo "Foo has been called!<br />";
+}
+
+function bar() {
+	die("Bar has been called!<br />");
+}
+
+for ($i = 0; $i < 3; $i++)
+	foo();
+
+for ($i = 0; $i < 3; $i++)
+	bar();
+?>]]></example>
+</slide>

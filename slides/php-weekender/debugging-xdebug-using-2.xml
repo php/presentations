@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Debugging - Xdebug</title>
+
+	<blurb>Enabling / disabling on the fly:</blurb>
+	<list>
+	 <bullet>xdebug_enable()</bullet>
+	 <bullet>xdebug_disable()</bullet>
+	 <bullet>xdebug_is_enabled()</bullet>
+	</list>
+	<blurb>Tracing:</blurb>
+	<list>
+	 <bullet>xdebug_start/stop_trace()</bullet>
+	 <bullet>xdebug_get/dump_function_trace()</bullet>
+	 <bullet>autotrace: xdebug_get_trace_file()</bullet>
+	 <bullet>
+	</list>
+</slide>

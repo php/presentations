@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="3em">
+	<title>Objects - Exceptions</title>
+
+	<blurb>The issue: Exceptions are needed for error handling</blurb>
+	<example result="1"><![CDATA[<?php
+class CouldNotConnectException extends exception {
+	public function __construct( $server ) {
+		parent::__construct( "Could not connect to server <$server>." );
+	}
+}
+
+class ExceptionExample {
+
+	public function connectToServer( $server ) {
+		if ( !($c = @fsockopen( $server, 80, $errno, $errstr, 0.1 ) ) ) {
+			throw new CouldNotConnectException( $server );
+		}
+	}
+}
+
+$object = new ExceptionExample();
+
+try {
+	$object->connectToServer( 'unavailable' );
+} catch ( CouldNotConnectException $e ) {
+	echo 'Cought: ', $e, "\n";
+} catch ( Exception $e ) {
+	// Cought another exception
+}
+?>]]></example>
+	<blurb>Exceptions bubble through your code until catched.</blurb>
+	<blurb>Exceptions result in a Fatal Error, if not catched properly.</blurb>
+</slide>
