@@ -9,7 +9,7 @@
 		<bullet>Allows tracing</bullet>
 		<bullet>Intergrated profiler</bullet>
 		<bullet>Supports the common GDB and DBGp protocolls for remote communication</bullet>
-		<bullet>No remote IDE supports it, yet (AFAIK)</bullet>
+		<bullet>IDEs that use Xdebug: PHPEdit, PHPEclipse</bullet>
 		<bullet>http://xdebug.org/</bullet>
 	</list>
 </slide>

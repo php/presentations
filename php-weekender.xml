@@ -34,20 +34,17 @@
 <slide>slides/php-best-practices/general-shortopen.xml</slide>
 <slide>slides/php-best-practices/general-e_strict.xml</slide>
 <slide>slides/php-best-practices/general-exceptions.xml</slide>
-<slide>slides/php-best-practices/general-debugging1.xml</slide>
-<slide>slides/php-best-practices/general-debugging2.xml</slide>
-<slide>slides/php-best-practices/general-codingstandard.xml</slide>
 <slide>slides/php-best-practices/general-documentation.xml</slide>
 
 <!-- OOP -->
-<slide>slides/php-best-practices/objects-intro.xml</slide>
-<slide>slides/php-best-practices/objects-agenda.xml</slide>
-<slide>slides/php-best-practices/objects-comparision.xml</slide>
-<slide>slides/php-best-practices/objects-scope.xml</slide>
-<slide>slides/php-best-practices/objects-static.xml</slide>
-<slide>slides/php-best-practices/objects-exceptions.xml</slide>
-<slide>slides/php-best-practices/objects-abstract.xml</slide>
-<slide>slides/php-best-practices/objects-interfaces.xml</slide>
+<slide>slides/php-weekender/objects-intro.xml</slide>
+<slide>slides/php-weekender/objects-agenda.xml</slide>
+<slide>slides/php-weekender/objects-comparision.xml</slide>
+<slide>slides/php-weekender/objects-scope.xml</slide>
+<slide>slides/php-weekender/objects-static.xml</slide>
+<slide>slides/php-weekender/objects-exceptions.xml</slide>
+<slide>slides/php-weekender/objects-abstract.xml</slide>
+<slide>slides/php-weekender/objects-interfaces.xml</slide>
 
 <!-- Debugging -->
 <slide>slides/php-weekender/debugging-intro.xml</slide>
@@ -105,7 +102,7 @@
 
 <!-- Open part -->
 <slide>slides/php-best-practices/open-intro.xml</slide>
-<slide>slides/php-best-practices/end.xml</slide>
+<slide>slides/php-weekender/end.xml</slide>
 
 
 
