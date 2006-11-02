@@ -23,7 +23,7 @@
 	<break/>
 	<example>http://example.com/script.php?name=&lt;script&gt;alert('!');&lt;/script&gt;</example>
 	<break lines="3"/>
-	<image filename="xss.png" align="center"/>
+	<image filename="xss.png" align="center" pdf-scale="0.7" y-offset="10cm"/>
 </div>
 
 </slide>
