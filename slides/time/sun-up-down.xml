@@ -12,8 +12,8 @@ if (isset($_POST['country'])) {
     $lat = $info['lat']; $lon = $info['lon'];
 
     $info = date_sun_info(time(), $lon, $lat);
-    echo "Sunrise is at ", date(date::RSS, $info['sunrise']), "\n";
-    echo "Sunset is at  ", date(date::RSS, $info['sunset']), "\n";
+    echo "Sunrise is at ", date(DateTime::RSS, $info['sunrise']), "\n";
+    echo "Sunset is at  ", date(DateTime::RSS, $info['sunset']), "\n";
     echo "Day length is ",
       round(($info['sunset'] - $info['sunrise']) / 3600, 1), "hrs";
   }

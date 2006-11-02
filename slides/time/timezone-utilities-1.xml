@@ -6,8 +6,8 @@
 	<blurb>Creating a timezone resource:</blurb>
 	<example result="1"><![CDATA[<?php
 	$tz = timezone_open("Europe/Amsterdam");
-	$trs = timezone_transistions_get($tz);
-	$trs = $tz->getTransistions();
+	$trs = timezone_transitions_get($tz);
+	$trs = $tz->getTransitions();
 
 	echo "<pre>\n";
 	foreach ($trs as $tr) {

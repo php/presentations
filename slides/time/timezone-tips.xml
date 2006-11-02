@@ -3,7 +3,7 @@
 	<title>Timezone and Date tips</title>
 
 	<list>
-		<bullet>Store date/time in a timezone agnostic way: GMT</bullet>
+		<bullet>Store date/time in a timezone agnostic way: UTC</bullet>
 		<bullet>Use a "Unix" timestamp, perhaps as string: %date("U");%</bullet>
 	</list>
 	

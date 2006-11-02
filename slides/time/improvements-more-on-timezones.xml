@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Changing Timezone Definitions</title>
+
+	<list>
+		<bullet>An updated database is released about 20 times a year.</bullet>
+		<bullet>Some of the changes are *very* sudden.</bullet>
+		<bullet>PHP releases will therefore often have an outdated version.</bullet>
+		<bullet>The PECL extension timezonedb provides a drop in replacement for the timezone database.</bullet>
+		<bullet>%pecl install timezonedb%</bullet>
+	</list>
+</slide>
+

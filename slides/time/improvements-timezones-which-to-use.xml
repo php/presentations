@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Timezone Support</title>
+	<subtitle>Which one to use</subtitle>
+
+	<list>
+		<bullet>Each zone is identified by the city with the largest population in a specific area.</bullet>
+		<bullet>Zones are divided into 10 major groups: Africa, America, Antarctica, Artic, Asia, Atlantic, Europe, Indian, Pacific.</bullet>
+		<bullet>Examples are: America/Toronto, Europe/Berlin, America/New_York, Europe/Oslo, Asia/Singapore.</bullet>
+		<bullet>There is also a group "Others" which contains outdated and backwards compatible names, such as Canada/Eastern, Etc/GMT-1 and US/Central. Those should *not* be used.</bullet>
+		<bullet>Pick the zone that is closest to your location.</bullet>
+		<bullet>http://php.net/timezones</bullet>
+	</list>
+</slide>
+

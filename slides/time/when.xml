@@ -2,11 +2,8 @@
 <slide>
 	<title>When Is The Additional Functionality Available</title>
 
-	<list>
-		<bullet>In PHP 5.1 if you compile PHP with a special flag</bullet>
-		<bullet>In PHP 5.2 by default</bullet>
-	</list>
-<break/>
-	<blurb>Compile like:</blurb>
+	<blurb>In PHP 5.1 if you compile PHP with a special flag:</blurb>
 	<example>CFLAGS=-DEXPERIMENTAL_DATE_SUPPORT=1 ./configure</example>
+<break lines="2"/>
+	<blurb>In PHP 5.2 and higher by default.</blurb>
 </slide>

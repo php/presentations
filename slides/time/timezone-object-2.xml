@@ -9,15 +9,15 @@
 	echo timezone_name_get($tz), ', ';
 
 	$tz = timezone_open("CEST");
-	echo $tz->getName();
+	echo timezone_name_get($tz);
 ?>]]></example>
 <break lines="2"/>
 
 	<blurb>Getting the current offset to GMT with a timezone for a specific date:</blurb>
 	<example result="1"><![CDATA[<?php
-	$tz = timezone_open("Europe/Amsterdam");
-	$d  = date_create("2005-01-22 09:15");
-	echo timezone_offset_get($tz, $d), ', ';
+	$tz = new DateTimeZone("Europe/Amsterdam");
+	$d  = new DateTime("2005-01-22 09:15");
+	echo $tz->getOffset($d), ', ';
 	$d->modify("+6 months");
 	echo $tz->getOffset($d);
 ?>]]></example>

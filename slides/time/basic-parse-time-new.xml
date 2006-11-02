@@ -8,8 +8,14 @@
 ?>]]></example>
 <break/>
 
+	<blurb>Alternatively you can just instantiate a DateTime object:</blurb>
+	<example><![CDATA[<?php
+	$ts = new DateTime("2006-11-07 16:12:15");
+?>]]></example>
+<break/>
+
 	<blurb>This function will not return the timestamp as an integer, but
-	instead returns a Date object which is a wrapper around a 64 bit
+	instead returns a DateTime object which is a wrapper around a 64 bit
 	integer (with some additional functionality ofcourse).</blurb>
 	
 </slide>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Updating Dates and Times</title>
+
+	<example result="1"><![CDATA[<?php
+	$date = new DateTime( 'now' );
+	echo $date->format(DateTime::ISO8601), "<br/>\n";
+
+	$date->setTime( 15, 0, 7 );
+	echo $date->format(DateTime::ISO8601), "<br/>\n";
+
+	$date->setDate( 2006, 12, 22 );
+	echo $date->format(DateTime::ISO8601), "<br/>\n";
+
+	$date->setIsoDate( 2006, 45, 2 );
+	echo $date->format(DateTime::ISO8601), "<br/>\n";
+?>]]></example>
+</slide>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Daylight Savings Time</title>
+	<subtitle>When is the next change?</subtitle>
+
+	<example result="1"><![CDATA[<?php
+$tz = new DateTimeZone(
+	isset($_GET['zone']) ? $_GET['zone'] : "Europe/Amsterdam");
+
+foreach (timezone_transitions_get($tz) as $tr)
+	if ($tr['ts'] > time())
+		break;
+
+$d = new DateTime( "@{$tr['ts']}" );
+printf("The timezone %s switches to %s on %s.<br/>The new GMT offset will be: %d (%s)\n",
+	$tz->getName(), $tr['isdst'] ? "DST" : "standard time",
+	$d->format('d M Y @ H:i'), $tr['offset'], $tr['abbr']
+);
+?>
+<form>
+<select name='zone'>
+<?php foreach(DateTimeZone::listIdentifiers() as $id) {
+	echo "<option value='$id'>$id</option>\n"; } ?>
+</select>
+<input type="submit" value="go"/>
+</form>]]></example>
+</slide>

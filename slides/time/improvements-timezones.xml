@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Date/Time Functions in PHP 5.1</title>
+	<title>Date/Time Functions in PHP 5.1 and up</title>
 	<subtitle>Timezone Support</subtitle>
 
 	<list>
-		<bullet>Bundled timezone database with 538 zones</bullet>
+		<bullet>Bundled timezone database with 546 zones</bullet>
 		<bullet>Not dependent on timezone abbreviations</bullet>
 		<bullet>Timezones have the format: Continent/Location or Continent/Location/Sublocation - Like: Europe/Amsterdam, America/Indiana/Knox</bullet>
 	</list>
