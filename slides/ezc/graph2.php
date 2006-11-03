@@ -2,6 +2,8 @@
 require 'ezc-setup.php';
 
 $chart = new ezcGraphPieChart();
+$chart->palette = new ezcGraphPaletteEzBlue();
+
 $chart->title = 'Browser Partitioning';
 
 $chart->data['browser'] = new ezcGraphArrayDataSet( array(
@@ -17,7 +19,7 @@ $chart->data['browser']->highlight['Firefox'] = true;
 $chart->driver = new ezcGraphSvgDriver();
 
 $chart->renderer = new ezcGraphRenderer3d();
-$chart->renderer->options->pieChartShadowSize = 10;
+$chart->renderer->options->pieChartShadowSize = 12;
 $chart->renderer->options->pieChartGleam = .5;
 $chart->renderer->options->dataBorder = false;
 $chart->renderer->options->pieChartHeight = 16;

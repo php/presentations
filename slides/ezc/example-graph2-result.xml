@@ -2,6 +2,14 @@
 	<title>Graph</title>
 	<subtitle>Pie chart - Result</subtitle>
 
-	<image filename='graph5.png'/>
+	<image align="center" filename='graph5.png'/>
+<break lines="8"/>
+
+	<blurb>The Graph component outputs:</blurb>
+	<list>
+		<bullet>PNG/JPG, through the ezcGraphGdDriver()</bullet>
+		<bullet>SVG, through the ezcGraphSvgDriver()</bullet>
+		<bullet>Flash, through the ezcGraphMingDriver()</bullet>
+	</list>
 
 </slide>
