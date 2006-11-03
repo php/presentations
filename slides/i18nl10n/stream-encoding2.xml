@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Text Streams</title>
+
+	<blurb>%t% is no longer only for Windows line endings.</blurb>
+<break/>
+	<blurb>Default encoding is used, which is by default UTF-8. The following
+	reads 42 UTF-8 characters and returns them as a Unicode string:</blurb>
+	<example><![CDATA[<?php
+$f = fopen( "somefile.txt", "rt" );
+$str = fread( $f, 42 );
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Script Encoding</title>
+
+	<example result='1'><![CDATA[<?php
+class 人 {
+	public $名;
+	public $姓;
+	public $誕生日;
+
+	function 年齢を計算() {
+		$年齢 = (time() - $this->誕生日) / (365.2422 * 86400);
+		return floor($年齢);
+	}
+}
+
+$私 = new 人;
+$私->誕生日 = strtotime( "1978-12-22 09:15" );
+echo "私は " . $私->年齢を計算() . " 才です。";
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

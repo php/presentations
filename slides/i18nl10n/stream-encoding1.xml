@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Streams I/O</title>
+
+	<list>
+		<bullet>PHP's IO uses a unified layer: streams</bullet>
+		<bullet>There is no clue in many cases what encoding a file is in</bullet>
+		<bullet>By default, PHP opens streams in binary mode, and no encoding conversion is done</bullet>
+	</list>
+</slide>
+<!--
+vim: encoding=utf8
+-->

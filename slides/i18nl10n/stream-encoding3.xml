@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Text Streams</title>
+	<subtitle>Default context</subtitle>
+
+	<blurb>You can change the default encoding like:</blurb>
+	<example><![CDATA[<?php
+stream_default_encoding( "iso-8859-1" );
+$str = file_get_contents( "somefile.txt", FILE_TEXT );
+?>]]></example>
+<break/>
+
+	<blurb>Or use a specific context for a stream:</blurb>
+	<example><![CDATA[<?php
+$ctxt = stream_context_create(
+	NULL, array( 'encoding' => 'koi8-r' )
+);
+file_put_contents( "someotherfile.txt", $data, FILE_TEXT, $ctxt );
+?>]]></example>
+
+<break/>
+	<blurb>Or set the encoding after opening a stream:</blurb>
+	<example><![CDATA[<?php
+$f = fopen( "someotherfile.txt", 'r' );
+stream_encoding( $f, 'iso-8859-5' );
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

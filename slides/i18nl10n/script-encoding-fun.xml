@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Script Encoding</title>
+
+	<example result='1'><![CDATA[<?php
+class Person {
+	public $firstName;
+	public $lastName;
+	public $birthday;
+
+	function calculateAge() {
+		$age = (time() - $this->birthday) / (365.2422 * 86400);
+		return floor($age);
+	}
+}
+
+$me = new Person;
+$me->birthday = strtotime( "1978-12-22 09:15" );
+echo "I am " . $me->calculateAge() . " years old.";
+?>]]></example>
+<!--
+ # vim: encoding=utf8
+-->
+</slide>

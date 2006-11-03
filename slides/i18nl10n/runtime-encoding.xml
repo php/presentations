@@ -8,7 +8,7 @@
 	</list>
 <break/>
 	<blurb>Encoding problems:</blurb>
-	<example><![CDATA[<?php
+	<example result='1'><![CDATA[<?php
 	ini_set('unicode.runtime_encoding', 'iso-8859-5');
 	ini_set('unicode.from_error_subst_char', '2D');
 	$food = 'blåbær != блабар';
@@ -16,6 +16,4 @@
 	$food3 = (string) $food2;
 	echo $food, '<br/>', $food2, '<br/>', $food3, "<br/>\n";
 ?>]]></example>
-	<blurb>Output:</blurb>
-	<blurb class="bit_larger_output"><![CDATA[blåbær != блабар<br/>bl?b?r != ������<br/>bl?b?r != блабар<br/>]]></blurb>
 </slide>

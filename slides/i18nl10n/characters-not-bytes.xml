@@ -9,14 +9,12 @@
 	</list>
 
 	<blurb>String Indexes:</blurb>
-	<example><![CDATA[<?php
+	<example result='1'><![CDATA[<?php
 	$string = "网页搜索";
 	// bytes are: E7 BD 91  E9 A1 B5  E6 90 9C  E7 B4 A2
 	
 	echo $string[1];
 ?>]]></example>
-	<blurb>Output:</blurb>
-	<blurb class="bit_larger_output">页</blurb>
 <!--
  # vim: encoding=utf8
 -->

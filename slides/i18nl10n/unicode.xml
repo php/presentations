@@ -5,8 +5,8 @@
 	<list>
 		<bullet>UCS uses 31 bits for character storage</bullet>
 		<bullet>Contains all known characters and symbols</bullet>
-		<bullet>First 128 bytes are the same as ASCII</bullet>
-		<bullet>First 256 bytes are the same as ISO-8859-1</bullet>
+		<bullet>First 128 characters are the same as ASCII</bullet>
+		<bullet>First 256 characters are the same as ISO-8859-1</bullet>
 		<bullet>Unicode 3.0 describes the BMP ~(Basic Multilingual Plane)~ (16 bits)</bullet>
 		<bullet>Unicode 3.1 describes other planes (21 bits)</bullet>
 		<bullet>Characters are ordered in language/script blocks: Basic latin, Cyrillic, Hebrew, Arabic, Gujarati, Runic, CJK etc.</bullet>

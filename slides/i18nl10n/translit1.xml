@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Transliteration</title>
+
+	<example result='1'><![CDATA[<?php
+$names = "でりっく
+          デリック
+          Дерик Ретханс";
+
+echo nl2br( strtotitle( str_transliterate( $names, 'Any', 'Latin' ) ) );
+?>]]></example>
+<break lines="3"/>
+	<example result='1'><![CDATA[<?php
+$t = str_transliterate( 'Derick Rethans', 'Latin', 'Katakana' );
+$b = str_transliterate( $t, 'Katakana', 'Latin' );
+
+echo $t, ' ', $b;
+?>]]></example>
+
+<!--
+ # vim: encoding=utf8
+-->
+</slide>
