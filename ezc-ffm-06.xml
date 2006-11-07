@@ -19,26 +19,32 @@
 
 <slide>slides/ezc-ffm-06/title-ezc-generic.xml</slide>
 <slide>slides/php-best-practices/aboutme-kore.xml</slide>
-<slide>slides/php-best-practices/aboutme-toby.xml</slide>
+<slide>slides/ezc-ffm-06/aboutme-toby.xml</slide>
 
 <slide>slides/ezc-ffm-06/agenda.xml</slide>
 
 <!-- introduction -->
+<slide>slides/ezc-ffm-06/introduction-title.xml</slide>
 <slide>slides/toolbox/goals-library.xml</slide>
-
-<!-- overview -->
+<slide>slides/ezc/contributing.xml</slide>
 <slide>slides/ezc/overview.xml</slide>
 <slide>slides/toolbox/dependencies.xml</slide>
-<slide>slides/ezc/install-download.xml</slide>
+
+<!-- getting started -->
+<slide>slides/ezc-ffm-06/getting-started-title.xml</slide>
+<slide>slides/ezc-ffm-06/install-download.xml</slide>
 <slide>slides/ezc/install-pear.xml</slide>
 
+
+<!-- some cool components -->
+<slide>slides/ezc-ffm-06/some-cool-components-title.xml</slide>
 <slide>slides/ezc/example-consoletools-table.xml</slide>
 <slide>slides/ezc/example-consoletools-progressbar.xml</slide>
 
 <slide>slides/ezc/example-eventlog.xml</slide>
 
-<slide>slides/ezc/example-database-instance.xml</slide>
-<slide>slides/ezc/example-database-query.xml</slide>
+<slide>slides/ezc-ffm-06/example-database-instance.xml</slide>
+<slide>slides/ezc-ffm-06/example-database-query.xml</slide>
 <slide>slides/ezc/example-persistentobject.xml</slide>
 
 <slide>slides/ezc/example-imageconversion.xml</slide>
@@ -58,10 +64,10 @@
 <slide>slides/ezc/example-feed.xml</slide>
 <slide>slides/ezc/example-feed2.xml</slide>
 
-<!-- what's next? -->
+<!-- stats and future -->
+<slide>slides/ezc-ffm-06/stats-future-title.xml</slide>
 <slide>slides/ezc-ffm-06/stats.xml</slide>
 <slide>slides/ezc/future-1.1-1.2.xml</slide>
-<slide>slides/ezc/contributing.xml</slide>
 <slide>slides/ezc/questions.xml</slide>
 
 </presentation>

@@ -1,0 +1,17 @@
+<slide>
+	<title>Database</title>
+	<subtitle>Handlers and Instances</subtitle>
+
+	<blurb>Supported Handlers:</blurb>
+	<list>
+		<bullet>MySQL</bullet>
+		<bullet>PostgreSQL</bullet>
+		<bullet>Oracle</bullet>
+		<bullet>SQLite</bullet>
+	</list>
+
+	<blurb>Using Instances:</blurb>
+	<example filename='database.php' result="1"/>
+
+</slide>
+
