@@ -17,7 +17,7 @@ $minlat = $lat - $dlat; $maxlat = $lat + $dlat;
 $minlon = $lon-(($y*cos($minlat)/6371) * $rad);
 $maxlon = $lon+(($y*cos($maxlat)/6371) * $rad);
 $params = array('bbox'=>"$minlon,$minlat,$maxlon,$maxlat",
-                'min_upload_date'=>time()-4*24*3600);
+                'min_upload_date'=>time()-30*24*3600);
 $photos = $flickr->photosSearch($params);
 if($photos['photos']) foreach($photos['photos'] as $photo) {
     $url = $flickr->getPhotoURL($photo);

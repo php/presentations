@@ -43,7 +43,11 @@ Here are all the possible modifiers in the argument format string:
 'a'  array
 'o'  any object
 'O'  specific object
-'z'  mixed]]></example>
+'z'  zval
+'Z'  zval-ref
+'|'  next arg is optional
+'/'  arg is separated if not a reference
+'!'  next arg returns null if type IS_NULL]]></example>
 
 <blurb>
 So, for example, a function that takes a string, an integer, and array and an 

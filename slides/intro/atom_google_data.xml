@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet href="http://www.blogger.com/styles/atom.css" type="text/css"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://groups.google.com/group/comp.lang.php</id>
+  <title type="text">comp.lang.php Google Group</title>
+  <subtitle type="text">
+  PHP, server side scripting.
+  </subtitle>
+  <link href="http://groups.google.com/group/comp.lang.php/feed/atom_v1_0_msgs.xml" rel="self" title="comp.lang.php feed"/>
+  <updated>2006-11-24T18:44:38Z</updated>
+  <generator uri="http://groups.google.com" version="1.99">Google Groups</generator>
+  <entry>
+  <author>
+  <name>bill nob...@spamcop.net</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T18:44:38Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/892e1f54265784e3</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/892e1f54265784e3"/>
+  <title type="text">$_FILE variables returning null when in body of page.</title>
+  <summary type="html" xml:space="preserve">
+  I am a relative newbie to PHP, but not to other languages. &lt;br&gt; I wrote a test script to upload files. In the php section above &lt;br&gt; the page I get the expected content of the $_FILES array. &lt;br&gt; When I have a php section in the body, the $_FILES array &lt;br&gt; variables return nothing. &lt;br&gt; --------here is the page that is the action of the post-------
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>eholz1 ewh...@gmail.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T17:44:10Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/1f35584342f4ed69</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/1f35584342f4ed69"/>
+  <title type="text">driver not found error when trying to use PDO, PHP (5.2) and mysql</title>
+  <summary type="html" xml:space="preserve">
+  Hello Newsgroup, &lt;br&gt; I have &amp;quot;installed&amp;quot; pdo using &amp;quot;pecl install pdo&amp;quot; (it intalled version &lt;br&gt; 1.0.3), &lt;br&gt; I have added the line &amp;quot;extension=pdo.so&amp;quot; to my php.ini file, but when I &lt;br&gt; try to use &lt;br&gt; the PDO db connect string &amp;quot;$db = new &lt;br&gt; PDO(&#39;msql:server=dbserver;dbna me=menagerie&#39;,$dbuser,$dbpass) ; &amp;quot; &lt;br&gt; i get a &amp;quot;driver not found&amp;quot; error.
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>sahm sahm...@gmail.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T17:41:54Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/0b78f42b3467647b</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/0b78f42b3467647b"/>
+  <title type="text">I need some help here</title>
+  <summary type="html" xml:space="preserve">
+  Hi evry one &lt;br&gt; I need some help with my code &lt;br&gt; What&#39;s wrong in this code &lt;br&gt; &amp;lt;?php &lt;br&gt; header(&#39;Content-Type: text/xml&#39;); &lt;br&gt; $dom = new DOMDocument(); &lt;br&gt; $response = $dom-&amp;gt;createElement(&#39;response&#39; ); &lt;br&gt; $dom-&amp;gt;appendChild($response); &lt;br&gt; $sub_categorys = $dom-&amp;gt;createElement(&#39;sub_Categ orys&#39;); &lt;br&gt; $response-&amp;gt;appendChild($sub_ca tegorys);
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Erwin Moller since_humans_read_this_I_am_spammed_too_m...@spamyourself.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T17:35:34Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/f5587eb524101fe9</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/f5587eb524101fe9"/>
+  <title type="text">Re: the script wont work and i cant find anything wrong please help</title>
+  <summary type="html" xml:space="preserve">
+  &amp;lt;snip&amp;gt; &lt;br&gt; This approach id possibly vunarable to SQL-injection. &lt;br&gt; That is bad. &lt;br&gt; NEVER trust data coming from GET, POST or COOKIE. &lt;br&gt; Possibly you have magic quotes enabled in php.ini, but you should at least &lt;br&gt; check for that. &lt;br&gt; It is much better to set up your applicatie right from the start than fixing &lt;br&gt; it afterward (after some funny guy gave the command to delete the database
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Pedro Graca hex...@dodgeit.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T17:17:02Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/01668d64dc1373ad</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/01668d64dc1373ad"/>
+  <title type="text">Re: treat large string like file</title>
+  <summary type="html" xml:space="preserve">
+  Mark wrote: &lt;br&gt; Index into the whole chunk? &lt;br&gt; $two_chars = substr($whole_chunk, 17655, 2); &lt;br&gt; switch ($two_chars) { &lt;br&gt; case &#39;C3&#39;: $three_chars = substr($whole_chunk, 17657, 3); &lt;br&gt; break; &lt;br&gt; case &#39;--&#39;: $three_chars = &#39;---&#39;; &lt;br&gt; break; &lt;br&gt; default: $three_chars = substr($whole_chunk, 17655, 3);
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name> lhen...@gmail.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T16:58:57Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/a6eb92c1054ef10b</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/a6eb92c1054ef10b"/>
+  <title type="text">Array length in SimpleXML</title>
+  <summary type="html" xml:space="preserve">
+  This is idiotic, but I can&#39;t figure this out: &lt;br&gt; I can do this: &lt;br&gt; $xml = new SimpleXMLElement(&#39;&amp;lt;items&amp;gt; &lt;br&gt; &amp;lt;item&amp;gt;&amp;lt;name&amp;gt;Lee&amp;lt;/name&amp;gt;&amp;lt;count&amp;gt;1 &amp;lt;/count&amp;gt;&amp;lt;/item&amp;gt; &lt;br&gt; &amp;lt;item&amp;gt;&amp;lt;name&amp;gt;Bill&amp;lt;/name&amp;gt;&amp;lt;count&amp;gt; 5&amp;lt;/count&amp;gt;&amp;lt;/item&amp;gt;&amp;lt;/items&amp;gt;&#39;); &lt;br&gt; foreach ($xml-&amp;gt;item as $item) { &lt;br&gt; echo $item-&amp;gt;name, &#39;&amp;lt;br /&amp;gt;&#39;; &lt;br&gt; But I can&#39;t figure how to tell I have 2 items. The obvious:
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Oliver Heins o...@sopos.org</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T16:39:13Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/6cc2e81bfb6452cb</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/6cc2e81bfb6452cb"/>
+  <title type="text">session management hangs firefox on mac</title>
+  <summary type="html" xml:space="preserve">
+  Hello, &lt;br&gt; I have a somewhat strange problem. The firefox browser on a mac (tested &lt;br&gt; 1.5.0.4) hangs after the third or fourth call in a session. This &lt;br&gt; happens both with cookies enabled and by passing the session via links. &lt;br&gt; It seems that this happens while starting the session, after commenting &lt;br&gt; session_start() out, firefox behaves just fine. A recent 2.0 is also
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Jerry Stuckle jstuck...@attglobal.net</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T16:22:40Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/08666e96fb95fc01</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/08666e96fb95fc01"/>
+  <title type="text">Re: playing music across pages</title>
+  <summary type="html" xml:space="preserve">
+  Gnarl, &lt;br&gt; Listen to the others. You completely ignore what the user might have &lt;br&gt; going on their own machine. &lt;br&gt; For instance, what happens if I&#39;m carrying on a conversation? Or &lt;br&gt; listening to a radio show? Or other music? &lt;br&gt; When that happens to me, I leave the site immediately, never to return. &lt;br&gt; I don&#39;t even stop long enough to see what it has to say.
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Pedro Graca hex...@dodgeit.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T16:17:03Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/86d92e4692b9211b</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/86d92e4692b9211b"/>
+  <title type="text">Re: the script wont work and i cant find anything wrong please help</title>
+  <summary type="html" xml:space="preserve">
+  &amp;lt;snip&amp;gt; &lt;br&gt; &amp;lt;snip&amp;gt; &lt;br&gt; Check the return value of mysql_* calls. &lt;br&gt; Where I snipped add &lt;br&gt; if (!$r) { &lt;br&gt; // There was an error &lt;br&gt; // for simplicity sake, I&#39;ll just print it and exit &lt;br&gt; exit(&#39;Error in query (&#39; . $query . &#39;): &#39; . mysql_error()); &lt;br&gt; } &lt;br&gt; Add similar code after *all* relevant mysql_* calls. &lt;br&gt; When you run the script and there is an error, the script itself will
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Schroeder, AJ a...@qg.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T16:08:37Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/a8a80d4f8b556ed3</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/a8a80d4f8b556ed3"/>
+  <title type="text">snmprealwalk questions</title>
+  <summary type="html" xml:space="preserve">
+  Hello group, &lt;br&gt; I am using snmprealwalk() to scan for interface types and descriptions on &lt;br&gt; some Cisco routers. What I am doing is two calls to walk the routers; one &lt;br&gt; walk for ifDescr.x and the other for locIfDescr.x so that I get the &lt;br&gt; interface index and our user defined descriptions. &lt;br&gt; That returns back two arrays which I then combine into one array with a
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Kim André Akerø kiman...@NOSPAMbetadome.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T16:06:48Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/d109c746697b1a69</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/d109c746697b1a69"/>
+  <title type="text">Re: 2 documentroots set up possible</title>
+  <summary type="html" xml:space="preserve">
+  This is actually more of an Apache configuration issue, and doesn&#39;t &lt;br&gt; have anything to do with PHP. However, your httpd.conf (or wherever the &lt;br&gt; virtual host configuration for your hostname(s) are in your Apache &lt;br&gt; configuration files) has to have something like this for your virtual &lt;br&gt; host: &lt;br&gt; &amp;lt;VirtualHost 192.168.0.1:80&amp;gt;
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Sandman m...@sandman.net</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T15:39:44Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/6dd8b1f0a9387e50</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/6dd8b1f0a9387e50"/>
+  <title type="text">Re: Advice about fetching user information</title>
+  <summary type="html" xml:space="preserve">
+  In article &amp;lt;4566ebf8$0$336$e4fe5...@news. xs4all.nl&amp;gt;, &lt;br&gt; Erwin Moller &lt;br&gt; &amp;lt;since_humans_read_this_I_am_s pammed_too_m...@spamyourself.c om&amp;gt; &lt;br&gt; wrote: &lt;br&gt; Ok, thanks for the info. I will think about it. :)
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Sandman m...@sandman.net</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T15:38:20Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/e26ab2be28a78f7f</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/e26ab2be28a78f7f"/>
+  <title type="text">Re: Advice about fetching user information</title>
+  <summary type="html" xml:space="preserve">
+  In article &amp;lt;79udm2dclimq6ambad1kdo5mu8j8q c1...@4ax.com&amp;gt;, &lt;br&gt; Yes, I apologize, I tested it the wrong way. My mistake. Sorry. &lt;br&gt; Doing it the same way as your way: &lt;br&gt; 1. Fetching 1000 members, randomly chosen, one at a time: &lt;br&gt; 0.254 seconds &lt;br&gt; 2. Fetching all 1000 members in one really big IN(): &lt;br&gt; 0.007 seconds
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>howa howac...@gmail.com</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T15:37:47Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/c9c2c1388b966449</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/c9c2c1388b966449"/>
+  <title type="text">Re: Why ini_set( &quot;short_open_tag&quot;, 1 ) didn&#39;t work?</title>
+  <summary type="html" xml:space="preserve">
+  Erwin Moller 寫道： &lt;br&gt; Thanks.
+  </summary>
+  </entry>
+  <entry>
+  <author>
+  <name>Sandman m...@sandman.net</name>
+  <email>comp.lang.php@googlegroups.com</email>
+  </author>
+  <updated>2006-11-24T15:22:11Z</updated>
+  <id>http://groups.google.com/group/comp.lang.php/msg/69ff6a0e8355d237</id>
+  <link href="http://groups.google.com/group/comp.lang.php/msg/69ff6a0e8355d237"/>
+  <title type="text">Re: Advice about fetching user information</title>
+  <summary type="html" xml:space="preserve">
+  In article &amp;lt;q9vdm2lgir1co34ijp82utfg30ond in...@4ax.com&amp;gt;, &lt;br&gt; Yes, I could - potentially, prefetch that list and then fetch member &lt;br&gt; info and then print the list. Sure. BUt there needs to be onlyh one &lt;br&gt; instance of member information being printed outside of this scope to &lt;br&gt; throw this off as a *solution* to my problem.
+  </summary>
+  </entry>
+</feed>

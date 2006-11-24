@@ -30,6 +30,7 @@ echo $proc->transformToXML($dom);
 
 <example title="SimpleXML" result="1" marginleft="2em"><![CDATA[<?php
   $menu = simplexml_load_file('menu.xml');
+#  echo "<pre>"; print_r($menu); echo "</pre>";
   foreach ($menu->food as $item) {
     echo $item['itemno'] . ") ";
     echo $item->price . " ... ";
