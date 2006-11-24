@@ -7,8 +7,9 @@ Finally, a free geocoding API
 
 <example hide="1" result="1" title="Returned XML"><![CDATA[<?php
 $loc = urlencode(':-:location:-:');
-$data = file_get_contents("http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=$loc");
-$data = preg_replace("|<(/.*?)>|","<\\1>\n",$data);
+if(!$data = file_get_contents("presentations/slides/intro/geo_{$loc}.xml"))
+  $data = file_get_contents("http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=$loc");
+$data = preg_replace("|<(/.*?)>|","<\\1>\n",trim($data));
 $data = preg_replace("|\">|","\">\n",$data);
 echo nl2br(htmlspecialchars($data));
 ?>]]></example>
