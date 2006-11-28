@@ -3,7 +3,7 @@ if(!empty($_GET['loc'])) {
   $src = "http://api.local.yahoo.com/MapsService/V1/mapImage?appid=rlerdorf";
   $src.= "&location=".urlencode($_GET['loc']).
          "&output=php&image_width=300&image_height=300&zoom=7";
-  header("Content-type: application/x-json");
+  header("Content-type: application/json");
   echo json_encode(unserialize(file_get_contents($src)));
   exit;
 }

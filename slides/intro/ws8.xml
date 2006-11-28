@@ -23,7 +23,7 @@ PHP to fetch data from a backend to plot.
 </blurb>
 
 <example title="Simple Embedded DHTML map" result="1" fontsize="1.6em" rfontsize="1em" marginright="0em"><![CDATA[<script type="text/javascript"
-       src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=YahooDemo">
+       src="http://api.maps.yahoo.com/ajaxymap?v=3.4&appid=YahooDemo">
 </script>
 <div id="jsmapContainer" style="height: 400px; width: 930px;"></div>
 <script type="text/javascript">
