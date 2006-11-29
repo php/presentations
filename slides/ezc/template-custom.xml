@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Template Syntax</title>
+	<subtitle>Custom Functions</subtitle>
+
+	<blurb>Allows you to extend the template language:</blurb><break/>
+	<example><![CDATA[string_to_time( $message->logtime )]]></example>
+<break lines="2"/>
+
+	<example><![CDATA[<?php
+class StringToTimeCall implements ezcTemplateCustomFunction
+{
+    public static function getCustomFunctionDefinition( $name )
+    {
+        if ( $name == "string_to_time" )
+        {
+            $def = new ezcTemplateCustomFunctionDefinition();
+            $def->class = __CLASS__;
+            $def->method = "strtotime";
+            $def->parameters = array("timestring");
+            return $def;
+        }
+        return false;
+    }
+
+    public static function strtotime( $string )
+    {
+        return strtotime( $string );
+    }
+}
+
+$config = ezcTemplateConfiguration::getInstance();
+$config->addExtension( 'StringToTimeCall' );
+?>]]></example>
+
+</slide>

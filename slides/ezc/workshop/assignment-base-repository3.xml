@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Class Repository (3/3)</title>
+	<subtitle>~15 minutes</subtitle>
+
+	<blurb>In the directory %~/include/persistent_classes/autoload%, create the following files:</blurb>
+<break lines="2"/>
+	<blurb>category_autoload.php</blurb>
+	<example><![CDATA[<?php
+return array(
+        'wpcCategory' => 'category.php',
+);
+?>]]></example>
+
+<break lines="2"/>
+	<blurb>image_autoload.php</blurb>
+	<example><![CDATA[<?php
+return array(
+        'wpcImage'    => 'image.php',
+        'wpcImageFile' => 'image_file.php',
+);
+?>]]></example>
+
+<break lines="2"/>
+	<blurb>log_autoload.php</blurb>
+	<example><![CDATA[<?php
+return array(
+        'wpcLog'      => 'log.php',
+);
+?>]]></example>
+		
+</slide>

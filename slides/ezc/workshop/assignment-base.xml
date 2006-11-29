@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Installation</title>
+	<subtitle>~10 minutes</subtitle>
+
+	<blurb>Configure pear as follows:</blurb>
+	<example type="shell">
+pear config-set php_dir /home/ezc/pear
+pear config-set data_dir /home/ezc/pear-data
+pear config-set test_dir /home/ezc/pear-test
+pear config-set doc_dir /home/ezc/pear-doc
+pear config-set preferred_state alpha</example>
+<break lines="3"/>
+	<blurb>Install the components with the PEAR installer.</blurb>
+<break lines="3"/>
+	<blurb>Create the script "%~/include/ezc-setup.php%" that sets up the
+	components' autoloading mechanism. Set the include path to
+	"%/home/ezc/pear:/home/ezc:.%".</blurb>
+		
+</slide>

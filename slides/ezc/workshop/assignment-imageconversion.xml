@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: ImageAnalysis &amp; ImageConversion</title>
+	<subtitle>~25 minutes</subtitle>
+
+	<blurb>Enhance the shell script to extract the photo's shutterspeed
+	with ImageAnalysis and print the results to standard output as
+	well.</blurb>
+<break lines="3"/>	
+	<blurb>Enhance the script to generate three images from the original image. Those images should be generated to %/tmp%:</blurb> 
+	<list type="number">
+		<bullet>A greyscale thumbnail in the size of maximum 50x50: %small_thumb.jpg% (type 1)</bullet>
+		<bullet>A thumbnail in the size of maximum 100x100: %large_thumb.jpg% (type 2)</bullet>
+		<bullet>A resized version (800x600) but added on top a watermark (%logo.png%) in the
+		top-left corner: %watermark.jpg% (type 3)</bullet>
+	</list>
+		
+</slide>

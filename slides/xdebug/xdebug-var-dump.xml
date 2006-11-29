@@ -4,8 +4,12 @@
 
 	<image filename="var_dump.png" align="center" pdf-scale="0.7"/>
 <break lines="2"/>
-	<blurb>%&amp;lt;?php%</blurb>
-	<blurb>%xdebug_var_dump(); // or just var_dump()%</blurb>
-	<blurb>%?&gt;%</blurb>
+	<example><![CDATA[<?php
+ini_set( 'xdebug.var_display_max_data', 25 );
+ini_set( 'xdebug.var_display_max_depth', 4 );
+
+xdebug_var_dump(); // or just var_dump()
+?>]]></example>
+<break lines="2"/>
 
 </slide>

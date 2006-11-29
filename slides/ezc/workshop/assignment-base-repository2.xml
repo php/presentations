@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Class Repository (2/3)</title>
+	<subtitle>~15 minutes</subtitle>
+
+	<blurb>Use the following template for classes:</blurb>
+	<example><![CDATA[<?php
+class wpcImageFile
+{
+    private $id = null;
+    public $image_id = null;
+    public $type = null;
+    public $data = null;
+
+    public function getState()
+    {
+        $result = array();
+        $result['id'] = $this->id;
+        $result['image_id'] = $this->image_id;
+        $result['type'] = $this->type;
+        $result['data'] = $this->data;
+        return $result;
+    }
+
+    public function setState( array $properties )
+    {
+        foreach ( $properties as $key => $value )
+        {
+            $this->$key = $value;
+        }
+    }
+}
+?> ]]></example>
+		
+</slide>

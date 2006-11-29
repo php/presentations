@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Persistent Object Definitions (3/3)</title>
+	<subtitle>~15 minutes</subtitle>
+
+	<blurb>Add information about relations to the following files:</blurb>
+<break lines="2"/>
+	<blurb>~/data/persistentobject-defs/wpccategory.php:</blurb>
+	<example><![CDATA[<?php
+$def->relations['wpcImage'] = new ezcPersistentOneToManyRelation(
+    "category",
+    "image"
+);
+$def->relations['wpcImage']->columnMap = array(
+    new ezcPersistentSingleTableMap( 'id', 'category_id' )
+);
+?>]]></example>
+
+<break lines="2"/>
+	<blurb>~/data/persistentobject-defs/wpcimage.php:</blurb>
+	<example><![CDATA[<?php
+$def->relations['wpcImageFile'] = new ezcPersistentOneToManyRelation(
+    "image",
+    "image_file"
+);
+$def->relations['wpcImageFile']->columnMap = array(
+    new ezcPersistentSingleTableMap( 'id', 'image_id' )
+);
+?>]]></example>
+</slide>

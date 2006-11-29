@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Template (1/3)</title>
+	<subtitle>Image overview: ~45 minutes</subtitle>
+
+	<list>
+		<bullet>Create a PHP script "%~/www/index.php%"</bullet>
+		<bullet>Set-up the Template component's templatePath and compilePath to %/home/ezc/data/templates%.</bullet> 
+		<bullet>Retrieve all %wpcCategory% objects with ezcPersistentSession, and send the resulting array *and* the session itself to a template called "%index.ezt%".</bullet> 
+		<bullet>Create the template %~/data/templates/index.ezt% that lists all the categories as "h2" elements.</bullet>
+	</list>
+		
+</slide>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>PersistentObjectDatabaseSchemaTiein</title>
+
+	<blurb>Creating definition files from the database:</blurb>
+<break/>	
+	<example><![CDATA[php pear/ezc/PersistentObjectDatabaseSchemaTiein/rungenerator.php
+	-f mysql
+	-s mysql://root@localhost/workshop
+	data/persistentobject-defs]]></example>
+<break lines="3"/>
+
+	<blurb>Often the generated definition files should be changed, for example
+	to change class names and/or column names.</blurb>
+</slide>

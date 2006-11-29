@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Template Syntax</title>
+	<subtitle>Extra features</subtitle>
+
+	<blurb>Delimiter:</blurb><break/>
+	<example><![CDATA[{foreach array("one", "two", "three") as $n}
+	{$n}{delimiter}, {/delimiter}
+{/foreach}]]></example>
+<break lines="3"/>
+
+	<blurb>Cycle:</blurb><break/>
+	<example><![CDATA[{var $elements = 0..(10 + 2)}
+{cycle $color = array( "#FF0000", "#00FF00" )}
+
+<table>
+{foreach $elements as $el increment $color offset 3 limit 5}
+    <tr style="background-color: {$color}">
+        <td>Number</td><td>{$el}</td>
+    </tr>
+{/foreach}
+</table>]]></example>
+</slide>

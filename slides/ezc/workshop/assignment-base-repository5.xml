@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Persistent Object Definitions (2/3)</title>
+	<subtitle>~15 minutes</subtitle>
+
+	<blurb>Modify the generated files in %~/data/persistentobject-defs%:</blurb>
+	<list type="number">
+		<bullet>Rename the files to %wpccategory.php%, %wpcimage.php%,
+		%wpcimagefile.php% and %wpclog.php%.</bullet>
+		<bullet>In the files, change %$def->class% to the correct classnames:
+		%wpcImage%, %wpcImageFile%, %wpcCategory% and %wpcLog%.</bullet>
+	</list>
+</slide>

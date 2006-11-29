@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Mail</title>
+	<subtitle>~20 minutes</subtitle>
+
+	<list>
+		<bullet>Send a mail message with Thunderbird
+		(Applications->Internet->Icedove Mail Client) to
+		ezc@workshop.ez.no.local and attach a JPEG image (you can find them in
+		/home/ezc/data/workshop-images).</bullet>
+
+		<bullet>Press "Get Mail" to check if the mail has been sent correctly.
+		The mail should also stay on the server.</bullet>
+
+		<bullet>Write a small console PHP script "~/scripts/import-mail.php"
+		that reads all mails in the mailbox and writes to standard output:
+		sender name, sender email address, filename of the parser attachment,
+		the body of the first text part and the message ID.</bullet>
+	</list>
+		
+</slide>

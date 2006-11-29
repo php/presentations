@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Configuration</title>
+	<subtitle>~15 minutes</subtitle>
+
+	<list>
+		<bullet>Create the file "watermark.ini" in
+		%/home/ezc/data/configuration% with the following contents:</bullet>
+	</list>
+	<example>[size]
+max_width=900
+max_height=600</example>
+	<list>
+		<bullet>Extend the %scripts/read-mail.php% script to use the
+		configurable sizes for the watermarked image.</bullet>
+	</list>
+		
+</slide>

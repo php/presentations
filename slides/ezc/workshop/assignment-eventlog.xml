@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: EventLog</title>
+	<subtitle>~30 minutes</subtitle>
+
+	<list>
+		<bullet>Extend the image-details.php script to log how often an image has been viewed. Use the following writer definition:</bullet>
+	</list>
+	<example><![CDATA[<?php
+$db = ezcDbFactory::create( 'mysql://root@localhost/workshop' );
+$writer = new ezcLogDatabaseWriter( $db, "log" );
+$writer->source = 'src';
+$writer->datetime = 'logtime';
+$writer->imageid = 'imageid';
+?>]]></example>
+	<list>
+		<bullet>Make sure to log the imageid in a custom parameter to the logger.</bullet>
+	</list>
+		
+</slide>

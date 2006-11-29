@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Template (3/3)</title>
+	<subtitle>Image overview: ~45 minutes</subtitle>
+
+	<list>
+		<bullet>Then loop over the %$categoryImages% and display them as:</bullet>
+	</list>
+	<example><![CDATA[<a href='image-details.php?id=42'>
+	<img src='image.php?id=42&type=1'/>
+</a>]]></example>
+	<list>
+		<bullet>If everything is ready, check the result with Firefox.</bullet>
+	</list>
+		
+</slide>

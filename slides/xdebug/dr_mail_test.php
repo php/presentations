@@ -4,7 +4,7 @@ require 'ezc_mail_setup.php';
 error_reporting(E_ALL);
 
 $parser = new ezcMailParser();
-$set = new ezcSingleFileSet( dirname(__FILE__).'/ezcmailtest.mail' );
+$set = new ezcMailFileSet( array( dirname(__FILE__).'/ezcmailtest.mail' ) );
 echo "Memory: ", xdebug_memory_usage(), " bytes\n\n";
 
 $mail = $parser->parseMail( $set );

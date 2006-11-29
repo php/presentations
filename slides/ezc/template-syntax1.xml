@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Template Syntax</title>
+
+	<blurb>Variable declaration</blurb> 
+	<list type="number">
+		<bullet>%{use $parameter}%</bullet>
+		<bullet>%{var $i, $j}%</bullet>
+	</list>
+<break lines="2"/>
+	<blurb>Assigments and expressions</blurb>
+	<list>
+		<bullet>Assignments: =, +=, -=, *=, >=, /=, %=</bullet>
+		<bullet>Arithmetic operators: +, -, \*, /, %</bullet>
+		<bullet>Comparison operators: ==, ===, !=, !==, &lt;, &gt;, &lt;=, &gt;=</bullet>
+		<bullet>Logical operators:  ||, &amp;&amp;, !</bullet>
+		<bullet>increment, decrement: $v++, $v--, ++$v, --$v</bullet>
+		<bullet>*Note:* Assignments cannot be used inside an expression: %{if $a = 2}%</bullet>
+	</list>
+</slide>

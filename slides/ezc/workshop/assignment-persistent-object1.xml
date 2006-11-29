@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: PersistentObject</title>
+	<subtitle>~30 minutes</subtitle>
+
+	<blurb>In the %~/scripts/read-mail.php% script create a function that uses the ezcPersistentSession:</blurb> 
+	<list type="number">
+		<bullet>Check if the category (the subject of the mail message) already exists, and store the ID of the category in a variable. (Hint: %$q = $session->createFindQuery();%</bullet>
+		<bullet>If it does not exist, create the category and store the new ID in a variable. (Hint: %$session->save( $cat );%)</bullet>
+		<bullet>Check if the mail/image already has been added to the database. (Hint: Use the messageId property of the wpcImage class)</bullet>
+		<bullet>If the image does not exist, create a new one and store it in the database.</bullet>
+		<bullet>Add the 4 related wpcImageFile objects. Use %$session->addRelatedObject();% to link them to the image object.</bullet>
+	</list>
+		
+</slide>

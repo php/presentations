@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Persistent Object Definitions (1/3)</title>
+	<subtitle>~15 minutes</subtitle>
+
+	<blurb>Change the include/ezc-setup.php file to include:</blurb>
+	<example><![CDATA[<?php
+ezcBase::addClassRepository(
+	dirname( __FILE__ ) . '/persistent_classes',
+    null,
+    'wpc'
+);
+?>]]></example>
+<break lines="3"/>
+
+	<blurb>Create the persistent object definition files:</blurb>
+	<example><![CDATA[php pear/ezc/PersistentObjectDatabaseSchemaTiein/rungenerator.php
+	-f mysql
+	-s mysql://root@localhost/workshop
+	data/persistentobject-defs]]></example>
+</slide>

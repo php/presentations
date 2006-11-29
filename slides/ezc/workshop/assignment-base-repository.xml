@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Class Repository (1/3)</title>
+	<subtitle>~15 minutes</subtitle>
+
+	<blurb>In the directory "%~/include/persistent_classes%" create four files containing classes:</blurb> 
+	<list type="number">
+		<bullet>%category.php% containing the class %wpcCategory% with the attributes: |ff0000|$id| and |ff0000|$name|.</bullet>
+		<bullet>%image.php% containing the class %wpcImage% with the attributes: |ff0000|$id|, |ff0000|$messageId|, |ff0000|$category_id|, |ff0000|$description|, |ff0000|$send_time|, |ff0000|$orig_x_size|, |ff0000|$orig_y_size|, |ff0000|$owner_email|, |ff0000|$owner_name| and |ff0000|$shutterspeed|.</bullet>
+		<bullet>%image_file.php% containing the class %wpcImageFile% with the attributes: |ff0000|$id|, |ff0000|$image_id|, |ff0000|$type| and |ff0000|$data|.</bullet>
+		<bullet>%log.php% containing the class %wpcLog% with the attributes: |ff0000|$id|, |ff0000|$logtime|, |ff0000|$src|, |ff0000|$category| and |ff0000|$message|.</bullet>
+	</list>
+		
+</slide>

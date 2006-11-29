@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>ImageConversion</title>
+	<subtitle>Ideas</subtitle>
+
+	<list>
+		<bullet>Transformations can be applied to images</bullet>
+		<bullet>Each transformation consists of one or more filters</bullet>
+	</list>
+
+	<break lines="2"/>
+	<blurb>Available filters are:</blurb>
+	<list>
+		<bullet>*ezcImageColorspaceFilters*: colorspace</bullet>
+		<bullet>*ezcImageGeometryFilters*: crop, scale, scaleExact, scaleHeight, scalePercent, scaleWidth</bullet>
+		<bullet>*ezcImageWatermarkFilters*: watermarkAbsolute, watermarkPercent</bullet>
+		<bullet>*ezcImageEffectFilters*: border, noise, swirl</bullet>
+	</list>
+		
+</slide>

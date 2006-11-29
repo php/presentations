@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Assignment: Template (2/3)</title>
+	<subtitle>Image overview: ~45 minutes</subtitle>
+
+	<list>
+		<bullet>Include the %include/template_function_call.php% file in the
+		%index.php% script and use the %addExtension()% method of the
+		ezcTemplateConfiguration to add it to the template system.</bullet>
+		<bullet>In the template %index.ezt% use the following code to retrieve all related images for each category:</bullet>
+	</list>
+	<example>{foreach $categories as $category}
+&lt;h2>{$category->name}&lt;/h2>
+{$categoryImages = call( $session, "getRelatedObjects",
+                         array( $category, "wpcImage" ))}</example>
+		
+</slide>
