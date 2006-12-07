@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Error objects</subtitle>
+
+	<list>
+		<bullet>PHP 4 applications mostly</bullet>
+		<bullet>Try to mimic exceptions</bullet>
+		<bullet>Well known through the PEAR project</bullet>
+		<bullet>http://pear.php.net</bullet>
+	</list>
+
+	<example result="0"><![CDATA[<?php
+
+function writeToFile( $file, $content )
+{
+	if ( ( $f = fopen( $file, "w" ) ) === false )
+	{
+		return PEAR::raiseError(
+			"File not writeable",
+			23,
+			PEAR_ERROR_RETURN,
+			$file
+		);
+	}
+	// ...
+}
+
+if ( PEAR::isError(
+	$err = writeToFile( "/tmp/foo", "99 klingons..." ) 
+	) )
+{
+	// handle error...
+}
+?>]]></example>
+<break lines="2" />
+<example result="0"><![CDATA[<?php
+
+PEAR::setErrorHandling(
+	PEAR_ERROR_CALLBACK,
+	"handleError"
+);
+
+function handleError( $err )
+{
+	// handle error...
+}
+
+writeToFile( "/tmp/foo" );
+
+?>]]></example>
+
+</slide>

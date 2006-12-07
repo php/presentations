@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Returning error codes</subtitle>
+
+	<blurb>Pros</blurb>
+	<list>
+		<bullet>Easy to implement</bullet>
+		<bullet>Global error message definition</bullet>
+	</list>
+
+	<blurb>Cons</blurb>
+	<list>
+		<bullet>Much work checking for errors</bullet>
+		<bullet>Returning integers (strings) very hard</bullet>
+		<bullet>Inconsitent styles possible</bullet>
+		<bullet>Error messages hardly customizeable</bullet>
+	</list>
+
+</slide>

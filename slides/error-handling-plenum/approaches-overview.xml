@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>What I will show here</subtitle>
+
+	<list>
+		<bullet>Exit and die</bullet>
+		<bullet>Returning error codes</bullet>
+		<bullet>Global error handler</bullet>
+		<bullet>Returning error objects</bullet>
+		<bullet>Throwing exceptions</bullet>
+	</list>
+</slide>

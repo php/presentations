@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Exit and die</subtitle>
+
+	<list>
+		<bullet>Kill the whole app in case of an error</bullet>
+		<bullet>Return error code and/or message</bullet>
+	</list>
+
+	<example result="0"><![CDATA[<?php
+
+function writeToFile( $file, $content )
+{
+	if ( ( $f = fopen( $file, "w" ) ) === false )
+	{
+		exit( "Could not write to <$file>" );
+	}
+	// ...
+}
+
+writeToFile(
+	"/tmp/foo",
+	"99 klingons on a killing crusade"
+); 
+?>]]></example>
+
+</slide>

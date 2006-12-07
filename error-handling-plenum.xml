@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/php-best-practices/talk.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>The error handling plenum</title>
+<event>International PHP Conference 2006</event>
+<location>Frankfurt, Germany</location>
+<date>November 7th, 2006</date>
+<speaker>Tobias Schlitt</speaker>
+<email>toby@php.net</email>
+
+<!-- Intro -->
+<slide>slides/error-handling-plenum/title.xml</slide>
+<slide>slides/error-handling-plenum/aboutme.xml</slide>
+<slide>slides/error-handling-plenum/agenda.xml</slide>
+
+<!-- About this talk -->
+<slide>slides/error-handling-plenum/about-intention.xml</slide>
+<slide>slides/error-handling-plenum/about-what.xml</slide>
+<slide>slides/error-handling-plenum/about-rules.xml</slide>
+
+<!-- Error handling in general -->
+<slide>slides/error-handling-plenum/general-what.xml</slide>
+<!-- <slide>slides/error-handling-plenum/general-why.xml</slide> -->
+<slide>slides/error-handling-plenum/general-error-kinds.xml</slide>
+
+<!-- Different approaches -->
+<slide>slides/error-handling-plenum/approaches-overview.xml</slide>
+<slide>slides/error-handling-plenum/approaches-exit-die-1.xml</slide>
+<slide>slides/error-handling-plenum/approaches-exit-die-2.xml</slide>
+<slide>slides/error-handling-plenum/approaches-error-codes-1.xml</slide>
+<slide>slides/error-handling-plenum/approaches-error-codes-2.xml</slide>
+<slide>slides/error-handling-plenum/approaches-global-handler-1.xml</slide>
+<slide>slides/error-handling-plenum/approaches-global-handler-2.xml</slide>
+<slide>slides/error-handling-plenum/approaches-internal-1.xml</slide>
+<slide>slides/error-handling-plenum/approaches-internal-2.xml</slide>
+<slide>slides/error-handling-plenum/approaches-error-objects-1.xml</slide>
+<slide>slides/error-handling-plenum/approaches-error-objects-2.xml</slide>
+<slide>slides/error-handling-plenum/approaches-exceptions-1.xml</slide>
+<slide>slides/error-handling-plenum/approaches-exceptions-2.xml</slide>
+
+<!-- Open part -->
+<slide>slides/error-handling-plenum/open-part.xml</slide>
+<slide>slides/error-handling-plenum/end.xml</slide>
+
+
+
+</presentation>

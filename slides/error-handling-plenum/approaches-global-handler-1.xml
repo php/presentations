@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Global error handler</subtitle>
+
+	<list>
+		<bullet>Handle errors globally</bullet>
+		<bullet>Single instance error handling</bullet>
+		<bullet>Wast range of variaties out there!</bullet>
+	</list>
+
+	<example result="0"><![CDATA[<?php
+
+class ErrorHandler
+{
+	public static function raiseError(
+		$code, $message )
+	{
+		// Handle error
+	}
+}
+
+function writeToFile( $file, $content )
+{
+	if ( ( $f = fopen( $file, "w" ) ) === false )
+	{
+		ErrorHandler::raiseError(
+			10,
+			"File not writeable <$file>"
+		);
+	}
+}
+
+writeToFile( "/tmp/foo", "99 ferenghi..." );
+
+?>]]></example>
+
+</slide>

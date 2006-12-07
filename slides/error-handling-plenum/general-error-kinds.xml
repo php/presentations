@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Error handling in general</title>
+	<subtitle>Which types of error exist?</subtitle>
+
+	<blurb>System errors</blurb>
+	<list>
+		<bullet>Occur in a underlying/related system</bullet>
+		<bullet>Example: Error connectin to network service</bullet>
+		<bullet>Reaction: Handle, retry or show nice error message</bullet>
+	</list>
+	<blurb>User errors</blurb>
+	<list>
+		<bullet>Result of faulty user data</bullet>
+		<bullet>Example: Wrong password</bullet>
+		<bullet>Reaction: Workflow adjustment</bullet>
+	</list>
+	<blurb>Application errors</blurb>
+	<list>
+		<bullet>Commonly known as "bugs"</bullet>
+		<bullet>Example: Unintended endless loop</bullet>
+		<bullet>Reaction: Mostly not possible</bullet>
+	</list>
+</slide>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Returning error codes</subtitle>
+
+	<list>
+		<bullet>Behaviour similar to shell programs</bullet>
+		<bullet>Functions / methods return constant codes</bullet>
+		<bullet>Most commonly mapped to messages globally</bullet>
+		<bullet>Wast range of variaties out there!</bullet>
+	</list>
+
+	<example result="0"><![CDATA[<?php
+define( "ERR_FILE_NOT_WRITEABLE", 1 );
+
+function writeToFile( $file, $content )
+{
+	if ( ( $f = fopen( $file, "w" ) ) === false )
+	{
+		return ERR_FILE_NOT_WRITEABLE;
+	}
+	// ...
+	return 0;
+}
+
+if ( ( $err = writeToFile( 
+	"/tmp/foo", "99 klingons..." ) ) !== 0 )
+{
+	switch ( $err )
+	{
+		case ERR_FILE_NOT_WRITEABLE:
+		// Handle error...
+		break;
+		// ...
+	}
+}
+?>]]></example>
+
+</slide>

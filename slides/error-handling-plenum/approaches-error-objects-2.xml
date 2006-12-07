@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Error objects</subtitle>
+
+	<blurb>Pros</blurb>
+	<list>
+		<bullet>Powerful concept</bullet>
+		<bullet>Extreme flexible</bullet>
+		<bullet>Highly configurable</bullet>
+		<bullet>Makes much sense for PHP 4</bullet>
+	</list>
+
+	<blurb>Cons</blurb>
+	<list>
+		<bullet>Exceptions are more powerful</bullet>
+		<bullet>Senseless for PHP 5</bullet>
+		<bullet>Blown code (at least in PEAR)</bullet>
+	</list>
+
+</slide>

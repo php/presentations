@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Error handling in general</title>
+	<subtitle>What is error handling?</subtitle>
+
+	<blurb>My own definition</blurb>
+	<break lines="2" />
+	<blurb>
+		&quot;Error handling is the art of reacting poperly to unwanted states 
+		of your application and the underlying / interacting systems, to
+		avoid annoyance on the user side, harm of your system and possible
+		security issues.&quot;
+	</blurb>
+	<break lines="2" />
+	<blurb>Wikipedia says</blurb>
+	<break lines="2" />
+	<blurb>Error handling == exception handling</blurb>
+	<break lines="2" />
+	<blurb>http://en.wikipedia.org/wiki/Error_handling</blurb>
+</slide>

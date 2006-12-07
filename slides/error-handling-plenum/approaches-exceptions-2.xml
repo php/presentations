@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Exceptions</subtitle>
+
+	<blurb>Pros</blurb>
+	<list>
+		<bullet>Easy to implement</bullet>
+		<bullet>Global and local error handling</bullet>
+		<bullet>Allows error handling up the call stack</bullet>
+		<bullet>Native language feature</bullet>
+		<bullet>Very common approach in OO langs</bullet>
+	</list>
+
+	<blurb>Cons</blurb>
+	<list>
+		<bullet>PHP 5 only (does that matter?)</bullet>
+		<bullet>Exceptions may leak in some cases!</bullet>
+		<bullet>Can be absused for flow control</bullet>
+	</list>
+
+</slide>

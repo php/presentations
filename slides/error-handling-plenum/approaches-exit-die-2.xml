@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Exit and die</subtitle>
+
+	<blurb>Pros</blurb>
+	<list>
+		<bullet>Easy to implement</bullet>
+		<bullet>"The short way out"</bullet>
+	</list>
+
+	<blurb>Cons</blurb>
+	<list>
+		<bullet>No possibility to handle the error</bullet>
+		<bullet>No possibility to exit cleanly</bullet>
+		<bullet>No layouting / design possible (web)</bullet>
+		<bullet>Possily inconsistent messages / codes</bullet>
+	</list>
+
+</slide>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>PHP internal</subtitle>
+
+	<list>
+		<bullet>Built into PHP itself</bullet>
+		<bullet>Global handling of errors</bullet>
+		<bullet>Ability to stack error handlers</bullet>
+		<bullet>Ability to define different error handler for different error levels</bullet>
+	</list>
+
+	<example result="0"><![CDATA[<?php
+
+function globalErrorHandler( $errno, $errstr, $errfile, $errline )
+{
+	die( "Error $errno occurred in $errfile on line $errline: '$errstr'." );
+}
+
+set_error_handler( "globalErrorHandler" );
+
+function writeToFile( $file, $content )
+{
+	if ( ( $f = fopen( $file, "w" ) ) === false )
+	{
+		ErrorHandler::raiseError(
+			10,
+			"File not writeable <$file>"
+		);
+	}
+}
+
+writeToFile( "/tmp/foo", "99 ferenghi..." );
+
+?>]]></example>
+
+</slide>

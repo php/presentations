@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Error handling in general</title>
+	<subtitle>Why must I do proper error handling?</subtitle>
+
+	<blurb>"If nothing goes wrong, my application runs well!"</blurb>
+	<blurb>"My users are experienced enough to deal with the errors of the underlying system!"</blurb>
+	<break lines="2" />
+	<list>
+		<bullet>Low level error information can contain sensible information</bullet>
+		<bullet>Every user is annoyed by error messages</bullet>
+		<bullet>Think about people extending your code</bullet>
+		<bullet>Avoiding to present an error to the user makes an application comfortable</bullet>
+	</list>
+</slide>

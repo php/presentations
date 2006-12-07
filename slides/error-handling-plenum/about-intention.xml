@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>About this talk</title>
+	<subtitle>Intention</subtitle>
+
+	<blurb>The idea for this talk</blurb>
+	<list>
+		<bullet>Discussion in planning phase of eZ components</bullet>
+		<bullet>People from Java, C++, C and PHP in 1 room</bullet>
+		<bullet>PHP Exceptions quite new</bullet>
+	</list>
+	<break lines="2" />
+	<blurb>Why a talk about it?</blurb>
+	<list>
+		<bullet>Error handling is very important</bullet>
+		<bullet>Wide range of error handling techniques out there</bullet>
+		<bullet>Pure PHP people not familiar with exceptions</bullet>
+		<bullet>Still some projects ignore error handling</bullet>
+	</list>
+		
+</slide>

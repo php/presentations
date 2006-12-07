@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Global error handler</subtitle>
+
+	<blurb>Pros</blurb>
+	<list>
+		<bullet>Easy to implement</bullet>
+		<bullet>Global error handling</bullet>
+		<bullet>Can become quite complex</bullet>
+	</list>
+
+	<blurb>Cons</blurb>
+	<list>
+		<bullet>Inconsitent styles possible</bullet>
+		<bullet>No local handling of errors possible</bullet>
+	</list>
+
+</slide>

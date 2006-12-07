@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Different approaches</title>
+	<subtitle>Exceptions</subtitle>
+
+	<list>
+		<bullet>Common OO concept</bullet>
+		<bullet>Found in almost any OO lang (e.g. Java, C#,...)</bullet>
+		<bullet>New in PHP 5</bullet>
+	</list>
+
+	<example result="0"><![CDATA[<?php
+class FileNotWriteableException extends Exception
+{
+	public function __construct( $file )
+	{
+		parent::__construct(
+			"File not writeable <$file>"
+		);
+}
+
+function writeToFile( $file, $content )
+{
+	if ( ( $f = fopen( $file, "w" ) ) === false )
+	{
+		throw new FileNotWritableException(
+			$file
+		);
+	}
+	// ...
+}
+
+try
+{
+	writeToFile( "/tmp/foo", "99 klingons..." );
+}
+catch ( FileNotWriteableException $e )
+{
+	// handle error...
+}
+?>]]></example>
+<break lines="2" />
+	<example result="0"><![CDATA[<?php
+// ...
+
+function handleError( Exception $e )
+{
+	// handle error...
+}
+
+set_exception_handler( "handleError" );
+
+writeToFile( "/tmp/foo" );
+?>]]></example>
+</slide>
