@@ -11,15 +11,17 @@ $xml = simplexml_load_file($url)->Result;
 $lat = (double)$xml->Latitude;
 $lon = (double)$xml->Longitude;
 $rad = (180.0/3.1415926); 
-$x = 5; $y = 5;
+$x = 10; $y = 10;
 $dlat = ($x/6371) * $rad;
-$minlat = $lat - $dlat; $maxlat = $lat + $dlat;
-$minlon = $lon-(($y*cos($minlat)/6371) * $rad);
-$maxlon = $lon+(($y*cos($maxlat)/6371) * $rad);
+$lat1 = $lat - $dlat; $lat2 = $lat + $dlat;
+$minlat = min($lat1,$lat2); $maxlat = max($lat1,$lat2);
+$lon1 = $lon-(($y*cos($minlat)/6371) * $rad);
+$lon2 = $lon+(($y*cos($maxlat)/6371) * $rad);
+$minlon = min($lon1,$lon2); $maxlon = max($lon1,$lon2);
 $params = array('bbox'=>"$minlon,$minlat,$maxlon,$maxlat",
                 'min_upload_date'=>time()-4*24*3600);
 $photos = $flickr->photosSearch($params);
-if($photos['photos']) foreach($photos['photos'] as $photo) {
+if(isset($photos['photos'])) foreach($photos['photos'] as $photo) {
     $url = $flickr->getPhotoURL($photo);
     echo '<img src="'.$url.'" height="75" width="75" />';
 } else echo "No photos found";

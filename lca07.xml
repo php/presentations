@@ -7,32 +7,50 @@
     titlesize="2em"
     navbarheight="4.1em"
 >
+<!--
+Better Web Apps with PHP  
 
+In order to build a successful modern web application you have to
+engage the user at a very primal level and harness each and every
+user in such a way that every action enhances the overall 
+experience for all users.  Translating this concept into code and
+making sure that an exponentially growing user base doesn't
+bring your application to its knees becomes a very interesting
+problem to solve.
+-->
 <topic>PHP</topic>
-<title>Getting Rich with PHP 5</title>
-<event>YDN BLR</event>
-<location>Bangalore</location>
-<date>Nov 27, 2006</date>
-<url>http://talks.php.net/show/ydnblr</url>
+<title>Better Web Apps with PHP 5</title>
+<event>LCA'07</event>
+<location>Sydney</location>
+<date>Jan.18, 2007</date>
 <speaker>Rasmus Lerdorf</speaker>
 <email>rasmus@php.net</email>
 
 <slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/lca_agenda.xml</slide>
 
 <slide>slides/intro/ossworks.xml</slide>
 <slide>slides/intro/ego.xml</slide>
 <slide>slides/intro/web20.xml</slide>
 <slide>slides/intro/web2works.xml</slide>
 
-<slide>slides/intro/rich.xml</slide>
-<slide>slides/intro/rich2.xml</slide>
-<slide>slides/bm06/profit.xml</slide>
+<slide>slides/intro/performance_title.xml</slide>
 <slide>slides/bm06/initial.xml</slide>
 <slide>slides/bm06/pg.xml</slide>
 <slide>slides/bm06/pg_persist.xml</slide>
 <slide>slides/bm06/mysql.xml</slide>
 <slide>slides/bm06/apc.xml</slide>
 <slide>slides/bm06/apc2.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/xml_eg.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/offline_atom_google.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/geoflickr.xml</slide>
+<slide>slides/intro/web2_summary.xml</slide>
+<slide>slides/intro/web2_ref.xml</slide>
 
 <slide>slides/intro/security_title.xml</slide>
 <slide>slides/intro/xss.xml</slide>
@@ -42,22 +60,5 @@
 <slide>slides/intro/the_web_is_broken.xml</slide>
 <slide>slides/intro/xss_risks.xml</slide>
 <slide>slides/intro/input_filter2.xml</slide>
-
-<slide>slides/intro/php5.xml</slide>
-<slide>slides/intro/xml_eg.xml</slide>
-<slide>slides/intro/rss_flickr.xml</slide>
-<slide>slides/intro/offline_atom_google.xml</slide>
-<slide>slides/intro/yajax.xml</slide>
-<slide>slides/intro/ws1.xml</slide>
-<slide>slides/intro/ws2.xml</slide>
-<slide>slides/intro/ws3.xml</slide>
-<slide>slides/intro/ws6.xml</slide>
-<slide>slides/intro/geoflickr.xml</slide>
-<slide>slides/intro/ws7.xml</slide>
-<slide>slides/intro/ws8.xml</slide>
-<slide>slides/intro/ws9.xml</slide>
-<slide>slides/intro/ajax_upload2.xml</slide>
-<slide>slides/intro/web2_summary.xml</slide>
-<slide>slides/intro/web2_ref.xml</slide>
 
 </presentation>

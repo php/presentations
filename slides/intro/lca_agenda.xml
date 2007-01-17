@@ -1,48 +1,9 @@
 <slide title="Agenda">
 
-<break lines="1" />
+<break lines="3" />
+<blurb marginleft="150px" fontsize="5em"> Web 2.0?</blurb>
+<blurb marginleft="150px" fontsize="5em"> Profiling and Performance</blurb>
+<blurb marginleft="150px" fontsize="5em"> PHP 5 Web Services</blurb>
+<blurb marginleft="150px" fontsize="5em"> Security</blurb>
 
-<blurb marginleft="150px" fontsize="4em"> Introduction </blurb>
-
-<blurb marginleft="150px" fontsize="4em"> PHP5 </blurb>
-
-<blurb marginleft="150px" fontsize="4em"> Security </blurb>
-
-<blurb marginleft="150px" fontsize="4em"> Large developer teams </blurb>
-<!--
-<list marginleft="3" fontsize="3em">
-  <bullet>Source Control</bullet>
-  <bullet>Mailing Lists</bullet>
-  <bullet>Bug tracking</bullet>
-  <bullet>Regression testing</bullet>
-  <bullet>Maximize development resources</bullet>
-</list>
--->
-<blurb marginleft="150px" fontsize="4em"> High-complexity applications </blurb>
-<!--
-<list marginleft="3" fontsize="3em">
-  <bullet>Separate Layout from business logic</bullet>
-  <bullet>Clean modular internal APIs</bullet>
-</list>
--->
-<blurb marginleft="150px" fontsize="4em"> High-traffic Applications </blurb>
-<!--
-<list marginleft="3" fontsize="3em">
-  <bullet>Profile</bullet>
-  <bullet>Optimize</bullet>
-  - PECL_GEN graphviz example
-  <bullet>Scalable Architecture</bullet> 
-</list>
--->
-<blurb marginleft="150px" fontsize="4em"> I18n and L10n </blurb>
-<!--
-<list marginleft="3" fontsize="3em">
-  <bullet>Runtime vs. Generation-time Templating</bullet>
-  <bullet>Template Management</bullet>
-</list>
--->
-<blurb marginleft="150px" fontsize="4em"> Writing your own PHP Extension </blurb>
-<!--
-PECL_Gen
--->
 </slide>
