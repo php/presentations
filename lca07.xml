@@ -24,6 +24,7 @@ problem to solve.
 <location>Sydney</location>
 <date>Jan.18, 2007</date>
 <speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/lca07</url>
 <email>rasmus@php.net</email>
 
 <slide>slides/intro/titlepage.xml</slide>
@@ -46,19 +47,20 @@ problem to solve.
 <slide>slides/intro/php5.xml</slide>
 <slide>slides/intro/xml_eg.xml</slide>
 <slide>slides/intro/rss_flickr.xml</slide>
-<slide>slides/intro/offline_atom_google.xml</slide>
+<slide>slides/intro/atom_google.xml</slide>
 <slide>slides/intro/ws6.xml</slide>
 <slide>slides/intro/geoflickr.xml</slide>
 <slide>slides/intro/web2_summary.xml</slide>
-<slide>slides/intro/web2_ref.xml</slide>
 
 <slide>slides/intro/security_title.xml</slide>
 <slide>slides/intro/xss.xml</slide>
 <slide>slides/intro/xss1.xml</slide>
+<slide>slides/intro/crumbs.xml</slide>
 <slide>slides/intro/xss2.xml</slide>
 <slide>slides/intro/xss_common.xml</slide>
 <slide>slides/intro/the_web_is_broken.xml</slide>
 <slide>slides/intro/xss_risks.xml</slide>
 <slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/web2_ref.xml</slide>
 
 </presentation>
