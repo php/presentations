@@ -5,13 +5,13 @@
 <example title="Config"><![CDATA[filter.default=special_chars]]></example>
 
 <example title="API" fontsize="1.5em"><![CDATA[<?php
-$email   = input_get(INPUT_POST, 'name', FILTER_VALIDATE_EMAIL);
-$age     = input_get(INPUT_POST, 'age', FILTER_VALIDATE_INT);  
-$url     = input_get(INPUT_COOKIE, 'url', FILTER_VALIDATE_URL);  
-$raw_msg = input_get(INPUT_POST, 'msg', FILTER_UNSAFE_RAW);  
-$options = input_get(INPUT_GET, 'options', FILTER_SANITIZE_SPECIAL_CHARS);
+$email   = filter_input(INPUT_POST, 'name', FILTER_VALIDATE_EMAIL);
+$age     = filter_input(INPUT_POST, 'age', FILTER_VALIDATE_INT);  
+$url     = filter_input(INPUT_COOKIE, 'url', FILTER_VALIDATE_URL);  
+$raw_msg = filter_input(INPUT_POST, 'msg', FILTER_UNSAFE_RAW);  
+$options = filter_input(INPUT_GET, 'options', FILTER_SANITIZE_SPECIAL_CHARS);
 
-$data = filter_data($user_data, FILTER_SANITIZE_STRING);
+$data = filter_var($user_data, FILTER_SANITIZE_STRING);
 ?>]]></example>
 
 <example title="All the Filters" fontsize="1.3em" result="1"><![CDATA[<table border="2" style="font-size:.9em; background:#fff;">
@@ -23,24 +23,24 @@ $data = array("PHP","123","123abc<>()","O'Henry", "하퍼");
 
 echo "<tr><th> </th><td>PHP</td><td>123</td><td>123abc&lt;&gt;()</td>";
 echo "<td>O'Henry</td><td>하퍼</td></tr>\n";
-foreach(input_filters_list() as $filter) {
-  $fn = input_name_to_filter($filter);
+foreach(filter_list() as $filter) {
+  $id = filter_id($filter);
   switch($filter) {
     case 'validate_regexp':
       foreach($data as $k=>$v)
-        $result[$k] = filter_data($v,$fn,array("regexp"=>'/^O.*/'));
+        $result[$k] = filter_var($v,$id,array('options'=>array("regexp"=>'/^O.*/')));
       break;
     case 'callback':
       foreach($data as $k=>$v)
-        $result[$k] = filter_data($v,$fn,"test");
+        $result[$k] = filter_var($v,$id,array("options"=>"test"));
       break;
     case 'validate_url':
       foreach($data as $k=>$v)
-        $result[$k] = filter_data($v,$fn,FILTER_FLAG_SCHEME_REQUIRED);
+        $result[$k] = filter_var($v,$id,FILTER_FLAG_SCHEME_REQUIRED);
       break;
     default:
       foreach($data as $k=>$v)
-        $result[$k] = filter_data($v,$fn);
+        $result[$k] = filter_var($v,$id);
       break;
   }
   echo "<tr><th align='left'>$filter</th>";
