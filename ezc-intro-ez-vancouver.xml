@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Component Libraries</topic>
+<title>Introduction</title>
+<location>Vancouver, Canada</location>
+<date>February 14th, 2007</date>
+<event>&#160;</event>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://files.derickrethans.nl/ezc-intro-ez-vancouver.pdf</url>
+<slide>slides/ezc/title-ezc-generic.xml</slide>
+
+<!-- introduction -->
+<slide>slides/toolbox/goals-library.xml</slide>
+<slide>slides/ezc/contributing.xml</slide>
+<slide>slides/toolbox/goals-process.xml</slide>
+
+<slide>slides/ezc/overview.xml</slide>
+<slide>slides/toolbox/dependencies.xml</slide>
+<slide>slides/ezc/versioning2.xml</slide>
+<slide>slides/toolbox/documentation.xml</slide>
+
+<slide>slides/toolbox/pear-channels.xml</slide>
+<slide>slides/ezc/install-pear.xml</slide>
+
+<slide>slides/ezc/future-2006.2-2007.1.xml</slide>
+
+<slide>slides/ezc/questions.xml</slide>
+
+</presentation>

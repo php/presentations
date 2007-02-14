@@ -7,7 +7,7 @@ $stmt = $sq->select( 'name', 'country', 'lat', 'lon' )
     ->from( 'city' )
     ->where(
         $sq->expr->like(
-            'normalized_name', $sq->bindValue( 'sofia%' )
+            'normalized_name', $sq->bindValue( 'vanco%' )
         )
     )
     ->orderBy( 'country', 'name' )

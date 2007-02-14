@@ -9,7 +9,7 @@
 	<list>
 		<bullet>PNG/JPG, through the ezcGraphGdDriver()</bullet>
 		<bullet>SVG, through the ezcGraphSvgDriver()</bullet>
-		<bullet>Flash, through the ezcGraphMingDriver()</bullet>
+		<bullet>Flash, through the ezcGraphFlashDriver()</bullet>
 	</list>
 
 </slide>

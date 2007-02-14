@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Component Libraries</topic>
+<title>eZ components</title>
+<event>Conference PHP Brasil</event>
+<location>São Paulo, Brasil</location>
+<date>December 2nd, 2006</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://files.derickrethans.nl/ezc-brasil6.pdf</url>
+<slide>slides/ezc/title-ezc-generic.xml</slide>
+
+<!-- introduction -->
+<slide>slides/toolbox/goals-library.xml</slide>
+
+<!-- overview -->
+<slide>slides/ezc/overview.xml</slide>
+<slide>slides/toolbox/dependencies.xml</slide>
+<slide>slides/ezc/install-download.xml</slide>
+<slide>slides/ezc/install-pear.xml</slide>
+
+<slide>slides/ezc/example-consoletools-table.xml</slide>
+<slide>slides/ezc/example-consoletools-progressbar.xml</slide>
+
+<slide>slides/ezc/example-eventlog.xml</slide>
+
+<slide>slides/ezc/example-database-instance.xml</slide>
+<slide>slides/ezc/example-database-query.xml</slide>
+<slide>slides/ezc/example-persistentobject.xml</slide>
+
+<slide>slides/ezc/example-imageconversion.xml</slide>
+<slide>slides/ezc/example-imageconversion2.xml</slide>
+
+<slide>slides/ezc/example-mail.xml</slide>
+<slide>slides/ezc/example-mail-parse.xml</slide>
+<slide>slides/ezc/example-mail-summary.xml</slide>
+
+<slide>slides/ezc/example-template-mail.xml</slide>
+
+<slide>slides/ezc/example-graph.xml</slide>
+<slide>slides/ezc/example-graph-result.xml</slide>
+<slide>slides/ezc/example-graph2.xml</slide>
+<slide>slides/ezc/example-graph2-result.xml</slide>
+
+<slide>slides/ezc/example-feed.xml</slide>
+<slide>slides/ezc/example-feed2.xml</slide>
+
+<!-- what's next? -->
+<slide>slides/ezc/future-1.1-1.2.xml</slide>
+<slide>slides/ezc/contributing.xml</slide>
+<slide>slides/ezc/questions.xml</slide>
+</presentation>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Next?</title>
+	<subtitle>Additions for eZ Components 2007.1</subtitle>
+
+	<blurb>New components:</blurb>
+	<list>
+		<bullet>*Authentication*: Graphs and diagrams</bullet>
+		<bullet>*Feed*: Reading and writing RSS/Atom feeds</bullet>
+		<bullet>*Workflow*: Workflow engine</bullet>
+	</list>
+
+	<blurb>Additions to components:</blurb>
+	<list>
+		<bullet>*Database*: SQL Server driver, Debugging support</bullet>
+		<bullet>*DatabaseSchema*: Foreign Key support</bullet>
+		<bullet>*Mail*: Caching, other additions</bullet>
+		<bullet>*PersistentObject*: Class stub generation</bullet>
+		<bullet>*Template*: Caching, Character set support and Translation Tie-in </bullet>
+	</list>
+
+	<blurb>Roadmap: http://issues.ez.no/RoadMap.php?Id=487</blurb>
+</slide>
