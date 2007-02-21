@@ -1,0 +1,47 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP on Hormones</title>
+<subtitle>(Application Development Using PHP)</subtitle>
+<event>Future of Web Apps</event>
+<location>London</location>
+<date>Feb.21, 2007</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/fowa/wifi.xml</slide>
+<slide>slides/fowa/futureof.xml</slide>
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<slide>slides/intro/ossworks.xml</slide>
+<slide>slides/intro/ego.xml</slide>
+<slide>slides/intro/web20.xml</slide>
+<slide>slides/intro/web2works.xml</slide>
+
+<slide>slides/fowa/performance.xml</slide>
+<slide>slides/fowa/perf.xml</slide>
+<slide>slides/fowa/security.xml</slide>
+<slide>slides/intro/xss_common.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/fowa/filter.xml</slide>
+
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/geoflickr.xml</slide>
+
+<slide>slides/intro/web2_summary.xml</slide>
+<slide>slides/fowa/ref.xml</slide>
+
+</presentation>

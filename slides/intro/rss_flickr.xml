@@ -1,4 +1,4 @@
-<slide title="5-second RSS parser">
+<slide title="5-second Atom parser">
 <break lines="1" />
 <example title="Recent Flickr Photos" fontsize="1.5em" rfontsize="1em" result="1"><![CDATA[<?php
 $url = 'http://www.flickr.com/services/feeds/photos_public.gne';

@@ -1,0 +1,13 @@
+<slide title="History">
+<blurb fontsize="16em" align="center">1993</blurb>
+<example fontsize="2.5em"><![CDATA[<HTML>
+  <HEAD>
+    <TITLE>My Personal Home Page</TITLE>
+  </HEAD>
+  <BODY>
+    This is my cool page<P>
+    And look at my counter<P>
+    <IMG SRC="/cgi-bin/counter.pl">
+  </BODY>
+</HTML>]]></example>
+</slide>

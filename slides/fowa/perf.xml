@@ -1,0 +1,25 @@
+<slide title="Benchmark and Profile">
+<break lines="2"/>
+
+<example title="Benchmark" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[7:27pm shiny:~/bm> http_load -parallel 5 -fetches 1000 bm1.txt
+1000 fetches, 5 max parallel, 6e+06 bytes, in 58.1026 seconds
+6000 mean bytes/connection
+|ffff00|17.2109| fetches/sec, 103266 bytes/sec
+msecs/connect: 0.403263 mean, 68.603 max, 0.194 min
+msecs/first-response: |ffff00|284.133| mean, 5410.13 max, 55.735 min
+HTTP response codes:
+  code 200 -- 1000]]></example>
+
+<example title="Let's ask Callgrind" fontsize="1.5em" type="shell" marginright="0em" marginleft="0.9em"><![CDATA[
+valgrind --tool=callgrind --dump-instr=yes --trace-jump=yes -v /usr/sbin/apache -X
+]]></example>
+
+<example title="After" fontsize="1.6em" type="shell" marginright="0em"><![CDATA[15000 fetches, 5 max parallel, 9e+07 bytes, in 13.6243 seconds
+6000 mean bytes/connection
+|ffff00|1100.97| fetches/sec, 6.60585e+06 bytes/sec
+msecs/connect: 0.295239 mean, 17.802 max, 0.114 min
+msecs/first-response: |ffff00|3.61389| mean, 1097.1 max, 0.739 min
+HTTP response codes:
+  code 200 -- 15000]]></example>
+
+</slide>

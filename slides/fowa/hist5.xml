@@ -1,0 +1,37 @@
+<slide title="History">
+<blurb fontsize="16em" align="center">2005</blurb>
+<example fontsize="1.4em"><![CDATA[<?php
+class db {
+  protected static $dbh = false;
+
+  function connect() {
+    self::$dbh = new PDO('mysql:host=localhost;dbname=test','user','pass');
+    self::$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  }
+}
+
+class items extends db {
+  function load($name) {
+    if(!self::$dbh) $this->connect();
+    try {
+      if(!self::$dbh) $this->connect();
+      $stmt = self::$dbh->prepare("SELECT * FROM items WHERE firstname=:name
+                                    ORDER by ctime desc");
+      $ret = $stmt->execute(array('name'=>$name)); 
+    } catch (PDOException $e) {
+      die($e->getMessage());
+    }
+    return $ret;
+  }
+}
+
+$db = new items;
+$result = $db->load("bob");
+foreach($result->fetch(PDO::FETCH_ASSOC) as $row) {
+  echo <<<EOB
+  {$row['fullname']}<br />
+  {$row['address']}<br />
+EOB;
+}
+?>]]></example>
+</slide>

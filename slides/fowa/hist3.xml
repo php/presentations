@@ -1,0 +1,18 @@
+<slide title="History">
+<blurb fontsize="16em" align="center">1994</blurb>
+<example fontsize="1.8em"><![CDATA[<!--getenv HTTP_USER_AGENT-->
+<!--ifsubstr $exec_result Mozilla-->
+Hey, you are using Netscape!<p>
+<!--endif-->
+
+<!--sql database select * from table where user='$username'-->
+
+<!--ifless $numentries 1-->
+Sorry, that record does not exist<p>
+<!--endif exit-->
+
+Welcome <!--$user-->!<p>
+You have <!--$index:0--> credits left in your account.<p>
+
+<!--include /text/footer.html-->]]></example>
+</slide>

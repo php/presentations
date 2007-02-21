@@ -1,0 +1,17 @@
+<slide title="History">
+<blurb fontsize="16em" align="center">1995</blurb>
+<example fontsize="1.6em"><![CDATA[<?
+ $name = "bob";	
+ $result = msql($db,"select * from table where firstname='$name'");
+ $num = msql_numrows($result);
+ echo "$num records found!<p>";
+ $i=0;
+ while($i<$num);
+    echo msql_result($result,$i,"fullname");
+    echo "<br>";
+    echo msql_result($result,$i,"address");
+    echo "<br>";
+    $i++;
+  endwhile;
+>]]></example>
+</slide>
