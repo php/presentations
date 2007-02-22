@@ -1,0 +1,30 @@
+<slide title="Migrating to PHP 5">
+
+<blurb title="Other Minor Changes" fontsize="4em">
+</blurb>
+
+<example title="Stricter type checks on array handling"><![CDATA[<?php
+$a = "test";
+$a[1][2][3] = "a"; // Warning in PHP 4, Fatal in 5.x
+
+array_merge("string",123);  //  Warning in 5.x
+?>]]></example>
+
+<example title="strrpos() works now"><![CDATA[<?php
+echo strrpos("kangaroo","an");
+// Returns 4 in PHP 4
+// Returns 1 in PHP 5
+?>]]></example>
+
+<example title="ip2long has been fixed"><![CDATA[<?php
+var_dump(ip2long("000.000.998.889"));  // -1 in PHP 4, false in PHP 5
+var_dump(ip2long("255.255.255.255"));  // -1 in PHP 4, -1 in PHP 5
+?>]]></example>
+
+<example title="Don't use {} for string offsets"><![CDATA[<?php
+$a = "foo";
+$a{0} = "F";
+?>]]></example>
+
+
+</slide>

@@ -1,0 +1,11 @@
+<slide title="Migrating to PHP 5">
+<break lines="2" />
+<blurb title="XML Handling" fontsize="4em">
+</blurb>
+<list fontsize="4em">
+<bullet> Replace old domxml parsers with SimpleXML or new dom</bullet>
+<bullet> Replace old SAX parsers with xmlreader</bullet>
+<bullet> Replace PEAR SOAP or NuSOAP with new SOAP extension</bullet>
+</list>
+
+</slide>

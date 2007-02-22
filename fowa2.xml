@@ -1,0 +1,79 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+
+<topic>Yahoo!</topic>
+<title>PHP Workshop</title>
+<event>FOWA 2007</event>
+<location>London</location>
+<date>Feb.22, 2007</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://php.corp.yahoo.com/show/fowa2</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/fowa/workshop_agenda.xml</slide>
+
+<slide>slides/bm06/profit.xml</slide>
+<slide>slides/bm06/initial.xml</slide>
+<slide>slides/bm06/pg.xml</slide>
+<slide>slides/bm06/pg_persist.xml</slide>
+<slide>slides/bm06/mysql.xml</slide>
+<slide>slides/bm06/apc.xml</slide>
+<slide>slides/bm06/apc2.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/php5_refclone.xml</slide>
+<slide>slides/intro/php5_construct.xml</slide>
+<slide>slides/intro/php5_private.xml</slide>
+<slide>slides/intro/php5_protected.xml</slide>
+<slide>slides/intro/php5_setget.xml</slide>
+<slide>slides/intro/php5_call.xml</slide>
+<slide>slides/intro/php5_exceptions.xml</slide>
+<slide>slides/intro/streams.xml</slide>
+<slide>slides/intro/stream_select.xml</slide>
+<slide>slides/intro/sqlite1.xml</slide>
+<slide>slides/intro/sqlite2.xml</slide>
+
+<slide>slides/intro/xml_eg.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/atom_google.xml</slide>
+<slide>slides/intro/yajax.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/geoflickr.xml</slide>
+<slide>slides/intro/ws7.xml</slide>
+<slide>slides/intro/ws8.xml</slide>
+<slide>slides/intro/ws9.xml</slide>
+<slide>slides/intro/ajax_upload1.xml</slide>
+<slide>slides/intro/ajax_upload2.xml</slide>
+
+<slide>slides/intro/security_title.xml</slide>
+<slide>slides/intro/xss.xml</slide>
+<slide>slides/intro/xss1.xml</slide>
+<slide>slides/intro/xss2.xml</slide>
+<slide>slides/intro/xss_common.xml</slide>
+<slide>slides/intro/the_web_is_broken.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+
+<slide>slides/intro/mig1.xml</slide>
+<slide>slides/intro/mig2.xml</slide>
+<slide>slides/intro/mig4.xml</slide>
+<slide>slides/intro/mig5.xml</slide>
+<slide>slides/intro/mig6.xml</slide>
+<slide>slides/intro/mig7.xml</slide>
+
+<slide>slides/intro/web2_ref.xml</slide>
+
+</presentation>

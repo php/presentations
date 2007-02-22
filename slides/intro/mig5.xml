@@ -1,0 +1,64 @@
+<slide title="Migrating to PHP 5">
+
+<blurb title="Minor OOP Changes" fontsize="4em">
+</blurb>
+<list fontsize="4em">
+<bullet>by-ref instead of by-value objects as already discussed</bullet>
+<bullet>*var* keyword is synonymous with *public*</bullet>
+<bullet>old-style constructors still work</bullet>
+<bullet>is_a() is going away, use instanceof operator</bullet>
+</list>
+
+<example title="Converting Objects to strings in 5.2.x"><![CDATA[<?php
+echo (string)new stdClass;
+// Results in Object id #1 before 5.2.x 
+// E_RECOVERABLE_ERROR in 5.2.x
+// Use a __tostring() method to explicitly define the conversion
+?>]]></example>
+
+<example title="Don't re-assign $this"><![CDATA[<?php
+class foo {
+  function bar($obj) {
+    $this = $obj;  // Fatal error in 5.x
+  }
+}
+?>]]></example>
+
+<example title="Case kept in object info calls"><![CDATA[<?php
+class Foo {
+  function BaR() { }
+}
+class Xyz extends Foo { }
+$a = new xyz;
+echo get_class($a);
+print_r(get_class_methods($a));
+echo get_parent_class($a);
+?>]]></example>
+
+<example title="A valid class is no longer empty"><![CDATA[<?php
+$a = new stdClass;
+var_dump(empty($a)); // true in PHP 4, false in PHP 5
+?>]]></example>
+
+<example title="Avoid is_a()"><![CDATA[<?php
+$a = new stdClass;
+var_dump(empty($a)); // true in PHP 4, false in PHP 5
+?>]]></example>
+
+<example title="E_STRICT on static method calls"><![CDATA[<?php
+class foo {
+  function bar() { echo "Bar"; }
+}
+foo::bar(); // Non-static method foo::bar() should not be called statically
+?>]]></example>
+
+<example title="Redefining consts in 5.2.x"><![CDATA[<?php
+class foo {
+   const foo = "bar";
+   const foo = "baz";  // Fatal error in 5.2.x
+}
+echo foo::foo;
+?>]]></example>
+
+
+</slide>

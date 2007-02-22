@@ -1,0 +1,12 @@
+<slide title="Migrating to PHP 5">
+<break lines="2" />
+<blurb title="Minor Changes" fontsize="4em">
+</blurb>
+<list fontsize="4em">
+<bullet> Completely rewritten date/time handling code</bullet>
+<bullet> New E_STRICT (5.1.x) and E_RECOVERABLE (5.2.x) error levels </bullet>
+<bullet> Improved memory manager (5.2.x)</bullet>
+<bullet> Optimized a number of string manipulation functions (5.2.x)</bullet>
+</list>
+
+</slide>

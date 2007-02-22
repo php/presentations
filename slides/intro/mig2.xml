@@ -1,0 +1,10 @@
+<slide title="Migrating to PHP 5">
+<break lines="2" />
+<blurb title="MySQL" fontsize="4em">
+</blurb>
+<list fontsize="4em">
+<bullet> Consider moving to PDO or mysqli</bullet>
+<bullet> Old ext/mysql extension still works fine</bullet>
+</list>
+
+</slide>

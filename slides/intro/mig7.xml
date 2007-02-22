@@ -1,0 +1,14 @@
+<slide title="Migrating to PHP 5">
+<break lines="2" />
+<example title="A lint check across your code could help" type="shell"><![CDATA[
+find /source/directory \ 
+-name \*.php -o -name \*.inc -o \*.html \ 
+| xargs -n1 \ 
+php -ddisplay_errors=1 -derror_reporting=8191 -l
+]]></example>
+
+<break lines="2" />
+<blurb fontsize="5em">Resources</blurb>
+<link marginleft="2em" fontsize="4em" href="http://php.net/migration5">http://php.net/migration5</link>
+<link marginleft="2em" fontsize="4em" href="http://www.php.net/UPDATE_5_2.txt">http://www.php.net/UPDATE_5_2.txt</link>
+</slide>
