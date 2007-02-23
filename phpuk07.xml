@@ -1,0 +1,53 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Fast and Rich</title>
+<subtitle>(Web Applications with PHP 5)</subtitle>
+<event>PHP UK</event>
+<location>London</location>
+<date>Feb.23, 2007</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<slide>slides/bm06/profit.xml</slide>
+<slide>slides/bm06/initial.xml</slide>
+<slide>slides/bm06/pg.xml</slide>
+<slide>slides/bm06/pg_persist.xml</slide>
+<slide>slides/bm06/mysql.xml</slide>
+<slide>slides/bm06/apc.xml</slide>
+<slide>slides/bm06/apc2.xml</slide>
+
+<slide>slides/intro/xss_common.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/fowa/filter.xml</slide>
+
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/geoflickr.xml</slide>
+<slide>slides/intro/yajax.xml</slide>
+<slide>slides/intro/ajax_upload2.xml</slide>
+
+<slide>slides/intro/mig1.xml</slide>
+<slide>slides/intro/mig2.xml</slide>
+<slide>slides/intro/mig4.xml</slide>
+<slide>slides/intro/mig5.xml</slide>
+<slide>slides/intro/mig6.xml</slide>
+<slide>slides/intro/mig7.xml</slide>
+
+<slide>slides/intro/web2_ref.xml</slide>
+
+</presentation>

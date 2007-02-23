@@ -2,6 +2,7 @@
 <blurb fontsize="16em" align="center">1995</blurb>
 <example fontsize="1.6em"><![CDATA[<?
  $name = "bob";	
+ $db = "db";
  $result = msql($db,"select * from table where firstname='$name'");
  $num = msql_numrows($result);
  echo "$num records found!<p>";
@@ -12,6 +13,6 @@
     echo msql_result($result,$i,"address");
     echo "<br>";
     $i++;
-  endwhile;
+ endwhile;
 >]]></example>
 </slide>
