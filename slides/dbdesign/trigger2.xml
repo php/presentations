@@ -5,7 +5,23 @@
 
 	<blurb>A better solution is a trigger:</blurb>
 <break/>
-  <example><![CDATA[]]></example>
+  <example><![CDATA[DELIMITER |
+
+CREATE TRIGGER trg_airport_name AFTER UPDATE ON airport_code
+  FOR EACH ROW BEGIN
+
+    UPDATE flight_denorm
+      SET from_airfield_name = NEW.airfield_name
+      WHERE from_airport = NEW.code;
+
+    UPDATE flight_denorm
+      SET to_airfield_name = NEW.airfield_name
+      WHERE to_airport = NEW.code;
+
+  END;
+|
+
+DELIMITER ;]]></example>
 
 </slide>
 

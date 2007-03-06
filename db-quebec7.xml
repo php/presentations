@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/perf/ezp.css"
+	backgroundfixed="1" >
+<topic>Databases</topic>
+<title>Designing good databases</title>
+<event>Conférence PHP Québec</event>
+<location>Montréal, Canada</location>
+<date>March 14th, 2007</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://files.derickrethans.nl/db-quebec7.pdf</url>
+<slide>slides/dbdesign/title.xml</slide>
+
+<!-- CONTENTS -->
+<slide>slides/dbdesign/content.xml</slide>
+
+<!-- DESIGN -->
+<slide>slides/dbdesign/exemple-data-et.xml</slide>
+<slide>slides/dbdesign/table-et-0NF.xml</slide>
+<slide>slides/dbdesign/1nf.xml</slide>
+<slide>slides/dbdesign/table-et-1NF.xml</slide>
+<slide>slides/dbdesign/2nf.xml</slide>
+<slide>slides/dbdesign/table-et-1NF-primary-key.xml</slide>
+<slide>slides/dbdesign/table-et-2NF.xml</slide>
+<slide>slides/dbdesign/3nf.xml</slide>
+<slide>slides/dbdesign/table-et-3NF.xml</slide>
+<slide>slides/dbdesign/back-to-1nf.xml</slide>
+<slide>slides/dbdesign/erd1.xml</slide>
+<slide>slides/dbdesign/surrogate-pks.xml</slide>
+<slide>slides/dbdesign/surrogate-pks2.xml</slide>
+<slide>slides/dbdesign/erd2.xml</slide>
+<slide>slides/dbdesign/relations-1-1.xml</slide>
+<slide>slides/dbdesign/relations-1-n.xml</slide>
+<slide>slides/dbdesign/relations-n-m.xml</slide>
+<slide>slides/dbdesign/singular-vs-plural-names.xml</slide>
+<slide>slides/dbdesign/naming-columns.xml</slide>
+
+<!-- ASSIGNMENT 1 -->
+<slide>slides/dbdesign/assignment1.xml</slide>
+<slide>slides/dbdesign/break.xml</slide>
+
+<!-- SQL DDL -->
+<slide>slides/dbdesign/column-types.xml</slide>
+<slide>slides/dbdesign/null-values-in-columns.xml</slide>
+<slide>slides/dbdesign/auto-increment.xml</slide>
+<slide>slides/dbdesign/auto-increment2.xml</slide>
+<slide>slides/dbdesign/create-table1.xml</slide>
+<slide>slides/dbdesign/create-table3.xml</slide>
+<slide>slides/dbdesign/create-table2.xml</slide>
+<slide>slides/dbdesign/intregity.xml</slide>
+<slide>slides/dbdesign/foreign-keys.xml</slide>
+<slide>slides/dbdesign/foreign-keys2.xml</slide>
+<slide>slides/dbdesign/foreign-keys3.xml</slide>
+<slide>slides/dbdesign/foreign-keys4.xml</slide>
+
+<slide>slides/dbdesign/index.xml</slide>
+
+<!-- ASSIGNMENT 2 -->
+<slide>slides/dbdesign/assignment2.xml</slide>
+<slide>slides/dbdesign/break.xml</slide>
+
+<!-- DENORMALIZATION/TRIGGERS -->
+<slide>slides/dbdesign/denormalization1.xml</slide>
+<!-- Example 1 -->
+<slide>slides/dbdesign/denormalization2.xml</slide>
+<slide>slides/dbdesign/denormalization3.xml</slide>
+
+<slide>slides/dbdesign/trigger1.xml</slide>
+<slide>slides/dbdesign/trigger2.xml</slide>
+
+<!-- TIPS & TRICKS -->
+<slide>slides/dbdesign/tips.xml</slide>
+<slide>slides/hpp/mysql_opt2.xml</slide>
+<slide>slides/dbdesign/trees.xml</slide>
+<slide>slides/dbdesign/trees2.xml</slide>
+<slide>slides/dbdesign/tree-nested-set1.xml</slide>
+<slide>slides/dbdesign/tree-nested-set2.xml</slide>
+<slide>slides/dbdesign/tree-nested-set3.xml</slide>
+<slide>slides/dbdesign/tree-nested-set4.xml</slide>
+<slide>slides/dbdesign/paths.xml</slide>
+<slide>slides/dbdesign/paths-adding-node.xml</slide>
+<slide>slides/dbdesign/paths-selecting-path.xml</slide>
+<slide>slides/dbdesign/paths-selecting-subtree.xml</slide>
+<slide>slides/dbdesign/questions.xml</slide>
+
+</presentation>
