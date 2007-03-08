@@ -11,9 +11,7 @@ String: <input type="text" name="string" maxlength="64" size="64"/><br/>
 $definition = array(
 	'int' => array(
 		'filter' =>  FILTER_VALIDATE_INT,
-		'options' => array(
-			'options' => array( "min_range" => 1, "max_range" => 10 )
-		),
+		'options' => array( "min_range" => 1, "max_range" => 10 )
 	),
 	'string' => FILTER_SANITIZE_SPECIAL_CHARS
 );

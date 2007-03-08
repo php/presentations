@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Getting Input Arrays</title>
+	<title>Filtering Variables</title>
 
 	<example result="1"><![CDATA[<?php
 $text = "This tekßt is göing\tto be changed\n";
