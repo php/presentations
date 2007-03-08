@@ -8,10 +8,10 @@ Data: <input type="text" name="data" maxlength="64" size="64"/><br/>
 </form>
 <?php
 $filter = FILTER_CALLBACK;
-$callback = array( 'Validate', 'My' );
+$callback = array( 'options' => array( 'Validate', 'My' ) );
 
 if (isset($_GET['data'])) {
-	$data = input_get( INPUT_GET, 'data', $filter, $callback );
+	$data = filter_input( INPUT_GET, 'data', $filter, $callback );
 	var_dump( $data );
 }
 

@@ -3,7 +3,7 @@
 	<title>Input Filter</title>
 	<subtitle>Data Accessing Functions</subtitle>
 
-	<example>mixed input_get (int source, string name, string filter
+	<example>mixed filter_input (int source, string name, string filter
 			[, mixed filter_options, [ string characterset ] ]);</example>
 	<list>
 		<bullet>Returns the filtered variable $name from source $source. It
@@ -12,7 +12,7 @@
 	</list>
 <break lines="2"/>
 
-	<example>bool filter_data (mixed variable, string filter
+	<example>bool filter_var (mixed variable, string filter
 			[, mixed filter_options, [ string characterset ] ]);</example>
 	<list>
 		<bullet>Filters the user supplied variable $variable with the filter

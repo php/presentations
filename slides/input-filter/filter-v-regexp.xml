@@ -11,10 +11,11 @@ Regexp: <input type="text" name="regexp" maxlength="64" size="64"/><br/>
 <?php
 $filter = FILTER_VALIDATE_REGEXP;
 if (!empty($_GET['regexp']))
-	$options['regexp'] = $_GET['regexp'];
+	$options = array( 'options' =>
+		array( 'regexp' => $_GET['regexp'] ) );
 
 if (isset($_GET['data'])) {
-	$data = input_get( INPUT_GET, 'data', $filter, $options );
+	$data = filter_input( INPUT_GET, 'data', $filter, $options );
 	var_dump( $data );
 }
 ?>]]></example>

@@ -8,10 +8,10 @@ Data 2: <input type="text" name="data[]" maxlength="64" size="64"/><br/>
 <input type="submit"/>
 </form>
 <?php
-$options = FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_ARRAY;
+$options = FILTER_FLAG_STRIP_HIGH | FILTER_REQUIRE_ARRAY;
 
 if (isset($_GET['data'])) {
-	$data = input_get(
+	$data = filter_input(
 		INPUT_GET,               // source
 		'data',                  // parameter name
 		FILTER_SANITIZE_STRING,  // filter

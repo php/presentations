@@ -4,7 +4,7 @@ if (isset($_GET['data'])) {
 	foreach( $flags as $flagName )
 		if ( isset( $_GET[$flagName] ) )
 			$o |= constant( $flagName );
-	$data = input_get( INPUT_GET, 'data', $filter, $o );
+	$data = filter_input( INPUT_GET, 'data', $filter, $o );
 	var_dump( $data );
 }
 ?>

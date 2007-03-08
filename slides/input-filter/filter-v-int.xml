@@ -19,16 +19,16 @@ Min: <input type="text" name="min"/><br/>Max: <input type="text" name="max"/>
 </form>
 <?php
 if (!empty($_GET['min']))
-	$options['min_range'] = (int) $_GET['min'];
+	$options['options']['min_range'] = (int) $_GET['min'];
 if (!empty($_GET['max']))
-	$options['max_range'] = (int) $_GET['max'];
+	$options['options']['max_range'] = (int) $_GET['max'];
 if (isset($_GET['data'])) {
 	$o = 0;
 	foreach( $flags as $flagName )
 		if ( isset( $_GET[$flagName] ) )
 			$o |= constant( $flagName );
 	$options['flags'] = $o;
-	$data = input_get( INPUT_GET, 'data', $filter, $options );
+	$data = filter_input( INPUT_GET, 'data', $filter, $options );
 	var_dump( $data );
 }
 ?>]]></example>

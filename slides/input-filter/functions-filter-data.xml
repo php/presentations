@@ -4,9 +4,9 @@
 
 	<example result="1"><![CDATA[<?php
 $text = "This tekßt is göing\tto be changed\n";
-$data = filter_data(
+$data = filter_var(
 	$text, 
-	input_name_to_filter( 'special_chars' ),
+	filter_id( 'special_chars' ),
 	FILTER_FLAG_STRIP_HIGH
 );
 var_dump( $data );
