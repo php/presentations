@@ -1,0 +1,37 @@
+<slide title="XSRF">
+<break lines="1"/>
+<blurb marginleft="2em" fontsize="6em">Use Crumbs!</blurb>
+
+<blurb>
+Include a user-specific crumb in the request data.
+</blurb>
+
+<example title="Generating the crumb" fontsize="1.7em" marginright="0.5em"><![CDATA[<?php
+$user = 'rasmus';
+$secret = 'foo';
+$crumb = sha1($user.$secret);
+?>
+<script>
+function sndReq(formName) {
+  YAHOO.util.Connect.setForm(formName);
+  YAHOO.util.Connect.asyncRequest('POST','api.php',callback);
+}
+</script>  
+<form name="myform" onsubmit="sndReq('myform'); return false;">
+  <input type="hidden" name="crumb" value="<?php echo $crumb?>"/>
+  <input type="text" name="foo"/>
+</form>]]></example>
+
+<example title="Validating the crumb - api.php" fontsize="1.7em" marginright="0.5em"><![CDATA[<?php
+$user = 'rasmus';
+$secret = 'foo';
+if($_POST['crumb'] != sha1($user.$secret)) {
+  echo json_encode(array("error"=>"XSRF Detected"));
+  exit;
+}
+
+// Perform Action
+
+?>]]></example>
+
+</slide>

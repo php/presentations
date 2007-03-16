@@ -1,0 +1,13 @@
+<slide title="XSS Types">
+<break lines="6"/>
+
+<blurb fontsize="5em">Attribute Injection</blurb>
+<example fontsize="1.75em" result="0"><![CDATA[<input type=hidden name=foo value=<?php echo $_GET['foo']/>]]></example>
+
+<blurb fontsize="5em">Tricky Attribute Injection</blurb>
+<example result="0"><![CDATA[ <a href="/foo" onclick="location.href='/sq?arg=foo'+alert('xss_check')//'">]]></example>
+
+<blurb fontsize="5em">Pure Javascript</blurb>
+<example fontsize="2.5em" result="0"><![CDATA[foo.innerHTML = document.location.href;]]></example>
+
+</slide>

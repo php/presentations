@@ -1,0 +1,18 @@
+<slide title="Xdebug">
+<break lines="2" />
+
+<link fontsize="3em" marginleft="1em" leader="Docs: " href="http://xdebug.org/docs-profiling2.php"/>
+
+<example fontsize="1.75em" type="shell" title="xdebug.ini"><![CDATA[
+xdebug.profiler_enable = "1"
+xdebug.profiler_aggregate = On
+xdebug.profiler_output_dir = "/tmp"
+xdebug.profiler_output_name = "crc32"
+
+; xdebug.remote_enable = "1"
+; xdebug.remote_handler = "dbgp"
+; xdebug.remote_host = "<your_client_box>.example.com"
+; xdebug.remote_mode = "req"
+; xdebug.allowed_clients = ""]]></example>
+
+</slide>

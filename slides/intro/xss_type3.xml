@@ -1,0 +1,12 @@
+<slide title="XSS Types">
+
+<break lines="8"/>
+
+<blurb fontsize="5em">Unfiltered Request Headers</blurb>
+<example fontsize="1.75em" result="0"><![CDATA[<?php 
+$uri = getenv('REFERER');
+$uri = filter_input(INPUT_SERVER, 'REFERER', FILTER_UNSAFE_RAW);
+?>
+<a href="<?php echo $uri?>">Back</a>]]></example>
+
+</slide>

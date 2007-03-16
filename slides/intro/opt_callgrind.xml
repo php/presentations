@@ -1,0 +1,29 @@
+<slide title="Callgrind">
+<break lines="2" />
+
+<example fontsize="2.25em" type="shell" title="callgrind"><![CDATA[valgrind --tool=callgrind --collect-jumps==yes \
+         --dump-instr=yes --trace-jump=yes -v \
+         /usr/sbin/httpd -X]]></example>
+
+<example fontsize="2.25em" type="shell" title=""><![CDATA[chmod a+rw callgrind.out.XXXX]]></example>
+
+<example fontsize="1.5em" type="shell" title="callgrind_control"><![CDATA[Usage: callgrind_control [options] [ <PID>|<Name> ...]
+
+If no PIDs/Names are given, an action is applied to all currently
+active Callgrind runs. Default action is printing short information.
+
+Options:
+  -h         Print this help text
+  -v         Print version
+  -q         Be quiet
+  -l         Print more information
+  -s         Print status information
+  -b         Print backtrace information
+  -e [A,..]  Print event counters for A,.. [default: all]
+  -d [str]   Request a profile dump, include <str> as trigger hint
+  -z         Zero all cost counters
+  -k         Kill
+  -i on/off  Switch instrumentation state on/off
+  -w <dir>   Manually specify the working directory of a callgrind run]]></example>
+
+</slide>

@@ -1,7 +1,7 @@
 <slide title="The Web keeps breaking">
 <break lines="1" />
 
-<blurb fontsize="6em">Remote spoofing arbitrary request headers</blurb>
+<blurb fontsize="5em">Remote spoofing arbitrary request headers</blurb>
 
 <example fontsize="2em" title="Courtesy of IE and Flash" result="0"><![CDATA[var req = new LoadVars();
 req.addRequestHeader("Host:", "host.example.com");
@@ -11,7 +11,7 @@ req.send("http://host.foo.com/", "_blank");]]></example>
 A variation allows request splitting against servers with keep-alive enabled.
 </blurb>
 
-<blurb fontsize="6em">Macrodobe involved again</blurb>
+<blurb fontsize="5em">Macrodobe involved again</blurb>
 
 <example fontsize="2em" title="Acrobat" result="0"><![CDATA[http://example.org/foo.pdf#bar=javascript:alert('XSS');
 ]]></example>

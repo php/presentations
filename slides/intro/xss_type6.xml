@@ -1,0 +1,8 @@
+<slide title="XSS Types">
+<break lines="8"/>
+<blurb fontsize="5em">Manual Decoding</blurb>
+<example fontsize="2.5em" result="0"><![CDATA[<?php echo urldecode($_GET['foo'])?>]]></example>
+
+<example fontsize="2.5em" result="0"><![CDATA[<?php echo base64_decode($_GET['foo'])?>]]></example>
+
+</slide>

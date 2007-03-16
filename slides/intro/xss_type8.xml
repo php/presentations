@@ -1,0 +1,10 @@
+<slide title="XSS Types">
+<break lines="6"/>
+
+<blurb fontsize="5em">On* and Style Entity Trick</blurb>
+<example fontsize="1.5em" result="0"><![CDATA[<?php $foo = htmlspecialchars($_GET['foo'], ENT_QUOTES);?>
+<a href="" onmouseover="a='Fantas<?php echo $foo?>tic';">Mouse Over Me</a>]]></example>
+
+<example fontsize="1.5em" result="1" hide="0" title="Input: ?foo=';alert(0);//"><![CDATA[<a href="" onmouseover="a='Fantas&#039;;alert(0);//tic';">Mouse Over Me</a>]]></example>
+
+</slide>

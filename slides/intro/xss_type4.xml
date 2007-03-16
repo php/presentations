@@ -1,0 +1,8 @@
+<slide title="XSS Types">
+
+<break lines="8" />
+
+<blurb fontsize="5em">One-Click</blurb>
+<example fontsize="2.5em" result="0"><![CDATA[<a href="<?php echo $_GET['_src']?>">Go</a>]]></example>
+
+</slide>

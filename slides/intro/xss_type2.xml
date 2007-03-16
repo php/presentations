@@ -1,0 +1,12 @@
+<slide title="XSS Types">
+<break lines="8"/>
+<blurb fontsize="5em">Unfiltered PHP_SELF/REQUEST_URI</blurb>
+<example fontsize="1.6em" result="0"><![CDATA[<?php
+$uri = getenv('REQUEST_URI');
+$uri = $_SERVER('REQUEST_URI');
+$uri = $PHP_SELF;
+$uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_UNSAFE_RAW);
+?>
+<a href="<?php echo $uri?>?page=2">Page 2</a>]]></example>
+
+</slide>
