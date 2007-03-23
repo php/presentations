@@ -1,0 +1,17 @@
+<slide title="XSS">
+
+<blurb>Never display user data back to the user unfiltered.</blurb>
+
+<example title="Traditional Form Handling" result="1"><![CDATA[<form action="<?php echo $PHP_SELF?>" method="POST">
+Your name: <input type=text name=name><br>
+Your age: <input type=text name=age><br>
+<input type=submit>
+</form>
+<?php
+if($_SERVER['REQUEST_METHOD']=='POST') {
+  echo <<<EOB
+Hi $_POST[name], you are $_POST[age] years old.
+EOB;
+} ?>]]></example>
+
+</slide>
