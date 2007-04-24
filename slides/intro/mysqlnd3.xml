@@ -1,0 +1,30 @@
+<slide title="mysqlnd">
+
+<break lines="1" />
+
+<example fontsize="1.75em" type="shell" title="ext/mysql Baseline"><![CDATA[% http_load -parallel 5 -fetches 100 ~/drupal.txt
+100 fetches, 5 max parallel, 634100 bytes, in 25.5106 seconds
+6341 mean bytes/connection
+3.91994 fetches/sec, 24856.3 bytes/sec
+msecs/connect: 3.95143 mean, 34.813 max, 1.935 min
+msecs/first-response: 1242.85 mean, 25450.3 max, 234.405 min
+HTTP response codes:
+  code 200 -- 100]]></example>
+
+<example fontsize="1.75em" type="shell" title="ext/mysqli"><![CDATA[100 fetches, 5 max parallel, 634100 bytes, in 25.3368 seconds
+6341 mean bytes/connection
+3.94683 fetches/sec, 25026.9 bytes/sec
+msecs/connect: 2.66605 mean, 6.651 max, 1.981 min
+msecs/first-response: 1219.1 mean, 2064.9 max, 262.123 min
+HTTP response codes:
+  code 200 -- 100]]></example>
+
+<example fontsize="1.75em" type="shell" title="ext/mysqli-nd"><![CDATA[100 fetches, 5 max parallel, 634100 bytes, in 25.7054 seconds
+6341 mean bytes/connection
+3.89023 fetches/sec, 24667.9 bytes/sec
+msecs/connect: 2.63793 mean, 23.317 max, 1.916 min
+msecs/first-response: 1229.47 mean, 25681.7 max, 260.643 min
+HTTP response codes:
+  code 200 -- 100]]></example>
+
+</slide>

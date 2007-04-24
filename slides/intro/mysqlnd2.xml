@@ -1,0 +1,62 @@
+<slide title="mysqlnd">
+
+<break lines="1" />
+
+<example fontsize="1em" type="shell" title="A Drupal Page view"><![CDATA[
+7 Connect     root@localhost on 
+7 Init DB     drupal
+7 Query       SET NAMES "utf8"
+7 Query       SELECT CASE WHEN status=1 THEN 0 ELSE 1 END FROM access WHERE type = 'host' AND LOWER('192.168.200.104') LIKE LOWER(mask) ORDER BY status DESC LIMIT 0, 1
+7 Query       SELECT u.*, s.* FROM users u INNER JOIN sessions s ON u.uid = s.uid WHERE s.sid = '5dfc4afd45113b5b523c2e5dd9f2ca71'
+7 Query       SELECT data, created, headers, expire FROM cache WHERE cid = 'variables'
+7 Query       SELECT data, created, headers, expire FROM cache_page WHERE cid = 'http://drupal.lerdorf.com/'
+7 Query       SELECT COUNT(pid) FROM url_alias
+7 Query       SELECT name, filename, throttle, bootstrap FROM system WHERE type = 'module' AND status = 1 ORDER BY weight ASC, filename ASC
+7 Query       SELECT data, created, headers, expire FROM cache_menu WHERE cid = '0:en'
+7 Query       SELECT DISTINCT(p.perm) FROM role r INNER JOIN permission p ON p.rid = r.rid WHERE r.rid IN (1)
+7 Query       SELECT data, created, headers, expire FROM cache WHERE cid = 'views_with_inline_args:en'
+7 Query       SELECT COUNT(*) FROM node_access WHERE nid = 0 AND ((gid = 0 AND realm = 'all')) AND grant_view >= 1
+7 Query       SELECT COUNT(*) FROM node n WHERE n.promote = 1 AND n.status = 1
+7 Query       SELECT n.nid, n.sticky, n.created FROM node n WHERE n.promote = 1 AND n.status = 1 ORDER BY n.sticky DESC, n.created DESC LIMIT 0, 10
+7 Query       SELECT * FROM system WHERE type = 'theme'
+7 Query       SELECT n.nid, n.vid, n.type, n.status, n.created, n.changed, n.comment, n.promote, n.sticky, r.timestamp AS revision_timestamp, r.title, r.body, r.teaser, r.log, r.format, u.uid, u.name, u.picture, u.data FROM node n INNER JOIN users u ON u.uid = n.uid INNER JOIN node_revisions r ON r.vid = n.vid WHERE n.nid = 4
+7 Query       SELECT nt.type, nt.* FROM node_type nt ORDER BY nt.type ASC
+7 Query       SELECT runtime, active FROM poll WHERE nid = 4
+7 Query       SELECT chtext, chvotes, chorder FROM poll_choices WHERE nid = 4 ORDER BY chorder
+7 Query       SELECT parent, weight FROM book WHERE vid = 4
+7 Query       SELECT last_comment_timestamp, last_comment_name, comment_count FROM node_comment_statistics WHERE nid = 4
+7 Query       SELECT t.* FROM term_node r INNER JOIN term_data t ON r.tid = t.tid INNER JOIN vocabulary v ON t.vid = v.vid WHERE r.nid = 4 ORDER BY v.weight, t.weight, t.name
+7 Query       SELECT * FROM files f INNER JOIN file_revisions r ON f.fid = r.fid WHERE r.vid = 4 ORDER BY f.fid
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=4 AND module='links_related'  ORDER BY weight, l.link_title
+7 Query       SELECT * FROM variable WHERE name like 'event_nodeapi_%'
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=4 AND module='links_related'  ORDER BY weight, l.link_title
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=4 AND module='links_weblink'  ORDER BY weight, l.link_title
+7 Query       SELECT n.nid, n.vid, n.type, n.status, n.created, n.changed, n.comment, n.promote, n.sticky, r.timestamp AS revision_timestamp, r.title, r.body, r.teaser, r.log, r.format, u.uid, u.name, u.picture, u.data FROM node n INNER JOIN users u ON u.uid = n.uid INNER JOIN node_revisions r ON r.vid = n.vid WHERE n.nid = 3
+7 Query       SELECT parent, weight FROM book WHERE vid = 3
+7 Query       SELECT last_comment_timestamp, last_comment_name, comment_count FROM node_comment_statistics WHERE nid = 3
+7 Query       SELECT t.* FROM term_node r INNER JOIN term_data t ON r.tid = t.tid INNER JOIN vocabulary v ON t.vid = v.vid WHERE r.nid = 3 ORDER BY v.weight, t.weight, t.name
+7 Query       SELECT * FROM files f INNER JOIN file_revisions r ON f.fid = r.fid WHERE r.vid = 3 ORDER BY f.fid
+7 Query       SELECT data, created, headers, expire FROM cache_filter WHERE cid = '1:098f6bcd4621d373cade4e832627b4f6'
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=3 AND module='links_related'  ORDER BY weight, l.link_title
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=3 AND module='links_related'  ORDER BY weight, l.link_title
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=3 AND module='links_weblink'  ORDER BY weight, l.link_title
+7 Query       SELECT n.nid, n.vid, n.type, n.status, n.created, n.changed, n.comment, n.promote, n.sticky, r.timestamp AS revision_timestamp, r.title, r.body, r.teaser, r.log, r.format, u.uid, u.name, u.picture, u.data FROM node n INNER JOIN users u ON u.uid = n.uid INNER JOIN node_revisions r ON r.vid = n.vid WHERE n.nid = 2
+7 Query       SELECT parent, weight FROM book WHERE vid = 2
+7 Query       SELECT last_comment_timestamp, last_comment_name, comment_count FROM node_comment_statistics WHERE nid = 2
+7 Query       SELECT t.* FROM term_node r INNER JOIN term_data t ON r.tid = t.tid INNER JOIN vocabulary v ON t.vid = v.vid WHERE r.nid = 2 ORDER BY v.weight, t.weight, t.name
+7 Query       SELECT * FROM files f INNER JOIN file_revisions r ON f.fid = r.fid WHERE r.vid = 2 ORDER BY f.fid
+7 Query       SELECT data, created, headers, expire FROM cache_filter WHERE cid = '1:26387103afc99f55816532529946728e'
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=2 AND module='links_related'  ORDER BY weight, l.link_title
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=2 AND module='links_related'  ORDER BY weight, l.link_title
+7 Query       SELECT l.lid, ln.nid, url, url_md5, weight, clicks, module, l.link_title AS link_link_title, ln.link_title AS node_link_title FROM links_node ln LEFT JOIN links l ON l.lid=ln.lid WHERE ln.nid=2 AND module='links_weblink'  ORDER BY weight, l.link_title
+7 Query       SELECT DISTINCT b.* FROM blocks b LEFT JOIN blocks_roles r ON b.module = r.module AND b.delta = r.delta WHERE b.theme = 'garland' AND b.status = 1 AND (r.rid IN (1) OR r.rid IS NULL) ORDER BY b.region, b.weight, b.module
+7 Query       SELECT * FROM system WHERE type = 'theme' AND name = 'garland'
+7 Query       SELECT sid FROM sessions WHERE sid = '5dfc4afd45113b5b523c2e5dd9f2ca71'
+7 Query       UPDATE sessions SET uid = 0, cache = 0, hostname = '192.168.200.104', session = '', timestamp = 1177377288 WHERE sid = '5dfc4afd45113b5b523c2e5dd9f2ca71'
+7 Quit]]></example>
+
+<blurb fontsize="4em">
+That's 46 SELECTs and 1 UPDATE for a single page view.
+</blurb>
+
+</slide>

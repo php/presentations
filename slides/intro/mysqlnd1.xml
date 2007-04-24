@@ -1,0 +1,19 @@
+<slide title="mysqlnd">
+
+<break lines="1" />
+
+<list marginleft="3em" fontsize="5em" title="New MySQL Native Driver" align="center">
+<bullet> PHP-specific MySQL client library</bullet>
+<bullet> Much less copying data around</bullet>
+<bullet> Better L1/L2 cache usage</bullet>
+</list>
+
+<break lines="1" />
+<list marginleft="3em" fontsize="5em" title="Tight Integration with PHP" align="center">
+<bullet> Memory manager</bullet>
+<bullet> Streams</bullet>
+<bullet> Internal zval caching</bullet>
+<bullet> Persistent connections</bullet>
+</list>
+<blurb fontsize="9em" align="center">Sounds Fast!</blurb>
+</slide>

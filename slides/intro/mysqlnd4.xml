@@ -1,0 +1,24 @@
+<slide title="now what?">
+
+<break lines="1" />
+
+<blurb fontsize="3em">
+Callgrind to the rescue!
+</blurb>
+<example fontsize="1.7em" type="shell" marginright="0.25em"><![CDATA[% valgrind --tool=callgrind --dump-instr=yes -v /usr/sbin/apache -X
+...
+% kcachegrind drupal_mysqli1.out]]></example>
+
+<example fontsize="1.7em" type="shell" title="Install APC" marginright="0.25em"><![CDATA[200 fetches, 5 max parallel, 1.2682e+06 bytes, in 8.97701 seconds
+6341 mean bytes/connection
+22.2791 fetches/sec, 141272 bytes/sec
+msecs/connect: 2.56332 mean, 4.705 max, 1.937 min
+msecs/first-response: 215.859 mean, 395.53 max, 51.845 min
+HTTP response codes:
+  code 200 -- 200]]></example>
+
+<example fontsize="1.7em" type="shell" marginright="0.25em"><![CDATA[% valgrind --tool=callgrind --dump-instr=yes -v /usr/sbin/apache -X
+...
+% kcachegrind drupal_mysqli2.out]]></example>
+
+</slide>

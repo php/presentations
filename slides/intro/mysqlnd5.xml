@@ -1,0 +1,37 @@
+<slide title="Time to look at the code">
+
+<break lines="1" />
+
+<blurb fontsize="3em">
+xdebug to the rescue!
+</blurb>
+<example fontsize="1.75em" type="shell" marginright="1.25em"><![CDATA[[php.ini]
+zend_extension=/usr/local/lib/php/extensions/xdebug.so
+xdebug.profiler_enable=1
+xdebug.profiler_aggregate = On
+xdebug.profiler_output_dir=/tmp
+...
+
+% kcachegrind drupal_xdebug1.out]]></example>
+
+<image filename="drupal_perf.png" align="center"/>
+
+<break lines="1" />
+
+<example fontsize="1.75em" type="shell" title="Turn on Normal Drupal Cacheing"><![CDATA[500 fetches, 5 max parallel, 3.226e+06 bytes, in 7.7064 seconds
+6452 mean bytes/connection
+64.8812 fetches/sec, 418613 bytes/sec
+msecs/connect: 2.53989 mean, 24.502 max, 1.914 min
+msecs/first-response: 70.8044 mean, 283.488 max, 46.382 min
+HTTP response codes:
+  code 200 -- 500]]></example>
+
+<example fontsize="1.75em" type="shell" title="Turn on Agressive Drupal Cacheing"><![CDATA[1000 fetches, 5 max parallel, 6.452e+06 bytes, in 12.2807 seconds
+6452 mean bytes/connection
+81.4287 fetches/sec, 525378 bytes/sec
+msecs/connect: 4.79381 mean, 86.273 max, 1.9 min
+msecs/first-response: 50.7257 mean, 129.51 max, 15.991 min
+HTTP response codes:
+  code 200 -- 1000]]></example>
+
+</slide>

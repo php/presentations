@@ -1,0 +1,55 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Scale, latency, and security are the key words for this year's talk. In order to build
+these bigger and faster web applications, PHP has gotten bigger and faster as well.
+This talk will explore recent PHP development and apply it to the three key words. 
+-->
+
+<topic>PHP</topic>
+<title>Performance and Security</title>
+<event>MySQL Conference</event>
+<location>Santa Clara</location>
+<date>Apr.24, 2007</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/mysql07</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/sls.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/performance_title.xml</slide>
+<slide>slides/intro/mysqlnd1.xml</slide>
+<slide>slides/intro/mysqlnd2.xml</slide>
+<slide>slides/intro/mysqlnd3.xml</slide>
+<slide>slides/intro/opt_callgrind.xml</slide>
+<slide>slides/intro/mysqlnd4.xml</slide>
+<slide>slides/intro/mysqlnd5.xml</slide>
+
+<!-- Security -->
+<slide>slides/intro/security_title.xml</slide>
+<slide>slides/intro/xss_basic.xml</slide>
+<slide>slides/intro/xss_yrisk.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/xss_type1.xml</slide>
+<slide>slides/intro/xss_type2.xml</slide>
+<slide>slides/intro/xss_type3.xml</slide>
+<slide>slides/intro/xss_type4.xml</slide>
+<slide>slides/intro/xss_type5.xml</slide>
+<slide>slides/intro/xss_type6.xml</slide>
+<slide>slides/intro/xss_type7.xml</slide>
+<slide>slides/intro/xss_type8.xml</slide>
+<slide>slides/intro/the_web_is_broken.xml</slide>
+<slide>slides/intro/xsrf.xml</slide>
+
+<slide>slides/intro/perfsec_ref.xml</slide>
+</presentation>

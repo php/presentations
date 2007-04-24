@@ -1,8 +1,7 @@
 <slide title="Callgrind">
 <break lines="2" />
 
-<example fontsize="2.25em" type="shell" title="callgrind"><![CDATA[valgrind --tool=callgrind --collect-jumps==yes \
-         --dump-instr=yes --trace-jump=yes -v \
+<example fontsize="2.25em" type="shell" title="callgrind"><![CDATA[valgrind --tool=callgrind --dump-instr=yes -v \
          /usr/sbin/httpd -X]]></example>
 
 <example fontsize="2.25em" type="shell" title=""><![CDATA[chmod a+rw callgrind.out.XXXX]]></example>
