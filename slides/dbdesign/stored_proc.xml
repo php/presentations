@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Stored Procedure</title>
+	<subtitle>Update Problems</subtitle>
+
+	<blurb>Another solution is a stored procedure:</blurb>
+<break/>
+  <example><![CDATA[DELIMITER |
+
+CREATE PROCEDURE prc_update_airport_name (c char(3), n varchar(255)) 
+BEGIN
+	UPDATE airport_code
+		SET airfield_name = n
+		WHERE code = c;
+
+	UPDATE flight_denorm 
+		SET from_airfield_name = n
+		WHERE from_airport = c;
+
+	UPDATE flight_denorm
+		SET to_airfield_name = n
+		WHERE to_airport = c; 
+END
+|
+
+DELIMITER ;]]></example>
+<break/>
+
+	<blurb>Use like:</blurb>
+<break/>
+	<example><![CDATA[CALL prc_update_airport_name('AMS', 'Schiphol');]]></example>
+</slide>
+

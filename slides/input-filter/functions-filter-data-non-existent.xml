@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Getting Input</title>
+
+	<example result="1"><![CDATA[<?php
+$data = filter_input(
+	INPUT_GET, 'data',
+	FILTER_VALIDATE_INT
+);
+var_dump( $data );
+
+$data = filter_input(
+	INPUT_GET, 'data',
+	FILTER_VALIDATE_INT, FILTER_NULL_ON_FAILURE
+);
+var_dump( $data );
+?>]]></example>
+<break/>
+</slide>

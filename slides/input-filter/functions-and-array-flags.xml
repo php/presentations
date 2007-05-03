@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>More about dealing with arrays</title>
+
+	<list>
+		<bullet>*FILTER_REQUIRE_SCALAR* (default): requires the input variable
+		to be not an array</bullet>
+		<bullet>*FILTER_REQUIRE_ARRAY*: requires the input variable to be an
+		array</bullet>
+		<bullet>*FILTER_FORCE_ARRAY*: converts the input variable to an array,
+		even if a scalar was submitted</bullet>
+	</list>
+</slide>
