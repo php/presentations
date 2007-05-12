@@ -3,11 +3,12 @@
 	<title>PHP Accelerators</title>
 
 	<list>
-		<li>*Zend Platform*: commercial</li>
-		<li>*Turck MM Cache*: abandonned</li>
-		<li>*eAcelerator*: seems struggeling, GPL</li>
-		<li>*PHP Accelerator*: updated, but not improved</li>
 		<li>*APC*: active development, PHP license</li>
+		<li>*eAcclerator*: GPL</li>
+		<li>*PHP Accelerator*: updated, but not improved</li>
+		<li>*Turck MM Cache*: abandonned</li>
+		<li>*XCache*: new</li>
+		<li>*Zend Platform*: commercial</li>
 	</list>
 	
 </slide>
