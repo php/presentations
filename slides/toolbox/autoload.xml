@@ -3,16 +3,14 @@
 	<title>Autoload</title>
 
 	<example result="1"><![CDATA[<?php
+require 'ezc/Base/base.php';
 function __autoload( $className )
 {
-	$path = preg_replace( '/([A-Z])/', '/\\1', $className );
-	$path = strtolower( $path );
-	$path = str_replace( 'ezc/', '', $path ) . '.php';
-	echo "Loading $path...\n";
-	@include_once $path;
+	ezcBase::autoload( $className );
 }
 
-$a = new ezcMailSmtpTransport;
+$a = new ezcMailSmtpTransport( 'localhost' );
+var_dump( $a );
 ?>]]></example>
 
 </slide>
