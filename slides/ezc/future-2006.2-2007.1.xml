@@ -5,18 +5,17 @@
 
 	<blurb>New components:</blurb>
 	<list>
-		<bullet>*Authentication*: Graphs and diagrams</bullet>
-		<bullet>*Feed*: Reading and writing RSS/Atom feeds</bullet>
+		<bullet>*Authentication*: Authentication against database, Typekey, (OpenID)</bullet>
 		<bullet>*Workflow*: Workflow engine</bullet>
 	</list>
 
 	<blurb>Additions to components:</blurb>
 	<list>
-		<bullet>*Database*: SQL Server driver, Debugging support</bullet>
-		<bullet>*DatabaseSchema*: Foreign Key support</bullet>
-		<bullet>*Mail*: Caching, other additions</bullet>
+		<bullet>*Database*: SQL Server driver</bullet>
+		<bullet>*Graph*: Radar charts, PDO data sets</bullet>
+		<bullet>*Mail*: Caching, SSL support</bullet>
 		<bullet>*PersistentObject*: Class stub generation</bullet>
-		<bullet>*Template*: Caching, Character set support and Translation Tie-in </bullet>
+		<bullet>*Template*: Caching</bullet>
 	</list>
 
 	<blurb>Roadmap: http://issues.ez.no/RoadMap.php?Id=487</blurb>

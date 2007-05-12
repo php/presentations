@@ -11,14 +11,12 @@ pear install ezc/ezcomponents]]></example>
 <break lines="3"/>
 
 	<blurb>Setup:</blurb>
-	<example result='1'><![CDATA[<?php
+	<example result='0'><![CDATA[<?php
 require 'ezc/Base/base.php';
 
 function __autoload( $className )
 {
 	ezcBase::autoload( $className );
 }
-
-ezcBase::checkDependency( 'Test', ezcBase::DEP_PHP_VERSION, '5.3.0' );
 ?>]]></example>
 </slide>

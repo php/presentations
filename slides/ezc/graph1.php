@@ -21,6 +21,6 @@ $chart->data['ips'] = new ezcGraphArrayDataSet( $ips );
 $chart->data['ips']->label = 'IP addresses';
 
 $chart->driver = new ezcGraphSvgDriver();
-$chart->render( 700, 400, 'php://output' );
+$chart->render( 600, 400, 'php://output' );
 
 ?>

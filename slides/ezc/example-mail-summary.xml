@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <slide fontsize="6em">
 	<title>Mail</title>
+	<subtitle>Supported Transports and Formats</subtitle>
 
-	<blurb>Parsing from:</blurb>
+	<blurb>Sending with:</blurb>
 	<list>
-		<bullet>POP3 Servers</bullet>
-		<bullet>IMAP Servers</bullet>
-		<bullet>MBOX Files</bullet>
-		<bullet>Single Mail Files</bullet>
-		<bullet>Variables</bullet>
+		<bullet>SMTP</bullet>
+		<bullet>"MTA" (PHP's mail())</bullet>
+	</list>
+
+	<blurb>Reading from:</blurb>
+	<list>
+		<bullet>POP3, IMAP, MBOX, Files, Variables</bullet>
 	</list>
 
 	<blurb>Supported formats:</blurb>
@@ -18,5 +21,8 @@
 		<bullet>multipart/related: HTML mail with inline images</bullet>
 		<bullet>multipart/digest: mailinglist digests</bullet>
 	</list>
+
+	<blurb>Overview:</blurb>
+	<link>http://ez.no/doc/components/view/latest/(file)/Mail_rfcs.html</link>
 
 </slide>

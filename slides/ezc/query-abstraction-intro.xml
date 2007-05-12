@@ -1,0 +1,25 @@
+<slide>
+	<title>Database</title>
+	<subtitle>Query Abstraction</subtitle>
+
+	
+	<blurb>Allows writing SQL that works for all supported databases, without
+	having to deal with differences in SQL dialects.</blurb>
+<break lines="2"/>
+
+	<blurb>Supported SQL categories:</blurb>
+	<list>
+		<bullet>SELECT: %$db->createSelectQuery();%</bullet>
+		<bullet>INSERT: %$db->createInsertQuery();%</bullet>
+		<bullet>UPDATE: %$db->createUpdateQuery();%</bullet>
+		<bullet>DELETE: %$db->createDeleteQuery();%</bullet>
+	</list>
+
+	<blurb>Query object:</blurb>
+	<list>
+		<bullet>Uses a "fluent-interface"</bullet>
+		<bullet>Exposes an expression object through %$db->e%.</bullet>
+	</list>
+
+</slide>
+

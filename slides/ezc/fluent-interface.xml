@@ -1,0 +1,31 @@
+<slide>
+	<title>Database</title>
+	<subtitle>Fluent Interface</subtitle>
+
+	
+	<blurb>Works by returning the object that a method is called on after
+	the method does it's work.</blurb>
+<break lines="2"/>
+	<example><![CDATA[<?php
+public function from()
+{
+    if ( $this->fromString == '' )
+    {
+        $this->fromString = 'FROM ';
+    }
+	// ...
+    $this->fromString .= join( ', ', $tables );
+    return $this;
+}
+?>]]></example>
+	
+<break lines="2"/>
+	<blurb>Allows for chaining of calls:</blurb>
+<break lines="2"/>
+	<example><![CDATA[<?php
+$q->select( '*' )->from( 'quotes' )
+  ->where( $e->eq( 'author', $q->bindValue( 'Robert Foster' ) ) );
+?>]]></example>
+
+</slide>
+

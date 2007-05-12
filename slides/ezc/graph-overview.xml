@@ -1,0 +1,23 @@
+<slide>
+	<title>Graph</title>
+	<subtitle>Introduction</subtitle>
+	
+	<blurb>Creates different kinds of diagrams:</blurb>
+	<list>
+		<bullet>Line charts</bullet>
+		<bullet>Bar charts</bullet>
+		<bullet>Pie charts</bullet>
+		<bullet>Radar charts</bullet>
+	</list>
+
+	<blurb>Drivers: GD, SVG, Flash</blurb>
+<break/>
+	<blurb>Renderers: 2D, 3D</blurb>
+<break/>
+	<blurb>Datasets: Array, Numeric, PDO, Average (Polynomal)</blurb>
+<break/>
+	<blurb>Axis: Date, Numeric, labeled, Logarithmic</blurb>
+<break/>
+	<blurb>Palettes: Black, eZ, Tango, User Defined</blurb>
+
+</slide>

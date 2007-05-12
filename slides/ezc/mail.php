@@ -1,29 +1,25 @@
 <?php
 require 'ezc-setup.php';
-$dir = dirname( __FILE__ );
-
 $mail = new ezcMailComposer();
+
+// from and to addresses, and subject
 $mail->from = new ezcMailAddress( 'john@doe.com', 'John Doe' );
 $mail->addTo( new ezcMailAddress( 'dr@ez.no', 'Derick Rethans' ) );
-
 $mail->subject = "Example of an HTML email with attachments";
-$mail->plainText = "Here is the text version of the mail.
-This is displayed if the client can not understand HTML";
 
+// body: plain
+$mail->plainText = "Here is the text version of the mail.";
+
+// body: html
 $mail->htmlText = <<<ENDHTML
-<html>
-Here is the HTML version of your mail
-with an image: <img src='file://$dir/consoletools-table.png'/>
-</html>
+<html>Here is the HTML version of your mail with an image: <img
+src='file://$dir/consoletools-table.png'/></html>
 ENDHTML;
 
+// add an attachment
 $mail->addAttachment( "$dir/mail.php" );
-$mail->build();
 
-echo "<pre><font size='4'>",
-	htmlspecialchars(
-		$mail->generateHeaders() . "\r\n" . $mail->generateBody() );
-	
+// send the mail
 $transport = new ezcMailTransportSmtp( 'localhost', null, null, 2525 );
-//$transport->send( $mail );
+$transport->send( $mail );
 ?>

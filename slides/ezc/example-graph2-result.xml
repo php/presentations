@@ -2,7 +2,11 @@
 	<title>Graph</title>
 	<subtitle>Pie chart - Result</subtitle>
 
-	<image align="center" filename='graph5.png'/>
+	<blurb><![CDATA[
+<div id="graph">
+<iframe id="graphIn" src="/presentations/slides/ezc/graph2.php"/>
+</div>
+]]></blurb>
 <break lines="8"/>
 
 	<blurb>The Graph component outputs:</blurb>

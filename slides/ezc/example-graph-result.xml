@@ -2,6 +2,10 @@
 	<title>Graph</title>
 	<subtitle>Line-graph - Result</subtitle>
 
-	<image filename='graph1.png'/>
+	<blurb><![CDATA[
+<div id="graph">
+<iframe id="graphIn" src="/presentations/slides/ezc/graph1.php"/>
+</div>
+]]></blurb>
 
 </slide>

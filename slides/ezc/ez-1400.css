@@ -1,11 +1,11 @@
 <style title="Default" type="text/css">
 body {
-	font-size: 8pt;
+	font-size: 11px;
 	margin-left:24px;
 	margin-right:0px;
 	margin-top:0em;
 	margin-bottom:0em;
-	background-image: url(presentations/slides/ezc/ez-background.jpg);
+	background-image: url(presentations/slides/ezc/ez-background-1400.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
     overflow: -moz-scrollbars-none;
@@ -14,14 +14,14 @@ body {
 
 body.title
 {
-	background-image: url(presentations/slides/ezc/ez-background-title.jpg);
+	background-image: url(presentations/slides/ezc/ez-background-title-1400.jpg);
 	overflow: none;
 }
 div.sticky {
 	margin: 0;
 	position: fixed;
 	top: -0.5em;
-	left: 290px;
+	left: 406px;
 	right: auto;
 	bottom: auto;
 }
@@ -33,12 +33,12 @@ font-family: "MaxOT-book", verdana, tahoma, arial, helvetica, sans-serif;
 z-index: 99;
 }
 div.navbar_title, div.navbar_title a, div.subtitle {
-	font-size: 26px;
+	font-size: 36px;
 	color: #000000;
 	text-decoration: none;
 	text-align: left;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 28px;
 }
 body.title div.navbar
 {
@@ -46,13 +46,13 @@ body.title div.navbar
 }
 div.subtitle {
 	margin-top: 0px;
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: normal;
 	font-style: italic;
 }
 
 div.navbar_nr a {
-font-size: 13px;
+font-size: 18px;
 color: #77a;
 text-decoration: none;
 position: fixed;
@@ -60,75 +60,77 @@ right: 10px;
 bottom: 0px;
 }
 div.mainarea {
-margin-top: 100px;
+margin-top: 180px;
+margin-left: 20px;
 padding-top: 10px;
-width: 1000px;
-height: 610px;
+padding-right: 20px;
+width: 1335px;
+height: 800px;
 overflow: auto;
 overflow: -moz-scrollbars-vertical;
 }
 body.title div.mainarea
 {
-	margin-top: 250px; 
+	margin-top: 380px; 
 	overflow: -moz-scrollbars-none;
 }
 ul.pres {
 list-style: circle;
-font-size: 18pt;
+font-size: 25pt;
 }
 
 ul.numbered
 {
-font-size: 20pt;
+font-size: 28pt;
 margin-right: 40px;
 list-style-type: decimal;
 }
 
 ul.level2 {
 	list-style: circle;
-	font-size: 16pt;
+	font-size: 22pt;
 	margin-left: 40px;
 	margin-top: -15px;
 }
 
 li.pres_bullet, div.link {
-font-size: 24pt;
+font-size: 28pt;
 margin-right: 40px;
 }
 
 li.pres_bullet_nr {
-font-size: 20pt;
+font-size: 28pt;
 margin-right: 40px;
 list-style-type: decimal;
 }
 
 ul.large div li.pres_bullet
 {
-	font-size: 26pt;
+	font-size: 36pt;
 }
 	
 ul.small div li.pres_bullet
 {
-	font-size: 16pt;
+	font-size: 22pt;
 }
 
 div.title_blurb {
-	font-size: 64px;
+	font-size: 90px;
 	text-align: center;
 	font-weight: bold;
 }
 	
 div.small_blurb {
-	font-size: 18px;
+	font-size: 25px;
 }
 
-div.blurb, div.bit_larger_output_text, div.output {
-	font-size: 24pt;
+div.blurb, div.bit_larger_output_text {
+	font-size: 28pt;
 	width: 100%;
 }
 
 div.bit_larger_output_text {
-	margin-top: 8px;
+	margin-top: 13px;
 }
 
 div.x_small_blurb {
@@ -136,11 +138,11 @@ div.x_small_blurb {
 }
 
 div.large_blurb {
-	font-size: 26pt;
+	font-size: 36pt;
 }
 
 div.large_blurb_center {
-	font-size: 38px;
+	font-size: 53px;
 	text-align: center;
 }
 
@@ -149,36 +151,35 @@ div.blurb_center {
 }
 
 div.quote {
-	font-size: 32px;
+	font-size: 45px;
 	text-align: center;
 	margin-left: 40px;
 	margin-right: 40px;
 }
 
 div.quote_attr {
-	font-size: 24px;
+	font-size: 33px;
 	text-align: right;
 	margin-right: 40px;
 }
 
 div.xx_large_blurb_center {
-	font-size: 64px;
+	font-size: 90px;
 	text-align: center;
 }
 
 div.q_mark {
 	text-align: center;
-	font-size: 384px;
+	font-size: 538px;
 }
 
 div.shadow, code {
-	width: 920px;
-	font-size: 18px;
+	font-size: 16px; width: 1240px;
 }
 
 div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
 	background: #eee;
-	font-size: 20px;
+	font-size: 22px;
 	width: 100%;
 	font-weight: bold;
 }
@@ -189,12 +190,12 @@ div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 
 div.bit_larger_output {
 	background: #e6e300;
-	font-size: 20pt;
+	font-size: 28pt;
 	font-weight: normal;
 }
 
 div.large code, div.large {
-	font-size: 26px;
+	font-size: 36px;
 	background: #eee;
 	font-weight: bold;
 	margin-left: 20px;
@@ -210,28 +211,28 @@ div.code_small, div.code_medium, div.code_large, div.example {
 	background: #eee;
 }
 div.code_small code {
-	font-size: 10px;
+	font-size: 14px;
 }
 div.code_medium code, div.code_medium pre {
-	font-size: 16px;
+	font-size: 22px;
 }
 div.code_large code, div.code_large pre {
-	font-size: 18px;
+	font-size: 25px;
 }
 div.example pre {
-    font-size: 16px;
+    font-size: 22px;
 	font-weight: bold;
 }
 
 div.event, div.event-date, div.event-presenter {
 	text-align: center;
-	font-size:  26pt;
+	font-size:  36pt;
 	font-family: "MaxOT-book";
 }
 
 div.pres-url-small {
 	text-align: center;
-	font-size:  18pt;
+	font-size:  25pt;
 	font-family: "MaxOT-book";
 }
 
@@ -243,7 +244,7 @@ img.spaced {
 }
 
 table {
-	font-size: 16pt;
+	font-size: 22pt;
 }
 
 table.dbtable {
@@ -301,6 +302,6 @@ div#graph {
 }
 
 iframe#graphIn {
-	border-style: none; height: 600px; width: 1000px;
+	border-style: none; height: 700px; width: 1300px;
 }
 </style>

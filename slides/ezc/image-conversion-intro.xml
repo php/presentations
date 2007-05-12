@@ -1,0 +1,19 @@
+<slide>
+	<title>ImageConversion</title>
+	<subtitle>Introduction</subtitle>
+	
+	<list>
+		<bullet>Filters and Transformations</bullet>
+		<bullet>Different backends: GD and ImageMagick</bullet>
+	</list>
+
+	<blurb>Supported filters:</blurb>
+	<list>
+		<bullet>Colorspace: monochrome, sepia and grey</bullet>
+		<bullet>Effects: border, noise, swirl</bullet>
+		<bullet>Geometry: crop, scale</bullet>
+		<bullet>Thumbnail</bullet>
+		<bullet>Watermark</bullet>
+	</list>
+
+</slide>

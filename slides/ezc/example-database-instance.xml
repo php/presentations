@@ -4,6 +4,7 @@
 
 	<blurb>Supported Handlers:</blurb>
 	<list>
+		<bullet>MS SQL</bullet>
 		<bullet>MySQL</bullet>
 		<bullet>PostgreSQL</bullet>
 		<bullet>Oracle</bullet>
@@ -11,7 +12,7 @@
 	</list>
 
 	<blurb>Using Instances:</blurb>
-	<example filename='database.php' result="1"/>
+	<example filename='database.php' result="0"/>
 
 </slide>
 

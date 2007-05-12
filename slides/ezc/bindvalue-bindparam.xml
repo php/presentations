@@ -1,0 +1,32 @@
+<slide>
+	<title>Database</title>
+	<subtitle>Prepared Statements</subtitle>
+	
+	<list>
+		<bullet>Safer: No manual quoting required</bullet>
+		<bullet>Faster: The query is only compiled once</bullet>
+	</list>
+
+	<example><![CDATA[<?php
+$country = $normalized_name = $name = $province = $lat = $lon = null;
+$sq = $db->createInsertQuery();
+$sq->insertInto( 'city' )
+   ->set( 'country', $sq->bindParam( $country ) )
+   ->set( 'normalized_name', $sq->bindParam( $normalized_name ) )
+   ->set( 'name', $sq->bindParam( $name ) )
+   ->set( 'province', $sq->bindParam( $province ) )
+   ->set( 'lat', $sq->bindParam( $lat ) )
+   ->set( 'lon', $sq->bindParam( $lon ) );
+$stmt = $sq->prepare();
+
+do {
+    $line = fgets( $fd ); if ( feof( $fd ) ) break;
+
+    $elements = explode( "\t", $line );
+    list( $country, $normalized_name, $name, $province, $lat, $lon ) = $elements;
+    $stmt->execute();
+} while ( true );
+?>]]></example>
+
+</slide>
+
