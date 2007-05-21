@@ -1,7 +1,6 @@
 <pre>
 <?php
-ini_set('include_path', '/home/httpd/ezcomponents/trunk');
-require_once 'Base/src/base.php';
+require_once 'ezc/Base/base.php';
 
 function __autoload( $className )
 {

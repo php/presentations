@@ -1,4 +1,9 @@
-<slide template="titlepage" fontsize="3.5em">
+<slide template="title" fontsize="3.5em">
 <title>Welcome!</title>
 <image align="center" filename="xdebug-logo.png" />
+<blurb class="event-date">:-:event:-: - :-:location:-:</blurb>
+<break/>
+<blurb class="event-presenter">:-:speaker:-: - dr@ez.no</blurb>
+<break/>
+<blurb class="pres-url-small">:-:url:-:</blurb>
 </slide>

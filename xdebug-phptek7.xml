@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Debugging</topic>
+<title>Help, I Found a Bug in my Code</title>
+<event>php|tek 2007</event>
+<location>Chicago, US</location>
+<date>May 18th, 2007</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://files.derickrethans.nl/xdebug-phptek7.pdf</url>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/toolbox/me.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/xdebug/why-debugger3.xml</slide>
+<slide>slides/xdebug/how-to-install.xml</slide>
+<slide>slides/xdebug/how-to-install2.xml</slide>
+<slide>slides/xdebug/how-to-install-win.xml</slide>
+<slide>slides/xdebug/how-to-install3.xml</slide>
+<!-- <slide>slides/xdebug/why-crash.xml</slide>  max nesting, function trace -->
+<slide>slides/xdebug/where-error.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+<!--<slide>slides/xdebug/debug-req-vars.xml</slide>
+<slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/how-many-functions.xml</slide>-->
+<slide>slides/xdebug/how-much-time.xml</slide>
+<slide>slides/xdebug/how-much-memory.xml</slide>
+<slide>slides/xdebug/wtf-happens.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+<slide>slides/xdebug/which-code-do-i-use.xml</slide>
+<slide>slides/xdebug/codecoverage2.xml</slide>
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+<slide>slides/xdebug/analyse-running-script.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
