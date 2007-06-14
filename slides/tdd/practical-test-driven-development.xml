@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Test-Driven Development</title>
+	<subtitle>eZ Components Development</subtitle>
+
+	<blurb class="blurb_header">Present the Idea</blurb>
+	<blurb class="blurb_header">Write the Requirements Document</blurb>
+	<blurb class="blurb_header">Design the Component</blurb>
+	<blurb class="blurb_header">Implementation</blurb>
+	<list>
+		<bullet>Write API stubs with parameter documentation and descriptions</bullet>
+		<bullet>Write test cases</bullet>
+		<bullet>Initial Implementation</bullet>
+		<bullet>Initial Implementation Review</bullet>
+		<bullet>Updating Implementation according to review</bullet>
+		<bullet>Implementation Review</bullet>
+	</list>
+	<blurb class="blurb_header">Pre-release Testing</blurb>
+</slide>

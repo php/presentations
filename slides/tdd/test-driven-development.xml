@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Into the Future</title>
+	<subtitle>Test-Driven Development Phases</subtitle>
+
+	<blurb class="blurb_header">Requirements Specification</blurb>
+	<blurb>Define what the software is supposed to do.</blurb>
+<break lines="2"/>
+	<blurb class="blurb_header">Design</blurb>
+	<blurb>Define how the software is supposed to be implemented.</blurb>
+<break lines="2"/>
+	<blurb class="blurb_header">Implementation ≡ Testing</blurb>
+	<blurb>The implemented software is tested.</blurb>
+	<blurb>The implementation of the software itself.</blurb>
+
+</slide>

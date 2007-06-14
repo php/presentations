@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Tests are King</title>
+
+	<blurb class="blurb_header">Tests drive the development</blurb>
+	<list>
+		<bullet>Tests are written before the code</bullet>
+		<bullet>There is no code without tests</bullet>
+	</list>
+<break lines="2"/>
+
+	<blurb class="blurb_header">Test Suites</blurb>
+	<list>
+		<bullet>Contain tests that check whether the code does what it is supposed to do</bullet>
+		<bullet>Also cover things that should fail</bullet>
+	</list>
+
+</slide>

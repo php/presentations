@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Case Studies</title>
+
+	<blurb class="blurb_header">Microsoft Case Study</blurb>
+	<list>
+		<bullet>TDD project has twice the code quality</bullet>
+		<bullet>Writing tests requires 15% more time</bullet>
+	</list>
+
+	<blurb class="blurb_header">IBM Case Study</blurb>
+	<list>
+		<bullet>40% fewer defects</bullet>
+		<bullet>No impact on the team's productivity</bullet>
+	</list>
+
+	<blurb class="blurb_header">John Deer / Ericsson Case Study</blurb>
+	<list>
+		<bullet>TDD produces higher quality code</bullet>
+		<bullet>Impact of 16% on the team's productivity</bullet>
+	</list>
+</slide>

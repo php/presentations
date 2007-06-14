@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Un-testable Problems</title>
+
+	<list>
+		<bullet>Testing singletons more than one time</bullet>
+		<bullet>System/Operating System dependent tests</bullet>
+		<bullet>Private methods</bullet>
+		<bullet>Code that depends on the state of an external resource</bullet>
+		<bullet>Things that simply should never happen</bullet>
+	</list>
+</slide>

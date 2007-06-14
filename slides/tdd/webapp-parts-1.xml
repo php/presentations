@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Web Application Testing</title>
+	<subtitle>Testable Parts</subtitle>
+
+	<blurb>Front-end</blurb>
+	<list>
+		<bullet>~Acceptance Tests~ and ~System Tests~ that run in the browser</bullet>
+		<bullet>Testing of Web Services with ~Unit Tests~</bullet>
+		<bullet>~Compability Testing~ for Browser/OS/etc. combinations</bullet>
+		<bullet>~Performance Testing~</bullet>
+		<bullet>~Security Testing~</bullet>
+	</list>
+
+	<blurb>Back-end</blurb>
+	<list>
+		<bullet>~Functional Testing~ of business logic with ~Unit Tests~</bullet>
+		<bullet>Reusable Components, but they often come with their own tests</bullet>
+	</list>
+		
+</slide>

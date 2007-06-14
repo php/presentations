@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Test-Driven Development</title>
+	<subtitle>Addressing Defects</subtitle>
+
+	<blurb class="blurb_header">Write Test Case</blurb>
+	<blurb>Write a test case to test the correct behavior of the method, and verify that the test case fails</blurb>
+<break lines="2"/>
+
+	<blurb class="blurb_header">Fix the Issue</blurb>
+	<blurb>Fix the implementation</blurb>
+<break lines="2"/>
+
+	<blurb class="blurb_header">Verify Fix with Test Case</blurb>
+	<blurb>Make sure that the test cases passes with the new implementation</blurb>
+<break lines="2"/>
+
+	<blurb class="blurb_header">Check Other Test Cases</blurb>
+	<blurb>Verify that the fix for this defect did not break any other test case</blurb>
+
+</slide>

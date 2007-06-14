@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Back In Time</title>
+	<subtitle>Traditional Development Phases</subtitle>
+
+	<blurb class="blurb_header">Requirements Specification</blurb>
+	<blurb>Define what the software is supposed to do.</blurb>
+<break lines="2"/>
+	<blurb class="blurb_header">Design</blurb>
+	<blurb>Define how the software is supposed to be implemented.</blurb>
+<break lines="2"/>
+	<blurb class="blurb_header">Implementation</blurb>
+	<blurb>The implementation of the software itself.</blurb>
+<break lines="2"/>
+	<blurb class="blurb_header">Testing</blurb>
+	<blurb>The implemented software is tested.</blurb>
+
+<div effect="hide">
+	<blurb>Sometimes.</blurb>
+</div>
+
+</slide>

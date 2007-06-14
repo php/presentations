@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Case Studies</title>
+	<subtitle>Developer Comments</subtitle>
+
+	<list>
+		<bullet>At first I didn't like that I need to write tests for my code,
+		but now after using it for more than 10 months I can't program without
+		it.</bullet>
+	</list>
+	<list>
+		<bullet>Helps to come up with better APIs.</bullet>
+	</list>
+	<list>
+		<bullet>It gives confidence that our software is working well at all
+		times. Even after making major changes and/or changing software we are
+		dependent on.</bullet>
+	</list>
+	<list>
+		<bullet>Productivity increases - you might loose some when you make the
+		initial tests, but you'll get it back later.  The code covered by tests
+		is 'insured' against future changes.</bullet>
+	</list>
+	<list>
+		<bullet>It works well for libraries, not so well for GUI
+		applications.</bullet>
+	</list>
+	<list>
+		<bullet>Some things cannot be tested like server errors</bullet>
+	</list>
+</slide>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Testing Methods</title>
+
+	<blurb class="blurb_header">Unit Testing</blurb>
+	<blurb>Tests small parts of an application of library (units) for correct working of the code. ~*Tools*: PHPUnit, SimpleTest~</blurb>
+<break lines="2"/>
+	<blurb class="blurb_header">System Testing</blurb>
+	<blurb>The testing of a whole integrated system against the specified requirements. ~*Tools*: Selenium~</blurb>
+<break lines="2"/>
+	<blurb class="blurb_header">Non-functional Testing</blurb>
+	<blurb>Testing for performance, load, stress, reliability, availability, security. ~*Tools*: ab, siege, httperf, chorizo~</blurb>
+</slide>
