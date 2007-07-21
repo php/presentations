@@ -1,0 +1,51 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+
+<topic>PHP</topic>
+<title>PHP/YUI</title>
+<subtitle>You got Javascript in my PHP! And...</subtitle>
+<event>OSCON 2007</event>
+<location>Portland</location>
+<date>July 23, 2007</date>
+<speaker>Thomas Sha, Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/oscon_tut07</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/php_yui1.xml</slide>
+<slide>slides/intro/php_yui2.xml</slide>
+<slide>slides/intro/php_yui3.xml</slide>
+<slide>slides/intro/php_yui4.xml</slide>
+<slide>slides/intro/php_yui5.xml</slide>
+
+<slide>slides/intro/security_title.xml</slide>
+<slide>slides/intro/xss_basic.xml</slide>
+<slide>slides/intro/xss_yrisk.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/xss_type1.xml</slide>
+<slide>slides/intro/xss_type2.xml</slide>
+<slide>slides/intro/xss_type3.xml</slide>
+<slide>slides/intro/xss_type4.xml</slide>
+<slide>slides/intro/xss_type5.xml</slide>
+<slide>slides/intro/xss_type6.xml</slide>
+<slide>slides/intro/xss_type7.xml</slide>
+<slide>slides/intro/xss_type8.xml</slide>
+<slide>slides/intro/the_web_is_broken.xml</slide>
+<slide>slides/intro/xsrf.xml</slide>
+
+<slide>slides/intro/db_layer1.xml</slide>
+<slide>slides/intro/db_layer2.xml</slide>
+<slide>slides/intro/db_layer3.xml</slide>
+<slide>slides/intro/db_layer4.xml</slide>
+<slide>slides/intro/db_layer5.xml</slide>
+<slide>slides/intro/db_layer6.xml</slide>
+
+<slide>slides/intro/web2_ref.xml</slide>
+
+</presentation>

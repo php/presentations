@@ -1,0 +1,24 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+For each table I usually do something like this
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
+class people extends db {
+  function load($id=-1) {
+    $where = '';
+    if($id!=-1) $where = "where id=".(int)$id;
+    try {
+      if(!self::$dbh) $this->connect();
+      $result = self::$dbh->query("SELECT * FROM people $where");
+      $rows = $result->fetchAll(PDO::FETCH_ASSOC); 
+    } catch (PDOException $e) {
+      $this->fatal_error($e->getMessage());
+    }
+    return $rows;
+  }
+?>]]></example>
+
+</slide>

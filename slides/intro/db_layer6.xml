@@ -1,0 +1,24 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+A complete DB/JSON backend
+</blurb>
+
+<example result="0" marginright="1em"><![CDATA[<?php
+  include './db.inc';
+  include './db_people.inc';
+
+  $pep = new people;
+
+  header("Content-type: application/json");
+
+  switch($_REQUEST['action']) {
+    case 'markers':
+      $all = $pep->load();
+      echo json_encode(array('people'=>$all)); 
+      break;
+  }
+?>]]></example>
+
+</slide>

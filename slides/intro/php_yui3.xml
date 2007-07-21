@@ -1,0 +1,18 @@
+<slide title="Taming the beast">
+
+<break lines="1" />
+<blurb fontsize="7em">
+Small changes, big rewards
+</blurb>
+
+<example result="1" fontsize="1.4em" rfontsize="1em" marginright="1em" type="marked"><![CDATA[<script type="text/javascript" 
+        src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=YahooDemo"></script>
+<div id="jsmapContainer" style="height: 500px; width: 930px;"></div>
+<script type="text/javascript">
+var jsmap = new YMap('jsmapContainer');
+jsmap.addZoomLong();
+|jsmap.addTypeControl();
+jsmap.drawZoomAndCenter("Portland, OR", 7);
+</script>]]></example>
+
+</slide>

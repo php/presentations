@@ -1,0 +1,17 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+Using the DB layer
+</blurb>
+
+<example result="0" marginright="1em"><![CDATA[<?php
+  include './db.inc';
+  include './db_people.inc';
+
+  $pep = new people;
+  $all = $pep->load();
+  $lid = $pep->insert($_REQUEST);
+?>]]></example>
+
+</slide>

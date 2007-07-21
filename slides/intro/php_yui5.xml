@@ -1,0 +1,29 @@
+<slide title="Earthquakes!">
+
+<break lines="1" />
+
+<example result="1" fontsize="1.4em" rfontsize="1em" marginright="1em" type="marked"><![CDATA[<script type="text/javascript" 
+        src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=YahooDemo"></script>
+<div id="jsmapContainer" style="height: 500px; width: 930px;"></div>
+
+<form id="locF" onSubmit="return updateMap();">
+  <label for="loc">Location:<label>
+  <input type="text" name="loc" id="loc" size="80"/>
+</form>
+
+<script type="text/javascript">
+
+var updateMap = function() {
+  var loc = document.getElementById('loc').value;
+  jsmap.drawZoomAndCenter(loc,7);
+  return false;
+};
+
+var jsmap = new YMap('jsmapContainer');
+jsmap.addZoomLong();
+jsmap.addTypeControl();
+jsmap.drawZoomAndCenter("Portland, OR", 7);
+|jsmap.addOverlay(new YGeoRSS('http://earthquake.usgs.gov/eqcenter/catalogs/eqs7day-M2.5.xml'));
+</script>]]></example>
+
+</slide>

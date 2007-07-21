@@ -1,0 +1,46 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+Prepare/execute example
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
+class people extends db {
+  function load($id=-1) {
+    $where = '';
+    if($id!=-1) $where = "where id=".(int)$id;
+    try {
+      if(!self::$dbh) $this->connect();
+      $result = self::$dbh->query("SELECT * FROM people $where");
+      $rows = $result->fetchAll(PDO::FETCH_ASSOC); 
+    } catch (PDOException $e) {
+      $this->fatal_error($e->getMessage());
+    }
+    return $rows;
+  }
+
+  function insert($p) {
+    try {
+      if(!self::$dbh) $this->connect();
+
+      $stmt = self::$dbh->prepare("INSERT INTO people 
+                           (name,cvs_id,email,groups,language,lon,lat)
+                           VALUES 
+                           (:name,:cvs_id,:email,:groups,:lang,:lon,:lat)");
+
+      $params = array(':name'=>$p['name'], ':cvs_id'=>$p['cvs_id'],
+                      ':email'=>$p['email'], ':groups'=>$p['groups'],
+                      ':lang'=>$p['langSearch'], ':lon'=>$p['longitude'], 
+                      ':lat'=>$p['latitude']);
+
+      $stmt->execute($params);
+      $ret = self::$dbh->lastInsertId();
+    } catch (PDOException $e) {
+      $this->fatal_error($e->getMessage());
+    }
+    return $ret;
+  }
+?>]]></example>
+
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Javascript invades">
+
+<break lines="1" />
+<blurb fontsize="7em">
+You got Javascript in my PHP!  And I am not happy about it.
+</blurb>
+<list>
+<bullet fontsize="3em">Javascript confuses me</bullet>
+<bullet fontsize="3em">It doesn't run on my server</bullet>
+<bullet fontsize="3em">I like my server</bullet>
+<bullet fontsize="3em">My server has my database</bullet>
+<bullet fontsize="3em">My application needs to run on my server</bullet>
+<bullet fontsize="3em">But my UI sucks</bullet>
+<bullet fontsize="3em">Javascript can fix my UI</bullet>
+<bullet fontsize="3em">The UI needs to manipulate the data</bullet>
+<bullet fontsize="3em">Half my application doesn't run on my server anymore</bullet>
+<bullet fontsize="3em">Javascript confuses me</bullet>
+</list>
+</slide>
