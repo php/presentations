@@ -1,0 +1,24 @@
+<slide title="Communication">
+
+<break lines="1"/>
+<blurb fontsize="7em">
+Javascript to PHP (and back)
+</blurb>
+
+<example title="Server-side PHP" result="0" fontsize="1.5em"><![CDATA[<?php
+   echo strrev($_REQUEST['str']);
+?>]]></example>
+
+<example title="Client-side Javascript" result="1" fontsize="1.5em"><![CDATA[<script type="text/javascript" 
+        src="http://yui.yahooapis.com/2.2.2/build/utilities/utilities.js">
+</script>
+<script>
+var callback = { 
+    success: handleResponse = function(o) {
+                                 alert(o.responseText);
+                              }
+};
+YAHOO.util.Connect.asyncRequest('GET','/rpc.php?str=Rasmus', callback);
+</script>]]></example>
+
+</slide>

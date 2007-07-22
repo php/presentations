@@ -1,0 +1,12 @@
+<slide title="Communication">
+
+<break lines="1"/>
+<blurb fontsize="7em">
+PHP to Javascript on initial page load
+</blurb>
+<example result="1" fontsize="1.5em"><![CDATA[<script>
+var foo = <?php echo json_encode(array('bar1'=>'This', 'bar2'=>'Works'))?>;
+document.write(foo.bar1+' '+foo.bar2);
+</script>]]></example>
+
+</slide>
