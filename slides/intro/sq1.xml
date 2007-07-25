@@ -1,0 +1,25 @@
+<slide title="SquirrelMail">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" leader="Siege: " href="http://www.joedog.org/JoeDog/Siege"/>
+
+<example fontsize="1.4em" type="shell" title="Benchmarking SquirrelMail"><![CDATA[
+% siege |ffff00|-H| "Cookie: squirrelmail_language=; SQMSESSID=10c85281f476600ee102e2db24354612; key=0Ce3/xkJ" \
+        |ffff00|-c| 10 http://mail.ubuntu/src/right_main.php |ffff00|-b| |ffff00|-r| 200
+** SIEGE 2.66
+** Preparing 10 concurrent users for battle.
+The server is now under siege..      done.                                                                                                          Transactions:                    2000 hits
+Availability:                 100.00 %
+Elapsed time:                  64.69 secs
+Data transferred:               2.81 MB
+Response time:                  |ffff00|0.26 secs|
+Transaction rate:              |ffff00|30.92 trans/sec|
+Throughput:                     0.04 MB/sec
+Concurrency:                    8.06
+Successful transactions:        2000
+Failed transactions:               0
+Longest transaction:           27.14
+Shortest transaction:           0.02]]></example>
+
+</slide>

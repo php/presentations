@@ -1,0 +1,43 @@
+<slide title="Quick optimization">
+
+<break lines="1" />
+
+<example fontsize="1.6em" type="shell" title="right_main.php"><![CDATA[define('SM_PATH','../');
+
+/* SquirrelMail required files. */
+include_once(SM_PATH . 'include/validate.php');
+//include_once(SM_PATH . 'functions/global.php');
+require_once(SM_PATH . 'functions/imap.php');
+require_once(SM_PATH . 'functions/date.php');
+require_once(SM_PATH . 'functions/mime.php');
+require_once(SM_PATH . 'functions/mailbox_display.php');
+require_once(SM_PATH . 'functions/display_messages.php');
+require_once(SM_PATH . 'functions/html.php');
+//require_once(SM_PATH . 'functions/plugin.php');
+...
+]]></example>
+
+<example fontsize="1.6em" type="shell" title="Get rid of dynamic paths and _once"><![CDATA[include '../include/validate.php';
+require '../functions/imap.php';
+require '../functions/date.php';
+require '../functions/mime.php';
+require '../functions/mailbox_display.php';
+require '../functions/display_messages.php';
+require '../functions/html.php';]]></example>
+
+
+<example fontsize="1.6em" type="shell" title="Results"><![CDATA[** SIEGE 2.66
+** Preparing 10 concurrent users for battle.
+The server is now under siege..      done.                                                                                                          Transactions:                   10000 hits
+Availability:                 100.00 %
+Elapsed time:                  57.91 secs
+Data transferred:              13.72 MB
+Response time:                  |ffff00|0.05 secs|
+Transaction rate:             |ffff00|172.68 trans/sec|
+Throughput:                     0.24 MB/sec
+Concurrency:                    8.31
+Successful transactions:       10000
+Failed transactions:               0
+Longest transaction:           11.84
+Shortest transaction:           0.00]]></example>
+</slide>
