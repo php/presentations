@@ -1,3 +1,11 @@
-<slide template="titlepage" fontsize="3.5em">
-<title>Welcome!</title>
+<slide template="title" fontsize="3.5em">
+
+<blurb class="session-title">:-:title:-:</blurb>
+<break/>
+<blurb class="event-date">:-:event:-: - :-:location:-:</blurb>
+<blurb class="pres-url-small">:-:date:-:</blurb>
+<break/>
+<blurb class="event-presenter">:-:speaker:-: - dr@ez.no</blurb>
+<break/>
+<blurb class="pres-url-small">:-:url:-:</blurb>
 </slide>

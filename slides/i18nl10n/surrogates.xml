@@ -10,10 +10,14 @@
 	</list>
 	<example><![CDATA[byte 1 = 0xd800 - 0xdbff
 byte 2 = 0xdc00 - 0xdfff
-
-𐐘
-U+10418 DESERET CAPITAL LETTER GAY
-        0xd810 0xdc18]]></example>
+]]></example>
+<break/>
+	<blurb>
+𝌝
+	</blurb>
+<break/>
+	<example><![CDATA[U+1D31D TETRAGRAM FOR JOY
+        0xD834 0xDF1D]]></example>
 	<list>
 		<bullet>Code *point*: a character</bullet>
 		<bullet>Code *unit*: a two-byte sequence with UTF-16</bullet>
