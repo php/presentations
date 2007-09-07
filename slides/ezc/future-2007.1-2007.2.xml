@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Next?</title>
+	<subtitle>Additions for eZ Components 2007.2</subtitle>
+
+	<blurb>New components:</blurb>
+	<list>
+		<bullet>*Document*: Conversions between different kinds of documents</bullet>
+		<bullet>*Tree*: Handling tree structyres</bullet>
+		<bullet>*Webdav*: Server-side support</bullet>
+	</list>
+
+	<blurb>Additions to components:</blurb>
+	<list>
+		<bullet>*Authentication*: Improved OpenID support</bullet>
+		<bullet>*Mail*: Searching IMAP mailboxes, validating addresses, more authentication mechanisms</bullet>
+		<bullet>*Template*: Translation and character set support</bullet>
+	</list>
+
+	<blurb>Roadmap: http://issues.ez.no/RoadMap.php?Id=630</blurb>
+</slide>

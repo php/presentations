@@ -9,8 +9,8 @@
 
 	$locales = array('en_US', 'fr_CA', 'nb_NO', 'ru_RU', 'ar_SA', 'ja_JP');
 	foreach ($locales as $locale) {
-		i18n_loc_set_default($locale);
-		echo date_format_locale($ts, DATE_RFC1036), "<br/>\n";
+		locale_set_default($locale);
+		echo date_format_locale($ts, DATE_RFC2822), "<br/>\n";
 	}
 ?>]]></example>
 </slide>

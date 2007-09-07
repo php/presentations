@@ -4,7 +4,7 @@
 
 	<blurb>Parsing strings for date time information with the ~date_create()~ function:</blurb>
 	<example><![CDATA[<?php
-	$ts = date_create("2005-07-11 22:16:50");
+	$ts = date_create("1978-12-22 09:15:50");
 ?>]]></example>
 <break/>
 
@@ -16,7 +16,12 @@
 
 	<blurb>This function will not return the timestamp as an integer, but
 	instead returns a DateTime object which is a wrapper around a 64 bit
-	integer (with some additional functionality ofcourse).</blurb>
+	integer, which you can access (as string) through:</blurb>
+<break/>
+
+	<example result="1"><![CDATA[<?php
+	$ts = new DateTime("2007-09-03 13:44:39");
+	echo $ts->format( 'U' ), "\n";
+?>]]></example>
 	
 </slide>
-

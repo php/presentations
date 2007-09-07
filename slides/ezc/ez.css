@@ -17,6 +17,7 @@ body.title
 	background-image: url(presentations/slides/ezc/ez-background-title.jpg);
 	overflow: none;
 }
+
 div.sticky {
 	margin: 0;
 	position: fixed;
@@ -71,6 +72,14 @@ body.title div.mainarea
 {
 	margin-top: 250px; 
 	overflow: -moz-scrollbars-none;
+}
+body.black div.mainarea
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	padding-left: 24px;
+	background-color: black;
 }
 ul.pres {
 list-style: circle;

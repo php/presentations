@@ -4,8 +4,8 @@
 	<subtitle>When is the next change?</subtitle>
 
 	<example result="1"><![CDATA[<?php
-$tz = new DateTimeZone(
-	isset($_GET['zone']) ? $_GET['zone'] : "Europe/Amsterdam");
+date_default_timezone_set("America/New_york");
+$tz = new DateTimeZone(isset($_GET['zone']) ? $_GET['zone'] : "America/New_york");
 
 foreach (timezone_transitions_get($tz) as $tr)
 	if ($tr['ts'] > time())
@@ -14,14 +14,11 @@ foreach (timezone_transitions_get($tz) as $tr)
 $d = new DateTime( "@{$tr['ts']}" );
 printf("The timezone %s switches to %s on %s.<br/>The new GMT offset will be: %d (%s)\n",
 	$tz->getName(), $tr['isdst'] ? "DST" : "standard time",
-	$d->format('d M Y @ H:i'), $tr['offset'], $tr['abbr']
+	$d->format('d M Y @ H:i T'), $tr['offset'], $tr['abbr']
 );
 ?>
-<form>
-<select name='zone'>
+<form><select name='zone'>
 <?php foreach(DateTimeZone::listIdentifiers() as $id) {
 	echo "<option value='$id'>$id</option>\n"; } ?>
-</select>
-<input type="submit" value="go"/>
-</form>]]></example>
+</select><input type="submit" value="go"/></form>]]></example>
 </slide>

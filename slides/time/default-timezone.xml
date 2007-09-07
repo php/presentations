@@ -3,7 +3,7 @@
 	<title>Default Timezones</title>
 
 	<blurb>Setting a default timezone:</blurb>
-	<example result="1"><![CDATA[<?php
+	<example result="0"><![CDATA[<?php
 	date_default_timezone_set("Europe/Oslo");
 	$ts = date_create("1978-12-22 09:15");
 	echo date_format($ts, "e");
