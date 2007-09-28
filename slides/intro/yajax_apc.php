@@ -1,7 +1,7 @@
 <?php
 if(!empty($_GET['loc'])) {
  if(!$data = apc_fetch("map".urlencode($_GET['loc']))) {
-  $src = "http://api.local.yahoo.com/MapsService/V1/mapImage?appid=rlerdorf";
+  $src = "http://local.yahooapi.com/MapsService/V1/mapImage?appid=rlerdorf";
   $src.= "&location=".urlencode($_GET['loc']).
          "&output=php&image_width=300&image_height=300&zoom=7";
   $data = unserialize(file_get_contents($src));

@@ -1,0 +1,66 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-yahoo-95x50.png"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+University Hack Day Introduction
+-->
+
+<topic>Yahoo!</topic>
+<title>Hack Day</title>
+<event>CMU Hack Day</event>
+<location>Pittsburgh, PA</location>
+<date>Sept 28, 2007</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/hackday0.xml</slide>
+<slide>slides/intro/hackday1.xml</slide>
+<slide>slides/intro/hackday2.xml</slide>
+<slide>slides/intro/hackday3.xml</slide>
+<slide>slides/lamp/failfast.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/intro/idea.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/intro/serverside.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<slide>slides/intro/ossworks.xml</slide>
+<slide>slides/intro/ego.xml</slide>
+<slide>slides/intro/web20.xml</slide>
+<slide>slides/intro/web2works.xml</slide>
+
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/xml_eg.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+
+<slide>slides/intro/php_yui1.xml</slide>
+<slide>slides/intro/php_yui2.xml</slide>
+<slide>slides/intro/php_yui3.xml</slide>
+<slide>slides/intro/php_yui4.xml</slide>
+<slide>slides/intro/php_yui5.xml</slide>
+
+<slide>slides/intro/yajax.xml</slide>
+<slide>slides/intro/ws1.xml</slide>
+<slide>slides/intro/ws2.xml</slide>
+<slide>slides/intro/ws3.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/ws7.xml</slide>
+<slide>slides/intro/geoflickr.xml</slide>
+
+<slide>slides/intro/hackref.xml</slide>
+
+</presentation>

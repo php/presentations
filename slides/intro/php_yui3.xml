@@ -12,7 +12,7 @@ Small changes, big rewards
 var jsmap = new YMap('jsmapContainer');
 jsmap.addZoomLong();
 |jsmap.addTypeControl();
-jsmap.drawZoomAndCenter("Portland, OR", 7);
+jsmap.drawZoomAndCenter("Pittsburgh, PA", 7);
 </script>]]></example>
 
 </slide>

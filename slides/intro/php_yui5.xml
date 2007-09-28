@@ -22,7 +22,7 @@ var updateMap = function() {
 var jsmap = new YMap('jsmapContainer');
 jsmap.addZoomLong();
 jsmap.addTypeControl();
-jsmap.drawZoomAndCenter("Portland, OR", 7);
+jsmap.drawZoomAndCenter("Pittsburgh, PA", 7);
 |jsmap.addOverlay(new YGeoRSS('http://earthquake.usgs.gov/eqcenter/catalogs/eqs7day-M2.5.xml'));
 </script>]]></example>
 

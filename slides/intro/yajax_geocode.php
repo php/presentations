@@ -1,6 +1,6 @@
 <?php
 if(!empty($_REQUEST['loc'])) {
-  $src = 'http://api.local.yahoo.com/MapsService/V1/geocode?appid=rlerdorf'.
+  $src = 'http://local.yahooapis.com/MapsService/V1/geocode?appid=rlerdorf'.
          '&location='.urlencode($_REQUEST['loc']).'&output=php';
   header("Content-type: application/x-json");
   echo json_encode(unserialize(file_get_contents($src)));
@@ -8,8 +8,7 @@ if(!empty($_REQUEST['loc'])) {
 }
 ?>
 <html><head>
- <script language="javascript" src="/yui/YAHOO.js"></script>
- <script language="javascript" src="/yui/connection.js"></script>
+ <script type="text/javascript" src="http://yui.yahooapis.com/2.3.0/build/utilities/utilities.js"></script> 
  <script language="javascript">
 <!--
 var fN = function callBack(o) {

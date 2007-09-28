@@ -1,11 +1,11 @@
 <?php
 if(!empty($_GET['loc'])) {
-  $geo = 'http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo'.
+  $geo = 'http://local.yahooapis.com/MapsService/V1/geocode?appid=YahooDemo'.
          '&location='.urlencode($_GET['loc']).'&output=php';
   $ll = unserialize(file_get_contents($geo));
   $lat = $ll['ResultSet']['Result']['Latitude']; 
   $lon = $ll['ResultSet']['Result']['Longitude']; 
-  $map = "http://api.local.yahoo.com/MapsService/V1/mapImage?appid=YahooDemo".
+  $map = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=YahooDemo".
          "&output=php&image_width=450&image_height=450&radius=1500";
   $N = unserialize(file_get_contents("$map&latitude=$lat&longitude=$lon")); 
   $lat = -$lat; $lon = $lon<0 ? 180+$lon : $lon-180;
@@ -16,8 +16,7 @@ if(!empty($_GET['loc'])) {
 }
 ?>
 <html><head>
- <script language="javascript" src="/yui/YAHOO.js"></script>
- <script language="javascript" src="/yui/connection.js"></script>
+ <script type="text/javascript" src="http://yui.yahooapis.com/2.3.0/build/utilities/utilities.js"></script> 
  <script language="javascript">
 <!--
 var img1 = false;

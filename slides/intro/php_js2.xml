@@ -14,9 +14,7 @@ Javascript to PHP (and back)
 </script>
 <script>
 var callback = { 
-    success: handleResponse = function(o) {
-                                 alert(o.responseText);
-                              }
+    success: handleResponse = function(o) { alert(o.responseText); }
 };
 YAHOO.util.Connect.asyncRequest('GET','/rpc.php?str=Rasmus', callback);
 </script>]]></example>
