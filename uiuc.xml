@@ -14,9 +14,12 @@
 <location>Champaign, IL</location>
 <date>Oct 9, 2007</date>
 <speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/uiuc</url>
 
 <slide>slides/intro/titlepage.xml</slide>
 
+<slide>slides/intro/php_yui1.xml</slide>
+<slide>slides/intro/phpjs_learn.xml</slide>
 <slide>slides/intro/sx.xml</slide>
 <slide>slides/intro/rss_flickr.xml</slide>
 <slide>slides/intro/buzz.xml</slide>
