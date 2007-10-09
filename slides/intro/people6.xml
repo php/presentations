@@ -1,0 +1,34 @@
+<slide title="People Map">
+
+<break lines="1" />
+<blurb fontsize="6em">
+Events and initial start up
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[var updateLatLon = function() {
+   var ll = YAHOO.people.container.jsmap.getCenterLatLon();
+   document.getElementById('latitude').value = ll['Lat'];
+   document.getElementById('longitude').value = ll['Lon'];
+};
+
+var updateMap = function() {
+   var loc = document.getElementById('loc').value;
+   YAHOO.people.container.jsmap.drawZoomAndCenter(loc,7);
+   return false;
+};
+
+var callback = { success:handleMarkers }
+YAHOO.util.Connect.asyncRequest('GET','http://www.lerdorf.com/people/rpc.php?action=markers', callback);
+
+YEvent.Capture(YAHOO.people.container.jsmap, EventsList.endPan, updateLatLon);
+YEvent.Capture(YAHOO.people.container.jsmap, EventsList.endAutoPan, updateLatLon);
+YEvent.Capture(YAHOO.people.container.jsmap, EventsList.endMapDraw, updateLatLon);
+
+YAHOO.util.Event.addListener("addButton", "click", YAHOO.people.container.addUser.show, 
+                    YAHOO.people.container.addUser, true);
+YAHOO.util.Event.addListener("loginButton", "click", YAHOO.people.container.loginUser.show,
+                    YAHOO.people.container.loginUser, true);
+YAHOO.util.Event.addListener("locF", "submit", updateMap);
+]]></example>
+
+</slide>

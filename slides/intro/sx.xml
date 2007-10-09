@@ -1,0 +1,20 @@
+<slide title="Simple XML">
+<example title="Book XML File"><![CDATA[<books>
+  <book>
+    <title>The Grapes of Wrath</title>
+    <author>John Steinbeck</author>
+  </book>
+  <book>
+    <title>The Pearl</title>
+    <author>John Steinbeck</author>
+  </book>
+</books>]]></example>
+<example title="Book PHP File" result="1"><![CDATA[<?php
+$books = simplexml_load_file('presentations/slides/intro/book.xml');
+
+foreach ($books->book as $book) {
+  echo "{$book->title} was written 
+        by {$book->author}<br>\n";
+}
+?>]]></example>
+</slide>

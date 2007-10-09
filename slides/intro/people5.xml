@@ -1,0 +1,37 @@
+<slide title="People Map">
+
+<break lines="1" />
+<blurb fontsize="6em">
+Dealing with the markers
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[ var createMarker = function(m) {
+   var colors = { none: 'grey', core: 'orange', doc: 'green', qa: 'red' }
+   var geoPoint = new YGeoPoint(m.lat,m.lon);
+   var col = m.groups.split(', ')[0];
+   if(!col.length) col = 'none';
+   var newMarker= new YMarker(geoPoint, myMarkerImage(colors[col]));
+   newMarker.addAutoExpand(m.name);
+   var blurb = "<b><font size=+1>"+m.name+"</font></b><br>" +
+           "<b>id:</b> "+m.cvs_id+"<br>" +
+           "<b>email:</b> "+m.email+"<br>" +
+           "<b>language:</b> "+m.language+"<br>" +
+           "<b>groups:</b> "+m.groups;
+
+   YEvent.Capture(newMarker, EventsList.MouseClick,
+     function(){
+       newMarker.openSmartWindow(blurb);
+     });
+   YAHOO.people.container.jsmap.addOverlay(newMarker);
+ };
+
+ var handleMarkers = function(o) {
+   var resp = eval('(' + o.responseText + ')');
+   if(resp['people']) {
+     for(var i in resp['people']) {
+       createMarker(resp['people'][i]);
+     }
+   }
+ }; ]]></example>
+
+</slide>

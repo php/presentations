@@ -1,0 +1,30 @@
+<slide title="People Map">
+
+<break lines="1" />
+<blurb fontsize="6em">
+Create and render the dialogs
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[ YAHOO.people.container.addUser = new YAHOO.widget.Dialog("addUserDlg",
+    { width : "290px",
+      context: ["buttonContainer", "br", "br"],
+      draggable: true,
+      visible : false,
+      buttons : [ { text:"Submit", handler:handleSubmit, isDefault:true },
+              { text:"Cancel", handler:handleCancel }
+             ]
+    });
+ YAHOO.people.container.addUser.render();
+
+ YAHOO.people.container.loginUser = new YAHOO.widget.Dialog("loginUserDlg",
+    { width : "210px",
+      context: ["buttonContainer", "br", "br"],
+      draggable: true,
+      visible : false,
+      buttons : [ { text:"Login", handler:handleSubmit, isDefault:true },
+              { text:"Cancel", handler:handleCancel }
+             ]
+    });
+ YAHOO.people.container.loginUser.render(); ]]></example>
+
+</slide>

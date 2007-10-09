@@ -1,0 +1,33 @@
+<slide title="People Map">
+
+<break lines="1" />
+<blurb fontsize="6em">
+Server-side rpc.php
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5" type="php"><![CDATA[<?php
+include './db.inc';
+include './db_people.inc';
+include './db_languages.inc';
+
+$people = new people;
+$action = $_REQUEST['action'];
+
+switch($action) {
+  case 'markers':
+    header("Content-type: application/json");
+    $all = $people->load();
+    echo json_encode(array('people'=>$all));
+    break;
+
+  case 'lang':
+    header("Content-type: text/javascript");
+    $languages = new languages;
+    $found = $languages->search($q);
+    foreach($found as $v) echo $v['name'].",";
+    break;
+}
+?>
+]]></example>
+
+</slide>

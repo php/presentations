@@ -1,0 +1,24 @@
+<slide title="People Map">
+
+<break lines="1" />
+<blurb fontsize="6em">
+Javascript to render map and center pin
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[  YAHOO.people.container.jsmap = new YMap(document.getElementById('jsmapContainer'));
+  YAHOO.people.container.jsmap.setMapType(YAHOO_MAP_REG);
+  YAHOO.people.container.jsmap.addZoomLong();
+  YAHOO.people.container.jsmap.addTypeControl();
+  YAHOO.people.container.jsmap.removeZoomScale();
+  YAHOO.people.container.jsmap.drawZoomAndCenter("Libya",16);
+
+  var container_size = YAHOO.people.container.jsmap.getContainerSize();
+  map_center = new YCoordPoint(container_size.width/2, container_size.height/2-17);
+  var cross = YUtility.createNode('img','cross');
+  cross.src = 'http://www.lerdorf.com/black_pin.png';
+  cross.height = 19;
+  cross.width= 23;
+  center_marker = new YCustomOverlay(map_center, cross);
+  YAHOO.people.container.jsmap.addOverlay(center_marker);]]></example>
+
+</slide>

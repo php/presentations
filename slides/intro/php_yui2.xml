@@ -11,7 +11,7 @@ Javascript libraries to the rescue
 <script type="text/javascript">
 var jsmap = new YMap('jsmapContainer');
 jsmap.addZoomLong();
-jsmap.drawZoomAndCenter("Pittsburgh, PA", 7);
+jsmap.drawZoomAndCenter(":-:location:-:", 5);
 </script>]]></example>
 
 </slide>

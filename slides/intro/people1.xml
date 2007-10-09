@@ -1,0 +1,84 @@
+<slide title="People Map">
+
+<break lines="1" />
+<blurb fontsize="6em">
+Putting it all together in a full application.
+</blurb>
+
+<example title="Main page" result="0" marginright="1em" fontsize="1.5" type="xml"><![CDATA[<div style="margin: 20px 0px 0px 20px; float: left; width:900px; border: 3px solid black;">
+    <div id="jsmapContainer" style="top:0px; left:0px; width:900px; height:500px;"></div>
+    <div style="padding: 0.5em; float: left;">
+        <form id="locF" onsubmit="return false">
+            <label for="loc">Location:<label>
+            <input type="text" name="loc" id="loc" size="80"/>
+        </form>
+        <div id="status" style="display: inline;"></div>
+    </div>
+    <div id="buttonContainer" style="padding: 0.5em; float: right;">
+        <form>
+            <input type="button" id="login" value="Login"></input>
+            <input type="button" id="add" value="Add"></input>
+        </form>
+    </div>
+</div>]]></example>
+
+<example title="Login Dialog" result="0" marginright="1em" fontsize="1.5" type="xml"><![CDATA[<div id="loginUserDlg">
+  <div class="hd">Login</div>
+  <div class="bd">
+    <form id="loginUserForm" method="POST" action="rpc.php">
+      <input type="hidden" id="action" name="action" value="login"></input>
+      <label for="userid">User id:</label><input type="text" name="id" size="26"/>
+      <label for="userpwd">Password:</label><input type="password" name="pwd" size="26"/>
+    </form>
+  </div>
+</div>]]></example>
+
+<example title="Add User Dialog" result="0" marginright="1em" fontsize="1.5" type="xml"><![CDATA[<div id="addUserDlg">
+  <div class="hd">New Marker Data</div>
+  <div class="bd">
+    <form id="addUserForm" method="POST" action="rpc.php">
+    <!-- TabView --->
+    <div id="tabContainer" class="yui-navset">
+      <ul class="yui-nav">
+         <li class="selected"><a href="#addTab"><em>Add</em></a></li>
+         <li><a href="#langTab"><em>Language</em></a></li>
+         <li><a href="#latLongTab"><em>Lat &amp; Long</em></a></li>
+      </ul>
+      <div class="yui-content">
+         <div id="addTab">
+            <input type="hidden" name="action" value="add" />
+            <label for="name">Name:</label>
+            <input type="text" name="name" size="36" />
+            <label for="cvs_id">User id:</label>
+            <input type="text" name="cvs_id" size="36"/>
+            <label for="email">E-mail:</label>
+            <input type="text" name="email" size="36"/>
+
+            <label for="group">Group:</label>
+            <input type="checkbox" name="group[]" value="core"> Core </input>
+            <input type="checkbox" name="group[]" value="doc"> Doc </input>
+            <input type="checkbox" name="group[]" value="qa"> QA </input>
+         </div>
+
+         <div id="langTab">
+            <label for="langSearch">Language:</label>
+            <input type="input" id="langSearch" name="langSearch" 
+                   autocomplete="off" size="36"/>
+            <div id="langResults"></div>
+         </div>
+
+         <div id="latLongTab">
+            <p>Center the map on your location to get your lat/lon.</p>
+            <label for="latitude">Latitude:</label>
+            <input type="text" name="latitude" id="latitude" size="36"/>
+            <label for="location">Longitude:</label>
+            <input type="text" name="longitude" id="longitude" size="36"/>
+         </div>
+      </div>
+    </div>
+    <!-- End TabView --->
+    </form>
+  </div>
+</div>]]></example>
+
+</slide>
