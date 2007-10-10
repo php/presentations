@@ -1,0 +1,57 @@
+<slide title="People Map">
+
+<break lines="1" />
+<blurb fontsize="6em">
+Login Javascript
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[var logged_in = <?php echo $logged_in ? 'true' : 'false'?>;
+
+var setCookie = function(cookieName,cookieValue, expire) {
+  var today = new Date();
+  var expire = new Date();
+  if(expire) {
+    expire.setTime(today.getTime() + 3600000*24*7);
+    document.cookie = cookieName+"="+escape(cookieValue) + ";expires="+expire.toGMTString();
+  } else {
+    document.cookie = cookieName+"="+escape(cookieValue);
+  }
+}
+
+var getCookie = function(name) {
+  var start = document.cookie.indexOf( name + "=" );
+  var len = start + name.length + 1;
+  if ((!start) && (name != document.cookie.substring(0, name.length))) {
+    return null;
+  }
+  if (start == -1) return null;
+  var end = document.cookie.indexOf(";", len);
+  if (end==-1) end = document.cookie.length;
+  return unescape( document.cookie.substring( len, end ) );
+}
+
+var addToken = function(token) {
+  var t = document.createElement('input');
+  t.type ='hidden'; t.name='token'; t.value=token;
+  document.getElementById('addUserForm').appendChild(t);
+}
+
+var handleLoginSuccess = function(o) {
+  var resp = eval('(' + o.responseText + ')');
+  if(resp.status) {
+    setCookie('id', resp.id, 1);
+    setCookie('auth', resp.auth, 1);
+    setCookie('token', resp.token, 0);
+    addToken(resp.token);
+    oAdd.set("disabled", false); //enable Add
+    oLogin.set("disabled", true); //disable Login
+  } else {
+    alert("Login failed");
+  }
+};
+
+if(logged_in) {
+  addToken(getCookie('token'));
+}]]></example>
+
+</slide>
