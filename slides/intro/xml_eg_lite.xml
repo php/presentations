@@ -1,0 +1,26 @@
+<slide title="XML">
+<break lines="1" />
+
+<example title="All XML handling based on libxml2" marginleft="2em" marginright="0em" result="0"><![CDATA[<?php
+$dom = new domDocument;
+$dom->load('menu.xml');
+// domXPath and xsltProcessor for further processing
+?>]]></example>
+
+<example title="presentations/slides/intro/menu.xml" result="1" hide="1" marginleft="2em" marginright="0em" fontsize="1.75em" rfontsize="1.5em"><![CDATA[<?php
+$fp = fopen('menu.xml','r');
+while($line = fgets($fp)) echo str_replace(' ','&nbsp;',htmlspecialchars($line))."<br />\n";
+?>]]></example>
+
+<example title="SimpleXML" result="1" marginleft="2em"><![CDATA[<?php
+  $menu = simplexml_load_file('menu.xml');
+#  echo "<pre>"; print_r($menu); echo "</pre>";
+  foreach ($menu->food as $item) {
+    echo $item['itemno'] . ") ";
+    echo $item->price . " ... ";
+    echo $item->name . "<br />\n";
+  }
+?>]]></example>
+
+</slide>
+
