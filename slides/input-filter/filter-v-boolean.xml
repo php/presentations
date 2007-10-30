@@ -8,7 +8,7 @@
 
 	<example result="1"><![CDATA[<?php
 $flags = array();
-$filter = FILTER_VALIDATE_BOOLEAN;
+$filter = FILTER_VALIDATE_BOOLEAN | FILTER_NULL_ON_FAILURE;
 include 'presentations/slides/input-filter/render-form.php';
 include 'presentations/slides/input-filter/check-data.php';
 ?>]]></example>

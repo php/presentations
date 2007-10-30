@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Developers</title>
+
+	<blurb class="subtitle_blurb">Fear - more work to do</blurb>
+	<list>
+		<bullet>Introduce TDD concepts gently</bullet>
+		<bullet>Whenever a problem is found, make and retain a test case for futher use</bullet>
+		<bullet>Start using TDD for new projects</bullet>
+	</list>
+</slide>

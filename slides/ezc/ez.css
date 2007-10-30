@@ -83,46 +83,53 @@ body.black div.mainarea
 }
 ul.pres {
 list-style: circle;
-font-size: 18pt;
+font-size: 24px;
 }
 
 ul.numbered
 {
-font-size: 20pt;
+font-size: 27px;
 margin-right: 40px;
 list-style-type: decimal;
 }
 
 ul.level2 {
 	list-style: circle;
-	font-size: 16pt;
+	font-size: 21px;
 	margin-left: 40px;
 	margin-top: -15px;
 }
 
 li.pres_bullet, div.link {
-font-size: 24pt;
+font-size: 32px;
 margin-right: 40px;
 }
 
 li.pres_bullet_nr {
-font-size: 20pt;
+font-size: 27px;
 margin-right: 40px;
 list-style-type: decimal;
 }
 
 ul.large div li.pres_bullet
 {
-	font-size: 26pt;
+	font-size: 35px;
 }
 	
 ul.small div li.pres_bullet
 {
-	font-size: 16pt;
+	font-size: 21px;
 }
 
 div.title_blurb {
 	font-size: 64px;
+	text-align: center;
+	font-weight: bold;
+	font-family: "MaxOT-book";
+}
+	
+div.subtitle_blurb {
+	font-size: 32px;
 	text-align: center;
 	font-weight: bold;
 	font-family: "MaxOT-book";
@@ -134,11 +141,11 @@ div.small_blurb {
 
 div.blurb_header {
 	font-family: "MaxOT-book";
-	font-size: 40px;
+	font-size: 38px;
 }
 
 div.blurb, div.bit_larger_output_text, div.output {
-	font-size: 24pt;
+	font-size: 32px;
 	width: 100%;
 }
 
@@ -151,7 +158,7 @@ div.x_small_blurb {
 }
 
 div.large_blurb {
-	font-size: 26pt;
+	font-size: 35px;
 }
 
 div.large_blurb_center {
@@ -183,7 +190,7 @@ div.xx_large_blurb_center {
 
 div.q_mark {
 	text-align: center;
-	font-size: 384px;
+	font-size: 350px;
 }
 
 div.shadow, code {
@@ -204,7 +211,7 @@ div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 
 div.bit_larger_output {
 	background: #e6e300;
-	font-size: 20pt;
+	font-size: 27px;
 	font-weight: normal;
 }
 
@@ -240,19 +247,19 @@ div.example pre {
 
 div.session-title {
 	text-align: center;
-	font-size:  48pt;
+	font-size:  64px;
 	font-family: "MaxOT-book";
 }
 
 div.event, div.event-date, div.event-presenter {
 	text-align: center;
-	font-size:  26pt;
+	font-size:  35px;
 	font-family: "MaxOT-book";
 }
 
 div.pres-url-small {
 	text-align: center;
-	font-size:  18pt;
+	font-size:  24px;
 	font-family: "MaxOT-book";
 }
 
@@ -264,7 +271,7 @@ img.spaced {
 }
 
 table {
-	font-size: 16pt;
+	font-size: 21px;
 }
 
 table.dbtable {
