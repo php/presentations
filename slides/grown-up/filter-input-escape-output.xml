@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Security Mantra</title>
+
+<break lines="12"/>
+	<blurb class="title_blurb">Filter input</blurb>
+<break lines="4"/>
+	<blurb class="title_blurb">Escape output</blurb>
+		
+</slide>

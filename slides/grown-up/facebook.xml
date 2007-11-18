@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Share Nothing</title>
+
+<image align="center" filename="facebook.png"/>
+<break lines="2"/>
+	<blurb class="quote">It seems that the cause was apache and mod_php
+	sending back un-interpreted source code as opposed to output, due to either
+	a server misconfiguration or high load (*this is a known issue*).</blurb>
+<break lines="3"/>
+	<blurb class="quote_attr">http://www.techcrunch.com/2007/08/11/facebook-source-code-leaked/</blurb>
+</slide>

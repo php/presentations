@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>PHP Benchmarks</title>
+
+<break lines="6"/>
+	<image align="center" filename="gcc411.png"/>
+<break lines="5"/>
+	<blurb class="quote_attr">
+	http://sebastian-bergmann.de/archives/634-PHP-GCC-ICC-Benchmark.html
+	</blurb>
+</slide>

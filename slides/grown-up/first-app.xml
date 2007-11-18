@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>My First Web "Application"</title>
+
+	<example><![CDATA[<HTML><TITLE>Members to publish</TITLE>
+<BODY BGCOLOR="#FFFFFF" BACKGROUND="pictures/schuback.gif">
+<CENTER>  <H1> The Members of the Anti Schumacher Club</H1>
+<! SQL connect localhost ascm ascm2304>
+<! SQL database ascm>
+<! SQL query "select id,land,naam,achternaam from leden
+ order by achternaam" q1>
+<TABLE BORDER=1 BGCOLOR=#FFFFFF CELLSPACING=0>
+<THEAD><TR><TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 >Id</TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 >land</TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 >Naam</TH>
+<TH BGCOLOR=#c0c0c0 BORDERCOLOR=#000000 >Achternaam</TH>
+</TR></THEAD><TBODY><! SQL print_rows q1 "<TR VALIGN=TOP>
+<TD ALIGN=RIGHT>@q1.0</TD><TD>@q1.1</TD> <TD>@q1.2</TD>
+ <TD>@q1.3</TD> </TR>\n" >
+</TABLE></CENTER>^M
+<br><br><br>^M
+<center>Powered by WWW-SQL</center></BODY></HTML>]]></example>
+<break/>
+	<blurb class="title_blurb">1998</blurb>
+
+</slide>

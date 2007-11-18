@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Micro-optimizations</title>
+
+<break lines="3"/>
+	<blurb class="title_blurb">%print% vs. %echo%</blurb>
+<break lines="2"/>
+	<blurb class="title_blurb">%$i++% vs. %++$i%</blurb>
+<break lines="2"/>
+	<blurb class="title_blurb">single quotes vs. double quotes</blurb>
+<break lines="2"/>
+	<blurb class="title_blurb">${0}</blurb>
+		
+</slide>
