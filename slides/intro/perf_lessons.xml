@@ -1,0 +1,10 @@
+<slide title="Performance Lessons">
+<break lines="5" />
+<list marginleft="1em" fontsize="5em">
+<bullet type="none">1. Keep things simple</bullet>
+<bullet type="none">2. Templating systems tend to be complex</bullet>
+<bullet type="none">3. Frameworks tend to be complex</bullet>
+<bullet type="none">4. Simple and clean takes work</bullet>
+<bullet type="none">5. Understand the costs when you violate rule #1</bullet>
+</list>
+</slide>

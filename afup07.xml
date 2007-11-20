@@ -26,10 +26,16 @@
 <slide>slides/fowa/hist5.xml</slide>
 
 <!-- Performance -->
-<slide>slides/intro/opt_callgrind.xml</slide>
-<slide>slides/intro/opt_xdebug.xml</slide>
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/sq1.xml</slide>
+<slide>slides/intro/sq2.xml</slide>
+<slide>slides/intro/sq3.xml</slide>
+<slide>slides/intro/sq4.xml</slide>
+<slide>slides/intro/sq5.xml</slide>
+<slide>slides/intro/perf_lessons.xml</slide>
 
 <!-- Security -->
+<slide>slides/intro/security_title.xml</slide>
 <slide>slides/yahoo/xss_basic.xml</slide>
 <slide>slides/yahoo/xss_yrisk.xml</slide>
 <slide>slides/intro/input_filter2.xml</slide>
@@ -43,6 +49,7 @@
 <slide>slides/intro/xss_type8.xml</slide>
 <slide>slides/intro/xss_type9.xml</slide>
 <slide>slides/intro/the_web_is_broken.xml</slide>
+<slide>slides/intro/url_handlers.xml</slide>
 <slide>slides/intro/xsrf.xml</slide>
 
 <slide>slides/intro/perfsec_ref.xml</slide>
