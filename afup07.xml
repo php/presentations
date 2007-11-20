@@ -1,0 +1,49 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Performance and Security</title>
+<event>Forum PHP</event>
+<location>Paris</location>
+<date>Nov.21 2007</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/afup07</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/opt_callgrind.xml</slide>
+<slide>slides/intro/opt_xdebug.xml</slide>
+
+<!-- Security -->
+<slide>slides/yahoo/xss_basic.xml</slide>
+<slide>slides/yahoo/xss_yrisk.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/xss_type1.xml</slide>
+<slide>slides/intro/xss_type2.xml</slide>
+<slide>slides/intro/xss_type3.xml</slide>
+<slide>slides/intro/xss_type4.xml</slide>
+<slide>slides/intro/xss_type5.xml</slide>
+<slide>slides/intro/xss_type6.xml</slide>
+<slide>slides/intro/xss_type7.xml</slide>
+<slide>slides/intro/xss_type8.xml</slide>
+<slide>slides/intro/xss_type9.xml</slide>
+<slide>slides/intro/the_web_is_broken.xml</slide>
+<slide>slides/intro/xsrf.xml</slide>
+
+<slide>slides/intro/perfsec_ref.xml</slide>
+</presentation>
