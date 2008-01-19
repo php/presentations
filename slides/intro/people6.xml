@@ -5,7 +5,7 @@
 Events and initial start up
 </blurb>
 
-<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[var updateLatLon = function() {
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[var updateLatLon = function() {
    var ll = YAHOO.people.container.jsmap.getCenterLatLon();
    document.getElementById('latitude').value = ll['Lat'];
    document.getElementById('longitude').value = ll['Lon'];

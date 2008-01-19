@@ -2,8 +2,9 @@
 	<title>Compiler Caches</title>
 	<subtitle>Serialization</subtitle>
 
+    <break lines="3"/>
 	<image align="center" filename="serialize.png"/>
-<break lines="3"/>
+    <break lines="3"/>
 	<list>
 		<bullet>Serialization into SHM</bullet>
 		<bullet>Direct execution from SHM (mostly)</bullet>

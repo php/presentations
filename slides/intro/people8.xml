@@ -5,7 +5,7 @@
 Implement autocomplete
 </blurb>
 
-<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[var oDS = new YAHOO.widget.DS_XHR("http://www.lerdorf.com/people/rpc.php", [","]);
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[var oDS = new YAHOO.widget.DS_XHR("http://www.lerdorf.com/people/rpc.php", [","]);
 oDS.responseType = YAHOO.widget.DS_XHR.TYPE_FLAT;
 oDS.scriptQueryParam = "q";
 oDS.scriptQueryAppend = "action=lang";

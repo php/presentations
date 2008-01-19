@@ -5,7 +5,7 @@
 Javascript to render map and center pin
 </blurb>
 
-<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[  YAHOO.people.container.jsmap = new YMap(document.getElementById('jsmapContainer'));
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[  YAHOO.people.container.jsmap = new YMap(document.getElementById('jsmapContainer'));
   YAHOO.people.container.jsmap.setMapType(YAHOO_MAP_REG);
   YAHOO.people.container.jsmap.addZoomLong();
   YAHOO.people.container.jsmap.addTypeControl();

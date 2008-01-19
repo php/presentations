@@ -5,7 +5,7 @@
 Dealing with the markers
 </blurb>
 
-<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[ var createMarker = function(m) {
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[ var createMarker = function(m) {
    var colors = { none: 'grey', core: 'orange', doc: 'green', qa: 'red' }
    var geoPoint = new YGeoPoint(m.lat,m.lon);
    var col = m.groups.split(', ')[0];

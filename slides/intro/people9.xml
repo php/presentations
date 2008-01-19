@@ -5,7 +5,7 @@
 Backend code for login and XSRF prevention
 </blurb>
 
-<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[<?php
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
 $logged_in = session_check();
 
 $token = null;
