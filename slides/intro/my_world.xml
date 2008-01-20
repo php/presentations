@@ -22,7 +22,7 @@ var markers = new Array();
 var first = 1;
 var last = null;
 var Pin = new YImage();
-Pin.src = '/red_pin.png';
+Pin.src = 'http://www.lerdorf.com/red_pin.png';
 Pin.size = new YSize(32,27);
 Pin.offset = new YCoordPoint(1,4);
 
