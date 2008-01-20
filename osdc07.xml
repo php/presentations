@@ -1,0 +1,45 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>Security</topic>
+<title>Exploring the Broken Web</title>
+<event>OSDC</event>
+<location>Brisbane</location>
+<date>Nov.28 2007</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/intro/my_world.xml</slide>
+
+<!-- Security -->
+<slide>slides/intro/never_click_title.xml</slide>
+<slide>slides/intro/ff2005.xml</slide>
+<slide>slides/intro/url_handlers.xml</slide>
+<slide>slides/yahoo/xss_basic.xml</slide>
+<slide>slides/yahoo/xss_yrisk.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/xss_type1.xml</slide>
+<slide>slides/intro/xss_type2.xml</slide>
+<slide>slides/intro/xss_type3.xml</slide>
+<slide>slides/intro/xss_type4.xml</slide>
+<slide>slides/intro/xss_type5.xml</slide>
+<slide>slides/intro/xss_type6.xml</slide>
+<slide>slides/intro/xss_type7.xml</slide>
+<slide>slides/intro/xss_type8.xml</slide>
+<slide>slides/intro/xss_type9.xml</slide>
+<slide>slides/intro/the_web_is_broken.xml</slide>
+<slide>slides/intro/xsrf.xml</slide>
+
+<slide>slides/intro/sec_ref.xml</slide>
+</presentation>
