@@ -1,0 +1,109 @@
+<slide title="World">
+<break lines="1" />
+<example result="1" hide="1" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=YahooDemo"></script>
+<script type="text/javascript" src="/ymap_canvas_fix.js"></script>
+
+<div id="jsmapContainer" style="height: 600px; width: 980px;"></div>
+<div id="buttonContainer" style="padding: 0.5em;">
+  <form>
+    <input type="button" id="1" value="San Francisco" onclick="mark('SFO');"></input>
+    <input type="button" id="2" value="Frankfurt" onclick="mark('Frankfurt');"></input>
+    <input type="button" id="3" value="Paris" onclick="mark('Paris, France');"></input>
+    <input type="button" id="4" value="Washington" onclick="mark('IAD');"></input>
+    <input type="button" id="5" value="Sydney" onclick="mark('Sydney, Australia');"></input>
+    <input type="button" id="6" value="Brisbane" onclick="mark('Brisbane, Australia');"></input>
+    <input type="button" id="7" value="London" onclick="mark('London');"></input>
+    <input type="button" id="8" value="Bangalore" onclick="mark('Bangalore');"></input>
+  </form>
+</div>
+
+<script type="text/javascript">
+var markers = new Array();
+var first = 1;
+var last = null;
+var Pin = new YImage();
+Pin.src = '/red_pin.png';
+Pin.size = new YSize(32,27);
+Pin.offset = new YCoordPoint(1,4);
+
+var geoDone = function(o) { 
+  jsmap.panToLatLon(o.GeoPoint);
+  if(!first) {
+    markers[o.Address] = o.GeoPoint;
+    jsmap.addOverlay(new YPolyline([last,o.GeoPoint],'blue',5,0.4));
+  }
+  first = 0;
+  last = o.GeoPoint;
+};
+
+var mark = function(loc) { 
+  if(!markers[loc]) {
+    jsmap.addOverlay(new YMarker(loc, Pin));
+  } else {
+    jsmap.panToLatLon(markers[loc]);
+    jsmap.addOverlay(new YPolyline([last,markers[loc]],'blue',5,0.4));
+    last = markers[loc];
+  }
+};
+
+var jsmap = new YMap('jsmapContainer');
+jsmap.addZoomLong();
+jsmap.addTypeControl();
+YEvent.Capture(jsmap, EventsList.onEndGeoCode, geoDone);
+jsmap.drawZoomAndCenter('SFO',15);
+</script>]]></example>
+
+<example result="0" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=YahooDemo"></script>
+<script type="text/javascript" src="http://lerdorf.com/ymap_canvas_fix.js"></script>
+
+<div id="jsmapContainer" style="height: 600px; width: 980px;"></div>
+<div id="buttonContainer" style="padding: 0.5em;">
+  <form>
+    <input type="button" id="1" value="San Francisco" onclick="mark('SFO');"></input>
+    <input type="button" id="2" value="Frankfurt" onclick="mark('Frankfurt');"></input>
+    <input type="button" id="3" value="Paris" onclick="mark('Paris, France');"></input>
+    <input type="button" id="4" value="Washington" onclick="mark('IAD');"></input>
+    <input type="button" id="5" value="Sydney" onclick="mark('Sydney, Australia');"></input>
+    <input type="button" id="6" value="Brisbane" onclick="mark('Brisbane, Australia');"></input>
+    <input type="button" id="7" value="London" onclick="mark('London');"></input>
+    <input type="button" id="8" value="Bangalore" onclick="mark('Bangalore');"></input>
+  </form>
+</div>
+
+<script type="text/javascript">
+var markers = new Array();
+var first = 1;
+var last = null;
+var Pin = new YImage();
+Pin.src = 'http://www.lerdorf.com/red_pin.png';
+Pin.size = new YSize(32,27);
+Pin.offset = new YCoordPoint(1,4);
+
+var geoDone = function(o) { 
+  jsmap.panToLatLon(o.GeoPoint);
+  if(!first) {
+    markers[o.Address] = o.GeoPoint;
+    jsmap.addOverlay(new YPolyline([last,o.GeoPoint],'blue',5,0.4));
+  }
+  first = 0;
+  last = o.GeoPoint;
+};
+
+var mark = function(loc) { 
+  if(!markers[loc]) {
+    jsmap.addOverlay(new YMarker(loc, Pin));
+  } else {
+    jsmap.panToLatLon(markers[loc]);
+    jsmap.addOverlay(new YPolyline([last,markers[loc]],'blue',5,0.4));
+    last = markers[loc];
+  }
+};
+
+var jsmap = new YMap('jsmapContainer');
+jsmap.addZoomLong();
+jsmap.addTypeControl();
+YEvent.Capture(jsmap, EventsList.onEndGeoCode, geoDone);
+jsmap.drawZoomAndCenter('SFO',15);
+</script>]]></example>
+
+</slide>
