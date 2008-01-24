@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Namespaces</title>
+	<subtitle>Name resolution rules</subtitle>
+
+	<blurb>Inside a namespace, all unqualified names (C) are translated during
+run-time.</blurb>
+<example><![CDATA[<?php
+namespace eZ::Database;
+
+// translated at run-time first to eZ::Database::Driver()
+new Driver();
+?>]]></example>
+	<blurb>If not found, it looks for the *internal class* Driver.</blurb>
+	<blurb>If not found, it attempts to autoload eZ::Database::Driver.</blurb>
+<break/>
+	<blurb>In order to use the global class Driver, use "%new ::Driver()%."</blurb>
+</slide>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Namespaces</title>
+	<subtitle>Quirks</subtitle>
+
+	<blurb>You can not override internal classes:</blurb>
+<break/>
+<example><![CDATA[ez_datetime.php
+<?php
+namespace eZ;
+
+class DateTime
+{
+}
+?>]]></example>
+<break lines="3"/>
+<example><![CDATA[test.php
+<?php
+require 'ez_datetime.php';
+
+use eZ::DateTime;
+?>]]></example>
+<break lines="3"/>
+	<blurb>Displays:</blurb>
+<example><![CDATA[Fatal error: Cannot use eZ::DateTime as DateTime because the
+name is already in use in /tmp/test.php on line 4]]></example>
+</slide>

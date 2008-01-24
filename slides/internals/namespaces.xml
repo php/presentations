@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Namespaces</title>
+
+	<list>
+		<bullet>Solves name clashes</bullet>
+		<bullet>Provides name aliases and resolving</bullet>
+		<bullet>Can contain constants, classes and functions</bullet>
+	</list>
+<example><![CDATA[<?php
+namespace eZ;
+
+const DEVELOPMENT = 42;
+
+class Configuration
+{ 
+}
+
+function bootstrap() 
+{ 
+}
+?>]]></example>
+</slide>

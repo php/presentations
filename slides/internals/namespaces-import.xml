@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Namespaces</title>
+	<subtitle>Using namespaces: use</subtitle>
+
+	<list>
+		<bullet>the *use* operator makes a namespaces available</bullet>
+	</list>
+<example><![CDATA[<?php
+use eZ::Database::Connection as DbConnection;
+
+use eZ::Database;
+
+new DbConnection(); // uses eZ::Database::Connection
+new Database::Driver(); // would use eZ::Database::Connection
+?>]]></example>
+</slide>
+

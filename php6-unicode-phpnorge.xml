@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Localization and Internationalization</topic>
+<title>PHP 6 og Unicode</title>
+<event>PHP Norge</event>
+<location>Oslo, Norway</location>
+<date>January 24th, 2008</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/grown-up/title.xml</slide>
+
+<!-- SIMPLE THINGS -->
+<slide>slides/i18nl10n/the-simple-things.xml</slide>
+<slide>slides/internals/variables-circular.xml</slide>
+<slide>slides/internals/gc1.xml</slide>
+<slide>slides/internals/namespaces.xml</slide>
+<slide>slides/internals/namespaces-import.xml</slide>
+<slide>slides/internals/namespaces-resolve1.xml</slide>
+<slide>slides/internals/namespaces-resolve2.xml</slide>
+<slide>slides/internals/namespaces-resolve3.xml</slide>
+
+<!-- UNICODE -->
+<slide>slides/i18nl10n/the-unicode-things.xml</slide>
+<slide>slides/i18nl10n/unicode-scripts.xml</slide>
+<slide>slides/i18nl10n/challenges2.xml</slide>
+<slide>slides/i18nl10n/sorting.xml</slide>
+
+<slide>slides/i18nl10n/php-can-do-it-now.xml</slide>
+<slide>slides/i18nl10n/php-now-iconv.xml</slide>
+<slide>slides/i18nl10n/php-now-mbstring.xml</slide>
+<slide>slides/i18nl10n/php-now-locales.xml</slide>
+
+<!-- UNICODE -->
+<slide>slides/i18nl10n/unicode.xml</slide>
+<slide>slides/i18nl10n/composition.xml</slide>
+<slide>slides/i18nl10n/properties.xml</slide>
+
+<!-- PHP SOON -->
+<slide>slides/i18nl10n/goals-1.xml</slide>
+<slide>slides/i18nl10n/basics-1.xml</slide>
+<slide>slides/i18nl10n/surrogates.xml</slide> <!-- how does the encoding work? -->
+<slide>slides/i18nl10n/icu.xml</slide>
+<slide>slides/i18nl10n/roadmap.xml</slide>
+<slide>slides/i18nl10n/unicode-semantics.xml</slide>
+
+<!-- STRINGS -->
+<slide>slides/i18nl10n/string-types.xml</slide>
+<slide>slides/i18nl10n/string-literals.xml</slide>
+<slide>slides/i18nl10n/characters-not-bytes.xml</slide>
+<slide>slides/i18nl10n/upgrading-locale.xml</slide>
+<slide>slides/i18nl10n/locale-example.xml</slide>
+<slide>slides/i18nl10n/locale-example2.xml</slide>
+<slide>slides/i18nl10n/locale-example-arrays.xml</slide>
+<slide>slides/i18nl10n/iterator-example.xml</slide>
+
+<!-- DIFFERENT ENCODINGS -->
+<slide>slides/i18nl10n/encoding-overview.xml</slide>
+<slide>slides/i18nl10n/script-encoding.xml</slide>
+<slide>slides/i18nl10n/script-encoding-pragma.xml</slide>
+<slide>slides/i18nl10n/script-encoding-fun1.xml</slide>
+<slide>slides/i18nl10n/script-encoding-fun2.xml</slide>
+<slide>slides/i18nl10n/runtime-encoding.xml</slide>
+<slide>slides/i18nl10n/http-output-encoding.xml</slide>
+
+<slide>slides/i18nl10n/stream-encoding1.xml</slide>
+<slide>slides/i18nl10n/stream-encoding2.xml</slide>
+<slide>slides/i18nl10n/stream-encoding3.xml</slide>
+
+<slide>slides/i18nl10n/translit1.xml</slide>
+
+<slide>slides/i18nl10n/fallback-encoding.xml</slide>
+
+<!-- EXIT -->
+<slide>slides/i18nl10n/when.xml</slide>
+<slide>slides/i18nl10n/resources.xml</slide> <!-- resources -->
+</presentation>
