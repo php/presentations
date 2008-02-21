@@ -1,0 +1,72 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Scale, latency, and security are the key words for this year's talk. In order to build
+these bigger and faster web applications, PHP has gotten bigger and faster as well.
+This talk will explore recent PHP development and apply it to the three key words. 
+-->
+
+<topic>PHP</topic>
+<title>PHP</title>
+<location>San Luis Obispo, CA</location>
+<date>Feb 20, 2008</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/calpoly08</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<!-- Hormones -->
+<slide>slides/intro/ossworks.xml</slide>
+<slide>slides/intro/ego.xml</slide>
+<slide>slides/intro/web20.xml</slide>
+<slide>slides/intro/web2works.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/xml_eg_lite.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+
+<slide>slides/intro/php_yui1.xml</slide>
+<slide>slides/intro/php_yui2.xml</slide>
+<slide>slides/intro/php_yui3.xml</slide>
+<slide>slides/intro/php_yui4.xml</slide>
+<slide>slides/intro/php_yui5.xml</slide>
+<slide>slides/intro/php_world.xml</slide>
+
+<slide>slides/intro/yajax.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws7.xml</slide>
+<slide>slides/intro/geoflickr.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/hurdles.xml</slide>
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/sq1.xml</slide>
+<slide>slides/intro/sq2.xml</slide>
+<slide>slides/intro/sq3.xml</slide>
+<slide>slides/intro/sq4.xml</slide>
+<slide>slides/intro/sq5.xml</slide>
+
+<!-- Security -->
+<slide>slides/fowa/security.xml</slide>
+<slide>slides/intro/xss_common.xml</slide>
+<slide>slides/intro/url_handlers.xml</slide>
+<slide>slides/intro/xss_yrisk.xml</slide>
+<slide>slides/fowa/filter.xml</slide>
+
+<slide>slides/intro/perfsec_ref.xml</slide>
+</presentation>
