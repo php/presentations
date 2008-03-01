@@ -1,0 +1,29 @@
+<slide title="Yahoo! Mobile">
+
+<link fontsize="3em" marginleft="3em" leader="Go: " href="http://mobile.yahoo.com/go"/>
+<link fontsize="3em" marginleft="3em" leader="Upload: " href="http://mobile.yahoo.com/developers/test/upload"/>
+<link fontsize="3em" marginleft="3em" leader="See it: " href="http://beta.m.yahoo.com"/>
+
+<example title="Hello World" result="1"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<config>
+  <title>Hello, World!</title>
+  <version>1.0</version>
+  <identifier>hello-world</identifier>
+  <description>The Hello World Widget</description>
+  <icon>icon</icon>
+  <author organization="Yahoo!" href="http://www.yahoo.com">Eric Lin</author>
+  <widget base="http://dev-wmess1.mobile.re3.yahoo.com/widget/demo/1.0/example">
+    <preview>
+      <icon>icon</icon>
+      <label>Hello, World!</label>
+    </preview>
+    <shortcuts>
+      <item default="true">
+        <label>Hello, World!</label>
+        <href>HelloWorld.bp</href>
+      </item>
+    </shortcuts>
+  </widget>
+</config>]]></example>
+
+</slide>
