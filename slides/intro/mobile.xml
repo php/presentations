@@ -1,8 +1,9 @@
 <slide title="Yahoo! Mobile">
 
-<link fontsize="3em" marginleft="3em" leader="Go: " href="http://mobile.yahoo.com/go"/>
-<link fontsize="3em" marginleft="3em" leader="Upload: " href="http://mobile.yahoo.com/developers/test/upload"/>
-<link fontsize="3em" marginleft="3em" leader="See it: " href="http://beta.m.yahoo.com"/>
+<link fontsize="2em" marginleft="3em" leader="Go: " href="http://mobile.yahoo.com/go"/>
+<link fontsize="2em" marginleft="3em" leader="Upload: " href="http://mobile.yahoo.com/developers/test/upload"/>
+<link fontsize="2em" marginleft="3em" leader="See it: " href="http://beta.m.yahoo.com"/>
+<link fontsize="2em" marginleft="3em" leader="Support: " href="http://tech.groups.yahoo.com/group/yhoomobiledevelopers"/>
 
 <example title="Hello World" result="1"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <config>
