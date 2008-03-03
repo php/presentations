@@ -5,14 +5,15 @@
 Login Javascript
 </blurb>
 
-<example result="0" marginright="1em" fontsize="1.5"><![CDATA[var logged_in = <?php echo $logged_in ? 'true' : 'false'?>;
+<example result="0" marginleft="1em" marginright="0.5em" fontsize="1.5"><![CDATA[var logged_in = <?php echo $logged_in ? 'true' : 'false'?>;
 
 var setCookie = function(cookieName,cookieValue, expire) {
   var today = new Date();
   var expire = new Date();
   if(expire) {
     expire.setTime(today.getTime() + 3600000*24*7);
-    document.cookie = cookieName+"="+escape(cookieValue) + ";expires="+expire.toGMTString();
+    document.cookie = cookieName+"="+escape(cookieValue) + 
+                      ";expires="+expire.toGMTString();
   } else {
     document.cookie = cookieName+"="+escape(cookieValue);
   }

@@ -5,24 +5,24 @@
 Putting it all together in a full application.
 </blurb>
 
-<example title="Main page" result="0" marginright="1em" fontsize="1.5" type="xml"><![CDATA[<div style="margin: 20px 0px 0px 20px; float: left; width:900px; border: 3px solid black;">
-    <div id="jsmapContainer" style="top:0px; left:0px; width:900px; height:500px;"></div>
-    <div style="padding: 0.5em; float: left;">
-        <form id="locF" onsubmit="return false">
-            <label for="loc">Location:<label>
-            <input type="text" name="loc" id="loc" size="80"/>
-        </form>
-        <div id="status" style="display: inline;"></div>
-    </div>
-    <div id="buttonContainer" style="padding: 0.5em; float: right;">
-        <form>
-            <input type="button" id="login" value="Login"></input>
-            <input type="button" id="add" value="Add"></input>
-        </form>
-    </div>
+<example title="Main page" result="0" marginleft="1em" marginright="0.5em" fontsize="1.4" type="xml"><![CDATA[<div style="margin: 20px 0px 0px 20px;float:left;width:900px;border:3px solid black;">
+  <div id="jsmapContainer" style="top:0px; left:0px; width:900px; height:500px;"></div>
+  <div style="padding: 0.5em; float: left;">
+    <form id="locF" onsubmit="return false">
+      <label for="loc">Location:<label>
+      <input type="text" name="loc" id="loc" size="80"/>
+    </form>
+    <div id="status" style="display: inline;"></div>
+  </div>
+  <div id="buttonContainer" style="padding: 0.5em; float: right;">
+    <form>
+      <input type="button" id="login" value="Login"></input>
+      <input type="button" id="add" value="Add"></input>
+    </form>
+  </div>
 </div>]]></example>
 
-<example title="Login Dialog" result="0" marginright="1em" fontsize="1.5" type="xml"><![CDATA[<div id="loginUserDlg">
+<example title="Login Dialog" result="0" marginleft="1em" marginright="0.5em" fontsize="1.4" type="xml"><![CDATA[<div id="loginUserDlg">
   <div class="hd">Login</div>
   <div class="bd">
     <form id="loginUserForm" method="POST" action="rpc.php">
@@ -33,7 +33,7 @@ Putting it all together in a full application.
   </div>
 </div>]]></example>
 
-<example title="Add User Dialog" result="0" marginright="1em" fontsize="1.5" type="xml"><![CDATA[<div id="addUserDlg">
+<example title="Add User Dialog" result="0" marginleft="1em" marginright="0.5em" fontsize="1.4" type="xml"><![CDATA[<div id="addUserDlg">
   <div class="hd">New Marker Data</div>
   <div class="bd">
     <form id="addUserForm" method="POST" action="rpc.php">

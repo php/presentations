@@ -5,7 +5,7 @@
 Backend code for login and XSRF prevention
 </blurb>
 
-<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
+<example result="0" marginleft="1em" marginright="0.5em" fontsize="1.4"><![CDATA[<?php
 $logged_in = session_check();
 
 $token = null;
@@ -26,7 +26,8 @@ function auth_check() {
 
 function session_check() {
   global $server_secret;
-  if($_COOKIE['auth'] && $_COOKIE['id'] && $_COOKIE['auth'] == sha1($server_secret.$_COOKIE['id'])) {
+  if($_COOKIE['auth'] && $_COOKIE['id'] && $_COOKIE['auth'] == 
+     sha1($server_secret.$_COOKIE['id'])) {
     SetCookie('token', sha1($auth.rand()));
     return 1;
   }
@@ -34,7 +35,7 @@ function session_check() {
 }
 ?>]]></example>
 
-<example result="0" marginright="1em" fontsize="1.5" type="javascript"><![CDATA[<?php
+<example result="0" marginleft="1em" marginright="0.5em" fontsize="1.4" type="javascript"><![CDATA[<?php
   case 'add':
     auth_check();
     $id = $people->insert($_REQUEST);
