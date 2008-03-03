@@ -1,0 +1,52 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP/YUI</title>
+<location>Atlanta, GA</location>
+<date>Mar 3, 2008</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/ygatech2</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- Architecture -->
+<slide>slides/intro/modular.xml</slide>
+<slide>slides/intro/php_yui1.xml</slide>
+<slide>slides/intro/phpjs_learn.xml</slide>
+<slide>slides/intro/sx.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+
+<slide>slides/intro/php_js1.xml</slide>
+<slide>slides/intro/php_js2.xml</slide>
+
+<slide>slides/intro/php_yui2.xml</slide>
+
+<slide>slides/intro/yajax.xml</slide>
+
+<slide>slides/intro/people1.xml</slide>
+<slide>slides/intro/people2.xml</slide>
+<slide>slides/intro/people3.xml</slide>
+<slide>slides/intro/people4.xml</slide>
+<slide>slides/intro/people5.xml</slide>
+<slide>slides/intro/people6.xml</slide>
+<slide>slides/intro/people7.xml</slide>
+<slide>slides/intro/people8.xml</slide>
+<slide>slides/intro/people9.xml</slide>
+<slide>slides/intro/people10.xml</slide>
+<slide>slides/intro/db_layer1.xml</slide>
+<slide>slides/intro/db_layer2.xml</slide>
+<slide>slides/intro/db_layer3.xml</slide>
+<slide>slides/intro/db_layer4.xml</slide>
+<slide>slides/intro/db_layer5.xml</slide>
+<slide>slides/intro/db_layer6.xml</slide>
+<slide>slides/intro/hackref.xml</slide>
+
+</presentation>
