@@ -19,11 +19,15 @@
 
 <slide>slides/grown-up/title.xml</slide>
 
+<slide>slides/grown-up/rip-php4.xml</slide>
+
 <!-- INTRODUCTION -->
 <slide>slides/grown-up/me.xml</slide>
 <slide>slides/grown-up/ms.xml</slide>
 
 <slide>slides/grown-up/first-app.xml</slide>
+<slide>slides/grown-up/brick.xml</slide>
+<slide>slides/grown-up/brick-in-screen.xml</slide>
 <slide>slides/grown-up/php2-parser.xml</slide>
 <slide>slides/grown-up/php3.xml</slide>
 <slide>slides/grown-up/i-am-a-spammer.xml</slide>
@@ -60,6 +64,7 @@
 <slide>slides/tdd/tdd.xml</slide>
 <slide>slides/tdd/broken-code-is-fine.xml</slide>
 <slide>slides/tdd/dont-ship.xml</slide>
+<slide>slides/grown-up/xdebug.xml</slide>
 <slide>slides/tdd/unit-testing.xml</slide>
 <slide>slides/tdd/religion.xml</slide>
 <slide>slides/tdd/back-in-time.xml</slide>
@@ -76,6 +81,6 @@
 <slide>slides/tdd/case-study-major-players.xml</slide>
 <slide>slides/tdd/darth-sb.xml</slide>
 
-<slide>slides/grown-up/suhoshin.xml</slide>
+<slide>slides/grown-up/thanks.xml</slide>
 
 </presentation>
