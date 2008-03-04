@@ -9,7 +9,7 @@
     <author>John Steinbeck</author>
   </book>
 </books>]]></example>
-<example title="Book PHP File" result="1" fontsize="1.8em"><![CDATA[<?php
+<example title="Book PHP File" result="1" fontsize="1.5em"><![CDATA[<?php
 $books = simplexml_load_file('presentations/slides/intro/book.xml');
 
 foreach ($books->book as $book) {
