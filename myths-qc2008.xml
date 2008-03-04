@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Explaining the complaints</title>
+<event>PHP Quebec 2008</event>
+<location>Montréal, Canada</location>
+<date>March 12th, 2008</date>
+<speaker>Derick Rethans and Marcus Börger</speaker>
+<email>dr@ez.no / marcus@php.net</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/input-filter/title.xml</slide>
+
+<!-- 1 -->
+<slide>slides/myths/no-compiler.xml</slide>
+<slide>slides/myths/no-compiler-no-slacking.xml</slide>
+
+<!-- 2 -->
+<slide>slides/myths/hard-to-integrate.xml</slide>
+<slide>slides/myths/ext-embed-php.xml</slide>
+
+<!-- 3 -->
+<slide>slides/myths/unstable-platform.xml</slide>
+
+<!-- 4 -->
+<slide>slides/myths/php-is-weak.xml</slide>
+
+<!-- 5 -->
+<slide>slides/myths/shared-nothing.xml</slide>
+<slide>slides/myths/srm.xml</slide>
+<slide>slides/myths/apc-memcache.xml</slide>
+<slide>slides/myths/ezc-workflow.xml</slide>
+
+<!-- 6 -->
+<slide>slides/myths/oo-sucks.xml</slide>
+
+<!-- 7 -->
+<slide>slides/myths/no-tool-support.xml</slide>
+<slide>slides/myths/xdebug.xml</slide>
+<slide>slides/myths/coverage.xml</slide>
+<slide>slides/myths/profile.xml</slide>
+<slide>slides/myths/cruise-control.xml</slide>
+
+<slide>slides/myths/resources.xml</slide>
+</presentation>
