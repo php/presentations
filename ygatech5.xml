@@ -1,0 +1,48 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Scale, latency, and security are the key words for this year's talk. In order to build
+these bigger and faster web applications, PHP has gotten bigger and faster as well.
+This talk will explore recent PHP development and apply it to the three key words. 
+-->
+
+<topic>PHP</topic>
+<title>PHP</title>
+<location>Atlanta, GA</location>
+<date>Mar 6, 2008</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/ygatech5</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<!-- Hormones -->
+<slide>slides/intro/ossworks.xml</slide>
+<slide>slides/intro/ego.xml</slide>
+<slide>slides/intro/web20.xml</slide>
+<slide>slides/intro/web2works.xml</slide>
+
+<slide>slides/intro/php5.xml</slide>
+<slide>slides/intro/xml_eg_lite.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/buzz.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/geoflickr.xml</slide>
+
+</presentation>
