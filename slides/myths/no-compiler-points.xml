@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #1: PHP Has No Compiler</title>
+
+	<list>
+		<bullet>Why would you want a compiler?</bullet>
+		<bullet>Real compiler makes “proper” byte code that can be introspected</bullet>
+		<bullet>There is no “compiler”, but there is APC</bullet>
+		<bullet>Only performs caching, and does not store to disk</bullet>
+		<bullet>APC optimizes, and you don't want that in a normal parser</bullet>
+	</list>
+</slide>
+

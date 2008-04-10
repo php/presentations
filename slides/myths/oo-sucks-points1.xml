@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #6: PHP's OO Implementation Is Inferior</title>
+
+	<list>
+		<bullet>You should have implemented the Java model, as that's where everything was stolen from anyway</bullet>
+		<bullet>PHP also doesn't use OO everywhere where it can.</bullet>
+		<bullet>PHP is pragmatic, where Java is academic and limiting.</bullet>
+		<bullet>PHP has to stay backwards compatible</bullet>
+		<bullet>New extensions also come in OO variants</bullet>
+		<bullet>OO is not the solution to all your problems</bullet>
+		<bullet>Why can't we omit $this?</bullet>
+		<bullet>Why do we have goto?</bullet>
+		<bullet>Why is reflection information not cached?</bullet>
+	</list>
+</slide>
+

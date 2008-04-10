@@ -12,9 +12,10 @@
 	</list>
 <break/>
 	<blurb>Usage:</blurb>
-	<example><![CDATA[wget wget http://pecl.php.net/get/vld-0.8.0.tgz
-tar -xvzf vld-0.8.0.tgz
-cd vld-0.8.0
+	<example><![CDATA[cvs -d :pserver:cvsread@cvs.xdebug.org:/repository login
+# passwd = srmread
+cvs -d :pserver:cvsread@cvs.xdebug.org:/repository co -d vld vle
+cd vld
 phpize && make && make install
 php -dextension=vld.so -dvld.active=1 script.php]]></example>
 </slide>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #2: PHP Is Hard To Integrate</title>
+
+	<list>
+		<bullet>As PHP performs badly, another approach is required</bullet>
+		<bullet>Extensions are hard to write</bullet>
+		<bullet>You can only write extensions in C</bullet>
+		<bullet>Who here has tried to write an extension, or considered it?</bullet>
+		<bullet>There are plenty of extensions, so plenty of examples</bullet>
+		<bullet>There are also extensions in C++ (SDO, SCA, Colorer...)</bullet>
+		<bullet>Extensions are hard to use, as you need to recompile PHP</bullet>
+		<bullet>Shared objects, even closed source exist (Zend, ioncube)</bullet>
+		<bullet>Documentation is hard to find</bullet>
+	</list>
+</slide>
+

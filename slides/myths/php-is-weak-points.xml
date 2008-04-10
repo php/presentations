@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #4: PHP is Weak(ly typed)</title>
+
+	<list>
+		<bullet>PHP auto casts variables when it feels like it – because that's how get/post works – strings only.</bullet>
+		<bullet>Has this every caused you a problem that can not be solved elegantly differently?</bullet>
+		<bullet>Larger application requires more control and type checks and...</bullet>
+		<bullet>You can always write type-aware (but not checking) code, saves time and is less code thus faster.</bullet>
+		<bullet>There is also ext/filter</bullet>
+		<bullet>Why don't we have scalar type hints?</bullet>
+		<bullet>Why don't we have auto boxing?</bullet>
+	</list>
+</slide>
+

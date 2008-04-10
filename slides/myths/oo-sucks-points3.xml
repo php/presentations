@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #6: PHP OO: Iterators</title>
+
+	<list>
+		<bullet>why are there *Recursive and non-Recursive versions of most iterators</bullet>
+		<bullet>Why is it rewind, and not reset?</bullet>
+		<bullet>Why do the recursive versions not just do the recursion?</bullet>
+	</list>
+</slide>
+

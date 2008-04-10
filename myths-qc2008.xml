@@ -20,26 +20,36 @@
 
 <!-- 1 -->
 <slide>slides/myths/no-compiler.xml</slide>
+<slide>slides/myths/no-compiler-points.xml</slide>
 <slide>slides/myths/no-compiler-no-slacking.xml</slide>
 
 <!-- 2 -->
 <slide>slides/myths/hard-to-integrate.xml</slide>
+<slide>slides/myths/hard-to-integrate-points.xml</slide>
 <slide>slides/myths/ext-embed-php.xml</slide>
 
 <!-- 3 -->
 <slide>slides/myths/unstable-platform.xml</slide>
+<slide>slides/myths/unstable-points.xml</slide>
+<slide>slides/internals/variables-circular.xml</slide>
 
 <!-- 4 -->
 <slide>slides/myths/php-is-weak.xml</slide>
+<slide>slides/myths/php-is-weak-points.xml</slide>
 
 <!-- 5 -->
 <slide>slides/myths/shared-nothing.xml</slide>
 <slide>slides/myths/srm.xml</slide>
 <slide>slides/myths/apc-memcache.xml</slide>
-<slide>slides/myths/ezc-workflow.xml</slide>
+<!--<slide>slides/myths/ezc-workflow.xml</slide>-->
 
 <!-- 6 -->
 <slide>slides/myths/oo-sucks.xml</slide>
+<slide>slides/myths/oo-sucks-points1.xml</slide>
+<slide>slides/myths/oo-sucks-points2.xml</slide>
+<slide>slides/myths/oo-sucks-points3.xml</slide>
+<slide>slides/myths/oo-sucks-points4.xml</slide>
+<slide>slides/myths/oo-sucks-points5.xml</slide>
 
 <!-- 7 -->
 <slide>slides/myths/no-tool-support.xml</slide>

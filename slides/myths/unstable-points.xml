@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #3: PHP Is An Unstable Platform</title>
+
+	<list>
+		<bullet>Backwards Compatibility breaks galore</bullet>
+		<bullet>Who has been affected by this, and which thing?</bullet>
+		<bullet>We try not to break BC at all, but we're still human</bullet>
+		<bullet>PHP crashes all the time</bullet>
+		<bullet>Could just as well been something else... like bad code (infinite recursion)</bullet>
+		<bullet>And where is the backtrace/bug report?</bullet>
+		<bullet>But references caused problems!</bullet>
+		<bullet>Yes, they did – and this was fixed</bullet>
+		<bullet>It wasn't fixed correctly, as it started throwing notices</bullet>
+		<bullet>Only if you abused references before</bullet>
+		<bullet>Why does PHP memory leak?</bullet>
+	</list>
+</slide>
+

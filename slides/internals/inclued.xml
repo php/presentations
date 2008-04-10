@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Inclued</title>
+
+	<blurb>Dumps includes/classes hiearchies</blurb>
+<break/>
+	<blurb>Download from http://t3.dotgnu.info/blog/tags/inclued/</blurb>
+<break/>
+	<blurb>Install:</blurb>
+	<example><![CDATA[tar -xvzf inclued-0.3.tgz
+cd inclued
+phpize && make && make install]]></example>
+<break/>
+	<blurb>Add to php.ini:</blurb>
+	<example><![CDATA[extension=inclued.so
+inclued.enabled=1
+inclued.dumpdir=/tmp]]></example>
+</slide>

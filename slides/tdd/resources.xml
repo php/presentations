@@ -3,8 +3,11 @@
 	<title>Resources</title>
 
 	<break lines="12" /> 
-	<link fontsize="3em" marginleft="2em" leader="These Slides: " href="http://derickrethans.nl/talks.php" target="_new"/>
+	<link leader="PHP Unit: " href="http://phpunit.de" target="_new"/>
+	<link leader="phpUnderControl: " href="http://phpundercontrol.org" target="_new"/>
+	<link leader="Xdebug: " href="http://xdebug.org" target="_new"/>
+	<link leader="These Slides: " href="http://derickrethans.nl/talks.php" target="_new"/>
 
 	<break lines="3" /> 
-	<link fontsize="3em" marginleft="2em" leader="PHP: " href="http://www.php.net" target="_new"/>
+	<link leader="PHP: " href="http://www.php.net" target="_new"/>
 </slide>

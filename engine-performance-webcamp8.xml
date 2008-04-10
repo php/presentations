@@ -9,15 +9,15 @@
 	stylesheet="presentations/slides/ezc/ez.css"
 	backgroundfixed="1" >
 <topic>Internals</topic>
-<title>PHP's Dirty Secrets</title>
-<event>International PHP Conference</event>
-<location>Mörfelden, Germany</location>
-<date>November 7th, 2007</date>
+<title>Engine Performance</title>
+<event>WebCamp 2008</event>
+<location>Prague, Czech Republic</location>
+<date>March 27th, 2008</date>
 <speaker>Derick Rethans</speaker>
 <email>dr@ez.no</email>
 <url>http://derickrethans.nl/talks.php</url>
 
-<slide>slides/internals/title.xml</slide>
+<slide>slides/internals/title2.xml</slide>
 
 <!-- INTRODUCTION -->
 <slide>slides/toolbox/me.xml</slide>
@@ -26,14 +26,17 @@
 
 <slide>slides/internals/parse_error.xml</slide>
 
-<slide>slides/internals/compile.xml</slide>
 <slide>slides/internals/opcode2.xml</slide>
 <slide>slides/internals/vld-example.xml</slide>
 <slide>slides/internals/vld1.xml</slide>
-<slide>slides/internals/vld1b.xml</slide>
 <slide>slides/internals/vld2.xml</slide>
 
 <slide>slides/internals/execute2.xml</slide>
+<slide>slides/internals/execute5.xml</slide>
+<slide>slides/grown-up/micro-opts.xml</slide>
+<slide>slides/grown-up/faster-harder.xml</slide>
+<slide>slides/grown-up/benchmarks.xml</slide>
+
 <slide>slides/internals/execute5.xml</slide>
 
 <!-- CACHES -->
@@ -41,17 +44,17 @@
 <slide>slides/internals/how_ccache_serialize.xml</slide>
 <slide>slides/perf/accelerators.xml</slide> <!-- Accelerators -->
 
-<!-- VARIABLES -->
-<slide>slides/internals/variables1.xml</slide>
-<slide>slides/internals/variables2.xml</slide>
-<slide>slides/internals/variables3.xml</slide>
-<slide>slides/internals/variables4.xml</slide>
-<slide>slides/internals/variables5.xml</slide>
-<slide>slides/internals/variables6.xml</slide>
-<slide>slides/internals/variables7.xml</slide>
-<slide>slides/internals/variables8.xml</slide>
-<slide>slides/internals/variables9.xml</slide>
-<slide>slides/internals/variables10.xml</slide>
+<slide>slides/internals/vld1b.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+<slide>slides/internals/inclued.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<!-- profile -->
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<!-- 5.3 greia -->
 <slide>slides/internals/variables-circular.xml</slide>
 
 <slide>slides/internals/questions.xml</slide>

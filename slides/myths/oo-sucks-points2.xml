@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #6: PHP's OO Implementation Is Inferior</title>
+
+	<list>
+		<bullet>Why don't we have type hints?</bullet>
+		<bullet>Why don't we have templates?</bullet>
+		<bullet>Why don't we have generics?</bullet>
+		<bullet>PHP has no namespaces and packages.</bullet>
+		<bullet>PHP throws fatal errors and not exceptions for many things</bullet>
+		<bullet>We have no type hints for properties.</bullet>
+		<bullet>PHP doesn't have friends</bullet>
+		<bullet>Why is the visibility checked against the class and not the objects?</bullet>
+	</list>
+</slide>
+

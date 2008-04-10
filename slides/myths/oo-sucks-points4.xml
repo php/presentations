@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #6: PHP OO: SPL</title>
+
+	<list>
+		<bullet>Why does SPLFileObject not have fread()? Because it's line based.</bullet>
+		<bullet>Why can't I implement traversable? Very low level shitznitz.</bullet>
+		<bullet>Why are SplObserver and SplSubject so narrow – dude?</bullet>
+	</list>
+</slide>
+

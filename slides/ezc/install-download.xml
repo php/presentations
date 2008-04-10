@@ -4,15 +4,15 @@
 	<subtitle>Download bundle</subtitle>
 
 	<blurb>Installation:</blurb>
-	<example><![CDATA[// download the bundle from http://ez.no/download/ez_components
-tar -xjf ezcomponents-2007.1beta1.tar.bz2
+	<example><![CDATA[// download the bundle from http://ezcomponents.org/download
+tar -xjf ezcomponents-2007.2.1.tar.bz2
 pwd]]></example>
 
 <break lines="3"/>
 
 	<blurb>Setup:</blurb>
 	<example result='0'><![CDATA[<?php
-ini_set( 'include_path', '/home/httpd/ezcomponents-2007.1beta1:.' );
+ini_set( 'include_path', '/home/httpd/ezcomponents-2007.2.1:.' );
 require 'Base/src/base.php';
 
 function __autoload( $className )

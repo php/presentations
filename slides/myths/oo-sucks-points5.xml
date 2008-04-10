@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+	<title>Myth #6: PHP OO: Exceptions</title>
+
+	<list>
+		<bullet>Why is everything marked as final – because it's safe C-code.</bullet>
+		<bullet>Why are exceptions not stackable?</bullet>
+		<bullet>Why don't we have finally?</bullet>
+		<bullet>Why can't I throw in __destruct?</bullet>
+		<bullet>Why can't I throw an exception from __autoload()?</bullet>
+	</list>
+</slide>
+

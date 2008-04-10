@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Next?</title>
+	<subtitle>Additions for eZ Components 2008.1</subtitle>
+
+	<blurb>New components:</blurb>
+	<list>
+		<bullet>*Feed*: RDF/RSS/ATOM feed parsing and generating, with support for modules</bullet>
+		<bullet>*Search*: Search API towards Solr, Sphinx, Google, etc.</bullet>
+	</list>
+
+	<blurb>Additions to components:</blurb>
+	<list>
+		<bullet>*Cache*: Hierarchical caching</bullet>
+		<bullet>*Template*: Translation and character set support</bullet>
+	</list>
+
+	<blurb>Roadmap: http://issues.ez.no/RoadMap.php?Id=729</blurb>
+</slide>
