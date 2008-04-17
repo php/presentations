@@ -1,0 +1,57 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>Large Scale PHP</title>
+<location>Porto Alegre</location>
+<date>Apr 18,  2008</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/fisl08</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!--
+  Large Scale PHP 
+
+  Scale, performance and security are the key concepts that will be
+  covered in this talk.  In order to build bigger and faster web
+  application, you need to understand these concepts.  This talk will
+  show you how to benchmark, profile and optimize your code for scale
+  and performance and it will also cover common security mistakes and
+  introduce the concept of a data firewall to deal with these.
+-->
+
+<!-- Performance -->
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/sq1.xml</slide>
+<slide>slides/intro/sq2.xml</slide>
+<slide>slides/intro/sq3.xml</slide>
+<slide>slides/intro/sq4.xml</slide>
+<slide>slides/intro/sq5.xml</slide>
+<slide>slides/intro/perf_lessons.xml</slide>
+
+<slide>slides/intro/never_click_title.xml</slide>
+<slide>slides/intro/ff2005.xml</slide>
+<slide>slides/intro/url_handlers.xml</slide>
+<slide>slides/intro/xss_basic.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/intro/xss_yrisk.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/xss_type1.xml</slide>
+<slide>slides/intro/xss_type2.xml</slide>
+<slide>slides/intro/xss_type3.xml</slide>
+<slide>slides/intro/xss_type4.xml</slide>
+<slide>slides/intro/xss_type5.xml</slide>
+<slide>slides/intro/xss_type6.xml</slide>
+<slide>slides/intro/xss_type7.xml</slide>
+<slide>slides/intro/xss_type8.xml</slide>
+<slide>slides/intro/xss_type9.xml</slide>
+<slide>slides/intro/perfsec_ref.xml</slide>
+</presentation>
