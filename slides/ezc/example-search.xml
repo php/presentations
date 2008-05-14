@@ -1,0 +1,11 @@
+<slide>
+	<title>Search</title>
+
+	<list>
+		<bullet>Provide an interface to Search backends</bullet>
+		<bullet>Interfaces to: Solr (Lucene)</bullet>
+	</list>
+	<example encoding="iso-8859-1" filename='search-query-abstraction.php'/>
+
+</slide>
+
