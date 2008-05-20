@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>eZ Components' Search component</title>
+	<subtitle>Search - API</subtitle>
+
+<example><![CDATA[<?php
+$session = new ezcSearchSession(
+	$backend,
+	new ezcSearchXmlManager( $testFilesDir ) 
+);
+
+$q = $session->createFindQuery( 'Article' );
+$q->where( $q->eq( 'title', 'Article' ) );
+  ->limit( 5 );
+  ->orderBy( 'id' );
+
+$r = $session->find( $q );
+
+foreach ( $r->documents as $document )
+{
+	echo $document['document']->title, "\n";
+}
+?>]]></example>
+</slide>
+

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>eZ Components' Search component</title>
+	<subtitle>Document Definition, in XML</subtitle>
+
+<example><![CDATA[<?xml version="1.0"?>
+<document>
+    <field type="id">id</field>
+    <field type="text" boost="2">title</field>
+    <field type="text">summary</field>
+    <field inResult="false" type="html">body</field>
+    <field type="date">published</field>
+    <field type="string" multi="true">author</field>
+</document>]]></example>
+<break lines="2"/>
+	<blurb>Setting up the manager:</blurb>
+<example><![CDATA[<?php
+$backend = new ezcSearchSolrHandler;
+
+$session = new ezcSearchSession(
+	$backend, 
+	new ezcSearchXmlManager( $testFilesDir )
+);
+?>]]></example>
+</slide>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>MySQL FULLTEXT</title>
+	<subtitle>Types</subtitle>
+
+	<blurb>Boolean search:</blurb>
+<break/>
+	<example><![CDATA[mysql> SELECT * FROM articles WHERE MATCH (title,body)
+    -> AGAINST ('+MySQL -YourSQL' IN BOOLEAN MODE);
++----+-----------------------+-------------------------------------+
+| id | title                 | body                                |
++----+-----------------------+-------------------------------------+
+|  1 | MySQL Tutorial        | DBMS stands for DataBase ...        |
+|  2 | How To Use MySQL Well | After you went through a ...        |
+|  3 | Optimizing MySQL      | In this tutorial we will show ...   |
+|  4 | 1001 MySQL Tricks     | 1. Never run mysqld as root. 2. ... |
+|  6 | MySQL Security        | When configured properly, MySQL ... |
++----+-----------------------+-------------------------------------+
+]]></example>
+<break/>
+
+	<blurb>Natural search (with or without query expansion):</blurb>
+<break/>
+	<example><![CDATA[mysql> SELECT * FROM articles
+    -> WHERE MATCH (title,body) AGAINST ('database');
++----+-------------------+------------------------------------------+
+| id | title             | body                                     |
++----+-------------------+------------------------------------------+
+|  5 | MySQL vs. YourSQL | In the following database comparison ... |
+|  1 | MySQL Tutorial    | DBMS stands for DataBase ...             |
++----+-------------------+------------------------------------------+]]>
+</example>
+</slide>

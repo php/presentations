@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Resources</title>
+
+	<break lines="6" /> 
+	<link leader="Porter algoritihm: " href="http://telemat.det.unifi.it/book/2001/wchange/download/stem_porter.html" target="_new"/>
+	<link leader="Solr: " href="http://lucene.apache.org/solr/" target="_new"/>
+	<link leader="Zend Lucene: " href="http://framework.zend.com/manual/en/zend.search.lucene.html" target="_new"/>
+	<link leader="SnowBall: " href="http://snowball.tartarus.org/" target="_new"/>
+	<link leader="Mecab (In Japanese): " href="http://mecab.sourceforge.net/" target="_new"/>
+	<break/>
+	<link leader="These Slides: " href="http://derickrethans.nl/talks.php" target="_new"/>
+</slide>

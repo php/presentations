@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Tokenizing</title>
+
+	<blurb>Making indexing parts out of text.</blurb>
+	<break/>
+
+	<blurb>Text</blurb>
+	<example>"This standard was developed from ISO/IEC 9075:1989"
+
+Whitespace:
+"This" "standard" "was" "developed" "from" "ISO/IEC" "9075:1989"
+
+Continuous letters:
+"This" "standard" "was" "developed" "from" "ISO" "IEC"
+	</example>
+	<break/>
+
+	<blurb>HTML</blurb>
+	<example>"&lt;li>&lt;em>If it exists&lt;/em>, the STATUS of the W3C document.&lt;/li>"
+
+"If" "it" "exists" "the" "status" "of" "the" "w3c" "document"
+</example>
+</slide>
+

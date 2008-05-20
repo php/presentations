@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Own Implementation</title>
+
+	<list>
+		<bullet>We store content differently, so the FULLTEXT MySQL approach doesn't work</bullet>
+		<bullet>We need support for CJK</bullet>
+		<bullet>We needed support for other databases</bullet>
+	</list>
+</slide>

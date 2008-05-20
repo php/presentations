@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>eZ Components' Search component</title>
+	<subtitle>Indexing</subtitle>
+
+<example><![CDATA[<?php
+$session = new ezcSearchSession( 
+	$backend, 
+	new ezcSearchXmlManager( $testFilesDir ) 
+);
+
+$a = new Article(
+	null, // id
+	'Test Article', // title 
+	'This is an article to test', // description
+	'the body of the article', // body
+	time() // published
+);
+$session->index( $a );
+?>]]></example>
+</slide>
+

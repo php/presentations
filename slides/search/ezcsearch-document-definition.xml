@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>eZ Components' Search component</title>
+	<subtitle>Document Definition</subtitle>
+
+<example><![CDATA[<?php
+static public function getDefinition()
+{
+	$n = new ezcSearchDocumentDefinition( 'ezcSearchSimpleArticle' );
+	$n->idProperty = 'id';
+	$n->fields['id'] = 
+		new ezcSearchDefinitionDocumentField( 
+			'id', ezcSearchDocumentDefinition::TEXT );
+
+	$n->fields['title'] = 
+		new ezcSearchDefinitionDocumentField( 
+			'title', ezcSearchDocumentDefinition::TEXT, 
+			2, true, false, true );
+
+	$n->fields['body'] = 
+		new ezcSearchDefinitionDocumentField( 
+			'body', ezcSearchDocumentDefinition::TEXT, 
+			1, false, false, true );
+
+	$n->fields['published'] = 
+		new ezcSearchDefinitionDocumentField( 
+			'published', ezcSearchDocumentDefinition::DATE );
+
+	$n->fields['url'] = 
+		new ezcSearchDefinitionDocumentField( 
+			'url', ezcSearchDocumentDefinition::STRING );
+
+	$n->fields['type'] = 
+		new ezcSearchDefinitionDocumentField( 
+			'type', ezcSearchDocumentDefinition::STRING, 
+			0, true, false, false );
+
+	return $n;
+}
+?>]]></example>
+</slide>
+

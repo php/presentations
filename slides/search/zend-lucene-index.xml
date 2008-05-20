@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Zend Lucene</title>
+	<subtitle>Indexing Example</subtitle>
+
+	<blurb>Normal:</blurb>
+<example><![CDATA[<?php
+// Open existing index
+$index = Zend_Search_Lucene::open('/data/my-index');
+
+$doc = new Zend_Search_Lucene_Document();
+// Store document URL to identify it in search result.
+$doc->addField(Zend_Search_Lucene_Field::Text('url', $docUrl));
+// Index document content
+$doc->addField(Zend_Search_Lucene_Field::UnStored('contents', $docContent));
+
+// Add document to the index.
+$index->addDocument($doc);
+?>]]></example>
+
+<break/>
+	<blurb>HTML document:</blurb>
+
+<example><![CDATA[<?php
+$doc = Zend_Search_Lucene_Document_Html::loadHTMLFile($filename);
+$index->addDocument($doc);
+?>]]></example>
+</slide>

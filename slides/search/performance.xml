@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Notes on Performance</title>
+	<subtitle>Solr vs Zend Lucene</subtitle>
+
+	<list>
+		<bullet>Both engines are not tuned</bullet>
+		<bullet>Solr indexes about 25% faster for small documents (one sentence)</bullet>
+		<bullet>Solr indexes about 200% faster for big documents (64kb)</bullet>
+	</list>
+</slide>

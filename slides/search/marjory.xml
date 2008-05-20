@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Marjory</title>
+
+	<blurb>Marjory is a webservice for indexing and searching for documents,
+	utilizing a full-text search engine.</blurb>
+
+	<list>
+		<bullet>It is somewhat similar to Solr, but is written in PHP and the underlying architecture allows for using search engines other than Lucene (no other adaptor is implemented yet, though).</bullet>
+		<bullet>Marjory is based on the Zend Framework and uses Zend_Search_Lucene as the default search engine. </bullet>
+	</list>
+</slide>

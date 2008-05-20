@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Own Implementation</title>
+
+	<list>
+		<bullet>Split text into tokens</bullet>
+		<bullet>Store tokens in a table, uniquely - with frequency</bullet>
+		<bullet>Store object / word location in a table, next/prev word, order</bullet>
+	</list>
+	<example>mysql> select * from ezsearch_word order by word limit 250, 4;
++------+--------------+--------------+
+| id   | object_count | word         |
++------+--------------+--------------+
+| 1761 |            1 | associations | 
+| 2191 |            1 | assurance    | 
+|  349 |           37 | at           | 
++------+--------------+--------------+
+
+mysql> select word_id, word from ezsearch_object_word_link wl, ezsearch_word w
+where wl.word_id = w.id and contentobject_id = 145 order by placement limit 4;
++---------+--------+
+| word_id | word   |
++---------+--------+
+|    1576 | puts   | 
+|     926 | europe | 
+|     349 | at     | 
++---------+--------+
+</example>
+</slide>

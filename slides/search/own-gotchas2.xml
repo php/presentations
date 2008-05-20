@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Own Implementation</title>
+	<blurb>Be careful to split with regular expressions - character set and
+	locale issues:</blurb>
+<break/>
+	<example result='1'><![CDATA[<pre>
+<?php
+$string = 'blårbærøl er greit';
+$string = iconv( 'utf-8', 'latin1', $string );
+setlocale( LC_ALL, 'nb_NO.iso-8859-1');
+var_dump( preg_split( '/\W/', $string ) );
+?>]]></example>
+</slide>

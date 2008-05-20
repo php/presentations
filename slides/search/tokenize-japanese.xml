@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Tokenizing</title>
+	<subtitle>Japanese</subtitle>
+
+	<blurb>There is little interpunction:</blurb>
+	<break/>
+	<blurb>辞書, コーパスに依存しない汎用的な設計</blurb>
+	<break/>
+	<blurb>You need special techniques to split it up into bits. Tools like
+	Kakasi and Mecab.</blurb>
+	<break/>
+	<blurb>Output from mecab:</blurb>
+
+	<example>
+辞書, コーパスに依存しない汎用的な設計
+
+辞書      名詞,普通名詞,*,*,辞書,じしょ,代表表記:辞書
+,        特殊,記号,*,*,*,*,*
+コーパス   名詞,普通名詞,*,*,*,*,*
+に        助詞,格助詞,*,*,に,に,*
+依存      名詞,サ変名詞,*,*,依存,いぞん,代表表記:依存
+し        動詞,*,サ変動詞,基本連用形,する,し,付属動詞候補（基本） 代表表記:する
+ない      接尾辞,形容詞性述語接尾辞,イ形容詞アウオ段,基本形,ない,ない,*
+汎用      名詞,サ変名詞,*,*,汎用,はんよう,代表表記:汎用
+的な      接尾辞,形容詞性名詞接尾辞,ナ形容詞,ダ列基本連体形,的だ,てきな,*
+設計      名詞,サ変名詞,*,*,設計,せっけい,代表表記:設計
+	</example>
+</slide>
+

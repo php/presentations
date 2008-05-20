@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Tokenizing</title>
+	<subtitle>Domain specific</subtitle>
+
+	<blurb>Tokenization is domain specific</blurb>
+	<break/>
+	<list>
+		<bullet>You don't always want to split up letters from numbers - f.e. in product numbers.</bullet>
+		<bullet>You might want to exclude words (stop words)</bullet>
+		<bullet>You might want to filter out words that are short, or just long</bullet>
+		<bullet>You might want to define synonyms</bullet>
+		<bullet>You might want to normalize text (remove accents, Unicode forms)</bullet>
+	</list>
+</slide>

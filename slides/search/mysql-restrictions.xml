@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>MySQL FULLTEXT</title>
+
+	<list>
+		<bullet>Full-text searches are supported for MyISAM tables only.</bullet>
+		<bullet>Full-text searches can be used with multi-byte character sets. The exception is that for Unicode, but not the ucs2 character set.</bullet>
+		<bullet>Ideographic languages such as Chinese and Japanese do not have word delimiters. Therefore, the FULLTEXT parser cannot determine where words begin and end in these and other such languages.</bullet>
+		<bullet>Although the use of multiple character sets within a single table is supported, all columns in a FULLTEXT index must use the same character set and collation.</bullet>
+	</list>
+	<blurb class="quote">From http://dev.mysql.com/doc/refman/5.0/en/fulltext-restrictions.html</blurb>
+</slide>

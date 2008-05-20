@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Apache Solr</title>
+
+	<blurb>Solr is a standalone enterprise search server with a web-services like API. It extends Lucene:</blurb>
+
+	<break/>
+	<list>
+		<bullet>Real schema, with numeric types, dynamic fields, unique keys</bullet>
+		<bullet>Powerful extensions to the lucene query language</bullet>
+		<bullet>Support for dynamic faceted browsing and filtering</bullet>
+		<bullet>Advanced, configurable text analysis</bullet>
+		<bullet>Highly configurable and user extensible caching</bullet>
+		<bullet>Performance optimizations</bullet>
+		<bullet>External configuration via xml</bullet>
+		<bullet>An administration interface</bullet>
+		<bullet>Monitorable logging</bullet>
+		<bullet>Fast incremental updates and snapshot distribution</bullet>
+		<bullet>XML and CSV/delimited-text update formats</bullet>
+	</list>
+	<blurb><![CDATA[<a href='http://localhost:8983/solr/admin/'>demo</a>]]></blurb>
+</slide>

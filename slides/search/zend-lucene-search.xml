@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Zend Lucene</title>
+	<subtitle>Search Example</subtitle>
+
+	<blurb>With parser:</blurb>
+<example><![CDATA[<?php
+$index = Zend_Search_Lucene::open('/data/my-index');
+$userQuery = Zend_Search_Lucene_Search_QueryParser::parse($queryStr);
+$hits = $index->find($query);
+?>]]></example>
+
+<break/>
+	<blurb>With API:</blurb>
+<example><![CDATA[<?php
+$userQuery = Zend_Search_Lucene_Search_QueryParser::parse($queryStr);
+
+$pathTerm  = new Zend_Search_Lucene_Index_Term('/data/doc_dir/' . $filename, 'path');
+$pathQuery = new Zend_Search_Lucene_Search_Query_Term($pathTerm);
+
+$query = new Zend_Search_Lucene_Search_Query_Boolean();
+$query->addSubquery($userQuery);
+$query->addSubquery($pathQuery);
+
+$hits = $index->find($query);
+?>]]></example>
+</slide>

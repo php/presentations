@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Searching</title>
+
+	<blurb>Different types of searches</blurb>
+	<break/>
+	<list>
+		<bullet>Search words, phrases, boolean: %airplane, "red wine", wine -red%</bullet>
+		<bullet>Field searches: %title:tutorial desc:feed%</bullet>
+		<bullet>Facetted search:</bullet>
+	</list>
+	<blurb><![CDATA[<a href='http://dev.ezcomponents.org/search'>demo</a>]]></blurb>
+
+</slide>

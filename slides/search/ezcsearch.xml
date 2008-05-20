@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>eZ Components' Search component</title>
+
+	<list>
+		<bullet>As our current solution doesn't scale, we needed something new</bullet>
+		<bullet>As Lucene is really good, the first attempt was to use the Java bridge</bullet>
+		<bullet>Then Solr came out</bullet>
+		<bullet>Which we integrated in "eZ Find"</bullet>
+		<bullet>Next versions of eZ Publish will use eZ Components</bullet>
+	</list>
+</slide>

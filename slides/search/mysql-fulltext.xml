@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>MySQL FULLTEXT</title>
+
+<blurb>MySQL has support for full-text indexing and searching:</blurb>
+	<list>
+		<bullet>A full-text index in MySQL is an index of type FULLTEXT.</bullet>
+		<bullet>Full-text indexes can be used only with MyISAM tables, and can be created only for CHAR, VARCHAR, or TEXT columns. </bullet>
+	</list>
+</slide>

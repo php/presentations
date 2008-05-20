@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>eZ Components' Search component</title>
+	<subtitle>Requirements and Design</subtitle>
+
+	<list>
+		<bullet>Support for multiple backends</bullet>
+		<bullet>Abstract documents</bullet>
+		<bullet>Support for datatypes</bullet>
+		<bullet>Rich searching API, including facetted search</bullet>
+		<bullet>Easy query interface</bullet>
+	</list>
+</slide>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Stemming</title>
+
+	<blurb>Stemming normalizes words:</blurb>
+	<list>
+		<bullet>Porter stemming</bullet>
+		<bullet>It's language dependent: snowball</bullet>
+		<bullet>Several algorithms exist</bullet>
+	</list>
+	<example>arrival -> arrive
+skies   -> sky
+riding  -> ride
+rides   -> ride
+horses  -> hors</example>
+
+	<break lines="2"/>
+	<blurb>Alternatively, instead of word analysis you can use "sounds like"
+	indexing, but using something like soundex or metaphone:</blurb>
+<break/>
+	<example>
+Word      Soundex    Metaphone
+stemming  S355       STMNK
+peas      P200       PS
+peace     P200       PS
+please    P420       PLS</example>
+
+</slide>
+

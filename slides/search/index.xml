@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Indexing</title>
+
+<break lines="3"/>
+	<blurb>Before you can search, you need to index.</blurb>
+<break lines="3"/>
+	<blurb>Indexing requires:</blurb>
+
+	<list>
+		<bullet>Finding the documents to index (crawl)</bullet>
+		<bullet>Separate the documents into indexable units (tokenizing)</bullet>
+		<bullet>Massage the found units (stemming)</bullet>
+	</list>
+</slide>
+

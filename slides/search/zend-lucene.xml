@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Zend Lucene</title>
+
+	<blurb>It's a port of Java Lucene to PHP</blurb>
+
+	<break lines="2"/>
+	<list>
+		<bullet>Compatible with the Lucene index format</bullet>
+		<bullet>Provides indexing and searching libraries</bullet>
+		<bullet>Supports some of the lucene query language</bullet>
+		<bullet>Support for indexing HTML documents: title, meta and body</bullet>
+		<bullet>Has support for different field types:</bullet>
+	</list>
+	<list>
+		<bullet>*Keyword*: Not tokenized</bullet>
+		<bullet>*UnIndexed*: Not indexed</bullet>
+		<bullet>*Binary*: Binary data</bullet>
+		<bullet>*Text*: Tokenized</bullet>
+		<bullet>*UnStored*: Tokenized, but only indexed</bullet>
+	</list>
+</slide>

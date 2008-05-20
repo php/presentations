@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Own Implementation</title>
+	<blurb>Doesn't work very well for huge amounts of content:</blurb>
+<break/>
+	<example><![CDATA[mysql> use ezno;
+Database changed
+
+mysql> select count(*) from ezsearch_word;
+212291
+
+mysql> select count(*) from ezsearch_object_word_link;
+15551310
+]]></example>
+</slide>
