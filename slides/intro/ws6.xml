@@ -3,12 +3,12 @@
 Finally, a free geocoding API
 </blurb>
 
-<example title="REST Query to look up an address" result="0" fontsize="1.8em" marginright="0em"><![CDATA[http://api.local.yahoo.com/MapsService/V1/geocode?appid=YahooDemo&location=:-:location:-:]]></example>
+<example title="REST Query to look up an address" result="0" fontsize="1.8em" marginright="0em"><![CDATA[http://api.local.yahoo.com/MapsService/V1/geocode?appid=rlerdorf&location=:-:location:-:]]></example>
 
 <example hide="1" result="1" title="Returned XML"><![CDATA[<?php
 $loc = urlencode(':-:location:-:');
 if(!$data = @file_get_contents("presentations/slides/intro/geo_{$loc}.xml"))
-  $data = file_get_contents("http://local.yahooapis.com/MapsService/V1/geocode?appid=YahooDemo&location=$loc");
+  $data = file_get_contents("http://local.yahooapis.com/MapsService/V1/geocode?appid=rlerdorf&location=$loc");
 $data = preg_replace("|<(/.*?)>|","<\\1>\n",trim($data));
 $data = preg_replace("|\">|","\">\n",$data);
 echo nl2br(htmlspecialchars($data));
@@ -16,7 +16,7 @@ echo nl2br(htmlspecialchars($data));
 
 <example fontsize="1.2em" title="We can parse it like this" result="1" marginright="0em" required_extension="simplexml"><![CDATA[<?php
   $url  = 'http://local.yahooapis.com/MapsService/V1/geocode';
-  $url .= '?appid=YahooDemo&location='.urlencode(':-:location:-:');
+  $url .= '?appid=rlerdorf&location='.urlencode(':-:location:-:');
   $xml = simplexml_load_file($url); 
   $ret['precision'] = (string)$xml->Result['precision'];
   $ret['warning'] = (string)$xml->Result['warning'];
@@ -26,7 +26,7 @@ echo nl2br(htmlspecialchars($data));
   echo "<pre>"; print_r($ret); echo "</pre>";
 ?>]]></example>
 
-<example title="Closest Match" result="0" fontsize="1.8em" marginright="0em"><![CDATA[http://local.yahooapis.com/MapsService/V1/geocode?appid=YahooDemo&location=701%20First,%20Sunnyvale]]></example>
+<example title="Closest Match" result="0" fontsize="1.8em" marginright="0em"><![CDATA[http://local.yahooapis.com/MapsService/V1/geocode?appid=rlerdorf&location=701%20First,%20Sunnyvale]]></example>
 
 <example title="Returned XML" result="0" fontsize="1.4em" marginright="0em"><![CDATA[<ResultSet xsi:schemaLocation="urn:yahoo:maps http://api.local.yahoo.com/MapsService/V1/GeocodeResponse.xsd">
  <Result precision="address" 

@@ -6,11 +6,11 @@ I know nothing about Actionscript, nor Flex.  Sorry.
 </blurb>
 
 <example title="Simple Embedded Flash map" result="1" fontsize="1.6em" marginright="0em"><![CDATA[<script type="text/javascript" 
-        src="http://api.maps.yahoo.com/v3.0/fl/javascript/apiloader.js?appid=YahooDemo">
+        src="http://api.maps.yahoo.com/v3.0/fl/javascript/apiloader.js?appid=rlerdorf">
 </script>
 <div id="mapContainer" style="height: 400px; width: 930px;"></div>
 <script type="text/javascript">
-var mymap = new Map("mapContainer","YahooDemo",":-:location:-:",10,MapViews.HYBRID);
+var mymap = new Map("mapContainer","rlerdorf",":-:location:-:",10,MapViews.HYBRID);
 mymap.addTool(new PanTool(), true);
 mymap.addWidget(new SatelliteControlWidget());
 mymap.addWidget(new NavigatorWidget()); 
@@ -23,7 +23,7 @@ PHP to fetch data from a backend to plot.
 </blurb>
 
 <example title="Simple Embedded DHTML map" result="1" fontsize="1.6em" rfontsize="1em" marginright="0em"><![CDATA[<script type="text/javascript"
-       src="http://api.maps.yahoo.com/ajaxymap?v=3.4&appid=YahooDemo">
+       src="http://api.maps.yahoo.com/ajaxymap?v=3.4&appid=rlerdorf">
 </script>
 <div id="jsmapContainer" style="height: 400px; width: 930px;"></div>
 <script type="text/javascript">

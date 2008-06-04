@@ -1,7 +1,7 @@
 <slide title="World">
 <break lines="1" />
 <example hide="1" result="1" fontsize="1.4em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[
-<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=YahooDemo"></script>
+<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=rlerdorf"></script>
 <script type="text/javascript" src="http://lerdorf.com/ymap_canvas_fix.js"></script>
 <div id="jsmapContainer" style="height: 600px; width: 980px;"></div>
 <div id="buttonContainer" style="padding: 0.5em;">

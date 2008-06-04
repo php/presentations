@@ -6,7 +6,7 @@ include 'secrets.inc';
 if(!isset($_POST['loc'])) $loc = ':-:location:-:';
 $flickr = new Flickr($secrets);
 $url  = 'http://local.yahooapis.com/MapsService/V1/geocode';
-$url .= '?appid=YahooDemo&location='.urlencode($loc);
+$url .= '?appid=rlerdorf&location='.urlencode($loc);
 $xml = simplexml_load_file($url)->Result; 
 $lat = (double)$xml->Latitude;
 $lon = (double)$xml->Longitude;

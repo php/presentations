@@ -32,7 +32,7 @@ dig it.  Ok, perhaps chicks don't really dig it, and it is actually a currency,
 but it is still cool.
 EOB;
 $url = 'http://search.yahooapis.com/ContentAnalysisService/V1/termExtraction';
-$post = "query=tool&appid=YahooDemo&context=".rawurlencode($context);
+$post = "query=tool&appid=rlerdorf&context=".rawurlencode($context);
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);

@@ -3,7 +3,7 @@
 You can also ask for a single map tile of any location at any size.
 </blurb>
 
-<example title="REST Query to get a tile" result="0" fontsize="1.4em" marginright="0em"><![CDATA[http://local.yahooapis.com/MapsService/V1/mapImage?appid=YahooDemo&location=94539]]></example>
+<example title="REST Query to get a tile" result="0" fontsize="1.4em" marginright="0em"><![CDATA[http://local.yahooapis.com/MapsService/V1/mapImage?appid=rlerdorf&location=94539]]></example>
 
 <example title="Returned XML" result="0" fontsize="1.4em" marginright="0em"><![CDATA[<Result>
 http://img.maps.yahoo.com/mapimage?MAPDATA=NE6uked6wXUvMKeeO65.zg9FRNGF36TLiC8QU14ROsDkbVumowh8Jm3JSJUKwebcVHHXcvWDLt8WExnWh59FAevHEV5ynmh6WyJ3zNdmrLJYh3S95w--
@@ -28,7 +28,7 @@ $cities = array("San Francisco", "Los Angeles", "Seattle", "Atlanta", "Chicago",
 
 $width = 600; $height = 300; $zoom = 7;
  
-$url  = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=YahooDemo"; 
+$url  = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=rlerdorf"; 
 $url .= "&image_height=$height&image_width=$width&zoom=$zoom";
 $url .= "&location=";
 $i=0;
@@ -85,7 +85,7 @@ $cities = array("San Francisco", "Los Angeles", "Seattle", "Atlanta", "Chicago",
 
 $width = 600; $height = 300; $zoom = 7;
  
-$url  = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=YahooDemo"; 
+$url  = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=rlerdorf"; 
 $url .= "&image_height=$height&image_width=$width&zoom=$zoom";
 $url .= "&location=";
 $i=0;

@@ -1,11 +1,11 @@
 <?php
 if(!empty($_GET['loc'])) {
-  $geo = 'http://local.yahooapis.com/MapsService/V1/geocode?appid=YahooDemo'.
+  $geo = 'http://local.yahooapis.com/MapsService/V1/geocode?appid=rlerdorf'.
          '&location='.urlencode($_GET['loc']).'&output=php';
   $ll = unserialize(file_get_contents($geo));
   $lat = $ll['ResultSet']['Result']['Latitude']; 
   $lon = $ll['ResultSet']['Result']['Longitude']; 
-  $map = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=YahooDemo".
+  $map = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=rlerdorf".
          "&output=php&image_width=450&image_height=450&radius=1500";
   $N = unserialize(file_get_contents("$map&latitude=$lat&longitude=$lon")); 
   $lat = -$lat; $lon = $lon<0 ? 180+$lon : $lon-180;
