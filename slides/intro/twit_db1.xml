@@ -1,0 +1,18 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+A simple abstract base class is the start of our Database layer
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
+abstract class db {
+  protected static $dbh = false;
+
+  function connect() {
+    self::$dbh = new PDO('sqlite:./people.db');
+    self::$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  }
+?>]]></example>
+
+</slide>

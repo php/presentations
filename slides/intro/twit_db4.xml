@@ -1,0 +1,50 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+Prepare/execute example
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
+class people extends db {
+  function load($id="",$lx=-1,$ly=-1) {
+    if(!self::$dbh) $this->connect();
+    if(strlen($id)) {
+      $id = self::$dbh->quote($id);
+      $where = "WHERE id=$id";
+    } else $where = "status > -1";
+    if($lx!=-1) {
+      $limit = "LIMIT $lx,$ly";
+    } else $limit="";
+    try {
+      $result = self::$dbh->query("SELECT * from twits $where order by ctime desc $limit");
+      $rows = $result->fetchall(PDO::FETCH_ASSOC);
+    } catch (PDOException $e) {
+      $this->fatal_error($e->getMessage());
+    }
+    if(strlen($id) && count($rows)) return $rows[0];
+    return $rows;
+  }
+
+  function save($record) {
+    if(!strlen($record['id'])) return false;
+    if(!self::$dbh) $this->connect();
+    try {
+      $stmt = self::$dbh->prepare("INSERT IGNORE INTO twits 
+         (id,ctime,msg,to_user_id,from_user,from_user_id,iso,profile_image,query,assigned) 
+         VALUES (:id,FROM_UNIXTIME(:ctime),:msg,:to_user_id,:from_user,:from_user_id,:iso,
+                 :profile_image,:query,:assigned)");
+      $params = array(':id'=>$record['id'], ':ctime'=>strtotime($record['created_at']),
+                      ':msg'=>$record['text'], ':to_user_id'=>$record['to_user_id'],
+                      ':from_user'=>$record['from_user'],':from_user_id'=>$record['from_user_id'],
+                      ':iso'=>$record['iso_language_code'],':profile_image'=>$record['profile_image_url'],
+                      ':query'=>$record['query'],':assigned'=>$record['assigned']);
+      $stmt->execute($params);
+    } catch (PDOException $e) {
+      $this->fatal_error($e->getMessage());
+    }
+  }
+
+?>]]></example>
+
+</slide>

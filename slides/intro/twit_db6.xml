@@ -1,0 +1,25 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+A complete DB/JSON backend
+</blurb>
+
+<example result="0" marginright="1em"><![CDATA[<?php
+  include './db.inc';
+  include './db_twits.inc';
+
+  $twits = new twits;
+  $query = $_POST['query'];
+
+  header("Content-type: application/json");
+
+  switch($_REQUEST['action']) {
+    case 'remove_old':
+       $twits->remove_old($query,$_SERVER['REQUEST_TIME']-(14*24*3600));
+       echo json_encode('update'=>'Old tweets have been removed');
+       break;
+  }
+?>]]></example>
+
+</slide>
