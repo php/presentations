@@ -14,8 +14,16 @@ Written inclued.out.dot...
 % dot -Tpng -o 1.png inclued.out.dot
 ]]></example>
 
+<break lines="1" />
+
+<blurb align="center">For the front page</blurb>
 <image filename="twit2.png" align="center"/>
 
+<break lines="1" />
+
+<blurb align="center">For the query tracking page</blurb>
 <image filename="twit.png" align="center"/>
+
+<break lines="3" />
 
 </slide>

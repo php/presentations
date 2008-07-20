@@ -36,8 +36,10 @@ class people extends db {
                  :profile_image,:query,:assigned)");
       $params = array(':id'=>$record['id'], ':ctime'=>strtotime($record['created_at']),
                       ':msg'=>$record['text'], ':to_user_id'=>$record['to_user_id'],
-                      ':from_user'=>$record['from_user'],':from_user_id'=>$record['from_user_id'],
-                      ':iso'=>$record['iso_language_code'],':profile_image'=>$record['profile_image_url'],
+                      ':from_user'=>$record['from_user'],
+                      ':from_user_id'=>$record['from_user_id'],
+                      ':iso'=>$record['iso_language_code'],
+                      ':profile_image'=>$record['profile_image_url'],
                       ':query'=>$record['query'],':assigned'=>$record['assigned']);
       $stmt->execute($params);
     } catch (PDOException $e) {

@@ -2,12 +2,16 @@
 
 <break lines="1" />
 
+<blurb>HTML should look like HTML</blurb>
+
+<break lines="1" />
+
 <example fontsize="1.4em" type="shell" title="Before"><![CDATA[
 Response time:              |ffff00|0.10 secs|
 Transaction rate:          |ffff00|49.84 trans/sec|
 ]]></example>
 
-<example fontsize="1.4em" type="shell" title="HTML should look like HTML"><![CDATA[
+<example fontsize="1.4em" type="shell" title="After"><![CDATA[
 % siege |ffff00|-H| "Cookie: rememberme=1%3A195e06ce1b0c466b62c0d0025611fe72" \
         |ffff00|-c| 5 "http://laconica2.localhost/index.php?action=public" \
         |ffff00|-b| |ffff00|-t|30s
@@ -19,8 +23,8 @@ Transactions:		        1716 hits
 Availability:		      100.00 %
 Elapsed time:		       30.19 secs
 Data transferred:	       17.59 MB
-Response time:		        0.09 secs
-Transaction rate:	       56.84 trans/sec
+Response time:		        |ffff00|0.09 secs|
+Transaction rate:	       |ffff00|56.84 trans/sec|
 Throughput:		        0.58 MB/sec
 Concurrency:		        4.99
 Successful transactions:        1716
