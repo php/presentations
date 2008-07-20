@@ -1,0 +1,32 @@
+<slide title="Benchmark again">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Before"><![CDATA[
+Response time:              |ffff00|0.11 secs|
+Transaction rate:          |ffff00|45.37 trans/sec|]]></example>
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="After fixing include_path"><![CDATA[
+% siege |ffff00|-H| "Cookie: rememberme=1%3A195e06ce1b0c466b62c0d0025611fe72" \
+        |ffff00|-c| 5 "http://laconica.localhost/index.php?action=public" \
+        |ffff00|-b| |ffff00|-t|30s
+** SIEGE 2.66
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        1412 hits
+Availability:		      100.00 %
+Elapsed time:		       30.28 secs
+Data transferred:	       14.61 MB
+Response time:		        |ffff00|0.11 secs|
+Transaction rate:	       |ffff00|46.63 trans/sec|
+Throughput:		        0.48 MB/sec
+Concurrency:		        4.99
+Successful transactions:        1412
+Failed transactions:	           0
+Longest transaction:	        1.10
+Shortest transaction:	        0.03]]></example>
+
+</slide>

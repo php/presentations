@@ -1,0 +1,49 @@
+<slide title="Enable APC">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" leader="APC: " href="http://pecl.php.net/APC"/>
+
+<example fontsize="1.4em" type="shell" title="Benchmarking Laconica PHP 5.2.7-dev"><![CDATA[
+% siege |ffff00|-H| "Cookie: rememberme=1%3A195e06ce1b0c466b62c0d0025611fe72" \
+        |ffff00|-c| 5 "http://laconica.localhost/index.php?action=public" \
+        |ffff00|-b| |ffff00|-t|30s
+** SIEGE 2.66
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:               1363 hits
+Availability:             100.00 %
+Elapsed time:              30.04 secs
+Data transferred:          14.11 MB
+Response time:              |ffff00|0.11 secs|
+Transaction rate:          |ffff00|45.37 trans/sec|
+Throughput:             0.47 MB/sec
+Concurrency:                4.99
+Successful transactions:        1363
+Failed transactions:               0
+Longest transaction:            2.95
+Shortest transaction:           0.03]]></example>
+
+<example fontsize="1.4em" type="shell" title="Benchmarking Laconica - PHP 5.3.0-dev"><![CDATA[
+% siege |ffff00|-H| "Cookie: rememberme=1%3A195e06ce1b0c466b62c0d0025611fe72" \
+        |ffff00|-c| 5 "http://laconica.localhost/index.php?action=public" \
+        |ffff00|-b| |ffff00|-t|30s
+** SIEGE 2.66
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:               1406 hits
+Availability:             100.00 %
+Elapsed time:              30.47 secs
+Data transferred:          14.54 MB
+Response time:              |ffff00|0.11 secs|
+Transaction rate:          |ffff00|46.14 trans/sec|
+Throughput:             0.48 MB/sec
+Concurrency:                4.99
+Successful transactions:        1406
+Failed transactions:               0
+Longest transaction:           20.61
+Shortest transaction:           0.02]]></example>
+
+</slide>

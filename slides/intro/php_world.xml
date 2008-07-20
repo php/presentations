@@ -1,6 +1,62 @@
 <slide title="World">
 <break lines="1" />
-<example result="1" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=rlerdorf"></script>
+
+<example result="1" hide="1" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=rlerdorf"></script>
+<script type="text/javascript" src="http://lerdorf.com/ymap_canvas_fix.js"></script>
+
+<div id="jsmapContainer" style="height: 600px; width: 980px;"></div>
+<div id="buttonContainer" style="padding: 0.5em;">
+  <form>
+    <input type="button" id="1" value="Qeqertarsuaq" onclick="mark('Qeqertarsuaq');"></input>
+    <input type="button" id="2" value="Frederikssund" onclick="mark('Frederikssund');"></input>
+    <input type="button" id="3" value="Toronto" onclick="mark('Toronto');"></input>
+    <input type="button" id="3" value="Waterloo" onclick="mark('Waterloo, Ontario');"></input>
+    <input type="button" id="3" value="Calgary" onclick="mark('Calgary');"></input>
+    <input type="button" id="3" value="Porto Alegre" onclick="mark('Porto Alegre, Brazil');"></input>
+    <input type="button" id="3" value="Mountain View" onclick="mark('Mountain View, CA');"></input>
+    <input type="button" id="3" value="Cary" onclick="mark('Cary, NC');"></input>
+    <input type="button" id="3" value="San Francisco" onclick="mark('San Francisco, CA');"></input>
+    <input type="button" id="3" value="Sunnyvale" onclick="mark('Sunnyvale, CA');"></input>
+  </form>
+</div>
+
+<script type="text/javascript">
+var markers = new Array();
+var first = 1;
+var last = null;
+var Pin = new YImage();
+Pin.src = 'http://www.lerdorf.com/red_pin.png';
+Pin.size = new YSize(32,27);
+Pin.offset = new YCoordPoint(1,4);
+
+var geoDone = function(o) { 
+  jsmap.panToLatLon(o.GeoPoint);
+  if(!first) {
+    markers[o.Address] = o.GeoPoint;
+    jsmap.addOverlay(new YPolyline([last,o.GeoPoint],'blue',5,0.4));
+  }
+  first = 0;
+  last = o.GeoPoint;
+};
+
+var mark = function(loc) { 
+  if(!markers[loc]) {
+    jsmap.addOverlay(new YMarker(loc, Pin));
+  } else {
+    jsmap.panToLatLon(markers[loc]);
+    jsmap.addOverlay(new YPolyline([last,markers[loc]],'blue',5,0.4));
+    last = markers[loc];
+  }
+};
+
+var jsmap = new YMap('jsmapContainer');
+jsmap.addZoomLong();
+jsmap.addTypeControl();
+YEvent.Capture(jsmap, EventsList.onEndGeoCode, geoDone);
+jsmap.drawZoomAndCenter('Qeqertarsuaq',15);
+</script>]]></example>
+
+<example result="0" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=rlerdorf"></script>
 <script type="text/javascript" src="http://lerdorf.com/ymap_canvas_fix.js"></script>
 
 <div id="jsmapContainer" style="height: 600px; width: 980px;"></div>

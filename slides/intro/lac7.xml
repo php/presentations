@@ -1,0 +1,19 @@
+<slide title="Check include hierachy">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Install pecl/inclued"><![CDATA[
+extension=inclued.so
+inclued.enabled=1
+inclued.dumpdir=/tmp
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Generate graph"><![CDATA[
+% php ~/pecl/inclued/gengraph.php -i inclued.27843.1
+Written inclued.out.dot...
+% dot -Tpng -o 1.png inclued.out.dot
+]]></example>
+
+<image filename="laconica.png" align="center"/>
+
+</slide>

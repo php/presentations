@@ -1,0 +1,628 @@
+<slide title="Check System Calls">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="strace your web server process"><![CDATA[
+% /usr/sbin/apache2 -X &
+[1] 16367
+|ffff00|(hit page a few times to warm up caches)|
+% strace -p 16367 -o sys1.txt 
+Process 16367 attached - interrupt to quit
+|ffff00|(hit page *once*)|
+Process 16367 detached
+% grep stat sys1.txt | grep -v fstat | wc -l
+153]]></example>
+
+<example fontsize="1.4em" type="shell" title="All the syscalls"><![CDATA[accept(3, {sa_family=AF_INET, sin_port=htons(52273), sin_addr=inet_addr("10.211.55.2")}, [16]) = 9
+getsockname(9, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("10.211.55.3")}, [16]) = 0
+fcntl64(9, F_GETFL)                     = 0x2 (flags O_RDWR)
+fcntl64(9, F_SETFL, O_RDWR|O_NONBLOCK)  = 0
+read(9, "GET /index.php?action=public HTT"..., 8000) = 230
+gettimeofday({1216449985, 940917}, NULL) = 0
+stat64("/var/www/laconica/index.php", {st_mode=S_IFREG|0644, st_size=1409, ...}) = 0
+setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={30, 0}}, NULL) = 0
+rt_sigaction(SIGPROF, {0xb7472030, [PROF], SA_RESTART}, {0xb7472030, [PROF], SA_RESTART}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [PROF], NULL, 8) = 0
+getcwd("/var/www/laconica", 4095)       = 18
+chdir("/var/www/laconica")              = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/lib/common.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=3844, ...}) = 0
+stat64("/var/www/laconica/lib/common.php", {st_mode=S_IFREG|0644, st_size=3844, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/PEAR.php", 0xbffcf5fc) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/PEAR.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/PEAR.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=34813, ...}) = 0
+stat64("./PEAR.php", 0xbffd1654)        = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/PEAR.php", {st_mode=S_IFREG|0644, st_size=34813, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf5fc) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+stat64("./DB/DataObject.php", 0xbffd1654) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/DB/DataObject.php", {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/PEAR.php", 0xbffcec2c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/PEAR.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/PEAR.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=34813, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf5fc) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject/Cast.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject/Cast.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=14587, ...}) = 0
+stat64("./DB/DataObject/Cast.php", 0xbffd1654) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/DB/DataObject/Cast.php", {st_mode=S_IFREG|0644, st_size=14587, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/config.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2076, ...}) = 0
+stat64("/var/www/laconica/config.php", {st_mode=S_IFREG|0644, st_size=2076, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/lib/util.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=37557, ...}) = 0
+stat64("/var/www/laconica/lib/util.php", {st_mode=S_IFREG|0644, st_size=37557, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/lib/action.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2454, ...}) = 0
+stat64("/var/www/laconica/lib/action.php", {st_mode=S_IFREG|0644, st_size=2454, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/lib/theme.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1212, ...}) = 0
+stat64("/var/www/laconica/lib/theme.php", {st_mode=S_IFREG|0644, st_size=1212, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/lib/mail.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=3950, ...}) = 0
+stat64("/var/www/laconica/lib/mail.php", {st_mode=S_IFREG|0644, st_size=3950, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/Mail.php", 0xbffcf49c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/Mail.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/Mail.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=9158, ...}) = 0
+stat64("./Mail.php", 0xbffd14f4)        = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/Mail.php", {st_mode=S_IFREG|0644, st_size=9158, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/PEAR.php", 0xbffcf34c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/PEAR.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/PEAR.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=34813, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Avatar.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2841, ...}) = 0
+stat64("/var/www/laconica/classes/Avatar.php", {st_mode=S_IFREG|0644, st_size=2841, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf49c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Notice.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2008, ...}) = 0
+stat64("/var/www/laconica/classes/Notice.php", {st_mode=S_IFREG|0644, st_size=2008, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf46c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Profile.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=4397, ...}) = 0
+stat64("/var/www/laconica/classes/Profile.php", {st_mode=S_IFREG|0644, st_size=4397, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf46c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Remote_profile.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1775, ...}) = 0
+stat64("/var/www/laconica/classes/Remote_profile.php", {st_mode=S_IFREG|0644, st_size=1775, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf46c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Subscription.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1773, ...}) = 0
+stat64("/var/www/laconica/classes/Subscription.php", {st_mode=S_IFREG|0644, st_size=1773, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf46c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/User.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=3821, ...}) = 0
+stat64("/var/www/laconica/classes/User.php", {st_mode=S_IFREG|0644, st_size=3821, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf45c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/PEAR", 0xbffcf45c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/PEAR/Validate/Validate.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/PEAR/Validate/Validate.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=39579, ...}) = 0
+stat64("./PEAR/Validate/Validate.php", 0xbffd14b4) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/PEAR/Validate/Validate.php", {st_mode=S_IFREG|0644, st_size=39579, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Confirm_address.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=1155, ...}) = 0
+stat64("/var/www/laconica/classes/Confirm_address.php", {st_mode=S_IFREG|0644, st_size=1155, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf49c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Remember_me.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=807, ...}) = 0
+stat64("/var/www/laconica/classes/Remember_me.php", {st_mode=S_IFREG|0644, st_size=807, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf49c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Queue_item.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=767, ...}) = 0
+stat64("/var/www/laconica/classes/Queue_item.php", {st_mode=S_IFREG|0644, st_size=767, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf49c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/Reply.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=792, ...}) = 0
+stat64("/var/www/laconica/classes/Reply.php", {st_mode=S_IFREG|0644, st_size=792, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcf49c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=149124, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/markdown.php", 0xbffcf5fc) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/markdown.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/PHP Markdown 1.0.1m/markdown.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=48310, ...}) = 0
+stat64("./markdown.php", 0xbffd1654)    = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/markdown.php", {st_mode=S_IFREG|0644, st_size=48310, ...}) = 0
+close(10)                               = 0
+access("/var/www/laconica/actions/public.php", F_OK) = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/actions/public.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=2582, ...}) = 0
+stat64("/var/www/laconica/actions/public.php", {st_mode=S_IFREG|0644, st_size=2582, ...}) = 0
+close(10)                               = 0
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+open("/var/www/laconica/lib/stream.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=4162, ...}) = 0
+stat64("/var/www/laconica/lib/stream.php", {st_mode=S_IFREG|0644, st_size=4162, ...}) = 0
+close(10)                               = 0
+access("/var/www/laconica/theme/default/ie6.css", F_OK) = 0
+access("/var/www/laconica/theme/default/ie7.css", F_OK) = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB.php", 0xbffcbd3c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=42793, ...}) = 0
+stat64("./DB.php", 0xbffcdd94)          = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/DB.php", {st_mode=S_IFREG|0644, st_size=42793, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/PEAR.php", 0xbffcb4fc) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/PEAR.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/PEAR.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=34813, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcb72c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/mysql.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/mysql.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=32799, ...}) = 0
+stat64("./DB/mysql.php", 0xbffcd784)    = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/DB/mysql.php", {st_mode=S_IFREG|0644, st_size=32799, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcb5cc) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/common.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/common.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=72263, ...}) = 0
+stat64("./DB/common.php", 0xbffcd624)   = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/DB/common.php", {st_mode=S_IFREG|0644, st_size=72263, ...}) = 0
+close(10)                               = 0
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/PEAR.php", 0xbffcb46c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/PEAR.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/PEAR.php", O_RDONLY) = 10
+fstat64(10, {st_mode=S_IFREG|0644, st_size=34813, ...}) = 0
+close(10)                               = 0
+socket(PF_FILE, SOCK_STREAM, 0)         = 10
+fcntl64(10, F_SETFL, O_RDONLY)          = 0
+fcntl64(10, F_GETFL)                    = 0x2 (flags O_RDWR)
+fcntl64(10, F_GETFL)                    = 0x2 (flags O_RDWR)
+fcntl64(10, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+connect(10, {sa_family=AF_FILE, path="/var/run/mysqld/mysqld.sock"}, 110) = 0
+fcntl64(10, F_SETFL, O_RDWR)            = 0
+setsockopt(10, SOL_SOCKET, SO_RCVTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+setsockopt(10, SOL_SOCKET, SO_SNDTIMEO, "\2003\341\1\0\0\0\0", 8) = 0
+setsockopt(10, SOL_IP, IP_TOS, [8], 4)  = -1 EOPNOTSUPP (Operation not supported)
+setsockopt(10, SOL_SOCKET, SO_KEEPALIVE, [1], 4) = 0
+poll([{fd=10, events=POLLIN, revents=POLLIN}], 1, 60000) = 1
+read(10, "J\0\0\0\n5.0.45-Debian_1ubuntu3.3-lo"..., 16384) = 78
+write(10, "&\0\0\1\205\242\0\0\0\0\0@\10\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 42) = 42
+read(10, "\7\0\0\2\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+access("/var/www/laconica/classes/stoica.ini", F_OK) = 0
+stat64("/var/www/laconica/classes/stoica.ini", {st_mode=S_IFREG|0644, st_size=2159, ...}) = 0
+time(NULL)                              = 1216449985
+open("/var/www/laconica/classes/stoica.ini", O_RDONLY) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=2159, ...}) = 0
+read(11, "\n[avatar]\nprofile_id = 129\norigi"..., 8192) = 2159
+read(11, "", 8192)                      = 0
+read(11, "", 8192)                      = 0
+close(11)                               = 0
+gettimeofday({1216449985, 980106}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "k\0\0\0\3SELECT * \n FROM remember_me"..., 111) = 111
+read(10, "\1\0\0\1\3:\0\0\2\3def\6stoica\vremember_me"..., 16384) = 223
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcd96c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject/Error.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+lstat64("/usr", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/usr/local", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/usr/local/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/usr/local/lib/php", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/usr/local/lib/php/DB", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/usr/local/lib/php/DB/DataObject", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/usr/local/lib/php/DB/DataObject/Error.php", {st_mode=S_IFREG|0644, st_size=1737, ...}) = 0
+open("/usr/local/lib/php/DB/DataObject/Error.php", O_RDONLY) = 11
+fstat64(11, {st_mode=S_IFREG|0644, st_size=1737, ...}) = 0
+stat64("./DB/DataObject/Error.php", 0xbffcf9c4) = -1 ENOENT (No such file or directory)
+stat64("/usr/local/lib/php/DB/DataObject/Error.php", {st_mode=S_IFREG|0644, st_size=1737, ...}) = 0
+read(11, "<?php\n/**\n * DataObjects error h"..., 8192) = 1737
+read(11, "", 8192)                      = 0
+read(11, "", 8192)                      = 0
+close(11)                               = 0
+time(NULL)                              = 1216449985
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+socket(PF_FILE, SOCK_DGRAM, 0)          = 11
+fcntl64(11, F_SETFD, FD_CLOEXEC)        = 0
+connect(11, {sa_family=AF_FILE, path="/dev/log"}, 110) = 0
+send(11, "<15>Jul 18 23:46:25 laconica: Go"..., 39, MSG_NOSIGNAL) = 39
+access("/var/www/laconica/theme/default/logo.png", F_OK) = -1 ENOENT (No such file or directory)
+gettimeofday({1216449985, 984712}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "k\0\0\0\3SELECT * \n FROM remember_me"..., 111) = 111
+read(10, "\1\0\0\1\3:\0\0\2\3def\6stoica\vremember_me"..., 16384) = 223
+getcwd("/var/www/laconica", 4096)       = 18
+time(NULL)                              = 1216449985
+lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/laconica/DB", 0xbffcd93c) = -1 ENOENT (No such file or directory)
+open("/var/www/laconica/DB/DataObject/Error.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+time(NULL)                              = 1216449985
+open("/usr/local/lib/php/DB/DataObject/Error.php", O_RDONLY) = 12
+fstat64(12, {st_mode=S_IFREG|0644, st_size=1737, ...}) = 0
+close(12)                               = 0
+time(NULL)                              = 1216449985
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+stat64("/etc/localtime", {st_mode=S_IFREG|0644, st_size=2819, ...}) = 0
+send(11, "<15>Jul 18 23:46:25 laconica: Go"..., 39, MSG_NOSIGNAL) = 39
+gettimeofday({1216449985, 988294}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\245\0\0\0\3SELECT * \n FROM notice \n \n "..., 169) = 169
+read(10, "\1\0\0\1\t,\0\0\2\3def\6stoica\6notice\6noti"..., 16384) = 1773
+gettimeofday({1216449985, 989360}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "?\0\0\0\3SELECT * \n FROM profile \n \n"..., 67) = 67
+read(10, "\1\0\0\1\t.\0\0\2\3def\6stoica\7profile\7pro"..., 16384) = 692
+gettimeofday({1216449985, 990325}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+gettimeofday({1216449985, 991922}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+gettimeofday({1216449985, 993620}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "?\0\0\0\3SELECT * \n FROM profile \n \n"..., 67) = 67
+read(10, "\1\0\0\1\t.\0\0\2\3def\6stoica\7profile\7pro"..., 16384) = 732
+gettimeofday({1216449985, 994774}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+gettimeofday({1216449985, 996363}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+gettimeofday({1216449985, 998126}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+time(NULL)                              = 1216449985
+gettimeofday({1216449985, 999629}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+gettimeofday({1216449986, 1116}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+gettimeofday({1216449986, 2508}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+writev(9, [{"HTTP/1.1 200 OK\r\nDate: Sat, 19 J"..., 288}, {"1f96\r\n", 6}, {"<?xml version=\"1.0\" encoding=\"UT"..., 4022}, {" class=\"nickname\">rasmus</a>    "..., 4064}, {"\r\n", 2}], 5) = 8382
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+gettimeofday({1216449986, 5086}, {420, 0}) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\7\0\0\0\2stoica", 11)       = 11
+read(10, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "|\0\0\0\3SELECT * \n FROM avatar \n \n "..., 128) = 128
+read(10, "\1\0\0\1\t<\0\0\2\3def\6stoica\6avatar\6avat"..., 16384) = 547
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+time(NULL)                              = 1216449986
+chdir("/var/www/laconica")              = 0
+writev(9, [{"acf\r\n", 5}, {" class=\"avatar stream\" width=\"48"..., 2767}, {"\r\n", 2}], 3) = 2774
+rt_sigaction(SIGPIPE, {SIG_IGN}, {SIG_IGN}, 8) = 0
+poll([{fd=10, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(10, "\1\0\0\0\1", 5)              = 5
+shutdown(10, 2 /* send and receive */)  = 0
+close(10)                               = 0
+rt_sigaction(SIGPIPE, {SIG_IGN}, {SIG_IGN}, 8) = 0
+setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
+writev(9, [{"0\r\n\r\n", 5}], 1)        = 5
+write(7, "10.211.55.2 - - [18/Jul/2008:23:"..., 139) = 139
+shutdown(9, 1 /* send */)               = 0
+poll([{fd=9, events=POLLIN, revents=POLLIN|POLLHUP}], 1, 2000) = 1
+read(9, "", 512)                        = 0
+close(9)                                = 0
+read(4, 0xbffd6847, 1)                  = -1 EAGAIN (Resource temporarily unavailable)
+accept(3,  <unfinished ...>]]></example>
+</slide>

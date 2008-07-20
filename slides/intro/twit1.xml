@@ -1,0 +1,35 @@
+<slide title="Twit Code">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Frontpage"><![CDATA[
+Transactions:		        4835 hits
+Availability:		      100.00 %
+Elapsed time:		       29.91 secs
+Data transferred:	       56.79 MB
+Response time:		        |ffff00|0.03 secs|
+Transaction rate:	      |ffff00|161.65 trans/sec|
+Throughput:		        1.90 MB/sec
+Concurrency:		        4.99
+Successful transactions:        4835
+Failed transactions:	           0
+Longest transaction:	        6.11
+Shortest transaction:	        0.00
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Query Page (10 queries)"><![CDATA[
+Transactions:		        7579 hits
+Availability:		      100.00 %
+Elapsed time:		       30.13 secs
+Data transferred:	       58.28 MB
+Response time:		        0.02 secs
+Transaction rate:	      251.54 trans/sec
+Throughput:		        1.93 MB/sec
+Concurrency:		        4.99
+Successful transactions:        7579
+Failed transactions:	           0
+Longest transaction:	        0.12
+Shortest transaction:	        0.00
+]]></example>
+
+</slide>

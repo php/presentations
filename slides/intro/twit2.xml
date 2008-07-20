@@ -1,0 +1,51 @@
+<slide title="Twit System Calls">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="System Calls for one request"><![CDATA[accept(3, {sa_family=AF_INET, sin_port=htons(52288), sin_addr=inet_addr("10.211.55.2")}, [16]) = 11
+getsockname(11, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("10.211.55.3")}, [16]) = 0
+fcntl64(11, F_GETFL)                    = 0x2 (flags O_RDWR)
+fcntl64(11, F_SETFL, O_RDWR|O_NONBLOCK) = 0
+read(11, "GET /track.php?filter=all&query="..., 8000) = 178
+gettimeofday({1216506311, 600117}, NULL) = 0
+stat64("/var/www/twit/track.php", {st_mode=S_IFREG|0644, st_size=5997, ...}) = 0
+setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={30, 0}}, NULL) = 0
+rt_sigaction(SIGPROF, {0xb74fe030, [PROF], SA_RESTART}, {0xb74fe030, [PROF], SA_RESTART}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [PROF], NULL, 8) = 0
+getcwd("/var/www/twit", 4095)           = 14
+chdir("/var/www/twit")                  = 0
+poll([{fd=12, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(12, "\1\0\0\0\16", 5)             = 5
+read(12, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=12, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(12, "\206\0\0\0\3SELECT count(id) as cnt fro"..., 138) = 138
+read(12, "\1\0\0\1\1\31\0\0\2\3def\0\0\0\3cnt\0\f?\0\25\0\0\0\10"..., 16384) = 58
+poll([{fd=12, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(12, "\227\0\0\0\3SELECT * from twits where ("..., 155) = 155
+read(12, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1515
+gettimeofday({1216506311, 602378}, NULL) = 0
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+time(NULL)                              = 1216506311
+poll([{fd=12, events=POLLIN|POLLPRI}], 1, 0) = 0
+write(12, ")\0\0\0\3SELECT * from tracks  order"..., 45) = 45
+read(12, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 767
+writev(11, [{"HTTP/1.1 200 OK\r\nDate: Sat, 19 J"..., 323}, {"1f45\r\n", 6}, {"\n<html>\n    <head>\n        <meta"..., 7773}, {"                </select>\n      "..., 232}, {"\r\n", 2}], 5) = 8336
+chdir("/var/www/twit")                  = 0
+setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
+writev(11, [{"36\r\n", 4}, {"\n    </body>\n<script>do_move_pan"..., 54}, {"\r\n", 2}, {"0\r\n\r\n", 5}], 4) = 65
+write(7, "10.211.55.2 - - [19/Jul/2008:15:"..., 147) = 147
+shutdown(11, 1 /* send */)              = 0
+poll([{fd=11, events=POLLIN, revents=POLLIN|POLLHUP}], 1, 2000) = 1
+read(11, "", 512)                       = 0
+close(11)                               = 0
+read(4, 0xbfd425a7, 1)                  = -1 EAGAIN (Resource temporarily unavailable)
+accept(3,  <unfinished ...>]]></example>
+
+</slide>
