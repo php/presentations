@@ -1,0 +1,811 @@
+version: 0.9.6
+cmd: /var/www/twit/index.php
+part: 1
+
+events: Time
+
+fl=/var/www/twit/includes/db.inc
+fn=require::/var/www/twit/includes/db.inc
+1 15
+
+fl=/var/www/twit/includes/comments.inc
+fn=require::/var/www/twit/includes/comments.inc
+1 15
+
+fl=/var/www/twit/includes/comment_msg.inc
+fn=require::/var/www/twit/includes/comment_msg.inc
+1 15
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=require::/var/www/twit/includes/twit_msg.inc
+1 15
+
+fl=php:internal
+fn=php::PDO->__construct
+13 583
+
+fl=php:internal
+fn=php::PDO->setAttribute
+14 12
+
+fl=/var/www/twit/includes/db.inc
+fn=db->connect
+317 180
+cfn=php::PDO->__construct
+calls=1 0 0
+13 583
+cfn=php::PDO->setAttribute
+calls=1 0 0
+14 12
+
+fl=php:internal
+fn=php::strlen
+318 15
+
+fl=php:internal
+fn=php::PDO->query
+323 425
+
+fl=php:internal
+fn=php::PDOStatement->fetchAll
+324 29
+
+fl=/var/www/twit/includes/db.inc
+fn=tracks->load
+19 190
+cfn=db->connect
+calls=1 0 0
+317 777
+cfn=php::strlen
+calls=1 0 0
+318 15
+cfn=php::PDO->query
+calls=1 0 0
+323 425
+cfn=php::PDOStatement->fetchAll
+calls=1 0 0
+324 29
+
+fl=php:internal
+fn=php::PDO->query
+188 341
+
+fl=php:internal
+fn=php::PDOStatement->fetchAll
+189 36
+
+fl=/var/www/twit/includes/db.inc
+fn=twits->queries
+20 104
+cfn=php::PDO->query
+calls=1 0 0
+188 341
+cfn=php::PDOStatement->fetchAll
+calls=1 0 0
+189 36
+
+fl=php:internal
+fn=php::rand
+23 14
+
+fl=php:internal
+fn=php::md5
+23 15
+
+fl=php:internal
+fn=php::uniqid
+23 31
+
+fl=php:internal
+fn=php::setcookie
+24 19
+
+fl=/var/www/twit/includes/db.inc
+fn=get_user
+35 13
+
+fl=php:internal
+fn=php::is_array
+199 15
+
+fl=php:internal
+fn=php::strlen
+213 14
+
+fl=php:internal
+fn=php::PDO->quote
+214 15
+
+fl=php:internal
+fn=php::PDO->query
+222 892
+
+fl=php:internal
+fn=php::PDOStatement->fetchAll
+223 15
+
+fl=/var/www/twit/includes/db.inc
+fn=twits->get_status
+35 232
+cfn=php::is_array
+calls=1 0 0
+199 15
+cfn=php::strlen
+calls=1 0 0
+213 14
+cfn=php::PDO->quote
+calls=1 0 0
+214 15
+cfn=php::PDO->query
+calls=1 0 0
+222 892
+cfn=php::PDOStatement->fetchAll
+calls=1 0 0
+223 15
+
+fl=php:internal
+fn=php::is_array
+199 13
+
+fl=php:internal
+fn=php::strlen
+213 14
+
+fl=php:internal
+fn=php::PDO->query
+222 509
+
+fl=php:internal
+fn=php::PDOStatement->fetchAll
+223 25
+
+fl=/var/www/twit/includes/db.inc
+fn=twits->get_status
+36 189
+cfn=php::is_array
+calls=1 0 0
+199 13
+cfn=php::strlen
+calls=1 0 0
+213 14
+cfn=php::PDO->query
+calls=1 0 0
+222 509
+cfn=php::PDOStatement->fetchAll
+calls=1 0 0
+223 25
+
+fl=php:internal
+fn=php::is_array
+199 13
+
+fl=php:internal
+fn=php::strlen
+213 13
+
+fl=php:internal
+fn=php::PDO->query
+222 600
+
+fl=php:internal
+fn=php::PDOStatement->fetchAll
+223 25
+
+fl=/var/www/twit/includes/db.inc
+fn=twits->get_status
+37 549
+cfn=php::is_array
+calls=1 0 0
+199 13
+cfn=php::strlen
+calls=1 0 0
+213 13
+cfn=php::PDO->query
+calls=1 0 0
+222 600
+cfn=php::PDOStatement->fetchAll
+calls=1 0 0
+223 25
+
+fl=php:internal
+fn=php::PDO->query
+31 7661
+
+fl=php:internal
+fn=php::PDOStatement->fetchAll
+32 21
+
+fl=/var/www/twit/includes/comments.inc
+fn=comments->last
+38 113
+cfn=php::PDO->query
+calls=1 0 0
+31 7661
+cfn=php::PDOStatement->fetchAll
+calls=1 0 0
+32 21
+
+fl=php:internal
+fn=php::ksort
+39 68
+
+fl=php:internal
+fn=php::rand
+2 15
+
+fl=/var/www/twit/includes/header.php
+fn=include::/var/www/twit/includes/header.php
+1 56
+cfn=php::rand
+calls=1 0 0
+2 15
+
+fl=php:internal
+fn=php::count
+113 15
+
+fl=php:internal
+fn=php::count
+123 14
+
+fl=php:internal
+fn=php::preg_replace
+370 15
+
+fl=php:internal
+fn=php::preg_replace
+375 15
+
+fl=php:internal
+fn=php::preg_replace
+376 13
+
+fl=php:internal
+fn=php::preg_replace
+378 15
+
+fl=php:internal
+fn=php::preg_replace
+382 12
+
+fl=php:internal
+fn=php::substr
+384 15
+
+fl=/var/www/twit/includes/db.inc
+fn=clickable
+3 255
+cfn=php::preg_replace
+calls=1 0 0
+370 15
+cfn=php::preg_replace
+calls=1 0 0
+375 15
+cfn=php::preg_replace
+calls=1 0 0
+376 13
+cfn=php::preg_replace
+calls=1 0 0
+378 15
+cfn=php::preg_replace
+calls=1 0 0
+382 12
+cfn=php::substr
+calls=1 0 0
+384 15
+
+fl=php:internal
+fn=php::strtotime
+4 99
+
+fl=php:internal
+fn=php::date
+4 65
+
+fl=/var/www/twit/includes/comment_msg.inc
+fn=comment_msg
+127 145
+cfn=clickable
+calls=1 0 0
+3 344
+cfn=php::strtotime
+calls=1 0 0
+4 99
+cfn=php::date
+calls=1 0 0
+4 65
+
+fl=php:internal
+fn=php::preg_replace
+370 15
+
+fl=php:internal
+fn=php::preg_replace
+375 15
+
+fl=php:internal
+fn=php::preg_replace
+376 36
+
+fl=php:internal
+fn=php::preg_replace
+378 41
+
+fl=php:internal
+fn=php::preg_replace
+382 15
+
+fl=php:internal
+fn=php::substr
+384 12
+
+fl=/var/www/twit/includes/db.inc
+fn=clickable
+37 255
+cfn=php::preg_replace
+calls=1 0 0
+370 15
+cfn=php::preg_replace
+calls=1 0 0
+375 15
+cfn=php::preg_replace
+calls=1 0 0
+376 36
+cfn=php::preg_replace
+calls=1 0 0
+378 41
+cfn=php::preg_replace
+calls=1 0 0
+382 15
+cfn=php::substr
+calls=1 0 0
+384 12
+
+fl=php:internal
+fn=php::urlencode
+38 12
+
+fl=php:internal
+fn=php::strtotime
+40 116
+
+fl=php:internal
+fn=php::date
+40 63
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_nav
+41 36
+
+fl=php:internal
+fn=php::strlen
+42 14
+
+fl=php:internal
+fn=php::htmlspecialchars
+42 15
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_msg
+136 309
+cfn=clickable
+calls=1 0 0
+37 391
+cfn=php::urlencode
+calls=1 0 0
+38 12
+cfn=php::strtotime
+calls=1 0 0
+40 116
+cfn=php::date
+calls=1 0 0
+40 63
+cfn=twit_nav
+calls=1 0 0
+41 36
+cfn=php::strlen
+calls=1 0 0
+42 14
+cfn=php::htmlspecialchars
+calls=1 0 0
+42 15
+
+fl=php:internal
+fn=php::preg_replace
+370 15
+
+fl=php:internal
+fn=php::preg_replace
+375 15
+
+fl=php:internal
+fn=php::preg_replace
+376 15
+
+fl=php:internal
+fn=php::preg_replace
+378 15
+
+fl=php:internal
+fn=php::preg_replace
+382 15
+
+fl=php:internal
+fn=php::substr
+384 12
+
+fl=/var/www/twit/includes/db.inc
+fn=clickable
+37 357
+cfn=php::preg_replace
+calls=1 0 0
+370 15
+cfn=php::preg_replace
+calls=1 0 0
+375 15
+cfn=php::preg_replace
+calls=1 0 0
+376 15
+cfn=php::preg_replace
+calls=1 0 0
+378 15
+cfn=php::preg_replace
+calls=1 0 0
+382 15
+cfn=php::substr
+calls=1 0 0
+384 12
+
+fl=php:internal
+fn=php::urlencode
+38 14
+
+fl=php:internal
+fn=php::strtotime
+40 83
+
+fl=php:internal
+fn=php::date
+40 65
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_nav
+41 30
+
+fl=php:internal
+fn=php::strlen
+42 15
+
+fl=php:internal
+fn=php::htmlspecialchars
+42 14
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_msg
+136 866
+cfn=clickable
+calls=1 0 0
+37 446
+cfn=php::urlencode
+calls=1 0 0
+38 14
+cfn=php::strtotime
+calls=1 0 0
+40 83
+cfn=php::date
+calls=1 0 0
+40 65
+cfn=twit_nav
+calls=1 0 0
+41 30
+cfn=php::strlen
+calls=1 0 0
+42 15
+cfn=php::htmlspecialchars
+calls=1 0 0
+42 14
+
+fl=php:internal
+fn=php::preg_replace
+370 15
+
+fl=php:internal
+fn=php::preg_replace
+375 15
+
+fl=php:internal
+fn=php::preg_replace
+376 33
+
+fl=php:internal
+fn=php::preg_replace
+378 38
+
+fl=php:internal
+fn=php::preg_replace
+382 15
+
+fl=php:internal
+fn=php::substr
+384 15
+
+fl=/var/www/twit/includes/db.inc
+fn=clickable
+37 251
+cfn=php::preg_replace
+calls=1 0 0
+370 15
+cfn=php::preg_replace
+calls=1 0 0
+375 15
+cfn=php::preg_replace
+calls=1 0 0
+376 33
+cfn=php::preg_replace
+calls=1 0 0
+378 38
+cfn=php::preg_replace
+calls=1 0 0
+382 15
+cfn=php::substr
+calls=1 0 0
+384 15
+
+fl=php:internal
+fn=php::urlencode
+38 13
+
+fl=php:internal
+fn=php::strtotime
+40 289
+
+fl=php:internal
+fn=php::date
+40 66
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_nav
+41 31
+
+fl=php:internal
+fn=php::strlen
+42 14
+
+fl=php:internal
+fn=php::htmlspecialchars
+42 14
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_msg
+144 1857
+cfn=clickable
+calls=1 0 0
+37 384
+cfn=php::urlencode
+calls=1 0 0
+38 13
+cfn=php::strtotime
+calls=1 0 0
+40 289
+cfn=php::date
+calls=1 0 0
+40 66
+cfn=twit_nav
+calls=1 0 0
+41 31
+cfn=php::strlen
+calls=1 0 0
+42 14
+cfn=php::htmlspecialchars
+calls=1 0 0
+42 14
+
+fl=php:internal
+fn=php::preg_replace
+370 16
+
+fl=php:internal
+fn=php::preg_replace
+375 62
+
+fl=php:internal
+fn=php::preg_replace
+376 15
+
+fl=php:internal
+fn=php::preg_replace
+378 16
+
+fl=php:internal
+fn=php::preg_replace
+382 15
+
+fl=php:internal
+fn=php::substr
+384 12
+
+fl=/var/www/twit/includes/db.inc
+fn=clickable
+37 322
+cfn=php::preg_replace
+calls=1 0 0
+370 16
+cfn=php::preg_replace
+calls=1 0 0
+375 62
+cfn=php::preg_replace
+calls=1 0 0
+376 15
+cfn=php::preg_replace
+calls=1 0 0
+378 16
+cfn=php::preg_replace
+calls=1 0 0
+382 15
+cfn=php::substr
+calls=1 0 0
+384 12
+
+fl=php:internal
+fn=php::urlencode
+38 12
+
+fl=php:internal
+fn=php::strtotime
+40 139
+
+fl=php:internal
+fn=php::date
+40 66
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_nav
+41 31
+
+fl=php:internal
+fn=php::strlen
+42 15
+
+fl=php:internal
+fn=php::htmlspecialchars
+42 13
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_msg
+144 369
+cfn=clickable
+calls=1 0 0
+37 460
+cfn=php::urlencode
+calls=1 0 0
+38 12
+cfn=php::strtotime
+calls=1 0 0
+40 139
+cfn=php::date
+calls=1 0 0
+40 66
+cfn=twit_nav
+calls=1 0 0
+41 31
+cfn=php::strlen
+calls=1 0 0
+42 15
+cfn=php::htmlspecialchars
+calls=1 0 0
+42 13
+
+fl=php:internal
+fn=php::strlen
+318 14
+
+fl=php:internal
+fn=php::PDO->query
+323 4153
+
+fl=php:internal
+fn=php::PDOStatement->fetchAll
+324 30
+
+fl=/var/www/twit/includes/db.inc
+fn=tracks->load
+65 167
+cfn=php::strlen
+calls=1 0 0
+318 14
+cfn=php::PDO->query
+calls=1 0 0
+323 4153
+cfn=php::PDOStatement->fetchAll
+calls=1 0 0
+324 30
+
+fl=/var/www/twit/includes/twit_msg.inc
+fn=twit_move_panel
+149 1982
+cfn=tracks->load
+calls=1 0 0
+65 4365
+
+fl=/var/www/twit/index.php
+fn={main}
+
+summary: 27953
+
+0 1491
+cfn=require::/var/www/twit/includes/db.inc
+calls=1 0 0
+11 15
+cfn=require::/var/www/twit/includes/comments.inc
+calls=1 0 0
+12 15
+cfn=require::/var/www/twit/includes/comment_msg.inc
+calls=1 0 0
+13 15
+cfn=require::/var/www/twit/includes/twit_msg.inc
+calls=1 0 0
+14 15
+cfn=tracks->load
+calls=1 0 0
+19 1436
+cfn=twits->queries
+calls=1 0 0
+20 483
+cfn=php::rand
+calls=1 0 0
+23 14
+cfn=php::md5
+calls=1 0 0
+23 15
+cfn=php::uniqid
+calls=1 0 0
+23 31
+cfn=php::setcookie
+calls=1 0 0
+24 19
+cfn=get_user
+calls=1 0 0
+35 13
+cfn=twits->get_status
+calls=1 0 0
+35 1185
+cfn=twits->get_status
+calls=1 0 0
+36 751
+cfn=twits->get_status
+calls=1 0 0
+37 1201
+cfn=comments->last
+calls=1 0 0
+38 7797
+cfn=php::ksort
+calls=1 0 0
+39 68
+cfn=include::/var/www/twit/includes/header.php
+calls=1 0 0
+62 72
+cfn=php::count
+calls=1 0 0
+113 15
+cfn=php::count
+calls=1 0 0
+123 14
+cfn=comment_msg
+calls=1 0 0
+127 654
+cfn=twit_msg
+calls=1 0 0
+136 959
+cfn=twit_msg
+calls=1 0 0
+136 1536
+cfn=twit_msg
+calls=1 0 0
+144 2671
+cfn=twit_msg
+calls=1 0 0
+144 1108
+cfn=twit_move_panel
+calls=1 0 0
+149 6348
+

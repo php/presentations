@@ -1,0 +1,75 @@
+<slide title="Check Callgrind">
+
+<break lines="1" />
+
+<blurb align="center">Study your Callgrind graph carefully!</blurb>
+
+<image filename="twit_notice.png" align="center"/>
+
+<example fontsize="1.4em" type="shell" title="gdb to see what is going on"><![CDATA[
+% gdb /usr/sbin/apache2
+GNU gdb 6.6-debian
+Copyright (C) 2006 Free Software Foundation, Inc.
+GDB is free software, covered by the GNU General Public License, and you are
+welcome to change it and/or distribute copies of it under certain conditions.
+Type "show copying" to see the conditions.
+There is absolutely no warranty for GDB.  Type "show warranty" for details.
+This GDB was configured as "i486-linux-gnu"...
+(no debugging symbols found)
+Using host libthread_db library "/lib/tls/i686/cmov/libthread_db.so.1".
+(gdb) b php_verror
+Function "php_verror" not defined.
+Make breakpoint pending on future shared library load? (y or [n]) y
+Breakpoint 1 (php_verror) pending.
+(gdb) run -X
+...
+|ffff00|(hit page)|
+...
+Breakpoint 2, php_verror (docref=0x0, params=0xb779dc6b "", type=2048, 
+    format=0xb758b640 "It is not safe to rely on the system's timezone settings.
+Please use the date.timezone setting, the TZ environment variable or the 
+date_default_timezone_set() function. In case you used any of those m"...,
+ args=0xbfa3d1cc "??X?\210?\037\b") at /home/rasmus/php52/main/main.c:569
+569		char *class_name = get_active_class_name(&space TSRMLS_CC);
+(gdb) bt
+#0  php_verror (docref=0x0, params=0xb779dc6b "", type=2048, 
+    format=0xb758b640 "It is not safe to rely on the system's timezone settings.
+Please use the date.timezone setting, the TZ environment variable or the
+date_default_timezone_set() function. In case you used any of those m"...,
+args=0xbfa3d1cc "??X?\210?\037\b") at /home/rasmus/php52/main/main.c:569
+#1  0xb74c19d1 in php_error_docref0 (docref=0x0, type=2048, 
+    format=0xb758b640 "It is not safe to rely on the system's timezone settings.
+Please use the date.timezone setting, the TZ environment variable or the
+date_default_timezone_set() function. In case you used any of those m"...)
+at /home/rasmus/php52/main/main.c:733
+#2  0xb727d719 in guess_timezone (tzdb=<value optimized out>) 
+    at /home/rasmus/php52/ext/date/php_date.c:603
+#3  0xb727d795 in get_timezone_info () 
+    at /home/rasmus/php52/ext/date/php_date.c:660
+#4  0xb727f24e in zif_strtotime (ht=1, return_value=0x8327b7c, return_value_ptr=0x0,
+                                 this_ptr=0x0, return_value_used=1)
+    at /home/rasmus/php52/ext/date/php_date.c:1113
+]]></example>
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Set your default timezone in php.ini file"><![CDATA[date.timezone = "America/Los_Angeles"]]></example>
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="After restarting server"><![CDATA[
+Transactions:		        5362 hits
+Availability:		      100.00 %
+Elapsed time:		       29.63 secs
+Data transferred:	       63.05 MB
+Response time:		        |ffff00|0.03 secs|
+Transaction rate:	      |ffff00|180.97 trans/sec|
+Throughput:		        2.13 MB/sec
+Concurrency:		        4.99
+Successful transactions:        5362
+Failed transactions:	           0
+Longest transaction:	       25.02
+Shortest transaction:	        0.00
+]]></example>
+
+</slide>

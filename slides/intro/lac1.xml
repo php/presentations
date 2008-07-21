@@ -18,12 +18,12 @@ Elapsed time:              29.83 secs
 Data transferred:           5.78 MB
 Response time:              |ffff00|0.27 secs|
 Transaction rate:          |ffff00|18.71 trans/sec|
-Throughput:             0.19 MB/sec
+Throughput:                 0.19 MB/sec
 Concurrency:                4.97
-Successful transactions:         558
-Failed transactions:               0
-Longest transaction:            1.16
-Shortest transaction:           0.05]]></example>
+Successful transactions:     558
+Failed transactions:           0
+Longest transaction:        1.16
+Shortest transaction:       0.05]]></example>
 
 <example fontsize="1.4em" type="shell" title="Benchmarking Laconica - PHP 5.3.0-dev"><![CDATA[
 % siege |ffff00|-H| "Cookie: rememberme=1%3A195e06ce1b0c466b62c0d0025611fe72" \
@@ -39,11 +39,11 @@ Elapsed time:              29.88 secs
 Data transferred:           6.36 MB
 Response time:              |ffff00|0.24 secs|
 Transaction rate:          |ffff00|20.58 trans/sec|
-Throughput:             0.21 MB/sec
+Throughput:                 0.21 MB/sec
 Concurrency:                4.97
-Successful transactions:         615
-Failed transactions:               0
-Longest transaction:            7.81
-Shortest transaction:           0.05]]></example>
+Successful transactions:     615
+Failed transactions:           0
+Longest transaction:        7.81
+Shortest transaction:       0.05]]></example>
 
 </slide>
