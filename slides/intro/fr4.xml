@@ -22,9 +22,14 @@ class Default_HelloWorldSuccessView extends DemoDefaultBaseView {
 </body>
 </html>]]></example>
 
-<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+<example fontsize="1.4em" type="shell" title="Performance Development"><![CDATA[
 Response time:              0.60 secs
 Transaction rate:           8.24 trans/sec
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance Production"><![CDATA[
+Response time:		        0.04 secs
+Transaction rate:	      126.91 trans/sec
 ]]></example>
 
 <break lines="1" />
