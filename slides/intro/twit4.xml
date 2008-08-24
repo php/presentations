@@ -57,7 +57,7 @@ at /home/rasmus/php52/main/main.c:733
 
 <break lines="1" />
 
-<example fontsize="1.4em" type="shell" title="After restarting server"><![CDATA[
+<example fontsize="1.4em" type="shell" title="Front page - After restarting server"><![CDATA[
 Transactions:		        5362 hits
 Availability:		      100.00 %
 Elapsed time:		       29.63 secs
@@ -70,6 +70,11 @@ Successful transactions:        5362
 Failed transactions:	           0
 Longest transaction:	       25.02
 Shortest transaction:	        0.00
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Query Page"><![CDATA[
+Response time:		        |ffff00|0.02 secs|
+Transaction rate:	      |ffff00|283.04 trans/sec|
 ]]></example>
 
 </slide>
