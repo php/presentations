@@ -1,0 +1,36 @@
+<slide title="Solar 1.0.0alpha1">
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Controller"><![CDATA[<?php
+class Solar_App_Hello extends Solar_Controller_Page {
+    protected $_action_default = 'index';
+    public $title, $body;
+
+    public function actionIndex() {
+      $this->title = 'Test';
+      $this->body = 'Hello World';
+    }
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="View"><![CDATA[<html>
+<head>
+<title><?php echo $this->title?></title>
+</head>
+<body>
+<?php echo $this->body ?>
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:		        0.02 secs
+Transaction rate:	      271.18 trans/sec
+]]></example>
+
+<break lines="1" />
+<image filename="solar.png" width="1000" align="center" />
+<break lines="1" />
+<image filename="solar_c.png" width="1000" align="center" />
+
+</slide>

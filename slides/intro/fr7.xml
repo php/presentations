@@ -1,0 +1,32 @@
+<slide title="Prado 3.1.2">
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Controller"><![CDATA[<?php
+class Home extends TPage {
+  public function onLoad(){
+    $this->setTitle("Test");
+    $this->HelloLabel->Text = "Hello World!";
+  }
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="View"><![CDATA[<html>
+<com:THead>
+</com:THead>
+<body>
+  <com:TLabel ID="HelloLabel" />
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:              0.06 secs
+Transaction rate:          76.95 trans/sec
+]]></example>
+
+<break lines="1" />
+<image filename="prado.png" width="1000" align="center" />
+<break lines="1" />
+<image filename="prado_c.png" width="1000" align="center" />
+
+</slide>

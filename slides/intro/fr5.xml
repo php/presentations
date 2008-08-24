@@ -1,0 +1,43 @@
+<slide title="Zend Framework 1.6.0-rc1">
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Controller"><![CDATA[<?php
+require_once 'Zend/Controller/Action.php';
+class IndexController extends Zend_Controller_Action {
+  public function indexAction() {
+    $this->view->title='Test';
+    $this->view->body='Hello, World';
+  }
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="View"><![CDATA[<html>
+<head>
+<title><?php echo $this->title?></title>
+</head>
+<body>
+<?php echo $this->body ?>
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:		        0.04 secs
+Transaction rate:	      125.79 trans/sec
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Prepend the ZF path"><![CDATA[
+- php_value include_path .:/usr/local/lib/php:/var/www/zf/source
++ php_value include_path /var/www/zf/source:.:/usr/local/lib/php
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:		        0.04 secs
+Transaction rate:	      130.08 trans/sec
+]]></example>
+
+<break lines="1" />
+<image filename="zf.png" width="1000" align="center" />
+<break lines="1" />
+<image filename="zf_c.png" width="1000" align="center" />
+</slide>

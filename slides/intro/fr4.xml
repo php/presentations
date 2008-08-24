@@ -1,0 +1,34 @@
+<slide title="Agavi 1.0-beta1">
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Controller"><![CDATA[<?php
+class Default_HelloWorldSuccessView extends DemoDefaultBaseView {
+  public function executeHtml(AgaviRequestDataHolder $rd) {
+    $this->setupHtml($rd);
+
+    $this->setAttribute('title', 'Test');
+    $this->setAttribute('body', 'Hello World');
+  }
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="View"><![CDATA[<html>
+<head>
+<title><?php echo $template['title']?></title>
+</head>
+<body>
+<?php echo $template['body'] ?>
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:              0.60 secs
+Transaction rate:           8.24 trans/sec
+]]></example>
+
+<break lines="1" />
+<image filename="agavi.png" width="1000" align="center" />
+<break lines="1" />
+<image filename="agavi_c.png" width="1000" align="center" />
+</slide>

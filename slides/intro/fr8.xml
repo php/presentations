@@ -1,0 +1,31 @@
+<slide title="Drupal 6.4">
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Drupal Module"><![CDATA[<?php
+function hello_menu() {
+  $items = array();
+
+  $items['hello'] = array(
+    'title' => 'Hello world page...',
+    'page callback' => 'hello_page',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function hello_page() {
+  return '<p>Hello world</p>';
+}
+?>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:              0.10 secs
+Transaction rate:          51.37 trans/sec
+]]></example>
+
+<break lines="1" />
+<image filename="drupal.png" width="1000" align="center" />
+
+</slide>

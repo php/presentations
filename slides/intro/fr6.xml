@@ -1,0 +1,38 @@
+<slide title="CodeIgniter 1.6.3">
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Controller"><![CDATA[<?php
+class HelloWorld extends Controller {
+  function HelloWorld() {
+    parent::Controller();
+  }
+
+  function index() {
+    $data['title']='Test';
+    $data['message']='Hello world!';
+    $this->load->view('helloworld',$data);
+  }
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="View"><![CDATA[<html>
+<head>
+<title><?php echo $title;?></title>
+</head>
+<body>
+<h1><?php echo $message?></h1>
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:              0.03 secs
+Transaction rate:         305.90 trans/sec
+]]></example>
+
+<break lines="1" />
+<image filename="ci.png" width="1000" align="center" />
+<break lines="1" />
+<image filename="ci_c.png" width="1000" align="center" />
+
+</slide>

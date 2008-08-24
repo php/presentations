@@ -1,0 +1,37 @@
+<slide title="Symfony 1.1">
+
+<break lines="1" />
+
+<example fontsize="1.4em" title="Controller"><![CDATA[<?php
+class demoActions extends sfActions
+{
+  public function executeHelloWorld($request)
+  {
+    $this->title = 'Test';
+    $this->body = 'Hello World';
+    return sfView::SUCCESS;
+  }
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="View"><![CDATA[<html>
+<head>
+<title><?php echo $title?></title>
+</head>
+<body>
+<?php echo $body ?>
+<?php decorate_with(false) ?>
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:		        0.05 secs
+Transaction rate:	      100.63 trans/sec
+]]></example>
+
+<break lines="1" />
+<image filename="sy.png" width="1000" align="center" />
+<break lines="1" />
+<image filename="sy_c.png" width="1000" align="center" />
+
+</slide>

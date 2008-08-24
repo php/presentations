@@ -1,0 +1,34 @@
+<slide title="Static and PHP baselines">
+
+<break lines="1" />
+
+
+<example fontsize="1.4em" title="Static HTML"><![CDATA[<html>
+<head>
+<title>Test</title>
+</head>
+<body>
+Hello World
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:		        0.01 secs
+Transaction rate:	      611.78 trans/sec
+]]></example>
+
+<example fontsize="1.4em" title="Trivial PHP"><![CDATA[<html>
+<head>
+<title><?php echo 'Test'?></title>
+</head>
+<body>
+<?php echo 'Hello World' ?>
+</body>
+</html>]]></example>
+
+<example fontsize="1.4em" type="shell" title="Performance"><![CDATA[
+Response time:		        0.01 secs
+Transaction rate:	      606.77 trans/sec
+]]></example>
+
+</slide>
