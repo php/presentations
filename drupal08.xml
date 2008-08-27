@@ -1,0 +1,66 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Simple is Hard
+-->
+
+<topic>PHP</topic>
+<title>Simple is Hard</title>
+<event>DrupalCon 2008</event>
+<location>Szeged, Hungary</location>
+<date>August 27, 2008</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/drupal08</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/hurdles3.xml</slide>
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/lac1.xml</slide>
+<slide>slides/intro/lac2.xml</slide>
+<slide>slides/intro/lac3.xml</slide>
+<slide>slides/intro/lac4.xml</slide>
+<slide>slides/intro/lac5.xml</slide>
+<slide>slides/intro/lac6.xml</slide>
+<slide>slides/intro/lac7.xml</slide>
+<slide>slides/intro/lac8.xml</slide>
+<slide>slides/intro/lac9.xml</slide>
+<slide>slides/intro/lac10.xml</slide>
+<slide>slides/intro/lac11.xml</slide>
+
+<slide>slides/intro/twit0.xml</slide>
+<slide>slides/intro/twit1.xml</slide>
+<slide>slides/intro/twit2.xml</slide>
+<slide>slides/intro/twit3.xml</slide>
+<slide>slides/intro/twit4.xml</slide>
+
+<!-- Frameworks -->
+<slide>slides/intro/fr0.xml</slide>
+<slide>slides/intro/fr1.xml</slide>
+<slide>slides/intro/fr2.xml</slide>
+<slide>slides/intro/fr3.xml</slide>
+<slide>slides/intro/fr4.xml</slide>
+<slide>slides/intro/fr5.xml</slide>
+<slide>slides/intro/fr6.xml</slide>
+<slide>slides/intro/fr7.xml</slide>
+<slide>slides/intro/fr8.xml</slide>
+
+<slide>slides/intro/victims.xml</slide>
+<slide>slides/intro/sh_ref.xml</slide>
+</presentation>
