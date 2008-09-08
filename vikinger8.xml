@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#000000"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Component Libraries</topic>
+<title>PHP Vikinger</title>
+<event>PHP Vikinger</event>
+<location>Skien, Norway</location>
+<date>June 21th, 2008</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/ezc/title.xml</slide>
+
+<slide>slides/ezc/hi.xml</slide>
+<slide>slides/ezc/program.xml</slide>
+<slide>slides/ezc/web20.xml</slide>
+
+</presentation>

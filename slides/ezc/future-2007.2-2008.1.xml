@@ -5,6 +5,7 @@
 
 	<blurb>New components:</blurb>
 	<list>
+		<bullet>*Document*: Document conversion tool</bullet>
 		<bullet>*Feed*: RDF/RSS/ATOM feed parsing and generating, with support for modules</bullet>
 		<bullet>*Search*: Search API towards Solr, Sphinx, Google, etc.</bullet>
 	</list>

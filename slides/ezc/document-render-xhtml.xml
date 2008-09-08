@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Document</title>
+	<subtitle>Rendering ReST as XHTML</subtitle>
+
+<example><![CDATA[<?php
+$document = new ezcDocumentRst();
+$document->loadFile( $argv[1] );
+
+$xhtml = $document->getAsXhtml();
+echo $xhtml->save();
+?>]]></example>
+</slide>
+

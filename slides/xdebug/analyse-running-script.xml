@@ -8,6 +8,8 @@
 		<bullet>Supported in Xdebug 2</bullet>
 		<bullet>Clients: Komodo, Maguma Workbench, TruStudio (PHP Eclipse Plugin) and many other smaller ones</bullet>
 	</list>
+<break />
+	<link leader="Other clients and plugins: ">http://xdebug.org/docs/remote#clients</link>
 <break lines="4"/>
 	<blurb>Let's demo this...</blurb>
 </slide>

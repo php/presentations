@@ -6,5 +6,5 @@
 
 	<example class="code_large">xdebug.profiler_enable=1          ; enable profiler
 xdebug.profile_output_dir=/tmp    ; output directory
-xdebug.profile_output_name=crc32  ; file extension</example>
+xdebug.profile_output_name=cachegrind.out.%p</example>
 </slide>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#000000"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Component Libraries</topic>
+<title>What's Next?</title>
+<event>Open Nordic</event>
+<location>Skien, Norway</location>
+<date>June 20th, 2008</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/ezc/title-ezc-generic.xml</slide>
+
+<!-- overview -->
+<slide>slides/ezc/overview.xml</slide>
+<slide>slides/ezc/future-2006.2-2007.1.xml</slide>
+<slide>slides/ezc/future-2007.1-2007.2.xml</slide>
+<slide>slides/ezc/future-2007.2-2008.1.xml</slide>
+
+<!-- document -->
+<slide>slides/ezc/document-intro.xml</slide>
+<slide>slides/ezc/document-render-xhtml.xml</slide>
+<slide>slides/ezc/document-diagram.xml</slide>
+
+<!-- feed -->
+<slide>slides/ezc/example-feed.xml</slide>
+<slide>slides/ezc/example-feed2.xml</slide>
+
+
+<!-- search -->
+<slide>slides/search/ezcsearch-design-ideas.xml</slide>
+<slide>slides/search/ezcsearch-document-definition2.xml</slide>
+<slide>slides/search/ezcsearch-index.xml</slide>
+<slide>slides/search/ezcsearch-search.xml</slide>
+<slide>slides/search/ezcsearch-search2.xml</slide>
+
+<!-- what's next? -->
+<slide>slides/ezc/future-2008.1-2008.2.xml</slide>
+<slide>slides/ezc/questions.xml</slide>
+</presentation>

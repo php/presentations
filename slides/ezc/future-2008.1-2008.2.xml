@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>What's Next?</title>
+	<subtitle>Additions for eZ Components 2008.2</subtitle>
+
+	<blurb>This is a tentative roadmap</blurb>
+<break lines="2"/>
+	<blurb>New components:</blurb>
+	<list>
+		<bullet>*MvcTools*: Light weight MVC layer with Tieins</bullet>
+	</list>
+
+	<blurb>Additions to components:</blurb>
+	<list>
+		<bullet>*Base*: Different development modes</bullet>
+		<bullet>*Document*: Support for many more formats</bullet>
+		<bullet>*Search*: More backends</bullet>
+	</list>
+</slide>

@@ -3,7 +3,7 @@
 require 'ezc-setup.php';
 
 // setup feed and content module
-$feed = new ezcFeed( 'rss2' );
+$feed = new ezcFeed();
 $feed->title = 'eZ components release feed';
 $feed->link  = 'http://components.ez.no/';
 $feed->description = <<<ENDL
@@ -17,7 +17,7 @@ $stmt = require 'feed-data.php';
 
 foreach( $stmt as $release )
 {
-    $item = $feed->newItem();
+    $item = $feed->add( 'item' );
     $item->title = "{$release['package']} {$release['version']}";
     $item->link = "http://ez.no/doc/components/view/latest/(file)/changelog_{$release['package']}.html";
     $item->description = $release['releasenotes'];
@@ -25,5 +25,5 @@ foreach( $stmt as $release )
     $item->guid = md5( $item->title );
 }
 
-echo htmlspecialchars( $feed->generate() );
+echo htmlspecialchars( $feed->generate( 'rss2' ) );
 ?>

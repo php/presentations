@@ -5,14 +5,13 @@
 	<image filename="tracefile-ezc.png" align="center" pdf-scale="0.7"/>
 
 <break/>
-	<blurb>Available settings:</blurb>
+	<blurb>Some settings:</blurb>
 <break/>
 	<example class="code_large">xdebug.auto_trace=1
 xdebug.trace_output_dir=/tmp
-xdebug.collect_vars=1
 xdebug.collect_params=1
 xdebug.collect_return=1
-xdebug.trace_options=1
-xdebug.trace_output_name=crc32 # crc32, timestamp, pid</example>
+xdebug.trace_output_name=trace.%c</example>
+	<link leader="Specifiers: " href="http://xdebug.org/docs/execution_trace#trace_output_name"/>
 <break/>
 </slide>

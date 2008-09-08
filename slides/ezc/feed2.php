@@ -1,7 +1,6 @@
 <?php
 require 'ezc-setup.php';
 
-$feed = new ezcFeed( 'rss2' );
 try {
 	$feed = ezcFeed::parse( 'http://components.ez.no/rss/rss2.xml' );
 } catch ( Exception $e ) {
@@ -9,7 +8,7 @@ try {
 }
 
 echo "<b>{$feed->title}</b><br/><br/>\n";
-foreach( $feed->items as $item )
+foreach( $feed->item as $item )
 {
 	echo "<a href='{$item->link}'>{$item->title}</a><br/>";
 	echo $item->Content->encoded, "<br/>";

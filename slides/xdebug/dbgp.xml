@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>DBGp mode</title>
+	<title>DBGp</title>
 	<subtitle>DeBuGger Protocol</subtitle>
 
 	<list fontsize="4em">
@@ -17,6 +17,5 @@
 	<list fontsize="4em">
 		<bullet>Cross-language: PHP, Python, Perl...</bullet>
 		<bullet>Supported in Xdebug 2</bullet>
-		<bullet>Clients: Komodo, Maguma Workbench, TruStudio</bullet>
 	</list>
 </slide>

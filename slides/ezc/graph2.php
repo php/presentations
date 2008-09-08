@@ -28,5 +28,5 @@ $chart->renderer->options->legendSymbolGleam = .5;
 $chart->renderer->options->pieChartOffset = 180;
 
 header( 'Content-Type: image/svg+xml' );
-$chart->render( 560, 200, 'php://output' );
+$chart->render( 900, 500, 'php://output' );
 ?>

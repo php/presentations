@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Document</title>
+	<subtitle>Converting between document formats</subtitle>
+
+	<list>
+		<bullet>Support for multiple document formats: ReST, HTML, eZ Publish, wiki... etc</bullet>
+		<bullet>Using docbook (simplified) as intermediate format</bullet>
+		<bullet>Configurable renderers</bullet>
+		<bullet>Shortcuts</bullet>
+	</list>
+</slide>
