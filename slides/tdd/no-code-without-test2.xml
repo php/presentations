@@ -5,7 +5,9 @@
 
 	<image align="center" filename="phpunit-code-coverage2.png"/>
 <break lines="3"/>
-	<blurb class="blurb_header">&lt; 100% Coverage ≡ Not fully tested code</blurb>
-	<blurb class="blurb_header">100% Coverage ≢ Fully tested code</blurb>
+	<blurb>Green: Covered code.</blurb>
+	<blurb>Red: Not covered code.</blurb>
+	<blurb>Grey: Unreachable code.</blurb>
+	<blurb>White: No code.</blurb>
 
 </slide>

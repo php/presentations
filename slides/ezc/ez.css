@@ -12,6 +12,13 @@ body {
     font-family: Arial, helvetica, sans-serif;
 }
 
+body.black
+{
+	background-image: none;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
 body.title
 {
 	background-image: url(presentations/slides/ezc/ez-background-title.jpg);
@@ -80,7 +87,20 @@ body.black div.mainarea
 	top: 0px;
 	padding-left: 24px;
 	background-color: black;
+	margin-top: 0px;
+	padding-top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	overflow: -moz-scrollbars-vertical;
 }
+
+body.black div.sticky, body.black div.navbar
+{
+	display: none;
+	visibility: hidden;
+}
+
 ul.pres {
 list-style: circle;
 font-size: 24px;

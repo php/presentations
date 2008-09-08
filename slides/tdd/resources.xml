@@ -2,7 +2,11 @@
 <slide fontsize="6em">
 	<title>Resources</title>
 
-	<break lines="12" /> 
+	<break lines="6" /> 
+	<link href="http://homepage.mac.com/hey.you/lessons.html"/>
+	<link leader="Testuvius: " href="http://www.artima.com/weblogs/viewpost.jsp?thread=203994"/>
+
+	<break lines="6" /> 
 	<link leader="PHP Unit: " href="http://phpunit.de" target="_new"/>
 	<link leader="phpUnderControl: " href="http://phpundercontrol.org" target="_new"/>
 	<link leader="Xdebug: " href="http://xdebug.org" target="_new"/>

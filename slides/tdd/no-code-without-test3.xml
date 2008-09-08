@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>PHPUnit</title>
+	<subtitle>Code Coverage: How important?</subtitle>
+
+	<blurb class="blurb_header">&lt; 100% Coverage ≡ Not fully tested code</blurb>
+	<blurb class="blurb_header">100% Coverage ≢ Fully tested code</blurb>
+<break lines="3"/>
+	<blurb class="blurb_header">How much coverage should you aim for?</blurb>
+	<list>
+		<bullet>It doesn't matter, just write some tests.</bullet>
+		<bullet>How much rice do I need to cook?</bullet>
+		<bullet>100%, and no less!</bullet>
+	</list>
+<break lines="3"/>
+	<blurb class='quote_attr'>http://www.developertesting.com/archives/month200705/20070504-000425.html</blurb>
+</slide>

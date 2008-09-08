@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>The Way of Testivus</title>
+
+<list>
+	<bullet>If you write code, write tests.</bullet>
+	<bullet>Don’t get stuck on unit testing dogma.</bullet>
+	<bullet>Embrace unit testing karma.</bullet>
+	<bullet>Think of code and test as one.</bullet>
+	<bullet>The test is more important than the unit.</bullet>
+	<bullet>The best time to test is when the code is fresh.</bullet>
+	<bullet>Tests not run waste away.</bullet>
+	<bullet>An imperfect test today is better than a perfect test someday.</bullet>
+	<bullet>An ugly test is better than no test.</bullet>
+	<bullet>Sometimes, the test justifies the means.</bullet>
+	<bullet>Only fools use no tools.</bullet>
+	<bullet>Good tests fail.</bullet>
+</list>
+
+	<blurb class="quote_attr">http://www.artima.com/weblogs/viewpost.jsp?thread=203994</blurb>
+</slide>
+
