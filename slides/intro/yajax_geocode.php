@@ -8,7 +8,7 @@ if(!empty($_REQUEST['loc'])) {
 }
 ?>
 <html><head>
- <script type="text/javascript" src="http://yui.yahooapis.com/2.3.0/build/utilities/utilities.js"></script> 
+ <script type="text/javascript" src="http://yui.yahooapis.com/2.5.2/build/utilities/utilities.js"></script> 
  <script language="javascript">
 <!--
 var fN = function callBack(o) {

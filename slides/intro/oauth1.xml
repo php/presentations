@@ -1,0 +1,15 @@
+<slide title="OAuth">
+
+<break lines="2"/>
+
+<blurb>
+An open protocol to allow secure API authorization  in a simple and standard method from desktop and web applications.  Similar to
+Flickr Auth and BBAuth, but it is an Open Specification.
+</blurb>
+
+<link marginleft="2em" leader="First, grab the PHP SDK: " href="http://hackday.developer.yahoo.com/social/sdk/"/>
+<link marginleft="2em" leader="For other languages, see: "  href="http://oauth.net/code/"/>
+
+<image filename="oauth_flow.jpg" align="center" />
+
+</slide>

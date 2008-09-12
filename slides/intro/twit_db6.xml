@@ -5,12 +5,11 @@
 A complete DB/JSON backend
 </blurb>
 
-<example result="0" marginright="1em"><![CDATA[<?php
+<example result="0" marginright="1em" fontsize="1.8em"><![CDATA[<?php
 include './db.inc';
 include './db_twits.inc';
 
 $twits = new twits;
-$query = $_POST['query'];
 
 header("Content-type: application/json");
 

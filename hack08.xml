@@ -1,0 +1,68 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP and Apis</title>
+<location>Sunnyvale, CA</location>
+<date>Sept 12, 2008</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/hack08</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/hack08_agenda.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<!-- Architecture -->
+<slide>slides/intro/phpjs_learn.xml</slide>
+<slide>slides/intro/sx.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+
+<slide>slides/intro/php_js1.xml</slide>
+<slide>slides/intro/php_js2.xml</slide>
+
+<slide>slides/intro/php_yui2.xml</slide>
+<slide>slides/intro/php_yui3.xml</slide>
+<slide>slides/intro/php_yui4.xml</slide>
+<slide>slides/intro/php_yui5.xml</slide>
+<slide>slides/intro/php_world.xml</slide>
+
+<slide>slides/intro/yajax.xml</slide>
+
+<slide>slides/intro/twit_db1.xml</slide>
+<slide>slides/intro/twit_db2.xml</slide>
+<slide>slides/intro/twit_db3.xml</slide>
+<slide>slides/intro/twit_db4.xml</slide>
+<slide>slides/intro/twit_db5.xml</slide>
+<slide>slides/intro/twit_db6.xml</slide>
+
+<slide>slides/intro/buzz.xml</slide>
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/ws5.xml</slide>
+<slide>slides/intro/ws6.xml</slide>
+<slide>slides/intro/ws7.xml</slide>
+
+<slide>slides/intro/oauth1.xml</slide>
+<slide>slides/intro/oauth2.xml</slide>
+<slide>slides/intro/oauth3.xml</slide>
+
+<slide>slides/intro/yql1.xml</slide>
+
+<slide>slides/intro/sm1.xml</slide>
+<slide>slides/intro/sm2.xml</slide>
+
+<slide>slides/intro/hack08_ref.xml</slide>
+</presentation>

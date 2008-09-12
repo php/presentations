@@ -1,0 +1,57 @@
+<slide title="OAuth">
+
+<break lines="2"/>
+
+<blurb>
+3-legged OAuth makes a roundtrip to the provider to obtain a token that represents the user.  The user
+has to authenticate and grant access to the application.
+</blurb>
+
+<blurb>
+2-legged OAuth has no roundtrip.  It is simply a way to send a request that is signed with your consumer key and secret to
+identify your application to the service.
+</blurb>
+
+<example title="3-Legged using the Yahoo PHP SDK" result="0" fontsize="2em"><![CDATA[<?php
+require './Yahoo.inc';
+require './oauth_secret.inc';
+
+$session = YahooSession::requireSession($consumerKey, 
+                                        $consumerSecret,
+                                        $applicationId);  
+$q = "select * from flickr.photos.recent";
+$result = $session->client->query($q); 
+print_r($result);
+?>]]></example>
+
+<example title="3-Legged using the Yahoo PHP SDK" result="0" fontsize="1.3em"><![CDATA[Array
+( [query] => Array (
+       [count] => 100
+       [created] => 2008-09-12T02:22:21Z
+       [lang] => en-US
+       [updated] => 2008-09-12T02:22:21Z
+       [uri] => http://query.pipes.yahoo.com/v1/yql?q=select+*+from+flickr.photos.recent
+       [diagnostics] => Array (
+          [url] => Array (
+               [execution-time] => 555
+               [content] => http://api.flickr.com/services/rest/?method=flickr.photos.getRecent
+          )
+          [user-time] => 575
+          [service-time] => 555
+          [build-version] => 2008.09.11.15:43
+       )
+       [results] => Array (
+          [photo] => Array (
+               [0] => Array (
+                   [farm] => 4
+                   [id] => 2851054416
+                   [isfamily] => 0
+                   [isfriend] => 0
+                   [ispublic] => 1
+                   [owner] => 29037411@N03
+                   [secret] => 33955b4ee4
+                   [server] => 3162
+                   [title] => Uma corrente para organizar
+               )
+               ...]]></example>
+</slide>

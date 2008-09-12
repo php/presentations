@@ -1,0 +1,79 @@
+<slide title="OAuth">
+
+<break lines="2"/>
+
+<example title="2-Legged using OAuth.inc from the PHP SDK" result="0" fontsize="1.4em"><![CDATA[<?php
+require './OAuth.php';
+include './oauth_secret.inc';
+
+function get_2legged($url) {
+  global $consumerKey, $consumerSecret;
+
+  list($base,$query) = explode('?',$url,2);
+  parse_str($query, $args);
+
+  $consumer = new OAuthConsumer($consumerKey, $consumerSecret);
+  $request = OAuthRequest::from_consumer_and_token($consumer,NULL,"GET",$base,$args);
+  $request->sign_request(new OAuthSignatureMethod_HMAC_SHA1(), $consumer, NULL); 
+
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array($request->to_header()));
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+  return curl_exec($ch);
+}
+
+echo get_2legged('http://query.yahooapis.com/v1/yql?q=show%20tables&format=xml');
+?>]]></example>
+
+<example title="Output" result="0" fontsize="1.5em"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<query xmlns:yahoo="http://www.yahooapis.com/v1/base.rng"
+    yahoo:count="33" yahoo:created="2008-09-12T02:56:55Z"
+    yahoo:lang="en-US" yahoo:updated="2008-09-12T02:56:55Z" yahoo:uri="http://query.pipes.yahoo.com/v1/yql?q=show+tables">
+    <results>
+        <tables>
+            <table>atom</table>
+            <table>csv</table>
+            <table>flickr.location</table>
+            <table>flickr.photos.exif</table>
+
+            <table>flickr.photos.info</table>
+            <table>flickr.photos.interestingness</table>
+            <table>flickr.photos.recent</table>
+            <table>flickr.photos.search</table>
+            <table>flickr.places</table>
+            <table>geo.places</table>
+
+            <table>geo.placetypes</table>
+            <table>html</table>
+            <table>json</table>
+            <table>local.search</table>
+            <table>rss</table>
+            <table>search.images</table>
+
+            <table>search.news</table>
+            <table>search.web</table>
+            <table>social.connections</table>
+            <table>social.contacts</table>
+            <table>social.presence</table>
+            <table>social.profile</table>
+
+            <table>social.updates</table>
+            <table>upcoming.category</table>
+            <table>upcoming.country</table>
+            <table>upcoming.events</table>
+            <table>upcoming.events.bestinplace</table>
+            <table>upcoming.groups</table>
+
+            <table>upcoming.metro</table>
+            <table>upcoming.state</table>
+            <table>upcoming.venue</table>
+            <table>weather.forecast</table>
+            <table>xml</table>
+        </tables>
+
+    </results>
+</query>
+<!-- total: 1 -->
+<!-- yqlengine2.pipes.sp1.yahoo.com uncompressed/chunked Fri Sep 12 07:56:55 PDT 2008 -->]]></example>
+</slide>

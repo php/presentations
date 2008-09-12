@@ -1,7 +1,7 @@
 <slide title="Buzz">
 <example title="Take a pinch of RSS" result="1" fontsize="1.6em" rfontsize="1.2em" required_extension="simplexml"><![CDATA[<?php
 $url = 'http://buzz.yahoo.com/feeds/buzzoverl.xml';
-$xml = @simplexml_load_file($url);
+$xml = simplexml_load_file($url);
 if($xml) {
   foreach($xml->channel->item as $item) {
     $ret[(string)$item->title] = (string)$item->link;
@@ -9,6 +9,8 @@ if($xml) {
   echo "<pre>"; print_r($ret); echo "</pre>";
 } else echo "Can't get to Yahoo!";
 ?>]]></example>
+
+<link leader="Many more RSS feeds listed here: " href="http://developer.yahoo.com/rss/"/>
 
 <example fontsize="1.6em" title="Add a spoonful of REST"><![CDATA[<?php
 $imgs='http://api.search.yahoo.com/ImageSearchService/V1/imageSearch';
