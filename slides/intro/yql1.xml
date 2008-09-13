@@ -1,0 +1,28 @@
+<slide title="YQL">
+
+<break lines="2"/>
+
+<blurb>Yahoo Query Language</blurb>
+
+<example title="Flickr Search" result="1" fontsize="1.4em"><![CDATA[<?php
+require './OAuth.php';
+require './2legged.inc';
+$url = 'http://query.yahooapis.com/v1/yql';
+
+$q = rawurlencode("select * from flickr.photos.search(100) where text='hackday08'");
+$result = get_2legged($url.'?q='.$q.'&format=json');
+$j = json_decode($result,true);
+echo <<<EOB
+{$j['query']['count']} photos fetched in
+{$j['query']['diagnostics']['user-time']}ms from
+{$j['query']['diagnostics']['url']['content']}<br>
+EOB;
+function photo_url($p, $size='s', $ext='jpg') {
+ return "http://static.flickr.com/{$p['server']}/{$p['id']}_{$p['secret']}_{$size}.{$ext}";
+}
+foreach($j['query']['results']['photo'] as $photo) {
+  echo '<img src="'.photo_url($photo,'m').'" />';
+}
+?>]]></example>
+
+</slide>
