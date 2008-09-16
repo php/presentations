@@ -10,7 +10,7 @@ Javascript to PHP (and back)
 ?>]]></example>
 
 <example title="Client-side Javascript" result="1" fontsize="1.5em"><![CDATA[<script type="text/javascript" 
-        src="http://yui.yahooapis.com/2.2.2/build/utilities/utilities.js">
+        src="http://yui.yahooapis.com/2.5.2/build/utilities/utilities.js">
 </script>
 <script>
 var callback = { 

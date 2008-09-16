@@ -1,0 +1,87 @@
+<slide title="BluePrint Mobile API">
+
+<link marginleft="1em" fontsize="5em" href="http://developer.yahoo.com/mobile"/>
+
+<example hide="0" result="0" title="Blueprint Hello World - index.php" fontsize="1.6em"><![CDATA[<?php
+// Make sure we set the right content type
+header( "Content-Type: application/x-ywidget+xml" );
+       
+// Make sure not to cache. The Java client really cares.
+header("Cache-Control: no-cache");
+        
+// Include Blueprint library
+require './lib/blueprint.php';
+        
+// Turn on debug output - only stops on errors, not warnings.
+blueprintSetErrorHandler();
+
+// New instance of XMLWriter
+$writer = new XMLWriter();
+$writer->openMemory();
+$writer->setIndent(true);
+$writer->startDocument('1.0','UTF-8');
+
+// Create Page and Section nodes
+$page = new Blueprint_Page();
+$module = new Blueprint_Module();
+$page->addContent($module);
+
+// Set Module's header text
+$module->setHeader("PHP Version");
+        
+// Add main content block
+$module->addContent(new Blueprint_Block("Hello World!"));
+        
+// Write everything to memory buffer
+$page->Emit($writer);
+       
+// Return buffer & flush
+print($writer->outputMemory());
+?>]]></example>
+
+<example hide="0" result="0" title="XML Version - index.bp" fontsize="1.6em"><![CDATA[<page>
+ <content>
+  <module>
+    <header layout="simple">
+     <layout-items>
+      <block class="title">Blueprint XML</block>
+     </layout-items>
+    </header>
+    <block>Hello World!</block>
+   </module>
+ </content>
+</page>]]></example>
+
+<example hide="0" result="0" title="Content-type" type="shell" fontsize="1.6em"><![CDATA[AddType application/x-ywidget+xml .bp]]></example>
+
+<example hide="0" result="0" title="config.xml" fontsize="1.2em"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xmlns="http://mobile.yahoo.com/widgets/schema/1.0/config /" xsi:schemaLocation="...">
+    <title>Hello World!</title>
+    <version>1.0</version>
+    <identifier>hello-world-1</identifier>  <!-- Each widget must have unique id. -->
+    <description>Hello World! Widget</description>
+    <icon>ybang</icon> 
+    <author organization="My Company" href="http://www.myhomepage.com"
+        email="me@myhomepage.com">
+            My Name
+    </author>
+    <!-- change this widget base to your server url -->
+    <widget base="http://www.myhomepage.com/mydirectory">
+        <preview>
+            <icon>ybang</icon> 
+            <label>Hello World!</label>
+        </preview>
+        <shortcuts>
+            <item default="true">
+                 <label>Y! Mobile</label>
+                 <href>index.php</href>  <!-- for xml-only version, change to index.bp -->
+            </item>
+        </shortcuts>
+   </widget>
+</config>]]></example>
+
+<link marginleft="1em" fontsize="3em" leader="Upload " href="http://mobile.yahoo.com/developers/test/upload"/>
+<link marginleft="1em" fontsize="3em" leader="Test   " href="http://beta.m.yahoo.com"/>
+
+</slide>
