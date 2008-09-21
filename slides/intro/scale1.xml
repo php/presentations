@@ -1,18 +1,20 @@
 <slide title="Scale">
 
-<blurb>
-</blurb>
+<break lines="2"/>
 
-<list title="Share-nothing Architecture">
+<blurb fontsize="6em">Share-nothing Architecture</blurb>
+<list fontsize="3.5em">
 <bullet> Like HTTP, each request is distinct</bullet>
 <bullet> Shared data is pushed down to the data-store layer</bullet>
+<bullet> Avoid front controllers</bullet>
 </list>
 
-<list title="This gives us">
+<break lines="2"/>
+<blurb fontsize="6em">This gives us</blurb>
+<list fontsize="3.5em">
 <bullet> Ability to load balance</bullet>
 <bullet> Invisible failover from one datacenter to another</bullet>
 <bullet> Better modularization of applications</bullet>
 <bullet> Easier to develop and debug</bullet>
 </list>
-
 </slide>

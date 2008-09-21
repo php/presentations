@@ -8,9 +8,9 @@
     navbarheight="4.1em"
 >
 <topic>PHP</topic>
-<title>UIUC Hack Day</title>
-<location>Champaign, IL</location>
-<date>Sept 15, 2008</date>
+<title>Waterloo Hack Day</title>
+<location>Waterloo, ON</location>
+<date>Sept 22, 2008</date>
 <speaker>Rasmus Lerdorf</speaker>
 <email>rasmus@php.net</email>
 <url>http://talks.php.net/show/hacku</url>
@@ -30,6 +30,10 @@
 <slide>slides/hacku/hacku8.xml</slide>
 -->
 <slide>slides/hacku/hacku9.xml</slide>
+
+<slide>slides/hacku/examples.xml</slide>
+<slide>slides/hacku/ideas.xml</slide>
+<slide>slides/hacku/good.xml</slide>
 
 <!-- History -->
 <slide>slides/fowa/hist1.xml</slide>
@@ -53,13 +57,6 @@
 <slide>slides/intro/php_world.xml</slide>
 
 <slide>slides/intro/yajax.xml</slide>
-
-<slide>slides/intro/twit_db1.xml</slide>
-<slide>slides/intro/twit_db2.xml</slide>
-<slide>slides/intro/twit_db3.xml</slide>
-<slide>slides/intro/twit_db4.xml</slide>
-<slide>slides/intro/twit_db5.xml</slide>
-<slide>slides/intro/twit_db6.xml</slide>
 
 <slide>slides/intro/buzz.xml</slide>
 <slide>slides/intro/ws4.xml</slide>
