@@ -8,9 +8,9 @@
     navbarheight="4.1em"
 >
 <topic>PHP</topic>
-<title>Waterloo Hack Day</title>
-<location>Waterloo, ON</location>
-<date>Sept 22, 2008</date>
+<title>Stanford Hack Day</title>
+<location>Palo Alto, CA</location>
+<date>Sept 30, 2008</date>
 <speaker>Rasmus Lerdorf</speaker>
 <email>rasmus@php.net</email>
 <url>http://talks.php.net/show/hacku</url>
@@ -18,7 +18,6 @@
 <slide>slides/intro/titlepage.xml</slide>
 
 <!-- Hack Day -->
-<!--
 <slide>slides/hacku/hacku1.xml</slide>
 <slide>slides/hacku/hacku2.xml</slide>
 <slide>slides/hacku/hacku3.xml</slide>
@@ -27,7 +26,6 @@
 <slide>slides/hacku/hacku6.xml</slide>
 <slide>slides/hacku/hacku7.xml</slide>
 <slide>slides/hacku/hacku8.xml</slide>
--->
 <slide>slides/hacku/hacku9.xml</slide>
 <slide>slides/hacku/hacku0.xml</slide>
 
@@ -47,19 +45,14 @@
 <slide>slides/intro/sx.xml</slide>
 <slide>slides/intro/rss_flickr.xml</slide>
 
+<slide>slides/intro/ws4.xml</slide>
+
 <slide>slides/intro/php_js1.xml</slide>
 <slide>slides/intro/php_js2.xml</slide>
-
-<slide>slides/intro/php_yui2.xml</slide>
-<slide>slides/intro/php_yui3.xml</slide>
-<slide>slides/intro/php_yui4.xml</slide>
-<slide>slides/intro/php_yui5.xml</slide>
-<slide>slides/intro/php_world.xml</slide>
 
 <slide>slides/intro/yajax.xml</slide>
 
 <slide>slides/intro/buzz.xml</slide>
-<slide>slides/intro/ws4.xml</slide>
 <slide>slides/intro/ws5.xml</slide>
 <slide>slides/intro/ws6.xml</slide>
 <slide>slides/intro/ws7.xml</slide>
