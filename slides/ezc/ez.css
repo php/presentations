@@ -12,11 +12,16 @@ body {
     font-family: Arial, helvetica, sans-serif;
 }
 
-body.black
+body.black, body.white
 {
 	background-image: none;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+}
+
+body.white
+{
+	margin: 0em;
 }
 
 body.title
@@ -94,8 +99,20 @@ body.black div.mainarea
 	overflow: auto;
 	overflow: -moz-scrollbars-vertical;
 }
+body.white div.mainarea
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	margin-top: 0px;
+	padding-left: 0px;
+	overflow: auto;
+	background-color: white;
+	width: 1024;
+	height: 760;
+}
 
-body.black div.sticky, body.black div.navbar
+body.black div.sticky, body.black div.navbar, body.white div.sticky
 {
 	display: none;
 	visibility: hidden;
@@ -181,6 +198,11 @@ div.large_blurb {
 	font-size: 35px;
 }
 
+div.medium_blurb_center {
+	font-size: 30px;
+	text-align: center;
+}
+
 div.large_blurb_center {
 	font-size: 38px;
 	text-align: center;
@@ -229,6 +251,10 @@ div.example, div.highlight, div.bit_larger, div.bit_larger_output {
 	margin-right: 20px;
 }
 
+body.white div.large, body.white div.large code {
+	background: #fff;
+}
+
 div.bit_larger_output {
 	background: #e6e300;
 	font-size: 27px;
@@ -255,7 +281,8 @@ div.code_small code {
 	font-size: 10px;
 }
 div.code_medium code, div.code_medium pre {
-	font-size: 16px;
+	font-size: 14px;
+	font-weight: bold;
 }
 div.code_large code, div.code_large pre {
 	font-size: 18px;
@@ -351,4 +378,42 @@ div#graph {
 iframe#graphIn {
 	border-style: none; height: 600px; width: 1000px;
 }
+
+body.white {
+	display: table;
+	width: 1020px;
+}
+
+body.white div.mainarea {
+	display: table-cell;
+	position: static;
+	vertical-align: middle;
+	font-family: "MaxOT-book";
+}
+
+body.white div.mainarea-inner {
+	margin-right:auto;
+	margin-left:auto;
+	display: table;
+}
+
+div.blurb_gigantic {
+	font-size: 128px;
+}
+
+div.blurb_gigantic_blink {
+	font-size: 128px;
+	text-decoration: blink;
+}
+
+div.blurb_very_big
+{
+	font-size: 96px;
+}
+
+div.blurb_big
+{
+	font-size: 64px;
+}
+
 </style>

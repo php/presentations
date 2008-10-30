@@ -1,0 +1,12 @@
+<slide template="white">
+<example class="large"><![CDATA[
+<?php
+echo "<html>\n";
+echo "<title>Hello World!</title>\n";
+echo "<body>\n";
+echo "\tHello World!\n";
+echo "</body>\n";
+echo "</html>\n";
+?>
+]]></example>
+</slide>

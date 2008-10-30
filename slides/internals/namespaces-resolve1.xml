@@ -6,7 +6,7 @@
 	<blurb>All qualified names (A::B::C) are translated during
 compile-time.</blurb>
 <example><![CDATA[<?php
-use eZ::Database::Driver;
+use eZ::Database::Driver as Driver;
 
 // translated at compile-time to eZ::Database::Driver::Sqlite()
 new Driver::Sqlite(); 

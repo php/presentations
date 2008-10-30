@@ -1,0 +1,32 @@
+<slide template="white">
+<example class="code_large">
+public function run()
+{
+	$request = $this->createRequest();
+
+	do {
+		$continue = false;
+		$result = $request->createResult();
+		if ( $result instanceof exInternalRedirect ) {
+			$request = $result->request;
+			$continue = true;
+			continue;
+		}
+
+		switch ( $result->status ) {
+			case exResult::STATUS_OK:
+				$view = $this->createView( $request, $result );
+				try {
+					$response = $view->createResponse();
+				} catch ( Exception $e ) {
+					$request = $this->createFatalRequest( $request, $result, $e );
+					$continue = true;
+					continue 2;
+				}
+				break;
+		}
+		echo $this->writeResponse( $response );
+	} while ( $continue );
+}
+</example>
+</slide>

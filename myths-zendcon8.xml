@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Myths Defused</title>
+<event>Zend PHP Conference</event>
+<location>Santa Clara, US</location>
+<date>September 16th, 2008</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/input-filter/title.xml</slide>
+
+<!-- 1 -->
+<slide>slides/myths/no-compiler.xml</slide>
+<!--<slide>slides/myths/no-compiler-points.xml</slide>-->
+<slide>slides/myths/no-compiler-no-slacking.xml</slide>
+
+<!-- 2 -->
+<slide>slides/myths/hard-to-integrate.xml</slide>
+<!--<slide>slides/myths/hard-to-integrate-points.xml</slide>-->
+<slide>slides/myths/ext-embed-php.xml</slide>
+
+<!-- 3 -->
+<slide>slides/myths/unstable-platform.xml</slide>
+<!--<slide>slides/myths/unstable-points.xml</slide>-->
+<slide>slides/internals/variables-circular.xml</slide>
+
+<!-- 4 -->
+<slide>slides/myths/php-is-weak.xml</slide>
+<!--<slide>slides/myths/php-is-weak-points.xml</slide>-->
+
+<!-- 5 -->
+<slide>slides/myths/shared-nothing.xml</slide>
+<slide>slides/myths/srm.xml</slide>
+<slide>slides/myths/apc-memcache.xml</slide>
+
+<!-- 6 -->
+<slide>slides/myths/oo-sucks.xml</slide>
+
+<!-- 7 -->
+<slide>slides/myths/no-tool-support.xml</slide>
+<slide>slides/myths/xdebug.xml</slide>
+<slide>slides/myths/coverage.xml</slide>
+<slide>slides/myths/profile.xml</slide>
+<!--<slide>slides/myths/cruise-control.xml</slide>-->
+<slide>slides/myths/php-under-control.xml</slide>
+
+<slide>slides/myths/resources.xml</slide>
+</presentation>

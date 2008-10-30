@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>closures</title>
+
+	<example><![CDATA[<?php
+class Example {
+	private $search;
+
+	public function __construct ($search) {
+		$this->search = $search;
+	}
+
+	public function setSearch ($search) {
+		$this->search = $search;
+	}
+
+	public function getReplacer ($replacement) {
+		return function ($text) use ($replacement) {
+			return str_replace ($this->search, $replacement, $text);
+		};
+	}
+}
+
+$example = new Example ('hello');
+$replacer = $example->getReplacer ('goodbye');
+echo $replacer ('hello world'); // goodbye world
+$example->setSearch ('world');
+echo $replacer ('hello world'); // hello goodbye
+?>]]></example>
+</slide>

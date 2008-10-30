@@ -3,9 +3,7 @@
 	<title>How Do We Turn It On?</title>
 
 	<list>
-		<bullet>With an INI setting: %unicode_semantics%</bullet>
-		<bullet>It can *not* be turned on "per-vhost"</bullet>
-		<bullet>(Almost) no behavioral changes when it's not enabled</bullet>
-		<bullet>The setting does not mean you won't have any Unicode strings</bullet>
+		<bullet>It is always on by default</bullet>
+		<bullet>It does not mean that all strings are Unicode strings</bullet>
 	</list>
 </slide>

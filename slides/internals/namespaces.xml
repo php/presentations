@@ -5,7 +5,7 @@
 	<list>
 		<bullet>Solves name clashes</bullet>
 		<bullet>Provides name aliases and resolving</bullet>
-		<bullet>Can contain constants, classes and functions</bullet>
+		<bullet>Can contain classes |999999|(and constants and functions)|</bullet>
 	</list>
 <example><![CDATA[<?php
 namespace eZ;

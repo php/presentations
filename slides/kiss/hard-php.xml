@@ -1,0 +1,23 @@
+<slide template="white">
+<example class="large"><![CDATA[
+<?php
+    $xw = new xmlWriter();
+    $xw->openMemory();
+
+    $xw->startDocument('1.0','UTF-8');
+		$xw->startElement('html');
+	  
+			$xw->startElement('head');
+				$xw->writeElement('title', 'Hello World!');
+			$xw->endElement();
+
+			$xw->startElement('body');
+				$xw->text('Hello World!');
+			$xw->endElement();
+		$xw->endElement();
+	$xw->endDocument();
+
+    echo $xw->outputMemory(true);
+?>
+]]></example>
+</slide>

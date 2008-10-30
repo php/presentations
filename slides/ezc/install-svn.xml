@@ -17,8 +17,8 @@ scripts/setup-env.sh
 <break lines="3"/>
 
 	<blurb>Setup:</blurb>
-	<example result='1'><![CDATA[<?php
-ini_set( 'include_path', '/home/httpd/ezcomponents/trunk:.' );
+	<example><![CDATA[<?php
+ini_set( 'include_path', '/home/derick/dev/ezcomponents/trunk:.' );
 require 'Base/src/base.php';
 
 function __autoload( $className )
@@ -26,6 +26,6 @@ function __autoload( $className )
 	ezcBase::autoload( $className );
 }
 
-ezcBase::checkDependency( 'Test', ezcBase::DEP_PHP_VERSION, '5.3.0' );
+$mc = new ezcMailComposer();
 ?>]]></example>
 </slide>

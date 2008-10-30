@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>K.I.S.S.</title>
+<event>International PHP Conference</event>
+<location>Mainz, Germany</location>
+<date>October 30th, 2008</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/kiss/title.xml</slide>
+<slide>slides/kiss/test.xml</slide>
+<!-- HTML no-nos
+-->
+<slide>slides/kiss/simple-url.xml</slide>
+<slide>slides/kiss/url-examples.xml</slide>
+<slide>slides/kiss/open-pages.xml</slide>
+<slide>slides/kiss/javascript.xml</slide>
+<slide>slides/kiss/ajax.xml</slide>
+<slide>slides/kiss/ajax2.xml</slide>
+<slide>slides/kiss/arngren.xml</slide>
+
+<slide>slides/kiss/website-language.xml</slide>
+<slide>slides/kiss/language-google.xml</slide>
+
+<!-- flash -->
+<slide>slides/kiss/flashturbation.xml</slide>
+<slide>slides/kiss/blink.xml</slide>
+
+<slide>slides/kiss/sifr1.xml</slide>
+<slide>slides/kiss/sifr2.xml</slide>
+<slide>slides/kiss/sifr3.xml</slide>
+
+<slide>slides/kiss/semi-broken.xml</slide>
+
+<!-- java -->
+<slide>slides/kiss/java0.xml</slide>
+<slide>slides/kiss/java1.xml</slide>
+
+<!-- phyton joke -->
+<slide>slides/kiss/python.xml</slide>
+
+<slide>slides/kiss/simple-php.xml</slide>
+<slide>slides/kiss/less-simple-php.xml</slide>
+<slide>slides/kiss/hard-php.xml</slide>
+<slide>slides/kiss/goto.xml</slide>
+<slide>slides/kiss/goto1.xml</slide>
+<slide>slides/kiss/goto3.xml</slide>
+<slide>slides/kiss/hammer.xml</slide>
+<slide>slides/kiss/complex-includes.xml</slide>
+<slide>slides/kiss/spaghetti.xml</slide>
+<slide>slides/kiss/dependencies.xml</slide>
+
+<slide>slides/kiss/debug.xml</slide>
+<slide>slides/kiss/ely.xml</slide>
+
+<!--
+- abstraction is good, but not always necessary
+- simple architecture, no-dependencies, makes easier testing
+- simple debugging and development (show komodo vs eclipse)
+-->
+
+</presentation>

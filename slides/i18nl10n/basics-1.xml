@@ -7,6 +7,5 @@
 		<bullet>All functions and operators work on Normalized Composed Characters (NFC)</bullet>
 		<bullet>All identifiers can contain Unicode characters</bullet>
 		<bullet>Internationalization is explicit, not implicit</bullet>
-		<bullet>You can turn off Unicode semantics if you don't need it</bullet>
 	</list>
 </slide>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>fileinfo and phar</title>
+
+<blurb>fileinfo</blurb>
+<break/>
+	<example result="1"><![CDATA[<?php
+$finfo = finfo_open( FILEINFO_MIME );
+
+echo finfo_file( $finfo, '/home/httpd/pres2/display.php' );
+
+finfo_close($finfo);
+?>]]></example>
+<break lines="3"/>
+<blurb>phar</blurb>
+<break/>
+	<example><![CDATA[<?php
+require 'ezcomponents-2008.1.phar'; 
+$f = ezcFeed::parse( 'http://derickrethans.nl/rss.xml' );
+foreach ( $f->item as $item )
+{
+	echo $item->title, "\n";
+}
+?>]]></example>
+</slide>

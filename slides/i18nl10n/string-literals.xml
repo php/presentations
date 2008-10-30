@@ -3,7 +3,7 @@
 	<title>String Literals</title>
 	<subtitle>string -> string, unicode</subtitle>
 
-	<blurb>Unicode Semantics are *off*:</blurb>
+	<blurb>PHP 5:</blurb>
 	<example><![CDATA[<?php // script is encoded in UTF-8
 $str = "hallo daar!";
 echo gettype($str), ': ', strlen($str), "\n";
@@ -16,7 +16,7 @@ echo gettype($str), ': ', strlen($str), "\n";
 string: 13</example>
 <break/>
 
-	<blurb>Unicode Semantics are *on*:</blurb>
+	<blurb>PHP 6:</blurb>
 	<example><![CDATA[<?php // script is encoded in UTF-8
 $str = "hallo daar!";
 echo gettype($str), ': ', strlen($str), "\n";

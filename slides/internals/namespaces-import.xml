@@ -9,10 +9,10 @@
 <example><![CDATA[<?php
 use eZ::Database::Connection as DbConnection;
 
-use eZ::Database;
+use eZ::Database as Database;
 
 new DbConnection(); // uses eZ::Database::Connection
-new Database::Driver(); // would use eZ::Database::Connection
+new Database::Driver(); // would use eZ::Database::Driver
 ?>]]></example>
 </slide>
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>goto</title>
+
+	<list>
+		<bullet>Only in the same function</bullet>
+		<bullet>Only in the same "scope", or out of a "scope"</bullet>
+	</list>
+
+	<example><![CDATA[<?php
+function foo()
+{
+	for ( $i = 0; $i < 10; $i++ )
+	{
+		if ( $i == 5 )
+		{
+			goto end;
+		}
+	}
+
+end:
+	// run cleanup code
+}
+?>]]></example>
+</slide>
