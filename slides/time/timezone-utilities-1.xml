@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
 	<title>Timezones Utilities</title>
-	<subtitle>Transition Times</subtitle>
+	<subtitle>Transition Times and Location Information</subtitle>
 
-	<blurb>Creating a timezone resource:</blurb>
 	<example result="1"><![CDATA[<?php
-	$tz = timezone_open("Europe/Amsterdam");
-	$trs = timezone_transitions_get($tz);
+	$tz = timezone_open("America/Caracas");
 	$trs = $tz->getTransitions();
+	// new in PHP 5.3:
+	$trs = $tz->getTransitions(strtotime('1960-01-01 UTC'));
 
 	echo "<pre>\n";
 	foreach ($trs as $tr) {
 		printf("%20s %7d %d %s\n",
-			$tr['time'], $tr['offset'],
-			$tr['isdst'], $tr['abbr']);
+			$tr['time'], $tr['offset'], $tr['isdst'], $tr['abbr']);
 	}
-?>]]></example>
+
+	// new in PHP 5.3:
+	$loc = $tz->getLocation();
+	echo 'Info: ', join( ' - ', $loc ), "\n";]]></example>
 </slide>

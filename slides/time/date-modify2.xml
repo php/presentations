@@ -9,10 +9,13 @@
 	$date->setTime( 15, 0, 7 );
 	echo $date->format(DateTime::ISO8601), "<br/>\n";
 
-	$date->setDate( 2006, 12, 22 );
+	$date->setDate( 2008, 07, 22 );
 	echo $date->format(DateTime::ISO8601), "<br/>\n";
 
-	$date->setIsoDate( 2006, 45, 2 );
+	echo $date->setIsoDate( 2008, 45, 2 )->format(DateTime::ISO8601), "<br/>\n";
+
+	// new in PHP 5.3:
+	$date->setTimestamp( 1200128314 );
 	echo $date->format(DateTime::ISO8601), "<br/>\n";
 ?>]]></example>
 </slide>

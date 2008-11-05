@@ -15,7 +15,7 @@
 ?>]]></example>
 <break/>
 
-	<blurb>The timestamps returned are still 32 bit signed integers as this is all that PHP supports.</blurb>
+	<blurb>The timestamp's range is still limited to what the CPU supports.</blurb>
 	
 </slide>
 

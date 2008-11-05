@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Parsing Dates</title>
+	<subtitle>With user-defined format</subtitle>
+
+	<blurb>Creating strings with the ~date_create_format_format()~ function:</blurb>
+	<example result="1"><![CDATA[<?php
+$date = "06/08/04";
+echo date_create_from_format( '!m/d/y', $date )->format( DateTime::ISO8601 ), "\n";
+?>]]></example>
+<break/>
+	
+	<blurb>Parsing strings with the ~date_parse_format_format()~ function:</blurb>
+	<example result="1"><![CDATA[<?php
+$date = "06/08/04";
+print_r( date_parse_from_format( '!m*d*y', $date ) );
+?>]]></example>
+</slide>

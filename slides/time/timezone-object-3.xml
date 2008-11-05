@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Using Timezones</title>
+	<subtitle>The Timezone Object</subtitle>
+
+	<blurb>Getting a timezone's name:</blurb>
+	<example result="1"><![CDATA[<?php
+	$tz = timezone_open("Asia/Singapore");
+	echo timezone_name_get($tz), ', ';
+
+	$tz = timezone_open("CEST");
+	echo timezone_name_get($tz);
+?>]]></example>
+<break lines="2"/>
+
+	<blurb>Getting the current offset to GMT with a timezone for a specific date:</blurb>
+	<example result="1"><![CDATA[<?php
+	$tz = new DateTimeZone("Europe/Amsterdam");
+	$d  = new DateTime("2005-01-22 09:15");
+	echo $tz->getOffset($d), ', ';
+	$d->modify("+6 months");
+	echo $tz->getOffset($d);
+?>]]></example>
+</slide>

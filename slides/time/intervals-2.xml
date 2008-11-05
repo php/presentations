@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Intervals (PHP 5.3)</title>
+	<subtitle>Applying an interval</subtitle>
+
+	<example result="1"><![CDATA[<pre><?php
+$d = new DateTime( 'November 6th, 2008' );
+
+$i = DateInterval::createFromDateString( "next weekday" );
+echo $d->add( $i )->format( "l Y-m-d\n" );
+echo $d->add( $i )->format( "l Y-m-d\n" );
+
+$i = DateInterval::createFromDateString( "3 months 10 days" );
+echo $d->sub( $i )->format( "l Y-m-d\n" );
+?>]]></example>
+</slide>

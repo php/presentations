@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Intervals (PHP 5.3)</title>
+	<subtitle>Creating an interval</subtitle>
+
+	<example result="1"><![CDATA[<?php
+// full notation
+$i = new DateInterval( 'P0003-01-15T06:12:30' );
+
+// abbreviated notation
+$i = new DateInterval( 'P3DT6H' );
+
+// from a difference
+$d1 = new DateTime();
+$d2 = new DateTime( "2008-12-12 09:15 Europe/Amsterdam" );
+$i = $d1->diff( $d2 );
+
+// displaying the difference
+echo $i->format( '%a days, %h hours, %i minutes' ), "\n";
+?>]]></example>
+<break lines="2"/>
+	<example><![CDATA[<?php
+// create from string
+$i = DateInterval::createFromDateString( "next weekday" );
+?>]]></example>
+</slide>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Periods (PHP 5.3)</title>
+	<subtitle>Initializing a period</subtitle>
+
+	<example result="1"><![CDATA[<?php
+// start, interval and count
+$db = new DateTime( '2008-07-31' ) ;
+$di = DateInterval::createFromDateString( 'next weekday' );
+$p = new DatePeriod( $db, $di, 3 );
+
+// start, interval and end
+$de = new DateTime ( '2008-08-05' );
+$p = new DatePeriod( $db, $di, $de );
+
+// ISO 8601 string
+$s = "2008-10-04T20:56:18Z/P0000-00-20T03:15:54/2008-12-22T00:00:00Z";
+$p = new DatePeriod( $s );
+?>]]></example>
+</slide>

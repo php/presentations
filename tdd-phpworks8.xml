@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Testing</topic>
+<title>Test-Driven Development</title>
+<event>php|works</event>
+<location>Atlanta, US</location>
+<date>Nov 14th, 2008</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+
+<slide>slides/tdd/title.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/toolbox/me.xml</slide>
+
+<!-- Funny Intro -->
+<slide>slides/tdd/broken-code-is-fine.xml</slide>
+<slide>slides/tdd/dont-ship.xml</slide>
+
+<!-- TESTING intro:
+
+- What needs testing?
+- Types of testing + tools
+-->
+<slide>slides/tdd/testing.xml</slide>
+<slide>slides/tdd/webapp-parts-1.xml</slide>
+<slide>slides/tdd/unit-testing.xml</slide>
+
+<!-- TDD intro
+- Development process, not just a test method
+- It is a religion: ✡✝☪
+- Traditional development
+- TDD
+- when to run tests
+-->
+<slide>slides/tdd/tdd.xml</slide>
+<slide>slides/tdd/not-a-testing-method.xml</slide>
+<slide>slides/tdd/religion.xml</slide>
+<slide>slides/tdd/back-in-time.xml</slide>
+<slide>slides/tdd/darth.xml</slide>
+<slide>slides/tdd/the-test-is-king.xml</slide>
+<slide>slides/tdd/test-driven-development.xml</slide>
+<slide>slides/tdd/practical-test-driven-development.xml</slide>
+<slide>slides/tdd/addressing-defects.xml</slide>
+<slide>slides/tdd/testuvius.xml</slide>
+<slide>slides/tdd/death-star.xml</slide>
+
+<!-- Quick php unit example
+- Quick example
+- Code coverage
+- some problems with leaking, system dependent things, can't test private
+  methods, hard to test exceptions - things that should not happen
+-->
+<slide>slides/tdd/phpunit.xml</slide>
+<slide>slides/tdd/phpunit-output.xml</slide>
+<slide>slides/tdd/no-code-without-test.xml</slide>
+<slide>slides/tdd/no-code-without-test2.xml</slide>
+<slide>slides/tdd/no-code-without-test3.xml</slide>
+<slide>slides/tdd/phpundercontrol.xml</slide>
+<slide>slides/tdd/unit-test-issues.xml</slide>
+
+<!-- Politics -->
+<slide>slides/tdd/politics.xml</slide>
+<slide>slides/tdd/politics-devs.xml</slide>
+<slide>slides/tdd/politics-managers.xml</slide>
+<slide>slides/tdd/darth-sb.xml</slide>
+
+<!-- TDD case studies
+-->
+<slide>slides/tdd/case-studies.xml</slide>
+<slide>slides/tdd/case-study-major-players.xml</slide>
+<slide>slides/tdd/case-study-dev-testimonials.xml</slide>
+
+<slide>slides/internals/questions.xml</slide>
+<slide>slides/tdd/resources.xml</slide>
+</presentation>
