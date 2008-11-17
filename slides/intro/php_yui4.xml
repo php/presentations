@@ -22,7 +22,7 @@
 var jsmap = new YMap('jsmapContainer');
 jsmap.addZoomLong();
 jsmap.addTypeControl();
-jsmap.drawZoomAndCenter(":-:location:-:", 5);
+jsmap.drawZoomAndCenter(":-:location:-:", 8);
 </script>]]></example>
 
 </slide>
