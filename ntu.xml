@@ -1,0 +1,75 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Simple is Hard
+-->
+
+<topic>PHP</topic>
+<title>Simple is Hard</title>
+<event>NTU Talk</event>
+<location>Taipei</location>
+<date>Nov. 18, 2008</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+<url>http://talks.php.net/show/ntu</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/hurdles3.xml</slide>
+<slide>slides/intro/scale1.xml</slide>
+<slide>slides/intro/modular.xml</slide>
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/lac1.xml</slide>
+<slide>slides/intro/lac2.xml</slide>
+<slide>slides/intro/lac3.xml</slide>
+<slide>slides/intro/lac4.xml</slide>
+<slide>slides/intro/lac5.xml</slide>
+<slide>slides/intro/lac6.xml</slide>
+<slide>slides/intro/lac7.xml</slide>
+<slide>slides/intro/lac8.xml</slide>
+<slide>slides/intro/lac9.xml</slide>
+<slide>slides/intro/lac10.xml</slide>
+<slide>slides/intro/lac11.xml</slide>
+
+<slide>slides/intro/twit0.xml</slide>
+<slide>slides/intro/twit1.xml</slide>
+<slide>slides/intro/twit2.xml</slide>
+<slide>slides/intro/twit3.xml</slide>
+<slide>slides/intro/twit4.xml</slide>
+
+<slide>slides/intro/victims.xml</slide>
+
+<!-- Security -->
+<slide>slides/intro/never_click_title.xml</slide>
+<slide>slides/intro/ff2005.xml</slide>
+<slide>slides/intro/url_handlers.xml</slide>
+<slide>slides/intro/xss_basic.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/xss_type1.xml</slide>
+<slide>slides/intro/xss_type2.xml</slide>
+<slide>slides/intro/xss_type3.xml</slide>
+<slide>slides/intro/xss_type4.xml</slide>
+<slide>slides/intro/xss_type5.xml</slide>
+<slide>slides/intro/xss_type6.xml</slide>
+<slide>slides/intro/xss_type7.xml</slide>
+<slide>slides/intro/xss_type8.xml</slide>
+<slide>slides/intro/xss_type9.xml</slide>
+
+<slide>slides/intro/perfsec_ref.xml</slide>
+</presentation>
