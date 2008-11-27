@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/kiss/dont-panic.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>Don't Panic</title>
+<event>php|works 2008</event>
+<location>Atlanta, US</location>
+<date>Nov 13, 2008</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/kiss/title.xml</slide>
+
+<slide>slides/dont-panic/b.xml</slide>
+<slide>slides/dont-panic/d.xml</slide>
+<slide>slides/dont-panic/e.xml</slide>
+<slide>slides/dont-panic/f.xml</slide>
+<slide>slides/dont-panic/g.xml</slide>
+<slide>slides/dont-panic/i.xml</slide>
+<slide>slides/dont-panic/j.xml</slide>
+<slide>slides/dont-panic/k.xml</slide>
+<slide>slides/dont-panic/l.xml</slide>
+<slide>slides/dont-panic/o.xml</slide>
+<slide>slides/dont-panic/p.xml</slide>
+<slide>slides/dont-panic/q.xml</slide>
+<slide>slides/dont-panic/r.xml</slide>
+<slide>slides/dont-panic/s.xml</slide>
+<slide>slides/dont-panic/t.xml</slide>
+<slide>slides/dont-panic/u.xml</slide>
+<slide>slides/dont-panic/v.xml</slide>
+<slide>slides/dont-panic/w.xml</slide>
+<slide>slides/dont-panic/y.xml</slide>
+<slide>slides/dont-panic/z.xml</slide>
+
+<!--
+- abstraction is good, but not always necessary
+- simple architecture, no-dependencies, makes easier testing
+- simple debugging and development (show komodo vs eclipse)
+-->
+
+</presentation>

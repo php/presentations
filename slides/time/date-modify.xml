@@ -8,16 +8,16 @@
 	$ts = new DateTime("now");
 	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
-	echo $ts->modify("+2 days");
+	$ts->modify("+2 days");
 	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
-	echo $ts->modify("fifth month");
+	$ts->modify("fifth month");
 	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
-	echo $ts->modify("Friday +3 weeks");
+	$ts->modify("Friday +3 weeks");
 	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
-	echo $ts->modify("next friday");
+	$ts->modify("next friday");
 	echo $ts->format(DATE_RFC2822), "<br/>\n";
 ?>]]></example>
 </slide>

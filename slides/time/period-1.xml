@@ -3,7 +3,7 @@
 	<title>Periods (PHP 5.3)</title>
 	<subtitle>Initializing a period</subtitle>
 
-	<example result="1"><![CDATA[<?php
+	<example><![CDATA[<?php
 // start, interval and count
 $db = new DateTime( '2008-07-31' ) ;
 $di = DateInterval::createFromDateString( 'next weekday' );

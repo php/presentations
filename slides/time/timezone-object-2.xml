@@ -13,7 +13,7 @@
 ?>]]></example>
 <break lines="2"/>
 
-	<blurb>Getting the current offset to GMT with a timezone for a specific date:</blurb>
+	<blurb>Getting the current offset to UTC with a timezone for a specific date:</blurb>
 	<example result="1"><![CDATA[<?php
 	$tz = new DateTimeZone("Europe/Amsterdam");
 	$d  = new DateTime("2005-01-22 09:15");

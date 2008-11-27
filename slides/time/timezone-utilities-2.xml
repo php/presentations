@@ -12,7 +12,7 @@
 ?>]]></example>
 <break lines="2"/>
 
-	<blurb>All supported timezone identifiers:</blurb>
+	<blurb>All supported timezone abbreviations:</blurb>
 	<example result="1"><![CDATA[<?php
 	$abbrs = timezone_abbreviations_list();
 	echo "<pre>\n";
