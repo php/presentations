@@ -7,7 +7,7 @@
 <example title="An hResume query" result="1" fontsize="1.7em"><![CDATA[<?php
 $wsurl = 'http://search.yahooapis.com/WebSearchService/V1/webSearch';
 $appid = 'rlerdorf';
-$q = urlencode("searchmonkeyid:com.yahoo.uf.hresume PHP");
+$q = urlencode("searchmonkeyid:com.yahoo.page.uf.hresume PHP");
 $x = simplexml_load_file("$wsurl?appid=$appid&query=$q&results=100");
 echo <<<EOB
 Showing {$x['totalResultsReturned']} of {$x['totalResultsAvailable']}<br>
