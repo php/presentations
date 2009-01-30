@@ -8,9 +8,9 @@
     navbarheight="4.1em"
 >
 <topic>PHP</topic>
-<title>UC Berkeley Hack Day</title>
-<location>Berkeley, CA</location>
-<date>Oct 21, 2008</date>
+<title>HackU Delhi</title>
+<location>Delhi, India</location>
+<date>Jan 29, 2009</date>
 <speaker>Rasmus Lerdorf</speaker>
 <email>rasmus@php.net</email>
 <url>http://talks.php.net/show/hacku</url>
@@ -31,7 +31,6 @@
 
 <slide>slides/hacku/examples.xml</slide>
 <slide>slides/hacku/ideas.xml</slide>
-<slide>slides/hacku/good.xml</slide>
 
 <!-- History -->
 <slide>slides/fowa/hist1.xml</slide>
@@ -62,6 +61,8 @@
 <slide>slides/intro/ws6.xml</slide>
 <slide>slides/intro/ws7.xml</slide>
 <slide>slides/intro/geoplanet.xml</slide>
+<slide>slides/intro/yql1.xml</slide>
+<slide>slides/intro/yql2.xml</slide>
 <slide>slides/intro/music.xml</slide>
 <slide>slides/intro/boss.xml</slide>
 <slide>slides/hacku/blueprint.xml</slide>
