@@ -1,6 +1,6 @@
 <slide title="World">
 <break lines="1" />
-<example result="1" hide="1" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=rlerdorf"></script>
+<example result="1" hide="1" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=rlerdorf"></script>
 <script type="text/javascript" src="/ymap_canvas_fix.js"></script>
 
 <div id="jsmapContainer" style="height: 600px; width: 980px;"></div>
@@ -53,7 +53,7 @@ YEvent.Capture(jsmap, EventsList.onEndGeoCode, geoDone);
 jsmap.drawZoomAndCenter('SFO',15);
 </script>]]></example>
 
-<example result="0" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=rlerdorf"></script>
+<example result="0" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" type="marked"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=rlerdorf"></script>
 <script type="text/javascript" src="http://lerdorf.com/ymap_canvas_fix.js"></script>
 
 <div id="jsmapContainer" style="height: 600px; width: 980px;"></div>

@@ -36,7 +36,7 @@ there is actually a DHTML GeoRSS overlay now.
 </blurb>
 
 <example title="Simple Embedded DHTML map" result="1" fontsize="1.4em" rfontsize="1em" marginright="0em"><![CDATA[<script type="text/javascript" 
-      src="http://api.maps.yahoo.com/ajaxymap?v=3.4&appid=rlerdorf">
+      src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=rlerdorf">
 </script>
 <div id="jsmapContainer" style="height: 500px; width: 930px;"></div>
 <?php

@@ -3,7 +3,7 @@
 <break lines="1" />
 
 <example result="1" fontsize="1.4em" rfontsize="1em" marginright="1em" type="marked"><![CDATA[<script type="text/javascript" 
-        src="http://api.maps.yahoo.com/ajaxymap?v=3.7&appid=rlerdorf"></script>
+        src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=rlerdorf"></script>
 <div id="jsmapContainer" style="height: 500px; width: 930px;"></div>
 
 |<form id="locF" onSubmit="return updateMap();">
