@@ -8,9 +8,9 @@
     navbarheight="4.1em"
 >
 <topic>PHP</topic>
-<title>HackU IIT Bombay</title>
-<location>Mumbai, India</location>
-<date>Feb 5, 2009</date>
+<title>HackU at UW</title>
+<location>Seattle, WA</location>
+<date>Feb 17, 2009</date>
 <speaker>Rasmus Lerdorf</speaker>
 <email>rasmus@php.net</email>
 <url>http://talks.php.net/show/hacku</url>
@@ -48,14 +48,9 @@
 <slide>slides/intro/php_yui4.xml</slide>
 <slide>slides/intro/php_yui5.xml</slide>
 
-<slide>slides/intro/buzz.xml</slide>
-<slide>slides/intro/ws5.xml</slide>
-<slide>slides/intro/ws6.xml</slide>
-<slide>slides/intro/ws7.xml</slide>
 <slide>slides/intro/geoplanet.xml</slide>
-<slide>slides/intro/yql1.xml</slide>
+<slide>slides/intro/yql.xml</slide>
 <slide>slides/intro/yql2.xml</slide>
-<slide>slides/intro/music.xml</slide>
 <slide>slides/intro/boss.xml</slide>
 <slide>slides/hacku/blueprint.xml</slide>
 

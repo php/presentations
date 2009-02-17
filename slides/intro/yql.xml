@@ -1,0 +1,63 @@
+<slide title="Yahoo Query Language - YQL">
+
+<break lines="1"/>
+<blurb fontsize="4em">Combine all APIs on the Web into a single API!</blurb>
+<link leader="Docs: " fontsize="3em" marginleft="1em">http://developer.yahoo.com/yql</link>
+<link leader="Public URL: " fontsize="3em" marginleft="1em">http://query.yahooapis.com/v1/public/yql</link>
+<link leader="OAuth'ed URL: " fontsize="3em" marginleft="1em">http://query.yahooapis.com/v1/yql</link>
+<link leader="Cool Console: " fontsize="3em" marginleft="1em">http://developer.yahoo.com/yql/console/</link>
+
+<example title="Public Flickr Search" result="1" fontsize="1.4em"><![CDATA[<?php
+$url = "http://query.yahooapis.com/v1/public/yql?q=";
+$q   = "select * from flickr.photos.search(100) where text='hacku'";
+$fmt = "xml";
+
+$x = simplexml_load_file($url.urlencode($q)."&format=$fmt");
+
+foreach($x->attributes('http://www.yahooapis.com/v1/base.rng') as $k=>$v) {
+  $$k=(string)$v;
+}
+
+echo <<<EOB
+ $count photos fetched from
+ {$x->diagnostics->url} in 
+ {$x->diagnostics->url['execution-time']} seconds<br>
+EOB;
+
+$flickr = "http://static.flickr.com/";
+foreach($x->results->photo as $p) {
+  echo "<img src=\"$flickr{$p['server']}/{$p['id']}_{$p['secret']}_s.jpg\"/>\n";
+}
+?>]]></example>
+
+<example title="Add a Cache" result="1" fontsize="1.4em"><![CDATA[<?php
+function cache($url) {
+  $tmp = '/tmp/'.md5($url);
+  if(!$fe=file_exists($tmp) || $fe && filemtime($tmp) < (time()-7200)) {
+    if($fe) touch($tmp);
+    $stream = fopen($url,'r');
+    $tmpf = tempnam('/tmp','YWS');
+    file_put_contents($tmpf, $stream);
+    fclose($stream);
+    rename($tmpf, $tmp);
+  }
+  return $tmp;
+}
+$yql = "http://query.yahooapis.com/v1/public/yql?q=";
+$q = "use 'http://airports.pidgets.com/v1/tables.xml' as airports;".
+     "select * from airports(5) where near='Seattle' and direct_flights_min=20";
+
+$x = simplexml_load_file(cache($yql.urlencode($q).'&format=xml'));
+echo "<b>URLs accessed:</b><br>\n";
+foreach($x->diagnostics->url as $u) {
+  echo "<a href=\"$u\">$u</a><br>\n";
+}
+echo "<br>";
+foreach($x->results->airport as $a) {
+  echo <<<EOB
+  {$a->code} <a href="{$a->url}">{$a->name}</a> {$a->dist}km<br>
+EOB;
+}
+?>]]></example>
+
+</slide>

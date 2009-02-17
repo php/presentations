@@ -2,8 +2,6 @@
 
 <break lines="2"/>
 
-<blurb>Yahoo Query Language</blurb>
-
 <example title="XPath on URL using PHP's OAuth Extension" result="1" fontsize="1.3em" rfontsize="1.3em"><![CDATA[<?php
 require './oauth_secret.inc';
 $url = 'http://query.yahooapis.com/v1/yql';
@@ -13,14 +11,19 @@ try {
     $q = <<<EOB
 select * from html where xpath=
 '//tr//a[@href="/wiki/Capital_(political)"]/../../../td[2]/a/text()'
-and url in (select url from search .web where url like '%wikipedia%'
-            and query='India' limit 1)
+and url in (select url from search.web where url like '%wikipedia%'
+            and query='Denmark' limit 1)
 EOB;
 	$o->fetch("$url?q=".rawurlencode($q)."&format=json");
+/* Uncomment for debugging
 	$response_info = $o->getLastResponseInfo();
     echo "<pre>".print_r($response_info,true)."</pre>";
+*/
 	$result = json_decode($o->getLastResponse(),true);
-    echo "<pre>".print_r($result['query'],true)."</pre>";
+    foreach($result['query']['diagnostics']['url'] as $u) {
+       echo "{$u['content']}<br>\n";
+    }
+    echo "<b>Answer: </b>{$result['query']['results']}";
 } catch(Exception $E) {
 	echo "Error: [".$E->errorMessage."]<br>\n";
 	echo "Response: [".$E->lastResponse."]<br>\n";
