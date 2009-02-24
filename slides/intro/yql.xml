@@ -34,7 +34,7 @@ foreach($x->results->photo as $p) {
 define('MINSZ',10);
 function cache($url) {
   $tmp = '/tmp/'.md5($url);
-  $st = stat($tmp);
+  if(file_exists($tmp)) $st = stat($tmp);
   if(!$st || $st && ($st['size']<MINSZ || $st['mtime']<(time()-7200))) {
     if($st && $st['size']>=MINSZ) touch($tmp);  // Keep re-using entry
     $stream = fopen($url,'r');                  // until new is ready
