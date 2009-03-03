@@ -3,7 +3,7 @@
 	<title>Development Goals</title>
 
 	<list>
-		<bullet>Move to PHP 5|999999|.1.1|</bullet>
+		<bullet>Move to PHP 5</bullet>
 		<bullet>Thoroughly plan the product to get a top notch API for the library</bullet>
 		<bullet>Thoroughly tested. All code should be covered by unit tests *prior* to implementation (PHPUnit)</bullet>
 		<bullet>Make sure we keep the product open enough for future development</bullet>

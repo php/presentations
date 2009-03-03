@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Solr vs Zend Lucene</title>
+
+	<blurb>Performance:</blurb>
+	<list>
+		<bullet>Solr indexes about 25% faster for small documents (one sentence)</bullet>
+		<bullet>Solr indexes about 200% faster for big documents (64kb)</bullet>
+		<bullet>Indexing the eZ Components website's article takes 47s with the
+		Solr backend, and 3m20s with the Zend Lucene backened.</bullet>
+	</list>
+<break lines="2"/>
+	<blurb>Missing features in Zend Lucene:</blurb>
+	<list>
+		<bullet>No real datatypes support.</bullet>
+		<bullet>No multi-valued fields.</bullet>
+		<bullet>No proper tokenizers.</bullet>
+	</list>
+</slide>

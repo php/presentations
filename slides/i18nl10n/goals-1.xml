@@ -7,6 +7,7 @@
 		<bullet>A clear separation between Binary / Native (Encoded) Strings and Unicode Strings</bullet>
 		<bullet>Unicode string literals</bullet>
 		<bullet>Updated language semantics</bullet>
+		<bullet>Proper locale support</bullet>
 		<bullet>Where possible, upgrade the existing functions</bullet>
 		<bullet>Backwards compability</bullet>
 		<bullet>PHP should do what most people will expect</bullet>

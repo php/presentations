@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>PHP: Programmers Helping People</title>
+<event>Web Programcıları Platformu</event>
+<location>Istanbul, Turkey</location>
+<date>January 24, 2009</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+
+<slide>slides/grown-up/title.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/grown-up/me.xml</slide>
+<slide>slides/grown-up/ms.xml</slide>
+
+<slide>slides/grown-up/first-app.xml</slide>
+<slide>slides/grown-up/php2-parser.xml</slide>
+<slide>slides/grown-up/php3.xml</slide>
+<slide>slides/grown-up/i-am-a-spammer.xml</slide>
+
+<!-- PHASE 1: MAKE THINGS WORK -->
+<slide>slides/grown-up/make-it-work.xml</slide>
+<slide>slides/grown-up/gallery1.xml</slide>
+<slide>slides/grown-up/phpmyadmin.xml</slide>
+<slide>slides/grown-up/gallery1-again.xml</slide>
+
+<!-- PHASE 2: MAKE THINGS QUICK -->
+<slide>slides/grown-up/make-it-fast.xml</slide>
+<slide>slides/grown-up/micro-opts.xml</slide>
+<slide>slides/internals/opcode-cache.xml</slide>
+<slide>slides/grown-up/faster-harder.xml</slide>
+<slide>slides/grown-up/benchmarks.xml</slide>
+
+<!-- PHASE 3: MAKE THINGS SECURE -->
+<slide>slides/grown-up/make-it-safe.xml</slide>
+<slide>slides/grown-up/filter-input-escape-output.xml</slide>
+<slide>slides/input-filter/bastions.xml</slide>
+<slide>slides/input-filter/bastions2.xml</slide>
+<slide>slides/input-filter/sapi-input-filter.xml</slide>
+<slide>slides/grown-up/suhoshin.xml</slide>
+
+<!-- PHASE 4: MAKE THINGS SCALE -->
+<slide>slides/grown-up/make-it-scale.xml</slide>
+<slide>slides/grown-up/speed-is-not-scalable.xml</slide>
+<slide>slides/grown-up/shared-nothing.xml</slide>
+<slide>slides/grown-up/facebook.xml</slide>
+
+<!-- PHASE 5: TEST THE SHIT OUT OF IT -->
+<slide>slides/tdd/tdd.xml</slide>
+<slide>slides/tdd/broken-code-is-fine.xml</slide>
+<slide>slides/tdd/dont-ship.xml</slide>
+<slide>slides/grown-up/xdebug.xml</slide>
+<slide>slides/tdd/unit-testing.xml</slide>
+<slide>slides/tdd/back-in-time.xml</slide>
+<slide>slides/tdd/test-driven-development.xml</slide>
+
+<!-- PHASE 6: What's next? -->
+<slide>slides/grown-up/what-next.xml</slide>
+
+<!-- UI -->
+<slide>slides/grown-up/url-examples.xml</slide>
+<slide>slides/grown-up/ajax.xml</slide>
+<slide>slides/grown-up/ajax2.xml</slide>
+<slide>slides/grown-up/arngren.xml</slide>
+<slide>slides/grown-up/java1.xml</slide>
+
+<!-- application dev -->
+<slide>slides/kiss/hard-php.xml</slide>
+<slide>slides/kiss/hammer.xml</slide>
+<slide>slides/kiss/universal-hammer.xml</slide>
+<slide>slides/kiss/hammer-factory.xml</slide>
+<slide>slides/kiss/hammer-factory-design.xml</slide>
+<slide>slides/kiss/complex-includes.xml</slide>
+<slide>slides/kiss/spaghetti.xml</slide>
+<slide>slides/kiss/dependencies.xml</slide>
+
+<!-- internationalization -->
+<slide>slides/grown-up/php6.xml</slide>
+
+<slide>slides/i18nl10n/php-can-do-it-now.xml</slide>
+<slide>slides/i18nl10n/unicode.xml</slide>
+<slide>slides/i18nl10n/goals-1.xml</slide>
+<slide>slides/i18nl10n/basics-1.xml</slide>
+<slide>slides/i18nl10n/string-types.xml</slide>
+<slide>slides/i18nl10n/locale-example.xml</slide>
+<slide>slides/i18nl10n/script-encoding-fun1.xml</slide>
+<slide>slides/i18nl10n/script-encoding-fun2.xml</slide>
+
+
+<slide>slides/kiss/website-language.xml</slide>
+<slide>slides/kiss/language-google.xml</slide>
+
+<slide>slides/internals/questions.xml</slide>
+
+</presentation>

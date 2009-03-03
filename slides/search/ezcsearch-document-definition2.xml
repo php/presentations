@@ -13,10 +13,14 @@
     <field type="string" multi="true">author</field>
 </document>]]></example>
 <break lines="2"/>
-	<blurb>Setting up the manager:</blurb>
+	<blurb>Setting up the backend:</blurb>
 <example><![CDATA[<?php
 $backend = new ezcSearchSolrHandler;
-
+$backend = new ezcSearchZendLuceneHandler( '/tmp/location' );
+?>]]></example>
+<break lines="2"/>
+	<blurb>Setting up the manager:</blurb>
+<example><![CDATA[<?php
 $session = new ezcSearchSession(
 	$backend, 
 	new ezcSearchXmlManager( $testFilesDir )
