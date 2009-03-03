@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Adding view templates</subtitle>
+
+    <blurb>%templates/recipes/list.ezt%:</blurb>
+<example><![CDATA[{use $recipes}
+<h1>Recipes</h1>
+<div class="list">
+{foreach $recipes as $recipe}
+    <div class="recipe-short">
+    <h1><a href="/recipe/{$recipe['id']}">{$recipe['name']}</a></h1>
+    <hr />
+    </div> 
+{/foreach}
+</div>]]></example>
+
+    <blurb>%templates/recipes/view.ezt%:</blurb>
+<example><![CDATA[{use $data, $ingredients}
+<h1>{$data['name']}</h1>
+<div class="description">
+    {raw $data['description']}
+</div>
+<div class="ingredients">
+    {foreach $ingredients as $ingredient}
+    <div class="ingredient">
+        {$ingredient['id']}
+    </div>
+    {/foreach}
+</div>]]></example>
+</slide>

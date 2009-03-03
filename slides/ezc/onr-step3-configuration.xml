@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Setting up auth rules</subtitle>
+
+    <blurb>%lib/config.php%:</blurb>
+<example><![CDATA[<?php
+    function runRequestFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request )
+    {
+        switch ( $routeInfo->matchedRoute )
+        {
+            case '/recipe/add':
+            case '/recipe/submit':
+                return $this->runAuthRequiredFilter( $request );
+                break;
+            case '/register/submit':
+            case '/register':
+            case '/login-required':
+            case '/login':
+            case '/logout':
+            case '/fatal':
+                break;
+            default:
+                return $this->runAuthCheckLoggedIn( $request );
+        }
+    }   
+]]></example>
+</slide>

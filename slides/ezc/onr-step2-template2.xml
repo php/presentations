@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>Adding view templates</subtitle>
+
+    <blurb>%templates/register.ezt%:</blurb>
+<example><![CDATA[{use $mailDomain = 'dev.omnomr'}
+<h1>Register</h1>
+<div class="pres">
+<form class="prefs" action='register/submit' method='post'>
+E-mail: <input name='email' size='32'/><br/>
+Full name: <input name='fullname' size='32'/> (Like "Derick Rethans")<br/><br/>
+<br/>
+<input type='submit' name='reg' value="Register"/>
+</form>
+</div>]]></example>
+
+    <blurb>%templates/register-submit.ezt%:</blurb>
+<example><![CDATA[{use $message = '', $success = false}
+<h1>Registration Result</h1>
+<div class="pres">
+<div class='regmessage'>
+{$message}
+</div>
+{if !$success}
+<a href='/register'>try again</a>
+{/if}
+</div>
+</div>]]></example>
+</slide>

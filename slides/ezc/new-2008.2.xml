@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>Additions for eZ Components 2008.2</title>
+
+	<blurb>New components:</blurb>
+	<list>
+		<bullet>*MvcTools*: Light weight MVC layer with Tieins</bullet>
+	</list>
+
+	<blurb>Additions to components:</blurb>
+	<list>
+		<bullet>*Document*: Support for many more formats</bullet>
+		<bullet>*Webdav*: Support for authentication and locking</bullet>
+	</list>
+</slide>

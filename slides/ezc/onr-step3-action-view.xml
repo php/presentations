@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Adding actions: view</subtitle>
+
+    <blurb>%lib/controllers/recipe.php%:</blurb>
+<example><![CDATA[<?php
+class onrRecipeController extends ezcMvcController
+{
+    public function doView()
+    {
+        $id = (int) $this->id;
+        $res = new ezcMvcResult;
+
+        $d = ezcDbInstance::get();
+        $q = $d->createSelectQuery();
+        $q->select( '*' )
+          ->from( 'recipe' )
+          ->where( $q->expr->eq( 'id', $q->bindValue( $id ) ) );
+        $s = $q->prepare();
+        $s->execute();
+
+        $data = $s->fetchAll();
+        if ( empty ( $data ) )
+        {
+            $res->status = new ezcMvcExternalRedirect( '/' );
+            return $res;
+        }
+
+        // render rest recipe as HTML
+        $desc = $data[0]['description'];
+        $document = new ezcDocumentRst();
+        $document->loadString( $desc );
+        $document->options->xhtmlVisitor = 'ezcDocumentRstXhtmlBodyVisitor';
+        $xhtml = $document->getAsXhtml();
+        $xml = $xhtml->save();
+        $data[0]['description'] = $xml;
+
+        $res->variables['data'] = $data[0];
+
+        return $res;
+    }
+}
+?>]]></example>
+
+</slide>

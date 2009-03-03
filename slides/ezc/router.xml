@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Dispatcher</title>
+
+	<list>
+		<bullet>Is responsible for the processing of the request</bullet>
+		<bullet>Implements the %ezcMvcDispatcher% interface</bullet>
+		<bullet>The current (and only) implementation right now is configured
+		through a configuration object</bullet>
+		<bullet>Configuration objects implement the
+		%ezcMvcDispatcherConfiguration% interface</bullet>
+	</list>
+</slide>

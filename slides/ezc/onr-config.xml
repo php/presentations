@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Setting-Up</title>
+	<subtitle>Configuration file, and index.php</subtitle>
+
+	<blurb>%config.php%:</blurb>
+<example><![CDATA[<?php
+ini_set( 'include_path', '/home/derick/dev/ezcomponents/trunk:.' );
+require 'Base/src/ezc_bootstrap.php';
+
+ezcDbInstance::set( ezcDbFactory::create( 'sqlite://'. dirname( __FILE__ ) . '/omnomr.sqlite' ) );
+
+ezcBase::addClassRepository( dirname( __FILE__ ) . '/lib', null, 'onr' );
+
+$tc = ezcTemplateConfiguration::getInstance();
+$tc->templatePath = dirname( __FILE__ ) . '/templates';
+$tc->compilePath = dirname( __FILE__ ) . '/cache';
+?>]]></example>
+</slide>

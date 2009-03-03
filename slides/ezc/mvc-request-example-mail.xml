@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Request Parser Example</title>
+	<subtitle>Mail</subtitle>
+
+<blurb>Request:</blurb>
+<example><![CDATA[Return-path: <SRS0=DbNu=XN=example.no=ts@example.net>
+Message-ID: <4869F84F.2060803@example.no>
+Date: Tue, 01 Jul 2008 11:26:39 +0200
+From: Tobias Schlitt <ts@example.no>
+User-Agent: Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.5) Gecko/20041124 Thunderbird/0.9 Mnenhy/0.6.0.104
+MIME-Version: 1.0
+To: Derick Rethans <dr@example.no>
+Cc: Components <components@lists.example.no>
+Subject: Re: [Components] [Sdk-public] MmvTools requirements and design
+References: <alpine.DEB.0.98.0806251707220.16594@kossu.example.no> <48678AF4.7010908@example.no> <alpine.DEB.0.98.0806300846100.16594@kossu.example.no> <4868A272.2080800@example.no>
+    <alpine.DEB.0.98.0806301153050.16594@kossu.example.no> <4868DFE3.5090001@example.no> <alpine.DEB.0.98.0807011003550.16594@kossu.example.no>
+In-Reply-To: <alpine.DEB.0.98.0807011003550.16594@kossu.example.no>
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+Ze body
+]]></example>
+<break/>
+<blurb>Generates:</blurb>
+
+<example><![CDATA[ezcMvcRequest::__set_state(array(
+   'date' =>
+  DateTime::__set_state(array(
+     'date' => '2008-07-01 09:26:39',
+     'timezone_type' => 1,
+     'timezone' => '+00:00',
+  )),
+   'protocol' => 'mail',
+   'host' => 'example.no',
+   'uri' => 'dr',
+   'requestId' => 'example.no/dr',
+   'referrer' => 'alpine.DEB.0.98.0807011003550.16594@kossu.example.no',
+   'variables' =>
+  array (
+    'fromAddress' => 'ts@example.no',
+    'fromName' => 'Tobias Schlitt',
+    'subject' => 'Re: [Components] [Sdk-public] MmvTools requirements and design',
+  ),
+   'body' => 'Ze body
+',  
+   'files' => NULL,
+   'accept' => 
+  ezcMvcRequestAccept::__set_state(array(
+     'types' => 
+    array (
+    ),
+     'charsets' =>
+    array (
+    ),
+     'languages' => 
+    array (
+    ),
+     'encodings' =>
+    array (
+    ), 
+  )),
+   'agent' =>  
+  ezcMvcRequestUserAgent::__set_state(array( 
+     'agent' => 'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.7.5) Gecko/20041124 Thunderbird/0.9 Mnenhy/0.6.0.104',
+  )),
+   'authentication' => NULL,
+   'raw' => 
+  ezcMail::__set_state(array(
+]]></example>
+</slide>

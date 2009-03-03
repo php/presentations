@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Step 1: The home controller and view</title>
+	<subtitle>View zones configuration</subtitle>
+
+	<blurb>%lib/views/main.php%:</blurb>
+<example><![CDATA[<?php
+class onrView extends ezcMvcView
+{
+    public $contentTemplate;
+
+    function createZones( $layout )
+    {
+        $zones = array();
+
+        $zones[] = new ezcMvcTemplateViewHandler(
+			'content', $this->contentTemplate
+		);
+
+        $zones[] = new ezcMvcTemplateViewHandler(
+			'page_layout', 'main.ezt'
+		);
+
+        return $zones;
+    }
+}
+?>]]></example>
+</slide>

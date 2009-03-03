@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Overview</subtitle>
+
+    <list>
+        <bullet>Add the new routes (/recipe/*) to the router.</bullet>
+        <bullet>Add the onrRecipeController class to the autoload file.</bullet>
+        <bullet>Update configuration.</bullet>
+        <bullet>Create templates</bullet>
+        <bullet>Add the actions.</bullet>
+    </list>
+</slide>

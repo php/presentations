@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Controller</title>
+	<subtitle>Redirects</subtitle>
+
+	<blurb>Internal redirects are replacements for ezcMvcResult objects:</blurb>
+<example>class redirectController extends ezcMvcController
+{
+    public function doLogout()
+    {
+		$request = clone $this->request;
+		$request->variables['redirUrl'] = '/new-url';
+		$request->variables['reasons']  = 'something was wrong';
+		$request->uri = '/login-required';
+		return new ezcMvcInternalRedirect( $request );
+    }
+}</example>
+<break lines="2"/>
+	<blurb>External redirects are done through the status property:</blurb>
+<example>class redirectController extends ezcMvcController
+{
+    public function doLogout()
+    {
+        $res = new ezcMvcResult;
+        $res->status = new ezcMvcExternalRedirect( '/' );
+        return $res;
+    }
+}</example>
+</slide>
+

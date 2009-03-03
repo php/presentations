@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>OmNomR</title>
+	<subtitle>Recipe Sharing</subtitle>
+
+	<list>
+		<bullet>*Authentication*: User registration</bullet>
+		<bullet>*Database*: Storing the recipes</bullet>
+		<bullet>*Document*: Displayed the wiki-formatted recipes as XHTML</bullet>
+		<bullet>*Feed*: New recipes</bullet>
+		<bullet>*MvcTools*: Application layout</bullet>
+		<bullet>*Template*: Application templates</bullet>
+	</list>
+</slide>

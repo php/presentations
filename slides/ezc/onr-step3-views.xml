@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Adding view configuration</subtitle>
+
+    <blurb>%lib/config.php%:</blurb>
+<example><![CDATA[<?php
+    function createView( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result )
+    {
+        switch ( $routeInfo->matchedRoute )
+        {
+            case '/':
+                $view->contentTemplate = 'home.ezt'; break;
+
+            // auth:
+            case '/register/submit':
+                $view->contentTemplate = 'register-submit.ezt'; break;
+            case '/register':
+                $view->contentTemplate = 'register.ezt'; break;
+            case '/login-required':
+                $view->contentTemplate = 'login.ezt'; break;
+
+            // recipes:
+            case '/recipes':
+            case '/recipe/list':
+                $view->contentTemplate = 'recipes/list.ezt'; break;
+            case '/recipe/:id':
+                $view->contentTemplate = 'recipes/view.ezt'; break;
+            case '/recipe/add':
+                $view->contentTemplate = 'recipes/add.ezt'; break;
+        }
+    }
+?>]]></example>
+</slide>

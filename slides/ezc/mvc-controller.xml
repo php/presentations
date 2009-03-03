@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Controller</title>
+
+	<list>
+		<bullet>The controller is created by the dispatcher from the routing
+		information returned by the router.</bullet>
+		<bullet>The controller is responsible for business logic and returns its
+		results in an %ezcMvcResult% object.</bullet>
+		<bullet>Users should implement inheritted classes to provide the
+		actions.</bullet>
+		<bullet>The "default" controller uses the actions name to map to a
+		method, but this algorithm can be easily overridden.</bullet>
+	</list>
+<example>&lt;?php
+class helloController extends ezcMvcController
+{
+    public function doGreet()
+    {
+        $ret = new ezcMvcResult;
+        $ret->variables['greeting'] = 'Hello World!';
+        return $ret;
+    }
+?></example>
+</slide>

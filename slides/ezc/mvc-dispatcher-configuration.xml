@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>ezcMvcConfigurableDispatcher</title>
+	<subtitle>The ezcMvcDispatcherConfiguration interface</subtitle>
+
+	<example>createRequestParser();
+
+createRouter(
+	ezcMvcRequest $request
+);
+
+createView( 
+	ezcMvcRoutingInformation $routeInfo, 
+	ezcMvcRequest $request, 
+	ezcMvcResult $result
+);
+
+createResponseWriter( 
+	ezcMvcRoutingInformation $routeInfo, 
+	ezcMvcRequest $request, 
+	ezcMvcResult $result, 
+	ezcMvcResponse $response
+);
+
+createFatalRedirectRequest( 
+	ezcMvcRequest $request, 
+	ezcMvcResult $result, 
+	Exception $e
+);
+</example>
+</slide>

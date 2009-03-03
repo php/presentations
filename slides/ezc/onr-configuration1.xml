@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 1: The home controller and view</title>
+    <subtitle>Dispatcher configuration</subtitle>
+
+    <blurb>%config.php%:</blurb>
+<example class="code_large"><![CDATA[<?php
+class onrMvcConfiguration implements ezcMvcDispatcherConfiguration
+{
+    function createRequestParser()
+    {
+        return new ezcMvcHttpRequestParser;
+    }
+
+    function createRouter( ezcMvcRequest $request )
+    {
+        return new onrRouter( $request );
+    }
+
+    function runPreRoutingFilters( ezcMvcRequest $request ) { }
+    function runRequestFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request ) { }
+    function runResultFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result ) { }
+    function runResponseFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result, ezcMvcResponse $response ) { }
+
+    function createView( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result )
+    {
+        switch ( $routeInfo->matchedRoute )
+        {
+            case '/':
+                $view->contentTemplate = 'home.ezt'; break;
+        }
+        return $view;
+    }
+
+
+    function createResponseWriter( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result, ezcMvcResponse $response )
+    {
+        return new ezcMvcHttpResponseWriter( $response );
+    }
+
+    function createFatalRedirectRequest(ezcMvcRequest $request, ezcMvcResult $result, Exception $response )
+    {
+        $req = clone $request;
+        $req->uri = '/fatal';
+        $req->variables['message'] = $response->getMessage();
+        return $req;
+    }
+}
+?>]]></example>
+</slide>

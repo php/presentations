@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>New routes and autoload entries</subtitle>
+
+    <blurb>%lib/router.php%:</blurb>
+<example><![CDATA[<?php
+class onrRouter extends ezcMvcRouter
+{
+    public function createRoutes()
+    {
+        return array(
+            // Authentication
+            new ezcMvcRailsRoute( 
+                '/register/submit', 'onrAuthController', 'register-sub' ),
+            new ezcMvcRailsRoute( '/register', 'onrAuthController', 'register' ),
+            new ezcMvcRailsRoute( 
+                '/login-required', 'onrAuthController', 'login-required' ),
+            new ezcMvcRailsRoute( '/login', 'onrAuthController', 'login' ),
+            new ezcMvcRailsRoute( '/logout', 'onrAuthController', 'logout' ),
+        );
+    }
+}]]></example>
+
+    <blurb>%lib/autoload/autoload.php%:</blurb>
+<example><![CDATA[<?php
+return array(
+    'onrAuthController'   => 'controllers/auth.php',
+);
+?>]]></example>
+</slide>

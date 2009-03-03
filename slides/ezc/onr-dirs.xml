@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Setting-Up</title>
+	<subtitle>Directory Structure</subtitle>
+
+<example># directories:
+mkdir OmNomR
+cd OmNomR
+mkdir cache
+mkdir cache/compiled_templates
+mkdir lib
+mkdir lib/autoload
+mkdir lib/controllers
+mkdir lib/views
+mkdir templates
+mkdir www
+mkdir www/stylesheets
+
+# permissions:
+chgrp nogroup cache/compiled_templates
+chmod g+w cache/compiled_templates</example>
+</slide>

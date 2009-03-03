@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Setting-Up</title>
+	<subtitle>index.php and mod_rewrite config</subtitle>
+
+	<blurb>%www/index.php%:</blurb>
+<example><![CDATA[<?php
+include '../config.php';
+
+$config = new onrMvcConfiguration();
+$dispatcher = new ezcMvcConfigurableDispatcher( $config );
+$dispatcher->run();
+?>]]></example>
+
+<break lines="2"/>
+	<blurb>%www/.htaccess%:</blurb>
+<example><![CDATA[RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
+
+ErrorDocument 404 /error/404
+
+php_value session.gc_maxlifetime 864000]]></example>
+
+</slide>

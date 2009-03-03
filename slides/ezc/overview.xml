@@ -2,9 +2,5 @@
 <slide fontsize="6em">
 	<title>Overview</title>
 
-	<blurb><![CDATA[
-<div id="graph">
-<iframe id="graphIn" src="http://kossu/test/allyourbase.svg"/>
-</div>
-]]></blurb>
+	<image align="center" filename="all_your_base.png"/>
 </slide>

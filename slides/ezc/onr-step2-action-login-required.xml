@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>Adding actions: login-required</subtitle>
+
+    <blurb>%lib/controllers/auth.php%:</blurb>
+<example><![CDATA[<?php
+class onrAuthController extends ezcMvcController
+{
+    public function doLoginRequired()
+    {
+        $res = new ezcMvcResult;
+        $res->variables['redirUrl'] = $this->redirUrl;
+
+        $err = array(
+            'ezcAuthenticationDatabaseFilter' => array(
+                ezcAuthenticationHtpasswdFilter::STATUS_USERNAME_INCORRECT => 'Incorrect or no credentials provided.',
+                ezcAuthenticationHtpasswdFilter::STATUS_PASSWORD_INCORRECT => 'Incorrect or no credentials provided.'
+            ),  
+            'ezcAuthenticationSession' => array(
+                ezcAuthenticationSession::STATUS_EMPTY => 'No session',
+                ezcAuthenticationSession::STATUS_EXPIRED => 'Session expired'
+            ),  
+            'logout' => array(
+                1 => 'You logged out',
+            )
+        );
+
+        $reasonText = array();
+        
+        $reasons = $this->reasons;
+        foreach ( $reasons as $line )
+        {   
+            list( $key, $value ) = each( $line );
+            $reasonText[] = $err[$key][$value];
+        }
+        $res->variables['reasons']  = $reasonText;
+        $res->variables['redirUrl'] = $this->redirUrl;
+        return $res;
+    }
+}
+?>]]></example>
+
+</slide>

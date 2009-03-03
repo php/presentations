@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Step 1: The home controller and view</title>
+	<subtitle>Home template</subtitle>
+
+	<blurb>%templates/home.ezt%:</blurb>
+<example><![CDATA[<h1>OmNomR</h1>
+<p>
+Welcome!
+</p>]]></example>
+
+<break lines="3"/>
+<blurb>Current result:</blurb>
+<image align="center" filename="onr-step1.jpg"/>
+</slide>

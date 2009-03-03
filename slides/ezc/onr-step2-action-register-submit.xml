@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>Adding actions: register and register-submit</subtitle>
+
+    <blurb>%lib/controllers/auth.php%:</blurb>
+<example><![CDATA[<?php
+class onrAuthController extends ezcMvcController
+{
+    public function doRegister()
+    {
+        $res = new ezcMvcResult;
+        return $res;
+    }
+
+    public function doRegisterSubmit()
+    {
+        $res = new ezcMvcResult;
+        if ( isset( $this->reg ) )
+        {
+            $res->variables['success'] = self::register( $message );
+            $res->variables['message'] = $message;
+        }
+        return $res;
+    }
+
+    private static function register( &$message )
+    {
+        $db = ezcDbInstance::get();
+        $email = substr( preg_replace( '/[^a-z0-9.@]/', '', $_POST['email'] ), 0, 32 );
+        $fullname= ucwords( strtolower( preg_replace( '/[^a-zæøå0-9 ]/ui', '', $_POST['fullname'] ) ) );
+
+        // check if the user already exists.
+        $q = $db->createSelectQuery();
+        $q->select( 'email' )->from( 'user' )->where( $q->expr->eq( 'email', $q->bindValue( $email ) ) );
+        $s = $q->prepare();
+        $s->execute();
+        $r = $s->fetchAll();
+
+        if ( count( $r ) > 0 )
+        {
+            $message = "A user with e-mail address '{$email}' already exists.";
+            return false;
+        }
+
+        // generate password
+        mt_srand( base_convert( substr( md5( $email ), 0, 6 ), 36, 10 ) * microtime( true ) );
+        $a = base_convert( mt_rand(), 10, 36 );
+        $b = base_convert( mt_rand(), 10, 36 );
+        $password = substr( $b . $a, 1, 8 );
+
+        // create user
+        $q = $db->createInsertQuery();
+        $q->insertInto( 'user' )
+          ->set( 'email', $q->bindValue( $email ) )
+          ->set( 'password', $q->bindValue( md5( $password ) ) )
+          ->set( 'name', $q->bindValue( $fullname ) );
+        $s = $q->prepare();
+        $s->execute();
+
+        $fromAddress = 'noreply@dev.omnomr';
+        $url = 'dev.omnomr';
+
+        // send registration mail
+        $m = new ezcMailComposer;
+        $m->from = new ezcMailAddress( $fromAddress, 'OmNomR' );
+        $m->addTo( new ezcMailAddress( $email, $fullname ) );
+        $m->subject = 'Registration for OmNomR';
+        $m->plainText = <<<ENDT
+Hello!
+
+We've created a user account. Your password is:
+    {$password}
+
+You can now login at http://$url.
+Please change your password to something you want it to be.
+
+regards,
+OnNomR
+
+ENDT;
+        $m->build();
+
+        $s = new ezcMailMtaTransport();
+        $s->send( $m );
+
+        $message = "A user account has been created, see your mail to find further instructions.";
+        return true;
+    }
+
+?>]]></example>
+
+</slide>

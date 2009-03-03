@@ -8,7 +8,7 @@
 pear remote-list -c ezc
 pear install ezc/ezcomponents]]></example>
 
-<break lines="3"/>
+<break/>
 
 	<blurb>Setup:</blurb>
 	<example result='0'><![CDATA[<?php
@@ -18,5 +18,12 @@ function __autoload( $className )
 {
 	ezcBase::autoload( $className );
 }
+?>]]></example>
+
+<break/>
+
+	<blurb>Quick Setup:</blurb>
+	<example result='0'><![CDATA[<?php
+require 'ezc/Base/ezc_bootstrap.php';
 ?>]]></example>
 </slide>

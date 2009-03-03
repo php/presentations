@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Installation and Setup</title>
+
+	<blurb>Through the PEAR installer</blurb>
+	<list>
+		<bullet>Easy to upgrade one (or more) specific component(s)</bullet>
+		<bullet>Depends on external tool</bullet>
+	</list>
+<break/>
+
+	<blurb>From a download bundle</blurb>
+	<list>
+		<bullet>Everything comes in one package</bullet>
+		<bullet>Hard to impossible to upgrade one specific component</bullet>
+	</list>
+<break/>
+
+	<blurb>|777777|Through eZ Publish download|</blurb>
+
+</slide>

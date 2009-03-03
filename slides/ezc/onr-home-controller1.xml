@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Step 1: The home controller and view</title>
+	<subtitle>Controller</subtitle>
+
+	<blurb>%lib/controllers/home.php%:</blurb>
+<example class="code_large"><![CDATA[<?php
+class onrHomeController extends ezcMvcController
+{
+    public function doList()
+    {
+        $res = new ezcMvcResult();
+        return $res;
+    }
+}
+?>]]></example>
+</slide>

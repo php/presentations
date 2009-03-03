@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Request Parser</title>
+
+	<list>
+		<bullet>Converts raw request data from a source to an abstracted
+		%ezcMvcRequest% object.</bullet>
+		<bullet>%ezcMvcHttpRequestParser% and %ezcMvcMailRequestParser%.</bullet>
+	</list>
+
+<example>class ezcMvcRequest {
+    public $date; // DateTime
+    public $protocol; // string
+    public $host; // string
+    public $uri; // string
+    public $requestId; // string
+    public $referrer; // string
+    public $variables; // array
+    public $body; // string
+    public $files; // array(ezcMvcRequestFile)
+    public $accept; // ezcMvcRequestAccept
+    public $agent; // ezcMvcRequestUserAgent
+    public $authentication; // ezcMvcRequestAuthentication
+    public $raw; // ezcMvcRawRequest
+    public $cookies; // array(ezcMvcRequestCookie)
+}</example>
+</slide>

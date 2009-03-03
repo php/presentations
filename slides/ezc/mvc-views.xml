@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Views</title>
+
+	<list>
+		<bullet>Render the abstract output into an
+		%ezcMvcResponse% object.</bullet>
+		<bullet>Are implemented by inheriting from %ezcMvcView%.</bullet>
+		<bullet>Define zones with a view handler.</bullet>
+	</list>
+	<image align='center' filename='mvctools-zones.png'/>
+<break/>
+<example>&lt;?php class helloNameView extends ezcMvcView
+{
+    function createZones( $layout )
+    {
+        $zones = array();
+        $zones[] = new ezcMvcTemplateViewHandler( 'menu', 'menu.ezt' );
+        $zones[] = new ezcMvcPhpViewHandler( 'content', 'greeting.php' );
+        $zones[] = new ezcMvcTemplateViewHandler( 'page_layout', 'layout.ezt' );
+        return $zones;
+</example>
+</slide>

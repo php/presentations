@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Request Parser Example</title>
+	<subtitle>HTTP</subtitle>
+
+<blurb>Request:</blurb>
+<example><![CDATA[http://kossu/test/test.php
+GET /test/test.php HTTP/1.1
+Host: kossu
+User-Agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.0.6) Gecko/2009020407 Iceweasel/3.0.6 (Debian-3.0.6-1) FirePHP/0.2.4
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en,en-us;q=0.8,nb;q=0.5,nl;q=0.3
+Accept-Encoding: gzip,deflate
+Accept-Charset: UTF-8,*
+Keep-Alive: 3000
+Connection: keep-alive
+Cache-Control: max-age=0]]></example>
+<break/>
+<blurb>Generates:</blurb>
+
+<example><![CDATA[object(ezcMvcRequest)#2 (14) {
+  ["date"]=>
+  object(DateTime)#3 (3) {
+    ["date"]=>
+    string(19) "2009-03-03 08:55:50"
+    ["timezone_type"]=>
+    int(1)
+    ["timezone"]=>
+    string(6) "+00:00"
+  }
+  ["protocol"]=>
+  string(8) "http-get"
+  ["host"]=>
+  string(5) "kossu"
+  ["uri"]=>
+  string(14) "/test/test.php"
+  ["requestId"]=>
+  string(19) "kossu/test/test.php"
+  ["referrer"]=>
+  NULL
+  ["variables"]=>
+  &array(0) {
+  }
+  ["body"]=>
+  string(0) ""
+  ["files"]=>
+  NULL
+  ["accept"]=>
+  object(ezcMvcRequestAccept)#4 (4) {
+    ["types"]=>
+    array(4) {
+      [0]=>
+      string(9) "text/html"
+      [1]=>
+      string(21) "application/xhtml+xml"
+      [2]=>
+      string(15) "application/xml"
+      [3]=>
+      string(3) "*/*"
+    }
+    ["charsets"]=>
+    array(2) {
+      [0]=>
+      string(5) "UTF-8"
+      [1]=>
+      string(1) "*"
+    }
+    ["languages"]=>
+    array(4) {
+      [0]=>
+      string(2) "en"
+      [1]=>
+      string(5) "en-us"
+      [2]=>
+      string(2) "nb"
+      [3]=>
+      string(2) "nl"
+    }
+    ["encodings"]=>
+    array(2) {
+      [0]=>
+      string(4) "gzip"
+      [1]=>
+      string(7) "deflate"
+    }
+  }
+  ["agent"]=>
+  object(ezcMvcRequestUserAgent)#5 (1) {
+    ["agent"]=>
+    string(117) "Mozilla/5.0 (X11; U; Linux x86_64; en-US; rv:1.9.0.6) Gecko/2009020407 Iceweasel/3.0.6 (Debian-3.0.6-1) FirePHP/0.2.4"
+  }
+  ["authentication"]=>
+  NULL
+  ["raw"]=>
+  &array(31) {
+  }
+  ["cookies"]=>
+  array(0) {
+  }
+} ]]></example>
+</slide>

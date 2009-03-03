@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Response Writer</title>
+
+	<list>
+		<bullet>Takes the abstract %ezcMvcResponse% object.</bullet>
+		<bullet>Is transport-mechanism specific.</bullet>
+		<bullet>Matches with request parsers.</bullet>
+		<bullet>Currently only implement for HTTP as the %ezcMvcHttpResponseWriter%.</bullet>
+		<bullet>Uses the abstract data to set HTTP headers/cookies.</bullet>
+		<bullet>Supports a "status" object for HTTP redirections.</bullet>
+	</list>
+</slide>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Step 1: The home controller and view</title>
+	<subtitle>Autoload file and router</subtitle>
+
+	<blurb>%lib/autoload/autoload.php%:</blurb>
+<example><![CDATA[<?php
+return array(
+    'onrMvcConfiguration' => 'config.php',
+    'onrRouter'           => 'router.php',
+    'onrHomeController'   => 'controllers/home.php',
+    'onrView'             => 'views/main.php',
+);
+?>]]></example>
+<break lines="2"/>
+	<blurb>%lib/router.php%:</blurb>
+<example><![CDATA[<?php
+class onrRouter extends ezcMvcRouter
+{
+    public function createRoutes()
+    {
+        return array(
+            new ezcMvcRailsRoute( '/', 'onrHomeController', 'list' ),
+        );
+    }
+}
+?>]]></example>
+</slide>

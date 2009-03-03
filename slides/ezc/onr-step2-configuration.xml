@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>Setting up the filter logic</subtitle>
+
+    <blurb>%lib/config.php%:</blurb>
+<example><![CDATA[<?php
+    function runRequestFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request )
+    {
+        switch ( $routeInfo->matchedRoute )
+        {
+            case '/':
+                return $this->runAuthCheckLoggedIn( $request );
+                break;
+            case '/register/submit':
+            case '/register':
+            case '/login-required':
+            case '/login':
+            case '/logout':
+            case '/fatal':
+                break;
+            default:
+                return $this->runAuthRequiredFilter( $request );
+        }
+    }   
+
+    private function doAuthCheck( $request )
+    {   
+        $database = new ezcAuthenticationDatabaseInfo( ezcDbInstance::get(), 'user', array( 'email', 'password' ) );
+        $databaseFilter = new ezcAuthenticationDatabaseFilter( $database );
+        
+        // use the options object when creating a new Session object
+        $options = new ezcAuthenticationSessionOptions();
+        $options->validity = 86400; 
+
+        $session = new ezcAuthenticationSession( $options );
+        $session->start();
+            
+        $user = $session->load();
+        $password = null;
+        $loginWithForm = true;
+        
+        $credentials = new ezcAuthenticationPasswordCredentials( $user, md5( $password ) );
+        $authentication = new ezcAuthentication( $credentials );
+        $authentication->session = $session; 
+        $authentication->addFilter( $databaseFilter );
+
+        return $authentication;
+    }   
+
+    private function fetchUserName()
+    {   
+        if ( isset( $_SESSION['ezcAuth_id'] ) )
+        {
+            $q = ezcDbInstance::get()->createSelectQuery();
+            $q->select( '*' ) 
+              ->from( 'user' )
+              ->where( $q->expr->eq( 'email', $q->bindValue( $_SESSION['ezcAuth_id'] ) ) );
+            $s = $q->prepare();
+            $s->execute();
+            $r = $s->fetchAll();
+            
+            return $r[0]['name'];
+        }   
+        return null;
+    }
+
+    private function runAuthCheckLoggedIn( $request )
+    {
+        $auth = self::doAuthCheck( $request );
+        $auth->run();
+        $request->variables['user'] = self::fetchUserName();
+    }
+    
+    private function runAuthRequiredFilter( $request )
+    {
+        $auth = self::doAuthCheck( $request );
+        if ( !$auth->run() )
+        {
+            $status = $auth->getStatus();
+            $request->variables['redirUrl'] = $request->uri;
+            $request->variables['reasons']  = $status;
+
+            $request->uri = '/login-required';
+            return new ezcMvcInternalRedirect( $request );
+        }
+
+        $request->variables['user'] = self::fetchUserName();
+    }
+
+    function runResultFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result )
+    {
+        $result->variables['user'] = isset( $request->variables['user'] ) ? $request->variables['user'] : 'Anonymous';
+    }
+]]></example>
+</slide>

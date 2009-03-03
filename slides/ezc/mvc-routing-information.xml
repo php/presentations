@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Routing Information</title>
+
+	<list>
+		<bullet>Is returned by the router if a route is found in the form of
+		an %ezcMvcRoutingInformation% object.</bullet>
+	</list>
+<example>&lt;?php
+class ezcMvcRoutingInformation extends ezcBaseStruct
+{
+    public $matchedRoute;
+    public $controllerClass;
+    public $action;
+?></example>
+</slide>

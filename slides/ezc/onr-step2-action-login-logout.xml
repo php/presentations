@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>Adding actions: login and logout</subtitle>
+
+    <blurb>%lib/controllers/auth.php%:</blurb>
+<example><![CDATA[<?php
+class onrAuthController extends ezcMvcController
+{
+    public function doLogin()
+    {
+        // obtain credentials from POST
+        $email = isset( $_POST['email'] ) ? $_POST['email'] : null;
+        $password = isset( $_POST['password'] ) ? $_POST['password'] : null;
+        $redirUrl = isset( $_POST['redirUrl'] ) ? $_POST['redirUrl'] : '/';
+
+        $database = new ezcAuthenticationDatabaseInfo( ezcDbInstance::get(), 'user', array( 'email', 'password' ) );
+        $databaseFilter = new ezcAuthenticationDatabaseFilter( $database );
+
+        $options = new ezcAuthenticationSessionOptions();
+        $options->validity = 86400;
+
+        $session = new ezcAuthenticationSession( $options );
+        $session->start();
+
+        // use the options object when creating a new Session object
+        $credentials = new ezcAuthenticationPasswordCredentials( $email, md5( $password ) );
+        $authentication = new ezcAuthentication( $credentials );
+        $authentication->session = $session;
+        $authentication->addFilter( $databaseFilter );
+
+        if ( !$authentication->run() )
+        {
+            $request = clone $this->request;
+            $status = $authentication->getStatus();
+            $request->variables['redirUrl'] = $redirUrl;
+            $request->variables['reasons']  = $status;
+
+            $request->uri = '/login-required';
+            return new ezcMvcInternalRedirect( $request );
+        }
+
+        $res = new ezcMvcResult;
+        $res->status = new ezcMvcExternalRedirect( $redirUrl );
+        return $res;
+    }
+
+    public function doLogout()
+    {
+        $options = new ezcAuthenticationSessionOptions();
+        $options->validity = 86400;
+
+        $session = new ezcAuthenticationSession( $options );
+        $session->start();
+        $session->destroy();
+
+        $res = new ezcMvcResult;
+        $res->status = new ezcMvcExternalRedirect( '/' );
+        return $res;
+    }
+}
+?>]]></example>
+
+</slide>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Step 2: Adding authentication</title>
+	<subtitle>Overview</subtitle>
+
+	<list>
+		<bullet>Prevent access to content with a request filter.</bullet>
+		<bullet>Request filter runs after the router has selected a router with controller and action.</bullet>
+		<bullet>Make sure that we do not limit access to the authentication pages and register pages.</bullet>
+	</list>
+
+	<blurb>Implement:</blurb>
+	<list>
+		<bullet>The new routes to the router.</bullet>
+		<bullet>The onrAuthController class to the autoload file.</bullet>
+		<bullet>The filter logic in the configuration object.</bullet>
+		<bullet>Template views to configuration object.</bullet>
+		<bullet>Templates</bullet>
+		<bullet>A "login required" action which a user gets redirected too.</bullet>
+		<bullet>A "login" and "logout" action.</bullet>
+		<bullet>A "register" and "register submit" action.</bullet>
+	</list>
+</slide>

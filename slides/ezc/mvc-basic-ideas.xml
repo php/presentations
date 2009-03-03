@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Core Ideas</title>
+
+	<list>
+		<bullet>Everything is decoupled</bullet>
+		<bullet>Everything can be reused</bullet>
+		<bullet>It's easy to override and overload functionality</bullet>
+		<bullet>The MvcTools package does not dictate any kind of
+		structure</bullet>
+		<bullet>Full flexibility</bullet>
+	</list>
+</slide>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Router</title>
+
+	<list>
+		<bullet>Is configured by inheriting and reimplementing the
+		%createRoutes()% method.</bullet>
+		<bullet>The %createRoutes()% method returns an array of
+		routes.</bullet>
+		<bullet>Routes are objects of classes that implement the
+		%ezcMvcRoute% interface: %ezcMvcRailsRoute% and
+		%ezcMvcRegexpRoute%.</bullet>
+		<bullet>Each route tests itself if it matches the request data, and
+		returns an %ezcMvcRoutingInformation% object if it matched.</bullet>
+	</list>
+<example>&lt;?php
+return array(
+  new ezcMvcRailsRoute( '/', 'shareHomeController', 'list' ),
+  new ezcMvcRailsRoute( '/updates', 'shareHomeController', 'list' ),
+  new ezcMvcRailsRoute( '/update/:id', 'shareHomeController', 'show' ),
+
+  new ezcMvcRailsRoute( '/view/:id', 
+    'shareHomeController', 'show', array( 'id' => 1 ) ),
+
+  new ezcMvcRegexpRoute( '@^people(/((?P&gt;nr>[0-9]+)|(?P&gt;name>.+)))?$@',
+   'testController', 'action', array( 'nr' => '', 'name' => '' ) );
+?></example>
+</slide>

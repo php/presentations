@@ -5,19 +5,27 @@
 
 	<blurb>Installation:</blurb>
 	<example><![CDATA[// download the bundle from http://ezcomponents.org/download
-tar -xjf ezcomponents-2008.1.tar.bz2
+tar -xjf ezcomponents-2008.2.tar.bz2
 pwd]]></example>
 
-<break lines="3"/>
+<break/>
 
 	<blurb>Setup:</blurb>
 	<example result='0'><![CDATA[<?php
-ini_set( 'include_path', '/home/httpd/ezcomponents-2008.1:.' );
+ini_set( 'include_path', '/home/httpd/ezcomponents-2008.2:.' );
 require 'Base/src/base.php';
 
 function __autoload( $className )
 {
 	ezcBase::autoload( $className );
 }
+?>]]></example>
+
+<break/>
+
+	<blurb>Quick Setup:</blurb>
+	<example result='0'><![CDATA[<?php
+ini_set( 'include_path', '/home/httpd/ezcomponents-2008.2:.' );
+require 'Base/src/ezc_bookstrap.php';
 ?>]]></example>
 </slide>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Adding actions: add and submit</subtitle>
+
+    <blurb>%lib/controllers/recipe.php%:</blurb>
+<example><![CDATA[<?php
+class onrRecipeController extends ezcMvcController
+{
+    public function doAdd()
+    {
+        return new ezcMvcResult;
+    }
+
+    public function doSubmit()
+    {
+        $d = ezcDbInstance::get();
+        $q = $d->createInsertQuery();
+        $q->insertInto( 'recipe' )
+           ->set( 'user_id', $q->bindValue( $this->user_id ) )
+           ->set( 'portions', $q->bindValue( (int) $this->portions ) )
+           ->set( 'description', $q->bindValue( $this->description ) )
+           ->set( 'name', $q->bindValue( $this->name ) );
+        $s = $q->prepare();
+        $s->execute();
+        $newId = $d->lastInsertId();
+        $res = new ezcMvcResult;
+        $res->status = new ezcMvcExternalRedirect( '/recipe/' . $newId );
+        return $res;
+    }
+}
+?>]]></example>
+
+</slide>

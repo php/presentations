@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#000000"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Component Libraries</topic>
+<title>MVC Tools</title>
+<event>PHP Québec 2009</event>
+<location>Montréal, Canada</location>
+<date>March 6th, 2009</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/ezc/title-ezc-generic.xml</slide>
+
+<!-- quick mvc intro -->
+<slide>slides/ezc/mvc-basic-ideas.xml</slide>
+<slide>slides/ezc/mvc-parts-overview.xml</slide>
+<slide>slides/ezc/mvc-dispatcher.xml</slide>
+<slide>slides/ezc/mvc-dispatcher-configuration.xml</slide>
+<slide>slides/ezc/mvc-request-parser.xml</slide>
+<slide>slides/ezc/mvc-request-example-http.xml</slide>
+<slide>slides/ezc/mvc-request-example-mail.xml</slide>
+<slide>slides/ezc/mvc-router.xml</slide>
+<slide>slides/ezc/mvc-routing-information.xml</slide>
+<slide>slides/ezc/mvc-controller.xml</slide>
+<slide>slides/ezc/mvc-controller-algo.xml</slide>
+<slide>slides/ezc/mvc-controller-redirect.xml</slide>
+<slide>slides/ezc/mvc-views.xml</slide>
+<slide>slides/ezc/mvc-view-handlers.xml</slide>
+<slide>slides/ezc/mvc-response-writer.xml</slide>
+
+<slide>slides/ezc/mvc-filters.xml</slide>
+
+<!-- introducing the app -->
+<slide>slides/ezc/onr-intro.xml</slide>
+<slide>slides/ezc/onr-dirs.xml</slide>
+<slide>slides/ezc/onr-config.xml</slide>
+<slide>slides/ezc/onr-index-htaccess.xml</slide>
+<!--<slide>slides/ezc/onr-database-scheme.xml</slide>-->
+
+<!-- step 1 -->
+<slide>slides/ezc/onr-configuration1.xml</slide>
+<slide>slides/ezc/onr-autoload.xml</slide>
+<slide>slides/ezc/onr-home-controller1.xml</slide>
+<slide>slides/ezc/onr-main-view.xml</slide>
+<slide>slides/ezc/onr-template-main.xml</slide>
+<slide>slides/ezc/onr-template-home1.xml</slide>
+
+<!-- step 2: authentication -->
+<slide>slides/ezc/onr-step2-overview.xml</slide>
+<slide>slides/ezc/onr-step2-auth-overview.xml</slide>
+<slide>slides/ezc/onr-step2-routes-autoload.xml</slide>
+<slide>slides/ezc/onr-step2-configuration.xml</slide>
+<slide>slides/ezc/onr-step2-views.xml</slide>
+<slide>slides/ezc/onr-step2-template.xml</slide>
+<slide>slides/ezc/onr-step2-template2.xml</slide>
+<slide>slides/ezc/onr-step2-action-login-required.xml</slide>
+<slide>slides/ezc/onr-step2-action-login-logout.xml</slide>
+<slide>slides/ezc/onr-step2-action-register-submit.xml</slide>
+<slide>slides/ezc/onr-step2-result.xml</slide>
+
+<!-- step 3: adding a recipe -->
+<slide>slides/ezc/onr-step3-add-recipe.xml</slide>
+<slide>slides/ezc/onr-step3-routes-autoload.xml</slide>
+<slide>slides/ezc/onr-step3-configuration.xml</slide>
+<slide>slides/ezc/onr-step3-views.xml</slide>
+<slide>slides/ezc/onr-step3-template.xml</slide>
+<slide>slides/ezc/onr-step3-template2.xml</slide>
+<slide>slides/ezc/onr-step3-action-recipe-add-submit.xml</slide>
+<slide>slides/ezc/onr-step3-action-list.xml</slide>
+<slide>slides/ezc/onr-step3-action-view.xml</slide>
+<slide>slides/ezc/onr-step3-result.xml</slide>
+
+<!-- implementing the app -->
+<!--
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+<slide>slides/ezc/mvc-.xml</slide>
+-->
+<!-- the tutorial -->
+
+
+<!-- overview -->
+<slide>slides/ezc/support.xml</slide>
+
+<slide>slides/ezc/questions.xml</slide>
+</presentation>

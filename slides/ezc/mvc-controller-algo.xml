@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Controller</title>
+	<subtitle>Changing action mapping algorithm</subtitle>
+
+	<list>
+		<bullet>The "default" controller uses the actions name to map to a
+		method, but this algorithm can be easily overridden.</bullet>
+	</list>
+<example>&lt;?php
+class helloController extends ezcMvcController
+{
+    public function action_greet()
+    {
+        $ret = new ezcMvcResult;
+        $ret->variables['greeting'] = 'Hello World!';
+        return $ret;
+    }
+
+	public function createActionMethodName( $actionName )
+	{
+		return 'action_' . $actionName;
+	}
+?></example>
+</slide>
+

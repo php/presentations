@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>View Handler</title>
+
+	<list>
+		<bullet>Renders a zone with variables from the abstract output into an
+        %ezcMvcResponse% object.</bullet>
+		<bullet>Are implemented by inheriting from %ezcMvcViewHandler%.</bullet>
+		<bullet>The result can be re-used in following zones.</bullet>
+		<bullet>The last view handler's process() method is special.</bullet>
+	</list>
+<break lines="2"/>
+	<blurb>Available view handlers:</blurb>
+	<list>
+		<bullet>*ezcMvcJsonViewHandler*: renders result objects as JSON</bullet>
+		<bullet>*ezcMvcPhpViewHandler*: uses PHP files to render result objects</bullet>
+		<bullet>*ezcMvcTemplateViewHandler*: uses the template component to render result objects</bullet>
+		<bullet>|777777|*ezcMvcFeedViewHandler*: uses XML feeds to render result objects|</bullet>
+	</list>
+</slide>

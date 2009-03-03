@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Adding view templates</subtitle>
+
+    <blurb>%templates/recipes/add.ezt%:</blurb>
+<example><![CDATA[<h1>Adding a recipe</h1>
+
+<div class="pres">
+<form class="prefs" action='/recipe/submit' method='post'>
+<div>
+Recipe name: <input type='text' name='name' value=''/><br/>
+Portions: <input type='text' size='2' maxlength='2' name='portions' value='4'/><
+<br/>
+Description:<br/>
+<textarea cols="60" rows="10" name="description">
+</textarea>
+<br/>
+<br/>
+<input type='submit' name='add' value="Add"/>
+</div>
+</form>
+</div>]]></example>
+</slide>

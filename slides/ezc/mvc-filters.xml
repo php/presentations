@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Filters</title>
+
+	<blurb>Can be run on four stages from the dispatcher:</blurb>
+	<list>
+		<bullet>Before the router with %runPreRoutingFilters()% to modify parsed
+		request data to be able to select different routers.</bullet>
+		<bullet>After the router has run, but before the controller has been
+		selected with %runRequestFilters()% (example: password protecting parts
+		of the site).</bullet>
+		<bullet>After the controller/action has run, but before the view is
+		applied with %runResultFilters()% (example: adding common variables to
+		be used in views, such as INI settings).</bullet>
+		<bullet>After the view has run, but before the request writer writes
+		output with %runResponseFilters()% (example: gzipping HTTP content on
+		the fly).</bullet>
+	</list>
+</slide>

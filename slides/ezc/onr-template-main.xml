@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Step 1: The home controller and view</title>
+	<subtitle>Main template</subtitle>
+
+	<blurb>%templates/main.ezt%:</blurb>
+<example><![CDATA[{use $installDomain = 'dev.omnomr', $user = 'Anonymous', $content}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>OmNomR</title> 
+<link type="text/css" rel="stylesheet" href="http://{$installDomain}/stylesheets/core.css"/>
+</head>
+<body>
+<div id="everything">
+<ul id="menu">
+{if $user != 'Anonymous'}
+    <li><a href='http://{$installDomain}/'>Home</a></li>
+    <li><a href='http://{$installDomain}/add'>Add Recipe</a></li>
+{else}
+    <li><a href='http://{$installDomain}/'>Login</a></li>
+    <li><a href='http://{$installDomain}/register'>Register</a></li>
+{/if}
+</ul>
+<br/>
+<div id="main">
+    {raw $content}
+</div>
+
+<div style="float: right">
+<div id="user">
+    <div class="username">{$user}</div>
+    {if $user != 'Anonymous'}
+    <div><a href='http://{$installDomain}/prefs'>Preferences</a></div>
+    {/if}
+</div>
+</div>
+</body>
+</html>]]></example>
+</slide>

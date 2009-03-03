@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>Adding view templates</subtitle>
+
+    <blurb>%templates/login.ezt%:</blurb>
+<example><![CDATA[{use $redirUrl, $reasons}
+<h1>Login</h1>
+
+<div class="login">
+<p>
+You are not logged in, because:
+</p>
+<ul>
+{foreach $reasons as $reason}
+    <li>{$reason}</li>
+{/foreach}
+</ul>
+
+<form class="login" action='/login' method='post'>
+<div>
+Email: <input name='email' size='32'/><br/>
+Password: <input type='password' name='password'/><br/>
+<br/>
+<input type='hidden' name='redirUrl' value='{$redirUrl}'/>
+<input type='submit' value="Login"/>
+</div>
+</form>
+</div>]]></example>
+</slide>

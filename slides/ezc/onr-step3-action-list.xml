@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 3: Recipes</title>
+    <subtitle>Adding actions: list</subtitle>
+
+    <blurb>%lib/controllers/recipe.php%:</blurb>
+<example><![CDATA[<?php
+class onrRecipeController extends ezcMvcController
+{
+    public function doList()
+    {
+        $d = ezcDbInstance::get();
+        $q = $d->createSelectQuery();
+        $q->select( 'id', 'name' )->from( 'recipe' )->orderBy( 'name' );
+        $s = $q->prepare();
+        $s->execute();
+
+        $res = new ezcMvcResult;
+        $res->variables['recipes'] = $s;
+        return $res;
+    }
+}
+?>]]></example>
+
+</slide>

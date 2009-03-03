@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+    <title>Step 2: Adding authentication</title>
+    <subtitle>Adding view templates</subtitle>
+
+    <blurb>%lib/config.php%:</blurb>
+<example><![CDATA[<?php
+    function createView( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result )
+    {
+        switch ( $routeInfo->matchedRoute )
+        {
+            case '/':
+                $view->contentTemplate = 'home.ezt'; break;
+            case '/register/submit':
+                $view->contentTemplate = 'register-submit.ezt'; break;
+            case '/register':
+                $view->contentTemplate = 'register.ezt'; break;
+            case '/login-required':
+                $view->contentTemplate = 'login.ezt'; break;
+        }
+    }
+?>]]></example>
+</slide>
