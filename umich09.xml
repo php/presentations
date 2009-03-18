@@ -1,0 +1,48 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<topic>PHP</topic>
+<title>PHP</title>
+<subtitle>Then, now and the future</subtitle>
+<location>Ann Arbor, MI</location>
+<date>Mar.18, 2009</date>
+<speaker>Rasmus Lerdorf</speaker>
+<email>rasmus@php.net</email>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<!-- Hormones -->
+<slide>slides/intro/ossworks.xml</slide>
+<slide>slides/intro/ego.xml</slide>
+<slide>slides/intro/web20.xml</slide>
+<slide>slides/intro/web2works.xml</slide>
+
+<!-- Skills -->
+<slide>slides/intro/phpjs_today.xml</slide>
+<slide>slides/intro/sx.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+
+<slide>slides/intro/php_js1.xml</slide>
+<slide>slides/intro/php_js2.xml</slide>
+
+<slide>slides/intro/yajax.xml</slide>
+
+<slide>slides/intro/buzz.xml</slide>
+
+<!-- Future -->
+<slide>slides/intro/future2.xml</slide>
+<slide>slides/intro/key_ref.xml</slide>
+</presentation>

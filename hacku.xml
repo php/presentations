@@ -8,9 +8,9 @@
     navbarheight="4.1em"
 >
 <topic>PHP</topic>
-<title>HackU at UW</title>
-<location>Seattle, WA</location>
-<date>Feb 17, 2009</date>
+<title>HackU at UMich</title>
+<location>Ann Arbor, MI</location>
+<date>Mar. 17, 2009</date>
 <speaker>Rasmus Lerdorf</speaker>
 <email>rasmus@php.net</email>
 <url>http://talks.php.net/show/hacku</url>
@@ -18,6 +18,15 @@
 <slide>slides/intro/titlepage.xml</slide>
 
 <!-- Hack Day -->
+<slide>slides/hacku/hacku01.xml</slide>
+<slide>slides/hacku/hacku02.xml</slide>
+<slide>slides/hacku/hacku03.xml</slide>
+<slide>slides/hacku/hacku04.xml</slide>
+<slide>slides/hacku/hacku05.xml</slide>
+<slide>slides/hacku/hacku06.xml</slide>
+<slide>slides/hacku/hacku07.xml</slide>
+<slide>slides/hacku/hacku08.xml</slide>
+<slide>slides/hacku/hacku09.xml</slide>
 <slide>slides/hacku/hacku1.xml</slide>
 <slide>slides/hacku/hacku2.xml</slide>
 <slide>slides/hacku/hacku3.xml</slide>
