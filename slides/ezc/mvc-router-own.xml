@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Router</title>
+	<subtitle>User Implementation</subtitle>
+
+<example>&lt;?php
+class slugRoute implements ezcMvcRoute
+{
+	public function __construct( $controller, $action, $paramName = 'slug' )
+	{
+		$this->controller = $controller;
+		$this->action = $action;
+		$this->paramName = $paramName;
+	}
+
+	public function matches( ezcMvcRequest $request )
+	{
+		$q = ezcDbInstance::get()->createSelectQuery();
+		$q->select( 'id' )->from( 'alias' )
+		  ->where( $q->expr->eq( 'slug', $q->bindValue( $request->uri ) ) );
+		....
+		$params = array( $this->paramName => $resultRow['id'] );
+		$request->variables = array_merge( $request->variables, $params );
+		return new ezcMvcRoutingInformation(
+			$request->uri,
+			$this->controller,
+			$this->action
+		);
+	}
+
+	public function prefix( $prefix )
+	{
+	}
+}
+?></example>
+</slide>

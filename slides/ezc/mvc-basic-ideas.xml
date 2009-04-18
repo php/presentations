@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <slide>
-	<title>Core Ideas</title>
+	<title>eZ Components' MVC Tools</title>
+	<subtitle>Core Ideas</subtitle>
 
 	<list>
 		<bullet>Everything is decoupled</bullet>
-		<bullet>Everything can be reused</bullet>
+		<bullet>All your own code can be reused if developed according to guidelines</bullet>
 		<bullet>It's easy to override and overload functionality</bullet>
 		<bullet>The MvcTools package does not dictate any kind of
 		structure</bullet>

@@ -22,7 +22,7 @@ return array(
   new ezcMvcRailsRoute( '/view/:id', 
     'shareHomeController', 'show', array( 'id' => 1 ) ),
 
-  new ezcMvcRegexpRoute( '@^people(/((?P&gt;nr>[0-9]+)|(?P&gt;name>.+)))?$@',
+  new ezcMvcRegexpRoute( '@^people(/((?P&lt;nr>[0-9]+)|(?P&lt;name>.+)))?$@',
    'testController', 'action', array( 'nr' => '', 'name' => '' ) );
 ?></example>
 </slide>

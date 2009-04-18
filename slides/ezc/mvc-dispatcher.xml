@@ -5,9 +5,15 @@
 	<list>
 		<bullet>Is responsible for the processing of the request</bullet>
 		<bullet>Implements the %ezcMvcDispatcher% interface</bullet>
-		<bullet>The current (and only) implementation right now is configured
-		through a configuration object</bullet>
+		<bullet>The current (and only) dispatcher implementation right now is
+		configured through a configuration object</bullet>
 		<bullet>Configuration objects implement the
 		%ezcMvcDispatcherConfiguration% interface</bullet>
 	</list>
+<div effect="hide">
+	<blurb>In the next release:</blurb>
+	<list>
+		<bullet>An dispatcher using configuration files will be added</bullet>
+	</list>
+</div>
 </slide>
