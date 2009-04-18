@@ -1,8 +1,7 @@
 <slide title="Fix include_path">
 
 <break lines="1" />
-<example fontsize="1.4em" title="Fix include_path"><![CDATA[
-;include_path = ".:/usr/local/lib/php"
+<example fontsize="1.4em" title="Fix include_path"><![CDATA[;include_path = ".:/usr/local/lib/php"
 include_path = "/usr/local/lib/php:."
 ]]></example>
 
