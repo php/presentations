@@ -13,7 +13,16 @@ Process 16367 detached
 % grep stat sys1.txt | grep -v fstat | wc -l
 153]]></example>
 
-<example fontsize="1.4em" type="shell" title="All the syscalls"><![CDATA[accept(3, {sa_family=AF_INET, sin_port=htons(52273), sin_addr=inet_addr("10.211.55.2")}, [16]) = 9
+<example fontsize="1.4em" type="shell" title="Common Mistake"><![CDATA[stat64("/var/www/index.html", 0xbfd279ac) = -1 ENOENT (No such file or directory)
+stat64("/var/www/index.cgi", 0xbfd27afc) = -1 ENOENT (No such file or directory)
+stat64("/var/www/index.pl", 0xbfd27afc) = -1 ENOENT (No such file or directory)
+stat64("/var/www/index.php", {st_mode=S_IFREG|0664, st_size=7198, ...}) = 0]]></example>
+
+<example fontsize="1.4em" title="Fix DirectoryIndex"><![CDATA[<Directory /var/www>
+    DirectoryIndex index.php
+</Directory>]]></example>
+
+<example fontsize="1.4em" type="shell" title="All the Laconica syscalls"><![CDATA[accept(3, {sa_family=AF_INET, sin_port=htons(52273), sin_addr=inet_addr("10.211.55.2")}, [16]) = 9
 getsockname(9, {sa_family=AF_INET, sin_port=htons(80), sin_addr=inet_addr("10.211.55.3")}, [16]) = 0
 fcntl64(9, F_GETFL)                     = 0x2 (flags O_RDWR)
 fcntl64(9, F_SETFL, O_RDWR|O_NONBLOCK)  = 0

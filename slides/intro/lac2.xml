@@ -46,4 +46,47 @@ Failed transactions:           0
 Longest transaction:       20.61
 Shortest transaction:       0.02]]></example>
 
+<example fontsize="1.4em" type="shell" title="Habari-0.6 - PHP 5.2.10-dev + APC"><![CDATA[
+Transactions:                794 hits
+Availability:             100.00 %
+Elapsed time:              29.75 secs
+Data transferred:           4.00 MB
+Response time:              |ffff00|0.19 secs|
+Transaction rate:          |ffff00|26.69 trans/sec|
+Throughput:                 0.13 MB/sec
+Concurrency:                4.99
+Successful transactions:     794
+Failed transactions:           0
+Longest transaction:        0.48
+Shortest transaction:       0.07]]></example>
+
+<example fontsize="1.4em" type="shell" title="Wordpress-2.7.1 - PHP 5.2.10-dev + APC"><![CDATA[
+Transactions:                999 hits
+Availability:             100.00 %
+Elapsed time:              30.20 secs
+Data transferred:           4.88 MB
+Response time:              |ffff00|0.15 secs|
+Transaction rate:          |ffff00|33.08 trans/sec|
+Throughput:                 0.16 MB/sec
+Concurrency:                4.99
+Successful transactions:     999
+Failed transactions:           0
+Longest transaction:        0.68
+Shortest transaction:       0.06]]></example>
+
+<example fontsize="1.4em" type="shell" title="Magento-1.3.0 - PHP 5.2.10-dev + APC"><![CDATA[
+% siege |ffff00|-c| 5 "http://magento.localhost/a-widget.html |ffff00|-b| |ffff00|-t|30s
+Transactions:                125 hits
+Availability:             100.00 %
+Elapsed time:              30.49 secs
+Data transferred:           1.83 MB
+Response time:             |ffff00|1.21 secs|
+Transaction rate:           |ffff00|4.10 trans/sec|
+Throughput:                 0.06 MB/sec
+Concurrency:                4.94
+Successful transactions:     125
+Failed transactions:           0
+Longest transaction:        1.63
+Shortest transaction:       1.05]]></example>
+
 </slide>
