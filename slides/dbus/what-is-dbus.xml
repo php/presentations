@@ -1,0 +1,13 @@
+<slide>
+	<title>What is DBUS?</title>
+
+	<list>
+		<bullet>Part of the freedesktop.org project</bullet>
+		<bullet>It is meant to replace Corba (GNOME) and DCOP (KDE)</bullet>
+		<bullet>A message bus system, a simple way for applications to talk to one another</bullet>
+		<bullet>It consists of a deamon, a library and a protocol</bullet>
+		<bullet>It is both meant for system level and session level communication</bullet>
+	</list>
+
+	<image align="center" filename="Freedesktop-logo.png"/>
+</slide>

@@ -1,0 +1,28 @@
+<slide>
+	<title>Message Types</title>
+
+	<blurb>Method calls</blurb>
+	<list>
+		<bullet>From one application to another</bullet>
+	</list>
+<break/>
+
+	<blurb>Method returns</blurb>
+	<list>
+		<bullet>Upon succesfull method execution</bullet>
+	</list>
+<break/>
+
+	<blurb>Method error returns</blurb>
+	<list>
+		<bullet>Upon a failure while executing the method</bullet>
+	</list>
+<break/>
+
+	<blurb>Signals</blurb>
+	<list>
+		<bullet>Broadcast from one application to all others</bullet>
+	</list>
+<break/>
+
+</slide>

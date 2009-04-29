@@ -1,0 +1,22 @@
+<slide>
+	<title>Talking to a DBUS object from PHP</title>
+	<subtitle>Activating the screensaver</subtitle>
+
+	<blurb>screensaver.php:</blurb>
+	<example><![CDATA[<?php
+$d = new Dbus; 
+$n = new DbusObject(
+	$d,
+	"org.gnome.ScreenSaver",
+	"/org/gnome/ScreenSaver",
+	"org.gnome.ScreenSaver"
+);
+var_dump( $n->GetActive() );
+
+$n->SetActive( true );
+var_dump( $n->GetActive() );
+
+sleep( 5 );
+$n->SetActive( false );
+?>]]></example>
+</slide>

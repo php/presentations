@@ -1,0 +1,13 @@
+<slide>
+	<title>PHP DBUS extension</title>
+
+	<list>
+		<bullet>DBUS bindings using the low-level C library (libdbus)</bullet>
+		<bullet>Provides proxy objects</bullet>
+		<bullet>Implements automatic-marshalling of data</bullet>
+		<bullet>Provides specific classes for full control</bullet>
+		<bullet>Support for method invocation, method calls, sending and receiving signals</bullet>
+		<bullet>(Basic) support for introspection</bullet>
+	</list>
+
+</slide>

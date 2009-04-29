@@ -1,0 +1,14 @@
+<slide>
+	<title>Pidgin</title>
+	<subtitle>Implements things through a proper interface</subtitle>
+
+	<list>
+		<bullet>It exposes everything through some form of objecty model</bullet>
+		<bullet>A new method for every functionality</bullet>
+		<bullet>Uses IDs to identify objects</bullet>
+		<bullet>Uses signals extensively</bullet>
+		<bullet>It's not documented very well, but it matches the internal C API</bullet>
+	</list>
+	<image align="center" filename="Pidgin.png"/>
+
+</slide>

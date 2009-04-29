@@ -1,0 +1,11 @@
+<slide>
+	<title>Skype</title>
+	<subtitle>Odd DBUS API</subtitle>
+
+	<list>
+		<bullet>Everything in and out happens with a weird string protocol</bullet>
+		<bullet>It does not make use of objects at all</bullet>
+		<bullet>It doesn't send signals, but you have to provide a callback</bullet>
+	</list>
+
+</slide>

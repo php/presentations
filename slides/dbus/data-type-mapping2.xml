@@ -1,0 +1,21 @@
+<slide>
+	<title>Data-type mapping</title>
+	<subtitle>From DBUS to PHP</subtitle>
+
+	<blurb>Basic types</blurb>
+	<list>
+		<bullet>boolean -> boolean</bullet>
+		<bullet>byte, int16, uint16, int32, uint32, int64, uint64 -> integer</bullet>
+		<bullet>double -> double</bullet>
+		<bullet>string -> string</bullet>
+	</list>
+
+	<blurb>Compound types</blurb>
+	<list>
+		<bullet>array -> DbusArray or DbusDict (depending on whether there is a dict-entry embedded)</bullet>
+		<bullet>dict-entry -> variable (could be anything)</bullet>
+		<bullet>variant -> DbusVariant</bullet>
+		<bullet>struct -> DbusStruct</bullet>
+	</list>
+
+</slide>

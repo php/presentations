@@ -1,0 +1,21 @@
+<slide>
+	<title>Data-types</title>
+
+	<blurb>Basic types</blurb>
+	<list>
+		<bullet>byte</bullet>
+		<bullet>boolean (0 = false, 1 = true)</bullet>
+		<bullet>integer (int16, uint16, int32, uint32, int64 and uint64)</bullet>
+		<bullet>double (IEEE 754 double)</bullet>
+		<bullet>string (UTF-8 string)</bullet>
+	</list>
+
+	<blurb>Compound types</blurb>
+	<list>
+		<bullet>array (contains elements of the same type)</bullet>
+		<bullet>struct (contains one or more complete types)</bullet>
+		<bullet>dictionary entry (contains a key (basic type) and a value, must be part of an array)</bullet>
+		<bullet>variant (contains a type and a value)</bullet>
+	</list>
+
+</slide>

@@ -1,0 +1,16 @@
+<slide>
+	<title>Signatures</title>
+
+	<blurb>Each method call has a signature for incoming and outgoing parameters</blurb>
+	<break/>
+	<blurb>Examples:</blurb>
+	<list>
+		<bullet>*ii*: two 32bit signed integers</bullet>
+		<bullet>*tn*: a 64bit unsigned integer, and a 16bit signed integer</bullet>
+		<bullet>*ssiib*: two strings, two integers and a byte</bullet>
+		<bullet>*ad*: an array of doubles (each array has one type following to determine the child's type)</bullet>
+		<bullet>*a{sv}*: an array containing dictionary entries with a string key, and a variant value</bullet>
+		<bullet>*a(iiss)*: an array containing a struct with two integers and two strings</bullet>
+		<bullet>*aai*: an array of arrays containing integers</bullet>
+	</list>
+</slide>

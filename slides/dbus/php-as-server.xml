@@ -1,0 +1,31 @@
+<slide>
+	<title>Providing DBUS services through PHP</title>
+
+	<list>
+		<bullet>Request a connection name</bullet>
+		<bullet>Register a class that provides methods</bullet>
+		<bullet>Introspection is not yet supported</bullet>
+	</list>
+
+<example><![CDATA[<?php
+$d = new Dbus( Dbus::BUS_SESSION, true );
+$d->requestName( 'nl.derickrethans.test' );
+$d->registerObject(
+	 '/nl/derickrethans/test', 'nl.derickrethans.test', 'testClass' );
+
+class testClass {
+    static function echoOne( $a ) {
+        return $a;
+    }
+    static function echoTwo( $a, $b ) {
+        return new DbusSet( $a, $b );
+    }
+}
+
+do {
+    $s = $d->waitLoop( 1000 );
+} while ( true );
+?> ]]></example>
+
+
+</slide>

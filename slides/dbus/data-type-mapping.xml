@@ -1,0 +1,26 @@
+<slide>
+	<title>Data-type mapping</title>
+	<subtitle>From PHP to DBUS</subtitle>
+
+	<blurb>Basic types</blurb>
+	<list>
+		<bullet>boolean -> boolean</bullet>
+		<bullet>integer -> int32</bullet>
+		<bullet>double -> double</bullet>
+		<bullet>string -> string</bullet>
+		<bullet>array -> array (only basic types as values are supported)</bullet>
+	</list>
+
+	<blurb>Specific type classes</blurb>
+	<list>
+		<bullet>DbusByte, DbusBool, DbusInt16, DbusUInt16, DbusInt32, DbusUInt32, DbusInt64, DbusUInt64, DbusDouble</bullet>
+	</list>
+	<list>
+		<bullet>DbusArray( int $type, array $elements [, string $signature] )</bullet>
+		<bullet>DbusDict( int $type, array $elements )</bullet>
+		<bullet>DbusVariant( mixed $data )</bullet>
+		<bullet>DbusStruct( string $signature, array $elements )</bullet>
+		<bullet>DbusSet( array $elements )</bullet>
+	</list>
+
+</slide>

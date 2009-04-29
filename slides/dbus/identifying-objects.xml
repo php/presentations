@@ -1,0 +1,15 @@
+<slide>
+	<title>Identifying objects</title>
+
+	<list>
+		<bullet>*Bus*: Communication pathways that clients can transport messages over</bullet>
+		<bullet>*Connection*: Every connection to the bus has one (or more) unique names (random and well-known) (~:1.363~ or ~nl.derickrethans.test~).</bullet>
+		<bullet>*Object*: A communications end-point that a process exports to offer its services (~/nl/derickrethans/test~).</bullet>
+		<bullet>*Proxy*: A client-level representation of an object on the bus.</bullet>
+		<bullet>*Method*: A function on an object; they have input and output parameters and are called through proxies.</bullet>
+		<bullet>*Signal*: One way communications from an object to registered clients.</bullet>
+		<bullet>*Members*: A collection of methods and signals.</bullet>
+		<bullet>*Interface*: A collection of members; each object can implement multiple interfaces (~nl.derickrethans.test~, ~org.freedesktop.DBus.Introspectable~).</bullet>
+	</list>
+
+</slide>
