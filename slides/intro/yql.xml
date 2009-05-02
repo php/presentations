@@ -47,7 +47,7 @@ function cache($url) {
 }
 $yql = "http://query.yahooapis.com/v1/public/yql?q=";
 $q = "use 'http://airports.pidgets.com/v1/tables.xml' as airports;".
-     "select * from airports(5) where near='Ann Arbor' and direct_flights_min=20";
+     "select * from airports(5) where near=':-:location:-:' and direct_flights_min=20";
 
 $x = simplexml_load_file(cache($yql.urlencode($q).'&format=xml'));
 echo "<b>URLs accessed:</b><br>\n";
