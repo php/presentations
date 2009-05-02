@@ -9,7 +9,7 @@
 
 <example title="Public Flickr Search" result="1" fontsize="1.4em"><![CDATA[<?php
 $url = "http://query.yahooapis.com/v1/public/yql?q=";
-$q   = "select * from flickr.photos.search(100) where text='hacku'";
+$q   = "select * from flickr.photos.search(100) where text=':-:event:-:'";
 $fmt = "xml";
 
 $x = simplexml_load_file($url.urlencode($q)."&format=$fmt");
