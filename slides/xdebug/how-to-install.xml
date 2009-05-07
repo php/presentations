@@ -9,9 +9,9 @@
 
 	<blurb>Without PEAR:</blurb>
 	<list class="numbered">
-		<bullet>wget http://xdebug.org/files/xdebug-2.0.3.tgz</bullet>
-		<bullet>tar -xvzf xdebug-2.0.3.tgz</bullet>
-		<bullet>cd xdebug-2.0.3</bullet>
+		<bullet>wget http://xdebug.org/files/xdebug-2.0.4.tgz</bullet>
+		<bullet>tar -xvzf xdebug-2.0.4.tgz</bullet>
+		<bullet>cd xdebug-2.0.4</bullet>
 		<bullet>phpize</bullet>
 		<bullet>./configure</bullet>
 		<bullet>make</bullet>
