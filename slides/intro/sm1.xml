@@ -4,16 +4,41 @@
 
 <blurb>Indexing the semantic Web!</blurb>
 
-<example title="An hResume query" result="1" fontsize="1.7em"><![CDATA[<?php
-$wsurl = 'http://search.yahooapis.com/WebSearchService/V1/webSearch';
-$appid = 'rlerdorf';
+<example title="An hResume query" result="1" fontsize="1.4em"><![CDATA[<?php
+$url = 'http://boss.yahooapis.com/ysearch/web/v1';
+$appid = 'Gux4Z8LIkY1IKfVXnRcMegs3IjNfmUhl';  // Get your own, please
 $q = urlencode("searchmonkeyid:com.yahoo.page.uf.hresume PHP");
-$x = simplexml_load_file("$wsurl?appid=$appid&query=$q&results=100");
-echo <<<EOB
-Showing {$x['totalResultsReturned']} of {$x['totalResultsAvailable']}<br>
+$views = "view=searchmonkey_feed,delicious_toptags,delicious_saves,language,keyterms";
+$x = simplexml_load_file("$url/$q?appid=$appid&format=xml&count=50&$views");
+foreach($x->resultset_web->result as $r) {
+  $tags = '';
+  if(isset($r->delicious_toptags->tags->tag)) {
+    foreach($r->delicious_toptags->tags->tag as $t) {
+      $tags .= $t->name.'('.$t->count.'), ';
+    }
+    $tags = trim($tags,', ');
+  }
+  $terms = '';
+  foreach($r->keyterms->terms->term as $t) {
+    $terms .= $t.', ';
+  }
+  $terms = trim($terms,', ');
+
+  $formats = '';
+  foreach($r->searchmonkey_feed->feed->adjunct as $a) {
+    $formats .= $a['id'][0].', '; 
+  }
+  $formats = trim($formats,', ');
+  echo <<<EOB
+{$r->date} {$r->language} <a href="{$r->clickurl}">{$r->url}</a><br>
+<p style="font-size: 12pt">
+Delicious saves: {$r->delicious_saves} Tags: $tags<br>
+Key Terms: $terms<br>
+Microformats: $formats<br>
+</p>
+{$r->abstract}<br>
+<hr>
 EOB;
-foreach($x->Result as $ent) {
-  echo "<a href=\"{$ent->Url}\">{$ent->Title}<br>\n";
 }
 ?>]]></example>
 
