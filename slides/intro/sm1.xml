@@ -4,7 +4,7 @@
 
 <blurb>Indexing the semantic Web!</blurb>
 
-<example title="An hResume query" result="1" fontsize="1.4em"><![CDATA[<?php
+<example title="An hResume query" result="1" fontsize="1.3em"><![CDATA[<?php
 $url = 'http://boss.yahooapis.com/ysearch/web/v1';
 $appid = 'Gux4Z8LIkY1IKfVXnRcMegs3IjNfmUhl';  // Get your own, please
 $q = urlencode("searchmonkeyid:com.yahoo.page.uf.hresume PHP");

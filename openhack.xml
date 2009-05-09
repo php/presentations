@@ -10,6 +10,7 @@
 <topic>PHP</topic>
 <title>Hacking with PHP</title>
 <location>London</location>
+<event>OpenHackDay</event>
 <date>May 9, 2009</date>
 <speaker>Rasmus Lerdorf</speaker>
 <url>http://talks.php.net/show/openhack</url>
@@ -38,10 +39,9 @@
 <slide>slides/intro/geoplanet.xml</slide>
 <slide>slides/intro/yql.xml</slide>
 <slide>slides/intro/yql2.xml</slide>
-<slide>slides/intro/boss.xml</slide>
 
-<slide>slides/intro/sm1.xml</slide>
 <slide>slides/intro/sm2.xml</slide>
+<slide>slides/intro/sm1.xml</slide>
 
 <slide>slides/intro/hacku_ref.xml</slide>
 </presentation>
