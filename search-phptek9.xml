@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Search</topic>
+<title>Haystacks and Needles</title>
+<event>php|tek 2009</event>
+<location>Chicago, US</location>
+<date>May 20th, 2009</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<joindin>http://joind.in/183</joindin>
+
+<slide>slides/search/title.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/toolbox/me.xml</slide>
+<slide>slides/search/h-introduction.xml</slide>
+<!--
+INDEX:
+- tokenizers
+- analysers (japanese)
+- stemming
+- stop words
+-->
+<slide>slides/search/index.xml</slide>
+<slide>slides/search/crawling.xml</slide>
+
+<slide>slides/search/tokenize.xml</slide>
+<slide>slides/search/tokenize-domain-specific.xml</slide>
+<slide>slides/search/tokenize-japanese.xml</slide>
+
+<slide>slides/search/stemming.xml</slide>
+<slide>slides/search/stem-japanese.xml</slide>
+
+<!--
+SEARCH:
+- boolean, operators, grouping
+- facets
+-->
+
+<slide>slides/search/searching.xml</slide>
+
+<slide>slides/search/method-title.xml</slide>
+<!-- Methods -->
+<!--
+- MySQL fulltext
+  - database tied
+  - just "text"
+  - only for myisam
+  - distance between words does not matter (fuzzy in lucene/solr)
+  - it's a database, not a search engine
+-->
+<slide>slides/search/mysql-fulltext.xml</slide>
+<slide>slides/search/mysql-types.xml</slide>
+<slide>slides/search/mysql-restrictions.xml</slide>
+
+<!--
+- Your own implementation
+  - tokenization
+  - 
+-->
+<slide>slides/search/own.xml</slide>
+<slide>slides/search/own-tokenization.xml</slide>
+<slide>slides/search/own-gotchas.xml</slide>
+<slide>slides/search/own-gotchas2.xml</slide>
+<slide>slides/search/own-gotchas3.xml</slide>
+
+<!--
+- Lucene intro
+	- Zend Lucene
+-->
+<slide>slides/search/lucene.xml</slide>
+<slide>slides/search/zend-lucene.xml</slide>
+<slide>slides/search/zend-lucene-index.xml</slide>
+<slide>slides/search/zend-lucene-search.xml</slide>
+
+<!--
+- Solr intro
+  - java, webservice
+  - marjory
+-->
+<slide>slides/search/solr.xml</slide>
+<slide>slides/search/marjory.xml</slide>
+
+<!--
+- ezc Search
+  - facets
+  - datatypes
+  - deals with objects
+  - interface idea
+  - extending with other analysers
+  - datatype masks, issue with dates
+  - interfaces to other backends: zend lucene, sphinx, google, xapian?
+
+  - Indexing -> extractors
+-->
+
+<slide>slides/search/ezcsearch.xml</slide>
+<slide>slides/search/ezcsearch-design-ideas.xml</slide>
+<slide>slides/search/ezcsearch-document-definition2.xml</slide>
+<slide>slides/search/ezcsearch-index.xml</slide>
+<slide>slides/search/ezcsearch-search.xml</slide>
+<slide>slides/search/ezcsearch-search2.xml</slide>
+<!-- performance notes -->
+
+<slide>slides/search/zend-lucene-vs-solr.xml</slide>
+
+<!-- future tech:
+- More Like This
+-->
+<slide>slides/search/future.xml</slide>
+<slide>slides/search/resources.xml</slide>
+
+</presentation>
