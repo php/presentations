@@ -2,7 +2,18 @@
 
 <break lines="1" />
 
-<example fontsize="1.4em" result='0' title="Defining a namespace"><![CDATA[<?php
+<example fontsize="1.4em" result='1' title="Closures"><![CDATA[<?php
+$getClosure = function($v) {
+    return function() use($v) {
+        echo "Hello World: $v!\n";
+    };
+};
+
+$closure = $getClosure(2);
+$closure();
+?>]]></example>
+
+<example fontsize="1.4em" result='0' title="Namespaces"><![CDATA[<?php
 // foo.php
 namespace foo;
 
@@ -20,6 +31,48 @@ $a = new b;
 ?>]]></example>
 
 <example fontsize="1.4em" hide="1" result='1' title="Output"><![CDATA[foo\bar]]></example>
+
+<example fontsize="1.4em" result='1' title="Late Static Binding"><![CDATA[<?php
+class TestClass {
+    public static function createInstance() {
+        return new static();
+    }
+}
+
+class ChildClass extends TestClass {}
+
+$testClass = TestClass::createInstance();
+$childClass = ChildClass::createInstance();
+
+echo get_class($testClass) . "<br>\n";
+echo get_class($childClass) . "<br>\n";
+?>]]></example>
+
+<example fontsize="1.4em" result="1" title="get_called_class"><![CDATA[<?php
+abstract class Singleton {
+    private static $instances = array();
+    final public static function getInstance() {
+        $className = get_called_class();
+        if(!isset(self::$instances[$className])) {
+            self::$instances[$className] = new $className();
+        }
+        return self::$instances[$className];
+    }
+}
+
+class foo extends Singleton { }
+class bar extends Singleton { }
+
+$a = foo::getInstance();
+$b = foo::getInstance();
+$c = bar::getInstance();
+
+echo '<pre>';
+var_dump($a);
+var_dump($b);
+var_dump($c);
+echo '</pre>';
+?>]]></example>
 
 <example fontsize="1.4em" result='1' title="NOWDOC"><![CDATA[<?php
 echo <<< 'EOB'
@@ -45,26 +98,6 @@ function foo() {
 end:
    // run cleanup code
 }
-?>]]></example>
-
-<example fontsize="1.4em" result="0" title="get_called_class"><![CDATA[<?php
-abstract class Singleton {
-    private static $instances = array();
-    final public static function getInstance() {
-        $className = get_called_class();
-        if(!isset(self::$instances[$className])) {
-            self::$instances[$className] = new $className();
-        }
-        return self::$instances[$className];
-    }
-}
-
-class foo extends Singleton { }
-class bar extends Singleton { }
-
-$a = foo::getInstance();
-$b = foo::getInstance();
-$c = bar::getInstance();
 ?>]]></example>
 
 <example fontsize="1.4em" result="1" title="DateInterval/DatePeriod"><![CDATA[<?php
