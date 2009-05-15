@@ -1,0 +1,31 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+
+<topic>PHP</topic>
+<title>PHP</title>
+<event>PHPDay</event>
+<location>Verona, Italy</location>
+<date>May 15, 2009</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/phpday1</url>
+<twitter>rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+
+<slide>slides/intro/php53.xml</slide>
+
+</presentation>

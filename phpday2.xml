@@ -1,0 +1,53 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="4.1em"
+>
+<!--
+Simple is Hard
+-->
+
+<topic>PHP</topic>
+<title>Simple is Hard</title>
+<event>PHPDay</event>
+<location>Verona, Italy</location>
+<date>May 15, 2009</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/phpday2</url>
+<twitter>rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/complex.xml</slide>
+<slide>slides/intro/complex2.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/hurdles3.xml</slide>
+<slide>slides/intro/scale1.xml</slide>
+<slide>slides/intro/modular.xml</slide>
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/lac1.xml</slide>
+<slide>slides/intro/lac2.xml</slide>
+<slide>slides/intro/lac3.xml</slide>
+<slide>slides/intro/lac4.xml</slide>
+<slide>slides/intro/lac5.xml</slide>
+<slide>slides/intro/lac6.xml</slide>
+<slide>slides/intro/lac7.xml</slide>
+<slide>slides/intro/lac8.xml</slide>
+<slide>slides/intro/lac9.xml</slide>
+<slide>slides/intro/lac10.xml</slide>
+<slide>slides/intro/lac11.xml</slide>
+
+<slide>slides/intro/twit0.xml</slide>
+<slide>slides/intro/twit1.xml</slide>
+<slide>slides/intro/twit2.xml</slide>
+<slide>slides/intro/twit3.xml</slide>
+<slide>slides/intro/twit4.xml</slide>
+
+<slide>slides/intro/perf_ref.xml</slide>
+
+</presentation>
