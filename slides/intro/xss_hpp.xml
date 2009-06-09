@@ -1,0 +1,11 @@
+<slide title="HPP">
+<break lines="6"/>
+
+<blurb fontsize="5em">HTTP Parameter Pollution</blurb>
+<example style="shell"><![CDATA[?app=mail%26action=delete]]></example>
+<example fontsize="1.5em" result="0"><![CDATA[<?php 
+echo <<<EOB
+<a href="http://example.yahoo.com?app={$_GET['app']}">Link</a>
+EOB;
+?>]]></example>
+</slide>
