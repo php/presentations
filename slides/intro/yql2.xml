@@ -12,7 +12,7 @@ try {
 select * from html where xpath=
 '//tr//a[@href="/wiki/Capital_(political)"]/../../../td[2]/a/text()'
 and url in (select url from search.web where url like '%wikipedia%'
-            and query='Denmark' limit 1)
+            and query='South Africa' limit 1)
 EOB;
 	$o->fetch("$url?q=".rawurlencode($q)."&format=json");
 /* Uncomment for debugging
