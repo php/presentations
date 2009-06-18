@@ -3,7 +3,7 @@
 <blurb fontsize="5em">Unfiltered PHP_SELF/REQUEST_URI</blurb>
 <example fontsize="1.6em" result="0"><![CDATA[<?php
 $uri = getenv('REQUEST_URI');
-$uri = $_SERVER('REQUEST_URI');
+$uri = $_SERVER['REQUEST_URI'];
 $uri = $PHP_SELF;
 $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_UNSAFE_RAW);
 ?>
