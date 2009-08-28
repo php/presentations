@@ -4,25 +4,25 @@
 
 <example><![CDATA[<?php
 $d = new Dbus;
-$n = new DbusObject( $d,
+$n = $d->createProxy(
 	"im.pidgin.purple.PurpleService",
 	"/im/pidgin/purple/PurpleObject",
 	"im.pidgin.purple.PurpleInterface"
 );
 
 $data = $n->PurpleAccountsGetAllActive();
-foreach ( $data[0]->getData() as $account )
+foreach( $data->getData() as $account )
 {
     $buddies = $n->PurpleFindBuddies( $account, '' );
     $protocol = $n->PurpleAccountGetProtocolName( $account );
-    echo $protocol[0], "\n";
-    foreach ( $buddies[0]->getData() as $buddyId )
+    echo $protocol, "\n";
+    foreach ( $buddies->getData() as $buddyId )
     {
         $online = $n->PurpleBuddyIsOnline( $buddyId );
         $alias = $n->PurpleBuddyGetAlias( $buddyId );
-        if ( $online[0] )
+        if ( $online )
         {
-            printf( "- %s\n", $alias[0] );
+            printf( "- %s\n", $alias );
         }
     }
 }

@@ -4,28 +4,36 @@
 
 <example><![CDATA[<?php
 $d = new Dbus( Dbus::BUS_SESSION, true );
-$n = new DbusObject( $d, "com.Skype.API", "/com/Skype", "com.Skype.API");
-$n->Invoke( "NAME PHP" ); $n->Invoke( "PROTOCOL 7" );
-$chatId = $n->Invoke( "CHAT CREATE username" );
-list( $ignore, $id, $stuff, $stuff2 ) = explode( " ", $chatId[0] );
-var_dump( $n->Invoke( "OPEN CHAT $id" ) );
+$n = $d->createProxy( "com.Skype.API", "/com/Skype", "com.Skype.API");
+$n->Invoke( "NAME PHP" );
+$n->Invoke( "PROTOCOL 7" );
+$n->Invoke( "CHAT CREATE omsmestad" );
+@list( $ignore, $id, $stuff, $stuff2 ) = explode( " ", $chatId );
+$n->Invoke( "OPEN CHAT $id" );
 
 class testClass {
     static function notify($a) {
         global $n;
-        @list( $a, $b, $c ) = explode( ' ', $a, 3 );
-        if ( $a === "CHATMESSAGE" ) {
+
+        @list( $a, $b, $c, $d ) = explode( ' ', $a, 4 );
+        if ( $a === "CHATMESSAGE" && ( $d === "RECEIVED" || $d == "SENT" ) )
+        {
+            $data = $n->Invoke( "GET CHATMESSAGE $b FROM_DISPNAME" );
+            @list( $a, $b, $c, $person ) = explode( ' ', $data, 4 );
+
             $data = $n->Invoke( "GET CHATMESSAGE $b BODY" );
-            list( $a, $b, $c, $body ) = explode( ' ', $data[0], 4 );
-            echo $body, "\n";
+            @list( $a, $b, $c, $body ) = explode( ' ', $data, 4 );
+            echo $person, ': ', $body, "\n";
         }
     }
 }
-$d->registerObject(
-	'/com/Skype/Client', 'com.Skype.API.Client', 'testClass' );
+
+$d->registerObject( '/com/Skype/Client', 'com.Skype.API.Client', 'testClass' );
+
 do {
     $s = $d->waitLoop( 1000 );
-} while ( true );
+}
+while ( true );
 ?>]]></example>
 
 </slide>
