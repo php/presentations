@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>New in 2009.1</title>
+
+	<list>
+		<bullet>Authentication: Open ID 2</bullet>
+		<bullet>Base: meta-data about eZ Components</bullet>
+		<bullet>Document: PDF writing support</bullet>
+		<bullet>EventLog: Memory writer</bullet>
+		<bullet>MvcTools: Reversed routes, improved support for reimplementations</bullet>
+		<bullet>MvcAuthenticationTiein: Authentication support for MvcTools</bullet>
+		<bullet>MvcFeedTiein: RSS feeds for MvcTools</bullet>
+		<bullet>PersistentObject: Identity management</bullet>
+		<bullet>Template: whitespace mangling functionality</bullet>
+		<bullet>Translation: script for extracting strings from a template</bullet>
+	</list>
+</slide>

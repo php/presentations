@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#000000"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Component Libraries</topic>
+<title>eZ Components Perspective</title>
+<event>eZ Conference 2009</event>
+<location>Paris, France</location>
+<date>June 24th, 2009</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/ezc/title-ezc-generic.xml</slide>
+
+<!-- introduction -->
+<slide>slides/ezc/overview.xml</slide>
+<slide>slides/toolbox/goals-library.xml</slide>
+<slide>slides/ezc/contributing.xml</slide>
+<slide>slides/toolbox/dependencies.xml</slide>
+<slide>slides/ezc/install.xml</slide>
+
+<!-- quick mvc intro -->
+<slide>slides/ezc/mvc-basic-ideas.xml</slide>
+<slide>slides/ezc/mvc-parts-overview.xml</slide>
+<slide>slides/ezc/mvc-dispatcher.xml</slide>
+<slide>slides/ezc/mvc-request-parser.xml</slide>
+<slide>slides/ezc/mvc-router.xml</slide>
+<slide>slides/ezc/mvc-router-own.xml</slide>
+<slide>slides/ezc/mvc-routing-information.xml</slide>
+<slide>slides/ezc/mvc-controller.xml</slide>
+<slide>slides/ezc/mvc-controller-algo.xml</slide>
+<slide>slides/ezc/mvc-views.xml</slide>
+<slide>slides/ezc/mvc-view-handlers.xml</slide>
+<slide>slides/ezc/mvc-response-writer.xml</slide>
+<slide>slides/ezc/mvc-filters.xml</slide>
+
+<!-- PDF and Document -->
+<slide>slides/ezc/new-2009.1.xml</slide>
+
+<!-- overview -->
+<slide>slides/ezc/support-commercial.xml</slide>
+<slide>slides/ezc/support.xml</slide>
+
+<slide>slides/ezc/questions.xml</slide>
+</presentation>

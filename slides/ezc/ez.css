@@ -391,10 +391,15 @@ body.white div.mainarea {
 	font-family: "MaxOT-book";
 }
 
+body.white div.mainarea-outer {
+	background: transparent url(presentations/slides/kiss/kiss-white.png) repeat fixed 0 0;
+}
+
 body.white div.mainarea-inner {
 	margin-right:auto;
 	margin-left:auto;
 	display: table;
+	opacity: 1;
 }
 
 div.blurb_gigantic {

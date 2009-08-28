@@ -15,6 +15,6 @@
 		<bullet>*ezcMvcTemplateViewHandler*: uses the template component to render result objects</bullet>
 		<bullet>*ezcMvcPhpViewHandler*: uses PHP files to render result objects</bullet>
 		<bullet>*ezcMvcJsonViewHandler*: renders result objects as JSON</bullet>
-		<bullet>|777777|*ezcMvcFeedViewHandler*: uses XML feeds to render result objects|</bullet>
+		<bullet>*ezcMvcFeedViewHandler*: uses XML feeds to render result objects</bullet>
 	</list>
 </slide>

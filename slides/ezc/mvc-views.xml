@@ -8,7 +8,7 @@
 		<bullet>Are implemented by inheriting from %ezcMvcView%.</bullet>
 		<bullet>Define zones with a view handler.</bullet>
 	</list>
-	<image align='center' filename='mvctools-zones.png'/>
+	<image align='center' filename='mvctools-zones.png' pdf-scale="0.5" y-offset="5"/>
 <break/>
 <example>&lt;?php class helloNameView extends ezcMvcView
 {
