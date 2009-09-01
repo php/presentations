@@ -4,7 +4,7 @@
 	<subtitle>Applying an interval</subtitle>
 
 	<example result="1"><![CDATA[<pre><?php
-$d = new DateTime( 'November 6th, 2008' );
+$d = new DateTime( 'August 27th, 2009' );
 
 $i = DateInterval::createFromDateString( "next weekday" );
 echo $d->add( $i )->format( "l Y-m-d\n" );

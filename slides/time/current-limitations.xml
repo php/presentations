@@ -11,5 +11,9 @@
 		<bullet>No way of dealing correctly with timezones</bullet>
 		<bullet>Some functions are Operating System dependent</bullet>
 	</list>
+
+	<list>
+		<bullet>*Avoid* functions that deal with timestamps as much as you can!</bullet>
+	</list>
 </slide>
 

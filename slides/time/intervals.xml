@@ -12,7 +12,7 @@ $i = new DateInterval( 'P3DT6H' );
 
 // from a difference
 $d1 = new DateTime();
-$d2 = new DateTime( "2008-12-12 09:15 Europe/Amsterdam" );
+$d2 = new DateTime( "2009-09-09 09:09 Europe/Amsterdam" );
 $i = $d1->diff( $d2 );
 
 // displaying the difference
