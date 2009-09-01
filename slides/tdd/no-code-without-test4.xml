@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>Code Coverage: 100% is not good enough</title>
+
+	<image align="center" filename="100-perc-cc.png"/>
+
+	<example><![CDATA[<?php require 'PathTest.php';
+class CcTest extends PHPUnit_Framework_TestCase
+{
+    public function testPath1()
+    {
+        self::assertEquals( 2, PathTest::testMethod( true, false ) );
+    }
+    public function testPath2()
+    {
+        self::assertEquals( 3, PathTest::testMethod( false, true ) );
+    }
+}
+?>]]></example>
+</slide>

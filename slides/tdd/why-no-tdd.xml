@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide fontsize="6em">
+	<title>What stops you from doing TDD?</title>
+
+	<blurb class="subtitle_blurb">Fear - more work to do</blurb>
+	<list>
+		<bullet>Introduce TDD concepts gently</bullet>
+		<bullet>Whenever a problem is found, make and retain a test case for futher use</bullet>
+		<bullet>Start using TDD for new projects</bullet>
+	</list>
+
+	<blurb class="subtitle_blurb">Ignorance - too much time spent on testing</blurb>
+	<list>
+		<bullet>Out of date with modern processes</bullet>
+		<bullet>Belief that testing slows the schedule (only if you follow the
+		ship-and-see process)</bullet>
+		<bullet>You save time later, because you wouldn't have to re-test or
+		re-debug newly written additions or big fixes.</bullet>
+	</list>
+</slide>

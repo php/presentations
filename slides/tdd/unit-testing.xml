@@ -10,6 +10,7 @@
 	<blurb>The testing of a whole integrated system against the specified
 	requirements. ~*Tools*: Selenium~</blurb>
 <break lines="2"/>
+<image align="left" filename="chorizo.jpg"/>
 	<blurb class="blurb_header">Non-functional Testing</blurb>
 	<blurb>Testing for performance, load, stress, reliability, availability,
 	security. ~*Tools*: ab, siege, httperf, chorizo~</blurb>
