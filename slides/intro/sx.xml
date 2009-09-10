@@ -1,10 +1,10 @@
 <slide title="Simple XML">
 <example title="Book XML File"><![CDATA[<books>
-  <book>
+  <book id="1">
     <title>The Grapes of Wrath</title>
     <author>John Steinbeck</author>
   </book>
-  <book>
+  <book id="2">
     <title>The Pearl</title>
     <author>John Steinbeck</author>
   </book>
@@ -13,7 +13,7 @@
 $books = simplexml_load_file('presentations/slides/intro/book.xml');
 
 foreach ($books->book as $book) {
-  echo "{$book->title} was written by {$book->author}<br>\n";
+  echo "{$book['id']}. {$book->title} was written by {$book->author}<br>\n";
 }
 ?>]]></example>
 </slide>
