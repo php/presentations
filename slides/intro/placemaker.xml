@@ -1,6 +1,33 @@
 <slide title="Placemaker">
 <break lines="1" />
 <link marginleft="1em" fontsize="4em" href="http://developer.yahoo.com/geo/placemaker"/>
-<example title="placemaker.php" filename="placemaker.php" hide="0" result="0" fontsize="1.5em" marginright="0em"/>
-<example title="" filename="placemaker.php" hide="1" result="1" marginright="0em" type="iframe"/>
+<example fontsize="1.7em" result="1"><![CDATA[<?php
+ $url = 'http://wherein.yahooapis.com/v1/document';
+ $appid = 'Gux4Z8LIkY1IKfVXnRcMegs3IjNfmUhl';
+ $type = 'documentType=text/plain';
+ $q = <<<EOB
+I was born in Greenland, grew up in Denmark and have also lived
+in Canada, Brazil and now live in Sunnyvale.  Currently at the
+University of Illinois in Champaign for Hack Day.  Jack London
+is not around.
+EOB;
+
+ $post="appid=$appid&$type&documentContent=".rawurlencode($q);
+ $ch = curl_init();
+ curl_setopt($ch, CURLOPT_URL, $url);
+ curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+ curl_setopt($ch, CURLOPT_POST, 1);
+ curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+ $data = curl_exec($ch);
+ curl_close($ch);
+ $x = simplexml_load_string($data);
+ foreach($x->document->placeDetails as $p) {
+   $woeid =$p->place->woeId;
+   $type = $p->place->type;
+   $name = $p->place->name;
+   $lat = $p->place->centroid->latitude;
+   $lon = $p->place->centroid->longitude;
+   echo "$woeid $type: $name at $lat,$lon<br>\n";
+ }
+?>]]></example>
 </slide>
