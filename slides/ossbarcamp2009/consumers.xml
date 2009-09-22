@@ -1,0 +1,15 @@
+<slide title="are you a PEAR consumer?">
+<blurb>
+A lot of solutions written in php use pear components - so you might be using
+PEAR as a consumer already.
+</blurb>
+<list>
+<li>phpmyadmin: Spreadsheet_Excel_Writer and PEAR_SOAP</li>
+<li>mediawiki: Text_Diff</li>
+<li>egroupware: HTTP_WebDAV, Net_IMAP</li>
+<li>gallery2: HTML_Safe, Mail_Mime</li>
+<li>magento uses pear to update the system and manage plugins</li>
+<li>symfony does similar</li>
+<li>horde</li>
+</list>
+</slide>

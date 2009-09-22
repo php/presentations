@@ -1,0 +1,29 @@
+<presentation
+    jskeyboard="1"
+    template="php"
+    logo1="/images/pear.png"
+    logoimage1url="http://pear.php.net/"
+    navbarbackground="#339900"
+    backgroundcol="#f0f0f0"
+    navsize="1.4em">
+  <topic>PEAR</topic>
+  <title>PEAR</title>
+  <event>OSSBarCamp</event>
+  <location>Dublin</location>
+  <date>September 19, 2009</date>
+  <speaker>Ken Guest</speaker>
+  <email>kguest@php.net</email>
+<url>http://pear.php.net/</url>
+  <slide>slides/ossbarcamp2009/titlepage.xml</slide>
+  <slide>slides/ossbarcamp2009/intro.xml</slide>
+  <slide>slides/ossbarcamp2009/consumers.xml</slide>
+  <slide>slides/ossbarcamp2009/packages.xml</slide>
+  <slide>slides/ossbarcamp2009/tools.xml</slide>
+  <slide>slides/ossbarcamp2009/installer.xml</slide>
+  <slide>slides/ossbarcamp2009/qualityassurance.xml</slide>
+  <slide>slides/ossbarcamp2009/whyusepear.xml</slide>
+  <slide>slides/ossbarcamp2009/contributing.xml</slide>
+  <slide>slides/ossbarcamp2009/support.xml</slide>
+  <slide>slides/ossbarcamp2009/resources.xml</slide>
+  <slide>slides/ossbarcamp2009/contact.xml</slide>
+</presentation>
