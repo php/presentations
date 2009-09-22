@@ -1,11 +1,9 @@
 <slide title="Resources">
-<list fontsize="5em"  effect="slide">
-<bullet>http://go-pear.org/</bullet>
-<bullet>http://pear.php.net/support/</bullet>
-<bullet>PEAR Installer Manifesto by Greg Beaver</bullet>
-<bullet>http://www.packtpub.com/PEAR-Installer/book</bullet>
-<bullet>http://pear.php.net/manual/</bullet>
-<bullet>http://pear.php.net/manual/en/installation.shared.php</bullet>
-<bullet>http://pear.php.net/manual/en/installation.cli.php</bullet> 
-</list>
+<blurb title="Official"/>
+<link target="_new" marginleft="1em" leader="Support:" href="http://pear.php.net/support/"/>
+<link target="_new" marginleft="1em" leader="The PEAR Manual: " href="http://pear.php.net/manual/"/>
+<link target="_new" marginleft="1em" leader="Installing to a shared host: " href="http://pear.php.net/manual/en/installation.shared.php"/>
+<break lines="3" />
+<blurb title="Unofficial"/>
+<link target="_new" marginleft="1em" leader="PEAR Installer Manifesto: " href="http://www.packtpub.com/PEAR-Installer/book"/>
 </slide>

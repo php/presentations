@@ -1,18 +1,17 @@
 <slide title="Tools for the PHP Developer">
-<blurb>a number of tools for the php developer are available through
-PEAR:</blurb>
+<blurb>A number of tools for the PHP developer are available through PEAR:</blurb>
 <list>
-<bullet>php_codesniffer (conformance to Coding Standards)</bullet>
+<bullet>PHP_CodeSniffer (conformance to Coding Standards)</bullet>
 <bullet>PhpDocumentor (generate documentation)</bullet>
-<bullet>php_uml (analyse code, generate UML)</bullet>
+<bullet>PHP_UML (analyse code, generate UML)</bullet>
 </list>
 <blurb>
-and on other pear channels:
+And on other PEAR channels:
 </blurb>
 <list>
-<bullet>phpunit.de/phpunit (unit testing)</bullet>
-<bullet>phpunit.de/phpcpd  (tool for spotting when to refactor)</bullet>
-<bullet>phpunit.de/phploc  (stats)</bullet>
+<bullet>phpunit.de/PHPUnit (unit testing)</bullet>
+<bullet>phpunit.de/phpcpd (copy/paste detection, to spot when to refactor)</bullet>
+<bullet>phpunit.de/phpUnderControl (CruiseControl integration)</bullet>
 <bullet>pear.pdepend.org/PHP_Depend (metric tool)</bullet>
 </list>
 

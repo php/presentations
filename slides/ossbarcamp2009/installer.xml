@@ -1,28 +1,28 @@
 <slide title="The Installer">
 <blurb>
-why deploy code via a pear installer?
+Why deploy code via a PEAR installer?
 </blurb>
 <list>
 <bullet>
-imagine a new release of a package you've bundled comes out fixing a critical
+Imagine a new release of a package you've bundled comes out fixing a critical
 security issue.</bullet><bullet> Do you tell your users/customers to copy files on top of others
 and risk things being done incorrectly... 
 </bullet><bullet>...or just do $pear upgrade package-1.01  ?
 </bullet>
 <bullet>
-you can use the pear installer for deploying your own applications and
+You can use the pear installer for deploying your own applications and
 packages.
 </bullet>
 </list>
 <blurb>
-why not rpm or deb or....just include everything in one big archive
+Why not RPM or DEB? Or just include everything in one big archive?
 </blurb>
 
 <list>
-<bullet>pear packages are operating system agnostic</bullet>
-<bullet>have a 'state' indicating maturity (devel/alpha/beta/stable)</bullet>
-<bullet>have release version numbers </bullet>
-<bullet>contain examples, unit tests, documentation</bullet>
-<bullet>the installer handles interdependencies</bullet>
+<bullet>PEAR packages are operating system agnostic</bullet>
+<bullet>Have a 'state' indicating maturity (devel/alpha/beta/stable)</bullet>
+<bullet>Have release version numbers </bullet>
+<bullet>Contain examples, unit tests, documentation</bullet>
+<bullet>The installer handles interdependencies</bullet>
 </list>
 </slide>

@@ -1,15 +1,15 @@
 <slide title="Packages">
-<blurb>there are other well used packages...</blurb>
+<blurb>There are other well used packages:</blurb>
 <list>
-<li>HTTP_OAUTH</li>
-<li>services_digg</li>
-<li>services_twitter</li>
-<li>mail_queue</li>
-<li>validate</li>
+<li>HTTP_OAuth (new, but expected to get a lot of attention)</li>
+<li>Services_Digg</li>
+<li>Services_Twitter</li>
+<li>Mail_Queue</li>
+<li>Validate</li>
 </list>
 
 
 <blurb>
-have a look at pear.php.net
+<link target="_new" marginleft="1em"  leader="Have a look at " href="http://pear.php.net/packages.php"/>
 </blurb>
 </slide>
