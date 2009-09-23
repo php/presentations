@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide fontsize="6em">
+	<title>Timeboxing</title>
+	<subtitle>Sprints</subtitle>
+
+<break lines="2"/>
+	<image align="center" filename="scrumm2.png" />
+<break lines="2"/>
+	<list>
+		<bullet>Springs are generally 3 to 4 weeks</bullet>
+		<bullet>*Every* aspect needs to have a user talk: specs, design, testing, peer review, releasing</bullet>
+		<bullet>A feature can be split over multiple sprints if needed</bullet>
+		<bullet>After every sprint you should have something that you can
+		immediately release. (Doesn't mean every functionality should be
+		exposed yet of course).</bullet>
+	</list>
+
+</slide>

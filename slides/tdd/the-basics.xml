@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>Introducing the Basics</title>
+
+	<list>
+		<bullet>Set-up some sort of process and guidelines: coding standards,
+		local development server, pushing out to staging/live servers, plan
+		time for testing</bullet>
+		<bullet>Source Control: CVS, SVN, or some of the newer ones</bullet>
+		<bullet>Write requirements and specifications</bullet>
+	</list>
+</slide>

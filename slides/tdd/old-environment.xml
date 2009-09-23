@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>The Old Environment</title>
+
+	<blurb>Years ago, this is how I started... and how many new PHP
+	developers still start when they get acquainted with the
+	language:</blurb>
+
+	<list>
+		<bullet effect="hide">PHP files are on the server only</bullet>
+		<bullet effect="hide">They are editted with a very simple editor, like vim</bullet>
+		<bullet effect="hide">(Alternatively, FTP and Notepad are used)</bullet>
+		<bullet effect="hide">Coding standards are optional</bullet>
+	</list>
+
+<div effect="hide">
+	<blurb>In more commercial environments, many things are often
+	missing:</blurb>
+	<list>
+		<bullet effect="hide">There are no proper specs</bullet>
+		<bullet effect="hide">Source control is not heard off</bullet>
+		<bullet effect="hide">Things are released or delivered "when they are
+		ready"</bullet>
+		<bullet effect="hide">*This is not a sustainable environment*</bullet>
+	</list>
+</div>
+</slide>

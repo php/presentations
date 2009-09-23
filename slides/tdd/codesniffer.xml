@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>Coding Standards</title>
+
+	<list>
+		<bullet>Makes it easier for all participants of the team to read
+		code, as all the code conforms to the same rules.</bullet>
+		<bullet>Best checked for with a tool: PHP Code Sniffer
+		(http://pear.php.net/package/PHP_CodeSniffer/)</bullet>
+		<bullet>Standard uses the PEAR Coding Standards, but the rules
+		can easily be modified.</bullet>
+	</list>
+
+	<example><![CDATA[FILE: ...home/derick/dev/ezcomponents/trunk/Configuration/src/ini/ini_parser.php
+--------------------------------------------------------------------------------
+FOUND 148 ERROR(S) AND 17 WARNING(S) AFFECTING 89 LINE(S)
+--------------------------------------------------------------------------------
+   5 | ERROR   | @package tag comment indented incorrectly. Expected 3 spaces
+     |         | but found 1.
+   6 | WARNING | Invalid version "//autogen//" in file comment; consider "CVS:
+     |         | <cvs_id>" or "SVN: <svn_id>" instead
+   6 | ERROR   | The @version tag is in the wrong order; the tag follows
+     |         | @license
+   8 | ERROR   | @license tag comment indented incorrectly. Expected 3 spaces]]></example>
+</slide>
