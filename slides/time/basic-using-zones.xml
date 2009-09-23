@@ -4,7 +4,7 @@
 
 	<blurb>Specifying timezone abbreviation while parsing:</blurb>
 	<example><![CDATA[<?php
-	$ts = date_create("1978-12-22 09:15 CET");
+	$ts = new DateTime("1978-12-22 09:15 CET");
 ?>]]></example>
 <break lines="3"/>
 	<blurb>Using timezone abbreviations is deprecated, one should always use
@@ -13,6 +13,6 @@
 
 	<blurb>Specifying timezone identifier while parsing:</blurb>
 	<example><![CDATA[<?php
-	$ts = date_create("1978-12-22 09:15 Europe/Oslo");
+	$ts = new DateTime("1978-12-22 09:15 Europe/Oslo");
 ?>]]></example>
 </slide>

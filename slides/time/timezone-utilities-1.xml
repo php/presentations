@@ -4,9 +4,7 @@
 	<subtitle>Transition Times and Location Information</subtitle>
 
 	<example result="1"><![CDATA[<?php
-	$tz = timezone_open("America/Caracas");
-	$trs = $tz->getTransitions();
-	// new in PHP 5.3:
+	$tz = new DateTimeZone("America/Caracas");
 	$trs = $tz->getTransitions(strtotime('1960-01-01 UTC'));
 
 	echo "<pre>\n";
@@ -15,7 +13,6 @@
 			$tr['time'], $tr['offset'], $tr['isdst'], $tr['abbr']);
 	}
 
-	// new in PHP 5.3:
 	$loc = $tz->getLocation();
 	echo 'Info: ', join( ' - ', $loc ), "\n";]]></example>
 </slide>

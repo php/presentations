@@ -5,11 +5,11 @@
 
 	<blurb>Getting a timezone's name:</blurb>
 	<example result="1"><![CDATA[<?php
-	$tz = timezone_open("Asia/Singapore");
-	echo timezone_name_get($tz), ', ';
+	$tz = new DateTimeZone("Asia/Singapore");
+	echo $tz->getName(), ', ';
 
-	$tz = timezone_open("CEST");
-	echo timezone_name_get($tz);
+	$tz = new DateTimeZone("CEST");
+	echo $tz->getName();
 ?>]]></example>
 <break lines="2"/>
 

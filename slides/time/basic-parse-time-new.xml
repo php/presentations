@@ -2,13 +2,8 @@
 <slide>
 	<title>Parsing Dates - Take #2</title>
 
-	<blurb>Parsing strings for date time information with the ~date_create()~ function:</blurb>
-	<example><![CDATA[<?php
-	$ts = date_create("1978-12-22 09:15:50");
-?>]]></example>
-<break/>
-
-	<blurb>Alternatively you can just instantiate a DateTime object:</blurb>
+	<blurb>Parsing strings for date time information by instantiating a
+	DateTime object:</blurb>
 	<example><![CDATA[<?php
 	$ts = new DateTime("2006-11-07 16:12:15");
 ?>]]></example>

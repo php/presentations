@@ -10,17 +10,4 @@
 	echo implode(", ", array_slice($ids, 0, 5)), '...';
 	echo implode(", ", array_slice($ids, -5));
 ?>]]></example>
-<break lines="2"/>
-
-	<blurb>All supported timezone abbreviations:</blurb>
-	<example result="1"><![CDATA[<?php
-	$abbrs = timezone_abbreviations_list();
-	echo "<pre>\n";
-	foreach ($abbrs as $abbr => $ids) {
-		foreach ($ids as $id) {
-			printf("%-6s %6d %d %s\n", strtoupper($abbr),
-				$id['offset'], $id['dst'], $id['timezone_id']);
-		}
-	}
-?>]]></example>
 </slide>

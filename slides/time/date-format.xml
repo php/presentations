@@ -5,8 +5,8 @@
 	<blurb>Formatting using format specifiers:</blurb>
 	<example result="1"><![CDATA[<?php
 	date_default_timezone_set("Europe/Oslo");
-	$ts = date_create("1979-12-31 09:15");
-	echo date_format($ts, "D Y-m-d H:i:s - \I\S\O \W/\Y: W/o"), "<br/>\n";]]></example>
+	$ts = new DateTime("1979-12-31 09:15");
+	echo $ts->format("D Y-m-d H:i:s - \I\S\O \W/\Y: W/o"), "<br/>\n";]]></example>
 <break/>
 	<blurb>All format modifiers as supported by ~date()~ are supported too.</blurb>
 <break lines="2"/>
@@ -14,8 +14,8 @@
 	<blurb>Predefined formats:</blurb>
 	<example result="1"><![CDATA[<?php
 	date_default_timezone_set("Europe/Oslo");
-	$ts = date_create("December 22nd, 2005 15:41");
-	echo date_format($ts, DATE_ISO8601), "<br/>\n";
-	echo date_format($ts, DateTime::RFC1036), "<br/>\n";
-	echo date_format($ts, DATE_RSS), "<br/>\n";]]></example>
+	$ts = new DateTime("December 22nd, 2005 15:41");
+	echo $ts->format(DATE_ISO8601), "<br/>\n";
+	echo $ts->format(DateTime::RFC1036), "<br/>\n";
+	echo $ts->format(DATE_RSS), "<br/>\n";]]></example>
 </slide>
