@@ -10,7 +10,7 @@ echo DateTime::createFromFormat( '!m/d/y', $date )->format( DateTime::ISO8601 ),
 ?>]]></example>
 <break/>
 	
-	<blurb>Parsing strings with the ~date_parse_format_format()~ function:</blurb>
+	<blurb>Parsing strings with the ~date_parse_from_format()~ function:</blurb>
 	<example result="1"><![CDATA[<?php
 $date = "06/08/04";
 print_r( date_parse_from_format( '!m*d*y', $date ) );
