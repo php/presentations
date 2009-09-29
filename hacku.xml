@@ -8,11 +8,11 @@
     navbarheight="3.4em"
 >
 <topic>PHP</topic>
-<title>HackU at UIUC</title>
-<location>Champaign, IL</location>
-<date>Sept. 14, 2009</date>
+<title>HackU at CMU</title>
+<location>Pittsburgh, PA</location>
+<date>Sept. 29, 2009</date>
 <speaker>Rasmus Lerdorf</speaker>
-<email>rasmus@php.net</email>
+<twitter>@rasmus</twitter>
 <url>http://talks.php.net/show/hacku</url>
 
 <slide>slides/intro/titlepage.xml</slide>
@@ -39,6 +39,7 @@
 <slide>slides/hacku/whatisit.xml</slide>
 <slide>slides/hacku/sched.xml</slide>
 <slide>slides/hacku/getready.xml</slide>
+<slide>slides/hacku/besmart.xml</slide>
 <slide>slides/hacku/hacku0.xml</slide>
 
 <slide>slides/hacku/examples.xml</slide>
@@ -59,10 +60,8 @@
 <slide>slides/intro/yajax.xml</slide>
 
 <slide>slides/hacku/geoloc.xml</slide>
-<slide>slides/intro/geoplanet.xml</slide>
 <slide>slides/intro/yql.xml</slide>
 <slide>slides/intro/yql2.xml</slide>
-<slide>slides/intro/boss.xml</slide>
 
 <slide>slides/intro/sm1.xml</slide>
 <slide>slides/intro/sm2.xml</slide>
