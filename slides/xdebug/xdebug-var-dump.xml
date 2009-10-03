@@ -7,6 +7,7 @@
 	<example><![CDATA[<?php
 ini_set( 'xdebug.var_display_max_data', 25 );
 ini_set( 'xdebug.var_display_max_depth', 4 );
+ini_set( 'xdebug.var_display_max_children', 32 );
 
 xdebug_var_dump(); // or just var_dump()
 ?>]]></example>

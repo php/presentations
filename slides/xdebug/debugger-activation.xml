@@ -13,7 +13,7 @@ xdebug.extended_info=1</example>
 	<break lines="2"/>
 
 	<blurb>On the shell:</blurb>
-	<blurb class="small_blurb">%  export XDEBUG_CONFIG="idekey=xdebugrocks remote_enable=1"%</blurb>
+	<blurb class="small_blurb">%  export XDEBUG_CONFIG="idekey=xdebugrocks"%</blurb>
 
 	<break lines="2"/>
 

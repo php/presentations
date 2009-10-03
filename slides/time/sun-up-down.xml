@@ -3,7 +3,7 @@
 	<title>Sunset/Sunrise</title>
 
 	<example result="1"><![CDATA[<pre><font size="5"><?php
-date_default_timezone_set('Europe/London');
+date_default_timezone_set('America/New_York');
 if (isset($_POST['country'])) {
   mysql_connect('localhost', 'root', 'wee123'); mysql_select_db('geolocation');
   $re = mysql_query( "SELECT * FROM city where country='{$_POST['country']}' AND normalized_name='{$_POST['city']}'" );

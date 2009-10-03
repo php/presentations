@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Localization and Internationalization</topic>
+<title>Time = Money</title>
+<event>CodeWorks 2009</event>
+<location>Miami, US</location>
+<date>Oct 1st, 2009</date>
+<speaker>Derick Rethans</speaker>
+<email>dr@ez.no</email>
+<url>http://derickrethans.nl/talks.php</url>
+<slide>slides/perf/title.xml</slide>
+<joindin>http://joind.in/787</joindin>
+
+<!-- INTRODUCTION -->
+<slide>slides/time/what-is-time5.xml</slide>
+<slide>slides/time/problems-timezones.xml</slide>
+<slide>slides/time/problems-dst.xml</slide>
+<slide>slides/time/problems-dst2.xml</slide>
+<slide>slides/time/problems-dst3.xml</slide>
+<slide>slides/time/problems-timezone-abbr.xml</slide>
+
+<!-- PHP - CURRENT -->
+<slide>slides/time/current-limitations.xml</slide>
+
+<!-- PHP - IMPROVEMENTS -->
+<slide>slides/time/improvements-overview.xml</slide>
+<slide>slides/time/improvements-formats.xml</slide>
+<slide>slides/time/improvements-timezones.xml</slide>
+<slide>slides/time/improvements-timezones-which-to-use.xml</slide>
+<slide>slides/time/improvements-more-on-timezones.xml</slide>
+
+<!-- PHP - CODE EXAMPLES -->
+<slide>slides/time/basic-parse-time.xml</slide>
+<slide>slides/time/basic-parse-time-new.xml</slide>
+<slide>slides/time/date-parse.xml</slide>
+<slide>slides/time/date-parse-from-format.xml</slide>
+
+<!-- DATE EXAMPLES -->
+<slide>slides/time/date-format.xml</slide>
+<slide>slides/time/date-modify2.xml</slide>
+<slide>slides/time/date-modify.xml</slide>
+<slide>slides/time/basic-using-zones.xml</slide>
+<slide>slides/time/default-timezone.xml</slide>
+<slide>slides/time/timezone-object-1.xml</slide>
+<slide>slides/time/timezone-object-2.xml</slide>
+<slide>slides/time/date-timezone.xml</slide>
+<slide>slides/time/timezone-utilities-1.xml</slide>
+<slide>slides/time/timezone-utilities-2.xml</slide>
+<slide>slides/time/timezone-utilities-3.xml</slide>
+
+<!-- INTERVALS and PERIODS -->
+<slide>slides/time/intervals.xml</slide>
+<slide>slides/time/intervals-2.xml</slide>
+<slide>slides/time/period-1.xml</slide>
+<slide>slides/time/period-2.xml</slide>
+
+<!-- EXIT -->
+<slide>slides/time/book.xml</slide> <!-- resources -->
+<slide>slides/time/resources.xml</slide> <!-- resources -->
+<slide>slides/time/user-timezone.xml</slide>
+<slide>slides/time/sun-up-down.xml</slide>
+</presentation>
