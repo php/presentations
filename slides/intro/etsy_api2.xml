@@ -1,0 +1,105 @@
+<slide title="The entire Etsy API on a slide">
+<break lines="1" />
+<blurb fontsize="4em">|ff0000|http://beta-api.etsy.com/v1/?api_key=123456789| Cool!</blurb>
+<example fontsize="1.2em" type="php"><![CDATA[<?php
+class Etsy {
+  private $_cfg = array('endpoint'=>'http://beta-api.etsy.com/v1');
+
+  function __construct($params = array()) {
+    foreach($params as $k => $v) {
+      $this->_cfg[$k] = $v;
+    }
+    if(!$this->_cfg['api_key']) {
+      throw new Exception("You must supply an api_key");
+    }
+  }
+
+  function __call($cmd,$args) {
+    if(!($methods = apc_fetch('etsy_methods'))) {
+      $meths = cache_json($this->_cfg['endpoint'].'/?api_key='.$this->_cfg['api_key'],604800);
+      foreach($meths['results'] as $meth) {
+        $name = $meth['name'];
+        unset($meth['name']);
+        $methods[$name] = $meth;
+      }
+    }
+
+    if(!isset($methods[$cmd])) {
+      throw new Exception("Method $cmd not found"); 
+      return false;
+    }
+    $uri = $methods[$cmd]['uri'];
+    preg_match_all('~{(.*?)}~',$uri,$regs);
+    $req_count = count($regs[1]);
+    $arg_count = count($args);
+    if($arg_count < $req_count) 
+      throw new Exception("$cmd requires $req_count arguments, you provided $arg_count");
+
+    // Substitute required arguments
+    foreach($regs[1] as $i=>$req_arg) {
+      $uri = str_replace('{'.$req_arg.'}',rawurlencode($args[$i]),$uri);
+    }
+
+    // Substitute optional arguments
+    if($arg_count>$req_count) {
+      $get_args = '?';
+      $params = array_keys($methods[$cmd]['params']);
+      for($i=$req_count; $i<$arg_count; $i++) {
+        $get_args .= $params[$i].'='.rawurlencode($args[$i]).'&';
+      } 
+      $uri .= $get_args;
+    }
+    $uri .= 'api_key='.$this->_cfg['api_key'];
+    $resp = cache_json($this->_cfg['endpoint'].$uri);
+    return $resp;
+  }  
+}
+?>]]></example>
+
+<blurb>We can now do things like this</blurb>
+<example fontsize="1.2em" type="php" result="0"><![CDATA[<?php
+  $e = new Etsy(array('api_key'=>$api_key));
+  $listings = $e->getListingsByColor($rgb,$wiggle,0,$listings,'medium');
+  foreach($listings as $l) {
+    echo <<<EOB
+<a href="{$l['url']}">
+ <img src="{$l['image_url_75x75']}" title="$title" height=75 width=75>
+</a>
+EOB;
+  } 
+?>]]></example>
+
+<blurb>cache_json looks like this:</blurb>
+<example fontsize="1.2em" type="php" result="0"><![CDATA[<?php
+function cache_json($url,$ttl=7200) {
+  $tmp = '/var/tmp/etsy/json_'.md5($url);
+  if(file_exists($tmp)) $st = stat($tmp);
+  if(!$st || $st && ($st['size']<10 || $st['mtime']<($_SERVER['REQUEST_TIME']-$ttl))) {
+    if($st && $st['size']>=10) touch($tmp); // Keep re-using entry
+    $stream = fopen($url,'r');              // until new is ready
+    $tmpf = tempnam('/tmp','YWS');
+    file_put_contents($tmpf, $stream);
+    fclose($stream);
+    rename($tmpf, $tmp);
+  }
+  $data = file_get_contents($tmp);
+  $ret = json_decode($data, true);
+  if(($err = json_last_error())!=JSON_ERROR_NONE) {
+    switch(json_last_error()) {
+      case JSON_ERROR_DEPTH:
+           throw new Exception("JSON - Maximum stack depth exceeded");
+           break;
+      case JSON_ERROR_CTRL_CHAR:
+           throw new Exception("JSON - Unexpected control character found");
+           break;
+      case JSON_ERROR_SYNTAX:
+           throw new Exception("JSON - Syntax error, malformed JSON");
+           break;
+    }
+    return false;
+  }
+  return $ret;
+}
+?>]]></example>
+
+</slide>

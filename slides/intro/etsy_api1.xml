@@ -1,0 +1,15 @@
+<slide title="Etsy API">
+<break lines="1" />
+<example fontsize="2.8em" type="php"><![CDATA[http://beta-api.etsy.com/v1/a/b?c=1&d=2]]></example>
+<blurb fontsize="3.5em">|ff0000|/a/b| is what we are looking for</blurb>
+<blurb fontsize="3.5em">|ff0000|?c=1&amp;d=2| are optional modifiers</blurb>
+
+<blurb fontsize="5em">Reply Codes</blurb>
+<blurb fontsize="3.5em">|ff0000|200| success</blurb>
+<blurb fontsize="3.5em">|ff0000|400| bad request</blurb>
+<blurb fontsize="3.5em">|ff0000|403| you got rate limited!</blurb>
+<blurb fontsize="3.5em">|ff0000|404| you screwed up</blurb>
+<blurb fontsize="3.5em">|ff0000|500| Etsy screwed up</blurb>
+<blurb fontsize="3.5em">|ff0000|503| Etsy is fixing stuff</blurb>
+
+</slide>

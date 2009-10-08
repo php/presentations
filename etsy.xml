@@ -1,0 +1,59 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="3.4em"
+>
+<topic>PHP</topic>
+<title>Tech Talk at Etsy</title>
+<location>Brooklyn, NY</location>
+<date>Oct. 9, 2009</date>
+<speaker>Rasmus Lerdorf</speaker>
+<twitter>@rasmus</twitter>
+<url>http://talks.php.net/show/etsy</url>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/etsy_agenda.xml</slide>
+<slide>slides/intro/phpjs_learn.xml</slide>
+<slide>slides/intro/sx.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+
+<slide>slides/intro/ws4.xml</slide>
+<slide>slides/intro/placemaker.xml</slide>
+
+<slide>slides/intro/php_js1.xml</slide>
+<slide>slides/intro/php_js2.xml</slide>
+
+<slide>slides/intro/yajax.xml</slide>
+
+<slide>slides/hacku/geoloc.xml</slide>
+<slide>slides/intro/yql.xml</slide>
+<slide>slides/intro/yql2.xml</slide>
+
+<slide>slides/intro/etsy_api1.xml</slide>
+<slide>slides/intro/etsy_api2.xml</slide>
+
+<slide>slides/intro/never_click_title.xml</slide>
+<slide>slides/intro/ff2005.xml</slide>
+<slide>slides/intro/url_handlers.xml</slide>
+<slide>slides/intro/xss_basic.xml</slide>
+<slide>slides/intro/xss_risks.xml</slide>
+<slide>slides/intro/input_filter2.xml</slide>
+<slide>slides/intro/xss_type1.xml</slide>
+<slide>slides/intro/xss_type2.xml</slide>
+<slide>slides/intro/xss_type3.xml</slide>
+<slide>slides/intro/xss_type4.xml</slide>
+<slide>slides/intro/xss_type5.xml</slide>
+<slide>slides/intro/xss_type6.xml</slide>
+<slide>slides/intro/xss_type7.xml</slide>
+<slide>slides/intro/xss_type8.xml</slide>
+<slide>slides/intro/xss_type9.xml</slide>
+<slide>slides/intro/xss_hpp.xml</slide>
+
+<slide>slides/intro/etsy_ref.xml</slide>
+
+</presentation>

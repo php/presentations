@@ -9,7 +9,7 @@
 
 <example title="Public Flickr Search" result="1" fontsize="1.4em"><![CDATA[<?php
 $url = "http://query.yahooapis.com/v1/public/yql?q=";
-$q   = "select * from flickr.photos.search(100) where text='hacku'";
+$q   = "select * from flickr.photos.search(100) where text='etsy'";
 $fmt = "xml";
 
 $x = simplexml_load_file($url.urlencode($q)."&format=$fmt");
@@ -27,6 +27,25 @@ EOB;
 $flickr = "http://static.flickr.com/";
 foreach($x->results->photo as $p) {
   echo "<img src=\"$flickr{$p['server']}/{$p['id']}_{$p['secret']}_s.jpg\"/>\n";
+}
+?>]]></example>
+
+<example title="Etsy Listings Search" result="1" fontsize="1.4em"><![CDATA[<?php
+include 'secrets.inc';
+$url = "http://query.yahooapis.com/v1/public/yql?q=";
+$q   = "select * from etsy.listings(100) 
+        where color='AAAA22' and wiggle=8 and api_key='$etsy_api_key'";
+$env = 'store://datatables.org/alltableswithkeys';
+$fmt = "xml";
+
+$x = simplexml_load_file($url.urlencode($q)."&format=$fmt&env=".urlencode($env));
+
+foreach($x->results->results as $l) {
+  echo <<<EOB
+<a href="{$l->url}">
+<img src="{$l->image_url_200x200}" title="{$l->listing_id}: {$l->title}">
+</a>
+EOB;
 }
 ?>]]></example>
 
