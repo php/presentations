@@ -7,9 +7,9 @@
  $type = 'documentType=text/plain';
  $q = <<<EOB
 I was born in Greenland, grew up in Denmark and have also lived
-in Canada, Brazil and now live in Sunnyvale.  Currently at Etsy
-at 55 Washington Street in Brooklyn, NY giving a talk.  Jack
-London is not around.
+in Canada, Brazil and now live in Sunnyvale.  Currently at OpenHack
+near Times Square giving a talk.  On Sunday I fly to Toronto.
+Jack London is not around.
 EOB;
 
  $post="appid=$appid&$type&documentContent=".rawurlencode($q);
