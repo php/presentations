@@ -8,9 +8,9 @@
     navbarheight="3.4em"
 >
 <topic>PHP</topic>
-<title>HackU at CMU</title>
-<location>Pittsburgh, PA</location>
-<date>Sept. 29, 2009</date>
+<title>HackU at U of Waterloo/Toronto</title>
+<location>Waterloo, Ontario</location>
+<date>Oct. 13, 2009</date>
 <speaker>Rasmus Lerdorf</speaker>
 <twitter>@rasmus</twitter>
 <url>http://talks.php.net/show/hacku</url>
@@ -18,23 +18,7 @@
 <slide>slides/intro/titlepage.xml</slide>
 
 <!-- Hack Day -->
-<slide>slides/hacku/hacku01.xml</slide>
-<slide>slides/hacku/hacku02.xml</slide>
-<slide>slides/hacku/hacku03.xml</slide>
-<slide>slides/hacku/hacku04.xml</slide>
-<slide>slides/hacku/hacku05.xml</slide>
-<slide>slides/hacku/hacku06.xml</slide>
-<slide>slides/hacku/hacku07.xml</slide>
-<slide>slides/hacku/hacku08.xml</slide>
-<slide>slides/hacku/hacku09.xml</slide>
-<slide>slides/hacku/hacku1.xml</slide>
-<slide>slides/hacku/hacku2.xml</slide>
-<slide>slides/hacku/hacku3.xml</slide>
-<slide>slides/hacku/hacku4.xml</slide>
-<slide>slides/hacku/hacku5.xml</slide>
-<slide>slides/hacku/hacku6.xml</slide>
-<slide>slides/hacku/hacku7.xml</slide>
-<slide>slides/hacku/hacku8.xml</slide>
+<slide>slides/hacku/hacku_slideshow.xml</slide>
 <slide>slides/hacku/hacku9.xml</slide>
 <slide>slides/hacku/whatisit.xml</slide>
 <slide>slides/hacku/sched.xml</slide>
