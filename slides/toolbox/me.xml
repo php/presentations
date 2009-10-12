@@ -3,7 +3,7 @@
 	<title>About Me</title>
 
 <break lines="3"/>
-	<image filename="../tdd/derick_photo.jpg" align="right" />
+	<image filename="../tdd/derick_photo.jpg" align="right" pdf-scale="0.2"/>
 	<blurb>Derick Rethans</blurb>
 	<blurb>derick@php.net</blurb>
 	<list>
