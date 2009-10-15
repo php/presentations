@@ -7,8 +7,9 @@
  $type = 'documentType=text/plain';
  $q = <<<EOB
 I was born in Greenland, grew up in Denmark and have also lived
-in Canada, Brazil and now live in Sunnyvale.  Currently at the
-University of Toronto.  On Saturday I fly to San Francisco.
+in Canada, Brazil and now live in Sunnyvale.  This week I am at
+the University of Waterloo for HackU and I am giving a talk in
+Toronto right now.  On Saturday I fly to San Francisco.
 Jack London is not around.
 EOB;
 
