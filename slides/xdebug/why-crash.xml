@@ -7,11 +7,11 @@
 		<bullet>Infinite recursion</bullet>
 	</list>
 <break/>
-	<blurb>Xdebug protects with:</blurb>
+	<blurb>Xdebug protects, level can be set with:</blurb>
 <break/>
 	<example class="code_large">xdebug.max_nesting_level=4</example>
-<break/>
+<break lines="3"/>
 
-	<image filename="infinite.png" align="center" y-offset="6" />
+	<blurb>Fatal error: Maximum function nesting level of '4' reached, aborting! in /home/httpd/html/test/xdebug/infinite.php on line 11.</blurb>
 
 </slide>

@@ -1,0 +1,13 @@
+<slide template="white" b_image="universe/pickles.jpg" b_image_attr="http://www.flickr.com/photos/kimncris/2338352716/sizes/l/">
+<break lines="2"/>
+<blurb>[Xdebug] Installation — crash</blurb>
+<break lines="2"/>
+<example>php_xdebug-2.0.5-5.3-vc9.dll and php_xdebug-2.1.0beta1-5.3-vc9.dll both
+result in connection reset messages.
+
+Additional Information:
+OS: Windows 7 Home Premium 64 bit
+Web server: Apache 2.2.14
+PHP: 5.3.1 (vc9) </example>
+<break lines="2"/>
+</slide>

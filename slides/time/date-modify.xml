@@ -11,9 +11,6 @@
 	$ts->modify("+2 days");
 	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
-	$ts->modify("fifth month");
-	echo $ts->format(DATE_RFC2822), "<br/>\n";
-
 	$ts->modify("Friday +3 weeks");
 	echo $ts->format(DATE_RFC2822), "<br/>\n";
 

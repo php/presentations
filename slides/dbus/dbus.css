@@ -1,0 +1,418 @@
+<style title="Default" type="text/css">
+body {
+	font-size: 8pt;
+	margin-left:24px;
+	margin-right:0px;
+	margin-top:0em;
+	margin-bottom:0em;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+    overflow: -moz-scrollbars-none;
+    font-family: Arial, helvetica, sans-serif;
+}
+
+body.black, body.white
+{
+	background-image: none;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+body.white
+{
+	margin: 0em;
+}
+
+body.title
+{
+	background-image: url(presentations/slides/ezc/ez-background-title.jpg);
+	overflow: none;
+}
+
+div.sticky {
+	margin: 0;
+	position: fixed;
+	top: -0.5em;
+	left: 20px;
+	right: auto;
+	bottom: auto;
+}
+div.navbar {
+padding: 4;
+margin: 0;
+height: 14em;
+font-family: verdana, tahoma, arial, helvetica, sans-serif;
+z-index: 99;
+}
+div.navbar_title, div.navbar_title a, div.subtitle {
+	font-size: 32px;
+	color: #000000;
+	text-decoration: none;
+	text-align: left;
+	font-weight: bold;
+	margin-top: 20px;
+}
+body.title div.navbar
+{
+	visibility: hidden; display: none;
+}
+div.subtitle {
+	margin-top: 0px;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+div.navbar_nr a {
+font-size: 13px;
+color: #77a;
+text-decoration: none;
+position: fixed;
+right: 10px;
+bottom: 0px;
+}
+div.mainarea {
+margin-top: 100px;
+padding-top: 10px;
+width: 1000px;
+height: 610px;
+overflow: auto;
+overflow: -moz-scrollbars-vertical;
+}
+body.title div.mainarea
+{
+	margin-top: 250px; 
+	overflow: -moz-scrollbars-none;
+}
+body.black div.mainarea
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	padding-left: 24px;
+	background-color: black;
+	margin-top: 0px;
+	padding-top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	overflow: -moz-scrollbars-vertical;
+}
+body.white div.mainarea
+{
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	margin-top: 0px;
+	padding-left: 0px;
+	overflow: auto;
+	background-color: white;
+	width: 1024;
+	height: 760;
+}
+
+body.black div.sticky, body.black div.navbar, body.white div.sticky
+{
+	display: none;
+	visibility: hidden;
+}
+
+ul.pres {
+list-style: circle;
+font-size: 24px;
+}
+
+ul.numbered
+{
+font-size: 27px;
+margin-right: 40px;
+list-style-type: decimal;
+}
+
+ul.level2 {
+	list-style: circle;
+	font-size: 21px;
+	margin-left: 40px;
+	margin-top: -15px;
+}
+
+li.pres_bullet, div.link {
+font-size: 32px;
+margin-right: 40px;
+}
+
+li.pres_bullet_nr {
+font-size: 27px;
+margin-right: 40px;
+list-style-type: decimal;
+}
+
+ul.large div li.pres_bullet
+{
+	font-size: 35px;
+}
+	
+ul.small div li.pres_bullet
+{
+	font-size: 21px;
+}
+
+div.title_blurb {
+	font-size: 64px;
+	text-align: center;
+	font-weight: bold;
+}
+	
+div.subtitle_blurb {
+	font-size: 32px;
+	text-align: center;
+	font-weight: bold;
+}
+	
+div.small_blurb {
+	font-size: 18px;
+}
+
+div.blurb_header {
+	font-size: 38px;
+}
+
+div.blurb, div.bit_larger_output_text, div.output {
+	font-size: 32px;
+	width: 100%;
+}
+
+div.bit_larger_output_text {
+	margin-top: 8px;
+}
+
+div.x_small_blurb {
+	font-size: 0.5em;
+}
+
+div.large_blurb {
+	font-size: 35px;
+}
+
+div.medium_blurb_center {
+	font-size: 30px;
+	text-align: center;
+}
+
+div.large_blurb_center {
+	font-size: 38px;
+	text-align: center;
+}
+
+div.blurb_center {
+	text-align: center;
+}
+
+div.quote {
+	font-size: 32px;
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+div.quote_attr {
+	font-size: 24px;
+	text-align: right;
+	margin-right: 40px;
+}
+
+div.xx_large_blurb_center {
+	font-size: 64px;
+	text-align: center;
+}
+
+div.q_mark {
+	text-align: center;
+	font-size: 350px;
+}
+
+div.shadow, code {
+	width: 920px;
+	font-size: 18px;
+}
+
+div.example code, div.highlight code, div.bit_larger, div.bit_larger code, div.bit_larger_output {
+	background: #eee;
+	font-size: 20px;
+	width: 100%;
+	font-weight: bold;
+}
+div.example, div.highlight, div.bit_larger, div.bit_larger_output {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+body.white div.large, body.white div.large code {
+	background: #fff;
+}
+
+div.bit_larger_output {
+	background: #e6e300;
+	font-size: 27px;
+	font-weight: normal;
+}
+
+div.large code, div.large {
+	font-size: 26px;
+	background: #eee;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+div.highlight code, div.highlight {
+	background: #fffc00;
+	font-weight: bold;
+}
+
+div.code_small, div.code_medium, div.code_large, div.example {
+	background: #eee;
+}
+div.code_small code {
+	font-size: 10px;
+}
+div.code_medium code, div.code_medium pre {
+	font-size: 14px;
+	font-weight: bold;
+}
+div.code_large code, div.code_large pre {
+	font-size: 18px;
+}
+div.example pre {
+    font-size: 16px;
+	font-weight: bold;
+}
+
+div.session-title {
+	text-align: center;
+	font-size:  64px;
+}
+
+div.event, div.event-date, div.event-presenter {
+	text-align: center;
+	font-size:  40px;
+}
+
+div.pres-url-small {
+	text-align: center;
+	font-size:  24px;
+}
+
+img.spaced {
+	margin-right: 25px;
+	margin-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+table {
+	font-size: 21px;
+}
+
+table.dbtable {
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+table.dbtable tr {
+margin: 0px;
+padding: 0px;
+		 background-color: #f00;
+}
+
+table.dbtable td {
+	margin: 0px;
+	padding: 1px 5px 1px 5px;
+	border: thin solid black;
+	background-color: #fff;
+	vertical-align: top;
+}
+
+table.dbtable td.header {
+	font-weight: bold;
+	text-align: center;
+}
+
+table.dbtable td.header-candidate-key {
+	font-weight: bold;
+	font-style: italic;
+	text-align: center;
+	color: blue;
+}
+
+table.dbtable td.header-key, table.dbtable td.header-key-moved-to {
+	font-weight: bold;
+	text-align: center;
+	color: red;
+}
+
+table.dbtable td.header-moved, table.dbtable td.moved {
+	border: 1px dotted #aaa;
+	color: #aaa;
+}
+
+table.dbtable td.header-moved, table.dbtable td.header-moved-to {
+	font-weight: bold;
+}
+
+table.dbtable td.header-moved-to, table.dbtable td.moved-to, table.dbtable td.header-key-moved-to {
+	border: 2px solid black;
+}
+
+div#graph {
+	text-align: center;
+}
+
+iframe#graphIn {
+	border-style: none; height: 600px; width: 1000px;
+}
+
+body.white {
+	display: table;
+	width: 1024px;
+}
+
+body.white div.mainarea {
+	display: table-cell;
+	position: static;
+	vertical-align: bottom;
+	padding-bottom: 150px;
+}
+
+
+
+body.white div.mainarea-outer {
+	background: transparent url(presentations/slides/kiss/kiss-white.png) repeat fixed 0 0;
+}
+
+body.white div.mainarea-inner {
+	margin-right:auto;
+	margin-left:auto;
+	display: table;
+	opacity: 1;
+}
+
+div.blurb_gigantic {
+	font-size: 128px;
+}
+
+div.blurb_gigantic_blink {
+	font-size: 128px;
+	text-decoration: blink;
+}
+
+div.blurb_very_big
+{
+	font-size: 96px;
+}
+
+div.blurb_big
+{
+	font-size: 64px;
+}
+</style>

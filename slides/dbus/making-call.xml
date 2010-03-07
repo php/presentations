@@ -1,0 +1,17 @@
+<slide>
+	<title>Phone Services</title>
+	<subtitle>Making a call</subtitle>
+
+<example><![CDATA[<?php
+$d = new DBus( DBus::BUS_SYSTEM );
+$callInterface = $d->createProxy(
+	'org.freesmartphone.ogsmd',
+	'/org/freesmartphone/GSM/Device',
+	'org.freesmartphone.GSM.Call'
+);
+
+$callInterface->Initiate( $nr, 'voice' );
+
+?>]]></example>
+
+</slide>

@@ -381,15 +381,18 @@ iframe#graphIn {
 
 body.white {
 	display: table;
-	width: 1020px;
+	width: 1024px;
 }
 
 body.white div.mainarea {
 	display: table-cell;
 	position: static;
-	vertical-align: middle;
+	vertical-align: bottom;
 	font-family: "MaxOT-book";
+	padding-bottom: 150px;
 }
+
+
 
 body.white div.mainarea-outer {
 	background: transparent url(presentations/slides/kiss/kiss-white.png) repeat fixed 0 0;
@@ -420,5 +423,4 @@ div.blurb_big
 {
 	font-size: 64px;
 }
-
 </style>

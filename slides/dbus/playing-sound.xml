@@ -1,0 +1,19 @@
+<slide>
+	<title>Phone Services</title>
+	<subtitle>Playing Sounds</subtitle>
+
+<example><![CDATA[<?php
+$d = new Dbus( Dbus::BUS_SYSTEM );
+$soundDbus = $d->createProxy(
+	'org.freesmartphone.odeviced',
+	'/org/freesmartphone/Device/Audio',
+	'org.freesmartphone.Device.Audio'
+);
+
+$soundDbus->PlaySound(
+	'/usr/share/sounds/notify_message.wav', 
+	0, 0
+);
+?>]]></example>
+
+</slide>

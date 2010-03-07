@@ -16,6 +16,7 @@
 		<bullet>struct (contains one or more complete types)</bullet>
 		<bullet>dictionary entry (contains a key (basic type) and a value, must be part of an array)</bullet>
 		<bullet>variant (contains a type and a value)</bullet>
+		<bullet>object path (a string representation of a DBUS Object)</bullet>
 	</list>
 
 </slide>

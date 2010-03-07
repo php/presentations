@@ -4,8 +4,10 @@
 	<subtitle>Transition Times and Location Information</subtitle>
 
 	<example result="1"><![CDATA[<?php
-	$tz = new DateTimeZone("America/Caracas");
-	$trs = $tz->getTransitions(strtotime('1960-01-01 UTC'));
+	$tz = new DateTimeZone("Europe/London");
+	$trs = $tz->getTransitions(
+		strtotime('1938-01-01 UTC'), strtotime('1948-01-01 UTC')
+	);
 
 	echo "<pre>\n";
 	foreach ($trs as $tr) {

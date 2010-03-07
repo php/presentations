@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<slide fontsize="6em">
+<slide template="white">
 	<title>About Me</title>
 
 <break lines="3"/>
-	<image filename="../tdd/derick_photo.jpg" align="right" pdf-scale="0.2"/>
 	<blurb>Derick Rethans</blurb>
-	<blurb>derick@php.net</blurb>
 	<list>
 		<bullet>Dutchman living in London</bullet>
-		<bullet>Project lead for eZ Components at eZ Systems A.S.</bullet>
-	</list>
-
-	<list>
 		<bullet>PHP development</bullet>
-		<bullet>Author of the mcrypt, input_filter and date/time extensions</bullet>
+		<bullet>Author of the mcrypt, input_filter, dbus, translit and date/time extensions</bullet>
 		<bullet>Author of Xdebug</bullet>
+		<bullet>Freelancer doing PHP (internals) development</bullet>
 	</list>
+	<image filename="../tdd/derick_photo.jpg" align="right" pdf-scale="0.2"/>
 		
 </slide>

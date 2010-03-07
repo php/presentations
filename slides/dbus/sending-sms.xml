@@ -1,0 +1,48 @@
+<slide>
+	<title>Phone Services</title>
+	<subtitle>Sending SMS</subtitle>
+
+<example><![CDATA[<?php
+$d = new DBus( DBus::BUS_SYSTEM );
+$smsInterface = $d->createProxy(
+	'org.freesmartphone.ogsmd', 
+	'/org/freesmartphone/GSM/Device',
+	'org.freesmartphone.GSM.SMS'
+);
+
+if ( strlen( $text ) <= 160 )
+{
+	$smsInterface->SendMessage(
+		$nr,
+		$text,
+		new DBusDict( Dbus::VARIANT,array() )
+	);
+	echo "Sending: $text\n";
+}
+else
+{
+	$textParts = chunk_split( $text, 140, "\n" );
+	$textParts = explode( "\n", trim( $textParts ) );
+	$id = mt_rand( 0, 255 );
+	$cnt = count( $textParts );
+	$c = 1;
+	foreach( $textParts as $textPart )
+	{
+		$smsInterface->SendMessage(
+			$nr,
+			$textPart,
+			new DBusDict( Dbus::VARIANT,
+				array( 
+					'csm_id' => new DBusVariant( $id ),
+					'csm_num' => new DBusVariant( $cnt ),
+					'csm_seq' => new DBusVariant( $c )
+				)
+			) 
+		);
+		$c++;
+		echo "Sending: $textPart\n";
+	}
+}
+?>]]></example>
+
+</slide>

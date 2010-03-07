@@ -13,4 +13,6 @@ xdebug_var_dump(); // or just var_dump()
 ?>]]></example>
 <break lines="2"/>
 
+	<blurb>Turn off with:</blurb>
+	<example>xdebug.overload_var_dump = 0</example>
 </slide>

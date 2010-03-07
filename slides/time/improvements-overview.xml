@@ -11,7 +11,6 @@
 		<bullet>~strtotime()~ has been rewritten</bullet>
 		<bullet>Nothing is Operating System dependent</bullet>
 		<bullet>Full support for timezones, DST, date modifications</bullet>
-		<bullet>New format modifiers: %e% for timezone identifier and %o% for ISO Year</bullet>
 		<bullet>Advanced date handling functions</bullet>
 	</list>
 </slide>

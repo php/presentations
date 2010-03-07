@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Parsing Dates - Take #2</title>
+	<title>Parsing Dates</title>
 
 	<blurb>Parsing strings for date time information by instantiating a
 	DateTime object:</blurb>
 	<example><![CDATA[<?php
-	$ts = new DateTime("2006-11-07 16:12:15");
+	$dt = new DateTime("2006-11-07 16:12:15");
 ?>]]></example>
 <break/>
 
@@ -15,8 +15,8 @@
 <break/>
 
 	<example result="1"><![CDATA[<?php
-	$ts = new DateTime("2007-09-03 13:44:39");
-	echo $ts->format( 'U' ), "\n";
+	$dt = new DateTime("2007-09-03 13:44:39");
+	echo $dt->format( 'U' ), "\n";
 ?>]]></example>
 	
 </slide>

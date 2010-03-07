@@ -1,0 +1,31 @@
+<slide>
+	<title>Phone Services</title>
+	<subtitle>Getting GPS coordinates</subtitle>
+
+<example><![CDATA[<?php
+$d = new Dbus( Dbus::BUS_SYSTEM );
+$gpsPos = $d->createProxy(
+	'org.freedesktop.Gypsy', '/org/freedesktop/Gypsy',
+	'org.freedesktop.Gypsy.Position'
+);
+$gpsDevice = $d->createProxy(
+	'org.freedesktop.Gypsy', '/org/freedesktop/Gypsy',
+	'org.freedesktop.Gypsy.Device'
+);
+$coords = $gpsPos->GetPosition()->getData();
+$fix    = $gpsDevice->GetFixStatus();
+switch ( $fix )
+{
+	case 0: $txt = 'Invalid fix'; break;
+	case 1: $txt = 'No fix'; break;
+	case 2: $txt = '2D fix'; break;
+	case 3: $txt = '3D fix'; break;
+}
+printf(
+	"%s | Location: %.2f, %.2f | %s",
+	date_create()->format( 'H:i:s' ),
+	$coords[2], $coords[3], $txt
+);
+?>]]></example>
+
+</slide>

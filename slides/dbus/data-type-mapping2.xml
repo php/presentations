@@ -16,6 +16,7 @@
 		<bullet>dict-entry -> variable (could be anything)</bullet>
 		<bullet>variant -> DbusVariant</bullet>
 		<bullet>struct -> DbusStruct</bullet>
+		<bullet>object-path -> DbusObjectPath</bullet>
 	</list>
 
 </slide>

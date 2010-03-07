@@ -6,21 +6,15 @@
 	<blurb>Using the timezone when parsing a string with a date representation:</blurb>
 	<example result="1"><![CDATA[<?php
 	$tz1 = new DateTimeZone("Pacific/Honolulu");
-	$tz2 = new DateTimeZone("Europe/Amsterdam");
-	$tz3 = new DateTimeZone("Australia/Melbourne");
+	$tz2 = new DateTimeZone("Australia/Melbourne");
 
 	$ts = new DateTime("1978-12-22 09:15", $tz1);
 	echo $ts->getTimezone()->getName(), ': ',
-		$ts->format(DATE_RFC822), "<br/>";
+		$ts->format(DateTime::RFC2822), "<br/>";
 
 	$ts->setTimezone($tz2);
-	echo $ts->getTimezone()->getName(), ': ',
-		$ts->format(DATE_RFC822), "<br/>";
 
-	$ts->setTimezone($tz3);
 	echo $ts->getTimezone()->getName(), ': ',
-		$ts->format(DATE_RFC822);
+		$ts->format(DateTime::RFC2822), "<br/>";
 ?>]]></example>
-<break lines="3"/>
-
 </slide>

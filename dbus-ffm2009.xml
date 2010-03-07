@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#000000"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>DBUS</topic>
+<title>PHP on the D-BUS</title>
+<event>International PHP Conference</event>
+<location>Karlsruhe, Germany</location>
+<date>Nov 18th, 2009</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.php</url>
+<joindin>http://joind.in/1062</joindin>
+<slide>slides/dbus/title.xml</slide>
+
+<slide>slides/dbus/what-is-dbus.xml</slide>
+<slide>slides/dbus/what-is-dbus-used-for.xml</slide>
+<slide>slides/dbus/design-overview.xml</slide>
+<slide>slides/dbus/message-types.xml</slide>
+<slide>slides/dbus/identifying-objects.xml</slide>
+<slide>slides/dbus/data-types.xml</slide>
+
+<!-- PHP -->
+<slide>slides/dbus/php-dbus-ext.xml</slide>
+<slide>slides/dbus/php-as-client.xml</slide>
+<slide>slides/dbus/data-type-mapping.xml</slide>
+<slide>slides/dbus/data-type-mapping2.xml</slide>
+<slide>slides/dbus/notify-hard.xml</slide>
+<slide>slides/dbus/introspection.xml</slide>
+<slide>slides/dbus/notify-introspect.xml</slide>
+<slide>slides/dbus/php-as-server.xml</slide>
+<slide>slides/dbus/signal.xml</slide>
+<slide>slides/dbus/signal-send.xml</slide>
+
+<slide>slides/dbus/skype.xml</slide>
+<slide>slides/dbus/skype-theory-objects.xml</slide>
+<slide>slides/dbus/skype-odd-api.xml</slide>
+<slide>slides/dbus/skype-poll.xml</slide>
+<slide>slides/dbus/skype-signal.xml</slide>
+
+<slide>slides/dbus/what-next.xml</slide>
+<slide>slides/dbus/playing-sound.xml</slide>
+<slide>slides/dbus/making-call.xml</slide>
+<slide>slides/dbus/sending-sms.xml</slide>
+<slide>slides/internals/questions.xml</slide>
+</presentation>

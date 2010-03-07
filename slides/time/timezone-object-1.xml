@@ -19,8 +19,7 @@
 	<blurb>A passed timezone object does not override a *parsed* timezone:</blurb>
 	<example result="1"><![CDATA[<?php
 	$tz = new DateTimeZone("Pacific/Honolulu");
-	$ts1 = new DateTime("1978-12-22 09:15 CET", $tz);
-	$ts2 = new DateTime("1978-12-22 09:15 Europe/Amsterdam", $tz);
+	$ts2 = new DateTime("1978-12-22 09:15 Europe/London", $tz);
 	echo $ts2->format( DateTime::RFC2822 );
 ?>]]></example>
 </slide>

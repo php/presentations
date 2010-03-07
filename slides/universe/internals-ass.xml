@@ -1,0 +1,11 @@
+<slide template="white" b_image="universe/scientists.jpg" b_image_attr="http://www.flickr.com/photos/marsdd/2986989396/sizes/o/">
+<blurb>Re: [PHP-DEV] About optimization</blurb>
+<break lines="1"/>
+<blurb>Have been developing for a more than a decade... PHP4 was the last
+time there was real performance improvements in PHP itself. The fact
+that there are "several so-called byte code caches" does not equal a
+good thing. It means that PHP is broken and lots of people are trying
+to fix it. It also means that none have succeeded, as that would mean
+that one of them would be included in the PHP core by now.
+</blurb>
+</slide>
