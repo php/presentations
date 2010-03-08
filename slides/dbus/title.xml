@@ -1,14 +1,9 @@
-<slide template="white">
+<slide template="white" type="title">
 <title>Welcome!</title>
 
-<blurb class="event-date">:-:title:-:</blurb>
-
-<break lines="5"/>
-<break/>
+<blurb class="event-title">:-:title:-:</blurb>
 <blurb class="event-date">:-:event:-: - :-:location:-:</blurb>
-<break/>
 <blurb class="event-presenter">Derick Rethans - :-:email:-: - twitter: @:-:twitter:-:</blurb>
-<break/>
 <blurb class="pres-url-small">:-:url:-:</blurb>
 <blurb class="pres-url-small">:-:joindin:-:</blurb>
 </slide>

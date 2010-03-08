@@ -7,11 +7,10 @@
 	<example result="1"><![CDATA[<?php
 	$tz = new DateTimeZone("Asia/Singapore");
 	echo $tz->getName(), ', ';
-
 	$tz = new DateTimeZone("CEST");
 	echo $tz->getName();
 ?>]]></example>
-<break lines="2"/>
+<break/>
 
 	<blurb>Getting the current offset to UTC with a timezone for a specific date:</blurb>
 	<example result="1"><![CDATA[<?php

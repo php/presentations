@@ -6,8 +6,8 @@
 	<blurb>All supported timezone identifiers:</blurb>
 	<example result="1"><![CDATA[<?php
 	$ids = timezone_identifiers_list();
-	echo "Number of identifiers: ", count($ids), "<br/>";
-	echo implode(", ", array_slice($ids, 0, 5)), '...';
+	echo "Number of identifiers: ", count($ids), "\n";
+	echo implode(", ", array_slice($ids, 0, 5)), "...\n";
 	echo implode(", ", array_slice($ids, -5));
 ?>]]></example>
 </slide>

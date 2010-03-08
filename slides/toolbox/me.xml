@@ -4,6 +4,7 @@
 
 <break lines="3"/>
 	<blurb>Derick Rethans</blurb>
+	<image filename="../tdd/derick_photo.jpg" align="right" pdf-scale="0.2"/>
 	<list>
 		<bullet>Dutchman living in London</bullet>
 		<bullet>PHP development</bullet>
@@ -11,6 +12,5 @@
 		<bullet>Author of Xdebug</bullet>
 		<bullet>Freelancer doing PHP (internals) development</bullet>
 	</list>
-	<image filename="../tdd/derick_photo.jpg" align="right" pdf-scale="0.2"/>
 		
 </slide>

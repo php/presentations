@@ -7,14 +7,14 @@
 	<example><![CDATA[<?php
 	$tz = new DateTimeZone("Asia/Singapore");
 ?>]]></example>
-<break lines="3"/>
+<break/>
 
 	<blurb>Using the timezone when parsing a string with a date representation:</blurb>
 	<example><![CDATA[<?php
 	$tz = new DateTimeZone("Pacific/Honolulu");
 	$ts = new DateTime("1978-12-22 09:15", $tz);
 ?>]]></example>
-<break lines="3"/>
+<break/>
 
 	<blurb>A passed timezone object does not override a *parsed* timezone:</blurb>
 	<example result="1"><![CDATA[<?php

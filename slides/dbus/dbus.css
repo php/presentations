@@ -293,7 +293,7 @@ div.session-title {
 	font-size:  64px;
 }
 
-div.event, div.event-date, div.event-presenter {
+div.event, div.event-date, div.event-presenter, div.event-title {
 	text-align: center;
 	font-size:  40px;
 }

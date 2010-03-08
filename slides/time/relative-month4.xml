@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Relative Time</title>
+	<subtitle>"last day of third month"</subtitle>
+
+	<example result="1"><![CDATA[<?php
+	$date = new DateTime( '2010-01-31 15:48:21' );
+	echo $date->modify( 'last day of third month' )->format( 'Y-m-d' ), "\n";
+?>]]></example>
+<break/>
+
+<div effect="hide">
+<blurb>Explanation:</blurb>
+	<blurb effect="fade-out"    class='pre'>   2010-01-31 15:48:21</blurb>
+	<blurb effect="fade-in-out" class='pre'>   2010-|ef2929|04|-31 15:48:21
+   
+   "third month" increases month number by 3</blurb>
+	<blurb effect="fade-in-out" class='pre'>   2010-|ef2929|05-00| 15:48:21
+
+   "last day of" resets the day number to 0 and increases
+   the month number by 1</blurb>
+	<blurb effect="fade-in"     class='pre'>   2010-|ef2929|04-30| 15:48:21
+
+   Day count is less than 1, so the algorithm corrects this
+   to a proper date</blurb>
+</div>
+
+</slide>

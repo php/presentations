@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Date/Time Functions in PHP 5.1 and up</title>
-	<subtitle>Improvements</subtitle>
+	<title>Improved Date/Time Functions</title>
 
 	<list>
 		<bullet>"Using a (signed) 64-bit value introduces a new wraparound date
 		in about 290 billion years, on Sunday, December 4, 292,277,026,596.
 		However, this problem is not widely regarded as a pressing
 		issue."</bullet>
-		<bullet>~strtotime()~ has been rewritten</bullet>
+		<bullet>~strtotime()~ has been rewritten (and replaced with ~new DateTime()~)</bullet>
 		<bullet>Nothing is Operating System dependent</bullet>
 		<bullet>Full support for timezones, DST, date modifications</bullet>
 		<bullet>Advanced date handling functions</bullet>

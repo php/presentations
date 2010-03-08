@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Problems with timestamps and timezones</title>
+
+	<example result="1"><![CDATA[<?php
+	$date = strtotime( '2010-03-07 20:48:21 America/Toronto' );
+	echo date( 'Y-m-d', $date ), "\n";
+?>]]></example>
+<break/>
+
+<div effect="hide">
+<blurb>Explanation:</blurb>
+	<blurb effect="fade-out"    class='pre'>   2010-03-07 20:48:21 America/Toronto</blurb>
+	<blurb effect="fade-in-out" class='pre'>   |ef2929|1268012901|
+   
+   string is turned into a number</blurb>
+	<blurb effect="fade-in"     class='pre'>   2010-03-08 |555753|01:48:21 Europe/London|
+
+   number is converted to a date/time string using
+   the *default* timezone</blurb>
+</div>
+
+</slide>

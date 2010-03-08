@@ -9,7 +9,6 @@
 		strtotime('1938-01-01 UTC'), strtotime('1948-01-01 UTC')
 	);
 
-	echo "<pre>\n";
 	foreach ($trs as $tr) {
 		printf("%20s %7d %d %s\n",
 			$tr['time'], $tr['offset'], $tr['isdst'], $tr['abbr']);

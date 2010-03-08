@@ -2,7 +2,7 @@
 <slide>
 	<title>Sunset/Sunrise</title>
 
-	<example result="1"><![CDATA[<pre><font size="5"><?php
+	<example result="1"><![CDATA[<p><?php
 date_default_timezone_set('America/New_York');
 if (isset($_POST['country'])) {
   mysql_connect('localhost', 'root', 'wee123'); mysql_select_db('geolocation');
@@ -18,9 +18,9 @@ if (isset($_POST['country'])) {
       round(($info['sunset'] - $info['sunrise']) / 3600, 1), "hrs";
   }
 }
-?></font></pre>
+?></font>
 <form method="post">
 Country: <input name="country"/> City: <input name="city"/><br/>
-<input type="submit" value="Check"/></form>
+<input type="submit" value="Check"/></form></p>
 ]]></example>
 </slide>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Relative Time</title>
+	<subtitle>"first day *of* next month"</subtitle>
+
+	<example result="1"><![CDATA[<?php
+	$date = new DateTime( '2010-01-31 15:48:21' );
+	echo $date->modify( 'first day of next month' )->format( 'Y-m-d' ), "\n";
+?>]]></example>
+<break/>
+
+<div effect="hide">
+<blurb>Explanation:</blurb>
+	<blurb effect="fade-out"    class='pre'>   2010-01-31 15:48:21</blurb>
+	<blurb effect="fade-in-out" class='pre'>   2010-|ef2929|02|-31 15:48:21
+   
+   "next month" increases month number by 1</blurb>
+	<blurb effect="fade-in"     class='pre'>   2010-02-|ef2929|01| 15:48:21
+
+   "first day of" resets the day number to 1</blurb>
+</div>
+
+</slide>

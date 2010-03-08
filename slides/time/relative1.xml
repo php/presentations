@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Relative Time</title>
+	<subtitle>Weekday manipulations</subtitle>
+
+	<example result="1"><![CDATA[<?php
+$ds = '2010-03-10 14:30';
+echo date_create( $ds )                                 ->format( 'D Y-m-d H:i' ), "\n";
+echo date_create( $ds )->modify( 'Tuesday'             )->format( 'D Y-m-d H:i' ), "\n";
+echo date_create( $ds )->modify( 'this week Tuesday'   )->format( 'D Y-m-d H:i' ), "\n";
+echo date_create( $ds )->modify( 'next Tuesday'        )->format( 'D Y-m-d H:i' ), "\n";
+echo date_create( $ds )->modify( 'next week Tuesday'   )->format( 'D Y-m-d H:i' ), "\n";
+echo date_create( $ds )->modify( 'last Tuesday'        )->format( 'D Y-m-d H:i' ), "\n";
+echo date_create( $ds )->modify( 'last week Tuesday'   )->format( 'D Y-m-d H:i' ), "\n";
+echo date_create( $ds )->modify( '1 week ago Tuesday'  )->format( 'D Y-m-d H:i' ), "\n";
+?>]]></example>
+</slide>

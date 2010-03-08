@@ -8,7 +8,7 @@
 	$ts = new DateTime("1978-12-22 09:15");
 	echo $ts->format("e");
 ?>]]></example>
-<break lines="2"/>
+<break/>
 
 	<blurb>Getting a default timezone:</blurb>
 	<example result="0"><![CDATA[<?php

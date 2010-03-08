@@ -6,7 +6,7 @@
 	<example result="1"><![CDATA[<?php
 	date_default_timezone_set("Europe/Oslo");
 	$ts = new DateTime("1979-12-31 09:15");
-	echo $ts->format("D Y-m-d H:i:s - \I\S\O \W/\Y: W/o"), "<br/>\n";]]></example>
+	echo $ts->format("D Y-m-d H:i:s - \I\S\O \W/\Y: W/o");]]></example>
 <break/>
 	<blurb>All format modifiers as supported by ~date()~ are supported too.</blurb>
 <break lines="2"/>
@@ -15,7 +15,7 @@
 	<example result="1"><![CDATA[<?php
 	date_default_timezone_set("Europe/Oslo");
 	$ts = new DateTime("December 22nd, 2005 15:41");
-	echo $ts->format(DATE_ISO8601), "<br/>\n";
-	echo $ts->format(DateTime::RFC1036), "<br/>\n";
-	echo $ts->format(DATE_RSS), "<br/>\n";]]></example>
+	echo $ts->format(DATE_ISO8601), "\n";
+	echo $ts->format(DateTime::RFC1036), "\n";
+	echo $ts->format(DATE_RSS);]]></example>
 </slide>

@@ -2,8 +2,8 @@
 <slide>
 	<title>Updating Dates and Times</title>
 
-	<example result="1"><![CDATA[<?php
-	$date = new DateTime( 'now' );
+	<example result="0"><![CDATA[<?php
+	$date = new DateTime( '2010-03-08 15:48:21' );
 	echo $date->format(DateTime::ISO8601), "<br/>\n";
 
 	$date->setTime( 15, 0, 7 );
@@ -18,4 +18,14 @@
 	$date->setTimestamp( 1200128314 );
 	echo $date->format(DateTime::ISO8601), "<br/>\n";
 ?>]]></example>
+<break/>
+
+<blurb>Result:</blurb>
+	<blurb class='pre'>   2010-03-08T15:48:21+0000</blurb>
+
+	<blurb effect="fade-in" class='pre'>   2010-03-08T|ef2929|15:00:07|+0000</blurb>
+	<blurb effect="fade-in" class='pre'>   |ef2929|2008-07-22|T15:00:07|ef2929|+0100|</blurb>
+	<blurb effect="fade-in" class='pre'>   |ef2929|2008-11-04|T15:00:07+0000</blurb>
+	<blurb effect="fade-in" class='pre'>   |ef2929|2008-11-15T08:58:34+0000|</blurb>
+
 </slide>
