@@ -1,0 +1,69 @@
+<slide title="Fix all warnings">
+
+<break lines="1" />
+
+<blurb fontsize="3.5em">
+Set *error_reporting(-1)* in *wp-settings.php* to catch all warnings
+</blurb>
+
+<example fontsize="0.8em" type="shell" title=""><![CDATA[
+Strict Standards: Declaration of Walker_Page::start_lvl() should be compatible with that of Walker::start_lvl() in wp-includes/classes.php on line 1229
+Strict Standards: Declaration of Walker_Page::end_lvl() should be compatible with that of Walker::end_lvl() in wp-includes/classes.php on line 1229
+Strict Standards: Declaration of Walker_Page::start_el() should be compatible with that of Walker::start_el() in wp-includes/classes.php on line 1229
+Strict Standards: Declaration of Walker_Page::end_el() should be compatible with that of Walker::end_el() in wp-includes/classes.php on line 1229
+Strict Standards: Declaration of Walker_PageDropdown::start_el() should be compatible with that of Walker::start_el() in wp-includes/classes.php on line 1274
+Strict Standards: Declaration of Walker_Category::start_lvl() should be compatible with that of Walker::start_lvl() in wp-includes/classes.php on line 1421
+Strict Standards: Declaration of Walker_Category::end_lvl() should be compatible with that of Walker::end_lvl() in wp-includes/classes.php on line 1421
+Strict Standards: Declaration of Walker_Category::start_el() should be compatible with that of Walker::start_el() in wp-includes/classes.php on line 1421
+Strict Standards: Declaration of Walker_Category::end_el() should be compatible with that of Walker::end_el() in wp-includes/classes.php on line 1421
+Strict Standards: Declaration of Walker_CategoryDropdown::start_el() should be compatible with that of Walker::start_el() in wp-includes/classes.php on line 1472
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/classes.php on line 1671 Strict Standards: Redefining already defined constructor for class wpdb in wp-includes/wp-db.php on line 481
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/cache.php on line 103
+Strict Standards: Redefining already defined constructor for class WP_Object_Cache in wp-includes/cache.php on line 482
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/l10n.php on line 453
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/query.php on line 61
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/theme.php on line 1335
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/theme.php on line 1426
+Strict Standards: Declaration of Walker_Comment::start_lvl() should be compatible with that of Walker::start_lvl() in wp-includes/comment-template.php on line 1349
+Strict Standards: Declaration of Walker_Comment::end_lvl() should be compatible with that of Walker::end_lvl() in wp-includes/comment-template.php on line 1349
+Strict Standards: Declaration of Walker_Comment::start_el() should be compatible with that of Walker::start_el() in wp-includes/comment-template.php on line 1349
+Strict Standards: Declaration of Walker_Comment::end_el() should be compatible with that of Walker::end_el() in wp-includes/comment-template.php on line 1349
+Strict Standards: Redefining already defined constructor for class WP_Dependencies in wp-includes/class.wp-dependencies.php on line 33
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/taxonomy.php on line 723
+Strict Standards: Redefining already defined constructor for class WP_Embed in wp-includes/media.php on line 961
+Strict Standards: Redefining already defined constructor for class WP_Widget in wp-includes/widgets.php on line 93
+Deprecated: Assigning the return value of new by reference is deprecated in wp-includes/widgets.php on line 324
+]]></example>
+
+<example fontsize="1.4em" title="Annoying useless code in class.wp-dependencies.php"><![CDATA[<?php
+class WP_Dependencies {
+        function WP_Dependencies() {
+                $args = func_get_args();
+                call_user_func_array( array(&$this, '__construct'), $args );
+        }
+
+        function __construct() {}
+        ...
+]]></example>
+
+
+<example fontsize="1.4em" type="shell" title="Examples of warning fixes"><![CDATA[<?php
+--- ./cache.php	2010-03-05 09:31:16.573829617 -0800
++++ ../../wp2/wp-includes/cache.php	2010-03-05 16:11:39.502645987 -0800
+@@ -100,7 +100,7 @@
+-	$GLOBALS['wp_object_cache'] =*|ffff00|&|* new WP_Object_Cache();
++	$GLOBALS['wp_object_cache'] = new WP_Object_Cache();
+
+--- ./classes.php	2010-03-05 09:31:16.603847118 -0800
++++ ../../wp2/wp-includes/classes.php	2010-03-05 13:30:32.957323183 -0800
+@@ -779,7 +779,7 @@
+-	function start_lvl(&$output) {}
++*|ffff00|#|*	function start_lvl(&$output) {}
+ 
+ 	/**
+ 	 * Ends the list of after the elements are added.
+@@ -793,7 +793,7 @@
+-	function end_lvl(&$output)   {}
++*|ffff00|#|*	function end_lvl(&$output)   {}
+]]></example>
+</slide>

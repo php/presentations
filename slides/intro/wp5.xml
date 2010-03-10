@@ -1,0 +1,123 @@
+<slide title="Conditional Includes">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Check for open() syscalls"><![CDATA[
+|00aaff|~>| *grep open strace.out*
+open("/var/www/wp1/wp-load.php", O_RDONLY) = 29
+open("/var/www/wp1/wp-config.php", O_RDONLY) = 29
+open("/var/www/wp1/wp-settings.php", O_RDONLY) = 29
+open("/var/www/wp1/wp-includes/wp-db.php", O_RDONLY) = 29
+open("/var/www/wp1/wp-includes/cache.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-includes/pomo/translations.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-includes/pomo/entry.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-includes/pomo/streams.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-includes/default-widgets.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-includes/default-embeds.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-includes/template-loader.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-content/themes/default/header.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-content/themes/default/sidebar.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-content/themes/default/footer.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-content/themes/default/style.css", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickbgcolor.jpg", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickbg-ltr.jpg", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickheader.jpg", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickfooter.jpg", O_RDONLY) = 29]]></example>
+
+<example fontsize="1em" title="Conditional config include in wp-load.php"><![CDATA[<?php
+if ( file_exists( ABSPATH . 'wp-config.php') ) {
+  /** The config file resides in ABSPATH */
+  require_once( ABSPATH . 'wp-config.php' );
+
+} elseif ( file_exists( dirname(ABSPATH) . '/wp-config.php' ) && ! file_exists( dirname(ABSPATH) . '/wp-settings.php' ) ) {
+  /** The config file resides one level above ABSPATH but is not part of another install*/
+  require_once( dirname(ABSPATH) . '/wp-config.php' );
+} else {
+  // A config file doesn't exist
+  // Set a path for the link to the installer
+  if (strpos($_SERVER['PHP_SELF'], 'wp-admin') !== false) $path = '';
+  else $path = 'wp-admin/';
+
+  // Die with an error message
+  require_once( ABSPATH . '/wp-includes/classes.php' );
+  require_once( ABSPATH . '/wp-includes/functions.php' );
+  require_once( ABSPATH . '/wp-includes/plugin.php' );
+  $text_direction = /*WP_I18N_TEXT_DIRECTION*/"ltr"/*/WP_I18N_TEXT_DIRECTION*/;
+  wp_die(sprintf(/*WP_I18N_NO_CONFIG*/"There doesn't seem to be a <code>wp-config.php</code> file. I need this before we can ge
+t started. Need more help? <a href='http://codex.wordpress.org/Editing_wp-config.php'>We got it</a>. You can create a <code>wp-config
+.php</code> file through a web interface, but this doesn't work for all server setups. The safest way is to manually create the file.
+</p><p><a href='%ssetup-config.php' class='button'>Create a Configuration File</a>"/*/WP_I18N_NO_CONFIG*/, $path), /*WP_I18N_ERROR_TI
+TLE*/"WordPress &rsaquo; Error"/*/WP_I18N_ERROR_TITLE*/, array('text_direction' => $text_direction));
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="Replace with"><![CDATA[<?php
+include './wp-config.php';
+?>]]></example>
+
+<example fontsize="1.4em" title="Conditional did-header check in wp-blog-header.php"><![CDATA[<?php
+#if ( !isset($wp_did_header) ) {
+  $wp_did_header = true;
+  require_once( dirname(__FILE__) . '/wp-load.php' );
+  wp();
+  require_once( ABSPATH . WPINC . '/template-loader.php' );
+#}
+?>]]></example>
+
+<example fontsize="1.4em" title="require_wp_db() call in wp-includes/functions.php"><![CDATA[<?php
+function require_wp_db() {
+  global $wpdb;
+  if ( file_exists( WP_CONTENT_DIR . '/db.php' ) )
+    require_once( WP_CONTENT_DIR . '/db.php' );
+  else
+    require_once( ABSPATH . WPINC . '/wp-db.php' );
+}
+?>]]></example>
+
+<example fontsize="1.4em" title="Don't call require_wp_db() from wp-settings.php"><![CDATA[<?php
+#require_wp_db();
+require './wp-includes/wp-db.php';
+]]></example>
+
+<example fontsize="1.4em" title="Hardcode built-in wp cache in wp-settings.php"><![CDATA[<?php
+require './wp-includes/cache.php';
+]]></example>
+
+<example fontsize="1.4em" title="Remove conditional require logic from wp_start_object_cache"><![CDATA[<?php
+function wp_start_object_cache() {
+        global $_wp_using_ext_object_cache;
+        $first_init = false;
+        $_wp_using_ext_object_cache = false;
+        static $first_init = true;
+
+#       if ( ! function_exists( 'wp_cache_init' ) ) {
+#               global $_wp_using_ext_object_cache;
+#               if ( file_exists( WP_CONTENT_DIR . '/object-cache.php' ) ) {
+#                       require_once ( WP_CONTENT_DIR . '/object-cache.php' );
+#                       $_wp_using_ext_object_cache = true;
+#               } else {
+#                       require_once ( ABSPATH . WPINC . '/cache.php' );
+#                       $_wp_using_ext_object_cache = false;
+#               }
+#               $first_init = true;
+#       }
+...]]></example>
+
+<example fontsize="1.4em" type="shell" title="Check again"><![CDATA[
+|00aaff|~>| *grep open strace2.out*
+open("/var/www/wp2/wp-includes/pomo/translations.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-includes/pomo/entry.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-includes/pomo/streams.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-includes/default-widgets.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-includes/default-embeds.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-includes/template-loader.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-content/themes/default/header.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-content/themes/default/sidebar.php", O_RDONLY) = 30
+open("/var/www/wp2/wp-content/themes/default/footer.php", O_RDONLY) = 30
+open("/var/www/wp1/wp-content/themes/default/style.css", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickbgcolor.jpg", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickbg-ltr.jpg", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickheader.jpg", O_RDONLY) = 29
+open("/var/www/wp1/wp-content/themes/default/images/kubrickfooter.jpg", O_RDONLY) = 29
+]]></example>
+</slide>

@@ -1,0 +1,26 @@
+<slide title="Current Wordpress SVN Checkout">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" leader="Siege: " href="http://www.joedog.org/JoeDog/Siege"/>
+
+<example fontsize="1.4em" type="shell" title="Baseline Benchmark Wordpress PHP-5.3.3-dev Apache-2.2.12 prefork"><![CDATA[
+|00aaff|~>| *siege |ffff00|-c| 5 |ffff00|-b| |ffff00|-t|30s http://wp1.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		         258 hits
+Availability:		      100.00 %
+Elapsed time:		       29.56 secs
+Data transferred:	        0.55 MB
+Response time:		        *|ffff00|0.57 secs|*
+Transaction rate:	        *|ffff00|8.73 trans/sec|*
+Throughput:		        0.02 MB/sec
+Concurrency:		        4.95
+Successful transactions:         258
+Failed transactions:	           0
+Longest transaction:	        1.10
+Shortest transaction:	        0.26]]></example>
+
+</slide>

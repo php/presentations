@@ -1,0 +1,41 @@
+<slide title="Twit Code">
+
+<example fontsize="1.4em" type="shell" title="Baseline Benchmark"><![CDATA[|00aaff|~>| *siege -b -t30s -c5 http://twit.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        7005 hits
+Availability:		      100.00 %
+Elapsed time:		       29.08 secs
+Data transferred:	       20.26 MB
+Response time:		        *|ffff00|0.02 secs|*
+Transaction rate:	      *|ffff00|240.89 trans/sec|*
+Throughput:		        0.70 MB/sec
+Concurrency:		        4.98
+Successful transactions:        7005
+Failed transactions:	           0
+Longest transaction:	        0.29
+Shortest transaction:	        0.00
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="w/ APC"><![CDATA[|00aaff|~>| *siege -b -t30s -c5 http://twit2.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		       11105 hits
+Availability:		      100.00 %
+Elapsed time:		       29.38 secs
+Data transferred:	       32.12 MB
+Response time:		        *|ffff00|0.01 secs|*
+Transaction rate:	      *|ffff00|377.98 trans/sec|*
+Throughput:		        1.09 MB/sec
+Concurrency:		        4.97
+Successful transactions:       11105
+Failed transactions:	           0
+Longest transaction:	        0.15
+Shortest transaction:	        0.00
+]]></example>
+
+</slide>

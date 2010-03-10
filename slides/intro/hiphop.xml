@@ -1,0 +1,84 @@
+<slide title="HipHop Gotchas">
+
+<list fontsize="3em">
+<bullet>The type inference means code like this will break under HipHop:</bullet>
+</list>
+
+<example fontsize="1.4em" title=""><![CDATA[<?php
+  $ret = false;
+  $ret[] = 123;  
+/* Fixed by Haiping Tuesday March 9, 2010 */
+]]></example>
+
+<list fontsize="2.5em">
+<bullet>It doesn't support any of the new PHP 5.3 language features</bullet>
+<bullet>Private properties don't really exist under HipHop.  They are treated as if they are protected instead.</bullet>
+<bullet>You can't unset variables.  unset will clear the variable, but it will still be in the symbol table.</bullet>
+<bullet>*eval* and *create_function* are limited</bullet>
+<bullet>Variable variables *$$var* are not supported</bullet>
+<bullet>Dynamic defines won't work: *define($name,$value)*</bullet>
+<bullet>*get_loaded_extensions()*, *get_extension_funcs()*, *phpinfo()*, *debug_backtrace()* don't work</bullet>
+<bullet>Conditional and dynamically created include filenames don't work as you might expect</bullet>
+<bullet>Default unix-domain socket filename isn't set for MySQL so connecting to localhost doesn't work</bullet>
+</list>
+<example fontsize="1.4em" title="Workaround"><![CDATA[<?php
+mysql_pconnect('localhost:/var/run/mysqld/mysqld.sock',$user,$pwd);
+// or
+mysql_pconnect('127.0.0.1',$user,$pwd);
+]]></example>
+<list fontsize="3em">
+<bullet>You are currently limited to these extensions:</bullet>
+</list>
+
+<example fontsize="1.4em" type="shell" title=""><![CDATA[ apache
+ apc (for apc_store/apc_fetch)
+ apd
+ bcmath
+ ctype
+ curl
+ datetime
+ domdocument
+ hash
+ hotprofiler (undocumented FB profiling ext that supports xhprof)
+ iconv
+ icu
+ idn
+ image
+ ipc
+ json
+ ldap
+ magick
+ mailparse
+ math
+ mb
+ mcrypt
+ misc
+ mysql
+ network
+ openssl
+ oracle
+ posix
+ preg
+ process
+ reflection
+ server
+ simplexml
+ soap
+ socket
+ splfile
+ sqlite3
+ stream
+ string
+ thrift
+ url
+ variable
+ xml
+ xmlwriter
+ zlib
+]]></example>
+
+<blurb fontsize="3em">
+Quite a few, but the lack of *session*, *PDO*, *mysqli*, *pgsql*, and *memcache* makes it hard to run many apps.
+</blurb>
+
+</slide>

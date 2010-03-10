@@ -1,0 +1,111 @@
+<slide title="Check xhprof">
+
+<break lines="1" />
+<example fontsize="1.4em" type="shell" title="pecl/xhprof extension in php.ini"><![CDATA[extension=xhprof.so
+xhprof.output_dir=/tmp]]></example>
+
+<example fontsize="1.4em" type="shell" title="xhprof vhost"><![CDATA[<VirtualHost *:80>
+  ServerName xhprof.localhost
+  UseCanonicalName Off
+  DocumentRoot /var/www/xhprof
+  ErrorLog /var/log/apache2/xhprof-error.log
+  CustomLog /var/log/apache2/xhprof-access.log combined
+  DirectoryIndex index.php index.html
+</VirtualHost>]]></example>
+
+<example fontsize="1.4em" type="shell" title="enable xhprof for a vhost"><![CDATA[
+# For XHPROF Profiling
+  php_value auto_prepend_file /var/www/xhprof/header.php
+  php_value auto_append_file /var/www/xhprof/footer.php
+...]]></example>
+
+<example fontsize="1.4em" title="header.php"><![CDATA[<?php
+include '/var/www/xhprof/xhprof_lib/utils/xhprof_lib.php';
+include '/var/www/xhprof/xhprof_lib/utils/xhprof_runs.php';
+xhprof_enable(XHPROF_FLAGS_CPU + XHPROF_FLAGS_MEMORY);]]></example>
+
+<example fontsize="1.4em" title="footer.php"><![CDATA[<?php
+$app = $_SERVER['HTTP_HOST'];
+$xhprof_data = xhprof_disable();
+$xhprof_runs = new XHProfRuns_Default();
+$id = $xhprof_runs->save_run($xhprof_data, $app);
+$ua = urlencode($app);
+$profiler_url = "http://xhprof.localhost/index.php?run=$id&source=$ua";
+echo '<a href="'. $profiler_url .'" target="_blank">Profiler output</a>';]]></example>
+
+<blurb fontsize="3.5em">
+Now hit the server a few times to warm up the caches, then click the "Profiler Output" link at the bottom.
+</blurb>
+
+<example fontsize="1.25em" type="shell" title="mysql_connect and mysql_set_charset"><![CDATA[
+--- wp-db.php	(revision 13595)
++++ wp-db.php	(working copy)
+@@ -499,7 +499,7 @@
+-		$this->dbh = *|ffff00|@mysql_connect|*( $dbhost, $dbuser, $dbpassword, *|ffff00|true|* );
++		$this->dbh = *|ffff00|mysql_pconnect|*( $dbhost, $dbuser, $dbpassword );
+@@ -518,7 +516,7 @@
+-				mysql_set_charset( $this->charset, $this->dbh );
++#				mysql_set_charset( $this->charset, $this->dbh );
+]]></example>
+
+<blurb fontsize="2.5em">
+And as we are browsing the source code, we can replace most *time()* calls with *$_SERVER['REQUEST_TIME']* and also any
+*date()* or *gmdate()* calls that don't already have a timestamp argument, we can add *$_SERVER['REQUEST_TIME']* to those.
+</blurb>
+
+<example fontsize="1em" type="shell" title="$_SERVER['REQUEST_TIME'] example"><![CDATA[--- ./load.php	2010-03-05 09:31:16.573829617 -0800
++++ ../../wp2/wp-includes/load.php	2010-03-05 16:57:13.452580398 -0800
+@@ -138,7 +138,7 @@
+-	if ( ( *|ffff00|time()|* - $upgrading ) >= 600 )
++	if ( ( *|ffff00|$_SERVER['REQUEST_TIME']|* - $upgrading ) >= 600 )
+]]></example>
+
+<example fontsize="1em" title="Optimize is_serialized"><![CDATA[// This condition gets hit often:
+   if ( !preg_match( '/^([adObis]):/', $data, $badions ) )
+      return false;
+]]></example>
+
+<example fontsize="1em" title="Faster alternative"><![CDATA[if(strlen($data)>1 && strpbrk($data,'adObis')==$data && $data[1]==':') $badions[1] = $data[0]; 
+   else return false;
+]]></example>
+
+<blurb fontsize="3.5em">
+And finally, let's disable the phone-home version update check and the cron functionality.
+We can do these out-of-band ourselves.
+</blurb>
+
+<example fontsize="1em" type="shell" title="Disable cron and update check"><![CDATA[...
+Index: wp-settings.php
+===================================================================
+--- wp-settings.php	(revision 13594)
++++ wp-settings.php	(working copy)
+@@ -118,11 +117,11 @@
+ require( ABSPATH . WPINC . '/bookmark.php' );
+ require( ABSPATH . WPINC . '/bookmark-template.php' );
+ require( ABSPATH . WPINC . '/kses.php' );
+-require( ABSPATH . WPINC . '/cron.php' );
++*|ffff00|#|*require( ABSPATH . WPINC . '/cron.php' );
+ require( ABSPATH . WPINC . '/deprecated.php' );
+ require( ABSPATH . WPINC . '/script-loader.php' );
+ require( ABSPATH . WPINC . '/taxonomy.php' );
+-require( ABSPATH . WPINC . '/update.php' );
++*|ffff00|#|*require( ABSPATH . WPINC . '/update.php' );
+ require( ABSPATH . WPINC . '/canonical.php' );
+ require( ABSPATH . WPINC . '/shortcodes.php' );
+ require( ABSPATH . WPINC . '/media.php' );
+
+Index: default-filters.php
+===================================================================
+--- default-filters.php	(revision 13595)
++++ default-filters.php	(working copy)
+@@ -198,8 +198,8 @@
+ }
+ 
+ // WP Cron
+-if ( !defined( 'DOING_CRON' ) )
+-	add_action( 'sanitize_comment_cookies', 'wp_cron' );
++*|ffff00|#|*if ( !defined( 'DOING_CRON' ) )
++*|ffff00|#|*	add_action( 'sanitize_comment_cookies', 'wp_cron' );
+]]></example>
+
+</slide>

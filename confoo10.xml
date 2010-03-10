@@ -1,0 +1,49 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="3.5em"
+>
+<!--
+Performance
+-->
+
+<topic>PHP</topic>
+<title>PHP Performance</title>
+<event>ConFoo.ca</event>
+<location>Montreal</location>
+<date>Mar.11, 2010</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/confoo10</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- History -->
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/perf_google.xml</slide>
+<slide>slides/intro/wp1.xml</slide>
+<slide>slides/intro/wp2.xml</slide>
+<slide>slides/intro/wp3.xml</slide>
+<slide>slides/intro/wp4.xml</slide>
+<slide>slides/intro/wp5.xml</slide>
+<slide>slides/intro/wp6.xml</slide>
+<slide>slides/intro/wp7.xml</slide>
+<slide>slides/intro/wp8.xml</slide>
+<slide>slides/intro/wp9.xml</slide>
+<slide>slides/intro/wp10.xml</slide>
+<slide>slides/intro/wp11.xml</slide>
+<slide>slides/intro/wp12.xml</slide>
+<slide>slides/intro/hiphop.xml</slide>
+
+<slide>slides/intro/ntwit0.xml</slide>
+<slide>slides/intro/ntwit1.xml</slide>
+<slide>slides/intro/ntwit2.xml</slide>
+<slide>slides/intro/ntwit3.xml</slide>
+<slide>slides/intro/ntwit4.xml</slide>
+<slide>slides/intro/perf_conclusion.xml</slide>
+
+</presentation>

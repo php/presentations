@@ -1,0 +1,27 @@
+<slide title="Get rid of the Blogroll">
+
+<blurb fontsize="3.5em">
+The *wp_list_bookmarks()* function is rather expensive.  It provides the Blogroll sidebar block.  
+If we don't care about that and remove the call from *wp-content/themes/default/sidebar.php* we are now at:
+</blurb>
+
+<example fontsize="1.4em" type="shell" title=""><![CDATA[
+|00aaff|~>| *siege -b -t30s -c5 http://wp1.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        1000 hits
+Availability:		      100.00 %
+Elapsed time:		       29.76 secs
+Data transferred:	        1.97 MB
+Response time:		        *|ffff00|0.15 secs|*
+Transaction rate:	       *|ffff00|33.60 trans/sec|*
+Throughput:		        0.07 MB/sec
+Concurrency:		        4.98
+Successful transactions:        1000
+Failed transactions:	           0
+Longest transaction:	        0.58
+Shortest transaction:	        0.07]]></example>
+
+</slide>

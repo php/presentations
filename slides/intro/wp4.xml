@@ -1,0 +1,27 @@
+<slide title="Check include hierachy">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Install pecl/inclued"><![CDATA[
+extension=inclued.so
+inclued.enabled=1
+inclued.dumpdir=/tmp
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Generate graph"><![CDATA[
+|00aaff|~>| *php ~/pecl/inclued/gengraph.php -i /tmp/inclued.27843.1*
+Written inclued.out.dot...
+|00aaff|~>| *dot -Tpng -o wp_inclued1.png inclued.out.dot*
+]]></example>
+
+<break lines="1" />
+
+<image filename="wp_inclued1.png" width="950" height="555" align="center"/>
+
+<break lines="1" />
+
+<blurb fontsize="3em">
+Not bad, no redundant include_once/require_once (would show as dotted lines).
+Still too many levsl for my liking though.
+</blurb>
+</slide>

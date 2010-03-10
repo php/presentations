@@ -1,0 +1,59 @@
+<slide title="Check System Calls">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="strace your web server process"><![CDATA[
+|00aaff|~>| */usr/sbin/apache2 -X &*
+[1] 16367
+|ffff00|(hit page a few times to warm up caches)|
+|00aaff|~>| *strace -p 16367 -o strace.out*
+Process 16367 attached - interrupt to quit
+|ffff00|(hit page *once*)|
+*^C*
+Process 16367 detached]]></example>
+
+<break lines="1" />
+<blurb fontsize="3.5em">Some common configuration issues you can spot in your strace output:</blurb>
+
+<example fontsize="1.4em" type="shell" title=".htaccess is slow"><![CDATA[...
+open("/.htaccess", O_RDONLY)            = -1 ENOENT (No such file or directory)
+open("/var/.htaccess", O_RDONLY)        = -1 ENOENT (No such file or directory)
+open("/var/www/.htaccess", O_RDONLY)    = -1 ENOENT (No such file or directory)
+...]]></example>
+
+<example fontsize="1.4em" title="In your httpd.conf"><![CDATA[ <Directory />
+    AllowOverride None
+ </Directory>]]></example>
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Finding the Index file"><![CDATA[stat64("/var/www/index.html", 0xbfd279ac) = -1 ENOENT (No such file or directory)
+stat64("/var/www/index.cgi", 0xbfd27afc) = -1 ENOENT (No such file or directory)
+stat64("/var/www/index.pl", 0xbfd27afc) = -1 ENOENT (No such file or directory)
+stat64("/var/www/index.php", {st_mode=S_IFREG|0664, st_size=7198, ...}) = 0]]></example>
+
+<example fontsize="1.4em" title="Fix DirectoryIndex"><![CDATA[<Directory /var/www>
+    DirectoryIndex index.php
+</Directory>]]></example>
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Watch your include_path"><![CDATA[lstat64("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/foo", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat64("/var/www/foo/PEAR.php", 0xbffcf5fc) = -1 ENOENT (No such file or directory)
+open("/var/www/foo/PEAR.php", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/php/PEAR.php", O_RDONLY) = 10
+open("./something.php", O_RDONLY) = 11]]></example>
+
+<example fontsize="1.4em" title="Cause"><![CDATA[<?php
+ini_set('include_path','.:/usr/local/lib/php');
+include 'PEAR.php';
+include 'something.php';
+?>]]></example>
+
+<example fontsize="1.4em" title="Fix"><![CDATA[<?php
+ini_set('include_path','/usr/local/lib/php');
+include 'PEAR.php';
+include './something.php';
+?>]]></example>
+
+</slide>

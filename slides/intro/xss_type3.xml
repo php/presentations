@@ -9,4 +9,6 @@ $uri = filter_input(INPUT_SERVER, 'REFERER', FILTER_UNSAFE_RAW);
 ?>
 <a href="<?php echo $uri?>">Back</a>]]></example>
 
+<blurb fontsize="4em">Watch out for Cookie injected XSS as well</blurb>
+
 </slide>

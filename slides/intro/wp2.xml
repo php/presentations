@@ -1,0 +1,46 @@
+<slide title="Enable APC">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" leader="APC: " href="http://pecl.php.net/APC"/>
+
+<example fontsize="1.4em" title="Set your default timezone in php.ini file"><![CDATA[date.timezone = "America/Los_Angeles"]]></example>
+
+<example fontsize="1.4em" type="shell" title="Benchmarking PHP-5.3.3-dev w/ APC-3.1.4-dev zend.enable_gc=Off"><![CDATA[
+|00aaff|~>| *siege |ffff00|-c| 5 |ffff00|-b| |ffff00|-t|30s http://wp1.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		         788 hits
+Availability:		      100.00 %
+Elapsed time:		       29.27 secs
+Data transferred:	        1.66 MB
+Response time:		        *|ffff00|0.18 secs|*
+Transaction rate:	       *|ffff00|26.92 trans/sec|*
+Throughput:		        0.06 MB/sec
+Concurrency:		        4.97
+Successful transactions:         788
+Failed transactions:	           0
+Longest transaction:	        0.65
+Shortest transaction:	        0.07]]></example>
+
+<example title="Make sure we are cpu-bound" fontsize="1.3em" type="shell">
+|00aaff|~>| *vmstat 1*
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy *|ffff00|id|* wa
+ 7  0 297704 333808 103644 680204    0    0     0    32  278 1682 90 10  *|ffff00|0|*  0
+ 5  0 297704 333184 103644 680348    0    0     0     0  279 1668 94  6  *|ffff00|0|*  0
+ 6  0 297704 333516 103644 680500    0    0     0     0  269 1701 92  8  *|ffff00|0|*  0
+ 6  0 297704 333076 103644 680612    0    0     0     0  266 1651 93  8  *|ffff00|0|*  0
+15  0 297704 333780 103644 680640    0    0     0     0  274 1718 93  7  *|ffff00|0|*  0
+ 6  0 297704 332248 103652 681548    0    0     0    32  328 2519 86 14  *|ffff00|0|*  0
+ 5  0 297704 329704 103652 684272    0    0     0     0  286 1623 90 11  *|ffff00|0|*  0
+ 7  0 297704 330208 103652 684184    0    0     0     0  374 1793 93  7  *|ffff00|0|*  0
+ 7  0 297704 332452 103652 681164    0    0     0     0  268 1678 95  6  *|ffff00|0|*  0
+ 7  0 297704 332196 103652 681460    0    0     0     0  291 1667 93  7  *|ffff00|0|*  0
+ 6  0 297704 332336 103660 681484    0    0     0    20  278 1718 92  8  *|ffff00|0|*  0
+ 6  0 297704 333412 103660 680792    0    0     0     0  279 1655 91  9  *|ffff00|0|*  0
+</example>
+
+</slide>

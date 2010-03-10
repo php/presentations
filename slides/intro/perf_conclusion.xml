@@ -1,0 +1,11 @@
+<slide title="Conclusion">
+<break lines="1"/>
+
+<list fontsize="3em">
+<bullet>Performance is all about flexibility vs. cost tradeoffs.</bullet>
+<bullet>If you don't know what things cost, you are lost.</bullet>
+<bullet>Learn your tools - strace, Callgrind, Xdebug, xhprof.</bullet>
+<bullet>Check your assumptions.</bullet>
+</list>
+
+</slide>

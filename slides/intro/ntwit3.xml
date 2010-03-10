@@ -1,0 +1,395 @@
+<slide title="HipHop">
+
+<blurb fontsize="3em">
+Let's try HipHop on it.
+</blurb>
+
+<example fontsize="1.4em" type="shell" title="HipHop"><![CDATA[
+|00aaff|~>| *siege -b -t30s -c5 http://twit2.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        8328 hits
+Availability:		      100.00 %
+Elapsed time:		       29.13 secs
+Data transferred:	       26.08 MB
+Response time:		        *|ffff00|0.02 secs|*
+Transaction rate:	      *|ffff00|285.89 trans/sec|*
+Throughput:		        0.90 MB/sec
+Concurrency:		        4.98
+Successful transactions:        8328
+Failed transactions:	           0
+Longest transaction:	        0.11
+Shortest transaction:	        0.00
+]]></example>
+
+<blurb fontsize="3em">
+Slower?  Weird.  Let's see if we can figure out why.  Start by comparing system calls. 
+</blurb>
+
+<example fontsize="1em" type="shell" title="56 System Calls for PHP+APC"><![CDATA[
+accept(4, {sa_family=AF_INET6, sin6_port=htons(55797), inet_pton(AF_INET6, "::ffff:127.0.1.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [28]) = 31
+fcntl(31, F_GETFD)                      = 0
+fcntl(31, F_SETFD, FD_CLOEXEC)          = 0
+getsockname(31, {sa_family=AF_INET6, sin6_port=htons(80), inet_pton(AF_INET6, "::ffff:127.0.1.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [68719476764]) = 0
+fcntl(31, F_GETFL)                      = 0x2 (flags O_RDWR)
+fcntl(31, F_SETFL, O_RDWR|O_NONBLOCK)   = 0
+read(31, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 8000) = 147
+stat("/var/www/twit2/", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/var/www/twit2/index.php", {st_mode=S_IFREG|0644, st_size=5970, ...}) = 0
+setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={60, 0}}, NULL) = 0
+rt_sigaction(SIGPROF, {0x7f25c862cda0, [PROF], SA_RESTORER|SA_RESTART, 0x7f25cb6f1530}, {0x7f25c862cda0, [PROF], SA_RESTORER|SA_RESTART, 0x7f25cb6f1530}, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [PROF], NULL, 8) = 0
+getcwd("/var/www/twit2", 4095)          = 15
+chdir("/var/www/twit2")                 = 0
+stat("././includes/db.inc", {st_mode=S_IFREG|0644, st_size=11177, ...}) = 0
+stat("././includes/comments.inc", {st_mode=S_IFREG|0644, st_size=2105, ...}) = 0
+stat("././includes/comment_msg.inc", {st_mode=S_IFREG|0644, st_size=544, ...}) = 0
+stat("././includes/twit_msg.inc", {st_mode=S_IFREG|0644, st_size=3816, ...}) = 0
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, "\1\0\0\0\16", 5)             = 5
+read(32, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, "\6\0\0\0\2twits", 10)        = 10
+read(32, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, ")\0\0\0\3SELECT * from tracks  order"..., 45) = 45
+read(32, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, "\266\0\0\0\3SELECT query, count(id) as "..., 186) = 186
+read(32, "\1\0\0\1\7/\0\0\2\3def\5twits\5twits\5twits\5"..., 16384) = 467
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, "F\0\0\0\3SELECT * from twits where a"..., 74) = 74
+read(32, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 736
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, "O\0\0\0\3SELECT * from twits where s"..., 83) = 83
+read(32, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1228
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, "O\0\0\0\3SELECT * from twits where s"..., 83) = 83
+read(32, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1896
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, "Y\0\0\0\3select id,c_id,p_id,replies"..., 93) = 93
+read(32, "\1\0\0\1\7/\0\0\2\3def\5twits\10comments\10com"..., 16384) = 700
+stat("././includes/header.php", {st_mode=S_IFREG|0644, st_size=353, ...}) = 0
+poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+write(32, ")\0\0\0\3SELECT * from tracks  order"..., 45) = 45
+read(32, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
+chdir("/var/www/twit2")                 = 0
+setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
+writev(31, [{"HTTP/1.1 200 OK\r\nDate: Mon, 08 M"..., 337}, {"\37\213\10\0\0\0\0\0\0\3", 10}, {"\345[\353r\33\267\25\376\357\247\200\
+327\323\330\351\210\334\v\257\242I:\36\305J\334\211\35\325\326L\376"..., 3004}, {"\245\225\236_\3218\0\0", 8}], 4) = 3359
+write(22, "127.0.1.1 - - [08/Mar/2010:08:41"..., 113) = 113
+shutdown(31, 1 /* send */)              = 0
+poll([{fd=31, events=POLLIN}], 1, 2000) = 1 ([{fd=31, revents=POLLIN|POLLHUP}])
+read(31, "", 512)                       = 0
+close(31)                               = 0
+read(5, 0x7fff24ca12ff, 1)              = -1 EAGAIN (Resource temporarily unavailable)
+accept(4,  <unfinished ...>
+]]></example>
+
+<example fontsize="1em" type="shell" title="112 System Calls for HipHop"><![CDATA[
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 19, NULL <unfinished ...>
+16347 epoll_wait(14,  <unfinished ...>
+16346 futex(0x2b1d844, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+16336 futex(0x2b1b28c, FUTEX_WAIT_PRIVATE, 1, NULL <unfinished ...>
+16342 restart_syscall(<... resuming interrupted call ...>) = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0}, {1, 0})         = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0}, {1, 0})         = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0}, {1, 0})         = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0}, {1, 0})         = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0}, {1, 0})         = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0},  <unfinished ...>
+16344 <... epoll_wait resumed> {{EPOLLIN, {u32=20, u64=20}}}, 32, 4294967295) = 1
+16344 accept(20, {sa_family=AF_INET, sin_port=htons(53023), sin_addr=inet_addr("127.0.1.1")}, [2292050743944806416]) = 19
+16344 fcntl(19, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+16344 epoll_ctl(6, EPOLL_CTL_ADD, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
+16344 epoll_wait(6, {{EPOLLIN, {u32=19, u64=19}}}, 32, 50000) = 1
+16344 epoll_ctl(6, EPOLL_CTL_DEL, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
+16344 ioctl(19, FIONREAD, [147])        = 0
+16344 read(19, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 147) = 147
+16344 futex(0x2b1b7b4, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x2b1b7b0, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+16343 <... futex resumed> )             = 0
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x2b1b788, FUTEX_WAKE_PRIVATE, 1) = 0
+16343 open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 26
+16343 stat("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+16343 stat("/var/www/twit2", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "\1\0\0\0\16", 5)       = 5
+16343 read(27, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "\6\0\0\0\2twits", 10)  = 10
+16343 read(27, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, ")\0\0\0\3SELECT * from tracks  order"..., 45) = 45
+16343 read(27, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "\266\0\0\0\3SELECT query, count(id) as "..., 186) = 186
+16343 read(27, "\1\0\0\1\7/\0\0\2\3def\5twits\5twits\5twits\5"..., 16384) = 467
+16343 madvise(0x7f21f802a000, 8192, MADV_DONTNEED) = 0
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "F\0\0\0\3SELECT * from twits where a"..., 74) = 74
+16343 read(27, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 736
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "O\0\0\0\3SELECT * from twits where s"..., 83) = 83
+16343 read(27, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1228
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "O\0\0\0\3SELECT * from twits where s"..., 83) = 83
+16343 read(27, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1896
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "Y\0\0\0\3select id,c_id,p_id,replies"..., 93) = 93
+16343 read(27, "\1\0\0\1\7/\0\0\2\3def\5twits\10comments\10com"..., 16384) = 700
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, ")\0\0\0\3SELECT * from tracks  order"..., 45) = 45
+16343 read(27, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
+16343 write(19, "HTTP/1.1 200 OK\r\nSet-Cookie: tok"..., 3556) = 3556
+16343 write(10, "\0", 1 <unfinished ...>
+16344 <... epoll_wait resumed> {{EPOLLIN, {u32=9, u64=9}}}, 32, 4294967295) = 1
+16343 <... write resumed> )             = 1
+16344 read(9,  <unfinished ...>
+16343 madvise(0x7f21f8035000, 274432, MADV_DONTNEED <unfinished ...>
+16344 <... read resumed> "\0", 512)     = 1
+16344 futex(0x7f21f8000020, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+16343 <... madvise resumed> )           = 0
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... futex resumed> )             = 1
+16344 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16343 madvise(0x7f21f8031000, 16384, MADV_DONTNEED <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... madvise resumed> )           = 0
+16344 close(19 <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16344 <... close resumed> )             = 0
+16343 <... futex resumed> )             = 0
+16344 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... futex resumed> )             = -1 EAGAIN (Resource temporarily unavailable)
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1) = 0
+16343 madvise(0x7f21f802c000, 20480, MADV_DONTNEED) = 0
+16343 close(26)                         = 0
+16343 madvise(0x7f21f8029000, 12288, MADV_DONTNEED) = 0
+16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 21, NULL <unfinished ...>
+16342 <... nanosleep resumed> {1, 0})   = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0}, {1, 0})         = 0
+16342 rt_sigprocmask(SIG_BLOCK, [CHLD], [], 8) = 0
+16342 rt_sigaction(SIGCHLD, NULL, {0xce9490, [CHLD], SA_RESTORER|SA_RESTART, 0x7f220fe99530}, 8) = 0
+16342 rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+16342 nanosleep({1, 0},  <unfinished ...>
+]]></example>
+
+<blurb fontsize="3em">
+Only threads 16343 and 16344 are really interesting here.  16344 calls accept and reads the
+request from the browser and 16343 runs the PHP code.  Removing the others brings us down to 75 system calls:
+</blurb>
+
+<example fontsize="1em" type="shell" title="75 System Calls"><![CDATA[
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 19, NULL <unfinished ...>
+16344 <... epoll_wait resumed> {{EPOLLIN, {u32=20, u64=20}}}, 32, 4294967295) = 1
+*|ffff00|16344 accept(20, {sa_family=AF_INET, sin_port=htons(53023), sin_addr=inet_addr("127.0.1.1")}, [2292050743944806416]) = 19|*
+16344 fcntl(19, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+16344 epoll_ctl(6, EPOLL_CTL_ADD, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
+16344 epoll_wait(6, {{EPOLLIN, {u32=19, u64=19}}}, 32, 50000) = 1
+16344 epoll_ctl(6, EPOLL_CTL_DEL, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
+16344 ioctl(19, FIONREAD, [147])        = 0
+*|ffff00|16344 read(19, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 147) = 147|*
+16344 futex(0x2b1b7b4, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x2b1b7b0, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+16343 <... futex resumed> )             = 0
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x2b1b788, FUTEX_WAKE_PRIVATE, 1) = 0
+16343 open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 26
+*|ffff00|16343 stat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0|*
+16343 stat("/var/www/twit2", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "\1\0\0\0\16", 5)       = 5
+16343 read(27, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "\6\0\0\0\2twits", 10)  = 10
+16343 read(27, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, ")\0\0\0\3SELECT * from tracks  order"..., 45) = 45
+16343 read(27, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "\266\0\0\0\3SELECT query, count(id) as "..., 186) = 186
+16343 read(27, "\1\0\0\1\7/\0\0\2\3def\5twits\5twits\5twits\5"..., 16384) = 467
+16343 madvise(0x7f21f802a000, 8192, MADV_DONTNEED) = 0
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "F\0\0\0\3SELECT * from twits where a"..., 74) = 74
+16343 read(27, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 736
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "O\0\0\0\3SELECT * from twits where s"..., 83) = 83
+16343 read(27, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1228
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "O\0\0\0\3SELECT * from twits where s"..., 83) = 83
+16343 read(27, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1896
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, "Y\0\0\0\3select id,c_id,p_id,replies"..., 93) = 93
+16343 read(27, "\1\0\0\1\7/\0\0\2\3def\5twits\10comments\10com"..., 16384) = 700
+16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
+16343 write(27, ")\0\0\0\3SELECT * from tracks  order"..., 45) = 45
+16343 read(27, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
+16343 write(19, "HTTP/1.1 200 OK\r\nSet-Cookie: tok"..., 3556) = 3556
+16343 write(10, "\0", 1 <unfinished ...>
+16344 <... epoll_wait resumed> {{EPOLLIN, {u32=9, u64=9}}}, 32, 4294967295) = 1
+16343 <... write resumed> )             = 1
+16344 read(9,  <unfinished ...>
+16343 madvise(0x7f21f8035000, 274432, MADV_DONTNEED <unfinished ...>
+16344 <... read resumed> "\0", 512)     = 1
+16344 futex(0x7f21f8000020, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+16343 <... madvise resumed> )           = 0
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... futex resumed> )             = 1
+16344 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16343 madvise(0x7f21f8031000, 16384, MADV_DONTNEED <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... madvise resumed> )           = 0
+16344 close(19 <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16344 <... close resumed> )             = 0
+16343 <... futex resumed> )             = 0
+16344 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... futex resumed> )             = -1 EAGAIN (Resource temporarily unavailable)
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1) = 0
+16343 madvise(0x7f21f802c000, 20480, MADV_DONTNEED) = 0
+16343 close(26)                         = 0
+16343 madvise(0x7f21f8029000, 12288, MADV_DONTNEED) = 0
+16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 21, NULL <unfinished ...>
+]]></example>
+
+<blurb fontsize="3em">
+The MySQL-related syscalls are exactly the same.  fd 32 in PHP and fd 27 in HipHop PHP, so we can assume the
+DB interaction is identical and eliminate those calls.
+</blurb>
+
+<example fontsize="1em" type="shell" title="48 System Calls"><![CDATA[
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 19, NULL <unfinished ...>
+16344 <... epoll_wait resumed> {{EPOLLIN, {u32=20, u64=20}}}, 32, 4294967295) = 1
+*|ffff00|16344 accept(20, {sa_family=AF_INET, sin_port=htons(53023), sin_addr=inet_addr("127.0.1.1")}, [2292050743944806416]) = 19|*
+16344 fcntl(19, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+16344 epoll_ctl(6, EPOLL_CTL_ADD, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
+16344 epoll_wait(6, {{EPOLLIN, {u32=19, u64=19}}}, 32, 50000) = 1
+16344 epoll_ctl(6, EPOLL_CTL_DEL, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
+16344 ioctl(19, FIONREAD, [147])        = 0
+*|ffff00|16344 read(19, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 147) = 147|*
+16344 futex(0x2b1b7b4, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x2b1b7b0, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
+16343 <... futex resumed> )             = 0
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x2b1b788, FUTEX_WAKE_PRIVATE, 1) = 0
+16343 open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 26
+*|ffff00|16343 stat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0|*
+16343 stat("/var/www/twit2", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+16343 madvise(0x7f21f802a000, 8192, MADV_DONTNEED) = 0
+16343 write(19, "HTTP/1.1 200 OK\r\nSet-Cookie: tok"..., 3556) = 3556
+16343 write(10, "\0", 1 <unfinished ...>
+16344 <... epoll_wait resumed> {{EPOLLIN, {u32=9, u64=9}}}, 32, 4294967295) = 1
+16343 <... write resumed> )             = 1
+16344 read(9,  <unfinished ...>
+16343 madvise(0x7f21f8035000, 274432, MADV_DONTNEED <unfinished ...>
+16344 <... read resumed> "\0", 512)     = 1
+16344 futex(0x7f21f8000020, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+16343 <... madvise resumed> )           = 0
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... futex resumed> )             = 1
+16344 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16343 madvise(0x7f21f8031000, 16384, MADV_DONTNEED <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... madvise resumed> )           = 0
+16344 close(19 <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16344 <... close resumed> )             = 0
+16343 <... futex resumed> )             = 0
+16344 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1 <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAIT_PRIVATE, 2, NULL <unfinished ...>
+16344 <... futex resumed> )             = 0
+16343 <... futex resumed> )             = -1 EAGAIN (Resource temporarily unavailable)
+16344 epoll_wait(6,  <unfinished ...>
+16343 futex(0x7f21f8000020, FUTEX_WAKE_PRIVATE, 1) = 0
+16343 madvise(0x7f21f802c000, 20480, MADV_DONTNEED) = 0
+16343 close(26)                         = 0
+16343 madvise(0x7f21f8029000, 12288, MADV_DONTNEED) = 0
+16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 21, NULL <unfinished ...>
+]]></example>
+
+<blurb fontsize="3em">
+The *accept()*, *read()* and *write()* calls are similar.  HipHop-PHP doesn't have a log write like Apache-PHP does (fd 22) and Apache-PHP necesssarily has a few more stats because I am running with apc.stat=1.  But both of these point to Apache-PHP being slower, and in this case it isn't.  Theoretically HipHop-PHP should do better at higher concurrency though, so let's test that.
+</blurb>
+
+<example fontsize="1.4em" type="shell" title="HipHop with 25 concurrent clients"><![CDATA[
+|00aaff|~>| *siege -b -t30s -c25 http://twit2.localhost*
+** SIEGE 2.68
+** Preparing 25 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        9519 hits
+Availability:		      100.00 %
+Elapsed time:		       29.10 secs
+Data transferred:	       29.81 MB
+Response time:		        0.08 secs
+Transaction rate:	      327.11 trans/sec
+Throughput:		        1.02 MB/sec
+Concurrency:		       24.91
+Successful transactions:        9519
+Failed transactions:	           0
+Longest transaction:	        0.42
+Shortest transaction:	        0.00
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="HipHop with 50 concurrent clients"><![CDATA[
+|00aaff|~>| *siege -b -t30s -c50 http://twit2.localhost*
+** SIEGE 2.68
+** Preparing 50 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        9718 hits
+Availability:		      100.00 %
+Elapsed time:		       29.53 secs
+Data transferred:	       30.43 MB
+Response time:		        0.15 secs
+Transaction rate:	      329.09 trans/sec
+Throughput:		        1.03 MB/sec
+Concurrency:		       49.69
+Successful transactions:        9718
+Failed transactions:	           0
+Longest transaction:	        0.66
+Shortest transaction:	        0.02
+]]></example>
+
+<blurb fontsize="3em">
+Right, so it does speed up a bit, but still doesn't quite match Apache-PHP here.  The thread-coordination and 
+corresponding locking that is necessary will slow things down a bit, but it shouldn't be this much.  We are
+still missing something.
+</blurb>
+
+</slide>

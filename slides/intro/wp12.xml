@@ -1,0 +1,184 @@
+<slide title="Try HipHop">
+
+<link fontsize="3em" marginleft="1em" href="http://wiki.github.com/facebook/hiphop-php/"/>
+
+<blurb fontsize="3.5em">
+Wordpress is well-suited for HipHop because it doesn't have a lot of dynamic runtime code.
+This is using the standard Wordpress-svn checkout with a few tweaks.
+</blurb>
+
+<example fontsize="1.4em" type="shell" title=""><![CDATA[
+--- wp-includes/class-simplepie.php	(revision 13591)
++++ wp-includes/class-simplepie.php	(working copy)
+@@ -4067,16 +4067,16 @@
+ 	if (sizeof($temp) > 0)
+ 	{
+-		*|ffff00|(int)|* $seconds = array_pop($temp);
++		$seconds = *|ffff00|(int)|*array_pop($temp);
+ 	}
+ 	if (sizeof($temp) > 0)
+ 	{
+-		*|ffff00|(int)|* $minutes = array_pop($temp);
++		$minutes = *|ffff00|(int)|*array_pop($temp);
+ 		$seconds += $minutes * 60;
+ 	}
+ 	if (sizeof($temp) > 0)
+ 	{
+-		*|ffff00|(int)|* $hours = array_pop($temp);
++		$hours = *|ffff00|(int)|*array_pop($temp);
+
+--- wp-includes/wp-diff.php	(revision 13591)
++++ wp-includes/wp-diff.php	(working copy)
+@@ -8,14 +8,12 @@
+  * @subpackage Diff
+  */
+ 
+-*|ffff00|if ( !class_exists( 'Text_Diff' ) ) {|*
+ 	/** Text_Diff class **/
+-	require( dirname(__FILE__).'/Text/Diff.php' );
++	require 'Text/Diff.php';
+ 	/** Text_Diff_Renderer class **/
+-	require( dirname(__FILE__).'/Text/Diff/Renderer.php' );
++	require 'Text/Diff/Renderer.php';
+ 	/** Text_Diff_Renderer_inline class **/
+-	require( dirname(__FILE__).'/Text/Diff/Renderer/inline.php' );
+-*|ffff00|}|*
++	require 'Text/Diff/Renderer/inline.php';
+
+--- wp-includes/functions.php	(revision 13591)
++++ wp-includes/functions.php	(working copy)
+@@ -2958,9 +2958,6 @@
+  */
+ function require_wp_db() {
+ 	global $wpdb;
+-	*|ffff00|if ( file_exists( WP_CONTENT_DIR . '/db.php' ) )|*
+-		*|ffff00|require_once( WP_CONTENT_DIR . '/db.php' );|*
+-	*|ffff00|else|*
+ 		require_once( ABSPATH . WPINC . '/wp-db.php' );
+ }
+
+--- wp-includes/capabilities.php	(revision 13591)
++++ wp-includes/capabilities.php	(working copy)
+@@ -770,7 +770,7 @@
+ 		global $wpdb;
+ 		if ( !empty($blog_id) ) {
+ 			$cap_key = $wpdb->get_blog_prefix( $blog_id );
+-			$cap_key*|ffff00|.|* 'capabilities';
++			$cap_key*|ffff00|.=|* 'capabilities';
+ 		} else {
+ 			$cap_key = '';
+ 		}
+
+--- wp-includes/widgets.php	(revision 13591)
++++ wp-includes/widgets.php	(working copy)
+@@ -848,6 +848,7 @@
+ 	}
+ 
+ 	$sidebars_widgets = wp_get_sidebars_widgets();
++	if(!count($sidebars_widgets)) return false;
+
+--- wp-admin/includes/class-ftp.php	(revision 13591)
++++ wp-admin/includes/class-ftp.php	(working copy)
+@@ -902,5 +902,5 @@
+ 	if(!@dl($prefix . 'sockets.' . PHP_SHLIB_SUFFIX)) $mod_sockets=FALSE;
+ }
+ 
+-require_once "class-ftp-".*|ffff00|($mod_sockets?"sockets":"pure")|*.".php";
++require_once "class-ftp-*|ffff00|sockets|*.php";
+
+--- wp-admin/includes/user.php	(revision 13591)
++++ wp-admin/includes/user.php	(working copy)
+@@ -832,7 +832,7 @@
+ }
+ 
+ add_action('profile_update', 'default_password_nag_edit_user', 10, 2);
+-function default_password_nag_edit_user(*|ffff00|$user_ID|*, $old_data) {
++function default_password_nag_edit_user(*|ffff00|$xuser_ID|*, $old_data) {
+ 	*|ffff00|global $user_ID;|*
+ 	if ( ! get_user_option('default_password_nag') ) //Short circuit it.
+
+--- wp-admin/import/blogger.php	(revision 13591)
++++ wp-admin/import/blogger.php	(working copy)
+@@ -162,7 +162,7 @@
+ 					if ( $tag['tag'] == 'TITLE' ) {
+ 						$blog['title'] = $tag['value'];
+ 					} elseif ( $tag['tag'] == 'SUMMARY' ) {
+-						$blog['summary'] *|ffff00|==|* $tag['value'];
++						$blog['summary'] *|ffff00|=|* $tag['value'];
+
+]]></example>
+
+<blurb fontsize="2.5em">Plus a few more.  See *http://progphp.com/wp/wp.diff*</blurb>
+
+<example fontsize="1.4em" type="shell" title="Compile"><![CDATA[
+|00aaff|~>| *$HPHP_HOME/src/hphp/hphp --input-list=files.list -k 1 --log=3 \ *
+   *-v "AllDynamic=true" -v "AllVolatile=true" --force=1*
+running hphp...
+creating temporary directory /tmp/hphp_CsY0zH ...
+re-creating sync directory /home/rasmus/hbuild ...
+parsing inputs...
+parsing ./wp-config.php...
+parsing ./wp-load.php...
+parsing ./wp-trackback.php...
+parsing ./wp-comments-post.php...
+parsing ./wp-commentsrss2.php...
+parsing ./wp-includes/template-loader.php...
+parsing ./wp-includes/class.wp-dependencies.php...
+parsing ./wp-includes/class.wp-scripts.php...
+...]]></example>
+
+<blurb fontsize="3.5em">
+Then wait over an hour on my Netbook here...
+</blurb>
+
+<example fontsize="1.4em" type="shell" title="Run"><![CDATA[
+|00aaff|~>| *cp /tmp/hphp_CsY0zH/program .*
+
+|00aaff|~>| *./program -m server -v "Server.SourceRoot=`pwd`" \ *
+   *-v "Server.DefaultDocument=index.php" -c $HPHP_HOME/bin/mime.hdf*
+loading static content...
+searching all files under source root...
+analyzing 2753 files under source root...
+..loaded 542822 bytes of css files
+..loaded 77714 bytes of gif files
+..loaded 80093 bytes of gz files
+..loaded 68939 bytes of htm files
+..loaded 22703 bytes of html files
+..loaded 822 bytes of ico files
+..loaded 448844 bytes of jpg files
+..loaded 2038563 bytes of js files
+..loaded 4534 bytes of ms files
+..loaded 299153 bytes of png files
+..loaded 24455 bytes of swf files
+..loaded 83599 bytes of txt files
+..loaded 1053 bytes of xml files
+loaded 3693294 bytes of static content in total
+loading static content took 0'02" (2576 ms) wall time
+page server started
+admin server started
+all servers started]]></example>
+
+<example fontsize="1.4em" type="shell" title="Benchmark"><![CDATA[
+|00aaff|~>| *siege -b -t30s -c5 http://wp3.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        1022 hits
+Availability:		      100.00 %
+Elapsed time:		       29.92 secs
+Data transferred:	        2.28 MB
+Response time:		        *|ffff00|0.15 secs|*
+Transaction rate:	       *|ffff00|34.16 trans/sec|*
+Throughput:		        0.08 MB/sec
+Concurrency:		        4.98
+Successful transactions:        1022
+Failed transactions:	           0
+Longest transaction:	        0.54
+Shortest transaction:	        0.05]]></example>
+
+<blurb fontsize="3.5em">
+So, our HipHop-compiled, mostly stock, Wordpress is slightly faster than our hand-optimized and slightly stripped install.
+</blurb>
+
+</slide>

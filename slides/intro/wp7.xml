@@ -1,0 +1,25 @@
+<slide title="Check it with Callgrind">
+
+<break lines="3" />
+
+<example fontsize="2em" type="shell"><![CDATA[|00aaff|~>| *valgrind --tool=callgrind --dump-instr=yes -v \ *
+          *--instr-atstart=no /usr/sbin/apache2 -X*]]></example>
+
+<break lines="1" />
+
+<example fontsize="2em" type="shell"><![CDATA[|00aaff|~>| *chmod a+rw callgrind.out.\**
+|ff00ff| - hit the server to warm it up -|
+% callgrind_control -i on
+|ff00ff| - hit the server -|
+% callgrind_control -i off
+% callgrind_control -k
+|ff00ff| - Hit ^C in valgrind terminal -|
+]]></example>
+
+<break lines="1" />
+
+<example fontsize="2em" type="shell"><![CDATA[|00aaff|~>| *kcachegrind callgrind.out.\**]]></example>
+
+<image filename="wp_cg.png" width="1022" height="498" align="center"/>
+
+</slide>

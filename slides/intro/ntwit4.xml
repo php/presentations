@@ -1,0 +1,77 @@
+<slide title="Callgrind it">
+
+<blurb fontsize="3em">
+Let's have a look at the callgraphs.  First Apache-PHP-APC.
+</blurb>
+
+<image filename="twit2_cg.png" width="1013" height="1111" align="center"/>
+
+<blurb fontsize="3em">
+And now HipHop-PHP.
+</blurb>
+
+<image filename="twit2_hphp.png" width="1017" height="460" align="center"/>
+
+<blurb fontsize="3em">
+If you are reading this on the Web, right click and open each image in a new tab or download them
+and look at them locally.
+</blurb>
+
+<blurb fontsize="3em">
+Look for the big-ticket items on each graph.  
+</blurb>
+
+<list fontsize="1.5em" title="PHP">
+<bullet>zif_preg_replace 28.63%</bullet>
+<bullet>ap_pass_brigade 27.45%</bullet>
+<bullet>zend_print_variable 13.10%</bullet>
+<bullet>zif_strototime 6.49%</bullet>
+<bullet>zif_date 4.32%</bullet>
+<bullet>php_request_startup 4.13%</bullet>
+</list>
+
+<list fontsize="1.5em" title="HipHop PHP">
+<bullet>HPHP::i_clickable 25.82%</bullet>
+<bullet>HPHP::TimeZone::Current 19.66%</bullet>
+<bullet>HPHP::Transport::sendRaw 16.44%</bullet>
+<bullet>HPHP::Variant::o_invoke_few_args 8.61%</bullet>
+<bullet>HPHP::f_twit_nav 4.7%</bullet>
+</list>
+
+<blurb fontsize="3em">
+One item stands out here.  *HPHP::TimeZone::Current* probably gets the current timezone.  That's known to
+be pretty slow which is why in PHP we define that in our *php.ini* file, but HipHop PHP doesn't read the
+*php.ini* file.  Let's try hardcoding a default timezone into our app.
+</blurb>
+
+<example fontsize="1.4em" title=""><![CDATA[<?php
+date_default_timezone_set("America/Los_Angeles");
+]]></example>
+
+<example fontsize="1.4em" type="shell" title="Benchmark"><![CDATA[
+|00aaff|~>| *siege -b -t30s -c5 http://twit2.localhost*
+** SIEGE 2.68
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		       12066 hits
+Availability:		      100.00 %
+Elapsed time:		       29.54 secs
+Data transferred:	       37.79 MB
+Response time:		        *|ffff00|0.01 secs|*
+Transaction rate:	      *|ffff00|408.46 trans/sec|*
+Throughput:		        1.28 MB/sec
+Concurrency:		        4.98
+Successful transactions:       12066
+Failed transactions:	           0
+Longest transaction:	        0.05
+Shortest transaction:	        0.00
+]]></example>
+
+<blurb fontsize="3em">
+Ok, the world makes sense again.  HipHop PHP is a bit faster than Apache-PHP-APC for this case.  It was never going
+to be a big boost since this app spends most of its time in pcre making links clickable and fetching stuff from MySQL.
+There are no heavy userspace abstraction layers that HipHop can sink its teeth into here.
+</blurb>
+
+</slide>
