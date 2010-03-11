@@ -15,7 +15,6 @@
 <bullet>Private properties don't really exist under HipHop.  They are treated as if they are protected instead.</bullet>
 <bullet>You can't unset variables.  unset will clear the variable, but it will still be in the symbol table.</bullet>
 <bullet>*eval* and *create_function* are limited</bullet>
-<bullet>Variable variables *$$var* are not supported</bullet>
 <bullet>Dynamic defines won't work: *define($name,$value)*</bullet>
 <bullet>*get_loaded_extensions()*, *get_extension_funcs()*, *phpinfo()*, *debug_backtrace()* don't work</bullet>
 <bullet>Conditional and dynamically created include filenames don't work as you might expect</bullet>
