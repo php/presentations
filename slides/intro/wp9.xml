@@ -60,13 +60,16 @@ And as we are browsing the source code, we can replace most *time()* calls with 
 +	if ( ( *|ffff00|$_SERVER['REQUEST_TIME']|* - $upgrading ) >= 600 )
 ]]></example>
 
-<example fontsize="1em" title="Optimize is_serialized"><![CDATA[// This condition gets hit often:
+<example fontsize="1.4em" title="Optimize is_serialized"><![CDATA[<?php
+   ...
+   // This condition gets hit often:
    if ( !preg_match( '/^([adObis]):/', $data, $badions ) )
       return false;
 ]]></example>
 
-<example fontsize="1em" title="Faster alternative"><![CDATA[if(strlen($data)>1 && strpbrk($data,'adObis')==$data && $data[1]==':') $badions[1] = $data[0]; 
-   else return false;
+<example fontsize="1.4em" title="Faster alternative using strpbrk"><![CDATA[<?php
+if(strlen($data)>1 && strpbrk($data,'adObis')==$data && $data[1]==':') $badions[1] = $data[0]; 
+else return false;
 ]]></example>
 
 <blurb fontsize="3.5em">
