@@ -388,8 +388,8 @@ Shortest transaction:	        0.02
 
 <blurb fontsize="3em">
 Right, so it does speed up a bit, but still doesn't quite match Apache-PHP here.  The thread-coordination and 
-corresponding locking that is necessary will slow things down a bit, but it shouldn't be this much.  We are
-still missing something.
+corresponding locking that is necessary will slow things down a bit, but it shouldn't be this much.  And you should
+easily make up for that with the compiled speedup.  We are still missing something.
 </blurb>
 
 </slide>

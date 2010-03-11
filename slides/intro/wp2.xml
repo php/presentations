@@ -43,4 +43,10 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
  6  0 297704 333412 103660 680792    0    0     0     0  279 1655 91  9  *|ffff00|0|*  0
 </example>
 
+<blurb fontsize="3em">
+The cpu *id*le column is 0, and the io *wa*it is 0.  If you have *id*>10 and *wa*>10 then
+you are likely io-bound and you need to track down your io issues instead of worrying about
+PHP.
+</blurb>
+
 </slide>

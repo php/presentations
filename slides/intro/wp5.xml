@@ -120,4 +120,9 @@ open("/var/www/wp1/wp-content/themes/default/images/kubrickbg-ltr.jpg", O_RDONLY
 open("/var/www/wp1/wp-content/themes/default/images/kubrickheader.jpg", O_RDONLY) = 29
 open("/var/www/wp1/wp-content/themes/default/images/kubrickfooter.jpg", O_RDONLY) = 29
 ]]></example>
+
+<blurb fontsize="3em">
+We just have translations, plugins and themes left here now.  We could hardcode these as
+well, but then we start to lose the main characteristics of Wordpress.
+</blurb>
 </slide>

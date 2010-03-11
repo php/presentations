@@ -66,4 +66,9 @@ class WP_Dependencies {
 -	function end_lvl(&$output)   {}
 +*|ffff00|#|*	function end_lvl(&$output)   {}
 ]]></example>
+
+<blurb fontsize="3em">
+Getting rid of PHP-4 style *new* references and stub methods and constructors that serve no purpose.
+</blurb>
+
 </slide>
