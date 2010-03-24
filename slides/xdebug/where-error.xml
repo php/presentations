@@ -2,12 +2,100 @@
 <slide>
 	<title>Help By Error Messages</title>
 
-	<image filename="stacktrace3a.png" align="center"/>
-	<blurb>... is kinda useless.</blurb>
-<div effect="hide">
-<break lines="2"/>
-	<image filename="stacktrace3b.png" align="center" y-offset="3" pdf-scale="0.7"/>
-	<blurb>%xdebug.collect_params=1% and %xdebug.show_local_vars=1%</blurb>
+<div effect="fade-out">
+	<html><![CDATA[<b>Warning</b>:  DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: Document is empty in /home/httpd/presentations, line: 1 in <b>/home/httpd/pres2/show2.php</b> on line <b>161</b><br />]]></html>
 </div>
+
+<div effect="fade-in-out">
+	<html><![CDATA[<table class='xdebug-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: Document is empty in /home/httpd/presentations, line: 1 in /home/httpd/pres2/show2.php on line <i>161</i></th></tr>
+
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0022</td><td bgcolor='#eeeeec' align='right'>786328</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0180</td><td bgcolor='#eeeeec' align='right'>1397248</td><td bgcolor='#eeeeec'>Presentation->display(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>110</td></tr>
+
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0183</td><td bgcolor='#eeeeec' align='right'>1399032</td><td bgcolor='#eeeeec'>DOMDocument->load(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
+</table>]]></html>
+	<example>xdebug.default_enable=1</example>
+</div>
+
+<div effect="fade-in-out">
+	<html><![CDATA[<table class='xdebug-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: Document is empty in /home/httpd/presentations, line: 1 in /home/httpd/pres2/show2.php on line <i>161</i></th></tr>
+
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0024</td><td bgcolor='#eeeeec' align='right'>786328</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0183</td><td bgcolor='#eeeeec' align='right'>1397248</td><td bgcolor='#eeeeec'>Presentation->display( <span><font color='#3465a4'>null</font></span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>110</td></tr>
+
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0185</td><td bgcolor='#eeeeec' align='right'>1399032</td><td bgcolor='#eeeeec'>DOMDocument->load( <span><font color='#cc0000'>string(32)</font></span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
+</table>]]></html>
+	<example>xdebug.show_local_vars=1</example>
+</div>
+
+<div effect="fade-in-out">
+	<html><![CDATA[<table class='xdebug-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: Document is empty in /home/httpd/presentations, line: 1 in /home/httpd/pres2/show2.php on line <i>161</i></th></tr>
+
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0022</td><td bgcolor='#eeeeec' align='right'>787720</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0183</td><td bgcolor='#eeeeec' align='right'>1398552</td><td bgcolor='#eeeeec'>Presentation->display( <span title='NULL'><font color='#3465a4'>null</font></span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>110</td></tr>
+
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0186</td><td bgcolor='#eeeeec' align='right'>1400336</td><td bgcolor='#eeeeec'>DOMDocument->load( <span title='&apos;/home/httpd/pres2/presentations/&apos;'><font color='#cc0000'>string(32)</font></span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
+</table>]]></html>
+	<example>xdebug.show_local_vars=2</example>
+</div>
+
+<div effect="fade-in-out">
+	<html><![CDATA[<table class='xdebug-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: Document is empty in /home/httpd/presentations, line: 1 in /home/httpd/pres2/show2.php on line <i>161</i></th></tr>
+
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0013</td><td bgcolor='#eeeeec' align='right'>787720</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0105</td><td bgcolor='#eeeeec' align='right'>1398552</td><td bgcolor='#eeeeec'>Presentation->display( <span>NULL</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>110</td></tr>
+
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0106</td><td bgcolor='#eeeeec' align='right'>1400336</td><td bgcolor='#eeeeec'>DOMDocument->load( <span>&apos;/home/httpd/pres2/presentations/&apos;</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
+</table>]]></html>
+	<example>xdebug.show_local_vars=3</example>
+</div>
+
+<div effect="fade-in-out">
+	<html><![CDATA[<table class='xdebug-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: Document is empty in /home/httpd/presentations, line: 1 in /home/httpd/pres2/show2.php on line <i>161</i></th></tr>
+
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0013</td><td bgcolor='#eeeeec' align='right'>787720</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0102</td><td bgcolor='#eeeeec' align='right'>1398552</td><td bgcolor='#eeeeec'>Presentation->display( <span>$slideNr = </span><span>NULL</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>110</td></tr>
+
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0103</td><td bgcolor='#eeeeec' align='right'>1400336</td><td bgcolor='#eeeeec'>DOMDocument->load( <span>&apos;/home/httpd/pres2/presentations/&apos;</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
+</table>]]></html>
+	<example>xdebug.show_local_vars=4</example>
+</div>
+
+<div effect="fade-in-out">
+	<html><![CDATA[<table class='xdebug-error' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Warning: DOMDocument::load() [<a href='domdocument.load'>domdocument.load</a>]: Document is empty in /home/httpd/presentations, line: 1 in <a style='color: black' href='gvim:///home/httpd/pres2/show2.php@161'>/home/httpd/pres2/show2.php</a> on line <i>161</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0027</td><td bgcolor='#eeeeec' align='right'>787720</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'><a style='color: black' href='gvim:///home/httpd/pres2/show2.php@0'>../show2.php<b>:</b>0</a></td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0190</td><td bgcolor='#eeeeec' align='right'>1398160</td><td bgcolor='#eeeeec'>Presentation->display( <span>$slideNr = </span><span>NULL</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'><a style='color: black' href='gvim:///home/httpd/pres2/show2.php@110'>../show2.php<b>:</b>110</a></td></tr>
+
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0193</td><td bgcolor='#eeeeec' align='right'>1399944</td><td bgcolor='#eeeeec'>DOMDocument->load( <span>&apos;/home/httpd/pres2/presentations/&apos;</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'><a style='color: black' href='gvim:///home/httpd/pres2/show2.php@161'>../show2.php<b>:</b>161</a></td></tr>
+</table>]]></html>
+	<example>xdebug.file_link_format=gvim://%f@%l</example>
+	<example><![CDATA[#! /bin/sh
+
+f=`echo $1 | cut -d @ -f 1 | sed 's/gvim:\/\///'`
+l=`echo $1 | cut -d @ -f 2`
+
+gvim --remote-tab +$l $f]]></example>
+	<blurb>Add the new boolean config value (config:about) "network.protocol-handler.expose.gvim" as false. First time you click it, select the shell script.</blurb>
+</div>
+
 
 </slide>

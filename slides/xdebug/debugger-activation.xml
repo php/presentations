@@ -4,11 +4,8 @@
 
 	<blurb>php.ini settings:</blurb>
 	<example class="code_large" type="ini">xdebug.remote_enable=1
-xdebug.remote_handler=dbgp
-xdebug.remote_mode=req
 xdebug.remote_host=localhost
-xdebug.remote_port=9000
-xdebug.extended_info=1</example>
+xdebug.remote_port=9000</example>
 
 	<break lines="2"/>
 
@@ -23,5 +20,5 @@ xdebug.extended_info=1</example>
 	<break lines="2"/>
 
 	<blurb>With a firefox extension:</blurb>
-	<blurb class="small_blurb">%  http://bit.ly/x6bf4%</blurb>
+	<blurb class="small_blurb"><link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></blurb>
 </slide>

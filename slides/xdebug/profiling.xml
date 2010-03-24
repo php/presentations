@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Profiling</title>
 	<subtitle>KCacheGrind's Flat Profile and Call List</subtitle>
-	<image filename="pg1.png" align="right"/>
+	<image filename="pg1.png"/>
 
 	<example class="code_large">xdebug.profiler_enable=1          ; enable profiler
 xdebug.profile_output_dir=/tmp    ; output directory
