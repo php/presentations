@@ -17,7 +17,8 @@
 
 <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0183</td><td bgcolor='#eeeeec' align='right'>1399032</td><td bgcolor='#eeeeec'>DOMDocument->load(  )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
 </table>]]></html>
-	<example>xdebug.default_enable=1</example>
+	<example>xdebug.default_enable=1
+html_errors=1</example>
 </div>
 
 <div effect="fade-in-out">
@@ -31,7 +32,7 @@
 
 <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0185</td><td bgcolor='#eeeeec' align='right'>1399032</td><td bgcolor='#eeeeec'>DOMDocument->load( <span><font color='#cc0000'>string(32)</font></span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
 </table>]]></html>
-	<example>xdebug.show_local_vars=1</example>
+	<example>xdebug.collect_params=1</example>
 </div>
 
 <div effect="fade-in-out">
@@ -45,7 +46,7 @@
 
 <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0186</td><td bgcolor='#eeeeec' align='right'>1400336</td><td bgcolor='#eeeeec'>DOMDocument->load( <span title='&apos;/home/httpd/pres2/presentations/&apos;'><font color='#cc0000'>string(32)</font></span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
 </table>]]></html>
-	<example>xdebug.show_local_vars=2</example>
+	<example>xdebug.collect_params=2</example>
 </div>
 
 <div effect="fade-in-out">
@@ -59,7 +60,7 @@
 
 <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0106</td><td bgcolor='#eeeeec' align='right'>1400336</td><td bgcolor='#eeeeec'>DOMDocument->load( <span>&apos;/home/httpd/pres2/presentations/&apos;</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
 </table>]]></html>
-	<example>xdebug.show_local_vars=3</example>
+	<example>xdebug.collect_params=3</example>
 </div>
 
 <div effect="fade-in-out">
@@ -73,7 +74,7 @@
 
 <tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0103</td><td bgcolor='#eeeeec' align='right'>1400336</td><td bgcolor='#eeeeec'>DOMDocument->load( <span>&apos;/home/httpd/pres2/presentations/&apos;</span> )</td><td title='/home/httpd/pres2/show2.php' bgcolor='#eeeeec'>../show2.php<b>:</b>161</td></tr>
 </table>]]></html>
-	<example>xdebug.show_local_vars=4</example>
+	<example>xdebug.collect_params=4</example>
 </div>
 
 <div effect="fade-in-out">
