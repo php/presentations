@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Date/Time Functions in PHP</title>
+
+	<list>
+		<bullet>Internally, a 64 bit signed integer is used to store the number
+		of seconds since the epoch</bullet>
+		<bullet>~strtotime()~ and functions dealing with timestamps have been
+		replaced with classes (such as ~new DateTime()~)</bullet>
+		<bullet>Nothing is Operating System dependent</bullet>
+		<bullet>Full support for timezones, DST, date modifications</bullet>
+		<bullet>Advanced date handling functions</bullet>
+	</list>
+</slide>
+

@@ -4,19 +4,11 @@
 
 	<example result="0"><![CDATA[<?php
 	$date = new DateTime( '2010-03-08 15:48:21' );
-	echo $date->format(DateTime::ISO8601), "<br/>\n";
 
 	$date->setTime( 15, 0, 7 );
-	echo $date->format(DateTime::ISO8601), "<br/>\n";
-
 	$date->setDate( 2008, 07, 22 );
-	echo $date->format(DateTime::ISO8601), "<br/>\n";
-
-	echo $date->setIsoDate( 2008, 45, 2 )->format(DateTime::ISO8601), "<br/>\n";
-
-	// new in PHP 5.3:
+	$date->setIsoDate( 2008, 45, 2 );
 	$date->setTimestamp( 1200128314 );
-	echo $date->format(DateTime::ISO8601), "<br/>\n";
 ?>]]></example>
 <break/>
 

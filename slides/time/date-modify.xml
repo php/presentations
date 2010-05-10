@@ -6,16 +6,12 @@
 	<example result="0"><![CDATA[<?php
 	date_default_timezone_set("Europe/London");
 	$ts = new DateTime("2010-03-08 15:53:55");
-	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
 	$ts->modify("+2 days");
-	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
 	$ts->modify("Friday +3 weeks");
-	echo $ts->format(DATE_RFC2822), "<br/>\n";
 
 	$ts->modify("next friday");
-	echo $ts->format(DATE_RFC2822), "<br/>\n";
 ?>]]></example>
 <break/>
 

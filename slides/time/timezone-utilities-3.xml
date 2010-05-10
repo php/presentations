@@ -6,13 +6,13 @@
 	<blurb>Restrict by continent:</blurb>
 	<example result="1"><![CDATA[<?php
 	$ids = timezone_identifiers_list( DateTimeZone::EUROPE );
-	echo implode(", ", array_slice($ids, 0, 5)), '...';
+	echo implode( ", ", $ids );
 ?>]]></example>
 <break/>
 
 	<blurb>Restrict by country:</blurb>
 	<example result="1"><![CDATA[<?php
-	$ids = timezone_identifiers_list( DateTimeZone::PER_COUNTRY, 'CA' );
-	echo implode(", ", array_slice($ids, 0, 10)), '...';
+	$ids = timezone_identifiers_list( DateTimeZone::PER_COUNTRY, 'US' );
+	echo implode( ", ", $ids );
 ?>]]></example>
 </slide>
