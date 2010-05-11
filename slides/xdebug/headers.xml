@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Recording headers</title>
+	<list>
+		<bullet>Xdebug collects all headers being set, implicitly and explicitly</bullet>
+		<bullet>It's very useful for testing and unit-tests</bullet>
+		<bullet>%xdebug_get_headers()%</bullet>
+	</list>
+
+	<example result="1"><![CDATA[<?php
+session_start();
+
+setcookie( 'key', 'value', time() + 86400 );
+
+header( "Status: 403" );
+
+var_dump( xdebug_get_headers() );
+?>]]></example>
+</slide>

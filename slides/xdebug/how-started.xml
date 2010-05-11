@@ -4,5 +4,6 @@
 	<break lines="8" />
 
 	<image filename="seg.png" align="center"/>
+	<blurb class="small">In PHP 5.3 and later, it will just use up all the available memory.</blurb>
 
 </slide>

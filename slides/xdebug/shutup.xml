@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Scream</title>
+
+	<list>
+		<bullet>PHP's %@% operator hides warnings and errors</bullet>
+		<bullet>%xdebug.scream=1% makes PHP ignore %@%</bullet>
+	</list>
+</slide>

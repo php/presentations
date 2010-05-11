@@ -19,6 +19,7 @@ xdebug.remote_port=9000</example>
 
 	<break lines="2"/>
 
-	<blurb>With a firefox extension:</blurb>
-	<blurb class="small_blurb"><link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></blurb>
+	<blurb>With browser extensions:</blurb>
+	<blurb class="small_blurb">easy Xdebug (FireFox): <link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></blurb>
+	<blurb class="small_blurb">Xdebug Helper (Chrome): <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></blurb>
 </slide>

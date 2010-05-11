@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>What Code Do I Use</title>
+	<subtitle>Code Coverage</subtitle>
+
+<div effect="fade-out">
+	<image filename="cov-branch1.png" align="center"/>
+</div>
+<div effect="fade-in-out">
+	<image filename="cov-branch2.png" align="center"/>
+</div>
+
+<div effect="fade-in-out">
+	<image filename="paths0.png" align="center"/>
+</div>
+<div effect="fade-in-out">
+	<image filename="paths1.png" align="center"/>
+</div>
+<div effect="fade-in-out">
+	<image filename="paths2.png" align="center"/>
+</div>
+<div effect="fade-in-out">
+	<image filename="paths3.png" align="center"/>
+</div>
+<div effect="fade-in-out">
+	<image filename="paths4.png" align="center"/>
+</div>
+</slide>
