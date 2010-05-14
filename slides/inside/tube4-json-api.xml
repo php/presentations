@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Web API</title>
+
+	<list>
+		<bullet>The download with status is only 0.5kb</bullet>
+		<bullet>The API caches the download</bullet>
+		<bullet>It only provides the data in JSON that we require:</bullet>
+	</list>
+	<example><![CDATA[
+{
+    "date":1273835118,
+    "status":[
+        ["Bakerloo",["Good service",""]],["Central",["Good service",""]],
+        ["Circle",["Good service",""]],["District",["Good service",""]],
+        ["H'smith & City",["Good service",""]],["Jubilee",["Good service",""]],
+        ["Metropolitan",["Good service",""]],["Northern",["Good service",""]],
+        ["Piccadilly",["Good service",""]],["Victoria",["Good service",""]],
+        ["Waterloo & City",["Good service",""]]
+    ]
+}
+]]></example>
+	<list>
+		<bullet>Parsing the JSON is fast, very little processing needed in the app, just display</bullet>
+		<bullet>If the HTML changes, only the scraping algorithm needs to be changed</bullet>
+	</list>
+
+</slide>

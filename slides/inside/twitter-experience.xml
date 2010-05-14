@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>Twitter App Experiences</title>
+
+	<list>
+		<bullet>Starting the app is not fast</bullet>
+		<bullet>Styling with GTK is tricky, especially if you want to run the app on the desktop too</bullet>
+		<bullet>Twitter API is very unstable, and inaccessible at times; it's also badly designed</bullet>
+		<bullet>You pull in way too much data than you need</bullet>
+		<bullet>My fingers are really fat</bullet>
+		<bullet>Can't really have the app running for a long time</bullet>
+	</list>
+</slide>

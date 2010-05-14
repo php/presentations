@@ -1,0 +1,21 @@
+<slide>
+	<title>Phone Services</title>
+	<subtitle>Activating the shaker</subtitle>
+
+<example><![CDATA[<?php
+$d = new Dbus( Dbus::BUS_SYSTEM );
+$p = $d->createProxy(
+	'org.freesmartphone.odeviced',
+	'/org/freesmartphone/Device/Vibrator/0',
+	'org.freesmartphone.Device.Vibrator'
+);
+
+for ( $i =0; $i < 100; $i+=5 )
+{
+        $p->Stop();
+        $p->VibratePattern( 1, 500, 50, $i );
+        usleep( 500000 );
+}
+?>]]></example>
+
+</slide>

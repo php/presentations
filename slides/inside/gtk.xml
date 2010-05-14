@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>GUI toolset</title>
+
+	<list>
+		<bullet><image filename="php-gtk.gif"/> is a PHP binding for the GTK+ widget set</bullet>
+		<bullet>It comes as an extension for PHP</bullet>
+		<bullet>It wraps around many GTK+ widgets</bullet>
+		<bullet>GUI can be created from PHP:</bullet>
+	</list>
+
+	<example><![CDATA[<?php
+$tb = new GtkToolbar();
+$tb->set_show_arrow( false );
+$tb->set_property( 'toolbar-style', Gtk::TOOLBAR_BOTH );
+$tb->set_property( 'icon-size', 6 );
+$this->updatebutton = GtkToolButton::new_from_stock( Gtk::STOCK_REFRESH );
+$lbl = new GtkLabel();
+$lbl->set_markup( '<span underline="single">U</span>pdate' );
+$this->updatebutton->set_label_widget( $lbl );
+$this->updatebutton->connect_simple( 'clicked', array( $this, 'update' ) );
+$this->updatebutton->add_accelerator( 'clicked', $accels, Gdk::KEY_U, Gdk::MOD1_MASK, 0 );
+$this->updatebutton->set_use_underline( true );
+$tb->insert( $this->updatebutton, -1 );
+]]></example>
+</slide>

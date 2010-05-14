@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Transport for London</title>
+
+	<list>
+		<bullet>Provides status updates through <link href="http://www.tfl.gov.uk/tfl/livetravelnews/realtime/tube/default.html"/></bullet>
+		<bullet>If you're traveling, it's really handy to have this information with you</bullet>
+		<bullet>There is no API, so you need to scrape</bullet>
+		<bullet>Widget provided for embedding: <link href="http://www.tfl.gov.uk/tfl/syndication/feeds/serviceboard-fullscreen.htm"/></bullet>
+		<bullet>Strict rules about colours etc.:</bullet>
+	</list>
+<break/>
+	<image filename="tfl-dictations.jpg"/>
+<break/>
+	<list>
+		<bullet>It's probably not totally legal</bullet>
+	</list>
+
+</slide>

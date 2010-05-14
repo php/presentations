@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Talking to the hardware</title>
+
+	<list>
+		<bullet>Many applications (phonebook, sending SMS) that came with the phone where suboptimal</bullet>
+		<bullet>Writing a new GUI is possible, but talking to the hardware requires D-BUS</bullet>
+		<bullet>D-BUS APIs are exposed by the freesmartphone project that the Linux distribution uses</bullet>
+		<bullet>PHP didn't have a D-BUS extension</bullet>
+	</list>
+
+</slide>

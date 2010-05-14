@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>Data Storage</title>
+
+	<list>
+		<bullet>You can't really run a database server on the phone</bullet>
+		<bullet>SQLite is part of PHP, and self-contained</bullet>
+		<bullet>Indexes are *vital* on this platform</bullet>
+		<bullet>Clever use of SQL/Data manipulation is required for performance</bullet>
+	</list>
+</slide>

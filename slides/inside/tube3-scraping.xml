@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Scraping the Tube status</title>
+
+	<list>
+		<bullet>It's a ~25kb download; with GPRS the download time is about 5 seconds</bullet>
+		<bullet>It has lots of mark-up and JavaScript that we're not interested in</bullet>
+		<bullet>Using PHP to get the data we want from it is relatively slow</bullet>
+		<bullet>If the format changes, all the installed apps need to be updated</bullet>
+	</list>
+
+</slide>

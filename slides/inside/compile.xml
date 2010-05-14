@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>Getting PHP on the device</title>
+
+	<list>
+		<bullet>It's an ARM processor</bullet>
+		<bullet>Cross compiling vs compiling on the device</bullet>
+	</list>
+<break lines="2"/>
+	<blurb>Cross-compiling:</blurb>
+	<list>
+		<bullet>Requires cross-compilation set-up</bullet>
+		<bullet>Tricky, and caused libtool problems for me</bullet>
+	</list>
+<break lines="2"/>
+	<blurb>Compiling on the device</blurb>
+	<list>
+		<bullet>All packages need to be found and installed</bullet>
+		<bullet>Tricky, and caused libtool problems for me</bullet>
+		<bullet>Compiling PHP is really slow, you really don't want to use %make clean%</bullet>
+	</list>
+</slide>

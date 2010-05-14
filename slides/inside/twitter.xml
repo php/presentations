@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<slide>
+	<title>My First Application</title>
+
+	<list>
+		<bullet><image filename="twitter_logo_header.png"/> is the new hello world</bullet>
+		<bullet>Simple web API to get data</bullet>
+		<bullet>Authentication with HTTP basic auth</bullet>
+		<bullet>Simple interface: some buttons, an edit box and a list of tweets</bullet>
+	</list>
+<break/>
+<div effect="fade-in">
+	<image filename="twitter-gui-mockup.png"/>
+</div>
+</slide>
