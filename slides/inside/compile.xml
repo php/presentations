@@ -16,7 +16,6 @@
 	<blurb>Compiling on the device</blurb>
 	<list>
 		<bullet>All packages need to be found and installed</bullet>
-		<bullet>Tricky, and caused libtool problems for me</bullet>
 		<bullet>Compiling PHP is really slow, you really don't want to use %make clean%</bullet>
 	</list>
 </slide>
