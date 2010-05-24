@@ -4,25 +4,25 @@
 	<subtitle>Code Coverage</subtitle>
 
 <div effect="fade-out">
-	<image filename="cov-branch1.png" align="center"/>
+	<image filename="cov-branch1.png" align="center" pdf-scale="0"/>
 </div>
 <div effect="fade-in-out">
-	<image filename="cov-branch2.png" align="center"/>
+	<image filename="cov-branch2.png" align="center" pdf-scale="0"/>
 </div>
 
 <div effect="fade-in-out">
-	<image filename="paths0.png" align="center"/>
+	<image filename="paths0.png" align="center" pdf-scale="0"/>
 </div>
 <div effect="fade-in-out">
-	<image filename="paths1.png" align="center"/>
+	<image filename="paths1.png" align="center" pdf-scale="0"/>
 </div>
 <div effect="fade-in-out">
-	<image filename="paths2.png" align="center"/>
+	<image filename="paths2.png" align="center" pdf-scale="0"/>
 </div>
 <div effect="fade-in-out">
-	<image filename="paths3.png" align="center"/>
+	<image filename="paths3.png" align="center" pdf-scale="0"/>
 </div>
 <div effect="fade-in-out">
-	<image filename="paths4.png" align="center"/>
+	<image filename="paths4.png" align="center" pdf-scale="0.6"/>
 </div>
 </slide>
