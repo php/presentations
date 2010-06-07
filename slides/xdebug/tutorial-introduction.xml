@@ -1,0 +1,29 @@
+<slide>
+	<title>This Tutorial</title>
+
+<div>
+	<list>
+		<bullet>Installation overview</bullet>
+		<bullet>~Downloading, compiling and configuring Xdebug~</bullet>
+		<bullet>Basic function overview</bullet>
+		<bullet>~Playing with settings, stack traces and function traces~</bullet>
+	</list>
+	<blurb>break</blurb>
+</div>
+<div effect="fade-in">
+	<list>
+		<bullet>Profiling</bullet>
+		<bullet>~Profiling your own code~</bullet>
+		<bullet>Code coverage</bullet>
+		<bullet>~(Setting up code-coverage with PHP Unit)~</bullet>
+	</list>
+	<blurb>break</blurb>
+</div>
+<div effect="fade-in">
+	<list>
+		<bullet>Debugging</bullet>
+		<bullet>~Setting up your IDE for debugging~</bullet>
+	</list>
+</div>
+</slide>
+

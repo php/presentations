@@ -4,18 +4,22 @@
 
 	<blurb>With PEAR:</blurb>
 	<list class="numbered">
-		<bullet>pecl install xdebug</bullet>
+		<bullet>pecl install xdebug-2.1.0RC1</bullet>
+		<bullet>*Ignore:* %You should add "extension=xdebug.so" to php.ini%</bullet>
 	</list>
-
+<break/>
 	<blurb>Without PEAR:</blurb>
 	<list class="numbered">
-		<bullet>wget http://xdebug.org/files/xdebug-2.0.4.tgz</bullet>
-		<bullet>tar -xvzf xdebug-2.0.4.tgz</bullet>
-		<bullet>cd xdebug-2.0.4</bullet>
+		<bullet>wget http://xdebug.org/files/xdebug-2.1.0RC1.tgz</bullet>
+		<bullet>tar -xvzf xdebug-2.1.0RC1.tgz</bullet>
+		<bullet>cd xdebug-2.1.0RC1</bullet>
 		<bullet>phpize</bullet>
 		<bullet>./configure</bullet>
 		<bullet>make</bullet>
 		<bullet>make install</bullet>
 	</list>
+<break/>
+
+	<blurb>Tailored installation instructions: <link href="http://xdebug.org/find-binary.php"/></blurb>
 </slide>
 

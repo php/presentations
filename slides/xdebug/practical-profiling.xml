@@ -1,0 +1,23 @@
+<slide>
+	<title>Practical</title>
+	<subtitle>Profiling</subtitle>
+
+	<blurb>Settings:</blurb>
+	<list>
+		<bullet>xdebug.profiler_enable / xdebug.profiler_enable_trigger</bullet>
+	</list>
+
+<break/>
+	<blurb>Tools:</blurb>
+	<list>
+		<bullet>KCacheGrind (Linux)</bullet>
+		<bullet>WinCacheGrind (Windows)</bullet>
+		<bullet>maccallgrind (Mac, non-free)</bullet>
+		<bullet>webgrind (PHP script, multi-platform)</bullet>
+	</list>
+<break/>
+
+	<blurb>Browser extensions:</blurb>
+	<blurb>easy Xdebug: <link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></blurb>
+	<blurb>Xdebug Helper: <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></blurb>
+</slide>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Debugging Gotchas</title>
+
+	<list>
+		<bullet>Xdebug connects to the client</bullet>
+		<bullet>Remote vs Local debugging</bullet>
+		<bullet>Debugging proxy: (Komodo-PythonRemoteDebugging)</bullet>
+		<bullet>%xdebug.remote_connect_back%</bullet>
+	</list>
+</slide>

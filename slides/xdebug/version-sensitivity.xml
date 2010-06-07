@@ -1,0 +1,24 @@
+<slide>
+	<title>The Xdebug extension</title>
+
+	<list>
+		<bullet>Zend extension, and not a PHP extension</bullet>
+		<bullet>Xdebug is very PHP-version sensitive</bullet>
+		<bullet>Different compilers under Windows</bullet>
+		<bullet>Debug/non-debug</bullet>
+		<bullet>Threadsafe or not</bullet>
+	</list>
+	<break/>
+<div effect="fade-out">
+	<blurb>In PHP 5.1 and 5.2:</blurb>
+	<example>zend_extension=/local/php/lib/php/extensions/no-debug-non-zts-20090626/xdebug.so</example>
+	<example>zend_extension_ts=/local/php/lib/php/extensions/debug-zts-20090626/xdebug.so</example>
+	<example>zend_extension_debug=/local/php/lib/php/extensions/debug-non-zts-20090626/xdebug.so</example>
+</div>
+<div effect="fade-in">
+	<blurb>In PHP 5.3:</blurb>
+	<example>zend_extension=/local/php/lib/php/extensions/no-debug-non-zts-20090626/xdebug.so</example>
+	<example>zend_extension=/local/php/lib/php/extensions/debug-zts-20090626/xdebug.so</example>
+	<example>zend_extension=/local/php/lib/php/extensions/debug-non-zts-20090626/xdebug.so</example>
+</div>
+</slide>

@@ -1,0 +1,19 @@
+<slide>
+	<title>Practical</title>
+	<subtitle>Debugging</subtitle>
+
+	<blurb>Settings:</blurb>
+	<list>
+		<bullet>xdebug.remote_enable</bullet>
+		<bullet>xdebug.remote_host / xdebug.remote_port</bullet>
+		<bullet>xdebug.remote_autostart</bullet>
+		<bullet>xdebug.remote_log</bullet>
+	</list>
+
+<break/>
+	<blurb>Browser extensions:</blurb>
+	<list>
+		<bullet>easy Xdebug: <link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></bullet>
+		<bullet>Xdebug Helper: <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></bullet>
+	</list>
+</slide>

@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<slide fontsize="6em">
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
 	<title>Analyzing Running Scripts</title>
 
 	<list>
 		<bullet>DBGp, common Debugging protocol</bullet>
 		<bullet>Cross-language: PHP, Python, Perl...</bullet>
 		<bullet>Supported in Xdebug 2</bullet>
-		<bullet>Clients: Komodo, Eclipse/PDT, Zend Studio for Eclipse, Netbeans
-		(and many others: <link href="http://xdebug.org/docs/remote#clients"/>)</bullet>
+	</list>
+<break/>
+	<blurb>Clients:</blurb>
+	<list>
+		<bullet>Komodo (Linux, Windows, Mac — commercial)</bullet>
+		<bullet>Eclipse/PDT (Java based — free) *L*</bullet>
+		<bullet>Zend Studio for Eclipse (Eclipse-based — commercial)</bullet>
+		<bullet>Netbeans (Java-based — free) *LW*</bullet>
+		<bullet>PHPStorm (Java-based — commercial) *LW*</bullet>
+		<bullet>(and many others: <link href="http://xdebug.org/docs/remote#clients"/>)</bullet>
 	</list>
 </slide>

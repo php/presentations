@@ -1,0 +1,28 @@
+<slide>
+	<title>Simple profiling</title>
+
+	<list>
+		<bullet>Uses the "computerized" trace files</bullet>
+		<bullet>A script is provided in the Xdebug source dir: %contrib/tracefile-analyser.php%:</bullet>
+	</list>
+	<example>php tracefile-analyser.php /tmp/trace.124683842.xt [sortkey] [element count]</example>
+	<list>
+		<bullet>sort keys: calls, time-inclusive, memory-inclusive, time-own, memory-own</bullet>
+	</list>
+	<example><![CDATA[Showing the 10 most costly calls sorted by 'time-inclusive'.
+
+                                                  Inclusive        Own
+function                                  #calls  time     memory  time     memory
+----------------------------------------------------------------------------------
+{main}                                         1  0.0894  1025656  0.0006     5672
+Presentation->display                          1  0.0723   408848  0.0004   -11528
+ezcTemplate->process                          10  0.0685   243320  0.0005    -2976
+ezcTemplateCompiledCode->execute              10  0.0627    14144  0.0009     1672
+include                                       10  0.0612    12352  0.0009    -4392
+__autoload                                    10  0.0176   781904  0.0006     1080
+ezcBase::autoload                             10  0.0170   780824  0.0017   -80728
+ezcTemplateCompiledCode::findCompiled         10  0.0094    38776  0.0024    12888
+ezcTemplateCompiledCode->checkRequirements    10  0.0094     2968  0.0029     2968
+ezcBase::loadFile                             10  0.0093   642320  0.0070   625520]]></example>
+
+</slide>

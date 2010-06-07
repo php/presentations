@@ -1,0 +1,17 @@
+<slide>
+	<title>Practical</title>
+	<subtitle>Basic functions and Function traces</subtitle>
+
+	<list>
+		<bullet>xdebug.default_enable / html_errors</bullet>
+		<bullet>xdebug.max_nesting_level</bullet>
+		<bullet>xdebug.file_link_format=gvim://%%%f@%%%l</bullet>
+		<bullet>xdebug.collect_includes / xdebug.collect_params / xdebug.collect_return / xdebug.collect_assignments</bullet>
+		<bullet>xdebug.var_display_max_data / xdebug.var_display_max_depth / xdebug.var_display_max_children</bullet>
+		<bullet>xdebug.dump.*</bullet>
+		<bullet>xdebug.show_local_vars</bullet>
+		<bullet>xdebug.auto_trace</bullet>
+		<bullet>xdebug.trace_output_dir / xdebug.trace_output_name</bullet>
+		<bullet>xdebug.trace_output_format</bullet>
+	</list>
+</slide>
