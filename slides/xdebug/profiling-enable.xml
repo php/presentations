@@ -5,6 +5,6 @@
 	<image filename="pg1.png"/>
 
 	<example class="code_large">xdebug.profiler_enable=1          ; enable profiler
-xdebug.profile_output_dir=/tmp    ; output directory
-xdebug.profile_output_name=cachegrind.out.%p</example>
+xdebug.profiler_output_dir=/tmp    ; output directory
+xdebug.profiler_output_name=cachegrind.out.%p</example>
 </slide>
