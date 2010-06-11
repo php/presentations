@@ -1,0 +1,17 @@
+<slide>
+	<title>Hard Dependency</title>
+
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct()
+	{
+		$configObj = new Config();
+		$this->lineLength = $configObj->getLineLength();
+	}
+}
+?>]]></example>
+	<blurb class="center-page">Hard Dependency</blurb>
+</slide>

@@ -1,0 +1,26 @@
+<slide>
+	<title>Service</title>
+
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct( Config $configObj )
+	{
+		$this->lineLength = $configObj->getLineLength();
+	}
+}
+
+/*
+<service>
+	<wrappy>
+		<config>
+		...
+	</wrappy>
+</service>
+*/
+
+$wrappy = ServiceDepmanager::createWrappy();
+?>]]></example>
+</slide>

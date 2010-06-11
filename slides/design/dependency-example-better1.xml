@@ -1,0 +1,51 @@
+<slide>
+	<title>Manual Injection</title>
+
+<div effect="fade-out">
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct( Config $configObj )
+	{
+		$this->lineLength = $configObj->getLineLength();
+	}
+}
+
+$configObj = new Config();
+$wrap = new Wrappy( $configObj );
+?>]]></example>
+</div>
+<div effect="fade-in-out">
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct( Config $configObj = null )
+	{
+		$this->lineLength = $configObj ? $configObj->getLineLength() : 78;
+	}
+}
+
+$wrap = new Wrappy();
+?>]]></example>
+</div>
+<div effect="fade-in">
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct( ConfigInterface $configObj = null )
+	{
+		$this->lineLength = $configObj ? $configObj->getLineLength() : 78;
+	}
+}
+
+$wrap = new Wrappy();
+?>]]></example>
+</div>
+
+</slide>

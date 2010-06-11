@@ -1,0 +1,32 @@
+<slide>
+	<title>ORM/ActiveRecord</title>
+
+	<list>
+		<bullet>Is a mechanism for mapping objects to a database</bullet>
+		<bullet>Makes classes inherit from "ActiveRecord"</bullet>
+		<bullet>Hibernate is alternative</bullet>
+		<bullet>Traits</bullet>
+	</list>
+
+<div effect="fade-in">
+	<example><![CDATA[<?php
+trait ActiveRecord
+{
+	public function load()
+	{
+		var_dump(get_class($this));
+	}
+}
+
+class Car {
+	use ActiveRecord;
+}
+
+$c = new Car;
+$c->load();
+?>]]></example>
+</div>
+<div effect="fade-in">
+	<example class="result"><![CDATA[string(3) "Car"]]></example>
+</div>
+</slide>

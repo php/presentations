@@ -1,0 +1,26 @@
+<slide>
+	<title>MVC/Testing</title>
+
+	<list>
+		<bullet>MVC generally uses HTTP</bullet>
+		<bullet>Is that necessary?</bullet>
+		<bullet>How do we test that?</bullet>
+	</list>
+
+<div effect="fade-in">
+	<example><![CDATA[<?php
+interface ezcMvcDispatcherConfiguration
+{
+    public function createRequestParser();
+    public function createRouter( ezcMvcRequest $request );
+    public function createView( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result );
+    public function createResponseWriter( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result, ezcMvcResponse $response );
+    public function createFatalRedirectRequest( ezcMvcRequest $request, ezcMvcResult $result, Exception $e );
+    public function runPreRoutingFilters( ezcMvcRequest $request );
+    public function runRequestFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request );
+    public function runResultFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result );
+    public function runResponseFilters( ezcMvcRoutingInformation $routeInfo, ezcMvcRequest $request, ezcMvcResult $result, ezcMvcResponse $response );
+}
+?>]]></example>
+</div>
+</slide>

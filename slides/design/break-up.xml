@@ -1,0 +1,47 @@
+<slide>
+	<title>Implementations</title>
+
+<div effect="fade-out">
+	<example><![CDATA[public function createRequest()
+{
+	$this->request = new ezcMvcRequest();
+	$this->processStandardHeaders();
+	$this->processAcceptHeaders();
+	$this->processUserAgentHeaders();
+	$this->processFiles();
+	$this->processAuthVars();
+	$this->processCookies();
+
+	$this->request->raw = &$_SERVER;
+
+	return $this->request;
+}]]></example>
+</div>
+<div effect="fade-in">
+	<example><![CDATA[public function createRequest()
+{
+	$this->request = $this->createRequestObject();
+	$this->processStandardHeaders();
+	$this->processAcceptHeaders();
+	$this->processUserAgentHeaders();
+	$this->processFiles();
+	$this->processAuthVars();
+	$this->processCookies();
+
+	$this->request->raw = &$_SERVER;
+
+	return $this->request;
+}
+
+/**
+ * Creates and returns an ezcMvcRequest object.
+ *
+ * @return ezcMvcRequest
+ */
+protected function createRequestObject()
+{
+	return new ezcMvcRequest();
+}]]></example>
+</div>
+
+</slide>

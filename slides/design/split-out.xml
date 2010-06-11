@@ -1,0 +1,59 @@
+<slide>
+	<title>Implementations</title>
+
+<div effect="fade-out">
+	<example><![CDATA[
+$text .= "<ul{$idPart}>\n";
+foreach ( $children as $child )
+{
+	$path = $child[2]->nodes;
+	if ( !$this->options->displayRootNode )
+	{
+		array_shift( $path );
+	}
+	if ( $this->options->selectedNodeLink )
+	{
+		$slice = array_slice( $path, -1 );
+		$path = htmlspecialchars( $this->options->basePath . '/' . array_pop( $slice ) );
+	}
+	else
+	{
+		$path = htmlspecialchars( $this->options->basePath . '/' . join( '/', $path ) );
+	}
+	$text .= str_repeat( '  ', $level + 2 );
+
+	$data = $this->formatData( $child[1], in_array( $child[0], $this->options->highlightNodeIds ) );]]></example>
+</div>
+<div effect="fade-in">
+	<example><![CDATA[
+foreach ( $children as $child )
+{
+	$text .= str_repeat( '  ', $level + 2 );
+
+	$path = $this->formatPath( $child );
+	$data = $this->formatData( $child[1], in_array( $child[0], $this->options->highlightNodeIds ) );
+]]></example>
+
+	<example><![CDATA[
+protected function formatPath( $child )
+{
+	$path = $child[2]->nodes;
+	if ( !$this->options->displayRootNode )
+	{
+		array_shift( $path );
+	}
+	if ( $this->options->selectedNodeLink )
+	{
+		$slice = array_slice( $path, -1 );
+		$path = htmlspecialchars( $this->options->basePath . '/' . array_pop( $slice ) );
+	}
+	else
+	{
+		$path = htmlspecialchars( $this->options->basePath . '/' . join( '/', $path ) );
+	}
+	return $path;
+}
+]]></example>
+</div>
+
+</slide>

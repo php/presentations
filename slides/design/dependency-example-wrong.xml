@@ -1,0 +1,34 @@
+<slide>
+	<title>Dependencies Example</title>
+
+<div effect="fade-out">
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct()
+	{
+		$configObj = Config::get();
+		$this->lineLength = $configObj->getLineLength();
+	}
+}
+?>]]></example>
+	<blurb class="center-page">The Singleton Disaster</blurb>
+</div>
+<div effect="fade-in">
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct()
+	{
+		global $configObj;
+		$this->lineLength = $configObj->getLineLength();
+	}
+}
+?>]]></example>
+	<blurb class="center-page">The Globals Catastrophe</blurb>
+</div>
+</slide>

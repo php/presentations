@@ -1,0 +1,24 @@
+<slide>
+	<title>Factory</title>
+
+	<example><![CDATA[<?php
+class Wrappy
+{
+	private $lineLength;
+
+	function __construct( Config $configObj )
+	{
+		$this->lineLength = $configObj->getLineLength();
+	}
+}
+
+class TextManipulationFactory
+{
+	function getWrappy()
+	{
+		$config = new Config();
+		return new Wrappy($config);
+	}
+}
+?>]]></example>
+</slide>
