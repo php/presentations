@@ -1,192 +1,192 @@
 <slide title="URL Handlers">
 <break lines="2" />
 
-<example fontsize="1.3em" type="shell"><![CDATA[|aaaaff|callto| 	rundll32.exe msconf.dll,CallToProtocolHandler %l 	
-|aaaaff|callto| 	C:\Program Files\Skype\Phone\Skype.exe "/callto:%1" 	
-|aaaaff|feed| 	C:\Program Files\FeedDemon\FeedDemon.exe "%1" 	
-|aaaaff|feed| 	C:\PROGRA~1\MOZILL~2\THUNDE~1.EXE -mail %1 	
-|aaaaff|feed| 	C:\Program Files\Morpheus\Morpheus.exe "%1" 	
-|aaaaff|feed| 	C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|feeds| 	C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|file| 	C:\Program Files\eMule\eMule.exe "%1" 	
-|aaaaff|Firefox.Url| C:\USERS\MARCIA\DESKTOP\FIREFOX.EXE -url "%1" 	
-|aaaaff|FirefoxURL| C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
-|aaaaff|ftp| 	C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
-|aaaaff|ftp| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
-|aaaaff|ftp| 	C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
-|aaaaff|gopher| 	C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
-|aaaaff|gopher| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
-|aaaaff|gtalk| 	C:\Program Files\Google\Google Talk\googletalk.exe "/%1" 	
-|aaaaff|HTTP| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
-|aaaaff|http| 	C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
-|aaaaff|HTTP| 	C:\Program Files\Mozilla Firefox-trunk\firefox\firefox.exe %1 	
-|aaaaff|HTTP| 	C:\Program Files\Minefield\firefox.exe -requestPending -osint -url "%1" 	
-|aaaaff|https| 	C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
-|aaaaff|https| 	C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
-|aaaaff|https| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
-|aaaaff|IE.FTP| 	C:\Program Files\Internet Explorer\iexplore.exe %1 	
-|aaaaff|IE.HTTP| C:\Program Files\Internet Explorer\iexplore.exe -nohome 	
-|aaaaff|IE.HTTPS| C:\Program Files\Internet Explorer\iexplore.exe -nohome 	
-|aaaaff|irc| 	C:\Program Files\X-Chat\xchat.exe "%1" 	
-|aaaaff|ircs| 	C:\Program Files\X-Chat\xchat.exe "%1" 	
-|aaaaff|mailto| 	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -compose "%1" 	
-|aaaaff|mailto| 	%ProgramFiles%\Windows Mail\WinMail.exe /mailurl:"%1" 	
-|aaaaff|mailto| 	%ProgramFiles%\Outlook Express\msimn.exe /mailurl:%1 	
-|aaaaff|mms| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L"
-|aaaaff|MMST| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
-|aaaaff|mmst| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
-|aaaaff|MMSU| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
-|aaaaff|mmsu| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
-|aaaaff|NavigatorURL| C:\PROGRA~1\NETSCAPE\NAVIGA~1\NAVIGA~1.EXE -url "%1" -requestPending 	
-|aaaaff|news|	%ProgramFiles%\Outlook Express\msimn.exe /newsurl:"%1" 	
-|aaaaff|news|	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
-|aaaaff|nntp| 	%ProgramFiles%\Outlook Express\msimn.exe /newsurl:"%1" 	
-|aaaaff|nntp| 	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
-|aaaaff|oms|	rundll32.exe C:\PROGRA~1\MICROS~2\Office12\OMSMAIN.DLL, OmsProtocolHandler %1 	
-|aaaaff|outlook|	C:\PROGRA~1\MICROS~2\Office10\OUTLOOK.EXE "%1"
-|aaaaff|outlook| C:\PROGRA~1\MI1933~1\OFFICE11\OUTLOOK.EXE /select "%1" 	
-|aaaaff|Outlook.URL.feed| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|Outlook.URL.mailto| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE -c IPM.Note /m "%1" 	
-|aaaaff|Outlook.URL.webcal| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|outlookfeed| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|outlookfeeds| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|Pnm| 	C:\Program Files\Real\RealPlayer\RealPlay.exe "%1"
-|aaaaff|SCP| 	C:\Programme\WinSCP\WinSCP.exe "%1" 	
-|aaaaff|SFTP| 	C:\Programme\WinSCP\WinSCP.exe "%1" 	
-|aaaaff|snews| 	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
-|aaaaff|snews| 	%ProgramFiles%\Outlook Express\msimn.exe /newsurl:"%1" 	
-|aaaaff|telnet| 	rundll32.exe url.dll,TelnetProtocolHandler %l
-|aaaaff|telnet| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|telnet| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|Thunderbird.Url.mailto| C:\Program Files\Mozilla Thunderbird\thunderbird.exe -compose "%1" 	
-|aaaaff|Thunderbird.Url.news| C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
-|aaaaff|webcal| 	rundll32.exe C:\PROGRA~1\AOL9~1.0\WEBCAL~1.DLL,WebCalHandler %1 	
-|aaaaff|Webcal| 	rundll32.exe C:\PROGRA~1\AMERIC~1.0\WEBCAL~1.DLL,WebCalHandler %1 	
-|aaaaff|webcal| 	rundll32.exe C:\PROGRA~1\AMERIC~1.0\WEBCAL~1.DLL,WebCalHandler %1 	
-|aaaaff|webcal| 	%ProgramFiles%\Windows Calendar\wincal.exe /webcal "%1" 	
-|aaaaff|webcal| 	C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|webcals| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|WindowsCalendar.UrlWebcal.1| %ProgramFiles%\Windows Calendar\wincal.exe /webcal "%1" 	
-|aaaaff|WindowsMail.Url.Mailto| %ProgramFiles%\Windows Mail\WinMail.exe /mailurl:"%1" 	
-|aaaaff|WindowsMail.Url.news| %ProgramFiles%\Windows Mail\WinMail.exe /newsurl:"%1" 	
-|aaaaff|WindowsMail.Url.nntp| %ProgramFiles%\Windows Mail\WinMail.exe /newsurl:"%1" 	
-|aaaaff|WindowsMail.Url.snews| %ProgramFiles%\Windows Mail\WinMail.exe /newsurl:"%1" 	
-|aaaaff|WMP11.AssocProtocol.MMS| %ProgramFiles%\Windows Media Player\wmplayer.exe "%L" 	
-|aaaaff|ymsgr|	C:\Program Files\Yahoo!\Messenger\YahooMessenger.exe %1 	
-|aaaaff|acrobat| C:\Program Files\Adobe\Acrobat 7.0\Reader\AcroRd32.exe /u "%1" 	
-|aaaaff|acsui| 	C:\Program Files\Common Files\AOL\ACS\AOLDial.exe -%l 	
-|aaaaff|aim| 	C:\Program Files\AIM6\aim6.exe /d locale=en-US ee://aol/imApp %1
-|aaaaff|AIM| 	Rundll32.exe "C:\Program Files\Trillian\plugins\aim.dll", aim_util_urlHandler url="%1" ini="C:\Program Files\Trillian\users\default\cache\pending_aim.ini"
-|aaaaff|aim| 	C:\Program Files\AIM\aim.exe %1 	
-|aaaaff|aim| 	RUNDLL32.EXE C:\PROGRA~1\MIRAND~1\Plugins\aim.dll,_aim_links_exec@16 %1 	
-|aaaaff|Allc8.Commands.2| C:\PROGRA~1\ALLINP~1\CRAZYE~1\bin\allc8.exe %1 %2 	
-|aaaaff|AllHoldem.Commands.2| C:\PROGRA~1\ALLINP~1\holdem\bin\allholde.exe %1 %2 	
-|aaaaff|AllPoker.Commands.2| C:\PROGRA~1\ALLINP~1\poker\bin\allpoker.exe %1 %2 	
-|aaaaff|aolautofix| C:\Program Files\Common Files\AOL\Launch\AOLLaunch.exe /d locale=en-us ee://aol/autofixDriver/autofixDriverObject "%1" 	
-|aaaaff|aolds| 	AOLLaunch.exe /d locale=en-US ee://aol/browserapp -s %1 	
-|aaaaff|bc|	C:\Program Files\BitComet\BitComet.exe 	
-|aaaaff|bctp| 	C:\Program Files\BitComet\BitComet.exe 	
-|aaaaff|bittorrent| C:\Program Files\BitTorrent\bittorrent.exe --responsefile "%1" 	
-|aaaaff|camfrog| C:\Program Files\Camfrog\Camfrog Video Chat\CamfrogHandler.exe %l 	
-|aaaaff|csi| 	C:\Program Files\CompuServe 6.0\cs.exe -u"%1" 	
-|aaaaff|CVS| 	C:\Program Files\TortoiseCVS\TortoiseAct.exe -u "%1" 	
-|aaaaff|daap| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|ed2k| 	C:\Program Files\eMule\eMule.exe "%1" 	
-|aaaaff|ed2k| 	C:\Program Files\Shareaza\Shareaza.exe "%L"
-|aaaaff|Explorer.AssocProtocol.search-ms| %SystemRoot%\Explorer.exe /separate,/idlist,%I,%L 	
-|aaaaff|fdaction| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|gizmoproject| C:\Program Files\Gizmo Project\Gizmo.exe -dial "%1" 	
-|aaaaff|gnet| 	C:\Program Files\Shareaza\Shareaza.exe "%L" 	
-|aaaaff|gnutella| C:\Program Files\Shareaza\Shareaza.exe "%L" 	
-|aaaaff|gsarcade| C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
-|aaaaff|HCP| 	%SystemRoot%\PCHEALTH\HELPCTR\Binaries\HelpCtr.exe -FromHCP -url "%1" 	
-|aaaaff|icquser| C:\Program Files\ICQ6\ICQLRun.exe %1 	
-|aaaaff|ICY| 	C:\Program Files\Winamp\winamp.exe %1 	
-|aaaaff|imesync| C:\PROGRA~1\COMMON~1\MICROS~1\IME12\IMEJP\IMJPTCKT.EXE "%1" 	
-|aaaaff|itms| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|itmss| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|itpc| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|iTunes.AssocProtocol.daap| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|iTunes.AssocProtocol.itms| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|iTunes.AssocProtocol.itmss| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|iTunes.AssocProtocol.itpc| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|iTunes.AssocProtocol.pcast| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|joost| 	C:\Program Files\Joost\xulrunner\tvprunner.exe "C:\Program Files\Joost\application.ini" "%1" 	
-|aaaaff|LDAP| 	C:\Program Files\Outlook Express\wab.exe /ldap:%1 	
-|aaaaff|M4MacDrive| C:\Program Files\Mediafour\MacDrive 7\MacDrive.exe /url:%1 	
-|aaaaff|magnet| 	C:\Program Files\Shareaza\Shareaza.exe "%L" 	
-|aaaaff|magnet| 	C:\Program Files\LimeWire\LimeWire.exe "%L" 	
-|aaaaff|magnet| 	C:\Program Files\Morpheus\Morpheus.exe "%1"
-|aaaaff|mapi| 	C:\PROGRA~1\MICROS~1\Office12\OUTLOOK.EXE -c IPM.Note /m "%1" 	
-|aaaaff|mapi| 	%ProgramFiles%\Windows Mail\WinMail.exe /mailurl:"%1" 	
-|aaaaff|mc12| 	C:\Windows\System32\MC12.exe /Protocol "%L" 	
-|aaaaff|mediajukebox| C:\Windows\System32\MC12.exe /Protocol "%L" 	
-|aaaaff|Morpheus| C:\Program Files\Morpheus\Morpheus.exe "%1" 	
-|aaaaff|Mozilla| C:\PROGRA~1\MOZILL~2\THUNDE~1.EXE -compose "%1" 	
-|aaaaff|mp2p| 	C:\Program Files\Shareaza\Shareaza.exe "%L" 	
-|aaaaff|mpodcast| C:\Program Files\Morpheus\Morpheus.exe "%1" 	
-|aaaaff|MSBD| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
-|aaaaff|msbd| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
-|aaaaff|msdigitallocker| %SystemRoot%\DigitalLocker\digitalx.exe %1 	
-|aaaaff|Outlook.URL.stssync| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
-|aaaaff|P2P| 	C:\PROGRA~1\TVAnts\Tvants.exe "%L" 	
-|aaaaff|pando| 	C:\Program Files\Pando Networks\Pando\Pando.exe "%1" 	
-|aaaaff|pcast| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
-|aaaaff|picasa| 	C:\Program Files\Picasa2\Picasa2.exe "%1" 	
-|aaaaff|plaxo| 	C:\Program Files\Plaxo\2.5.6.21\plx_link.exe -command="%1" 	
-|aaaaff|Play| 	C:\Program Files\PPLive\PPLive.exe "%1" 	
-|aaaaff|podcast| C:\Program Files\Morpheus\Morpheus.exe "%1" 	
-|aaaaff|podcast| C:\Windows\System32\MC12.exe /Subscribe "%L" 	
-|aaaaff|ppmate| 	C:\Program Files\PPMate\ppmate.exe "%1" 	
-|aaaaff|ppmates| C:\Program Files\PPMate\ppmate.exe "%1" 	
-|aaaaff|ppstream| C:\Program Files\PPStream\PPStream.exe -ppstream %1 	
-|aaaaff|ppstream| C:\Users\Martijn\AppData\Local\VirtualStore\Program Files\PPMate\ppmate.exe "%1" 	
-|aaaaff|Prls.IntAppFile.Ftp| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
-|aaaaff|Prls.IntAppFile.Http| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
-|aaaaff|Prls.IntAppFile.Https| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
-|aaaaff|Prls.IntAppFile.Mailto| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
-|aaaaff|quicktime| C:\PROGRA~1\QUICKT~1\QuickTimePlayer.exe -u"%1" 	
-|aaaaff|RealPlayer.AutoPlay.6| C:\Program Files\Real\RealPlayer\RealPlay.exe /autoplay "%1" 	
-|aaaaff|RealPlayer.CDBurn.6| C:\Program Files\Real\RealPlayer\RealPlay.exe /burn "%1" 	
-|aaaaff|rhap| 	C:\Program Files\Jambase Rhapsody\Rhapsody.exe "%1" 	
-|aaaaff|rlogin|	rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|rlogin|	rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|rlogin|	rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|rtsp|	C:\Program Files\Real\RealPlayer\RealPlay.exe "%1" 	
-|aaaaff|rtsp|	C:\Program Files\K-Lite Codec Pack\Media Player Classic\mplayerc.exe "%1" 	
-|aaaaff|SC|	C:\Program Files\Winamp\winamp.exe %1 	
-|aaaaff|search-ms| %SystemRoot%\Explorer.exe /separate,/idlist,%I,%L 	
-|aaaaff|shareaza| C:\Program Files\Shareaza\Shareaza.exe "%L" 	
-|aaaaff|Shell|	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
-|aaaaff|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
-|aaaaff|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
-|aaaaff|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L
-|aaaaff|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
-|aaaaff|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
-|aaaaff|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
-|aaaaff|SHOUT| 	C:\Program Files\Winamp\winamp.exe %1 	
-|aaaaff|sig2dat| C:\Program Files\KaZaA Lite\sig2dat.exe %1 	
-|aaaaff|sip| 	C:\Program Files\SJLabs\SJphone\SJphone.exe %1 	
-|aaaaff|sip| 	C:\Program Files\Gizmo Project\Gizmo.exe -dial "%1" 	
-|aaaaff|skype| 	C:\Program Files\Skype\Phone\Skype.exe "/uri:%l" 	
-|aaaaff|skype| 	C:\Program Files\Skype\Phone\Skype.exe "/uri:%1"
-|aaaaff|sop| 	C:\Program Files\SopCast\SopCast.exe "%1" 	
-|aaaaff|steam| 	C:\Program Files\Valve\Steam\Steam.exe "%1" 	
-|aaaaff|stssync| C:\PROGRA~1\MI1933~1\OFFICE11\OUTLOOK.EXE /stssync "%1" 	
-|aaaaff|svn| 	C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:repobrowser /path:"%1" 	
-|aaaaff|svn+ssh| C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:repobrowser /path:"%1" 	
-|aaaaff|Synacast| C:\Program Files\PPLive\PPLive.exe "%1" 	
-|aaaaff|tn3270| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|tn3270| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|torrent| C:\Program Files\BitTorrent\bittorrent.exe --responsefile "%1" 	
-|aaaaff|TSCRec4| rundll32.exe url.dll,TelnetProtocolHandler %l 	
-|aaaaff|tsvn| 	C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:checkout /url:"%1" 	
-|aaaaff|tvants| 	C:\PROGRA~1\TVAnts\Tvants.exe "%L" 	
-|aaaaff|tvu| 	C:\Program Files\TVUPlayer\TVUPlayer.exe "%1" 	
-|aaaaff|UNSV| 	C:\Program Files\Winamp\winamp.exe %1 	
-|aaaaff|UVOX| 	C:\Program Files\Winamp\winamp.exe %1 	
-|aaaaff|Ventrilo| C:\PROGRA~1\Ventrilo\Ventrilo.exe -l%1 	
-|aaaaff|vs|	C:\Program Files\Microsoft Visual Studio .NET\Common7\IDE\devenv.exe /vsprotocol /command "navigate %1" 	
-|aaaaff|WPC| 	%systemroot%\system32\wpcer.exe %1]]></example>
+<example fontsize="1.3em" type="shell"><![CDATA[|7777aa|callto| 	rundll32.exe msconf.dll,CallToProtocolHandler %l 	
+|7777aa|callto| 	C:\Program Files\Skype\Phone\Skype.exe "/callto:%1" 	
+|7777aa|feed| 	C:\Program Files\FeedDemon\FeedDemon.exe "%1" 	
+|7777aa|feed| 	C:\PROGRA~1\MOZILL~2\THUNDE~1.EXE -mail %1 	
+|7777aa|feed| 	C:\Program Files\Morpheus\Morpheus.exe "%1" 	
+|7777aa|feed| 	C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|feeds| 	C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|file| 	C:\Program Files\eMule\eMule.exe "%1" 	
+|7777aa|Firefox.Url| C:\USERS\MARCIA\DESKTOP\FIREFOX.EXE -url "%1" 	
+|7777aa|FirefoxURL| C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
+|7777aa|ftp| 	C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
+|7777aa|ftp| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
+|7777aa|ftp| 	C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
+|7777aa|gopher| 	C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
+|7777aa|gopher| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
+|7777aa|gtalk| 	C:\Program Files\Google\Google Talk\googletalk.exe "/%1" 	
+|7777aa|HTTP| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
+|7777aa|http| 	C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
+|7777aa|HTTP| 	C:\Program Files\Mozilla Firefox-trunk\firefox\firefox.exe %1 	
+|7777aa|HTTP| 	C:\Program Files\Minefield\firefox.exe -requestPending -osint -url "%1" 	
+|7777aa|https| 	C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
+|7777aa|https| 	C:\DOWNLO~1\FIREFO~1.3\FIREFOX.EXE -url "%1" -requestPending 	
+|7777aa|https| 	C:\PROGRA~1\MOZILLA.ORG\SEAMON~1\SEAMON~1.EXE -url "%1" 	
+|7777aa|IE.FTP| 	C:\Program Files\Internet Explorer\iexplore.exe %1 	
+|7777aa|IE.HTTP| C:\Program Files\Internet Explorer\iexplore.exe -nohome 	
+|7777aa|IE.HTTPS| C:\Program Files\Internet Explorer\iexplore.exe -nohome 	
+|7777aa|irc| 	C:\Program Files\X-Chat\xchat.exe "%1" 	
+|7777aa|ircs| 	C:\Program Files\X-Chat\xchat.exe "%1" 	
+|7777aa|mailto| 	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -compose "%1" 	
+|7777aa|mailto| 	%ProgramFiles%\Windows Mail\WinMail.exe /mailurl:"%1" 	
+|7777aa|mailto| 	%ProgramFiles%\Outlook Express\msimn.exe /mailurl:%1 	
+|7777aa|mms| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L"
+|7777aa|MMST| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
+|7777aa|mmst| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
+|7777aa|MMSU| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
+|7777aa|mmsu| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
+|7777aa|NavigatorURL| C:\PROGRA~1\NETSCAPE\NAVIGA~1\NAVIGA~1.EXE -url "%1" -requestPending 	
+|7777aa|news|	%ProgramFiles%\Outlook Express\msimn.exe /newsurl:"%1" 	
+|7777aa|news|	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
+|7777aa|nntp| 	%ProgramFiles%\Outlook Express\msimn.exe /newsurl:"%1" 	
+|7777aa|nntp| 	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
+|7777aa|oms|	rundll32.exe C:\PROGRA~1\MICROS~2\Office12\OMSMAIN.DLL, OmsProtocolHandler %1 	
+|7777aa|outlook|	C:\PROGRA~1\MICROS~2\Office10\OUTLOOK.EXE "%1"
+|7777aa|outlook| C:\PROGRA~1\MI1933~1\OFFICE11\OUTLOOK.EXE /select "%1" 	
+|7777aa|Outlook.URL.feed| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|Outlook.URL.mailto| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE -c IPM.Note /m "%1" 	
+|7777aa|Outlook.URL.webcal| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|outlookfeed| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|outlookfeeds| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|Pnm| 	C:\Program Files\Real\RealPlayer\RealPlay.exe "%1"
+|7777aa|SCP| 	C:\Programme\WinSCP\WinSCP.exe "%1" 	
+|7777aa|SFTP| 	C:\Programme\WinSCP\WinSCP.exe "%1" 	
+|7777aa|snews| 	C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
+|7777aa|snews| 	%ProgramFiles%\Outlook Express\msimn.exe /newsurl:"%1" 	
+|7777aa|telnet| 	rundll32.exe url.dll,TelnetProtocolHandler %l
+|7777aa|telnet| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|telnet| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|Thunderbird.Url.mailto| C:\Program Files\Mozilla Thunderbird\thunderbird.exe -compose "%1" 	
+|7777aa|Thunderbird.Url.news| C:\Program Files\Mozilla Thunderbird\thunderbird.exe -mail "%1" 	
+|7777aa|webcal| 	rundll32.exe C:\PROGRA~1\AOL9~1.0\WEBCAL~1.DLL,WebCalHandler %1 	
+|7777aa|Webcal| 	rundll32.exe C:\PROGRA~1\AMERIC~1.0\WEBCAL~1.DLL,WebCalHandler %1 	
+|7777aa|webcal| 	rundll32.exe C:\PROGRA~1\AMERIC~1.0\WEBCAL~1.DLL,WebCalHandler %1 	
+|7777aa|webcal| 	%ProgramFiles%\Windows Calendar\wincal.exe /webcal "%1" 	
+|7777aa|webcal| 	C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|webcals| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|WindowsCalendar.UrlWebcal.1| %ProgramFiles%\Windows Calendar\wincal.exe /webcal "%1" 	
+|7777aa|WindowsMail.Url.Mailto| %ProgramFiles%\Windows Mail\WinMail.exe /mailurl:"%1" 	
+|7777aa|WindowsMail.Url.news| %ProgramFiles%\Windows Mail\WinMail.exe /newsurl:"%1" 	
+|7777aa|WindowsMail.Url.nntp| %ProgramFiles%\Windows Mail\WinMail.exe /newsurl:"%1" 	
+|7777aa|WindowsMail.Url.snews| %ProgramFiles%\Windows Mail\WinMail.exe /newsurl:"%1" 	
+|7777aa|WMP11.AssocProtocol.MMS| %ProgramFiles%\Windows Media Player\wmplayer.exe "%L" 	
+|7777aa|ymsgr|	C:\Program Files\Yahoo!\Messenger\YahooMessenger.exe %1 	
+|7777aa|acrobat| C:\Program Files\Adobe\Acrobat 7.0\Reader\AcroRd32.exe /u "%1" 	
+|7777aa|acsui| 	C:\Program Files\Common Files\AOL\ACS\AOLDial.exe -%l 	
+|7777aa|aim| 	C:\Program Files\AIM6\aim6.exe /d locale=en-US ee://aol/imApp %1
+|7777aa|AIM| 	Rundll32.exe "C:\Program Files\Trillian\plugins\aim.dll", aim_util_urlHandler url="%1" ini="C:\Program Files\Trillian\users\default\cache\pending_aim.ini"
+|7777aa|aim| 	C:\Program Files\AIM\aim.exe %1 	
+|7777aa|aim| 	RUNDLL32.EXE C:\PROGRA~1\MIRAND~1\Plugins\aim.dll,_aim_links_exec@16 %1 	
+|7777aa|Allc8.Commands.2| C:\PROGRA~1\ALLINP~1\CRAZYE~1\bin\allc8.exe %1 %2 	
+|7777aa|AllHoldem.Commands.2| C:\PROGRA~1\ALLINP~1\holdem\bin\allholde.exe %1 %2 	
+|7777aa|AllPoker.Commands.2| C:\PROGRA~1\ALLINP~1\poker\bin\allpoker.exe %1 %2 	
+|7777aa|aolautofix| C:\Program Files\Common Files\AOL\Launch\AOLLaunch.exe /d locale=en-us ee://aol/autofixDriver/autofixDriverObject "%1" 	
+|7777aa|aolds| 	AOLLaunch.exe /d locale=en-US ee://aol/browserapp -s %1 	
+|7777aa|bc|	C:\Program Files\BitComet\BitComet.exe 	
+|7777aa|bctp| 	C:\Program Files\BitComet\BitComet.exe 	
+|7777aa|bittorrent| C:\Program Files\BitTorrent\bittorrent.exe --responsefile "%1" 	
+|7777aa|camfrog| C:\Program Files\Camfrog\Camfrog Video Chat\CamfrogHandler.exe %l 	
+|7777aa|csi| 	C:\Program Files\CompuServe 6.0\cs.exe -u"%1" 	
+|7777aa|CVS| 	C:\Program Files\TortoiseCVS\TortoiseAct.exe -u "%1" 	
+|7777aa|daap| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|ed2k| 	C:\Program Files\eMule\eMule.exe "%1" 	
+|7777aa|ed2k| 	C:\Program Files\Shareaza\Shareaza.exe "%L"
+|7777aa|Explorer.AssocProtocol.search-ms| %SystemRoot%\Explorer.exe /separate,/idlist,%I,%L 	
+|7777aa|fdaction| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|gizmoproject| C:\Program Files\Gizmo Project\Gizmo.exe -dial "%1" 	
+|7777aa|gnet| 	C:\Program Files\Shareaza\Shareaza.exe "%L" 	
+|7777aa|gnutella| C:\Program Files\Shareaza\Shareaza.exe "%L" 	
+|7777aa|gsarcade| C:\PROGRA~1\MOZILL~1\FIREFOX.EXE -requestPending -osint -url "%1" 	
+|7777aa|HCP| 	%SystemRoot%\PCHEALTH\HELPCTR\Binaries\HelpCtr.exe -FromHCP -url "%1" 	
+|7777aa|icquser| C:\Program Files\ICQ6\ICQLRun.exe %1 	
+|7777aa|ICY| 	C:\Program Files\Winamp\winamp.exe %1 	
+|7777aa|imesync| C:\PROGRA~1\COMMON~1\MICROS~1\IME12\IMEJP\IMJPTCKT.EXE "%1" 	
+|7777aa|itms| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|itmss| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|itpc| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|iTunes.AssocProtocol.daap| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|iTunes.AssocProtocol.itms| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|iTunes.AssocProtocol.itmss| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|iTunes.AssocProtocol.itpc| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|iTunes.AssocProtocol.pcast| C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|joost| 	C:\Program Files\Joost\xulrunner\tvprunner.exe "C:\Program Files\Joost\application.ini" "%1" 	
+|7777aa|LDAP| 	C:\Program Files\Outlook Express\wab.exe /ldap:%1 	
+|7777aa|M4MacDrive| C:\Program Files\Mediafour\MacDrive 7\MacDrive.exe /url:%1 	
+|7777aa|magnet| 	C:\Program Files\Shareaza\Shareaza.exe "%L" 	
+|7777aa|magnet| 	C:\Program Files\LimeWire\LimeWire.exe "%L" 	
+|7777aa|magnet| 	C:\Program Files\Morpheus\Morpheus.exe "%1"
+|7777aa|mapi| 	C:\PROGRA~1\MICROS~1\Office12\OUTLOOK.EXE -c IPM.Note /m "%1" 	
+|7777aa|mapi| 	%ProgramFiles%\Windows Mail\WinMail.exe /mailurl:"%1" 	
+|7777aa|mc12| 	C:\Windows\System32\MC12.exe /Protocol "%L" 	
+|7777aa|mediajukebox| C:\Windows\System32\MC12.exe /Protocol "%L" 	
+|7777aa|Morpheus| C:\Program Files\Morpheus\Morpheus.exe "%1" 	
+|7777aa|Mozilla| C:\PROGRA~1\MOZILL~2\THUNDE~1.EXE -compose "%1" 	
+|7777aa|mp2p| 	C:\Program Files\Shareaza\Shareaza.exe "%L" 	
+|7777aa|mpodcast| C:\Program Files\Morpheus\Morpheus.exe "%1" 	
+|7777aa|MSBD| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
+|7777aa|msbd| 	C:\Program Files\Windows Media Player\wmplayer.exe "%L" 	
+|7777aa|msdigitallocker| %SystemRoot%\DigitalLocker\digitalx.exe %1 	
+|7777aa|Outlook.URL.stssync| C:\PROGRA~1\MICROS~2\Office12\OUTLOOK.EXE /share "%1" 	
+|7777aa|P2P| 	C:\PROGRA~1\TVAnts\Tvants.exe "%L" 	
+|7777aa|pando| 	C:\Program Files\Pando Networks\Pando\Pando.exe "%1" 	
+|7777aa|pcast| 	C:\Program Files\iTunes\iTunes.exe /url "%1" 	
+|7777aa|picasa| 	C:\Program Files\Picasa2\Picasa2.exe "%1" 	
+|7777aa|plaxo| 	C:\Program Files\Plaxo\2.5.6.21\plx_link.exe -command="%1" 	
+|7777aa|Play| 	C:\Program Files\PPLive\PPLive.exe "%1" 	
+|7777aa|podcast| C:\Program Files\Morpheus\Morpheus.exe "%1" 	
+|7777aa|podcast| C:\Windows\System32\MC12.exe /Subscribe "%L" 	
+|7777aa|ppmate| 	C:\Program Files\PPMate\ppmate.exe "%1" 	
+|7777aa|ppmates| C:\Program Files\PPMate\ppmate.exe "%1" 	
+|7777aa|ppstream| C:\Program Files\PPStream\PPStream.exe -ppstream %1 	
+|7777aa|ppstream| C:\Users\Martijn\AppData\Local\VirtualStore\Program Files\PPMate\ppmate.exe "%1" 	
+|7777aa|Prls.IntAppFile.Ftp| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
+|7777aa|Prls.IntAppFile.Http| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
+|7777aa|Prls.IntAppFile.Https| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
+|7777aa|Prls.IntAppFile.Mailto| C:\Program Files\Parallels\Parallels Tools\SIA\sharedintapp.exe "%1" 	
+|7777aa|quicktime| C:\PROGRA~1\QUICKT~1\QuickTimePlayer.exe -u"%1" 	
+|7777aa|RealPlayer.AutoPlay.6| C:\Program Files\Real\RealPlayer\RealPlay.exe /autoplay "%1" 	
+|7777aa|RealPlayer.CDBurn.6| C:\Program Files\Real\RealPlayer\RealPlay.exe /burn "%1" 	
+|7777aa|rhap| 	C:\Program Files\Jambase Rhapsody\Rhapsody.exe "%1" 	
+|7777aa|rlogin|	rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|rlogin|	rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|rlogin|	rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|rtsp|	C:\Program Files\Real\RealPlayer\RealPlay.exe "%1" 	
+|7777aa|rtsp|	C:\Program Files\K-Lite Codec Pack\Media Player Classic\mplayerc.exe "%1" 	
+|7777aa|SC|	C:\Program Files\Winamp\winamp.exe %1 	
+|7777aa|search-ms| %SystemRoot%\Explorer.exe /separate,/idlist,%I,%L 	
+|7777aa|shareaza| C:\Program Files\Shareaza\Shareaza.exe "%L" 	
+|7777aa|Shell|	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
+|7777aa|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
+|7777aa|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
+|7777aa|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L
+|7777aa|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
+|7777aa|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
+|7777aa|Shell| 	%SystemRoot%\Explorer.exe /idlist,%I,%L 	
+|7777aa|SHOUT| 	C:\Program Files\Winamp\winamp.exe %1 	
+|7777aa|sig2dat| C:\Program Files\KaZaA Lite\sig2dat.exe %1 	
+|7777aa|sip| 	C:\Program Files\SJLabs\SJphone\SJphone.exe %1 	
+|7777aa|sip| 	C:\Program Files\Gizmo Project\Gizmo.exe -dial "%1" 	
+|7777aa|skype| 	C:\Program Files\Skype\Phone\Skype.exe "/uri:%l" 	
+|7777aa|skype| 	C:\Program Files\Skype\Phone\Skype.exe "/uri:%1"
+|7777aa|sop| 	C:\Program Files\SopCast\SopCast.exe "%1" 	
+|7777aa|steam| 	C:\Program Files\Valve\Steam\Steam.exe "%1" 	
+|7777aa|stssync| C:\PROGRA~1\MI1933~1\OFFICE11\OUTLOOK.EXE /stssync "%1" 	
+|7777aa|svn| 	C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:repobrowser /path:"%1" 	
+|7777aa|svn+ssh| C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:repobrowser /path:"%1" 	
+|7777aa|Synacast| C:\Program Files\PPLive\PPLive.exe "%1" 	
+|7777aa|tn3270| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|tn3270| 	rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|torrent| C:\Program Files\BitTorrent\bittorrent.exe --responsefile "%1" 	
+|7777aa|TSCRec4| rundll32.exe url.dll,TelnetProtocolHandler %l 	
+|7777aa|tsvn| 	C:\Program Files\TortoiseSVN\bin\TortoiseProc.exe /command:checkout /url:"%1" 	
+|7777aa|tvants| 	C:\PROGRA~1\TVAnts\Tvants.exe "%L" 	
+|7777aa|tvu| 	C:\Program Files\TVUPlayer\TVUPlayer.exe "%1" 	
+|7777aa|UNSV| 	C:\Program Files\Winamp\winamp.exe %1 	
+|7777aa|UVOX| 	C:\Program Files\Winamp\winamp.exe %1 	
+|7777aa|Ventrilo| C:\PROGRA~1\Ventrilo\Ventrilo.exe -l%1 	
+|7777aa|vs|	C:\Program Files\Microsoft Visual Studio .NET\Common7\IDE\devenv.exe /vsprotocol /command "navigate %1" 	
+|7777aa|WPC| 	%systemroot%\system32\wpcer.exe %1]]></example>
 
 </slide>

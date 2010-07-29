@@ -3,7 +3,7 @@
 <break lines="1" />
 
 <example fontsize="1.4em" type="shell" title="Before"><![CDATA[
-|00aaff|~>| *siege -b -t30s -c5 http://wp1.localhost*
+|0077aa|~>| *siege -b -t30s -c5 http://wp1.localhost*
 ** SIEGE 2.68
 ** Preparing 5 concurrent users for battle.
 The server is now under siege...
@@ -12,8 +12,8 @@ Transactions:		         788 hits
 Availability:		      100.00 %
 Elapsed time:		       29.27 secs
 Data transferred:	        1.66 MB
-Response time:		        *|ffff00|0.18 secs|*
-Transaction rate:	       *|ffff00|26.92 trans/sec|*
+Response time:		        *0.18 secs*
+Transaction rate:	       *26.92 trans/sec*
 Throughput:		        0.06 MB/sec
 Concurrency:		        4.97
 Successful transactions:         788
@@ -22,7 +22,7 @@ Longest transaction:	        0.65
 Shortest transaction:	        0.07]]></example>
 
 <example fontsize="1.4em" type="shell" title="After"><![CDATA[
-|00aaff|~>| *siege -b -t30s -c5 http://wp2.localhost*
+|0077aa|~>| *siege -b -t30s -c5 http://wp2.localhost*
 ** SIEGE 2.68
 ** Preparing 5 concurrent users for battle.
 The server is now under siege...
@@ -31,8 +31,8 @@ Transactions:		         851 hits
 Availability:		      100.00 %
 Elapsed time:		       29.55 secs
 Data transferred:	        1.80 MB
-Response time:		        *|ffff00|0.17 secs|*
-Transaction rate:	       *|ffff00|28.80 trans/sec|*
+Response time:		        *0.17 secs*
+Transaction rate:	       *28.80 trans/sec*
 Throughput:		        0.06 MB/sec
 Concurrency:		        4.97
 Successful transactions:         851

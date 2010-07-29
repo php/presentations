@@ -9,7 +9,7 @@ xdebug.profiler_output_dir=/tmp]]></example>
 
 <break lines="1" />
 
-<example fontsize="2em" type="shell"><![CDATA[|00aaff|~>| *kcachegrind cachegrind.out.\**]]></example>
+<example fontsize="2em" type="shell"><![CDATA[|0077aa|~>| *kcachegrind cachegrind.out.\**]]></example>
 
 <image filename="wp_xdebug.png" width="1003" height="597" align="center"/>
 

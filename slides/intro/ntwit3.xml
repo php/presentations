@@ -5,7 +5,7 @@ Let's try HipHop on it.
 </blurb>
 
 <example fontsize="1.4em" type="shell" title="HipHop"><![CDATA[
-|00aaff|~>| *siege -b -t30s -c5 http://twit2.localhost*
+|0077aa|~>| *siege -b -t30s -c5 http://twit2.localhost*
 ** SIEGE 2.68
 ** Preparing 5 concurrent users for battle.
 The server is now under siege...
@@ -14,8 +14,8 @@ Transactions:		        8328 hits
 Availability:		      100.00 %
 Elapsed time:		       29.13 secs
 Data transferred:	       26.08 MB
-Response time:		        *|ffff00|0.02 secs|*
-Transaction rate:	      *|ffff00|285.89 trans/sec|*
+Response time:		        *0.02 secs*
+Transaction rate:	      *285.89 trans/sec*
 Throughput:		        0.90 MB/sec
 Concurrency:		        4.98
 Successful transactions:        8328
@@ -212,19 +212,19 @@ request from the browser and 16343 runs the PHP code.  Removing the others bring
 16344 epoll_wait(6,  <unfinished ...>
 16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 19, NULL <unfinished ...>
 16344 <... epoll_wait resumed> {{EPOLLIN, {u32=20, u64=20}}}, 32, 4294967295) = 1
-*|ffff00|16344 accept(20, {sa_family=AF_INET, sin_port=htons(53023), sin_addr=inet_addr("127.0.1.1")}, [2292050743944806416]) = 19|*
+*16344 accept(20, {sa_family=AF_INET, sin_port=htons(53023), sin_addr=inet_addr("127.0.1.1")}, [2292050743944806416]) = 19*
 16344 fcntl(19, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
 16344 epoll_ctl(6, EPOLL_CTL_ADD, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
 16344 epoll_wait(6, {{EPOLLIN, {u32=19, u64=19}}}, 32, 50000) = 1
 16344 epoll_ctl(6, EPOLL_CTL_DEL, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
 16344 ioctl(19, FIONREAD, [147])        = 0
-*|ffff00|16344 read(19, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 147) = 147|*
+*16344 read(19, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 147) = 147*
 16344 futex(0x2b1b7b4, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x2b1b7b0, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
 16343 <... futex resumed> )             = 0
 16344 epoll_wait(6,  <unfinished ...>
 16343 futex(0x2b1b788, FUTEX_WAKE_PRIVATE, 1) = 0
 16343 open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 26
-*|ffff00|16343 stat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0|*
+*16343 stat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0*
 16343 stat("/var/www/twit2", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
 16343 poll([{fd=27, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
 16343 write(27, "\1\0\0\0\16", 5)       = 5
@@ -295,19 +295,19 @@ DB interaction is identical and eliminate those calls.
 16344 epoll_wait(6,  <unfinished ...>
 16343 futex(0x2b1b7b4, FUTEX_WAIT_PRIVATE, 19, NULL <unfinished ...>
 16344 <... epoll_wait resumed> {{EPOLLIN, {u32=20, u64=20}}}, 32, 4294967295) = 1
-*|ffff00|16344 accept(20, {sa_family=AF_INET, sin_port=htons(53023), sin_addr=inet_addr("127.0.1.1")}, [2292050743944806416]) = 19|*
+*16344 accept(20, {sa_family=AF_INET, sin_port=htons(53023), sin_addr=inet_addr("127.0.1.1")}, [2292050743944806416]) = 19*
 16344 fcntl(19, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
 16344 epoll_ctl(6, EPOLL_CTL_ADD, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
 16344 epoll_wait(6, {{EPOLLIN, {u32=19, u64=19}}}, 32, 50000) = 1
 16344 epoll_ctl(6, EPOLL_CTL_DEL, 19, {EPOLLIN, {u32=19, u64=19}}) = 0
 16344 ioctl(19, FIONREAD, [147])        = 0
-*|ffff00|16344 read(19, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 147) = 147|*
+*16344 read(19, "GET / HTTP/1.1\r\nHost: twit2.loca"..., 147) = 147*
 16344 futex(0x2b1b7b4, FUTEX_WAKE_OP_PRIVATE, 1, 1, 0x2b1b7b0, {FUTEX_OP_SET, 0, FUTEX_OP_CMP_GT, 1}) = 1
 16343 <... futex resumed> )             = 0
 16344 epoll_wait(6,  <unfinished ...>
 16343 futex(0x2b1b788, FUTEX_WAKE_PRIVATE, 1) = 0
 16343 open("/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 26
-*|ffff00|16343 stat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0|*
+*16343 stat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0*
 16343 stat("/var/www/twit2", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
 16343 madvise(0x7f21f802a000, 8192, MADV_DONTNEED) = 0
 16343 write(19, "HTTP/1.1 200 OK\r\nSet-Cookie: tok"..., 3556) = 3556
@@ -347,7 +347,7 @@ The *accept()*, *read()* and *write()* calls are similar.  HipHop-PHP doesn't ha
 </blurb>
 
 <example fontsize="1.4em" type="shell" title="HipHop with 25 concurrent clients"><![CDATA[
-|00aaff|~>| *siege -b -t30s -c25 http://twit2.localhost*
+|0077aa|~>| *siege -b -t30s -c25 http://twit2.localhost*
 ** SIEGE 2.68
 ** Preparing 25 concurrent users for battle.
 The server is now under siege...
@@ -367,7 +367,7 @@ Shortest transaction:	        0.00
 ]]></example>
 
 <example fontsize="1.4em" type="shell" title="HipHop with 50 concurrent clients"><![CDATA[
-|00aaff|~>| *siege -b -t30s -c50 http://twit2.localhost*
+|0077aa|~>| *siege -b -t30s -c50 http://twit2.localhost*
 ** SIEGE 2.68
 ** Preparing 50 concurrent users for battle.
 The server is now under siege...

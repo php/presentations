@@ -3,12 +3,12 @@
 <break lines="1" />
 
 <example fontsize="1.4em" type="shell" title="strace your web server process"><![CDATA[
-|00aaff|~>| */usr/sbin/apache2 -X &*
+|0077aa|~>| */usr/sbin/apache2 -X &*
 [1] 16367
-|ffff00|(hit page a few times to warm up caches)|
-|00aaff|~>| *strace -p 16367 -o strace.out*
+(hit page a few times to warm up caches)
+|0077aa|~>| *strace -p 16367 -o strace.out*
 Process 16367 attached - interrupt to quit
-|ffff00|(hit page *once*)|
+(hit page *once*)
 *^C*
 Process 16367 detached]]></example>
 
@@ -46,13 +46,13 @@ open("./something.php", O_RDONLY) = 11]]></example>
 
 <example fontsize="1.4em" title="Cause"><![CDATA[<?php
 ini_set('include_path','.:/usr/local/lib/php');
-include 'PEAR.php';
+include_once 'PEAR.php';
 include 'something.php';
 ?>]]></example>
 
 <example fontsize="1.4em" title="Fix"><![CDATA[<?php
 ini_set('include_path','/usr/local/lib/php');
-include 'PEAR.php';
+include_once 'PEAR.php';
 include './something.php';
 ?>]]></example>
 

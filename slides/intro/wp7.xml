@@ -2,12 +2,12 @@
 
 <break lines="3" />
 
-<example fontsize="2em" type="shell"><![CDATA[|00aaff|~>| *valgrind --tool=callgrind --dump-instr=yes -v \ *
+<example fontsize="2em" type="shell"><![CDATA[|0077aa|~>| *valgrind --tool=callgrind --dump-instr=yes -v \ *
           *--instr-atstart=no /usr/sbin/apache2 -X*]]></example>
 
 <break lines="1" />
 
-<example fontsize="2em" type="shell"><![CDATA[|00aaff|~>| *chmod a+rw callgrind.out.\**
+<example fontsize="2em" type="shell"><![CDATA[|0077aa|~>| *chmod a+rw callgrind.out.\**
 |ff00ff| - hit the server to warm it up -|
 % callgrind_control -i on
 |ff00ff| - hit the server -|
@@ -18,7 +18,7 @@
 
 <break lines="1" />
 
-<example fontsize="2em" type="shell"><![CDATA[|00aaff|~>| *kcachegrind callgrind.out.\**]]></example>
+<example fontsize="2em" type="shell"><![CDATA[|0077aa|~>| *kcachegrind callgrind.out.\**]]></example>
 
 <image filename="wp_cg.png" width="1022" height="498" align="center"/>
 

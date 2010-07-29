@@ -41,8 +41,8 @@ Now hit the server a few times to warm up the caches, then click the "Profiler O
 --- wp-db.php	(revision 13595)
 +++ wp-db.php	(working copy)
 @@ -499,7 +499,7 @@
--		$this->dbh = *|ffff00|@mysql_connect|*( $dbhost, $dbuser, $dbpassword, *|ffff00|true|* );
-+		$this->dbh = *|ffff00|mysql_pconnect|*( $dbhost, $dbuser, $dbpassword );
+-		$this->dbh = *@mysql_connect*( $dbhost, $dbuser, $dbpassword, *true* );
++		$this->dbh = *mysql_pconnect*( $dbhost, $dbuser, $dbpassword );
 @@ -518,7 +516,7 @@
 -				mysql_set_charset( $this->charset, $this->dbh );
 +#				mysql_set_charset( $this->charset, $this->dbh );
@@ -56,8 +56,8 @@ And as we are browsing the source code, we can replace most *time()* calls with 
 <example fontsize="1em" type="shell" title="$_SERVER['REQUEST_TIME'] example"><![CDATA[--- ./load.php	2010-03-05 09:31:16.573829617 -0800
 +++ ../../wp2/wp-includes/load.php	2010-03-05 16:57:13.452580398 -0800
 @@ -138,7 +138,7 @@
--	if ( ( *|ffff00|time()|* - $upgrading ) >= 600 )
-+	if ( ( *|ffff00|$_SERVER['REQUEST_TIME']|* - $upgrading ) >= 600 )
+-	if ( ( *time()* - $upgrading ) >= 600 )
++	if ( ( *$_SERVER['REQUEST_TIME']* - $upgrading ) >= 600 )
 ]]></example>
 
 <example fontsize="1.4em" title="Optimize is_serialized"><![CDATA[<?php
@@ -87,12 +87,12 @@ Index: wp-settings.php
  require( ABSPATH . WPINC . '/bookmark-template.php' );
  require( ABSPATH . WPINC . '/kses.php' );
 -require( ABSPATH . WPINC . '/cron.php' );
-+*|ffff00|#|*require( ABSPATH . WPINC . '/cron.php' );
++*#*require( ABSPATH . WPINC . '/cron.php' );
  require( ABSPATH . WPINC . '/deprecated.php' );
  require( ABSPATH . WPINC . '/script-loader.php' );
  require( ABSPATH . WPINC . '/taxonomy.php' );
 -require( ABSPATH . WPINC . '/update.php' );
-+*|ffff00|#|*require( ABSPATH . WPINC . '/update.php' );
++*#*require( ABSPATH . WPINC . '/update.php' );
  require( ABSPATH . WPINC . '/canonical.php' );
  require( ABSPATH . WPINC . '/shortcodes.php' );
  require( ABSPATH . WPINC . '/media.php' );
@@ -107,8 +107,8 @@ Index: default-filters.php
  // WP Cron
 -if ( !defined( 'DOING_CRON' ) )
 -	add_action( 'sanitize_comment_cookies', 'wp_cron' );
-+*|ffff00|#|*if ( !defined( 'DOING_CRON' ) )
-+*|ffff00|#|*	add_action( 'sanitize_comment_cookies', 'wp_cron' );
++*#*if ( !defined( 'DOING_CRON' ) )
++*#*	add_action( 'sanitize_comment_cookies', 'wp_cron' );
 ]]></example>
 
 </slide>

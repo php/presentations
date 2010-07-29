@@ -3,7 +3,7 @@
 <break lines="1" />
 
 <example fontsize="1.4em" type="shell" title="Check for open() syscalls"><![CDATA[
-|00aaff|~>| *grep open strace.out*
+|0077aa|~>| *grep open strace.out*
 open("/var/www/wp1/wp-load.php", O_RDONLY) = 29
 open("/var/www/wp1/wp-config.php", O_RDONLY) = 29
 open("/var/www/wp1/wp-settings.php", O_RDONLY) = 29
@@ -104,7 +104,7 @@ function wp_start_object_cache() {
 ...]]></example>
 
 <example fontsize="1.4em" type="shell" title="Check again"><![CDATA[
-|00aaff|~>| *grep open strace2.out*
+|0077aa|~>| *grep open strace2.out*
 open("/var/www/wp2/wp-includes/pomo/translations.php", O_RDONLY) = 30
 open("/var/www/wp2/wp-includes/pomo/entry.php", O_RDONLY) = 30
 open("/var/www/wp2/wp-includes/pomo/streams.php", O_RDONLY) = 30

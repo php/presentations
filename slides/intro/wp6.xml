@@ -51,20 +51,20 @@ class WP_Dependencies {
 --- ./cache.php	2010-03-05 09:31:16.573829617 -0800
 +++ ../../wp2/wp-includes/cache.php	2010-03-05 16:11:39.502645987 -0800
 @@ -100,7 +100,7 @@
--	$GLOBALS['wp_object_cache'] =*|ffff00|&|* new WP_Object_Cache();
+-	$GLOBALS['wp_object_cache'] =*&* new WP_Object_Cache();
 +	$GLOBALS['wp_object_cache'] = new WP_Object_Cache();
 
 --- ./classes.php	2010-03-05 09:31:16.603847118 -0800
 +++ ../../wp2/wp-includes/classes.php	2010-03-05 13:30:32.957323183 -0800
 @@ -779,7 +779,7 @@
 -	function start_lvl(&$output) {}
-+*|ffff00|#|*	function start_lvl(&$output) {}
++*#*	function start_lvl(&$output) {}
  
  	/**
  	 * Ends the list of after the elements are added.
 @@ -793,7 +793,7 @@
 -	function end_lvl(&$output)   {}
-+*|ffff00|#|*	function end_lvl(&$output)   {}
++*#*	function end_lvl(&$output)   {}
 ]]></example>
 
 <blurb fontsize="3em">

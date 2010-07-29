@@ -9,9 +9,9 @@ inclued.dumpdir=/tmp
 ]]></example>
 
 <example fontsize="1.4em" type="shell" title="Generate graph"><![CDATA[
-|00aaff|~>| *php ~/pecl/inclued/gengraph.php -i /tmp/inclued.27843.1*
+|0077aa|~~>| *php ~~/pecl/inclued/gengraph.php -i /tmp/inclued.27843.1*
 Written inclued.out.dot...
-|00aaff|~>| *dot -Tpng -o wp_inclued1.png inclued.out.dot*
+|0077aa|~>| *dot -Tpng -o wp_inclued1.png inclued.out.dot*
 ]]></example>
 
 <break lines="1" />

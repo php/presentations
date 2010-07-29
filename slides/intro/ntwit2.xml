@@ -26,26 +26,26 @@ poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
 write(32, "\1\0\0\0\16", 5)             = 5
 read(32, "\7\0\0\1\0\0\0\2\0\0\0", 16384) = 11
 poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
-*|ffff00|write(32, ")\0\0\0\3SELECT \* from tracks  order"..., 45) = 45|*
+*write(32, ")\0\0\0\3SELECT \* from tracks  order"..., 45) = 45*
 read(32, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
 poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
-*|ffff00|write(32, "\266\0\0\0\3SELECT query, count(id) as "..., 186) = 186|*
+*write(32, "\266\0\0\0\3SELECT query, count(id) as "..., 186) = 186*
 read(32, "\1\0\0\1\7/\0\0\2\3def\5twits\5twits\5twits\5"..., 16384) = 467
 poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
-*|ffff00|write(32, "M\0\0\0\3SELECT \* from twits where a"..., 81) = 81|*
+*write(32, "M\0\0\0\3SELECT \* from twits where a"..., 81) = 81*
 read(32, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 736
 poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
-*|ffff00|write(32, "O\0\0\0\3SELECT \* from twits where s"..., 83) = 83|*
+*write(32, "O\0\0\0\3SELECT \* from twits where s"..., 83) = 83*
 read(32, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1228
 poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
-*|ffff00|write(32, "O\0\0\0\3SELECT \* from twits where s"..., 83) = 83|*
+*write(32, "O\0\0\0\3SELECT \* from twits where s"..., 83) = 83*
 read(32, "\1\0\0\1\r)\0\0\2\3def\5twits\5twits\5twits\2"..., 16384) = 1896
 poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
 write(32, "Y\0\0\0\3select id,c_id,p_id,replies"..., 93) = 93
 read(32, "\1\0\0\1\7/\0\0\2\3def\5twits\10comments\10com"..., 16384) = 700
 stat("././includes/header.php", {st_mode=S_IFREG|0644, st_size=353, ...}) = 0
 poll([{fd=32, events=POLLIN|POLLPRI}], 1, 0) = 0 (Timeout)
-*|ffff00|write(32, ")\0\0\0\3SELECT \* from tracks  order"..., 45) = 45|*
+*write(32, ")\0\0\0\3SELECT \* from tracks  order"..., 45) = 45*
 read(32, "\1\0\0\1\0031\0\0\2\3def\5twits\6tracks\6track"..., 16384) = 511
 chdir("/home/rasmus/wp")                = 0
 setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={0, 0}}, NULL) = 0
@@ -120,15 +120,15 @@ fcntl(31, F_SETFD, FD_CLOEXEC)          = 0
 getsockname(31, {sa_family=AF_INET6, sin6_port=htons(80), inet_pton(AF_INET6, "::ffff:127.0.1.1", &sin6_addr), sin6_flowinfo=0, sin6_scope_id=0}, [68719476764]) = 0
 fcntl(31, F_GETFL)                      = 0x2 (flags O_RDWR)
 fcntl(31, F_SETFL, O_RDWR|O_NONBLOCK)   = 0
-*|ffff00|read(31, "GET /favicon.ico HTTP/1.1\r\nHost:"..., 8000) = 399|*
-*|ffff00|stat("/var/www/twit/favicon.ico", 0x7fff40d70ab0) = -1 ENOENT (No such file or directory)|*
-*|ffff00|lstat("/var", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0|*
-*|ffff00|lstat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0|*
-*|ffff00|lstat("/var/www/twit", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0|*
-*|ffff00|lstat("/var/www/twit/favicon.ico", 0x7fff40d70ab0) = -1 ENOENT (No such file or directory)|*
-*|ffff00|write(10, "[Sat Mar 06 00:50:26 2010] [erro"..., 101) = 101|*
-*|ffff00|stat("/var/www/twit/404.php", {st_mode=S_IFREG 0644, st_size=364, ...}) = 0|*
-setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={60, 0}}, NULL) = 0|*
+*read(31, "GET /favicon.ico HTTP/1.1\r\nHost:"..., 8000) = 399*
+*stat("/var/www/twit/favicon.ico", 0x7fff40d70ab0) = -1 ENOENT (No such file or directory)*
+*lstat("/var", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0*
+*lstat("/var/www", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0*
+*lstat("/var/www/twit", {st_mode=S_IFDIR 0755, st_size=4096, ...}) = 0*
+*lstat("/var/www/twit/favicon.ico", 0x7fff40d70ab0) = -1 ENOENT (No such file or directory)*
+*write(10, "[Sat Mar 06 00:50:26 2010] [erro"..., 101) = 101*
+*stat("/var/www/twit/404.php", {st_mode=S_IFREG 0644, st_size=364, ...}) = 0*
+setitimer(ITIMER_PROF, {it_interval={0, 0}, it_value={60, 0}}, NULL) = 0
 rt_sigaction(SIGPROF, {0x7fd1652a4da0, [PROF], SA_RESTORER|SA_RESTART, 0x7fd168369530}, {0x7fd1652a4da0, [PROF], SA_RESTORER|SA_RESTART, 0x7fd168369530}, 8) = 0
 rt_sigprocmask(SIG_UNBLOCK, [PROF], NULL, 8) = 0
 getcwd("/home/rasmus/wp", 4095)         = 16
