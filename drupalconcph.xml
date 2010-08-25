@@ -1,0 +1,44 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="3.5em"
+>
+<!--
+Performance
+-->
+
+<topic>PHP</topic>
+<title>PHP Performance</title>
+<event>DrupalCon</event>
+<location>Copenhagen</location>
+<date>Aug.25, 2010</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/drupalconcph</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- Intro -->
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/intro/drupal2001.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+<slide>slides/intro/php53.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/perf_why.xml</slide>
+<slide>slides/intro/druperf1.xml</slide>
+<slide>slides/intro/druperf2.xml</slide>
+<slide>slides/intro/web_servers.xml</slide>
+<slide>slides/intro/druperf3.xml</slide>
+<slide>slides/intro/druperf4.xml</slide>
+<slide>slides/intro/druperf5.xml</slide>
+<slide>slides/intro/perf_conclusion.xml</slide>
+
+</presentation>
