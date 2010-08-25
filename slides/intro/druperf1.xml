@@ -1,0 +1,26 @@
+<slide title="Current Drupal 7 CVS Checkout">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" leader="Siege: " href="http://www.joedog.org/JoeDog/Siege"/>
+
+<example fontsize="1.4em" type="shell" title="Baseline Benchmark Drupal 7 PHP-5.3.3 PHP-FPM Nginx 0.7.64"><![CDATA[
+|0077aa|~>| siege -c 5 -b -t30s http://drupal/
+**SIEGE 2.67
+**Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		         252 hits
+Availability:		      100.00 %
+Elapsed time:		       29.73 secs
+Data transferred:	        0.60 MB
+Response time:		        *0.57 secs*
+Transaction rate:	        *8.48 trans/sec*
+Throughput:		        0.02 MB/sec
+Concurrency:		        4.87
+Successful transactions:         252
+Failed transactions:	           0
+Longest transaction:	        2.90
+Shortest transaction:	        0.11]]></example>
+
+</slide>

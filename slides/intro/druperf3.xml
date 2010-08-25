@@ -1,0 +1,214 @@
+<slide title="System Calls">
+
+<break lines="1" />
+
+<blurb fontsize="4em">Required require_once rant!</blurb>
+
+<example fontsize="1.4em" type="shell"><![CDATA[
+open("/home/rasmus/drupal/index.php", O_RDONLY) = 4
+open("/home/rasmus/drupal/includes/bootstrap.inc", O_RDONLY) = 4
+open("/home/rasmus/drupal/sites/default/settings.php", O_RDONLY) = 4
+open("/home/rasmus/drupal/includes/cache.inc", O_RDONLY) = 4
+open("/home/rasmus/drupal/includes/database/database.inc", O_RDONLY) = 4
+open("/home/rasmus/drupal/includes/lock.inc", O_RDONLY) = 4
+open("/home/rasmus/drupal/includes/database/mysql/database.inc", O_RDONLY) = 4
+open("/home/rasmus/drupal/includes/module.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/dblog/dblog.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/overlay/overlay.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/session.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/common.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/path.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/theme.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/database/select.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/database/query.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/menu.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/tablesort.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/file.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/stream_wrappers.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/unicode.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/image.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/form.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/mail.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/actions.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/ajax.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/token.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/errors.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/block/block.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/color/color.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/comment/comment.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/entity.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/contextual/contextual.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/dashboard/dashboard.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/field.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/field.crud.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/field.default.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/field.info.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/field.multilingual.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/field.attach.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/field.form.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/modules/field_sql_storage/field_sql_storage.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field_ui/field_ui.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/file/file.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/file/file.field.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/filter/filter.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/help/help.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/image/image.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/image/image.field.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/modules/list/list.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/menu/menu.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/node/node.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/modules/number/number.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/modules/options/options.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/path/path.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/rdf/rdf.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/search/search.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/shortcut/shortcut.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/system/system.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/taxonomy/taxonomy.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/field/modules/text/text.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/toolbar/toolbar.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/update/update.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/modules/user/user.module", O_RDONLY) = 5
+open("/home/rasmus/drupal/profiles/standard/standard.profile", O_RDONLY) = 5
+open("/home/rasmus/drupal/includes/database/mysql/query.inc", O_RDONLY) = 5
+open("/home/rasmus/drupal/themes/engines/phptemplate/phptemplate.engine", O_RDONLY) = 5
+open("/home/rasmus/drupal/themes/bartik/template.php", O_RDONLY) = 5
+open("/home/rasmus/drupal/misc/feed.png", O_RDONLY) = 5
+]]></example>
+
+<blurb fontsize="4em">
+Why oh why do you feel compelled to use include_once/require_once everywhere?
+</blurb>
+
+<image align="center" filename="drupal_inclued.png"/>
+
+<blurb fontsize="4em">
+Paranoid bootstrap code:
+</blurb>
+
+<example fontsize="1em"><![CDATA[<?php
+function _drupal_bootstrap_full() {
+  $called = &drupal_static(__FUNCTION__);
+
+  if ($called) {
+    return;
+  }
+  $called = 1;
+  require_once DRUPAL_ROOT . '/' . variable_get('path_inc', 'includes/path.inc');
+  require_once DRUPAL_ROOT . '/includes/theme.inc';
+  require_once DRUPAL_ROOT . '/includes/pager.inc';
+  require_once DRUPAL_ROOT . '/' . variable_get('menu_inc', 'includes/menu.inc');
+  require_once DRUPAL_ROOT . '/includes/tablesort.inc';
+  require_once DRUPAL_ROOT . '/includes/file.inc';
+  require_once DRUPAL_ROOT . '/includes/unicode.inc';
+  require_once DRUPAL_ROOT . '/includes/image.inc';
+  require_once DRUPAL_ROOT . '/includes/form.inc';
+  require_once DRUPAL_ROOT . '/includes/mail.inc';
+  require_once DRUPAL_ROOT . '/includes/actions.inc';
+  require_once DRUPAL_ROOT . '/includes/ajax.inc';
+  require_once DRUPAL_ROOT . '/includes/token.inc';
+  require_once DRUPAL_ROOT . '/includes/errors.inc';
+]]></example>
+
+<break lines="1"/>
+
+<blurb fontsize="4em">
+And what's with the DB autoloader?
+</blurb>
+
+<example fontsize="1em" title=""><![CDATA[<?php
+function db_autoload($class) {
+  static $base_path = '';
+  static $checked = array();
+
+  static $files = array(
+    'query.inc' => array(
+      'QueryPlaceholderInterface',
+      'QueryConditionInterface', 'DatabaseCondition',
+      'Query', 'DeleteQuery', 'InsertQuery', 'UpdateQuery', 'MergeQuery', 'TruncateQuery',
+      'QueryAlterableInterface',
+    ),
+    'select.inc' => array('QueryAlterableInterface', 'SelectQueryInterface', 'SelectQuery', 
+                          'SelectQueryExtender'),
+    'database.inc' => array('DatabaseConnection'),
+    'log.inc' => array('DatabaseLog'),
+    'prefetch.inc' => array('DatabaseStatementPrefetch'),
+    'schema.inc' => array('DatabaseSchema'),
+  );
+]]></example>
+
+<blurb fontsize="4em">
+Pretty much every Drupal page is going to read from the database, so just load at least query.inc and select.inc on every request.
+You can autoload the less frequently used things.
+</blurb>
+
+<blurb fontsize="4em">
+Not wild about this either:
+</blurb>
+
+<break lines="1"/>
+
+<example fontsize="1.2em" type="shell"><![CDATA[
+access("/home/rasmus/drupal/sites/sites.php", F_OK) = -1 ENOENT (No such file or directory)
+access("/home/rasmus/drupal/sites/drupal/settings.php", F_OK) = -1 ENOENT (No such file or directory)
+access("/home/rasmus/drupal/sites/default/settings.php", F_OK) = 0
+open("/home/rasmus/drupal/sites/default/settings.php", O_RDONLY) = 4
+]]></example>
+
+<break lines="1"/>
+
+<blurb fontsize="4em">
+Which comes from this bootstrap code:
+</blurb>
+
+<example fontsize="1em" title=""><![CDATA[<?php
+function conf_path($require_settings = TRUE, $reset = FALSE) {
+  $conf = &drupal_static(__FUNCTION__, '');
+
+  if ($conf && !$reset) {
+    return $conf;
+  }
+
+  $confdir = 'sites';
+
+  $sites = array();
+  if (file_exists(DRUPAL_ROOT . '/' . $confdir . '/sites.php')) {
+    // This will overwrite $sites with the desired mappings.
+    include(DRUPAL_ROOT . '/' . $confdir . '/sites.php');
+  }
+
+  $uri = explode('/', $_SERVER['SCRIPT_NAME'] ? $_SERVER['SCRIPT_NAME'] : $_SERVER['SCRIPT_FILENAME']);
+  $server = explode('.', implode('.', array_reverse(explode(':', rtrim($_SERVER['HTTP_HOST'], '.')))));
+  for ($i = count($uri) - 1; $i > 0; $i--) {
+    for ($j = count($server); $j > 0; $j--) {
+      $dir = implode('.', array_slice($server, -$j)) . implode('.', array_slice($uri, 0, $i));
+      if (isset($sites[$dir]) && file_exists(DRUPAL_ROOT . '/' . $confdir . '/' . $sites[$dir])) {
+        $dir = $sites[$dir];
+      }
+      if (file_exists(DRUPAL_ROOT . '/' . $confdir . '/' . $dir . '/settings.php') || 
+          (!$require_settings && file_exists(DRUPAL_ROOT . '/' . $confdir . '/' . $dir))) {
+        $conf = "$confdir/$dir";
+        return $conf;
+      }
+    }
+  }
+  $conf = "$confdir/default";
+  return $conf;
+}
+]]></example>
+
+<blurb fontsize="3em">
+The easy fix is to just hardcode the conf path and remove all calls to the conf_path() function.
+</blurb>
+
+<blurb fontsize="3em">
+After fixing all these, we shaved off 10ms of latency and gained about 1.5 requests/sec:
+</blurb>
+
+<example fontsize="1.4em" type="shell"><![CDATA[
+Response time:		        *0.15 secs*
+Transaction rate:	       *32.66 trans/sec*
+]]></example>
+
+
+</slide>

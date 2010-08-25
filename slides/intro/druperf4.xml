@@ -1,0 +1,64 @@
+<slide title="The Drupal Extension">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" href="http://drupal.org/project/drupal_php_ext"/>
+
+<example fontsize="1.4em" type="shell" title=""><![CDATA[
+Response time:		        *0.15 secs*
+Transaction rate:	       *33.01 trans/sec*]]></example>
+
+<blurb fontsize="3em">
+A small gain of maybe just over 1%, but there is some margin-of-error wiggle-room here.  
+Let's spend some quality time with kcachegrind to figure out why it we are not getting more
+out of this.
+</blurb>
+
+<image filename="drupal_ext1.png" align="center" />
+
+<break lines="1" />
+
+<image filename="drupal_ext2.png" align="center" />
+
+<blurb fontsize="3em">
+After enabling the extension:
+</blurb>
+
+<image filename="drupal_ext3.png" align="center" />
+
+<blurb fontsize="3em">
+So, it should be showing some performance improvements.  However, looking at the code of the extension:
+</blurb>
+ 
+
+<example fontsize="1em" type="C"><![CDATA[
+PHP_RINIT_FUNCTION(drupal_extension)
+{
+        // Initialize arrays to hold static variables on a per page request basis.
+        // Doing this in MINIT will make the same arrays persistent across multiple requests
+        // which is probably not wanted.
+        ZEND_INIT_MODULE_GLOBALS(drupal_extension, php_drupal_extension_init_globals, NULL)
+        return SUCCESS;
+}
+
+PHP_RSHUTDOWN_FUNCTION(drupal_extension)
+{
+        // Apparently function_table is persistent across requests so we have to remove our
+        // changes or else we'll bork subsequent requests.
+        // TODO: Add a global flag to track whether these functions were ever overriden.
+        zend_hash_del(EG(function_table), "check_plain", sizeof("check_plain"));
+        zend_hash_del(EG(function_table), "drupal_static", sizeof("drupal_static"));
+
+        zend_hash_destroy(DRUPAL_EXTENSION_G(drupal_static_ext_zdata));
+        zend_hash_destroy(DRUPAL_EXTENSION_G(drupal_static_ext_zdefault));
+
+        FREE_HASHTABLE(DRUPAL_EXTENSION_G(drupal_static_ext_zdata));
+        FREE_HASHTABLE(DRUPAL_EXTENSION_G(drupal_static_ext_zdefault));
+
+        return SUCCESS;
+}
+]]></example>
+
+<image filename="drupal_ext4.png" align="center" />
+
+</slide>

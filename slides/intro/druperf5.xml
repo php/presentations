@@ -1,0 +1,77 @@
+<slide title="What about HipHop?">
+
+<link fontsize="3em" marginleft="1em" href="http://wiki.github.com/facebook/hiphop-php/"/>
+
+<blurb fontsize="3.5em">
+Unfortunately, D7's use of PDO doesn't work with HipHop's PDO implementation and there are
+some issues with the session array merging in includes/session.inc which you can hack around.
+</blurb>
+
+<example fontsize="1.4em" title="Generate files for HipHop's file list"><![CDATA[<?php
+$cache = apc_cache_info();
+foreach($cache['cache_list'] as $file) {
+	echo substr($file['filename'],27)."\n";
+}]]></example>
+
+<example fontsize="1.4em" type="shell" title="Compile"><![CDATA[
+|0077aa|~>| *$HPHP_HOME/src/hphp/hphp --input-list=files.list -k 1 --log=3 \ *
+   *-v "AllDynamic=true" -v "AllVolatile=true" --force=1*
+creating temporary directory /tmp/hphp_H27LtS ...
+parsing inputs...
+Unable to stat file /home/rasmus/drupal.hiphop/system/image.gd.inc
+Unable to stat file /home/rasmus/drupal.hiphop/sites/sites.php
+parsing inputs took 0'02" (2924 ms) wall time
+pre-optimizing...
+pre-optimizing took 0'01" (1307 ms) wall time
+inferring types...
+inferring types took 0'02" (2528 ms) wall time
+post-optimizing...
+post-optimizing took 0'00" (699 ms) wall time
+creating CPP files...
+creating CPP files took 0'02" (2469 ms) wall time
+saving code errors...
+compiling and linking CPP files...
+
+compiling and linking CPP files took 34'10" (2050431 ms) wall time
+all files saved in /tmp/hphp_H27LtS ...
+running hphp took 34'21" (2061375 ms) wall time
+]]></example>
+
+<blurb fontsize="3.5em">
+Argh! 34 minutes!
+</blurb>
+
+<example fontsize="1.4em" type="shell" title="Run"><![CDATA[
+|0077aa|~>| *cp /tmp/hphp_H27LtS/program .*
+
+|0077aa|~>| *./program -m server -v "Server.SourceRoot=`pwd`" \ *
+   *-v "Server.DefaultDocument=index.php" -v "Log.Level=Verbose" \ *
+   *-v "Log.InjectedStackTrace=1"-c $HPHP_HOME/bin/mime.hdf*
+loading static content...
+searching all files under source root...
+analyzing 2753 files under source root...
+..loaded 542822 bytes of css files
+..loaded 77714 bytes of gif files
+..loaded 80093 bytes of gz files
+..loaded 68939 bytes of htm files
+..loaded 22703 bytes of html files
+..loaded 822 bytes of ico files
+..loaded 448844 bytes of jpg files
+..loaded 2038563 bytes of js files
+..loaded 4534 bytes of ms files
+..loaded 299153 bytes of png files
+..loaded 24455 bytes of swf files
+..loaded 83599 bytes of txt files
+..loaded 1053 bytes of xml files
+loaded 3693294 bytes of static content in total
+loading static content took 0'02" (2576 ms) wall time
+page server started
+admin server started
+all servers started]]></example>
+
+<blurb fontsize="3.5em">
+But, unfortunately it doesn't work:
+</blurb>
+<image filename="drupal_hiphop.png" align="center" />
+
+</slide>

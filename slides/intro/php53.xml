@@ -35,6 +35,8 @@ use foo\bar as b;
 $a = new b;
 ?>]]></example>
 
+<example fontsize="1.4em" hide="1" result='1' title="Output"><![CDATA[foo\bar]]></example>
+
 <break lines="1"/>
 <blurb fontsize="4em">PHP 5.3.3 - Bug fix</blurb>
 <example fontsize="1.4em" result='0' title=""><![CDATA[<?php
@@ -46,8 +48,6 @@ class Bar {
     }
 }
 ?>]]></example>
-
-<example fontsize="1.4em" hide="1" result='1' title="Output"><![CDATA[foo\bar]]></example>
 
 <break lines="1" />
 <blurb fontsize="4em">Late Static Binding - http://php.net/lsb</blurb>
