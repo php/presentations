@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Debugging</topic>
+<title>Xdebug tutorial</title>
+<event>PHP Konferenca</event>
+<location>Ljubljana, Slovenia</location>
+<date>July 8th, 2010</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>&#160;</joindin>
+<slide>slides/dbus/title.xml</slide>
+<slide>slides/toolbox/me.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/xdebug/why-debugger1.xml</slide>
+<slide>slides/xdebug/why-debugger2.xml</slide>
+<slide>slides/xdebug/why-debugger3.xml</slide>
+
+<!-- TUTORIAL INTRODUCTION -->
+<slide>slides/xdebug/tutorial-introduction.xml</slide>
+
+
+<!-- INSTALLATION -->
+<slide>slides/xdebug/title-installation.xml</slide>
+<slide>slides/xdebug/version-sensitivity.xml</slide>
+<slide>slides/xdebug/how-to-install.xml</slide>
+<slide>slides/xdebug/how-to-install-win.xml</slide>
+<slide>slides/xdebug/how-to-install3.xml</slide>
+<slide>slides/xdebug/practical.xml</slide>
+
+<!-- FUNCTION OVERVIEW -->
+<slide>slides/xdebug/title-function-overview.xml</slide>
+
+<slide>slides/xdebug/how-started.xml</slide>
+<slide>slides/xdebug/why-crash.xml</slide>
+<slide>slides/xdebug/where-error.xml</slide>
+<slide>slides/xdebug/debug-req-vars.xml</slide>
+<slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/how-many-functions.xml</slide>
+<slide>slides/xdebug/shutup.xml</slide>
+<slide>slides/xdebug/wtf-happens.xml</slide>
+<slide>slides/xdebug/specifiers.xml</slide>
+<slide>slides/xdebug/vim.xml</slide>
+<slide>slides/xdebug/functiontrace-computerized.xml</slide>
+<slide>slides/xdebug/wtf-happens2.xml</slide>
+<slide>slides/xdebug/practical-basic-and-trace.xml</slide>
+
+<!-- PROFILING -->
+<slide>slides/xdebug/title-profiling.xml</slide>
+<slide>slides/xdebug/profiling-simple.xml</slide>
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+<slide>slides/xdebug/profiling-webgrind.xml</slide>
+<slide>slides/xdebug/practical-profiling.xml</slide>
+
+<slide>slides/xdebug/which-code-do-i-use.xml</slide>
+<slide>slides/xdebug/codecoverage2.xml</slide>
+<slide>slides/xdebug/practical.xml</slide>
+
+
+<!-- DEBUGGING -->
+<slide>slides/xdebug/title-debugging.xml</slide>
+<slide>slides/xdebug/analyse-running-script.xml</slide>
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/debugging-gotchas.xml</slide>
+<slide>slides/xdebug/dbgp.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+<slide>slides/xdebug/practical-debug.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
