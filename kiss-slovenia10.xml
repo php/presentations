@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>PHP</topic>
+<title>K.I.S.S.</title>
+<event>php konferenca</event>
+<location>Ljubljana, Slovenia</location>
+<date>July 10th, 2010</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>&#160;</joindin>
+
+<!-- barriers of entry:
+- other languages: different
+- php: simple
+
+- show learning curve with manual and community (tardis)
+-->
+<slide>slides/universe/the-universe.xml</slide>
+<slide>slides/universe/barriers.xml</slide>
+<slide>slides/universe/c.xml</slide>
+<slide>slides/universe/dotnet.xml</slide>
+<slide>slides/universe/lisp.xml</slide>
+<slide>slides/universe/php.xml</slide>
+
+<!-- different people
+- hobbiests
+- self-professionals
+- professionals
+- academics
+-->
+<slide>slides/universe/dev-types.xml</slide>
+<slide>slides/universe/geek.xml</slide>
+<slide>slides/universe/self-professional.xml</slide>
+<slide>slides/universe/professional.xml</slide>
+<slide>slides/universe/academics.xml</slide>
+
+<slide>slides/universe/interaction.xml</slide>
+<slide>slides/universe/shouting.xml</slide>
+<slide>slides/universe/ass1.xml</slide>
+<!-- different areas
+- coding
+  - internals:
+  
+  scientists: http://www.flickr.com/photos/marsdd/2986989396/sizes/o/
+
+    - be nice (with number_format example) (shouting)
+  - pear
+
+  pear: http://www.flickr.com/photos/ajawin/2241195052/
+
+  - pecl/gtk
+
+  pickles: http://www.flickr.com/photos/kimncris/2338352716/sizes/l/
+
+  - documentation
+
+  librarians: http://www.flickr.com/photos/njlibraryevents/3501358883/sizes/l/
+
+  - system maintenance
+  
+  cablemess: http://www.flickr.com/photos/vespa_gt/278340566/sizes/l/
+
+  - user land
+
+  library:  ?
+  shouting: http://www.flickr.com/photos/kaptainkobold/26194492/sizes/o/
+-->
+<slide>slides/universe/scientists.xml</slide>
+<slide>slides/universe/internals-ass.xml</slide>
+<slide>slides/universe/internals-ass2.xml</slide>
+<slide>slides/universe/internals-ass3.xml</slide>
+<slide>slides/universe/rfc.xml</slide>
+<slide>slides/universe/pear.xml</slide>
+<slide>slides/universe/pickles.xml</slide>
+<slide>slides/universe/pickles-ass.xml</slide>
+<slide>slides/universe/library.xml</slide>
+<slide>slides/universe/librarians.xml</slide>
+<slide>slides/universe/cablemess.xml</slide>
+
+<!--
+- community
+  - mailinglist (internals, php-general)
+  - IRC (efnet/#php.pecl, #php-win-dev, ##php, #phpc, others (##backroom))
+
+  scientists2: http://www.flickr.com/photos/andrewserff/165688483/sizes/l/
+  servicedesk: http://www.flickr.com/photos/ryner/311518940/
+  bookclub: http://www.flickr.com/photos/ndemi/3636086073/sizes/l/
+  pub: http://www.flickr.com/photos/thehappyrobot/466094976/sizes/l/
+  privateclub: http://www.flickr.com/photos/zagatbuzz/4265996026/sizes/l/
+
+  - conferences
+    - different ones: zendcon, tek/works, local ones, 
+
+  networking: http://www.flickr.com/photos/jonbell/2742399929/sizes/l/
+  networking2: http://www.flickr.com/photos/vnoel/324770553/
+
+  - frameworks
+
+  framework: http://www.flickr.com/photos/sifter/292158704/sizes/l/
+
+  - user land communities: drupal, wordpress
+
+  wordpress: http://www.flickr.com/photos/dnorman/1458004451/
+
+  - connections
+
+  connections: http://www.flickr.com/photos/kevinkemmerer/3007254818/
+-->
+<slide>slides/universe/community.xml</slide>
+<slide>slides/universe/servicedesk.xml</slide>
+<slide>slides/universe/scientists2.xml</slide>
+<slide>slides/universe/pub.xml</slide>
+<slide>slides/universe/privateclub.xml</slide>
+<slide>slides/universe/framework.xml</slide>
+<slide>slides/universe/wordpress.xml</slide>
+
+<slide>slides/universe/networking2.xml</slide>
+<slide>slides/universe/networking.xml</slide>
+<slide>slides/universe/connections.xml</slide>
+
+<slide>slides/universe/community-larger-inside.xml</slide>
+<slide>slides/universe/the-end.xml</slide>
+
+</presentation>

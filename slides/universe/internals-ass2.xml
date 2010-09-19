@@ -1,31 +1,15 @@
 <slide template="white" b_image="universe/scientists.jpg" b_image_attr="http://www.flickr.com/photos/marsdd/2986989396/sizes/o/">
-<example>Yeah, I would firstly like to mention how absolutely pissed off at PHP I
-am. Your program must be the absolute worst programmed piece of software
-in all of the net. You compete with Bill Gates in that regard.
-
-Now that I have that off my chest, let me explain why your program
-sucks. I have spent over 12 hours researching, reinstalling, etc etc etc
-etc etc etc ETCETERA... All trying to get mysql into php. It won't load
-the goddamn dll. Nothing in Event Log. Nothing anywhere, regardless of
-errors=E_ALL, or "REPORT_STARTUP_ERRORS". I have fucking done it all.
-
-ITS IMPOSSIBLE TO INTEGRATE PHP WITH MYSQL. THIS IS BECAUSE YOUR PROGRAM
-SUCKS, AND YOU SHOULD ADD SOME GODDAMN ERROR REPORTING SO WE CAN AT
-LEAST FIGURE OUT WHAT THE FUCK ____YOUR___ PROGRAM IS DOING WRONG.
-FIX YOUR SHIT. just fucking fix it.
-
-Thanks. And fuck you sincerely, for making my life, and everyone else's
-life, an utter atrocity. I'm going to Cold Fusion 8; Fuck you.
-
-Expected result:
-----------------
-Nothing. Your blasted PHP program doesn't even report error messages
-like it should.
-
-Actual result:
---------------
-Yay! PHP Works. Oh wait... no it doesn't. It isn't loading .dll's, and
-it isn't reporting why not - maybe this is because PHP sucks? yup, i
-think so.
-</example>
+<blurb>|777777|Yeah, I would firstly like to mention how absolutely| *pissed off at PHP I am*.
+|777777|Your program must be the| *absolute worst programmed piece of software*
+|777777|in all of the net.| *You compete with Bill Gates* |777777|in that regard.|
+</blurb>
+<break/>
+<blurb>
+*ITS IMPOSSIBLE TO INTEGRATE PHP WITH MYSQL*. 
+|777777|THIS IS BECAUSE YOUR PROGRAM SUCKS, AND YOU SHOULD ADD SOME GODDAMN ERROR REPORTING SO WE CAN AT LEAST FIGURE OUT WHAT THE FUCK _YOUR_ PROGRAM IS DOING WRONG.  FIX YOUR SHIT.| *just fucking fix it.*
+</blurb>
+<break/>
+<blurb>
+|777777|Thanks. And fuck you sincerely, for making my life, and everyone else's life, an utter atrocity.| *I'm going to Cold Fusion 8; Fuck you.*
+</blurb>
 </slide>
