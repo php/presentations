@@ -6,8 +6,12 @@
 	<example result="1"><![CDATA[<?php
 $db = new DateTime( '2008-12-31' );
 $de = new DateTime( '2009-12-31' );
-$di = DateInterval::createFromDateString( 'third tuesday of next month' );
-$dp = new DatePeriod( $db, $di, $de, DatePeriod::EXCLUDE_START_DATE );
+$di = DateInterval::createFromDateString(
+	'third tuesday of next month'
+);
+$dp = new DatePeriod(
+	$db, $di, $de, DatePeriod::EXCLUDE_START_DATE
+);
 foreach ( $dp as $dt )
 {
    echo $dt->format( "F jS\n" );
