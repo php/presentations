@@ -23,8 +23,8 @@ print_r( date_parse_from_format( '!y*d*m', $date ) );
 	<blurb effect="fade-in-out" class='pre'>   |ef2929|!|y\*d\*m       06/08/04       |ef2929|1970  01    01|</blurb>
 	<blurb effect="fade-in-out" class='pre'>   |a40000|!||ef2929|y|\*d\*m       |ef2929|06|/08/04       |ef2929|2006|  01    01</blurb>
 	<blurb effect="fade-in-out" class='pre'>   |a40000|!y||ef2929|\*|d\*m       |a40000|06||ef2929|/|08/04       2006  01    01</blurb>
-	<blurb effect="fade-in-out" class='pre'>   |a40000|!y\*||ef2929|d|\*m       |a40000|06/||ef2929|08|/04       2006  |ef2929|08|    01</blurb>
-	<blurb effect="fade-in-out" class='pre'>   |a40000|!y\*d||ef2929|\*|m       |a40000|06/08||ef2929|/|04       2006  08    01</blurb>
-	<blurb effect="fade-in-out" class='pre'>   |a40000|!y\*d\*||ef2929|m|       |a40000|06/08/||ef2929|04|       2006  08    |ef2929|04|</blurb>
-	<blurb effect="fade-in"     class='pre'>   |a40000|!y\*d\*m|       |a40000|06/08/04|       2006  08    04</blurb>
+	<blurb effect="fade-in-out" class='pre'>   |a40000|!y\*||ef2929|d|\*m       |a40000|06/||ef2929|08|/04       2006  01    |ef2929|08|</blurb>
+	<blurb effect="fade-in-out" class='pre'>   |a40000|!y\*d||ef2929|\*|m       |a40000|06/08||ef2929|/|04       2006  01    08</blurb>
+	<blurb effect="fade-in-out" class='pre'>   |a40000|!y\*d\*||ef2929|m|       |a40000|06/08/||ef2929|04|       2006  |ef2929|04|    08</blurb>
+	<blurb effect="fade-in"     class='pre'>   |a40000|!y\*d\*m|       |a40000|06/08/04|       2006  04    08</blurb>
 </slide>
