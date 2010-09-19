@@ -176,6 +176,10 @@ div.small_blurb {
 	font-size: 18px;
 }
 
+div.medium_blurb {
+	font-size: 24px;
+}
+
 div.blurb_header {
 	font-family: "MaxOT-book";
 	font-size: 38px;
