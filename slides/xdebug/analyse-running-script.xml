@@ -10,11 +10,12 @@
 <break/>
 	<blurb>Clients:</blurb>
 	<list>
+		<bullet>Stand-alone client (Linux (for now)):<br/> <link href="svn://svn.xdebug.org/svn/xdebug/gtkdbgp/trunk"/></bullet>
 		<bullet>Komodo (Linux, Windows, Mac — commercial)</bullet>
-		<bullet>Eclipse/PDT (Java based — free) *L*</bullet>
+		<bullet>Eclipse/PDT (Java based — free)</bullet>
 		<bullet>Zend Studio for Eclipse (Eclipse-based — commercial)</bullet>
-		<bullet>Netbeans (Java-based — free) *LW*</bullet>
-		<bullet>PHPStorm (Java-based — commercial) *LW*</bullet>
+		<bullet>Netbeans (Java-based — free)</bullet>
+		<bullet>PHPStorm (Java-based — commercial)</bullet>
 		<bullet>(and many others: <link href="http://xdebug.org/docs/remote#clients"/>)</bullet>
 	</list>
 </slide>

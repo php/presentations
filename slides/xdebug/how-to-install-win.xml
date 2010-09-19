@@ -2,9 +2,13 @@
 	<title>Installing Xdebug</title>
 	<subtitle>On Windows</subtitle>
 
+<div effect="fade-out">
 	<list>
 		<bullet>Download the .dll for your PHP version from <link href="http://xdebug.org/download.php">http://xdebug.org/download.php</link></bullet>
 		<bullet>in php.ini add: %zend_extension_ts=c:\php\xdebug.dll%</bullet>
-		<bullet>Tips on finding the correct binary: <link href="http://xdebug.org/find-binary.php"/></bullet>
 	</list>
+</div>
+<div effect="fade-in">
+	<blurb>Tailored installation instructions: <link href="http://xdebug.org/find-binary.php"/></blurb>
+</div>
 </slide>

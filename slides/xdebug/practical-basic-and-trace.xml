@@ -12,6 +12,6 @@
 		<bullet>xdebug.show_local_vars</bullet>
 		<bullet>xdebug.auto_trace</bullet>
 		<bullet>xdebug.trace_output_dir / xdebug.trace_output_name</bullet>
-		<bullet>xdebug.trace_output_format</bullet>
+		<bullet>xdebug.trace_format</bullet>
 	</list>
 </slide>

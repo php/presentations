@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+<title>Specifiers</title>
+<subtitle>For filesnames of traces and profile dumps</subtitle>
+
+<example>
+Sp  Meaning                     Format    Example Filename
+--  --------------------------  --------  -------------------------------------------
+%c  crc32 of the cwd            trace.%c  trace.1258863198.xt
+%p  pid                         trace.%p  trace.5174.xt
+%r  random number               trace.%r  trace.072db0.xt
+%s  script name                 prof.%s   prof._home_httpd_html_test_xdebug_test_php
+%t  timestamp (seconds)         trace.%t  trace.1179434742.xt
+%u  timestamp (microseconds)    trace.%u  trace.1179434749_642382.xt
+%H  $_SERVER['HTTP_HOST']       trace.%H  trace.kossu.xt
+%R  $_SERVER['REQUEST_URI']     trace.%R  trace._test_xdebug_test_php_var=1_var2=2.xt
+%S  session_id (from $_COOKIE)  trace.%S  trace.c70c1ec2375af58f74b390bbdd2a679d.xt
+%%  literal %                   trace.%%  trace.%%.xt</example>
+
+<example>xdebug.trace_output_name=trace.%c</example>
+<example>xdebug.profiler_output_name=trace.%c</example>
+
+<blurb>On *!*Windows, if a profiling file is open, a random string will be
+attached to prevent file corruption.</blurb>
+</slide>
+

@@ -5,5 +5,6 @@
 	<list>
 		<bullet>%--enable-versioning% prevent Xdebug from loading</bullet>
 		<bullet>Zend's extensions (optimizer, debugger, cache) prohibit Xdebug (and other non-Zend zend-extensions) from loading</bullet>
+		<bullet>Make sure %html_errors% is set to 1</bullet>
 	</list>
 </slide>

@@ -36,6 +36,6 @@
 xdebug.trace_output_dir=/tmp
 xdebug.collect_params=1
 xdebug.collect_return=1
-xdebug.trace_output_name=trace.%c</example>
-	<link leader="Specifiers: " href="http://xdebug.org/docs/execution_trace#trace_output_name"/>
+xdebug.collect_includes=1
+xdebug.collect_assignments=1</example>
 </slide>
