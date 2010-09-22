@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="EN">
+	<head>
+	<style>
+		html,body {
+			height: 99%;
+			width: 99%;
+		}
+		#map {
+			width: 100%;
+			height: 100%;
+			border: 1px solid black;
+			float: left;
+			z-index: -1;
+		}
+		div.olControlAttribution {
+			bottom: 0.5em;
+			font-size: 70%;
+		}
+	</style>
+	<script src='http://www.openlayers.org/api/OpenLayers.js'></script>
+	<script src='http://www.openstreetmap.org/openlayers/OpenStreetMap.js'></script>
+	<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+	<script type="text/javascript">
+		var map; //complex object of type OpenLayers.Map
+		var vectorLayer;
+ 
+		// Start position for the map (hardcoded here for simplicity,
+		// but maybe you want to get this from the URL params)
+		var lat=51.47786
+		var lon=0
+		var zoom=17
+ 
+		function changeQuery()
+		{
+			extend = map.getExtent();
+			wgs84Coords =     new OpenLayers.Geometry.Point(0, 0).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+			greenwichCoords = new OpenLayers.Geometry.Point(-0.001475, 0).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
+
+			wgs84 = new OpenLayers.Feature.Vector(
+                new OpenLayers.Geometry.LineString([
+                    new OpenLayers.Geometry.Point(wgs84Coords.x, extend.top),
+                    new OpenLayers.Geometry.Point(wgs84Coords.x, extend.bottom),
+                ]),
+                {
+                    color: 'blue',
+                }
+			);
+			greenwich = new OpenLayers.Feature.Vector(
+                new OpenLayers.Geometry.LineString([
+                    new OpenLayers.Geometry.Point(greenwichCoords.x, extend.top),
+                    new OpenLayers.Geometry.Point(greenwichCoords.x, extend.bottom),
+                ]),
+                {
+                    color: 'red',
+                }
+			);
+			vectorLayer.removeAllFeatures();
+			vectorLayer.drawFeature(wgs84);
+			vectorLayer.drawFeature(greenwich);
+			vectorLayer.addFeatures([wgs84, greenwich]);
+		}
+
+		function moveEndEvent(event)
+		{
+			changeQuery();
+		}
+
+		function init() {
+			map = new OpenLayers.Map ("map", {
+				eventListeners: {
+					"moveend": moveEndEvent
+				},
+				controls:[
+					new OpenLayers.Control.Navigation(),
+					new OpenLayers.Control.PanZoomBar(),
+					new OpenLayers.Control.LayerSwitcher(),
+					new OpenLayers.Control.ScaleLine( null, {geodesic: true }),
+					new OpenLayers.Control.Attribution()],
+				maxExtent: new OpenLayers.Bounds(-20037508.34,-20037508.34,20037508.34,20037508.34),
+				maxResolution: 156543.0399,
+				numZoomLevels: 19,
+				units: 'mi',
+				projection: new OpenLayers.Projection("EPSG:900913"),
+				displayProjection: new OpenLayers.Projection("EPSG:4326")
+			} );
+ 
+			// Define the map layer
+			// Here we use a predefined layer that will be kept up to date with URL changes
+			layerMapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
+			map.addLayer(layerMapnik);
+
+			vectorLayer = new OpenLayers.Layer.Vector("Area",
+			{
+                styleMap: new OpenLayers.StyleMap({'default':{
+                    strokeColor: "${color}",
+                    strokeOpacity: 1,
+                    strokeWidth: 1,
+                    fillColor: "${color}",
+                    fillOpacity: 0.1,
+                    pointRadius: 6,
+                    pointerEvents: "visiblePainted",
+                    
+                    fontColor: "${favColor}",
+                    fontSize: "18px",
+                    fontFamily: "Arial",
+                    labelAlign: "${align}",
+                    labelXOffset: "${xOffset}",
+                    labelYOffset: "${yOffset}"
+                }})
+            });
+			map.addLayer(vectorLayer);
+
+			var lonLat = new OpenLayers.LonLat(lon, lat).transform(map.displayProjection, map.projection);
+			map.setCenter(lonLat, zoom);
+		}
+	</script>
+
+		<title>Locatr</title>
+	</head>
+<body onload="init();">
+		<div id='map'></div>
+	</body>
+</html>

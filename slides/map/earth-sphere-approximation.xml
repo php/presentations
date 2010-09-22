@@ -1,0 +1,17 @@
+<slide>
+<title>The Earth's shape</title>
+
+<blurb>In cartography, the Earth's shape has to be approximated: a *reference ellipsoid*</blurb>
+<list>
+	<bullet>specify the Earth's radius and a flattening constant</bullet>
+	<bullet>different ones are in use</bullet>
+	<bullet>also called *datum* or *geodetic system*</bullet>
+	<bullet>for coordinates, a meridian (0° longitude) should also be specified</bullet>
+</list>
+<break/>
+<blurb>Important ones are:</blurb>
+<list>
+	<bullet>*WGS84*: That's what GPS uses</bullet>
+	<bullet>*OSGB36*: That's what Ordnance Survey uses</bullet>
+</list>
+</slide>
