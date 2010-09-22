@@ -1,0 +1,40 @@
+<slide title="FPM">
+
+<break lines="1" />
+<blurb fontsize="4em">http://php-fpm.org/</blurb>
+<blurb fontsize="4em">
+FPM (FastCGI Process Manager) is now part of PHP!
+</blurb>
+
+<blurb fontsize="2em">
+INI Magic
+Support for “.htaccess” style INI controls for CGI/ FastCGI
+Per-directory INI settings inside php.ini via [PATH=/var/www/domain.com] not modifiable by the user.
+Improve error handling
+Allow use of INI variables and constants from virtually everywhere in the INI files
+Several other minor improvements
+
+INI Magic
+Name for user-defined php.ini (.htaccess) files. Default is ".user.ini"
+user_ini.filename = ".user.ini" 
+
+To disable this feature set this option to empty value
+user_ini.filename =
+
+TTL for user-defined php.ini files (time-to-live) in seconds.
+Default is 300 seconds (5 minutes)
+user_ini.cache_ttl = 300
+
+[PATH=/var/www/domain.com]
+variables_order = GPC
+safe_mode = 1
+
+[my variables] somevar = “1234”
+anothervar = ${somevar} ;
+
+[ini arrays]
+foo[bar] = 1
+foo[123] = 2
+foo[] = 3
+</blurb>
+</slide>

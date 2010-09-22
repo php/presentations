@@ -1,0 +1,14 @@
+<slide title="NOWDOC">
+
+<break lines="1" />
+<blurb fontsize="4em">http://php.net/nowdoc</blurb>
+<blurb fontsize="4em">Single-quoted version of Heredoc.</blurb>
+
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+echo <<< 'EOB'
+NOWDOC is to HEREDOC as single quoted $trings are\n
+to double quoted $trings in PHP.
+EOB;
+?>]]></example>
+
+</slide>

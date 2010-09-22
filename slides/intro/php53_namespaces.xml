@@ -1,0 +1,38 @@
+<slide title="PHP 5.3 - Namespaces">
+
+<break lines="1" />
+
+<blurb fontsize="4em">http://php.net/namespaces</blurb>
+
+<example fontsize="1.4em" result='0' title=""><![CDATA[<?php
+// foo.php
+namespace foo;
+
+class bar {
+  function __construct() {
+    echo get_called_class();
+  }
+}
+?>]]></example>
+
+<example fontsize="1.4em" result='0' title="Using namespaced code"><![CDATA[<?php
+require './foo.php';
+use foo\bar as b;
+$a = new b;
+?>]]></example>
+
+<example fontsize="1.4em" hide="1" result='1' title="Output"><![CDATA[foo\bar]]></example>
+
+<break lines="1"/>
+<blurb fontsize="4em">PHP 5.3.3 - Bug fix</blurb>
+<example fontsize="1.4em" result='0' title=""><![CDATA[<?php
+namespace Foo;
+class Bar {
+    public function Bar() {
+        // treated as constructor in PHP 5.3.0-5.3.2
+        // treated as regular method in PHP 5.3.3
+    }
+}
+?>]]></example>
+
+</slide>

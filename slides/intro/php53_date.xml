@@ -1,0 +1,34 @@
+<slide title="Date">
+
+<break lines="1" />
+<blurb fontsize="4em">DateInterval/DatePeriod</blurb>
+
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+$db = new DateTime('2008-12-31');
+$de = new DateTime('2009-12-31');
+$di = DateInterval::createFromDateString('third tuesday of next month');
+$dp = new DatePeriod($db, $di, $de, DatePeriod::EXCLUDE_START_DATE);
+foreach($dp as $dt) {
+   echo $dt->format("F jS\n") . "<br>\n";
+}
+?>]]></example>
+
+<blurb fontsize="4em">
+Controllable strtotime() via date_create_from_format()
+</blurb>
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+$date = strtotime("08-01-07 00:00:00");
+var_dump(date("Y-m-d", $date));
+$date = date_create_from_format("m-d-y", "08-01-07");
+var_dump($date->format('Y-m-d'));
+?>]]></example>
+
+<blurb fontsize="4em">
+Added date_get_last_errors() that returns errors and warnings in date parsing.
+</blurb>
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+$date = strtotime("13-13-07 00:00:00");
+var_dump(date_get_last_errors());
+?>]]></example>
+
+</slide>

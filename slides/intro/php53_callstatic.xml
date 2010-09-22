@@ -1,0 +1,17 @@
+<slide title="__callStatic">
+
+<break lines="1" />
+<blurb fontsize="4em">http://php.net/__callStatic</blurb>
+<blurb fontsize="4em">
+Equivalent to __call(), but for static methods.
+</blurb>
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+class helper { 
+	static function __callStatic($name, $args) {
+		echo $name.'('.implode(',', $args).')';
+	} 
+}
+helper::test("foo","bar");
+?>]]></example>
+
+</slide>

@@ -1,0 +1,20 @@
+<slide title="Dynamic Static Calls">
+
+<break lines="1" />
+<blurb fontsize="4em">
+PHP now allows dynamic calls to static methods
+</blurb>
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+class helper { 
+	static function foo() { 
+		echo __METHOD__;
+	}
+}
+
+$a = "helper";
+$b = "foo"; 
+
+$a::$b(); // helper::foo
+?>]]></example>
+
+</slide>

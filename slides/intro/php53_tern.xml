@@ -1,0 +1,12 @@
+<slide title="PHP 5.3">
+
+<break lines="1" />
+
+<blurb fontsize="4em">Ternary Shortcut</blurb>
+
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+echo true ?: 'Hello';
+echo false ?: 'World';
+?>]]></example>
+
+</slide>

@@ -1,0 +1,15 @@
+<slide title="Garbage Collector">
+
+<break lines="1" />
+<blurb fontsize="4em">http://php.net/gc</blurb>
+<blurb fontsize="4em">
+Memory cleanup for long-running scripts.
+</blurb>
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+gc_enable(); // Enable Garbage Collector
+var_dump(gc_enabled()); // true
+var_dump(gc_collect_cycles()); // # of elements cleaned up
+gc_disable(); // Disable Garbage Collector
+?>]]></example>
+
+</slide>

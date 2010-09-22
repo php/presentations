@@ -1,0 +1,150 @@
+<slide title="PHP 5.3">
+
+<break lines="1" />
+
+<blurb fontsize="4em">Closures - http://php.net/closures</blurb>
+
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+$getClosure = function($v) {
+    return function() use($v) {
+        echo "Hello World: $v!\n";
+    };
+};
+
+$closure = $getClosure(2);
+$closure();
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">Namespaces - http://php.net/namespaces</blurb>
+
+<example fontsize="1.4em" result='0' title=""><![CDATA[<?php
+// foo.php
+namespace foo;
+
+class bar {
+  function __construct() {
+    echo get_called_class();
+  }
+}
+?>]]></example>
+
+<example fontsize="1.4em" result='0' title="Using namespaced code"><![CDATA[<?php
+require './foo.php';
+use foo\bar as b;
+$a = new b;
+?>]]></example>
+
+<example fontsize="1.4em" hide="1" result='1' title="Output"><![CDATA[foo\bar]]></example>
+
+<break lines="1"/>
+<blurb fontsize="4em">PHP 5.3.3 - Bug fix</blurb>
+<example fontsize="1.4em" result='0' title=""><![CDATA[<?php
+namespace Foo;
+class Bar {
+    public function Bar() {
+        // treated as constructor in PHP 5.3.0-5.3.2
+        // treated as regular method in PHP 5.3.3
+    }
+}
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">Late Static Binding - http://php.net/lsb</blurb>
+
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+class A {
+    public static function who() {
+        echo __CLASS__;
+    }
+    public static function test() {
+         self::who(); // Normal class resolution
+         static::who(); // LSB
+    }
+}
+
+class B extends A {
+    public static function who() {
+         echo __CLASS__;
+    }
+}
+
+B::test();
+?>
+]]></example>
+
+<example fontsize="1.4em" result="1" title="get_called_class"><![CDATA[<?php
+abstract class Singleton {
+    private static $instances = array();
+    final public static function getInstance() {
+        $className = get_called_class();
+        if(!isset(self::$instances[$className])) {
+            self::$instances[$className] = new $className();
+        }
+        return self::$instances[$className];
+    }
+}
+
+class foo extends Singleton { }
+class bar extends Singleton { }
+
+$a = foo::getInstance();
+$b = foo::getInstance();
+$c = bar::getInstance();
+
+echo '<pre>';
+var_dump($a);
+var_dump($b);
+var_dump($c);
+echo '</pre>';
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">NOWDOC - http://php.net/nowdoc</blurb>
+
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+echo <<< 'EOB'
+NOWDOC is to HEREDOC as single quoted $trings are\n
+to double quoted $trings in PHP.
+EOB;
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">Ternary Shortcut</blurb>
+
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+echo true ?: 'Hello';
+echo false ?: 'World';
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">goto - http://php.net/goto</blurb>
+
+<example fontsize="1.4em" result='0' title=""><![CDATA[<?php
+function foo() {
+   for($i=0, $j=1; $i<10; $i++) {
+       while($j++) {
+           if($j == 5) {
+               goto end;
+           }
+       }
+   }
+end:
+   // run cleanup code
+}
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">DateInterval/DatePeriod</blurb>
+
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+$db = new DateTime('2008-12-31');
+$de = new DateTime('2009-12-31');
+$di = DateInterval::createFromDateString('third tuesday of next month');
+$dp = new DatePeriod($db, $di, $de, DatePeriod::EXCLUDE_START_DATE);
+foreach($dp as $dt) {
+   echo $dt->format("F jS\n") . "<br>\n";
+}
+?>]]></example>
+
+</slide>

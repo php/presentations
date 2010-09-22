@@ -1,0 +1,21 @@
+<slide title="goto">
+
+<break lines="1" />
+<blurb fontsize="4em">http://php.net/goto</blurb>
+<blurb fontsize="4em">Restricted goto that doesn't let you jump into structures, only out of them.</blurb>
+
+<example fontsize="1.4em" result='0' title=""><![CDATA[<?php
+function foo() {
+   for($i=0, $j=1; $i<10; $i++) {
+       while($j++) {
+           if($j == 5) {
+               goto end;
+           }
+       }
+   }
+end:
+   // run cleanup code
+}
+?>]]></example>
+
+</slide>

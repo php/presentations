@@ -1,0 +1,12 @@
+<slide title="__DIR__">
+
+<break lines="1" />
+<blurb fontsize="4em">
+Replacement for dirname(__FILE__)
+</blurb>
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+echo dirname(__FILE__); // < PHP 5.3 
+/* vs */
+echo __DIR__; // >= PHP 5.3
+?>]]></example>
+</slide>

@@ -1,0 +1,15 @@
+<slide title="SPL">
+
+<break lines="1" />
+<blurb fontsize="4em">http://php.net/spl</blurb>
+<list fontsize="4em">
+<item>Improved nested directory iterations via FilesystemIterator</item>
+<item>Introduced GlobIterator</item>
+<item>Various data structure classes: SplDoublyLinkedList, SplStack, SplQueue, SplHeap, SplMinHeap, SplMaxHeap, SplPriorityQueue</item>
+</list>
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+?>]]></example>
+
+</slide>
+
+
