@@ -24,11 +24,14 @@ var_dump($date->format('Y-m-d'));
 ?>]]></example>
 
 <blurb fontsize="4em">
-Added date_get_last_errors() that returns errors and warnings in date parsing.
+Better error reporting when we are unable to parse the date.
 </blurb>
 <example fontsize="1.4em" result="1" title=""><![CDATA[<?php
-$date = strtotime("13-13-07 00:00:00");
-var_dump(date_get_last_errors());
+try {
+  $date = new DateTime('Nov 33, 2011');
+} catch(Exception $E) {
+  print_r($E->getMessage());
+}
 ?>]]></example>
 
 </slide>

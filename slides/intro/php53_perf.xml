@@ -5,7 +5,6 @@
 <bullet>Better stack implementation in the engine</bullet>
 <bullet>Constants moved to read-only memory</bullet>
 <bullet>Improve exception handling (simpler &amp; less opcodes)</bullet>
-<bullet>Eliminate open(2) call on (require/include)_once</bullet>
 <bullet>Smaller binary size &amp; startup size with gcc4</bullet>
 <bullet>Substantial performance improvements on Windows (40% +)</bullet>
 <bullet>md5() is roughly 10-15% faster</bullet>

@@ -8,6 +8,11 @@
 <item>Various data structure classes: SplDoublyLinkedList, SplStack, SplQueue, SplHeap, SplMinHeap, SplMaxHeap, SplPriorityQueue</item>
 </list>
 <example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+$iterator = new GlobIterator('/var/log/*.log');
+foreach($iterator as $file) {
+  echo $file->getFilename();
+  echo "<br>";
+}
 ?>]]></example>
 
 </slide>

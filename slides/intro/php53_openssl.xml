@@ -21,8 +21,7 @@ Access to OpenSSL Cipher Functions
 <example fontsize="1.4em" result="1" title=""><![CDATA[<?php
 // BF-CBC, AES-256 CFB1... (54 all in all)
 foreach(openssl_get_cipher_methods() as $v) {
-  $val = openssl_encrypt("value", $v, "secret");
-  openssl_decrypt($val, $v, "secret"); // value
+  echo "$v<br>\n";
 }
 ?>]]></example>
 
