@@ -98,7 +98,7 @@ gvim --remote-tab +$l $f]]></example>
 	<blurb>Add the new boolean config value (about:config) "network.protocol-handler.expose.gvim" as false. First time you click it, select the shell script.</blurb>
 <break/>
 	<blurb>Textmate:</blurb>
-	<example>xdebug.file_link_format=txmt://open/?file://%f&amp;line=%l</example>
+	<example>xdebug.file_link_format=txmt://open/?url=file://%f&amp;line=%l</example>
 </div>
 
 
