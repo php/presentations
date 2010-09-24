@@ -5,8 +5,8 @@
 Replacement for dirname(__FILE__)
 </blurb>
 <example fontsize="1.4em" result="1" title=""><![CDATA[<?php
-echo dirname(__FILE__); // < PHP 5.3 
-/* vs */
-echo __DIR__; // >= PHP 5.3
+echo dirname(__FILE__);
+echo "<br>\n";
+echo __DIR__;
 ?>]]></example>
 </slide>

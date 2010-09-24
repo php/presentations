@@ -2,16 +2,74 @@
 
 <break lines="1" />
 <blurb fontsize="4em">http://php.net/spl</blurb>
-<list fontsize="4em">
+<list fontsize="3.5em">
 <item>Improved nested directory iterations via FilesystemIterator</item>
 <item>Introduced GlobIterator</item>
-<item>Various data structure classes: SplDoublyLinkedList, SplStack, SplQueue, SplHeap, SplMinHeap, SplMaxHeap, SplPriorityQueue</item>
+<item>Various data structure classes:</item>
 </list>
+<list>
+  <bullet marginleft="2em" type="oplus">SplDoublyLinkedList</bullet>
+  <bullet marginleft="2em" type="oplus">SplStack</bullet>
+  <bullet marginleft="2em" type="oplus">SplQueue</bullet>
+  <bullet marginleft="2em" type="oplus">SplHeap</bullet>
+  <bullet marginleft="2em" type="oplus">SplMinHeap</bullet>
+  <bullet marginleft="2em" type="oplus">SplMaxHeap</bullet>
+  <bullet marginleft="2em" type="oplus">SplPriorityQueue</bullet>
+</list>
+
+<break lines="1" />
 <example fontsize="1.4em" result="1" title=""><![CDATA[<?php
 $iterator = new GlobIterator('/var/log/*.log');
 foreach($iterator as $file) {
   echo $file->getFilename();
   echo "<br>";
+}
+?>]]></example>
+
+<break lines="1" />
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+$q = new SplStack();
+
+$q[] = 1;
+$q[] = 2;
+$q[] = 3;
+
+foreach ($q as $elem)  {
+ echo $elem."<br>\n";
+}
+?>]]></example>
+
+<break lines="1" />
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+$heap = new SplMaxHeap();
+$heap->insert(2);
+$heap->insert(1);
+$heap->insert(3);
+foreach ($heap as $elem)  {
+ echo $elem."<br>\n";
+}
+?>]]></example>
+
+<break lines="1" />
+<example fontsize="1.4em" result="1" title=""><![CDATA[<?php
+class PQ extends SplPriorityQueue { 
+	private $pris = array('high'=>3,'medium'=>2,'low'=>1);
+    public function compare($pri1, $pri2) { 
+        if ($pri1==$pri2) return 0; 
+        return ($this->pris[$pri1]<$this->pris[$pri2]) ? -1 : 1; 
+    } 
+} 
+
+$PQ = new PQ(); 
+$PQ->setExtractFlags(SplPriorityQueue::EXTR_BOTH); 
+
+$PQ->insert('Run','medium'); 
+$PQ->insert('Sleep', 'high'); 
+$PQ->insert('Fix annoying bug','low'); 
+$PQ->insert('Eat','high'); 
+
+foreach($PQ as $task) {
+  echo "{$task['data']} -- {$task['priority']}<br>\n";
 }
 ?>]]></example>
 

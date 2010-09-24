@@ -14,7 +14,7 @@ class helper {
 $a = "helper";
 $b = "foo"; 
 
-$a::$b(); // helper::foo
+$a::$b();
 ?>]]></example>
 
 </slide>
