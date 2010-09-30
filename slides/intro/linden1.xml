@@ -1,0 +1,12 @@
+<slide title="XSS Types">
+<break lines="8"/>
+<blurb fontsize="5em">Simple Unfiltered GET, POST or Cookie data</blurb>
+<example fontsize="1.75em" result="0"><![CDATA[<form action="/foo.html" method="POST">
+<input type="text" name="foo" value="<?php echo $foo?>" />
+</form>]]></example>
+
+<example fontsize="1.75em" result="0"><![CDATA[http://search.secondlife.com/web/search/?q=test;"><script>alert(1)</script>
+<input type="text" name="foo" value="<?php echo $foo?>" />
+</form>]]></example>
+
+</slide>

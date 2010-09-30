@@ -1,0 +1,26 @@
+<slide title="Drupal 6.19 HipHop">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" leader="Siege: " href="http://www.joedog.org/JoeDog/Siege"/>
+
+<example fontsize="1.4em" type="shell" title="Drupal 6.19 HipHop"><![CDATA[
+|0077aa|~>| siege -c 5 -b -t30s http://drupal6/
+** SIEGE 2.67
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege...      done.
+Transactions:		        1579 hits
+Availability:		      100.00 %
+Elapsed time:		       29.20 secs
+Data transferred:	        2.40 MB
+Response time:		        *0.09 secs*
+Transaction rate:	       *54.08 trans/sec*
+Throughput:		        0.08 MB/sec
+Concurrency:		        4.98
+Successful transactions:        1579
+Failed transactions:	           0
+Longest transaction:	        1.59
+Shortest transaction:	        0.02]]></example>
+
+</slide>

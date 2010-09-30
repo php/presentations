@@ -1,0 +1,15 @@
+<slide title="">
+
+<blurb fontsize="5em">Why does performance matter?</blurb>
+<break lines="1" />
+<list fontsize="3.5em">
+<item>Isn't it all about scalability?</item>
+<item>Latency is always an issue, even for small sites</item>
+<item>You can't scale your way out of being slow at low traffic</item>
+<item>Allows you to keep your number of servers down</item>
+<item>Flexibility to add more features</item>
+<item>Google Pagerank might be affected if you are too slow</item>
+<item>Being slow is just not cool</item>
+</list>
+
+</slide>

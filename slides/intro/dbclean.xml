@@ -1,0 +1,98 @@
+<slide title="DB Layer">
+
+<break lines="1" />
+<blurb fontsize="7em">
+A simple abstract base class is the start of our Database layer
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
+abstract class db {
+  protected static $dbh = false;
+
+  function connect() {
+    self::$dbh = new PDO('sqlite:./people.db');
+    self::$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  }
+
+  protected function fatal_error($msg) {
+    echo "<pre>Error!: $msg\n";
+    $bt = debug_backtrace();
+    foreach($bt as $line) {
+      $args = var_export($line['args'], true);
+      echo "{$line['function']}($args) at {$line['file']}:{$line['line']}\n";
+    }
+    echo "</pre>";
+    die();
+  }
+?>]]></example>
+
+<blurb fontsize="7em">
+For each table I usually do something like this
+</blurb>
+
+<example result="0" marginright="1em" fontsize="1.5"><![CDATA[<?php
+class people extends db {
+
+  function load($id=-1) {
+    $where = '';
+    if($id!=-1) $where = "where id=".(int)$id;
+    try {
+      if(!self::$dbh) $this->connect();
+      $result = self::$dbh->query("SELECT * FROM people $where");
+      $rows = $result->fetchAll(PDO::FETCH_ASSOC); 
+    } catch (PDOException $e) {
+      $this->fatal_error($e->getMessage());
+    }
+    return $rows;
+  }
+
+  function insert($p) {
+    try {
+      if(!self::$dbh) $this->connect();
+
+      $stmt = self::$dbh->prepare("INSERT INTO people 
+                           (name,cvs_id,email,groups,language,lon,lat)
+                           VALUES 
+                           (:name,:cvs_id,:email,:groups,:lang,:lon,:lat)");
+
+      $params = array(':name'=>$p['name'], ':cvs_id'=>$p['cvs_id'],
+                      ':email'=>$p['email'], ':groups'=>$p['groups'],
+                      ':lang'=>$p['langSearch'], ':lon'=>$p['longitude'], 
+                      ':lat'=>$p['latitude']);
+
+      $stmt->execute($params);
+      $ret = self::$dbh->lastInsertId();
+    } catch (PDOException $e) {
+      $this->fatal_error($e->getMessage());
+    }
+    return $ret;
+  }
+?>]]></example>
+
+<blurb fontsize="7em">
+Using the DB layer
+</blurb>
+
+<example result="0" marginright="1em"><![CDATA[<?php
+include './db.inc';
+include './db_people.inc';
+
+$pep = new people;
+
+header("Content-type: application/json");
+
+switch($_POST['action']) {
+  case 'list':
+    $all = $pep->load();
+    echo json_encode(array('people'=>$all)); 
+    break;
+
+  case 'insert':
+    $id = $pep->insert($_POST);
+    if($id) echo json_encode(array('result'=>'ok'));
+    else echo json_encode(array('result'=>'insert failed'));
+    break;
+}
+?>]]></example>
+
+</slide>
