@@ -1,0 +1,18 @@
+<slide>
+<title>Reverse Geocoding</title>
+<subtitle>Yahoo! PlaceFinder</subtitle>
+
+<example result="1"><![CDATA[<?php
+$lat = 48.8583;
+$lon = 2.2945;
+
+$baseUrl = 'http://where.yahooapis.com/geocode?gflags=R&flags=GJQT&q=';
+$data = file_get_contents( "{$baseUrl}{$lat},{$lon}" );
+
+$data = json_decode( $data )->ResultSet->Results[0];
+echo $data->level3, ', ', $data->level0, "\n";
+echo $data->timezone, "\n";
+print_r( $data );
+?>]]></example>
+<blurb>http://developer.yahoo.com/geo/placefinder/guide/</blurb>
+</slide>

@@ -1,0 +1,22 @@
+<slide>
+<title>Showing a Map</title>
+<subtitle>Looking up latitude and longitude from a location</subtitle>
+<div effect="fade-out">
+<iframe filename='examples/openlayers-nominatim.php?name=:-:location:-:' image='openlayers-nominatim.png'/>
+</div>
+<div effect="fade-in">
+<example result="1"><![CDATA[
+<?php
+$name = urlencode( ':-:location:-:' );
+$baseUrl = 'http://nominatim.openstreetmap.org/search?format=json&q=';
+$data = file_get_contents( "{$baseUrl}{$name}&limit=1" );
+$json = json_decode( $data );
+$lat = $json[0]->lat;
+$lon = $json[0]->lon;
+?>
+var lat=<?php printf( '%0.3f', $lat ); ?> 
+var lon=<?php printf( '%0.3f', $lon ); ?> 
+<?php var_dump( $json[0] ); ?>
+]]></example>
+</div>
+</slide>

@@ -1,0 +1,43 @@
+<slide>
+<title>Finding Food</title>
+<subtitle>Getting The Data: MySQL</subtitle>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+include 'distance.php';
+header('Content-type: text/plain');
+require '/home/derick/dev/zetacomponents/trunk/Base/src/ezc_bootstrap.php';
+$d = ezcDbFactory::create( 'mysql://root:root@localhost/geolocation' );
+
+$wantedD = isset($_GET['d']) ? $_GET['d']: 1;
+$q = $d->createSelectQuery();
+$q->select('*',"DISTANCE({$_GET['lat']},{$_GET['lon']}, lat, lon) as dist")->from('poi');
+if ( $_GET['cuisine'] !== 'all' )
+{
+    $q->where($q->expr->eq('cuisine', $q->bindValue( $_GET['cuisine'] ) ) );
+}
+$s = $q->prepare();
+$s->execute();
+]]></example>
+</div>
+<div effect="fade-in-out">
+<blurb>Stored Procedure</blurb>
+<example><![CDATA[
+delimiter //
+
+CREATE FUNCTION distance (latA double, lonA double, latB double, LonB double)
+	RETURNS double DETERMINISTIC
+BEGIN
+	SET @RlatA = radians(latA);
+	SET @RlonA = radians(lonA); 
+	SET @RlatB = radians(latB); 
+	SET @RlonB = radians(LonB); 
+	SET @deltaLat = @RlatA - @RlatB; 
+	SET @deltaLon = @RlonA - @RlonB; 
+	SET @d = SIN(@deltaLat/2) * SIN(@deltaLat/2) + 
+		COS(@RlatA) * COS(@RlatB) * SIN(@deltaLon/2)*SIN(@deltaLon/2);
+	RETURN 2 * ASIN(SQRT(@d)) * 6371.01;
+END//
+]]></example>
+</div>
+</slide>

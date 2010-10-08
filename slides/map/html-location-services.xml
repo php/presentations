@@ -1,0 +1,50 @@
+<slide>
+<title>Finding the user</title>
+<subtitle>Using JavaScript to locate the user</subtitle>
+
+<div effect="fade-out">
+<iframe filename='examples/find-me.html'/>
+</div>
+<div effect="fade-in">
+<example><![CDATA[
+function getPosition()
+{
+  navigator.geolocation.getCurrentPosition(iKnowWhereYouAre, notTheFaintestClue, {timeout:30000});
+}
+
+function notTheFaintestClue()
+{
+}
+
+function iKnowWhereYouAre(position)
+{
+  var lonLat = new OpenLayers.LonLat(
+    position.coords.longitude, position.coords.latitude
+  ).transform(map.displayProjection, map.projection);
+  map.setCenter(lonLat, zoom);
+
+  center = map.getCenter().
+    transform(map.getProjectionObject(), new OpenLayers.Projection("EPSG:4326"));
+
+  factor = Math.cos(center.lat / (180/Math.PI)), 10 + map.getZoom() * 2;
+
+  multiFeature = new OpenLayers.Feature.Vector(
+    OpenLayers.Geometry.Polygon.createRegularPolygon(
+      new OpenLayers.Geometry.Point(
+        center.lon, center.lat
+      ).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()),
+      position.coords.accuracy / factor, 10
+    ),
+    {
+      color: 'blue',
+      align: 'rt'
+    }
+  );
+
+  vectorLayer.removeAllFeatures();
+  vectorLayer.drawFeature(multiFeature);
+  vectorLayer.addFeatures([multiFeature]);
+}
+]]></example>
+</div>
+</slide>

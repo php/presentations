@@ -16,7 +16,7 @@
 <email>derick@derickrethans.nl</email>
 <twitter>derickr</twitter>
 <url>http://derickrethans.nl/talks.html</url>
-<joindin>http://joind.in/???</joindin>
+<joindin>http://joind.in/2047</joindin>
 <slide>slides/map/title.xml</slide>
 <slide>slides/toolbox/me.xml</slide>
 
@@ -39,7 +39,71 @@
 <slide>slides/map/earth-sphere-approximation.xml</slide>
 <slide>slides/map/meridian.xml</slide>
 <slide>slides/map/earth-not-flat.xml</slide>
+<slide>slides/map/projections.xml</slide>
+<slide>slides/map/coordinates.xml</slide>
+<slide>slides/map/planets.xml</slide>
+<slide>slides/map/coordinate-transformation.xml</slide>
+<slide>slides/map/grid-systems.xml</slide>
+<slide>slides/map/national-grid.xml</slide>
+
+<!--
+SHOWING DATA
+- OpenStreetMap tiles
+- (Google, eew!)
+-->
+<slide>slides/map/googlemap.xml</slide>
+<slide>slides/map/openlayers-simple.xml</slide>
+
+<!--
+ACQUIRING LOCATION
+- Nominatim
+- Geonames
+- Yahoo
+- firefox location API
+- Google GeoLocation
+-->
+<slide>slides/map/openlayers-location.xml</slide>
+<slide>slides/map/nominatim-lookup.xml</slide>
+<slide>slides/map/yahoo-lookup.xml</slide>
+<slide>slides/map/reverse.xml</slide>
+<slide>slides/map/nominatim-reverse-lookup.xml</slide>
+<slide>slides/map/geonames-reverse-lookup.xml</slide>
+<slide>slides/map/yahoo-reverse-lookup.xml</slide>
+
+<slide>slides/map/html-location-services.xml</slide>
+<slide>slides/map/google-geolocation.xml</slide>
+<slide>slides/map/google-geolocation-get-wlan.xml</slide>
+
+<!--
+ACQUIRING DATA
+- Open Street Map
+- Ordnance Survey Open CodePoint
+- GPX files
+-->
+<slide>slides/map/osm-what.xml</slide>
+<slide>slides/map/osm-xapi.xml</slide>
+<slide>slides/map/osm-data.xml</slide>
+<slide>slides/map/osm-parse-into-db.xml</slide>
+
+<!--
+PLOTTING DATA
+- mysql/sqlite/mongodb
+- distances are tricky
+- flickr photos
+-->
+
+<slide>slides/map/finding-food.xml</slide>
+<slide>slides/map/finding-food-data-sqlite.xml</slide>
+<slide>slides/map/finding-food-data-mysql.xml</slide>
+<slide>slides/map/finding-food-data-mongo.xml</slide>
+<slide>slides/map/finding-distances.xml</slide>
+<slide>slides/map/finding-food-take2.xml</slide>
+<slide>slides/map/tube-gpx.xml</slide>
+<slide>slides/map/conferences.xml</slide>
+<slide>slides/map/flickr.xml</slide>
 
 <!-- micro format: http://en.wikipedia.org/wiki/Geo_%28microformat%29 -->
+
+<slide>slides/map/resources.xml</slide>
 
 </presentation>

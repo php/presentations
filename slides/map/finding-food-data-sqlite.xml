@@ -1,0 +1,50 @@
+<slide>
+<title>Finding Food</title>
+<subtitle>Getting The Data: SQLite</subtitle>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+include 'distance.php';
+header('Content-type: text/plain');
+require '/home/derick/dev/zetacomponents/trunk/Base/src/ezc_bootstrap.php';
+$d = ezcDbFactory::create( 'sqlite://' . dirname( __FILE__ ) . '/pois.sqlite' );
+
+$wantedD = isset($_GET['d']) ? $_GET['d']: 1;
+$q = $d->createSelectQuery();
+$q->select('*')->from('poi');
+if ( $_GET['cuisine'] !== 'all' )
+{
+    $q->where($q->expr->eq('cuisine', $q->bindValue( $_GET['cuisine'] ) ) );
+}
+$s = $q->prepare();
+$s->execute();
+echo "lat\tlon\ttitle\tdescription\ticonSize\ticonOffset\ticon\r\n";
+foreach( $s as $res) {
+    $e = distance2($_GET['lat'], $_GET['lon'], $res['lat'], $res['lon'] );
+    if ($e < $wantedD) {
+        echo $res['lat'], "\t", $res['lon'], "\t", $res['name'], "\t", sprintf('%.2f', $e). " km away\t16,16\t-8,-8\tpub.png\r\n";
+    }
+}]]></example>
+<blurb><link href='/presentations/slides/map/examples/fetch.php?cuisine=all&amp;lat=51.514&amp;lon=-0.116&amp;d=0.5'/></blurb>
+</div>
+<div effect="fade-in-out">
+<blurb>Calculating Distance</blurb>
+<example><![CDATA[<?php
+function distance2($latA, $lonA, $latB, $lonB) 
+{
+    $latA = deg2rad($latA);
+    $lonA = deg2rad($lonA);
+    $latB = deg2rad($latB);
+    $lonB = deg2rad($lonB);
+
+    $deltaLat = ($latA - $latB);
+    $deltaLon = ($lonA - $lonB);
+
+    $d = sin($deltaLat/2) * sin($deltaLat/2) +
+        cos($latA) * cos($latB) * sin($deltaLon/2) * sin($deltaLon/2);
+    $d = 2 * asin(sqrt($d));
+    return $d * 6371.01;
+}
+]]></example>
+</div>
+</slide>

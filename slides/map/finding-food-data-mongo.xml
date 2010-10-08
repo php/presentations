@@ -1,0 +1,44 @@
+<slide>
+<title>Finding Food</title>
+<subtitle>Getting The Data: MongoDB</subtitle>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+header('Content-type: text/plain');
+$m = new Mongo( 'mongodb://localhost:27017' );
+$d = $m->selectDb( 'geolocation' );
+
+$wantedD = isset($_GET['d']) ? $_GET['d']: 1;
+
+$query = array( 'cuisine' => $_GET['cuisine'] );
+if ( $_GET['cuisine'] == 'all' )
+{
+    $query = array();
+}
+
+$s = $d->command(
+    array(
+        'geoNear' => 'poi',
+        'near' => array( $_GET['lat'], $_GET['lon'] ),
+        'num' => 10000,
+        'maxDistance' => $wantedD * (360 / (2*M_PI*6371.01)), // km to °
+        'query' => $query,
+    )
+);
+echo "lat\tlon\ttitle\tdescription\r\n";
+foreach( $s['results'] as $res) {
+    if (isset($res['obj']['name'] ) )
+    {
+        echo $res['obj']['loc'][0], "\t", $res['obj']['loc'][1], "\t", $res['obj']['name'], "\t", sprintf('real: %.4f mongo: %.4f', $e,  $res['dis'] / (360 / (2*M_PI*6371.
+    }
+}
+]]></example>
+</div>
+<div effect="fade-in-out">
+<blurb>Spatial Index</blurb>
+<example><![CDATA[
+db.poi.ensureIndex( { loc : '2d' } );
+]]></example>
+<blurb>It is not a geospatial index (yet)</blurb>
+</div>
+</slide>

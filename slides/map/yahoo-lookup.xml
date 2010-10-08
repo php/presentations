@@ -1,0 +1,21 @@
+<slide>
+<title>Finding where a place is</title>
+<subtitle>Yahoo! PlaceFinder</subtitle>
+
+<example result="1"><![CDATA[<?php
+$name = urlencode( ':-:location:-:' );
+$baseUrl = 'http://where.yahooapis.com/geocode?flags=GJT&appid=[yourappidhere]&q=';
+$data = file_get_contents( "{$baseUrl}{$name}" );
+
+foreach ( json_decode( $data )->ResultSet->Results as $elem )
+{
+	printf( "%s, %s @ %.3f, %.3f\n",
+		$elem->level3, $elem->level0,
+		$elem->latitude, $elem->longitude
+	);
+
+	print_r( $elem );
+}
+?>]]></example>
+<blurb>http://developer.yahoo.com/geo/placefinder/guide/</blurb>
+</slide>

@@ -1,0 +1,26 @@
+<slide>
+<title>Plotting data</title>
+
+<div effect="fade-out">
+<iframe filename='examples/conferences.html'/>
+</div>
+<div effect="fade-in">
+<example><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.0"
+  creator="GPSBabel - http://www.gpsbabel.org"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/0"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+    <trk><name>Conferences</name>
+        <trkseg>
+            <trkpt lat="51.5393357" lon="-0.1982196"><name>London</name></trkpt>
+            <trkpt lat="53.4791466" lon="-2.2447445"><name>Manchester</name></trkpt>
+            <trkpt lat="49.9999952" lon="8.2710237"><name>Mainz</name></trkpt>
+            <trkpt lat="52.05292"   lon="6.09513"><name>Dieren</name></trkpt>
+            <trkpt lat="51.5393357" lon="-0.1982196"><name>London</name></trkpt>
+        </trkseg>
+    </trk>
+</gpx>]]></example>
+</div>
+</slide>

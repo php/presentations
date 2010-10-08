@@ -1,0 +1,8 @@
+<slide>
+<title>Different coordinate-systems</title>
+
+<break lines="2"/>
+	<image filename="osgrid.png" attr="(c) OpenStreetMap contributors, CC-BY-SA"/>
+	<blurb align="center">(2° × 2°) |ff0000|WGS84 Latitude and Longitude| (1° × 1°)</blurb>
+	<blurb align="center">(100km × 100km) |0000ff|Ordnance Survey National Grid| (10km × 10km)</blurb>
+</slide>

@@ -1,0 +1,35 @@
+<slide>
+<title>Plotting data</title>
+
+<div effect="fade-out">
+<iframe filename='examples/ol-tubes.html'/>
+</div>
+<div effect="fade-in">
+<example><![CDATA[
+var lgpx = new OpenLayers.Layer.GML("Bakerloo", "BAK.gpx", {
+    format: OpenLayers.Format.GPX,
+    style: {strokeColor: "#ae6118", strokeWidth: 3, strokeOpacity: 0.3},
+    projection: new OpenLayers.Projection("EPSG:4326")
+});
+map.addLayer(lgpx);
+]]></example>
+<example><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.0"
+  creator="GPSBabel - http://www.gpsbabel.org"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/0"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+    <trk><name>Elephant &amp; Castle - Baker Street - Harrow &amp; Wealdstone</name>
+        <trkseg>
+            <trkpt lat="51.5434596" lon="-0.2752602">
+                <name>Stonebridge Park</name>
+            </trkpt>
+            <trkpt lat="51.552765" lon="-0.2971141">
+                <name>Wembley Central</name>
+            </trkpt>
+            <trkpt lat="51.5624687" lon="-0.3036124">
+                <name>North Wembley</name>
+]]></example>
+</div>
+</slide>

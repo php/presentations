@@ -1,0 +1,28 @@
+<slide>
+<title>Fetching OSM data</title>
+
+<example>wget 
+  http://osmxapi.hypercube.telascience.org/api/0.6/node
+  [amenity=pub] 
+  [bbox=-2.401,53.394,-2.104,53.551]
+  -O pubs.osm</example>
+
+<example><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='xapi: OSM Extended API 2.0' attribution='http://wiki.openstreetmap.org/wiki/Attribution' xmlns:xapi='http://www.informationfreeway.org/xapi/0.6' xapi:uri='/api/0.6/node[amenity=pub][bbox=-2.401,53.394,-2.104,53.551]' xapi:planetDate='20101006' xapi:copyright='2010 OpenStreetMap contributors' xapi:license='Creative commons CC-BY-SA 2.0' xapi:bugs='For assistance or to report bugs contact 80n80n@gmail.com' xapi:instance='zappyHyper'>
+<bounds minlat='53.394' minlon='-2.401' maxlat='53.551' maxlon='-2.104'/>
+  <node id='275332052' lat='53.548238' lon='-2.3958373' version='2' changeset='4395635'
+        user='Steeley' uid='101150' visible='true' timestamp='2010-04-11T17:08:16Z'>
+    <tag k='amenity' v='pub'/>
+    <tag k='name' v='The Saddle'/>
+  </node>
+...
+  <node id='30732192' lat='53.4647746' lon='-2.2319186' version='3' changeset='5810586'
+        user='geordiemanc' uid='345640' visible='true' timestamp='2010-09-18T11:12:50Z'>
+    <tag k='address' v='325 Oxford Road'/>
+    <tag k='amenity' v='pub'/>
+    <tag k='name' v='Kro Bar'/>
+    <tag k='phone' v='01612743100'/>
+    <tag k='postal_code' v='M13 9PG'/>
+    <tag k='real_ale' v='yes'/>
+  </node>]]></example>
+</slide>

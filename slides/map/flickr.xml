@@ -1,0 +1,63 @@
+<slide>
+<title>Flickr</title>
+
+<div effect="fade-out">
+<iframe filename='examples/ol-flickr.html'/>
+</div>
+<div effect="fade-in-out">
+<example><![CDATA[function newImageMarker(url, lat, lon)
+{
+    w = 85 - ((19-map.getZoom())*4);
+    size = new OpenLayers.Size(w,w);
+    offset = new OpenLayers.Pixel(-(size.w/2), -(size.h/2));
+    icon = new OpenLayers.Icon(url, size, offset);
+
+    marker = new OpenLayers.Marker(
+        new OpenLayers.LonLat(lon, lat)
+            .transform(
+                new OpenLayers.Projection("EPSG:4326"), 
+                map.getProjectionObject()
+            ),
+        icon.clone()
+    );
+    marker.events.register(
+        'mousedown', 
+        marker, 
+        function(evt) { showImage(this.icon); OpenLayers.Event.stop(evt); }
+    );
+    markers.addMarker(marker);
+}
+
+function changeQuery()
+{
+    markers.clearMarkers();
+    $.getJSON('fetch-flickr.php', function(data) {
+        $.each(data.items, function(i,item){
+            newImageMarker(item.url, item.lat, item.lon);
+        });
+    });
+}
+]]></example>
+</div>
+<div effect="fade-in">
+<example result="1"><![CDATA[<?php
+$d = ezcDbFactory::create( 'sqlite://' . dirname( __FILE__ ) . '/presentations/slides/map/examples/photos.sqlite' );
+
+$q = $d->createSelectQuery();
+$q->select('*')->from('photo')->orderBy( 'date_taken', ezcQuerySelect::DESC )->limit(100);
+$s = $q->prepare();
+$s->execute();
+
+$items = array();
+foreach ( $s as $photo )
+{
+    $items[] = array(
+        'lon' => $photo['lon'],
+        'lat' => $photo['lat'],
+        'url' => $photo['thumb_url']
+    );
+}
+echo json_encode(array( 'items' => $items ) );
+]]></example>
+</div>
+</slide>

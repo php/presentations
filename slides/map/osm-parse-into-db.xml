@@ -1,0 +1,12 @@
+<slide>
+<title>Massage the Data</title>
+
+<blurb>Process:</blurb>
+<list>
+	<bullet>Use XAPI to fetch data</bullet>
+	<bullet>Parse XML file with PHP into a DB</bullet>
+	<bullet>Query database</bullet>
+	<bullet>Show data</bullet>
+	<bullet>Profit!</bullet>
+</list>
+</slide>

@@ -1,0 +1,60 @@
+<slide>
+<title>Finding Food</title>
+
+<div effect="fade-out">
+<iframe filename='examples/find-poi.php'/>
+</div>
+<div effect="fade-in">
+<example><![CDATA[
+function init() {
+    map = new OpenLayers.Map ("map", {
+        eventListeners: {
+            "moveend": moveEndEvent
+        },
+        controls:[
+]]></example>
+
+<example><![CDATA[
+function changeQuery()
+{
+    cuisine = document.getElementById('amenity').value;
+    radiusInput = document.getElementById('radius');
+    source = document.getElementById('source').value;
+
+    if (source == 'sqlite') { script = 'fetch.php'; }
+    if (source == 'mysql') { script = 'fetch-mysql.php'; }
+    if (source == 'mongo') { script = 'fetch-mongo.php'; }
+    if (source == 'mongo2') { script = 'fetch-mongo-fixed.php'; }
+
+    center = map.getCenter().transform(map.getProjectionObject(), new OpenLayers.Projection("EPSG:4326"));
+    pois.destroy();
+    pois = new OpenLayers.Layer.Text( "The Shops", {
+        location: "./" + script + "?cuisine=" + cuisine + 
+            '&lat=' + center.lat + '&lon=' + center.lon + '&d=' + radiusInput.value,
+        projection: map.displayProjection
+    });
+    map.addLayer(pois);
+
+    multiFeature = new OpenLayers.Feature.Vector(
+        OpenLayers.Geometry.Polygon.createRegularPolygon(
+            new OpenLayers.Geometry.Point(center.lon,center.lat).transform(new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()),
+            radiusInput.value * 1000 / Math.cos(center.lat / (180/Math.PI)), 10 + map.getZoom() * 2, 10
+    ),
+    {
+        color: 'blue',
+        align: 'rt'
+    });
+
+    vectorLayer.removeAllFeatures();
+    vectorLayer.drawFeature(multiFeature);
+    vectorLayer.addFeatures([multiFeature]);
+}
+
+function moveEndEvent(event)
+{
+    changeQuery();
+}
+]]></example>
+
+</div>
+</slide>

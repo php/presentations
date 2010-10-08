@@ -1,0 +1,51 @@
+<slide>
+<title>Showing a Map</title>
+<subtitle>OpenStreetMap</subtitle>
+<div effect="fade-out">
+<iframe filename='examples/openlayers.html' image='openlayers.png'/>
+</div>
+<div effect="fade-in">
+<example><![CDATA[
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="EN">
+    <head>
+    <style>
+        html,body { margin: 0; padding: 0; width: 1004px; height: 590px; }
+        #map { width: 100%; height: 100%; border: 1px solid black; float: left; z-index: -1; }
+        div.olControlAttribution { bottom: 0.5em; font-size: 70%; }
+    </style>
+    <script src='OpenLayers.js'></script>
+    <script src='osm/OpenStreetMap.js'></script>
+    <script type="text/javascript">
+    var map; //complex object of type OpenLayers.Map
+
+    var lat=54.417
+    var lon=-3.51
+    var zoom=14
+
+    function init() {
+        map = new OpenLayers.Map ("map", {
+            controls:[
+                new OpenLayers.Control.PanZoomBar(),
+                new OpenLayers.Control.Attribution()],
+            projection: new OpenLayers.Projection("EPSG:900913"),
+            displayProjection: new OpenLayers.Projection("EPSG:4326")
+        } );
+
+        layerMapnik = new OpenLayers.Layer.OSM.Mapnik("Mapnik");
+        map.addLayer(layerMapnik);
+
+        var lonLat = new OpenLayers.LonLat(lon, lat).
+            transform(map.displayProjection, map.projection);
+        map.setCenter(lonLat, zoom);
+    }
+    </script>
+</head>
+<body onload="init();">
+    <div id='map'></div>
+</body>
+</html>]]></example>
+</div>
+</slide>

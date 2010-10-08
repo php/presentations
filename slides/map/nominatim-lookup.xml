@@ -1,0 +1,23 @@
+<slide>
+<title>Finding where a place is</title>
+<subtitle>Nominatim</subtitle>
+
+<div>
+<example result="1"><![CDATA[<?php
+$name = urlencode( ':-:location:-:' );
+$baseUrl = 'http://nominatim.openstreetmap.org/search?format=json&q=';
+$data = file_get_contents( "{$baseUrl}{$name}&limit=1&addressdetails=1" );
+
+foreach ( json_decode( $data ) as $elem )
+{
+	printf( "%s, %s @ %.3f, %.3f\n",
+		$elem->address->city, $elem->address->country,
+		$elem->lat, $elem->lon
+	);
+
+	print_r( $elem );
+}
+?>]]></example>
+<blurb>http://wiki.openstreetmap.org/wiki/Nominatim</blurb>
+</div>
+</slide>
