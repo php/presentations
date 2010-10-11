@@ -2,11 +2,11 @@
 <title>The Earth is</title>
 
 <div effect="fade-out">
-<image filename='bluemarble.jpg'/>
+<image filename='bluemarble.jpg' pdf-scale="0.33"/>
 <blurb align="center">not a sphere...</blurb>
 </div>
 <div effect="fade-in">
-<image filename="pear.jpg"/>
+<image filename="pear.jpg" pdf-scale="0.33" y-offset="7"/>
 <blurb align="center">... but a bit of a pear.</blurb>
 </div>
 </slide>

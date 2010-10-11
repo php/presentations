@@ -3,15 +3,15 @@
 
 <break lines="5"/>
 <div effect="fade-out">
-	<image filename='flatmap.jpg'/>
+	<image filename='flatmap.jpg' pdf-scale="0.25"/>
 	<blurb align="center">The Earth is not flat</blurb>
 </div>
 <div effect="fade-in-out">
-	<image filename="globe.jpg" attr="http://www.flickr.com/photos/derickrethans/2527529206"/>
+	<image filename="globe.jpg" pdf-scale="0.25" y-offset="4" attr="http://www.flickr.com/photos/derickrethans/2527529206"/>
 	<blurb align="center">Bringing a globe with you isn't very practical</blurb>
 </div>
 <div effect="fade-in">
-	<image filename="paper.jpg"/>
+	<image filename="paper.jpg" pdf-scale="0.25" y-offset="8"/>
 	<blurb align="center">Paper is flat, so we need to project the globe on a 2D plane</blurb>
 </div>
 </slide>

@@ -2,7 +2,7 @@
 <title>Plotting data</title>
 
 <div effect="fade-out">
-<iframe filename='examples/conferences.html'/>
+<iframe filename='examples/conferences.html' pdf-scale="0.5"/>
 </div>
 <div effect="fade-in">
 <example><![CDATA[<?xml version="1.0" encoding="UTF-8"?>

@@ -2,7 +2,7 @@
 <title>Flickr</title>
 
 <div effect="fade-out">
-<iframe filename='examples/ol-flickr.html'/>
+<iframe filename='examples/ol-flickr.html' pdf-scale="0.2"/>
 </div>
 <div effect="fade-in-out">
 <example><![CDATA[function newImageMarker(url, lat, lon)

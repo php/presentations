@@ -3,10 +3,10 @@
 	<title>Twitter Client: The Result</title>
 
 <div effect="fade-out">
-	<blurb align="center"><image filename="twitter.png"/></blurb>
+	<image filename="twitter.png" pdf-scale="0.6"/>
 </div>
 <div effect="fade-in">
-	<blurb align="center"><image filename="twitter-desktop.jpg"/></blurb>
+	<image filename="twitter-desktop.jpg"/ pdf-scale="0.6">
 </div>
 
 </slide>
