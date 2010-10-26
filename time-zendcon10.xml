@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/dbus/dbus.css"
+	backgroundfixed="1" >
+<topic>Localization and Internationalization</topic>
+<title>Advanced Date/Time Handling</title>
+<event>ZendCon</event>
+<location>Santa Clara, US</location>
+<date>Nov 2nd, 2010</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/2232</joindin>
+<twitter>derickr</twitter>
+
+<slide>slides/dbus/title.xml</slide>
+<slide>slides/toolbox/me.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/time/problems-condensed.xml</slide>
+
+<!-- PHP - IMPROVEMENTS -->
+<slide>slides/time/improvements-timezones.xml</slide>
+<slide>slides/time/improvements-more-on-timezones.xml</slide>
+<slide>slides/time/default-timezone.xml</slide>
+<slide>slides/time/timestamps-suck.xml</slide>
+
+<!-- PHP - CODE EXAMPLES -->
+<slide>slides/time/basic-parse-time-new.xml</slide>
+<slide>slides/time/date-parse2.xml</slide>
+<slide>slides/time/date-parse-from-format3.xml</slide>
+<slide>slides/time/date-parse-from-format2.xml</slide>
+
+<!-- DATE EXAMPLES -->
+<slide>slides/time/date-modify.xml</slide>
+<slide>slides/time/timezone-object-1.xml</slide>
+<slide>slides/time/date-timezone.xml</slide>
+<slide>slides/time/timezone-utilities-1.xml</slide>
+<slide>slides/time/timezone-utilities-3.xml</slide>
+
+<!-- INTERVALS and PERIODS -->
+<slide>slides/time/intervals.xml</slide>
+<slide>slides/time/intervals-2.xml</slide>
+<slide>slides/time/relative-month.xml</slide>
+<slide>slides/time/relative-month2.xml</slide>
+<slide>slides/time/relative-month3.xml</slide>
+<slide>slides/time/relative-month4.xml</slide>
+<slide>slides/time/period-1.xml</slide>
+<slide>slides/time/period-2.xml</slide>
+
+<!-- EXIT -->
+<slide>slides/time/book.xml</slide> <!-- resources -->
+<slide>slides/time/resources.xml</slide> <!-- resources -->
+
+<slide>slides/dbus/end.xml</slide>
+</presentation>
