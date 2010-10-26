@@ -1,0 +1,10 @@
+<slide>
+<title>Finding a name for the current location</title>
+<subtitle>Different services</subtitle>
+
+<list>
+	<bullet>*Geonames:*<br/>http://ws.geonames.org/findNearbyPlaceNameJSON?username=derick&amp;style=full&amp;lat={$lat}&amp;lng={$lon}</bullet>
+	<bullet>*Nominatim:*<br/>http://nominatim.openstreetmap.org/reverse?format=json&amp;lat={$lat}&amp;lon={$lon}&amp;zoom={$z}</bullet>
+	<bullet>*Yahoo:*<br/>http://where.yahooapis.com/geocode?gflags=R&amp;flags=GJQT&amp;q={$lat},{$lon}</bullet>
+</list>
+</slide>

@@ -19,9 +19,9 @@
 </script>
 <script type="text/javascript">
   function initialize() {
-    var latlng = new google.maps.LatLng(40.153293, -76.72534);
+    var latlng = new google.maps.LatLng(51.51922, -0.12736);
     var myOptions = {
-      zoom: 14, center: latlng,
+      zoom: 17, center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);

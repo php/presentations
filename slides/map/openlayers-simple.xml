@@ -21,9 +21,9 @@
     <script type="text/javascript">
     var map; //complex object of type OpenLayers.Map
 
-    var lat=52.500556
-    var lon=13.3988
-    var zoom=13
+    var lat=51.51922
+    var lon=-0.12736
+    var zoom=17
 
     function init() {
         map = new OpenLayers.Map ("map", {
