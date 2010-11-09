@@ -5,7 +5,7 @@
 	<list>
 		<bullet>Xdebug connects to the client</bullet>
 		<bullet>Remote vs Local debugging</bullet>
-		<bullet>Debugging proxy: (Komodo-PythonRemoteDebugging)</bullet>
+		<bullet>Debugging proxy: <br/><link href='http://downloads.activestate.com/Komodo/releases/6.0.1/remotedebugging/'/><br/>(Komodo-PythonRemoteDebugging)</bullet>
 		<bullet>%xdebug.remote_connect_back%</bullet>
 	</list>
 </slide>

@@ -15,7 +15,7 @@
 <speaker>Derick Rethans</speaker>
 <email>derick@derickrethans.nl</email>
 <twitter>derickr</twitter>
-<joindin>http://joind.in/2013</joindin>
+<joindin>http://joind.in/2103</joindin>
 <url>http://derickrethans.nl/talks.html</url>
 <slide>slides/map/title.xml</slide>
 <slide>slides/toolbox/me.xml</slide>
@@ -62,16 +62,12 @@ ACQUIRING LOCATION
 - Google GeoLocation
 -->
 <slide>slides/map/openlayers-location.xml</slide>
-<slide>slides/map/nominatim-lookup.xml</slide>
-<slide>slides/map/yahoo-lookup.xml</slide>
+<slide>slides/map/openlayers-location-services.xml</slide>
 <slide>slides/map/reverse.xml</slide>
-<slide>slides/map/nominatim-reverse-lookup.xml</slide>
-<slide>slides/map/geonames-reverse-lookup.xml</slide>
-<slide>slides/map/yahoo-reverse-lookup.xml</slide>
+<slide>slides/map/reverse-services.xml</slide>
 
 <slide>slides/map/html-location-services.xml</slide>
 <slide>slides/map/google-geolocation.xml</slide>
-<slide>slides/map/google-geolocation-get-wlan.xml</slide>
 
 <!--
 ACQUIRING DATA
@@ -92,17 +88,14 @@ PLOTTING DATA
 -->
 
 <slide>slides/map/finding-food.xml</slide>
-<slide>slides/map/finding-food-data-sqlite.xml</slide>
-<slide>slides/map/finding-food-data-mysql.xml</slide>
-<slide>slides/map/finding-food-data-mongo.xml</slide>
 <slide>slides/map/finding-distances.xml</slide>
 <slide>slides/map/finding-food-take2.xml</slide>
-<slide>slides/map/tube-gpx.xml</slide>
 <slide>slides/map/conferences.xml</slide>
 <slide>slides/map/flickr.xml</slide>
 
 <!-- micro format: http://en.wikipedia.org/wiki/Geo_%28microformat%29 -->
 
 <slide>slides/map/resources.xml</slide>
+<slide>slides/map/google-geolocation-get-wlan.xml</slide>
 
 </presentation>

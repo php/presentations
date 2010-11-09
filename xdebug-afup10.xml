@@ -28,20 +28,15 @@
 <slide>slides/xdebug/how-to-install.xml</slide>
 
 <!-- FUNCTION OVERVIEW -->
-<slide>slides/xdebug/where-error.xml</slide>
-<slide>slides/xdebug/debug-req-vars.xml</slide>
+<slide>slides/xdebug/where-error-short.xml</slide>
 <slide>slides/xdebug/xdebug-var-dump.xml</slide>
 <slide>slides/xdebug/shutup.xml</slide>
 <slide>slides/xdebug/wtf-happens.xml</slide>
-<slide>slides/xdebug/functiontrace-computerized.xml</slide>
 <slide>slides/xdebug/wtf-happens2.xml</slide>
-<slide>slides/xdebug/live-demo.xml</slide>
 
 <!-- PROFILING -->
 <slide>slides/xdebug/profiling-simple.xml</slide>
 <slide>slides/xdebug/profiling.xml</slide>
-<slide>slides/xdebug/profiling2.xml</slide>
-<slide>slides/xdebug/live-demo.xml</slide>
 <slide>slides/xdebug/profiling-webgrind.xml</slide>
 
 <slide>slides/xdebug/codecoverage2.xml</slide>
@@ -50,7 +45,6 @@
 <slide>slides/xdebug/analyse-running-script.xml</slide>
 <slide>slides/xdebug/debugger-activation.xml</slide>
 <slide>slides/xdebug/debugging-gotchas.xml</slide>
-<slide>slides/xdebug/live-demo.xml</slide>
 <slide>slides/xdebug/resources.xml</slide>
 
 </presentation>

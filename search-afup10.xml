@@ -61,18 +61,6 @@ SEARCH:
 -->
 <slide>slides/search/mysql-fulltext.xml</slide>
 <slide>slides/search/mysql-types.xml</slide>
-<slide>slides/search/mysql-restrictions.xml</slide>
-
-<!--
-- Your own implementation
-  - tokenization
-  - 
--->
-<slide>slides/search/own.xml</slide>
-<slide>slides/search/own-tokenization.xml</slide>
-<slide>slides/search/own-gotchas.xml</slide>
-<slide>slides/search/own-gotchas2.xml</slide>
-<slide>slides/search/own-gotchas3.xml</slide>
 
 <!--
 - Lucene intro
@@ -112,10 +100,6 @@ SEARCH:
 
 <slide>slides/search/zend-lucene-vs-solr.xml</slide>
 
-<!-- future tech:
-- More Like This
--->
-<slide>slides/search/future.xml</slide>
 <slide>slides/search/resources.xml</slide>
 
 </presentation>
