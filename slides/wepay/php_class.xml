@@ -1,0 +1,49 @@
+<slide title="A Simple WePay API Class">
+<break lines="2"/>
+<example fontsize="1.4em" result="0"><![CDATA[<?php
+class WePay {
+    const CK = '81686f810f48a43d9fbac4cf535b26';
+    const CS = '0b00c9af4c';
+
+    private $oauth;
+    private $apiurl = 'http://sandbox.wepayapi.com/v1';
+    private $methods = array(
+        'get'    => OAUTH_HTTP_METHOD_GET,
+        'post'   => OAUTH_HTTP_METHOD_POST,
+        'put'    => OAUTH_HTTP_METHOD_PUT,
+        'delete' => OAUTH_HTTP_METHOD_DELETE);
+
+    public function __construct($access_token,$access_secret) {
+        try {
+            $this->oauth = new OAuth(self::CK,
+									 self::CS,
+                                     OAUTH_SIG_METHOD_HMACSHA1);
+            $this->oauth->setToken($access_token, $access_secret);
+            $this->oauth->enableDebug();
+        } catch(OAuthException $E) {
+            error_log($E->getMessage());
+        }
+    }
+
+    public function __call($method, $args) {
+        if(!isset($args[0])) { 
+			echo "Error - no API command provided";
+			return false;
+		}
+        $method = strtolower($method);
+        $cmd = $args[0];
+        if(!isset($args[1])) $send_data = null;
+        else $send_data = $args[1];
+        try { 
+            $this->oauth->fetch($this->apiurl.$cmd,
+								$send_data,
+								$this->methods[$method]);
+            echo $this->oauth->getLastResponse();
+            return json_decode($this->oauth->getLastResponse())->result;
+        } catch(OAuthException $E) {
+            error_log($E->lastResponse);
+            return false;
+        }
+    }
+}]]></example>
+</slide>

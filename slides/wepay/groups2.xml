@@ -1,0 +1,16 @@
+<slide title="Modifying a group">
+<break lines="2"/>
+<blurb fontsize="4em">Modifying an existing group</blurb>
+
+<example fontsize="1.4em" result="1" pre="1" rfontsize="1.3em"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$groups = $W->get('/group/list');
+$id = $groups[0]->id;
+$data = array('name'=>'Rent', 'description'=>'8 is old enough to pay rent');
+$result = $W->put("/group/modify/$id", $data);
+print_r($result);
+$result = $W->get("/group/$id");
+print_r($result);
+]]></example>
+</slide>

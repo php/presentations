@@ -1,0 +1,15 @@
+<slide title="API Concepts - Users">
+<break lines="2"/>
+<blurb fontsize="3em">
+One unique thing about the WePay API is that you can create stub user accounts from your App.
+</blurb>
+
+<example fontsize="1.4em" pre="1" result="1" rfontsize="1.3em"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$user = uniqid();
+$data = array('name'=>"Test $user", 'email'=>"$user@slowgeek.com");
+$new_user = $W->post('/user/register', $data);
+print_r($new_user);
+]]></example>
+</slide>

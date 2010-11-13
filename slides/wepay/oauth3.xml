@@ -1,0 +1,27 @@
+<slide title="The OAuth Dance">
+<break lines="2"/>
+<blurb fontsize="3em">Step 2 - Authorize the request token to get an access token</blurb>
+<example fontsize="1.4em" result="1" pre="1"><![CDATA[<?php
+define('OAUTH_CONSUMER_KEY','f670ca415f673fb613cfcf6bc0bc20');
+define('OAUTH_CONSUMER_SECRET','09f28ded59');
+$acc_url = 'http://sandbox.wepayapi.com/v1/oauth/access_token';
+list($token,$secret) = file('/tmp/last_request');
+$token = trim($token);
+$secret = trim($secret);
+
+$access = file_get_contents('http://progphp.com/oauth/'.$token);
+$data = json_decode($access);
+try {
+  $o = new OAuth(OAUTH_CONSUMER_KEY,OAUTH_CONSUMER_SECRET,
+                 OAUTH_SIG_METHOD_HMACSHA1,OAUTH_AUTH_TYPE_URI);
+  $o->enableDebug();
+  $o->setToken($token,$secret);
+  $resp = $o->getAccessToken($acc_url, NULL, $data->verifier);
+  file_put_contents("/tmp/access_token.txt",serialize($resp));
+} catch(OAuthException $E) {
+        echo "Response: ". $E->lastResponse . "\n";
+}
+
+print_r($resp);
+?>]]></example>
+</slide>

@@ -1,0 +1,19 @@
+<slide title="Sending a Bill">
+<break lines="2"/>
+<blurb fontsize="4em">Sending a bill from a group</blurb>
+
+<example fontsize="1.4em" pre="1" result="1" rfontsize="1.25em"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$user = $W->post('/user/register',array('email'=>'rasmus@slowgeek.com'));
+$data = array('to'     => $user->user_id,
+              'amount' => 100,
+              'due'    => '3 weeks from now',
+              'reason' => 'You owe me money, man!',
+              'rd'     => 'http://progphp.com/rd.php');
+$group_id = apc_fetch('group_id');
+$bill = $W->post("/group/send_bill/$group_id", $data);
+print_r($bill);
+]]></example>
+
+</slide>

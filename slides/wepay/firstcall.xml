@@ -1,0 +1,10 @@
+<slide title="Your first API call">
+<break lines="2"/>
+<blurb fontsize="3em">Current User Info</blurb>
+<example fontsize="1.4em" result="1" pre="1"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$user = $W->get('/user');
+print_r($user);
+?>]]></example>
+</slide>

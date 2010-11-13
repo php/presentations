@@ -1,0 +1,21 @@
+<slide title="The OAuth Dance">
+<break lines="2"/>
+<blurb fontsize="3em">Step 1 - Get a request token</blurb>
+<example fontsize="1.4em" result="1"><![CDATA[<?php
+define('OAUTH_CONSUMER_KEY','f670ca415f673fb613cfcf6bc0bc20');
+define('OAUTH_CONSUMER_SECRET','09f28ded59');
+$req_url = 'http://sandbox.wepayapi.com/v1/oauth/request_token';
+try {
+  $o = new OAuth(OAUTH_CONSUMER_KEY,OAUTH_CONSUMER_SECRET,
+                 OAUTH_SIG_METHOD_HMACSHA1,OAUTH_AUTH_TYPE_FORM);
+  $o->enableDebug();
+  $resp = $o->getRequestToken($req_url);
+} catch(OAuthException $E) {
+  echo "Response: ". $E->lastResponse . "\n";
+}
+file_put_contents("/tmp/last_request",$resp['oauth_token']."\n".
+                  $resp['oauth_token_secret']."\n");
+echo '<a target="_blank" href="'.$resp['login_url'].'">'.
+     $resp['login_url'].'</a>';
+?>]]></example>
+</slide>

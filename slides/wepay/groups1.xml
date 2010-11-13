@@ -1,0 +1,36 @@
+<slide title="API Concepts - Groups">
+<break lines="2"/>
+<blurb fontsize="3em">
+A Group, or sometimes referred to as a Group Account, refers to a distinct WePay bank account.
+A user may have several group account.  One for collecting rent from room mates, for example,
+another for organizing a ski trip with friends, and perhaps a 3rd for collecting donations
+for something.
+</blurb>
+
+<blurb fontsize="4em">List the current user's groups</blurb>
+<example fontsize="1.4em" pre="1" result="0" rfontsize="1.3em" pre_code="$access_token=apc_fetch('access_token');$token_secret=apc_fetch('token_secret');"><![CDATA[<?php
+$W = new WePay($access_token, $token_secret);
+$groups = $W->post('/group/list');
+print_r($groups);
+]]></example>
+
+<example fontsize="1.4em" hide="1" result="1" pre="1" rfontsize="1.3em"><![CDATA[<?php
+include './wepay_api.inc';
+apc_store('access_token',$access_token);
+apc_store('token_secret',$token_secret);
+$W = new WePay($access_token, $token_secret);
+$groups = $W->post('/group/list');
+foreach($groups as $i=>$gr) {
+	if($i==0) $default_group = $gr->id;
+	else $W->delete("/group/delete/{$gr->id}");
+}
+apc_store('default_group',$default_group);
+$W->put("/group/modify/$default_group",array('name'=>'My First Group Account',
+		'description'=>'I use this account to collect money for my favorite group activity. I can sell tickets, request payment, or accept donations.'));
+
+$groups = $W->post('/group/list');
+print_r($groups);
+]]></example>
+
+
+</slide>

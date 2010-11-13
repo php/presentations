@@ -1,0 +1,14 @@
+<slide title="Looking up a transaction">
+<break lines="2"/>
+
+<example fontsize="1.4em" pre="1" result="1" rfontsize="1.25em"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$group_id = apc_fetch('group_id');
+$trs = $W->get("/group/transactions/$group_id");
+$id = $trs[0]->id;
+$tr = $W->get("/transaction/$id");
+print_r($tr);
+]]></example>
+
+</slide>

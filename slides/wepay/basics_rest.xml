@@ -1,0 +1,23 @@
+<slide title="Basics - REST">
+<break lines="1"/>
+<blurb fontsize="4em">REST HTTP Methods</blurb>
+<list>
+<item>GET - Fetch resource(s) from WePay</item>
+<item>POST - Create a new resource</item>
+<item>PUT - Modify a resource</item>
+<item>DELETE - Delete a resource</item>
+</list>
+<break lines="1"/>
+
+<blurb fontsize="4em">HTTP Response Codes</blurb>
+<list>
+<item>200 - GET/PUT/DELETE request succeeded</item>
+<item>201 - POST request succeeded (resource created)</item>
+<item>400 - Parameter missing</item>
+<item>403 - Forbidden</item>
+<item>404 - Unknown API Call</item>
+<item>405 - Method not allowed</item>
+<item>500 - Internal Error - contact api@wepay.com</item>
+</list>
+
+</slide>

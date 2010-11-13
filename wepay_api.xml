@@ -1,0 +1,33 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/wepay.png"
+    titlesize="2em"
+    navbarheight="4.7em"
+>
+
+<topic>WePay</topic>
+<title>Using the WePay API</title>
+<speaker>Rasmus Lerdorf</speaker>
+<url>https://www.wepay.com/developer/show/wepay_api</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/titlepage.xml</slide>
+<slide>slides/wepay/oauth1.xml</slide>
+<slide>slides/wepay/oauth2.xml</slide>
+<slide>slides/wepay/oauth3.xml</slide>
+<slide>slides/wepay/php_class.xml</slide>
+<slide>slides/wepay/firstcall.xml</slide>
+<slide>slides/wepay/basics_rest.xml</slide>
+<slide>slides/wepay/basics_json.xml</slide>
+<slide>slides/wepay/users.xml</slide>
+<slide>slides/wepay/groups1.xml</slide>
+<slide>slides/wepay/groups2.xml</slide>
+<slide>slides/wepay/groups3.xml</slide>
+<slide>slides/wepay/groups4.xml</slide>
+<slide>slides/wepay/groups5.xml</slide>
+<slide>slides/wepay/groups6.xml</slide>
+<slide>slides/wepay/wepay_ref.xml</slide>
+</presentation>

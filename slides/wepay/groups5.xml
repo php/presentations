@@ -1,0 +1,35 @@
+<slide title="IPN">
+<break lines="2"/>
+<blurb fontsize="4em">Setting up Instant Payment Notification (IPN)</blurb>
+
+<example fontsize="1.4em" result="0" pre="1"><![CDATA[<?php
+$W = new WePay($access_token, $token_secret);
+
+$group_id = apc_fetch('group_id');
+$cb = $W->post("/group/callback/$group_id", 
+               array('callback_url'=>'http://progphp.com/cb.php'));
+print_r($cb);
+
+// Get a list of callbacks for a group
+$cbs = $W->get("/group/callback_list/$group_id");
+print_r($cbs);
+]]></example>
+
+<example fontsize="1.4em" hide="1" result="1" pre="1"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$group_id = apc_fetch('group_id');
+$cbs = $W->get("/group/callback_list/$group_id");
+if(count($cbs)) {
+	$id = $cbs[0]->id;
+	$result = $W->delete("/group/callback_delete/$id");
+}
+
+$cb = $W->post("/group/callback/$group_id", 
+               array('callback_url'=>'http://progphp.com/cb.php'));
+print_r($cb);
+$cbs = $W->get("/group/callback_list/$group_id");
+print_r($cbs);
+]]></example>
+
+</slide>

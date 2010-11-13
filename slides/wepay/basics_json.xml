@@ -1,0 +1,12 @@
+<slide title="Basics - JSON">
+<break lines="1"/>
+
+<blurb fontsize="3em">Response data is in JSON format</blurb>
+
+<example fontsize="1.4em" pre="1" result="1" rfontsize="1.5em"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$W->post('/user');
+echo wordwrap($W->raw_response(),70,"\n",1);
+]]></example>
+</slide>

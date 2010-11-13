@@ -1,0 +1,18 @@
+<slide title="Creating a new group">
+<break lines="2"/>
+<blurb fontsize="4em">Creating a new group</blurb>
+
+<example fontsize="1.4em" pre="1" result="1"><![CDATA[<?php
+include './wepay_api.inc';
+$W = new WePay($access_token, $token_secret);
+$data = array('name'        => "Carl's College Fund", 
+              'description' => "Collect donations for Carl's education",
+              'default_donation' => 75,
+              'donate_rd'   => 'http://slowgeek.com',
+              'image_url'   => 'http://farm5.static.flickr.com/4035/4633359701_05a677c48a_z.jpg');
+$group = $W->post('/group/create', $data);
+print_r($group);
+apc_store('group_id',$group->id);
+]]></example>
+
+</slide>
