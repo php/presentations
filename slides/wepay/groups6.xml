@@ -6,9 +6,13 @@ include './wepay_api.inc';
 $W = new WePay($access_token, $token_secret);
 $group_id = apc_fetch('group_id');
 $trs = $W->get("/group/transactions/$group_id");
-$id = $trs[0]->id;
-$tr = $W->get("/transaction/$id");
-print_r($tr);
+if(count($trs)) {
+	$id = $trs[0]->id;
+	$tr = $W->get("/transaction/$id");
+	print_r($tr);
+} else {
+	echo "No transaction yet";
+}
 ]]></example>
 
 </slide>
