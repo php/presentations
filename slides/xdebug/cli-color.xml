@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Colours on the Command Line</title>
+	<subtitle>*new in 2.2*</subtitle>
+
+<div effect="fade-out">
+	<image filename="cli-color1.jpg"/>
+	<blurb align="center">xdebug.cli_color=1</blurb>
+</div>
+
+<div effect="fade-in-out">
+	<image filename="cli-color2.jpg"/>
+	<blurb align="center">xdebug.cli_color=1</blurb>
+</div>
+
+</slide>

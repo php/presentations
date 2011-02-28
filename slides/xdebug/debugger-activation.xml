@@ -2,24 +2,37 @@
 <slide fontsize="6em">
 	<title>Activating the Remote Debugger</title>
 
+<div effect="fade-out">
 	<blurb>php.ini settings:</blurb>
-	<example class="code_large" type="ini">xdebug.remote_enable=1
-xdebug.remote_host=localhost
-xdebug.remote_port=9000</example>
+	<blurb class="small_blurb">%  xdebug.remote_enable=1%</blurb>
+	<blurb class="small_blurb">%  xdebug.remote_host=localhost%</blurb>
+	<blurb class="small_blurb">%  xdebug.remote_port=9000%</blurb>
+</div>
 
-	<break lines="2"/>
+<div effect="fade-in-out">
+	<blurb>php.ini settings:</blurb>
+	<blurb class="small_blurb">%  xdebug.remote_enable=1%</blurb>
+	<blurb class="small_blurb">%  xdebug.remote_host=localhost%</blurb>
+	<blurb class="small_blurb">%  xdebug.remote_port=9000%</blurb>
+	<blurb class="small_blurb">*%  xdebug.remote_connect_back=1%*</blurb>
+</div>
 
+<div effect="fade-in-out">
 	<blurb>On the shell:</blurb>
 	<blurb class="small_blurb">%  export XDEBUG_CONFIG="idekey=xdebugrocks"%</blurb>
+</div>
 
-	<break lines="2"/>
-
+<div effect="fade-in-out">
 	<blurb>With a browser:</blurb>
 	<blurb class="small_blurb">%  http://pres/show.php|698fe5|?XDEBUG_SESSION_START=xdebugrocks|%</blurb>
+	<blurb class="small_blurb">%  http://pres/show.php|698fe5|?XDEBUG_SESSION_STOP=1|%</blurb>
+</div>
 
-	<break lines="2"/>
-
+<div effect="fade-in-out">
 	<blurb>With browser extensions:</blurb>
 	<blurb class="small_blurb">easy Xdebug (FireFox): <link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></blurb>
 	<blurb class="small_blurb">Xdebug Helper (Chrome): <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></blurb>
+	<blurb class="small_blurb">Xdebug Toggler for Safari: <link href="https://github.com/benmatselby/xdebug-toggler"/></blurb>
+	<blurb class="small_blurb">Xdebug launcher for Opera: <link href="https://addons.opera.com/addons/extensions/details/xdebug-launcher/?display=en"/></blurb>
+</div>
 </slide>
