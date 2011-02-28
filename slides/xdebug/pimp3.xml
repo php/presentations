@@ -1,11 +1,21 @@
 <slide>
-<title>Error Message</title>
+<title>Error Messages</title>
 <subtitle>Record and Delayed Display</subtitle>
 <blurb>xdebug_start_error_collection()</blurb>
 <blurb>xdebug_stop_error_collection()</blurb>
 <blurb>xdebug_get_collected_errors()</blurb>
+<break/>
 
-<list>
-	<bullet>This is still undocumented— *oops*!</bullet>
-</list>
+<example><![CDATA[<?php
+xdebug_start_error_collection();
+?>
+<html>
+<body>
+<div id='main'>
+...
+</div>
+<div id='errors'>
+	<?php echo xdebug_get_collected_errors(); ?>
+</div>
+</html>]]></example>
 </slide>
