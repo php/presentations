@@ -32,6 +32,10 @@
 	<bullet>xdebug.file_link_format=*?*
 		<example>xdebug.file_link_format=gvim://%f@%l</example>
 		<example>xdebug.file_link_format=txmt://open/?url=file://%f&amp;line=%l</example>
+		<break/>
+		<example>xdebug.file_link_format=???://%f?%l</example>
+		<blurb>Windows: http://forums.netbeans.org/topic20597.html#85639</blurb>
+		<blurb>Linux: http://xdebug.org/docs/stack_trace#file_link_format</blurb>
 	</bullet>
 </div>
 </list>
