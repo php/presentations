@@ -1,0 +1,24 @@
+<slide>
+<title>Kindle Hacking</title>
+<subtitle>Getting PHP on the Kindle</subtitle>
+
+<image align="center" filename="caution2.jpg"/>
+<break lines="2"/>
+<list>
+	<bullet>Install the cross compilers from Emdebian:
+		<example>echo "deb http://www.emdebian.org/debian/ testing main" >> /etc/apt/sources.list
+apt-get update
+apt-get install gcc-4.3-arm-linux-gnueabi</example>
+	</bullet>
+	<bullet>Cross compile PHP</bullet>
+	<bullet>Copy it over and run:
+		<example>scp sapi/cli/php root@kindle:/tmp
+ssh root@kindle
+/tmp/php -v</example>
+		<example>[root@kindle root]# /tmp/php -v
+PHP 5.3.6-dev (cli) (built: Mar  7 2011 13:42:56) 
+Copyright (c) 1997-2011 The PHP Group
+Zend Engine v2.3.0, Copyright (c) 1998-2011 Zend Technologies</example>
+	</bullet>
+</list>
+</slide>

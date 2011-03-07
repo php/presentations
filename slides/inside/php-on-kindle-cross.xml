@@ -1,0 +1,26 @@
+<slide>
+<title>Kindle Hacking</title>
+<subtitle>Cross-compiling</subtitle>
+
+<list>
+	<bullet>Install the cross compilers from Emdebian:
+		<example>echo "deb http://www.emdebian.org/debian/ testing main" >> /etc/apt/sources.list
+apt-get update
+apt-get install gcc-4.3-arm-linux-gnueabi</example>
+	</bullet>
+	<bullet>Configure "like normal":
+		<example>CC='arm-linux-gnueabi-gcc' \
+'/home/derick/dev/php/php-src/branches/PHP_5_3/configure' \
+'--disable-all' \
+'--prefix=/home/derick/install/kindle/cross/target' \
+'--enable-sockets' \
+'--enable-pcntl' \
+'--with-pcre-regex'</example>
+	</bullet>
+	<bullet>make</bullet>
+	<bullet>Edit the last line, remove everything until %arm-linux-gnueabi-gcc%</bullet>
+	<bullet>Add %-static% after %-fvisibility=hidden%</bullet>
+	<bullet>Replace every %.lo% with %.o%</bullet>
+	<bullet>Run %arm-linux-gnueabi-gcc -export-dynamic -g -O2 -fvisibility=hidden -static    ext/date/php_date.o% .... %-lcrypt  -o sapi/cli/php%</bullet>
+</list>
+</slide>

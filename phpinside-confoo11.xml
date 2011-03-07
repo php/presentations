@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>PHP-GTK</topic>
+<title>PHP Inside</title>
+<event>ConFoo</event>
+<location>Montréal, Canada</location>
+<date>March 10th, 2011</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/2823</joindin>
+<twitter>derickr</twitter>
+
+<slide>slides/dbus/title.xml</slide>
+<slide>slides/toolbox/me.xml</slide>
+
+<slide>slides/inside/phone.xml</slide>
+<slide>slides/inside/mad.xml</slide>
+<slide>slides/inside/twitter.xml</slide>
+<slide>slides/inside/gtk.xml</slide>
+
+<slide>slides/inside/compile.xml</slide>
+<slide>slides/inside/storage.xml</slide>
+<slide>slides/inside/twitter-experience.xml</slide>
+<slide>slides/inside/twitter-result.xml</slide>
+<!-- INTRODUCTION -->
+<!--
+Photo of phone
+Am I mad?
+First thing: twitter
+So I needed a gui thing
+GTK
+compiling PHP and GTK
+sqlite - slower,indexes are *vital* — say something about keeping track what you've downloaded
+twitter API is rather... unstable
+- you don't have to mock for failures
+- expect to request the same data more often
+- very convoluted JSON returns
+GUI finger design
+5.2 vs 5.3 with GC
+-->
+<slide>slides/inside/tube1.xml</slide>
+<slide>slides/inside/tube2.xml</slide>
+<slide>slides/inside/tube3-scraping.xml</slide>
+<slide>slides/inside/tube4-json-api.xml</slide>
+<slide>slides/inside/tube5-demo.xml</slide>
+<!--
+tube status app
+needs scraping
+really large files
+designed a caching API as a webservice
+- app pulls 1k from that API
+If website structure changes, just adjust the service — all installed apps will continue working
+-->
+<slide>slides/inside/talking-to-hardware.xml</slide>
+<!--<slide>slides/dbus/what-is-dbus.xml</slide>
+<slide>slides/dbus/design-overview.xml</slide>
+<slide>slides/dbus/identifying-objects.xml</slide>-->
+
+<!-- PHP -->
+<slide>slides/dbus/php-dbus-ext.xml</slide>
+<slide>slides/dbus/php-as-client.xml</slide>
+
+<slide>slides/inside/kindle.xml</slide>
+<slide>slides/inside/kindle-warning.xml</slide>
+<slide>slides/inside/kindle-hacking.xml</slide>
+<slide>slides/inside/php-on-kindle.xml</slide>
+<slide>slides/inside/php-on-kindle-cross.xml</slide>
+<slide>slides/inside/kindle-hard-software.xml</slide>
+<slide>slides/inside/kindle-screen.xml</slide>
+<slide>slides/inside/kindle-download-file.xml</slide>
+<slide>slides/inside/kindle-left.xml</slide>
+
+<slide>slides/inside/conclusion.xml</slide>
+
+<slide>slides/dbus/end.xml</slide>
+
+<!--
+SMS, phone, addressbook sucked
+in order to talk to hardware -> dbus
+adding GPS to twitter client
+
+-->
+
+</presentation>

@@ -1,0 +1,52 @@
+<slide>
+<title>Kindle Hacking</title>
+<subtitle>Downloading files from PHP</subtitle>
+
+<image align="center" filename="caution2.jpg"/>
+<div effect="fade-out">
+<list>
+	<bullet>You need to use Amazon's proxy</bullet>
+	<bullet>Each request with the proxy needs to be authenticated, otherwise:
+        <example>HTTP/1.1 403 Forbidden+for+Client%3A+amz%5F2020
+Date: Thu, 03 Mar 2011 20:54:10 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+x-kn-retry: 300
+
+a0
+There is a problem with your Kindle account. Please call Customer Service at 1-866-321-8851 or 1-206-266-0927. For UK customers, please call +44(0)800 496 2449.
+0</example>
+    </bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<example><![CDATA[<?php
+$url = "tcp://87.238.83.84:80";
+
+$fp = stream_socket_client($url, $errno, $errstr, 1);
+if (!$fp) {
+    echo "$errstr ($errno)<br />\n";
+} else {
+    fwrite($fp, <<<ENDREQ
+GET http://derickrethans.nl/ws/tubestatus.ws.php HTTP/1.1\r
+Host: derickrethans.nl\r
+User-Agent: Mozilla/5.0 (Linux; U; en-US) AppleWebKit/528.5+ (KHTML, like Gecko, Safari/528.5+) Version/4.0 Kindle/3.0 (screen 600x800; rotate)\r
+Referer: http://mobile.twitter.com/\r
+Cache-Control: max-age=0\r
+Accept-Encoding: gzip\r
+Accept-Language: en-US\r
+x-fsn: R0pdR...personal-key...qpxX1J\r
+x-kn-appId: BBookletV3\r
+\r
+\r
+ENDREQ
+    );
+    while (!feof($fp)) {
+        echo fgets($fp, 1024);
+    }
+    fclose($fp);
+}?>]]>
+</example>
+</div>
+</slide>

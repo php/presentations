@@ -1,0 +1,19 @@
+<slide>
+<title>Kindle Hacking</title>
+
+<blurb>The Kindle:</blurb>
+<list>
+	<bullet>Runs Linux</bullet>
+	<bullet>Does not run X, but a framebuffer</bullet>
+	<bullet>Has WiFi (and 3G), but requires a proxy to work</bullet>
+</list>
+<break/>
+
+<blurb>Getting GTK to run on framebuffer is a pain, and so far I have
+not managed to get PHP-GTK running on it.</blurb>
+
+<div effect="fade-in">
+<break lines="2"/>
+	<image filename="sad-cat.jpg" attr="http://www.flickr.com/photos/emptysound/3768519920"/>
+</div>
+</slide>

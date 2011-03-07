@@ -1,0 +1,27 @@
+<slide>
+<title>Kindle Hacking</title>
+<subtitle>Accessing the screen</subtitle>
+
+<div effect="fade-out">
+<list>
+	<bullet>Open framebuffer %/dev/fb0%</bullet>
+	<bullet>mmap the open file</bullet>
+	<bullet>Screen data is stored with every two pixels stored in one byte, in total 800 rows, with 300 bytes per row (600 pixels)</bullet>
+</list>
+<example>
+(40 more)
+66 55 55 65 66 54 45 68 CF FF (290 more)
+77 77 66 78 77 65 65 55 7B FF (290 more)
+(858 more)
+
+7B =  0111 1011
+      `--´ `--´
+       |     `---- 2nd nibble: 11/15
+       `----------1st nibble:   7/15
+</example>
+</div>
+
+<div effect="fade-in">
+<image filename="kindle-read-screen.jpg"/>
+</div>
+</slide>
