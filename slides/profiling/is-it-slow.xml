@@ -1,0 +1,12 @@
+<slide>
+<title>Do I need to optimise my code?</title>
+
+<blurb>Before you can optimise anything:</blurb>
+<list>
+	<bullet>Find out if things are running slow</bullet>
+	<bullet>Find out whether it is the *code*</bullet>
+	<bullet>Understand your code, application and execution paths</bullet>
+	<bullet>Find out which parts of the code are slow</bullet>
+	<bullet>Find out what you can optimise</bullet>
+</list>
+</slide>

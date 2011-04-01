@@ -1,0 +1,26 @@
+<slide>
+<title>How does the application perform?</title>
+
+<blurb>Benchmark the application: siege</blurb>
+<list>
+	<bullet>check ~/.siegerc and set the %logfile% setting</bullet>
+	<bullet>Create a file with urls:<example><![CDATA[http://derickrethans.nl/
+http://derickrethans.nl/spatial-indexes-data-sqlite.html
+http://derickrethans.nl/using-openstreetmap-with-flickr.html
+http://derickrethans.nl/who.html]]></example></bullet>
+	<bullet>run against your code: %siege -c 4 -r 10 -f /tmp/urls.txt%</bullet>
+</list>
+<example><![CDATA[Transactions:		          40 hits
+Availability:		      100.00 %
+Elapsed time:		        9.76 secs
+Data transferred:	        1.34 MB
+Response time:		        0.18 secs
+Transaction rate:	        4.10 trans/sec
+Throughput:		        0.14 MB/sec
+Concurrency:		        0.73
+Successful transactions:          40
+Failed transactions:	           0
+Longest transaction:	        0.39
+Shortest transaction:	        0.08]]></example>
+
+</slide>

@@ -1,0 +1,49 @@
+<slide>
+<title>The Internet is Full of Nonsense</title>
+
+<div effect="fade-out">
+<break lines="6"/>
+<blurb class="large" align="center">A small selection of PHP optimisation tips I found on the internet</blurb>
+</div>
+
+<div effect="fade-in-out">
+<break lines="6"/>
+<blurb align="center">echo is faster than print</blurb>
+</div>
+
+<div effect="fade-in-out"><break lines="6"/><blurb align="center">Use sprintf instead of variables contained in double quotes, it’s about 10x faster.</blurb></div>
+
+<div effect="fade-in-out"><break lines="6"/><blurb align="center">Use &lt;?php … ?> tags when declaring PHP as all other styles are depreciated, including short tags.</blurb></div>
+
+<div effect="fade-in-out"><break lines="6"/><blurb align="center">Just declaring a global variable without using it in a function slows things down (by about the same amount as incrementing a local var). PHP probably does a check to see if the global exists.</blurb></div>
+
+<div effect="fade-in-out"><break lines="6"/><blurb align="center">Methods in derived classes run faster than ones defined in the base class.</blurb></div>
+
+<div effect="fade-in-out"><break lines="6"/><blurb align="center">A function call with one parameter and an empty function body takes about the same time as doing 7-8 $localvar++ operations. A similar method call is of course about 15 $localvar++ operations.</blurb></div>
+
+<div effect="fade-in-out"><break lines="6"/><blurb align="center">Not everything has to be OOP, often it is just overhead, each method and object call consumes a lot of memory.</blurb></div>
+
+<div effect="fade-in-out"><break lines="6"/><blurb align="center">Avoid overusing function calls.
+Calling a function in PHP is very expensive, so avoid it whenever you can.</blurb></div>
+
+<div effect="fade-in-out">
+<break lines="6"/>
+<blurb align="center">Use isset where possible in replace of strlen.</blurb>
+<example><![CDATA[
+if (!isset($foo{5})) { echo "Foo is too short"; }
+//is faster than
+if (strlen($foo) < 5) { echo "Foo is too short"; }
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<break lines="6"/>
+<blurb align="center">Use pre-incrementing where possible as it is 10% faster</blurb>
+<example><![CDATA[
+++$i;
+//is faster than
+$i++;
+]]></example>
+</div>
+
+</slide>
