@@ -1,0 +1,28 @@
+<slide title="Development">
+
+<blurb fontsize="4em">Use strace</blurb>
+<blurb fontsize="3em">
+Start by looking for ENOENT on your production servers. Then look for execessive stats and check your realpath_cache_size.
+</blurb>
+
+<example title="Smarty Modifier Example" result="0" fontsize="0.9"><![CDATA[access("/var/www/current/lib/plugins/modifier.json_encode.php", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/lib/php5/plugins/modifier.json_encode.php", R_OK) = -1 ENOENT (No such file or directory)
+access("/usr/share/php/plugins/modifier.json_encode.php", R_OK) = -1 ENOENT (No such file or directory)
+access("./plugins/modifier.json_encode.php", R_OK) = -1 ENOENT (No such file or directory)
+...
+lstat("/var", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var/www", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var/www/current", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var/www/current/lib", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+lstat("/var/www/current/lib/Smarty", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var/www/current/lib/Smarty/plugins", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+lstat("/var/www/current/lib/Smarty/plugins/modifier.nl2br.php", {st_mode=S_IFREG|0644, st_size=649, ...}) = 0
+open("/var/www/current/lib/Smarty/plugins/modifier.nl2br.php", O_RDONLY) = 33
+]]></example>
+
+<example title="Smarty/plugins/modifier.nl2br.php"><![CDATA[<?php
+function smarty_modifier_nl2br($string) {
+    return nl2br($string);
+}]]></example>
+
+</slide>

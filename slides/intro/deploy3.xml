@@ -1,0 +1,12 @@
+<slide title="Deploying PHP/APC Apps">
+
+<break lines="1" />
+<blurb fontsize="6em">Atomic multi-file creation</blurb>
+
+<blurb fontsize="4em">Slightly trickier. Most often solved by having a current
+symlink that points to a release directory. When a new release is uploaded to the
+server, the symlink is moved when all the files are in place.</blurb>
+
+<blurb fontsize="4em">If you have a CDN, or don't delete static assets and you manage your caches
+appropriately, you can get away with rsync'ing the files into place.</blurb>
+</slide>

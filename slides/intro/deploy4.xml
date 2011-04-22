@@ -1,0 +1,13 @@
+<slide title="Deploying PHP/APC Apps">
+
+<break lines="1" />
+<blurb fontsize="6em">Don't break/miss requests and cache clearing</blurb>
+
+<blurb fontsize="4em">This is where some magic is needed.</blurb>
+
+<blurb fontsize="4em">Multiple in-memory caches to manage</blurb>
+<list>
+<item fontsize="2.5em">Shared memory caches like Memcache and APC</item>
+<item fontsize="2.5em">In-process caches, primarily the realpath_cache</item>
+</list>
+</slide>

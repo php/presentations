@@ -1,0 +1,18 @@
+<slide title="Deploying PHP/APC Apps">
+
+<break lines="1" />
+<blurb fontsize="6em">Atomic file creation</blurb>
+
+<blurb fontsize="4em" marginleft="1.5em">Solved problem</blurb>
+
+<list type="rgillemet">
+<item fontsize="2.7em">rsync</item>
+<item fontsize="2.7em">copy files to new release dir and move symlink</item>
+</list>
+<break lines="2"/>
+<list type="otimes">
+<item fontsize="3em">Don't "svn up"/"git pull"</item>
+<item fontsize="3em">Don't tar/cp/scp</item>
+</list>
+
+</slide>

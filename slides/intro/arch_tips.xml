@@ -1,0 +1,17 @@
+<slide title="Architecture">
+
+<break lines="2"/>
+<blurb fontsize="6em">Architecture Reminders</blurb>
+<list>
+<item>Use a different domain/sub-domain for static assets</item>
+<item>Keep your cookies short and remember the MTU size</item>
+<item>Don't overload your web servers</item>
+<item>Use out-of-band processing - Gearman or custom via ZeroMQ</item>
+<item>Don't move relational data out of a relational database</item>
+<item>Do move _huge_ non-relational tables out of your relational DB</item>
+<item>Be very very careful with foreign keys. Avoid them if possible</item>
+<item>Think long and hard about your ORM/caching strategy</item>
+<item>If you are not on PHP 5.3 yet, do it!</item>
+</list>
+
+</slide>

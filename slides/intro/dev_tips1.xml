@@ -1,0 +1,17 @@
+<slide title="Development">
+
+<break lines="3"/>
+<blurb fontsize="7em" align="center">error_reporting -1</blurb>
+<blurb fontsize="3em">
+Any error/warning/notice/strict can take *0.15ms* on modern production hardware even if it isn't logged if you are using custom error handlers.
+</blurb>
+
+<example><![CDATA[<?php 
+$results = get_results();
+foreach($results as $foo) {
+   if($foo > 10) $stuff[]++; 
+}
+template->assign('stuff', $stuff);
+]]></example>
+
+</slide>

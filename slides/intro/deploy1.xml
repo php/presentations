@@ -1,0 +1,16 @@
+<slide title="Deploying PHP/APC Apps">
+
+<break lines="1" />
+<blurb fontsize="6em">Considerations</blurb>
+
+<list>
+<item fontsize="2.6em">Atomic file creation</item>
+<item fontsize="2.6em">Atomic multi-file creation</item>
+<item fontsize="2.6em">Cache clearing</item>
+<item fontsize="2.6em">We don't want to break running requests</item>
+<item fontsize="2.6em">We don't want to miss any requests</item>
+<item fontsize="2.6em">Robustness - don't leave system in broken state</item>
+<item fontsize="2.6em">Logging</item>
+</list>
+
+</slide>

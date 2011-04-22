@@ -1,0 +1,38 @@
+<slide title="Development">
+
+<blurb fontsize="4em">Static Analysis</blurb>
+<blurb fontsize="3em">
+You can use HipHop-PHP to do static analysis
+</blurb>
+
+<example fontsize="1.4em" type="shell" title="With apc.stat=0"><![CDATA[$ find $SRC_DIR -name '*.php' | grep -v phpunit > $OUTPUT_DIR/files.txt
+$ $HPHP_HOME/src/hphp/hphp \
+  --input-list=$OUTPUT_DIR/files.txt \
+  --input-dir=$SRC_DIR \
+  --cmodule=$SRC_DIR/htdocs \
+  --include-path="$SRC_DIR/lib:." \
+  --output-dir=$OUTPUT_DIR \
+  --gen-stats=1 \
+  --keep-tempdir=1 \
+  --log=3 \
+  --force=1 \
+  --parse-on-demand=0 \
+  --target=analyze
+]]></example>
+
+<break lines="1"/>
+<blurb fontsize="3em">It will find these sorts of things</blurb>
+
+<list fontsize="2.5em">
+<item>Use of Undeclared Variables/Constants/Classes</item>
+<item>Calls to non-existent functions/methods</item>
+<item>Redefining constants</item>
+<item>Repeating a function parameter name in function declaration</item>
+<item>Required function parameters after optional ones in function declaration</item>
+<item>Too few/many arguments in a function call</item>
+<item>Code that will never be executed</item>
+<item>Use of Void return value</item>
+<item>Missing object context (using $this in a static method)</item>
+</list>
+
+</slide>

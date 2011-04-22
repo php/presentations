@@ -1,0 +1,43 @@
+<presentation 
+    template="php2" 
+    navmode="html"
+    titlecolor="#1111aa"
+    navbarbackground="url(images/trans-ffffff.png)"
+    logo1="images/php-med-trans-light.gif"
+    titlesize="2em"
+    navbarheight="3.5em"
+>
+<!--
+Performance
+-->
+
+<topic>PHP</topic>
+<title>PHP in 2011</title>
+<event>PHP Community Conference</event>
+<location>Nashville</location>
+<date>April 22, 2011</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/phpcon2011</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/intro/2011.xml</slide>
+<slide>slides/intro/Tech2011.xml</slide>
+<slide>slides/intro/web_servers.xml</slide>
+<slide>slides/intro/dev_tips1.xml</slide>
+<slide>slides/intro/dev_tips2.xml</slide>
+<slide>slides/intro/dev_tips3.xml</slide>
+<slide>slides/intro/dev_tips4.xml</slide>
+<slide>slides/intro/dev_tips5.xml</slide>
+<slide>slides/intro/arch_tips.xml</slide>
+<slide>slides/intro/deploy1.xml</slide>
+<slide>slides/intro/deploy2.xml</slide>
+<slide>slides/intro/deploy3.xml</slide>
+<slide>slides/intro/deploy4.xml</slide>
+<slide>slides/intro/deploy5.xml</slide>
+<slide>slides/intro/deploy6.xml</slide>
+<slide>slides/intro/deploy7.xml</slide>
+<slide>slides/intro/deploy8.xml</slide>
+<slide>slides/intro/key_ref2011.xml</slide>
+
+</presentation>
