@@ -23,12 +23,6 @@
 </div>
 
 <div effect="fade-in-out">
-	<blurb>With a browser:</blurb>
-	<blurb class="small_blurb">%  http://pres/show.php|698fe5|?XDEBUG_SESSION_START=xdebugrocks|%</blurb>
-	<blurb class="small_blurb">%  http://pres/show.php|698fe5|?XDEBUG_SESSION_STOP=1|%</blurb>
-</div>
-
-<div effect="fade-in-out">
 	<blurb>With browser extensions:</blurb>
 	<blurb class="small_blurb">easy Xdebug (FireFox): <link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></blurb>
 	<blurb class="small_blurb">Xdebug Helper (Chrome): <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></blurb>

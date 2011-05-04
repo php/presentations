@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	stylesheet="presentations/slides/ezc/ez.css"
+	backgroundfixed="1" >
+<topic>Debugging</topic>
+<title>Xdebug</title>
+<event>PHP North West</event>
+<location>Manchester, UK</location>
+<date>May 3rd, 2011</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/toolbox/me.xml</slide>
+
+<slide>slides/xdebug/main-things.xml</slide>
+<slide>slides/xdebug/pimped.xml</slide>
+<slide>slides/xdebug/pimp1-quick.xml</slide>
+<slide>slides/xdebug/pimp3.xml</slide>
+<slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/cli-color.xml</slide>
+<slide>slides/xdebug/shutup.xml</slide>
+<slide>slides/xdebug/headers.xml</slide>
+
+<slide>slides/xdebug/tracing.xml</slide>
+<slide>slides/xdebug/functiontrace-summary.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/fly-swat.xml</slide>
+<slide>slides/xdebug/analyse-running-script.xml</slide>
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/netbeans.xml</slide>
+<slide>slides/xdebug/komodo.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/profile2.xml</slide>
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+<!--<slide>slides/xdebug/live-demo.xml</slide>-->
+
+<slide>slides/xdebug/donate.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

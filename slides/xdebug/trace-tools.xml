@@ -2,8 +2,7 @@
 <title>Trace file analysers</title>
 
 <div effect="fade-out">
-<list>
-	<bullet>One bundled with Xdebug:
+	<blurb>One bundled with Xdebug:</blurb>
 <example>
 php ~/dev/php/xdebug/trunk/contrib/tracefile-analyser.php
 ...
@@ -32,20 +31,14 @@ ezcBase::loadFile                                            88  0.1599  5988856
 ezcDocumentRstStack->shift                                  715  1.0971   -59360  0.0719    80520
 DateTime->__construct                                       866  0.0710      488  0.0710      488
 </example>
-	</bullet>
-</list>
 </div>
 <div effect="fade-in-out">
-<list>
-	<bullet>
-		ValaXdebugTools (http://tinyurl.com/vxdebugtools):
+<blurb>ValaXdebugTools (http://tinyurl.com/vxdebugtools):</blurb>
 		<list>
 <bullet>*trace4func*: Give a function name, get a stack trace for each time it is called.</bullet>
 <bullet>*evaled*: Prints an ordered list of evals, together with what file is responsible for this evil.</bullet>
 <bullet>*whocalls*: Find out what files contain calls to the given function.</bullet>
 <bullet>*whatisincluded*: Find out what files are included and where they are included from.</bullet>
 		</list>
-	</bullet>
-</list>
 </div>
 </slide>

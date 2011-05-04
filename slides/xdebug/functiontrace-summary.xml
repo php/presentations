@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Function traces</title>
+
+	<list>
+		<bullet>Textual traces</bullet>
+		<bullet>Parsable traces</bullet>
+		<bullet>HTML traces</bullet>
+		<bullet>Tracing only parts of an application with *xdebug_start_trace()* and *xdebug_stop_trace()*.</bullet>
+		<bullet>Fetching the trace file name that is being used with *xdebug_get_tracefile_name()*.</bullet>
+		<bullet>Changing how much data is shown with *xdebug.var_display_max_children*, *xdebug.var_display_max_data* and *xdebug.var_display_max_depth*.</bullet>
+	</list>
+</slide>
