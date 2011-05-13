@@ -2,7 +2,7 @@
 <title>Fetching OSM data</title>
 
 <example>wget 
-  http://osmxapi.hypercube.telascience.org/api/0.6/node
+  http://open.mapquestapi.com/xapi/api/0.6/node
   [amenity=pub] 
   [bbox=-2.401,53.394,-2.104,53.551]
   -O pubs.osm</example>

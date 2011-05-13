@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	backgroundfixed="1" >
+<topic>Maps</topic>
+<title>Geolocation and Maps with PHP</title>
+<event>DPC</event>
+<location>Amsterdam, the Netherlands</location>
+<date>May 20th, 2011</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<joindin>http://joind.in/3226</joindin>
+<url>http://derickrethans.nl/talks.html</url>
+<slide>slides/map/title.xml</slide>
+<slide>slides/toolbox/me.xml</slide>
+
+<!-- THEORY -->
+<!--
+- coordinate systems
+  - reference ellipsoid/datum
+    - can have multiple coordinate systems
+	- WGS84 datum -> GPS/
+	- reference ellipsoid -> WGS84/OSGB36 = datum (geodetic)
+	GRS80 ellipsoid )reference ellipsoid)
+	- OS -> OSGB36 datum/Airy 1830 ellipsoid
+	  - Transverse Mercator projection with an origin at 49° N, 2° W 
+	  - The most common transformation is called the Helmert datum transformation, which results in a typical 7 m error from true. The definitive transformation from ETRS89 that is published by the OSGB is called the National Grid Transformation OSTN02.[2] This models the detailed distortions in the 1936–1962 retriangulation, and achieves backwards compatibility in grid coordinates to sub-metre accuracy.
+  - geoid
+- projections
+-->
+
+<slide>slides/map/earth-not-a-sphere.xml</slide>
+<slide>slides/map/earth-sphere-approximation.xml</slide>
+<slide>slides/map/meridian.xml</slide>
+<slide>slides/map/projections.xml</slide>
+<slide>slides/map/coordinates.xml</slide>
+<slide>slides/map/coordinate-transformation.xml</slide>
+<slide>slides/map/grid-systems.xml</slide>
+
+<!--
+SHOWING DATA
+- OpenStreetMap tiles
+- (Google, eew!)
+-->
+<slide>slides/map/googlemap.xml</slide>
+<slide>slides/map/openlayers-simple.xml</slide>
+<slide>slides/map/leaflet.xml</slide>
+
+<!--
+ACQUIRING LOCATION
+- Nominatim
+- Geonames
+- Yahoo
+- firefox location API
+- Google GeoLocation
+-->
+<slide>slides/map/openlayers-location.xml</slide>
+<slide>slides/map/openlayers-location-services.xml</slide>
+<slide>slides/map/reverse.xml</slide>
+<slide>slides/map/reverse-services.xml</slide>
+
+<slide>slides/map/html-location-services.xml</slide>
+<slide>slides/map/google-geolocation.xml</slide>
+
+<!--
+ACQUIRING DATA
+- Open Street Map
+- Ordnance Survey Open CodePoint
+- GPX files
+-->
+<slide>slides/map/osm-what.xml</slide>
+<slide>slides/map/osm-xapi.xml</slide>
+<slide>slides/map/osm-data.xml</slide>
+<slide>slides/map/osm-parse-into-db.xml</slide>
+
+<!--
+PLOTTING DATA
+- mysql/sqlite/mongodb
+- distances are tricky
+- flickr photos
+-->
+
+<slide>slides/map/finding-food.xml</slide>
+<slide>slides/map/finding-distances.xml</slide>
+<slide>slides/map/finding-food-take2.xml</slide>
+<slide>slides/map/flickr.xml</slide>
+
+<!-- micro format: http://en.wikipedia.org/wiki/Geo_%28microformat%29 -->
+
+<slide>slides/map/resources.xml</slide>
+<slide>slides/map/google-geolocation-get-wlan.xml</slide>
+
+</presentation>
