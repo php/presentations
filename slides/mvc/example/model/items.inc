@@ -12,6 +12,7 @@ class items extends db {
     $t = $_SERVER["REQUEST_TIME"];
     try {
       if(!self::$dbh) $this->connect();
+      self::$dbh->beginTransaction();
       $stmt = self::$dbh->prepare("INSERT INTO items 
                                     (id,cat,sdesc,ldesc,price,ctime)
                                    VALUES 
@@ -21,7 +22,9 @@ class items extends db {
                       ':ldesc'=>$item['ldesc'],
                       ':price'=>$item['price']);
       $ret = $stmt->execute($params);
+      self::$dbh->commit();
     } catch (PDOException $e) {
+      self::$dbh->rollback();
       $this->fatal_error($e->getMessage());
     }
     return $ret;
@@ -30,6 +33,7 @@ class items extends db {
   function modify($item) {
     try {
       if(!self::$dbh) $this->connect();
+      self::$dbh->beginTransaction();
       $stmt = self::$dbh->prepare("UPDATE items SET 
                                     cat=:cat, sdesc=:sdesc, 
                                     ldesc=:ldesc, price=:price 
@@ -40,7 +44,9 @@ class items extends db {
                       ':price'=>$item['price'],
                       ':id'=>$item['id']);
       $ret = $stmt->execute($params);
+      self::$dbh->commit();
     } catch (PDOException $e) {
+      self::$dbh->rollback();
       $this->fatal_error($e->getMessage());
     }
     return $ret;
