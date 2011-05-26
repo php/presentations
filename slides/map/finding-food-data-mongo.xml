@@ -37,8 +37,34 @@ foreach( $s['results'] as $res) {
 <div effect="fade-in-out">
 <blurb>Spatial Index</blurb>
 <example><![CDATA[
-db.poi.ensureIndex( { loc : '2d' } );
+db.poi.ensureIndex( { poi : '2d' } );
+
+$s = $d->command(
+    array(
+        'geoNear' => 'poi',
+        'near' => array( $_GET['lat'], $_GET['lon'] ),
+        'num' => 10000,
+        'maxDistance' => $wantedD * (360 / (2*M_PI*6371.01)), // km to °
+        'query' => $query,
+    )
+);
 ]]></example>
-<blurb>It is not a geospatial index (yet)</blurb>
+<blurb>Geospatial Index (since 1.7)</blurb>
+<!--
+<example><![CDATA[
+db.poi.ensureIndex( { poi : '2d' } );
+
+$s = $d->command(
+    array(
+        'geoNear' => 'poi',
+        'spherical' => true,
+        'near' => array( $_GET['lat'], $_GET['lon'] ),
+        'num' => 10000,
+        'maxDistance' => $wantedD / 6371.01, // km to radians
+        'query' => $query,
+    )
+);
+]]></example>
+-->
 </div>
 </slide>

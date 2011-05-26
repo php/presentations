@@ -39,5 +39,7 @@ BEGIN
 	RETURN 2 * ASIN(SQRT(@d)) * 6371.01;
 END//
 ]]></example>
+
+<div><blurb>See also: <link href='http://drck.me/spat-mysql-8ls'/></blurb></div>
 </div>
 </slide>

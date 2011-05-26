@@ -6,11 +6,13 @@
 	<blurb>Helmert transformation:</blurb>
 	<image filename="helmert2.png" attr="http://en.wikipedia.org/wiki/Helmert_transformation"/>
 
-	<blurb>WGS84 to OSGB36:</blurb>
+	<blurb>WGS84 to OSGB36 (OSTN2):</blurb>
 <example>
 cx: −446.448 cy: 125.157 cz: −542.06
 s: 20.4894
 rx: −0.1502  ry: −0.247  rz: −0.8421</example>
 
 	<blurb>Accuracy of about 7m for a OSGB36/WGS84 transformation</blurb>
+
+	<blurb>See also: <link href='http://wiki.openstreetmap.org/wiki/OSTN02_for_PHP'/></blurb>
 </slide>

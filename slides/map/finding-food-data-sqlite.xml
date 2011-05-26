@@ -46,5 +46,6 @@ function distance2($latA, $lonA, $latB, $lonB)
     return $d * 6371.01;
 }
 ]]></example>
+<div><blurb>See also: <link href='http://drck.me/spat-osm-sqlite-8la'/></blurb></div>
 </div>
 </slide>

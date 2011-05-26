@@ -38,10 +38,8 @@
 <slide>slides/map/earth-not-a-sphere.xml</slide>
 <slide>slides/map/earth-sphere-approximation.xml</slide>
 <slide>slides/map/meridian.xml</slide>
-<slide>slides/map/projections.xml</slide>
 <slide>slides/map/coordinates.xml</slide>
-<slide>slides/map/coordinate-transformation.xml</slide>
-<slide>slides/map/grid-systems.xml</slide>
+<slide>slides/map/projections.xml</slide>
 
 <!--
 SHOWING DATA
@@ -88,7 +86,10 @@ PLOTTING DATA
 
 <slide>slides/map/finding-food.xml</slide>
 <slide>slides/map/finding-distances.xml</slide>
+<slide>slides/map/finding-food-data-sqlite.xml</slide>
+<slide>slides/map/finding-food-data-mysql.xml</slide>
 <slide>slides/map/finding-food-take2.xml</slide>
+<slide>slides/map/finding-food-data-mongo.xml</slide>
 <slide>slides/map/flickr.xml</slide>
 
 <!-- micro format: http://en.wikipedia.org/wiki/Geo_%28microformat%29 -->
