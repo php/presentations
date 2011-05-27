@@ -1,6 +1,6 @@
 <slide title="History">
 <blurb fontsize="16em" align="center">2005</blurb>
-<example fontsize="1.4em"><![CDATA[<?php
+<example fontsize="1.2em"><![CDATA[<?php
 class db {
   protected static $dbh = false;
 
