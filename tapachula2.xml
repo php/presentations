@@ -1,0 +1,40 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>Hacking the Web with People</title>
+<event>Congreso Internacional de Software Libre</event>
+<location>Tapachula, México</location>
+<date>May 28, 2011</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/tapachula2</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+<slide>slides/intro/ossworks.xml</slide>
+<slide>slides/intro/ego.xml</slide>
+<slide>slides/intro/web20.xml</slide>
+<slide>slides/intro/web2works.xml</slide>
+
+<slide>slides/intro/php53.xml</slide>
+<slide>slides/intro/php54.xml</slide>
+<slide>slides/intro/tapachula2_ref.xml</slide>
+
+</presentation>
