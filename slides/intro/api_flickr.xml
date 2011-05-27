@@ -1,0 +1,21 @@
+<slide title="Geocoded Photos">
+
+<example hide="0" result="1" fontsize="1.4em" title="Geocoded Flickr Photos"><![CDATA[<?php
+include 'flickr_api.inc';
+include 'secrets.inc';
+if(!isset($_POST['loc'])) $loc = ':-:location:-:';
+else $loc = $_POST['loc'];
+$flickr = new Flickr($secrets);
+list($tag) = explode(',', $loc);
+$params = array('tags'=>$tag, 'sort'=>'interestingness-desc');
+$photos = $flickr->photosSearch($params);
+if(isset($photos['photos'])) foreach($photos['photos'] as $photo) {
+    $url = $flickr->getPhotoURL($photo,'m');
+    echo '<img src="'.$url.'" />';
+} else echo "No photos found";
+?>
+<form action="<?php echo htmlspecialchars($PHP_SELF)?>" method="POST">
+Location: <input type=text name=loc size=60>
+</form>]]></example>
+
+</slide>
