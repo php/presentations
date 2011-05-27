@@ -37,18 +37,6 @@ $a = new b;
 
 <example fontsize="1.4em" hide="1" result='1' title="Output"><![CDATA[foo\bar]]></example>
 
-<break lines="1"/>
-<blurb fontsize="4em">PHP 5.3.3 - Bug fix</blurb>
-<example fontsize="1.4em" result='0' title=""><![CDATA[<?php
-namespace Foo;
-class Bar {
-    public function Bar() {
-        // treated as constructor in PHP 5.3.0-5.3.2
-        // treated as regular method in PHP 5.3.3
-    }
-}
-?>]]></example>
-
 <break lines="1" />
 <blurb fontsize="4em">Late Static Binding - http://php.net/lsb</blurb>
 

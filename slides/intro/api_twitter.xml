@@ -1,0 +1,27 @@
+<slide title="Geocoded Twitter Search">
+<break lines="1" />
+<example title="Geocoded Twitter Search" fontsize="1.3em" rfontsize="1em" result="1"><![CDATA[<?php
+$ggc  = 'http://maps.googleapis.com/maps/api/geocode/json';
+$loc  = urlencode(':-:location:-:');
+$json = file_get_contents("$ggc?address=$loc&sensor=false");
+$data = json_decode($json);
+$lat  = $data->results[0]->geometry->location->lat;
+$lng  = $data->results[0]->geometry->location->lng;
+
+$tws  = 'http://search.twitter.com/search.json';
+$json = file_get_contents("$tws?geocode=$lat%2C$lng%2C25km&rpp=50");
+$data = json_decode($json);
+
+$twpr = 'http://api.twitter.com/1/users/profile_image';
+
+foreach($data->results as $tweet):
+echo <<<EOT
+<img src="$twpr/{$tweet->from_user}?size=normal" style="float:left;"/>
+&nbsp;<b>{$tweet->from_user}</b><br />
+&nbsp;{$tweet->text}<br clear="left"/>
+<br />
+EOT;
+endforeach;
+?>]]></example>
+
+</slide>

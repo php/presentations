@@ -1,0 +1,61 @@
+<slide title="Map Tiles API">
+<blurb>Yahoo Map Tiles</blurb>
+<example fontsize="1.2em" title="Example" result="1" marginright="0em"><![CDATA[<html><head><title>Map Tile Demo</title>
+<script type="text/javascript">
+<?php
+function request_cache($url, $dest_file, $timeout=43200) {
+  if(!file_exists($dest_file) || filemtime($dest_file) < (time()-$timeout)) {
+    $stream = fopen($url,'r');
+    $tmpf = tempnam('/tmp','YWS');
+    file_put_contents($tmpf, $stream);
+    fclose($stream);
+    rename($tmpf, $dest_file);
+  }
+}
+
+$cities = array("San Francisco","Los Angeles","Paris","London","Mexico City", 
+                "Chicago", "Copenhagen", "Moscow", "New York City", "Mumbai",
+                "Toronto", "Miami, FL", "Porto Alegre, RS", ":-:location:-:");
+
+$width = 600; $height = 500; $zoom = 7;
+ 
+$url  = "http://local.yahooapis.com/MapsService/V1/mapImage?appid=rlerdorf"; 
+$url .= "&image_height=$height&image_width=$width&zoom=$zoom";
+$url .= "&location=";
+$i=0;
+foreach($cities as $city) {
+  $q = $url.rawurlencode($city); 
+  $tmp = '/tmp/yws_tile_'.md5($q); 
+  request_cache($q, $tmp);
+  $xml = simplexml_load_file($tmp); 
+  if($i==0) $first = (string)$xml;
+  echo <<<EOB
+image$i = new Image();
+image$i.src = "$xml";
+EOB;
+  $i++;
+}
+?>
+</script>
+</head><body>
+<?php
+echo <<<EOB
+<div id="img_container" 
+  style="float:left; height:{$height}px; width:{$width}px; padding: 0px 10px 0px 10px;">
+<img id="the_img" src="$first" height="$height" width="$width"/></div>
+EOB;
+$i=0;
+foreach($cities as $city) {
+  $q = rawurlencode($city);
+  echo <<<EOB
+<a href="http://maps.yahoo.com/beta/index.php?#trf=0&q1=$q"
+   onmouseover="document.getElementById('the_img').src=image$i.src;
+                this.style.backgroundColor='#eeee33';"
+   onmouseout="this.style.backgroundColor='#ffffff';">$city</a><br />
+EOB;
+  $i++;
+}
+?>
+</body></html>]]></example>
+
+</slide>
