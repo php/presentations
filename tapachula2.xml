@@ -22,7 +22,7 @@
 <url>http://talks.php.net/show/tapachula2</url>
 <twitter>@rasmus</twitter>
 
-<slide>slides/intro/titlepage_b.xml</slide>
+<slide>slides/intro/titlepage.xml</slide>
 <slide>slides/fowa/hist1.xml</slide>
 <slide>slides/fowa/hist2.xml</slide>
 <slide>slides/fowa/hist3.xml</slide>
@@ -33,8 +33,40 @@
 <slide>slides/intro/web20.xml</slide>
 <slide>slides/intro/web2works.xml</slide>
 
-<slide>slides/intro/php53.xml</slide>
-<slide>slides/intro/php54.xml</slide>
+<slide>slides/intro/phpjs_learn.xml</slide>
+<slide>slides/intro/sx.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/context_extract.xml</slide>
+<slide>slides/intro/placemaker.xml</slide>
+<slide>slides/intro/php_js1.xml</slide>
+<slide>slides/intro/php_js2.xml</slide>
+<slide>slides/intro/ajax30.xml</slide>
+<slide>slides/hacku/geoloc.xml</slide>
+
+<slide>slides/intro/php53_title.xml</slide>
+<slide>slides/intro/php53_perf.xml</slide>
+<slide>slides/intro/php53_closures.xml</slide>
+<slide>slides/intro/php53_namespaces.xml</slide>
+<slide>slides/intro/php53_lsb.xml</slide>
+<slide>slides/intro/php53_gc.xml</slide>
+<slide>slides/intro/php53_nowdoc.xml</slide>
+<slide>slides/intro/php53_goto.xml</slide>
+<slide>slides/intro/php53_tern.xml</slide>
+<slide>slides/intro/php53_dir.xml</slide>
+<slide>slides/intro/php53_callstatic.xml</slide>
+<slide>slides/intro/php53_dynamicstatic.xml</slide>
+<slide>slides/intro/php53_date.xml</slide>
+<slide>slides/intro/php53_spl.xml</slide>
+<slide>slides/intro/php53_fpm.xml</slide>
+<slide>slides/intro/php53_openssl.xml</slide>
+<slide>slides/intro/php54_title.xml</slide>
+<slide>slides/intro/php54_perf.xml</slide>
+<slide>slides/intro/php54_traits.xml</slide>
+<slide>slides/intro/php54_fad.xml</slide>
+<slide>slides/intro/php54_tfcs.xml</slide>
+<slide>slides/intro/php54_json.xml</slide>
+<slide>slides/intro/php54_misc.xml</slide>
+<slide>slides/intro/php54_disc.xml</slide>
 <slide>slides/intro/tapachula2_ref.xml</slide>
 
 </presentation>
