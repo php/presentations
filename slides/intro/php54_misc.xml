@@ -1,0 +1,14 @@
+<slide title="Miscellaneous">
+
+<blurb fontsize="4em">New Output API (internal code cleanup)</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">&amp;lt;?= is now always available</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">default charset is UTF-8 instead of ISO-8859-1</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">Multibyte support is now configurable at runtime</blurb>
+
+</slide>

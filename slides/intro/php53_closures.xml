@@ -2,7 +2,7 @@
 
 <break lines="1" />
 
-<blurb fontsize="4em">Closures - http://php.net/closures</blurb>
+<blurb fontsize="4em">http://php.net/closures</blurb>
 
 <example fontsize="1.4em" result='1' title=""><![CDATA[<?php
 $data = array(3,2,8,5,6,1,7,4,9);

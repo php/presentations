@@ -7,10 +7,10 @@
  $type = 'documentType=text/plain';
  $q = <<<EOB
 I was born in Greenland, grew up in Denmark and have also lived
-in Canada, Brazil and now live in Sunnyvale.  This week I am at
-the University of Waterloo for HackU and I am giving a talk in
-Toronto right now.  On Saturday I fly to San Francisco.
-Jack London is not around.
+in Canada, and Brazil and now live in Sunnyvale.  Today I am 
+in Tapachula giving a talk. I fly back to San Francisco tomorrow
+and next week I am going to Rio de Janeiro.  
+Jack London is not here.
 EOB;
 
  $post="appid=$appid&$type&documentContent=".rawurlencode($q);

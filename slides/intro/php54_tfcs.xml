@@ -1,0 +1,17 @@
+<slide title="Closures">
+
+<blurb fontsize="4em">$this from current scope supported in Closures</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+class Foo {
+  private $prop = "bar";
+  public function getPrinter() {
+    return function() { echo ucfirst($this->prop); };
+  }
+}
+
+$a = new Foo;
+$func = $a->getPrinter();
+$func(); // Outputs: Bar
+?>]]></example>
+
+</slide>

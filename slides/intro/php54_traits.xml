@@ -1,0 +1,25 @@
+<slide title="Traits">
+
+<blurb fontsize="4em">Traits aka Horizontal Code Reuse</blurb>
+<blurb fontsize="4em">(Compiler-assisted Copy-and-Paste)</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+trait Singleton {
+    public static function getInstance() { ... }
+}
+
+class A {
+    use Singleton;
+    // ...
+}
+
+class B extends ArrayObject {
+    use Singleton;
+    // ...
+}
+
+// Singleton method is now available for both classes
+A::getInstance();
+B::getInstance();
+?>]]></example>
+
+</slide>

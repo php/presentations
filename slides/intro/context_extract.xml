@@ -1,0 +1,27 @@
+<slide title="Context Extraction API">
+
+<example type="shell" fontsize="1.3em"> _Parameter       Value                                Description                          _
+ appid     string (required) The application ID. See Application IDs for more information.
+ context   string (required) The context to extract terms from (UTF-8 encoded).
+ query     string            An optional query to help with the extraction process.</example>
+
+<example title="Example" fontsize="1.4em" rfontsize="1.3em" result="1"><![CDATA[<?php
+$context = <<< EOB
+PHP is a versatile scripting language, which is mostly used to solve the web
+problem.  PHP is not a drug, and it is not a Philippine currency, but chicks
+dig it.  Ok, perhaps chicks don't really dig it, and it is actually a currency, 
+but it is still cool.
+EOB;
+$url = 'http://search.yahooapis.com/ContentAnalysisService/V1/termExtraction';
+$post = "query=tool&appid=rlerdorf&context=".rawurlencode($context);
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $url);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+$xml = simplexml_load_string(curl_exec($ch));
+curl_close($ch);
+echo "<pre>".print_r($xml,1)."</pre>";
+?>]]></example>
+
+</slide>

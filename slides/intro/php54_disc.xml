@@ -1,0 +1,28 @@
+<slide title="Discussing">
+
+<blurb fontsize="4em">Short syntax for arrays</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+$a = [1, 2, 3];
+$b = ['foo' => 'orange', 'bar' => 'apple'];
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">Built-in Web server for testing</blurb>
+<example fontsize="2em" result='0' title="" type="shell"><![CDATA[
+% php -S localhost:8000
+Server is listening on localhost:8000... Press CTRL-C to quit.
+]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">method call/property access on instantiation</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+new foo()->bar()
+?>]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">Function call chaining (useful for closures)</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+foo()();
+?>]]></example>
+
+</slide>

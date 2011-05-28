@@ -1,0 +1,18 @@
+<slide title="Performance">
+
+<break lines="1" />
+<blurb fontsize="4em">Broad Performance Improvements</blurb>
+<list fontsize="3em">
+<item>FastCGI request handling</item>
+<item>better memory handling</item>
+<item>startup/shutdown</item>
+<item>repeated run-time function binding</item>
+<item>string constants</item>
+<item>access to global constants</item>
+<item>access to static properties</item>
+<item>empty hashes</item>
+<item>@ operator</item>
+<item>unserialize()</item>
+</list>
+
+</slide>
