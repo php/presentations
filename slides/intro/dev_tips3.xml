@@ -1,19 +1,17 @@
-<slide title="Development">
+<slide title="">
 
 <blurb fontsize="4em">Use a profiler</blurb>
-<blurb fontsize="3em">
+<blurb fontsize="4em">
 Use callgrind/xdebug/xhprof/xhgui to find problems
 </blurb>
 
-<blurb fontsize="4em">Go to Paul's talk at 13:15 to hear all about xhprof/xhgui</blurb>
-
-<blurb fontsize="1.5em">Example: Callgrind catching an unset timezone</blurb>
+<blurb fontsize="3em" marginleft="1.5em">Example: Callgrind catching an unset timezone</blurb>
 <image filename="twit_notice.png" align="center"/>
 
-<blurb fontsize="1.5em">Example: An Xdebug profile</blurb>
+<blurb fontsize="3em" marginleft="1.5em">Example: An Xdebug profile</blurb>
 <image filename="twit_xdebug.png" width="1100" align="center"/>
 
-<blurb fontsize="1.5em">Example: Using Xdebug to try to understand Wordpress</blurb>
+<blurb fontsize="3em" marginleft="1.5em">Example: Using Xdebug to try to understand Wordpress</blurb>
 <image filename="wp_xdebug.png" width="1000" align="center"/>
 
 <break lines="10"/>
