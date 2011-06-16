@@ -1,0 +1,22 @@
+<slide title="Removed Features">
+
+<break lines="2"/>
+<list fontsize="4em">
+<item>allow_call_time_pass_reference</item>
+<item>define_syslog_variables</item>
+<item>highlight.bg</item>
+<item>register_globals</item>
+<item>register_long_arrays</item>
+<item>safe_mode</item>
+<item>safe_mode_gid</item>
+<item>safe_mode_include_dir</item>
+<item>safe_mode_exec_dir</item>
+<item>safe_mode_allowed_env_vars</item>
+<item>safe_mode_protected_env_vars</item>
+<item>zend.ze1_compatibility_mode</item>
+<item>session.bug_compat42</item>
+<item>session.bug_compat_warn</item>
+<item>y2k_compliance</item>
+</list>
+
+</slide>

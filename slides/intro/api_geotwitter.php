@@ -1,15 +1,24 @@
 <?php
 if(empty($_GET['lat'])):?>
 <script type="text/javascript" src="/jquery.min.js"></script>
+<script type="text/javascript"
+         src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<div id="map" style="width: 600px; height: 480px;"></div>
+<div id="tweets"></div>
 <script>
 $(document).ready(function() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition (
       function(position) {
-        console.log(position);
         var target = "/presentations/slides/intro/api_geotwitter.php";
-        $.get(target, {'lat':position.coords.latitude,
-                       'lng':position.coords.longitude},
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+        var gop = { zoom: 15, center: new google.maps.LatLng(lat, lng),
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    scaleControl: true };
+        var map = new google.maps.Map(document.getElementById("map"),gop);
+        $.get(target, {'lat':lat, 'lng':lng},
                       function(responseText){  
                          $("#tweets").html(responseText);  
                       },  "html");
@@ -18,8 +27,6 @@ $(document).ready(function() {
   }
 });
 </script>
-<div id="tweets">
-</div>
 <?php
 else:
 $lat  = (double)$_GET['lat'];

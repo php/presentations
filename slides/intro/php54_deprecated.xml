@@ -1,0 +1,10 @@
+<slide title="Deprecated Features">
+
+<break lines="2"/>
+<list fontsize="4em">
+<item>magic_quotes_gpc</item>
+<item>magic_quotes_runtime</item>
+<item>magic_quotes_sybase</item>
+</list>
+
+</slide>
