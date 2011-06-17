@@ -5,7 +5,7 @@
 You can use HipHop-PHP to do static analysis
 </blurb>
 
-<example fontsize="1.4em" type="shell" title="With apc.stat=0"><![CDATA[$ find $SRC_DIR -name '*.php' | grep -v phpunit > $OUTPUT_DIR/files.txt
+<example fontsize="1.4em" type="shell" title=""><![CDATA[$ find $SRC_DIR -name '*.php' | grep -v phpunit > $OUTPUT_DIR/files.txt
 $ $HPHP_HOME/src/hphp/hphp \
   --input-list=$OUTPUT_DIR/files.txt \
   --input-dir=$SRC_DIR \
