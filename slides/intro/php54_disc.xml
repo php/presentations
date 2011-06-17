@@ -25,4 +25,10 @@ new foo()->bar()
 foo()();
 ?>]]></example>
 
+<break lines="1" />
+<blurb fontsize="4em">Binary notation</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+$mask = 0b010101;
+?>]]></example>
+
 </slide>

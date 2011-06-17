@@ -12,4 +12,10 @@
 <break lines="1" />
 <blurb fontsize="4em">Multibyte support is now configurable at runtime</blurb>
 
+<break lines="1" />
+<blurb fontsize="4em">INI directive to disable POST data processing</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">Add E_STRICT to E_ALL</blurb>
+
 </slide>

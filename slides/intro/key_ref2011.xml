@@ -1,5 +1,11 @@
-<slide title="Resources">
-<break lines="5"/>
+<slide title="Conclusion">
+<break lines="2"/>
+<list fontsize="4em">
+<bullet>Real performance is architecture-driven</bullet>
+<bullet>Make sure you are on PHP 5.3</bullet>
+<bullet>Help us test PHP 5.4 now</bullet>
+</list>
+<break lines="2"/>
 <link fontsize="2.5em" marginleft="2em" leader="Slides: " href=":-:url:-:"/>
 <link fontsize="2.5em" marginleft="2em" leader="xhprof: " href="http://pecl.php.net/package/xhprof"/>
 <link fontsize="2.5em" marginleft="2em" leader="Xdebug: " href="http://xdebug.org/docs/profiler"/>
