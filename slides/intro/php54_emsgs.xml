@@ -1,0 +1,21 @@
+<slide title="Improved Error Messages">
+
+<blurb fontsize="4em">Slightly improved error messages</blurb>
+<example fontsize="1.5em" result='0' title="" type="shell"><![CDATA[ 
+% php -r 'class abc foo'
+
+Parse error: syntax error, unexpected 'foo' (T_STRING), expecting '{' 
+in Command line code on line 
+
+]]></example>
+
+<blurb fontsize="5.5em">vs.</blurb>
+<example fontsize="1.5em" result='0' title="" type="shell"><![CDATA[ 
+% php -r 'class abc foo'
+
+Parse error: syntax error, unexpected T_STRING, expecting '{' 
+in Command line code on line 1
+
+]]></example>
+
+</slide>

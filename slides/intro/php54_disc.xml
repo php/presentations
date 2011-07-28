@@ -1,11 +1,5 @@
 <slide title="Discussing">
 
-<blurb fontsize="4em">Short syntax for arrays</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
-$a = [1, 2, 3];
-$b = ['foo' => 'orange', 'bar' => 'apple'];
-?>]]></example>
-
 <break lines="1" />
 <blurb fontsize="4em">Built-in Web server for testing</blurb>
 <example fontsize="2em" result='0' title="" type="shell"><![CDATA[
@@ -23,12 +17,6 @@ new foo()->bar()
 <blurb fontsize="4em">Function call chaining (useful for closures)</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 foo()();
-?>]]></example>
-
-<break lines="1" />
-<blurb fontsize="4em">Binary notation</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
-$mask = 0b010101;
 ?>]]></example>
 
 </slide>
