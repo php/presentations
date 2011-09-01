@@ -1,7 +1,7 @@
 <slide>
 <title>Replacing functions</title>
 
-<image filename='function.jpg' align="right" attribution="http://www.flickr.com/photos/vestman/4908148942"/>
+<image filename='function.jpg' align="right" attribution="http://www.flickr.com/photos/vestman/4908148942" pdf-scale="0.5"/>
 
 <list>
 	<bullet>Replaces a function pointer in the symbol table with a new one</bullet>

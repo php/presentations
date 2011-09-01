@@ -1,17 +1,7 @@
 <slide>
 <title>Opcode overloading</title>
 
-<image filename='overload.jpg' align="right" attribution="http://www.flickr.com/photos/3059349393/3709115244"/>
+<image filename='opcodes.jpg' align="center"/>
 
-<blurb>Good:</blurb>
-<list>
-	<bullet>*Scream:* For making PHP ignore the %@% operator</bullet>
-	<bullet>*Xdebug:* For code coverage, ignoring the %@% operator</bullet>
-</list>
-<break/>
-
-<blurb>|dd0000|Bad:|</blurb>
-<list>
-	<bullet>*Operator*: Allows for operator overloading|888888|, but also demands your first-born|</bullet>
-</list>
+<blurb align="center">Opcodes you say?</blurb>
 </slide>

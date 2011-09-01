@@ -2,7 +2,7 @@
 <title>Why extensions?</title>
 <subtitle>They are faster than raw PHP code</subtitle>
 
-<image filename='concorde.jpg' align="right" attribution="http://www.flickr.com/photos/james_gordon_los_angeles/5597919621"/>
+<image filename='concorde.jpg' align="right" attribution="http://www.flickr.com/photos/james_gordon_los_angeles/5597919621" pdf-scale="0.5"/>
 
 <list>
 	<bullet>It's just too slow in normal PHP: %ssh2%, %openssl%</bullet>

@@ -1,7 +1,7 @@
 <slide>
 <title>British PHP</title>
 
-<image filename='union-jack.jpg' align="right" attribution="http://www.flickr.com/photos/princess_l_88/5657601138/"/>
+<image filename='union-jack.jpg' align="right" attribution="http://www.flickr.com/photos/princess_l_88/5657601138/" pdf-scale="0.5"/>
 
 <example><![CDATA[<?php
 $marmiteIsFor = 'trashcan';
