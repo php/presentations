@@ -3,7 +3,7 @@
 	<title>Profiling</title>
 	<subtitle>KCacheGrind's Call Graph and Source Annotations</subtitle>
 
-	<image filename="pg4.png" marginright="2em" align="right" pdf-scale="0.3"/>
+	<image filename="pg4.png" marginright="2em" align="right" pdf-float="1" x-offset="15" y-offset="0" pdf-scale="0.6"/>
 	<break/>
 	<list fontsize="4em">
 		<bullet>Call graph</bullet>

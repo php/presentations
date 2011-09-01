@@ -2,8 +2,7 @@
 	<title>Compiler Caches</title>
 	<subtitle>How it works</subtitle>
 
-	<image filename="execute-cache.png" class="spaced" pdf-scale="0.6"/>
-	<break lines="5"/>
+	<image filename="execute-cache2.png" class="spaced" pdf-scale="0.6"/>
 	<list>
 		<bullet>In general, each source file is compiled once</bullet>
 		<bullet>Compilation overhead becomes inconsequential</bullet>

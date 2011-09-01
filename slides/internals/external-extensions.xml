@@ -1,0 +1,13 @@
+<slide>
+<title>External</title>
+
+<image filename='external-extension.jpg' align="right" attribution="http://www.flickr.com/photos/sarahreido/4387746215"/>
+
+<blurb>Everything not in the core distribution</blurb>
+<list>
+	<bullet>Are often not compiled into PHP, but instead are compiled as shared
+	objects</bullet>
+	<bullet>Sometimes make their way into the core distribution, and sometimes
+	they are moved away</bullet>
+</list>
+</slide>

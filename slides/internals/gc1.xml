@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<slide fontsize="6em">
-	<title>Garbage Collection</title>
+<slide>
+	<title>Garbage Collections</title>
+	<subtitle>Garbage Creation</subtitle>
 
-	<list>
-		<bullet>Collects all the variable containers into a buffer</bullet>
-		<bullet>Once buffer is full, the algorithm runs to reclaim space</bullet>
-		<bullet>Can be turned on and off at will: *gc_enable()*, *gc_disable()*</bullet>
-		<bullet>Drastically reduces memory usage for testing eZ Components (2.4GB->500MB)</bullet>	
-	</list>
-<example>
-GC Statistics
--------------
-Runs:               124
-Collected:          2434961
-Root buffer length: 4
-Root buffer peak:   10000
+	<example>$a = array( 'meaning' => 'life', 'number' => 42 );
+xdebug_debug_zval( 'a' );</example>
 
-      Possible            Remove from  Marked
-        Root    Buffered     buffer     grey
-      --------  --------  -----------  ------
-ZVAL  13233645   2444651    2106657  18967079
-ZOBJ  41671687   2120597    1218587   2475517
-</example>
-<!--
- # vim: encoding=utf8
--->
+<example>a: (refcount=1, is_ref=0)=array (
+        'meaning' => (refcount=1, is_ref=0)='life',
+        'number' => (refcount=1, is_ref=0)=42
+)</example>
+	<image align="center" filename="gc-part1-figure1.png" />
 </slide>

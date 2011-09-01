@@ -9,13 +9,10 @@
 		<bullet>main script</bullet>
 		<bullet>function</bullet>
 		<bullet>class method</bullet>
+		<bullet>path analysis and dead code analysis</bullet>
 	</list>
 <break/>
 	<blurb>Usage:</blurb>
-	<example><![CDATA[cvs -d :pserver:cvsread@cvs.xdebug.org:/repository login
-# passwd = srmread
-cvs -d :pserver:cvsread@cvs.xdebug.org:/repository co -d vld vle
-cd vld
-phpize && make && make install
+	<example><![CDATA[pecl install vld
 php -dextension=vld.so -dvld.active=1 script.php]]></example>
 </slide>

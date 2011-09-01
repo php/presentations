@@ -11,43 +11,37 @@
 
 <div effect="fade-in-out">
 <blurb>eZ Publish:</blurb>
-<image filename="ezpublish-time.png"/>
+<image filename="ezpublish-time.png" pdf-scale="0.4" y-offset="2.0" x-offset="19" pdf-float="1"/>
 </div>
 
 <div effect="fade-in-out">
 <blurb>Symfony:</blurb>
-<image filename="symfony-time.png"/>
+<image filename="symfony-time.png" pdf-scale="0.4" y-offset="8.25" x-offset="19" pdf-float="1"/>
 </div>
 
 <div effect="fade-in-out">
 <blurb>Zeta Components:</blurb>
-<image align="right" filename="zeta-time.png"/>
+<image align="right" filename="zeta-time.png" pdf-scale="0.4" y-offset="13.5" x-offset="19" pdf-float="1"/>
 <example><![CDATA[<?php
 // Get the one and only instance of the ezcDebug.
 $debug = ezcDebug::getInstance();
-
 // Start the accumulator.
 $debug->startTimer( "Program runtime", "Accumulators" );
 $debug->switchTimer( "Start", "Program runtime" );
-
 // The name of the timer is: "Hello world" and it will be
 // placed in the group: "output". 
 $debug->startTimer ("Hello world", "output" );
 echo "Hello world<br/>";
 $debug->stopTimer( "Hello world" );
-
 // Replace the "Start" timer for "Half the way".
 $debug->switchTimer( "Half the way", "Start" );
-
 // Measure the time of writing "cruel world".
 $debug->startTimer( "Goodbye cruel world", "output" );
 echo "Goodbye cruel world<br/>";
 $debug->stopTimer( "Goodbye cruel world" );
-
 // Stop the last timer.
 $debug->switchTimer( "Stop", "Half the way" );
 $debug->stopTimer( "Stop" );
-
 // Get HTML output.
 $output = $debug->generateOutput();
 ?>]]></example>

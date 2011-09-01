@@ -1,0 +1,25 @@
+<slide>
+<title>Namespaces</title>
+
+<example><![CDATA[<?php
+namespace foobar;
+class log
+{
+    function logThat($message)
+    {
+        echo "Logging {$message}\n";
+    }
+}
+?>]]></example>
+<blurb>foobarlog.php</blurb>
+<break/>
+<example><![CDATA[<?php
+require 'foobarlog.php';
+use foobar\log as log;
+
+$log = new \foobar\log;
+$log = new log;
+$log->logThat( "yeah!" );
+?>]]></example>
+<blurb>namespace.php</blurb>
+</slide>

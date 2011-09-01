@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Input: FastCGI</title>
+
+	<blurb>Useful for Lighttpd and IIS</blurb>
+<break />
+
+	<blurb>FastCGI runs as a daemon:</blurb>
+	<list>
+		<bullet>Process control by the webserver</bullet>
+		<bullet>Request logic through the FastCGI module</bullet>
+	</list>
+	<example>
+fastcgi.server    = ( ".php" =>
+    ((
+        "bin-path" => "/usr/local/php/5.3dev/bin/php-cgi",
+        "socket" => "/tmp/php80.socket",
+        "max-procs" => 1,
+        "idle-timeout" => 20,
+        "bin-environment" => (
+            "PHP_FCGI_CHILDREN" => "1",
+            "PHP_FCGI_MAX_REQUESTS" => "10000"
+        ),
+        "bin-copy-environment" => (
+            "PATH", "SHELL", "USER"
+        ),
+        "broken-scriptfilename" => "enable"
+    ))
+)
+</example>
+</slide>

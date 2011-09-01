@@ -4,9 +4,9 @@
 <div effect="fade-out">
 	<blurb>One bundled with Xdebug:</blurb>
 <example>
-php ~/dev/php/xdebug/trunk/contrib/tracefile-analyser.php
+php ~/dev/php/xdebug/trunk/contrib/tracefile-analyser.php time-own 5
 ...
-Showing the 25 most costly calls sorted by 'time-own'.
+Showing the 5 most costly calls sorted by 'time-own'.
 
                                                                  Inclusive        Own
 function                                                 #calls  time     memory  time     memory
@@ -16,20 +16,6 @@ preg_match                                                 2986  0.3718  1016336
 {main}                                                        1  6.4562  7335704  0.3476 -15198832
 next                                                        432  0.2386        0  0.2386        0
 count                                                      3302  0.2132        0  0.2123        0
-ezcQuerySelectSqlite->from                                  434  0.4076   715880  0.1522  -663944
-ezcDocumentRstTokenizer->tokenizeString                       1  0.4426   817840  0.1431   435888
-ezcQuery::arrayFlatten                                     1303  0.1929   780360  0.1344   642792
-drBlogApi->fetchMetaData                                    433  0.3938  2381928  0.1160 -1440896
-ezcQuerySelect->select                                      434  0.2590   189496  0.1099  -437048
-ezcQueryExpression->getIdentifier                           870  0.1937        0  0.1093  -603752
-ezcQuerySelect->where                                       435  0.2155   104792  0.0917  -537512
-PDO->prepare                                                434  0.0885   622072  0.0885   622072
-array_key_exists                                            107  0.0884        0  0.0884        0
-join                                                       1740  0.0882   258264  0.0882   258264
-ezcDocumentRstParser->parse                                   4  2.3933  1427376  0.0757  -140208
-ezcBase::loadFile                                            88  0.1599  5988856  0.0747  3585136
-ezcDocumentRstStack->shift                                  715  1.0971   -59360  0.0719    80520
-DateTime->__construct                                       866  0.0710      488  0.0710      488
 </example>
 </div>
 <div effect="fade-in-out">

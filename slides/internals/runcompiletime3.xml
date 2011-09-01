@@ -1,0 +1,33 @@
+<slide>
+<title>Runtime vs Compile-time Inheritance</title>
+
+<example><![CDATA[<?php
+abstract class gargleblaster
+{
+    abstract function make();
+}
+?> ]]></example>
+<blurb>gargleblaster.php</blurb>
+<break/>
+
+<example><![CDATA[<?php
+class slartibartfast extends gargleblaster
+{
+    function make()
+    {
+        echo "Aw\n";
+    }
+}
+?>]]></example>
+<blurb>slartibartfast.php</blurb>
+<break/>
+
+<example><![CDATA[<?php
+function __autoload($className)
+{
+    require "{$className}.php";
+}
+$a = new slartibartfast();
+?>]]></example>
+<blurb>abstract-compiletime.php</blurb>
+</slide>

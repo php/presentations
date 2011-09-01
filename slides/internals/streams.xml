@@ -1,0 +1,10 @@
+<slide>
+<title>Streams</title>
+
+<image filename='stream.jpg' align="right" attribution="http://www.flickr.com/photos/quinet/2786214505"/>
+
+<list>
+	<bullet>*Wrappers:* Wrap around file reading and writing operations with a "protocol" (f.e.: %http://compress.bzip2%)</bullet>
+	<bullet>*Filters:* On the fly encrypting/decrypting filter (f.e.: *mcrypt_filter*)</bullet>
+</list>
+</slide>

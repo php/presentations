@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<slide>
+<title>Threaded Web Servers</title>
+
+<list>
+	<bullet>PHP is thread safe</bullet>
+	<bullet>Most extensions are thread safe</bullet>
+	<bullet>Whether libraries are, it depends</bullet>
+	<bullet>FastCGI/FPM is your solution</bullet>
+</list>
+</slide>

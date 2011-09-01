@@ -1,0 +1,11 @@
+<slide>
+<title>Internal</title>
+
+<image filename='internal-extension.jpg' align="right" attribution="http://www.flickr.com/photos/quakecon/3416461263"/>
+
+<blurb>Everything in ext/</blurb>
+<list>
+	<bullet>Are compiled into PHP</bullet>
+	<bullet>Can most of the time be compiled as shared extensions as well ← distributions like to do that |888888|(too much)|</bullet>
+</list>
+</slide>

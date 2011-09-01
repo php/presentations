@@ -1,0 +1,14 @@
+<slide>
+<title>PECL</title>
+
+<image filename='pickles.jpg' align="right" attribution="http://www.flickr.com/photos/24013072@N05/6027561697"/>
+
+<blurb>PECL: PHP Extension C Library</blurb>
+<list>
+	<bullet>http://pecl.php.net</bullet>
+	<bullet>A whole load of extensions for various interesting (and odd things)</bullet>
+	<bullet>Are installed with the *PECL* tool</bullet>
+	<bullet>Used to be called "Siberia"</bullet>
+	<bullet>Don't really have to be hosted in PHP's SVN repository, on the PECL website</bullet>
+</list>
+</slide>

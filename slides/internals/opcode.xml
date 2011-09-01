@@ -8,11 +8,19 @@
 		<bullet>One for every script element</bullet>
 	</list>
 
+	<blurb>Contains execution info for a function</blurb>
+	<list>
+		<bullet>name, filename, flags, start and end line, doc block</bullet>
+		<bullet>argument information</bullet>
+		<bullet>opcodes that contain instructions</bullet>
+	</list>
+
 	<blurb>Opcode</blurb>
 	<list fontsize="4em" marginleft="2em">
 		<bullet>Basic execution unit</bullet>
 		<bullet>Two operands</bullet>
 		<bullet>One result</bullet>
+		<bullet>%znode%s during compilation, %zend_op% containing everything at runtime</bullet>
 	</list>
 
 </slide>

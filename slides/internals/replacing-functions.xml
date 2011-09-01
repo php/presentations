@@ -1,0 +1,12 @@
+<slide>
+<title>Replacing functions</title>
+
+<image filename='function.jpg' align="right" attribution="http://www.flickr.com/photos/vestman/4908148942"/>
+
+<list>
+	<bullet>Replaces a function pointer in the symbol table with a new one</bullet>
+	<bullet>You can also use it for methods</bullet>
+	<bullet>Xdebug uses it to replace %var_dump% with %xdebug_var_dump%</bullet>
+	<bullet>You can only replace internal functions |888888|(unless you're %runkit%/%classkit% and you'd like some pain)|</bullet>
+</list>
+</slide>

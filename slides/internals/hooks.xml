@@ -1,0 +1,19 @@
+<slide>
+<title>Extension hooks</title>
+
+<image filename='hooks.jpg' align="right" attribution="http://www.flickr.com/photos/rogerss1/2770106311"/>
+
+<blurb>Normal extensions</blurb>
+<list>
+	<bullet>Module and request init and shutdown; and post module deinitialisation</bullet>
+	<bullet>phpinfo()</bullet>
+</list>
+<break/>
+
+<blurb>Zend extensions</blurb>
+<list>
+	<bullet>statement calls</bullet>
+	<bullet>all sorts of internal handlers: activate/deactivate functions,
+	op_array handler, op_array contructor and destructor</bullet>
+</list>
+</slide>

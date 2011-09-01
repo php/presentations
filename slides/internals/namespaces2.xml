@@ -1,0 +1,9 @@
+<slide>
+<title>Namespaces</title>
+
+<list>
+	<bullet>Allow shorter class names</bullet>
+	<bullet>Is basically glorified copy&amp;paste</bullet>
+	<bullet>No support for %use foobar\\*%</bullet>
+</list>
+</slide>

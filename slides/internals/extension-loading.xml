@@ -1,0 +1,10 @@
+<slide>
+<title>Extension Loading</title>
+
+<list>
+	<bullet>php.ini is loaded</bullet>
+	<bullet>zend extensions are loaded</bullet>
+	<bullet>extensions are loaded</bullet>
+	<bullet>%dl()% is problematic</bullet>
+</list>
+</slide>

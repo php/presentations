@@ -22,11 +22,11 @@ dot -Tpng -o inclued-classes.png inclued.out.dot</example>
 
 <div effect="fade-in-out">
 <blurb>Include overview: %inclued-includes.png%:</blurb>
-<image filename="inclued-includes.png"/>
+<image filename="inclued-includes.png" y-offset="12" pdf-float="1" x-offset="1" pdf-scale="0.5"/>
 </div>
 
 <div effect="fade-in-out">
 <blurb>Class hiearchy: %inclued-classes.png%:</blurb>
-<image filename="inclued-classes.png"/>
+<image filename="inclued-classes.png" y-offset="12" pdf-float="1" x-offset="16" pdf-scale="0.5"/>
 </div>
 </slide>

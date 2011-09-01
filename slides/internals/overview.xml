@@ -1,0 +1,40 @@
+<slide>
+<title>A few examples...</title>
+
+<list class="tiny">
+	<bullet>*Core distribution:* bcmath *bz2* calendar com_dotnet ctype curl date
+	dba dom enchant ereg exif fileinfo filter ftp *gd* gettext gmp hash iconv
+	imap interbase intl *json* ldap libxml mbstring mcrypt mssql mysql mysqli
+	mysqlnd oci8 odbc openssl pcntl *pcre* pdo pdo_dblib pdo_firebird pdo_mysql
+	pdo_oci pdo_odbc pdo_pgsql pdo_sqlite pgsql phar posix pspell readline
+	recode *reflection* *session* shmop simplexml skeleton snmp soap sockets spl
+	sqlite sqlite3 *standard* sybase_ct sysvmsg sysvsem sysvshm tidy tokenizer
+	wddx xml *xmlreader* xmlrpc xmlwriter xsl zip zlib</bullet>
+	<bullet>*PECL:* activescript adt amfext amqp apache_accessor *apc* apd apm
+	archive ares automap axis2 bbcode bcompiler bitset blenc bloomy bz2_filter
+	cairo chasen *classkit* colorer courierauth cpdf crack cubrid cvsclient
+	cybercash cybermut cyrus daffodildb date dazuko db dbase dbdo dbplus dbus
+	dbx demoext *dio* docblock domxml doublemetaphone drizzle dtrace ecasound
+	enchant *esmtp* etpan event expect fam fbsql fdf ffi filepro flitetts
+	framegrab freeimage fribidi fuse gdchart *gearman* gender geoip gmagick gnupg
+	gupnp haru hidef html_parse htscanner http hwapi hyperwave ibm_db2 id3 idn
+	iisfunc imagick ims inclued informix ingres inotify intercept intl iptcdata
+	ixsfunc judy kadm5 kakasi krb5 ktaglib lchash libevent libexif litespeed
+	llvm lua lzf mailparse markdown maxdb mcal mcrypt_filter mcve mdbtools
+	memcache *memcached* memsession memtrack ming mnogosearch mono mqseries
+	msession msql muscat myphp mysqlnd_mc mysqlnd_ms mysqlnd_pscache mysqlnd_qc
+	mysqlnd_sip mysqlnd_uh namazu ncurses Net_Gopher netools newt notes ntuser
+	oauth ocal *oggvorbis* openal opendirectory openssl operator optimizer oracle
+	ovrimos pam paradox params parsekit parse_tree pdf pdo_4d pdo_ibm pdo_ids
+	pdo_informix pdo_user *perl* pfpro phar philter phk phpdoc picosql
+	pop3 prephp preprocessor printer proctitle ps python qtdom radius rar rb
+	rpc rpmreader rrd rsvg rsync runkit sam sasl satellite scream sdo selinux
+	servlet session_pgsql shp simple_cvs smbc smtp sndfile solr sphinx
+	spl_types spplus spread sqlite ssdeep ssh2 statgrab stats stem stomp svn
+	swf swish sybase tcc tclink tcpwrap tdb tests textcat threads timezonedb
+	*translit* txforward unicode uploadprogress usblib uuid v8js valkyrie varnish
+	vpopmail w32api wbxml weakref win32ps win32scheduler win32service win32std
+	*wincache* wxwidgets xattr *xdiff* xdom xhprof xmgrace xml xmlrpci xmms xquery
+	xrange xslcache xslt yaf yami yaml yaz yp zeroconf zip zlib_filter</bullet>
+</list>
+</slide>

@@ -8,7 +8,7 @@
 		<bullet>Lexical analyze script source</bullet>
 		<bullet>Divide into logical blocks of characters</bullet>
 		<bullet>Give special blocks a meaning</bullet>
-		<bullet>%flex% (but only 2.5.4!)</bullet>
+		<bullet>%re2c% (%flex% originally)</bullet>
 	</list>
 
 	<blurb>The Parse Error: </blurb>

@@ -1,0 +1,26 @@
+<slide>
+<title>Namespaces</title>
+
+<example><![CDATA[
+line     # *  op                           fetch          ext  return  operands
+---------------------------------------------------------------------------------
+]]></example>
+<example><![CDATA[
+   5     5      EXT_STMT                                                 
+         6      ZEND_FETCH_CLASS                                 :1      'foobar%5Clog'
+         7      EXT_FCALL_BEGIN                                          
+         8      NEW                                              $2      :1
+         9      DO_FCALL_BY_NAME                              0          
+        10      EXT_FCALL_END                                            
+        11      ASSIGN                                                   !0, $2
+]]></example>
+<example><![CDATA[
+   6    12      EXT_STMT                                                 
+        13      ZEND_FETCH_CLASS                                 :5      'foobar%5Clog'
+        14      EXT_FCALL_BEGIN                                          
+        15      NEW                                              $6      :5
+        16      DO_FCALL_BY_NAME                              0          
+        17      EXT_FCALL_END                                            
+        18      ASSIGN                                                   !0, $6
+]]></example>
+</slide>

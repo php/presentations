@@ -1,0 +1,9 @@
+<slide>
+<title>Runtime vs Compile-time Inheritance</title>
+
+<list>
+<bullet>%__autoload()% vs. %require()%/%include()%</bullet>
+<bullet>early/late binding</bullet>
+<bullet>Consequences for opcode-caches</bullet>
+</list>
+</slide>

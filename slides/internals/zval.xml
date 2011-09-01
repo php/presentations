@@ -1,0 +1,33 @@
+<slide>
+<title>Variables</title>
+<subtitle>The Zed-val</subtitle>
+
+<example><![CDATA[typedef union _zvalue_value {
+    long lval;                  /* long value */
+    double dval;                /* double value */
+    struct {
+        char *val;
+        int len;
+    } str;
+    HashTable *ht;              /* hash table value */
+    zend_object_value obj;
+} zvalue_value;
+
+struct _zval_struct {
+    /* Variable information */
+    zvalue_value value;     /* value */
+    zend_uint refcount__gc;
+    zend_uchar type;    /* active type */
+    zend_uchar is_ref__gc;
+};]]></example>
+<example>#define IS_NULL     0
+#define IS_LONG     1
+#define IS_DOUBLE   2
+#define IS_BOOL     3
+#define IS_ARRAY    4
+#define IS_OBJECT   5
+#define IS_STRING   6
+#define IS_RESOURCE 7
+#define IS_CONSTANT 8
+#define IS_CONSTANT_ARRAY   9</example>
+</slide>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Input: FastCGI Process Manager (FPM)</title>
+
+	<blurb>Replacement for FastCGI?</blurb>
+<break />
+
+	<blurb>FPM manages a pool of PHP daemons:</blurb>
+<break />
+	<example>
+fastcgi.server    = ( ".php" =>
+    ((
+		"host" => "127.0.0.1",
+		"port" => "9020"
+    ))
+)
+</example>
+	<blurb>http://svn.php.net/viewvc/php/php-src/trunk/sapi/fpm/php-fpm.conf.in?revision=305775&amp;view=markup</blurb>
+</slide>

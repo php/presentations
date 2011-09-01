@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Garbage Collections</title>
+	<subtitle>Garbage Creation</subtitle>
+
+	<example><![CDATA[$a = array( 'one' );
+$a[] =& $a;
+xdebug_debug_zval( 'a' );]]></example>
+
+<example>a: (refcount=2, is_ref=1)=array (
+        0 => (refcount=1, is_ref=0)='one',
+        1 => (refcount=2, is_ref=1)=...
+)</example>
+	<image align="center" filename="gc-part1-figure3.png" />
+</slide>

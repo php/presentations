@@ -1,0 +1,30 @@
+<slide>
+<title>Runtime vs Compile-time Inheritance</title>
+
+<example><![CDATA[filename:       /home/httpd/html/test/runtime-compiletime/slartibartfast.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line     # *  op                           fetch          ext  return  operands
+--------------------------------------------------------------------------------
+   3     0  >   EXT_STMT
+         1      NOP
+         2      NOP
+  15     3      EXT_STMT
+         4    > RETURN                                                   1]]></example>
+<blurb>Compile-time</blurb>
+<break/>
+
+<example><![CDATA[filename:       /home/httpd/html/test/runtime-compiletime/slartibartfast.php
+function name:  (null)
+number of ops:  5
+compiled vars:  none
+line     # *  op                           fetch          ext  return  operands
+---------------------------------------------------------------------------------
+   3     0  >   EXT_STMT
+         1      ZEND_FETCH_CLASS                                 :0      'gargleblaster'
+         2      ZEND_DECLARE_INHERITED_CLASS                     $1      '%00slartibartfast%2Fhome%2Fhttpd%2Fhtml%2Ftest%2Fruntime-compiletime%2Fslartibartfast.php0x7f1d791d8031', 'slartibartfast'
+  15     3      EXT_STMT
+         4    > RETURN                                                   1]]></example>
+<blurb>Run-time</blurb>
+</slide>

@@ -1,0 +1,12 @@
+<slide>
+<title>Traditional parts</title>
+
+<image filename='parts.jpg' align="right" attribution="http://www.flickr.com/photos/bensutherland/4451724655"/>
+
+<list>
+	<bullet>Module init/shutdown</bullet>
+	<bullet>Request init/shutdown</bullet>
+	<bullet>Functions</bullet>
+	<bullet>Configuration (INI) settings</bullet>
+</list>
+</slide>

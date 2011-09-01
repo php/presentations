@@ -2,7 +2,7 @@
 <title>Is it my code that is slow?</title>
 
 <div effect="fade-out">
-<blurb>There could be multiple reasons why the application is slow:</blurb>
+<blurb>Multiple possible reasons:</blurb>
 <list>
 	<bullet>The database is slow</bullet>
 	<bullet>There is lots of IO</bullet>

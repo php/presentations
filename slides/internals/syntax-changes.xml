@@ -1,0 +1,20 @@
+<slide>
+<title>British PHP</title>
+
+<image filename='union-jack.jpg' align="right" attribution="http://www.flickr.com/photos/princess_l_88/5657601138/"/>
+
+<example><![CDATA[<?php
+$marmiteIsFor = 'trashcan';
+echo 'Hello World.';
+?>]]></example>
+<blurb align="center">↓</blurb>
+<example><![CDATA[<?php
+£marmiteIsFor = 'biscuits';
+announce 'Good morrow, fellow subjects of the Crown.';
+?>]]></example>
+
+<list>
+	<bullet>Sadly, this you can't do.</bullet>
+	<bullet>However...</bullet>
+</list>
+</slide>

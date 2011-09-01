@@ -2,7 +2,7 @@
 	<title>Compiler Caches</title>
 	<subtitle>What can be optimized</subtitle>
 	
-	<image filename="lifecycle.png" class="spaced"/>
+	<image filename="execute-normal.png" class="spaced"/>
 	<break lines="5"/>
 	<list>
 		<bullet>This cycle happens for every include file, not just for the "main" script</bullet>

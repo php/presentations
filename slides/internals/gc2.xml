@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Garbage Collections</title>
+	<subtitle>Garbage Creation</subtitle>
+
+	<example>$a = array( 'meaning' => 'life', 'number' => 42 );
+$a['life'] = $a['meaning'];
+xdebug_debug_zval( 'a' );</example>
+
+<example>a: (refcount=1, is_ref=0)=array (
+        'meaning' => (refcount=2, is_ref=0)='life',
+        'number' => (refcount=1, is_ref=0)=42,
+        'life' => (refcount=2, is_ref=0)='life'
+)</example>
+	<image align="center" filename="gc-part1-figure2.png" />
+</slide>

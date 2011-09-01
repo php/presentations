@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>Garbage Collections</title>
+	<subtitle>Cleaning Up</subtitle>
+
+<blurb>Some general statements:</blurb>
+<list>
+<bullet>If a refcount is increased, it's still in use and therefore not garbage.</bullet>
+<bullet>If the refcount is decreased and hits zero, the zval can be freed and is thus not garbage.</bullet>
+<bullet>So only refcount decrements to a non-zero value need to be checked.</bullet>
+</list>
+<break/>
+<blurb>
+The basic algorithm checks whether it is possible to decrease their refcount by
+one, and then check which of the zvals have a refcount of zero.
+</blurb>
+
+</slide>

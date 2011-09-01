@@ -1,0 +1,10 @@
+<slide>
+<title>Why extensions?</title>
+<subtitle>Performance bottlenecks</subtitle>
+
+<image filename='replace-php.jpg' align="right" attribution="http://www.flickr.com/photos/thatguyfromcchs08/2300190277/"/>
+
+<list>
+	<bullet>Your code is really slow, and need something quicker: %twig%</bullet>
+</list>
+</slide>

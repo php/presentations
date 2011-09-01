@@ -1,0 +1,10 @@
+<slide>
+<title>Why extensions?</title>
+<subtitle>Impossible in just PHP</subtitle>
+
+<image filename='escher.jpg' align="right" attribution="http://www.flickr.com/photos/robbie73/2644689893"/>
+
+<list>
+	<bullet>Not everything is possible in pure PHP: %apc%, %com%, %xdebug%, %xhprof%</bullet>
+</list>
+</slide>
