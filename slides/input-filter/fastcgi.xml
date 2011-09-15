@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide fontsize="6em">
+	<title>Input: CLI</title>
+
+	<blurb>CLI binary is optimized for the command line.</blurb>
+<break />
+
+	<blurb>On an invocation, PHP itself:</blurb>
+	<list>
+		<bullet>checks whether the file exists</bullet>
+		<bullet>fills in needed environment/SERVER variables</bullet>
+		<bullet>opens the file, and gives the file pointer to the parser</bullet>
+	</list>
+</slide>
