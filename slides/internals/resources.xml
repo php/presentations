@@ -2,12 +2,12 @@
 <slide fontsize="6em">
 	<title>Resources</title>
 
-	<break lines="12" /> 
 	<link fontsize="3em" marginleft="2em" leader="These Slides: " href="http://derickrethans.nl/talks.php" target="_new"/>
 	<link fontsize="3em" marginleft="2em" leader="VLD: " href="http://www.derickrethans.nl/vld.php" target="_new"/>
 	<link fontsize="3em" marginleft="2em" leader="Xdebug: " href="http://xdebug.org" target="_new"/>
 	<link fontsize="3em" marginleft="2em" leader="Inclued: " href="http://t3.dotgnu.info/blog/tags/inclued/" target="_new"/>
+<break/>
+	<link fontsize="3em" marginleft="2em" leader="Extending and Embedding PHP ('Sara's Book'): " href="http://www.amazon.com/Extending-Embedding-PHP-Sara-Golemon/dp/067232704X"/>
+	<link fontsize="3em" marginleft="2em" leader="Tutorial on Zend's devzone: " href="http://devzone.zend.com/article/1021"/>
 
-	<break lines="3" /> 
-	<link fontsize="3em" marginleft="2em" leader="PHP: " href="http://www.php.net" target="_new"/>
 </slide>

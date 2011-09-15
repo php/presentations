@@ -3,15 +3,9 @@
 
 <image filename='overload.jpg' align="right" attribution="http://www.flickr.com/photos/3059349393/3709115244" pdf-scale="0.5"/>
 
-<blurb>|00bb00|Good:|</blurb>
 <list>
 	<bullet>*Scream:* For making PHP ignore the %@% operator</bullet>
 	<bullet>*Xdebug:* For code coverage, and for making PHP ignore the %@% operator</bullet>
-</list>
-<break/>
-
-<blurb>|dd0000|Bad:|</blurb>
-<list>
 	<bullet>*Operator*: Allows for operator overloading|888888|, but also demands that you hand over your first-born|</bullet>
 </list>
 </slide>
