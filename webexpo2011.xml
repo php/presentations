@@ -34,9 +34,11 @@ Performance
 <slide>slides/fowa/hist3.xml</slide>
 <slide>slides/fowa/hist4.xml</slide>
 <slide>slides/fowa/hist5.xml</slide>
+<slide>slides/intro/crock1.xml</slide>
+<slide>slides/intro/crock2.xml</slide>
+<slide>slides/intro/crock3.xml</slide>
 <slide>slides/intro/howwon.xml</slide>
 <slide>slides/intro/rss_flickr.xml</slide>
-<slide>slides/intro/api_geotwitter.xml</slide>
 <slide>slides/intro/api_yql1.xml</slide>
 <slide>slides/intro/api_yql2.xml</slide>
 <slide>slides/intro/api_flickr.xml</slide>
@@ -46,7 +48,6 @@ Performance
 <slide>slides/intro/Tech2011.xml</slide>
 
 <slide>slides/intro/performance_title.xml</slide>
-<slide>slides/intro/web_servers.xml</slide>
 <slide>slides/intro/dev_tips1.xml</slide>
 <slide>slides/intro/dev_tips2.xml</slide>
 <slide>slides/intro/dev_tips3.xml</slide>
@@ -69,7 +70,6 @@ Performance
 <slide>slides/intro/php53_date.xml</slide>
 <slide>slides/intro/php53_spl.xml</slide>
 <slide>slides/intro/php53_fpm.xml</slide>
-<slide>slides/intro/php53_openssl.xml</slide>
 <slide>slides/intro/php54_title.xml</slide>
 <slide>slides/intro/php54_perf.xml</slide>
 <slide>slides/intro/php54_removed.xml</slide>

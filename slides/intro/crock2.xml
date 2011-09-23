@@ -1,0 +1,13 @@
+<slide title="Quiz 2">
+
+<break lines="1" />
+
+<example fontsize="3em" rfontsize="4em" result='1' title=""><![CDATA[<?php
+function swap(&$a, &$b) {
+    list($a, $b) = [$b, $a];
+}
+$x = 1; $y = 2;
+swap($x, $y);
+echo $x;]]></example>
+
+</slide>

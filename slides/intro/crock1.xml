@@ -1,0 +1,14 @@
+<slide title="Quiz 1">
+
+<break lines="1" />
+
+<example fontsize="3em" rfontsize="4em" result='1' title=""><![CDATA[<?php
+function funky(&$o) {
+    $o = null;
+}
+$x = [];
+funky($x);
+var_dump($x);
+]]></example>
+
+</slide>

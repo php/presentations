@@ -1,0 +1,14 @@
+<slide title="Quiz 3">
+
+<break lines="1" />
+<blurb fontsize="4em">Write a function that puts a value in a variable when it is finished</blurb>
+
+<example fontsize="2em" rfontsize="3em" result='1' title=""><![CDATA[<?php
+function gimmepi(&$var) {
+    $result = M_PI;
+    $var = $result;
+}
+gimmepi($foo);
+echo $foo;]]></example>
+
+</slide>
