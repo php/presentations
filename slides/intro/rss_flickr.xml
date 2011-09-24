@@ -1,8 +1,32 @@
 <slide title="5-second Atom parser">
 <break lines="1" />
-<example title="Recent Flickr Photos" fontsize="1.5em" rfontsize="1em" result="1"><![CDATA[<?php
+<example title="Recent Flickr Photos" fontsize="1.5em" rfontsize="1em" result="0"><![CDATA[<?php
 $url = 'http://www.flickr.com/services/feeds/photos_public.gne';
 foreach(simplexml_load_file($url)->entry as $it) echo $it->content;
+?>]]></example>
+
+<example hide="1" result="1"><![CDATA[<?php
+define('MINSZ',10);
+function cache($url) {
+  if(isset($_GET['cache'])) $cache = (int)$_GET['cache'];
+  else $cache = 1;
+  $tmp = '/var/tmp/'.md5($url);
+  if(file_exists($tmp)) $st = stat($tmp);
+  if(!$cache || !$st || $st && ($st['size']<MINSZ || $st['mtime']<(time()-14400))) {
+    if($st && $st['size']>=MINSZ) touch($tmp);  // Keep re-using entry
+    $stream = fopen($url,'r');                  // until new is ready
+    $tmpf = tempnam('/tmp','YWS');
+    file_put_contents($tmpf, $stream);
+    fclose($stream);
+    rename($tmpf, $tmp);
+  }
+  return $tmp;
+}
+
+$url = 'http://www.flickr.com/services/feeds/photos_public.gne';
+$data = cache($url);
+foreach(simplexml_load_file($data)->entry as $it) echo $it->content;
+
 ?>]]></example>
 
 </slide>
