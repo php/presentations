@@ -1,0 +1,57 @@
+<slide title="LibEvent + ZMQ">
+<break lines="1" />
+<blurb fontsize="4em">Event-driven Server</blurb>
+<example title="" fontsize="1.5em" rfontsize="1em" result="0"><![CDATA[<?php
+// create base and event
+$base = event_base_new();
+$event = event_new();
+
+// Allocate a new context
+$context = new ZMQContext();
+
+// Create sockets
+$rep = $context->getSocket(ZMQ::SOCKET_REP);
+
+// Connect the socket
+$rep->bind("tcp://127.0.0.1:5555");
+
+// Get the stream descriptor
+$fd = $rep->getsockopt(ZMQ::SOCKOPT_FD);
+
+// Define event callback function
+$fnc = function ($fd, $events, $arg) {
+    static $msgs = 1; 
+    echo "CALLBACK FIRED" . PHP_EOL;
+    if($arg[0]->getsockopt (ZMQ::SOCKOPT_EVENTS) & ZMQ::POLL_IN) {
+        echo "Got incoming data" . PHP_EOL;
+        var_dump ($arg[0]->recv());
+        $arg[0]->send("Got msg $msgs");
+        if($msgs++ >= 10) event_base_loopexit($arg[1]);
+    }
+};
+
+// set event flags
+event_set($event, $fd, EV_READ | EV_PERSIST, $fnc, array($rep, $base));
+
+// set event base
+event_base_set($event, $base);
+
+// enable event
+event_add($event);
+
+// start event loop
+event_base_loop($base);
+]]></example>
+
+<break lines="1"/>
+<blurb fontsize="4em">ZeroMQ Client</blurb>
+<example title="" fontsize="1.5em" rfontsize="1em" result="0"><![CDATA[<?php
+// Create new queue object
+$queue = new ZMQSocket(new ZMQContext(), ZMQ::SOCKET_REQ, "MySock1");
+$queue->connect("tcp://127.0.0.1:5555");
+
+// Assign socket 1 to the queue, send and receive
+var_dump($queue->send("hello there!")->recv());
+]]></example>
+
+</slide>
