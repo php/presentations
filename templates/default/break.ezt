@@ -1,0 +1,4 @@
+{use $node}
+{var $lines = get_attribute( $node, 'lines' )}
+{var $i = 0}
+<br/>{while $i < $lines - 1}<br />{$i++}{/while}

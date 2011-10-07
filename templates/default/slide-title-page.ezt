@@ -1,0 +1,4 @@
+{use $node, $pres, $slideNr}
+<div class='title-slide'>
+{include 'slide-contents.ezt' send $node, $pres}
+</div>

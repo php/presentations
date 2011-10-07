@@ -1,0 +1,5 @@
+{use $node, $pres, $slideNr}
+<div class='slide'>
+{include 'slide-contents.ezt' send $node, $pres}
+<div class='slideCount'>{$slideNr + 1}/{array_count( $pres->slideFiles ) }</div>
+</div>

@@ -1,0 +1,8 @@
+{use $node, $pres, $inline = false}
+{if $inline}
+<span class='link'>{get_attribute( $node, 'leader' )}<a href='{get_attribute( $node, 'href' )}'>{get_attribute( $node, 'href' )}</a></span>
+{else}
+<div class='link'>
+	<p>{get_attribute( $node, 'leader' )}<a href='{get_attribute( $node, 'href' )}'>{get_attribute( $node, 'href' )}</a></p>
+</div>
+{/if}

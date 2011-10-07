@@ -1,0 +1,17 @@
+{use $node, $pres}
+{var $class = get_attribute( $node, 'class' )}
+{var $align = get_attribute( $node, 'align' )}
+{var $effect = get_attribute( $node, 'effect' )}
+{if $effect}<div class="effect-{$effect}">{/if}
+<div{if $class} class='{$class}'{/if}{if $align} align='{$align}'{/if}>
+<p>
+{foreach $node->childNodes as $child}
+	{if is_set( $child->tagName )}
+		{include $child->tagName . '.ezt' send $child as $node, $pres, true as $inline}
+	{else}
+		{raw format_text( $pres, $child->nodeValue )}
+	{/if}
+{/foreach}
+</p>
+</div>
+{if $effect}</div>{/if}

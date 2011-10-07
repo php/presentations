@@ -1,0 +1,17 @@
+<slide>
+<title>What is Google Maps?</title>
+
+<div effect="fade-out">
+<iframe filename='examples/googlemap.html' image='openlayers.png'/>
+</div>
+<div effect="fade-in">
+<blurb>In words:</blurb>
+<list>
+	<bullet>It gives you free map tiles</bullet>
+	<bullet>It gives you satellite imagery</bullet>
+	<bullet>It gives you StreetView™</bullet>
+	<bullet>It gives you a free JavaScript library</bullet>
+	<bullet>It gives you a free geo-coding API</bullet>
+</list>
+</div>
+</slide>

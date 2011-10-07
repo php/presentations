@@ -1,0 +1,9 @@
+{use $node, $pres}
+{var $class = get_attribute( $node, 'class' )}
+{var $align = get_attribute( $node, 'align' )}
+{var $effect = get_attribute( $node, 'effect' )}
+{if $effect}<div class="effect-{$effect}">{/if}
+<div {if $class}class='{$class}'{else}class='html'{/if}{if $align} align='{$align}'{/if}>
+{raw $node->nodeValue}
+</div>
+{if $effect}</div>{/if}

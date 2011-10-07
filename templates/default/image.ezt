@@ -1,0 +1,6 @@
+{use $node, $pres, $inline = false}
+{var $align = get_attribute( $node, 'align' )}
+{var $attr = get_attribute( $node, 'attr' )}
+{if $attr}<div{if $align} align='{$align}'{/if}>{/if}
+<img {if $inline}class='inline' {/if}{if $align}align='{$align}' class='{$align}' {/if}src='{$pres->base}{get_attribute( $node, 'filename' )}'/>
+{if $attr}<p class='attribution'>{$attr}</p></div>{/if}

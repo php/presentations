@@ -1,0 +1,10 @@
+{use $pres, $node}
+<pre class='code'>{ replace_properties( $pres, $node->nodeValue )}</pre>
+{if get_attribute( $node, 'result' ) == 1}
+<div class='effect-slide'>
+<div class='result'>
+<p>Result:</p>
+<pre>{raw run_code( replace_properties( $pres, $node->nodeValue ) )}</pre>
+</div>
+</div>
+{/if}

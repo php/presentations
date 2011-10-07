@@ -1,0 +1,2 @@
+{use $pres, $node}
+<h2>{raw format_text( $pres, $node->nodeValue )}</h2>

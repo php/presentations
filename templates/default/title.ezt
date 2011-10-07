@@ -1,0 +1,2 @@
+{use $node}
+<h1>{$node->nodeValue}</h1>

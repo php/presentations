@@ -1,0 +1,2 @@
+{use $pres}
+{title( $pres->title, "=") }

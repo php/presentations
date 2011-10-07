@@ -1,0 +1,9 @@
+{use $node, $pres}
+{var $class = get_attribute( $node, 'class' )}
+<ul{if $class} class='{$class}'{/if}>
+{foreach $node->childNodes as $child}
+	{if is_set( $child->tagName )}
+		{include $child->tagName . '.ezt' send $child as $node, $pres}
+	{/if}
+{/foreach}
+</ul>

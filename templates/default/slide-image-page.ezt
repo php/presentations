@@ -1,0 +1,15 @@
+{use $node, $pres, $slideNr}
+<div class='image-slide'>
+{foreach $node->childNodes as $child}
+	{if is_set( $child->tagName ) && $child->tagName == 'image'}
+		{include $child->tagName . '.ezt' send $child as $node, $pres}
+	{/if}
+{/foreach}
+<div class="text-overlay">
+{foreach $node->childNodes as $child}
+	{if is_set( $child->tagName ) && $child->tagName == 'title'}
+		{include $child->tagName . '.ezt' send $child as $node, $pres}
+	{/if}
+{/foreach}
+</div>
+</div>

@@ -1,0 +1,6 @@
+{use $node, $pres}
+{if str_trim( format_text( $pres, $node->nodeValue ) ) == ''}
+<img src="http://qrcode.kaywa.com/img.php?s=8&d=http://derickrethans.nl/talks.html"/>
+{else}
+<img src="http://qrcode.kaywa.com/img.php?s=8&d={raw format_text( $pres, $node->nodeValue )}"/>
+{/if}

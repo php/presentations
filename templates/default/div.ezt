@@ -1,0 +1,9 @@
+{use $node, $pres}
+{var $effect = get_attribute( $node, 'effect' )}
+<div{if $effect} class='effect-{$effect}'{/if}>
+{foreach $node->childNodes as $child}
+	{if is_set( $child->tagName )}
+		{include $child->tagName . '.ezt' send $child as $node, $pres}
+	{/if}
+{/foreach}
+</div>
