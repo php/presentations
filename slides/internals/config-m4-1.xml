@@ -1,0 +1,17 @@
+<slide>
+<title>Config.m4: configuration</title>
+
+<list>
+<bullet>Hooks into PHP's %configure% system</bullet>
+<bullet>Both for shared and static extensions</bullet>
+<bullet>Also checks for libraries, functions, and system/OS dependent features</bullet>
+</list>
+
+<blurb>Minimal %config.m4%:</blurb>
+<example><![CDATA[PHP_ARG_ENABLE(helloworld, whether to enable helloworld support,
+[  --enable-helloword            Enable helloworld support])
+
+if test "$PHP_helloworld" != "no"; then
+  PHP_NEW_EXTENSION(helloworld, helloworld.c, $ext_shared)
+fi]]></example>
+</slide>

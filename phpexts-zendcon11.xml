@@ -23,6 +23,14 @@
 
 <slide>slides/internals/extension-on-a-slide.xml</slide>
 
+<slide>slides/internals/config-m4-1.xml</slide>
+<slide>slides/internals/config-m4-2.xml</slide>
+<slide>slides/internals/config-m4-3.xml</slide>
+<slide>slides/internals/config-m4-4.xml</slide>
+<slide>slides/internals/config-m4-5.xml</slide>
+<slide>slides/internals/config-m4-6.xml</slide>
+<slide>slides/internals/config-w32-1.xml</slide>
+
 <!--
 So you've heard that PHP supports extensions. But what are they exactly, what
 can you do with them, and what *can't* you do with them? And mostly, why would
@@ -81,7 +89,26 @@ why:
 <slide>slides/internals/overview2.xml</slide>
 
 <slide>slides/internals/functions.xml</slide>
+<slide>slides/internals/init-shutdown.xml</slide>
+<slide>slides/internals/request-init-shutdown.xml</slide>
+<slide>slides/internals/request-post-deactivate.xml</slide>
+<slide>slides/internals/shutdown-order.xml</slide>
+<slide>slides/internals/function-entry.xml</slide>
+<slide>slides/internals/globals.xml</slide>
+
 <slide>slides/internals/classes-etc.xml</slide>
+<slide>slides/internals/class-setup.xml</slide>
+<slide>slides/internals/arg-info.xml</slide>
+
+<!-- variables -->
+<slide>slides/internals/zval.xml</slide>
+<slide>slides/internals/variables1.xml</slide>
+<slide>slides/internals/variables2.xml</slide>
+<slide>slides/internals/variables3.xml</slide>
+<slide>slides/internals/variables3a.xml</slide>
+<slide>slides/internals/variables11.xml</slide>
+<slide>slides/internals/zend_parse_parameters.xml</slide>
+<slide>slides/internals/zend_parse_parameters2.xml</slide>
 
 <slide>slides/internals/hooks.xml</slide>
 <slide>slides/internals/overload.xml</slide>

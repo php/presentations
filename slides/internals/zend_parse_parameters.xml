@@ -1,0 +1,37 @@
+<slide>
+<title>Argument parsing</title>
+<example><![CDATA[int zend_parse_parameters(int num_args TSRMLS_DC, char *type_spec, ...);]]></example>
+<blurb>Examples:</blurb>
+<example><![CDATA[
+zend_bool             clear = 0;
+if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "|b", &clear) == FAILURE) {
+	return;
+}
+]]></example>
+
+<example><![CDATA[
+char *prefix = NULL;
+int prefix_len;
+if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "|s", &prefix, &prefix_len) == FAILURE) {
+]]></example>
+
+<example><![CDATA[
+char *fname = NULL;
+int   fname_len = 0;
+long  options = XG(trace_options);
+if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "|sl", &fname, &fname_len, &options) == FAILURE) {
+]]></example>
+
+<example><![CDATA[
+zval *array;
+long sort_type = PHP_SORT_REGULAR;
+if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "a|l", &array, &sort_type) == FAILURE) {
+]]></example>
+
+<example><![CDATA[
+zval *var_array, *prefix = NULL;
+long extract_type = EXTR_OVERWRITE;
+if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "a|lz/", &var_array, &extract_type, &prefix) == FAILURE) {
+]]></example>
+
+</slide>

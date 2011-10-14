@@ -1,0 +1,16 @@
+<slide>
+<title>Globals</title>
+<blurb>Definition (in php_xdebug.h):</blurb>
+<example><![CDATA[ZEND_BEGIN_MODULE_GLOBALS(xdebug)
+    int           status;
+    int           reason;
+...
+zend_bool  do_scream;
+ZEND_END_MODULE_GLOBALS(xdebug)]]></example>
+<blurb>Using:</blurb>
+<example><![CDATA[    if (XG(remote_enabled) && XG(context).handler->register_eval_id && fse->function.type == XFUNC_EVAL) {
+        eval_id = XG(context).handler->register_eval_id(&(XG(context)), fse);
+    }]]></example>
+<blurb>In other .c files:</blurb>
+<example><![CDATA[ZEND_EXTERN_MODULE_GLOBALS(xdebug)]]></example>
+</slide>

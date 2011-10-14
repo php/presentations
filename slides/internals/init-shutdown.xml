@@ -1,0 +1,24 @@
+<slide>
+<title>Module initialisation and shutdown</title>
+<example><![CDATA[PHP_MINIT_FUNCTION(xdebug)
+{
+    zend_extension dummy_ext;
+
+    ZEND_INIT_MODULE_GLOBALS(xdebug, php_xdebug_init_globals, php_xdebug_shutdown_globals);
+    REGISTER_INI_ENTRIES();
+
+...
+
+    /* Redirect compile and execute functions to our own */
+    old_compile_file = zend_compile_file;
+    zend_compile_file = xdebug_compile_file;]]></example>
+<example><![CDATA[PHP_MSHUTDOWN_FUNCTION(xdebug)
+{
+    if (XG(profiler_aggregate)) {
+        xdebug_profiler_output_aggr_data(NULL TSRMLS_CC);
+    }
+
+    /* Reset compile, execute and error callbacks */
+    zend_compile_file = old_compile_file;
+...]]></example>
+</slide>

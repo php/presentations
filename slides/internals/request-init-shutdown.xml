@@ -1,0 +1,34 @@
+<slide>
+<title>Request initialisation and shutdown</title>
+<example><![CDATA[PHP_RINIT_FUNCTION(xdebug)
+{
+    zend_function *orig;
+    char *idekey;
+    zval **dummy;
+
+    /* get xdebug ini entries from the environment also */
+    XG(ide_key) = NULL;
+    xdebug_env_config();
+    idekey = zend_ini_string("xdebug.idekey", sizeof("xdebug.idekey"), 0);
+
+    XG(no_exec)       = 0;
+    XG(level)         = 0;
+    XG(do_trace)      = 0;
+    XG(coverage_enable) = 0;
+    XG(do_code_coverage) = 0;
+    XG(code_coverage) = xdebug_hash_alloc(32, xdebug_coverage_file_dtor);
+    XG(stack)         = xdebug_llist_alloc(xdebug_stack_element_dtor);
+...]]></example>
+<example><![CDATA[PHP_RSHUTDOWN_FUNCTION(date)
+{
+    if (DATEG(timezone)) {
+        efree(DATEG(timezone));
+    }
+    DATEG(timezone) = NULL;
+    if(DATEG(tzcache)) {
+        zend_hash_destroy(DATEG(tzcache));
+        FREE_HASHTABLE(DATEG(tzcache));
+        DATEG(tzcache) = NULL;
+    }
+...]]></example>
+</slide>

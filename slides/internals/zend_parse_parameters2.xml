@@ -1,0 +1,27 @@
+<slide>
+<title>Argument parsing</title>
+<list>
+    <bullet>a - array (zval*)</bullet>
+    <bullet>A - array or object (zval *)</bullet>
+    <bullet>b - boolean (zend_bool)</bullet>
+    <bullet>C - class (zend_class_entry*)</bullet>
+    <bullet>d - double (double)</bullet>
+    <bullet>f - function or array containing php method call info (returned as zend_fcall_info and zend_fcall_info_cache)</bullet>
+    <bullet>h - array (returned as HashTable*)</bullet>
+    <bullet>H - array or HASH_OF(object) (returned as HashTable*)</bullet>
+    <bullet>l - long (long)</bullet>
+    <bullet>L - long, limits out-of-range numbers to LONG_MAX/LONG_MIN (long)</bullet>
+    <bullet>o - object of any type (zval*)</bullet>
+    <bullet>O - object of specific type given by class entry (zval*, zend_class_entry)</bullet>
+    <bullet>p - valid path (string without null bytes in the middle) and its length (char*, int)</bullet>
+    <bullet>r - resource (zval*)</bullet>
+    <bullet>s - string (with possible null bytes) and its length (char*, int)</bullet>
+    <bullet>z - the actual zval (zval*)</bullet>
+    <bullet>Z - the actual zval (zval**)</bullet>
+    <bullet>* - variable arguments list (0 or more)</bullet>
+    <bullet>+ - variable arguments list (1 or more)</bullet>
+    <bullet>| - indicates that the remaining parameters are optional, they should be initialized to default values by the extension since they will not be touched by the parsing function if they are not passed to it.</bullet>
+    <bullet>/ - use SEPARATE_ZVAL_IF_NOT_REF() on the parameter it follows</bullet>
+    <bullet>! - the parameter it follows can be of specified type or NULL (applies to all specifiers except for 'b', 'l', and 'd'). If NULL is passed, the results pointer is set to NULL as well.  </bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<slide>
+<title>Shutdown order</title>
+<list>
+    <bullet>1. Call all possible shutdown functions registered with register_shutdown_function()</bullet>
+    <bullet>2. Call all possible __destruct() functions</bullet>
+    <bullet>3. Flush all output buffers</bullet>
+    <bullet>4. Send the set HTTP headers (note: This must be done AFTER php_output_discard_all() / php_output_end_all() !!)</bullet>
+    <bullet>5. Reset max_execution_time (no longer executing php code after response sent)</bullet>
+    <bullet>6. Call all extensions RSHUTDOWN functions</bullet>
+    <bullet>7. Destroy super-globals</bullet>
+    <bullet>7.5 free last error information</bullet>
+	<bullet>7. Shutdown scanner/executor/compiler and restore ini entries</bullet>
+    <bullet>8. Call all extensions post-RSHUTDOWN functions</bullet>
+    <bullet>9. SAPI related shutdown (free stuff)</bullet>
+    <bullet>10. Destroy stream hashes</bullet>
+    <bullet>11. Free Willy (here be crashes) -~shuts down memory manager~</bullet>
+    <bullet>12. Reset max_execution_time</bullet>
+</list>
+</slide>

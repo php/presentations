@@ -1,0 +1,26 @@
+<slide>
+<title>Argument Info</title>
+<blurb>Definition:</blurb>
+<example><![CDATA[ZEND_BEGIN_ARG_INFO_EX(arginfo_array_multisort, ZEND_SEND_PREFER_REF, 0, 1)
+    ZEND_ARG_INFO(ZEND_SEND_PREFER_REF, arr1) /* ARRAY_INFO(0, arg1, 0) */
+    ZEND_ARG_INFO(ZEND_SEND_PREFER_REF, SORT_ASC_or_SORT_DESC)
+    ZEND_ARG_INFO(ZEND_SEND_PREFER_REF, SORT_REGULAR_or_SORT_NUMERIC_or_SORT_STRING)
+    ZEND_ARG_INFO(ZEND_SEND_PREFER_REF, arr2)
+    ZEND_ARG_INFO(ZEND_SEND_PREFER_REF, SORT_ASC_or_SORT_DESC)
+    ZEND_ARG_INFO(ZEND_SEND_PREFER_REF, SORT_REGULAR_or_SORT_NUMERIC_or_SORT_STRING)
+ZEND_END_ARG_INFO()]]></example>
+<blurb>In the function list:</blurb>
+<example><![CDATA[    PHP_FE(array_multisort, arginfo_array_multisort)]]></example>
+<blurb>CLI output:</blurb>
+<example><![CDATA[    Function [ <internal:standard> function array_multisort ] {
+
+      - Parameters [6] {
+        Parameter #0 [ <required> &$arr1 ]
+        Parameter #1 [ <optional> &$SORT_ASC_or_SORT_DESC ]
+        Parameter #2 [ <optional> &$SORT_REGULAR_or_SORT_NUMERIC_or_SORT_STRING ]
+        Parameter #3 [ <optional> &$arr2 ]
+        Parameter #4 [ <optional> &$SORT_ASC_or_SORT_DESC ]
+        Parameter #5 [ <optional> &$SORT_REGULAR_or_SORT_NUMERIC_or_SORT_STRING ]
+      }
+    }]]></example>
+</slide>

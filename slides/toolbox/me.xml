@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <slide template="white">
 	<title>About Me</title>
 
@@ -8,11 +8,11 @@
 	<list>
 		<bullet>Dutchman living in London</bullet>
 		<bullet>PHP development</bullet>
-		<bullet>Author of the mcrypt, input_filter, dbus, translit and date/time extensions</bullet>
+		<bullet>Freelancer doing PHP internals development — ie.: writing extensions for a living</bullet>
+		<bullet>Anderskor's Camouflage</bullet>
 		<bullet>Author of Xdebug</bullet>
+		<bullet>Author of the mcrypt, input_filter, dbus, translit and date/time extensions</bullet>
 		<bullet>Contributor to the Apache Zeta Components Incubator project (formerly eZ Components)</bullet>
-		<bullet>Freelancer doing PHP (internals) development</bullet>
-		<bullet>Anderskor</bullet>
 	</list>
 		
 </slide>
