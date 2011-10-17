@@ -1,0 +1,16 @@
+<slide>
+<title>Overloading the exception handler</title>
+<blurb>In RINIT:</blurb>
+<example><![CDATA[    /* Hack: We check for a soap header here, if that's existing, we don't use
+     * Xdebug's error handler to keep soap fault from fucking up. */
+    if (XG(default_enable) && zend_hash_find(Z_ARRVAL_P(PG(http_globals)[TRACK_VARS_SERVER]), "HTTP_SOAPACTION", 16, (void**)&dummy) == FAILURE) {
+        zend_error_cb = xdebug_new_error_cb;
+        zend_throw_exception_hook = xdebug_throw_exception_hook;
+    }
+]]></example>
+<blurb>%xdebug_throw_exception_hook%:</blurb>
+<example>static void xdebug_throw_exception_hook(zval *exception TSRMLS_DC)
+{
+    zval *message, *file, *line, *xdebug_message_trace, *previous_exception;
+</example>
+</slide>

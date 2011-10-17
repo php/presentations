@@ -1,0 +1,9 @@
+<slide>
+<title>Excercises</title>
+<list><bullet>The slide deck is at http://derickrethans.nl/talks/phpexts-zendcon.pdf</bullet></list>
+<div effect="fade-in"><list><bullet>Add a new function %helloearth()% that returns %"Hello Earth!"% (slide 23, 42).</bullet></list></div>
+<div effect="fade-in"><list><bullet>Add a new function %hello()% that accepts a string argument, and returns %"Hello «argument»!"% (slide 40/41).</bullet></list></div>
+<div effect="fade-in"><list><bullet>Add the argument info information to the %hello()% function (slide 31).</bullet></list></div>
+<div effect="fade-in"><list><bullet>Add a new function that multiplies a float and an integer and optionally also a boolean (slide 40/41).</bullet></list></div>
+
+</slide>

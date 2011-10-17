@@ -1,0 +1,26 @@
+<slide>
+<title>Returning Values</title>
+<blurb>Arrays:</blurb>
+<example><![CDATA[
+    array_init(return_value);
+]]></example>
+<break/>
+<example><![CDATA[PHP_METHOD(DbusSet, getData)
+{
+    int i;
+    zval *object;
+    php_dbus_set_obj *set_obj;
+
+    if (FAILURE == zend_parse_method_parameters(ZEND_NUM_ARGS() TSRMLS_CC, getThis(),
+        "O", &object, dbus_ce_dbus_set)) {
+        RETURN_FALSE;
+    }
+    set_obj = (php_dbus_set_obj *) zend_object_store_get_object(object TSRMLS_CC);
+    array_init(return_value);
+    for (i = 0; i < set_obj->element_count; i++) {
+        Z_ADDREF_P(set_obj->elements[i]);
+        add_next_index_zval(return_value, set_obj->elements[i]);
+    }
+}]]></example>
+
+</slide>

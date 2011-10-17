@@ -1,0 +1,22 @@
+<slide>
+<title>Extension Dependencies</title>
+<blurb>In dbus/config.m4:</blurb>
+<example><![CDATA[if test "$PHP_DBUS" != "no"; then
+  if test "$PHP_LIBXML" = "no"; then
+    AC_MSG_ERROR([DBUS extension requires LIBXML extension, add --enable-libxml])
+  fi]]></example>
+<break/>
+<blurb>In dbus/dbus.c:</blurb>
+<example><![CDATA[static const zend_module_dep dbus_deps[] = {
+    ZEND_MOD_REQUIRED("libxml")
+    ZEND_MOD_END
+};  
+
+zend_module_entry dbus_module_entry = {
+    STANDARD_MODULE_HEADER_EX,
+    NULL,
+    dbus_deps,
+    "dbus",                     /* extension name */
+...]]></example>
+<blurb>There is also %ZEND_MOD_CONFLICTS% and %ZEND_MOD_OPTIONAL%; as well as %ZEND_MOD_REQUIRED_EX% and %ZEND_MOD_OPTIONAL_EX%</blurb>
+</slide>

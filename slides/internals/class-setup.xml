@@ -1,0 +1,28 @@
+<slide>
+<title>Class registration</title>
+<blurb>in MINIT:</blurb>
+<example>PHP_MINIT_FUNCTION(quickhash)
+{
+    qh_register_class_intset(TSRMLS_C);
+</example>
+<blurb>In qh_intset.h:</blurb>
+<example><![CDATA[typedef struct _php_qh_intset_obj php_qh_intset_obj;
+    
+struct _php_qh_intset_obj {
+    zend_object   std;
+    qhi          *hash;
+};
+
+void qh_register_class_intset(TSRMLS_D);
+PHPAPI zend_class_entry *php_qh_get_intset_ce(void);]]></example>
+<blurb>In qh_intset.c:</blurb>
+<example><![CDATA[void qh_register_class_intset(TSRMLS_D)
+{
+    zend_class_entry ce_intset;
+
+    INIT_CLASS_ENTRY(ce_intset, "QuickHashIntSet", qh_funcs_intset);
+    ce_intset.create_object = qh_object_new_intset;
+    qh_ce_intset = zend_register_internal_class_ex(&ce_intset, NULL, NULL TSRMLS_CC);
+    memcpy(&qh_object_handlers_intset, zend_get_std_object_handlers(), sizeof(zend_object_handlers));
+}]]></example>
+</slide>

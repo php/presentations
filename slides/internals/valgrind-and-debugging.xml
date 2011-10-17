@@ -1,0 +1,21 @@
+<slide>
+<title>Debugging with gdb and valgrind</title>
+<list>
+	<bullet>%gdb --args php% ~....~
+		<list>
+			<bullet>%run%</bullet>
+			<bullet>%bt%</bullet>
+			<bullet>%frame framenr%</bullet>
+			<bullet>%p varname%</bullet>
+		</list>
+	</bullet>
+	<bullet>%valgrind php% ~....~</bullet>
+</list>
+<break/>
+<blurb>To make it easier:</blurb>
+<list>
+	<bullet>Make sure PHP is compiled in debug mode</bullet>
+	<bullet>Disable the Zend memory manager: %export USE_ZEND_ALLOC=0%</bullet>
+	<bullet>Disable shared extension unloading: %export ZEND_DONT_UNLOAD_MODULES=1%</bullet>
+</list>
+</slide>

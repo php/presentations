@@ -1,0 +1,22 @@
+<slide>
+<title>Overloading functions</title>
+<blurb>In RINIT:</blurb>
+<example><![CDATA[    zend_function *orig;
+
+    XG(var_dump_overloaded) = 0;
+    if (XG(overload_var_dump)) {
+        zend_hash_find(EG(function_table), "var_dump", 9, (void **)&orig);
+        XG(orig_var_dump_func) = orig->internal_function.handler;
+        orig->internal_function.handler = zif_xdebug_var_dump;
+        XG(var_dump_overloaded) = 1;
+    }
+]]></example>
+<blurb>In ZEND_MODULE_POST_ZEND_DEACTIVATE_D:</blurb>
+<example><![CDATA[    zend_function *orig;
+
+    if (XG(var_dump_overloaded)) {
+        zend_hash_find(EG(function_table), "var_dump", 9, (void **)&orig);
+        orig->internal_function.handler = XG(orig_var_dump_func);
+    }]]></example>
+<blurb>And %xdebug_var_dump()% is just defined as a normal function.</blurb>
+</slide>

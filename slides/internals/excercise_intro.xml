@@ -1,0 +1,19 @@
+<slide>
+<title>Excercise: helloworld</title>
+
+<list>
+	<bullet>Download from github: %git clone git://github.com/derickr/helloworld.git%</bullet>
+	<bullet>%cd helloworld%</bullet>
+	<bullet>%phpize &amp;&amp; ./configure &amp;&amp; make%</bullet>
+	<bullet>%sudo make install%</bullet>
+	<bullet>%php -dextension=helloworld.so --re helloworld%</bullet>
+</list>
+<blurb>Output:</blurb>
+<example><![CDATA[Extension [ <persistent> extension #61 helloworld version 0.0.1 ] {
+
+  - Functions {
+    Function [ <internal:helloworld> function helloworld ] {
+    }
+  }
+}]]></example>
+</slide>

@@ -90,6 +90,7 @@ why:
 
 <slide>slides/internals/functions.xml</slide>
 <slide>slides/internals/init-shutdown.xml</slide>
+<slide>slides/internals/ini-entries.xml</slide>
 <slide>slides/internals/request-init-shutdown.xml</slide>
 <slide>slides/internals/request-post-deactivate.xml</slide>
 <slide>slides/internals/shutdown-order.xml</slide>
@@ -98,7 +99,13 @@ why:
 
 <slide>slides/internals/classes-etc.xml</slide>
 <slide>slides/internals/class-setup.xml</slide>
+<slide>slides/internals/class-setup2.xml</slide>
+<slide>slides/internals/some-notes.xml</slide>
+<slide>slides/internals/class-methods.xml</slide>
+<slide>slides/internals/function-method-duality.xml</slide>
 <slide>slides/internals/arg-info.xml</slide>
+<slide>slides/internals/extension-dependencies.xml</slide>
+<slide>slides/internals/questions.xml</slide>
 
 <!-- variables -->
 <slide>slides/internals/zval.xml</slide>
@@ -109,9 +116,21 @@ why:
 <slide>slides/internals/variables11.xml</slide>
 <slide>slides/internals/zend_parse_parameters.xml</slide>
 <slide>slides/internals/zend_parse_parameters2.xml</slide>
+<slide>slides/internals/returning_variables.xml</slide>
+<slide>slides/internals/returning_variables_array.xml</slide>
+<slide>slides/internals/returning_variables_object.xml</slide>
+<slide>slides/internals/excercise_intro.xml</slide>
+<slide>slides/internals/excercise_add_a_function.xml</slide>
+<slide>slides/internals/valgrind-and-debugging.xml</slide>
+<slide>slides/internals/questions.xml</slide>
 
+<!-- more advanced stuff -->
 <slide>slides/internals/hooks.xml</slide>
+<slide>slides/internals/minfo.xml</slide>
 <slide>slides/internals/overload.xml</slide>
+<slide>slides/internals/hooks-error.xml</slide>
+<slide>slides/internals/hooks-exception.xml</slide>
+<slide>slides/internals/hooks-compiler-executor.xml</slide>
 <slide>slides/internals/opcodes-question.xml</slide>
 
 <slide>slides/internals/execute5.xml</slide>
@@ -120,7 +139,10 @@ why:
 <slide>slides/internals/opcode-cache.xml</slide>
 
 <slide>slides/internals/opcode-overload2.xml</slide>
+<slide>slides/internals/hooks-opcode.xml</slide>
+
 <slide>slides/internals/replacing-functions.xml</slide>
+<slide>slides/internals/hooks-replace-function.xml</slide>
 <slide>slides/internals/streams.xml</slide>
 <slide>slides/internals/syntax-changes.xml</slide>
 

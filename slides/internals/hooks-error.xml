@@ -1,0 +1,15 @@
+<slide>
+<title>Overloading the error handler</title>
+<blurb>In MINIT:</blurb>
+<example>    /* Replace error handler callback with our own */
+    xdebug_old_error_cb = zend_error_cb;
+    xdebug_new_error_cb = xdebug_error_cb;</example>
+<blurb>In MSHUTDOWN:</blurb>
+<example>    zend_error_cb = xdebug_old_error_cb;</example>
+<blurb>%xdebug_error_cb%:</blurb>
+<example>/* Error callback for formatting stack traces */
+void xdebug_error_cb(int type, const char *error_filename, const uint error_lineno, const char *format, va_list args)
+{
+...
+}</example>
+</slide>

@@ -1,0 +1,26 @@
+<slide>
+<title>Class methods</title>
+<blurb>In qh_intset.h:</blurb>
+<example><![CDATA[PHP_METHOD(QuickHashIntSet, __construct);
+PHP_METHOD(QuickHashIntSet, getSize);
+PHP_METHOD(QuickHashIntSet, add);
+PHP_METHOD(QuickHashIntSet, exists);
+PHP_METHOD(QuickHashIntSet, delete);
+...]]></example>
+<blurb>In qh_intset.c:</blurb>
+<example><![CDATA[zend_function_entry qh_funcs_intset[] = {
+    PHP_ME(QuickHashIntSet, __construct,    arginfo_qh_intset_construct,        ZEND_ACC_CTOR|ZEND_ACC_PUBLIC)
+    PHP_ME(QuickHashIntSet, getSize,        arginfo_qh_intset_get_size,         ZEND_ACC_PUBLIC)
+    PHP_ME(QuickHashIntSet, add,            arginfo_qh_intset_add,              ZEND_ACC_PUBLIC)
+    PHP_ME(QuickHashIntSet, exists,         arginfo_qh_intset_exists,           ZEND_ACC_PUBLIC)
+    PHP_ME(QuickHashIntSet, delete,         arginfo_qh_intset_exists,           ZEND_ACC_PUBLIC)
+...
+    {NULL, NULL, NULL}
+};
+
+PHP_METHOD(QuickHashIntSet, getSize)   
+{   
+...
+}
+]]></example>
+</slide>

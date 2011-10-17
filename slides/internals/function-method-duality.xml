@@ -1,0 +1,29 @@
+<slide>
+<title>Function/Method duality</title>
+<blurb>In ext/date/php_date.h:</blurb>
+<example><![CDATA[PHP_FUNCTION(date_timezone_get);]]></example>
+<blurb>In ext/date/php_date.c:</blurb>
+<example><![CDATA[const zend_function_entry date_functions[] = {
+    PHP_FE(date_timezone_get, arginfo_date_timezone_get)
+    PHP_FE_END
+};
+
+const zend_function_entry date_funcs_date[] = {
+    PHP_ME_MAPPING(createFromFormat, date_timezone_get,   arginfo_date_timezone_get, ZEND_ACC_PUBLIC)
+    PHP_FE_END
+};
+
+PHP_FUNCTION(date_timezone_get)
+{                   
+    zval             *object;
+    php_date_obj     *dateobj;
+    php_timezone_obj *tzobj;
+                        
+    if (zend_parse_method_parameters(ZEND_NUM_ARGS() TSRMLS_CC, getThis(), "O", &object, date_ce_date) == FAILURE) {
+        RETURN_FALSE;
+    }
+    dateobj = (php_date_obj *) zend_object_store_get_object(object TSRMLS_CC);
+...
+}
+]]></example>
+</slide>

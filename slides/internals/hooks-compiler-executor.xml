@@ -1,0 +1,46 @@
+<slide>
+<title>Overloading the compiler and executor</title>
+<blurb>In MINIT:</blurb>
+<example><![CDATA[    old_compile_file = zend_compile_file;
+    zend_compile_file = xdebug_compile_file;
+    xdebug_old_execute = zend_execute;
+    zend_execute = xdebug_execute;
+    xdebug_old_execute_internal = zend_execute_internal;
+    zend_execute_internal = xdebug_execute_internal;
+]]></example>
+<blurb>In MSHUTDOWN:</blurb>
+<example><![CDATA[    zend_compile_file = old_compile_file;
+    zend_execute = xdebug_old_execute;
+    zend_execute_internal = xdebug_old_execute_internal;
+]]></example>
+<blurb>%xdebug_compile_file%:</blurb>
+<example><![CDATA[/* {{{ zend_op_array srm_compile_file (file_handle, type)
+ *    This function provides a hook for the execution of bananas */
+zend_op_array *xdebug_compile_file(zend_file_handle *file_handle, int type TSRMLS_DC)
+{
+    zend_op_array *op_array;
+    op_array = old_compile_file(file_handle, type TSRMLS_CC);
+...
+    return op_array;
+}
+/* }}} */]]></example>
+<blurb>%xdebug_execute%:</blurb>
+<example><![CDATA[void xdebug_execute(zend_op_array *op_array TSRMLS_DC)
+{
+...
+    if (op_array && op_array->filename && strcmp("xdebug://debug-eval", op_array->filename)
+        xdebug_old_execute(op_array TSRMLS_CC);
+        return;
+    }
+...]]></example>
+<blurb>%xdebug_execute_internal%:</blurb>
+<example><![CDATA[void xdebug_execute_internal(zend_execute_data *current_execute_data, int return_value_used TSRMLS_DC)
+{
+    zend_execute_data    *edata = EG(current_execute_data);
+...
+    XG(level)++;
+    if (XG(level) == XG(max_nesting_level)) {
+        php_error(E_ERROR, "Maximum function nesting level of '%ld' reached, aborting!", XG(max_nesting_level));
+    }
+]]></example>
+</slide>

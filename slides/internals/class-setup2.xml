@@ -1,0 +1,51 @@
+<slide>
+<title>Class registration (2)</title>
+<blurb>In qh_intset.c:</blurb>
+<example><![CDATA[static inline zend_object_value qh_object_new_intset_ex(zend_class_entry *class_type, php_qh_intset_obj **ptr TSRMLS_DC)
+{
+    php_qh_intset_obj *intern;
+    zend_object_value retval;
+    zval *tmp;
+
+    intern = emalloc(sizeof(php_qh_intset_obj));
+    memset(intern, 0, sizeof(php_qh_intset_obj));
+    if (ptr) {
+        *ptr = intern;
+    }
+
+    zend_object_std_init(&intern->std, class_type TSRMLS_CC);
+#if PHP_MINOR_VERSION > 3
+    object_properties_init(&intern->std, class_type);
+#else
+    zend_hash_copy(intern->std.properties, &class_type->default_properties, 
+        (copy_ctor_func_t) zval_add_ref, (void *) &tmp, sizeof(zval *));
+#endif
+
+    retval.handle = zend_objects_store_put(intern, (zend_objects_store_dtor_t)zend_objects_destroy_object,
+        (zend_objects_free_object_storage_t) qh_object_free_storage_intset, NULL TSRMLS_CC);
+    retval.handlers = &qh_object_handlers_intset;
+    
+    return retval;
+}
+
+static zend_object_value qh_object_new_intset(zend_class_entry *class_type TSRMLS_DC)
+{   
+    return qh_object_new_intset_ex(class_type, NULL TSRMLS_CC);
+}
+
+static void qh_object_free_storage_intset(void *object TSRMLS_DC)
+{   
+    php_qh_intset_obj *intern = (php_qh_intset_obj *) object;
+    
+    if (intern->hash) {
+        qho *tmp_options = intern->hash->options;
+        
+        qhi_free(intern->hash);
+        qho_free(tmp_options);
+    }
+    
+    zend_object_std_dtor(&intern->std TSRMLS_CC);
+    efree(object);
+}
+]]></example>
+</slide>

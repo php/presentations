@@ -1,0 +1,12 @@
+<slide>
+<title>Intermediate notes</title>
+<list>
+    <bullet>%TSRM%: %TSRMLS_C%, %TSRMLS_CC%, %TSRMLS_D%, %TSRMLS_DC%, %TSRMLS_FETCH()%</bullet>
+    <bullet>%PHP_MINOR_VERSION%, %PHP_VERSION_ID%</bullet>
+    <bullet>memory allocation: emalloc/efree/estrdup vs malloc/free/strdup</bullet>
+	<bullet><example>#if COMPILE_DL_XDEBUG
+ZEND_GET_MODULE(xdebug)
+#endif
+</example></bullet>
+</list>
+</slide>

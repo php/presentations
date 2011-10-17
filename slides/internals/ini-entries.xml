@@ -1,0 +1,25 @@
+<slide>
+<title>.ini entries</title>
+<example><![CDATA[PHP_INI_BEGIN()
+    STD_PHP_INI_ENTRY("xdebug.manual_url",        "http://www.php.net", PHP_INI_ALL,    OnUpdateString, 
+		manual_url,        zend_xdebug_globals, xdebug_globals)
+
+    STD_PHP_INI_ENTRY("xdebug.max_nesting_level", "100",                PHP_INI_ALL,    OnUpdateLong,
+		max_nesting_level, zend_xdebug_globals, xdebug_globals)
+
+    STD_PHP_INI_BOOLEAN("xdebug.overload_var_dump", "1", PHP_INI_SYSTEM|PHP_INI_PERDIR, OnUpdateBool,
+		overload_var_dump, zend_xdebug_globals, xdebug_globals)
+
+    STD_PHP_INI_BOOLEAN("xdebug.show_exception_trace",  "0",            PHP_INI_ALL,    OnUpdateBool,
+		show_ex_trace,     zend_xdebug_globals, xdebug_globals)
+]]></example>
+
+<list>
+	<bullet>name, default value</bullet>
+	<bullet>where is it active</bullet>
+	<bullet>what to do when it updates</bullet>
+	<bullet>internal globals struct field</bullet>
+	<bullet>globals struct type</bullet>
+	<bullet>global struct name</bullet>
+</list>
+</slide>
