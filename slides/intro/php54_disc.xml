@@ -1,13 +1,6 @@
 <slide title="Discussing">
 
 <break lines="1" />
-<blurb fontsize="4em">Built-in Web server for testing</blurb>
-<example fontsize="2em" result='0' title="" type="shell"><![CDATA[
-% php -S localhost:8000
-Server is listening on localhost:8000... Press CTRL-C to quit.
-]]></example>
-
-<break lines="1" />
 <blurb fontsize="4em">method call/property access on instantiation</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 new foo()->bar()

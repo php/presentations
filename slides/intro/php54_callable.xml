@@ -1,0 +1,16 @@
+<slide title="Callable Typehint">
+
+<break lines="1" />
+<blurb fontsize="4em">Callable Typehint</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+function foo(callable $do) {
+  $do();
+}
+
+foo("phpinfo");
+foo(function() {});
+$o = new ArrayObject();
+foo(array($o, "count"));
+]]></example>
+
+</slide>

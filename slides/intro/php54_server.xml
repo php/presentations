@@ -1,0 +1,10 @@
+<slide title="Web Server">
+
+<break lines="1" />
+<blurb fontsize="4em">Built-in Web server for testing</blurb>
+<example fontsize="2em" result='0' title="" type="shell"><![CDATA[
+% php -S localhost:8000
+Server is listening on localhost:8000... Press CTRL-C to quit.
+]]></example>
+
+</slide>
