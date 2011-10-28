@@ -4,6 +4,9 @@
 <blurb fontsize="4em">New Output API (internal code cleanup)</blurb>
 
 <break lines="1" />
+<blurb fontsize="4em">Session entropy from /dev/urandom by default</blurb>
+
+<break lines="1" />
 <blurb fontsize="4em">&amp;lt;?= is now always available</blurb>
 
 <break lines="1" />
@@ -13,7 +16,34 @@
 <blurb fontsize="4em">Multibyte support is now configurable at runtime</blurb>
 
 <break lines="1" />
+<blurb fontsize="4em">Better support for asian chars in htmlspecialchars/htmlentities</blurb>
+
+<break lines="1" />
 <blurb fontsize="4em">INI directive to disable POST data processing</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">XSLT writes are disabled by default now</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">Added AES support to OpenSSL</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">debug_backtrace() now takes optional arg to limit number of stack frames returned</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">mysqlnd used by default unless overridden by ./configure</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">file upload progress support in Session extension</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">TZ env var is ignored - UTC if not otherwise set</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">REQUEST_TIME has microsecond precision and is a double now</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">readline support for php -a</blurb>
 
 <break lines="1" />
 <blurb fontsize="4em">Add E_STRICT to E_ALL</blurb>

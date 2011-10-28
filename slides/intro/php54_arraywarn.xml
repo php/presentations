@@ -1,7 +1,7 @@
-<slide title="Array to String Warning">
+<slide title="Array to String">
 
-<blurb fontsize="4em">Array to String conversion notice</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
+<blurb fontsize="4em">New notice on array to string conversion</blurb>
+<example fontsize="2em" result='1' title=""><![CDATA[<?php
 error_reporting(-1);
 $a = [1,2,3];
 echo $a;]]></example>

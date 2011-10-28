@@ -3,7 +3,7 @@
 <blurb fontsize="4em">Function Array Dereferencing</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 function fruits() {
-  return array('apple', 'banana', 'orange');
+  return ['apple', 'banana', 'orange'];
 }
 echo fruits()[0]; // Outputs: apple
 ?>]]></example>

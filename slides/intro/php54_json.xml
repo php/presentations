@@ -30,4 +30,11 @@ echo json_encode($a,JSON_PRETTY_PRINT);
 ]
 ]]></example>
 
+<list>
+<item>JSON_UNESCAPED_SLASHES</item>
+<item>JSON_NUMERIC_CHECK</item>
+<item>JSON_BIGINT_AS_STRING</item>
+<item>JSON_UNESCAPED_UNICODE</item>
+</list>
+
 </slide>
