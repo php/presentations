@@ -12,8 +12,7 @@ usort($data,
                  return ($a%2) ? 1 : -1;
              }
      );
-foreach($data as $v) echo "$v ";
-?>]]></example>
+foreach($data as $v) echo "$v ";]]></example>
 
 <break lines="1" />
 
@@ -25,7 +24,6 @@ $getClosure = function($v) {
 };
 
 $closure = $getClosure(2);
-$closure();
-?>]]></example>
+$closure();]]></example>
 
 </slide>
