@@ -1,0 +1,54 @@
+<slide title="IMC">
+
+<blurb fontsize="4em">Instance Method Call</blurb>
+<example fontsize="2em" result="0" title=""><![CDATA[<?php
+class foo {
+	public $x = 1;
+ 
+	public function getX() {
+		return $this->x;
+	}
+	public function setX($val) {
+		$this->x = $val;
+		return $this;
+	}
+}
+ 
+$X = (new foo)->setX(20)->getX();
+echo $X; // 20
+]]></example>
+
+<break lines="1"/>
+
+<blurb fontsize="4em">Combine with Function Array Dereferencing</blurb>
+<example fontsize="2em" result="0" title=""><![CDATA[<?php
+class foo2 {
+	public $x = [];
+ 
+	public function getX() {
+		return $this->x;
+	}
+	public function setX($arr) {
+		$this->x = $arr;
+		return $this;
+	}
+}
+ 
+$X = (new foo2)->setX([0,10,20,30])->getX()[2];
+echo $X; // 20
+]]></example>
+
+<break lines="1"/>
+
+<blurb fontsize="4em">Instance Method Array Dereferencing</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+class foo extends ArrayObject {
+	public function __construct($arr) {
+		parent::__construct($arr);
+	}
+}
+ 
+echo (new foo( [1, [4, 5], 3] ))[1][0]; // 4
+]]></example>
+
+</slide>
