@@ -1,0 +1,89 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+<!--
+Performance
+-->
+
+<topic>PHP</topic>
+<title>PHP in 2011</title>
+<event>South Florida PHP Users Group</event>
+<location>Davie, FL</location>
+<date>Dec.14, 2011</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/soflo2011</url>
+<twitter>@rasmus or find me on G+</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- Intro -->
+
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+<slide>slides/intro/howwon.xml</slide>
+<slide>slides/intro/rss_flickr.xml</slide>
+<slide>slides/intro/api_flickr.xml</slide>
+<slide>slides/intro/api_flickr2.xml</slide>
+<slide>slides/intro/api_yql1.xml</slide>
+<slide>slides/intro/api_yql2.xml</slide>
+
+<slide>slides/intro/2011.xml</slide>
+<slide>slides/intro/Tech2011.xml</slide>
+<slide>slides/intro/eventmq.xml</slide>
+
+<slide>slides/intro/performance_title.xml</slide>
+<slide>slides/intro/dev_tips1.xml</slide>
+<slide>slides/intro/dev_tips2.xml</slide>
+<slide>slides/intro/dev_tips3.xml</slide>
+<slide>slides/intro/dev_tips4.xml</slide>
+<slide>slides/intro/dev_tips5.xml</slide>
+<slide>slides/intro/arch_tips.xml</slide>
+
+<slide>slides/intro/php53_title.xml</slide>
+<slide>slides/intro/php53_perf.xml</slide>
+<slide>slides/intro/php53_closures.xml</slide>
+<slide>slides/intro/php53_namespaces.xml</slide>
+<slide>slides/intro/php53_lsb.xml</slide>
+<slide>slides/intro/php53_gc.xml</slide>
+<slide>slides/intro/php53_nowdoc.xml</slide>
+<slide>slides/intro/php53_goto.xml</slide>
+<slide>slides/intro/php53_tern.xml</slide>
+<slide>slides/intro/php53_dir.xml</slide>
+<slide>slides/intro/php53_callstatic.xml</slide>
+<slide>slides/intro/php53_dynamicstatic.xml</slide>
+<slide>slides/intro/php53_date.xml</slide>
+<slide>slides/intro/php53_spl.xml</slide>
+<slide>slides/intro/php53_fpm.xml</slide>
+<slide>slides/intro/php54_title.xml</slide>
+<slide>slides/intro/php54_perf.xml</slide>
+<slide>slides/intro/php54_removed.xml</slide>
+<slide>slides/intro/php54_traits.xml</slide>
+<slide>slides/intro/php54_sarrays.xml</slide>
+<slide>slides/intro/php54_fad.xml</slide>
+<slide>slides/intro/php54_imc.xml</slide>
+<slide>slides/intro/php54_tfcs.xml</slide>
+<slide>slides/intro/php54_callable.xml</slide>
+<slide>slides/intro/php54_server.xml</slide>
+<slide>slides/intro/php54_binary.xml</slide>
+<slide>slides/intro/php54_emsgs.xml</slide>
+<slide>slides/intro/php54_arraywarn.xml</slide>
+<slide>slides/intro/php54_json.xml</slide>
+<slide>slides/intro/php54_misc.xml</slide>
+
+<slide>slides/intro/key_ref2011.xml</slide>
+
+</presentation>
