@@ -1,0 +1,16 @@
+<slide title="Closures">
+
+<break lines="1" />
+
+<blurb fontsize="4em">You can nest them</blurb>
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+$getClosure = function($v) {
+    return function() use($v) {
+        echo "Hello World: $v!\n";
+    };
+};
+
+$closure = $getClosure(2);
+$closure();]]></example>
+
+</slide>

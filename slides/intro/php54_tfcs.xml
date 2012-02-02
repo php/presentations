@@ -1,17 +1,32 @@
-<slide title="Closures">
+<slide title="Closures inside Objects">
 
 <blurb fontsize="4em">$this from current scope supported in Closures</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 class Foo {
-  private $prop = "bar";
+  private $prop;
+  function __construct($prop) {
+    $this->prop = $prop;
+  }
   public function getPrinter() {
     return function() { echo ucfirst($this->prop); };
   }
 }
 
-$a = new Foo;
+$a = new Foo('bar');;
 $func = $a->getPrinter();
 $func(); // Outputs: Bar
+?>]]></example>
+
+<break lines="1" />
+
+<blurb fontsize="4em">You can also re-bind a closure to a new object instance</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+$a = new Foo('bar');
+$b = new Foo('pickle');
+$func = $a->getPrinter();
+$func(); // Outputs: Bar
+$func = $func->bindTo($b);
+$func(); // Outputs: Pickle
 ?>]]></example>
 
 </slide>

@@ -1,0 +1,20 @@
+<slide title="Static Closures">
+
+<blurb fontsize="4em">If you declare a closure static it won't have access to $this</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+class Foo {
+  private $prop;
+  function __construct($prop) {
+    $this->prop = $prop;
+  }
+  public static function getPrinter() {
+    return function() { echo ucfirst($this->prop); };
+  }
+}
+
+$a = new Foo('bar');;
+$func = $a->getPrinter();
+$func(); // Fatal error: Using $this when not in object context
+?>]]></example>
+
+</slide>

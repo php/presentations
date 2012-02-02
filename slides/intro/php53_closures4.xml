@@ -1,0 +1,21 @@
+<slide title="Closures">
+
+<break lines="1" />
+
+<blurb fontsize="4em">However, you can do this:</blurb>
+<example fontsize="1.4em" result='1' title=""><![CDATA[<?php
+function getMsgFnc2() {
+    global $msg;
+    return function() use (&$msg) {
+        echo "Msg: {$msg}!<br/>\n";
+    };
+}
+
+$GLOBALS['msg'] = "Hello";
+$fnc = getMsgFnc2();
+$fnc();
+$GLOBALS['msg'] = "World";
+$fnc();
+]]></example>
+
+</slide>

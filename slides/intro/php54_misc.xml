@@ -40,12 +40,18 @@
 <blurb fontsize="4em">TZ env var is ignored - UTC if not otherwise set</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">REQUEST_TIME has microsecond precision and is a double now</blurb>
+<blurb fontsize="4em">REQUEST_TIME_FLOAT has microsecond precision and is a double now</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">readline support for php -a</blurb>
+<blurb fontsize="4em">proper readline support for php -a</blurb>
 
 <break lines="1" />
 <blurb fontsize="4em">Add E_STRICT to E_ALL</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">crypt() in Blowfish mode now supports hashes marked $2a$, $2x$, $2y$ and $2z$</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">Added support for SORT_NATURAL and SORT_FLAG_CASE in all array sort functions</blurb>
 
 </slide>
