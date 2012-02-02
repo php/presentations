@@ -17,7 +17,8 @@ echo "Name: {$name->name}<br />\n";
 echo "Gender: {$name->gender}<br />\n";
 echo "Countries: ";
 $countries='';
-foreach($name->countries->country as $c) $countries.=((string)$c).", ";
+if(count($name->countries->country)) 
+    foreach($name->countries->country as $c) $countries.=((string)$c).", ";
 $countries = rtrim($countries,", ");
 echo $countries;
 ?>
