@@ -7,8 +7,8 @@ class Foo {
   function __construct($prop) {
     $this->prop = $prop;
   }
-  public static function getPrinter() {
-    return function() { echo ucfirst($this->prop); };
+  public function getPrinter() {
+    return static function() { echo ucfirst($this->prop); };
   }
 }
 
