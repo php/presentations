@@ -1,0 +1,32 @@
+<slide title="Flickr">
+<break lines="1"/>
+
+<example result="0" hide="0" fontsize="1.4em"><![CDATA[<?php
+include 'yql.php';
+$q = "SELECT * FROM flickr.photos.search(100) WHERE tags='$loc' 
+         AND sort='interestingness-desc' AND api_key='$api_key'";
+foreach(yql($q)->results->photo as $p)
+    echo '<img src="'.furl($p,'m').'">';]]></example>
+
+<break lines="1"/>
+
+<example result="1" hide="1" fontsize="1.4em"><![CDATA[<?php
+include 'presentations/slides/intro/yql.php';
+if(!isset($_POST['loc'])) $loc = ':-:location:-:';
+else $loc = $_POST['loc'];
+$q = <<<EOQ
+select * from flickr.photos.search(100) where tags="$loc" 
+         and sort="interestingness-desc"
+         and api_key="{$secrets['api_key']}"
+EOQ;
+$x = yql($q);
+foreach($x->results->photo as $p) {
+  echo '<img src="'.furl($p,'m').'" title="'.
+       htmlspecialchars($p['title'], ENT_QUOTES, 'utf-8').'"/>';
+}
+?>
+<form action="<?php echo htmlspecialchars($PHP_SELF)?>" method="POST">
+Location: <input type=text name=loc size=60>
+</form>]]></example>
+
+</slide>

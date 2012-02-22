@@ -21,3 +21,7 @@ function yql($q, $fmt='xml') {
   $x = simplexml_load_file(cache($yql.urlencode($q)."&format=$fmt&env=".urlencode($env)));
   return $x;
 }
+
+function furl($p, $size='s', $ext='jpg') {
+  return "http://farm{$p['farm']}.static.flickr.com/{$p['server']}/{$p['id']}_{$p['secret']}_{$size}.{$ext}";
+}
