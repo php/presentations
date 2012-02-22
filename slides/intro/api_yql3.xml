@@ -5,8 +5,7 @@
 include 'yql.php';
 $q = "SELECT * FROM flickr.photos.search(100) WHERE tags='$loc' 
          AND sort='interestingness-desc' AND api_key='$api_key'";
-foreach(yql($q)->results->photo as $p)
-    echo '<img src="'.furl($p,'m').'">';]]></example>
+foreach(yql($q)->results->photo as $p) echo '<img src="'.furl($p,'m').'">';]]></example>
 
 <break lines="1"/>
 
