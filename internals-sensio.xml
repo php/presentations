@@ -1,0 +1,90 @@
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#3C5BB4"
+    stylesheet="presentations/slides/ze-xdebug/style.css"
+	backgroundfixed="1" >
+<topic>Internals</topic>
+<title>PHP Internals</title>
+<event>Sensio Training</event>
+<location>Paris, France</location>
+<date>June 13, 2011</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<slide>slides/dbus/title.xml</slide>
+<slide>slides/internals/overview-tutorial.xml</slide>
+
+<slide>slides/internals/apache2-module.xml</slide>
+<slide>slides/internals/cgi.xml</slide>
+<slide>slides/internals/cli.xml</slide>
+<slide>slides/internals/fastcgi.xml</slide>
+<slide>slides/internals/fpm.xml</slide>
+<slide>slides/internals/threaded.xml</slide>
+
+<slide>slides/internals/extension-loading.xml</slide>
+
+<slide>slides/internals/parse_error.xml</slide>
+<slide>slides/internals/lex.xml</slide>
+<slide>slides/internals/tokens.xml</slide>
+<slide>slides/internals/alltokens.xml</slide>
+<slide>slides/internals/tokenizer1.xml</slide>
+<slide>slides/internals/tokenizer2.xml</slide>
+
+<slide>slides/internals/compile.xml</slide>
+<slide>slides/internals/opcode2.xml</slide>
+<slide>slides/internals/opcode.xml</slide>
+<slide>slides/internals/vld-example.xml</slide>
+<slide>slides/internals/vld1.xml</slide>
+<slide>slides/internals/vld2.xml</slide>
+
+<slide>slides/internals/execute1.xml</slide>
+<slide>slides/internals/execute2.xml</slide>
+<slide>slides/internals/execute3.xml</slide>
+<slide>slides/internals/execute4.xml</slide>
+
+<!-- CACHES -->
+<slide>slides/internals/execute5.xml</slide>
+<slide>slides/internals/opcode-cache.xml</slide>
+<slide>slides/internals/how_ccache_serialize.xml</slide>
+
+<slide>slides/internals/runcompiletime.xml</slide>
+<slide>slides/internals/runcompiletime2.xml</slide>
+<slide>slides/internals/runcompiletime3.xml</slide>
+<slide>slides/internals/runcompiletime4.xml</slide>
+<slide>slides/internals/namespaces2.xml</slide>
+<slide>slides/internals/namespaces3.xml</slide>
+<slide>slides/internals/namespaces4.xml</slide>
+- traits
+
+<slide>slides/internals/questions.xml</slide>
+
+<!-- VARIABLES -->
+
+<slide>slides/internals/zval.xml</slide>
+<slide>slides/internals/internal-variable-types.xml</slide>
+<slide>slides/internals/variables1.xml</slide>
+<slide>slides/internals/variables2.xml</slide>
+<slide>slides/internals/variables3.xml</slide>
+<slide>slides/internals/variables4.xml</slide>
+<slide>slides/internals/variables5.xml</slide>
+<slide>slides/internals/variables6.xml</slide>
+<slide>slides/internals/variables7.xml</slide>
+<slide>slides/internals/variables8.xml</slide>
+<slide>slides/internals/variables9.xml</slide>
+<slide>slides/internals/variables10.xml</slide>
+<slide>slides/internals/variables11-php4.xml</slide>
+<slide>slides/internals/variables11.xml</slide>
+
+<slide>slides/internals/gc1.xml</slide>
+<slide>slides/internals/gc2.xml</slide>
+<slide>slides/internals/gc3.xml</slide>
+<slide>slides/internals/gc4.xml</slide>
+<slide>slides/internals/gc5.xml</slide>
+<slide>slides/internals/gc6.xml</slide>
+<slide>slides/internals/gc7.xml</slide>
+<slide>slides/internals/gc8.xml</slide>
+
+<slide>slides/internals/questions.xml</slide>
+<slide>slides/internals/resources.xml</slide>
+</presentation>

@@ -1,0 +1,26 @@
+<slide>
+<title>Document update modifiers: Misc</title>
+
+<list>
+    <bullet>%*$rename*% (renames fields)</bullet>
+    <bullet>%*$bit*% (bitwise updates of field)</bullet>
+</list>
+<example result="1"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->bits;
+$c->remove();
+
+$c->insert( array( 'bitmask' => 0b1001 ) );
+echo decbin( $c->findOne()['bitmask'] ), "\n";
+
+$c->update( array(), array( '$bit' => array( 'bitmask' => array( 'and' => 0b0101 ) ) ) );
+echo decbin( $c->findOne()['bitmask'] ), "\n";
+
+$c->update( array(), array( '$bit' => array( 'bitmask' => array( 'or' => 0b10100 ) ) ) );
+echo decbin( $c->findOne()['bitmask'] ), "\n";
+
+// this is not in yet ;-)
+$c->update( array(), array( '$bit' => array( 'bitmask' => array( 'xor' => 0b01110 ) ) ) );
+echo decbin( $c->findOne()['bitmask'] ), "\n";
+?>]]></example>
+</slide>

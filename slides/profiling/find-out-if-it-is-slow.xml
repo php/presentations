@@ -1,7 +1,7 @@
 <slide>
 <title>How does the application perform?</title>
 
-<blurb>Benchmark the application: siege</blurb>
+<blurb>Benchmark the application: siege (httperf, jmeter-http)</blurb>
 <list>
 	<bullet>check ~/.siegerc and set the %logfile% setting</bullet>
 	<bullet>Create a file with urls:<example><![CDATA[http://derickrethans.nl/

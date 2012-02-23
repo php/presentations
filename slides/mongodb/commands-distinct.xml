@@ -1,0 +1,19 @@
+<slide>
+<title>Distinct</title>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo; $c = $m->demo->pubs; $c->drop();
+
+$c->insert( [ 'name' => 'Betsy Smith',   'city' => 'London' ] );
+$c->insert( [ 'name' => 'London Tavern', 'city' => 'London' ] );
+$c->insert( [ 'name' => 'Lammars',       'city' => 'Manchester' ] );
+$c->insert( [ 'name' => 'Weatherspoons', 'city' => 'Coventry' ] );
+
+$r = $m->demo->command( [
+    'distinct' => 'pubs',
+    'key' => 'city',
+    'query' => [ 'name' => [ '$ne' => 'Weatherspoons' ] ]
+] );
+var_dump( $r['values'] );
+?>]]></example>
+</slide>

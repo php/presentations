@@ -1,0 +1,17 @@
+<slide>
+<title>Aggregation Framework</title>
+<subtitle>New in 2.2</subtitle>
+
+<blurb>Powerfull framework for running multiple operations in a pipeline</blurb>
+<blurb>Operations are:</blurb>
+<list>
+	<bullet>%$match%: for matching documents, à la %find()%.</bullet>
+	<bullet>%$project%: for "rewriting" documents, but more powerful with
+	computed expressions: adding fields (%$add%), conditions (%$ifNull%),
+	string functions (%$toLower%), etc</bullet>
+	<bullet>%$unwind%: hands out array elements each at a time</bullet>
+	<bullet>%$group%: aggregates items into buckets defined by key</bullet>
+	<bullet>%$sort%</bullet>
+	<bullet>%$limit% / %$skip%</bullet>
+</list>
+</slide>

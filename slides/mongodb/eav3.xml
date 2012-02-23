@@ -1,0 +1,17 @@
+<slide>
+<title>In MongoDB</title>
+
+<example>
+{
+	'_id': 1,
+	'name' : 'Elephpant',
+	'url_key': 'elephpant',
+	'description': 'Cute elephpant',
+	'short_description': "It's cute",
+	'status': 1,
+	'visibility': 4,
+	'tax_class_id': 2,
+}
+</example>
+<image align="right" filename="elephpant.jpg"/>
+</slide>

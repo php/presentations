@@ -1,0 +1,25 @@
+<slide>
+<title>Getting started with mongoDB</title>
+
+<blurb>Installation by downloading from <link href="http://www.mongodb.org/downloads"/>:</blurb>
+<example>
+wget http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.0.2.tgz
+tar xvzf mongodb-linux-x86_64-2.0.2.tgz
+cd mongodb-linux-x86_64-2.0.2/bin
+mkdir ../../data
+./mongod --dbpath ../../data --logpath /tmp/mongod.log --fork
+tail -f /tmp/mongod.log
+</example>
+<break/>
+
+<blurb>Installation through %apt-get%:</blurb>
+<example>
+$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+$ sudo echo "deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen" >> /etc/apt/sources.list
+# sudo apt-get update
+$ sudo apt-get install mongodb-10gen
+</example>
+<break/>
+
+<blurb>Tweak config in %/etc/mongodb.conf% if you must. %mongo% (the shell) is a useful application to try out things with.</blurb>
+</slide>

@@ -1,0 +1,19 @@
+<slide>
+<title>Cursor methods</title>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo();
+$c = $m->demo->articles;
+
+$cursor = $c->find();
+$cursor->sort( array( '_id' => 1 ) )
+       ->limit( 3 )
+       ->skip( 3 );
+
+// Only now does the query get send
+foreach ( $cursor as $r )
+{
+    echo $r['_id'], "\n";
+}
+?>]]></example>
+</slide>

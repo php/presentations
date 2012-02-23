@@ -1,0 +1,15 @@
+<slide>
+<title>Sorting</title>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo();
+$c = $m->demo->articles;
+
+$cursor = $c->find()->sort( array( '_id' => -1 ) );
+
+foreach ( $cursor as $r )
+{
+    var_dump( $r );
+}
+?>]]></example>
+</slide>

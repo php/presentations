@@ -1,0 +1,10 @@
+<slide>
+<title>Sharding</title>
+
+<image filename="sharding.png"/>
+
+<list>
+	<bullet>Scaling writes and reads</bullet>
+	<bullet>Config servers, router (%mongos%) and replica sets</bullet>
+</list>
+</slide>

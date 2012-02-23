@@ -1,0 +1,21 @@
+<slide>
+<title>Querying: matching array elements ($elemMatch)</title>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->circus;
+$r = $c->find(
+    array (
+        'elephpants' =>
+        array( '$elemMatch' => array ( 'colour' => 'blue', 'year' => array( '$gt' => 1900 ) )
+    )
+) );
+foreach( $r as $c ) {
+    echo $c['name'], ': ';
+    foreach( $c['elephpants'] as $elephpant ) {
+        echo "\n- ", join( ", ", $elephpant );
+    }
+    echo "\n\n";
+}
+?>]]></example>
+</slide>

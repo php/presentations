@@ -1,0 +1,19 @@
+<slide>
+<title>Querying (1)</title>
+
+<example><![CDATA[<?php
+$m = new Mongo();
+// First "found" item:
+$record = $m->demo->articles->findOne();
+
+// Search on the _id field being 'derickr'
+$record = $m->demo->articles->findOne( array( '_id' => 'derickr' ) );
+
+// Search on the array element key 'title' in the 'articles' field
+$record = $m->demo->articles->findOne(
+  array(
+    'articles.title' => 'Xdebug'
+  )
+);
+?>]]></example>
+</slide>

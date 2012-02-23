@@ -11,13 +11,13 @@
 <topic>Debugging</topic>
 <title>Profiling PHP Applications</title>
 <event>PHP Tour Lille</event>
-<location>Lille, Belgium!</location>
+<location>Lille, France</location>
 <date>Nov 25th, 2011</date>
 <speaker>Derick Rethans</speaker>
 <email>derick@derickrethans.nl</email>
 <twitter>derickr</twitter>
 <url>http://derickrethans.nl/talks.html</url>
-<joindin></joindin>
+<joindin>4357</joindin>
 <slide>slides/dbus/title.xml</slide>
 <slide>slides/toolbox/me.xml</slide>
 
@@ -51,11 +51,9 @@
 
 <slide>slides/profiling/xhprof.xml</slide>
 
-<slide>slides/xdebug/profiling.xml</slide>
-<slide>slides/xdebug/profiling2.xml</slide>
+<slide>slides/xdebug/profiling3.xml</slide>
 <slide>slides/xdebug/live-demo.xml</slide>
 
-<slide>slides/xdebug/donate.xml</slide>
 <slide>slides/profiling/resources.xml</slide>
 
 </presentation>

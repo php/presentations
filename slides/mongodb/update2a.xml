@@ -1,0 +1,22 @@
+<slide>
+<title>Updating documents</title>
+
+<blurb>Update only updates the *first* document it finds by default.</blurb>
+
+<blurb>You can set an option to get all matching documents to be updated</blurb>
+
+<example result="0"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->elephpants;
+$c->drop();
+
+$c->insert( [ '_id' => 'e42', 'name' => 'Kamubpo', 'age' => 17 ] );
+$c->insert( [ '_id' => 'e43', 'name' => 'Denali',  'age' => 17 ] );
+
+$c->update(
+    [ 'age' => 17 ],                // criteria
+    [ '$inc' => [ 'age' => 1 ] ],   // update spec
+    [ 'multiple' => true ]          // options: multiple
+);
+?>]]></example>
+</slide>

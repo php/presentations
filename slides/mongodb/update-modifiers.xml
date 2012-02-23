@@ -1,0 +1,26 @@
+<slide>
+<title>Modifying documents</title>
+
+<example><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->elephpants;
+$c->remove();
+
+$c->insert( [
+  '_id' => 'e43',
+  'name' => 'Dumbo'
+] );
+
+$c->update(
+  [ 'name' => 'Dumbo' ], // criteria
+  [ '$set' => array [ 'age' => '17' ] ] // modifiers
+);
+
+// document is now:
+[
+  '_id' => 'e43',
+  'name' => 'Dumbo',
+  'age' => '17',
+]
+?>]]></example>
+</slide>

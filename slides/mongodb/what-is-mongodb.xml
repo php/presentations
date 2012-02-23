@@ -1,0 +1,13 @@
+<slide>
+<title>What is mongoDB?</title>
+
+<image filename="mongodb.png" align="right"/>
+
+<list>
+	<bullet>mongoDB is a document storage and retrieval engine</bullet>
+	<bullet>It requires almost no configuration to set-up a high available
+	and high performant cluster of database servers</bullet>
+	<bullet>Each document is stored into a collection, which is stored into
+	a database, which is stored in a database server.</bullet>
+</list>
+</slide>

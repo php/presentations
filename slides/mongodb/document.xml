@@ -1,0 +1,40 @@
+<slide>
+<title>Documents</title>
+
+<list>
+  <bullet>Stored as BSON (Binary JSON)</bullet>
+  <bullet>Can have embedded documents</bullet>
+  <bullet>Have a unique ID (the %_id% field)</bullet>
+  <bullet>Are *schemaless*</bullet>
+</list>
+<break/>
+
+<div effect="fade-out">
+<blurb>Simple document:</blurb>
+<example>
+{
+  "_id" : ObjectId("4cb4ab6d7addf98506010001"),
+  "handle" : "derickr",
+  "name" : "Derick Rethans"
+}
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Document with embedded documents:</blurb>
+<example>
+{
+  "_id" : "derickr",
+  "name" : "Derick Rethans",
+  "talks" : [
+    { "title" : "Profiling PHP Applications",
+      "url" : "http://derickrethans.nl/talks/profiling-phptour.pdf",
+    },
+    { "title" : "Xdebug",
+      "url" : "http://derickrethans.nl/talks/xdebug-phpbcn11.pdf",
+    }
+  ]
+}
+</example>
+</div>
+</slide>

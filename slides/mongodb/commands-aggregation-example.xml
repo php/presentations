@@ -1,0 +1,33 @@
+<slide>
+<title>Aggregation Example</title>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo; $d = $m->demo; $c = $d->articles; $c->drop();
+
+$c->insert( [
+    "title" => "Profiling PHP Applications",
+    "url" => "http://derickrethans.nl/talks/profiling-phptourlille11.pdf",
+    "tags" => [ "php", "profiling" ]
+] );
+$c->insert( [
+    "title" => "Xdebug",
+    "url" => "http://derickrethans.nl/talks/xdebug-phpbcn11.pdf",
+    "tags" => [ "php", "xdebug" ]
+] );
+
+$m = $d->command( [
+    'aggregate' => 'articles',
+    'pipeline' => [
+        [ '$match' => [ 'tags' => 'php' ] ],
+        [ '$unwind' => '$tags' ],
+        [ '$project' => [
+            'title' => [ '$add' => [ '$title', ': ', '$url' ] ],
+            'tag' => '$tags'
+        ] ]
+    ]
+] );
+
+foreach( $m['result'] as $res ) { echo $res['title'], ' (', $res['tag'], ")\n"; }
+?>]]></example>
+</slide>
+

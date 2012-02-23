@@ -1,0 +1,10 @@
+<slide>
+<title>Commands</title>
+
+<list>
+	<bullet>Are run on the database</bullet>
+	<bullet>Do *not* return a cursor</bullet>
+	<bullet>Return one document</bullet>
+	<bullet>Some commands have helpers in the drivers and shell</bullet>
+</list>
+</slide>

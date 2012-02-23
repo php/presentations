@@ -1,0 +1,18 @@
+<slide>
+<title>mongoDB supports many types</title>
+
+<list>
+	<bullet>null</bullet>
+	<bullet>boolean</bullet>
+	<bullet>integer (both 32-bit and 64-bit, MongoInt32, MongoInt64)</bullet>
+	<bullet>double</bullet>
+	<bullet>string (UTF-8)</bullet>
+	<bullet>array</bullet>
+	<bullet>associative array</bullet>
+	<bullet>MongoRegex</bullet>
+	<bullet>MongoId</bullet>
+	<bullet>MongoDate</bullet>
+	<bullet>MongoCode</bullet>
+	<bullet>MongoBinData</bullet>
+</list>
+</slide>

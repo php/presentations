@@ -1,0 +1,19 @@
+<slide>
+<title>Querying and looping</title>
+
+<blurb>Finding multiple documents is done with the %find()%, and returns an
+iterator in the form of a %MongoCursor% object.</blurb>
+<break/>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo();
+$c = $m->demo->articles;
+
+$cursor = $c->find( [ 'title' => [ '$exists' => true ] ] );
+
+foreach ( $cursor as $r )
+{
+    echo $r['title'], ': ', join( ', ', $r['tags'] ), "\n";
+}
+?>]]></example>
+</slide>

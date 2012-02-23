@@ -1,0 +1,38 @@
+<slide>
+<title>Advanced querying operators</title>
+
+<blurb>Besides testing for exact matches, mongoDB also has operators.
+Operators start with a '$', so make sure to use single quotes!</blurb>
+
+<div effect="fade-out">
+<blurb>Compare:</blurb>
+<list>
+    <bullet>$lt, $lte, $gt, $gte (&lt;, &lt;=, &gt;, &gt;=)</bullet>
+    <bullet>$ne (not equal)</bullet>
+    <bullet>$exists (field exists)</bullet>
+    <bullet>$mod (modulo)</bullet>
+</list>
+<blurb>Logical:</blurb>
+<list>
+    <bullet>$or (one needs to match)</bullet>
+    <bullet>$and (all need to match)</bullet>
+    <bullet>$nor (not or)</bullet>
+    <bullet>$not</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<blurb>Array:</blurb>
+<list>
+    <bullet>$in (value needs to be one of the elements of the given array)</bullet>
+    <bullet>$nin (not in)</bullet>
+    <bullet>$all (value needs to match all elements of the given array)</bullet>
+    <bullet>$size (exact size of array)</bullet>
+	<bullet>$elemMatch (element in an array matches the specified match expression)</bullet>
+</list>
+<blurb>Others:</blurb>
+<list>
+    <bullet>$type (check for type number, see <link href="http://www.mongodb.org/display/DOCS/Advanced+Queries#AdvancedQueries-%24type"/>)</bullet>
+</list>
+</div>
+</slide>

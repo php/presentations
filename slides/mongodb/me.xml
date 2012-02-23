@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide template="white">
+	<title>About Me</title>
+
+<image filename="../tdd/derick_photo.jpg" align="right" pdf-float="1" x-offset="21.3" y-offset="10" pdf-scale="0.25"/>
+
+	<blurb>Derick Rethans</blurb>
+	<list>
+		<bullet>Dutchman living in London</bullet>
+		<bullet>PHP mongoDB driver maintainer for 10gen (the company behind mongoDB)</bullet>
+		<bullet>Author of Xdebug</bullet>
+		<bullet>Author of the mcrypt, input_filter, dbus, translit and date/time extensions</bullet>
+	</list>
+		
+</slide>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<slide>
+	<title>Profiling</title>
+	<subtitle>Valgrind / Cachegrind</subtitle>
+
+	<image filename="pg4.png" marginright="2em" align="right" pdf-float="1" x-offset="15" y-offset="0" pdf-scale="0.6"/>
+	<break/>
+	<list>
+		<bullet>Written for C-applications</bullet>
+		<bullet>Xdebug uses the same format</bullet>
+		<bullet>KCacheGrind is an awesome viewer</bullet>
+		<bullet>Profile your app with *both* CacheGrind and Xdebug</bullet>
+		<bullet>Alternative viewers: WinGrind, Macgrind, Webgrind, PHP Storm</bullet>
+	</list>
+</slide>

@@ -1,0 +1,18 @@
+<slide>
+<title>Indexes</title>
+
+<example result="1"><![CDATA[<?php ini_set('xdebug.var_display_max_depth', 1);
+$m = new Mongo;
+$c = $m->demo->elephpants;
+$c->drop();
+
+$c->ensureIndex( [ 'name' => 1 ] );
+
+$c->insert( [ '_id' => 'ele1', 'name' => 'Jumbo' ] );
+$c->insert( [ '_id' => 'ele2', 'name' => 'Tantor' ] );
+$c->insert( [ '_id' => 'ele3', 'name' => 'Stampy' ] );
+
+var_dump( $c->find( [ 'name' => 'Jumbo' ] )->explain() );
+?>]]>
+</example>
+</slide>

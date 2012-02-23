@@ -1,0 +1,24 @@
+<slide>
+<title>EAV: Entity Attribute Value</title>
+
+<example>SELECT entity_id, attribute_code, value
+FROM catalog_product_entity_text cpev
+JOIN eav_attribute ea ON cpev.attribute_id = ea.attribute_id;
+
+| entity_id | attribute_code       | value             |
++-----------+----------------------+-------------------+
+|         1 | description          | Cute elephpant    |
+|         1 | short_description    | It&#38;#39;s cute     |
+|         1 | meta_keyword         | NULL              |
+
+SELECT entity_id, attribute_code, value
+FROM catalog_product_entity_int cpev
+JOIN eav_attribute ea ON cpev.attribute_id = ea.attribute_id;
+
+| entity_id | attribute_code        | value |
++-----------+-----------------------+-------+
+|         1 | status                |     1 |
+|         1 | visibility            |     4 |
+|         1 | tax_class_id          |     2 |
+</example>
+</slide>

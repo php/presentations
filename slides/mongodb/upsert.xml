@@ -1,0 +1,23 @@
+<slide>
+<title>Upserting documents</title>
+
+<blurb>*upsert*: if the record(s) do not exist, insert one.</blurb>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->elephpants; $c->drop();
+
+function birthDay( $c, $name )
+{
+    $c->update(
+        array( 'name' => $name ),                 // criteria
+        array( '$inc' => array( 'age' => 1 ) ),   // update spec
+        array( 'upsert' => true )                 // options
+    );
+    echo $c->findOne( array( 'name' => 'Santon' ) )['age'], "\n";
+}
+
+birthDay( $c, 'Santon' );
+birthDay( $c, 'Santon' );
+?>]]></example>
+</slide>

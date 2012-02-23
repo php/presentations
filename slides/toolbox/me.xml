@@ -2,17 +2,17 @@
 <slide template="white">
 	<title>About Me</title>
 
-<break lines="3"/>
+<image filename="../tdd/derick_photo.jpg" align="right" pdf-float="1" x-offset="21.3" pdf-scale="0.25"/>
+
 	<blurb>Derick Rethans</blurb>
-	<image filename="../tdd/derick_photo.jpg" align="right" pdf-float="1" x-offset="21.3" pdf-scale="0.25"/>
 	<list>
 		<bullet>Dutchman living in London</bullet>
-		<bullet>PHP development</bullet>
 		<bullet>Freelancer doing PHP internals development — ie.: writing extensions for a living</bullet>
-		<bullet>Anderskor's Camouflage</bullet>
+		<bullet>PHP Driver Maintainer for 10gen (the MongoDB people)</bullet>
+		<bullet>Anderskor's Camouflage Encoder</bullet>
+	<image filename="../profiling/camouflage-250.png" align="right"/>
 		<bullet>Author of Xdebug</bullet>
 		<bullet>Author of the mcrypt, input_filter, dbus, translit and date/time extensions</bullet>
-		<bullet>Contributor to the Apache Zeta Components Incubator project (formerly eZ Components)</bullet>
 	</list>
 		
 </slide>

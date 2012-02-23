@@ -1,0 +1,49 @@
+<slide>
+<title>Querying: matching array elements</title>
+
+<div effect="fade-out">
+<example result="2"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->circus;
+
+$c->insert( array(
+    '_id' => 'circ1',
+    'name' => 'Diaspora',
+    'performers' => 43,
+    'elephpants' => array (
+        array ( 'name' => 'Annabelle', 'colour' => 'pink', 'year' => 1964 ),
+        array ( 'name' => 'Chunee',    'colour' => 'blue', 'year' => 1826 )
+    )
+) );
+
+$c->insert( array(
+    '_id' => 'circ2',
+    'name' => 'Sensible',
+    'performers' => 27,
+    'elephpants' => array (
+        array ( 'name' => 'Kandula',   'colour' => 'pink', 'year' => 2001 ),
+        array ( 'name' => 'Kolakolli', 'colour' => 'blue', 'year' => 2006 )
+    )
+) );
+?>]]></example>
+</div>
+
+<blurb>Find circuses which have blue elephpants after 1900.</blurb>
+
+<div effect="fade-in">
+<example result="1"><![CDATA[<?php ini_set( 'xdebug.var_display_max_depth', 4 );
+$m = new Mongo;
+$c = $m->demo->circus;
+$r = $c->find(
+    array( 'elephpants.colour' => 'blue', 'elephpants.year' => array( '$gt' => 1900 ) )
+);
+foreach( $r as $c ) {
+    echo $c['name'], ': ';
+    foreach( $c['elephpants'] as $elephpant ) {
+        echo "\n- ", join( ", ", $elephpant );
+    }
+    echo "\n\n";
+}
+?>]]></example>
+</div>
+</slide>

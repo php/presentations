@@ -1,0 +1,32 @@
+<slide>
+<title>Checking for errors</title>
+
+<blurb>So far, we have not checked for whether inserts worked.</blurb>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->articles;
+
+$c->insert( array( '_id' => 'derickr' ) );
+$c->insert( array( '_id' => 'derickr' ) );
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>"Safe" inserts:</blurb>
+<example result="1"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->articles;
+
+try {
+    $c->insert(
+        array( '_id' => 'derickr' ), // document
+        array( 'safe' => true )      // options
+    );
+} catch ( Exception $e ) {
+    echo $e->getMessage(), "\n";
+}
+?>]]></example>
+</div>
+</slide>

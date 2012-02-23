@@ -1,0 +1,28 @@
+<slide>
+<title>Indexes</title>
+
+<div effect="fade-out">
+<list>
+	<bullet>Just like a relational database, mongoDB also benefits from indexes.</bullet>
+	<bullet>Every collection has (automatically) an index on %_id%.</bullet>
+	<bullet>Indexes can be on single or multiple fields.</bullet>
+	<bullet>MongoCursor->explain().</bullet>
+</list>
+
+<image filename="index.jpg" align="right" pdf-scale="0.4" x-offset="15" y-offset="10"/>
+</div>
+
+<div effect="fade-in">
+<example result="1"><![CDATA[<?php ini_set('xdebug.var_display_max_depth', 1);
+$m = new Mongo;
+$c = $m->demo->elephpants;
+$c->drop();
+
+$c->insert( array( '_id' => 'ele1', 'name' => 'Jumbo' ) );
+$c->insert( array( '_id' => 'ele2', 'name' => 'Tantor' ) );
+
+var_dump( $c->find( [ '_id' => 'ele1' ] )->explain() );
+?>]]>
+</example>
+</div>
+</slide>

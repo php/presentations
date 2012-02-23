@@ -1,0 +1,23 @@
+<slide>
+<title>Geospatial Indexes</title>
+
+<blurb>Helps you with finding POIs (pubs!) in a 2D space</blurb>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo; $c = $m->demo->pubs; $c->drop();
+
+$c->ensureIndex( array( 'l' => '2d' ) );
+$c->insert([ 'name' => 'Betsy Smith',   'l' => [ -0.193, 51.537 ] ]);
+$c->insert([ 'name' => 'London Tavern', 'l' => [ -0.202, 51.545 ] ]);
+
+$closest = $m->demo->command( [
+    'geoNear' => 'pubs',
+    'near' => [ -0.198, 51.538 ],
+    'spherical' => true,
+] );
+
+foreach ( $closest['results'] as $res ) {
+  printf( "%s: %.2f km\n", $res['obj']['name'], $res['dis'] * 6378 );
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,22 @@
+<slide>
+<title>Checking for errors (2)</title>
+
+<blurb>Safeness levels:</blurb>
+<list>
+	<bullet>Confirm change recorded in memory: %array( 'safe' => true );%</bullet>
+	<bullet>|777777|Confirm inclusion in journal: %array( 'j' => true );%|</bullet>
+	<bullet>Confirm committed to disk: %array( 'fsync' => true );%</bullet>
+	<bullet>Confirm replication: %array( 'safe' => true, 'w' => 2 );%</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo();
+$c = $m->demo->articles;
+
+$c->insert(
+    array( '_id' => 'mongodb' ),      // document
+    array( 'safe' => true, 'w' => 2 ) // options
+);
+?>]]></example>
+
+</slide>

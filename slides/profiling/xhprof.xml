@@ -2,97 +2,14 @@
 <title>XHProf</title>
 
 <div effect="fade-out">
-<blurb>Install:</blurb>
-<example>pecl download xhprof-beta
-tar -xvzf xhprof-0.9.2.tgz
-cd xhprof-0.9.2/extension
-phpize &amp;&amp; ./configure &amp;&amp; make install</example>
-<blurb>In php.ini:</blurb>
-<example><![CDATA[extension=xhprof.so
-xhprof.output_dir=/tmp]]></example>
-<blurb>Download XHGui:</blurb>
-<example>$ cd /home/httpd
-$ git clone https://github.com/preinheimer/xhprof</example>
-<blurb>Config XHGui (xhprof/xhprof_lib/config.php:</blurb>
-<example>
-$_xhprof['dbhost'] = 'localhost';
-$_xhprof['dbuser'] = 'root';
-$_xhprof['dbpass'] = 'root';
-$_xhprof['dbname'] = 'xhprof';
-$_xhprof['servername'] = 'derickrethans';
-$_xhprof['namespace'] = 'MySite';
-$_xhprof['url'] = 'http://xhprof/';
-</example>
+<list>
+	<bullet>Was original developed by Facebook</bullet>
+	<bullet>XHProf and XHGui</bullet>
+	<bullet>Meant to be run in a production environment</bullet>
+</list>
 </div>
 
-<div effect="fade-in-out">
-<blurb>Setup XHGui database:</blurb>
-<example>mysqladmin -u root -p create xhprof
-mysql -u root -p xhprof</example>
-<example>CREATE TABLE `details` (
-  `id` char(17) NOT NULL,
-  `url` varchar(255) default NULL,
-  `c_url` varchar(255) default NULL,
-  `timestamp` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
-  `server name` varchar(64) default NULL,
-  `perfdata` text,
-  `type` tinyint(4) default NULL,
-  `cookie` text,
-  `post` text,
-  `get` text,
-  `pmu` int(11) default NULL,
-  `wt` int(11) default NULL,
-  `cpu` int(11) default NULL,
-  `server_id` char(3) NOT NULL default 't11',
-  PRIMARY KEY  (`id`),
-  KEY `url` (`url`),
-  KEY `c_url` (`c_url`),
-  KEY `cpu` (`cpu`),
-  KEY `wt` (`wt`),
-  KEY `pmu` (`pmu`),
-  KEY `timestamp` (`timestamp`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;</example>
-</div>
-
-<div effect="fade-in-out">
-<blurb>Create VHOST for XHGui (Apache):</blurb>
-<example><![CDATA[<VirtualHost *:80>
-  ServerName xhprof.localhost
-  UseCanonicalName Off
-  DocumentRoot /home/httpd/xhprof/xhprof_html
-  ErrorLog /var/log/apache2/xhprof-error.log
-  CustomLog /var/log/apache2/xhprof-access.log combined
-  DirectoryIndex index.php index.html
-</VirtualHost>]]></example>
-
-<blurb>Enable XHProf for a vhost:</blurb>
-<example><![CDATA[
-# For XHPROF Profiling
-  php_value auto_prepend_file /home/httpd/xhprof/external/header.php
-  php_value auto_append_file /home/httpd/xhprof/external/footer.php
-...]]></example>
-</div>
-
-<div effect="fade-in-out">
-<blurb>Create VHOST for XHGui (lighttpd):</blurb>
-<example><![CDATA[$HTTP["host"] =~ "^xhprof" {
-	server.document-root = "/home/httpd/xhprof/xhprof_html/"
-}
-]]></example>
-
-<blurb>Install htscanner:</blurb>
-<example>pecl install htscanner
-extension=htscanner.so</example>
-
-<blurb>Enable XHProf for a vhost (.htaccess):</blurb>
-<example><![CDATA[
-# For XHPROF Profiling
-  php_value auto_prepend_file /home/httpd/xhprof/external/header.php
-  php_value auto_append_file /home/httpd/xhprof/external/footer.php
-...]]></example>
-</div>
-
-<div effect="fade-in-out">
+<div effect="fade-in">
 <image filename="xhgui.png" pdf-scale="0.5" x-offset="16"/>
 </div>
 

@@ -1,0 +1,18 @@
+<slide>
+<title>IDs</title>
+
+<list>
+	<bullet>Every document needs a unique ID</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo();
+$c = $m->demo->articles;
+
+$c->insert( [ 'name' => 'Derick', '_id' => 'derickr' ] );
+
+$d = array( 'name' => 'Derick' );
+$c->insert( $d );
+var_dump( $d );
+?>]]></example>
+</slide>

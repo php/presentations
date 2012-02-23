@@ -1,0 +1,20 @@
+<slide>
+<title>Updating documents</title>
+
+<example result="0"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->elephpants;
+$c->remove();
+
+$c->insert( array( '_id' => 'e42', 'name' => 'Kamubpo' ) );
+var_dump( $c->findOne( array( '_id' => 'e42' ) ) );
+
+$c->update( array( '_id' => 'e42' ), array( 'name' => 'Bo Tat' ) );
+var_dump( $c->findOne( array( '_id' => 'e42' ) ) );
+
+$c->update( array( 'name' => 'Bo Tat' ), array( 'age' => '17' ) );
+var_dump( $c->findOne( array( '_id' => 'e42' ) ) );
+?>]]></example>
+
+<blurb>update() replaces the document matching criteria entirely with a new object.</blurb>
+</slide>

@@ -1,0 +1,23 @@
+<slide>
+<title>EAV: Entity Attribute Value</title>
+
+<div effect="fade-out">
+<image filename="eav.png"/>
+</div>
+
+<div effect="fade-in">
+<example>
+SELECT cpe.entity_id, value AS name
+FROM catalog_product_entity cpe 
+
+INNER JOIN eav_attribute ea
+    ON cpe.entity_type_id = ea.entity_type_id 
+
+INNER JOIN catalog_product_entity_varchar cpev
+    ON ea.attribute_id = cpev.attribute_id AND
+       cpe.entity_id = cpev.entity_id
+
+WHERE ea.attribute_code = 'name'
+</example>
+</div>
+</slide>

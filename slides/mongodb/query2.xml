@@ -1,0 +1,14 @@
+<slide>
+<title>Querying (2)</title>
+
+<example result="0"><![CDATA[<?php
+$m = new Mongo();
+
+// Find with 'projection'
+$record = $m->demo->articles->findOne(
+  array( 'articles.title' => 'Xdebug' ),
+  array( 'name' => true, 'articles.url' => true )
+);
+?>]]></example>
+</slide>
+

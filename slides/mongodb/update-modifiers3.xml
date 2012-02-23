@@ -1,0 +1,24 @@
+<slide>
+<title>Document update modifiers: Array manipulation</title>
+
+<list>
+    <bullet>%*$push*%/%*$pushAll*% (adds elements to an array)</bullet>
+    <bullet>%*$addToSet*% (like %$push%, but without duplicates in the array)</bullet>
+    <bullet>%*$pop*% (removes the first or last element of an array)</bullet>
+    <bullet>%*$pull*%/%*$pullAll*% (removes elements from an array)</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->circus; $c->remove();
+$c->insert( array( '_id' => 'circ5', 'name' => 'Funny Led' ) );
+
+$c->update(
+    array( '_id' => 'circ5' ),
+    array( '$push' => array(
+       'elephpants' => array( 'name' => 'Bobo', 'year' => 2012 ) )
+    )
+);
+var_dump( $c->findOne( array( 'name' => 'Funny Led' ), array( 'elephpants' => true ) ) );
+?>]]></example>
+</slide>

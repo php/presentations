@@ -1,0 +1,19 @@
+<slide>
+<title>Document update modifiers: Single value manipulation</title>
+
+<list>
+    <bullet>%*$set*% (sets a field to a new value)</bullet>
+    <bullet>%*$unset*% (removes a field)</bullet>
+    <bullet>%*$inc*% (increments the value in a field)</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->demo->circus;
+$c->remove();
+
+$c->insert( array( '_id' => 'circ3', 'name' => 'Humberto', 'performers' => 12 ) );
+$c->update( array( 'name' => 'Humberto' ), array( '$inc' => array( 'performers' => 4 ) ) );
+var_dump( $c->findOne( array( 'name' => 'Humberto' ) ) );
+?>]]></example>
+</slide>

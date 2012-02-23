@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Function trace to file</title>
 	<subtitle>Automatic readable format</subtitle>
-	<image filename="tracefile-computerized.png"/>
+	<image filename="tracefile-computerized2.png"/>
 	<break/>
 	<example class="code_large" fontsize="1.7em">xdebug.auto_trace=1     ; enable tracing
 xdebug.trace_format=1   ; selects computerized format
