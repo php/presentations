@@ -1,0 +1,11 @@
+<slide title="Support Vector Machine (SVM)">
+
+<blurb fontsize="4em">Fast Machine Learning - http://php.net/svm</blurb>
+
+<example result="0" hide="0" fontsize="1.4em"><![CDATA[<?php
+$svm = new svm();
+$model = $svm->train('./data.scale');
+echo $model->predict($vectors);
+]]></example>
+
+</slide>

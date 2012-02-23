@@ -1,0 +1,10 @@
+<slide title="HashDoS">
+
+<blurb fontsize="4em">Prevention</blurb>
+<blurb>Randomized hashing, but there are complications</blurb>
+<blurb>For now, limit the damage</blurb>
+<break lines="1" />
+
+<blurb>In PHP 5.3.10 and higher we have:</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[max_input_vars=1000]]></example>
+</slide>
