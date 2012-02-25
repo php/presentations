@@ -9,10 +9,11 @@
 
 <break lines="1"/>
 
-<blurb fontsize="6em">Scale down</blurb>
+<blurb fontsize="6em">Scale</blurb>
 <list>
-<bullet fontsize="3em" marginleft="2em" type="none">Scaling up is easy</bullet>
-<bullet fontsize="3em" marginleft="2em" type="none">Scaling down is hard</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">Scaling up is expected</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">Scaling down is surprisingly hard</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">Doing both is rocket science</bullet>
 </list>
 
 </slide>

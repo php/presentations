@@ -3,7 +3,7 @@
 
 <example result="0" hide="0" fontsize="1.4em"><![CDATA[<?php
 include 'yql.php';
-$q = "SELECT * FROM flickr.photos.search(100) WHERE tags='$loc' 
+$q = "SELECT * FROM flickr.photos.search(100) WHERE tags=':-:location:-:' 
          AND sort='interestingness-desc' AND api_key='$api_key'";
 foreach(yql($q)->results->photo as $p) echo '<img src="'.furl($p,'m').'">';]]></example>
 

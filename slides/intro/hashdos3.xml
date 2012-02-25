@@ -1,10 +1,19 @@
 <slide title="HashDoS">
 
-<blurb fontsize="4em">Prevention</blurb>
-<blurb>Randomized hashing, but there are complications</blurb>
-<blurb>For now, limit the damage</blurb>
-<break lines="1" />
+<blurb fontsize="4em">Creating Hash Collisions</blurb>
 
-<blurb>In PHP 5.3.10 and higher we have:</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[max_input_vars=1000]]></example>
+<example result="1" hide="0" fontsize="1.4em"><![CDATA[<?php
+function djbx33a($key, $len) {
+  $hash = 5381;
+  for($i=0; $i < $len; $i++) {
+    $hash = $hash * 33 + chr($key[$i]);
+  }
+  return $hash . "<br>\n";
+}
+
+echo djbx33a('1024',4);
+echo djbx33a('2048',4);
+echo djbx33a('3072',4);
+]]></example>
+
 </slide>
