@@ -17,16 +17,8 @@
 	<blurb class="small_blurb">*%  xdebug.remote_connect_back=1%*</blurb>
 </div>
 
-<div effect="fade-in-out">
+<div effect="fade-in">
 	<blurb>On the shell:</blurb>
 	<blurb class="small_blurb">%  export XDEBUG_CONFIG="idekey=xdebugrocks"%</blurb>
-</div>
-
-<div effect="fade-in-out">
-	<blurb>With browser extensions:</blurb>
-	<blurb class="small_blurb">easy Xdebug (FireFox): <link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></blurb>
-	<blurb class="small_blurb">Xdebug Helper (Chrome): <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></blurb>
-	<blurb class="small_blurb">Xdebug Toggler for Safari: <link href="https://github.com/benmatselby/xdebug-toggler"/></blurb>
-	<blurb class="small_blurb">Xdebug launcher for Opera: <link href="https://addons.opera.com/addons/extensions/details/xdebug-launcher/?display=en"/></blurb>
 </div>
 </slide>

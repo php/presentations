@@ -6,6 +6,7 @@
 	<bullet>check ~/.siegerc and set the %logfile% setting</bullet>
 	<bullet>Create a file with urls:<example><![CDATA[http://derickrethans.nl/
 http://derickrethans.nl/spatial-indexes-data-sqlite.html
+http://derickrethans.nl/talks.html
 http://derickrethans.nl/who.html]]></example></bullet>
 	<bullet>run against your code: %siege -c 4 -r 10 -f /tmp/urls.txt%</bullet>
 </list>

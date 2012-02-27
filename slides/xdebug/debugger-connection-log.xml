@@ -1,0 +1,37 @@
+<slide>
+<title>Remote debugging log</title>
+
+<example>xdebug.remote_log=/tmp/remote.log</example>
+
+<list>
+	<bullet>Logs all debugger communication</bullet>
+	<bullet>In Xdebug 2.2dev, also shows connection attempts and failures:</bullet>
+</list>
+
+<example>
+xdebug.remote_connect_back=0
+xdebug.remote_host=doesnotexist
+xdebug.remote_port=9002
+
+I: Connecting to configured address/port: doesnotexist:9002.
+E: Could not connect to client. :-(
+</example>
+
+<example>
+xdebug.remote_connect_back=1
+xdebug.remote_host=doesnotexist2
+xdebug.remote_port=9003
+
+I: Checking remote connect back address.
+W: Remote address not found, connecting to configured address/port: doesnotexist2:9003. :-|
+E: Could not connect to client. :-(
+</example>
+
+<example>
+xdebug.remote_connect_back=0
+xdebug.remote_port=9991
+
+I: Connecting to configured address/port: localhost:9991.
+I: Connected to client. :-)
+</example>
+</slide>
