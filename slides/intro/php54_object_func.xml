@@ -1,0 +1,18 @@
+<slide title="Objects as Functions">
+
+<blurb fontsize="4em">__invoke() magic method</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+class Money {
+    private $value;
+    function __construct($val) {
+        $this->value = $val;
+    }
+    function __invoke() {
+        return sprintf('$%.2f',$this->value);
+    }
+}
+$Money = new Money(11.02/5*13);
+echo $Money(); // $28.65
+?>]]></example>
+
+</slide>

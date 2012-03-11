@@ -1,0 +1,17 @@
+<slide title="Session Object">
+
+<blurb fontsize="4em">Native Session Handler Interface</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+SessionHandler implements SessionHandlerInterface {
+  /* Methods */
+  public int close ( void )
+  public int destroy ( string $sessionid )
+  public int gc ( int $maxlifetime )
+  public int open ( string $save_path , string $sessionid )
+  public string read ( string $sessionid )
+  public int write ( string $sessionid , string $sessiondata )
+}
+session_set_save_handler(new MySessionHandler);
+?>]]></example>
+
+</slide>
