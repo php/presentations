@@ -4,7 +4,44 @@
 <blurb fontsize="4em">Built-in Web server for testing</blurb>
 <example fontsize="2em" result='0' title="" type="shell"><![CDATA[
 % php -S localhost:8000
-Server is listening on localhost:8000... Press CTRL-C to quit.
+PHP 5.4.0 Development Server started at Sun Mar 11 13:27:09 2012
+Listening on localhost:8080
+Document root is /home/rasmus
+Press Ctrl-C to quit.
 ]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">The DocumentRoot is the current dir by default, but you can specify a different one.</blurb>
+<example fontsize="2em" result='0' title="" type="shell"><![CDATA[
+% php -S localhost:8080 -t /tmp/web
+PHP 5.4.0 Development Server started at Sun Mar 11 13:28:01 2012
+Listening on localhost:8080
+Document root is /tmp/web
+Press Ctrl-C to quit.
+[Sun Mar 11 13:31:04 2012] 127.0.0.1:49393 [200]: /
+[Sun Mar 11 13:31:04 2012] 127.0.0.1:49394 [200]: /php.png
+[Sun Mar 11 13:31:04 2012] 127.0.0.1:49395 [404]: /favicon.ico - No such file or directory
+]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">Many frameworks also have a default global router script. You can easily wrap it and call it like this:</blurb>
+<example fontsize="2em" result='0' title="" type="shell"><![CDATA[
+% php -S localhost:8080 /path/to/router.php
+PHP 5.4.0 Development Server started at Sun Mar 11 13:28:01 2012
+Listening on localhost:8080
+Document root is /tmp/web
+Press Ctrl-C to quit.
+]]></example>
+
+<blurb fontsize="4em">And the wrapper might be as simple as:</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+if (preg_match('!\.php$!', $_SERVER["REQUEST_URI"])) {
+    require basename($_SERVER["REQUEST_URI"]);
+} else if (strpos($_SERVER["REQUEST_URI"], '.')) {
+    return false; // serve the requested file as-is.
+} else {
+    Framework::Router($_SERVER["REQUEST_URI"]);
+}
+?>]]></example>
 
 </slide>
