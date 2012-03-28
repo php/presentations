@@ -1,0 +1,8 @@
+{use $node, $pres}
+<tr>
+{foreach $node->childNodes as $child}
+	{if is_set( $child->tagName )}
+		{include $child->tagName . '.ezt' send $child as $node, $pres}
+	{/if}
+{/foreach}
+</tr>

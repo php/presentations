@@ -1,0 +1,13 @@
+<slide>
+<title>Single table inheritance - MongoDB</title>
+
+<example><![CDATA[
+{ _id: "1", type: "circle", area: 3.14, radius: 1}
+
+{ _id: "2", type: "square", area: 4, d: 2}
+
+{ _id: "3", type: "rectangle", area: 10, length: 5, width: 2}
+]]></example>
+
+
+</slide>

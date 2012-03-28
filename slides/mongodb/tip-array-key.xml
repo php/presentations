@@ -1,0 +1,25 @@
+<slide>
+<title>Tips and hints: array keys</title>
+
+<blurb>Don't do:</blurb>
+<example><![CDATA[temperature: {
+  _id: 42,
+  points: [
+    { 1332942067: 17.3 },
+    { 1332942118: 17.5 }
+  ]
+}]]></example>
+<break/>
+
+<blurb>instead, do:</blurb>
+<example><![CDATA[temperature: {
+  _id: 42,
+  points: [
+    { ts: 1332942067, temp: 17.3 },
+    { ts: 1332942118, temp: 17.5 }
+  ]
+}]]></example>
+<break/>
+
+<blurb>*Define and document your keys!*</blurb>
+</slide>

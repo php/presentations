@@ -1,0 +1,17 @@
+<slide>
+<title>Schema considerations</title>
+
+<list>
+<blurb>Access Patterns?</blurb>
+    <bullet>Read / Write Ratio</bullet>
+    <bullet>Types of updates</bullet>
+    <bullet>Types of queries</bullet>
+    <bullet>Data life-cycle</bullet>
+</list>
+<break/>
+<blurb>Considerations</blurb>
+<list>
+    <bullet>No Joins</bullet>
+    <bullet>Document writes are atomic</bullet>
+</list>
+</slide>

@@ -1,0 +1,21 @@
+<slide>
+<title>Embedding versus Linking</title>
+
+<blurb>Embedding</blurb>
+<list>
+    <bullet>Simple data structure</bullet>
+    <bullet>Limited to 16MB</bullet>
+    <bullet>Larger documents</bullet>
+    <bullet>How often do you update?</bullet>
+    <bullet>Will the document grow and grow?</bullet>
+</list>
+<break/>
+
+<blurb>Linking</blurb>
+<list>
+    <bullet>More complex data structure</bullet>
+    <bullet>Unlimited data size</bullet>
+    <bullet>More, smaller documents</bullet>
+    <bullet>What are the maintenance needs?</bullet>
+</list>
+</slide>

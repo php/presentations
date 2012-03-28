@@ -1,0 +1,10 @@
+<slide>
+<title>Many to Many (n:m)</title>
+
+<list>
+    <bullet>products can be in many categories</bullet>
+    <bullet>category can have many products</bullet>
+</list>
+<break lines="2"/>
+<image filename="many-to-many1.png"/>
+</slide>

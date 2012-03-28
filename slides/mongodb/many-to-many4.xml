@@ -1,0 +1,21 @@
+<slide>
+<title>Many to Many (n:m) - alternative 2</title>
+
+<example><![CDATA[products:
+{ _id: 10, name: "Blue elephpant" }
+{ _id: 11, name: "Pink elephpant" }
+
+categories:
+{ _id: 4, name: "toys",            product_ids: [ 10, 11 ] }
+{ _id: 8, name: "everything pink", product_ids: [ 11 ] }]]></example>
+
+<blurb>All categories for a given product (pink elephpant):</blurb>
+<example>db.categories.find( { product_ids: 11 } );</example>
+<break/>
+
+<blurb>All products for a given category (toys):</blurb>
+<example>category = db.categories.find( { category_ids: 4 } );
+db.products.find( { _id: { $in: category.product_ids } } );</example>
+<break/>
+
+</slide>
