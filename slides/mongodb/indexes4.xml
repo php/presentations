@@ -1,19 +1,17 @@
 <slide>
 <title>More about indexes</title>
 
-<list>
-	<bullet>Compound indexes:
-	<example>$myCol->ensureIndex( [ _id => 1, ts => -1 ] )</example></bullet>
-
-	<bullet>Indexes can be made on nested fields:
-	<example>$myCol->ensureIndex( [ "article.title" => -1 ] )</example></bullet>
-
-	<bullet>Indexes can be made on array values:
+	<blurb>Compound indexes:</blurb>
+	<example>$myCol->ensureIndex( [ _id => 1, ts => -1 ] )</example>
+<break/>
+	<blurb>Indexes can be made on nested fields:</blurb>
+	<example>$myCol->ensureIndex( [ "article.title" => -1 ] )</example>
+<break/>
+	<blurb>Indexes can be made on array values:</blurb>
 	<example><![CDATA[$myCol->insert( [ '_id' => 42, 'values' => [ 'fourty', 'two' ] ] );
 $myCol->ensureIndex( [ 'values' => 1 ] );]]>
-</example></bullet>
-
-	<bullet>Searching with regexp: %^%:
-	<example>$myCol->find( [ 'name' => new MongoRegex( '/^tan/i' ) ] )</example></bullet>
-</list>
+</example>
+<break/>
+	<blurb>Searching with regexp: %^%:</blurb>
+	<example>$myCol->find( [ 'name' => new MongoRegex( '/^tan/i' ) ] )</example>
 </slide>
