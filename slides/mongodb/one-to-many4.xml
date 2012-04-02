@@ -11,7 +11,7 @@
   author: "Hergé",
   date: "Tue Mar 28 2012 12:41:29 GMT",
   comments: [
-    { comment: ObjectId("1") }
+    { comment: "1" }
   ]
 }
 
@@ -19,5 +19,10 @@ comments: {
   _id: "1",
   author: "Kyle",
   date: "Tue Mar 28 2012 12:41:54 GMT",
+},
+{
+  _id: "2",
+  author: "Derick",
+  in_reply_to: "1",
 }]]></example>
 </slide>

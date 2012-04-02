@@ -1,11 +1,7 @@
 <slide>
 <title>Tips and hints: pre-page results</title>
 
-<example><![CDATA[article: {
-  _id: 42,
-  title: "Xdebug saves you time!"
-}]]></example>
-<break/>
+<example><![CDATA[article: { _id: 42, title: "Xdebug saves you time!" }]]></example>
 
 <example><![CDATA[comments:
 {

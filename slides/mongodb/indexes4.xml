@@ -3,22 +3,17 @@
 
 <list>
 	<bullet>Compound indexes:
-	<example>$myCol->ensureIndex( [ _id: 1, ts: -1 ] )</example></bullet>
+	<example>$myCol->ensureIndex( [ _id => 1, ts => -1 ] )</example></bullet>
+
+	<bullet>Indexes can be made on nested fields:
+	<example>$myCol->ensureIndex( [ "article.title" => -1 ] )</example></bullet>
+
+	<bullet>Indexes can be made on array values:
+	<example><![CDATA[$myCol->insert( [ '_id' => 42, 'values' => [ 'fourty', 'two' ] ] );
+$myCol->ensureIndex( [ 'values' => 1 ] );]]>
+</example></bullet>
 
 	<bullet>Searching with regexp: %^%:
 	<example>$myCol->find( [ 'name' => new MongoRegex( '/^tan/i' ) ] )</example></bullet>
-	<bullet>%2d% index wants longitude, latitude (as in GeoJSON)
-	<example>
-$myCol->insert( [
-	_id: 42, loc: [ 6.43, 52.1233 ]
-] );
-$myCol->insert( [
-	_id: 42, loc: { long: 6.43, lat: 52.1233 }
-] );
-$myCol->insert( [
-	_id: 42, loc: { latitude: 6.43, longitude: 52.1233 }
-] );
-</example>
-</bullet>
 </list>
 </slide>

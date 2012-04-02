@@ -1,0 +1,20 @@
+<slide>
+<title>More about 2D indexes</title>
+
+<blurb>A %2d% *geo* index wants two elements. With the first being the
+longitude (*x*) and the second one being the latitude (*y*) (as in
+GeoJSON).</blurb>
+<break/>
+<blurb>The following are all equivalent:</blurb>
+	<example>
+$myCol->insert( [
+	_id: 42, loc: [ 6.43, 52.1233 ]
+] );
+$myCol->insert( [
+	_id: 42, loc: { long: 6.43, lat: 52.1233 }
+] );
+$myCol->insert( [
+	_id: 42, loc: { latitude: 6.43, longitude: 52.1233 }
+] );
+</example>
+</slide>
