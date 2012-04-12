@@ -1,27 +1,27 @@
 <slide>
-<title>Finding Food</title>
-<subtitle>Getting The Data: MongoDB</subtitle>
+<title>Querying our database</title>
 
 <div effect="fade-out">
 <example><![CDATA[<?php
 header('Content-type: text/plain');
 $m = new Mongo( 'mongodb://localhost:27017' );
-$d = $m->selectDb( 'geolocation' );
+$d = $m->selectDb( 'poi' );
 
 $wantedD = isset($_GET['d']) ? $_GET['d']: 1;
 
-$query = array( 'cuisine' => $_GET['cuisine'] );
+$query = array( 'tags_indexed.k' => 'cuisine', 'tags_indexed.v' => $_GET['cuisine'] );
 if ( $_GET['cuisine'] == 'all' )
 {
-    $query = array();
+    $query = array( 'tags_indexed.k' => 'amenity', 'tags_indexed.v' => 'restaurant' );
 }
 
 $s = $d->command(
     array(
         'geoNear' => 'poi',
+		'spherical' => true,
         'near' => array( $_GET['lat'], $_GET['lon'] ),
-        'num' => 10000,
-        'maxDistance' => $wantedD * (360 / (2*M_PI*6371.01)), // km to °
+        'num' => 1000,
+        'maxDistance' => $wantedD / 6371.01, // km to °
         'query' => $query,
     )
 );
@@ -29,28 +29,18 @@ echo "lat\tlon\ttitle\tdescription\r\n";
 foreach( $s['results'] as $res) {
     if (isset($res['obj']['name'] ) )
     {
-        echo $res['obj']['loc'][0], "\t", $res['obj']['loc'][1], "\t", $res['obj']['name'], "\t", sprintf('real: %.4f mongo: %.4f', $e,  $res['dis'] / (360 / (2*M_PI*6371.
+        echo $res['obj']['loc'][0], "\t", $res['obj']['loc'][1], "\t",
+		$res['obj']['name'], "\t",
+		sprintf('real: %.4f mongo: %.4f',
+			$e,
+			$res['dis'] * 6371.01
+		), " km away\r\n";
     }
 }
 ]]></example>
 </div>
 <div effect="fade-in-out">
-<blurb>Spatial Index</blurb>
-<example><![CDATA[
-db.poi.ensureIndex( { poi : '2d' } );
-
-$s = $d->command(
-    array(
-        'geoNear' => 'poi',
-        'near' => array( $_GET['lat'], $_GET['lon'] ),
-        'num' => 10000,
-        'maxDistance' => $wantedD * (360 / (2*M_PI*6371.01)), // km to °
-        'query' => $query,
-    )
-);
-]]></example>
-<blurb>Geospatial Index (since 1.7)</blurb>
-<!--
+<blurb>MongoDB's 2D index</blurb>
 <example><![CDATA[
 db.poi.ensureIndex( { poi : '2d' } );
 
@@ -58,13 +48,15 @@ $s = $d->command(
     array(
         'geoNear' => 'poi',
         'spherical' => true,
-        'near' => array( $_GET['lat'], $_GET['lon'] ),
+        'near' => array( $_GET['lon'], $_GET['lat'] ),
         'num' => 10000,
         'maxDistance' => $wantedD / 6371.01, // km to radians
         'query' => $query,
     )
 );
 ]]></example>
--->
+<list>
+	<bullet>%spherical => true,% for spherical Earth calculations</bullet>
+</list>
 </div>
 </slide>

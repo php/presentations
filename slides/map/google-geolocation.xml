@@ -14,7 +14,8 @@ curl_setopt( $c, CURLOPT_URL, 'https://www.google.com/loc/json' );
 curl_setopt( $c, CURLOPT_POST, 1 );
 curl_setopt( $c, CURLOPT_POSTFIELDS, json_encode( $request ) );
 curl_setopt( $c, CURLOPT_RETURNTRANSFER, true );
-var_dump( json_decode( curl_exec( $c ) ) );
+
+var_dump( curl_exec( $c ) );
 ]]></example>
 
 <blurb>http://code.google.com/intl/es-ES/apis/gears/geolocation_network_protocol.html</blurb>

@@ -1,6 +1,5 @@
 <slide>
-<title>Showing a Map</title>
-<subtitle>Looking up latitude and longitude from a location</subtitle>
+<title>Looking up latitude and longitude from a location</title>
 <div effect="fade-out">
 <iframe filename='examples/openlayers-nominatim.php?name=:-:location:-:' image='openlayers-nominatim.png'/>
 </div>

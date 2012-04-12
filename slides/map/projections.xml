@@ -1,7 +1,9 @@
 <slide>
 <title>Map Projections</title>
 
-<break lines="2"/>
-	<image filename="projections.jpg"/>
-	<blurb align="center">Different projections have different strengths</blurb>
+<blurb align="center">Different projections have different strengths</blurb>
+<div effect="fade-out"><image filename="equivalent.jpg"/></div>
+<div effect="fade-in-out"><image filename="mcarthur-large.jpg"/></div>
+<div effect="fade-in-out"><image filename="petersworldmap.jpg"/></div>
+<div effect="fade-in"><image filename="equirectangular.jpg"/></div>
 </slide>

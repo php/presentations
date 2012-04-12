@@ -1,28 +1,41 @@
 <slide>
 <title>Fetching OSM data</title>
 
-<example>wget 
-  http://open.mapquestapi.com/xapi/api/0.6/node
-  [amenity=pub] 
-  [bbox=-2.401,53.394,-2.104,53.551]
-  -O pubs.osm</example>
+<example><![CDATA[wget http://download.geofabrik.de/osm/europe/great_britain/england.osm.bz2]]></example>
 
-<example><![CDATA[<?xml version='1.0' encoding='UTF-8'?>
-<osm version='0.6' generator='xapi: OSM Extended API 2.0' attribution='http://wiki.openstreetmap.org/wiki/Attribution' xmlns:xapi='http://www.informationfreeway.org/xapi/0.6' xapi:uri='/api/0.6/node[amenity=pub][bbox=-2.401,53.394,-2.104,53.551]' xapi:planetDate='20101006' xapi:copyright='2010 OpenStreetMap contributors' xapi:license='Creative commons CC-BY-SA 2.0' xapi:bugs='For assistance or to report bugs contact 80n80n@gmail.com' xapi:instance='zappyHyper'>
-<bounds minlat='53.394' minlon='-2.401' maxlat='53.551' maxlon='-2.104'/>
-  <node id='275332052' lat='53.548238' lon='-2.3958373' version='2' changeset='4395635'
-        user='Steeley' uid='101150' visible='true' timestamp='2010-04-11T17:08:16Z'>
-    <tag k='amenity' v='pub'/>
-    <tag k='name' v='The Saddle'/>
+<example><![CDATA[
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version="0.6" generator="Osmosis 0.39">
+  <bound box="51.26000,-0.56300,51.68000,0.28000" origin="http://www.openstreetmap.org/api/0.6"/>
+  <node id="44" version="3" timestamp="2011-09-08T20:53:43Z" uid="15867" user="mattfromderby" changeset="9249514" lat="51.5250157" lon="-0.1485302"/>
+  <node id="47" version="2" timestamp="2011-09-08T20:53:43Z" uid="15867" user="mattfromderby" changeset="9249514" lat="51.525182" lon="-0.1479761"/>
+  <node id="52" version="3" timestamp="2011-09-08T21:13:19Z" uid="15867" user="mattfromderby" changeset="9249514" lat="51.5289059" lon="-0.1458559"/>
+...
+  <node id="1571982070" version="1" timestamp="2011-12-31T20:37:18Z" uid="545369" user="bigfatfrog67" changeset="10257991" lat="51.5087759" lon="-0.1253258">
+    <tag k="name" v="Charing Cross"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="source:name" v="survey"/>
+    <tag k="source:railway" v="survey"/>
   </node>
 ...
-  <node id='30732192' lat='53.4647746' lon='-2.2319186' version='3' changeset='5810586'
-        user='geordiemanc' uid='345640' visible='true' timestamp='2010-09-18T11:12:50Z'>
-    <tag k='address' v='325 Oxford Road'/>
-    <tag k='amenity' v='pub'/>
-    <tag k='name' v='Kro Bar'/>
-    <tag k='phone' v='01612743100'/>
-    <tag k='postal_code' v='M13 9PG'/>
-    <tag k='real_ale' v='yes'/>
-  </node>]]></example>
+  <way id="74" version="5" timestamp="2010-12-12T22:43:15Z" uid="508" user="Welshie" changeset="6643030">
+    <nd ref="196101"/>
+    <nd ref="196100"/>
+    <nd ref="196331"/>
+    <tag k="abutters" v="retail"/>
+    <tag k="highway" v="primary"/>
+    <tag k="maxspeed" v="30 mph"/>
+    <tag k="name" v="Ballards Lane"/>
+    <tag k="ref" v="A598"/>
+  </way>
+...
+  <relation id="69" version="13" timestamp="2009-02-09T14:57:24Z" uid="45027" user="PA94" changeset="307506">
+    <member type="way" ref="3793834" role="outer"/>
+    <member type="way" ref="26454599" role="inner"/>
+    <tag k="created_by" v="xybot"/>
+    <tag k="type" v="multipolygon"/>
+  </relation>
+...
+</osm>
+]]></example>
 </slide>
