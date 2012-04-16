@@ -6,10 +6,14 @@
 header('Content-type: text/plain');
 $m = new Mongo( 'mongodb://localhost:27017' );
 $d = $m->selectDb( 'poi' );
-
+$d->ensureIndex( array( 'poi' => '2d' ) );
+]]></example>
+</div>
+<div effect="fade-in-out">
+<example><![CDATA[
 $wantedD = isset($_GET['d']) ? $_GET['d']: 1;
-
 $query = array( 'tags_indexed.k' => 'cuisine', 'tags_indexed.v' => $_GET['cuisine'] );
+
 if ( $_GET['cuisine'] == 'all' )
 {
     $query = array( 'tags_indexed.k' => 'amenity', 'tags_indexed.v' => 'restaurant' );
@@ -18,45 +22,67 @@ if ( $_GET['cuisine'] == 'all' )
 $s = $d->command(
     array(
         'geoNear' => 'poi',
-		'spherical' => true,
-        'near' => array( $_GET['lat'], $_GET['lon'] ),
+        'spherical' => true,
+        'near' => array(
+            (float) $_GET['lon'],
+            (float) $_GET['lat']
+        ),
         'num' => 1000,
-        'maxDistance' => $wantedD / 6371.01, // km to °
+        'maxDistance' => $wantedD / 6371.01,
         'query' => $query,
     )
 );
-echo "lat\tlon\ttitle\tdescription\r\n";
-foreach( $s['results'] as $res) {
-    if (isset($res['obj']['name'] ) )
-    {
-        echo $res['obj']['loc'][0], "\t", $res['obj']['loc'][1], "\t",
-		$res['obj']['name'], "\t",
-		sprintf('real: %.4f mongo: %.4f',
-			$e,
-			$res['dis'] * 6371.01
-		), " km away\r\n";
-    }
-}
+
 ]]></example>
 </div>
 <div effect="fade-in-out">
-<blurb>MongoDB's 2D index</blurb>
 <example><![CDATA[
-db.poi.ensureIndex( { poi : '2d' } );
-
-$s = $d->command(
-    array(
-        'geoNear' => 'poi',
-        'spherical' => true,
-        'near' => array( $_GET['lon'], $_GET['lat'] ),
-        'num' => 10000,
-        'maxDistance' => $wantedD / 6371.01, // km to radians
-        'query' => $query,
-    )
-);
+foreach( $s['results'] as $res) 
+{
+    $o = $res['obj'];
+    if (!isset($o['name'])) {
+        continue;
+    }
+    $ret = array(
+        'type' => 'Feature',
+        'properties' => array(
+            'name' => $o['name'],
+            'popupContent' => $o['name'],
+        )
+    );
+    if ($o['type'] == 1) {
+        $ret['geometry'] = array(
+            'type' => "Point",
+            'coordinates' => $o['loc']
+        );
+    }
+    if ($o['type'] == 2) {
+        $ret['geometry'] = array(
+            'type' => "Polygon",
+            'coordinates' => array($o['loc']),
+        );
+    }
+    $rets[] = $ret;
+}
+echo json_encode( $rets, JSON_PRETTY_PRINT );
 ]]></example>
-<list>
-	<bullet>%spherical => true,% for spherical Earth calculations</bullet>
-</list>
+</div>
+<div effect="fade-in">
+<example><![CDATA[
+{
+  "type": "Feature",
+  "properties": {
+    "name": "La Ballerina",
+    "popupContent": "<b>La Ballerina<\/b><br\/>addr:housenumber: 7-8\n<br\/>addr:street: Bow street\n<br\/>amenity: restaurant\n<br\/>cuisine: italian\n<br\/>phone: +442073796659\n"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -0.122713,
+      51.513472
+    ]
+  }
+},
+]]></example>
 </div>
 </slide>

@@ -1,14 +1,8 @@
 <slide>
-<title>Using data</title>
-<div effect="fade-out">
-<list>
-	<bullet>Quering data (API, XAPI/JXAPI, Nominatim)</bullet>
-	<bullet>Render and display what ever you want from it</bullet>
-</list>
-</div>
-<div effect="fade-in-out"><image filename='style-cycle.jpg'/></div>
+<title>Different visualisations of the data</title>
+<div effect="fade-out"><image filename='style-cycle.jpg'/></div>
 <div effect="fade-in-out"><image filename='style-sea.jpg'/></div>
 <div effect="fade-in-out"><image filename='style-transport.jpg'/></div>
 <div effect="fade-in-out"><image filename='style-piste.jpg'/></div>
-<div effect="fade-in-out"><image filename='style-wheel.jpg'/></div>
+<div effect="fade-in"><image filename='style-wheel.jpg'/></div>
 </slide>
