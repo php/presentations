@@ -5,8 +5,8 @@
 <example><![CDATA[<?php
 header('Content-type: text/plain');
 $m = new Mongo( 'mongodb://localhost:27017' );
-$d = $m->selectDb( 'poi' );
-$d->ensureIndex( array( 'poi' => '2d' ) );
+$c = $m->demo->poi;
+$c->ensureIndex( array( 'loc' => '2d' ) );
 ]]></example>
 </div>
 <div effect="fade-in-out">

@@ -1,0 +1,37 @@
+<slide>
+<title>Importing data</title>
+
+<example>{
+	"_id" : ObjectId("4f8d9b6644670adc440510eb"),
+	"id" : "w1572026939",
+	"type" : NumberLong(2),
+	"name" : "Noura",
+	"address" : "Curzon Street 16 W1J 5HP",
+	"tags" : {
+		"addr:housenumber" : "16",
+		"addr:postcode" : "W1J 5HP",
+		"addr:street" : "Curzon Street",
+		"amenity" : "restaurant",
+		"building" : "yes",
+		"contact:phone" : "+44 20 74951050",
+		"cuisine" : "lebanese"
+	},
+	"tags_indexed" : [
+		{ "k" : "addr:housenumber", "v" : "16" },
+		{ "k" : "addr:postcode", "v" : "W1J 5HP" },
+		{ "k" : "addr:street", "v" : "Curzon Street" },
+		{ "k" : "amenity", "v" : "restaurant" },
+		{ "k" : "building", "v" : "yes" },
+		{ "k" : "contact:phone", "v" : "+44 20 74951050" },
+		{ "k" : "cuisine", "v" : "lebanese" }
+	],
+	"loc" : [
+		[ -0.1479191, 51.5067744 ],
+		[ -0.1480757, 51.5067491 ],
+		[ -0.1481252, 51.5068679 ],
+		[ -0.1479687, 51.5068932 ],
+		[ -0.1479191, 51.5067744 ]
+	]
+}
+</example>
+</slide>

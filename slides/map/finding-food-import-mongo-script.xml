@@ -1,0 +1,126 @@
+<slide>
+<title>Importing data</title>
+
+<example><![CDATA[<?php
+$file = $argv[1];
+$m = new Mongo( 'mongodb://localhost:27017' );
+$d = $m->selectCollection( 'demo', 'poi' );
+$d->drop();
+$d->ensureIndex( array( 'loc' => '2d' ) );
+$d->ensureIndex( array( 'name' => 1 ) );
+$d->ensureIndex( array( 'tags_indexed' => 1 ) );
+$d->ensureIndex( array( 'tags_indexed.k' => 1, 'tags_indexed.v' => 1 ) );
+
+$locations = array();
+
+$z = new XMLReader();
+$z->open( $argv[1]);
+while ($z->read() && $z->name !== 'node' );
+$c = 0;
+
+while ($z->name === 'node') {
+    $dom = new DomDocument;
+    $node = simplexml_import_dom($dom->importNode($z->expand(), true));
+
+    $q = array();
+    $q['id'] = "n" . (string) $node['id'];
+    $q['type'] = 1;
+    $q['loc'] = array( (float) $node['lon'], (float) $node['lat'] );
+    parseNode($q, $node);
+    if (count($q['tags']) > 0) {
+        $d->insert( $q );
+    }
+
+    // also keep a cache of all nodes and locations
+    $locations[(string) $node['id']] = "{$node['lon']}|{$node['lat']}";
+
+    $z->next('node');
+    $c++;
+    if ($c % 1000 === 0) {
+        echo ".";
+    }
+    if ($c % 100000 === 0) {
+        echo "\n", $c, "\n";
+    }
+}
+echo "\n";
+
+$z = new XMLReader();
+$z->open( $argv[1]);
+while ($z->read() && $z->name !== 'way' );
+$c = 0;
+
+while ($z->name === 'way') {
+    $dom = new DomDocument;
+    $way = simplexml_import_dom($dom->importNode($z->expand(), true));
+
+    $q = array();
+    $q['id'] = "w" . (string) $node['id'];
+    $q['type'] = 2;
+    parseNode($q, $way);
+    fetchLocations($q, $locations, $way);
+    if (count($q['tags']) > 0) {
+        $d->insert( $q );
+    }
+
+    $z->next('way');
+    if (++$c % 100 === 0) {
+        echo ".";
+    }
+    if ($c % 10000 === 0) {
+        echo "\n", $c, "\n";
+    }
+}
+echo "\n";
+
+
+function fetchLocations(&$q, $nodes, $node)
+{
+    $locations = array();
+    foreach ($node->nd as $nd) {
+        if (isset( $nodes[(string) $nd['ref']])) {
+            $nr = explode('|', $nodes[(string) $nd['ref']]);
+            $locations[] = array( (float) $nr[0], (float) $nr[1] );
+        }
+    }
+    $q['loc'] = $locations;
+}
+
+function parseNode(&$q, $sxml)
+{
+    $standAloneNode = false;
+    $street = $postcode = $nr = $cuisine = false;
+    $tags = $tagsIndexed = array();
+    $ignoreTags = array( 'created_by', 'abutters' );
+
+    foreach( $sxml->tag as $tag )
+    {
+        if ($tag['k'] == 'name') {
+            $q['name'] = trim( (string) $tag['v'] );
+            $standAloneNode = true;
+        } else {
+            if (!in_array( $tag['k'], $ignoreTags)) {
+                $tags[(string) $tag['k']]  = (string) $tag['v'];
+                $tagsIndexed[] = array( 'k' => (string) $tag['k'], 'v' => (string) $tag['v'] );
+            }
+        }
+        if ($tag['k'] == 'addr:street') {
+            $street = $tag['v'];
+        }
+        if ($tag['k'] == 'addr:postcode') {
+            $postcode = strtoupper( (string) $tag['v'] );
+        }
+        if ($tag['k'] == 'addr:housenumber') {
+            $nr = $tag['v'];
+        }
+    }
+
+    if ( $street || $nr || $postcode )
+    {
+        $q['address'] = trim( "{$street} {$nr} {$postcode}");
+    }
+    $q['tags'] = $tags;
+    $q['tags_indexed'] = $tagsIndexed;
+}
+]]></example>
+</slide>

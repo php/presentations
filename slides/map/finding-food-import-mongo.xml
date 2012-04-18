@@ -17,10 +17,10 @@ $db->poi->ensureIndex( [ 'tags.oneway' => 1 ] );</example>
 <blurb>or:</blurb>
 <example>$doc = array(
 	'name' => 'A440',
-	'tags' = { [
-		'k' => 'highway', 'v' => 'secondary',
-		'k' => 'oneway', 'v' => 'yes'
-	] }
+	'tags' = [
+		{ 'k' => 'highway', 'v' => 'secondary' },
+		{ 'k' => 'oneway', 'v' => 'yes' }
+	]
 );
 
 $db->poi->ensureIndex( [ 'name' => 1 ] );
