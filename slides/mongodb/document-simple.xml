@@ -1,0 +1,38 @@
+<slide>
+<title>Documents</title>
+
+<list>
+  <bullet>Are *schemaless*</bullet>
+  <bullet>Can have embedded documents</bullet>
+</list>
+<break/>
+
+<div effect="fade-out">
+<blurb>Simple document:</blurb>
+<example>
+{
+  "_id" : ObjectId("4cb4ab6d7addf98506010001"),
+  "twitter" : "derickr",
+  "name" : "Derick Rethans"
+}
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Document with embedded documents:</blurb>
+<example>
+{
+  "_id" : "derickr",
+  "name" : "Derick Rethans",
+  "bookmarks" : [
+    { "title" : "MongoDB",
+      "url" : "http://mongodb.org",
+    },
+    { "title" : "10gen",
+      "url" : "http://10gen.com",
+    }
+  ]
+}
+</example>
+</div>
+</slide>
