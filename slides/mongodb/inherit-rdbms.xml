@@ -1,0 +1,11 @@
+<slide>
+<title>Single table inheritance - RDBMS</title>
+
+<table>
+<tr><th>id</th><th>type</th><th>area</th><th>radius</th><th>d</th><th>length</th><th>width</th></tr>
+<tr><td>1</td><td>circle</td><td>3.14</td><td>1</td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td>square</td><td>4</td>   <td></td><td>2</td><td></td><td></td></tr>
+<tr><td>3</td><td>rectangle</td><td>10</td>  <td></td><td></td><td>5</td><td>2</td></tr>
+</table>
+
+</slide>

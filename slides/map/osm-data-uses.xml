@@ -1,17 +1,8 @@
 <slide>
-<title>Using data</title>
-<div effect="fade-out">
-<list>
-	<bullet>Quering data (API, XAPI/JXAPI, Nominatim)</bullet>
-	<bullet>Render and display what ever you want from it</bullet>
-</list>
-</div>
-<div effect="fade-in-out"><iframe filename='http://opencyclemap.org/?zoom=15&amp;lat=53.47574&amp;lon=-2.24345&amp;layers=B0'/></div>
-<div effect="fade-in-out"><iframe filename='http://openseamap.org/index.php?id=startseite&amp;L=1'/></div>
-<div effect="fade-in-out"><iframe filename='http://openbusmap.org/?zoom=16&amp;lat=53.47784&amp;lon=-2.23541&amp;layers=BT'/></div>
-<div effect="fade-in-out"><iframe filename='http://openpistemap.org/?lat=56.6171&amp;lon=-4.8468&amp;zoom=14&amp;layers=BTT00T'/></div>
-<div effect="fade-in-out"><iframe width="560" height="315" filename="http://www.youtube.com/embed/u7ddxtFK1T8" frameborder="0" allowfullscreen="yes"></iframe></div>
-<div effect="fade-in-out"><iframe filename='http://wheelmap.org/en?zoom=18&amp;lat=51.52256&amp;lon=-0.13706&amp;layers=BT'/></div>
-<div effect="fade-in-out"><iframe filename="http://latlon.org/buildings?lat=53.47989&amp;lon=-2.23751&amp;zoom=17&amp;layers=BT"/></div>
-<div effect="fade-in-out"><iframe filename="http://86.1.68.93/ol-local.php"/></div>
+<title>Different visualisations of the data</title>
+<div effect="fade-out"><image filename='style-cycle.jpg' x-offset="1" pdf-scale="0.2"/></div>
+<div effect="fade-in-out"><image filename='style-sea.jpg' x-offset="5" pdf-scale="0.2"/></div>
+<div effect="fade-in-out"><image filename='style-transport.jpg' x-offset="9" pdf-scale="0.2"/></div>
+<div effect="fade-in-out"><image filename='style-piste.jpg' x-offset="13" pdf-scale="0.2"/></div>
+<div effect="fade-in"><image filename='style-wheel.jpg' x-offset="17" pdf-scale="0.2"/></div>
 </slide>

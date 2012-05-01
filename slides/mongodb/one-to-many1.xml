@@ -1,0 +1,12 @@
+<slide>
+<title>One to Many (1:n)</title>
+
+<blurb>One to Many relationships can specify:</blurb>
+<list>
+    <bullet>degree of association between objects</bullet>
+    <bullet>containment</bullet>
+    <bullet>life-cycle</bullet>
+</list>
+
+<image filename="one-to-many1.png" pdf-scale="0.9" y-offset="5.5"/>
+</slide>

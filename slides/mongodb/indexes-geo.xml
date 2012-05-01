@@ -1,9 +1,9 @@
 <slide>
 <title>Geospatial Indexes</title>
 
-<blurb>Helps you with finding POIs (pubs!) in a 2D space</blurb>
+<blurb>Helps you with finding POIs in a 2D space</blurb>
 
-<example result="1"><![CDATA[<?php
+<example result="0"><![CDATA[<?php
 $m = new Mongo; $c = $m->demo->pubs; $c->drop();
 
 $c->ensureIndex( array( 'l' => '2d' ) );

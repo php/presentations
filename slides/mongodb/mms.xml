@@ -1,5 +1,13 @@
 <slide>
-<title>MMS</title>
+<title>MMS: MongoDB Monitoring Service</title>
+
+<list>
+    <bullet>SaaS solution providing instrumentation and visibility into MongoDB systems</bullet>
+    <bullet>Included in the 10gen commercial subscriptions.</bullet>
+    <bullet>Deployed to most customers</bullet>
+    <bullet>Free version released</bullet>
+    <bullet>3,500+ customers signed up and using service</bullet>
+</list>
 
 <image filename="mms.png"/>
 </slide>

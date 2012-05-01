@@ -1,0 +1,18 @@
+<slide>
+<title>Benefits</title>
+<blurb>Agility</blurb>
+<list>
+    <bullet>Applications store complex data that is easier to model as documents</bullet>
+    <bullet>Schemaless DB enables faster development cycle</bullet>
+</list>
+
+<blurb>Scale</blurb>
+<list>
+    <bullet>Relaxed transactional semantics enable easy scale out</bullet>
+</list>
+
+<blurb>Cost</blurb>
+<list>
+    <bullet>Cost effectively operationalize abundant data (clickstreams, tweets, logs, ...)</bullet>
+</list>
+</slide>

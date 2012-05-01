@@ -1,0 +1,28 @@
+<slide>
+<title>Importing data</title>
+
+<blurb>MongoDB is schema less, so fits the OSM data model quite well, but you still
+need to think about how to store the data best:</blurb>
+<example>$doc = array(
+	'name' => 'A440',
+	'tags = [
+		'highway' => 'secondary',
+		'oneway' => 'yes'
+	]
+);
+
+$db->poi->ensureIndex( [ 'name' => 1 ] );
+$db->poi->ensureIndex( [ 'tags.highway' => 1 ] );
+$db->poi->ensureIndex( [ 'tags.oneway' => 1 ] );</example>
+<blurb>or:</blurb>
+<example>$doc = array(
+	'name' => 'A440',
+	'tags' = [
+		{ 'k' => 'highway', 'v' => 'secondary' },
+		{ 'k' => 'oneway', 'v' => 'yes' }
+	]
+);
+
+$db->poi->ensureIndex( [ 'name' => 1 ] );
+$db->poi->ensureIndex( [ 'tags.k' => 1, 'tags.v' => 1 ] );</example>
+</slide>

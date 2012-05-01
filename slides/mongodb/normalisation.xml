@@ -1,0 +1,18 @@
+<slide>
+<title>RDBMS: Normalisation</title>
+
+<list>
+    <bullet>1970 E.F.Codd introduces 1st Normal Form (1NF)</bullet>
+    <bullet>1971 E.F.Codd introduces 2nd and 3rd Normal Form (2NF, 3NF)</bullet>
+    <bullet>1974 Codd &amp; Boyce define Boyce/Codd Normal Form (BCNF)</bullet>
+    <bullet>2002 Date, Darween, Lorentzos define 6th Normal Form (6NF)</bullet>
+</list>
+
+<blurb>Goals:</blurb>
+<list>
+    <bullet>Avoid anomalies when inserting, updating or deleting</bullet>
+    <bullet>Minimize redesign when extending the schema</bullet>
+    <bullet>Make the model informative to users</bullet>
+    <bullet>Avoid bias towards a particular style of query</bullet>
+</list>
+</slide>

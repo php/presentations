@@ -1,0 +1,27 @@
+<slide>
+<title>Tips and hints: pre-page results</title>
+
+<example><![CDATA[article: { _id: 42, title: "Xdebug saves you time!" }]]></example>
+
+<example><![CDATA[comments:
+{
+  _id: 42,
+  page: 0,
+  comments: [
+    { ts: 1332942067, author: "Derick", comment: "It also costs a lot of time to write!" },
+    { ts: 1332942118, author: "...", comment: "..." },
+    ...
+  ]
+},
+{
+  _id: 42,
+  page: 1,
+  comments: [
+    { ts: 1332942261, author: "Derick", comment: "blah blah" },
+    { ts: 1332942482, author: "...", comment: "..." },
+  ]
+}]]></example>
+<break/>
+
+<blurb>A bit more work when updating, but a lot easier to retrieve</blurb>
+</slide>
