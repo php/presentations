@@ -12,25 +12,31 @@
     exampleclass="noshadow"
     exampleoutputclass="noshadow"
 >
-<!--
-Performance
--->
 
 <topic>PHP</topic>
-<title>PHP in 2012</title>
-<event>Cognizance 2012</event>
-<location>Roorkee</location>
-<date>March 24, 2012</date>
+<title>PHP 5.4 and Beyond</title>
+<event>Future Insights</event>
+<location>Las Vegas</location>
+<date>May 2, 2012</date>
 <speaker>Rasmus Lerdorf</speaker>
-<url>http://talks.php.net/show/cognizance</url>
-<twitter>@rasmus or find me on G+</twitter>
+<url>http://talks.php.net/show/filive</url>
+<twitter>@rasmus</twitter>
 
 <slide>slides/intro/titlepage.xml</slide>
 
+<!--
+PHP is the Web scripting language that powers about 30% of all the Web sites in the world
+including some of the largest ones we all use on a daily basis. PHP 5.3 was released in 
+June 2009. Now, almost 3 years later PHP 5.4 is here. Come learn about the latest features
+and how they, along with a number of new extensions, will affect the Web over the next couple
+of years. Traits, closures, the array shortcut, and other new language syntaxes as well as
+event-driven and asynchronous programming, NoSQL, and Support Vector Machines (SVM) will be
+covered in this fast-moving session.
+-->
+
 <!-- Intro -->
 
-<slide>slides/intro/tie1.xml</slide>
-<slide>slides/intro/tie2.xml</slide>
+<slide>slides/intro/php_slideshow.xml</slide>
 <slide>slides/fowa/hist2.xml</slide>
 <slide>slides/fowa/hist3.xml</slide>
 <slide>slides/fowa/hist4.xml</slide>
