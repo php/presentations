@@ -8,4 +8,6 @@ $model = $svm->train('./data.scale');
 echo $model->predict($vectors);
 ]]></example>
 
+<image filename="svm.jpg" align="left" marginleft="2em"/>
+
 </slide>

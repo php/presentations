@@ -27,7 +27,7 @@ foreach($slides as $line) {
 ?>
 
 	],
-	displaymode: {type:'auto', pause:1500, cycles:1, wraparound:false},
+	displaymode: {type:'auto', pause:1200, cycles:1, wraparound:false},
 	persist: false, //remember last viewed slide and recall within same session?
 	fadeduration: 300, //transition duration (milliseconds)
 	descreveal: "ondemand",
