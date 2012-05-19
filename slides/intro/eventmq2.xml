@@ -1,0 +1,84 @@
+<slide title="Event Abstraction">
+<break lines="1"/>
+<link fontsize="4em" marginleft="0.5em" href="http://nodephp.org/"/>
+
+<break lines="1"/>
+<blurb fontsize="4em">Simple Web Server</blurb>
+<example title="" fontsize="1.5em" rfontsize="1em" result="0"><![CDATA[<?php
+$i = 1;
+
+$app = new React\Espresso\Application();
+
+$app->get('/favicon.ico', function ($request, $response) {
+  $response->writeHead(204);
+  $response->end();
+});
+
+$app->get('/', function ($request, $response) use (&$i) {
+  $i++;
+
+  $text = "This is request number $i.\n";
+  $headers = array('Content-Type' => 'text/plain', 
+                   'Content-Length' => strlen($text));
+
+  $response->writeHead(200, $headers);
+  $response->end($text);
+});
+
+$stack = new React\Espresso\Stack($app);
+$stack->listen(1337);
+]]></example>
+
+<break lines="1"/>
+<blurb fontsize="4em">Barebones HTTP Server listening on 10 ports</blurb>
+<example title="" fontsize="1.5em" rfontsize="1em" result="0"><![CDATA[<?php
+$loop = React\EventLoop\Factory::create();
+
+for($i=0; $i<10; ++$i) {
+  $s=stream_socket_server('tcp://127.0.0.1:'.(8000+$i));
+  $loop->addReadStream($s, function ($s) use ($i) {
+    $c=stream_socket_accept($s);
+    $len=strlen($i)+4;
+    fwrite($c,"HTTP/1.1 200 OK\r\n".
+              "Content-Length: $len\r\n\r\n".
+              "Response from server $i\n");
+    echo "Served on server number $i\n";
+  });
+}
+
+$loop->run();
+]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">Downloading 2 files in parallel</blurb>
+<example title="" fontsize="1em" rfontsize="1em" result="0"><![CDATA[<?php
+$loop = React\EventLoop\Factory::create();
+
+$files = array(
+  'node-v0.6.18.tar.gz' => 'http://nodejs.org/dist/v0.6.18/node-v0.6.18.tar.gz',
+  'php-5.4.3.tar.gz' => 'http://it.php.net/get/php-5.4.3.tar.gz/from/this/mirror',
+);
+
+$buffers = array();
+
+foreach ($files as $file => $url) {
+  $readStream = fopen($url, 'r');
+  $writeStream = fopen($file, 'w');
+
+  $buffers[$file] = new React\Socket\Buffer($writeStream, $loop);
+
+  $loop->addReadStream($readStream, function ($readStream) use (&$buffers, $loop, $file, $writeStream) {
+    if (feof($readStream)) {
+      $loop->removeStream($readStream);
+      $loop->removeStream($writeStream);
+      echo "Finished downloading $file\n";
+      return;
+    }
+    $buffers[$file]->write(fread($readStream, 1024));
+  });
+}
+
+$loop->run();
+]]></example>
+
+</slide>

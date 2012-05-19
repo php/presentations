@@ -42,6 +42,6 @@ if (preg_match('!\.php$!', $_SERVER["REQUEST_URI"])) {
 } else {
     Framework::Router($_SERVER["REQUEST_URI"]);
 }
-?>]]></example>
+]]></example>
 
 </slide>

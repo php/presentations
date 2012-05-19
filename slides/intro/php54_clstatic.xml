@@ -15,6 +15,6 @@ class Foo {
 $a = new Foo('bar');;
 $func = $a->getPrinter();
 $func(); // Fatal error: Using $this when not in object context
-?>]]></example>
+]]></example>
 
 </slide>

@@ -15,7 +15,7 @@ class Foo {
 $a = new Foo('bar');;
 $func = $a->getPrinter();
 $func(); // Outputs: Bar
-?>]]></example>
+]]></example>
 
 <break lines="1" />
 
@@ -27,6 +27,8 @@ $func = $a->getPrinter();
 $func(); // Outputs: Bar
 $func = $func->bindTo($b);
 $func(); // Outputs: Pickle
-?>]]></example>
+]]></example>
+
+<break lines="5" />
 
 </slide>

@@ -10,13 +10,13 @@ class Foo implements JsonSerializable {
     }
 }
 echo json_encode(new Foo); // Outputs: {"data":"Bar"}
-?>]]></example>
+]]></example>
 
 <list><item>JSON Pretty Printer</item></list>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 $a = array(1,2,3,array(4,5,6));
 echo json_encode($a,JSON_PRETTY_PRINT);
-?>]]></example>
+]]></example>
 <example fontsize="2em" result='0' title=""><![CDATA[
 [
     1,

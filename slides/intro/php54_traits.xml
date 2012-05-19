@@ -19,7 +19,6 @@ class B extends ArrayObject {
 
 // Singleton method is now available for both classes
 A::getInstance();
-B::getInstance();
-?>]]></example>
+B::getInstance();]]></example>
 
 </slide>

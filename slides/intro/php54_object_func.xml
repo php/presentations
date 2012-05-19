@@ -13,6 +13,6 @@ class Money {
 }
 $Money = new Money(11.02/5*13);
 echo $Money(); // $28.65
-?>]]></example>
+]]></example>
 
 </slide>

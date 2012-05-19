@@ -51,4 +51,6 @@ class foo extends ArrayObject {
 echo (new foo( [1, [4, 5], 3] ))[1][0]; // 4
 ]]></example>
 
+<break lines="5"/>
+
 </slide>
