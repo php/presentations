@@ -1,8 +1,8 @@
 <slide title="Conclusion">
 <break lines="2"/>
 <list fontsize="4em">
-<bullet>Make sure you are on PHP 5.3</bullet>
-<bullet>Help us test PHP 5.4 now</bullet>
+<bullet>Still running PHP &lt; 5.3? Upgrade!</bullet>
+<bullet>Test your code on PHP 5.4 and upgrade soon</bullet>
 <bullet>Contribute!</bullet>
 </list>
 <break lines="2"/>
@@ -14,6 +14,7 @@
 <link fontsize="2.5em" marginleft="2em" leader="SVM: " href="http://pecl.php.net/package/svm"/>
 <link fontsize="2.5em" marginleft="2em" leader="LibEvent: " href="http://pecl.php.net/package/libevent"/>
 <link fontsize="2.5em" marginleft="2em" leader="ZeroMQ: " href="http://php.zero.mq"/>
+<link fontsize="2.5em" marginleft="2em" leader="Node.PHP: " href="http://nodephp.org"/>
 <link fontsize="2.5em" marginleft="2em" leader="xhprof: " href="http://pecl.php.net/package/xhprof"/>
 <link fontsize="2.5em" marginleft="2em" leader="Xdebug: " href="http://xdebug.org/docs/profiler"/>
 <link fontsize="2.5em" marginleft="2em" leader="HipHop: " href="https://github.com/facebook/hiphop-php"/>

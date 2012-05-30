@@ -3,6 +3,6 @@
 <blurb fontsize="4em">To go along with PHP's octal and hex notation</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 $mask = 0b010101;
-?>]]></example>
+]]></example>
 
 </slide>

@@ -6,6 +6,6 @@ function fruits() {
   return ['apple', 'banana', 'orange'];
 }
 echo fruits()[0]; // Outputs: apple
-?>]]></example>
+]]></example>
 
 </slide>
