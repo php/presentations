@@ -10,20 +10,26 @@
 	<bullet>Configuration (INI) settings</bullet>
 </list>
 
-<example><![CDATA[zend_module_entry xdebug_module_entry = {
+<example><![CDATA[zend_module_entry mongo_module_entry = {
+#if ZEND_MODULE_API_NO >= 20010901
     STANDARD_MODULE_HEADER,
-    "xdebug",
-    xdebug_functions,
-    PHP_MINIT(xdebug),
-    PHP_MSHUTDOWN(xdebug),
-    PHP_RINIT(xdebug),
-    NULL, // PHP_RSHUTDOWN not in use
-    PHP_MINFO(xdebug),
-    XDEBUG_VERSION,
-#if (PHP_MAJOR_VERSION == 5 && PHP_MINOR_VERSION >= 2) || PHP_MAJOR_VERSION >= 6
-    NO_MODULE_GLOBALS,
 #endif
-    ZEND_MODULE_POST_ZEND_DEACTIVATE_N(xdebug),
+    PHP_MONGO_EXTNAME,
+    mongo_functions,
+    PHP_MINIT(mongo),
+    PHP_MSHUTDOWN(mongo),
+    PHP_RINIT(mongo),
+    NULL, // PHP_RSHUTDOWN not in use
+    PHP_MINFO(mongo),
+    PHP_MONGO_VERSION,
+#if ZEND_MODULE_API_NO >= 20060613
+    PHP_MODULE_GLOBALS(mongo),
+    PHP_GINIT(mongo),
+    NULL,
+    NULL,
     STANDARD_MODULE_PROPERTIES_EX
+#else
+    STANDARD_MODULE_PROPERTIES
+#endif
 };]]></example>
 </slide>

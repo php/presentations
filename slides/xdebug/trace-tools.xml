@@ -8,14 +8,14 @@ php ~/dev/php/xdebug/trunk/contrib/tracefile-analyser.php time-own 5
 ...
 Showing the 5 most costly calls sorted by 'time-own'.
 
-                                                                 Inclusive        Own
-function                                                 #calls  time     memory  time     memory
--------------------------------------------------------------------------------------------------
-array_pop                                                   715  1.0252  -139880  1.0252  -139880
-preg_match                                                 2986  0.3718  1016336  0.3718  1016336
-{main}                                                        1  6.4562  7335704  0.3476 -15198832
-next                                                        432  0.2386        0  0.2386        0
-count                                                      3302  0.2132        0  0.2123        0
+                                               Inclusive        Own
+function                               #calls  time     memory  time     memory
+-------------------------------------------------------------------------------
+array_pop                                 715  1.0252  -139880  1.0252  -139880
+preg_match                               2986  0.3718  1016336  0.3718  1016336
+{main}                                      1  6.4562  7335704  0.3476 -15198832
+next                                      432  0.2386        0  0.2386        0
+count                                    3302  0.2132        0  0.2123        0
 </example>
 </div>
 <div effect="fade-in-out">

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Intervals (PHP 5.3)</title>
+	<title>Intervals</title>
 	<subtitle>Creating an interval</subtitle>
 
 	<example result="1"><![CDATA[<?php
@@ -12,7 +12,7 @@ $i = new DateInterval( 'P3DT6H' );
 
 // from a difference
 $d1 = new DateTime();
-$d2 = new DateTime( "2010-10-10 10:10 Europe/Amsterdam" );
+$d2 = new DateTime( "2012-05-29 15:26 Europe/Amsterdam" );
 $i = $d1->diff( $d2 );
 
 // displaying the difference

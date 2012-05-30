@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen.css">
+<topic>Debugging</topic>
+<title>PHP Extensions - What and Why</title>
+<event>phpDay</event>
+<location>Verona, Italy</location>
+<date>May 18th, 2012</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/6376</joindin>
+<slide>slides/dbus/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/internals/extension-on-a-slide.xml</slide>
+
+<!--
+So you've heard that PHP supports extensions. But what are they exactly, what
+can you do with them, and what *can't* you do with them? And mostly, why would
+you or would you not want to spend time writing them?
+
+This session will introduce you into what PHP extensions are, and what they can
+do for you. It will cover cases of when it makes sense to write extensions and
+which things you need to think of when deciding whether you want to put the
+effort into writing an extension.
+
+The talk then proceeds with a small introduction to the request cycle and PHP's
+memory management. It mentions which parts of PHP you could override and which
+parts you can hook into. It will also cover things that you can not do with
+extensions.
+
+examples
+core ext
+internal ext
+external ext
+pecl
+zend ext
+
+functions
+classes
+ini settings
+
+hooks
+- startup, shutdown
+
+overloading:
+- errors
+- compile
+- execute
+- replacing functions
+
+stream filters
+- phar
+- encryption
+
+
+
+no syntax change
+- british php
+
+why:
+- wrapping libraries
+- fast, specific extensions
+- replacing PHP functions
+-->
+<slide>slides/internals/extensions.xml</slide>
+<slide>slides/internals/core-extensions.xml</slide>
+<slide>slides/internals/internal-extensions.xml</slide>
+<slide>slides/internals/external-extensions.xml</slide>
+<slide>slides/internals/pecl.xml</slide>
+<slide>slides/internals/overview.xml</slide>
+<slide>slides/internals/overview2.xml</slide>
+
+<slide>slides/internals/functions.xml</slide>
+<slide>slides/internals/classes-etc.xml</slide>
+
+<slide>slides/internals/hooks.xml</slide>
+<slide>slides/internals/overload.xml</slide>
+<slide>slides/internals/opcodes-question.xml</slide>
+
+<slide>slides/internals/execute5.xml</slide>
+<slide>slides/internals/opcode2.xml</slide>
+<slide>slides/internals/execute2.xml</slide>
+<slide>slides/internals/opcode-cache.xml</slide>
+
+<slide>slides/internals/opcode-overload2.xml</slide>
+<slide>slides/internals/replacing-functions.xml</slide>
+<slide>slides/internals/streams.xml</slide>
+<slide>slides/internals/syntax-changes.xml</slide>
+
+<slide>slides/internals/why-wrapping-libs.xml</slide>
+<slide>slides/internals/why-fast-specific.xml</slide>
+<slide>slides/internals/why-replace-php.xml</slide>
+<slide>slides/internals/why-not-possible.xml</slide>
+
+<slide>slides/internals/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

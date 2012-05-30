@@ -6,7 +6,7 @@
 	<blurb>Creating strings with the ~date_create_from_format()~ function:</blurb>
 	<example result="0"><![CDATA[<?php
 $date = "06/08/04";
-echo DateTime::createFromFormat( '!d/m/y', $date )->format( DateTime::ISO8601 ), "\n";
+$obj = DateTime::createFromFormat( '!d/m/y', $date )->format( DateTime::ISO8601 );
 ?>]]></example>
 <break/>
 	

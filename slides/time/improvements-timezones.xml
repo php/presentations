@@ -3,7 +3,7 @@
 	<title>Timezone Support</title>
 
 	<list>
-		<bullet>Bundled timezone database with 564 zones</bullet>
+		<bullet>Bundled timezone database with 576 zones</bullet>
 		<bullet>Not dependent on timezone abbreviations</bullet>
 		<bullet>Timezones have the format: Continent/Location or Continent/Location/Sublocation - Like: Europe/Amsterdam, America/Indiana/Knox</bullet>
 	</list>

@@ -1,0 +1,15 @@
+<slide>
+<title>Storing date/time in a database</title>
+<subtitle>Timestamp and timezone identifier</subtitle>
+
+<image filename="utc-point1.png"/>
+
+<list>
+	<bullet>*Goal*: Store date *exactly* 4 months in the future</bullet>
+	<bullet>Store: ~timestamp~ and ~timezone identifier~ (%America/Montreal%)</bullet>
+	<bullet>Current date/time: Jun 1st, 13:00 EDT (%1338570000%)</bullet>
+	<bullet>Future date/time: Oct 1st, 13:00 EDT (%1349110800%)</bullet>
+	<bullet>Local time for Santiago can also be calculated with the ~timestamp~ and its ~timezone identifier~ (%America/Santiago%).</bullet>
+	<bullet>*Conclusion*: Storing ~timestamp~ and ~timezone identifier~ allows you to convert to local time</bullet>
+</list>
+</slide>

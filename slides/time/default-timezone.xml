@@ -20,9 +20,6 @@
 	<blurb>Default timezone is 'guessed' in the following order:</blurb>
 	<list>
 		<bullet>~date_default_timezone_set()~ value</bullet>
-		<bullet>|777777|%TZ% environment variable|</bullet>
 		<bullet>php.ini's %date.timezone% setting</bullet>
-		<bullet>|dd4444|System's rendering of timezone abbreviation|</bullet>
 	</list>
-
 </slide>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Intervals (PHP 5.3)</title>
+	<title>Intervals</title>
 	<subtitle>Applying an interval</subtitle>
 
 	<example result="0"><![CDATA[<?php
-$d = new DateTime( 'August 27th, 2009' );
+$d = new DateTime( 'May 29th, 2012' );
 echo $d->format( "l Y-m-d\n" );
 
 $i = DateInterval::createFromDateString( "next weekday" );

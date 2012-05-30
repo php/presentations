@@ -1,0 +1,24 @@
+<slide>
+<title>Storing date/time in a database</title>
+<subtitle>Timestamp and timezone identifier?</subtitle>
+
+<div effect='fade-out'>
+<image filename="utc-point2.png"/>
+
+<blurb>Then somebody change the timezone database rules:</blurb>
+<list>
+	<bullet>%America/Montreal, 1349110800% → ---Oct 1st, 13:00 EDT---</bullet>
+	<bullet>%America/Montreal, 1349110800% → *Oct 1st, 12:00 EST* ☹</bullet>
+</list>
+</div>
+
+<div effect='fade-in'>
+<image filename="utc-point3.png"/>
+
+<blurb>You can store it as:</blurb>
+<list>
+	<bullet>%America/Montreal, 2012 10 1 13 0 0% → Oct 1st, 13:00 EDT</bullet>
+	<bullet>That however, changes the original point in time...</bullet>
+</list>
+</div>
+</slide>

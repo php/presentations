@@ -1,0 +1,16 @@
+<slide>
+<title>Storing date/time in a database</title>
+<subtitle>Timestamp and UTC offset for in the future</subtitle>
+
+<image filename="utc-database2.png"/>
+
+<list>
+	<bullet>*Goal*: Store date *exactly* 4 months in the future</bullet>
+	<bullet>Store: ~timestamp~ and ~UTC offset~ (%UTC-4%)</bullet>
+	<bullet>Current date/time: Jun 1st, 13:00 UTC-4 (%1338570000%)</bullet>
+	<bullet>Future date/time: Oct 1st, 13:00 UTC-4 (%1349110800%)</bullet>
+	<bullet>Correct for Montreal, where DST is still in effect.</bullet>
+	<bullet>Wrong for Santiago, where it DST has kicked in so it's UTC-3.</bullet>
+	<bullet>*Conclusion*: By storing ~timestamp~ and ~UTC offset~ you can't convert back to local time</bullet>
+</list>
+</slide>
