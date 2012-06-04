@@ -1,0 +1,77 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>PHP in 2012</title>
+<event>Forum PHP</event>
+<location>Paris</location>
+<date>June 5, 2012</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/afup12</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!--
+PHP is the Web scripting language that powers about 30% of all the Web sites in the world
+including some of the largest ones we all use on a daily basis. PHP 5.3 was released in 
+June 2009. Now, almost 3 years later PHP 5.4 is here. Come learn about the latest features
+and how they, along with a number of new extensions, will affect the Web over the next couple
+of years. Traits, closures, the array shortcut, and other new language syntaxes as well as
+event-driven and asynchronous programming, NoSQL, and Support Vector Machines (SVM) will be
+covered in this fast-moving session.
+-->
+
+<!-- Intro -->
+
+<slide>slides/intro/php_slideshow.xml</slide>
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+<slide>slides/intro/ecosystem.xml</slide>
+<slide>slides/intro/api_yql1.xml</slide>
+<slide>slides/intro/api_yql2.xml</slide>
+<slide>slides/intro/api_yql3.xml</slide>
+<slide>slides/intro/api_yql4.xml</slide>
+
+<slide>slides/intro/2012_title.xml</slide>
+<slide>slides/intro/eventmq.xml</slide>
+<slide>slides/intro/eventmq2.xml</slide>
+<slide>slides/intro/svm.xml</slide>
+
+<slide>slides/intro/php54_title.xml</slide>
+<slide>slides/intro/php54_perf.xml</slide>
+<slide>slides/intro/php54_removed.xml</slide>
+<slide>slides/intro/php54_traits.xml</slide>
+<slide>slides/intro/php54_sarrays.xml</slide>
+<slide>slides/intro/php54_object_func.xml</slide>
+<slide>slides/intro/php54_fad.xml</slide>
+<slide>slides/intro/php54_imc.xml</slide>
+<slide>slides/intro/php54_tfcs.xml</slide>
+<slide>slides/intro/php54_clstatic.xml</slide>
+<slide>slides/intro/php54_callable.xml</slide>
+<slide>slides/intro/php54_server.xml</slide>
+<slide>slides/intro/php54_session.xml</slide>
+<slide>slides/intro/php54_binary.xml</slide>
+<slide>slides/intro/php54_emsgs.xml</slide>
+<slide>slides/intro/php54_arraywarn.xml</slide>
+<slide>slides/intro/php54_json.xml</slide>
+<slide>slides/intro/php54_misc.xml</slide>
+<slide>slides/intro/future3.xml</slide>
+<slide>slides/intro/contribute.xml</slide>
+<slide>slides/intro/key_ref2012.xml</slide>
+
+</presentation>
