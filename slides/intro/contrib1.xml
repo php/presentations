@@ -1,0 +1,92 @@
+<slide title="Test RCs">
+<break lines="1"/>
+<link fontsize="2.8em" marginleft="1.5em" href="http://qa.php.net"/>
+
+<blurb fontsize="4em">Get your current configure flags</blurb>
+
+<example fontsize="1.4em" type="shell" ><![CDATA[
+|0077aa|~>| php -i | grep Configure
+Configure Command =>  './configure'  '--with-apxs2=/usr/bin/apxs2' 
+'--with-curlwrappers' '--disable-zend-signals' '--with-gd'
+'--with-jpeg-dir=/usr' '--with-png-dir=/usr' '--with-vpx-dir=/usr'
+'--with-freetype-dir=/usr' '--with-t1lib=/usr' '--enable-gd-native-ttf'
+'--enable-exif' '--with-config-file-path=/etc/php5/apache2'
+'--with-config-file-scan-dir=/etc/php5/apache2/conf.d'
+'--with-mysql=mysqlnd' '--with-mysql-sock=/var/run/mysqld/mysqld.sock'
+'--with-zlib' '--with-gmp' '--with-zlib-dir=/usr' '--with-gettext'
+'--with-kerberos' '--with-imap-ssl' '--with-mcrypt=/usr/local'
+'--with-iconv' '--enable-sockets' '--with-openssl' '--with-pspell'
+'--with-pdo-mysql=mysqlnd' '--with-pdo-sqlite' '--enable-soap'
+'--enable-xmlreader' '--with-xsl' '--enable-ftp' '--enable-cgi'
+'--with-curl=/usr' '--with-tidy' '--with-xmlrpc' '--enable-mbstring'
+'--enable-sysvsem' '--enable-sysvshm' '--enable-shmop' '--with-readline'
+'--enable-pcntl' '--enable-fpm' '--with-imap' '--with-mysqli=mysqlnd'
+'--prefix=/usr/local'
+]]></example>
+
+<blurb fontsize="4em">Configure, build and run the tests</blurb>
+
+<example fontsize="1.4em" type="shell" ><![CDATA[
+|0077aa|~>| ./configure --enable-cgi --enable-fpm --with-apxs2=/usr/bin/apxs2
+|0077aa|~>| make
+|0077aa|~>| make test
+]]></example>
+
+<blurb fontsize="4em">Go do something else for a while...</blurb>
+
+<example fontsize="1.2em" type="shell" ><![CDATA[
+|0077aa|~>| make test 
+
+=====================================================================
+PHP         : /home/rasmus/src/54/sapi/cli/php 
+PHP_SAPI    : cli
+PHP_VERSION : 5.4.5-dev
+ZEND_VERSION: 2.4.0
+PHP_OS      : Linux - Linux x220 3.2.0-24-generic #39-Ubuntu SMP Mon May 21 16:52:17 UTC 2012 x86_64
+INI actual  : /home/rasmus/src/54/tmp-php.ini
+More .INIs  :  
+CWD         : /home/rasmus/src/54
+Extra dirs  : 
+VALGRIND    : Not used
+=====================================================================
+TIME START 2012-06-06 23:26:11
+=====================================================================
+PASS EXPECT [tests/run-test/test001.phpt] 
+PASS EXPECTF [tests/run-test/test002.phpt] 
+PASS EXPECTREGEX [tests/run-test/test003.phpt] 
+...
+
+FAILED TEST SUMMARY
+---------------------------------------------------------------------
+Bug #43073 (TrueType bounding box is wrong for angle<>0) [ext/gd/tests/bug43073.phpt]
+Bug #51647 (Certificate file without private key (pk in another file) doesn't work) [ext/mysqli/tests/bug51647.phpt]
+Bug #55283 (SSL options set by mysqli_ssl_set ignored for MySQLi persistent connections) [ext/mysqli/tests/bug55283.phpt]
+Forking a child and using the same connection. [ext/mysqli/tests/mysqli_fork.phpt]
+Bug #39858 (Lost connection to MySQL server during query by a repeated call stored proced) [ext/pdo_mysql/tests/bug_39858.phpt]
+PDO MySQL Bug #41997 (stored procedure call returning single rowset blocks future queries) [ext/pdo_mysql/tests/bug_41997.phpt]
+MySQL PDO->exec(), affected rows [ext/pdo_mysql/tests/pdo_mysql_exec.phpt]
+MySQL PDO->exec(), affected rows [ext/pdo_mysql/tests/pdo_mysql_exec_load_data.phpt]
+MySQL PDOStatement->nextRowSet() [ext/pdo_mysql/tests/pdo_mysql_stmt_nextrowset.phpt]
+MySQL Prepared Statements and different column counts [ext/pdo_mysql/tests/pdo_mysql_stmt_variable_columncount.phpt]
+Bug #38802 (ignore_errors and max_redirects) [ext/standard/tests/http/bug38802.phpt]
+Bug #48929 (duplicate \r\n sent after last header line) [ext/standard/tests/http/bug48929.phpt]
+Bug #53198 (From: header cannot be changed with ini_set) [ext/standard/tests/http/bug53198.phpt]
+Bug #60570 (Stream context leaks when http request fails) [ext/standard/tests/http/bug60570.phpt]
+http:// and ignore_errors [ext/standard/tests/http/ignore_errors.phpt]
+=====================================================================
+
+=====================================================================
+WARNED TEST SUMMARY
+---------------------------------------------------------------------
+Bug #44454 (Unexpected exception thrown in foreach() statement) [ext/pdo_mysql/tests/bug_44454.phpt] (warn: XFAIL section but test passes)
+MySQL PDO->prepare(), emulated PS [ext/pdo_mysql/tests/pdo_mysql_prepare_emulated.phpt] (warn: XFAIL section but test passes)
+=====================================================================
+
+...
+
+Posting to http://qa.php.net/buildtest-process.php
+
+Thank you for helping to make PHP better.
+]]></example>
+
+</slide>

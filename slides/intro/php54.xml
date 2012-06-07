@@ -16,31 +16,21 @@
 </list>
 
 <break lines="1" />
-<blurb fontsize="4em">Traits aka Horizontal Code Reuse</blurb>
-<blurb fontsize="4em">(Compiler-assisted Copy-and-Paste)</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
-trait Singleton {
-    public static function getInstance() { ... }
-}
-
-class A {
-    use Singleton;
-    // ...
-}
-
-class B extends ArrayObject {
-    use Singleton;
-    // ...
-}
-
-// Singleton method is now available for both classes
-A::getInstance();
-B::getInstance();
-?>]]></example>
-
+<blurb fontsize="4em">✔ Built-in Web Server</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">Function Array Dereferencing</blurb>
+<blurb fontsize="4em">✔ Traits aka Horizontal Code Reuse</blurb>
+<blurb fontsize="3em" margintop="-0.5em">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;(Compiler-assisted Copy-and-Paste)</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Short Array Syntax</blurb>
+<example fontsize="2em" result='0' title=""><![CDATA[<?php
+$a = [1, 2, 3];
+$b = ['foo' => 'orange', 'bar' => 'apple'];
+]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Function Array Dereferencing</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 function fruits() {
   return array('apple', 'banana', 'orange');
@@ -49,7 +39,7 @@ echo fruits()[0]; // Outputs: apple
 ?>]]></example>
 
 <break lines="1" />
-<blurb fontsize="4em">$this from current scope supported in Closures</blurb>
+<blurb fontsize="4em">✔ $this from current scope supported in Closures</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 class Foo {
   private $prop = "bar";
@@ -64,19 +54,25 @@ $func(); // Outputs: Bar
 ?>]]></example>
 
 <break lines="1" />
-<blurb fontsize="4em">New Output API (internal code cleanup)</blurb>
+<blurb fontsize="4em">✔ &amp;lt;?= is now always available</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">&amp;lt;?= is now always available</blurb>
+<blurb fontsize="4em">✔ New Session Object</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">default charset is UTF-8 instead of ISO-8859-1</blurb>
+<blurb fontsize="4em">✔ Callable Typehint</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">Multibyte support is now configurable at runtime</blurb>
+<blurb fontsize="4em">✔ Better support for asian chars in htmlspecialchars/htmlentities</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">JSON Improvements:</blurb>
+<blurb fontsize="4em">✔ default charset is UTF-8 instead of ISO-8859-1</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Multibyte support is now configurable at runtime</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ JSON Improvements</blurb>
 <list><item>JsonSerializable</item></list>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 class Foo implements JsonSerializable {
@@ -88,22 +84,12 @@ class Foo implements JsonSerializable {
 echo json_encode(new Foo); // Outputs: {"data":"Bar"}
 ?>]]></example>
 
-<list><item>JSON Pretty Printer</item></list>
+<break lines="1" />
+<blurb fontsize="4em">✔ mysqlnd used by default everywhere</blurb>
+
+<blurb fontsize="4em">✔ Binary notation</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
-$a = array(1,2,3,array(4,5,6));
-echo json_encode($a,JSON_PRETTY_PRINT);
-?>]]></example>
-<example fontsize="2em" result='0' title=""><![CDATA[
-[
-    1,
-    2,
-    3,
-    [
-        4,
-        5,
-        6
-    ]
-]
+$mask = 0b010101;
 ]]></example>
 
 </slide>

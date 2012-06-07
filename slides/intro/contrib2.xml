@@ -1,0 +1,45 @@
+<slide title="Track down a failed test">
+<break lines="2"/>
+<example fontsize="1.4em" type="shell" ><![CDATA[
+MySQL PDO->exec(), affected rows [ext/pdo_mysql/tests/pdo_mysql_exec.phpt]
+]]></example>
+
+<blurb fontsize="4em">Files generated when a test fails</blurb>
+
+<example fontsize="1.4em" type="shell" ><![CDATA[
+|0077aa|~>| ls ext/pdo_mysql/tests/pdo_mysql_exec.*
+ext/pdo_mysql/tests/pdo_mysql_exec.diff
+ext/pdo_mysql/tests/pdo_mysql_exec.exp
+ext/pdo_mysql/tests/pdo_mysql_exec.log
+ext/pdo_mysql/tests/pdo_mysql_exec.out
+ext/pdo_mysql/tests/pdo_mysql_exec.php
+ext/pdo_mysql/tests/pdo_mysql_exec.phpt
+ext/pdo_mysql/tests/pdo_mysql_exec.sh*
+]]></example>
+
+<blurb fontsize="4em">Check the diff</blurb>
+<example fontsize="1.4em" type="shell" ><![CDATA[
+|0077aa|~>| cat ext/pdo_mysql/tests/pdo_mysql_exec.diff
+003+ [020] Expecting '0'/integer got '1'/integer when running 'CALL p(@version)', [00000] 00000 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'THIS IS NOT VALID SQL, I HOPE' at line 1
+]]></example>
+
+<blurb fontsize="4em">Run the test program</blurb>
+<example fontsize="1.4em" type="shell" ><![CDATA[
+|0077aa|~>| ext/pdo_mysql/tests/pdo_mysql_exec.sh
+
+Warning: PDO::exec(): SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'THIS IS NOT VALID SQL, I HOPE' at line 1 in /home/rasmus/src/54/ext/pdo_mysql/tests/pdo_mysql_exec.php on line 6
+[016] [42000] 42000 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'THIS IS NOT VALID SQL, I HOPE' at line 1
+[020] Expecting '0'/integer got '1'/integer when running 'CALL p(@version)', [00000] 00000 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'THIS IS NOT VALID SQL, I HOPE' at line 1
+[035] With emulated PS it works but makes no sense given that exec() returns sort of affected rows...
+done!
+]]></example>
+
+<blurb fontsize="4em">Fix the test</blurb>
+
+<blurb fontsize="4em">Then re-run tests just for that section</blurb>
+
+<example fontsize="1.4em" type="shell"><![CDATA[
+|0077aa|~>| make test TESTS=ext/pdo_mysql
+]]></example>
+
+</slide>

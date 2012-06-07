@@ -1,0 +1,64 @@
+<slide title="Help us write new tests">
+<break lines="1"/>
+<link fontsize="2.8em" marginleft="1.5em" href="http://gcov.php.net"/>
+
+<break lines="1"/>
+<blurb fontsize="4em">Writing tests is easy</blurb>
+
+<example title="" fontsize="1.75em"><![CDATA[--TEST--
+Hello World test
+--FILE--
+<?php
+	echo "Hello World";
+?>
+--EXPECT--
+Hello World]]></example>
+
+<break lines="1"/>
+<blurb fontsize="4em">Conditional tests and GET/POST args</blurb>
+
+<example title="" fontsize="1.75em"><![CDATA[--TEST--
+Input Filter test
+--SKIPIF--
+if(!extension_loaded('input_filter')) print "skip";
+--POST--
+a=<b>1</b>
+--GET--
+b=<i>2</i>
+--FILE--
+<?php
+	echo $_POST['a'];
+	echo $_GET['b'];
+?>
+--EXPECT--
+12]]></example>
+
+<break lines="1"/>
+<table columns="2" fontsize="3em" title="PHPT Sections">
+<cell>--TEST--</cell><cell>title of the test</cell>
+<cell>--EXTENSIONS--</cell><cell>load additional extensions</cell>
+<cell>--XFAIL--</cell><cell>explain why the test is expected to fail</cell>
+<cell>--CREDITS--</cell><cell>give yourself some credit for writing a test</cell>
+<cell>--SKIPIF--</cell><cell>php code which prints &quot;skip&quot;</cell>
+<cell>--REDIRECTTEST--</cell><cell>Reuse test from a different dir</cell>
+<cell>--ARGS--</cell><cell>CLI args</cell>
+<cell>--POST--</cell><cell>POST variables passed to test script</cell>
+<cell>--POST_RAW--</cell><cell>Raw post data</cell>
+<cell>--GZIP_POST--</cell><cell>Gzipped post data</cell>
+<cell>--DEFLATE_POST--</cell><cell>Deflated (compressed) post data</cell>
+<cell>--PUT--</cell><cell>Put data</cell>
+<cell>--GET--</cell><cell>GET variables passed to test script</cell>
+<cell>--COOKIE--</cell><cell>Cookie data</cell>
+<cell>--ENV--</cell><cell>Environment variables</cell>
+<cell>--INI--</cell><cell>each line contains an ini setting e.g. foo=bar</cell>
+<cell>--FILE--</cell><cell>the test script</cell>
+<cell>--FILE_EXTERNAL--</cell><cell>load the test script from file</cell>
+<cell>--FILEEOF--</cell><cell>Make sure there is no trailing crlf</cell>
+<cell>--EXPECT--</cell><cell>the expected output from the test script</cell>
+<cell>--EXPECTF--</cell><cell>sscanf version of expected output</cell>
+<cell>--EXPECTREGEX--</cell><cell>regex version of expected output</cell>
+<cell>--EXPECTHEADERS--</cell><cell>Expected output headers</cell>
+<cell>--CLEAN--</cell><cell>Cleanup code to run after test completes</cell>
+</table>
+
+</slide>
