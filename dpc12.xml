@@ -45,9 +45,11 @@ Future direction
 
 <!-- Intro -->
 
+<slide>slides/intro/1992.xml</slide>
 <slide>slides/intro/php_slideshow.xml</slide>
 
 <slide>slides/intro/matter.xml</slide>
+<slide>slides/intro/matter2.xml</slide>
 
 <slide>slides/intro/ecosystem.xml</slide>
 
@@ -56,6 +58,7 @@ Future direction
 <slide>slides/intro/eventmq.xml</slide>
 <slide>slides/intro/eventmq2.xml</slide>
 <slide>slides/intro/svm.xml</slide>
+<slide>slides/intro/future3.xml</slide>
 
 <slide>slides/intro/contrib0.xml</slide>
 <slide>slides/intro/contrib1.xml</slide>
@@ -66,7 +69,6 @@ Future direction
 <slide>slides/intro/contrib6.xml</slide>
 <slide>slides/intro/contrib7.xml</slide>
 
-<slide>slides/intro/future3.xml</slide>
 <slide>slides/intro/key_matter.xml</slide>
 
 </presentation>

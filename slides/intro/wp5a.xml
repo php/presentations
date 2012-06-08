@@ -1,0 +1,25 @@
+<slide title="Benchmark again">
+
+<break lines="1" />
+
+<example fontsize="1.4em" type="shell" title="Benchmarking PHP-5.4.5-dev w/ APC-3.1.11-dev --enable-apc-pthreadrwlocks"><![CDATA[
+|0077aa|~>| *siege -c 5 -b -t30s "http://wp2.localhost/?p=1"*
+** SIEGE 2.70
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege..      done.
+Transactions:		        2331 hits
+Availability:		      100.00 %
+Elapsed time:		       29.40 secs
+Data transferred:	       18.82 MB
+Response time:		        *0.06 secs*
+Transaction rate:	       *79.29 trans/sec*
+Throughput:		        0.64 MB/sec
+Concurrency:		        4.99
+Successful transactions:        2331
+Failed transactions:	           0
+Longest transaction:	        0.12
+Shortest transaction:	        0.02
+]]></example>
+
+</slide>

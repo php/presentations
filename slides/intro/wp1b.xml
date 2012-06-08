@@ -1,0 +1,27 @@
+<slide title="Wordpress">
+
+<break lines="1" />
+
+<link fontsize="3em" marginleft="1em" leader="Siege: " href="http://www.joedog.org/JoeDog/Siege"/>
+
+<example fontsize="1.4em" type="shell" title="Baseline Benchmark Wordpress-svn PHP-FPM-5.4.5-dev nginx-1.1.19"><![CDATA[
+|0077aa|~>| *siege -c 5 -b -t30s "http://wp1.localhost/?p=1"*
+** SIEGE 2.70
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege..      done.
+Transactions:		         659 hits
+Availability:		      100.00 %
+Elapsed time:		       29.02 secs
+Data transferred:	        5.32 MB
+Response time:		        *0.22 secs*
+Transaction rate:	       *22.71 trans/sec*
+Throughput:		        0.18 MB/sec
+Concurrency:		        4.97
+Successful transactions:         659
+Failed transactions:	           0
+Longest transaction:	        1.62
+Shortest transaction:	        0.13
+]]></example>
+
+</slide>

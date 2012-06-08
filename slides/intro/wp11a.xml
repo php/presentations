@@ -1,0 +1,27 @@
+<slide title="Add cache to locate_template()">
+
+<blurb fontsize="3.5em">
+The *locate_template()* function checks stats the filesystem on every call to find templates.
+Cache these stats in shared memory.
+</blurb>
+
+<example fontsize="1.4em" type="shell" title=""><![CDATA[
+|0077aa|~>| *siege -b -t30s -c5 http://wp1.localhost*
+** SIEGE 2.70
+** Preparing 5 concurrent users for battle.
+The server is now under siege...
+Lifting the server siege..      done.
+Transactions:		        2408 hits
+Availability:		      100.00 %
+Elapsed time:		       29.46 secs
+Data transferred:	       19.45 MB
+Response time:		        *0.06 secs*
+Transaction rate:	       *81.74 trans/sec*
+Throughput:		        0.66 MB/sec
+Concurrency:		        4.99
+Successful transactions:        2408
+Failed transactions:	           0
+Longest transaction:	        0.12
+Shortest transaction:	        0.02]]></example>
+
+</slide>

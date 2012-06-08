@@ -3,7 +3,8 @@
 <break lines="1" />
 
 <blurb fontsize="3.5em">
-Set *error_reporting(-1)* in *wp-settings.php* to catch all warnings
+Set *error_reporting(-1)* in *wp-load.php* and *wp-includes/load.php* to catch all warnings.
+Wordpress has fixed all of them in the current version. Previously we saw warnings like this:
 </blurb>
 
 <example fontsize="0.8em" type="shell" title=""><![CDATA[

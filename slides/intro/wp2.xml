@@ -4,26 +4,25 @@
 
 <link fontsize="3em" marginleft="1em" leader="APC: " href="http://pecl.php.net/APC"/>
 
-<example fontsize="1.4em" title="Set your default timezone in php.ini file"><![CDATA[date.timezone = "America/Los_Angeles"]]></example>
-
-<example fontsize="1.4em" type="shell" title="Benchmarking PHP-5.3.3-dev w/ APC-3.1.4-dev zend.enable_gc=Off"><![CDATA[
-|0077aa|~>| *siege -c 5 -b -t30s http://wp1.localhost*
-** SIEGE 2.68
+<example fontsize="1.4em" type="shell" title="Benchmarking PHP-5.4.5-dev w/ APC-3.1.11-dev --enable-apc-pthreadrwlocks"><![CDATA[
+|0077aa|~>| *siege -c 5 -b -t30s "http://wp1.localhost/?p=1"*
+** SIEGE 2.70
 ** Preparing 5 concurrent users for battle.
 The server is now under siege...
-Lifting the server siege...      done.
-Transactions:		         788 hits
+Lifting the server siege..      done.
+Transactions:		        2259 hits
 Availability:		      100.00 %
-Elapsed time:		       29.27 secs
-Data transferred:	        1.66 MB
-Response time:		        *0.18 secs*
-Transaction rate:	       *26.92 trans/sec*
-Throughput:		        0.06 MB/sec
-Concurrency:		        4.97
-Successful transactions:         788
+Elapsed time:		       29.70 secs
+Data transferred:	       18.24 MB
+Response time:		        *0.07 secs*
+Transaction rate:	       *76.06 trans/sec*
+Throughput:		        0.61 MB/sec
+Concurrency:		        4.99
+Successful transactions:        2259
 Failed transactions:	           0
-Longest transaction:	        0.65
-Shortest transaction:	        0.07]]></example>
+Longest transaction:	        0.13
+Shortest transaction:	        0.03
+]]></example>
 
 <example title="Make sure we are cpu-bound" fontsize="1.3em" type="shell">
 |0077aa|~>| *vmstat 1*

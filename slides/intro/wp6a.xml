@@ -1,0 +1,33 @@
+<slide title="Fix all warnings">
+
+<break lines="1" />
+
+<blurb fontsize="3em">
+Set *error_reporting(-1)* in *wp-load.php* and *wp-includes/load.php* to catch all warnings.
+Wordpress has fixed most of them in the current version.
+</blurb>
+
+<example fontsize="0.8em" type="shell" title=""><![CDATA[
+
+Strict Standards: Redefining already defined constructor for class WP_Widget in /var/www/wp2/wp-includes/widgets.php on line 93
+
+]]></example>
+
+<example fontsize="1.4em" title="Stray PHP4 constructor"><![CDATA[<?php
+/**
+ * PHP4 constructor
+ */
+function WP_Widget( $id_base = false, $name, $widget_options = array(), $control_options = array() ) {
+    WP_Widget::__construct( $id_base, $name, $widget_options, $control_options );
+}
+]]></example>
+
+<break lines="1"/>
+
+<example fontsize="0.8em" type="shell" title=""><![CDATA[
+
+Fatal error: Call to undefined method Twenty_Eleven_Ephemera_Widget::WP_Widget() in /var/www/wp2/wp-content/themes/twentyeleven/inc/widgets.php on line 20
+
+]]></example>
+
+</slide>

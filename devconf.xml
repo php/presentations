@@ -1,0 +1,62 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+<!--
+Performance
+-->
+
+<topic>PHP</topic>
+<title>PHP Performance</title>
+<location>Moscow</location>
+<date>June 10, 2012</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/devconf</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- Intro -->
+<slide>slides/fowa/hist2.xml</slide>
+<slide>slides/fowa/hist3.xml</slide>
+<slide>slides/fowa/hist4.xml</slide>
+<slide>slides/fowa/hist5.xml</slide>
+<slide>slides/intro/php54.xml</slide>
+
+<!-- Performance -->
+<slide>slides/intro/perf_overall1.xml</slide>
+<slide>slides/intro/wp1.xml</slide>
+<slide>slides/intro/wp1a.xml</slide>
+<slide>slides/intro/wp1b.xml</slide>
+<slide>slides/intro/wp2.xml</slide>
+<slide>slides/intro/wp3.xml</slide>
+<slide>slides/intro/wp4.xml</slide>
+<slide>slides/intro/wp5.xml</slide>
+<slide>slides/intro/wp5a.xml</slide>
+<slide>slides/intro/wp6a.xml</slide>
+<slide>slides/intro/wp7.xml</slide>
+<slide>slides/intro/wp8.xml</slide>
+<slide>slides/intro/wp9a.xml</slide>
+<slide>slides/intro/wp10.xml</slide>
+<slide>slides/intro/wp11a.xml</slide>
+<slide>slides/intro/wp12.xml</slide>
+<slide>slides/intro/hiphop.xml</slide>
+
+<slide>slides/intro/ntwit0.xml</slide>
+<slide>slides/intro/ntwit1.xml</slide>
+<slide>slides/intro/ntwit2.xml</slide>
+<slide>slides/intro/ntwit3.xml</slide>
+<slide>slides/intro/ntwit4.xml</slide>
+<slide>slides/intro/perf_conclusion.xml</slide>
+
+</presentation>

@@ -4,23 +4,23 @@
 
 <link fontsize="3em" marginleft="1em" leader="Siege: " href="http://www.joedog.org/JoeDog/Siege"/>
 
-<example fontsize="1.4em" type="shell" title="Baseline Benchmark Wordpress-svn PHP-5.3.15-dev Apache-2.2.22 prefork"><![CDATA[
+<example fontsize="1.4em" type="shell" title="Baseline Benchmark Wordpress-svn PHP-5.4.5-dev Apache-2.2.22 prefork"><![CDATA[
 |0077aa|~>| *siege -c 5 -b -t30s "http://wp1.localhost/?p=1"*
 ** SIEGE 2.70
 ** Preparing 5 concurrent users for battle.
 The server is now under siege...
 Lifting the server siege..      done.
-Transactions:		         579 hits
+Transactions:		         670 hits
 Availability:		      100.00 %
-Elapsed time:		       29.41 secs
-Data transferred:	        4.68 MB
-Response time:		        *0.25 secs*
-Transaction rate:	       *19.69 trans/sec*
-Throughput:		        0.16 MB/sec
+Elapsed time:		       29.61 secs
+Data transferred:	        5.41 MB
+Response time:		        *0.22 secs*
+Transaction rate:	       *22.63 trans/sec*
+Throughput:		        0.18 MB/sec
 Concurrency:		        4.98
-Successful transactions:         579
+Successful transactions:         670
 Failed transactions:	           0
-Longest transaction:	        0.51
+Longest transaction:	        0.35
 Shortest transaction:	        0.14
 ]]></example>
 
