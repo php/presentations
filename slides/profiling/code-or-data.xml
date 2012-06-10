@@ -14,8 +14,8 @@
 <div effect="fade-in-out">
 <blurb>%$ vmstat 1%</blurb>
 <code>
-procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
- r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs *|dd1111|us sy|* id wa
+procs            memory              swap        io      system       cpu    
+ r  b   swpd   free   buff   cache   si   so    bi    bo   in   cs *|dd1111|us sy|* id wa
  5  0 121248 367520 767824 3080668    0    0 11272     0 1593 5540 *|dd1111|74 22|*  3  0
  5  0 121248 290784 767960 3082980    0    0   268     0 1555 5381 *|dd1111|77 20|*  3  0
  5  0 121248 238340 768132 3084336    0    0  1364 21160 2263 6815 *|dd1111|70 21|*  3  7
@@ -27,8 +27,8 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
 <div effect="fade-in-out">
 <blurb>%$ vmstat 1%</blurb>
 <code>
-procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
- r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id *|dd1111|wa|*
+procs            memory              swap        io      system       cpu    
+ r  b   swpd   free   buff   cache   si   so     bi    bo   in   cs us sy id *|dd1111|wa|*
  0  1 121248  50776 314796 4156000    0    0 245800     0 3018 5394  1 11 71 *|dd1111|17|*
  1  0 121248  52112 315108 4236692    0    0 243672     0 3107 5552  1 10 71 *|dd1111|18|*
  1  1 121248  50148 315256 4318268    0    0 243096    44 3146 5463  1 11 72 *|dd1111|17|*
