@@ -9,7 +9,7 @@
 	{if is_set( $child->tagName )}
 		{include $child->tagName . '.ezt' send $child as $node, $pres, true as $inline}
 	{else}
-		{raw format_text( $pres, $child->nodeValue )}
+{raw format_text( $pres, $child->nodeValue )}
 	{/if}
 {/foreach}
 </p>

@@ -1,6 +1,10 @@
 {use $pres, $node}
 {var $result}
+{if get_attribute( $node, 'inline' ) >= 1}
+<pre class='code'>{raw format_text( $pres, $node->nodeValue )}</pre>
+{else}
 <pre class='code'>{ replace_properties( $pres, $node->nodeValue )}</pre>
+{/if}
 {if get_attribute( $node, 'result' ) >= 1}
  {$result = run_code( replace_properties( $pres, $node->nodeValue ) )}
  {if get_attribute( $node, 'result' ) == 1 && $result != ""}
