@@ -1,0 +1,20 @@
+<slide>
+<title>Connection String</title>
+
+<example result="0"><![CDATA[<?php
+$options = array( 'replicaSet' => 'seta' );
+
+$m = new Mongo( 'mongodb://localhost:13000', $options );
+
+$m = new Mongo( 'mongodb://localhost:13000,localhost:13001', $options );
+
+$m = new Mongo( 'mongodb://user:password@localhost:13000,localhost:13001/demo', $options );
+?>]]></example>
+
+<list>
+	<bullet>Add more than one host for seeding</bullet>
+	<bullet>Don't add the arbiters to the connection string</bullet>
+	<bullet>Don't use %->authenticate()%</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen.css">
+<topic>mongoDB</topic>
+<title>MongoDB workshop</title>
+<event>DevConf12</event>
+<location>Moscow, Russian Federation</location>
+<date>Jun 10th, 2012</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin></joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/mongodb/databasefield.xml</slide>
+<slide>slides/mongodb/collections-documents.xml</slide>
+<slide>slides/mongodb/document.xml</slide>
+
+<slide>slides/mongodb/mongo-extension.xml</slide>
+- install
+  - driver
+  - mongodb
+
+<slide>slides/mongodb/connecting.xml</slide>
+
+<slide>slides/mongodb/insert.xml</slide>
+- single
+
+<slide>slides/mongodb/types.xml</slide>
+- php types
+- extra types (int32/64)
+- id
+<slide>slides/mongodb/id.xml</slide>
+<slide>slides/mongodb/safe.xml</slide>
+<slide>slides/mongodb/safe2.xml</slide>
+
+<slide>slides/mongodb/query.xml</slide>
+<slide>slides/mongodb/query2.xml</slide>
+- findOne
+- find
+
+<slide>slides/mongodb/cursors.xml</slide>
+- cursor
+<slide>slides/mongodb/limit-skip.xml</slide>
+- limit/skip
+
+
+<slide>slides/mongodb/update-modifiers.xml</slide>
+<slide>slides/mongodb/update2a.xml</slide>
+
+<slide>slides/mongodb/indexes2.xml</slide>
+<slide>slides/mongodb/indexes3.xml</slide>
+<slide>slides/mongodb/indexes4.xml</slide>
+
+<slide>slides/mongodb/commands.xml</slide>
+<slide>slides/mongodb/commands-distinct.xml</slide>
+
+<!-- SCHEMA DESIGN -->
+Common Patterns
+
+- RDBMS-normalisation.
+
+<slide>slides/mongodb/normalisation.xml</slide>
+<slide>slides/mongodb/blog.xml</slide>
+<slide>slides/mongodb/blog2.xml</slide>
+
+<slide>slides/mongodb/considerations.xml</slide>
+
+<slide>slides/mongodb/inherit.xml</slide>
+<slide>slides/mongodb/inherit-rdbms.xml</slide>
+<slide>slides/mongodb/inherit-mongo.xml</slide>
+<slide>slides/mongodb/inherit-summary.xml</slide>
+
+<slide>slides/mongodb/one-to-many1.xml</slide>
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/one-to-many3.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+
+<slide>slides/mongodb/many-to-many1.xml</slide>
+<slide>slides/mongodb/many-to-many2.xml</slide>
+<slide>slides/mongodb/many-to-many3.xml</slide>
+<slide>slides/mongodb/many-to-many4.xml</slide>
+
+<slide>slides/mongodb/embed-vs-link.xml</slide>
+
+<!-- INTRODUCING OSM DATA -->
+<slide>slides/map/osm-what.xml</slide>
+<slide>slides/map/what-is-osm.xml</slide>
+<slide>slides/map/osm-data.xml</slide>
+
+<slide>slides/map/osm-tags1.xml</slide>
+<slide>slides/map/osm-tags2.xml</slide>
+<slide>slides/map/osm-tags3.xml</slide>
+<slide>slides/map/osm-tags4.xml</slide>
+
+<slide>slides/map/osm-parse-into-db.xml</slide>
+<slide>slides/map/osm-xapi.xml</slide>
+<slide>slides/mongodb/write-import-script-result.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data3.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data4.xml</slide>
+<slide>slides/map/finding-food-import-mongo.xml</slide>
+<slide>slides/mongodb/write-import-script2.xml</slide>
+
+<slide>slides/mongodb/indexes-geo.xml</slide>
+<slide>slides/mongodb/indexes-geo2.xml</slide>
+
+<!--<slide>slides/map/finding-food-data-mongo.xml</slide>-->
+<slide>slides/map/finding-food-take2.xml</slide>
+
+<slide>slides/mongodb/replication.xml</slide>
+<slide>slides/mongodb/replication-setup.xml</slide>
+- setup
+- slaveOk
+- journal
+- write concerns
+<slide>slides/mongodb/safe3.xml</slide>
+<slide>slides/mongodb/read-preference.xml</slide>
+<slide>slides/mongodb/php-connection-string.xml</slide>
+
+<slide>slides/mongodb/sharding.xml</slide>
+- mongos
+- diagram
+- transparent
+
+<slide>slides/mongodb/resources.xml</slide>
+
+<!-- PERFORMANCE THINGS -->
+<slide>slides/mongodb/mmap.xml</slide>
+
+
+<!-- ADVANCED QUERY STUFF -->
+<slide>slides/mongodb/query-advanced-ops.xml</slide>
+<slide>slides/mongodb/query-advanced-example-array1.xml</slide>
+<slide>slides/mongodb/query-advanced-example-array2.xml</slide>
+<slide>slides/mongodb/upsert.xml</slide>
+<slide>slides/mongodb/tip-array-key.xml</slide>
+<slide>slides/mongodb/tip-paged-result.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

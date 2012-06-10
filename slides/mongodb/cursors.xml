@@ -7,13 +7,13 @@ iterator in the form of a %MongoCursor% object.</blurb>
 
 <example result="1"><![CDATA[<?php
 $m = new Mongo();
-$c = $m->demo->articles;
+$c = $m->demo->talks;
 
-$cursor = $c->find( [ 'title' => [ '$exists' => true ] ] );
+$cursor = $c->find( [ 'talks.title' => [ '$exists' => true ] ] );
 
 foreach ( $cursor as $r )
 {
-    echo $r['title'], ': ', join( ', ', $r['tags'] ), "\n";
+	echo $r['_id'], "\n";
 }
 ?>]]></example>
 </slide>

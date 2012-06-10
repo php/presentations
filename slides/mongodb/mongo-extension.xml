@@ -1,10 +1,10 @@
 <slide>
-<title>The mongoDB PHP extension</title>
+<title>The MongoDB PHP extension</title>
 
 <image filename="10gen.png" align="right"/>
 
 <list>
-	<bullet>Maintained and supported by 10gen (Kristina and me)</bullet>
+	<bullet>Maintained and supported by 10gen</bullet>
 	<bullet>Can be installed with pecl: %pecl install mongo%</bullet>
 	<bullet>Add %extension=mongo.so% to %php.ini%</bullet>
 </list>

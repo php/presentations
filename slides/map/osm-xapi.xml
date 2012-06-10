@@ -2,6 +2,8 @@
 <title>Fetching OSM data</title>
 
 <example><![CDATA[wget http://download.geofabrik.de/osm/europe/great_britain/england.osm.bz2]]></example>
+<blurb>(Or pick a smaller country from
+%http://download.geofabrik.de/osm/europe/%)</blurb>
 
 <example><![CDATA[
 <?xml version='1.0' encoding='UTF-8'?>

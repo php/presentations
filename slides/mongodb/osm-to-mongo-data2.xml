@@ -1,0 +1,19 @@
+<slide>
+<title>Importing OSM into MongoDB (2)</title>
+
+<example>
+{
+    '_id': 'w4442243',
+    'name' : 'Brondesbury Road',
+    'tags': { 
+        'highway': 'secondary',
+        'ref' : 'B451',
+        'source_ref' : 'OS OpenData StreetView',
+    }
+}
+</example>
+<blurb>Querying all secondary roads:</blurb>
+<example>db.poi.find( { 'tags.highway' : 'secondary' } );</example>
+<blurb>Find all roads:</blurb>
+<example>db.poi.find( { 'tags.highway' : { $exists : true } );</example>
+</slide>

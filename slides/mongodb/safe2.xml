@@ -11,7 +11,7 @@
 
 <example result="1"><![CDATA[<?php
 $m = new Mongo();
-$c = $m->demo->articles;
+$c = $m->demo->talks;
 
 $c->insert(
     array( '_id' => 'mongodb' ),      // document

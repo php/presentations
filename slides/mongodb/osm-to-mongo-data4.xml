@@ -1,0 +1,29 @@
+<slide>
+<title>Importing OSM into MongoDB (4)</title>
+
+<example>
+{
+    '_id': 'w4442243',
+    'name' : 'Brondesbury Road',
+    'tags': { 
+        'highway': 'secondary',
+        'ref' : 'B451',
+        'source_ref' : 'OS OpenData StreetView',
+    }
+}
+</example>
+<example>db.poi.ensureIndex( { "tags.amenity" : 1 } );</example>
+<div effect="fade-in">
+<example>db.poi.ensureIndex( { "tags.highway" : 1 } );</example>
+</div>
+<div effect="fade-in">
+<example>db.poi.ensureIndex( { "tags.ref" : 1 } );</example>
+</div>
+<div effect="fade-in">
+<example>db.poi.ensureIndex( { "tags.???" : 1 } );</example>
+<list>
+    <bullet>Lots of indexes make things slow</bullet>
+    <bullet>Limited to 64 indexes</bullet>
+</list>
+</div>
+</slide>

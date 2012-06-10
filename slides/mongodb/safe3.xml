@@ -1,0 +1,18 @@
+<slide>
+<title>Write concerns</title>
+
+<blurb>Safeness levels:</blurb>
+<list>
+    <bullet>Confirm replication: %array( 'safe' => true, 'w' => 2 );%</bullet>
+</list>
+
+<example result="1"><![CDATA[<?php
+$m = new Mongo( 'mongodb://localhost:13000' );
+$c = $m->demo->talks;
+
+$c->insert(
+    array( '_id' => 'mongodb' ),      // document
+    array( 'safe' => true, 'w' => 2 ) // options
+);
+?>]]></example>
+</slide>

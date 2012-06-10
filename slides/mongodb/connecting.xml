@@ -1,5 +1,5 @@
 <slide>
-<title>Connecting to mongoDB</title>
+<title>Connecting to MongoDB</title>
 
 <blurb>No tables or collections have to do be explicitly created:</blurb>
 <break />
@@ -17,6 +17,5 @@ $collection = $database->testCollection;
 	<bullet>%new Mongo("mongodb://localhost");%</bullet>
 	<bullet>%new Mongo("mongodb://localhost:29000");%</bullet>
 	<bullet>%new Mongo("mongodb://mongo.example.com");%</bullet>
-	<bullet>%new Mongo("mongodb://mdb1.example.com,mdb2.example.com",%<br/>%&#160; [ 'replicaSet' => 'testSet' ] );%</bullet>
 </list>
 </slide>

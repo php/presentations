@@ -1,0 +1,39 @@
+<slide>
+<title>Setting up replication</title>
+
+<blurb>Starting the daemons (2 data, 1 arbiter):</blurb>
+
+<example>
+mongod -f /etc/mongodb.conf --dbpath=~/repl-slave0 --port 13000 --replSet seta
+mongod -f /etc/mongodb.conf --dbpath=~/repl-slave1 --port 13001 --replSet seta
+mongod -f /etc/mongodb.conf --dbpath=~/repl-arb --port 13002 --replSet seta --rest
+</example>
+
+<div effect="fade-out">
+<blurb>Sample %/etc/mongodb.conf%</blurb>
+<example>
+logpath=/var/log/mongodb/mongodb.log
+logappend=true
+smallfiles=true
+replSet=seta
+</example>
+</div>
+<div effect="fade-in">
+<blurb>Configure the set:</blurb>
+<example>
+mongo localhost:13000
+
+> db.adminCommand( {
+  replSetInitiate: {
+    _id: 'seta',
+    members: [
+      { _id: 0, host: 'localhost:13000' },
+      { _id: 1, host: 'localhost:13001' },
+    ]
+  }
+} );
+
+PRIMARY> rs.addArb('localhost:13002');
+</example>
+</div>
+</slide>

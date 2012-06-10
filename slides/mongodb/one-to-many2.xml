@@ -3,19 +3,22 @@
 
 <blurb>Embedded Array / Array Keys</blurb>
 <list>
-    <bullet>slice operator to return subset of array</bullet>
-    <bullet>some queries harder e.g find latest comments across all documents</bullet>
+    <bullet>some queries harder: e.g find all areas speaking German</bullet>
 </list>
 
-<example><![CDATA[blogs: {
-  author: "Hergé",
-  date: "Tue Mar 28 2012 12:41:29 GMT",
-  comments: [
-    {
-      author: "Kyle",
-      date: "Tue Mar 28 2012 12:41:54 GMT",
-      text: "great book"
-    }
+<example><![CDATA[{
+  name: "Germany",
+  language: "German",
+  areas: [
+    { name: "Bavaria", language: "Swabian" }
+  ]
+},
+{
+  name: "Switzerland",
+  areas: [
+    { name: "Deutsche Schweiz",  language: "German"  },
+    { name: "Romandy",           language: "French"  },
+    { name: "Svizzera italiana", language: "Italian" },
   ]
 }]]></example>
 </slide>

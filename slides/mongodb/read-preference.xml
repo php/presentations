@@ -1,0 +1,16 @@
+<slide>
+<title>Read preferences</title>
+<subtitle>(in development)</subtitle>
+
+<example result="0"><![CDATA[<?php
+$m = new Mongo( 'mongodb://localhost:13000' );
+$c = $m->demo->poi;
+$c->setReadPreference( Mongo::READ_NEAREST, array( 'dc' => 'europe1' ) );
+
+$c->find( ... );
+
+// or
+$c->find( ... )->setReadPreference( Mongo::SECONDARY );
+?>]]></example>
+
+</slide>

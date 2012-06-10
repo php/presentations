@@ -6,7 +6,7 @@
 <div effect="fade-out">
 <example><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->articles;
+$c = $m->demo->talks;
 
 $c->insert( array( '_id' => 'derickr' ) );
 $c->insert( array( '_id' => 'derickr' ) );
@@ -17,7 +17,7 @@ $c->insert( array( '_id' => 'derickr' ) );
 <blurb>"Safe" inserts:</blurb>
 <example result="1"><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->articles;
+$c = $m->demo->talks;
 
 try {
     $c->insert(

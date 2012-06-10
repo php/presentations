@@ -1,28 +1,23 @@
 <slide>
 <title>One to Many (1:n)</title>
 
-<blurb>Normalised (with two collections)</blurb>
+<blurb>Split out into multiple documents</blurb>
 <list>
     <bullet>most flexble</bullet>
     <bullet>more queries</bullet>
 </list>
 
-<example><![CDATA[blogs: {
-  author: "Hergé",
-  date: "Tue Mar 28 2012 12:41:29 GMT",
-  comments: [
-    { comment: "1" }
-  ]
-}
+<example><![CDATA[
+{ name: "Germany", language: "German",                     },
+{ name: "Bavaria", language: "Swabian", part_of: "Germany" },
 
-comments: {
-  _id: "1",
-  author: "Kyle",
-  date: "Tue Mar 28 2012 12:41:54 GMT",
-},
+// or:
 {
-  _id: "2",
-  author: "Derick",
-  in_reply_to: "1",
-}]]></example>
+  name: "Switzerland",
+  parts: [ 'Deutsche Schweiz', 'Romandy', 'Svizzera italiana' ]
+},
+{ name: "Deutsche Schweiz",  language: "German" },
+{ name: "Romandy",           language: "French" },
+{ name: "Svizzera italiana", language: "Italian" },
+]]></example>
 </slide>

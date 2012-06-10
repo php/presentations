@@ -1,0 +1,41 @@
+<slide>
+<title>Importing OSM into MongoDB</title>
+
+<blurb>From %http://www.openstreetmap.org/browse/way/4442243%:</blurb>
+<example>
+Way:    Brondesbury Road (4442243)
+Tags:   highway = secondary
+        name = Brondesbury Road
+        ref = B451
+        source:ref = OS OpenData StreetView
+</example>
+
+<div effect="fade-in-out">
+<blurb>Simplest way:</blurb>
+<example>
+{
+    '_id': 'w4442243',
+    'highway': 'secondary',
+    'name' : 'Brondesbury Road',
+    'ref' : 'B451',
+    'source_ref' : 'OS OpenData StreetView',
+}
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>or a little more organised:</blurb>
+<example>
+{
+    '_id': 'w4442243',
+    'name' : 'Brondesbury Road',
+    'tags': { 
+        'highway': 'secondary',
+        'ref' : 'B451',
+        'source_ref' : 'OS OpenData StreetView',
+    }
+}
+</example>
+</div>
+
+</slide>

@@ -1,0 +1,18 @@
+<slide>
+<title>Exercise 2: Add index for tags</title>
+
+<list>
+    <bullet>%wget http://derickrethans.nl/files/dump/mongo-exercise2.php.txt%</bullet>
+    <bullet>Open it in your favourite editor and edit.</bullet>
+</list>
+<example><![CDATA[<?php
+// 1 ADD: Indexes for the tags
+$d->ensureIndex( array( 'tags_indexed' => 1 ) );
+$d->ensureIndex( array( 'tags_indexed.k' => 1, 'tags_indexed.v' => 1 ) );
+
+var_dump($d->getIndexInfo());
+]]></example>
+<list>
+    <bullet>Run the script!</bullet>
+</list>
+</slide>

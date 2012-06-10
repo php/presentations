@@ -5,9 +5,9 @@
 $m = new Mongo();
 
 // Find with 'projection'
-$record = $m->demo->articles->findOne(
-  array( 'articles.title' => 'Xdebug' ),
-  array( 'name' => true, 'articles.url' => true )
+$record = $m->demo->talks->findOne(
+  array( 'talks.title' => 'Xdebug' ),
+  array( 'name' => true, 'talks.url' => true )
 );
 ?>]]></example>
 </slide>

@@ -1,0 +1,34 @@
+<slide>
+<title>Importing OSM into MongoDB (3)</title>
+
+<div effect="fade-out">
+<blurb>Find all pubs:</blurb>
+<example>db.poi.find( { 'tags.amenity' : 'pub' } );</example>
+
+<blurb>Let's look at the "explain" output:</blurb>
+<example inline="1">db.poi.find( { 'tags.amenity' : 'pub' } ).explain();
+{
+    "cursor" : "BasicCursor",
+    "isMultiKey" : false,
+*|e70000|    "n" : 3895,|*
+*|e70000|    "nscannedObjects" : 2347913,|*
+    "nscanned" : 2347913,
+    ...
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>We need an index for that:</blurb>
+<example>db.poi.ensureIndex( { "tags.amenity" : 1 } );</example>
+<blurb>And the new "explain" output:</blurb>
+<example inline="1">db.poi.find( { 'tags.amenity' : 'pub' } ).explain();
+{
+    "cursor" : "BtreeCursor tags.amenity_1",
+    "isMultiKey" : false,
+    "n" : 3895,
+*|00e700|    "nscannedObjects" : 3895,|*
+    "nscanned" : 3895,
+    ...
+</example>
+</div>
+</slide>

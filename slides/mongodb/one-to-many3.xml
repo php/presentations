@@ -9,15 +9,23 @@
 </list>
 
 <example><![CDATA[blogs: {
-  author: "Hergé",
-  date: "Tue Mar 28 2012 12:41:29 GMT",
+  author: "sambeau",
+  date: "84 days ago",
   comments: [
     {
-      author: "Kyle",
-      date: "Tue Mar 28 2012 12:41:54 GMT",
-      text: "great book"
+      author: "ElliotH",
+      date: "84 days ago",
+      text: "It’s also missing the necessary credit to OpenStreetMap’s
+          contributors; we look forward to working with Apple to get that on
+          there.",
       replies: [
-        { author: "Derick", ... }
+        {
+          author: "sambeau",
+          date: "83 days ago",
+          text: "I do think that this is a very classy move by the OSM people,
+              no ranting blog post or 'Apple stole our stuff', welcoming people
+              presents a much better image of the project."
+        }
       ]
     }
   ]
