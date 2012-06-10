@@ -1,0 +1,537 @@
+<slide title="Static Analysis">
+
+<blurb fontsize="3.5em">
+Hiphop static analysis against current wordpress-svn
+</blurb>
+
+<example fontsize="1.4em" type="shell" title=""><![CDATA[
+|0077aa|~>| *$HPHP_HOME/src/hphp/hphp --input-list=files.list --gen-stats=1 \
+ --keep-tempdir=1 --log=3 --parse-on-demand=0 --target=analyze*
+running hphp...
+creating temporary directory /tmp/hphp_ZOShUj ...
+parsing inputs...
+parsing inputs took 0'00" (763 ms) wall time
+pre-optimizing...
+pre-optimizing took 0'00" (266 ms) wall time
+inferring types...
+inferring types took 0'00" (516 ms) wall time
+post-optimizing...
+post-optimizing took 0'00" (252 ms) wall time
+saving code errors and stats...
+saving stats...
+saving stats took 0'00" (23 ms) wall time
+all files saved in /tmp/hphp_ZOShUj ...
+running hphp took 0'02" (2176 ms) wall time]]></example>
+
+<break lines="1"/>
+
+<example fontsize="1.2em" type="shell" title=""><![CDATA[
+|0077aa|~>| CodeErrorFormatter.php /tmp/hphp_ZOShUj/CodeError.js
+CodeErrorFormatter 1.1.0 by Patrick Allaert.
+
+*UseUndeclaredVariable*
+================================================================================
+
+wp-admin/includes/class-wp-filesystem-ssh2.php
+	187:53 -> 187:57	details: $mode
+	213:53 -> 213:57	details: $mode
+
+wp-includes/ms-load.php
+	94:232 -> 94:244	details: $current_site
+
+wp-admin/includes/class-pclzip.php
+	3969:14 -> 3969:20	details: $v_file
+
+wp-includes/general-template.php
+	1559:7 -> 1559:17	details: $currentday
+
+wp-admin/includes/class-ftp.php
+	508:24 -> 508:27	details: $arg
+	587:30 -> 587:34	details: $rest
+
+wp-includes/atomlib.php
+	134:57 -> 134:67	details: $xml_parser
+
+wp-includes/class-snoopy.php
+	1013:25 -> 1013:33	details: $temp_dir
+
+wp-includes/class-wp-atom-server.php
+	735:39 -> 735:45	details: $parsed
+
+wp-includes/class-wp-theme.php
+	817:10 -> 817:20	details: $theme_root
+
+wp-admin/includes/theme-install.php
+	40:10 -> 40:18	details: $features
+
+wp-includes/deprecated.php
+	1092:13 -> 1092:17	details: $wpdb
+
+*UseUndeclaredGlobalVariable*
+================================================================================
+
+wp-content/plugins/akismet/legacy.php
+	390:7 -> 390:11	details: $wpdb
+
+wp-content/themes/twentyeleven/header.php
+	95:48 -> 95:52	details: $post
+
+wp-content/themes/twentyten/loop.php
+	23:12 -> 23:20	details: $wp_query
+	60:85 -> 60:89	details: $post
+
+wp-content/themes/twentyten/header.php
+	80:28 -> 80:32	details: $post
+
+wp-admin/js/revisions-js.php
+	20:24 -> 20:32	details: $redirect
+
+wp-content/themes/twentyeleven/showcase.php
+	97:68 -> 97:72	details: $post
+
+wp-includes/feed-rss2-comments.php
+	24:96 -> 24:104	details: $wp_query
+
+wp-includes/theme-compat/comments.php
+	72:111 -> 72:124	details: $user_identity
+	76:76 -> 76:90	details: $comment_author
+	76:131 -> 76:134	details: $req
+	79:74 -> 79:94	details: $comment_author_email
+	82:71 -> 82:89	details: $comment_author_url
+	94:33 -> 94:37	details: $post
+
+wp-admin/edit-form-comment.php
+	14:42 -> 14:49	details: $comment
+	20:61 -> 20:68	details: $user_ID
+	102:78 -> 102:84	details: $action
+
+wp-content/themes/twentyeleven/image.php
+	36:35 -> 36:39	details: $post
+
+wp-includes/feed-rdf.php
+	42:52 -> 42:56	details: $post
+
+wp-includes/feed-rss2.php
+	47:21 -> 47:25	details: $post
+
+wp-admin/edit-tag-form.php
+	20:20 -> 20:28	details: $taxonomy
+	21:38 -> 21:41	details: $tag
+	31:16 -> 31:19	details: $tax
+
+wp-content/themes/twentyeleven/content-gallery.php
+	36:54 -> 36:58	details: $post
+
+*UseUndeclaredConstant*
+================================================================================
+
+wp-includes/class-simplepie.php
+	10854:56 -> 10854:68	details: E_USER_WARNNG
+
+wp-admin/menu.php
+	195:60 -> 195:77	details: WP_ALLOW_MULTISITE
+
+wp-admin/network/menu.php
+	45:67 -> 45:84	details: WP_ALLOW_MULTISITE
+
+wp-admin/includes/class-wp-filesystem-ftpext.php
+	85:37 -> 85:51	details: FTP_TIMEOUT_SEC
+	86:33 -> 86:47	details: FTP_TIMEOUT_SEC
+
+wp-includes/class-http.php
+	522:45 -> 522:63	details: WP_ACCESSIBLE_HOSTS
+	524:26 -> 524:44	details: WP_ACCESSIBLE_HOSTS
+	1404:41 -> 1404:61	details: WP_PROXY_BYPASS_HOSTS
+	1406:26 -> 1406:46	details: WP_PROXY_BYPASS_HOSTS
+
+wp-includes/ms-functions.php
+	1702:121 -> 1702:134	details: NOBLOGREDIRECT
+
+wp-includes/js/tinymce/plugins/spellchecker/config.php
+	14:27 -> 14:37	details: PSPELL_FAST
+	20:32 -> 20:42	details: PSPELL_FAST
+
+*UnknownClass*
+================================================================================
+
+wp-includes/Text/Diff/Engine/string.php
+	54:20 -> 54:66	details: PEAR::raiseError('Type of diff is unsupported')
+	61:24 -> 61:77	details: PEAR::raiseError('Type of diff could not be detected')
+
+wp-includes/class-json.php
+	843:4 -> 843:66	details: parent::PEAR_Error($message, $code, $mode, $options, $userinfo)
+
+wp-admin/includes/file.php
+	573:7 -> 573:22	details: new ZipArchive()
+
+*UnknownBaseClass*
+================================================================================
+
+wp-includes/class-json.php
+	838:2 -> 845:2	details: PEAR_Error
+
+*UnknownObjectMethod*
+================================================================================
+
+wp-admin/includes/class-ftp.php
+	813:43	details: $this->my_regexp('^' . $tester . '$', $string)
+
+*UnknownFunction*
+================================================================================
+
+wp-admin/includes/class-wp-filesystem-ssh2.php
+	105:19 -> 105:82	details: ssh2_connect($this->options['hostname'], $this->options['port'])
+	107:19 -> 107:109	details: ssh2_connect($this->options['hostname'], $this->options['port'], $this->options['hostkey'])
+	116:12 -> 116:98	details: ssh2_auth_password($this->link, $this->options['username'], $this->options['password'])
+	121:12 -> 121:163	details: ssh2_auth_pubkey_file($this->link, $this->options['username'], $this->options['public_key'], $this->options['private_key'], $this->options['password'])
+	127:22 -> 127:43	details: ssh2_sftp($this->link)
+	137:21 -> 137:52	details: ssh2_exec($this->link, $command)
+	251:11 -> 251:62	details: ssh2_sftp_rename($this->link, $source, $destination)
+	256:11 -> 256:51	details: ssh2_sftp_unlink($this->sftp_link, $file)
+	258:12 -> 258:51	details: ssh2_sftp_rmdir($this->sftp_link, $file)
+	265:10 -> 265:49	details: ssh2_sftp_rmdir($this->sftp_link, $file)
+	319:10 -> 319:63	details: ssh2_sftp_mkdir($this->sftp_link, $path, $chmod, true)
+
+wp-admin/includes/upgrade.php
+	492:10 -> 492:115	details: update($wpdb->categories, array('category_nicename' => $newtitle), array('cat_ID' => $category->cat_ID))
+
+wp-includes/class-simplepie.php
+	773:53 -> 773:64	details: gc_enabled()
+	3133:53 -> 3133:64	details: gc_enabled()
+
+wp-admin/includes/class-pclzip.php
+	1275:14 -> 1275:27	details: PclErrorCode()
+	1337:14 -> 1337:29	details: PclErrorString()
+	5288:7 -> 5288:46	details: PclError($p_error_code, $p_error_string)
+	5305:7 -> 5305:21	details: PclErrorReset()
+
+wp-includes/js/tinymce/plugins/spellchecker/classes/PSpell.php
+	23:9 -> 23:41	details: pspell_check($plink, trim($word))
+	38:12 -> 38:57	details: pspell_suggest($this->_getPLink($lang), $word)
+	55:12 -> 61:3	details: pspell_new($lang, $this->_config['PSpell.spelling'], $this->_config['PSpell.jargon'], $this->_config['PSpell.encoding'], $this->_config['PSpell.mode'])
+
+wp-admin/includes/class-wp-filesystem-ftpext.php
+	71:19 -> 71:101	details: ftp_connect($this->options['hostname'], $this->options['port'], FS_CONNECT_TIMEOUT)
+	78:11 -> 78:87	details: ftp_login($this->link, $this->options['username'], $this->options['password'])
+	84:4 -> 84:32	details: ftp_pasv($this->link, true)
+	85:9 -> 85:52	details: ftp_get_option($this->link, FTP_TIMEOUT_SEC)
+	86:5 -> 86:60	details: ftp_set_option($this->link, FTP_TIMEOUT_SEC, FS_TIMEOUT)
+	101:11 -> 101:64	details: ftp_fget($this->link, $temp, $file, $type, $resumepos)
+	128:11 -> 128:52	details: ftp_fput($this->link, $file, $temp, $type)
+	138:11 -> 138:30	details: ftp_pwd($this->link)
+	144:11 -> 144:38	details: ftp_chdir($this->link, $dir)
+	168:18 -> 168:76	details: ftp_site($this->link, sprintf('CHMOD %o %s', $mode, $file))
+	169:17 -> 169:52	details: ftp_chmod($this->link, $mode, $file)
+	195:10 -> 195:55	details: ftp_rename($this->link, $source, $destination)
+	202:12 -> 202:41	details: ftp_delete($this->link, $file)
+	204:12 -> 204:40	details: ftp_rmdir($this->link, $file)
+	210:11 -> 210:39	details: ftp_rmdir($this->link, $file)
+	214:12 -> 214:40	details: ftp_nlist($this->link, $file)
+	222:14 -> 222:60	details: ftp_chdir($this->link, trailingslashit($path))
+	224:5 -> 224:32	details: ftp_chdir($this->link, $cwd)
+	241:10 -> 241:37	details: ftp_mdtm($this->link, $file)
+	244:10 -> 244:37	details: ftp_size($this->link, $file)
+	254:10 -> 254:38	details: ftp_mkdir($this->link, $path)
+	270:27 -> 270:50	details: ftp_systype($this->link)
+	344:11 -> 344:30	details: ftp_pwd($this->link)
+	345:11 -> 345:39	details: ftp_chdir($this->link, $path)
+	347:12 -> 347:48	details: ftp_rawlist($this->link, '-a', false)
+	348:4 -> 348:31	details: ftp_chdir($this->link, $pwd)
+	387:4 -> 387:25	details: ftp_close($this->link)
+
+wp-admin/includes/deprecated.php
+	823:2 -> 823:74	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_upload_handler()')
+	828:2 -> 828:74	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_upload_handler()')
+	833:2 -> 833:74	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_upload_handler()')
+	838:2 -> 838:74	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_upload_handler()')
+	843:2 -> 843:82	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_insert_url_form('."'".'image'."'".')')
+	848:2 -> 848:82	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_insert_url_form('."'".'audio'."'".')')
+	853:2 -> 853:82	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_insert_url_form('."'".'video'."'".')')
+	858:2 -> 858:81	details: __deprecated_function(__FUNCTION__, '3.3', 'wp_media_insert_url_form('."'".'file'."'".')')
+
+wp-includes/Text/Diff/Engine/xdiff.php
+	30:17 -> 30:77	details: xdiff_string_diff($from_string, $to_string, count($to_lines))
+
+wp-includes/js/tinymce/plugins/spellchecker/classes/EnchantSpell.php
+	21:8 -> 21:28	details: enchant_broker_init()
+	23:7 -> 23:42	details: enchant_broker_dict_exists($r, $lang)
+	24:9 -> 24:46	details: enchant_broker_request_dict($r, $lang)
+	28:16 -> 28:45	details: enchant_dict_check($d, $value)
+	35:4 -> 35:31	details: enchant_broker_free_dict($d)
+	39:3 -> 39:25	details: enchant_broker_free($r)
+	50:8 -> 50:28	details: enchant_broker_init()
+	52:7 -> 52:42	details: enchant_broker_dict_exists($r, $lang)
+	53:9 -> 53:46	details: enchant_broker_request_dict($r, $lang)
+	54:13 -> 54:43	details: enchant_dict_suggest($d, $word)
+	60:4 -> 60:31	details: enchant_broker_free_dict($d)
+	65:3 -> 65:25	details: enchant_broker_free($r)
+
+*DeclaredConstantTwice*
+================================================================================
+
+wp-admin/admin-post.php
+	10:1 -> 10:24	details: define('WP_ADMIN', true)
+
+wp-admin/admin.php
+	15:2 -> 15:25	details: define('WP_ADMIN', true)
+
+wp-admin/includes/ajax-actions.php
+	39:2 -> 39:58	details: define('WP_NETWORK_ADMIN', $current_screen->is_network)
+	40:2 -> 40:52	details: define('WP_USER_ADMIN', $current_screen->is_user)
+
+wp-admin/network/update.php
+	11:2 -> 11:33	details: define('IFRAME_REQUEST', true)
+
+wp-admin/plugin-install.php
+	10:2 -> 10:33	details: define('IFRAME_REQUEST', true)
+
+wp-admin/press-this.php
+	9:1 -> 9:31	details: define('IFRAME_REQUEST', true)
+
+wp-includes/ms-files.php
+	11:1 -> 11:27	details: define('SHORTINIT', true)
+
+wp-includes/rss.php
+	666:3 -> 666:34	details: define('MAGPIE_USER_AGENT', $ua)
+
+wp-admin/load-styles.php
+	11:1 -> 11:53	details: define('ABSPATH', dirname(dirname(__FILE__)) . '/')
+	12:1 -> 12:32	details: define('WPINC', 'wp-includes')
+
+wp-admin/network/admin.php
+	10:1 -> 10:34	details: define('WP_NETWORK_ADMIN', true)
+
+wp-admin/network/plugin-install.php
+	11:2 -> 11:33	details: define('IFRAME_REQUEST', true)
+
+wp-admin/network/theme-install.php
+	11:2 -> 11:33	details: define('IFRAME_REQUEST', true)
+
+wp-admin/setup-config.php
+	19:1 -> 19:29	details: define('WP_INSTALLING', true)
+	38:1 -> 38:49	details: define('ABSPATH', dirname(dirname(__FILE__)) . '/')
+	39:1 -> 39:30	details: define('WPINC', 'wp-includes')
+
+wp-admin/user-edit.php
+	17:2 -> 17:63	details: define('IS_PROFILE_PAGE', $user_id == $current_user->ID)
+
+wp-config-sample.php
+	19:1 -> 19:39	details: define('DB_NAME', 'database_name_here')
+	22:1 -> 22:34	details: define('DB_USER', 'username_here')
+	25:1 -> 25:38	details: define('DB_PASSWORD', 'password_here')
+	28:1 -> 28:30	details: define('DB_HOST', 'localhost')
+	81:1 -> 81:25	details: define('WP_DEBUG', false)
+	87:2 -> 87:43	details: define('ABSPATH', dirname(__FILE__) . '/')
+
+wp-includes/ms-default-constants.php
+	44:3 -> 44:45	details: define('COOKIEPATH', $current_site->path)
+	70:4 -> 70:55	details: define('COOKIE_DOMAIN', '.' . $current_site->domain)
+	50:3 -> 50:49	details: define('SITECOOKIEPATH', $current_site->path)
+	57:4 -> 57:48	details: define('ADMIN_COOKIE_PATH', SITECOOKIEPATH)
+	59:4 -> 59:61	details: define('ADMIN_COOKIE_PATH', SITECOOKIEPATH . 'wp-admin')
+	68:4 -> 68:62	details: define('COOKIE_DOMAIN', '.' . $current_site->cookie_domain)
+	134:3 -> 134:38	details: define('SUBDOMAIN_INSTALL', false)
+	135:3 -> 135:25	details: define('VHOST', 'no')
+
+wp-includes/theme.php
+	1271:5 -> 1271:64	details: define('NO_HEADER_TEXT', empty($args[0]['header-text']))
+	1276:5 -> 1276:59	details: define('HEADER_IMAGE_WIDTH', (int)$args[0]['width'])
+	1281:5 -> 1281:61	details: define('HEADER_IMAGE_HEIGHT', (int)$args[0]['height'])
+	1286:5 -> 1286:64	details: define('HEADER_TEXTCOLOR', $args[0]['default-text-color'])
+	1291:5 -> 1291:55	details: define('HEADER_IMAGE', $args[0]['default-image'])
+
+wp-admin/async-upload.php
+	9:1 -> 9:24	details: define('WP_ADMIN', true)
+
+wp-admin/includes/file.php
+	810:3 -> 810:26	details: define('FS_TIMEOUT', 30)
+
+wp-admin/network.php
+	13:1 -> 13:39	details: define('WP_INSTALLING_NETWORK', true)
+
+wp-admin/update.php
+	10:2 -> 10:33	details: define('IFRAME_REQUEST', true)
+
+wp-content/themes/twentyten/functions.php
+	123:3 -> 123:34	details: define('HEADER_TEXTCOLOR', '')
+	125:3 -> 125:67	details: define('HEADER_IMAGE', $custom_header_support['default-image'])
+	126:3 -> 126:65	details: define('HEADER_IMAGE_WIDTH', $custom_header_support['width'])
+	127:3 -> 127:67	details: define('HEADER_IMAGE_HEIGHT', $custom_header_support['height'])
+
+wp-includes/default-constants.php
+	23:4 -> 23:35	details: define('WP_MEMORY_LIMIT', '32M')
+	46:3 -> 46:52	details: define('WP_CONTENT_DIR', ABSPATH . 'wp-content')
+	50:3 -> 50:29	details: define('WP_DEBUG', false)
+	152:4 -> 152:29	details: define('COOKIEHASH', '')
+
+wp-includes/ms-functions.php
+	971:3 -> 971:33	details: define('WP_INSTALLING', true)
+
+wp-load.php
+	22:1 -> 22:44	details: define('ABSPATH', dirname(__FILE__) . '/')
+	46:2 -> 46:33	details: define('WPINC', 'wp-includes')
+	47:2 -> 47:51	details: define('WP_CONTENT_DIR', ABSPATH . 'wp-content')
+
+wp-settings.php
+	18:1 -> 18:32	details: define('WPINC', 'wp-includes')
+
+wp-admin/import.php
+	9:1 -> 9:33	details: define('WP_LOAD_IMPORTERS', true)
+
+wp-admin/install.php
+	33:1 -> 33:31	details: define('WP_INSTALLING', true)
+
+wp-admin/load-scripts.php
+	11:1 -> 11:53	details: define('ABSPATH', dirname(dirname(__FILE__)) . '/')
+
+wp-admin/theme-install.php
+	10:2 -> 10:33	details: define('IFRAME_REQUEST', true)
+
+wp-admin/upgrade.php
+	15:1 -> 15:31	details: define('WP_INSTALLING', true)
+
+wp-admin/user/admin.php
+	10:1 -> 10:29	details: define('WP_USER_ADMIN', true)
+
+wp-includes/load.php
+	307:4 -> 307:58	details: define('WP_LANG_DIR', ABSPATH . WPINC . '/languages')
+	310:5 -> 310:45	details: define('LANGDIR', WPINC . '/languages')
+
+*RequiredAfterOptionalParam*
+================================================================================
+
+wp-includes/class-simplepie.php
+	14376:15 -> 14376:44	details: $type = SIMPLEPIE_LOCATOR_ALL
+
+wp-includes/class-wp-walker.php
+	118:26 -> 118:78	details: $depth = 0
+
+wp-signup.php
+	351:29 -> 351:73	details: $user_name = ''
+	351:29 -> 351:91	details: $user_email = ''
+
+wp-admin/includes/class-wp-terms-list-table.php
+	174:16 -> 174:58	details: $start = 0
+	174:16 -> 174:74	details: $per_page = 20
+
+wp-includes/comment-template.php
+	1301:26 -> 1301:78	details: $depth = 0
+
+wp-includes/deprecated.php
+	802:25 -> 802:38	details: $echo = false
+
+wp-includes/widgets.php
+	76:20 -> 76:37	details: $id_base = false
+	93:22 -> 93:39	details: $id_base = false
+
+wp-includes/post.php
+	4563:27 -> 4563:44	details: $deprecated = ''
+
+*TooManyArgument*
+================================================================================
+
+wp-includes/class-simplepie.php
+	9204:69 -> 9204:127	details: SimplePie_Misc::entities_decode(end($attribs[$j]), 'UTF-8')
+
+wp-admin/includes/class-wp-upgrader.php
+	968:4 -> 968:45	details: switch_theme($template, $stylesheet, true)
+
+wp-includes/class-wp-xmlrpc-server.php
+	4178:13 -> 4178:42	details: wp_update_post($newpost, true)
+
+wp-includes/wp-db.php
+	552:42	details: $this->has_cap('collation', $dbh)
+	553:87	details: $this->has_cap('set_charset', $dbh)
+
+wp-admin/includes/class-ftp.php
+	763:30	details: $this->mkdir($dir, $mode)
+
+wp-admin/includes/class-wp-terms-list-table.php
+	160:52	details: $this->single_row($term, 0, $taxonomy)
+	203:89	details: $this->single_row($my_parent, $level - $num_parents, $taxonomy)
+	209:67	details: $this->single_row($term, $level, $taxonomy)
+
+wp-admin/includes/class-wp-ms-themes-list-table.php
+	253:3 -> 253:32	details: parent::bulk_actions($which)
+
+wp-admin/includes/class-wp-plugins-list-table.php
+	268:3 -> 268:32	details: parent::bulk_actions($which)
+
+wp-admin/includes/user.php
+	336:3 -> 336:55	details: delete_user_setting('default_password_nag', $user_ID)
+
+wp-admin/network/site-settings.php
+	61:4 -> 61:53	details: update_option($key, stripslashes($val), false)
+	124:30 -> 124:93	details: esc_html(maybe_unserialize($option->option_value), 'single')
+
+wp-includes/deprecated.php
+	1709:13 -> 1709:70	details: get_the_content($more_link_text, $stripteaser, $more_file)
+
+*UseVoidReturn*
+================================================================================
+
+wp-admin/includes/class-wp-posts-list-table.php
+	384:50	details: $this->single_row($page, $level)
+	399:45	details: $this->single_row($op, 0)
+	445:71	details: $this->single_row($my_parent, $level - $num_parents)
+	451:50	details: $this->single_row($page, $level)
+
+wp-admin/includes/dashboard.php
+	537:153 -> 537:173	details: esc_attr_e('Publish')
+	537:177 -> 537:207	details: esc_attr_e('Submit for Review')
+
+wp-includes/ms-blogs.php
+	643:21 -> 643:59	details: do_action('make_spam_blog', $blog_id)
+	643:63 -> 643:100	details: do_action('make_ham_blog', $blog_id)
+	645:21 -> 645:56	details: do_action('mature_blog', $blog_id)
+	645:60 -> 645:97	details: do_action('unmature_blog', $blog_id)
+	647:21 -> 647:57	details: do_action('archive_blog', $blog_id)
+	647:61 -> 647:99	details: do_action('unarchive_blog', $blog_id)
+	649:21 -> 649:57	details: do_action('archive_blog', $blog_id)
+	649:61 -> 649:99	details: do_action('unarchive_blog', $blog_id)
+
+wp-admin/custom-header.php
+	545:64 -> 545:77	details: header_image()
+
+wp-admin/includes/class-wp-upgrader.php
+	1129:8 -> 1129:20	details: screen_icon()
+
+wp-admin/user-edit.php
+	364:29 -> 364:48	details: _e('About Yourself')
+	364:52 -> 364:71	details: _e('About the user')
+
+wp-includes/feed-rss2-comments.php
+	29:30 -> 29:48	details: the_permalink_rss()
+	29:52 -> 29:70	details: bloginfo_rss('url')
+
+wp-admin/custom-background.php
+	332:240 -> 332:254	details: _e('Default')
+	332:258 -> 332:270	details: _e('Clear')
+
+wp-admin/includes/class-wp-list-table.php
+	825:41	details: $this->single_row_columns($item)
+
+wp-admin/includes/class-wp-terms-list-table.php
+	160:52	details: $this->single_row($term, 0, $taxonomy)
+	203:89	details: $this->single_row($my_parent, $level - $num_parents, $taxonomy)
+	209:67	details: $this->single_row($term, $level, $taxonomy)
+	229:40	details: $this->single_row_columns($tag)
+
+wp-admin/includes/template.php
+	727:34 -> 727:65	details: _e('Thumbnail linked to file')
+	727:69 -> 727:96	details: _e('Image linked to file')
+	731:34 -> 731:65	details: _e('Thumbnail linked to page')
+	731:69 -> 731:96	details: _e('Image linked to page')
+
+wp-admin/about.php
+	125:20 -> 125:44	details: _e('Return to Updates')
+	125:48 -> 125:89	details: _e('Return to Dashboard &rarr; Updates')
+	129:21 -> 129:55	details: _e('Go to Dashboard &rarr; Home')
+	129:59 -> 129:81	details: _e('Go to Dashboard')
+
+wp-admin/includes/class-wp-comments-list-table.php
+	315:44	details: $this->single_row_columns($comment)
+
+wp-admin/includes/export.php
+	374:44 -> 374:53	details: the_guid()]]></example>
+</slide>
