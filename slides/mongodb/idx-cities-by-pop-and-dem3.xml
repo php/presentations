@@ -1,0 +1,34 @@
+<slide>
+<title>Sorting by descending population</title>
+
+<example inline="1">
+db.cities.find( { population: { $gte: 2000000 }, dem: { $gte : 1654 } } )
+         .sort( { population: -1 } ).explain();
+</example>
+<example inline="1">
+{
+	"cursor" : "BtreeCursor population_1_dem_1 *reverse*",
+	"nscanned" : 127,
+	"nscannedObjects" : 6,
+	"n" : 6,
+	"millis" : 1,
+	"nYields" : 0,
+	"nChunkSkips" : 0,
+	"isMultiKey" : false,
+	"indexOnly" : false,
+	"indexBounds" : {
+		"population" : [ [ 1.7976931348623157e+308, 2000000 ] ],
+		"dem" : [ [ 1.7976931348623157e+308, 1654 ] ]
+	}
+}
+</example>
+<example>
+{ "name" : "Mexico City", "population" : 12294193, "dem" : 2240 }
+{ "name" : "Bogotá", "population" : 7102602, "dem" : 2582 }
+{ "name" : "Kabul", "population" : 3043532, "dem" : 1798 }
+{ "name" : "Addis Ababa", "population" : 2757729, "dem" : 2405 }
+{ "name" : "Nairobi", "population" : 2750547, "dem" : 1684 }
+{ "name" : "Johannesburg", "population" : 2026469, "dem" : 1767 }
+</example>
+
+</slide>

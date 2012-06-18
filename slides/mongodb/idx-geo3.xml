@@ -1,0 +1,21 @@
+<slide>
+<title>Geospatial indexes (spherical)</title>
+
+<blurb>Since MongoDB 1.8 a spherical model is also supported:</blurb>
+<example inline="1">
+db.cities.find( { location: { *$nearSphere*: [ -0.088, 51.489 ] } } );
+</example>
+
+<example inline="1">
+db.runCommand( { geoNear: 'cities', near: [ -0.088, 51.489 ], *spherical: true* } );
+</example>
+
+<list>
+    <bullet>Location needs to be: *latitude, longitude* in a field.</bullet>
+    <bullet>For 50N and 13E:<list>
+        <bullet>|00cc00|%[13, -50]%|</bullet>
+        <bullet>|00cc00|%{ lon : 13, lat : -50 }%|</bullet>
+        <bullet>|f10000|%{ lat : -50, lon : 13 }%|</bullet>
+    </list></bullet>
+</list>
+</slide>

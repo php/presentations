@@ -1,0 +1,32 @@
+<slide>
+<title>Geospatial indexes (2d indexes) (geoNear command)</title>
+
+<example inline="1">
+db.runCommand( { *geoNear: 'cities', near: [ -0.088, 51.489 ], num: 10* } );
+</example>
+
+<example inline="1">
+{
+    "ns" : "demo.cities",
+    "near" : "0110111010111010111010011111101110111010110010011011",
+    "results" : [
+        { "dis" : 0.024097918997296273, "obj" : { "name" : "City of London", "asciiname" : "City of London", ... },
+        { "dis" : 0.02958403792587928,  "obj" : { "name" : "Brixton", "asciiname" : "Brixton", ... },
+    ],
+    "stats" : {
+        "time" : 0,
+        "btreelocs" : 0,
+        "nscanned" : 85,
+        "objectsLoaded" : 26,
+        "avgDistance" : 0.05905622408516078,
+        "maxDistance" : 0.09879506691618341
+    },
+    "ok" : 1
+}
+</example>
+
+<list>
+    <bullet>Includes distance</bullet>
+    <bullet>Limited to "one document"</bullet>
+</list>
+</slide>

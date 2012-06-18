@@ -1,0 +1,32 @@
+<slide>
+<title>Covered Indexes</title>
+
+<blurb>MongoDB can return data from the *index only*:</blurb>
+
+<example inline="1">
+db.cities.ensureIndex( { country_code: 1, name: 1 } );
+db.cities.find(
+	{ country_code: 1 }, *{ country_code: 1, name: 1, _id: 0 }*
+).explain();
+</example>
+
+<example inline="1">
+{
+	"cursor" : "BtreeCursor country_code_1_name_1",
+	"nscanned" : 256,
+	"nscannedObjects" : 256,
+	"n" : 256,
+	"millis" : 1,
+	"nYields" : 0,
+	"nChunkSkips" : 0,
+	"isMultiKey" : false,
+	*"indexOnly" : true,*
+...
+</example>
+
+<list>
+	<bullet>An index needs to be used in the first place</bullet>
+	<bullet>Make sure to provide a projection</bullet>
+	<bullet>Remove %_id% explicitly from the projection</bullet>
+</list>
+</slide>

@@ -1,0 +1,30 @@
+<slide>
+<title>Indexes on multi-value fields</title>
+
+<blurb>Example:</blurb>
+<example>
+{ "name" : "Arnhem", "alternatenames" : [ "Arnem", "Arnheim", "Arnhem", ... ] }
+</example>
+
+<blurb>Create as a normal index:</blurb>
+<example>
+db.cities.ensureIndex( { alternatenames: 1 } );
+</example>
+
+<blurb>The %isMultiKey% field is set to %true%:</blurb>
+<example inline="1">
+db.cities.find( { alternatenames: 'Arnheim' } ).explain();
+{
+    "cursor" : "BtreeCursor alternatenames_1",
+    "nscanned" : 1,
+    "nscannedObjects" : 1,
+    "n" : 1,
+    "millis" : 0,
+    "nYields" : 0,
+    "nChunkSkips" : 0,
+    *"isMultiKey" : true,*
+...
+</example>
+</slide>
+
+

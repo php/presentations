@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>Maps</topic>
+<title>Geolocation, Maps and MongoDB</title>
+<event>MongoDB UK</event>
+<location>London, UK</location>
+<date>June 20th, 2012</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<joindin>e-mail me!</joindin>
+<slide>slides/map/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!--
+In this talk I will be explaining the strong points of OpenStreetMap and why
+using GoogleMaps for your websites is generally a bad idea. Contrary to popular
+belief, GoogleMaps isn't as amazing as it looks and they are a lot more evil
+than they look. OpenStreetMap's data is also easily accessible for use in PHP
+applications and the generated tiles can easily be embedded into a Web 2.0
+application. Its open nature is a welcome and powerful geo database that can be
+added to and used in whatever way imaginary.
+-->
+
+<!--
+What is X?
+-->
+<slide>slides/map/osm-what.xml</slide>
+<slide>slides/map/what-is-osm.xml</slide>
+<slide>slides/map/leaflet.xml</slide>
+
+<slide>slides/map/openlayers-location.xml</slide>
+<slide>slides/map/openlayers-location-services.xml</slide>
+<slide>slides/map/reverse.xml</slide>
+<slide>slides/map/reverse-services.xml</slide>
+
+<slide>slides/map/osm-data.xml</slide>
+
+<slide>slides/map/osm-tags-edit.xml</slide>
+
+
+<slide>slides/map/osm-mapping-party1.xml</slide>
+<slide>slides/map/osm-editors.xml</slide>
+<slide>slides/map/osm-data-uses.xml</slide>
+
+<slide>slides/map/osm-parse-into-db.xml</slide>
+<slide>slides/map/osm-xapi.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data3.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data4.xml</slide>
+<slide>slides/map/finding-food-import-mongo.xml</slide>
+<slide>slides/map/finding-food-import-mongo2.xml</slide>
+
+<slide>slides/mongodb/indexes-geo.xml</slide>
+<slide>slides/mongodb/indexes-geo2.xml</slide>
+
+<slide>slides/map/finding-food-take2.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

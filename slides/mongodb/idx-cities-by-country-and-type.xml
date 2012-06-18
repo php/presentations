@@ -1,0 +1,18 @@
+<slide>
+<title>Let's imagine another compound index</title>
+
+<table>
+<tr><th>_Country_</th><th>_Type_</th><th>Name</th></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>GB</td><td>PPLA</td><td>Edinburgh</td></tr>
+<tr><td>GB</td><td>PPL</td><td>Egham</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>GB</td><td>PPLC</td><td>London</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>NL</td><td>PPLC</td><td>Amsterdam</td></tr>
+<tr><td>NL</td><td>PPLA</td><td>Arnhem</td></tr>
+<tr><td>NL</td><td>PPLA</td><td>Assen</td></tr>
+<tr><td>NL</td><td>PPLG</td><td>Den Haag</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+</table>
+</slide>

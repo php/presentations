@@ -1,0 +1,31 @@
+<slide>
+<title>Let's look at the query plan</title>
+
+<example inline="1">
+db.cities.find( { country_code: 'GB', population: { $gte: 500000 } } ).*explain()*;
+</example>
+<example inline="1">
+{
+	"cursor" : "*BtreeCursor country_code_1_population_1*",
+	|00aa00|"nscanned" : 4,|
+	|00aa00|"nscannedObjects" : 4,|
+	|00aa00|"n" : 4,|
+	"millis" : 0,
+	"nYields" : 0,
+	"nChunkSkips" : 0,
+	"isMultiKey" : false,
+	"indexOnly" : false,
+	"indexBounds" : {
+		"country_code" : [ [ "GB", "GB" ] ],
+		"population" : [ [ 500000, 1.7976931348623157e+308 ] ]
+	}
+}
+</example>
+<example>
+{ "name" : "Glasgow", "country_code" : "GB", "population" : 610268 }
+{ "name" : "Birmingham", "country_code" : "GB", "population" : 984333 }
+{ "name" : "City of London", "country_code" : "GB", "population" : 7556900 }
+{ "name" : "London", "country_code" : "GB", "population" : 7556900 }
+</example>
+
+</slide>

@@ -1,0 +1,22 @@
+<slide>
+<title>Let's imagine a compound index</title>
+
+<table>
+<tr><th>_Country Code_</th><th>_Population_</th><th>Name</th></tr>
+<tr><td>AD</td><td>15853</td><td>les Escaldes</td></tr>
+<tr><td>AD</td><td>20430</td><td>Andorra la Vella</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>GB</td><td>435791</td><td>Edinburgh</td></tr>
+<tr><td>GB</td><td>447047</td><td>Sheffield</td></tr>
+<tr><td>GB</td><td>455123</td><td>Leeds</td></tr>
+<tr><td>GB</td><td>468945</td><td>Liverpool</td></tr>
+<tr><td>GB</td><td>610268</td><td>Glasgow</td></tr>
+<tr><td>GB</td><td>984333</td><td>Birmingham</td></tr>
+<tr><td>GB</td><td>7556900</td><td>London</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<example>
+db.cities.ensureIndex( { country_code: 1, population: 1 } );
+</example>
+
+</slide>

@@ -75,8 +75,9 @@ $('*').keypress(function(event) {
 
 </head>
 {var $img = get_attribute( $node, 'background' )}
+{var $maincolor = get_attribute( $node, 'template' )}
 <body{if $img} style='background-image: url({$pres->base}{$img});'{/if}>
-<div class='whole-slide'>
+<div class='whole-slide{if $maincolor} template-{$maincolor}{/if}'>
 {switch ( get_attribute( $node, 'type' ) )}
 	{case 'section'}
 		{include 'slide-section-page.ezt' send $node, $pres, $slideNr}

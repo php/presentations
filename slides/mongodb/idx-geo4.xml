@@ -1,0 +1,28 @@
+<slide>
+<title>Geospatial indexes (spherical)</title>
+
+<blurb>Find all cities within 150 km from London, in France:</blurb>
+<example inline="1">
+db.runCommand( {
+    geoNear: 'cities',
+    near: [ -0.088, 51.489 ],
+    spherical: true,
+    query: { country_code: 'FR' },
+    maxDistance: 150 / *6378*
+} )*.results.*
+   forEach(function(obj) {
+        print( obj.obj.country_code, '-', obj.obj.name, ': ', *obj.dis *** 6378* );
+   } );
+</example>
+<example>
+FR - Outreau :  146.16198019887855
+FR - Boulogne-sur-Mer :  146.92634969912072
+FR - Calais :  147.59429539150375
+</example>
+
+<list>
+    <bullet>Distances are in radians, so convert</bullet>
+    <bullet>Results are limited to one document (16MB)</bullet>
+</list>
+
+</slide>

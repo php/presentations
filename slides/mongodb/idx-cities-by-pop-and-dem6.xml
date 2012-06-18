@@ -1,0 +1,26 @@
+<slide>
+<title>Querying by just the DEM</title>
+
+<example inline="1">
+db.cities.find( { dem: { $gte : 1654 } } ).explain();
+</example>
+<example inline="1">
+{
+	*|f10000|"cursor" : "BasicCursor",|*
+	"nscanned" : 22840,
+	"nscannedObjects" : 22840,
+	"n" : 614,
+	"millis" : 26,
+	"nYields" : 0,
+	"nChunkSkips" : 0,
+	"isMultiKey" : false,
+	"indexOnly" : false,
+	"indexBounds" : {
+	}
+}
+</example>
+<div effect="fade-in">
+<blurb>MongoDB can not use only the second part of a compound index<br/> (%{ population: 1, dem: 1 }%).</blurb>
+</div>
+
+</slide>

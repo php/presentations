@@ -1,0 +1,11 @@
+<slide>
+<title>Indexes Recap (2)</title>
+
+<blurb>Be aware of redundant indexes. Order is important. With an index on<br/> %{ dem: 1, population: 1 }%:</blurb>
+<list>
+	<bullet>You *don't* need an index on %{ dem: 1 }%.</bullet>
+	<bullet>You *do* need an index on %{ population: 1 }%.</bullet>
+	<bullet>The index can be used for sorting on *dem* and then *population*, but not on *population* and then *dem*.</bullet>
+	<bullet>Range search work best if used on the last field only (remember range on *population* and *dem*).</bullet>
+</list>
+</slide>
