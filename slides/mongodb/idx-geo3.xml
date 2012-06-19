@@ -11,8 +11,8 @@ db.runCommand( { geoNear: 'cities', near: [ -0.088, 51.489 ], *spherical: true* 
 </example>
 
 <list>
-    <bullet>Location needs to be: *latitude, longitude* in a field.</bullet>
-    <bullet>For 50N and 13E:<list>
+    <bullet>Location needs to be: *longitude, latitude* in a field.</bullet>
+    <bullet>For 50°N and 13°E:<list>
         <bullet>|00cc00|%[13, -50]%|</bullet>
         <bullet>|00cc00|%{ lon : 13, lat : -50 }%|</bullet>
         <bullet>|f10000|%{ lat : -50, lon : 13 }%|</bullet>
