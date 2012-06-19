@@ -1,5 +1,5 @@
 <slide>
-<title>Geospatial indexes (2d indexes) (geoNear command)</title>
+<title>Geospatial indexes (geoNear command)</title>
 
 <example inline="1">
 db.runCommand( { *geoNear: 'cities', near: [ -0.088, 51.489 ], num: 10* } );
@@ -8,7 +8,7 @@ db.runCommand( { *geoNear: 'cities', near: [ -0.088, 51.489 ], num: 10* } );
 <example inline="1">
 {
     "ns" : "demo.cities",
-    "near" : "0110111010111010111010011111101110111010110010011011",
+    "near" : *"0110111010111010111010011111101110111010110010011011",*
     "results" : [
         { "dis" : 0.024097918997296273, "obj" : { "name" : "City of London", "asciiname" : "City of London", ... },
         { "dis" : 0.02958403792587928,  "obj" : { "name" : "Brixton", "asciiname" : "Brixton", ... },
