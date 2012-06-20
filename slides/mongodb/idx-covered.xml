@@ -6,7 +6,7 @@
 <example inline="1">
 db.cities.ensureIndex( { country_code: 1, name: 1 } );
 db.cities.find(
-	{ country_code: 1 }, *{ country_code: 1, name: 1, _id: 0 }*
+	{ country_code: 'NL' }, *{ country_code: 1, name: 1, _id: 0 }*
 ).explain();
 </example>
 
