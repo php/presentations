@@ -51,6 +51,7 @@ sleep 4; for i in `seq 0 7`; do ^Crefox http://pres/show2.php/mongo-index-mongou
 <slide>slides/mongodb/idx-covered.xml</slide>
 <slide>slides/mongodb/idx-multi-key.xml</slide>
 <slide>slides/mongodb/idx-which-one-is-picked.xml</slide>
+<slide>slides/mongodb/idx-or.xml</slide>
 
 <slide>slides/mongodb/idx-map2.xml</slide>
 <slide>slides/mongodb/idx-geo.xml</slide>

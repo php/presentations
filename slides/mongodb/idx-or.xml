@@ -1,0 +1,32 @@
+<slide>
+<title>Indexes with $or</title>
+
+<example inline="1">
+db.cities.ensureIndex( { country_code: 1 } );
+db.cities.find( { *$or*: [|f10000|{country_code: 'NL'}|, |00cc00|{country_code: 'BE'}|] } ).explain();
+</example>
+<example inline="1">
+{
+    *"clauses" : [*
+        {
+            |f10000|"cursor" : "BtreeCursor country_code_1",|
+            |f10000|"nscanned" : 256,|
+            |f10000|"nscannedObjects" : 256,|
+            |f10000|"n" : 256,|
+...
+            |f10000|"indexBounds" : { "country_code" : [ [ "NL", "NL" ] ] }|
+        },
+        {
+            |00cc00|"cursor" : "BtreeCursor country_code_1",|
+            |00cc00|"nscanned" : 184,|
+...
+            |00cc00|"indexBounds" : { "country_code" : [ [ "BE", "BE" ] ] }|
+        }
+    ],
+    "nscanned" : 440,
+    "nscannedObjects" : 440,
+    "n" : 440,
+    "millis" : 3
+}
+</example>
+</slide>
