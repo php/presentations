@@ -1,7 +1,7 @@
 <slide>
 <title>Unique indexes</title>
 
-<blurb>Unique indexes prefer multiple documents to match the same index key:</blurb>
+<blurb>Unique indexes prevent multiple documents to match the same index key:</blurb>
 
 <example inline="1">
 > db.cities.ensureIndex( { country_code: 1, name: 1 }, *{ unique: true }* );
