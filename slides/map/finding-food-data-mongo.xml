@@ -12,12 +12,7 @@ $c->ensureIndex( array( 'loc' => '2d' ) );
 <div effect="fade-in-out">
 <example><![CDATA[
 $wantedD = isset($_GET['d']) ? $_GET['d']: 1;
-$query = array( 'tags_indexed.k' => 'cuisine', 'tags_indexed.v' => $_GET['cuisine'] );
-
-if ( $_GET['cuisine'] == 'all' )
-{
-    $query = array( 'tags_indexed.k' => 'amenity', 'tags_indexed.v' => 'restaurant' );
-}
+$query = array( 'tags_indexed.k' => array( '$ne' => 'landuse' ) );
 
 $s = $d->command(
     array(
@@ -37,30 +32,53 @@ $s = $d->command(
 </div>
 <div effect="fade-in-out">
 <example><![CDATA[
-foreach( $s['results'] as $res) 
+foreach( $s['results'] as $res)
 {
     $o = $res['obj'];
-    if (!isset($o['name'])) {
+    if (!isset($o['tags']['name'])) {
         continue;
     }
     $ret = array(
         'type' => 'Feature',
-        'properties' => array(
-            'name' => $o['name'],
-            'popupContent' => $o['name'],
-        )
+        'properties' => array( 'name' => '?', 'popupContent' => '' ),
     );
-    if ($o['type'] == 1) {
+    if (isset( $o['tags']['name'] ) )
+    {
+        $ret['properties'] = array(
+            'name' => $o['tags']['name'],
+            'popupContent' => "<b>{$o['tags']['name']}</b>",
+        );
+    }
+    if ( isset( $o['tags'] ) )
+    {
+        foreach ( $o['tags'] as $tagName => $value )
+        {
+            $ret['properties']['popupContent'] .= "<br/>{$tagName}: {$value}\n";
+        }
+    }
+    if ($o['type'] == 1)
+    {
         $ret['geometry'] = array(
             'type' => "Point",
             'coordinates' => $o['loc']
         );
     }
-    if ($o['type'] == 2) {
-        $ret['geometry'] = array(
-            'type' => "Polygon",
-            'coordinates' => array($o['loc']),
-        );
+    if ($o['type'] == 2)
+    {
+        if ($o['loc'][0] == $o['loc'][count($o['loc']) - 1])
+        {
+            $ret['geometry'] = array(
+                'type' => "Polygon",
+                'coordinates' => array($o['loc']),
+            );
+        }
+        else
+        {
+            $ret['geometry'] = array(
+                'type' => "LineString",
+                'coordinates' => $o['loc'],
+            );
+        }
     }
     $rets[] = $ret;
 }

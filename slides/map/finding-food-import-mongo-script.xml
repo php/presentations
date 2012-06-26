@@ -7,9 +7,7 @@ $m = new Mongo( 'mongodb://localhost:27017' );
 $d = $m->selectCollection( 'demo', 'poi' );
 $d->drop();
 $d->ensureIndex( array( 'loc' => '2d' ) );
-$d->ensureIndex( array( 'name' => 1 ) );
-$d->ensureIndex( array( 'tags_indexed' => 1 ) );
-$d->ensureIndex( array( 'tags_indexed.k' => 1, 'tags_indexed.v' => 1 ) );
+$d->ensureIndex( array( 'tags_indexed.v' => 1, 'tags_indexed.k' => 1 ) );
 
 $locations = array();
 
@@ -27,9 +25,7 @@ while ($z->name === 'node') {
     $q['type'] = 1;
     $q['loc'] = array( (float) $node['lon'], (float) $node['lat'] );
     parseNode($q, $node);
-    if (count($q['tags']) > 0) {
-        $d->insert( $q );
-    }
+	$d->insert( $q );
 
     // also keep a cache of all nodes and locations
     $locations[(string) $node['id']] = "{$node['lon']}|{$node['lat']}";
@@ -96,7 +92,6 @@ function parseNode(&$q, $sxml)
     foreach( $sxml->tag as $tag )
     {
         if ($tag['k'] == 'name') {
-            $q['name'] = trim( (string) $tag['v'] );
             $standAloneNode = true;
         } else {
             if (!in_array( $tag['k'], $ignoreTags)) {
