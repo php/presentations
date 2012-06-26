@@ -3,13 +3,13 @@
 
 <example result="1"><![CDATA[<?php
 $m = new Mongo();
-$c = $m->demo->articles;
+$c = $m->demo->cities;
 
-$cursor = $c->find()->sort( array( '_id' => -1 ) );
+$cursor = $c->find( array( 'country_code' => 'IS' ) )
+            ->sort( array( 'name' => -1 ) );
 
-foreach ( $cursor as $r )
-{
-    var_dump( $r );
+foreach ( $cursor as $r ) {
+    var_dump( $r['name'] );
 }
 ?>]]></example>
 </slide>

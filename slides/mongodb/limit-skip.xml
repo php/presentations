@@ -3,17 +3,14 @@
 
 <example result="1"><![CDATA[<?php
 $m = new Mongo();
-$c = $m->demo->articles;
+$c = $m->demo->cities;
 
-$cursor = $c->find();
-$cursor->sort( array( '_id' => 1 ) )
-       ->limit( 3 )
-       ->skip( 3 );
+$cursor = $c->find( array( 'country_code' => 'RU' ) )
+            ->sort( array( 'name' => 1 ) )
+            ->limit( 5 )->skip( 25 );
 
-// Only now does the query get send
-foreach ( $cursor as $r )
-{
-    echo $r['_id'], "\n";
+foreach ( $cursor as $r ) {
+    var_dump( $r['name'] );
 }
 ?>]]></example>
 </slide>

@@ -4,45 +4,42 @@
 <div effect="fade-out">
 <example result="2"><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->circus;
-
+$c = $m->demo->continent; $c->drop();
 $c->insert( array(
-    '_id' => 'circ1',
-    'name' => 'Diaspora',
-    'performers' => 43,
-    'elephpants' => array (
-        array ( 'name' => 'Annabelle', 'colour' => 'pink', 'year' => 1964 ),
-        array ( 'name' => 'Chunee',    'colour' => 'blue', 'year' => 1826 )
+    'name' => 'South America',
+    'cities' => array(
+        array( "name" => "Buenos Aires", "population" => 13076300, "dem" => 131 ),
+        array( "name" => "São Paulo", "population" => 10021295, "dem" => 769 ),
     )
 ) );
-
 $c->insert( array(
-    '_id' => 'circ2',
-    'name' => 'Sensible',
-    'performers' => 27,
-    'elephpants' => array (
-        array ( 'name' => 'Kandula',   'colour' => 'pink', 'year' => 2001 ),
-        array ( 'name' => 'Kolakolli', 'colour' => 'blue', 'year' => 2006 )
+    'name' => 'Asia',
+    'cities' => array(
+        array( "name" => "Karachi", "population" => 11624219, "dem" => 38 ),
+        array( "name" => "Moscow", "population" => 10381222, "dem" => 144 ),
+        array( "name" => "İstanbul", "population" => 11174257, "dem" => 39 ),
     )
 ) );
 ?>]]></example>
+
+<blurb>Contitent with a city of more than 11 million people and above 100
+meter.</blurb>
 </div>
 
-<blurb>Find circuses which have blue elephpants after 1900.</blurb>
-
 <div effect="fade-in">
-<example result="1"><![CDATA[<?php ini_set( 'xdebug.var_display_max_depth', 4 );
+<example result="1"><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->circus;
-$r = $c->find(
-    array( 'elephpants.colour' => 'blue', 'elephpants.year' => array( '$gt' => 1900 ) )
-);
+$c = $m->demo->continent;
+$r = $c->find( array(
+    'cities.population' => array( '$gte' => 11000000 ),
+    'cities.dem' => array( '$gte' => 100 ),
+) );
+
 foreach( $r as $c ) {
-    echo $c['name'], ': ';
-    foreach( $c['elephpants'] as $elephpant ) {
-        echo "\n- ", join( ", ", $elephpant );
+    echo $c['name'], "\n";
+    foreach( $c['cities'] as $city ) {
+        echo '- ', $city['name'], ': ', $city['population'], ' - ', $city['dem'], "\n";
     }
-    echo "\n\n";
 }
 ?>]]></example>
 </div>
