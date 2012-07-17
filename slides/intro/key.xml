@@ -1,0 +1,18 @@
+<slide title="Conclusion">
+<break lines="2"/>
+<list fontsize="4em">
+<bullet>Still running PHP &lt; 5.3? Upgrade!</bullet>
+<bullet>Test your code on PHP 5.4 and upgrade soon</bullet>
+<bullet>Contribute!</bullet>
+</list>
+<break lines="2"/>
+<link fontsize="2.5em" marginleft="2em" leader="Slides: " href=":-:url:-:"/>
+<link fontsize="2.5em" marginleft="2em" leader="5.2->5.3: " href="http://php.net/migration53"/>
+<link fontsize="2.5em" marginleft="2em" leader="5.3->5.4: " href="http://php.net/migration54"/>
+<link fontsize="2.5em" marginleft="2em" leader="Wiki: " href="http://wiki.php.net"/>
+<link fontsize="2.5em" marginleft="2em" leader="Bugs: " href="http://bugs.php.net"/>
+<link fontsize="2.5em" marginleft="2em" leader="SVM: " href="http://pecl.php.net/package/svm"/>
+<link fontsize="2.5em" marginleft="2em" leader="LibEvent: " href="http://pecl.php.net/package/libevent"/>
+<link fontsize="2.5em" marginleft="2em" leader="ZeroMQ: " href="http://php.zero.mq"/>
+<link fontsize="2.5em" marginleft="2em" leader="Node.PHP: " href="http://nodephp.org"/>
+</slide>

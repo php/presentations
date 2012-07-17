@@ -1,0 +1,21 @@
+<slide title="1993">
+
+<example><![CDATA[use CGI qw(:standard);
+print header;
+print start_html('Form Example'),
+    h1('My Example Form'),
+    start_form,
+    "Name: ", textfield('name'),
+    p,
+    "Age: ", textfield('age'),
+    p,
+    submit,
+    end_form;
+if(param()) {
+    print "Hi ",em(param('name')),
+        "You are ",em(param('age')),
+        " years old";
+}
+print end_html;]]></example>
+
+</slide>

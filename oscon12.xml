@@ -1,0 +1,54 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>PHP</title>
+<event>OSCON</event>
+<location>Portland</location>
+<date>July 18, 2012</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/dpc12</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/nold.xml</slide>
+<slide>slides/intro/nold2.xml</slide>
+<slide>slides/intro/nold3.xml</slide>
+
+<slide>slides/intro/2012_title.xml</slide>
+
+<slide>slides/intro/php_slideshow.xml</slide>
+
+<slide>slides/intro/ecosystem.xml</slide>
+
+<slide>slides/intro/php54.xml</slide>
+<slide>slides/intro/eventmq.xml</slide>
+<slide>slides/intro/eventmq2.xml</slide>
+<slide>slides/intro/svm.xml</slide>
+<slide>slides/intro/future3.xml</slide>
+
+<slide>slides/intro/contrib0.xml</slide>
+<slide>slides/intro/contrib1.xml</slide>
+<slide>slides/intro/contrib2.xml</slide>
+<slide>slides/intro/contrib3.xml</slide>
+<slide>slides/intro/contrib4.xml</slide>
+<slide>slides/intro/contrib5.xml</slide>
+<slide>slides/intro/contrib6.xml</slide>
+<slide>slides/intro/contrib7.xml</slide>
+
+<slide>slides/intro/key_matter.xml</slide>
+
+</presentation>

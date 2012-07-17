@@ -1,0 +1,16 @@
+<slide title="1994">
+
+<example><![CDATA[<html><head><title>Form Example</title></head>
+<body><h1>My Example Form</h1>
+<form action="form.phtml" method="POST">
+Name: <input type="text" name="name">
+Age: <input type="text" name="age">
+<br><input type="submit">
+</form>
+<?if($name):?>
+Hi <?echo $name?>, you are <?echo $age?> years old
+<?endif?>
+</body></html>]]></example>
+
+</slide>
+
