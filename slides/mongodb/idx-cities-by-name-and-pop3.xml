@@ -1,0 +1,32 @@
+<slide>
+<title>Let's look at the query plan when we try to sort</title>
+
+<example inline="1">
+db.cities.find( { country_code: 'GB', population: { $gte: 500000 } } )
+         .sort( { population: -1 }).explain();
+</example>
+<example inline="1">
+{
+	"cursor" : "BtreeCursor country_code_1_population_1 ~*reverse*~",
+	"nscanned" : 4,
+	"nscannedObjects" : 4,
+	"n" : 4,
+	"millis" : 0,
+	"nYields" : 0,
+	"nChunkSkips" : 0,
+	"isMultiKey" : false,
+	"indexOnly" : false,
+	"indexBounds" : {
+		"country_code" : [ [ "GB", "GB" ] ],
+		"population" : [ [ ~*1.7976931348623157e+308, 500000*~ ] ]
+	}
+}
+</example>
+<example>
+{ "name" : "London", "country_code" : "GB", "population" : 7556900 }
+{ "name" : "City of London", "country_code" : "GB", "population" : 7556900 }
+{ "name" : "Birmingham", "country_code" : "GB", "population" : 984333 }
+{ "name" : "Glasgow", "country_code" : "GB", "population" : 610268 }
+</example>
+
+</slide>

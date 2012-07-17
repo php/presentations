@@ -2,38 +2,37 @@
 <title>Querying: $gte</title>
 
 <div effect="fade-out">
-<example result="2"><![CDATA[<?php
+<example><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->circus;
-
-$c->insert( array(
-  '_id' => 'circ1',
-  'name' => 'Diaspora',
-  'performers' => 43,
-) );
-
-$c->insert( array(
-  '_id' => 'circ2',
-  'name' => 'Sensible',
-  'performers' => 27,
-) );
+$c = $m->demo->cities;
+$c->insert( array( "name" => "Buenos Aires", "population" => 13076300 ) );
+$c->insert( array( "name" => "Dhaka", "population" => 10356500 ) );
+$c->insert( array( "name" => "São Paulo", "population" => 10021295 ) );
+$c->insert( array( "name" => "Shanghai", "population" => 14608512 ) );
+$c->insert( array( "name" => "Delhi", "population" => 10927986 ) );
+$c->insert( array( "name" => "Mumbai", "population" => 12691836 ) );
+$c->insert( array( "name" => "Seoul", "population" => 10349312 ) );
+$c->insert( array( "name" => "Mexico City", "population" => 12294193 ) );
 ?>]]></example>
 </div>
 
-<blurb>Find circuses with 40 or more performers.</blurb>
+<blurb>Find cities with more than 12 million inhabitants.</blurb>
 
 <div effect="fade-in">
 <example result="1"><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->circus;
+$c = $m->demo->cities;
 
-$r = $c->findOne(
+$r = $c->find(
   // query
-  array( 'performers' => array( '$gte' => 40 ) ),
+  array( 'population' => array( '$gte' => 12000000 ) ),
   // projection
-  array( 'name' => true, 'performers' => true )
+  array( 'name' => true, 'population' => true, '_id' => false )
 );
-var_dump( $r );
-?>]]></example>
+
+foreach( $r as $res )
+{
+	echo $res['name'], ': ', $res['population'], "\n";
+}]]></example>
 </div>
 </slide>

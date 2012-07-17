@@ -1,0 +1,11 @@
+<slide>
+<title>Indexes Recap</title>
+
+<list>
+	<bullet>MongoDB uses B-trees for indexes</bullet>
+	<bullet>Many of the principles that apply to an RDBMS also apply to MongoDB</bullet>
+	<bullet>e.g., indexes require additional work on inserts, updates and deletes</bullet>
+	<bullet>A collection can have 64 indexes at most</bullet>
+	<bullet>MongoDB can only use one index per query (with a few exceptions)</bullet>
+</list>
+</slide>

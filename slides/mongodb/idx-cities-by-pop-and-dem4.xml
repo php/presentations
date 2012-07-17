@@ -1,0 +1,19 @@
+<slide>
+<title>Sorting by descending elevation</title>
+
+<example inline="1">
+db.cities.find( { population: { $gte: 2000000 }, dem: { $gte : 1654 } } )
+         .sort( { dem: -1 } ).explain();
+</example>
+<example inline="1">
+{
+	"cursor" : "BtreeCursor population_1_dem_1",
+	"nscanned" : 127,
+	"nscannedObjects" : 6,
+	"n" : 6,
+	*|f10000|"scanAndOrder" : true,|*
+	"millis" : 1,
+...
+</example>
+
+</slide>

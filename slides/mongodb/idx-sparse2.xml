@@ -1,0 +1,27 @@
+<slide>
+<title>Sparse indexes can have unexpected results</title>
+
+<example inline="1">
+> db.cities.find( { admin1_code: { $exists: true } } ).count();
+|00cc00|22816|
+> db.cities.find( { admin1_code: { $exists: false } } ).count();
+|f10000|0|
+> db.cities.count();
+22840
+</example>
+
+<div effect="fade-in">
+<blurb>Let's look at %explain()%:</blurb>
+<example inline="1">
+> db.cities.find( { admin1_code: { $exists: false } } ).explain();
+{
+	*"cursor" : "BtreeCursor admin1_code_1",*
+	"nscanned" : 0,
+	"nscannedObjects" : 0,
+	"n" : 0,
+...
+</example>
+<break/>
+<blurb>A sparse index doesn't contain the field, so it won't find any documents *without* that field.</blurb>
+</div>
+</slide>

@@ -3,17 +3,21 @@
 
 <example result="1"><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->circus;
-$r = $c->find( [
-	'elephpants' =>
-	[ '$elemMatch' => [ 'colour' => 'blue', 'year' => [ '$gt' => 1900 ] ] ]
-] );
+$c = $m->demo->continent;
+$r = $c->find( array(
+    'cities' => array(
+        '$elemMatch' => array(
+            'population' => array( '$gte' => 11000000 ),
+            'dem' => array( '$gte' => 100 ),
+        )
+    )
+) );
+
 foreach( $r as $c ) {
-    echo $c['name'], ': ';
-    foreach( $c['elephpants'] as $elephpant ) {
-        echo "\n- ", join( ", ", $elephpant );
+    echo $c['name'], "\n";
+    foreach( $c['cities'] as $city ) {
+        echo '- ', $city['name'], ': ', $city['population'], ' - ', $city['dem'], "\n";
     }
-    echo "\n\n";
 }
 ?>]]></example>
 </slide>

@@ -1,0 +1,18 @@
+<slide>
+<title>Routing engine: OSRM</title>
+
+<list>
+	<bullet>Open source routing engine</bullet>
+	<bullet>Website at http://project-osrm.org/</bullet>
+	<bullet>Demo website at http://map.project-osrm.org</bullet>
+	<bullet>Server API access
+		<list>
+			<bullet>some usage restrictions</bullet>
+			<bullet>some requirements for usage</bullet>
+		</list>
+	</bullet>
+	<bullet>It is *really* fast!</bullet>
+</list>
+
+<image filename="osrm3.png"/>
+</slide>

@@ -1,0 +1,21 @@
+<slide>
+<title>Creating Indexes</title>
+
+<blurb>The %_id% field is always indexed. Additional indexes can be created with %ensureIndex%:</blurb>
+
+<example><![CDATA[
+<?php
+$m = new Mongo;
+$c = $m->demo->cities;
+
+// Create an index on the name attribute
+$c->ensureIndex( array( 'name' => 1 ) );
+
+// Create a compound index on country code and feature code
+$c->ensureIndex( array( 'country_code' => 1, 'feature_code' => 1 ) );
+
+// Create a unique index on the area field of timezone:
+$c->ensureIndex( array( 'timezone.area' => 1 ) );
+]]>
+</example>
+</slide>

@@ -1,7 +1,7 @@
 <slide>
 <title>Connecting to MongoDB</title>
 
-<blurb>No tables or collections have to do be explicitly created:</blurb>
+<blurb>No databases or collections have to do be explicitly created:</blurb>
 <break />
 
 <example><![CDATA[<?php

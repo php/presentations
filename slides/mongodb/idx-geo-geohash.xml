@@ -1,0 +1,35 @@
+<slide>
+<title>Geohashes</title>
+
+<div effect="fade-out">
+<image filename="geohash1.png"/>
+</div>
+
+<div effect="fade-in-out">
+<image filename="geohash2.png"/>
+<blurb align="center">Geohash so far: *00*</blurb>
+</div>
+
+<div effect="fade-in-out">
+<image filename="geohash3.png"/>
+<blurb align="center">Geohash so far: 00*11*</blurb>
+</div>
+
+<div effect="fade-in-out">
+<image filename="geohash4.png"/>
+<blurb align="center">Geohash so far: 0011*01*</blurb>
+</div>
+
+<div effect="fade-in">
+<image filename="geohash5.png"/>
+<blurb align="center">Geohash so far: 001101*00*</blurb>
+</div>
+
+<div effect="fade-in">
+<example inline="1">db.cities.ensureIndex( { location: '2d', *bits: 4* } )</example>
+<list>
+	<bullet>Default %bits% is 26, about 0.3 meter resolution (~½ * 40000 / 2^26~)</bullet>
+</list>
+</div>
+
+</slide>
