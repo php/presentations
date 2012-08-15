@@ -1,0 +1,52 @@
+<slide>
+<title>Storing node/fields in MongoDB</title>
+<example>
+mysql> select * from node where nid = 3\G
+*************************** 1. row ***************************
+      nid: 3
+      vid: 3
+     type: book
+ language: und
+    title: A book with some more fields
+      uid: 1
+   status: 1
+  created: 1345026957
+  changed: 1345027893
+  comment: 2
+  promote: 1
+   sticky: 0
+     tnid: 0
+translate: 0
+1 row in set (0.00 sec)
+</example><example>
+> db['fields_current.node'].find( { 'nid' : 3 } ).pretty();
+{
+	"_id" : NumberLong(3),
+	"_type" : "node",
+	"_bundle" : "book",
+	"_revision_id" : NumberLong(3),
+	"nid" : NumberLong(3),
+	"vid" : NumberLong(3),
+	"type" : "book",
+	"language" : "und",
+	"title" : "A book with some more fields",
+	"uid" : NumberLong(1),
+	"status" : NumberLong(1),
+	"created" : NumberLong(1345026957),
+	"changed" : NumberLong(1345027893),
+	"comment" : NumberLong(2),
+	"promote" : NumberLong(1),
+	"sticky" : NumberLong(0),
+	"tnid" : NumberLong(0),
+	"translate" : NumberLong(0),
+	"field_author" : [
+		{
+			"value" : "Derick Rethans"
+		},
+		{
+			"value" : "Hannes Magnusson"
+		}
+	]
+}
+</example>
+</slide>

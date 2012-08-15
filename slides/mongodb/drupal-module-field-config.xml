@@ -1,0 +1,35 @@
+<slide>
+<title>Field configuration overview</title>
+<example>
+mysql> select * from field_config where field_name like 'field_author%' \G
+*************************** 1. row ***************************
+            id: 5
+    field_name: field_author
+          type: text
+        module: text
+        active: 1
+  storage_type: mongodb_field_storage
+storage_module: mongodb_field_storage
+storage_active: 0
+        locked: 0
+          data: a:7:{s:12:"translatable";s:1:"0";s:12:"entity_types";a:0:{}s:8:"settings";a:1:{s:10:"max_length";s:3:"255";}s:7:"storage";a:5:{s:4:"type";s:21:"mongodb_field_storage";s:8:"settings";a:0:{}s:6:"module";s:21:"mongodb_field_storage";s:6:"active";s:1:"1";s:7:"details";a:0:{}}s:12:"foreign keys";a:1:{s:6:"format";a:2:{s:5:"table";s:13:"filter_format";s:7:"columns";a:1:{s:6:"format";s:6:"format";}}}s:7:"indexes";a:1:{s:6:"format";a:1:{i:0;s:6:"format";}}s:2:"id";s:1:"5";}
+   cardinality: -1
+  translatable: 0
+       deleted: 0
+*************************** 2. row ***************************
+            id: 6
+    field_name: field_author2
+          type: text
+        module: text
+        active: 1
+  storage_type: field_sql_storage
+storage_module: field_sql_storage
+storage_active: 1
+        locked: 0
+          data: a:7:{s:12:"translatable";s:1:"0";s:12:"entity_types";a:0:{}s:8:"settings";a:1:{s:10:"max_length";s:3:"255";}s:7:"storage";a:5:{s:4:"type";s:17:"field_sql_storage";s:8:"settings";a:0:{}s:6:"module";s:17:"field_sql_storage";s:6:"active";s:1:"1";s:7:"details";a:1:{s:3:"sql";a:2:{s:18:"FIELD_LOAD_CURRENT";a:1:{s:24:"field_data_field_author2";a:2:{s:5:"value";s:19:"field_author2_value";s:6:"format";s:20:"field_author2_format";}}s:19:"FIELD_LOAD_REVISION";a:1:{s:28:"field_revision_field_author2";a:2:{s:5:"value";s:19:"field_author2_value";s:6:"format";s:20:"field_author2_format";}}}}}s:12:"foreign keys";a:1:{s:6:"format";a:2:{s:5:"table";s:13:"filter_format";s:7:"columns";a:1:{s:6:"format";s:6:"format";}}}s:7:"indexes";a:1:{s:6:"format";a:1:{i:0;s:6:"format";}}s:2:"id";s:1:"6";}
+   cardinality: -1
+  translatable: 0
+       deleted: 0
+2 rows in set (0.00 sec)
+</example>
+</slide>

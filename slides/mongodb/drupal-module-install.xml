@@ -1,0 +1,11 @@
+<slide>
+<title>Installing the module</title>
+
+<list>
+	<bullet>Download from http://ftp.drupal.org/files/projects/mongodb-7.x-1.0-rc1.tar.gz</bullet>
+	<bullet>Extract in %sites/all/modules/%</bullet>
+	<bullet>Enable in %http://drupal/#overlay=\%3Fq\%3Dadmin/modules%</bullet>
+</list>
+
+<image filename="mongodb-drupal.jpg"/>
+</slide>

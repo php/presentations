@@ -1,0 +1,31 @@
+<slide>
+<title>Storing node/fields in MySQL</title>
+<example>
+mysql> select * from node where nid = 5\G
+*************************** 1. row ***************************
+      nid: 5
+      vid: 5
+     type: book
+ language: und
+    title: PHP 5 Power Programming
+      uid: 1
+   status: 1
+  created: 1345034378
+  changed: 1345034395
+  comment: 2
+  promote: 1
+   sticky: 0
+     tnid: 0
+translate: 0
+1 row in set (0.00 sec)
+</example><example>
+mysql> select * from field_data_field_author2 where entity_id = 5;
++-------------+--------+---------+-----------+-------------+----------+-------+---------------------+----------------------+
+| entity_type | bundle | deleted | entity_id | revision_id | language | delta | field_author2_value | field_author2_format |
++-------------+--------+---------+-----------+-------------+----------+-------+---------------------+----------------------+
+| node        | book   |       0 |         5 |           5 | und      |     0 | Derick Rethans      | NULL                 |
+| node        | book   |       0 |         5 |           5 | und      |     1 | Hannes Magnusson    | NULL                 |
++-------------+--------+---------+-----------+-------------+----------+-------+---------------------+----------------------+
+2 rows in set (0.00 sec)
+</example>
+</slide>
