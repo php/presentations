@@ -1,0 +1,58 @@
+<slide>
+<title>Aggregation example</title>
+<div effect="fade-out">
+<example>
+> db.cities.find({ name: 'Atlanta' }).pretty();
+{
+    "_id" : ObjectId("4fe82d3044670a8156004ca0"),
+    "geonameid" : 4180439,
+    "name" : "Atlanta",
+    "asciiname" : "Atlanta",
+    "alternatenames" : [
+        "ATL", "Atlanta", "Atlantae", "aeteullaenta", "arrlanra nagaram",
+        "atalanta", "atlanta", "atlanta", " jwrjya", "atoranta", "etalanta",
+        "etlanta", "ya te lan da", "Ατλάντα", "Атлантæ", "Атланта", "Ատլանտա",
+        "แอตแลนตา", "ཨ་ཊི་ལཱན་ཊཱ།", "အတ္တလန္တာမြို့", "ატლანტა", "アトランタ",
+        "亚特兰大", "애틀랜타"
+    ],
+    "feature_class" : "P",
+    "feature_code" : "PPLA",
+    "country_code" : "US",
+    "admin1_code" : "GA",
+    "admin2_code" : "121",
+    "population" : 420003,
+    "elevation" : 320,
+    "dem" : 336,
+    "timezone" : "America/New_York",
+    "modification_date" : "2011-06-16",
+    "location" : [ -84.38798, 33.749 ]
+}
+</example>
+</div>
+
+<div effect="fade-in">
+<example result="1"><![CDATA[<?php
+$m = new Mongo();
+$c = $m->demo->cities;
+
+$res = $c->aggregate( [ 
+    [ '$match' => [ 'name' => 'Atlanta' ] ],
+    [ '$unwind' => '$alternatenames' ],
+    [ '$project' => [
+        'name' => '$alternatenames',
+        'meta' => [
+            'elevation' => '$dem',
+            'population' => 1,
+            'timezone' => 1,
+        ],
+        'location' => 1,
+        '_id' => 0,
+    ] ],
+    [ '$sort' => [ 'name' => 1 ] ]
+] );
+
+var_dump( $res );
+?>]]>
+</example>
+</div>
+</slide>
