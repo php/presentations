@@ -4,11 +4,11 @@
 <example result="0"><![CDATA[<?php
 $options = array( 'replicaSet' => 'seta' );
 
+$m = new Mongo( 'mongodb://localhost:13000/?replicaSet=seta' );
+
+$m = new Mongo( 'mongodb://localhost:13000,localhost:13001', $options );
+
 $m = new Mongo( 'mongodb://user:password@localhost:13000/demo', $options );
-
-$m = new Mongo( 'mongodb://localhost:13000,localhost:13001', $options );
-
-$m = new Mongo( 'mongodb://localhost:13000,localhost:13001', $options );
 ?>]]></example>
 
 <list>
