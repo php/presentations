@@ -1,0 +1,56 @@
+<slide>
+<title>Read preferences</title>
+
+<example>mongodb://mongo1.local,mongo3.local/?replicaSet=demo ⏎
+	&amp;readPreference=secondary&amp;readPreferenceTags=dc:europe</example>
+<div effect="fade-out">
+<blurb>Servers:</blurb>
+<example>
+mongo1.local - primary   -  6ms - dc:europe,server:big
+mongo2.local - secondary - 25ms - dc:europe,server:small
+mongo3.local - secondary -  4ms - dc:europe,server:big
+mongo4.local - secondary - 17ms - dc:europe,server:big
+mongo5.local - secondary - 16ms - dc:asia,server:big
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Servers (after finding all candidates):</blurb>
+<example>
+mongo2.local - secondary - 25ms - dc:europe,server:small
+mongo3.local - secondary -  4ms - dc:europe,server:big
+mongo4.local - secondary - 17ms - dc:europe,server:big
+mongo5.local - secondary - 16ms - dc:asia,server:big
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Servers (after matching tags):</blurb>
+<example>
+mongo2.local - secondary - 25ms - dc:europe,server:small
+mongo3.local - secondary -  4ms - dc:europe,server:big
+mongo4.local - secondary - 17ms - dc:europe,server:big
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Servers (after sorting):</blurb>
+<example>
+mongo3.local - secondary -  4ms - dc:europe,server:big
+mongo4.local - secondary - 17ms - dc:europe,server:big
+mongo2.local - secondary - 25ms - dc:europe,server:small
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Servers (after removing "far away" ones):</blurb>
+<example>
+mongo3.local - secondary -  4ms - dc:europe,server:big
+mongo4.local - secondary - 17ms - dc:europe,server:big
+</example>
+<blurb>
+And from those a random one per (read) query is picked.
+</blurb>
+</div>
+
+</slide>

@@ -1,16 +1,20 @@
 <slide>
 <title>Read preferences</title>
-<subtitle>(in development)</subtitle>
 
 <example result="0"><![CDATA[<?php
-$m = new Mongo( 'mongodb://localhost:13000' );
-$c = $m->demo->poi;
-$c->setReadPreference( Mongo::READ_NEAREST, array( 'dc' => 'europe1' ) );
-
-$c->find( ... );
-
-// or
-$c->find( ... )->setReadPreference( Mongo::SECONDARY );
+$m = new Mongo(
+	'mongodb://localhost:13000/?' .
+	'replicaSet=poiset&readPreference=nearest&readPreferenceTags=dc:asia'
+);
+$c = $m->phpunit->test;
+$c->find(...);
+?>]]></example>
+<blurb>or:</blurb>
+<example result="0"><![CDATA[<?php
+$m = new Mongo( 'mongodb://localhost:13000/?replicaSet=poiset' );
+$c = $m->phpunit->test;
+$c->setReadPreference( Mongo::RP_SECONDARY, array( 'dc' => 'europe' ) );
+$c->find(...);
 ?>]]></example>
 
 </slide>
