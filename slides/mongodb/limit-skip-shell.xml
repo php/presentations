@@ -1,0 +1,19 @@
+<slide>
+<title>Cursor methods</title>
+
+<example result="0"><![CDATA[use demo
+c = db.cities.find( { 'country_code' : 'RU' } ).
+              sort( { 'name' : 1 } ).
+              limit( 5 ).
+              skip( 25 ).
+              forEach( function(a) { print( a.name ); } );
+]]></example>
+Output:
+<example>
+Al’met’yevsk
+Amursk
+Anapa
+Angarsk
+Anna
+</example>
+</slide>

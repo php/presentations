@@ -1,0 +1,15 @@
+<slide>
+<title>Querying and looping</title>
+
+<blurb>Finding multiple documents is done with the %find()%, and returns an
+iterator in the form of an iterator.</blurb>
+<break/>
+
+<example result="0"><![CDATA[$ mongo
+> use demo
+switched to db demo
+> db.talks.find( { 'talks.title' : { '$exists' : true } } ).
+... forEach(function(a) { prin( a._id ) } );
+derickr
+>]]></example>
+</slide>
