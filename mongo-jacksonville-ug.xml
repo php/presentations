@@ -2,9 +2,9 @@
 <presentation css="10gen-strict.css">
 <topic>mongoDB</topic>
 <title>MongoDB</title>
-<event>Orlando PHP Users Group</event>
-<location>Orlando, US</location>
-<date>Sep 19, 2012</date>
+<event>JaxPHP/JaxWeb</event>
+<location>Jacksonville, US</location>
+<date>Sep 20, 2012</date>
 <speaker>Derick Rethans</speaker>
 <email>derick@10gen.com</email>
 <twitter>derickr</twitter>
@@ -14,52 +14,65 @@
 <slide>slides/mongodb/me.xml</slide>
 
 <slide>slides/mongodb/databasefield.xml</slide>
-<slide>slides/mongodb/what-is-mongodb.xml</slide>
 <slide>slides/mongodb/collections-documents.xml</slide>
-<slide>slides/mongodb/connecting.xml</slide>
-
 <slide>slides/mongodb/document.xml</slide>
 
-<slide>slides/mongodb/insert.xml</slide>
 <slide>slides/mongodb/types.xml</slide>
 - php types
 - extra types (int32/64)
 - id
 <slide>slides/mongodb/id.xml</slide>
-<slide>slides/mongodb/safe.xml</slide>
 <slide>slides/mongodb/safe2.xml</slide>
 
-<slide>slides/mongodb/cursors.xml</slide>
+<slide>slides/mongodb/cursors-shell.xml</slide>
 - cursor
-<slide>slides/mongodb/limit-skip.xml</slide>
+<slide>slides/mongodb/limit-skip-shell.xml</slide>
 - limit/skip
 
 
-<slide>slides/mongodb/update2a.xml</slide>
-<slide>slides/mongodb/upsert.xml</slide>
-<slide>slides/mongodb/update-modifiers2.xml</slide>
+<slide>slides/mongodb/update2a-shell.xml</slide>
 
 <slide>slides/mongodb/commands-aggregation.xml</slide>
 <slide>slides/mongodb/aggregation-example.xml</slide>
+
+<!-- SCHEMA DESIGN -->
+Common Patterns
+
+- RDBMS-normalisation.
+
+<slide>slides/mongodb/blog.xml</slide>
+<slide>slides/mongodb/blog2.xml</slide>
+
+<slide>slides/mongodb/considerations.xml</slide>
+
+<slide>slides/mongodb/one-to-many1.xml</slide>
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+<slide>slides/mongodb/one-to-many3.xml</slide>
+
+<slide>slides/mongodb/many-to-many1.xml</slide>
+<slide>slides/mongodb/many-to-many2.xml</slide>
+<slide>slides/mongodb/many-to-many3.xml</slide>
+
+<slide>slides/mongodb/embed-vs-link.xml</slide>
 
 <slide>slides/mongodb/osm-to-mongo-data.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data3.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data4.xml</slide>
-<slide>slides/map/finding-food-import-mongo.xml</slide>
+<slide>slides/mongodb/finding-food-import-mongo-shell.xml</slide>
 
 <slide>slides/mongodb/idx-recap1.xml</slide>
 <slide>slides/mongodb/idx-recap2.xml</slide>
 <slide>slides/mongodb/idx-recap3.xml</slide>
 
-<slide>slides/mongodb/idx-map.xml</slide>
-<slide>slides/mongodb/idx-geo.xml</slide>
-<slide>slides/mongodb/idx-geo2.xml</slide>
-<slide>slides/mongodb/idx-geo-geohash.xml</slide>
-<slide>slides/mongodb/idx-geo3.xml</slide>
-<slide>slides/mongodb/idx-geo4.xml</slide>
 
-<slide>slides/mongodb/quick-summary.xml</slide>
+<slide>slides/mongodb/replication.xml</slide>
+<slide>slides/mongodb/replication-setup.xml</slide>
+- setup
+- slaveOk
+- journal
+- write concerns
 
 <slide>slides/mongodb/resources.xml</slide>
 <slide>slides/mongodb/mmap.xml</slide>
