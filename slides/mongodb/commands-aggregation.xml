@@ -2,7 +2,7 @@
 <title>Aggregation Framework</title>
 <subtitle>New in 2.2</subtitle>
 
-<blurb>Powerfull framework for running multiple operations in a pipeline</blurb>
+<blurb>Powerfull framework for running multiple operations in a pipeline, mostly replacing M/R.</blurb>
 <blurb>Operations are:</blurb>
 <list>
 	<bullet>%$match%: for matching documents, à la %find()%.</bullet>
