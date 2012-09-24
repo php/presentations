@@ -21,7 +21,7 @@ db.poi.find( { 'name' : 'Strand' } );
 db.poi.find( { 'tags.highway' : { '$exists' :  1 } } );
 </example>
 <list>
-    <bullet>Lots of indexed are required</bullet>
+    <bullet>Lots of indexes are required</bullet>
     <bullet>Easy to extract data from</bullet>
 </list>
 </div>

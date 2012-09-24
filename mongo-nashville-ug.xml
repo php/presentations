@@ -28,6 +28,12 @@
 <slide>slides/mongodb/query.xml</slide>
 <slide>slides/mongodb/cursors.xml</slide>
 <slide>slides/mongodb/limit-skip.xml</slide>
+<slide>slides/mongodb/update2a.xml</slide>
+<slide>slides/mongodb/upsert.xml</slide>
+<slide>slides/mongodb/update-modifiers2.xml</slide>
+
+<slide>slides/mongodb/commands-aggregation.xml</slide>
+<slide>slides/mongodb/aggregation-example.xml</slide>
 
 <!-- SCHEMA DESIGN -->
 Common Patterns
@@ -36,13 +42,9 @@ Common Patterns
 
 <slide>slides/mongodb/blog.xml</slide>
 <slide>slides/mongodb/blog2.xml</slide>
+<slide>slides/mongodb/one-to-many3.xml</slide>
 
 <slide>slides/mongodb/considerations.xml</slide>
-
-<slide>slides/mongodb/inherit.xml</slide>
-<slide>slides/mongodb/inherit-rdbms.xml</slide>
-<slide>slides/mongodb/inherit-mongo.xml</slide>
-<slide>slides/mongodb/inherit-summary.xml</slide>
 
 <slide>slides/mongodb/osm-to-mongo-data.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
