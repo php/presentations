@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen.css">
+<topic>Localization and Internationalization</topic>
+<title>Advanced Date/Time Handling</title>
+<event>PHP North West</event>
+<location>Manchester, UK</location>
+<date>October 6th, 2012</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/6628</joindin>
+<twitter>derickr</twitter>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- INTRODUCTION -->
+<slide>slides/time/problems-condensed.xml</slide>
+
+<!-- PHP - IMPROVEMENTS -->
+<slide>slides/time/improvements-timezones.xml</slide>
+<slide>slides/time/improvements-more-on-timezones.xml</slide>
+<slide>slides/time/default-timezone.xml</slide>
+<slide>slides/time/timestamps-suck.xml</slide>
+
+<!-- PHP - CODE EXAMPLES -->
+<slide>slides/time/basic-parse-time-new.xml</slide>
+<slide>slides/time/date-parse2.xml</slide>
+<slide>slides/time/date-parse-from-format3.xml</slide>
+<slide>slides/time/date-parse-from-format2.xml</slide>
+
+<!-- DATE EXAMPLES -->
+<slide>slides/time/date-modify.xml</slide>
+<slide>slides/time/timezone-object-1.xml</slide>
+<slide>slides/time/date-timezone.xml</slide>
+<slide>slides/time/timezone-utilities-3.xml</slide>
+
+<!-- INTERVALS and PERIODS -->
+<slide>slides/time/intervals.xml</slide>
+<slide>slides/time/intervals-2.xml</slide>
+<slide>slides/time/relative-month.xml</slide>
+<slide>slides/time/relative-month3.xml</slide>
+<slide>slides/time/period-2.xml</slide>
+
+<!-- STORING in DATABASE -->
+<slide>slides/time/in-database1.xml</slide>
+<slide>slides/time/in-database2.xml</slide>
+<slide>slides/time/in-database3.xml</slide>
+<slide>slides/time/in-database4.xml</slide>
+
+<!-- EXIT -->
+<slide>slides/time/book.xml</slide> <!-- resources -->
+<slide>slides/mongodb/resources.xml</slide> <!-- resources -->
+
+<slide>slides/dbus/end.xml</slide>
+</presentation>
