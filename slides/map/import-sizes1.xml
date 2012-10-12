@@ -1,0 +1,24 @@
+<slide>
+<title>Usage</title>
+
+<blurb>London:</blurb>
+<list>
+	<bullet>2 million nodes / 750 thousand ways</bullet>
+	<bullet>Memory usage: 827 MB </bullet>
+	<bullet>DB stats:
+		<example>
+"count" : 445689,
+"size" : 135102204,
+"avgObjSize" : 303.1311160921629,
+"storageSize" : 159219712,
+"totalIndexSize" : 188677552,
+"indexSizes" : { "_id_" : 22712928, "loc_2d" : 91906416, "tags_1" : 74058208 },
+		</example>
+	</bullet>
+</list>
+<blurb>United Kingdom:</blurb>
+<list>
+	<bullet>45 million nodes / 10 million ways</bullet>
+	<bullet>which is 20 times as much…</bullet>
+</list>
+</slide>
