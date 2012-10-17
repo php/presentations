@@ -3,6 +3,7 @@
 
 <list>
 	<bullet>Every document needs a unique ID</bullet>
+	<bullet>ID consists of: 4 bytes timestamp, 3 byte machine id, 2 bytes PID and 3 bytes counter: %|ff9999|507e6384| |99ff99|44670a| |9999ff|3e6e| |ffff99|000000|%</bullet>
 </list>
 
 <example result="1"><![CDATA[<?php

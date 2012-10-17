@@ -3,24 +3,24 @@
 
 <example><![CDATA[<?php
 $m = new Mongo;
-$c = $m->demo->elephpants;
+$c = $m->demo->presentations;
 $c->remove();
 
-$c->insert( [
-  '_id' => 'e43',
-  'name' => 'Dumbo'
-] );
+$c->insert( array(
+  '_id' => 'mongo-tut-zendcon12',
+  'name' => 'Hands-On MongoDB'
+) );
 
 $c->update(
-  [ 'name' => 'Dumbo' ], // criteria
-  [ '$set' => array [ 'age' => '17' ] ] // modifiers
+  array( 'name' => 'Hands-On MongoDB' ), // criteria
+  array( '$set' => array( 'lastviewed' => time() ) ) // modifiers
 );
 
-// document is now:
-[
-  '_id' => 'e43',
-  'name' => 'Dumbo',
-  'age' => '17',
-]
+/* document is now:
+array(
+  '_id' => 'mongo-tut-zendcon12',
+  'name' => 'Hands-On MongoDB'
+  'lastviewed' => 1350296073,
+) */
 ?>]]></example>
 </slide>

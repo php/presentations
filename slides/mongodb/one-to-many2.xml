@@ -1,24 +1,27 @@
 <slide>
-<title>One to Many (1:n)</title>
-
-<blurb>Embedded Array / Array Keys</blurb>
-<list>
-    <bullet>some queries harder: e.g find all areas speaking German</bullet>
-</list>
+<title>Embedding Comments and Views</title>
 
 <example><![CDATA[{
-  name: "Germany",
-  language: "German",
-  areas: [
-    { name: "Bavaria", language: "Swabian" }
+  name: "Derick's MongoDB Tour Wrap-up",
+  date: "2012-10-01",
+  comments: [
+    { name: "Adam", text: "It was great having you in Sou..." },
+    { name: "Jake", text: "I don't think you can ever re..." },
+  ],
+  views: [
+    { time: 1350297458, ip: "192.168.42.101" },
+    { time: 1350297729, ip: "192.168.42.103" },
+    { time: 1350298912, ip: "192.168.42.102" },
   ]
 },
 {
-  name: "Switzerland",
-  areas: [
-    { name: "Deutsche Schweiz",  language: "German"  },
-    { name: "Romandy",           language: "French"  },
-    { name: "Svizzera italiana", language: "Italian" },
+  name: "What is PHP doing?",
+  date: "2012-07-13",
+  comments: [
+    { name: "Chris", text: "The .gdbinit trick was somethi..." },
+  ],
+  views: [
+    { time: 1350297458, ip: "192.168.42.101" },
   ]
 }]]></example>
 </slide>
