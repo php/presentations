@@ -15,7 +15,7 @@ $c->insert( array( '_id' => 'derickr' ) );
 
 <div effect="fade-in">
 <blurb>"Safe" inserts:</blurb>
-<example result="1"><![CDATA[<?php
+<example result="1" stop="true"><![CDATA[<?php
 $m = new Mongo;
 $c = $m->demo->talks;
 

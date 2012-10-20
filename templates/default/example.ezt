@@ -8,7 +8,7 @@
 {if get_attribute( $node, 'result' ) >= 1}
  {$result = run_code( replace_properties( $pres, $node->nodeValue ) )}
  {if get_attribute( $node, 'result' ) == 1 && $result != ""}
-<div class='effect-slide'>
+<div class='effect-slide{if get_attribute( $node, 'stop' ) == 'true'} stop{/if}'>
 <div class='result'>
 <p>Result:</p>
 <pre>{raw $result}</pre>

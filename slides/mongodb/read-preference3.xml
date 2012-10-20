@@ -24,7 +24,7 @@ mongo5.local - secondary - 16ms - dc:asia,server:big
 </example>
 </div>
 
-<div effect="fade-in-out">
+<div effect="fade-in-out stop">
 <blurb>Servers (after matching tags):</blurb>
 <example>
 mongo2.local - secondary - 25ms - dc:europe,server:small

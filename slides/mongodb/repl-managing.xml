@@ -1,7 +1,7 @@
 <slide>
 <title>Managing a replica set</title>
 
-<div effect="fade-out">
+<div effect="fade-out stop">
 <list>
     <bullet>%rs.conf()%: get current configuration</bullet>
     <bullet>%rs.initiate(cfg)%: initiate replica set</bullet>
