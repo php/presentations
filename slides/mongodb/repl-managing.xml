@@ -3,20 +3,20 @@
 
 <div effect="fade-out">
 <list>
-    <bullet>rs.conf(): get current configuration</bullet>
-    <bullet>rs.initiate(cfg): initiate replica set</bullet>
-    <bullet>rs.reconfig(cfg): reconfigure a replica set</bullet>
-    <bullet>rs.add("hostname:port"): add a new member</bullet>
-    <bullet>rs.addArb("hostname:port"): add a new arbiter</bullet>
-    <bullet>rs.remove("hostname:port"): remove a member</bullet>
+    <bullet>%rs.conf()%: get current configuration</bullet>
+    <bullet>%rs.initiate(cfg)%: initiate replica set</bullet>
+    <bullet>%rs.reconfig(cfg)%: reconfigure a replica set</bullet>
+    <bullet>%rs.add("hostname:port")%: add a new member</bullet>
+    <bullet>%rs.addArb("hostname:port")%: add a new arbiter</bullet>
+    <bullet>%rs.remove("hostname:port")%: remove a member</bullet>
 </list>
 </div>
 
 <div effect="fade-in">
 <list>
-    <bullet>rs.status(): Reports status of the replica set from one node's point of view</bullet>
-    <bullet>rs.stepDown(secs): Request the primary to step down</bullet>
-    <bullet>rs.freeze(secs): Prevents any changes to the current replica set configuration (primary/secondary status); Use during backups</bullet>
+    <bullet>%rs.status()%: Reports status of the replica set from one node's point of view</bullet>
+    <bullet>%rs.stepDown(secs)%: Request the primary to step down</bullet>
+    <bullet>%rs.freeze(secs)%: Prevents any changes to the current replica set configuration (primary/secondary status); Use during backups</bullet>
 </list>
 </div>
 </slide>

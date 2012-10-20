@@ -1,0 +1,26 @@
+<slide>
+<title>Tagging example</title>
+
+<example><![CDATA[seta:SECONDARY> rs.config();
+{
+  "_id" : "seta", "version" : 5,
+  "members" : [
+   { "_id": 0, "host": "w:13000", "tags": { "dc": "west",  "use": "accounting" } },
+   { "_id": 1, "host": "w:13001", "tags": { "dc": "east",  "use": "reporting" } },
+   { "_id": 2, "host": "w:13002", "arbiterOnly": true }
+   { "_id": 3, "host": "w:13003", "tags": { "dc": "east",  "use": "accounting" } },
+   { "_id": 4, "host": "w:13004", "tags": { "dc": "north", "use": "reporting" } },
+  ],
+  settings : {
+    getLastErrorModes: {
+      allDCs:  { "dc": 3 },
+      allUses: { "use": 2 }
+    }
+  }
+}]]></example>
+
+<blurb>From PHP, enforce the write tags by:</blurb>
+<example><![CDATA[
+$c->insert( array( … ), array( 'safe' => 'allUses' ) );
+]]></example>
+</slide>

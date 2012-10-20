@@ -1,0 +1,11 @@
+<slide>
+<title>Replicaset 5</title>
+
+<image filename="repl-set6.png"/>
+
+<list>
+	<bullet>Three datacentres</bullet>
+	<bullet>Can survive full datacentre loss</bullet>
+	<bullet>Can do %w = { dc : 2 }% to guarantee write in two datacentres</bullet>
+</list>
+</slide>

@@ -1,0 +1,18 @@
+<slide>
+<title>Replicaset 2</title>
+
+<image filename="repl-set3.png"/>
+
+<list>
+	<bullet>Single datacentre</bullet>
+	<bullet>Multiple power/network zones</bullet>
+	<bullet>Automatic recovery of single node crash</bullet>
+	<bullet>w=2 not viable as losing one node means no writes</bullet>
+	<bullet>Points of failure:
+		<list>
+			<bullet>Datacentre</bullet>
+			<bullet>Two node failure</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

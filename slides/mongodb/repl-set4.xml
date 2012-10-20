@@ -1,0 +1,11 @@
+<slide>
+<title>Replicaset 4</title>
+
+<image filename="repl-set5.png"/>
+
+<list>
+	<bullet>Multi datacentre</bullet>
+	<bullet>DR node for safety</bullet>
+	<bullet>Can't do multi datacentre durable write safely since only one node in distant datacentre</bullet>
+</list>
+</slide>

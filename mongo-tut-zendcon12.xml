@@ -179,11 +179,19 @@ multikey
 <slide>slides/mongodb/repl-managing.xml</slide>
 <slide>slides/mongodb/repl-priorities1.xml</slide>
 <slide>slides/mongodb/repl-priorities2.xml</slide>
+<slide>slides/mongodb/repl-priorities3.xml</slide>
+<slide>slides/mongodb/safe3.xml</slide>
 <slide>slides/mongodb/repl-write-concern.xml</slide>
 <slide>slides/mongodb/repl-tagging.xml</slide>
-<slide>slides/mongodb/repl-read-preferences.xml</slide>
+<slide>slides/mongodb/repl-tagging2.xml</slide>
+<slide>slides/mongodb/repl-tagging-example.xml</slide>
+<slide>slides/mongodb/read-preference2.xml</slide>
+<slide>slides/mongodb/read-preference.xml</slide>
+<slide>slides/mongodb/read-preference3.xml</slide>
 <slide>slides/mongodb/repl-eventual-consistency.xml</slide>
-<slide>slides/mongodb/repl-schenarios.xml</slide>
+<slide>slides/mongodb/repl-features2.xml</slide>
+
+<slide>slides/mongodb/repl-scenarios.xml</slide>
 <slide>slides/mongodb/repl-single.xml</slide>
 <slide>slides/mongodb/repl-set1.xml</slide>
 <slide>slides/mongodb/repl-set2.xml</slide>
@@ -196,9 +204,6 @@ multikey
 - slaveOk
 - journal
 - write concerns
-<slide>slides/mongodb/safe3.xml</slide>
-<slide>slides/mongodb/read-preference.xml</slide>
-<slide>slides/mongodb/php-connection-string.xml</slide>
 
 <slide>slides/mongodb/sharding.xml</slide>
 - mongos

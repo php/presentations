@@ -1,0 +1,19 @@
+<slide>
+<title>Replicaset 1</title>
+
+<image filename="repl-set2.png"/>
+
+<list>
+	<bullet>Single datacentre</bullet>
+	<bullet>Single switch and power</bullet>
+	<bullet>One node failure</bullet>
+	<bullet>Automatic recovery of single node crash</bullet>
+	<bullet>Points of failure:
+		<list>
+			<bullet>Power</bullet>
+			<bullet>Network</bullet>
+			<bullet>Datacentre</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

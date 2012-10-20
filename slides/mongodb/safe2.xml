@@ -19,4 +19,9 @@ $c->insert(
 );
 ?>]]></example>
 
+<blurb>From 1.3:</blurb>
+<example result="0"><![CDATA[<?php
+$m = new Mongo('mongodb://localhost/?safe=true');
+?>]]></example>
+
 </slide>
