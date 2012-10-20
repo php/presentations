@@ -1,0 +1,16 @@
+<slide>
+<title>Sharding: mongos</title>
+
+<list>
+	<bullet>Acts just like a %mongod% towards clients</bullet>
+	<bullet>You can have as many as you want</bullet>
+	<bullet>Lightweight, so can run on the web servers</bullet>
+	<bullet>Caches meta-data from config servers</bullet>
+	<bullet>Routes queries to the correct shards:
+		<list>
+			<bullet>Insertions directly to one shard</bullet>
+			<bullet>Queries to one, a few, or all shards</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

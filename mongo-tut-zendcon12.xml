@@ -9,10 +9,12 @@
 <email>derick@10gen.com</email>
 <twitter>derickr</twitter>
 <url>http://derickrethans.nl/talks.html</url>
-<joindin></joindin>
+<joindin>http://joind.in/6861</joindin>
 <slide>slides/mongodb/title.xml</slide>
 <slide>slides/mongodb/me.xml</slide>
+<slide>slides/mongodb/tutorial-topics.xml</slide>
 
+<slide>slides/mongodb/section-intro.xml</slide>
 <slide>slides/mongodb/databasefield.xml</slide>
 <slide>slides/mongodb/collections-documents.xml</slide>
 <slide>slides/mongodb/document.xml</slide>
@@ -60,8 +62,12 @@
 
 <slide>slides/mongodb/commands.xml</slide>
 <slide>slides/mongodb/commands-distinct.xml</slide>
+<slide>slides/mongodb/commands-aggregation.xml</slide>
+<slide>slides/mongodb/aggregation-example.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
 
 <!-- SCHEMA DESIGN -->
+<slide>slides/mongodb/section-schema-design.xml</slide>
 Common Patterns
 
 - RDBMS-normalisation.
@@ -89,8 +95,10 @@ Common Patterns
 <slide>slides/mongodb/many-to-many3.xml</slide>
 
 <slide>slides/mongodb/embed-vs-link.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
 
 <!-- INDEXES -->
+<slide>slides/mongodb/section-indexes.xml</slide>
 <slide>slides/mongodb/idx-whats-in-store.xml</slide>
 <slide>slides/mongodb/idx-startup-quotes.xml</slide>
 <slide>slides/mongodb/idx-startup-quotes2.xml</slide>
@@ -141,8 +149,10 @@ multikey
 2d
 
 <slide>slides/mongodb/idx-recap3.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
 
 <!-- INTRODUCING OSM DATA -->
+<slide>slides/mongodb/section-practical-osm.xml</slide>
 <slide>slides/map/osm-what.xml</slide>
 <slide>slides/map/osm-data.xml</slide>
 
@@ -162,9 +172,11 @@ multikey
 <slide>slides/mongodb/osm-schema1.xml</slide>
 <slide>slides/mongodb/osm-schema2.xml</slide>
 <slide>slides/mongodb/osm-schema3.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
 
 
 <!-- REPLICATION -->
+<slide>slides/mongodb/section-replication.xml</slide>
 <slide>slides/mongodb/repl-intro.xml</slide>
 <slide>slides/mongodb/repl-use-cases.xml</slide>
 <slide>slides/mongodb/repl-types-of-outage.xml</slide>
@@ -205,15 +217,16 @@ multikey
 - journal
 - write concerns
 
+<!-- SHARDING -->
+<slide>slides/mongodb/section-sharding.xml</slide>
 <slide>slides/mongodb/sharding.xml</slide>
+<slide>slides/mongodb/sharding-key.xml</slide>
+<slide>slides/mongodb/sharding-mongos.xml</slide>
+<slide>slides/mongodb/sharding-config.xml</slide>
 - mongos
 - diagram
 - transparent
 
+<slide>slides/mongodb/questions.xml</slide>
 <slide>slides/mongodb/resources.xml</slide>
-
-<!-- PERFORMANCE THINGS -->
-<slide>slides/mongodb/mmap.xml</slide>
-
-
 </presentation>
