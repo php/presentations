@@ -22,6 +22,6 @@
 ...
 </example>
 <break/>
-<blurb>A sparse index doesn't contain the field, so it won't find any documents *without* that field.</blurb>
+<blurb>A sparse index doesn't contain links to documents without the indexed field.</blurb>
 </div>
 </slide>

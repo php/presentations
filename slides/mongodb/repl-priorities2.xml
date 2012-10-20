@@ -1,0 +1,16 @@
+<slide>
+<title>Priorities</title>
+
+<list>
+    <bullet>Priority, floating point number between 0 and 100</bullet>
+    <bullet>Used during an election:
+		<list>
+			<bullet>Most up to date</bullet>
+			<bullet>Highest priority</bullet>
+			<bullet>Less than 10s behind failed Primary</bullet>
+		</list>
+	</bullet>
+    <bullet>Allows weighting of members during failover</bullet>
+</list>
+
+</slide>

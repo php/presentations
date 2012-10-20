@@ -1,0 +1,22 @@
+<slide>
+<title>Replication</title>
+<subtitle>Use cases</subtitle>
+
+<list>
+	<bullet>High Availability (auto-failover)</bullet>
+    <bullet>Read Scaling (extra copies to read from)</bullet>
+    <bullet>Backups
+		<list>
+		    <bullet>Online, Delayed Copy (fat finger)</bullet>
+		    <bullet>Point in Time (PiT) backups</bullet>
+		</list>
+	</bullet>
+    <bullet>Use (hidden) replica for secondary workload
+		<list>
+			<bullet>Analytics</bullet>
+			<bullet>Data-processing</bullet>
+			<bullet>Integration with external systems</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

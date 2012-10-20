@@ -1,0 +1,133 @@
+<slide>
+<title>Let's have a quick look on how index look-ups work</title>
+
+<example>db.cities.find( { population: { $gte: 2000000 }, dem: { $gte: 1654 } } );</example>
+
+<div effect="fade-out">
+<table>
+<tr><td>⇒</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>Shijiazhuang</td><td>1992474</td><td>77</td></tr>
+<tr><td></td><td>Medellín</td><td>1999979</td><td>1500</td></tr>
+<tr><td></td><td>Almaty</td><td>2000900</td><td>793</td></tr>
+<tr><td></td><td>Zhengzhou</td><td>2014125</td><td>104</td></tr>
+<tr><td></td><td>Al Başrat al Qadīmah</td><td>2015483</td><td>6</td></tr>
+<tr><td></td><td>Kowloon</td><td>2019533</td><td>92</td></tr>
+<tr><td></td><td>Johannesburg</td><td>2026469</td><td>1767</td></tr>
+<tr><td></td><td>Dalian</td><td>2035307</td><td>33</td></tr>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 0 - nscanned = 0%</blurb>
+</div>
+
+<div effect="fade-in-out">
+<table>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>|777777|Shijiazhuang|</td><td>|777777|1992474|</td><td>|777777|77|</td></tr>
+<tr><td></td><td>|777777|Medellín|</td><td>|777777|1999979|</td><td>|777777|1500|</td></tr>
+<tr><td>⇒</td><td>*Almaty*</td><td>*2000900*</td><td>*793*</td></tr>
+<tr><td></td><td>Zhengzhou</td><td>2014125</td><td>104</td></tr>
+<tr><td></td><td>Al Başrat al Qadīmah</td><td>2015483</td><td>6</td></tr>
+<tr><td></td><td>Kowloon</td><td>2019533</td><td>92</td></tr>
+<tr><td></td><td>Johannesburg</td><td>2026469</td><td>1767</td></tr>
+<tr><td></td><td>Dalian</td><td>2035307</td><td>33</td></tr>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 0 - nscanned = 0%</blurb>
+</div>
+
+<div effect="fade-in-out">
+<table>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>|777777|Shijiazhuang|</td><td>|777777|1992474|</td><td>|777777|77|</td></tr>
+<tr><td></td><td>|777777|Medellín|</td><td>|777777|1999979|</td><td>|777777|1500|</td></tr>
+<tr><td></td><td>|ff7777|Almaty|</td><td>|ff7777|2000900|</td><td>|ff7777|793|</td></tr>
+<tr><td>⇒</td><td>*Zhengzhou*</td><td>*2014125*</td><td>*104*</td></tr>
+<tr><td></td><td>Al Başrat al Qadīmah</td><td>2015483</td><td>6</td></tr>
+<tr><td></td><td>Kowloon</td><td>2019533</td><td>92</td></tr>
+<tr><td></td><td>Johannesburg</td><td>2026469</td><td>1767</td></tr>
+<tr><td></td><td>Dalian</td><td>2035307</td><td>33</td></tr>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 0 - nscanned = 1%</blurb>
+</div>
+
+<div effect="fade-in-out">
+<table>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>|777777|Shijiazhuang|</td><td>|777777|1992474|</td><td>|777777|77|</td></tr>
+<tr><td></td><td>|777777|Medellín|</td><td>|777777|1999979|</td><td>|777777|1500|</td></tr>
+<tr><td></td><td>|ff7777|Almaty|</td><td>|ff7777|2000900|</td><td>|ff7777|793|</td></tr>
+<tr><td></td><td>|ff7777|Zhengzhou|</td><td>|ff7777|2014125|</td><td>|ff7777|104|</td></tr>
+<tr><td>⇒</td><td>*Al Başrat al Qadīmah*</td><td>*2015483*</td><td>*6*</td></tr>
+<tr><td></td><td>Kowloon</td><td>2019533</td><td>92</td></tr>
+<tr><td></td><td>Johannesburg</td><td>2026469</td><td>1767</td></tr>
+<tr><td></td><td>Dalian</td><td>2035307</td><td>33</td></tr>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 0 - nscanned = 2%</blurb>
+</div>
+
+<div effect="fade-in-out">
+<table>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>|777777|Shijiazhuang|</td><td>|777777|1992474|</td><td>|777777|77|</td></tr>
+<tr><td></td><td>|777777|Medellín|</td><td>|777777|1999979|</td><td>|777777|1500|</td></tr>
+<tr><td></td><td>|ff7777|Almaty|</td><td>|ff7777|2000900|</td><td>|ff7777|793|</td></tr>
+<tr><td></td><td>|ff7777|Zhengzhou|</td><td>|ff7777|2014125|</td><td>|ff7777|104|</td></tr>
+<tr><td></td><td>|ff7777|Al Başrat al Qadīmah|</td><td>|ff7777|2015483|</td><td>|ff7777|6|</td></tr>
+<tr><td>⇒</td><td>*Kowloon*</td><td>*2019533*</td><td>*92*</td></tr>
+<tr><td></td><td>Johannesburg</td><td>2026469</td><td>1767</td></tr>
+<tr><td></td><td>Dalian</td><td>2035307</td><td>33</td></tr>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 0 - nscanned = 3%</blurb>
+</div>
+
+<div effect="fade-in-out">
+<table>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>|777777|Shijiazhuang|</td><td>|777777|1992474|</td><td>|777777|77|</td></tr>
+<tr><td></td><td>|777777|Medellín|</td><td>|777777|1999979|</td><td>|777777|1500|</td></tr>
+<tr><td></td><td>|ff7777|Almaty|</td><td>|ff7777|2000900|</td><td>|ff7777|793|</td></tr>
+<tr><td></td><td>|ff7777|Zhengzhou|</td><td>|ff7777|2014125|</td><td>|ff7777|104|</td></tr>
+<tr><td></td><td>|ff7777|Al Başrat al Qadīmah|</td><td>|ff7777|2015483|</td><td>|ff7777|6|</td></tr>
+<tr><td></td><td>|ff7777|Kowloon|</td><td>|ff7777|2019533|</td><td>|ff7777|92|</td></tr>
+<tr><td>⇒</td><td>*Johannesburg*</td><td>*2026469*</td><td>*1767*</td></tr>
+<tr><td></td><td>Dalian</td><td>2035307</td><td>33</td></tr>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 0 - nscanned = 4%</blurb>
+</div>
+
+<div effect="fade-in-out">
+<table>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>|777777|Shijiazhuang|</td><td>|777777|1992474|</td><td>|777777|77|</td></tr>
+<tr><td></td><td>|777777|Medellín|</td><td>|777777|1999979|</td><td>|777777|1500|</td></tr>
+<tr><td></td><td>|ff7777|Almaty|</td><td>|ff7777|2000900|</td><td>|ff7777|793|</td></tr>
+<tr><td></td><td>|ff7777|Zhengzhou|</td><td>|ff7777|2014125|</td><td>|ff7777|104|</td></tr>
+<tr><td></td><td>|ff7777|Al Başrat al Qadīmah|</td><td>|ff7777|2015483|</td><td>|ff7777|6|</td></tr>
+<tr><td></td><td>|ff7777|Kowloon|</td><td>|ff7777|2019533|</td><td>|ff7777|92|</td></tr>
+<tr><td></td><td>|77ff77|Johannesburg|</td><td>|77ff77|2026469|</td><td>|77ff77|1767|</td></tr>
+<tr><td>⇒</td><td>*Dalian*</td><td>*2035307*</td><td>*33*</td></tr>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 1 - nscanned = 5%</blurb>
+</div>
+
+<div effect="fade-in-out">
+<table>
+<tr><td></td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>|777777|Shijiazhuang|</td><td>|777777|1992474|</td><td>|777777|77|</td></tr>
+<tr><td></td><td>|777777|Medellín|</td><td>|777777|1999979|</td><td>|777777|1500|</td></tr>
+<tr><td></td><td>|ff7777|Almaty|</td><td>|ff7777|2000900|</td><td>|ff7777|793|</td></tr>
+<tr><td></td><td>|ff7777|Zhengzhou|</td><td>|ff7777|2014125|</td><td>|ff7777|104|</td></tr>
+<tr><td></td><td>|ff7777|Al Başrat al Qadīmah|</td><td>|ff7777|2015483|</td><td>|ff7777|6|</td></tr>
+<tr><td></td><td>|ff7777|Kowloon|</td><td>|ff7777|2019533|</td><td>|ff7777|92|</td></tr>
+<tr><td></td><td>|77ff77|Johannesburg|</td><td>|77ff77|2026469|</td><td>|77ff77|1767|</td></tr>
+<tr><td></td><td>|ff7777|Dalian|</td><td>|ff7777|2035307|</td><td>|ff7777|33|</td></tr>
+<tr><td>⇒</td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+<blurb align="center">%n = 1 - nscanned = 6%</blurb>
+</div>
+</slide>
