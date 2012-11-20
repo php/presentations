@@ -4,7 +4,7 @@
 <blurb>Helps you with finding POIs in a 2D space</blurb>
 
 <example result="0"><![CDATA[<?php
-$m = new Mongo; $c = $m->demo->pubs; $c->drop();
+$m = new MongoClient; $c = $m->demo->pubs; $c->drop();
 
 $c->ensureIndex( array( 'l' => '2d' ) );
 $c->insert([ 'name' => 'Betsy Smith',   'l' => [ -0.193, 51.537 ] ]);

@@ -32,7 +32,7 @@
 
 <div effect="fade-in">
 <example result="1"><![CDATA[<?php
-$m = new Mongo();
+$m = new MongoClient();
 $c = $m->demo->cities;
 
 $res = $c->aggregate( [ 

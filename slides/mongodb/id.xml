@@ -7,7 +7,7 @@
 </list>
 
 <example result="1" stop="true"><![CDATA[<?php
-$m = new Mongo();
+$m = new MongoClient();
 $c = $m->demo->articles;
 
 $c->insert( [ 'name' => 'Derick', '_id' => 'derickr' ] );

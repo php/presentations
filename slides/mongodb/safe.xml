@@ -1,32 +1,31 @@
 <slide>
 <title>Checking for errors</title>
 
-<blurb>So far, we have not checked for whether inserts worked.</blurb>
+<blurb>So far, we have always checked whether inserts worked.</blurb>
 
 <div effect="fade-out">
-<example><![CDATA[<?php
-$m = new Mongo;
+<blurb>Write acknowledged inserts:</blurb>
+<example result="1" stop="true"><![CDATA[<?php
+$m = new MongoClient;
 $c = $m->demo->talks;
 
-$c->insert( array( '_id' => 'derickr' ) );
-$c->insert( array( '_id' => 'derickr' ) );
+try {
+	$c->insert( array( '_id' => 'derickr' ) );
+	$c->insert( array( '_id' => 'derickr' ) );
+} catch ( Exception $e ) {
+    echo $e->getMessage(), "\n";
+}
 ?>]]></example>
 </div>
 
 <div effect="fade-in">
-<blurb>"Safe" inserts:</blurb>
+<blurb>Ignore errors:</blurb>
 <example result="1" stop="true"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient('mongodb://localhost/?w=0');
 $c = $m->demo->talks;
 
-try {
-    $c->insert(
-        array( '_id' => 'derickr' ), // document
-        array( 'safe' => true )      // options
-    );
-} catch ( Exception $e ) {
-    echo $e->getMessage(), "\n";
-}
+$c->insert( array( '_id' => 'derickr' ) );
+$c->insert( array( '_id' => 'derickr' ) );
 ?>]]></example>
 </div>
 </slide>

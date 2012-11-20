@@ -2,7 +2,7 @@
 <title>Distinct</title>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo; $c = $m->demo->pubs; $c->drop();
+$m = new MongoClient; $c = $m->demo->pubs; $c->drop();
 
 $c->insert( [ 'name' => 'Betsy Smith',   'city' => 'London' ] );
 $c->insert( [ 'name' => 'London Tavern', 'city' => 'London' ] );

@@ -2,7 +2,7 @@
 <title>Querying: matching array elements ($elemMatch)</title>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->continent;
 $r = $c->find( array(
     'cities' => array(

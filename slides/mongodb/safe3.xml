@@ -3,16 +3,15 @@
 
 <blurb>Safeness levels:</blurb>
 <list>
-    <bullet>Confirm replication: %array( 'safe' => true, 'w' => 2 );%</bullet>
+    <bullet>Confirm replication: %w=2%</bullet>
 </list>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo( 'mongodb://localhost:13000/?replSet=seta' );
+$m = new MongoClient( 'mongodb://localhost:13000/?replSet=seta&w=2' );
 $c = $m->demo->talks;
 
 $c->insert(
     array( '_id' => 'mongodb' ),      // document
-    array( 'safe' => true, 'w' => 2 ) // options
 );
 ?>]]></example>
 

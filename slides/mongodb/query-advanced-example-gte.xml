@@ -3,7 +3,7 @@
 
 <div effect="fade-out">
 <example><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->cities;
 $c->insert( array( "name" => "Buenos Aires", "population" => 13076300 ) );
 $c->insert( array( "name" => "Dhaka", "population" => 10356500 ) );
@@ -20,7 +20,7 @@ $c->insert( array( "name" => "Mexico City", "population" => 12294193 ) );
 
 <div effect="fade-in">
 <example result="1"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->cities;
 
 $r = $c->find(

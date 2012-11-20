@@ -2,7 +2,7 @@
 <title>Read preferences</title>
 
 <example result="0"><![CDATA[<?php
-$m = new Mongo(
+$m = new MongoClient(
 	'mongodb://localhost:13000/?' .
 	'replicaSet=poiset&readPreference=nearest&readPreferenceTags=dc:asia'
 );
@@ -11,7 +11,7 @@ $c->find(...);
 ?>]]></example>
 <blurb>or:</blurb>
 <example result="0"><![CDATA[<?php
-$m = new Mongo( 'mongodb://localhost:13000/?replicaSet=poiset' );
+$m = new MongoClient( 'mongodb://localhost:13000/?replicaSet=poiset' );
 $c = $m->phpunit->test;
 $c->setReadPreference( Mongo::RP_SECONDARY, array( 'dc' => 'europe' ) );
 $c->find(...);

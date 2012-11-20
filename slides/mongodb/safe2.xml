@@ -3,10 +3,10 @@
 
 <blurb>Safeness levels:</blurb>
 <list>
-	<bullet>Confirm change recorded in memory: %array( 'safe' => true );%</bullet>
+	<bullet>Confirm change recorded in memory: %array( 'w' => 1 );%</bullet>
 	<bullet>Confirm inclusion in journal: %array( 'j' => true );%</bullet>
 	<bullet>Confirm committed to disk: %array( 'fsync' => true );%</bullet>
-	<bullet>Confirm replication: %array( 'safe' => true, 'w' => 2 );%</bullet>
+	<bullet>Confirm replication: %array( 'w' => 2 );%</bullet>
 </list>
 
 <example result="1"><![CDATA[<?php
@@ -21,7 +21,7 @@ $c->insert(
 
 <blurb>From 1.3:</blurb>
 <example result="0"><![CDATA[<?php
-$m = new Mongo('mongodb://localhost/?safe=true');
+$m = new MongoClient('mongodb://localhost/');
 ?>]]></example>
 
 </slide>

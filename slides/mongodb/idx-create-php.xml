@@ -5,7 +5,7 @@
 
 <example><![CDATA[
 <?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->cities;
 
 // Create an index on the name attribute

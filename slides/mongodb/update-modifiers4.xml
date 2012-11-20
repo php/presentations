@@ -6,7 +6,7 @@
     <bullet>%*$bit*% (bitwise updates of field)</bullet>
 </list>
 <example result="1"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->bits;
 $c->remove();
 

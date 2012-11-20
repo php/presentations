@@ -37,7 +37,7 @@ $document = array(
   )
 );
 
-$m = new Mongo();
+$m = new MongoClient();
 var_dump( $m->demo->talks->insert( $document ) );
 ?>]]></example>
 </div>
@@ -59,7 +59,7 @@ $document = [
   ]
 ];
 
-$m = new Mongo();
+$m = new MongoClient();
 var_dump( $m->demo->talks->insert( $document ) );
 ?>]]></example>
 </div>

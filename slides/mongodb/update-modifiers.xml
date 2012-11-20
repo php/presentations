@@ -2,7 +2,7 @@
 <title>Modifying documents</title>
 
 <example><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->presentations;
 $c->remove();
 

@@ -10,7 +10,7 @@ $file = $argv[1];
 
 // 1 ADD: Set variable $m to the connection, and $d to the collection "poi" in
 // the database "demo" on localhost
-$m = new Mongo();
+$m = new MongoClient();
 $d = $m->demo->poi;
 
 // 2 ADD: Drop the collection

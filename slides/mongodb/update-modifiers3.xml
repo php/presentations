@@ -9,7 +9,7 @@
 </list>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->circus; $c->remove();
 $c->insert( array( '_id' => 'circ5', 'name' => 'Funny Led' ) );
 

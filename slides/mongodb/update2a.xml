@@ -6,7 +6,7 @@
 <blurb>You can set an option to get all matching documents to be updated</blurb>
 
 <example result="0"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->products;
 $c->drop();
 

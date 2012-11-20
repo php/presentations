@@ -4,7 +4,7 @@
 <blurb>*upsert*: if the record(s) do not exist, insert one.</blurb>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->elephpants; $c->drop();
 
 function birthDay( $c, $name )

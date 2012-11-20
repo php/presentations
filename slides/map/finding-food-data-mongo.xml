@@ -4,7 +4,7 @@
 <div effect="fade-out">
 <example><![CDATA[<?php
 header('Content-type: text/plain');
-$m = new Mongo( 'mongodb://localhost:27017' );
+$m = new MongoClient( 'mongodb://localhost:27017' );
 $c = $m->demo->poi;
 $c->ensureIndex( array( 'loc' => '2d' ) );
 ]]></example>

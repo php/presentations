@@ -2,7 +2,7 @@
 <title>Querying our dataset</title>
 
 <example>
-$m = new Mongo( 'mongodb://localhost' );
+$m = new MongoClient( 'mongodb://localhost' );
 $d = $m->selectDb( 'demo' );
 
 $wantedD = isset($_GET['d']) ? $_GET['d']: 1;
