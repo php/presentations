@@ -1,0 +1,46 @@
+<slide>
+<title>Exercise #4: Updating</title>
+
+<div effect="fade-out">
+<list>
+    <bullet>Edit %functions.php% to create the update under #3</bullet>
+    <bullet>Things to keep in mind:<list>
+    <bullet>Where do you want to store the values?</bullet>
+    <bullet>Where are you storing the check-ins?</bullet>
+    <bullet>How often do we update?</bullet>
+    <bullet>How do we need to query the data in the future?</bullet>
+    </list></bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<blurb>Expected, something like:</blurb>
+<example>
+foreach( $values as $key => $value )
+{
+    @$values[$key] = (string) $value;
+
+    if ( $values[$key] === '?' || $values[$key] === '' || $values[$key] === 'Array' )
+    {
+        continue;
+    }
+
+    if ( array_key_exists( $key, $this->tags ) )
+    {
+        if ( $values[$key] != $this->tags[$key] )
+        {
+            $updates["possible.$key"] = array( $values[$key], 0 );
+        }
+    }
+    else
+    {
+        $updates["possible.$key"] = array( $values[$key], 0 );
+    }
+}
+
+$update = array( '$addToSet' => $updates );
+$this->d->poi->update( array( '_id' => $this->o['_id'] ), $update );
+</example>
+</div>
+
+</slide>

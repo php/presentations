@@ -1,10 +1,12 @@
 <slide type="title">
+<break lines="6"/>
 <blurb class="event-title">:-:title:-:</blurb>
-<blurb class="event-date">:-:event:-: - :-:location:-: - :-:date:-:</blurb>
-<blurb class="event-presenter">Derick Rethans - :-:email:-: - twitter: @:-:twitter:-:</blurb>
-<blurb class="pres-url-small">:-:joindin:-:</blurb>
+<break lines="1"/>
+<blurb class="event-presenter">Derick Rethans - :-:email:-:</blurb>
+<blurb class="event-presenter">@:-:twitter:-:</blurb>
+<blurb class="event-presenter">:-:joindin:-:</blurb>
 <div class="footer">
-<image align="left" filename="10gen.png" pdf-scale="0.4" x-offset="2" y-offset="12.3"/>
-<image align="right" filename="mongodb.png" pdf-scale="0.4" x-offset="18" y-offset="13.3"/>
+<image align="left" filename="10gen-small.png" pdf-scale="0.4" x-offset="2" y-offset="12.3"/>
+<image align="right" filename="mongodb-small.png" pdf-scale="0.4" x-offset="18" y-offset="13.3"/>
 </div>
 </slide>

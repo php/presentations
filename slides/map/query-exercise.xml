@@ -1,0 +1,20 @@
+<slide>
+<title>Exercise #2: Querying</title>
+
+<list>
+	<bullet>Commit or stash your changes (%git stash%)</bullet>
+	<bullet>%git checkout web%</bullet>
+	<bullet>run: %php -S localhost:9002%</bullet>
+	<bullet>Browse to %http://localhost:9002%</bullet>
+</list>
+<div effect="fade-in">
+<list>
+	<bullet>Edit %fetch-poi.php% to create the queries under #1a, #1b and #1c</bullet>
+	<bullet>Hints:<list>
+		<bullet>A pub is an *amenity*</bullet>
+		<bullet>You can define a regular expression with:<br/>%new MongoRegex( '/…/' );%</bullet>
+	</list></bullet>
+</list>
+</div>
+
+</slide>
