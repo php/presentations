@@ -1,0 +1,17 @@
+<slide>
+<title>Aggregation example</title>
+
+<example result="3"><![CDATA[<?php
+$m = new MongoClient();
+
+$res = $m->demo->poi->aggregate( [
+    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$unwind' => '$tags' ],
+    /* Match again to get rid of all the useless tags */
+    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
+] );
+
+var_dump( $res['result'] );
+?>]]>
+</example>
+</slide>

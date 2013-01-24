@@ -7,6 +7,7 @@
 
 categories:
 { _id: 4, name: "toys",            product_ids: [ 10, 11 ] }
+{ _id: 7, name: "everything blue", product_ids: [ 10 ] }
 { _id: 8, name: "everything pink", product_ids: [ 11 ] }]]></example>
 
 <blurb>All categories for a given product (pink elephpant):</blurb>

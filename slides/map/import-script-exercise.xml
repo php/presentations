@@ -9,6 +9,7 @@
 			<bullet>Cast all values, due to SimpleXML weirdness</bullet>
 			<bullet>%_id% needs to be "n" + the node's ID (in
 			%$node['id']%)</bullet>
+			<bullet>%type% is %1% for nodes</bullet>
 			<bullet>Make sure to add the location (*lon*, *lat*) as a two
 			element array in the %loc% element.</bullet>
 		</list>
@@ -17,6 +18,7 @@
 		<list>
 			<bullet>%_id% needs to be "w" + the node's ID (in
 			%$way['id']%)</bullet>
+			<bullet>%type% is %2% for ways</bullet>
 		</list>
 	</bullet>
 	<bullet>Add the %insert% statement at #2 and #4</bullet>

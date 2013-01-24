@@ -15,4 +15,10 @@
 </div>
 </div>
  {/if}
+ {if get_attribute( $node, 'result' ) == 3 && $result != ""}
+<div class='result'>
+<p>Result:</p>
+<pre>{raw $result}</pre>
+</div>
+ {/if}
 {/if}

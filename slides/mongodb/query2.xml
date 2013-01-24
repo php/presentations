@@ -1,5 +1,5 @@
 <slide>
-<title>Querying (2)</title>
+<title>Querying (with projection)</title>
 
 <example result="0"><![CDATA[<?php
 $m = new MongoClient();

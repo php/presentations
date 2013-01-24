@@ -1,5 +1,5 @@
 <slide>
-<title>Querying (1)</title>
+<title>Querying (one document)</title>
 
 <example><![CDATA[<?php
 $m = new MongoClient();
