@@ -1,0 +1,24 @@
+<slide title="">
+
+<blurb fontsize="6em">What was he thinking?</blurb>
+
+<list>
+<bullet fontsize="3em" marginleft="2em" type="none">Case insensitive function names?</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">Naming inconsistencies?</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">What's with the $ signs?</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">register_globals?</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">magic_quotes?</bullet>
+</list>
+
+<blurb fontsize="6em">OMGWTFBBQ?</blurb>
+<example hide="0" result="0" title="" marginleft="10em" fontsize="1.6em"><![CDATA[<?php
+array_search($needle, $haystack);
+strstr($haystack, $needle);
+in_array($needle, $haystack);
+substr_count($haystack, $needle);
+array_key_exists($needle, $haystack);
+strchr($haystack, $needle);
+]]></example>
+
+
+</slide>

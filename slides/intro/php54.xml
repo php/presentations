@@ -1,7 +1,7 @@
 <slide title="PHP 5.4">
 
 <break lines="1" />
-<blurb fontsize="4em">Broad Performance Improvements</blurb>
+<blurb fontsize="6em">Broad Performance Improvements</blurb>
 <list>
 <item>FastCGI request handling</item>
 <item>better memory handling</item>
@@ -65,8 +65,6 @@ $func(); // Outputs: Bar
 <break lines="1" />
 <blurb fontsize="4em">✔ Better support for asian chars in htmlspecialchars/htmlentities</blurb>
 
-<break lines="1" />
-<blurb fontsize="4em">✔ default charset is UTF-8 instead of ISO-8859-1</blurb>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Multibyte support is now configurable at runtime</blurb>
@@ -81,15 +79,33 @@ class Foo implements JsonSerializable {
         return array('data'=>$this->data);
     }
 }
-echo json_encode(new Foo); // Outputs: {"data":"Bar"}
-?>]]></example>
+echo json_encode(new Foo); // Outputs: {"data":"Bar"}]]></example>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ mysqlnd used by default everywhere</blurb>
 
+<break lines="1" />
+<blurb fontsize="4em">✔ iterator support added to mysqli (mysqli_result implements Traversable)</blurb>
+
+<break lines="1" />
 <blurb fontsize="4em">✔ Binary notation</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 $mask = 0b010101;
 ]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ AES Support added to OpenSSL</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Tokyo Cabinet and DB5 support added to dba</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Added stack frame count arg to debug_backtrace()</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ $_SERVER['REQUEST_TIME_FLOAT'] added</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Apache 2.4 support on Windows</blurb>
 
 </slide>
