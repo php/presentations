@@ -10,7 +10,7 @@ db.cities.ensureIndex( { name: 1 } );
 // Create a compound index on country code and feature code
 db.cities.ensureIndex( { country_code: 1, feature_code: 1 } );
 
-// Create a unique index on the area field of timezone:
+// Create an index on the area field of timezone:
 db.cities.ensureIndex( { 'timezone.area': 1 } );
 </example>
 </slide>

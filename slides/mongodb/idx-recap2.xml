@@ -1,5 +1,5 @@
 <slide>
-<title>Indexes Recap (2)</title>
+<title>Indexes (2)</title>
 
 <blurb>Be aware of redundant indexes. Order is important. With an index on<br/> %{ dem: 1, population: 1 }%:</blurb>
 <list>

@@ -13,6 +13,4 @@ xdebug_stop_code_coverage();</example>
 		<bullet>XDEBUG_CC_UNUSED: Enables scanning of code to figure out which line has executable code.</bullet>
 		<bullet>XDEBUG_CC_DEAD_CODE: Enables branch analyzation to figure out whether code can be executed.</bullet>
 	</list>
-
-	<link target="new" href="http://kossu/coverage/index.html">demo</link>
 </slide>

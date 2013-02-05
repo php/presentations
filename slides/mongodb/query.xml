@@ -1,8 +1,8 @@
 <slide>
-<title>Querying (1)</title>
+<title>Querying (one document)</title>
 
 <example><![CDATA[<?php
-$m = new Mongo();
+$m = new MongoClient();
 // First "found" item:
 $record = $m->demo->talks->findOne();
 

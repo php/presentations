@@ -1,0 +1,22 @@
+<slide>
+<title>Querying our dataset</title>
+
+<example>
+$m = new MongoClient( 'mongodb://localhost' );
+$d = $m->selectDb( 'demo' );
+
+$wantedD = isset($_GET['d']) ? $_GET['d']: 1;
+$query = array( 'tags' => array( '$not' => array( '$size' => 0 ) ) );
+
+$s = $d->command(
+    array(
+        'geoNear' => 'poi',
+        'spherical' => true,
+        'near' => array( (float) $_GET['lon'], (float) $_GET['lat'] ),
+        'num' => 250,
+        'maxDistance' => $wantedD / 6371.01,
+        'query' => $query,
+    )
+);
+</example>
+</slide>

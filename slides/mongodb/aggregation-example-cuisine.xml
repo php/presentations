@@ -1,0 +1,25 @@
+<slide>
+<title>Aggregation example</title>
+
+<example>
+…
+{
+	"_id" : "n1996641853",
+	"tags" : [
+		"amenity=restaurant",
+		"cuisine=japanese",
+		"name=Kaiseki"
+	]
+}
+{
+	"_id" : "n1618702957",
+	"tags" : [
+		"amenity=fast_food",
+		"cuisine=kebab",
+		"name=Pita Durum"
+	]
+}
+…
+</example>
+<blurb>We want all different cuisines, with their usage count</blurb>
+</slide>

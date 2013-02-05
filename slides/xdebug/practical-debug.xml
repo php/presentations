@@ -12,8 +12,8 @@
 
 <break/>
 	<blurb>Browser extensions:</blurb>
-	<list>
-		<bullet>easy Xdebug: <link href="https://addons.mozilla.org/en-US/firefox/addon/58688"/></bullet>
-		<bullet>Xdebug Helper: <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></bullet>
-	</list>
+	<blurb class="small_blurb">easy xdebug (firefox): <link href="https://addons.mozilla.org/en-us/firefox/addon/58688"/></blurb>
+	<blurb class="small_blurb">xdebug helper (chrome): <link href="https://chrome.google.com/extensions/detail/eadndfjplgieldjbigjakmdgkmoaaaoc"/></blurb>
+	<blurb class="small_blurb">xdebug toggler for safari: <link href="https://github.com/benmatselby/xdebug-toggler"/></blurb>
+	<blurb class="small_blurb">xdebug launcher for opera: <link href="https://addons.opera.com/addons/extensions/details/xdebug-launcher/?display=en"/></blurb>
 </slide>

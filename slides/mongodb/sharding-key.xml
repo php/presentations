@@ -1,0 +1,23 @@
+<slide>
+<title>Sharding: How does it work?</title>
+
+<list>
+	<bullet>Sharding happens on a collection level</bullet>
+	<bullet>The sharding key determines how data is distributed</bullet>
+</list>
+
+<example>db.runCommand( {
+	shardcollection: "demo.cities",
+	key: { name: 1 }
+} );</example>
+<break />
+
+<list>
+	<bullet>Data is stored in chunks, each with a maximum size of 64MB</bullet>
+	<bullet>A chunk contains data in the form of a subsection of the shard key</bullet>
+	<bullet>*mongos* makes sure that chunks are distributed</bullet>
+	<bullet>Chunk meta-data is stored in the *config servers*</bullet>
+	<bullet>Each shard is a replica-set</bullet>
+</list>
+
+</slide>

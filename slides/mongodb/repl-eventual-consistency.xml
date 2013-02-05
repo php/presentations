@@ -1,0 +1,19 @@
+<slide>
+<title>Eventual consistency</title>
+
+<list>
+    <bullet>Read Preference / Slave Okay
+		<list>
+			<bullet>driver will always send writes to Primary</bullet>
+			<bullet>driver will send read requests to Secondaries</bullet>
+		</list>
+	</bullet>
+
+    <bullet>Warning!
+		<list>
+			<bullet>Secondaries may be out of date</bullet>
+			<bullet>Not applicable for all applications</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

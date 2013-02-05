@@ -1,0 +1,38 @@
+<slide>
+<title>How MongoDB replication works</title>
+
+<break lines="2"/>
+<div effect="fade-out">
+<image filename="repl-set-down.png"/>
+
+<list>
+	<bullet>PRIMARY may fail</bullet>
+	<bullet>Automatic election of new PRIMARY if majority exists</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<image filename="repl-set-new-primary.png"/>
+
+<list>
+	<bullet>New PRIMARY elected</bullet>
+	<bullet>Replicaset re-established</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out stop">
+<image filename="repl-set-recovering.png"/>
+
+<list>
+	<bullet>Automatic recovery</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<image filename="repl-set-recovered.png"/>
+
+<list>
+	<bullet>Replicaset re-established</bullet>
+</list>
+</div>
+</slide>

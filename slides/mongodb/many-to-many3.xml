@@ -7,10 +7,11 @@
 
 categories:
 { _id: 4, name: "toys"           }
+{ _id: 7, name: "everything blue"}
 { _id: 8, name: "everything pink"}]]></example>
 
 <blurb>All categories for a given product (pink elephpant):</blurb>
-<example>product = db.products.find( { category_ids: 4 } );
+<example>product = db.products.find( { _id: 11 } );
 db.categories.find( { _id: { $in: product.category_ids } } );</example>
 <break/>
 

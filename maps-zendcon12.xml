@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation 
+	template="css" 
+	navmode="html"
+	navbarbackground="#4373b4"
+	navbartopiclinks="0"
+	navColor="#f1fbff"
+	logo1=""
+	backgroundfixed="1" >
+<topic>Maps</topic>
+<title>OpenStreetMap is awesome</title>
+<event>ZendCon 2012 - uncon</event>
+<location>Santa Clara, US</location>
+<date>October 24th, 2012</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<joindin>http://joind.in/7595</joindin>
+<url>http://derickrethans.nl/talks.html</url>
+<slide>slides/map/title.xml</slide>
+
+<!--
+In this talk I will be explaining the strong points of OpenStreetMap and why
+using GoogleMaps for your websites is generally a bad idea. Contrary to popular
+belief, GoogleMaps isn't as amazing as it looks and they are a lot more evil
+than they look. OpenStreetMap's data is also easily accessible for use in PHP
+applications and the generated tiles can easily be embedded into a Web 2.0
+application. Its open nature is a welcome and powerful geo database that can be
+added to and used in whatever way imaginary.
+-->
+
+<!--
+What is X?
+-->
+<slide>slides/map/what-is-googlemaps.xml</slide>
+<slide>slides/map/osm-what.xml</slide>
+<slide>slides/map/what-is-osm.xml</slide>
+<slide>slides/map/osm-mapping-party.xml</slide>
+<slide>slides/map/osm-editors.xml</slide>
+<slide>slides/map/osm-kibera.xml</slide>
+<slide>slides/map/gmm-korogocho.xml</slide>
+<slide>slides/map/mapping-belarus.xml</slide>
+<slide>slides/map/osm-data-uses.xml</slide>
+<slide>slides/map/terms-and-conditions.xml</slide>
+<slide>slides/map/gmaps-bad-data1.xml</slide>
+<slide>slides/map/gmaps-bad-data3.xml</slide>
+
+<!--
+// mapping party rip off: http://google-latlong.blogspot.com/2010/12/mapping-korogocho.html
+<div effect="fade-in-out"><iframe filename='http://tools.geofabrik.de/mc/?mt0=mapnik&amp;mt1=googlemap&amp;lon=36.88608&amp;lat=-1.25629&amp;zoom=16'/></div>
+<blurb>Related projects include:</blurb>
+<list>
+	<bullet>The rendered map at http://openstreetmap.org</bullet>
+	<bullet>OpenLayers (http://openlayers.org/) and LeafLet (http://leaflet.cloudmade.com/) as JavaScript mapping libraries</bullet>
+	<bullet>Different renderings: OpenCycleMap (http://opencyclemap.org/), OpenSeaMap (http://openseamap.org), OpenBusMap (http://openbusmap.org/), OpenPisteMap (http://openpistemap.org/), WheelMap (http://wheelmap.org/en)</bullet>
+</list>
+
+
+
+tblisi:
+<div effect="fade-in-out"><iframe filename='http://tools.geofabrik.de/mc/?mt0=mapnik&amp;mt1=googlemap&amp;lat=41.7292&amp;lon=44.7735&amp;zoom=13'/></div>
+
+// bad data (in hampstead heath)
+<div effect="fade-in-out"><iframe filename='http://tools.geofabrik.de/mc/?mt0=mapnik&amp;mt1=googlemap&amp;lon=-0.16797&amp;lat=51.55532&amp;zoom=17'/></div>
+
+
+
+latlon-buildings
+<div effect="fade-in-out"><iframe filename="http://latlon.org/buildings?lat=48.73813&lon=9.11073&zoom=17&layers=BT"/></div>
+-->
+
+<slide>slides/map/resources.xml</slide>
+
+</presentation>

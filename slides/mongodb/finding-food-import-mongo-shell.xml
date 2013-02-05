@@ -1,0 +1,73 @@
+<slide>
+<title>Think about the data schema!</title>
+
+<div effect="fade-out">
+<example>
+use poi;
+doc = {
+    'name' : 'A440',
+    'tags' : {
+        'highway' : 'secondary',
+        'oneway' : 'yes'
+    }
+};
+db.poi.ensureIndex( { 'name' : 1 } );
+db.poi.ensureIndex( { 'tags.highway' : 1 } );
+db.poi.ensureIndex( { 'tags.oneway' : 1 } );
+
+// Road with name=Strand
+db.poi.find( { 'name' : 'Strand' } );
+// All roads
+db.poi.find( { 'tags.highway' : { '$exists' :  1 } } );
+</example>
+<list>
+    <bullet>Lots of indexes are required</bullet>
+    <bullet>Easy to extract data from</bullet>
+</list>
+</div>
+<div effect="fade-in-out">
+<blurb>or:</blurb>
+<example>doc = {
+    'tags' : {
+        { 'k' : 'name', 'v' : 'A440' },
+        { 'k' : 'highway', 'v' : 'secondary' },
+        { 'k' : 'oneway', 'v' : 'yes' }
+    }
+);
+db.poi.ensureIndex( { 'tags.v' : 1, 'tags.k' : 1 } );
+
+// Road with name=Strand
+db.poi.find( {
+    'tags' : { '$elemMatch' : { 'k' : 'name', 'v' : 'Strand' } }
+} );
+// All roads
+db.poi.find( { 'tags.k' : 'highway' } );
+</example>
+<list>
+    <bullet>One index required</bullet>
+    <bullet>Good for finding key/value combinations</bullet>
+    <bullet>Extra index needed for "all roads" question (on %tags_indexed.k%)</bullet>
+</list>
+</div>
+<div effect="fade-in">
+<blurb>or:</blurb>
+<example>doc = {
+    'tags' : {
+        'name=A440',
+        'highway=secondary',
+        'oneway=yes'
+    }
+);
+db.poi.ensureIndex( { 'tags' : 1 } );
+
+// Road with name=Strand
+db.poi.find( { 'tags' : 'name=Strand' } );
+// All roads
+db.poi.find( { 'tags' : /^highway=/ } );</example>
+<list>
+    <bullet>One index required</bullet>
+    <bullet>Good for finding key/value combinations</bullet>
+    <bullet>Good enough for doing the "all roads" question</bullet>
+</list>
+</div>
+</slide>

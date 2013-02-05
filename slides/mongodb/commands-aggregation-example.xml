@@ -2,7 +2,7 @@
 <title>Aggregation Example</title>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo; $d = $m->demo; $c = $d->articles; $c->drop();
+$m = new MongoClient; $d = $m->demo; $c = $d->articles; $c->drop();
 
 $c->insert( [
     "title" => "Profiling PHP Applications",

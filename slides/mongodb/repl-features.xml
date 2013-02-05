@@ -1,0 +1,13 @@
+<slide>
+<title>Replicaset features</title>
+
+<list>
+    <bullet>A cluster of N servers</bullet>
+    <bullet>All writes to primary</bullet>
+    <bullet>Reads can be from primary (default) or a secondary</bullet>
+    <bullet>Any (one) node can be primary</bullet>
+    <bullet>Consensus election of primary</bullet>
+    <bullet>Automatic failover</bullet>
+    <bullet>Automatic recovery</bullet>
+</list>
+</slide>

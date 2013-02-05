@@ -1,0 +1,25 @@
+<slide>
+<title>Tags as a key/value combination</title>
+
+<example>$doc = array(
+    'name' => 'A440',
+    'tags' => [
+        'highway' => 'secondary',
+        'oneway' => 'yes'
+    ]
+);
+$db->poi->ensureIndex( [ 'name' => 1 ] );
+$db->poi->ensureIndex( [ 'tags.highway' => 1 ] );
+$db->poi->ensureIndex( [ 'tags.oneway' => 1 ] );
+
+// Road with name=Strand
+$db->poi->find( [ 'name' => 'Strand' ] );
+// All roads
+$db->poi->find( [ 'tags.highway' => [ '$exists' =>  1 ] ] );
+</example>
+<list>
+    <bullet>Lots of indexes are required</bullet>
+    <bullet>Easy to extract data from</bullet>
+</list>
+</slide>
+

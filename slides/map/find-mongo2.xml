@@ -1,0 +1,47 @@
+<slide>
+<title>Converting to GEOJson</title>
+
+<example>
+foreach( $s['results'] as $res)
+{
+    $o = $res['obj'];
+    $ret = array(
+        'type' => 'Feature',
+        'properties' => array( 'popupContent' => '' ),
+    );
+    if ( isset( $o['tags'] ) ) {
+        $name = $content = '';
+        foreach ( $o['tags'] as $tagName => $value ) {
+            list( $tagName, $value ) = explode( '=', $value );
+            if ( $tagName == 'name' ) {
+                $name = $value; 
+            } else {
+                $content .= "<br/>{$tagName}: {$value}\n";
+            }
+        }
+        $ret['properties']['popupContent'] = "<b>{$name}</b>" . $content;
+    }
+    if ($o['type'] == 1) {
+        $ret['geometry'] = array(
+            'type' => "Point",
+            'coordinates' => $o['loc']
+        );
+    }
+    if ($o['type'] == 2) {
+        if ($o['loc'][0] == $o['loc'][count($o['loc']) - 1]) {
+            $ret['geometry'] = array(
+                'type' => "Polygon",
+                'coordinates' => array($o['loc']),
+            );
+        } else {
+            $ret['geometry'] = array(
+                'type' => "LineString",
+                'coordinates' => $o['loc'],
+            );
+        }
+    }
+    $rets[] = $ret;
+}
+echo json_encode( $rets, JSON_PRETTY_PRINT );
+</example>
+</slide>

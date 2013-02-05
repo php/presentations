@@ -1,4 +1,13 @@
 <slide>
 <title>Bad data</title>
-<div><iframe filename='http://tools.geofabrik.de/mc/?mt0=mapnik&amp;mt1=googlemap&amp;lat=41.7292&amp;lon=44.7735&amp;zoom=13'/></div>
+
+<blurb>Sarajevo</blurb>
+<iframe filename='http://tools.geofabrik.de/mc/?mt0=mapnik&amp;mt1=googlemap&amp;lat=43.858494758&amp;lon=18.4295868873&amp;zoom=14'/>
+
+<blurb>Santa Clara Convention Center</blurb>
+<iframe filename='http://tools.geofabrik.de/mc/?mt0=mapnik&amp;mt1=googlemap&amp;lat=37.399553060&amp;lon=-121.973776&amp;zoom=15'/>
+
+<blurb>Google Campus</blurb>
+<iframe filename='http://tools.geofabrik.de/mc/?mt0=mapnik&amp;mt1=googlemap&amp;lat=37.4225074&amp;lon=-122.0888221&amp;zoom=18'/>
+
 </slide>

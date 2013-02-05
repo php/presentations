@@ -17,8 +17,8 @@ $i = $d1->diff( $d2 );
 
 // displaying the difference
 echo $i->format( '%a days, %h hours, %i minutes' ), "\n";
+echo $i->format( '%m months, %d days, %h hours, %i minutes' ), "\n";
 ?>]]></example>
-<break lines="2"/>
 	<example><![CDATA[<?php
 // create from string
 $i = DateInterval::createFromDateString( "next weekday" );

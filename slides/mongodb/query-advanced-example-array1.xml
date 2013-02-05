@@ -3,7 +3,7 @@
 
 <div effect="fade-out">
 <example result="2"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->continent; $c->drop();
 $c->insert( array(
     'name' => 'South America',
@@ -28,7 +28,7 @@ meter.</blurb>
 
 <div effect="fade-in">
 <example result="1"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->continent;
 $r = $c->find( array(
     'cities.population' => array( '$gte' => 11000000 ),

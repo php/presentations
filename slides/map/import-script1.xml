@@ -1,0 +1,25 @@
+<slide>
+<title>The import script (1)</title>
+
+<list>
+	<bullet>Open file with XML Reader</bullet>
+	<bullet>Loop over all nodes, and:
+		<list>
+			<bullet>Store their latitude/longitude in an array</bullet>
+			<bullet>If the node has tags, store the node in the database</bullet>
+		</list>
+		<example>
+"_id" : "n105",
+"type" : NumberLong(1),
+"loc" : [ -0.1430911, 51.5238028 ],
+"tags" : [ "amenity=pub", "name=The Green Man" ]
+		</example>
+	</bullet>
+	<bullet>Loop over all the ways, and:
+		<list>
+			<bullet>Look up locations for each node in the node array</bullet>
+			<bullet>Store the way into the database</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

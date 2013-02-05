@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>Maps</topic>
+<title>Store a city, a country or even a planet in your DB</title>
+<event>MongoDB Meet-up #9</event>
+<location>London, UK</location>
+<date>November 26th, 2012</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<joindin></joindin>
+<slide>slides/map/title.xml</slide>
+
+<!--
+In this talk I will be explaining the strong points of OpenStreetMap and why
+using GoogleMaps for your websites is generally a bad idea. Contrary to popular
+belief, GoogleMaps isn't as amazing as it looks and they are a lot more evil
+than they look. OpenStreetMap's data is also easily accessible for use in PHP
+applications and the generated tiles can easily be embedded into a Web 2.0
+application. Its open nature is a welcome and powerful geo database that can be
+added to and used in whatever way imaginary.
+-->
+
+<!--
+What is X?
+-->
+<slide>slides/map/osm-what.xml</slide>
+
+<slide>slides/map/osm-data.xml</slide>
+
+<slide>slides/map/osm-tags1.xml</slide>
+<slide>slides/map/osm-tags2.xml</slide>
+<slide>slides/map/osm-tags3.xml</slide>
+<slide>slides/map/osm-tags4.xml</slide>
+
+<slide>slides/map/osm-xapi.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data3.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data4.xml</slide>
+<slide>slides/mongodb/osm-schema1.xml</slide>
+<slide>slides/mongodb/osm-schema2.xml</slide>
+<slide>slides/mongodb/osm-schema3.xml</slide>
+<slide>slides/map/finding-food-import-mongo2.xml</slide>
+<slide>slides/map/import-script1.xml</slide>
+<slide>slides/map/import-sizes1.xml</slide>
+<slide>slides/map/import-script2.xml</slide>
+
+<slide>slides/mongodb/idx-geo.xml</slide>
+<slide>slides/mongodb/idx-geo2.xml</slide>
+<slide>slides/mongodb/idx-geo3.xml</slide>
+
+<slide>slides/map/find-mongo.xml</slide>
+<slide>slides/map/finding-food-take2.xml</slide>
+
+<slide>slides/map/mongo-country.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+<slide>slides/mongodb/idx-geo-geohash.xml</slide>
+<slide>slides/map/find-mongo2.xml</slide>
+<slide>slides/map/find-mongo-html.xml</slide>
+
+</presentation>

@@ -1,0 +1,18 @@
+<slide>
+<title>Application specific tools</title>
+
+<blurb>mongostat:</blurb>
+<example>
+insert  query update delete getmore command flushes mapped  vsize    res faults  locked db idx miss %     qr|qw   ar|aw  netIn netOut  conn       time 
+     0   2260      0      0       0       2       0  3.44g  7.19g    73m      0 phpunit:0.0%        0       0|0     1|0   201k   478m     2   08:46:23 
+    22   1071      0      0       0      43       0  3.44g  7.19g    83m      0 phpunit:1.8%        0       0|0     0|0     3m   233m     2   08:46:24 
+     0      0      0      0       0       1       0  3.44g  7.19g    73m      0 test2:0.0%          0       0|0     0|0    62b     3k     2   08:46:25 
+     0      0      0      0       0       1       0  3.44g  7.19g    73m      0 test2:0.0%          0       0|0     0|0    62b     3k     2   08:46:26 
+    42      0      0      0       0      42       0  3.44g  7.19g    85m      9 phpunit:2.1%        0       0|0     0|1    10m     6k     2   08:46:27 
+   120     77      0      0       0     122       0  3.44g  7.19g   148m    139 phpunit:70.2%       0       0|0     0|0    31m    19m     2   08:46:28 
+    34    117      0      0       0      47       0  3.44g  7.19g   129m      0 phpunit:1.2%        0       0|0     0|0     8m    30m     2   08:46:29 
+     0      0      0      0       0       1       0  3.44g  7.19g   113m      0     .:0.2%          0       0|0     0|0    62b     3k     2   08:46:30 
+     0      0      0      0       0       1       0  3.44g  7.19g   105m      0     .:0.2%          0       0|0     0|0    62b     3k     2   08:46:31 
+     0      0      0      0       0       1       0  3.44g  7.19g   105m      0 test2:0.0%          0       0|0     0|0    62b     3k     2   08:46:32 
+</example>
+</slide>

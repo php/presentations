@@ -1,0 +1,11 @@
+<slide>
+<title>How MongoDB replication works</title>
+
+<break lines="2"/>
+<image filename="repl-set1.png"/>
+
+<list>
+	<bullet>Set is made up of 2 or more nodes</bullet>
+	<bullet>It makes most sense to have an *odd* number of nodes</bullet>
+</list>
+</slide>

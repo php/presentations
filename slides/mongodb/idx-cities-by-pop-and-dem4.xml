@@ -16,4 +16,10 @@ db.cities.find( { population: { $gte: 2000000 }, dem: { $gte : 1654 } } )
 ...
 </example>
 
+<list>
+	<bullet>Batch and sort results in memory</bullet>
+	<bullet>No streaming (with getMore) of results</bullet>
+	<bullet>32 MB data limit for sorting</bullet>
+</list>
+
 </slide>

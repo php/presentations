@@ -1,0 +1,16 @@
+<slide>
+<title>How does replication work?</title>
+
+<list>
+    <bullet>Change operations are written to the oplog
+		<list>
+		<bullet>The oplog is a capped collection (fixed size)
+			<list>
+			<bullet>Must have enough space to allow new secondaries to catch up after copying from a primary</bullet>
+			<bullet>Must have enough space to cope with any applicable slaveDelay</bullet>
+		</list></bullet>
+	</list></bullet>
+    <bullet>Secondaries query the primary's oplog and apply what they find</bullet>
+    <bullet>All replicas contain an oplog</bullet>
+</list>
+</slide>

@@ -1,8 +1,8 @@
 <slide>
 <title>Updating documents</title>
 
-<example result="0"><![CDATA[<?php
-$m = new Mongo;
+<example result="1"><![CDATA[<?php
+$m = new MongoClient;
 $c = $m->demo->elephpants;
 $c->remove();
 

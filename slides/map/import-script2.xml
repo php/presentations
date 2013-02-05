@@ -1,0 +1,30 @@
+<slide>
+<title>The import script (2)</title>
+
+<list>
+	<bullet>Open file with XML Reader</bullet>
+	<bullet>Loop over all nodes, and:
+		<list>
+			<bullet>*Store the node in the database*</bullet>
+		</list>
+	</bullet>
+	<bullet>Loop over all the ways, and:
+		<list>
+			<bullet>*Look up locations for each node in the database*</bullet>
+			<bullet>Store the way into the database</bullet>
+		</list>
+	</bullet>
+	<bullet>Memory usage: 1.3 MB </bullet>
+	<bullet>But quite a bit slower</bullet>
+</list>
+<example>
+"count" : 2253986,
+"size" : 213572964,
+"avgObjSize" : 94.7534563213791,
+"storageSize" : 339603456,
+"totalIndexSize" : 354830224,
+"indexSizes" : {
+  "_id_" : 118846336, "loc_2d" : 74156320, "tags_1" : 161827568
+},
+</example>
+</slide>

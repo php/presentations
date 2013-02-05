@@ -1,0 +1,10 @@
+<slide>
+<title>Sharding: config server</title>
+
+<list>
+	<bullet>Three of them</bullet>
+	<bullet>Changes use two phase commit</bullet>
+	<bullet>If any are down, meta-data goes read-only</bullet>
+	<bullet>System is online, as long as one is up</bullet>
+</list>
+</slide>

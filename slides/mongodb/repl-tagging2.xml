@@ -1,0 +1,15 @@
+<slide>
+<title>Tagging</title>
+
+<list>
+    <bullet>Control over where data is written to.</bullet>
+    <bullet>Each member can have one or more tags:
+	<example>
+tags: {dc: "stockholm"}
+tags: {dc: "stockholm",
+       ip: "192.168",
+       rack: "row3-rk7"}</example></bullet>
+    <bullet>Replica set defines rules for where data resides</bullet>
+    <bullet>Rules can change without change application code</bullet>
+</list>
+</slide>

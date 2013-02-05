@@ -1,0 +1,29 @@
+<slide>
+<title>Tags as dictionary</title>
+
+<example>$doc = array(
+    'tags' => [
+        [ 'k' => 'name', 'v' => 'A440' ],
+        [ 'k' => 'highway', 'v' => 'secondary' ],
+        [ 'k' => 'oneway', 'v' => 'yes' ]
+    ]
+);
+$db->poi->ensureIndex( [ 'tags.v' => 1, 'tags.k' => 1 ] );
+
+// Road with name=Strand
+$db->poi->find( [
+    'tags' => [ '$elemMatch' => [ 'k' : 'name', 'v' : 'Strand' ] ]
+] );
+// All roads
+$db->poi->find( [ 'tags.k' => 'highway' ] );
+</example>
+<list>
+    <bullet>Two indexes required:
+		<list>
+		    <bullet>one for key/value combinations</bullet>
+		    <bullet>one for "all roads" question (on %tags_indexed.k%)</bullet>
+		</list>
+	</bullet>
+    <bullet>Good for finding key/value combinations</bullet>
+</list>
+</slide>

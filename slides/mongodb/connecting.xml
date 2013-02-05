@@ -5,7 +5,7 @@
 <break />
 
 <example><![CDATA[<?php
-$m = new Mongo();
+$m = new MongoClient();
 $database = $m->demo;
 $collection = $database->testCollection;
 ?>]]>
@@ -14,8 +14,8 @@ $collection = $database->testCollection;
 
 <blurb>Different connection strings:</blurb>
 <list>
-	<bullet>%new Mongo("mongodb://localhost");%</bullet>
-	<bullet>%new Mongo("mongodb://localhost:29000");%</bullet>
-	<bullet>%new Mongo("mongodb://mongo.example.com");%</bullet>
+	<bullet>%new MongoClient("mongodb://localhost");%</bullet>
+	<bullet>%new MongoClient("mongodb://localhost:29000");%</bullet>
+	<bullet>%new MongoClient("mongodb://mongo.example.com");%</bullet>
 </list>
 </slide>

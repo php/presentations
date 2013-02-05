@@ -1,0 +1,22 @@
+<slide>
+<title>Tags as concatenated strings</title>
+
+<example>$doc = array(
+    'tags' => [
+        'name=A440',
+        'highway=secondary',
+        'oneway=yes'
+    ]
+);
+$db->poi->ensureIndex( [ 'tags' => 1 ] );
+
+// Road with name=Strand
+$db->poi->find( [ 'tags' => 'name=Strand' ] );
+// All roads
+$db->poi->find( [ 'tags' => new MongoRegex( '/^highway=/' ) ] );</example>
+<list>
+    <bullet>One index required</bullet>
+    <bullet>Good for finding key/value combinations</bullet>
+    <bullet>Good enough for doing the "all roads" question</bullet>
+</list>
+</slide>

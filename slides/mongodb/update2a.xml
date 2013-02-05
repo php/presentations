@@ -6,17 +6,18 @@
 <blurb>You can set an option to get all matching documents to be updated</blurb>
 
 <example result="0"><![CDATA[<?php
-$m = new Mongo;
-$c = $m->demo->elephpants;
+$m = new MongoClient;
+$c = $m->demo->products;
 $c->drop();
 
-$c->insert( [ '_id' => 'e42', 'name' => 'Kamubpo', 'age' => 17 ] );
-$c->insert( [ '_id' => 'e43', 'name' => 'Denali',  'age' => 17 ] );
+$c->insert( [ '_id' => 'blue-elephpant',  'generation' => 1, 'price' => 7.5 ] );
+$c->insert( [ '_id' => 'pink-elephpant',  'generation' => 2, 'price' => 8.0 ] );
+$c->insert( [ '_id' => 'green-elephpant', 'generation' => 3, 'price' => 7.5 ] );
 
 $c->update(
-    [ 'age' => 17 ],                // criteria
-    [ '$inc' => [ 'age' => 1 ] ],   // update spec
-    [ 'multiple' => true ]          // options: multiple
+    [ 'generation' => [ '$lte' => 2 ] ],  // criteria
+    [ '$dec' => [ 'price' => 2.0 ] ],     // update spec
+    [ 'multiple' => true ]                // options: multiple
 );
 ?>]]></example>
 </slide>

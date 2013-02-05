@@ -1,0 +1,15 @@
+<slide>
+<title>Aggregation example</title>
+
+<example result="3"><![CDATA[<?php
+$m = new MongoClient();
+
+$res = $m->demo->poi->aggregate( [
+    /* First we match all documents that have a cuisine tag: */ 
+    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
+] );
+
+var_dump( $res['result'] );
+?>]]>
+</example>
+</slide>

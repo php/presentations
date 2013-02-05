@@ -1,0 +1,18 @@
+<slide>
+<title>Replicaset (multiple zones)</title>
+
+<image filename="repl-set4.png"/>
+
+<list>
+	<bullet>Single datacentre</bullet>
+	<bullet>Multiple power/network zones</bullet>
+	<bullet>Automatic recovery of single node crash</bullet>
+	<bullet>w=2 viable as 2 out of 3 nodes available</bullet>
+	<bullet>Points of failure:
+		<list>
+			<bullet>Datacentre</bullet>
+			<bullet>Two node failure</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

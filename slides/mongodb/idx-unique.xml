@@ -27,7 +27,7 @@ demo.cities.$country_code_1_name_1  dup key: { : "AR", : "San Pedro" }
 </div>
 
 <div effect="fade-in">
-<blurb>You can force the index with *dropDups* (|f10000|This could delete a lot of data!|):</blurb>
+<blurb>You can force the index with *dropDups* (|ff9999|This could delete a lot of data!|):</blurb>
 
 <example inline="1">
 > db.cities.ensureIndex( { country_code: 1, name: 1 },

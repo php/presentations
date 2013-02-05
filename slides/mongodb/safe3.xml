@@ -3,16 +3,19 @@
 
 <blurb>Safeness levels:</blurb>
 <list>
-    <bullet>Confirm replication: %array( 'safe' => true, 'w' => 2 );%</bullet>
+    <bullet>Confirm replication: %w=2%</bullet>
 </list>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo( 'mongodb://localhost:13000' );
+$m = new MongoClient( 'mongodb://localhost:13000/?replSet=seta&w=2' );
 $c = $m->demo->talks;
 
-$c->insert(
-    array( '_id' => 'mongodb' ),      // document
-    array( 'safe' => true, 'w' => 2 ) // options
-);
+$c->insert( array( '_id' => 'mongodb' ) );
+$c->insert( array( '_id' => 'mongodb' ) );
 ?>]]></example>
+
+<list>
+	<bullet>%w != 0% automatically enables "getLastError"</bullet>
+	<bullet>%w > 1% means that the extra nodes have read from the oplog</bullet>
+</list>
 </slide>

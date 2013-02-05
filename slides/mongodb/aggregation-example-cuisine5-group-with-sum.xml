@@ -1,0 +1,18 @@
+<slide>
+<title>Aggregation example</title>
+
+<example result="3"><![CDATA[<?php
+$m = new MongoClient();
+
+$res = $m->demo->poi->aggregate( [
+    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$unwind' => '$tags' ],
+    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
+    /* Now we group on the tags, and add the count */
+    [ '$group' => [ '_id' => '$tags', 'count' => [ '$sum' => 1 ] ] ],
+] );
+
+var_dump( $res['result'] );
+?>]]>
+</example>
+</slide>

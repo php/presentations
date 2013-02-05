@@ -11,7 +11,7 @@
 
 <div effect="fade-in">
 <example result="1"><![CDATA[<?php
-$m = new Mongo;
+$m = new MongoClient;
 $c = $m->demo->circus; $c->remove();
 
 $c->insert( [ '_id' => 'circ3', 'name' => 'Humberto', 'performers' => 12 ] );

@@ -21,19 +21,19 @@ replSet=seta
 <div effect="fade-in">
 <blurb>Configure the set:</blurb>
 <example>
-mongo localhost:13000
+mongo whisky:13000
 
 > db.adminCommand( {
   replSetInitiate: {
     _id: 'seta',
     members: [
-      { _id: 0, host: 'localhost:13000' },
-      { _id: 1, host: 'localhost:13001' },
+     { _id: 0, host: 'whisky:13000', tags: { 'dc': 'west', 'use': 'accounting' } },
+     { _id: 1, host: 'whisky:13001', tags: { 'dc': 'east', 'use': 'reporting' } },
     ]
   }
 } );
 
-PRIMARY> rs.addArb('localhost:13002');
+PRIMARY> rs.addArb('whisky:13002');
 </example>
 </div>
 </slide>

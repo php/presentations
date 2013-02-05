@@ -1,0 +1,18 @@
+<slide>
+<title>Drupal and MongoDB</title>
+
+<blurb>http://drupal.org/project/mongodb - a MongoDB module for Drupal</blurb>
+<list>
+	<bullet>Provides basic functionality for using MongoDB with Drupal</bullet>
+	<bullet>Support for: Sessions, Watchdog, Block, Queue, Cache and Field storage</bullet>
+</list>
+<break/>
+
+<blurb>http://drupal.org/project/mongodb_dbtng - an *experimental* DBTNG driver</blurb>
+<list>
+	<bullet>Parses the SQL and translates it to MongoDB structures and queries</bullet>
+</list>
+<break/>
+
+<blurb>Drupal 8 might support MongoDB natively...</blurb>
+</slide>

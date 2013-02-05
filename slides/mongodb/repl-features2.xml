@@ -1,0 +1,12 @@
+<slide>
+<title>Replicaset wrap-up</title>
+
+<list>
+    <bullet>Reads from Primary are always consistent</bullet>
+    <bullet>Reads from Secondaries are eventually consistent</bullet>
+    <bullet>Automatic failover if a Primary fails</bullet>
+    <bullet>Automatic recovery when a node joins the set</bullet>
+    <bullet>Full control of where writes occur</bullet>
+    <bullet>Full control of where reads occur</bullet>
+</list>
+</slide>

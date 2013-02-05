@@ -1,0 +1,23 @@
+<slide>
+<title>Exercise #3: Querying</title>
+
+<list>
+    <bullet>Edit %functions.php% to create the query under #2</bullet>
+    <bullet>Hints:<list>
+        <bullet>We only need one result</bullet>
+        <bullet>The object ID that you need to query is stored in %$object%</bullet>
+    </list></bullet>
+</list>
+
+<div effect="fade-in">
+<blurb>Expected, something like:</blurb>
+<example>
+$this->o = $this->c->findOne(
+    array(
+        '_id' => preg_replace( '/[^nw0-9]/', '', $object )
+    )
+);
+</example>
+</div>
+
+</slide>

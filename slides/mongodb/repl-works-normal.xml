@@ -1,0 +1,11 @@
+<slide>
+<title>How MongoDB replication works</title>
+
+<break lines="2"/>
+<image filename="repl-set-normal.png"/>
+
+<list>
+	<bullet>Election establishes the PRIMARY</bullet>
+	<bullet>Data replication from PRIMARY to SECONDARY</bullet>
+</list>
+</slide>

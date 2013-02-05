@@ -2,7 +2,7 @@
 <title>Geospatial indexes (2d indexes)</title>
 
 <blurb>MongoDB supports indexes on two dimensional fields:</blurb>
-<example>db.cities.ensureIndex( { location: '2d } )</example>
+<example>db.cities.ensureIndex( { location: '2d' } )</example>
 
 <example inline="1">
 db.cities.find( { location: { *$near: [ -0.088, 51.489 ]* } } );

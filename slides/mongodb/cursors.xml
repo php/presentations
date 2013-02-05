@@ -6,7 +6,7 @@ iterator in the form of a %MongoCursor% object.</blurb>
 <break/>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo();
+$m = new MongoClient();
 $c = $m->demo->talks;
 
 $cursor = $c->find( [ 'talks.title' => [ '$exists' => true ] ] );

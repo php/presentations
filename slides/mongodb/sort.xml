@@ -2,7 +2,7 @@
 <title>Sorting</title>
 
 <example result="1"><![CDATA[<?php
-$m = new Mongo();
+$m = new MongoClient();
 $c = $m->demo->cities;
 
 $cursor = $c->find( array( 'country_code' => 'IS' ) )
