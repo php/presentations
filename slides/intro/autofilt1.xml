@@ -60,34 +60,34 @@ class MyParent {
 <image filename="autofilt3.png" width="842" height="222" align="center"/>
 
 <example title="opcodes for c2.php" fontsize="1.3em" type="shell">
-line     # *  op                           fetch          ext  return  operands
+line     # *  op                       fetch         ext  return  operands
 ---------------------------------------------------------------------------------
-   2     0  >   SEND_VAL                                                 'MyParent'
-         1      DO_FCALL                                      1  $0      'class_exists'
-         2      BOOL_NOT                                         ~1      $0
-         3    > JMPZ                                                     ~1, ->6
-         4  >   INCLUDE_OR_EVAL                                          'p2.php', INCLUDE
-         5    > JMP                                                      ->6
-   3     6  >   ZEND_FETCH_CLASS                                 :3      'MyParent'
-         7      ZEND_DECLARE_INHERITED_CLASS                             '%00child2%2Fvar%2Fwww%2Fc3.php0x7f7a5af32054', 'child2'
-   8     8    > RETURN                                                   1
+   2     0  >   SEND_VAL                                          'MyParent'
+         1      DO_FCALL                               1  $0      'class_exists'
+         2      BOOL_NOT                                  ~1      $0
+         3    > JMPZ                                              ~1, ->6
+         4  >   INCLUDE_OR_EVAL                                   'p2.php', INCLUDE
+         5    > JMP                                               ->6
+   3     6  >   ZEND_FETCH_CLASS                          :3      'MyParent'
+         7      ZEND_DECLARE_INHERITED_CLASS                      '%00child2%2Fvar%2Fwww%2Fc3.php0x7f7a5af32054', 'child2'
+   8     8    > RETURN                                            1
 </example>
 
 <blurb fontsize="4em">If indexA is hit first</blurb>
 <image filename="autofilt2.png" width="842" height="262" align="center"/>
 
 <example title="opcodes for c2.php" fontsize="1.3em" type="shell">
-line     # *  op                           fetch          ext  return  operands
----------------------------------------------------------------------------------
-   2     0  >   SEND_VAL                                                 'MyParent'
-         1      DO_FCALL                                      1  $0      'class_exists'
-         2      BOOL_NOT                                         ~1      $0
-         3    > JMPZ                                                     ~1, ->6
-         4  >   INCLUDE_OR_EVAL                                          'p2.php', INCLUDE
-         5    > JMP                                                      ->6
+line     # *  op                       fetch          ext  return  operands
+-----------------------------------------------------------------------------
+   2     0  >   SEND_VAL                                          'MyParent'
+         1      DO_FCALL                               1  $0      'class_exists'
+         2      BOOL_NOT                                  ~1      $0
+         3    > JMPZ                                              ~1, ->6
+         4  >   INCLUDE_OR_EVAL                                   'p2.php', INCLUDE
+         5    > JMP                                               ->6
    3     6  >   NOP
          7      NOP
-   8     8    > RETURN                                                   1
+   8     8    > RETURN                                            1
 </example>
 
 

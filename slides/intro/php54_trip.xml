@@ -48,12 +48,13 @@ label:]]></example>
   }
   class Foo extends Base {
     public function __construct($bar) {}
-// FATAL  Declaration of Foo::__construct() must be compatible with Base::__construct()
+// FATAL  Declaration of Foo::__construct() must be compatible 
+//        with Base::__construct()
   }
 ]]></example>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ stream_select() preserves keys of passed array</blurb>
+<blurb fontsize="4em">✔ stream_select() preserves keys of array arg</blurb>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ XSLT writes are disabled by default</blurb>
