@@ -1,43 +1,50 @@
 <slide>
 <title>Fetching OSM data</title>
 
-<example><![CDATA[wget http://download.geofabrik.de/osm/europe/great_britain/england.osm.bz2]]></example>
-<blurb>(Or pick a smaller country from
-%http://download.geofabrik.de/osm/europe/%)</blurb>
+<div effect="fade-out">
+<blurb>The whole planet (bad idea as it's 26GB):</blurb>
+<example>http://planet.openstreetmap.org/planet/planet-latest.osm.bz2</example>
+<break/>
 
+<blurb>A whole country:</blurb>
+<example>http://download.geofabrik.de/openstreetmap/europe/great_britain/england.osm.bz2</example>
+<blurb>Or pick a smaller country from<br/>
+%http://download.geofabrik.de/openstreetmap/%</blurb>
+<break/>
+
+<blurb>XAPI (via Overpass):</blurb>
+<example>http://www.overpass-api.de/api/xapi?*[bbox=7.1,51.2,7.2,51.3][amenity=restaurant]</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Overpass</blurb>
 <example><![CDATA[
-<?xml version='1.0' encoding='UTF-8'?>
-<osm version="0.6" generator="Osmosis 0.39">
-  <bound box="51.26000,-0.56300,51.68000,0.28000" origin="http://www.openstreetmap.org/api/0.6"/>
-  <node id="44" version="3" timestamp="2011-09-08T20:53:43Z" uid="15867" user="mattfromderby" changeset="9249514" lat="51.5250157" lon="-0.1485302"/>
-  <node id="47" version="2" timestamp="2011-09-08T20:53:43Z" uid="15867" user="mattfromderby" changeset="9249514" lat="51.525182" lon="-0.1479761"/>
-  <node id="52" version="3" timestamp="2011-09-08T21:13:19Z" uid="15867" user="mattfromderby" changeset="9249514" lat="51.5289059" lon="-0.1458559"/>
-...
-  <node id="1571982070" version="1" timestamp="2011-12-31T20:37:18Z" uid="545369" user="bigfatfrog67" changeset="10257991" lat="51.5087759" lon="-0.1253258">
-    <tag k="name" v="Charing Cross"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="source:name" v="survey"/>
-    <tag k="source:railway" v="survey"/>
-  </node>
-...
-  <way id="74" version="5" timestamp="2010-12-12T22:43:15Z" uid="508" user="Welshie" changeset="6643030">
-    <nd ref="196101"/>
-    <nd ref="196100"/>
-    <nd ref="196331"/>
-    <tag k="abutters" v="retail"/>
-    <tag k="highway" v="primary"/>
-    <tag k="maxspeed" v="30 mph"/>
-    <tag k="name" v="Ballards Lane"/>
-    <tag k="ref" v="A598"/>
-  </way>
-...
-  <relation id="69" version="13" timestamp="2009-02-09T14:57:24Z" uid="45027" user="PA94" changeset="307506">
-    <member type="way" ref="3793834" role="outer"/>
-    <member type="way" ref="26454599" role="inner"/>
-    <tag k="created_by" v="xybot"/>
-    <tag k="type" v="multipolygon"/>
-  </relation>
-...
-</osm>
+<?php
+$bb = '<bbox-query e="0.334" n="51.691" s="51.286" w="-0.510"/>';
+
+$data = <<<ENDDATA
+<union>
+    <query type="node"><has-kv k="amenity" v="pub"/>$bb</query>
+    <query type="way"><has-kv k="amenity" v="pub"/>$bb</query>
+</union>
+<query type="node">
+    <around radius="2"/>
+    <has-kv k="highway" v="bus_stop"/>
+</query>
+<print/>
+ENDDATA;
+
+$params = array(
+    'http' => array(
+        'method' => 'POST',
+        'content' => $data,
+        'header' => 'Content-Type: application/x-www-form-urlencoded'
+    )
+);
+$ctx = stream_context_create($params);
+echo file_get_contents("http://overpass-api.de/api/interpreter", false, $ctx);
+?>
 ]]></example>
+</div>
+
 </slide>
