@@ -1,0 +1,23 @@
+<slide title="">
+
+<blurb fontsize="6em">Performance</blurb>
+
+<list>
+<bullet fontsize="2.6em" marginleft="1em" type="bullet">Create mod_php</bullet>
+<bullet fontsize="2.6em" marginleft="1em" type="bullet">Create shared-nothing perfect sandbox model</bullet>
+</list>
+
+<blurb fontsize="6em">Robustness</blurb>
+<list>
+<bullet fontsize="2.6em" marginleft="1em" type="bullet">Create SQL LIMIT clause</bullet>
+<bullet fontsize="2.6em" marginleft="1em" type="bullet">Promote Prefork shared-nothing model</bullet>
+</list>
+
+<blurb fontsize="6em">Security</blurb>
+<list>
+<bullet fontsize="2.6em" marginleft="1em" type="bullet">max_execution_time</bullet>
+<bullet fontsize="2.6em" marginleft="1em" type="bullet">memory_limit</bullet>
+<bullet fontsize="2.6em" marginleft="1em" type="bullet">safe mode</bullet>
+</list>
+
+</slide>

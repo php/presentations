@@ -1,0 +1,57 @@
+<slide title="PHP 5.5">
+
+<break lines="1" />
+<blurb fontsize="6em">Performance Improvements</blurb>
+<list fontsize="4em" marginleft="1.5em">
+<item>Nested calls</item>
+<item>Call stack pre-allocated by compiler</item>
+<item>Bundled opcode cache</item>
+</list>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Generators</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+function xrange($start, $end) {
+    for ($i = $start; $i <= $end; $i ++) {
+        yield $i;
+    }
+}
+foreach (xrange(0, 5) as $i) {
+    echo $i, "\n";
+}]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ finally</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+$db = mysqli_connect();
+try {
+   call_some_function($db);
+} finally {
+   mysqli_close($db);
+}]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ list() in foreach</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+$names = [ ['John','Smith'], ['Fred','Johnson'] ];
+foreach($names as list($first,$last)) { 
+    echo $first,$last; 
+}]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Const array/string Dereferencing</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+echo array(1, 2, 3)[0]; //output 1
+echo "foobar"[3]; //output b
+echo [1,3,4][2]; //output 4]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ empty() support for functions/expressions</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ curl upload functionality rewritten</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Simplified password hashing API</blurb>
+
+</slide>

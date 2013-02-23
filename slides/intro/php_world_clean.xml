@@ -17,6 +17,7 @@
     <input type="button" id="3" value="Cary" onclick="mark('Cary, NC');"></input>
     <input type="button" id="3" value="San Francisco" onclick="mark('San Francisco, CA');"></input>
     <input type="button" id="3" value="Sunnyvale" onclick="mark('Sunnyvale, CA');"></input>
+    <input type="button" id="3" value="Brooklyn" onclick="mark('Brooklyn, NY');"></input>
   </form>
 </div>
 

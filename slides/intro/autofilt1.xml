@@ -1,0 +1,95 @@
+<slide title="">
+
+<blurb fontsize="4em">What is dynamic inheritance?</blurb>
+<blurb fontsize="4em">aka PHP's hardest to understand concept</blurb>
+
+<example title="apc.report_autofilter=1" fontsize="1.3em" type="shell">
+Warning: include(): Dynamic inheritance detected for class child2 in /var/www/indexB.php on line 2
+
+Warning: include(): Autofiltering c2.php in /var/www/indexB.php on line 2
+
+Warning: include(): Recompiling /var/www/c2.php in /var/www/indexB.php on line 2
+</example>
+
+<image filename="autofilt1.png" width="842" height="222" align="center"/>
+
+<example hide="0" result="0" title="indexA.php" fontsize="1.6em"><![CDATA[<?php
+include 'c1.php';
+include 'c2.php';
+new Child1;
+new Child2;
+echo 'Done';]]></example>
+
+<example hide="0" result="0" title="indexB.php" fontsize="1.6em"><![CDATA[<?php
+include 'c2.php';
+new Child2;
+echo 'Done';]]></example>
+
+<example hide="0" result="0" title="c1.php" fontsize="1.6em"><![CDATA[<?php
+include 'p1.php';
+class Child1 extends MyParent {
+    function __construct() {
+        parent::__construct();
+    }
+}]]></example>
+
+<example hide="0" result="0" title="c2.php" fontsize="1.6em"><![CDATA[<?php
+if(!class_exists('MyParent')) include 'p2.php';
+class Child2 extends MyParent {
+    function __construct() {
+        parent::__construct();
+    }
+}]]></example>
+
+<example hide="0" result="0" title="p1.php" fontsize="1.6em"><![CDATA[<?php
+class MyParent {
+    function __construct() {
+        echo "Parent1";
+    }
+}]]></example>
+
+<example hide="0" result="0" title="p2.php" fontsize="1.6em"><![CDATA[<?php
+class MyParent {
+    function __construct() {
+        echo "Parent2";
+    }
+}]]></example>
+
+
+<blurb fontsize="4em">If indexB is hit first</blurb>
+<image filename="autofilt3.png" width="842" height="222" align="center"/>
+
+<example title="opcodes for c2.php" fontsize="1.3em" type="shell">
+line     # *  op                       fetch         ext  return  operands
+---------------------------------------------------------------------------------
+   2     0  >   SEND_VAL                                          'MyParent'
+         1      DO_FCALL                               1  $0      'class_exists'
+         2      BOOL_NOT                                  ~1      $0
+         3    > JMPZ                                              ~1, ->6
+         4  >   INCLUDE_OR_EVAL                                   'p2.php', INCLUDE
+         5    > JMP                                               ->6
+   3     6  >   ZEND_FETCH_CLASS                          :3      'MyParent'
+         7      ZEND_DECLARE_INHERITED_CLASS                      '%00child2%2Fvar%2Fwww%2Fc3.php0x7f7a5af32054', 'child2'
+   8     8    > RETURN                                            1
+</example>
+
+<blurb fontsize="4em">If indexA is hit first</blurb>
+<image filename="autofilt2.png" width="842" height="262" align="center"/>
+
+<example title="opcodes for c2.php" fontsize="1.3em" type="shell">
+line     # *  op                       fetch          ext  return  operands
+-----------------------------------------------------------------------------
+   2     0  >   SEND_VAL                                          'MyParent'
+         1      DO_FCALL                               1  $0      'class_exists'
+         2      BOOL_NOT                                  ~1      $0
+         3    > JMPZ                                              ~1, ->6
+         4  >   INCLUDE_OR_EVAL                                   'p2.php', INCLUDE
+         5    > JMP                                               ->6
+   3     6  >   NOP
+         7      NOP
+   8     8    > RETURN                                            1
+</example>
+
+
+
+</slide>
