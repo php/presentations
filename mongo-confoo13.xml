@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>mongoDB</topic>
+<title>MongoDB Introduction</title>
+<event>ConFoo 2013</event>
+<location>Montréal, Canada</location>
+<date>February 27th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/7866</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/databasefield.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/mongodb/collections-documents.xml</slide>
+<slide>slides/mongodb/document.xml</slide>
+<slide>slides/mongodb/connecting.xml</slide>
+<slide>slides/mongodb/insert.xml</slide>
+<slide>slides/mongodb/id.xml</slide>
+
+<slide>slides/mongodb/query.xml</slide>
+<slide>slides/mongodb/query2.xml</slide>
+- findOne
+- find
+
+<slide>slides/mongodb/cursors.xml</slide>
+- cursor
+<slide>slides/mongodb/limit-skip.xml</slide>
+
+Common Patterns
+
+- RDBMS-normalisation.
+
+<slide>slides/mongodb/blog.xml</slide>
+<slide>slides/mongodb/blog2.xml</slide>
+
+<slide>slides/mongodb/considerations.xml</slide>
+
+**OSMify**
+<slide>slides/mongodb/inherit-rdbms.xml</slide>
+<slide>slides/mongodb/inherit-mongo.xml</slide>
+
+<slide>slides/mongodb/osm-to-mongo-data.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data3.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data4.xml</slide>
+
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+<slide>slides/mongodb/embed-vs-link.xml</slide>
+
+<slide>slides/mongodb/commands-aggregation.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine1-match.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine2-unwind.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine3-match.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine4-group.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine5-group-with-sum.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine6-sort.xml</slide>
+
+<slide>slides/mongodb/idx-startup-quotes.xml</slide>
+
+<slide>slides/mongodb/idx-create-php.xml</slide>
+
+<slide>slides/mongodb/idx-cities-by-name-and-pop.xml</slide>
+<slide>slides/mongodb/idx-cities-by-name-and-pop2.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem2.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem4.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem6.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem5.xml</slide>
+
+<slide>slides/mongodb/idx-recap1.xml</slide>
+<slide>slides/mongodb/idx-recap2.xml</slide>
+<slide>slides/mongodb/idx-recap3.xml</slide>
+
+<slide>slides/mongodb/replication.xml</slide>
+- setup
+- slaveOk
+- journal
+- write concerns
+- tags (mention briefly)
+- php connection string
+
+<slide>slides/mongodb/sharding.xml</slide>
+- mongos
+- diagram
+- transparent
+
+<slide>slides/mongodb/selling-points.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

@@ -1,11 +1,27 @@
 <slide>
 <title>Indexes (2)</title>
 
-<blurb>Be aware of redundant indexes. Order is important. With an index on<br/> %{ dem: 1, population: 1 }%:</blurb>
-<list>
-	<bullet>You *don't* need an index on %{ dem: 1 }%.</bullet>
-	<bullet>You *do* need an index on %{ population: 1 }%.</bullet>
-	<bullet>The index can be used for sorting on *dem* and then *population*, but not on *population* and then *dem*.</bullet>
-	<bullet>Range search work best if used on the last field only (remember range on *population* and *dem*).</bullet>
-</list>
+<blurb>Indexes are used from left to right.</blurb>
+
+<example inline="1">$c->ensureIndex( [ 'country_code' => 1, 'timezone' => 1, 'asciiname' => 1 ] )</example>
+<break/>
+<div effect="fade-in">
+<example inline="1">|00aa00|✔| %$c->find(['country_code' => 'GB']);%</example>
+<example inline="1">|00aa00|✔| %$c->find(['country_code' => 'GB', 'timezone' => 'Europe/London']);%</example>
+<example inline="1">|00aa00|✔| %$c->find(['country_code' => 'GB']).sort(['timezone' => 1]);%</example>
+</div>
+<div effect="fade-in">
+<example inline="1">|ffaa00|✘| %$c->find(['country_code' => 'GB', 'asciiname' => 'London']);%</example>
+<example inline="1">|ffaa00|✘| %$c->find(['country_code' => 'GB']).sort(['asciiname' => 1]);%</example>
+</div>
+<div effect="fade-in">
+<example inline="1">|ff0000|✘| %$c->find(['timezone' => 'Europe/London']);%</example>
+<example inline="1">|ff0000|✘| %$c->find(['asciiname' => 'Europe/London']);%</example>
+</div>
+<div effect="fade-in">
+<example inline="1">|00aa00|✔| %$c->find(['country_code' => 'GB']).sort(['timezone' => 1, 'asciiname' => 1]);%</example>
+<example inline="1">|ffaa00|✘| %$c->find(['country_code' => 'GB']).sort(['timezone' => 1, 'asciiname' => -1]);%</example>
+<example inline="1">|ffaa00|✘| %$c->find(['country_code' => 'GB']).sort(['timezone' => -1, 'asciiname' => 1]);%</example>
+<example inline="1">|00aa00|✔| %$c->find(['country_code' => 'GB']).sort(['timezone' => -1, 'asciiname' => -1]);%</example>
+</div>
 </slide>

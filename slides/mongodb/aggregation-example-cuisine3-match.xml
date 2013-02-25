@@ -4,7 +4,7 @@
 <example result="3"><![CDATA[<?php
 $m = new MongoClient();
 
-$res = $m->demo->poi->aggregate( [
+$res = $m->demo->poiConcat->aggregate( [
     [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
     [ '$unwind' => '$tags' ],
     /* Match again to get rid of all the useless tags */

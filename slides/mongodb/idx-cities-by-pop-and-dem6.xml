@@ -20,7 +20,8 @@ db.cities.find( { dem: { $gte : 1654 } } ).explain();
 }
 </example>
 <div effect="fade-in">
-<blurb>MongoDB can not use only the second part of a compound index<br/> (%{ population: 1, dem: 1 }%).</blurb>
+<break/>
+<blurb>MongoDB uses indexes in order from left to right</blurb>
 </div>
 
 </slide>

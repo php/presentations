@@ -4,9 +4,8 @@
 <image filename="replset.png" pdf-scale="0.8"/>
 
 <list>
-	<bullet>Failover/Availability</bullet>
+	<bullet>Failover/High Availability</bullet>
 	<bullet>Scaling reads</bullet>
 	<bullet>Primaries, secondaries and arbiters</bullet>
-	<bullet>Odd number to prevent split brain</bullet>
 </list>
 </slide>
