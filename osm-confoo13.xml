@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <presentation css="10gen-strict.css">
 <topic>Maps</topic>
-<title>OpenStreetMap For The Web</title>
+<title>OpenStreetMap for the Web</title>
 <event>ConFoo 2013</event>
 <location>Montréal, Canada</location>
 <date>February 27th, 2013</date>
@@ -32,8 +32,6 @@ What is X?
 -->
 <slide>slides/map/osm-what.xml</slide>
 <slide>slides/map/what-is-osm.xml</slide>
-<slide>slides/map/what-is-googlemaps.xml</slide>
-<slide>slides/map/terms-and-conditions.xml</slide>
 
 
 
@@ -46,15 +44,12 @@ What is X?
 <slide>slides/map/osrm.xml</slide>
 <slide>slides/map/osrm-services.xml</slide>
 
-<slide>slides/map/html-location-services.xml</slide>
-
 <slide>slides/map/osm-data.xml</slide>
 
 <slide>slides/map/osm-tags-edit.xml</slide>
 
 
 <slide>slides/map/osm-mapping-party1.xml</slide>
-<slide>slides/map/osm-mapping-party2.xml</slide>
 <slide>slides/map/osm-editors.xml</slide>
 <slide>slides/map/osm-kibera.xml</slide>
 <slide>slides/map/gmm-korogocho2.xml</slide>
@@ -65,6 +60,5 @@ What is X?
 <slide>slides/map/osm-data-uses.xml</slide>
 
 <slide>slides/mongodb/resources.xml</slide>
-<slide>slides/map/osm-qa.xml</slide>
 
 </presentation>
