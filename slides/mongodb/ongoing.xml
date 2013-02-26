@@ -1,0 +1,14 @@
+<slide>
+<title>Ongoing Work</title>
+
+<list>
+<bullet>Security: finer-level authorization and auditing</bullet>
+<bullet>Improved management of sharded clusters
+    <list>
+        <bullet>Better sharing of network resources in sharded environments (sockets, connections, etc)</bullet>
+    </list>
+</bullet>
+<bullet>Additional features for Text Search</bullet>
+<bullet>Collection-level locking</bullet>
+</list>
+</slide>

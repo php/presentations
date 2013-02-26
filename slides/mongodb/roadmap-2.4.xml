@@ -1,0 +1,14 @@
+<slide>
+<title>2.4 — Highlights</title>
+
+<list>
+    <bullet>Security - SASL, Kerberos, additional privileges</bullet>
+    <bullet>Hash-based Sharding</bullet>
+    <bullet>Geospatial Indexing: query intersecting polygons</bullet>
+    <bullet>Aggregation framework: faster and more features</bullet>
+    <bullet>V8 JavaScript engine replaces SpiderMonkey</bullet>
+    <bullet>Replica set flapping reduced, initial sync for replication much faster</bullet>
+    <bullet>MMS running in your own data center</bullet>
+    <bullet>Text search (experimental)</bullet>
+</list>
+</slide>

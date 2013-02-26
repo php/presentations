@@ -1,0 +1,13 @@
+<slide>
+<title>2.2 — Release August 2012</title>
+
+<list>
+<bullet>Concurrency: yielding + db level locking</bullet>
+<bullet>New aggregation framework</bullet>
+<bullet>TTL Collections</bullet>
+<bullet>Improved free list implementation</bullet>
+<bullet>Tag aware sharding</bullet>
+<bullet>Read Preferences</bullet>
+<bullet>http://docs.mongodb.org/manual/release-notes/2.2/</bullet>
+</list>
+</slide>

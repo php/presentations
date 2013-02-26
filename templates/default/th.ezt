@@ -1,5 +1,6 @@
 {use $node, $pres}
-<th>
+{var $colspan = get_attribute( $node, 'colspan' )}
+<th{if $colspan} colspan='{$colspan}'{/if}>
 {foreach $node->childNodes as $child}
 	{if is_set( $child->tagName )}
 		{include $child->tagName . '.ezt' send $child as $node, $pres, true as $inline}

@@ -1,0 +1,25 @@
+<slide>
+<title>Recent Release History</title>
+
+<blurb>1.8 — March 2011</blurb>
+<list>
+    <bullet>Journaling</bullet>
+    <bullet>Sharding and Replica set enhancements</bullet>
+    <bullet>Spherical geo search</bullet>
+</list>
+
+<blurb>2.0 — Sept 2011</blurb>
+<list>
+    <bullet>Index enhancements to improve size and performance</bullet>
+    <bullet>Authentication with sharded clusters</bullet>
+    <bullet>Replica Set enhancements</bullet>
+</list>
+
+<blurb>2.2 — Aug 2012</blurb>
+<list>
+    <bullet>Aggregation Framework</bullet>
+    <bullet>Multi-Data Center Deployments</bullet>
+    <bullet>Improved Performance and Concurrency</bullet>
+</list>
+
+</slide>

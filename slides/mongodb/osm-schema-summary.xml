@@ -1,0 +1,41 @@
+<slide>
+<title>Comparing the approaches</title>
+
+<table>
+<tr><th></th><th>simple</th><th>map</th><th>concat</th><th>sub</th></tr>
+<tr><td>items</td><td>2253986</td><td>2253986</td><td>2253986</td><td>2253986</td></tr>
+<tr><td>storage (MB)</td><td>270</td><td>302</td><td>284</td><td>279</td></tr>
+<tr><td>index size (MB)</td><td>569++</td><td>520</td><td>423</td><td>458</td></tr>
+<tr><th colspan="5">%name=Strand%</th></tr>
+<tr><td>n</td><td>12</td><td>12</td><td>12</td><td>12</td></tr>
+<tr><td>nScanObjs</td><td>12</td><td>12</td><td>12</td><td>12</td></tr>
+<tr><td>ms</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+<tr><th colspan="5">%highway=*%</th></tr>
+<tr><td>n</td><td>210440</td><td>210440</td><td>210440</td><td>210440</td></tr>
+<tr><td>nScanObjs</td><td>2253986</td><td>210440</td><td>210440</td><td>2253986</td></tr>
+<tr><td>ms</td><td>1215</td><td>421</td><td>629</td><td>1341</td></tr>
+<tr><th colspan="5">%leisure=*%</th></tr>
+<tr><td>n</td><td>6609</td><td>6609</td><td>6609</td><td>6609</td></tr>
+<tr><td>nScanObjs</td><td>2253986</td><td>6609</td><td>6609</td><td>2253986</td></tr>
+<tr><td>ms</td><td>1226</td><td>15</td><td>21</td><td>1326</td></tr>
+</table>
+
+<!--
+db.poi.find( { 'tags.name': "Strand" } ).explain();
+db.poiMap.find( { 'tags' : { $elemMatch: { 'v' : 'Strand', 'k': "name" } } } ).explain();
+db.poiConcat.find( { 'tags': "name=Strand" } ).explain();
+db.poiSub.find( { 'tags': { name: 'Strand' } } ).explain();
+
+db.poi.find( { 'tags.highway': { $exists: true } } ).explain();
+db.poiMap.find( { 'tags.k': 'highway' } ).explain();
+db.poiConcat.find( { 'tags': /^highway=/ } ).explain();
+db.poiSub.find( { 'tags.highway' : { '$exists': true } } ).explain();
+
+db.poi.find( { 'tags.leisure': { $exists: true } } ).explain();
+db.poiMap.find( { 'tags.k': 'leisure' } ).explain();
+db.poiConcat.find( { 'tags': /^leisure=/ } ).explain();
+db.poiSub.find( { 'tags.leisure' : { '$exists': true } } ).explain();
+-->
+
+
+</slide>
