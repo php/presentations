@@ -1,0 +1,18 @@
+<slide>
+<title>Geo features in MongoDB 2.2</title>
+
+<list>
+    <bullet>Planar with occasional spherical distance
+        <list>
+            <bullet>%$nearSphere%, %$centerSphere%</bullet>
+            <bullet>Limited spherical behaviour (wrapping)</bullet>
+        </list>
+    </bullet>
+    <bullet>Indexes only points</bullet>
+    <bullet>%$near(Sphere)% finds Points near a point</bullet>
+    <bullet>%$within% finds points within a circle or a polygon</bullet>
+    <bullet>Index required for everything</bullet>
+	<bullet>Index type: 2d</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,39 @@
+<slide>
+<title>Indexes with $geoWithin</title>
+
+<image filename="geo-within-index.png" align="right"/>
+<example>
+db.poiConcat.find( {
+  l: {
+    $geoWithin: { $geometry: {
+      type: "Polygon",
+      coordinates: [[
+        [-0.1531, 51.5341], [-0.1346, 51.5341],
+        [-0.1346, 51.5437], [-0.1531, 51.5437],
+        [-0.1531, 51.5341]
+      ]]
+    } },
+  },
+  ts: "amenity=pub"
+} ).explain();
+</example>
+
+<div effect="fade-in-out">
+    <blurb>*No index:*<br/> BasicCursor, n: 40, nscannedObjects: 2802711, millis: 1246</blurb>
+</div>
+<div effect="fade-in">
+    <blurb>*ensureIndex( { ts: 1 } )*<br/>BtreeCursor ts_1, n: 40, nscannedObjects: 3326, millis: 46</blurb>
+</div>
+<div effect="fade-in-out">
+    <blurb>*ensureIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 257</blurb>
+</div>
+<div effect="fade-in">
+    <blurb>*ensureIndex( { ts: 1} )* &amp;&amp; *ensureIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 256</blurb>
+</div>
+<div effect="fade-in-out">
+    <blurb>*ensureIndex( { l: '2dsphere', ts: 1 } )*<br/>S2Cursor, n: 40, nscannedObjects: 523, millis: 8</blurb>
+</div>
+<div effect="fade-in">
+    <blurb>*ensureIndex( { ts: 1, l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 523, millis: 8</blurb>
+</div>
+</slide>

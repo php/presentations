@@ -1,0 +1,16 @@
+<slide>
+<title>Cells</title>
+
+<list>
+    <bullet>
+        We divide the surface of the earth into cells
+        <list>
+            <bullet>A library called S2 from Google does the hard work</bullet>
+        </list>
+    </bullet>
+    <bullet>Cells have a level which define the size of the cell</bullet>
+    <bullet>S2 provides 31 levels</bullet>
+    <bullet>The higher the level, the smaller the cell, and therefore the more needed to cover the earth</bullet>
+    <bullet>By default, we use all levels between 500m on a side and 100km on a side</bullet>
+</list>
+</slide>

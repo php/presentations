@@ -1,0 +1,31 @@
+<slide>
+<title>GeoJSON: LineString</title>
+
+<image filename="geojson-line.png" align="right" />
+
+<example>
+{
+    "_id" : "w4373934",
+    "ty" : NumberLong(2),
+    "l" : {
+        "type" : "LineString",
+        "coordinates" : [
+            [ -0.1286202, 51.50752 ],
+            [ -0.1283857, 51.5075115 ],
+            [ -0.1282389, 51.5075112 ],
+            [ -0.1278265, 51.5075453 ]
+        ]
+    },
+    "ts" : [
+        "highway=primary",
+        "lit=yes",
+        "name=Trafalgar Square",
+        "oneway=yes",
+        "postal_code=WC2",
+        "sidewalk=left"
+    ]
+}
+
+</example>
+
+</slide>

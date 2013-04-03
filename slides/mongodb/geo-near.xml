@@ -1,0 +1,37 @@
+<slide>
+<title>Example with $near</title>
+
+<image filename="near-pub.png" align="right"/>
+
+<example inline="1">
+db.poiConcat.find( {
+  ts: "amenity=pub",
+  l: {
+    *$near: {*
+      *$geometry: {*
+        *type: 'Point',*
+        *coordinates: [ -0.1204, 51.5168 ]*
+      *},*
+      *$maxDistance: 500*
+    *}*
+  }
+} ).limit(5).pretty();
+</example>
+
+<example>
+{
+  "_id" : "n26848690",
+  "l" : {
+    "type" : "Point",
+    "coordinates" : [ -0.119473, 51.516787 ]
+  },
+  "ts" : [
+    "addr:housenumber=64-68",
+    "addr:street=Kingsway",
+    "amenity=pub",
+    "name=The Shakespeare's Head",
+    "wifi=free"
+  ]
+}
+</example>
+</slide>

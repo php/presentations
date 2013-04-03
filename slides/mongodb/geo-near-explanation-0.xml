@@ -1,0 +1,11 @@
+<slide>
+<title>$near and cells</title>
+
+<list>
+    <bullet>Starts from a point</bullet>
+    <bullet>Looks at concentric donuts from that point</bullet>
+    <bullet>Want to look at documents within the donut</bullet>
+    <bullet>If distance from query point to document is within the donut, output</bullet>
+    <bullet>Adapts size of the donut as needed</bullet>
+</list>
+</slide>

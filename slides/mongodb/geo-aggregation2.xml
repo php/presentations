@@ -1,0 +1,98 @@
+<slide>
+<title>Aggregation: $geoNear example</title>
+
+<image filename="pubs-distance.png" align="right"/>
+
+<div effect="fade-out">
+<example inline="1"><![CDATA[
+maxDist = 500;
+rEarth = 6371000;
+
+res = db.poiConcat.aggregate( [ {
+  '$geoNear' : { 
+    'near' : [ -0.122055, 51.514562 ],
+    'distanceField' : 'distance',
+    'distanceMultiplier' : rEarth,
+    'maxDistance' : maxDist / rEarth,
+    'spherical' : true,
+    'query' : { 
+      '$or' : [
+        { ts: 'amenity=pub' },
+        { ts: 'amenity=bar' },
+      ]     
+    }   
+  } 
+} ] )
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+maxDist = 500;
+rEarth = 6371000;
+
+res = db.poiConcat.aggregate( [ {
+  |ff0000|'$geoNear' : {|
+    |ff0000|'near' : [ -0.122055, 51.514562 ],|
+    'distanceField' : 'distance',
+    'distanceMultiplier' : rEarth,
+    'maxDistance' : maxDist / rEarth,
+    |ff0000|'spherical' : true,|
+    |ff0000|'query' : {|
+      |ff0000|'$or' : [|
+        |ff0000|{ ts: 'amenity=pub' },|
+        |ff0000|{ ts: 'amenity=bar' },|
+      |ff0000|]|
+    |ff0000|}|   
+  |ff0000|} |
+} ] )
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+|ff0000|maxDist = 500;|
+|ff0000|rEarth = 6371000;|
+
+res = db.poiConcat.aggregate( [ {
+  '$geoNear' : { 
+    'near' : [ -0.122055, 51.514562 ],
+    |ff0000|'distanceField' : 'distance',|
+    |ff0000|'distanceMultiplier' : rEarth,|
+    |ff0000|'maxDistance' : maxDist / rEarth,|
+    'spherical' : true,
+    'query' : { 
+      '$or' : [
+        { ts: 'amenity=pub' },
+        { ts: 'amenity=bar' },
+      ]     
+    }   
+  } 
+} ] )
+]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[
+> res.result[0]
+{
+  "_id" : "n312156665",
+  "ty" : NumberLong(1),
+  "l" : {
+    "type" : "Point",
+    "coordinates" : [
+      -0.121732,
+      51.5145794
+    ]
+  },
+  "ts" : [
+    "amenity=pub",
+    "name=The Prince of Wales",
+    "toilets=yes",
+    "toilets:access=customers"
+  ],
+  |ff0000|"distance" : 22.432289888830912|
+}
+]]></example>
+</div>
+</slide>

@@ -1,0 +1,37 @@
+<slide>
+<title>Example with $geoWithin</title>
+
+<image filename="hydepark.png" align="right"/>
+
+<example inline="1">
+hydepark = db.poiConcat.findOne( {
+  ts: { $all: [
+    "name=Hyde Park", "leisure=park"
+  ] }
+} );
+
+db.poiConcat.find( {
+  *l: { $geoWithin: {*
+    *$geometry: hydepark.l*
+  *} },*
+  ts: "amenity=cafe"
+} );
+</example>
+
+<example inline="1">
+{
+  "_id" : "w19851241",
+  "ty" : NumberLong(2),
+  "l" : *{*
+    *"type" : "Polygon",*
+    *"coordinates" : [*
+      *[ [ -0.1549378, 51.508331 ], … [ -0.1549378, 51.508331 ] ]*
+    *]*
+  *},*
+  "ts" : [
+    "access=yes", "leisure=park", "name=Hyde Park",
+    "wikipedia=http://en.wikipedia.org/wiki/Hyde_Park,_London"
+  ]
+}
+</example>
+</slide>

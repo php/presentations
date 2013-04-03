@@ -1,0 +1,26 @@
+<slide>
+<title>GeoJSON: Point</title>
+
+<image filename="geojson-point.png" align="right" />
+
+<example>
+{
+    "_id" : "n356277759",
+    "ty" : NumberLong(1),
+    "l" : {
+        "type" : "Point",
+        "coordinates" : [
+            -0.1607376,
+            51.5138662
+        ]
+    },
+    "ts" : [
+        "amenity=pub",
+        "food=yes",
+        "name=The Tyburn",
+        "operator=wetherspoons",
+        "real_ale=yes"
+    ]
+}
+</example>
+</slide>

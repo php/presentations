@@ -1,0 +1,92 @@
+<slide>
+<title>Aggregation: $geoNear example</title>
+
+<image filename="pubs-distance.png" align="right"/>
+
+<div effect="fade-out">
+<example inline="1"><![CDATA[
+$center = new GeoJSONPoint(
+  (float) $_GET['lon'],
+  (float) $_GET['lat']
+);
+$maxDist =     500; // in meters
+$rEarth  = 6371000;
+
+$res = $c->aggregate( array(
+  '$geoNear' => array(
+    'near' => $center->p,
+    'distanceField' => 'distance',
+    'distanceMultiplier' => $rEarth,
+    'maxDistance' => $maxDist / $rEarth,
+    'spherical' => true,
+    'query' => array(
+      '$or' => array( 
+        array( TAGS => 'amenity=pub' ),
+        array( TAGS => 'amenity=bar' )
+      )
+    ),
+  )
+) );
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+$center = new GeoJSONPoint(
+  (float) $_GET['lon'],
+  (float) $_GET['lat']
+);
+$maxDist =     500; // in meters
+$rEarth  = 6371000;
+
+$res = $c->aggregate( array(
+  |ff0000|'$geoNear' => array(|
+    |ff0000|'near' => $center->p,|
+    'distanceField' => 'distance',
+    'distanceMultiplier' => $rEarth,
+    'maxDistance' => $maxDist / $rEarth,
+    |ff0000|'spherical' => true,|
+    |ff0000|'query' => array(|
+      |ff0000|'$or' => array(|
+        |ff0000|array( TAGS => 'amenity=pub' ),|
+        |ff0000|array( TAGS => 'amenity=bar' )|
+      |ff0000|)|
+    |ff0000|),|
+  |ff0000|)|
+) );
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+$center = new GeoJSONPoint(
+  (float) $_GET['lon'],
+  (float) $_GET['lat']
+);
+
+|ff0000|$maxDist =     500; // in meters|
+|ff0000|$rEarth  = 6371000;|
+
+$res = $c->aggregate( array(
+  '$geoNear' => array(
+    'near' => $center->p,
+    |ff0000|'distanceField' => 'distance',|
+    |ff0000|'distanceMultiplier' => $rEarth,|
+    |ff0000|'maxDistance' => $maxDist / $rEarth,|
+    'spherical' => true,
+    'query' => array(
+      '$or' => array( 
+        array( TAGS => 'amenity=pub' ),
+        array( TAGS => 'amenity=bar' )
+      )
+    ),
+  )
+) );
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+]]></example>
+</div>
+</slide>

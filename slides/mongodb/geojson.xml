@@ -1,0 +1,20 @@
+<slide>
+<title>GeoJson</title>
+
+<blurb>Example:</blurb>
+<example>
+{
+  loc : {
+    type : "LineString" ,
+    coordinates : [ [ -0.09, 51.49 ], [ 2.35, 48.86 ] ]
+  }
+}
+</example>
+<break/>
+
+<list>
+	<bullet>GeoJSON is a format for encoding a variety of geographic data structures.</bullet>
+	<bullet>Used by various other HTML APIs as well: OpenLayers, Leaflet and through GDAL also PostGIS.</bullet>
+	<bullet>MongoDB supports three sub-formats: Point, LineString, and Polygon.</bullet>
+</list>
+</slide>

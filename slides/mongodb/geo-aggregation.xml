@@ -1,0 +1,13 @@
+<slide>
+<title>Aggregation: $geoNear</title>
+
+<list>
+	<bullet>MongoDB's aggregation framework has as %$geoNear% pipeline operator</bullet>
+	<bullet>Also adds the %distance% as a new field to the document</bullet>
+</list>
+<break />
+<list>
+	<bullet>Has to be the first operator in the pipeline</bullet>
+	<bullet>Only works if there is *one* 2dsphere index</bullet>
+</list>
+</slide>

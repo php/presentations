@@ -1,0 +1,15 @@
+<slide>
+<title>$geoWithin/$geoIntersects and cells</title>
+
+<list>
+    <bullet>Generate a covering for geometry in query</bullet>
+    <bullet>Look at all points in all overlapping cells
+        <list>
+            <bullet>Cells may be larger or smaller than our covering</bullet>
+            <bullet>Must look at cells that contain our covering</bullet>
+            <bullet>Must look at cells that we contain</bullet>
+        </list>
+    </bullet>
+    <bullet>See if documents are within or intersect our query geometry</bullet>
+</list>
+</slide>

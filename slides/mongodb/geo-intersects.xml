@@ -1,0 +1,37 @@
+<slide>
+<title>Example with $geoIntersects</title>
+
+<image filename="charingcross.png" align="right"/>
+
+<example inline="1">
+building = db.poiConcat.findOne( {
+  _id: "w30734457"
+} );
+
+db.poiConcat.find( {
+  l: {
+    *$geoIntersects: {*
+      *$geometry: building.l*
+    *}*
+  },
+  ts: {
+    $exists: true
+  }
+} );
+</example>
+
+<example inline="1">
+{ "_id" : "w5059478", "ts" : [ "branch=Charing Cross", "electrified=rail", "frequency=0", "gauge=1435", "history=Retrieved from v43", "layer=-3", "line=Northern", "loading_gauge=deep-tube", "name=Northern Line (Charing Cross Branch) Southbound", "network=London Underground", "oneway=yes", "railway=subway", "tunnel=yes", "voltage=630" ] }
+{ "_id" : "w139389296", "ts" : [ "branch=Charing Cross", "electrified=rail", "frequency=10", "gauge=1435", "layer=-2", "line=Northern", "loading_gauge=deep-tube", "name=Northern Line (Charing Cross Branch)", "network=London Underground", "oneway=yes", "railway=subway", "tunnel=yes", "voltage=630" ] }
+{ "_id" : "n595696911", "ts" : [ "disused=yes", "disused:amenity=bar", "name=Kudos", "toilets=yes", "toilets:access=customers" ] }
+{ "_id" : "n595696974", "ts" : [ "amenity=cafe", "name=Costa", "wheelchair=yes" ] }
+{ "_id" : "n653124873", "ts" : [ "addr:city=London", "addr:housenumber=441", "addr:street=Strand", "operator=Paperchase", "phone=020 7497 2797", "postal_code=WC2R 0QU", "shop=stationery", "website=http://www.paperchase.co.uk/london/strand/stry/wc2r0qr/" ] }
+{ "_id" : "n1163880380", "ts" : [ "addr:housenumber=430", "addr:street=Strand", "name=Ryman", "phone=+44 20 7240 4408", "postal_code=WC2R 0QN", "shop=stationery", "website=http://www.ryman.co.uk/store-finder/branches/branch/?storeid=1037", "wheelchair=limited" ] }
+{ "_id" : "n1571982051", "ts" : [ "name=Charing Cross", "railway=subway_entrance", "source:name=survey", "source:railway=survey" ] }
+{ "_id" : "n1571982070", "ts" : [ "name=Charing Cross", "railway=subway_entrance", "source:name=survey", "source:railway=survey", "wheelchair=no" ] }
+{ "_id" : "n2066862842", "ts" : [ "addr:housenumber=440", "addr:street=Strand", "amenity=bank", "name=Coutts &amp; Co", "phone=+44 2077 531000", "postal_code=WC2R 0QS", "website=http://www.coutts.com/locations/london-strand/" ] }
+{ "_id" : "w166702178", "ts" : [ "layer=-3", "line=Jubilee", "name=Jubilee Line (disused)", "network=London Underground", "oneway=yes", "railway=disused", "tunnel=yes" ] }
+{ "_id" : "w166707824", "ts" : [ "layer=-2", "name=Northern Line Southbound", "railway=platform" ] }
+{ "_id" : "w166707825", "ts" : [ "layer=-2", "name=Northern Line Northbound", "railway=platform" ] }
+</example>
+</slide>

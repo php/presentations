@@ -1,0 +1,22 @@
+<slide>
+<title>Geo Operators</title>
+
+<blurb>%$near%</blurb>
+<list>
+     <bullet>find stuff near a point</bullet>
+     <bullet>index required</bullet>
+</list>
+
+<blurb>%$geoWithin%</blurb>
+<list>
+     <bullet>find stuff within a polygon/circle</bullet>
+     <bullet>index *not* required</bullet>
+</list>
+
+<blurb>%$geoIntersects%</blurb>
+<list>
+     <bullet>find stuff that intersects with other stuff</bullet>
+     <bullet>index *not* required</bullet>
+</list>
+
+</slide>

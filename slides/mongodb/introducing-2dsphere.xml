@@ -1,0 +1,21 @@
+<slide>
+<title>MongoDB 2.4: Introducing 2dsphere</title>
+
+<list>
+    <bullet>Lines, Polygons and Points can be indexed.</bullet>
+
+    <bullet>
+        Multiple geo fields can be indexed:
+        <list>
+            <bullet>Find me air routes where the start is within 50mi of NYC and the end points is within 50mi of Miami.</bullet>
+        </list>
+    </bullet>
+    <bullet>
+        Geo field doesn't have to be first indexed field.
+        <list>
+            <bullet>Speeds up certain queries a lot.</bullet>
+        </list>
+    </bullet>
+    <bullet>Almost no driver changes needed, since only added new queries.</bullet>
+</list>
+</slide>
