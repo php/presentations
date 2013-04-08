@@ -1,3 +1,12 @@
 <slide>
 <title>Summary</title>
+
+<image filename="include-beer.jpg" align="right"/>
+
+<list>
+	<bullet>Real spherical model</bullet>
+	<bullet>New %$geoIntersects% operator</bullet>
+	<bullet>Compound indexes</bullet>
+	<bullet>It's a lot faster</bullet>
+</list>
 </slide>

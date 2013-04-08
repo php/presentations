@@ -1,11 +1,11 @@
-<slide>
+<slide type="title">
 <title>Resources</title>
 
 <qrcode>http://derickrethans.nl/talks/:-:talk_id:-:</qrcode>
-<list>
-	<bullet>Slides and Feedback: :-:joindin:-:</bullet>
-	<bullet>Contact me: :-:speaker:-:: @:-:twitter:-:, :-:email:-:</bullet>
-</list>
+<blurb class="event-presenter">
+Slides: :-:joindin:-:<br/>
+:-:speaker:-: — @:-:twitter:-: — :-:email:-:
+</blurb>
 <div class="footer">
 <image align="left" filename="10gen.png" pdf-scale="0.4" x-offset="2" y-offset="12.3"/>
 <image align="right" filename="mongodb.png" pdf-scale="0.4" x-offset="18" y-offset="13.3"/>

@@ -27,7 +27,7 @@ db.poiConcat.find( {
 <div effect="fade-in-out">
     <blurb>*ensureIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 257</blurb>
 </div>
-<div effect="fade-in">
+<div effect="fade-in-out">
     <blurb>*ensureIndex( { ts: 1} )* &amp;&amp; *ensureIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 256</blurb>
 </div>
 <div effect="fade-in-out">

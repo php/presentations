@@ -12,10 +12,10 @@
 
 <slide>slides/mongodb/title.xml</slide>
 
+<slide>slides/mongodb/closed-pub.xml</slide>
 <!-- A few words about our dataset -->
 <slide>slides/mongodb/few-words-about-osm.xml</slide>
 <!-- Introduction, what is geo -->
-<slide>slides/mongodb/what-is-geo.xml</slide>
 
 <!-- GEO in 2.2
     Planar with occasional spherical distance
@@ -41,6 +41,7 @@
     No driver changes needed, since only added new queries.
 -->
 <slide>slides/mongodb/introducing-2dsphere.xml</slide>
+<slide>slides/mongodb/flat-vs-sphere.xml</slide>
 
 <!-- DATA STORAGE -->
 <!--
