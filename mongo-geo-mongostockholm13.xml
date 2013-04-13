@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Finding a Pub with MongoDB 2.4 Geo Features</title>
+<event>MongoDB Stockholm</event>
+<location>Stockholm, Sweden</location>
+<date>May 3rd, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/mongo-geo-stockholm13</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/mongodb/closed-pub.xml</slide>
+<!-- A few words about our dataset -->
+<slide>slides/mongodb/few-words-about-osm.xml</slide>
+<!-- Introduction, what is geo -->
+
+<!-- GEO in 2.2
+    Planar with occasional spherical distance
+        $nearSphere, $centerSphere
+        Limited spherical behavior (wrapping)
+    Indexes only points
+    $near(Sphere) finds Points near a point
+    $geoWithin finds points within a circle or a polygon
+    Index required for everything
+
+	Index type: 2d
+-->
+<slide>slides/mongodb/geo-2.2.xml</slide>
+
+<!--
+    Lines and Polygons and points can be indexed.
+
+    Multiple geo fields can be indexed.
+        Find me air routes where the start is within 50mi of NYC and the end points is within 50mi of Miami
+            Geo fields fully indexed in 2dsphere, only one indexed in 2d
+    Geo field doesn't have to be first indexed field.
+        Speeds up certain queries a lot.
+    No driver changes needed, since only added new queries.
+-->
+<slide>slides/mongodb/introducing-2dsphere.xml</slide>
+<slide>slides/mongodb/flat-vs-sphere.xml</slide>
+
+<!-- DATA STORAGE -->
+<!--
+	No more [ lon, lat ], but geojson instead
+
+SAY WHERE ELSE GeoJson is used
+-->
+<slide>slides/mongodb/geojson.xml</slide>
+
+<!--
+	POINT:
+    show an image, and the GeoJson under 
+-->
+<slide>slides/mongodb/geojson-point.xml</slide>
+<!--
+	LINESTRING:
+    show an image, and the GeoJson under 
+-->
+<slide>slides/mongodb/geojson-linestring.xml</slide>
+<!--
+	POLYGON:
+    show an image, and the GeoJson under 
+-->
+<slide>slides/mongodb/geojson-polygon.xml</slide>
+
+<!--
+	CELLS,
+    We divide the surface of the earth into cells
+        A library called S2 from Google does the hard work
+    Cells have a level which define the size of the cell.
+    S2 provides 31 levels
+    The higher the level, the smaller the cell, and therefore the more needed to cover the earth
+    By default, we use all levels between 500m on a side and 100km on a side
+-->
+<slide>slides/mongodb/cells.xml</slide>
+<!--
+	Show grid over the UK
+	Explain coverings
+	highlight scotland
+-->
+<slide>slides/mongodb/cells-level3-example-uk-1.xml</slide>
+<!--
+    Coverings are a set of cells that cover a geometry
+        The last slide had a very coarse covering of North America
+    Coverings are the basis of the 2dsphere index.
+-->
+<slide>slides/mongodb/cells-coverings.xml</slide>
+<slide>slides/mongodb/cells-level3-example-uk-2.xml</slide>
+<slide>slides/mongodb/cells-level3-example-uk-3.xml</slide>
+<slide>slides/mongodb/cells-level3-example-uk-4.xml</slide>
+
+<!--
+	Show grid of (part of) London:
+	- Point, Westminster palace
+	- Line, Oxford Street
+    - Polygon, Hyde Park
+-->
+<slide>slides/mongodb/cells-level10-example-london-1.xml</slide>
+<slide>slides/mongodb/cells-level10-example-london-2.xml</slide>
+<slide>slides/mongodb/cells-level10-example-london-3.xml</slide>
+
+
+<!-- operators
+    $near
+        find stuff near a point
+        index required
+    $geoWithin
+        find stuff within a polygon/circle
+        index NOT required
+    $geoIntersects
+        find stuff that intersects with other stuff
+        index NOT required
+
+-->
+<slide>slides/mongodb/geo-in-2.4.xml</slide>
+
+<!-- near
+	- Example with road and park
+	- slide with index/no index, and comparsion with 2.2?
+-->
+<!-- geoWithin
+	- Example with road and park
+	- slide with index/no index, and comparsion with 2.2?
+-->
+<!-- geoIntersects
+	- Example with road and park
+	- slide with index/no index, and comparsion with 2.2?
+-->
+<slide>slides/mongodb/geo-near.xml</slide>
+
+<!--
+	NEAR
+
+    Starts from a point
+    Looks at concentric donuts from that point
+    Want to look at documents within the donut
+    If distance from query point to document is within the donut, output
+    Adapts size of the donut as needed
+-->
+<slide>slides/mongodb/geo-near-explanation-0.xml</slide>
+<slide>slides/mongodb/geo-near-explanation-1.xml</slide>
+<slide>slides/mongodb/geo-near-explanation-2.xml</slide>
+<slide>slides/mongodb/geo-near-explanation-3.xml</slide>
+<slide>slides/mongodb/geo-near-explanation-4.xml</slide>
+<slide>slides/mongodb/geo-near-explanation-5.xml</slide>
+<slide>slides/mongodb/geo-near-explanation-6.xml</slide>
+<slide>slides/mongodb/geo-near-explanation-7.xml</slide>
+
+<!--
+	GeoWithin/GeoIntersecs
+
+    Generate a covering for geometry in query
+    Look at all points in all overlapping cells
+        Cells may be larger or smaller than our covering
+        Must look at cells that contain our covering
+        Must look at cells that we contain
+    See if documents are within or intersect our query geometry
+
+	Show examples of:
+	- within: The Palace of Westminster (point) in "City of Westminster" (polygon)
+	- intersect: thames (line) crossing London (polygon)
+-->
+<slide>slides/mongodb/geo-within.xml</slide>
+<slide>slides/mongodb/geo-within-intersects-explanation.xml</slide>
+<slide>slides/mongodb/geo-within-1.xml</slide>
+<slide>slides/mongodb/geo-within-2.xml</slide>
+
+<slide>slides/mongodb/geo-intersects.xml</slide>
+<slide>slides/mongodb/geo-intersects-1.xml</slide>
+
+
+<!--
+Without index:
+    $near
+        Look at every point
+        Sort by distance
+        Very slow, so requires an index.
+    $geoWithin
+        Look at every document
+        Is it within the query polygon?
+        Order is arbitrary
+    $geoIntersects
+        Look at every document
+        Does it intersect with the query geometry?
+        Order is arbitrary
+-->
+<!-- AGGREGATION:
+
+	- show tube stations per borough
+	- show pubs by borough
+
+http://docs.mongodb.org/manual/reference/aggregation/#stage._S_geoNear
+
+- distance is important
+- $geoNear in aggregation can't deal with more than one 2dsphere index
+- spherical option is *required* when using a 2dsphere index
+-->
+<slide>slides/mongodb/geo-aggregation.xml</slide>
+<slide>slides/mongodb/geo-aggregation2.xml</slide>
+
+<!-- SHOW EXAMPLE OF:
+	-  MULTIPLE GEO FIELDS
+	- compound keys with:
+      normal first, geo second
+	  geo first, normal second
+-->
+<slide>slides/mongodb/geo-indexes.xml</slide>
+
+<slide>slides/mongodb/summary.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>
