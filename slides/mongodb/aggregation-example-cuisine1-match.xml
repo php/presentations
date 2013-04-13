@@ -6,7 +6,7 @@ $m = new MongoClient();
 
 $res = $m->demo->poiConcat->aggregate( [
     /* First we match all documents that have a cuisine tag: */ 
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
 ] );
 
 var_dump( $res['result'] );

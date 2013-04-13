@@ -5,10 +5,10 @@
 $m = new MongoClient();
 
 $res = $m->demo->poiConcat->aggregate( [
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
-    [ '$unwind' => '$tags' ],
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
-    [ '$group' => [ '_id' => '$tags', 'count' => [ '$sum' => 1 ] ] ],
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$unwind' => '$ts' ],
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$group' => [ '_id' => '$ts', 'count' => [ '$sum' => 1 ] ] ],
     /* and at last we sort by count */
     [ '$sort' => [ 'count' => -1 ] ],
 ] );

@@ -5,10 +5,10 @@
 $m = new MongoClient();
 
 $res = $m->demo->poiConcat->aggregate( [
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
-    [ '$unwind' => '$tags' ],
-    /* Match again to get rid of all the useless tags */
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$unwind' => '$ts' ],
+    /* Match again to get rid of all the useless ts */
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
 ] );
 
 var_dump( $res['result'] );

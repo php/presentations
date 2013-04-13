@@ -5,9 +5,9 @@
 $m = new MongoClient();
 
 $res = $m->demo->poiConcat->aggregate( [
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
-    /* Then we unwind all the tags */
-    [ '$unwind' => '$tags' ],
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
+    /* Then we unwind all the ts */
+    [ '$unwind' => '$ts' ],
 ] );
 
 var_dump( $res['result'] );

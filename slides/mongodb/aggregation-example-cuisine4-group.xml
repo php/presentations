@@ -5,11 +5,11 @@
 $m = new MongoClient();
 
 $res = $m->demo->poiConcat->aggregate( [
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
-    [ '$unwind' => '$tags' ],
-    [ '$match' => [ 'tags' => new MongoRegex( '/^cuisine=/' ) ] ],
-    /* Now we group on the tags */
-    [ '$group' => [ '_id' => '$tags' ] ],
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
+    [ '$unwind' => '$ts' ],
+    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
+    /* Now we group on the ts */
+    [ '$group' => [ '_id' => '$ts' ] ],
 ] );
 
 var_dump( $res['result'] );
