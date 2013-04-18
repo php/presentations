@@ -1,0 +1,19 @@
+<slide>
+<title>Verify that the shard was added</title>
+
+<image filename="verify-added.png"/>
+
+<break lines="2"/>
+<list>
+	<bullet>%db.runCommand({ listshards:1 })%</bullet>
+</list>
+<example>
+{
+    "shards" : [
+        { "_id": "shard0000", "host": "&lt;hostname&gt;:27018" }
+    ],
+    "ok" : 1
+}
+</example>
+
+</slide>

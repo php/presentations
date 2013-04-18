@@ -1,0 +1,11 @@
+<slide>
+<title>Moving the chunk</title>
+
+<image filename="move-chunk.png"/>
+
+<list>
+    <bullet>The mongos sends a "moveChunk" command to source shard</bullet>
+    <bullet>The source shard then notifies destination shard</bullet>
+    <bullet>The destination claims the chunk shard-key range</bullet>
+</list>
+</slide>

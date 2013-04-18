@@ -1,0 +1,13 @@
+<slide>
+<title>Chunk splitting</title>
+
+<image filename="chunk-splitting.png"/>
+<break/>
+
+<list>
+    <bullet>A chunk is split once it exceeds the maximum size</bullet>
+    <bullet>There is no split point if all documents have the same shard key</bullet>
+    <bullet>Chunk split is a logical operation (no data is moved)</bullet>
+    <bullet>If split creates too large of a discrepancy of chunk count across cluster a balancing round starts</bullet>
+</list>
+</slide>

@@ -1,0 +1,18 @@
+<slide>
+<title>MongoDB Auto-Sharding</title>
+
+<list>
+    <bullet>Minimal effort required
+		<list>
+			<bullet>Same interface as single mongod</bullet>
+		</list>
+	</bullet>
+    <bullet>
+		Two steps
+		<list>
+			<bullet>Enable Sharding for a database</bullet>
+			<bullet>Shard collection within database</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

@@ -1,0 +1,12 @@
+<slide>
+<title>Shard Key</title>
+
+<list>
+    <bullet>Choose a field common used in queries</bullet>
+    <bullet>Shard key is *immutable*</bullet>
+    <bullet>Shard key values are *immutable*</bullet>
+    <bullet>Shard key requires index on fields contained in key</bullet>
+    <bullet>Uniqueness of %_id% field is only guaranteed within individual shard</bullet>
+    <bullet>Shard key limited to 512 bytes in size</bullet>
+</list>
+</slide>

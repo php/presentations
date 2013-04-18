@@ -1,0 +1,16 @@
+<slide>
+<title>Acquiring the Balancer lock</title>
+
+<image filename="acquire-lock.png"/>
+
+<list>
+    <bullet>The balancer on mongos takes out a "balancer" lock</bullet>
+    <bullet>
+		To see the status of these locks:
+		<list>
+			<bullet>%use config%</bullet>
+			<bullet>%db.locks.find({ _id: "balancer" })%</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

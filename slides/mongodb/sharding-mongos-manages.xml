@@ -1,0 +1,18 @@
+<slide>
+<title>MongoS manages the data</title>
+
+<list>
+	<blurb>
+		Mongos
+		<list>
+			<bullet>Acts as a router / balancer</bullet>
+			<bullet>No local data (persists to config database)</bullet>
+			<bullet>Can have 1 or many</bullet>
+		</list>
+	</blurb>
+</list>
+
+<break lines="2"/>
+
+<image filename="mongos-es.png"/>
+</slide>

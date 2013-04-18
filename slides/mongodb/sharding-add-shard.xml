@@ -1,0 +1,11 @@
+<slide>
+<title>Add the shard</title>
+
+<image filename="add-shard.png"/>
+
+<list>
+    <bullet>On mongos:<br/>%sh.addShard('&amp;lt;host&amp;gt;:27018')%</bullet>
+    <bullet>Adding a replica set:<br/>%sh.addShard('&amp;lt;rsname&amp;gt;/&amp;lt;seedlist&amp;gt;')%</bullet>
+    <bullet>In 2.2 and later can use:<br/>%sh.addShard('&amp;lt;host&amp;gt;:&amp;lt;port&amp;gt;')%</bullet>
+</list>
+</slide>

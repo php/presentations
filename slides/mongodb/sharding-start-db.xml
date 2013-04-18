@@ -1,0 +1,12 @@
+<slide>
+<title>Start the shard database</title>
+
+<image filename="start-database.png"/>
+
+<list>
+	<bullet>%mongod --shardsvr%</bullet>
+    <bullet>Starts a mongod with the default shard port (27018)</bullet>
+    <bullet>Shard is not yet connected to the rest of the cluster</bullet>
+    <bullet>Shard may have already been running in production</bullet>
+</list>
+</slide>

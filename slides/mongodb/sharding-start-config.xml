@@ -1,0 +1,10 @@
+<slide>
+<title>Start the config server</title>
+
+<image filename="start-server.png"/>
+
+<list>
+	<bullet>%mongod --configsvr%</bullet>
+	<bullet>Starts a config server on the default port (27019)</bullet>
+</list>
+</slide>

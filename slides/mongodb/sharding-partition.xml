@@ -1,0 +1,13 @@
+<slide>
+<title>Partition data based on ranges</title>
+
+<list>
+    <bullet>User defines shard key</bullet>
+    <bullet>Shard key defines range of data</bullet>
+    <bullet>Key space is like points on a line</bullet>
+    <bullet>Range is a segment of that line</bullet>
+</list>
+
+<break lines="3"/>
+<image filename="partition.png"/>
+</slide>

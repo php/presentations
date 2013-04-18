@@ -1,0 +1,11 @@
+<slide>
+<title>MongoDB manages data</title>
+
+<image filename="manages.png" align="right"/>
+
+<list>
+    <bullet>Queries routed to specific shards</bullet>
+    <bullet>MongoDB balances cluster</bullet>
+    <bullet>MongoDB migrates data to new nodes</bullet>
+</list>
+</slide>

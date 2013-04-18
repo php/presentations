@@ -1,0 +1,15 @@
+<slide>
+<title>Cleanup</title>
+
+<image filename="move-cleanup.png"/>
+
+<list>
+    <bullet>
+		Source shard deletes moved data
+		<list>
+			<bullet>Must wait for open cursors to either close or time out</bullet>
+		</list>
+	</bullet>
+    <bullet>Mongos releases balancer lock after old chunks are deleted</bullet>
+</list>
+</slide>

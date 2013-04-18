@@ -1,0 +1,10 @@
+<slide>
+<title>Balancing</title>
+
+<image filename="balancing.png"/>
+
+<list>
+    <bullet>Balancer is running on mongos</bullet>
+    <bullet>Once the difference in chunks between the most dense shard and the least dense shard is above the migration threshold, a balancing round starts</bullet>
+</list>
+</slide>

@@ -1,0 +1,19 @@
+<slide>
+<title>Data Store Scalability Today</title>
+
+<list>
+	<bullet>
+		MongoDB auto-sharding available in 2009
+	</bullet>
+	<bullet>
+		A data store that is
+		<list>
+            <bullet>Free</bullet>
+            <bullet>Publicly available</bullet>
+            <bullet>Open source (https://github.com/mongodb/mongo)</bullet>
+            <bullet>Horizontally scalable</bullet>
+            <bullet>Application independent</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

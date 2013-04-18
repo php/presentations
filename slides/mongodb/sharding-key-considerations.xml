@@ -1,0 +1,10 @@
+<slide>
+<title>Shard Key Considerations</title>
+
+<list>
+    <bullet>Cardinality</bullet>
+    <bullet>Write distribution</bullet>
+    <bullet>Query isolation</bullet>
+    <bullet>Data Distribution</bullet>
+</list>
+</slide>

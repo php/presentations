@@ -1,0 +1,18 @@
+<slide>
+<title>Config server stores meta data</title>
+
+<list>
+	<bullet>
+		Config Server
+		<list>
+			<bullet>Stores cluster chunk ranges and locations</bullet>
+			<bullet>Can have only 1 or 3 (production must have 3)</bullet>
+			<bullet>Two phase commit (not a replica set)</bullet>
+		</list>
+		</bullet>
+</list>
+
+<break lines="2"/>
+
+<image filename="config-server.png"/>
+</slide>

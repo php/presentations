@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Sharding with MongoDB</title>
+<event>BigDataCon</event>
+<location>Mainz, Germany</location>
+<date>April 23rd, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/mongo-sharding-bigdatacon13</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/sharding-agenda.xml</slide>
+<slide>slides/mongodb/sharding-the-story.xml</slide>
+<slide>slides/mongodb/sharding-vertical-scale.xml</slide>
+<slide>slides/mongodb/sharding-horizontal-scale.xml</slide>
+<slide>slides/mongodb/sharding-data-store-old.xml</slide>
+<slide>slides/mongodb/sharding-data-store-now.xml</slide>
+<slide>slides/mongodb/sharding-why.xml</slide>
+<slide>slides/mongodb/sharding-working-set.xml</slide>
+<slide>slides/mongodb/sharding-throughput.xml</slide>
+<slide>slides/mongodb/sharding-mongo-approach.xml</slide>
+<slide>slides/mongodb/sharding-partition.xml</slide>
+<slide>slides/mongodb/sharding-chunks.xml</slide>
+<slide>slides/mongodb/sharding-manages.xml</slide>
+<slide>slides/mongodb/sharding-auto-shard.xml</slide>
+<slide>slides/mongodb/sharding-architecture.xml</slide>
+<slide>slides/mongodb/sharding-shard.xml</slide>
+<slide>slides/mongodb/sharding-config-server.xml</slide>
+<slide>slides/mongodb/sharding-mongos-manages.xml</slide>
+<slide>slides/mongodb/sharding-infrastructure.xml</slide>
+<slide>slides/mongodb/sharding-configuration.xml</slide>
+<slide>slides/mongodb/sharding-example-setup.xml</slide>
+<slide>slides/mongodb/sharding-start-config.xml</slide>
+<slide>slides/mongodb/sharding-start-mongos.xml</slide>
+<slide>slides/mongodb/sharding-start-db.xml</slide>
+<slide>slides/mongodb/sharding-add-shard.xml</slide>
+<slide>slides/mongodb/sharding-verify-added.xml</slide>
+<slide>slides/mongodb/sharding-enable.xml</slide>
+<slide>slides/mongodb/sharding-key-title.xml</slide>
+<slide>slides/mongodb/sharding-shard-key.xml</slide>
+<slide>slides/mongodb/sharding-key-considerations.xml</slide>
+<slide>slides/mongodb/sharding-mechanics.xml</slide>
+<slide>slides/mongodb/sharding-partitioning.xml</slide>
+<slide>slides/mongodb/sharding-chunk-is-range.xml</slide>
+<slide>slides/mongodb/sharding-chunk-splitting.xml</slide>
+<slide>slides/mongodb/sharding-balancing.xml</slide>
+<slide>slides/mongodb/sharding-acquire-lock.xml</slide>
+<slide>slides/mongodb/sharding-move-chunk.xml</slide>
+<slide>slides/mongodb/sharding-commit-migration.xml</slide>
+<slide>slides/mongodb/sharding-cleanup.xml</slide>
+<slide>slides/mongodb/sharding-routing.xml</slide>
+<slide>slides/mongodb/sharding-routing-types.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query1.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query2.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query3.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query4.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query1.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query2.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query3.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query4.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query1.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query2.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query3.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query4.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query5.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query6.xml</slide>
+
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

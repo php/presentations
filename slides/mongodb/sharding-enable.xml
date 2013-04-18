@@ -1,0 +1,15 @@
+<slide>
+<title>Enabling Sharding</title>
+
+<list>
+	<bullet>Enable sharding on a database:<br/>
+	%sh.enableSharding("&amp;lt;dbname&amp;gt;")%</bullet>
+
+	<bullet>Shard a collection with the given key:<br/>
+	%sh.shardCollection("&amp;lt;dbname&amp;gt;.people", {"country":1})%</bullet>
+
+	<bullet>Use a compound shard key to prevent duplicates:<br/>
+	%sh.shardCollection("&amp;lt;dbname&amp;gt;.cars", {"year":1, "uniqueid":1})%</bullet>
+
+</list>
+</slide>

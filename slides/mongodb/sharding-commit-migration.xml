@@ -1,0 +1,10 @@
+<slide>
+<title>Committing Migration</title>
+
+<image filename="commit-migration.png"/>
+
+<list>
+    <bullet>When complete, destination shard updates config server</bullet>
+    <bullet>Provides new locations of the chunks</bullet>
+</list>
+</slide>
