@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>Maps</topic>
+<title>Aggregation Framework</title>
+<event>MongoDB Stockholm</event>
+<location>Stockholm, Sweden</location>
+<date>May 3rd, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/mongo-aggregation-stockholm13</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/mongodb/aggr-agenda.xml</slide>
+
+<slide>slides/mongodb/aggr-state-of-section.xml</slide>
+<slide>slides/mongodb/aggr-state-of-aggr.xml</slide>
+<slide>slides/mongodb/aggr-data-warehousing-img.xml</slide>
+<slide>slides/mongodb/aggr-data-warehousing.xml</slide>
+<slide>slides/mongodb/aggr-mapreduce-img.xml</slide>
+<slide>slides/mongodb/aggr-mapreduce.xml</slide>
+<slide>slides/mongodb/aggr-mapreduce-mongodb.xml</slide>
+<slide>slides/mongodb/aggr-aggr-framework-img.xml</slide>
+<slide>slides/mongodb/aggr-aggr-framework.xml</slide>
+<slide>slides/mongodb/aggr-pipeline-section.xml</slide>
+<slide>slides/mongodb/aggr-pipeline.xml</slide>
+<slide>slides/mongodb/aggr-pipelines-ops.xml</slide>
+<slide>slides/mongodb/aggr-our-example-data.xml</slide>
+<slide>slides/mongodb/aggr-op-match.xml</slide>
+<slide>slides/mongodb/aggr-op-match-example.xml</slide>
+<slide>slides/mongodb/aggr-op-match-with-query-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project.xml</slide>
+<slide>slides/mongodb/aggr-op-project-incl-excl-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project-rename-compute-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project-create-sub-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group.xml</slide>
+<slide>slides/mongodb/aggr-op-group-calc-avg-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group-sum-count-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group-collect-example.xml</slide>
+<slide>slides/mongodb/aggr-op-unwind.xml</slide>
+<slide>slides/mongodb/aggr-op-unwind-example.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-skip-limit.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-example.xml</slide>
+<slide>slides/mongodb/aggr-op-limit-example.xml</slide>
+<slide>slides/mongodb/aggr-op-skip-example.xml</slide>
+
+<slide>slides/mongodb/aggr-usage-and-limitations-section.xml</slide>
+<slide>slides/mongodb/aggr-usage.xml</slide>
+<slide>slides/mongodb/aggr-collection.xml</slide>
+<slide>slides/mongodb/aggr-database-cmd.xml</slide>
+<slide>slides/mongodb/aggr-limitations.xml</slide>
+
+<slide>slides/mongodb/aggr-sharding-section.xml</slide>
+<slide>slides/mongodb/aggr-sharding.xml</slide>
+<slide>slides/mongodb/aggr-sharding-example1.xml</slide>
+<slide>slides/mongodb/aggr-sharding-example2.xml</slide>
+
+<slide>slides/mongodb/aggr-expressions-section.xml</slide>
+<slide>slides/mongodb/aggr-expressions.xml</slide>
+<slide>slides/mongodb/aggr-expr-boolean.xml</slide>
+<slide>slides/mongodb/aggr-expr-comparison.xml</slide>
+<slide>slides/mongodb/aggr-expr-arithmetic.xml</slide>
+<slide>slides/mongodb/aggr-expr-string.xml</slide>
+<slide>slides/mongodb/aggr-expr-date.xml</slide>
+<slide>slides/mongodb/aggr-expr-conditional.xml</slide>
+
+<slide>slides/mongodb/aggr-looking-ahead-section.xml</slide>
+<slide>slides/mongodb/aggr-fw-use-cases.xml</slide>
+<slide>slides/mongodb/aggr-fw-extending.xml</slide>
+<slide>slides/mongodb/aggr-fw-future.xml</slide>
+<slide>slides/mongodb/aggr-enabling-devs.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

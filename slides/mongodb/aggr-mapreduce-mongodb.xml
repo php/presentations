@@ -1,0 +1,20 @@
+<slide>
+<title>MapReduce in MongoDB</title>
+
+<list>
+	<bullet>
+		Implemented with JavaScript
+		<list>
+			<bullet>Single-threaded</bullet>
+			<bullet>Difficult to debug</bullet>
+		</list>
+	</bullet>
+	<bullet>
+		Concurrency
+		<list>
+			<bullet>Appearance of parallelism</bullet>
+			<bullet>Write locks</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

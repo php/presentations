@@ -1,0 +1,16 @@
+<slide>
+<title>Data Warehousing</title>
+
+<list>
+    <bullet>SQL for reporting and analytics</bullet>
+	<bullet>
+		Infrastructure complications
+		<list>
+			<bullet>Additional maintenance</bullet>
+			<bullet>Data duplication</bullet>
+			<bullet>Extract Transform Load (ETL) processes</bullet>
+			<bullet>Real time?</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

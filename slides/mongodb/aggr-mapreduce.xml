@@ -1,0 +1,15 @@
+<slide>
+<title>MapReduce</title>
+
+<list>
+    <bullet>Extremely versatile, powerful</bullet>
+    <bullet>Intended for complex data analysis</bullet>
+    <bullet>Overkill for simple aggregation tasks
+		<list>
+			<bullet>Averages</bullet>
+			<bullet>Summation</bullet>
+			<bullet>Grouping</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

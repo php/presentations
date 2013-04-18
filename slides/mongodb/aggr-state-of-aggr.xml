@@ -1,0 +1,9 @@
+<slide>
+<title>State of Aggregation</title>
+
+<list>
+    <bullet>We're storing our data in MongoDB</bullet>
+    <bullet>We need to do ad-hoc reporting, grouping, common aggregations, etc.</bullet>
+    <bullet>What are we using for this?</bullet>
+</list>
+</slide>
