@@ -18,26 +18,25 @@
 
 <div effect="fade-in">
 <blurb>Overpass</blurb>
-<example><![CDATA[
-<?php
-$bb = '<bbox-query e="0.334" n="51.691" s="51.286" w="-0.510"/>';
+<example inline="3"><![CDATA[
+&lt;?php
+$bb = '&lt;bbox-query e="0.334" n="51.691" s="51.286" w="-0.510"/>';
 
-$data = <<<ENDDATA
-<union>
-    <query type="node"><has-kv k="amenity" v="pub"/>$bb</query>
-    <query type="way"><has-kv k="amenity" v="pub"/>$bb</query>
-</union>
-<query type="node">
-    <around radius="2"/>
-    <has-kv k="highway" v="bus_stop"/>
-</query>
-<print/>
-ENDDATA;
+*$data = &lt;&lt;&lt;ENDDATA*
+*&lt;union>*
+*    &lt;query type="node">&lt;has-kv k="amenity" v="pub"/>$bb&lt;/query>*
+*    &lt;query type="way">&lt;has-kv k="amenity" v="pub"/>$bb&lt;/query>*
+*&lt;/union>*
+*&lt;query type="node">*
+*    &lt;around radius="2"/>*
+*    &lt;has-kv k="highway" v="bus_stop"/>*
+*&lt;/query>*
+*&lt;print/>*
+*ENDDATA;*
 
 $params = array(
     'http' => array(
-        'method' => 'POST',
-        'content' => $data,
+        'method' => 'POST', 'content' => $data,
         'header' => 'Content-Type: application/x-www-form-urlencoded'
     )
 );

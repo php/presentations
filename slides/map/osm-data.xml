@@ -5,14 +5,11 @@
 	<bullet>Nodes (Lat/Lon point)<br/>
 		<example><![CDATA[<node id='459517295' lat='50.0100766' lon='8.3162402' user='WoGo' timestamp='2009-08-09T11:45:33Z' uid='152395' version='1' changeset='2083951'>]]></example>
 	</bullet>
-	<bullet>Ways (Ordered interconnection of nodes, ie: roads)</bullet>
-	<bullet>Areas (Closed ways, ie: buildings, squares and landuse)
+	<bullet>Ways/Areas (Roads, buildings, squares and landuse)
 		<example><![CDATA[<way id='76174399' user='Derick Rethans' uid='37137' timestamp='2010-09-06T08:30:14Z' version='1' changeset='5695697'>
     <nd ref='898861293'/>
     <nd ref='898861305'/>
     <nd ref='898861298'/>
-    <nd ref='898861315'/>
-    <nd ref='898861293'/>
     ...
 </way>]]></example>
 	</bullet>
@@ -20,7 +17,6 @@
 		<example><![CDATA[<tag k='addr:housenumber' v='375'/>
 <tag k='addr:street' v='Kilburn High Road'/>
 <tag k='amenity' v='pub'/>
-<tag k='building' v='yes'/>
 <tag k='name' v='North London Tavern'/>]]></example>
 	</bullet>
 </list>
