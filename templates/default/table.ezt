@@ -1,6 +1,7 @@
 {use $node, $pres}
+{var $class = get_attribute( $node, 'class' )}
 <div>
-<table>
+<table{if $class} class="{$class}"{/if}>
 {foreach $node->childNodes as $child}
 	{if is_set( $child->tagName )}
 		{include $child->tagName . '.ezt' send $child as $node, $pres}

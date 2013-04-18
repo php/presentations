@@ -12,6 +12,7 @@
 
 <slide>slides/map/title.xml</slide>
 
+<slide>slides/mongodb/store-city-agenda.xml</slide>
 <!--
 In this talk I will be explaining the strong points of OpenStreetMap and why
 using GoogleMaps for your websites is generally a bad idea. Contrary to popular
@@ -25,6 +26,7 @@ added to and used in whatever way imaginary.
 <!--
 What is X?
 -->
+<slide>slides/map/store-data-section.xml</slide>
 <slide>slides/map/osm-what.xml</slide>
 
 <slide>slides/map/osm-data.xml</slide>
@@ -35,15 +37,22 @@ What is X?
 <slide>slides/map/osm-tags4.xml</slide>
 
 <slide>slides/map/osm-xapi.xml</slide>
+
+
+<slide>slides/mongodb/osm-import-mongo-section.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data3.xml</slide>
 <slide>slides/mongodb/osm-to-mongo-data4.xml</slide>
+
+<slide>slides/mongodb/osm-import-4times-section.xml</slide>
 <slide>slides/mongodb/osm-schema1.xml</slide>
 <slide>slides/mongodb/osm-schema2.xml</slide>
 <slide>slides/mongodb/osm-schema4.xml</slide>
 <slide>slides/mongodb/osm-schema3.xml</slide>
 <slide>slides/mongodb/osm-schema-summary.xml</slide>
+
+<slide>slides/mongodb/osm-import-script-section.xml</slide>
 <slide>slides/map/finding-food-import-mongo2.xml</slide>
 <slide>slides/map/import-script2.xml</slide>
 

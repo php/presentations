@@ -1,26 +1,57 @@
 <slide>
 <title>Importing data</title>
 
+<table class="columns">
+<tr>
+<td>
+<example><![CDATA[
+<way id="77002328" version="1"
+  changeset="5749014" uid="37137"
+  user="Derick Rethans"
+  timestamp="2010-09-11T11:25:48Z">
+  <nd ref="906743010"/>
+  <nd ref="906743004"/>
+  <nd ref="906742995"/>
+  <nd ref="906742998"/>
+  <nd ref="906743010"/>
+  <tag k="addr:housenumber" v="16" />
+  <tag k="addr:postcode" v="W1J 5HP" />
+  <tag k="addr:street" v="Curzon Street" />
+  <tag k="amenity" v="restaurant" />
+  <tag k="building" v="yes" />
+  <tag k="cuisine" v="lebanese" />
+  <tag k="name" v="Noura" />
+</way>]]>
+</example>
+</td>
+
+<td>
+<blurb class="large">→</blurb>
+</td>
+
+<td>
 <example>{
-	"_id" : "w77002328",
-	"type" : NumberLong(2),
-	"tags" : [
-		"addr:housenumber=16",
-		"addr:postcode=W1J 5HP",
-		"addr:street=Curzon Street",
-		"amenity=restaurant",
-		"building=yes",
-		"contact:phone=+44 20 74951050",
-		"cuisine=lebanese",
-		"name=Noura"
-	],
-	"loc" : [
-		[ -0.1479191, 51.5067744 ],
-		[ -0.1480757, 51.5067491 ],
-		[ -0.1481252, 51.5068679 ],
-		[ -0.1479687, 51.5068932 ],
-		[ -0.1479191, 51.5067744 ]
-	]
+  "_id" : "w77002328",
+  "type" : NumberLong(2),
+  "tags" : [
+    "addr:housenumber=16",
+    "addr:postcode=W1J 5HP",
+    "addr:street=Curzon Street",
+    "amenity=restaurant",
+    "building=yes",
+    "cuisine=lebanese",
+    "name=Noura"
+  ],
+  "loc" : [
+    [ -0.1479191, 51.5067744 ],
+    [ -0.1480757, 51.5067491 ],
+    [ -0.1481252, 51.5068679 ],
+    [ -0.1479687, 51.5068932 ],
+    [ -0.1479191, 51.5067744 ]
+  ]
 }
 </example>
+</td>
+</tr>
+</table>
 </slide>

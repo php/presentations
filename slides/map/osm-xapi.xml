@@ -1,7 +1,7 @@
 <slide>
 <title>Fetching OSM data</title>
 
-<div effect="fade-out">
+<div effect="fade-out stop">
 <blurb>The whole planet (bad idea as it's 26GB):</blurb>
 <example>http://planet.openstreetmap.org/planet/planet-latest.osm.bz2</example>
 <break/>
