@@ -52,6 +52,9 @@ $(document).ready(function() {
 {literal}
     $("*[class^='effect']").hide();
     $("*[class^='effect-fade-out']").show();
+	var f = $("div div:first").select(":first");
+
+	$("body").addClass(f[0].className);
 {/literal}
 {literal}
 });
@@ -115,6 +118,9 @@ $('*').keypress(function(event) {
 <body{if $img} style='background-image: url({$pres->base}{$img});'{/if}>
 <div class='whole-slide{if $maincolor} template-{$maincolor}{/if}'>
 {switch ( get_attribute( $node, 'type' ) )}
+	{case 'agenda'}
+		{include 'slide-agenda-page.ezt' send $node, $pres, $slideNr}
+	{/case}
 	{case 'section'}
 		{include 'slide-section-page.ezt' send $node, $pres, $slideNr}
 	{/case}

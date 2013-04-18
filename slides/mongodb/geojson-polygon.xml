@@ -5,26 +5,26 @@
 
 <example>
 {
-    "_id" : "w161490892",
-    "ty" : NumberLong(2),
-    "l" : {
-        "type" : "Polygon",
-        "coordinates" : [
-            [
-                [ -0.1356425, 51.497671 ],
-                [ -0.1355737, 51.4975662 ],
-                [ -0.1354639, 51.4975815 ],
-                [ -0.1354536, 51.497694 ],
-                [ -0.1356425, 51.497671 ]
-            ]
-        ]
-    },
-    "ts" : [
-        "amenity=pub",
-        "building=yes",
-        "name=The Albert",
-        "real_ale=yes"
-    ]
+   "_id" : "w161490892",
+   "ty" : NumberLong(2),
+   "l" : {
+      "type" : "Polygon",
+      "coordinates" : [
+         [
+            [ -0.1356425, 51.497671 ],
+            [ -0.1355737, 51.4975662 ],
+            [ -0.1354639, 51.4975815 ],
+            [ -0.1354536, 51.497694 ],
+            [ -0.1356425, 51.497671 ]
+         ]
+      ]
+   },
+   "ts" : [
+      "amenity=pub",
+      "building=yes",
+      "name=The Albert",
+      "real_ale=yes"
+   ]
 }
 </example>
 

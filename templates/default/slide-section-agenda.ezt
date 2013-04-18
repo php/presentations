@@ -1,0 +1,4 @@
+{use $node, $pres, $slideNr}
+<div class='agenda-slide'>
+{include 'slide-contents.ezt' send $node, $pres}
+</div>
