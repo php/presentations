@@ -1,0 +1,57 @@
+<slide>
+<title>Matching Field Values</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+  "_id" : "w42931536",
+  "tags" : {
+    "amenity" : "restaurant",
+*    "cuisine" : "french",*
+    "name" : "Le Comptoir Gascon",
+  }
+}
+{
+  "_id" : "w50732182",
+  "tags" : {
+    "amenity" : "restaurant",
+*    "cuisine" : "burger",*
+    "name" : "Starving Marvin's",
+  }
+}
+{
+  "_id" : "w58537927",
+  "tags" : {
+    "amenity" : "restaurant",
+*    "cuisine" : "chinese",*
+    "name" : "Royal Garden Restaurant"
+  }
+}
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{
+*  $match: {*
+*    "tags.cuisine": "chinese"*
+*  }*
+}
+</example>
+
+<example inline="3">
+{
+  "_id" : "w58537927",
+  "tags" : {
+    "building" : "yes",
+*    "cuisine" : "chinese",*
+    "name" : "Royal Garden Restaurant"
+  }
+}
+</example>
+</td></tr></table>
+</slide>

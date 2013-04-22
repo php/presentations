@@ -1,0 +1,17 @@
+<slide>
+<title>$group</title>
+
+    <bullet>Group documents by an ID
+		<list>
+			<bullet>Field reference, object, constant</bullet>
+		</list>
+	</bullet>
+    <bullet>Other output fields are computed
+		<list>
+			<bullet>%$max%, %$min%, %$avg%, %$sum%</bullet>
+			<bullet>%$addToSet%, %$push%</bullet>
+			<bullet>%$first%, %$last%</bullet>
+		</list>
+	</bullet>
+    <bullet>Processes all data in memory</bullet>
+</slide>

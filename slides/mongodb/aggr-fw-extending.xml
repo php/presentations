@@ -1,0 +1,13 @@
+<slide>
+<title>Extending the Framework</title>
+
+<list>
+    <bullet>Adding new pipeline operators, expressions</bullet>
+	<bullet>$out and $tee for output control
+		<list>
+			<bullet>https://jira.mongodb.org/browse/SERVER-3253</bullet>
+		</list>
+	</bullet>
+	<bullet>Cursor support</bullet>
+</list>
+</slide>

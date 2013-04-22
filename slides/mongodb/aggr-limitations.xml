@@ -1,0 +1,18 @@
+<slide>
+<title>Limitations</title>
+
+<list>
+    <bullet>Result limited by BSON document size
+		<list>
+			<bullet>Final command result</bullet>
+			<bullet>Intermediate shard results</bullet>
+		</list>
+	</bullet>
+	<bullet>Pipeline operator memory limits</bullet>
+	<bullet>Some BSON types unsupported
+		<list>
+			<bullet>Binary, Code, deprecated types</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

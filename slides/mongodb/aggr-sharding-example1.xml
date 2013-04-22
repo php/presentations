@@ -1,0 +1,13 @@
+<slide>
+<title>Sharding</title>
+
+<example>
+[
+	{ $match:   { /* filter by shard key */ } },
+	{ $project: { /* select fields */       } },
+	{ $group:   { /* group by some field */ } },
+	{ $sort:    { /* sort by some field */  } },
+	{ $project: { /* reshape result */      } }
+]
+</example>
+</slide>

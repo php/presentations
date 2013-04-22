@@ -1,0 +1,14 @@
+<slide>
+<title>Enabling Developers</title>
+
+<list>
+    <bullet>Doing more within MongoDB, faster</bullet>
+    <bullet>Refactoring MapReduce and groupings
+		<list>
+			<bullet>Replace pages of JavaScript</bullet>
+			<bullet>Longer aggregation pipelines</bullet>
+		</list>
+	</bullet>
+    <bullet>Quick aggregations from the shell</bullet>
+</list>
+</slide>

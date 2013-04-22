@@ -1,0 +1,35 @@
+<slide>
+<title>Limit Documents through the Pipeline</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{ "name" : "Blues Restaurant &amp; Bar" },
+{ "name" : "Yard" },
+{ "name" : "Le Sacré Coeur" },
+{ "name" : "Ask" },
+{ "name" : "Vigata" },
+{ "name" : "Sedir" },
+{ "name" : "Parveen" },
+{ "name" : "Mem &amp; Laz" },
+{ "name" : "Gallipoli" }
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+*{ $limit : 5 }*
+</example>
+
+<example inline="3">
+{ "name" : "Blues Restaurant &amp; Bar" },
+{ "name" : "Yard" },
+{ "name" : "Le Sacré Coeur" },
+{ "name" : "Ask" },
+{ "name" : "Vigata" },
+</example>
+</td></tr></table>
+</slide>

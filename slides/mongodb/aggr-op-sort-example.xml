@@ -1,0 +1,41 @@
+<slide>
+<title>Sort All the Documents in the Pipeline</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{ "name" : "Blues Restaurant &amp; Bar" },
+{ "name" : "Yard" },
+{ "name" : "Le Sacré Coeur" },
+{ "name" : "Ask" },
+{ "name" : "Vigata" },
+{ "name" : "Sedir" },
+{ "name" : "Parveen" },
+{ "name" : "Mem &amp; Laz" },
+{ "name" : "Gallipoli" }
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{ $sort: {
+*  name: 1*
+} }
+</example>
+
+<example inline="3">
+{ "name" : "Ask" },
+{ "name" : "Blues Restaurant &amp; Bar" },
+{ "name" : "Gallipoli" }
+{ "name" : "Le Sacré Coeur" },
+{ "name" : "Mem &amp; Laz" },
+{ "name" : "Parveen" },
+{ "name" : "Sedir" },
+{ "name" : "Vigata" },
+{ "name" : "Yard" },
+</example>
+</td></tr></table>
+</slide>

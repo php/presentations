@@ -1,0 +1,58 @@
+<slide>
+<title>Yielding Multiple Documents from One</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+  "_id" : "n476033502",
+  "type" : NumberLong(1),
+*  "tags" : [*
+*    "addr:housenumber=125",*
+*    "addr:street=Alban Gate",*
+*    "amenity=restaurant",*
+*    "cuisine=pizza",*
+*    "level=1",*
+*    "name=Pizza Express",*
+*    "phone=020 7600 8880",*
+*    "postcode=EC2Y 5AS"*
+*  ]*
+}
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{
+*  $unwind: '$tags'*
+}
+</example>
+
+<example inline="3">
+{
+  "_id" : "n476033502",
+  "type" : NumberLong(1),
+*  "tags" : "addr:housenumber=125"*
+},
+{
+  "_id" : "n476033502",
+  "type" : NumberLong(1),
+*  "tags" : "addr:street=Alban Gate"*
+},
+{
+  "_id" : "n476033502",
+  "type" : NumberLong(1),
+*  "tags" : "amenity=restaurant"*
+},
+{
+  "_id" : "n476033502",
+  "type" : NumberLong(1),
+*  "tags" : "cuisine=pizza"*
+},
+…
+</example>
+</td></tr></table>
+</slide>

@@ -1,0 +1,54 @@
+<slide>
+<title>Renaming and Computing Fields</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+  "_id" : "n375475617",
+  "type" : NumberLong(1),
+  "loc" : [
+    -0.1502324,
+    51.4440935
+  ],
+*  "tags"* : {
+    "addr:housenumber" : "37",
+    "addr:street" : "Bedford Hill",
+    "amenity" : "restaurant",
+    "cuisine" : "greek",
+    "name" : "Meze Kitchen"
+  }
+},
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{ $project: {
+  address: { *$concat: [*
+*    '$tags.addr:housenumber',*
+*    ' ',*
+*    '$tags.addr:street'*
+*  ]* },
+  'desc': *'$tags'*
+} }
+</example>
+
+<example inline="3">
+{
+  "_id" : "n375475617",
+*  "address" : "37 Bedford Hill",*
+*  "desc"* : {
+    "addr:housenumber" : "37",
+    "addr:street" : "Bedford Hill",
+    "amenity" : "restaurant",
+    "cuisine" : "greek",
+    "name" : "Meze Kitchen"
+  }
+},
+</example>
+</td></tr></table>
+</slide>

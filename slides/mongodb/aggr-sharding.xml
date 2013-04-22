@@ -1,0 +1,14 @@
+<slide>
+<title>Sharding</title>
+
+<list>
+	<bullet>Split the pipeline at first %$group% or %$sort%
+		<list>
+			<bullet>Shards execute pipeline up to that point</bullet>
+			<bullet>mongos merges results and continues</bullet>
+		</list>
+	</bullet>
+    <bullet>Early %$match% may excuse shards</bullet>
+    <bullet>CPU and memory implications for mongos</bullet>
+</list>
+</slide>

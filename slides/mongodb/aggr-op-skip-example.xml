@@ -1,0 +1,36 @@
+<slide>
+<title>Skip Over Documents in the Pipeline</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{ "name" : "Blues Restaurant &amp; Bar" },
+{ "name" : "Yard" },
+{ "name" : "Le Sacré Coeur" },
+{ "name" : "Ask" },
+{ "name" : "Vigata" },
+{ "name" : "Sedir" },
+{ "name" : "Parveen" },
+{ "name" : "Mem &amp; Laz" },
+{ "name" : "Gallipoli" }
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+*{ $skip : 3 }*
+</example>
+
+<example inline="3">
+{ "name" : "Ask" },
+{ "name" : "Vigata" },
+{ "name" : "Sedir" },
+{ "name" : "Parveen" },
+{ "name" : "Mem &amp; Laz" },
+{ "name" : "Gallipoli" }
+</example>
+</td></tr></table>
+</slide>

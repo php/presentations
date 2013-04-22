@@ -1,0 +1,14 @@
+<slide>
+<title>$sort, $limit, $skip</title>
+
+<list>
+    <bullet>Sort documents by one or more fields
+		<list>
+			<bullet>Same order syntax as cursors</bullet>
+			<bullet>Waits for earlier pipeline operator to return</bullet>
+			<bullet>In-memory unless early and indexed</bullet>
+		</list>
+	</bullet>
+    <bullet>Limit and skip follow cursor behaviour</bullet>
+</list>
+</slide>

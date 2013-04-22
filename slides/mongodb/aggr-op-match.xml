@@ -1,0 +1,9 @@
+<slide>
+<title>$match</title>
+
+<list>
+    <bullet>Filter documents</bullet>
+    <bullet>Uses existing query syntax</bullet>
+    <bullet>No geospatial operations or %$where%</bullet>
+</list>
+</slide>

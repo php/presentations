@@ -1,0 +1,13 @@
+<slide>
+<title>Usage</title>
+
+<list>
+	<bullet>%collection.aggregate()% method
+		<list>
+			<bullet>Mongo shell</bullet>
+			<bullet>Most drivers</bullet>
+		</list>
+	</bullet>
+	<bullet>%aggregate% database command</bullet>
+</list>
+</slide>

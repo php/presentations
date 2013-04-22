@@ -1,0 +1,15 @@
+<slide>
+<title>$unwind</title>
+
+<list>
+    <bullet>Operate on an array field</bullet>
+    <bullet>Yield new documents for each array element
+		<list>
+			<bullet>Array replaced by element value</bullet>
+			<bullet>Missing/empty fields → no output</bullet>
+			<bullet>Non-array fields → error</bullet>
+		</list>
+	</bullet>
+    <bullet>Pipe to %$group% to aggregate array values</bullet>
+</list>
+</slide>

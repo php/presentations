@@ -1,0 +1,17 @@
+<slide>
+<title>Our Example data</title>
+
+<example>
+{
+	"_id" : "w94069675",
+	"tags" : {
+		"addr:housenumber" : "64",
+		"addr:street" : "Borough High Street",
+		"amenity" : "restaurant",
+		"building" : "yes",
+		"cuisine" : "indian",
+		"name" : "Truly Indian"
+	},
+}
+</example>
+</slide>

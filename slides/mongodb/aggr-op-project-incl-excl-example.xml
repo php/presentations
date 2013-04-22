@@ -1,0 +1,43 @@
+<slide>
+<title>Including and Excluding Fields</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+*  "_id" : "n47733711",*
+  "type" : NumberLong(1),
+  "loc" : [
+    0.2344868,
+    51.5938555
+  ],
+*  "tags" : {*
+*    "amenity" : "fast_food",*
+*    "cuisine" : "fish_and_chips",*
+*    "name" : "The Frying Pan"*
+*  }*
+},
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{
+*    $project: { _id: 0, tags: 1 }*
+}
+</example>
+
+<example inline="3">
+{
+*  "tags" : {*
+*    "amenity" : "fast_food",*
+*    "cuisine" : "fish_and_chips",*
+*    "name" : "The Frying Pan"*
+*  }*
+},
+</example>
+</td></tr></table>
+</slide>

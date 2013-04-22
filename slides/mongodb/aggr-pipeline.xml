@@ -1,0 +1,21 @@
+<slide>
+<title>Pipeline</title>
+
+<list>
+    <bullet>Process a stream of documents
+		<list>
+			<bullet>Original input is a collection</bullet>
+			<bullet>Final output is a result document</bullet>
+		</list>
+	</bullet>
+    <bullet>Series of operators
+		<list>
+			<bullet>Filter or transform data</bullet>
+			<bullet>Input/output chain</bullet>
+		</list>
+	</bullet>
+</list>
+
+<blurb align="center">%ps ax | grep mongod | head -n 1%</blurb>
+</slide>
+

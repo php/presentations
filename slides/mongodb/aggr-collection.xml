@@ -1,0 +1,31 @@
+<slide>
+<title>Collection Method</title>
+
+<example inline="3">
+db.poi.aggregate( [
+  { $match: { 'tags.amenity': 'restaurant' } },
+  { $skip: 100 },
+  { $limit: 1 }
+] }
+</example>
+
+<blurb>Result:</blurb>
+
+<example inline="3">
+{
+  "result" : [
+    {
+      "_id" : "n272078075",
+      "type" : NumberLong(1),
+      "tags" : {
+        "amenity" : "restaurant",
+        "cuisine" : "turkish",
+        "name" : "Cyprus Mangal"
+      }
+    },
+  ],
+  "ok" : 1
+}
+</example>
+
+</slide>

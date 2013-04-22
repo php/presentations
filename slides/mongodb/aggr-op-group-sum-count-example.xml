@@ -1,0 +1,58 @@
+<slide>
+<title>Summating Fields and Counting</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+  "_id" : "n306036143",
+  "tags" : {
+*    "amenity" : "cafe",*
+    "cuisine" : "italian",
+    "name" : "Saponara"
+  }
+},
+{
+  "_id" : "n306042529",
+  "tags" : {
+*    "amenity" : "restaurant",*
+    "cuisine" : "asian",
+    "layer" : "2",
+    "name" : "Wagamama"
+  }
+},
+{
+  "_id" : "n306042546",
+  "tags" : {
+*    "amenity" : "restaurant",*
+    "cuisine" : "sushi",
+    "layer" : "2",
+    "name" : "Yo! Sushi"
+  }
+}
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{ $group: {
+*  _id: '$tags.amenity',*
+  count: { *'$sum': 1* }
+} }
+</example>
+
+<example inline="3">
+{
+  "_id" : "restaurant",
+  "count" : 2
+},
+{
+  "_id" : "cafe",
+  "count" : 1
+},
+</example>
+</td></tr></table>
+</slide>

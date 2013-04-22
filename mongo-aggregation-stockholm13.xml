@@ -35,15 +35,16 @@
 <slide>slides/mongodb/aggr-op-project-rename-compute-example.xml</slide>
 <slide>slides/mongodb/aggr-op-project-create-sub-example.xml</slide>
 <slide>slides/mongodb/aggr-op-group.xml</slide>
-<slide>slides/mongodb/aggr-op-group-calc-avg-example.xml</slide>
 <slide>slides/mongodb/aggr-op-group-sum-count-example.xml</slide>
 <slide>slides/mongodb/aggr-op-group-collect-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group-compound-example.xml</slide>
 <slide>slides/mongodb/aggr-op-unwind.xml</slide>
 <slide>slides/mongodb/aggr-op-unwind-example.xml</slide>
 <slide>slides/mongodb/aggr-op-sort-skip-limit.xml</slide>
 <slide>slides/mongodb/aggr-op-sort-example.xml</slide>
 <slide>slides/mongodb/aggr-op-limit-example.xml</slide>
 <slide>slides/mongodb/aggr-op-skip-example.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-limit-skip-example.xml</slide>
 
 <slide>slides/mongodb/aggr-usage-and-limitations-section.xml</slide>
 <slide>slides/mongodb/aggr-usage.xml</slide>
@@ -55,7 +56,7 @@
 <slide>slides/mongodb/aggr-sharding.xml</slide>
 <slide>slides/mongodb/aggr-sharding-example1.xml</slide>
 <slide>slides/mongodb/aggr-sharding-example2.xml</slide>
-
+<!--
 <slide>slides/mongodb/aggr-expressions-section.xml</slide>
 <slide>slides/mongodb/aggr-expressions.xml</slide>
 <slide>slides/mongodb/aggr-expr-boolean.xml</slide>
@@ -64,7 +65,7 @@
 <slide>slides/mongodb/aggr-expr-string.xml</slide>
 <slide>slides/mongodb/aggr-expr-date.xml</slide>
 <slide>slides/mongodb/aggr-expr-conditional.xml</slide>
-
+-->
 <slide>slides/mongodb/aggr-looking-ahead-section.xml</slide>
 <slide>slides/mongodb/aggr-fw-use-cases.xml</slide>
 <slide>slides/mongodb/aggr-fw-extending.xml</slide>

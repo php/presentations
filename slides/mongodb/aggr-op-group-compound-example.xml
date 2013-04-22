@@ -1,0 +1,71 @@
+<slide>
+<title>Grouping with a Compound Key</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+  "_id" : "n322270228",
+  "tags" : {
+*    "amenity" : "restaurant",*
+*    "cuisine" : "italian",*
+    "name" : "Ristorante LA COLLINA",
+  }
+},
+{
+  "_id" : "n322270302",
+  "tags" : {
+*    "amenity" : "restaurant",*
+*    "cuisine" : "indian",*
+    "name" : "The Connoisseur",
+  }
+},
+{
+  "_id" : "n322270304",
+  "tags" : {
+*    "amenity" : "restaurant",*
+*    "cuisine" : "italian",*
+    "deli" : "yes",
+    "name" : "Incanto",
+  }
+}
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{ $group: {
+  _id: *{*
+*    'amenity' : '$tags.amenity',*
+*    'cuisine' : '$tags.cuisine'*
+*  }*
+  names: { *'$addToSet': '$tags.name'* }
+} }
+</example>
+
+<example inline="3">
+{
+*  "_id" : {*
+*    "amenity" : "restaurant",*
+*    "cuisine" : "indian"*
+*  },*
+  "names" : [
+    "The Connoisseur"
+  ]
+},
+{
+*  "_id" : {*
+*    "amenity" : "restaurant",*
+*    "cuisine" : "italian"*
+*  },*
+  "names" : [
+    "Incanto",
+    "Ristorante LA COLLINA"
+  ]
+}
+</example>
+</td></tr></table>
+</slide>

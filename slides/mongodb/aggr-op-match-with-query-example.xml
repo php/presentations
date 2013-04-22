@@ -1,0 +1,59 @@
+<slide>
+<title>Matching with Query Operators</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+  "_id" : "n1240135999",
+  "tags" : {
+    "amenity" : "restaurant",
+    "cuisine" : "thai",
+    "name" : "Addie's Thai"
+  }
+}
+{
+  "_id" : "n1242469688",
+  "tags" : {
+*    "addr:postcode" : "CR6 9EG",*
+    "addr:street" : "Farleigh Road",
+    "amenity" : "restaurant",
+    "cuisine" : "regional",
+    "name" : "The Horseshoe"
+  }
+}
+{
+  "_id" : "n1242549289",
+  "tags" : {
+    "amenity" : "restaurant",
+    "cuisine" : "ethiopian",
+    "name" : "Queen of Sheba"
+  }
+}
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{  $match: {
+*  "tags.addr:postcode": { $exists: true }*
+} }
+</example>
+
+<example inline="3">
+{
+  "_id" : "n1242469688",
+  "tags" : {
+*    "addr:postcode" : "CR6 9EG",*
+    "addr:street" : "Farleigh Road",
+    "amenity" : "restaurant",
+    "cuisine" : "regional",
+    "name" : "The Horseshoe"
+  }
+}
+</example>
+</td></tr></table>
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Future Enhancements</title>
+
+<list>
+    <bullet>Automatically move %$match% earlier if possible</bullet>
+    <bullet>Pipeline explain facility</bullet>
+	<bullet>Memory usage improvements 
+		<list>
+			<bullet>Grouping input sorted by _id</bullet>
+			<bullet>Sorting with limited output</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

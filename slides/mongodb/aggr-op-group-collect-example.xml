@@ -1,0 +1,62 @@
+<slide>
+<title>Collecting Distinct Values</title>
+
+<table class="columns">
+<tr>
+<td>
+<example inline="3">
+{
+  "_id" : "n388320891",
+  "tags" : {
+*    "amenity" : "restaurant",*
+*    "cuisine" : "chinese",*
+    "name" : "China GaGa"
+  }
+},
+{
+  "_id" : "n388826644",
+  "tags" : {
+*    "amenity" : "restaurant",*
+*    "cuisine" : "japanese",*
+    "name" : "Oisi"
+  }
+},
+{
+  "_id" : "n389031406",
+  "tags" : {
+*    "amenity" : "pub",*
+*    "cuisine" : "tapas",*
+    "food" : "yes",
+    "name" : "Tonic"
+  }
+}
+</example>
+</td>
+<td>
+<blurb class="large">→</blurb>
+</td>
+<td>
+<example inline="3">
+{ $group: {
+*  _id: '$tags.amenity',*
+  cuisines: { *'$addToSet': '$tags.cuisine'* }
+} }
+</example>
+
+<example inline="3">
+{
+  "_id" : "pub",
+  "cuisines" : [
+    "tapas"
+  ]
+},
+{
+  "_id" : "restaurant",
+  "cuisines" : [
+    "japanese",
+    "chinese"
+  ]
+}
+</example>
+</td></tr></table>
+</slide>
