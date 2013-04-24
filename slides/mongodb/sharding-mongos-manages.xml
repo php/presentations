@@ -8,6 +8,7 @@
 			<bullet>Acts as a router / balancer</bullet>
 			<bullet>No local data (persists to config database)</bullet>
 			<bullet>Can have 1 or many</bullet>
+			<bullet>Should have it on each application server as proxy</bullet>
 		</list>
 	</blurb>
 </list>

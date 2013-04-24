@@ -1,0 +1,22 @@
+<slide>
+<title>Tag a Shard Key Range</title>
+
+<list>
+	<bullet>Define ranges based on the *shard key*</bullet>
+	<bullet>Any given range may only have *one* assigned tag</bullet>
+</list>
+
+<blurb>Example:</blurb>
+<example>
+sh.addTagRange(
+	"demo.emails",                                     // database.collection
+	{ continent: "Asia" }, { continent: "Australia" }, // range
+	"ASIA"                                             // tag
+);
+sh.addTagRange(
+	"demo.emails",
+	{ continent: "Europe" }, { continent: "Europe" },
+	"EUR"
+);
+</example>
+</slide>

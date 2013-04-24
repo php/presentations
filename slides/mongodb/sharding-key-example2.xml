@@ -1,0 +1,22 @@
+<slide>
+<title>Example: email storage</title>
+
+<table>
+<tr><th></th><th>Cardinality</th><th>Write scaling</th><th>Query isolation</th><th>Index Locality</th></tr>
+<tr><th>_id</th>      <td>Doc level</td> <td>|ff0000|1 shard|</td>   <td>|ff0000|All shards, merge sort|</td><td>Great</td></tr>
+<tr><th>hash(_id)</th><td>Hash level</td><td>All shards</td><td>|ff0000|All shards, merge sort|</td><td>|ff0000|Poor|</td></tr>
+<tr><th>user</th>     <td>|ff0000|Many docs|</td> <td>All shards</td><td>One shard, index sort</td> <td>So-so</td></tr>
+<tr><th>user,time</th><td>Doc level</td> <td>All shards</td><td>One shard, index sort</td> <td>Good</td></tr>
+</table>
+
+<example>
+{
+	_id: ObjectId("51156a11056d6f966f268f7f"),
+	user: 37113,
+	time: ISODate( '2013-04-24 10:38:05 '),
+	subject: "This is a test",
+	recipients: [ "derick@10gen.com", "derick@example.com" ],
+	body: "..."
+}
+</example>
+</slide>

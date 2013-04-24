@@ -1,0 +1,21 @@
+<slide>
+<title>Example: email storage</title>
+
+<example>
+{
+	_id: ObjectId("51156a11056d6f966f268f7f"),
+	user: 37113,
+	time: ISODate( '2013-04-24 10:38:05 '),
+	subject: "This is a test",
+	recipients: [ "derick@10gen.com", "derick@example.com" ],
+	body: "...",
+	continent: "Asia",
+}
+</example>
+
+<list>
+	<bullet>Lots of emails per user</bullet>
+	<bullet>Most common query: get user emails sorted by time</bullet>
+	<bullet>Index on %{ _id }%, %{ user, time }%, and %{ recipients }%</bullet>
+</list>
+</slide>

@@ -1,0 +1,16 @@
+<slide>
+<title>Balancing tips</title>
+
+<list>
+	<bullet>Run the balancer at low traffic times:
+		<example>use config;
+
+db.settings.update(
+	{ _id: 'balancer' },
+	{ $set: { activeWindow: { start: "23:00", stop: "4:00" } } }
+);</example>
+	</bullet>
+	<bullet>Can be triggered manually using %moveChunk%</bullet>
+	<bullet>Feel free to write your own smart balancer!</bullet>
+</list>
+</slide>

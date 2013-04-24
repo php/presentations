@@ -1,0 +1,16 @@
+<slide>
+<title>Tagging a shard</title>
+
+<example>
+sh.addShardTag("shard0000", "ASIA");
+sh.addShardTag("shard0001", "ASIA");
+sh.addShardTag("shard0002", "ASIA");
+sh.addShardTag("shard0003", "US");
+sh.addShardTag("shard0004", "AUS");
+</example>
+
+<list>
+	<bullet>The same tag can be used with multiple shards</bullet>
+	<bullet>A shard can have more than one tag</bullet>
+</list>
+</slide>
