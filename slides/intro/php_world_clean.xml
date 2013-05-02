@@ -1,7 +1,7 @@
 <slide title=" " body_style="margin-left:0em; margin-right:0em; background:#000000;">
 <break lines="1" />
 
-<example result="1" hide="1" fontsize="1.2em" rfontsize="1em" marginright="0em" marginleft="1.5em" outputbackground="#ffffff"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=rlerdorf"></script>
+<example result="1" hide="1" fontsize="1.2em" rfontsize="1em" marginright="4em" marginleft="5.5em" outputbackground="#ffffff"><![CDATA[<script type="text/javascript" src="http://api.maps.yahoo.com/ajaxymap?v=3.8&appid=rlerdorf"></script>
 <script type="text/javascript" src="http://lerdorf.com/ymap_canvas_fix.js"></script>
 
 <div id="jsmapContainer" style="height: 650px; width: 1008px;"></div>
