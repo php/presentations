@@ -5,19 +5,13 @@
 You can use HipHop-PHP to do static analysis
 </blurb>
 
-<example fontsize="1.4em" type="shell" title=""><![CDATA[$ find $SRC_DIR -name '*.php' | grep -v phpunit > $OUTPUT_DIR/files.txt
-$ $HPHP_HOME/src/hphp/hphp \
-  --input-list=$OUTPUT_DIR/files.txt \
-  --input-dir=$SRC_DIR \
-  --cmodule=$SRC_DIR/htdocs \
-  --include-path="$SRC_DIR/lib:." \
-  --output-dir=$OUTPUT_DIR \
+<example fontsize="1.4em" type="shell" title=""><![CDATA[$ find /var/www -name '*.php' | grep -v phpunit > /tmp/hphp/files.txt
+$ hhvm --hphp -t analyze \
+  --input-list=/tmp/hphp/files.txt \
+  --include-path="/var/www/include" \
+  --output-dir=/tmp/hphp \
   --gen-stats=1 \
-  --keep-tempdir=1 \
-  --log=3 \
-  --force=1 \
-  --parse-on-demand=0 \
-  --target=analyze
+  --keep-tempdir=1 
 ]]></example>
 
 <break lines="1"/>
