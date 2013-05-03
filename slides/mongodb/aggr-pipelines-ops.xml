@@ -6,6 +6,9 @@
     <bullet>%$project%</bullet>
     <bullet>%$group%</bullet>
     <bullet>%$unwind%</bullet>
+</list>
+<break lines="2"/>
+<list>
     <bullet>%$sort%</bullet>
     <bullet>%$limit%</bullet>
     <bullet>%$skip%</bullet>
