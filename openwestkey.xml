@@ -1,0 +1,48 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+<!--
+Performance
+-->
+
+<topic>PHP</topic>
+<title>PHP</title>
+<event>OpenWest Conference</event>
+<location>Orem, UT</location>
+<date>May 3, 2013</date>
+<speaker>Rasmus Lerdorf</speaker>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<!-- Intro -->
+
+<slide>slides/intro/lovehack.xml</slide>
+<slide>slides/intro/greenland0.xml</slide>
+<slide>slides/intro/greenland1.xml</slide>
+<slide>slides/intro/greenland2.xml</slide>
+<slide>slides/intro/greenland3.xml</slide>
+
+<slide>slides/fowa/hist1.xml</slide>
+<slide>slides/intro/nold.xml</slide>
+<slide>slides/intro/nold2.xml</slide>
+<slide>slides/intro/nold3.xml</slide>
+<slide>slides/intro/numbers_2013.xml</slide>
+<slide>slides/intro/eco.xml</slide>
+<slide>slides/intro/wwht2.xml</slide>
+
+<slide>slides/intro/matter.xml</slide>
+<slide>slides/intro/matter2.xml</slide>
+<slide>slides/intro/etsy_access.xml</slide>
+</presentation>
