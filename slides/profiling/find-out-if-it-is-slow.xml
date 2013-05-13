@@ -8,19 +8,19 @@
 http://derickrethans.nl/spatial-indexes-data-sqlite.html
 http://derickrethans.nl/talks.html
 http://derickrethans.nl/who.html]]></example></bullet>
-	<bullet>run against your code: %siege -c 4 -r 10 -f /tmp/urls.txt%</bullet>
+	<bullet>run against your code: %siege -c 40 -r 10 -f /tmp/urls.txt%</bullet>
 </list>
-<example><![CDATA[Transactions:		          40 hits
+<example><![CDATA[Transactions:		         400 hits
 Availability:		      100.00 %
-Elapsed time:		        9.76 secs
-Data transferred:	        1.34 MB
-Response time:		        0.18 secs
-Transaction rate:	        4.10 trans/sec
-Throughput:		        0.14 MB/sec
-Concurrency:		        0.73
-Successful transactions:          40
+Elapsed time:		        9.82 secs
+Data transferred:	       17.04 MB
+Response time:		        0.10 secs
+Transaction rate:	       40.73 trans/sec
+Throughput:		        1.74 MB/sec
+Concurrency:		        4.16
+Successful transactions:         400
 Failed transactions:	           0
-Longest transaction:	        0.39
-Shortest transaction:	        0.08]]></example>
+Longest transaction:	        0.68
+Shortest transaction:	        0.01]]></example>
 
 </slide>
