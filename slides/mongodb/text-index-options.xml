@@ -1,0 +1,33 @@
+<slide>
+<title>Indexing Options</title>
+
+<blurb>
+Basic, default weights:
+</blurb>
+<example>
+tc.ensureIndex( { title: "text", post: "text" } );
+</example>
+
+<blurb>
+Explicit weights:
+</blurb>
+<example>
+tc.ensureIndex( { title: "text", post: "text" },
+                { weights: { "title": 10 } } );
+</example>
+
+<blurb>
+Wildcard field: text at any depth, default weights:
+</blurb>
+<example>
+tc.ensureIndex( { "$**": "text" } );
+</example>
+
+<blurb>
+Wildcard field: override default weights and explicit weights:
+</blurb>
+<example>
+tc.ensureIndex( { "$**": "text" },
+                { weights: {"$**": 10, post: 5 } } );
+</example>
+</slide>

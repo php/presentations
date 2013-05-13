@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<slide template="title">
+<slide>
 	<title>About Me</title>
 
 <image filename="../tdd/derick_photo.jpg" align="right" pdf-float="1" x-offset="21.3" y-offset="10" pdf-scale="0.25"/>
@@ -11,9 +11,4 @@
 		<bullet>Author of the PHP debugger tool Xdebug, PHP's Date/Time/Timezone support, and a bunch of other PHP extensions</bullet>
 		<bullet>I ♥ maps</bullet>
 	</list>
-		
-<div class="footer">
-<image align="left" filename="10gen.png" pdf-scale="0.4" x-offset="2" y-offset="12.3"/>
-<image align="right" filename="mongodb.png" pdf-scale="0.4" x-offset="18" y-offset="13.3"/>
-</div>
 </slide>

@@ -1,0 +1,11 @@
+<slide>
+<title>When to Use MongoDB Text Search</title>
+
+<list>
+    <bullet>Adding text search to an existing db application</bullet>
+    <bullet>Simplify application search-db architecture</bullet>
+</list>
+<list>
+    <bullet>Not a substitute for a dedicated search application (ElasticSearch)</bullet>
+</list>
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Summary</title>
+
+<list>
+	<bullet>Under the hood
+		<list>
+			<bullet>Optional search arguments include project and filter</bullet>
+			<bullet>It’s a command: results are wrapped in a single return document</bullet>
+			<bullet>Text strings generate stemmed, non-stop-word, weighted ‘terms’</bullet>
+			<bullet>The text index acts like a multi-key index on terms</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

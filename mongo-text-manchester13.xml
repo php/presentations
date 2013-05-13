@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>MongoDB 2.4 and Text Search</title>
+<event>MongoDB UG Manchester</event>
+<location>Manchester, UK</location>
+<date>April 29th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/mongo-text-manchester13</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/text-agenda-lightning.xml</slide>
+<slide>slides/mongodb/text-section-what.xml</slide>
+<slide>slides/mongodb/text-what-does-it-do.xml</slide>
+<slide>slides/mongodb/text-search-examples.xml</slide>
+<slide>slides/mongodb/text-when-to-use.xml</slide>
+<slide>slides/mongodb/text-strenghts.xml</slide>
+<slide>slides/mongodb/text-section-definitions.xml</slide>
+<slide>slides/mongodb/text-stemming.xml</slide>
+<slide>slides/mongodb/text-stemming-examples.xml</slide>
+<slide>slides/mongodb/text-stopwords.xml</slide>
+<slide>slides/mongodb/text-stopwords-examples.xml</slide>
+<slide>slides/mongodb/text-section-using.xml</slide>
+<slide>slides/mongodb/text-enabling.xml</slide>
+<slide>slides/mongodb/text-create-index.xml</slide>
+<slide>slides/mongodb/text-run-command.xml</slide>
+<slide>slides/mongodb/text-example.xml</slide>
+<slide>slides/mongodb/text-index-options.xml</slide>
+<slide>slides/mongodb/text-language-specific.xml</slide>
+<slide>slides/mongodb/text-query-syntax.xml</slide>
+<slide>slides/mongodb/text-query-options.xml</slide>
+<slide>slides/mongodb/text-section-summary.xml</slide>
+<slide>slides/mongodb/text-summary1.xml</slide>
+<slide>slides/mongodb/text-summary2.xml</slide>
+<slide>slides/mongodb/text-summary3.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

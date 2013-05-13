@@ -1,0 +1,19 @@
+<slide>
+<title>MongoDB Text Search Strengths</title>
+
+<list>
+    <bullet>Consistent – integrated into db kernel
+		<list>
+			<bullet>Works with sharding and replication</bullet>
+		</list>
+	</bullet>
+    <bullet>Real-time
+		<list>
+			<bullet>Index immediately reflects all changes</bullet>
+		</list>
+	</bullet>
+    <bullet>Very easy to use - push of a button</bullet>
+    <bullet>Basic European language support</bullet>
+    <bullet>Covering index capabilities</bullet>
+</list>
+</slide>

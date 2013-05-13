@@ -1,0 +1,11 @@
+<slide>
+<title>Enabling Text Search</title>
+
+<blurb>Because it is *beta*, Text Search needs to be enabled:</blurb>
+
+<blurb>Option 1: on the command line</blurb>
+<example>$mongod --setParameter textSearchEnabled=true</example>
+
+<blurb>Option 2: as admin command to mongod or mongos</blurb>
+<example>&gt; db.adminCommand( { setParameter: 1, textSearchEnabled: true } )</example>
+</slide>
