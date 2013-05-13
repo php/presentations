@@ -1,0 +1,57 @@
+<slide title="mysqlnd_uh">
+
+<break lines="1" />
+
+<blurb fontsize="6em">User Handler</blurb>
+<list fontsize="4em" marginleft="1.5em">
+<bullet> Lets you hook almost anything</bullet>
+<bullet> monitor queries and prepared statements</bullet>
+<bullet> audit db usage and sql injection</bullet>
+</list>
+
+<break lines="1" />
+
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+class conn_proxy extends MysqlndUhConnection {
+ public function query($res, $query) {
+  debug_print_backtrace();
+  return parent::query($res, $query);
+ }
+}
+class stmt_proxy extends MysqlndUhPreparedStatement {
+ public function prepare($res, $query) {
+  debug_print_backtrace();
+  return parent::prepare($res, $query);
+ }
+}
+mysqlnd_uh_set_connection_proxy(new conn_proxy());
+mysqlnd_uh_set_statement_proxy(new stmt_proxy());
+
+printf("Proxies installed...\n");
+$pdo = new PDO("mysql:host=localhost;dbname=test", "root", "");
+var_dump($pdo->query("SELECT 1 AS _one FROM DUAL")->fetchAll(PDO::FETCH_ASSOC));
+
+$mysqli = new mysqli("localhost", "root", "", "test");
+$mysqli->prepare("SELECT 1 AS _two FROM DUAL");
+]]></example>
+
+<break lines="1" />
+
+<blurb fontsize="6em">Output</blurb>
+<example fontsize="2em" marginleft="7em" hide='1' result='r' title=""><![CDATA[
+<pre>
+#0  conn_proxy->query(Resource id #19, SELECT 1 AS _one FROM DUAL)
+#1  PDO->query(SELECT 1 AS _one FROM DUAL) called at [example.php:19]
+array(1) {
+  [0]=>
+  array(1) {
+    ["_one"]=>
+    string(1) "1"
+  }
+}
+#0  stmt_proxy->prepare(Resource id #753, SELECT 1 AS _two FROM DUAL)
+#1  mysqli->prepare(SELECT 1 AS _two FROM DUAL) called at [example.php:22]
+</pre>
+]]></example>
+
+</slide>

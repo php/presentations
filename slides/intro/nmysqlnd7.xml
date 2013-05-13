@@ -1,0 +1,17 @@
+<slide title="mysqlnd_qc">
+
+<break lines="1" />
+
+<blurb fontsize="6em">Query caching</blurb>
+<list fontsize="4em" marginleft="1.5em">
+<bullet> Caches queries locally</bullet>
+    <bullet marginleft="3em" type="dot"> in-process hash</bullet>
+    <bullet marginleft="3em" type="dot"> APC user cache</bullet>
+    <bullet marginleft="3em" type="dot"> memcache</bullet>
+    <bullet marginleft="3em" type="dot"> sqlite</bullet>
+    <bullet marginleft="3em" type="dot"> user-defined</bullet>
+<bullet> Either all or hinted queries</bullet>
+<bullet> TTL or user-defined cache invalidation</bullet>
+</list>
+
+</slide>

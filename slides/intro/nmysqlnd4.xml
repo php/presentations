@@ -1,0 +1,19 @@
+<slide title="Query stats">
+
+<break lines="1" />
+
+<blurb fontsize="4em">mysqlnd stats example</blurb>
+<example fontsize="2em" marginleft="7em" result='1' title=""><![CDATA[<?php
+  $db = mysqli_connect("localhost", "root", null, "mysql");
+  $result = mysqli_query($db, "SELECT * from user"); 
+  $users = mysqli_fetch_all($result);
+
+  $client_stats = mysqli_get_client_stats(); 
+  echo "<pre>".print_r($client_stats,true)."</pre>";
+
+  // You can also get stats per connection
+  $conn_stats = mysqli_get_connection_stats($db); 
+  echo "<pre>".print_r($conn_stats,true)."</pre>";
+]]></example>
+
+</slide>

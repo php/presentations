@@ -1,0 +1,15 @@
+<slide title="mysqlnd_ms">
+
+<break lines="1" />
+
+<blurb fontsize="6em">Replication and Load balancing</blurb>
+<list fontsize="4em" marginleft="1.5em">
+<bullet> ms = master/slave</bullet>
+<bullet> lazy connections</bullet>
+<bullet> read/write splitting</bullet>
+<bullet> various slave load balancing strategies</bullet>
+<bullet> partitioning and sharding via query hints</bullet>
+<bullet> and much more - see http://php.net/mysqlnd_ms</bullet>
+</list>
+
+</slide>
