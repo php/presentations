@@ -14,8 +14,8 @@ $to   = urlencode( "St Paul's Cathedral, London" );
 $fromLL = json_decode( file_get_contents( "{$nominatimUrl}{$from}" ) );
 $toLL   = json_decode( file_get_contents( "{$nominatimUrl}{$to}" ) );
 
-$osrmUrl = 'http://router.project-osrm.org/viaroute';
-$osrmUrl .= sprintf( "?loc=%.4f,%.4f", $fromLL[0]->lat, $fromLL[0]->lon );
+$osrmUrl = 'http://router.project-osrm.org/viaroute?instructions=true';
+$osrmUrl .= sprintf( "&loc=%.4f,%.4f", $fromLL[0]->lat, $fromLL[0]->lon );
 $osrmUrl .= sprintf( "&loc=%.4f,%.4f", $toLL[0]->lat, $toLL[0]->lon );
 var_dump( json_decode( file_get_contents( $osrmUrl ) ) );
 ?>]]></example>

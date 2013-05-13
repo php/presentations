@@ -1,0 +1,31 @@
+<slide>
+<title>Summary</title>
+
+<list>
+	<bullet>How does it work?
+		<list>
+			<bullet>Specify as many fields as you like for text indexing</bullet>
+			<bullet>Each field can have an associated weight</bullet>
+			<bullet>Individual result documents are relevance-ordered by score</bullet>
+			<bullet>Supports basic boolean queries:  OR, AND, NOT, PHRASE</bullet>
+		</list>
+	</bullet>
+
+	<bullet>Operational considerations
+		<list>
+			<bullet>Works with sharding and replication</bullet>
+			<bullet>You can have one text index per collection</bullet>
+			<bullet>The text index has an associated default language</bullet>
+		</list>
+	</bullet>
+
+	<bullet>Under the hood
+		<list>
+			<bullet>Optional search arguments include project and filter</bullet>
+			<bullet>It’s a command: results are wrapped in a single return document</bullet>
+			<bullet>Text strings generate stemmed, non-stop-word, weighted ‘terms’</bullet>
+			<bullet>The text index acts like a multi-key index on terms</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

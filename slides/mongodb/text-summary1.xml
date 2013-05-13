@@ -1,0 +1,14 @@
+<slide>
+<title>Summary</title>
+
+<list>
+	<bullet>How does it work?
+		<list>
+			<bullet>Specify as many fields as you like for text indexing</bullet>
+			<bullet>Each field can have an associated weight</bullet>
+			<bullet>Individual result documents are relevance-ordered by score</bullet>
+			<bullet>Supports basic boolean queries:  OR, AND, NOT, PHRASE</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

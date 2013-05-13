@@ -1,0 +1,24 @@
+<slide>
+<title>Text Search Query Options</title>
+
+<example inline="3">
+db.collection.runCommand( "text", 
+    {
+        // OR, AND, PHRASE, NEGATION
+        search: "coffee",
+      
+        // post-search ‘find’ filter
+        filter: { about: /desserts/ },
+
+        // result limit
+        limit: 2,
+
+        // result projection, 1/0 = include/exclude
+        project: { comments: 1, _id: 0 },
+
+        // default stemmer override
+        language: "english"
+    }
+)
+</example>
+</slide>

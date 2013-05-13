@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen.css">
+<topic>Debugging</topic>
+<title>Performance Perpetrators: Profiling for Professionals</title>
+<event>tek 13</event>
+<location>Rosemont, IL, US</location>
+<date>May 15th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/8155</joindin>
+<slide>slides/dbus/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- not everything you read on the internet *matters* -->
+<!-- not everything you read on the internet is true -->
+<slide>slides/profiling/does-not-matter.xml</slide>
+<slide>slides/profiling/does-not-matter2.xml</slide>
+<slide>slides/profiling/knuth.xml</slide>
+
+<!-- benchmark -->
+<slide>slides/profiling/is-it-slow.xml</slide>
+<slide>slides/profiling/find-out-if-it-is-slow.xml</slide>
+<slide>slides/profiling/code-or-data.xml</slide>
+<slide>slides/profiling/app-specific.xml</slide>
+<slide>slides/profiling/understand-code.xml</slide>
+<slide>slides/profiling/timing-points.xml</slide>
+<!-- - data or code bound -->
+<!-- - code with debugging/benchmarking/timingpoints -->
+<!-- - check over time -->
+<slide>slides/profiling/frontend.xml</slide>
+
+<!-- understand your code -->
+<!-- - inclued -->
+<!-- <slide>slides/internals/inclued.xml</slide> -->
+<!-- - xdebug tracing -->
+<slide>slides/xdebug/why-debugger3.xml</slide>
+<slide>slides/xdebug/wtf-happens.xml</slide>
+<slide>slides/xdebug/functiontrace-computerized.xml</slide>
+<slide>slides/xdebug/trace-tools.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/profile2.xml</slide>
+
+<slide>slides/profiling/xhprof.xml</slide>
+
+<slide>slides/xdebug/profiling3.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/profiling/resources.xml</slide>
+
+</presentation>

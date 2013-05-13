@@ -1,0 +1,13 @@
+<slide>
+<title>Summary</title>
+
+<list>
+	<bullet>Operational considerations
+		<list>
+			<bullet>Works with sharding and replication</bullet>
+			<bullet>You can have one text index per collection</bullet>
+			<bullet>The text index has an associated default language</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>

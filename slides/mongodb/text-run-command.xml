@@ -1,0 +1,6 @@
+<slide>
+<title>Run a Text Search Command</title>
+
+<example>
+db.t.runCommand( "text", { search: "MongoDB" } );</example>
+</slide>

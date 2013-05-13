@@ -1,0 +1,9 @@
+<slide>
+<title>Stemming Examples</title>
+
+<list>
+    <bullet>{ walk, walked, walking, walks }  ⇒  walk</bullet>
+    <bullet>{ magazine, magazines, magazine’s } ⇒  magazine</bullet>
+    <bullet>{ runs, running, run, ran } ⇒ { run, ran }</bullet>
+</list>
+</slide>

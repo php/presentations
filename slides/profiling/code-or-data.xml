@@ -4,7 +4,7 @@
 <div effect="fade-out">
 <blurb>Multiple possible reasons:</blurb>
 <list>
-	<bullet>The database is slow</bullet>
+	<bullet>The retrieval from a database is slow</bullet>
 	<bullet>There is lots of IO</bullet>
 	<bullet>Your code is slow</bullet>
 	<bullet>The system is busy with other things</bullet>

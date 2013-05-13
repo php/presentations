@@ -1,0 +1,55 @@
+<slide>
+<title>Text Search Example</title>
+
+<div effect="fade-out">
+<example>
+t = db.search;
+t.drop();
+t.save( { _id: 1 , title: "1st post", 
+                     post: "this is my first blog entry." } );
+t.save( { _id: 2 , title: "2nd post" , 
+                     post: "this is my second blog entry." } );
+
+t.ensureIndex ( { title: "text", post: "text" },
+                { weights: {title: 10, post: 5}} );</example>
+</div>
+
+<div>
+<example>
+res = t.runCommand( "text" , { search: "first post" } );</example>
+</div>
+
+<div effect="fade-in">
+<example>
+{
+	"queryDebugString" : "first|post||||||",
+	"language" : "english",
+	"results" : [
+		{
+			"score" : 11.833333333333332,
+			"obj" : {
+				"_id" : 1,
+				"title" : "1st post",
+				"post" : "this is my first blog entry."
+			}
+		},
+		{
+			"score" : 7.5,
+			"obj" : {
+				"_id" : 2,
+				"title" : "2nd post",
+				"post" : "this is my second blog entry."
+			}
+		}
+	],
+	"stats" : {
+		"nscanned" : 3,
+		"nscannedObjects" : 0,
+		"n" : 2,
+		"nfound" : 2,
+		"timeMicros" : 121
+	},
+	"ok" : 1
+}</example>
+</div>
+</slide>
