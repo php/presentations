@@ -1,0 +1,13 @@
+<slide title="mysqlnd">
+
+<break lines="1" />
+
+<blurb fontsize="6em">Plugins</blurb>
+<list fontsize="4em" marginleft="1.5em">
+<bullet> mysqlnd_ms - replication and load balancing</bullet>
+<bullet> mysqlnd_qc - query cache</bullet>
+<bullet> mysqlnd_uh - user handler</bullet>
+<bullet> mysqlnd_memcache - to access innodb memcache daemon</bullet>
+</list>
+
+</slide>

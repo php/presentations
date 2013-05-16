@@ -1,0 +1,45 @@
+<slide title="Async Queries">
+
+<break lines="1" />
+
+<blurb fontsize="4em">3 normal queries</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+  $dbs = $ids = [];
+  for ($i = 1; $i <= 3; $i++) {
+    $dbs[$i] = new mysqli("db_host_$i", $user, $pass, "users");
+  }
+  foreach($dbs as $db) {
+    $result = $db->query("SELECT id from users where age > 21"); 
+    while($row = mysqli_fetch_assoc($result)) {
+      $ids[] = $row['id'];
+    }
+  }
+]]></example>
+
+<blurb fontsize="4em">3 async queries</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+  $dbs = $ids = [];
+  for ($i = 1; $i <= 3; $i++) {
+    $dbs[$i] = new mysqli("db_host_$i", $user, $pass, "users");
+  }
+  foreach($dbs as $db) {
+    $result = $db->query("SELECT id from users where age > 21", MYSQLI_ASYNC); 
+  }
+  $all_dbs = $read = $err = $rej = $dbs;
+  do {
+    if (!mysqli_poll($read, $err, $rej, 1)) {
+      continue;
+    }
+    foreach($all_dbs as $id => $db) {
+      if ($result = mysqli_reap_async_query($db)) { 
+        while($row = mysqli_fetch_assoc($result)) {
+          $ids[] = $row['id'];
+        }
+        mysqli_free_result($result);
+        unset($all_dbs[$id]);
+      }
+    }
+  } while (count($all_dbs) > 0);
+]]></example>
+
+</slide>

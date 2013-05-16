@@ -1,0 +1,13 @@
+<slide title="mysqlnd_mux">
+
+<break lines="1" />
+
+<blurb fontsize="6em">Connection Multiplexer</blurb>
+<list fontsize="4em" marginleft="1.5em">
+<bullet> still early development</bullet>
+<bullet> essentially connection pooling</bullet>
+<bullet> keeps a cache of established connections</bullet>
+<bullet> tries to manage this cache intelligently</bullet>
+</list>
+
+</slide>

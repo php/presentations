@@ -1,0 +1,14 @@
+<slide title="mysqlnd">
+
+<break lines="1" />
+
+<blurb fontsize="6em">Unique features</blurb>
+<list fontsize="4em" marginleft="1.5em">
+<bullet> Async queries</bullet>
+<bullet> Improved persistent connections</bullet>
+<bullet> Performance statistics calls</bullet>
+<bullet> mysqli_fetch_all()</bullet>
+<bullet> Plugin API</bullet>
+</list>
+
+</slide>

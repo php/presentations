@@ -1,0 +1,12 @@
+<slide title="mysqlnd_memcache">
+
+<break lines="1" />
+
+<blurb fontsize="6em">Innodb Memcache plugin</blurb>
+<image filename="nmysqlnd10.png" width="813" height="276" align="center"/>
+<list fontsize="4em" marginleft="1.5em">
+<bullet> transparent SQL to memcache</bullet>
+<bullet> not for standalone memcached</bullet>
+</list>
+
+</slide>
