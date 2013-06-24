@@ -2,26 +2,29 @@
 <title>Importing the Data</title>
 
 <list>
-	<bullet>Open file with XML Reader</bullet>
-	<bullet>Loop over all nodes, and:
-		<list>
-			<bullet>Store the node in the database</bullet>
-		</list>
-	</bullet>
-	<bullet>Loop over all the ways, and:
-		<list>
-			<bullet>Look up locations for each node in the database</bullet>
-			<bullet>Store the way into the database</bullet>
-		</list>
-	</bullet>
+    <bullet>Open file with XML Reader</bullet>
+    <bullet>Loop over all nodes, and:
+        <list>
+            <bullet>Store the node in the database</bullet>
+        </list>
+    </bullet>
+    <bullet>Loop over all the ways, and:
+        <list>
+            <bullet>Look up locations for each node in the database</bullet>
+            <bullet>Store the way into the database</bullet>
+        </list>
+    </bullet>
 </list>
 <example>
-"count" : 2253986
-"size" : 298385216
-"avgObjSize" : 132.38113102743318
-"totalIndexSize" : 443695168
+"count" : 2801187
+"size" : 591099280
+"avgObjSize" : 211.0174
+"totalIndexSize" : 650564320
 "indexSizes" : {
-	"_id_" : 118846336, "loc_2d" : 163757104, "tags_1" : 161091728
+    "_id_" : 153463520,
+    "l_2dsphere" : 174737472,
+    "ts_1" : 182692720,
+    "ty_1" : 139670608
 }
 </example>
 </slide>

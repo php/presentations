@@ -31,24 +31,30 @@
 
 <td>
 <example>{
-  "_id" : "w77002328",
-  "type" : NumberLong(2),
-  "tags" : [
-    "addr:housenumber=16",
-    "addr:postcode=W1J 5HP",
-    "addr:street=Curzon Street",
-    "amenity=restaurant",
-    "building=yes",
-    "cuisine=lebanese",
-    "name=Noura"
-  ],
-  "loc" : [
-    [ -0.1479191, 51.5067744 ],
-    [ -0.1480757, 51.5067491 ],
-    [ -0.1481252, 51.5068679 ],
-    [ -0.1479687, 51.5068932 ],
-    [ -0.1479191, 51.5067744 ]
-  ]
+    "_id" : "w77002328",
+    "ty" : NumberLong(2),
+    "l" : {
+        "type" : "Polygon",
+        "coordinates" : [
+            [
+                [ -0.1479191, 51.5067744 ],
+                [ -0.1480757, 51.5067491 ],
+                [ -0.1481252, 51.5068679 ],
+                [ -0.1479687, 51.5068932 ],
+                [ -0.1479191, 51.5067744 ]
+            ]
+        ]
+    },
+    "ts" : [
+        "addr:housenumber=16",
+        "addr:postcode=W1J 5HP",
+        "addr:street=Curzon Street",
+        "amenity=restaurant",
+        "building=yes",
+        "contact:phone=+44 20 74951050",
+        "cuisine=lebanese",
+        "name=Noura"
+    ]
 }
 </example>
 </td>

@@ -2,8 +2,7 @@
 <title>Linking Articles and Views</title>
 
 <blurb>Article collection:</blurb>
-<example><![CDATA[{
-  _id: 4,
+<example><![CDATA[{ _id: 4,
   name: "Derick's MongoDB Tour Wrap-up",
   date: "2012-10-01",
   comments: [
@@ -11,8 +10,7 @@
     { name: "Jake", text: "I don't think you can ever re..." },
   ],
 },
-{
-  _id: 7,
+{ _id: 7,
   name: "What is PHP doing?",
   date: "2012-07-13",
   comments: [
