@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<presentation css="10gen.css">
+<presentation css="10gen-strict.css">
 <topic>Debugging</topic>
-<title>Profiling PHP Applications</title>
+<title>Profiling</title>
 <event>Lonestar PHP</event>
 <location>Addison, TX, USA</location>
 <date>June 28th, 2013</date>
 <speaker>Derick Rethans</speaker>
-<email>derick@derickrethans.nl</email>
+<email>derick@php.net</email>
 <twitter>derickr</twitter>
 <url>http://derickrethans.nl/talks.html</url>
 <joindin>http://joind.in/8701</joindin>
-<slide>slides/dbus/title.xml</slide>
+<slide>slides/mongodb/title.xml</slide>
 <slide>slides/mongodb/me.xml</slide>
 
 <!-- not everything you read on the internet *matters* -->

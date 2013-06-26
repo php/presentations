@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Using Timezones</title>
-	<subtitle>The Timezone Object</subtitle>
+  <title>Using Timezones</title>
 
-	<blurb>Creating a timezone resource:</blurb>
-	<example><![CDATA[<?php
-	$tz = new DateTimeZone("Asia/Singapore");
+  <blurb>Creating a timezone resource:</blurb>
+  <example><![CDATA[<?php
+  $tz = new DateTimeZone("Asia/Singapore");
 ?>]]></example>
-<break/>
 
-	<blurb>Using the timezone when parsing a string with a date representation:</blurb>
-	<example><![CDATA[<?php
-	$tz = new DateTimeZone("Pacific/Honolulu");
-	$ts = new DateTime("1978-12-22 09:15", $tz);
+  <blurb>Using the timezone when parsing a string:</blurb>
+  <example><![CDATA[<?php
+  $tz = new DateTimeZone("Pacific/Honolulu");
+  $ts = new DateTime("1978-12-22 09:15", $tz);
 ?>]]></example>
-<break/>
 
-	<blurb>A passed timezone object does not override a *parsed* timezone:</blurb>
-	<example result="1"><![CDATA[<?php
-	$tz = new DateTimeZone("Pacific/Honolulu");
-	$ts2 = new DateTime("1978-12-22 09:15 Europe/London", $tz);
-	echo $ts2->format( DateTime::RFC2822 );
+  <blurb>A passed timezone does not override a *parsed* timezone:</blurb>
+  <example result="1"><![CDATA[<?php
+  $tz = new DateTimeZone("Pacific/Honolulu");
+  $ts2 = new DateTime("1978-12-22 09:15 Europe/London", $tz);
+  echo $ts2->format( DateTime::RFC2822 );
 ?>]]></example>
 </slide>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Timezones Utilities</title>
-	<subtitle>Restricting listing by geographical location</subtitle>
+  <title>Timezones Utilities</title>
+  <subtitle>Restricting listing by geographical location</subtitle>
 
-	<blurb>Restrict by continent:</blurb>
-	<example result="1"><![CDATA[<?php
-	$ids = timezone_identifiers_list( DateTimeZone::EUROPE );
-	echo implode( ", ", $ids );
+  <blurb>Restrict by continent:</blurb>
+  <example result="1"><![CDATA[<?php
+  $ids = timezone_identifiers_list( DateTimeZone::EUROPE );
+  echo implode( ", ", $ids );
 ?>]]></example>
 <break/>
 
-	<blurb>Restrict by country:</blurb>
-	<example result="1"><![CDATA[<?php
-	$ids = timezone_identifiers_list( DateTimeZone::PER_COUNTRY, 'US' );
-	echo implode( ", ", $ids );
+  <blurb>Restrict by country:</blurb>
+  <example result="1"><![CDATA[<?php
+  $ids = timezone_identifiers_list( DateTimeZone::PER_COUNTRY, 'US' );
+  echo implode( ", ", $ids );
 ?>]]></example>
 </slide>
