@@ -44,6 +44,10 @@ $(document).ready(function() {
 				$(effect).removeClass('effect-slide');
 				$(effect).show();
 			}
+			if ($(effect).hasClass('effect-hide')) {
+				$(effect).removeClass('effect-hide');
+				$(effect).show();
+			}
 			var effect = $("*[class^='effect']:first");
 		} while (!sclass && effect.length);
 	}

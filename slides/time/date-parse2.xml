@@ -2,7 +2,6 @@
 <slide>
   <title>Parsing Dates</title>
 
-<div>
   <blurb align='center'>"|a4000000|22||3464a4|apr||f57900|2006| |ad7fa8|8|:|ef2929|36|:|73d216|14| # |c4a000|Europe/Oslo| |75507b|CEST|"</blurb>
 
 <blurb>Parsing strings with the ~date_parse()~ function:</blurb>
@@ -22,7 +21,5 @@ if ( $t['error_count'] )
   echo "Errors:\n";
   foreach( $t['errors'] as $pos => $message )
     echo "- $message @$pos\n";]]></example>
-</div>
   
 </slide>
-
