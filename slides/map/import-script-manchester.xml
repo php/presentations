@@ -2,11 +2,10 @@
 <title>The import script</title>
 
 <list>
-	<bullet>Open file with XML Reader</bullet>
 	<bullet>Loop over all nodes, and:
 		<list>
 			<bullet>*Store the node in a different cache database*</bullet>
-			<bullet>If a node has tags, store in the collection.</bullet>
+			<bullet>If a node has tags, store in the collection</bullet>
 		</list>
 	</bullet>
 	<bullet>Loop over all the ways, and:
@@ -15,6 +14,9 @@
 			<bullet>Store the way into the collection</bullet>
 		</list>
 	</bullet>
-	<bullet>(Delete the cache database)</bullet>
 </list>
+
+<example>node_cache: 45.1MB — poiConcat:  84.2MB</example>
+
+<blurb>https://github.com/derickr/3angle</blurb>
 </slide>
