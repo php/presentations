@@ -1,0 +1,10 @@
+<slide title="">
+
+<break lines="6" />
+<blurb fontsize="6em">Are your deploys atomic?</blurb>
+<break lines="4" />
+<blurb fontsize="6em">Are you sure?</blurb>
+<break lines="4" />
+<blurb fontsize="4em" marginleft="2em" marginright="3em">What happens to a request that is currently executing when you deploy?</blurb>
+
+</slide>

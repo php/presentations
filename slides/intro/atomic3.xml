@@ -1,0 +1,10 @@
+<slide title="Deploying Web Apps">
+
+<break lines="4" />
+<blurb fontsize="4em">2 Document Root directories</blurb>
+<blurb fontsize="4em">Symlink /var/www/site toggles between them</blurb>
+<blurb fontsize="4em">realpath() symlink at the web server level</blurb>
+<blurb fontsize="4em">Set Document Root to symlink realpath</blurb>
+<blurb fontsize="4em">Never hardcode the document root in code</blurb>
+
+</slide>

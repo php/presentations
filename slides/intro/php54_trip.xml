@@ -1,15 +1,15 @@
-<slide title="Things that might trip you up">
+<slide title="Watch out for...">
 
 <break lines="1" />
-<blurb fontsize="4em">✔ default charset is UTF-8 instead of ISO-8859-1</blurb>
-<example fontsize="1.6em" result='0' title=""><![CDATA[<?php
+<blurb fontsize="3.5em">✔ default charset is UTF-8 instead of ISO-8859-1</blurb>
+<example fontsize="1.5em" result='0' title=""><![CDATA[<?php
 echo htmlspecialchars("abc".chr(0xE0)."def"); // 5.3 "abc�def"
 echo htmlspecialchars("abc".chr(0xE0)."def", NULL, 'UTF-8'); // 5.3 ""
 echo htmlspecialchars("abc".chr(0xE0)."def"); // 5.4 ""
 echo htmlspecialchars("abc".chr(0xE0)."def", ENT_IGNORE); // 5.4 "abcdef"]]></example>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ array to string conversion notice</blurb>
+<blurb fontsize="3.5em">✔ array to string conversion notice</blurb>
 <example fontsize="1.6em" result='0' title=""><![CDATA[<?php
 echo [1,2,3];
 // Notice: Array to string conversion in test.php code on line 1
@@ -19,13 +19,13 @@ array_diff([1,2,3], [1,2, [3] ]);
 ]]></example>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ register_globals completely removed</blurb>
+<blurb fontsize="3.5em">✔ register_globals completely removed</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ magic quotes completely removed</blurb>
+<blurb fontsize="3.5em">✔ magic quotes completely removed</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ removed variable break/continue</blurb>
+<blurb fontsize="3.5em">✔ removed variable break/continue</blurb>
 <example fontsize="1.6em" result='0' title=""><![CDATA[<?php
 $var = 'label';
 while(1) {
@@ -35,13 +35,13 @@ while(1) {
 label:]]></example>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ max_input_vars (default 1000)</blurb>
+<blurb fontsize="3.5em">✔ max_input_vars (default 1000)</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ "callable", "insteadof" and "trait" are now reserved words</blurb>
+<blurb fontsize="3.5em">✔ "callable", "insteadof" and "trait" are now reserved words</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ extending an abstract constructor must match the signature</blurb>
+<blurb fontsize="3.5em">✔ extending an abstract constructor must match the signature</blurb>
 <example fontsize="1.6em" result='0' title=""><![CDATA[<?php
   abstract class Base {
     abstract public function __construct();
@@ -54,24 +54,24 @@ label:]]></example>
 ]]></example>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ stream_select() preserves keys of array arg</blurb>
+<blurb fontsize="3.5em">✔ stream_select() preserves keys of array arg</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ XSLT writes are disabled by default</blurb>
+<blurb fontsize="3.5em">✔ XSLT writes are disabled by default</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ mcrypt_generic_end() removed in favour of mcrypt_generic_deinit()</blurb>
+<blurb fontsize="3.5em">✔ mcrypt_generic_end() removed in favour of mcrypt_generic_deinit()</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ mysql_list_dbs() removed</blurb>
+<blurb fontsize="3.5em">✔ mysql_list_dbs() removed</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ PDO needs at least mysql client lib 4.1 now</blurb>
+<blurb fontsize="3.5em">✔ PDO needs at least mysql client lib 4.1 now</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ Datetime ignores TZ env var and falls back to UTC if none set</blurb>
+<blurb fontsize="3.5em">✔ Datetime ignores TZ env var and falls back to UTC if none set</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ Tiger hash output fixed - See bug 61307</blurb>
+<blurb fontsize="3.5em">✔ Tiger hash output fixed - See bug 61307</blurb>
 
 </slide>
