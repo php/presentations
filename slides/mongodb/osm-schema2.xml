@@ -21,7 +21,7 @@ $db->poi->find( [ 'tags.k' => 'highway' ] );
     <bullet>Two indexes required:
 		<list>
 		    <bullet>one for key/value combinations</bullet>
-		    <bullet>one for "all roads" question (on %tags_indexed.k%)</bullet>
+		    <bullet>one for "all roads" question (on %tags.k%)</bullet>
 		</list>
 	</bullet>
     <bullet>Good for finding key/value combinations</bullet>

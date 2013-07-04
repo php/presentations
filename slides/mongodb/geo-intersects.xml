@@ -18,6 +18,7 @@ db.poiConcat.find( {
     $exists: true
   }
 } );
+
 </example>
 
 <example inline="1">

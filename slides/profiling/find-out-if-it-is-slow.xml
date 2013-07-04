@@ -3,12 +3,11 @@
 
 <blurb>Benchmark the application: siege (httperf, jmeter-http)</blurb>
 <list>
-	<bullet>check ~/.siegerc and set the %logfile% setting</bullet>
 	<bullet>Create a file with urls:<example><![CDATA[http://derickrethans.nl/
 http://derickrethans.nl/spatial-indexes-data-sqlite.html
 http://derickrethans.nl/talks.html
 http://derickrethans.nl/who.html]]></example></bullet>
-	<bullet>run against your code: %siege -c 40 -r 10 -f /tmp/urls.txt%</bullet>
+	<bullet>%siege -c 40 -r 10 -f /tmp/urls.txt%</bullet>
 </list>
 <example><![CDATA[Transactions:		         400 hits
 Availability:		      100.00 %

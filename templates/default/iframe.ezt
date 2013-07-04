@@ -1,14 +1,17 @@
 {use $node, $pres, $inline = false}
 {var $align = get_attribute( $node, 'align' )}
 {var $attr = get_attribute( $node, 'attr' )}
+{var $width = get_attribute( $node, 'width' )}
 {var $height = get_attribute( $node, 'height' )}
 {var $source = ''}
+{if !$width}{$width = 1010}{/if}
+{if !$height}{$height = 592}{/if}
 {if str_starts_with(get_attribute($node, 'filename'), 'http://')}
 {$source = get_attribute($node, 'filename')}
 {else}
 {$source = str_append($pres->base, get_attribute( $node, 'filename' ))}
 {/if}
 {if $attr}<div{if $align} align='{$align}'{/if}>{/if}
-<iframe style="clear: both; background-color: #fff; margin-left: 9px;" scrolling="no" frameborder="0" width="1010" height="592" {if $inline}class='inline' {/if}{if $align}align='{$align}' {/if}src='{$source}'></iframe>
+<iframe style="clear: both; background-color: #fff; margin-left: 9px;" scrolling="no" frameborder="0" width="{$width}" height="{$height}" {if $inline}class='inline' {/if}{if $align}align='{$align}' {/if}src='{$source}'></iframe>
 <img src="{$pres->base}{get_attribute( $node, 'image' )}"/>
 {if $attr}<span class='attribution'>{$attr}</span></div>{/if}

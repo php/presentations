@@ -1,19 +1,19 @@
 <slide>
 <title>Aggregation: $geoNear example</title>
 
-<image filename="pubs-distance.png" align="right"/>
+<iframe align="right" width="500" filename='examples/3angle/?l=pubsaggr&amp;zoom=17;&amp;lat=:-:lat:-:&amp;lon=:-:lon:-:'/>
 
 <div effect="fade-out">
 <example inline="1"><![CDATA[
-maxDist = 500;
-rEarth = 6371000;
-
 res = db.poiConcat.aggregate( [ {
   '$geoNear' : { 
-    'near' : [ -0.122055, 51.514562 ],
+    'near' : {
+      'type': 'Point',
+      'coordinates' : [:-:lon:-:, :-:lat:-:]
+    },
     'distanceField' : 'distance',
-    'distanceMultiplier' : rEarth,
-    'maxDistance' : maxDist / rEarth,
+    'distanceMultiplier' : 1,
+    'maxDistance' : 500,
     'spherical' : true,
     'query' : { 
       '$or' : [
@@ -28,38 +28,15 @@ res = db.poiConcat.aggregate( [ {
 
 <div effect="fade-in-out">
 <example inline="1"><![CDATA[
-maxDist = 500;
-rEarth = 6371000;
-
-res = db.poiConcat.aggregate( [ {
-  |ff0000|'$geoNear' : {|
-    |ff0000|'near' : [ -0.122055, 51.514562 ],|
+res = db.poiConcat.aggregate( [ {|
+  |ff0000|'$geoNear' : { |
+  |ff0000|  'near' : {|
+  |ff0000|    'type': 'Point',|
+  |ff0000|    'coordinates' : [:-:lon:-:, :-:lat:-:]|
+  |ff0000|  },|
     'distanceField' : 'distance',
-    'distanceMultiplier' : rEarth,
-    'maxDistance' : maxDist / rEarth,
-    |ff0000|'spherical' : true,|
-    |ff0000|'query' : {|
-      |ff0000|'$or' : [|
-        |ff0000|{ ts: 'amenity=pub' },|
-        |ff0000|{ ts: 'amenity=bar' },|
-      |ff0000|]|
-    |ff0000|}|   
-  |ff0000|} |
-} ] )
-]]></example>
-</div>
-
-<div effect="fade-in-out">
-<example inline="1"><![CDATA[
-|ff0000|maxDist = 500;|
-|ff0000|rEarth = 6371000;|
-
-res = db.poiConcat.aggregate( [ {
-  '$geoNear' : { 
-    'near' : [ -0.122055, 51.514562 ],
-    |ff0000|'distanceField' : 'distance',|
-    |ff0000|'distanceMultiplier' : rEarth,|
-    |ff0000|'maxDistance' : maxDist / rEarth,|
+    'distanceMultiplier' : 1,
+    'maxDistance' : 500,
     'spherical' : true,
     'query' : { 
       '$or' : [
@@ -67,6 +44,29 @@ res = db.poiConcat.aggregate( [ {
         { ts: 'amenity=bar' },
       ]     
     }   
+  } 
+} ] )
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+res = db.poiConcat.aggregate( [ {
+  '$geoNear' : { 
+    'near' : {
+      'type': 'Point',
+      'coordinates' : [:-:lon:-:, :-:lat:-:]
+    },
+    'distanceField' : 'distance',
+    'distanceMultiplier' : 1,
+    'maxDistance' : 500,
+    'spherical' : true,
+|ff0000|    'query' : {|
+|ff0000|      '$or' : [|
+|ff0000|        { ts: 'amenity=pub' },|
+|ff0000|        { ts: 'amenity=bar' },|
+|ff0000|      ]|
+|ff0000|    }| 
   } 
 } ] )
 ]]></example>

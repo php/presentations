@@ -6,16 +6,16 @@
 	<div effect="fade-out">
 		<blurb class="xlarge" align="center">08/03/10</blurb>
 	</div>
-	<div effect="fade-in-out">
+	<div effect="fade-in-out stop">
 		<blurb class="xlarge" align="center">|cc0000|08|/|00cc00|03|/|0000cc|10|</blurb>
-		<blurb class="xlarge" align="center">|cc0000|August| |00cc00|3rd|, |0000cc|2010|</blurb>
+		<blurb class="xlarge" align="center">|cc0000|Aug| |00cc00|3rd|, |0000cc|2010|</blurb>
 		<blurb align="center">(default)</blurb>
 	</div>
 	<div effect="fade-in-out">
 		<blurb class="xlarge" align="center">|cc0000|08|/|00cc00|03|/|0000cc|10|</blurb>
 		<blurb class="xlarge" align="center">|cc0000|2008| |00cc00|March| |0000cc|10|</blurb>
 	</div>
-	<div effect="fade-in-out">
+	<div effect="fade-in">
 		<blurb class="xlarge" align="center">|cc0000|08|/|00cc00|03|/|0000cc|10|</blurb>
 		<blurb class="xlarge" align="center">|cc0000|8| |00cc00|March| |0000cc|2010|</blurb>
 	</div>

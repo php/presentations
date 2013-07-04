@@ -2,21 +2,20 @@
 <slide>
 	<title>Parsing Dates</title>
 
-	<blurb>Parsing strings for date time information by instantiating a
-	DateTime object:</blurb>
+	<blurb>Parsing strings for date time information:</blurb>
 	<example><![CDATA[<?php
-	$dt = new DateTime("2010-03-08 08:43:57");
+  $dt = new DateTime("2010-03-08 08:43:57");
 ?>]]></example>
 <break/>
 
-	<blurb>This function will not return the timestamp as an integer, but
-	instead returns a DateTime object which is a wrapper around a 64 bit
-	integer, which you can access (as string) through:</blurb>
+	<blurb>This function will *not* return the timestamp as an integer, but
+	instead returns a DateTime object, which you can access (as string)
+	through:</blurb>
 <break/>
 
 	<example result="1"><![CDATA[<?php
-	$dt = new DateTime("2010-03-08 08:44:12");
-	echo $dt->format( 'U' ), "\n";
+  $dt = new DateTime("2010-03-08 08:44:12");
+  echo $dt->format( 'U' ), "\n";
 ?>]]></example>
 <break/>
 

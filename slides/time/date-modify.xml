@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Modifying Dates</title>
+  <title>Modifying Dates</title>
 
-	<blurb>Modifying dates and times:</blurb>
-	<example result="0"><![CDATA[<?php
-	date_default_timezone_set("Europe/London");
-	$ts = new DateTime("2010-03-08 15:53:55");
+  <example result="0"><![CDATA[<?php
+  date_default_timezone_set("Europe/London");
+  $ts = new DateTime("2010-03-08 15:53:55");
 
-	$ts->modify("+2 days");
+  $ts->modify("+2 days");
 
-	$ts->modify("Friday +3 weeks");
+  $ts->modify("Friday +3 weeks");
 
-	$ts->modify("next friday");
+  $ts->modify("next friday");
 ?>]]></example>
-<break/>
 
 <blurb>Result:</blurb>
-	<blurb class='pre'>   Mon, 08 Mar 2010 15:53:55 +0000</blurb>
+  <blurb class='pre'>   Mon, 08 Mar 2010 15:53:55 +0000</blurb>
 
-	<blurb effect="fade-in" class='pre'>   |ef2929|Wed, 10 Mar| 2010 15:53:55 +0000</blurb>
-	<blurb effect="fade-in" class='pre'>   |ef2929|Fri, 02 Apr| 2010 15:53:55 |ef2929|+0100|</blurb>
-	<blurb effect="fade-in" class='pre'>   Fri, |ef2929|09 Apr| 2010 15:53:55 +0100</blurb>
+  <blurb effect="fade-in" class='pre'>   |ef2929|Wed, 10 Mar| 2010 15:53:55 +0000</blurb>
+  <blurb effect="fade-in" class='pre'>   |ef2929|Fri, 02 Apr| 2010 15:53:55 |ef2929|+0100|</blurb>
+  <blurb effect="fade-in" class='pre'>   Fri, |ef2929|09 Apr| 2010 15:53:55 +0100</blurb>
 
 </slide>
