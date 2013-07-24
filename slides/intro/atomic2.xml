@@ -1,0 +1,10 @@
+<slide title="Deploying Web Apps">
+
+<break lines="4" />
+<blurb fontsize="4em">✔ Don't copy files into current document root</blurb>
+<blurb fontsize="4em">✔ Let existing requests finish on old code</blurb>
+<blurb fontsize="4em">✔ New requests start on new code</blurb>
+<blurb fontsize="4em">✔ Avoid clearing your opcode cache</blurb>
+<blurb fontsize="4em">✔ Minimal impact on production traffic</blurb>
+
+</slide>

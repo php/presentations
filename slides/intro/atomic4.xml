@@ -1,0 +1,14 @@
+<slide title="Deploying Web Apps">
+
+<break lines="2" />
+<blurb fontsize="6em">Apache</blurb>
+<blurb fontsize="4em">http://github.com/etsy/mod_realdoc</blurb>
+<break lines="1" />
+<blurb fontsize="6em">nginx</blurb>
+<blurb fontsize="4em">You can use $realpath_root</blurb>
+<blurb fontsize="2em">&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;eg. fastcgi_param DOCUMENT_ROOT $realpath_root;</blurb>
+<break lines="1" />
+<blurb fontsize="6em">PHP</blurb>
+<blurb fontsize="4em">http://github.com/etsy/incpath</blurb>
+
+</slide>

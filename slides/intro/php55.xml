@@ -55,7 +55,7 @@ echo [1,3,4][2]; //output 4]]></example>
 <blurb fontsize="4em">✔ Simplified password hashing API</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 // Hash
-$hash = password_hash("super secret password", PASSWORD_BCRYPT);
+$hash = password_hash("super secret",PASSWORD_BCRYPT);
 
 // To validate $pwd against the stored hash
 if (password_verify($pwd, $hash)) {
