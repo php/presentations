@@ -1,0 +1,14 @@
+<slide>
+<title>Render maps</title>
+
+<blurb>For each map "frame":</blurb>
+<list>
+	<bullet>Import %.osm% file into PostGreSQL:<example>osm2pgsql -S /home/derick/install/osm2pgsql/default.style --slim -d gis -C 2400 $i</example></bullet>
+	<bullet>Only if it's not the same as the previous one</bullet>
+	<bullet>Read calculated bounding boxes and put those in the environment</bullet>
+	<bullet>Run mapnik to render image:
+<example>export MAPNIK_MAP_FILE=/home/derick/install/mapnik/osm.xml
+/home/derick/install/mapnik/generate_image.py ${LAT1} ${LON1} ${LAT2} ${LON2}</example>
+	</bullet>
+</list>
+</slide>

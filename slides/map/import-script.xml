@@ -2,7 +2,6 @@
 <title>The import script</title>
 
 <list>
-	<bullet>Open file with XML Reader</bullet>
 	<bullet>Loop over all nodes, and:
 		<list>
 			<bullet>*Store the node in a different cache database*</bullet>
@@ -15,6 +14,11 @@
 			<bullet>Store the way into the collection</bullet>
 		</list>
 	</bullet>
-	<bullet>(Delete the cache database)</bullet>
+	<bullet>Loop over all the relations, and:
+		<list>
+			<bullet>*See whether we have multi-polygon relations and do something clever with them*</bullet>
+			<bullet>Remove ways that were converted into a multi-polygon</bullet>
+		</list>
+	</bullet>
 </list>
 </slide>

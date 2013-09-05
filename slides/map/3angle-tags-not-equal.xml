@@ -1,0 +1,19 @@
+<slide>
+<title>Not all tags are equal</title>
+
+<example inline="1">
+    "ts" : [
+*        "amenity=pub",*
+|ff0000|        "name=Ehr-Bar"|
+|ff2a00|        "addr:housenumber=19",|
+|ff2a00|        "addr:street=Mendener Straße",|
+|ff8000|        "addr:postcode=53757",|
+|ff8000|        "smoking=no",|
+|ff8000|        "wheelchair=no",|
+|ffaa00|        "real_ale=no",|
+|ffaa00|        "real_cider=no",|
+|ffd500|        "addr:city=Sankt Augustin",|
+|ffff00|        "addr:country=DE",|
+    ],
+</example>
+</slide>

@@ -1,0 +1,54 @@
+<slide>
+<title>Recording votes</title>
+
+<example>
+$collection->update(
+    [ '_id' => 'n1566340485', 'key' => 'cuisine', 'value' => 'german' ],
+    [
+        '$inc' => [ 'approver_count' => 1 ], 
+        '$push' => [ 'approvers' => 83453 ],
+        '$set' => [ 'last' => time() ]
+    ]
+);
+</example>
+
+<div effect="fade-out">
+<example>
+{
+    "_id" : ObjectId("5216190444670a5e20151202"),
+    "id" : "n1566340485",
+    "approvers" : [
+        NumberLong(79999),
+        NumberLong(80106),
+    ],
+    "decliners" : [ ],
+    "approver_count" : 2,
+    "decliner_count" : 0,
+    "key" : "cuisine",
+    "last" : NumberLong(1377215982),
+    "suggester" : NumberLong(79908),
+    "value" : "german"
+}
+</example>
+</div>
+<div effect="fade-in">
+<example inline="1">
+{
+    "_id" : ObjectId("5216190444670a5e20151202"),
+    "id" : "n1566340485",
+    "approvers" : [
+        NumberLong(79999),
+        NumberLong(80106),
+        *NumberLong(83453),*
+    ],
+    "decliners" : [ ],
+    *"approver_count" : 3,*
+    "decliner_count" : 0,
+    "key" : "cuisine",
+    *"last" : NumberLong(1623422341),*
+    "suggester" : NumberLong(79908),
+    "value" : "german"
+}
+</example>
+</div>
+</slide>

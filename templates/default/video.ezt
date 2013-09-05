@@ -1,0 +1,19 @@
+{use $node, $pres, $inline = false}
+{var $align = get_attribute( $node, 'align' )}
+{var $attr = get_attribute( $node, 'attr' )}
+{var $width = get_attribute( $node, 'width' )}
+{var $height = get_attribute( $node, 'height' )}
+{var $source = ''}
+{if !$width}{$width = 1010}{/if}
+{if !$height}{$height = 592}{/if}
+{if str_starts_with(get_attribute($node, 'filename'), 'http://')}
+{$source = get_attribute($node, 'filename')}
+{else}
+{$source = str_append($pres->base, get_attribute( $node, 'filename' ))}
+{/if}
+<div{if $align} align='{$align}'{/if}>
+<video {if $inline}class='inline' {/if} width="{$width}" height="{$height}" preload controls autoplay>
+	<source src="{$source}" type='video/webm; codecs="vp8, vorbis"' />
+</video>
+{if $attr}<span class='attribution'>{$attr}</span>{/if}
+</div>

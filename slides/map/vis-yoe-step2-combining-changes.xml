@@ -1,0 +1,16 @@
+<slide>
+<title>From changes file to image</title>
+
+<list>
+	<bullet>A year has 365 * 24 = 8760 hours</bullet>
+	<bullet>At 25 frames/sec the video would take 700 seconds</bullet>
+	<bullet>10 minutes is boring, so a frame for every 6 hours</bullet>
+</list>
+<break/>
+<blurb>A script:</blurb>
+<list>
+	<bullet>Combines 6 "change files"</bullet>
+	<bullet>Maps each long/lat to a 11520 pixels horizontal and 5760 vertical</bullet>
+	<bullet>Writes out an image which keeps into account previous changes as well</bullet>
+</list>
+</slide>

@@ -1,0 +1,30 @@
+<slide>
+<title>Example data point</title>
+
+<example>db.poiConcat.find( { _id: 'n1566340485' } ).pretty();</example>
+
+<example>
+{
+    "_id" : "n1566340485",
+    "ty" : NumberLong(1),
+    "l" : {
+        "type" : "Point",
+        "coordinates" : [ 7.1903879, 50.7841392 ]
+    },
+    "ts" : [
+        "addr:housenumber=48",
+        "addr:street=Mendener Straße",
+        "amenity=restaurant",
+        "name=Blumenhof",
+        "wheelchair=yes"
+    ],
+    "m" : {
+        "v" : NumberLong(4),
+        "cs" : NumberLong(15878090),
+        "uid" : NumberLong(92274),
+        "ts" : NumberLong(1367019680)
+    }
+}
+</example>
+</slide>
+

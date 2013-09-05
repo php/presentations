@@ -1,0 +1,21 @@
+<slide>
+<title>Storing suggestions</title>
+
+<example>
+{
+    "_id" : ObjectId("5216190444670a5e20151202"),
+    "id" : "n1566340485",
+    "approvers" : [
+        NumberLong(79999),
+        NumberLong(80106),
+    ],
+    "decliners" : [ ],
+    "approver_count" : 2,
+    "decliner_count" : 0,
+    "key" : "cuisine",
+    "last" : NumberLong(1377215982),
+    "suggester" : NumberLong(79908),
+    "value" : "german"
+}
+</example>
+</slide>

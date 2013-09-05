@@ -1,0 +1,10 @@
+<slide>
+<title>Artwork</title>
+
+<list>
+	<bullet>Put a 900x472 pixel image in %config/title-image.jpg%</bullet>
+	<bullet>Run: %./create-artwork.sh%</bullet>
+</list>
+<break lines="3"/>
+<image filename="artwork.png"/>
+</slide>

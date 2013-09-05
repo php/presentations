@@ -1,0 +1,12 @@
+<slide>
+<title>Set-up replication</title>
+
+<list>
+	<bullet>Remove left-over stuff:	<example>rm configuration.txt</example></bullet>
+	<bullet>Initialise replication: <example>../osmosis-latest/bin/osmosis --rrii</example></bullet>
+	<bullet>Get a matching state file from %http://planet.openstreetmap.org/replication/minute% and save it as %state.txt%</bullet>
+	<bullet>Edit %configuration.txt% and make it:<example>
+baseUrl=http://planet.openstreetmap.org/replication/minute
+maxInterval = 900</example></bullet>
+</list>
+</slide>

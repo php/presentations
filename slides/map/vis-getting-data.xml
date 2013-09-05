@@ -1,0 +1,22 @@
+<slide>
+<title>Getting the data</title>
+
+<list>
+	<bullet>It is a lot easier if you do this *before* the party starts</bullet>
+	<bullet>I use an extract from %http://download.geofabrik.de/%</bullet>
+	<bullet>Create %config.txt% and change the coordinates:
+<example># osmosis
+bbox=left=-0.176 right=-0.115 top=51.53 bottom=51.50
+# edits, make sure LON1 &lt; LON2 and LAT1 &gt; LAT2
+LON1=-0.15447
+LON2=-0.13512
+LAT1=51.5176
+LAT2=51.5086</example>
+	</bullet>
+	<bullet>Extract the part that you need:<example>
+../osmosis-latest/bin/osmosis --rbf workers=3 file=great-britain-latest.osm.pbf \
+    --bb `cat config.txt | grep "bbox=" | cut -d "=" -f 2-` --lp --wx party.osm
+</example>
+	</bullet>
+</list>
+</slide>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Visualising Progress</title>
+<event>State of the Map</event>
+<location>Birmingham, UK</location>
+<lat>52.48142</lat><lon>-1.89983</lon>
+<date>September 7th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>osm@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/osm-visualisation-sotm13</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- It all started in Kensington… -->
+<slide>slides/map/vis-start.xml</slide>
+<slide>slides/map/vis-not-too-spectacular.xml</slide>
+<slide>slides/map/vis-shots.xml</slide>
+<slide>slides/map/vis-progress-what-does-it-show.xml</slide>
+<slide>slides/map/vis-how-does-it-work.xml</slide>
+<slide>slides/map/vis-prerequisites.xml</slide>
+<slide>slides/map/vis-getting-data.xml</slide>
+<slide>slides/map/vis-setup-replication.xml</slide>
+<slide>slides/map/vis-fetching-data.xml</slide>
+<slide>slides/map/vis-artwork.xml</slide>
+<slide>slides/map/vis-calculate-difference.xml</slide>
+<slide>slides/map/vis-render-edit-points.xml</slide>
+<slide>slides/map/vis-render-maps.xml</slide>
+<slide>slides/map/vis-combine-edit-points.xml</slide>
+<slide>slides/map/vis-convert-images-into-movie.xml</slide>
+<slide>slides/map/vis-music.xml</slide>
+
+<slide>slides/map/vis-is-that-all.xml</slide>
+<slide>slides/map/vis-yoe-redaction.xml</slide>
+<slide>slides/map/vis-yoe-basic-idea.xml</slide>
+<slide>slides/map/vis-yoe-step1-grabbing-changes.xml</slide>
+<slide>slides/map/vis-yoe-step2-combining-changes.xml</slide>
+<slide>slides/map/vis-yoe-changes-video.xml</slide>
+<slide>slides/map/vis-yoe-flat-to-3d.xml</slide>
+<slide>slides/map/vis-yoe-video.xml</slide>
+<slide>slides/map/vis-yoe-reaction-period.xml</slide>
+<slide>slides/map/vis-yoe-video-redaction.xml</slide>
+<slide>slides/map/vis-yoe-special-variants.xml</slide>
+<slide>slides/map/vis-yoe-mask.xml</slide>
+<slide>slides/map/vis-yoe-changes-video-partial.xml</slide>
+
+<slide>slides/map/vis-what-next.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

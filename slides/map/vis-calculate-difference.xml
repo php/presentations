@@ -1,0 +1,15 @@
+<slide>
+<title>Calculating the difference</title>
+
+<list>
+	<bullet>Basically we just use Osmosis to do the hard work:<example>
+osmosis \
+	--rx {$files[$i + 1]} --rx {$files[$i]} \
+	--derive-change \
+	--write-xml-change file='changes/diff-{$m[2]}.osc'</example>
+	</bullet>
+	<bullet>We take a short cut if the file sizes are the same</bullet>
+</list>
+<break lines="2"/>
+<image align="center" filename="short-cut-road.jpg"/>
+</slide>

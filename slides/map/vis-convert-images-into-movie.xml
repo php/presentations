@@ -1,0 +1,18 @@
+<slide>
+<title>From images to movie</title>
+
+<list>
+	<bullet>Blend with title image for start</bullet>
+	<bullet>Blend with black for end</bullet>
+	<bullet>Using %mencoder% to combine into movie:
+<example>OPTIONS="-ovc lavc -lavcopts vcodec=msmpeg4v2:vbitrate=16000"
+mencoder "mf://artwork/title*.jpg" -mf fps=25 -o title.avi $OPTIONS
+mencoder "mf://images/x*.jpg" -mf fps=25 -o middle.avi $OPTIONS
+mencoder "mf://artwork/end*.jpg" -mf fps=25 -o end.avi $OPTIONS
+
+mencoder -oac copy -oac copy -ovc copy -o test.avi title.avi middle.avi end.avi</example>
+	</bullet>
+</list>
+
+<image filename="thumbnails.png"/>
+</slide>

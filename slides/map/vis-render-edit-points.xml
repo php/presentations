@@ -1,0 +1,11 @@
+<slide>
+<title>Creating the edit points</title>
+
+<list>
+	<bullet>Calculates bounding box in sliding window</bullet>
+	<bullet>Draws expanding circles for each change</bullet>
+	<bullet>Optionally also adds GPX tracks</bullet>
+</list>
+
+<image filename="edit-points.png"/>
+</slide>
