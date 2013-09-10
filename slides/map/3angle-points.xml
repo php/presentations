@@ -1,0 +1,17 @@
+<slide>
+<title>Points</title>
+
+<blurb>*Amount depends on:*</blurb>
+<list>
+    <bullet>Tag importance</bullet>
+    <bullet>For votes: how soon after the suggestion was made</bullet>
+</list>
+
+<blurb>*Awarded for:*</blurb>
+<list>
+    <bullet>Checking in (instantly)</bullet>
+    <bullet>Suggesting a new value (instantly)</bullet>
+    <bullet>Voting on a new value (+/-) (instantly)</bullet>
+    <bullet>Acceptance of suggestion (3 plus votes) (cron)</bullet>
+</list>
+</slide>

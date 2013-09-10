@@ -19,6 +19,7 @@ res = db.poiConcat.aggregate( [ {
       '$or' : [
         { ts: 'amenity=pub' },
         { ts: 'amenity=bar' },
+        { ts: 'amenity=restaurant' },
       ]     
     }   
   } 
@@ -42,6 +43,7 @@ res = db.poiConcat.aggregate( [ {|
       '$or' : [
         { ts: 'amenity=pub' },
         { ts: 'amenity=bar' },
+        { ts: 'amenity=restaurant' },
       ]     
     }   
   } 
@@ -65,6 +67,7 @@ res = db.poiConcat.aggregate( [ {
 |ff0000|      '$or' : [|
 |ff0000|        { ts: 'amenity=pub' },|
 |ff0000|        { ts: 'amenity=bar' },|
+|ff0000|        { ts: 'amenity=restaurant' },|
 |ff0000|      ]|
 |ff0000|    }| 
   } 

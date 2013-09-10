@@ -1,0 +1,28 @@
+<slide>
+<title>Finding the items</title>
+
+<blurb>GeoJSON for data storage:</blurb>
+<example inline="1">
+"l" : {
+    "type" : "Polygon",
+    "coordinates" : [
+        [
+            *[ 7.2018081, 50.7697172 ]*,
+            *[ 7.2017458, 50.7695921 ]*,
+            *[ 7.2019352, 50.7695544 ]*,
+            *[ 7.2019975, 50.7696794 ]*,
+            *[ 7.2018081, 50.7697172 ]*
+        ]
+    ]
+},</example>
+<blurb>Query:</blurb>
+<example>
+$query = [
+    LOC => [
+        '$near' => [
+            '$geometry' => [ 'type' => 'Point', 'coordinates' => [ 7.19, 50.76 ] ],
+            '$maxDistance' => 500
+        ],
+    ], …
+</example>
+</slide>

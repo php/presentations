@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Gamifying Map Improvements</title>
+<event>State of the Map</event>
+<location>Birmingham, UK</location>
+<lat>52.48142</lat><lon>-1.89983</lon>
+<date>September 6th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>osm@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/3angle-sotm13</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+
+<!-- Foursquare -->
+<slide>slides/map/foursquare1.xml</slide>
+<slide>slides/map/foursquare2.xml</slide>
+<slide>slides/map/foursquare-addict.xml</slide>
+<slide>slides/map/foursquare4.xml</slide>
+<slide>slides/map/foursquare3.xml</slide>
+
+<!-- 3angle example -->
+<slide>slides/map/3angle-intro.xml</slide>
+<slide>slides/map/3angle-example.xml</slide>
+
+<!-- how -->
+<!-- import -->
+<slide>slides/map/import-script.xml</slide>
+<slide>slides/map/import-example-froscon.xml</slide>
+<slide>slides/map/3angle-what.xml</slide>
+<slide>slides/map/3angle-different-tags.xml</slide>
+<slide>slides/map/3angle-different-types.xml</slide>
+<slide>slides/map/3angle-tags-not-equal.xml</slide>
+<slide>slides/map/3angle-rough-outline.xml</slide>
+<slide>slides/map/3angle-points.xml</slide>
+<slide>slides/map/3angle-penalties.xml</slide>
+<slide>slides/map/3angle-badges.xml</slide>
+
+<!-- technology -->
+<slide>slides/map/3angle-tech.xml</slide>
+<slide>slides/map/3angle-mongo-geoquery.xml</slide>
+<slide>slides/map/3angle-storing-suggestions.xml</slide>
+<slide>slides/map/3angle-vote.xml</slide>
+<slide>slides/map/3angle-progress.xml</slide>
+
+<slide>slides/map/3angle-wrapup.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

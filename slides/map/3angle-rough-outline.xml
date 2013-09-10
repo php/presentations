@@ -1,0 +1,13 @@
+<slide>
+<title>How does it work?</title>
+
+<list>
+    <bullet>Cron runs to calculate scores</bullet>
+    <bullet>Rules can change</bullet>
+    <bullet>You can "check in" to any object, always</bullet>
+    <bullet>If there is no "check in", you can suggest new values</bullet>
+    <bullet>If there is a "check in" already, you get to vote</bullet>
+    <bullet>3 plus votes → the change is propagated to OpenStreetMap</bullet>
+    <bullet>3 minus votes → the suggestion is removed</bullet>
+</list>
+</slide>

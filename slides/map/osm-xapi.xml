@@ -7,13 +7,12 @@
 
 <blurb>A whole country:</blurb>
 <example>http://download.geofabrik.de/openstreetmap/europe/great_britain/england.osm.bz2</example>
-<blurb>Or pick a smaller country from</blurb>
-<example>http://download.geofabrik.de/openstreetmap/</example>
 
 <blurb>A metro extract:</blurb>
 <example>http://metro.teczno.com/#manchester</example>
 
 <blurb>XAPI (via Overpass):</blurb>
+<example>http://www.overpass-api.de/api/xapi?map?bbox=7.12,50.73,7.25,50.81</example>
 <example>http://www.overpass-api.de/api/xapi?*[bbox=7.1,51.2,7.2,51.3][amenity=pub]</example>
 </div>
 

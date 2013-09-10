@@ -1,0 +1,27 @@
+<slide>
+<title>Finding used values</title>
+
+<blurb>Using MongoDB's aggregation framework</blurb>
+<example>
+define( 'TAGS', 'ts' );
+
+$pipeline = [
+    '$match'   => [ TAGS => new MongoRegex( '/^cuisine=[a-z_-]+$/' ) ],
+
+    '$project' => [ TAGS => 1 ],
+
+    '$unwind'  => '$' . TAGS,
+
+    '$match'   => [ TAGS => new MongoRegex( '/^cuisine=[a-z_-]+$/' ) ],
+
+    '$group'   => [
+        '_id'   => '$' . TAGS,
+        'count' => [ '$sum' => 1 ],
+    ),
+
+    '$sort'    => [ '_id' => 1 ]
+];
+
+$result = $this->c->aggregate( $pipeline );
+</example>
+</slide>

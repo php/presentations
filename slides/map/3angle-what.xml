@@ -1,0 +1,26 @@
+<slide>
+<title>Which objects do we care about?</title>
+
+<example inline="1">
+"ts" : [
+    "addr:housenumber=48",
+    "addr:street=Mendener Straße",
+|ff0000|    "amenity|=restaurant",
+    "name=Blumenhof",
+    "wheelchair=yes"
+],
+</example>
+
+<blurb>For now:</blurb>
+<example>
+'ts' => array(
+    '$in' => array(
+        new MongoRegex( "/^amenity=/" ),
+        new MongoRegex( "/^shop=/" ),
+        new MongoRegex( "/^tourism=/" ),
+    )
+)
+</example>
+<blurb>Most importantly, this includes pubs ;-)</blurb>
+
+</slide>

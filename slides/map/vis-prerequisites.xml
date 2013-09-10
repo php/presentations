@@ -1,0 +1,10 @@
+<slide>
+<title>What do I need?</title>
+
+<list>
+	<bullet>ImageMagick</bullet>
+	<bullet>PHP 5.3+ (with GD)</bullet>
+	<bullet>Osmosis</bullet>
+	<bullet>A working Mapnik rendering stack with all the default locations and users</bullet>
+</list>
+</slide>

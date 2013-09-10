@@ -1,0 +1,11 @@
+<slide>
+<title>Grabbing changes</title>
+
+<list>
+	<bullet>A script fetches all files from %http://planet.openstreetmap.org/replication/hour/000/%</bullet>
+	<bullet>This gives me a file for each hour</bullet>
+</list>
+
+<image filename="clock-hour.jpg"/>
+
+</slide>

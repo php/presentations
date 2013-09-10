@@ -1,0 +1,17 @@
+<slide>
+<title>Flat to 3D</title>
+
+<list>
+	<bullet>The images need to wrapped around a sphere</bullet>
+	<bullet>Some tricky 3D rotation required</bullet>
+</list>
+<div effect="fade-in">
+<list>
+	<bullet>Say hello to the *POV-Ray* ray-tracer</bullet>
+	<bullet>Zoom and rotation follows an "interesting" formula</bullet>
+	<bullet>Lower layer is a Earth map</bullet>
+	<bullet>Transparent "changes" layer</bullet>
+	<bullet>I also add atmosphere and some other effects</bullet>
+</list>
+</div>
+</slide>

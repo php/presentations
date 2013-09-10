@@ -1,0 +1,25 @@
+<slide>
+<title>How do I make them?</title>
+
+<div effect="fade-out">
+<list>
+	<bullet>Get map data (%.osm%) from before the mapping party</bullet>
+</list>
+</div>
+<div effect="fade-in">
+<list>
+	<bullet>*Get map data (%.osm%) from before the mapping party*</bullet>
+</list>
+</div>
+<list>
+	<bullet>Grab a new data set every 15 minutes</bullet>
+	<bullet>De-duplicate %osm% files to save space</bullet>
+	<bullet>Find a suitable cover photo and generate artwork</bullet>
+	<bullet>For each two data sets, calculate the difference</bullet>
+	<bullet>Calculate and generate images containing changes</bullet>
+	<bullet>Render each map file with Mapnik to an image</bullet>
+	<bullet>Combine all the images into a video</bullet>
+	<bullet>Add music to video</bullet>
+</list>
+
+</slide>
