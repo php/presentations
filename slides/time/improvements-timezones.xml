@@ -3,9 +3,9 @@
 	<title>Timezone Support</title>
 
 	<list>
-		<bullet>Bundled timezone database with more than 500 zones</bullet>
-		<bullet>Not dependent on timezone abbreviations</bullet>
-		<bullet>Timezones have the format: Continent/Location or Continent/Location/Sublocation - Like: Europe/Amsterdam, America/Indiana/Knox</bullet>
+		<bullet>There are more than 500 zones</bullet>
+		<bullet>Do not dependend on timezone abbreviations</bullet>
+		<bullet>Use timezone IDs like %Europe/Amsterdam% or %America/Indiana/Knox%</bullet>
 	</list>
 
 	<image align="center" filename="zone-places.png" y-offset="6"/>

@@ -1,0 +1,32 @@
+<slide>
+<title>After saving...</title>
+
+<example><![CDATA[
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' upload='false' generator='JOSM'>
+  <node id='-1754895' visible='true' lat='11.843674659729004' lon='-71.322021484375' />
+  <node id='-1754894' visible='true' lat='11.844100952148438' lon='-71.31991577148438' />
+  …
+  <node id='-8' visible='true' lat='15.542881011962892' lon='-61.29474258422852' />
+  <way id='-1751536' visible='true'>
+    <nd ref='-774459' />
+	…
+    <nd ref='-131' />
+  </way>
+  <way id='-7' visible='true'>
+    <nd ref='-8' />
+	…
+    <nd ref='-8' />
+    <tag k='TZID' v='America/Dominica' />
+  </way>
+  …
+  <relation id='-129' visible='true'>
+    <member type='way' ref='-130' role='outer' />
+    <member type='way' ref='-137' role='outer' />
+	…
+    <member type='way' ref='-283' role='outer' />
+    <tag k='TZID' v='America/St_Vincent' />
+    <tag k='type' v='multipolygon' />
+  </relation>
+</osm>]]></example>
+</slide>

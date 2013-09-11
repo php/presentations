@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>What time is it where?</title>
+<event>MongoDB MUG #7</event>
+<location>London, UK</location>
+<lat>51.52348</lat><lon>-0.08350</lon>
+<date>September 11th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/mongo-tz-mug13</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/time/worldclock.xml</slide>
+<slide>slides/time/problems-condensed.xml</slide>
+<slide>slides/time/timezone-map.xml</slide>
+<slide>slides/time/improvements-timezones.xml</slide>
+<slide>slides/time/location-to-tzid.xml</slide>
+
+<slide>slides/mongodb/location-to-tzid-method.xml</slide>
+<slide>slides/mongodb/tzid-shapefiles.xml</slide>
+<slide>slides/mongodb/tzid-convert-shapefiles.xml</slide>
+<slide>slides/mongodb/tzid-convert-osm-file.xml</slide>
+<slide>slides/mongodb/tzid-import-osm-file.xml</slide>
+
+<slide>slides/mongodb/tzid-match.xml</slide>
+<slide>slides/mongodb/tzid-match-same-tzid.xml</slide>
+
+<slide>slides/mongodb/tzid-simplify1.xml</slide>
+<slide>slides/mongodb/tzid-simplify2.xml</slide>
+<slide>slides/mongodb/tzid-simplify3.xml</slide>
+<slide>slides/mongodb/tzid-simplify4.xml</slide>
+
+<slide>slides/mongodb/tzid-nautical-border.xml</slide>
+<slide>slides/mongodb/tzid-nautical-border2.xml</slide>
+<slide>slides/mongodb/tzid-nautical-border-ca-us.xml</slide>
+
+<slide>slides/mongodb/tzid-fallback.xml</slide>
+<slide>slides/mongodb/tzid-nautical-what-it-is.xml</slide>
+<slide>slides/mongodb/tzid-left-to-do.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

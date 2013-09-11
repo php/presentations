@@ -1,0 +1,15 @@
+<slide>
+<title>Converting shapefiles</title>
+
+<image filename="josm-tzshapefile2.png" align="right"/>
+<list>
+	<bullet>We need to import them into MongoDB</bullet>
+	<bullet>I have already written an OpenStreetMap to MongoDB importer</bullet>
+	<bullet>The OpenStreetMap editor JOSM can convert shapefiles:
+		<example>
+wget http://efele.net/maps/tz/world/tz_world_mp.zip
+unzip tz_world_mp.zip
+josm world/tz_world_mp.shp</example>
+	</bullet>
+</list>
+</slide>

@@ -1,0 +1,27 @@
+<slide>
+<title>Importing the OSM file</title>
+
+<blurb>Article describing imports:<br/>http://drck.me/mongosm-a7u</blurb>
+<example>> db.timezone.stats(1024);
+{
+	"ns" : "demo.timezone",
+	"count" : 408,
+	"size" : 69841,
+	"avgObjSize" : 171.17892156862746,
+	"storageSize" : 142736,
+	"numExtents" : 9,
+	"nindexes" : 4,
+	"lastExtentSize" : 41340,
+	"paddingFactor" : 1,
+	"systemFlags" : 1,
+	"userFlags" : 0,
+	"totalIndexSize" : 2427,
+	"indexSizes" : {
+		"_id_" : 23,
+		"ty_1" : 23,
+		"l_2dsphere" : 2331,
+		"ts_1" : 47
+	},
+	"ok" : 1
+}</example>
+</slide>

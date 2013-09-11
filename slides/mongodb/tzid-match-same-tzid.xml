@@ -1,0 +1,9 @@
+<slide>
+<title>Finding the TZID at a location</title>
+
+<blurb>All others with the same TZID:</blurb>
+<example>db.timezone.find( { ts: "TZID=Europe/London" } );</example>
+
+<break lines="4"/>
+<image filename="uk-highres.png"/>
+</slide>

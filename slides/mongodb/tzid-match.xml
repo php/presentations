@@ -1,0 +1,26 @@
+<slide>
+<title>Finding the TZID at a location</title>
+
+<blurb>Under the "cursor":</blurb>
+<example>db.timezone.findOne( {
+    l: { 
+        '$geoIntersects' : { 
+            '$geometry' : { 
+                type: 'Point', 
+                coordinates: [ -0.08237, 51.52336 ] 
+            } 
+        } 
+    } 
+}, { ts: 1 } );</example>
+
+<blurb>Result:</blurb>
+<example>
+{
+  "_id" : "r-1403284",
+  "ts" : [
+    "TZID=Europe/London",
+    "type=multipolygon"
+  ]
+}
+</example>
+</slide>

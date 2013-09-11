@@ -1,0 +1,12 @@
+<slide>
+<title>Simplify ways</title>
+
+<image align="right" filename="simplify2.png"/>
+
+<list>
+	<bullet>Lots of points take a lot of rendering time</bullet>
+	<bullet>Simplifying ways to reduce rendering time</bullet>
+	<bullet>Ramer–Douglas–Peucker algorithm</bullet>
+</list>
+
+</slide>

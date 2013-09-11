@@ -1,0 +1,15 @@
+<slide>
+<title>Simplify ways</title>
+
+<image align="right" filename="simplify1.png"/>
+
+<list>
+	<bullet>Lots of points take a lot of rendering time</bullet>
+	<bullet>Simplifying ways to reduce rendering time</bullet>
+	<bullet>Ramer–Douglas–Peucker algorithm</bullet>
+	<bullet>Takes up time to run...</bullet>
+	<bullet>Part of MongoDB?</bullet>
+	<bullet>Store alternative polygons for rendering?</bullet>
+</list>
+
+</slide>

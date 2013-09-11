@@ -1,0 +1,32 @@
+<slide>
+<title>Territorial waters</title>
+
+<example>
+db.timezone.aggregate( [
+    { "$geoNear": {
+        near: { type: "Point", coordinates: [ 1.0375, 51.5809 ] },
+        distanceField: "d",
+        distanceMultiplier: 1,
+        maxDistance: 22000,
+        spherical: true,
+        query: { "ty" : { $gte: 2 } },
+        limit: 4
+    } }
+] );
+</example>
+
+<example>{
+  "result" : [
+    {
+      "_id" : "r-1403284",
+      "ty" : NumberLong(3),
+      "ts" : [
+        "TZID=Europe/London",
+        "type=multipolygon"
+      ],
+      "l" : { … }
+    }
+  ]
+}
+</example>
+</slide>

@@ -1,0 +1,10 @@
+<slide>
+<title>Nautical Time</title>
+
+<blurb>Three different cases:</blurb>
+<list>
+	<bullet>The location is within a land-polygon</bullet>
+	<bullet>The location is within 22km from a land-polygon</bullet>
+	<bullet>All others: Nautical time</bullet>
+</list>
+</slide>

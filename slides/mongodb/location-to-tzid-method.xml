@@ -1,0 +1,10 @@
+<slide>
+<title>Approach</title>
+
+<list>
+	<bullet>Find shape files defining the Timezone Identifier boundaries</bullet>
+	<bullet>Convert shape files to GeoJSON</bullet>
+	<bullet>Import GeoJSON files into MongoDB</bullet>
+	<bullet>Match!</bullet>
+</list>
+</slide>
