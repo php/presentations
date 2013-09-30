@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>Debugging</topic>
+<title>Xdebug</title>
+<event>ZendCon 2013</event>
+<location>Santa Clara, CA, US</location>
+<date>October 8th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/9064</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/toolbox/me.xml</slide>
+
+<slide>slides/xdebug/agenda.xml</slide>
+
+<slide>slides/xdebug/pimp1-quick.xml</slide>
+<slide>slides/xdebug/trace-collect-params.xml</slide>
+<slide>slides/xdebug/trace-show-local-vars.xml</slide>
+<slide>slides/xdebug/trace-file-link-format.xml</slide>
+<slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/cli-color.xml</slide>
+<slide>slides/xdebug/shutup.xml</slide>
+
+<slide>slides/xdebug/tracing.xml</slide>
+<slide>slides/xdebug/functiontrace-summary.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/fly-swat.xml</slide>
+<slide>slides/xdebug/analyse-running-script.xml</slide>
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/debugger-browser-extensions.xml</slide>
+<slide>slides/xdebug/debugger-connection-log.xml</slide>
+<slide>slides/xdebug/netbeans.xml</slide>
+<slide>slides/xdebug/komodo.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/profile2.xml</slide>
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+<!--<slide>slides/xdebug/live-demo.xml</slide>-->
+
+<!--<slide>slides/xdebug/donate.xml</slide>-->
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
