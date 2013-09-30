@@ -1,13 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 <slide fontsize="6em">
 	<title>Resources</title>
 
-	<image filename="xdebug-logo.png" align="left" pdf-scale="0.6"/>
-
 <qrcode>http://derickrethans.nl/talks/:-:talk_id:-:</qrcode>
-<list>
-	<bullet>Slides: http://derickrethans.nl/talks/:-:talk_id:-:</bullet>
-	<bullet>Contact me: :-:speaker:-:: @:-:twitter:-:, :-:email:-:</bullet>
-	<bullet>Feedback: :-:joindin:-:</bullet>
-</list>
+	<blurb>Slides:<br/>http://derickrethans.nl/talks/:-:talk_id:-:</blurb>
+	<blurb>:-:speaker:-: — @:-:twitter:-: — :-:email:-:</blurb>
+	<blurb>Feedback: :-:joindin:-:</blurb>
 </slide>

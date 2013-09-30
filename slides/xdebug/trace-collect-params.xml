@@ -1,0 +1,12 @@
+<slide>
+<title>Options for stack trace display</title>
+
+<blurb>*xdebug.collect_params*</blurb>
+<list>
+	<bullet>0: %Presentation->display( )%</bullet>
+	<bullet>1: %Presentation->display( |cc0000|string(1)| )%</bullet>
+	<bullet>2: %Presentation->display( |cc0000|string(1)| )%</bullet>
+	<bullet>3: %Presentation->display( '4' )%</bullet>
+	<bullet>4: %Presentation->display( $slideNr = '4' )%</bullet>
+</list>
+</slide>

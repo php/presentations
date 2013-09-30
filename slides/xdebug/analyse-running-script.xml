@@ -7,15 +7,12 @@
 		<bullet>Cross-language: PHP, Python, Perl...</bullet>
 	</list>
 <break/>
-	<blurb>Clients:</blurb>
 	<list>
 		<bullet>Eclipse/PDT (Java based — free)</bullet>
 		<bullet>Komodo (Linux, Windows, Mac — commercial)</bullet>
 		<bullet>MacGDBp (free)</bullet>
 		<bullet>Netbeans (Java-based — free)</bullet>
 		<bullet>PHPStorm (Java-based — commercial)</bullet>
-		<bullet>Zend Studio for Eclipse (Eclipse-based — commercial)</bullet>
-		<bullet>Stand-alone client (Linux (for now)):<br/> <link href="svn://svn.xdebug.org/svn/xdebug/gtkdbgp/trunk"/></bullet>
 		<bullet>(and many others: <link href="http://xdebug.org/docs/remote#clients"/>)</bullet>
 	</list>
 </slide>

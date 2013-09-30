@@ -3,11 +3,18 @@
 	<title>Function traces</title>
 
 	<list>
-		<bullet>Textual traces</bullet>
-		<bullet>Parsable traces</bullet>
-		<bullet>HTML traces</bullet>
+		<bullet>Different types: *Textual*, *Parsable* and *HTML*</bullet>
 		<bullet>Tracing only parts of an application with *xdebug_start_trace()* and *xdebug_stop_trace()*.</bullet>
-		<bullet>Fetching the trace file name that is being used with *xdebug_get_tracefile_name()*.</bullet>
-		<bullet>Changing how much data is shown with *xdebug.var_display_max_children*, *xdebug.var_display_max_data* and *xdebug.var_display_max_depth*.</bullet>
+        <bullet>%xdebug.collect_return%:
+<example>
+-> explode('/', '/xdebug-phpnw13/11') /home/httpd/pres2/show2.php:121
+ >=> array (0 => '', 1 => 'xdebug-phpnw13', 2 => '11')
+                       </example></bullet>
+		<bullet>%xdebug.collect_assignments%:
+<example>
+-> ezcTemplateVariableCollection->__set($name = 'slideNr', $value = '11') /home/httpd/pres2/show2.php:202
+   => $this->variables['slideNr'] = '11' /home/derick/dev/zetacomponents/trunk/Template/src/variable_collection.php:134
+</example>
+</bullet>
 	</list>
 </slide>
