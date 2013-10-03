@@ -1,0 +1,12 @@
+<slide>
+<title>Tasting notes</title>
+
+<blurb>Tasting notes is like "review" of how whisky tastes. Each user
+can have a note for each whisky. Design a schema that allows for:</blurb>
+
+<list>
+	<bullet>User profiles: name, country</bullet>
+	<bullet>Whiskies: name, age, etc (ignore the distillery bit)</bullet>
+	<bullet>Tasting notes: date, text, likes, and rating</bullet>
+</list>
+</slide>

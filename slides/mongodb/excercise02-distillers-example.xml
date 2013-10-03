@@ -1,0 +1,38 @@
+<slide>
+<title>Distilleries: result</title>
+
+<div effect="fade-out">
+<blurb>Collection: distillery</blurb>
+<example><![CDATA[{
+	name: "Glenfiddch",
+	country: "Scotland",
+	region: "Speyside",
+	opening_year: 1887,
+	whiskies: [ "Glenfiddich 15", "Glenfiddich 18", "Glenfiddich 21" ]
+}]]></example>
+<blurb>Collection: whisky</blurb>
+<example><![CDATA[{
+	name: "Glenfiddch 15",
+	age: 15,
+	strength: 50.3
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Collection: distillery</blurb>
+<example><![CDATA[{
+	name: "Glenfiddch",
+	country: "Scotland",
+	region: "Speyside",
+	opening_year: 1887
+}]]></example>
+<blurb>Collection: whisky</blurb>
+<example><![CDATA[{
+	name: "Glenfiddch 15",
+	age: 15,
+	strength: 50.3,
+	distillery: "Glenfiddich"
+}]]></example>
+</div>
+
+</slide>

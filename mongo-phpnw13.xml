@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>mongoDB</topic>
+<title>Working with MongoDB</title>
+<event>PHP NorthWest 2013</event>
+<location>Manchester, UK</location>
+<date>October 4th, 2013</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/9324</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+<slide>slides/mongodb/half-tutorial-topics.xml</slide>
+
+<slide>slides/mongodb/section-intro.xml</slide>
+<slide>slides/mongodb/collections-documents.xml</slide>
+<slide>slides/mongodb/document.xml</slide>
+
+<slide>slides/mongodb/connecting.xml</slide>
+
+<slide>slides/mongodb/insert-js.xml</slide>
+<slide>slides/mongodb/insert-php.xml</slide>
+<slide>slides/mongodb/insert-php-shortarray.xml</slide>
+- single
+
+<slide>slides/mongodb/id.xml</slide>
+
+<slide>slides/mongodb/query.xml</slide>
+<slide>slides/mongodb/query2.xml</slide>
+- findOne
+- find
+
+<slide>slides/mongodb/query-advanced-ops.xml</slide>
+
+<slide>slides/mongodb/cursors.xml</slide>
+- cursor
+<slide>slides/mongodb/limit-skip.xml</slide>
+- limit/skip
+
+<slide>slides/mongodb/update2a.xml</slide>
+
+<!-- FIRST EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise01-whisky-storage.xml</slide>
+<slide>slides/mongodb/excercise01-whisky-example.xml</slide>
+
+<!-- SCHEMA DESIGN -->
+<slide>slides/mongodb/section-schema-design.xml</slide>
+Common Patterns
+
+- RDBMS-normalisation.
+
+<slide>slides/mongodb/blog.xml</slide>
+<slide>slides/mongodb/blog2.xml</slide>
+
+<slide>slides/mongodb/considerations.xml</slide>
+
+
+<slide>slides/mongodb/one-to-many1.xml</slide>
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/tip-array-key.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+
+<!-- SECOND EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise02-distillers-storage.xml</slide>
+<slide>slides/mongodb/excercise02-distillers-example.xml</slide>
+
+
+<slide>slides/mongodb/many-to-many1.xml</slide>
+<slide>slides/mongodb/many-to-many2.xml</slide>
+<slide>slides/mongodb/many-to-many3.xml</slide>
+<slide>slides/mongodb/many-to-many4.xml</slide>
+
+<slide>slides/mongodb/embed-vs-link.xml</slide>
+
+
+<!-- THIRD EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise03-reviews.xml</slide>
+<slide>slides/mongodb/excercise03-reviews-example.xml</slide>
+<slide>slides/mongodb/excercise03-push-to-add-review.xml</slide>
+<slide>slides/mongodb/excercise03-add-like.xml</slide>
+
+
+<!-- COMMANDS and AGGREGATION -->
+<slide>slides/mongodb/commands.xml</slide>
+
+<slide>slides/mongodb/section-aggregation.xml</slide>
+<slide>slides/mongodb/aggr-aggr-framework.xml</slide>
+
+<slide>slides/mongodb/aggr-pipeline.xml</slide>
+<slide>slides/mongodb/aggr-pipelines-ops.xml</slide>
+<slide>slides/mongodb/aggr-our-example-data.xml</slide>
+<slide>slides/mongodb/aggr-op-match.xml</slide>
+<slide>slides/mongodb/aggr-op-match-example.xml</slide>
+<slide>slides/mongodb/aggr-op-match-with-query-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project.xml</slide>
+<slide>slides/mongodb/aggr-op-project-incl-excl-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project-rename-compute-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project-create-sub-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group.xml</slide>
+<slide>slides/mongodb/aggr-op-group-sum-count-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group-collect-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group-compound-example.xml</slide>
+<slide>slides/mongodb/aggr-op-unwind.xml</slide>
+<slide>slides/mongodb/aggr-op-unwind-example.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-skip-limit.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-example.xml</slide>
+<slide>slides/mongodb/aggr-op-limit-example.xml</slide>
+<slide>slides/mongodb/aggr-op-skip-example.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-limit-skip-example.xml</slide>
+
+<!-- FOURTH EXCERCISE -->
+<slide>slides/mongodb/aggregation-example-cuisine6-sort.xml</slide>
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise04-reviews-aggr.xml</slide>
+<slide>slides/mongodb/excercise04-reviews-aggr-example.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+
+
+<!-- INDEXES -->
+<slide>slides/mongodb/section-indexes.xml</slide>
+
+<slide>slides/mongodb/idx-create-php.xml</slide>
+
+<slide>slides/mongodb/idx-cities-by-name-and-pop.xml</slide>
+<slide>slides/mongodb/idx-cities-by-name-and-pop2.xml</slide>
+<slide>slides/mongodb/idx-cities-by-name-and-pop3.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem2.xml</slide>
+<slide>slides/mongodb/idx-stored2.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem4.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem6.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem5.xml</slide>
+
+<slide>slides/mongodb/idx-recap1.xml</slide>
+<slide>slides/mongodb/idx-recap2.xml</slide>
+<slide>slides/mongodb/idx-recap3.xml</slide>
+
+<slide>slides/mongodb/idx-which-one-is-picked.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
+
+<!-- REPLICATION -->
+<slide>slides/mongodb/section-replication.xml</slide>
+<slide>slides/mongodb/repl-use-cases.xml</slide>
+<!-- <slide>slides/mongodb/repl-types-of-outage.xml</slide> -->
+<slide>slides/mongodb/repl-features.xml</slide>
+<slide>slides/mongodb/repl-works-basic.xml</slide>
+<slide>slides/mongodb/repl-works-normal.xml</slide>
+<slide>slides/mongodb/repl-works-failover.xml</slide>
+<slide>slides/mongodb/repl-oplog.xml</slide>
+
+<slide>slides/mongodb/replication-setup.xml</slide>
+
+<slide>slides/mongodb/repl-eventual-consistency.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+</presentation>

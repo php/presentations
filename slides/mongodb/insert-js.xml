@@ -1,0 +1,20 @@
+<slide>
+<title>Inserting a document (JavaScript)</title>
+<example>
+
+{
+  "_id" : "derickr",
+  "name" : "Derick Rethans",
+  "talks" : [
+    {
+      "title" : "Profiling PHP Applications",
+      "url" : "http://derickrethans.nl/talks/profiling-phptour.pdf",
+    },
+    {
+      "title" : "Xdebug",
+      "url" : "http://derickrethans.nl/talks/xdebug-phpbcn11.pdf",
+    }
+  ]
+}
+</example>
+</slide>

@@ -1,0 +1,35 @@
+<slide>
+<title>Adding a review</title>
+
+<example><![CDATA[{
+    name: "Glenfiddich 15",
+    notes: [
+        {
+            user_name: "Derick",
+            date: 2013-10-02,
+            note: "Caramel and honey, fruity with some hints of earth",
+            likes: 17
+            rating: 3,
+        }
+    ]
+}]]></example>
+
+<div effect="fade-in-out">
+<example><![CDATA[<?php
+$m = new MongoClient;
+$c = $m->demo->whisky;
+
+$newReview = array(
+    user_name => "Michael",
+    date => 2013-10-01,
+    note => "No peat, but fruity",
+    rating => 1,
+);
+
+$c->update(
+    array( 'name' => 'Glenfiddich 15' ),
+    array( '$push => array( 'notes' => $newReview ) )
+);
+?>]]></example>
+</div>
+</slide>

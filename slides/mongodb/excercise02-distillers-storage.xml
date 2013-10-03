@@ -1,0 +1,15 @@
+<slide>
+<title>Distilleries</title>
+
+<blurb>A distillery has many whiskies. Design a schema that stores
+information about whiskies, and about distilleries and the whiskies they make.
+<br/><br/>
+Information to store is:
+</blurb>
+<list>
+	<bullet>Distillery: country, region (optional), name, opening year</bullet>
+	<bullet>Whisky: name, age, strength, vintage (optional)</bullet>
+	<bullet>The relation between them</bullet>
+</list>
+
+</slide>

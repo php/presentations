@@ -44,6 +44,7 @@ var_dump( $m->demo->talks->insert( $document ) );
 
 <div effect="fade-in">
 <example result="1" stop="true"><![CDATA[<?php
+ini_set('display_errors', 1);
 $document = [
   "_id" => "derickr",
   "name" => "Derick Rethans",

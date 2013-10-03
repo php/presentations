@@ -1,0 +1,24 @@
+<slide>
+<title>Inserting a document (short array)</title>
+
+<example result="1"><![CDATA[<?php
+$document = [
+  "_id" => "derickr",
+  "name" => "Derick Rethans",
+  "talks" => [
+    [
+      "title" => "Profiling PHP Applications",
+      "url" => "http://derickrethans.nl/talks/profiling-phptour.pdf",
+    ],
+    [
+      "title" => "Xdebug",
+      "url" => "http://derickrethans.nl/talks/xdebug-phpbcn11.pdf",
+    ]
+  ]
+];
+
+$m = new MongoClient();
+$c = $m->demo->talks; $c->drop();
+var_dump( $c->insert( $document ) );
+?>]]></example>
+</slide>

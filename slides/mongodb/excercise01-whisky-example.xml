@@ -1,0 +1,45 @@
+<slide>
+<title>Whisky storage</title>
+
+<div effect="fade-out">
+<example><![CDATA[
+<?php
+$m = new MongoClient;
+$d = $m->whisky;
+$c = $d->whisky;
+
+$document = [
+	'name' => 'Glenmorangie',
+	'age'  => 25,
+	'vintage' => 1980,
+	'strength' => 46.3,
+	'distillery' => 'Glenmorangie',
+	'country' => 'Scotland',
+	'region' => 'Speyside',
+];
+$c->insert( $document );
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example><![CDATA[
+<?php
+$m = new MongoClient;
+$d = $m->whisky;
+$c = $d->whisky;
+
+$document = [
+	'name' => 'Glenmorangie',
+	'age'  => 25,
+	'vintage' => 1980,
+	'strength' => 46.3,
+	'distillery' => [
+		'name' => 'Glenmorangie',
+		'country' => 'Scotland',
+		'region' => 'Speyside',
+	],
+];
+$c->insert( $document );
+?>]]></example>
+</div>
+</slide>

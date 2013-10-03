@@ -1,0 +1,16 @@
+<slide>
+<title>Whisky storage</title>
+
+<blurb>Write a PHP script that stores information about a whisky. The
+information that you need to store is:</blurb>
+
+<list>
+	<bullet>The name</bullet>
+	<bullet>The age (if available)</bullet>
+	<bullet>The bottling year (if available)</bullet>
+	<bullet>The strength (alcohol %)</bullet>
+	<bullet>The name of the distillery</bullet>
+	<bullet>The country of the distillery</bullet>
+	<bullet>The region of the distillery, if applicable (Highlands, Lowlands, Speyside)</bullet>
+</list>
+</slide>

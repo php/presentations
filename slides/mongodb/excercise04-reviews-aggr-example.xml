@@ -1,0 +1,30 @@
+<slide>
+<title>Excercise: Aggregation</title>
+
+<example><![CDATA[<?php
+ini_set('xdebug.var_display_max_depth', 4);
+$m = new MongoClient;
+$c = $m->demo->whisky;
+
+$name = 'Michael';
+
+$res = $c->aggregate( [
+    [ '$match' => [ 'notes.user_name' => $name ] ],
+    [ '$unwind' => '$notes' ],
+    [ '$match' => [ 'notes.user_name' => $name ] ],
+    [ '$group' => [ 
+        '_id' => '$notes.user_name', 
+        'notes' => [
+            '$addToSet' => [
+                'whisky' => '$name', 
+                'note' => '$notes.note', 
+                'rating' => '$notes.rating'
+            ]
+        ]
+    ] ],
+    [ '$sort' => [ 'notes.rating' => -1 ] ],
+] );
+
+var_dump( $res['result'] );
+?>]]></example>
+</slide>
