@@ -14,7 +14,7 @@
     ]
 }]]></example>
 
-<div effect="fade-in-out">
+<div effect="fade-in">
 <example><![CDATA[<?php
 $m = new MongoClient;
 $c = $m->demo->whisky;
