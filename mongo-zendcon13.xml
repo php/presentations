@@ -53,6 +53,11 @@ Common Patterns
 
 <slide>slides/mongodb/commands-aggregation.xml</slide>
 <slide>slides/mongodb/aggregation-example-cuisine.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine1-match.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine2-unwind.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine3-match.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine4-group.xml</slide>
+<slide>slides/mongodb/aggregation-example-cuisine5-group-with-sum.xml</slide>
 <slide>slides/mongodb/aggregation-example-cuisine6-sort.xml</slide>
 
 <slide>slides/mongodb/section-indexes.xml</slide>
@@ -62,6 +67,19 @@ Common Patterns
 
 <slide>slides/mongodb/idx-recap1.xml</slide>
 <slide>slides/mongodb/idx-recap2.xml</slide>
+
+<!-- REPLICATION -->
+<slide>slides/mongodb/section-replication.xml</slide>
+<slide>slides/mongodb/repl-use-cases.xml</slide>
+<slide>slides/mongodb/repl-features.xml</slide>
+<slide>slides/mongodb/repl-works-basic.xml</slide>
+<slide>slides/mongodb/repl-works-normal.xml</slide>
+<slide>slides/mongodb/repl-works-failover.xml</slide>
+<slide>slides/mongodb/repl-oplog.xml</slide>
+
+<slide>slides/mongodb/replication-setup.xml</slide>
+
+<slide>slides/mongodb/repl-eventual-consistency.xml</slide>
 
 <slide>slides/mongodb/selling-points.xml</slide>
 <slide>slides/mongodb/resources.xml</slide>
