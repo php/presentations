@@ -1,0 +1,19 @@
+<slide title="PHP 5.6">
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Variadic functions</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+class MySQL implements DB {
+    public function query($query, ...$params) {
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($params);
+        return $stmt;
+    }
+    // ...
+}
+}]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Internal operator overloading for internal features like GMP and BCMath</blurb>
+
+</slide>
