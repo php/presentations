@@ -3,6 +3,10 @@
 {var $attr = get_attribute( $node, 'attr' )}
 {var $width = get_attribute( $node, 'width' )}
 {var $height = get_attribute( $node, 'height' )}
+{var $autoplay = "true"}
+{if has_attribute( $node, 'autoplay' )}
+{$autoplay = get_attribute( $node, 'autoplay' )}
+{/if}
 {var $source = ''}
 {if !$width}{$width = 1010}{/if}
 {if !$height}{$height = 592}{/if}
@@ -12,7 +16,7 @@
 {$source = str_append($pres->base, get_attribute( $node, 'filename' ))}
 {/if}
 <div{if $align} align='{$align}'{/if}>
-<video {if $inline}class='inline' {/if} width="{$width}" height="{$height}" preload controls autoplay>
+<video {if $inline}class='inline' {/if} width="{$width}" height="{$height}" preload controls{if $autoplay == "true"} autoplay{/if}>
 	<source src="{$source}" type='video/webm; codecs="vp8, vorbis"' />
 </video>
 {if $attr}<span class='attribution'>{$attr}</span>{/if}
