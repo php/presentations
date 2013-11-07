@@ -1,0 +1,50 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>PHP</title>
+<location>Mexico City</location>
+<date>Nov. 16, 2013</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/show/phpdaymx</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/nold.xml</slide>
+<slide>slides/intro/nold2.xml</slide>
+<slide>slides/intro/nold3.xml</slide>
+<slide>slides/intro/eco.xml</slide>
+<slide>slides/intro/wwht1.xml</slide>
+<slide>slides/intro/wwht2.xml</slide>
+
+<slide>slides/intro/2013_title.xml</slide>
+
+<slide>slides/intro/php54.xml</slide>
+<slide>slides/intro/perf54.xml</slide>
+<slide>slides/intro/php54_trip.xml</slide>
+<slide>slides/intro/php55.xml</slide>
+<slide>slides/intro/php56.xml</slide>
+<slide>slides/intro/atomic1.xml</slide>
+<slide>slides/intro/atomic3a.xml</slide>
+<slide>slides/intro/atomic2.xml</slide>
+<slide>slides/intro/atomic3b.xml</slide>
+<slide>slides/intro/atomic3c.xml</slide>
+<slide>slides/intro/atomic3.xml</slide>
+<slide>slides/intro/atomic4.xml</slide>
+
+<slide>slides/intro/key_2013.xml</slide>
+
+</presentation>
