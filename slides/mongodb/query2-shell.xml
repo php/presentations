@@ -1,0 +1,13 @@
+<slide>
+<title>Querying (with projection)</title>
+
+<example result="0"><![CDATA[
+mongo demo
+
+db.talks.findOne( 
+	{ 'talks.title' : 'Xdebug' }, 
+	{ 'name' : 1, 'talks.url: 1 }
+);
+]]></example>
+</slide>
+
