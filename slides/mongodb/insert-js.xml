@@ -2,7 +2,7 @@
 <title>Inserting a document (JavaScript)</title>
 <example>
 
-{
+doc = {
   "_id" : "derickr",
   "name" : "Derick Rethans",
   "talks" : [
@@ -15,6 +15,8 @@
       "url" : "http://derickrethans.nl/talks/xdebug-phpbcn11.pdf",
     }
   ]
-}
+};
+
+db.collectionName.insert( doc );
 </example>
 </slide>
