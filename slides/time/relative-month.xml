@@ -4,7 +4,7 @@
 	<subtitle>"previous month" / "next month"</subtitle>
 
 	<example result="1"><![CDATA[<?php
-  $date = new DateTime( '2010-01-31 15:48:21' );
+  $date = new DateTimeImmutable( '2010-01-31 15:48:21' );
   echo $date->modify( 'next month' )->format( 'Y-m-d' ), "\n";
 ?>]]></example>
 <break/>

@@ -10,13 +10,13 @@
   <blurb>Using the timezone when parsing a string:</blurb>
   <example><![CDATA[<?php
   $tz = new DateTimeZone("Pacific/Honolulu");
-  $ts = new DateTime("1978-12-22 09:15", $tz);
+  $ts = new DateTimeImmutable("1978-12-22 09:15", $tz);
 ?>]]></example>
 
   <blurb>A passed timezone does not override a *parsed* timezone:</blurb>
   <example result="1"><![CDATA[<?php
   $tz = new DateTimeZone("Pacific/Honolulu");
-  $ts2 = new DateTime("1978-12-22 09:15 Europe/London", $tz);
+  $ts2 = new DateTimeImmutable("1978-12-22 09:15 Europe/London", $tz);
   echo $ts2->format( DateTime::RFC2822 );
 ?>]]></example>
 </slide>

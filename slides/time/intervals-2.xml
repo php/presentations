@@ -4,7 +4,7 @@
 	<blurb>Applying an interval</blurb>
 
 	<example result="0"><![CDATA[<?php
-$d = new DateTime( 'Aug 28th, 2009' );
+$d = new DateTimeImmutable( 'Aug 28th, 2009' );
 echo $d->format( "l Y-m-d\n" );
 
 $i = DateInterval::createFromDateString( "next weekday" );
@@ -17,6 +17,6 @@ echo $d->sub( $i )->format( "l Y-m-d\n" );
 <blurb>Result:</blurb>
 	<blurb                  class='pre'>   Friday 2009-08-28</blurb>
 	<blurb effect="fade-in" class='pre'>   Monday 2009-08-31</blurb>
-	<blurb effect="fade-in" class='pre'>   Thursday 2009-05-21</blurb>
+	<blurb effect="fade-in" class='pre'>   Thursday 2009-05-18</blurb>
 
 </slide>

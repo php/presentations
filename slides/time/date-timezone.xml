@@ -7,13 +7,13 @@
   $tz1 = new DateTimeZone("Pacific/Honolulu");
   $tz2 = new DateTimeZone("Australia/Melbourne");
 
-  $ts = new DateTime("1978-12-22 09:15", $tz1);
+  $ts = new DateTimeImmutable("1978-12-22 09:15", $tz1);
   echo $ts->getTimezone()->getName(), ':    ',
     $ts->format(DateTime::RFC2822), "<br/>";
 
-  $ts->setTimezone($tz2);
+  $melbourne = $ts->setTimezone($tz2);
 
-  echo $ts->getTimezone()->getName(), ': ',
-    $ts->format(DateTime::RFC2822), "<br/>";
+  echo $melbourne->getTimezone()->getName(), ': ',
+    $melbourne->format(DateTime::RFC2822), "<br/>";
 ?>]]></example>
 </slide>
