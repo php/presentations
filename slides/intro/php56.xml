@@ -1,19 +1,6 @@
 <slide title="PHP 5.6">
 
 <break lines="1" />
-<blurb fontsize="4em">✔ Internal operator overloading for internal features like GMP</blurb>
-<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
-echo 2**256;
-echo "\n";
-$n = gmp_init(2);
-echo $n**256;
-]]></example>
-<example fontsize="2em" marginleft="7em" hide='1' result='1' title=""><![CDATA[
-1.1579208923732E+77
-115792089237316195423570985008687907853269984665640564039457584007913129639936
-]]></example>
-
-<break lines="1" />
 <blurb fontsize="4em">✔ Variadic functions</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 class MySQL implements DB {
@@ -24,7 +11,8 @@ class MySQL implements DB {
     }
 }
 
-$res = $db->query('SELECT * FROM users WHERE id = ?', $userID)->fetch();]]></example>
+$q = 'SELECT * FROM users WHERE id = ?';
+$user = $db->query($q, $userID)->fetch();]]></example>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Argument Unpacking</blurb>
@@ -53,6 +41,20 @@ echo 2 ** 3 ** 2; // 512 (not 64)
 echo -3 ** 2; // -9 (not 9)
 echo 1 - 3 ** 2; // -8
 echo ~3 ** 2; // -10 (not 16)]]></example>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Internal operator overloading for internal features like GMP</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+echo 2**256;
+echo "\n";
+$n = gmp_init(2);
+echo $n**256;
+]]></example>
+<break lines="1" />
+<example fontsize="2em" marginleft="7em" hide='1' result='1' title=""><![CDATA[
+1.1579208923732E+77
+115792089237316195423570985008687907853269984665640564039457584007913129639936
+]]></example>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ use function and use const namespace imports</blurb>
