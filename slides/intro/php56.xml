@@ -45,15 +45,15 @@ echo ~3 ** 2; // -10 (not 16)]]></example>
 <break lines="1" />
 <blurb fontsize="4em">✔ Internal operator overloading for internal features like GMP</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
-echo 2**256;
+echo 2**512;
 echo "\n";
 $n = gmp_init(2);
-echo $n**256;
+echo $n**512;
 ]]></example>
 <break lines="1" />
 <example fontsize="2em" marginleft="7em" hide='1' result='1' title=""><![CDATA[
-1.1579208923732E+77
-115792089237316195423570985008687907853269984665640564039457584007913129639936
+1.3407807929943E+154
+13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
 ]]></example>
 
 <break lines="1" />
