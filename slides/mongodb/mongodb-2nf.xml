@@ -1,0 +1,33 @@
+<slide>
+<title>MongoDB and the Second Normal Form</title>
+
+<table>
+<tr><th>Employee</th><th>Skill</th><th>Current Work Location</th></tr>
+<tr><td>Brown</td><td>Light Cleaning</td><td>73 Industrial Way</td></tr>
+<tr><td>Brown</td><td>Typing</td><td>|ff0000|73 Industrial Way|</td></tr>
+<tr><td>Harrison</td><td>Light Cleaning</td><td>73 Industrial Way</td></tr>
+<tr><td>Jones</td><td>Shorthand</td><td>114 Main Street</td></tr>
+<tr><td>Jones</td><td>Typing</td><td>|ff0000|114 Main Street|</td></tr>
+<tr><td>Jones</td><td>Whittling</td><td>|ff0000|114 Main Street|</td></tr>
+</table>
+
+<div effect="fade-in">
+<example>
+{
+	"Employee": "Brown",
+	"Skill": [ "Light Cleaning", "Typing" ],
+	"Current Work Location": "73 Industrial Way",
+}
+{
+	"Employee": "Harrison",
+	"Skill": [ "Light Cleaning" ],
+	"Current Work Location": "73 Industrial Way",
+}
+{
+	"Employee": "Jones",
+	"Skill": [ "Shorthand", "Typing", "Whittling" ],
+	"Current Work Location": "114 Main Street",
+}
+</example>
+</div>
+</slide>

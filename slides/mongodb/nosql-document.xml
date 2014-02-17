@@ -1,0 +1,25 @@
+<slide>
+<title>NoSQL: Document</title>
+
+<blurb>Example implementations:</blurb>
+<list>
+<bullet>CouchDB</bullet>
+<bullet>MongoDB</bullet>
+</list>
+
+<break/>
+
+<blurb>Data model:</blurb>
+<example>
+{
+	_id: "derick",
+	twitter: "derickr",
+	email: "derick@derickrethans.nl",
+	sites: [ "http://derickrethans.nl", "http://xdebug.org" ]
+}
+{
+	_id: "jeremy",
+	twitter: "jmikola",
+}
+</example>
+</slide>

@@ -1,0 +1,19 @@
+<slide>
+<title>NoSQL: Graph</title>
+
+<blurb>Example implementations:</blurb>
+<list>
+<bullet>neo4j</bullet>
+</list>
+
+<break/>
+
+<blurb>Data model:</blurb>
+<example>
+[ "derick", "follows", "jeremy" ]
+[ "jeremy", "follows", "derick" ]
+[ "derick", "follows", "Queen_UK" ]
+[ "derick", "twitters_with", "derickr" ]
+[ "jeremy", "twitters_with", "jmikola" ]
+</example>
+</slide>

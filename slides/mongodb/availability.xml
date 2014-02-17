@@ -1,0 +1,12 @@
+<slide>
+<title>Availability/Partition Tolerance (CAP)</title>
+
+<blurb>Different methods</blurb>
+
+<list>
+    <bullet>Master-slave replication</bullet>
+    <bullet>Master-slave replication with Failover</bullet>
+    <bullet>Multi-master replication</bullet>
+    <bullet>Sharding</bullet>
+</list>
+</slide>

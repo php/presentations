@@ -1,0 +1,20 @@
+<slide>
+<title>NoSQL: Key/Value</title>
+
+<blurb>Example implementations:</blurb>
+<list>
+<bullet>Memcache</bullet>
+<bullet>Redis</bullet>
+</list>
+
+<break/>
+
+<blurb>Data model:</blurb>
+<example>
+{ "derick-twitter": "derickr" }
+{ "derick-email": "derick@derickrethans.nl" }
+{ "jeremy-twitter": "jmikola" }
+
+{ "derick-sites": [ "http://derickrethans.nl", "http://xdebug.org" ] }
+</example>
+</slide>

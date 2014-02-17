@@ -1,0 +1,16 @@
+<slide>
+<title>ACID</title>
+
+<blurb>Jim Grey in the late 1970s</blurb>
+
+<list>
+	<bullet>*A*tomicity</bullet>
+	<bullet>*C*onsistency</bullet>
+	<bullet>*I*solation</bullet>
+	<bullet>*D*urability</bullet>
+</list>
+
+<example>
+CREATE TABLE acidtest (A INTEGER, B INTEGER CHECK (A + B = 100));
+</example>
+</slide>

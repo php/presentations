@@ -1,0 +1,21 @@
+<slide>
+<title>Consistency (CAP) and Durability (ACID): WriteConcerns</title>
+
+<blurb>Consistency-level can be picked *per-query*:</blurb>
+
+<example inline="1"><![CDATA[
+$m = new MongoClient;
+$c = $m->workout->steps;
+$c->insert( [
+	'person' => 'derickr',
+	'steps_made' => [
+		'20140201' => 10800
+	],
+	*[ 'w' => 1 ]*
+);]]></example>
+
+<blurb>But also with defaults:</blurb>
+<example inline="1">
+$m = new MongoClient("mongodb://localhost/?w=*majority*");
+</example>
+</slide>

@@ -1,0 +1,33 @@
+<slide>
+<title>MongoDB and the First Normal Form</title>
+
+<table>
+<tr><th>Customer ID</th><th>First Name</th><th>Surname</th><th>Telephone Number</th></tr>
+<tr><td>123</td><td>Robert</td><td>Ingram</td><td>861-2025</td></tr>
+<tr><td>456</td><td>Jane</td><td>Wright</td><td>|ff0000|403-1659, 776-4100|</td></tr>
+<tr><td>789</td><td>Maria</td><td>Fernandez</td><td>808-9633</td></tr>
+</table>
+
+<div effect="fade-in">
+<example>
+{
+	"Customer ID": 123, 
+	"First Name": "Robert", 
+	"Surname": "Ingram", 
+	"Telephone Number": '861-2025' 
+}
+{ 
+	"Customer ID": 456, 
+	"First Name": "Jane", 
+	"Surname": "Wright", 
+	"Telephone Number": [ '403-1659', '776-4100' ] 
+}
+{ 
+	"Customer ID": 789, 
+	"First Name": "Maria", 
+	"Surname": "Fermandez", 
+	"Telephone Number": [ '808-9633' ] 
+}
+</example>
+</div>
+</slide>

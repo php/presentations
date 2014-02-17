@@ -1,0 +1,12 @@
+<slide>
+<title>Wrapping up</title>
+
+<blurb>In NoSQL:</blurb>
+<list>
+    <bullet>No real schema design "theory"</bullet>
+    <bullet>Schema design depends on data access paterns</bullet>
+    <bullet>ACID vs. CAP</bullet>
+    <bullet>Traditional relational database features are replaced by features
+    for scalability</bullet>
+</list>
+</slide>

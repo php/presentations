@@ -1,0 +1,15 @@
+<slide>
+<title>CAP</title>
+
+<blurb>Eric Brewer in 2002</blurb>
+
+<list>
+<bullet>*C*onsistency:<br/>A read sees all previously completed
+writes<br/>(Not the same consitency as in ACID)</bullet>
+<bullet>*A*vailability:<br/>Guarantees that every request receives a response
+about whether it was successful or failed</bullet>
+<bullet>*P*artition Tolerance:<br/>Guaranteed properties are maintained even
+when network failures prevent some machines from communicating with
+others.</bullet>
+</list>
+</slide>

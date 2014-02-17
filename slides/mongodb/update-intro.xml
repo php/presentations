@@ -1,0 +1,27 @@
+<slide>
+<title>Updating data</title>
+
+<example inline="1">
+$m->demo->steps->update(
+        [ 'person' => "derickr" ],
+        [ '$inc' => [ "steps_made.20140202" => 712 ] ],
+        [ 'upsert' => true ]
+);
+</example>
+<blurb>Record after update:</blurb>
+<example>
+{
+        person: "derickr",
+        steps_made: {
+                "20140201": 10800,
+                "20140202": 712,
+        }
+}
+</example>
+
+<list>
+<bullet>Atomic *per-document* only</bullet>
+<bullet>No transactions</bullet>
+<bullet>Can't use other field names in updates</bullet>
+</list>
+</slide>
