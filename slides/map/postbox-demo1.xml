@@ -1,0 +1,30 @@
+<slide>
+<title>The Nearest Postboxes</title>
+
+<iframe align="right" width="500" filename='examples/3angle/?l=postboxes&amp;lon=:-:lon:-:&amp;lat=:-:lat:-:&amp;zoom=15'/>
+
+<example>
+<![CDATA[<?php
+$m = new MongoClient( 'mongodb://localhost' );
+$d = $m->selectDb( DATABASE );
+$c = $d->selectCollection( COLLECTION );
+$center = new GeoJSONPoint(
+  (float) $_GET['lon'],
+  (float) $_GET['lat'] 
+);
+$res = $c->aggregate( [
+    [ '$geoNear' => [
+        'near' => $center->getGeoJson(),
+        'distanceField' => 'distance',
+        'distanceMultiplier' => 1,
+        'maxDistance' => 1000,
+        'spherical' => true,
+        'query' => 
+            [ TAGS => 'amenity=post_box' ],
+        'limit' => 40,
+    ) ),
+    [ '$sort' => [ 'distance' => 1 ] ],
+) );
+]]>
+</example>
+</slide>

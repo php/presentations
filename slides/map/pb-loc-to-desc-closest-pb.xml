@@ -1,0 +1,20 @@
+<slide>
+<title>Closest Postbox</title>
+
+<example><![CDATA[<?php
+$m = new MongoClient( 'mongodb://localhost' );
+$d = $m->selectDb( 'demo' ); $c = $d->selectCollection( 'poiConcat' );
+$center = new GeoJSONPoint( (float) $_GET['lon'], (float) $_GET['lat'] );
+$res = $c->aggregate( [
+        '$geoNear' => [
+                'near' => $center->getGeoJson(),
+                'distanceField' => 'distance',
+                'distanceMultiplier' => 1,
+                'maxDistance' => 5000,
+                'spherical' => true,
+                'query' => [ TAGS => 'amenity=post_box' ],
+                'limit' => 1,
+        ]
+] );]]></example>
+<image filename="postbox1.png"/>
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Discard roads</title>
+
+<blurb>Find all roads with a name, but not the same as our original road</blurb>
+<example><![CDATA[$intersectingWays = array();
+foreach ( $q as $crossRoad )
+{
+    $crossTags = Functions::split_tags( $crossRoad[TAGS] );
+    if ( !in_array( "name={$roadName}", $crossRoad ) && array_key_exists( 'name', $crossTags ) )
+    {
+        $intersectingWays[] = $crossRoad['_id'];
+    }
+}]]></example>
+</slide>

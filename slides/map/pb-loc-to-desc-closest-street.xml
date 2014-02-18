@@ -1,0 +1,18 @@
+<slide>
+<title>Find closest street</title>
+
+<example><![CDATA[
+$r = $res['result'][0];
+$query = [
+    LOC => [
+        '$near' => $r['l']
+    ],
+    TAGS => new MongoRegex(
+        '/^highway=(trunk|pedestrian|service|primary|secondary|tertiary|residential)/'
+    )
+];
+$road = $c->findOne( $query );
+]]></example>
+<br/>
+<image filename="postbox2.png"/>
+</slide>

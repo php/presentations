@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Hunting postboxes</title>
+<event>Montreal MUG March Madness</event>
+<lat>45.50038</lat><lon>-73.57015</lon>
+<location>Montréal, Canada</location>
+<date>February 25th, 2014</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/postbox-mug-montreal14</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/map/postbox.xml</slide>
+<slide>slides/map/pebble.xml</slide>
+
+<slide>slides/map/postboxhunting.xml</slide>
+<slide>slides/map/postbox-data.xml</slide>
+
+<!-- A few words about our dataset -->
+<slide>slides/mongodb/few-words-about-osm.xml</slide>
+<slide>slides/map/osm-data.xml</slide>
+<slide>slides/map/osm-xapi.xml</slide>
+
+<!-- Import -->
+<slide>slides/mongodb/osm-import-mongo-section.xml</slide>
+<slide>slides/mongodb/osm-schema4.xml</slide>
+
+<slide>slides/map/postbox-xml.xml</slide>
+<slide>slides/map/import-script2.xml</slide>
+
+<!-- DEMO 1 -->
+<slide>slides/map/postbox-demo1.xml</slide>
+
+<slide>slides/map/goal-description.xml</slide>
+<slide>slides/map/postbox-architecture.xml</slide>
+
+<!-- FROM LOCATION TO DESCRIPTION -->
+<slide>slides/map/pb-loc-to-desc.xml</slide>
+<slide>slides/map/pb-loc-to-desc-closest-pb.xml</slide>
+<slide>slides/map/pb-loc-to-desc-closest-street.xml</slide>
+<slide>slides/map/pb-loc-to-desc-crossing-street.xml</slide>
+<slide>slides/map/pb-loc-to-desc-discard-same.xml</slide>
+<slide>slides/map/pb-loc-to-desc-closest-cross.xml</slide>
+<slide>slides/map/pb-loc-to-desc-direction.xml</slide>
+
+<!-- DEMO 2 -->
+<slide>slides/map/postbox-demo2.xml</slide>
+<slide>slides/map/postbox-demo3.xml</slide>
+
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

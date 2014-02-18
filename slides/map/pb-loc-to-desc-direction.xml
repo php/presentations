@@ -1,0 +1,15 @@
+<slide>
+<title>Finding the direction</title>
+<iframe width="1000" align="center" height="200" filename='examples/3angle/?l=gc&amp;lon=:-:lon:-:&amp;lat=:-:lat:-:&amp;zoom=4'/>
+
+<blurb>Formula:</blurb>
+<example>
+θ = atan2(
+    sin(Δλ).cos(φ2),
+    cos(φ1).sin(φ2) − sin(φ1).cos(φ2).cos(Δλ)
+)
+</example>
+
+<blurb>Implemented in php-geospatial:</blurb>
+<blurb>https://github.com/php-geospatial/geospatial/blob/master/geospatial.c#L623</blurb>
+</slide>

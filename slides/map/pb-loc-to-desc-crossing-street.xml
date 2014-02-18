@@ -1,0 +1,17 @@
+<slide>
+<title>Find crossing streets</title>
+
+<example><![CDATA[
+$q = $c->find( [
+    'l' => [
+        '$geoIntersects' => [ '$geometry' => $road['l'] ]
+    ],
+    'ts' => new MongoRegex(
+        '/^highway=(trunk|pedestrian|service|primary|secondary|tertiary|residential)/'
+    ),
+    '_id' => [ '$ne' => $road['_id'] ],
+] );]]></example>
+
+<br/>
+<image filename="postbox3.png"/>
+</slide>
