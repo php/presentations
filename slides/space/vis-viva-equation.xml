@@ -1,0 +1,45 @@
+<slide>
+<title>Vis-viva equation</title>
+
+<div effect="fade-out">
+<image filename="minmus-only.png" align="right"/>
+<list>
+<bullet><image filename="vis-viva.png"/></bullet>
+<!-- <bullet>~v²~ = GM(2/r - 1/a)</bullet> -->
+<bullet>*G* = 6.67 x 10¯¹¹</bullet>
+<bullet>*M* = 2.6457897×10¹⁹ kg</bullet>
+<!--<bullet>~µ~ = ~GM~: 1.76×10⁹ kg</bullet>-->
+<bullet>*a* = (360 + 1058) / 2 = 709 km</bullet>
+<bullet>*r* = 998+60 = 1058 km</bullet>
+<bullet><image filename="vis-viva2.png"/></bullet>
+</list>
+</div>
+<div effect="fade-in">
+<image filename="orbit2.png"/>
+</div>
+Size = 47 000 000 m
+Mass 	2.6457897×10¹⁹ kg
+G
+Gravitational parameter
+1.7658000×10⁹ m³/s²
+
+G = 6.67 x 10¯¹¹
+M = 2.64 x 10¹⁹ kg
+µ = GM = 1760880000 (1.76 x 10⁹)kg
+
+r = 60+998 = 1058000m
+
+a = (360 + 1058) / 2 = 709000m
+
+v² = µ(2/r - 1/a)
+v² = 845
+v  = 29
+
+
+CIRCLE:
+
+a = 1058000
+
+v² = µ(1/a) = 1664, 
+v  = 40.79
+</slide>

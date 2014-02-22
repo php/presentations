@@ -1,0 +1,20 @@
+<slide>
+<title>With coordinates, we calculate the distance</title>
+
+<list>
+	<bullet>Kerbin's diameter is 600 km, as compared to Earth's 6378.1 km</bullet>
+	<bullet>Haversine, because Vincenty is only for the WGS84 Earth Spheroid</bullet>
+</list>
+
+<example>
+Jeb lives at 45.74, -47.11
+KSP is at -74.575277777778, -0.1025
+</example>
+<example result="1"><![CDATA[
+<?php
+$jeb = [ 'type' => 'Point', 'coordinates' => [ 45.74, -47.11 ] ];
+$ksp = [ 'type' => 'Point', 'coordinates' => [ -74.57527, -0.1025 ] ];
+var_dump(haversine($jeb, $ksp, 600000));
+?>]]></example>
+
+</slide>

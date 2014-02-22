@@ -1,0 +1,15 @@
+<slide>
+<title>How far is it to KSP?</title>
+
+<image filename="ksp.png" align="right"/>
+<list>
+	<bullet>Jebediah lives at 47.11°S, 45.74°E</bullet>
+	<bullet>KSP is at 0°6′9″S, 74°34′31″W</bullet>
+	<bullet>We need to figure out how far he has to walk, drive, or fly a plane to</bullet>
+</list>
+<break/>
+<list>
+	<bullet>°, ′, and ″ are units that are not often usable with algorithms</bullet>
+	<bullet>They need to be converted!</bullet>
+</list>
+</slide>

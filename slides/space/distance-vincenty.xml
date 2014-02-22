@@ -1,0 +1,18 @@
+<slide>
+<title>The Earth is not a sphere</title>
+
+<blurb>Vincenty</blurb>
+
+<blurb>Implemented in the geospatial extension:</blurb>
+
+<example>
+Jeb lives at 45.74, -47.11
+KSP is at -74.575277777778, -0.1025
+</example>
+<example result="1"><![CDATA[
+<?php
+$jeb = [ 'type' => 'Point', 'coordinates' => [ 45.74, -47.11 ] ];
+$ksp = [ 'type' => 'Point', 'coordinates' => [ -74.57527, -0.1025 ] ];
+var_dump(vincenty($jeb, $ksp));
+?>]]></example>
+</slide>

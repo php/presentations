@@ -1,0 +1,20 @@
+<slide>
+<title>Which direction does Jeb needs to head to?</title>
+
+<div effect="fade-out">
+<iframe width="1000" filename='../map/examples/3angle/?l=gcl&amp;lon1=-74.575&amp;lat1=-0.1025&amp;lon2=45.74&amp;lat2=-47.11&amp;zoom=3&amp;lat=-30&amp;lon=75&amp;kb=yes&amp;gcl_segments=1'/>
+</div>
+<div effect="fade-in-out">
+<iframe width="1000" filename='../map/examples/3angle/?l=gcl&amp;lon1=-74.575&amp;lat1=-0.1025&amp;lon2=45.74&amp;lat2=-47.11&amp;zoom=3&amp;lat=-30&amp;lon=75&amp;kb=yes&amp;gcl_segments=20'/>
+</div>
+<div effect="fade-in">
+<blurb>The geospatial extension has a function for this too:</blurb>
+<example result="1">
+<![CDATA[<?php
+$jeb = [ 'type' => 'Point', 'coordinates' => [ 45.74, -47.11 ] ];
+$ksp = [ 'type' => 'Point', 'coordinates' => [ -74.57527, -0.1025 ] ];
+var_dump((initial_bearing($jeb, $ksp) + 360) % 360);
+?>]]>
+</example>
+</div>
+</slide>

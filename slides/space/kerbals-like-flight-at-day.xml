@@ -1,0 +1,18 @@
+<slide>
+<title>Launches at day time only!</title>
+
+<div effect="fade-out">
+<image filename="launch.png"/>
+</div>
+
+<blurb>PHP has a function for calculating sunset and sunrise—for Earth</blurb>
+
+<div effect="fade-in">
+<example result="1">
+<![CDATA[<?php
+$sun = date_sun_info(time(), 51.50, -0.127);
+var_dump( $sun );
+?>]]></example>
+</div>
+
+</slide>

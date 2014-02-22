@@ -1,0 +1,17 @@
+<slide>
+<title>Thrust to Weight Ratio (TWR)</title>
+
+<image filename="point-rocket-to-space.png" align="right"/>
+
+<blurb>Max weight to satisfy TWR > 1:</blurb>
+<blurb>~thrust~ / ~surface_gravity~ =</blurb>
+<example result="1"><![CDATA[<?php
+function max_weight($thrust, $surface_gravity)
+{
+	return $thrust / $surface_gravity;
+}
+
+echo max_weight( 30000, 9.81 ), "\n";
+?>]]></example>
+
+</slide>
