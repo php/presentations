@@ -1,0 +1,42 @@
+<slide>
+<title>Example data point</title>
+
+<div effect="fade-out">
+<blurb>In OpenStreetMap:</blurb>
+<example><![CDATA[
+  <node id="877879696" version="5" timestamp="2013-10-12T11:16:57Z" uid="238584" user="mcld" changeset="18312789" lat="51.5185648" lon="-0.1685154">
+    <tag k="amenity" v="post_box"/>
+    <tag k="box_type" v="pillar_box_dual_aperture"/>
+    <tag k="collection_plate" v="CP1"/>
+    <tag k="collection_times" v="Mo-Fr 18:30; Sa 12:00"/>
+    <tag k="post_box:apertures" v="2"/>
+    <tag k="ref" v="W2 68"/>
+    <tag k="royal_cypher" v="EIIR"/>
+    <tag k="source:ref" v="survey"/>
+  </node>
+]]></example>
+</div>
+<div effect="fade-in">
+<blurb>In MongoDB:</blurb>
+<example>
+{
+  "_id" : "n877879696",
+  "l" : {
+    "type" : "Point",
+    "coordinates" : [ -0.1685154, 51.5185648 ]
+  },
+  "ts" : [
+    "amenity=post_box",
+    "box_type=pillar_box_dual_aperture",
+    "collection_plate=CP1",
+    "collection_times=Mo-Fr 18:30; Sa 12:00",
+    "post_box:apertures=2",
+    "ref=W2 68",
+    "royal_cypher=EIIR",
+    "source:ref=survey"
+  ],
+  "ty" : NumberLong(1)
+}
+</example>
+</div>
+</slide>

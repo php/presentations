@@ -1,0 +1,32 @@
+<slide>
+<title>MongoDB and the Third Normal Form</title>
+
+<table>
+<tr><th>Tournament</th><th>Year</th><th>Winner</th><th>Date of Birth</th></tr>
+<tr><td>Indiana Invitational</td><td>1998</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
+<tr><td>Cleveland Open</td><td>1999</td><td>|ff0000|Bob Albertson|</td><td>|ff0000|28 September 1968|</td></tr>
+<tr><td>Des Moines Masters</td><td>1999</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
+<tr><td>Indiana Invitational</td><td>1999</td><td>|ff0000|Chip Masterson|</td><td>|ff0000|14 March 1977|</td></tr>
+</table>
+
+<div effect="fade-in">
+<example>
+{ "Tournament": "Indiana Invitational",
+  "Winners": [
+    { "Year": 1998, "Winner": "Al Fredrickson", "Date of Birth": "21 July 1975" },
+    { "Year": 1999, "Winner": "Chip Masterson", "Date of Birth": "14 March 1977" },
+  ]
+}
+{ "Tournament": "Cleveland Open",
+  "Winners": [
+    { "Year": 1999, "Winner": "Bob Albertson", "Date of Birth": "28 September 1968" },
+  ]
+}
+{ "Tournament": "Des Moines Masters",
+  "Winners": [
+    { "Year": 1999, "Winner": "Al Fredrickson", "Date of Birth": "21 July 1975" },
+  ]
+}
+</example>
+</div>
+</slide>

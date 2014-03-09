@@ -1,0 +1,10 @@
+<slide>
+<title>Extensions extensions extensions</title>
+
+<blurb>Some of the functions I'm going to use are already in PHP, some we have to write.</blurb>
+<blurb>A few extensions are going to be used in this talk:</blurb>
+<list>
+	<bullet>*geospatial:*<br/>https://github.com/php-geospatial/geospatial</bullet>
+	<bullet>*solarsystem:*<br/>https://github.com/derickr/php-solarsystem</bullet>
+</list>
+</slide>

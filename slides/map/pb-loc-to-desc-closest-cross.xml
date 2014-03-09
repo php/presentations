@@ -1,0 +1,21 @@
+<slide>
+<title>Find closest cross road</title>
+
+<example><![CDATA[
+$res = $c->aggregate( array(
+    '$geoNear' => array(
+        'near' => $r['l'],
+        'distanceField' => 'distance',
+        'distanceMultiplier' => 1,
+        'maxDistance' => 5000,
+        'spherical' => true,
+        'query' => [
+            '_id' => [ '$in' => $intersectingWays ],
+            'ts' => [ '$ne' => "name={$roadName}" ]
+        ],
+        'limit' => 1,
+    )
+) );]]></example>
+
+<image filename="postbox4.png"/>
+</slide>

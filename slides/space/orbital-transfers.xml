@@ -1,0 +1,34 @@
+<slide>
+<title>Velocity calculation</title>
+
+<image filename="orbit1.png" align="right"/>
+<list>
+<bullet>a = semi major axis:<br/>a = (r₁ + r₂) / 2</bullet>
+<bullet>r₁ = 300 + 60</bullet>
+<bullet>r₂ = 998 + 60</bullet>
+<bullet>what is the velocity at r₂?</bullet>
+</list>
+size = 47 000 000 m
+Mass 	2.6457897×10¹⁹ kg
+Gravitational parameter 	1.7658000×10⁹ m³/s²
+
+G = 6.67 x 10¯¹¹
+M = 2.64 x 10¹⁹ kg
+µ = GM = 1760880000 (1.76 x 10⁹)kg
+
+r = 60+998 = 1058000m
+
+a = (360 + 1058) / 2 = 709000m
+
+v² = µ(2/r - 1/a)
+v² = 845
+v  = 29
+
+
+CIRCLE:
+
+a = 1058000
+
+v² = µ(1/a) = 1664, 
+v  = 40.79
+</slide>

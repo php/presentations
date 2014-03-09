@@ -2,7 +2,6 @@
 <title>Documents</title>
 
 <list>
-  <bullet>Stored as BSON (Binary JSON)</bullet>
   <bullet>Can have embedded documents</bullet>
   <bullet>Have a unique ID (the %_id% field)</bullet>
   <bullet>Are *schemaless*</bullet>

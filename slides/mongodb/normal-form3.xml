@@ -1,0 +1,16 @@
+<slide>
+<title>Third Normal Form</title>
+
+<blurb>Every non-prime attribute is non-transitively dependent on every
+candidate key in the table. The attributes that do not contribute to the
+description of the primary key are removed from the table. In other words, no
+transitive dependency is allowed.</blurb>
+
+<table>
+<tr><th>Tournament</th><th>Year</th><th>Winner</th><th>Winner Date of Birth</th></tr>
+<tr><td>Indiana Invitational</td><td>1998</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
+<tr><td>Cleveland Open</td><td>1999</td><td>|ff0000|Bob Albertson|</td><td>|ff0000|28 September 1968|</td></tr>
+<tr><td>Des Moines Masters</td><td>1999</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
+<tr><td>Indiana Invitational</td><td>1999</td><td>|ff0000|Chip Masterson|</td><td>|ff0000|14 March 1977|</td></tr>
+</table>
+</slide>

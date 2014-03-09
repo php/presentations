@@ -1,0 +1,16 @@
+<slide>
+<title>Second Normal Form</title>
+
+<blurb>No non-prime attribute in the table is functionally dependent on a
+proper subset of any candidate key</blurb>
+
+<table>
+<tr><th>Employee</th><th>Skill</th><th>Current Work Location</th></tr>
+<tr><td>Brown</td><td>Light Cleaning</td><td>73 Industrial Way</td></tr>
+<tr><td>Brown</td><td>Typing</td><td>|ff0000|73 Industrial Way|</td></tr>
+<tr><td>Harrison</td><td>Light Cleaning</td><td>73 Industrial Way</td></tr>
+<tr><td>Jones</td><td>Shorthand</td><td>114 Main Street</td></tr>
+<tr><td>Jones</td><td>Typing</td><td>|ff0000|114 Main Street|</td></tr>
+<tr><td>Jones</td><td>Whittling</td><td>|ff0000|114 Main Street|</td></tr>
+</table>
+</slide>

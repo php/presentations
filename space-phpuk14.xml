@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>PHP</topic>
+<title>PHP in Space</title>
+<event>PHP UK Conference</event>
+<location>London, UK</location>
+<lat>45.49938</lat><lon>-73.56787</lon>
+<date>February 22nd, 2014</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<joindin>http://joind.in/10709</joindin>
+
+<slide>slides/map/title.xml</slide>
+<!-- 
+Jebediah is an astronaut, who wants to go from his house to Eve.
+He lives a while from the space station so he needs to walk there first.
+- Calculate d.x from dms
+- Figure out the distance
+- Calculate initial bearing
+- At the half way point
+- Only in daylight, so we need to know when the sun is up
+- When it rises, is the sun up? earth_sunpos()
+- The first trip is to the Mun, so we need to calculate when it rises
+- Then we need to rocket into the sky. Thrust/Weight
+- Explain delta-v
+- Atmospheric drag
+- Three body system?
+- Mun landing
+- Minmus - plane change
+- Orbit to orbit - hoffman transfer
+- Eve landing
+- Not enough fuel to get off :-(
+-->
+<slide>slides/space/jebediah.xml</slide>
+<slide>slides/space/kerbin.xml</slide>
+<slide>slides/space/kerbin-system.xml</slide>
+<slide>slides/space/mun.xml</slide>
+<slide>slides/space/minmus.xml</slide>
+<slide>slides/space/eve.xml</slide>
+<slide>slides/space/duna.xml</slide>
+
+<slide>slides/space/getting-to-ksp.xml</slide>
+<slide>slides/space/extensions.xml</slide>
+<slide>slides/space/dms_to_decimal.xml</slide>
+<slide>slides/space/decimal_to_dms.xml</slide>
+<slide>slides/space/distance.xml</slide>
+<slide>slides/space/distance-vincenty.xml</slide>
+<slide>slides/space/kerbin.xml</slide>
+<slide>slides/space/distance-on-kerbin.xml</slide>
+<slide>slides/space/direction.xml</slide>
+<slide>slides/space/something-about-the-line.xml</slide>
+
+<slide>slides/space/kerbals-like-flight-at-day.xml</slide>
+<slide>slides/space/sun-position.xml</slide>
+<slide>slides/space/thrust-to-weight-ratio.xml</slide>
+<slide>slides/space/thrust-to-weight-ratio-calculation.xml</slide>
+<slide>slides/space/thrust-to-weight-max-weight.xml</slide>
+<slide>slides/space/get-it-right.xml</slide>
+
+<slide>slides/space/delta-v.xml</slide>
+<slide>slides/space/delta-v-specific-impulse.xml</slide>
+<slide>slides/space/delta-v-specific-calculation.xml</slide>
+
+<slide>slides/space/orbital-transfers.xml</slide>
+<slide>slides/space/vis-viva-equation.xml</slide>
+<slide>slides/space/vis-viva-equation-circle.xml</slide>
+
+<slide>slides/space/to-duna.xml</slide>
+<slide>slides/space/still-to-do.xml</slide>
+<slide>slides/space/bill-explosion.xml</slide>
+<slide>slides/space/resources.xml</slide>
+
+</presentation>

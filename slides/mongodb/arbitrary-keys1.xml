@@ -1,0 +1,53 @@
+<slide>
+<title>NoSQL does not mean: No Schema</title>
+
+<div effect="fade-out">
+<example>{
+        person: "derickr",
+        steps_made: {
+                "20140201": 10800,
+                "20140202": 712,
+        }
+}
+</example>
+<list>
+	<bullet>You can not do queries depending on date range</bullet>
+	<bullet>You can not find days with more than 10000 steps</bullet>
+</list>
+</div>
+<div effect="fade-in-out">
+<list>
+<bullet>It's the same idea as doing this in XML:
+<example>
+&lt;steps>
+        &lt;person>derickr&lt;/person>
+        &lt;steps_made>
+                &lt;20140201>10800&lt;/20140201>
+                &lt;20140202>712&lt;/20140202>
+        &lt;/steps_made>
+&lt;/steps>
+</example></bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<list>
+<bullet>Do *not* use values as key names</bullet>
+<bullet>Split it up instead:</bullet>
+<bullet><example>
+{
+        person: "derickr",
+        date: "20140201",
+        steps: 10800,
+}
+{
+        person: "derickr",
+        date: "20140202",
+        steps: 5906,
+}
+</example>
+</bullet>
+<bullet>Make sure you can always document your key names</bullet>
+</list>
+</div>
+</slide>

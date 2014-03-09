@@ -1,0 +1,14 @@
+<slide>
+<title>Converting from decimal degrees to °, ′, and ″</title>
+
+<blurb>And we can do that the other way around too:</blurb>
+<example result="1"><![CDATA[
+<?php
+$jebLon = 45.74;
+$jebLat = -47.11;
+$lon = decimal_to_dms($jebLon, "longitude");
+$lat = decimal_to_dms($jebLat, "latitude");
+echo "{$lon['degrees']}°{$lon['minutes']}′{$lon['seconds']}″{$lon['direction']}\n";
+echo "{$lat['degrees']}°{$lat['minutes']}′{$lat['seconds']}″{$lat['direction']}\n";
+?>]]></example>
+</slide>

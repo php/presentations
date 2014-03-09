@@ -1,0 +1,12 @@
+<slide>
+<title>From location to description</title>
+
+<list>
+<bullet>Find nearest postbox</bullet>
+<bullet>Find closest street</bullet>
+<bullet>Find all crossing streets</bullet>
+<bullet>Discard all streets with the same name</bullet>
+<bullet>Find cross road closest to postbox location</bullet>
+<bullet>Calculate direction</bullet>
+</list>
+</slide>

@@ -1,0 +1,20 @@
+<slide>
+<title>Delta-V</title>
+
+<image align="left" filename="rockomax-48-7s.png"/>
+<image align="right" filename="fl-t400.png"/>
+<blurb>Specific impulse:</blurb>
+<image filename="specific-impulse.png"/>
+
+<blurb>Rocket equation:</blurb>
+<image filename="rocket-equation.png"/>
+
+<example result="3"><![CDATA[<?php
+function delta_v( $lsp, $g, $m0, $m1 )
+{
+	return ($lsp * $g) * log($m0/$m1);
+}
+echo delta_v( 300, 9.81, 3500, 1500 ), "\n";
+?>]]></example>
+
+</slide>

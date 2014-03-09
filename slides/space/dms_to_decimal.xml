@@ -1,0 +1,17 @@
+<slide>
+<title>Converting from °, ′, and ″ to decimal degrees</title>
+
+<blurb>From the php-geospatial extension:</blurb>
+
+<example result="1"><![CDATA[
+<?php
+$jebLon = 45.74;
+$jebLat = -47.11;
+echo "Jeb lives at $jebLon, $jebLat\n";
+
+$kspLon = dms_to_decimal(74, 34, 31, 'W');
+$kspLat = dms_to_decimal(0, 6, 9, 'S');
+echo "KSP is at $kspLon, $kspLat\n";
+?>]]>
+</example>
+</slide>

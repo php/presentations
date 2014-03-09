@@ -1,0 +1,12 @@
+<slide>
+<title>Consistency (CAP) and Durability (ACID): WriteConcerns</title>
+
+<table>
+<tr><td>w=0</td><td>Unacknowledged</td><td>A write will not be followed up with a GLE call, and therefore not checked</td></tr>
+<tr><td>w=1</td><td>Acknowledged</td><td>The write will be acknowledged by the (primary) server)</td></tr>
+<tr><td>w=N</td><td>Replica Set Acknowledged</td><td>The write will be acknowledged by the primary server, and replicated to N-1 secondaries.</td></tr>
+<tr><td>w=majority</td><td>Majority Acknowledged</td><td>The write will be acknowledged by the majority of the replica set (including the primary). This is a special reserved string.</td></tr>
+<tr><td>w={tagset}</td><td>Replica Set Tag Set Acknowledged</td><td>The write will be acknowledged by members of the entire tag set</td></tr>
+<tr><td>j=true</td><td>Journaled</td><td>The write will be acknowledged by primary and the journal flushed to disk</td></tr>
+</table>
+</slide>

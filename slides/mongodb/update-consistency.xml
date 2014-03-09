@@ -1,0 +1,9 @@
+<slide>
+<title>Consistency (ACID): Schemas</title>
+
+<list>
+<bullet>There is no schema</bullet>
+<bullet>There is no schema validation</bullet>
+<bullet>Hence, no ACID consistency</bullet>
+</list>
+</slide>

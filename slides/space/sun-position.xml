@@ -1,0 +1,18 @@
+<slide>
+<title>Calculating the position of the Sun in the sky</title>
+
+<image align="right" filename="kerbol.png"/>
+<example result="3"><![CDATA[<?php
+$pos = earth_sunpos( time(), 51.50, -0.127 );
+echo $pos, "\n";
+?>]]></example>
+
+<div effect="fade-in">
+<blurb>Actually, this only calculates the height over the horizon ☹.</blurb>
+</div>
+
+<div effect="fade-in">
+<image filename="no-mun.png" align="left"/>
+<blurb>I am working on the full position, and the moon as well. (Not the Mün).</blurb>
+</div>
+</slide>

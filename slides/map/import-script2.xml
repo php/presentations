@@ -15,16 +15,5 @@
         </list>
     </bullet>
 </list>
-<example>
-"count" : 2801187
-"size" : 591099280
-"avgObjSize" : 211.0174
-"totalIndexSize" : 650564320
-"indexSizes" : {
-    "_id_" : 153463520,
-    "l_2dsphere" : 174737472,
-    "ts_1" : 182692720,
-    "ty_1" : 139670608
-}
-</example>
+<blurb>https://raw.github.com/derickr/3angle/master/import-data.php</blurb>
 </slide>

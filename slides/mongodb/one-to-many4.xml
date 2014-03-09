@@ -20,7 +20,6 @@
 <blurb>Views collection:</blurb>
 <example><![CDATA[
 { article_id: 4, time: 1350297458, ip: "192.168.42.101" },
-{ article_id: 4, time: 1350297729, ip: "192.168.42.103" },
 { article_id: 4, time: 1350298912, ip: "192.168.42.102" },
 { article_id: 7, time: 1350297458, ip: "192.168.42.101" },
 ]]></example>

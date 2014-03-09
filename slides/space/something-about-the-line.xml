@@ -1,0 +1,29 @@
+<slide>
+<title>Drawing the GC line</title>
+
+<iframe width="1000" height="250" filename='../map/examples/3angle/?l=gcl&amp;lon1=-74.575&amp;lat1=-0.1025&amp;lon2=45.74&amp;lat2=-47.11&amp;zoom=2&amp;lat=-30&amp;lon=75&amp;kb=yes&amp;gcl_segments=20'/>
+
+<div effect="fade-out">
+<example>fraction_along_gc_line(GeoJSONPoint from, GeoJSONPoint to, double fraction)</example>
+</div>
+
+<div effect="fade-in">
+<example><![CDATA[
+function getPoint( $n, $e, $s, $w, $f, &$lat, &$lon )
+{
+    $lat1 = deg2rad( $n ); $lon1 = deg2rad( $w );
+    $lat2 = deg2rad( $s ); $lon2 = deg2rad( $e );
+
+    distance( $n, $e, $s, $w, $d );
+
+    $A = sin( ( 1 - $f ) * $d ) / sin( $d );
+    $B = sin( $f * $d ) / sin( $d );
+    $x = $A * cos($lat1) * cos($lon1) + $B * cos($lat2) * cos($lon2);
+    $y = $A * cos($lat1) * sin($lon1) + $B * cos($lat2) * sin($lon2);
+    $z = $A * sin($lat1) + $B * sin($lat2);
+
+    $lat = rad2deg( atan2( $z, sqrt( $x * $x + $y * $y ) ) );
+    $lon = rad2deg( atan2( $y, $x ) );
+}]]></example>
+</div>
+</slide>

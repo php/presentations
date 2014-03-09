@@ -1,0 +1,18 @@
+<slide>
+<title>NoSQL: Column</title>
+
+<blurb>Example implementations:</blurb>
+<list>
+<bullet>Cassandra</bullet>
+<bullet>HBase/Hadoop</bullet>
+</list>
+
+<break/>
+
+<blurb>Data model:</blurb>
+<example>
+{ twitter: [ { "derick" : "derickr" }, { "jeremy" : "jmikola } ] }
+{ email: [ { "derick" : "derick@derickrethans.nl" } ] }
+{ sites: [ { "derick" : [ "http://derickrethans.nl", "http://xdebug.org" ] } ] }
+</example>
+</slide>

@@ -1,0 +1,20 @@
+<slide>
+<title>Thrust to Weight Ratio (TWR)</title>
+
+<div effect="fade-out">
+<blurb>If it is > 1 one, you will take off. If it is &lt; 1, you will not:</blurb>
+
+<video width="640" height="480" filename="twr-demo.webm" autoplay="0" align="center"/>
+</div>
+
+<div effect="fade-in-out">
+<image filename="launch2.png" align="center"/>
+<blurb align="center">Mass: 3 500 kg<br/>Engine thrust: 30kN<br/>Max acceleration: 8.751m/s²<br/>Surface TWR: 0.88</blurb>
+<break lines="7"/>
+</div>
+
+<div effect="fade-in">
+<image filename="launch3.png" align="center"/>
+<blurb align="center">Mass: 3 050 kg<br/>Engine thrust: 30kN<br/>Max acceleration: 9.851m/s²<br/>Surface TWR: 1.00</blurb>
+</div>
+</slide>
