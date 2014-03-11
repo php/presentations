@@ -1,11 +1,16 @@
-<slide title="5.4 Performance">
+<slide title="5.4 Performance" section="php54perf1">
 
 <blurb fontsize="3em">
 PHP 5.4 + Opcache vs. PHP 5.3 + APC
 </blurb>
 
 <break lines="1" />
-
-<image filename="graphs.png" width="732" height="1660" align="center"/>
+<image filename="php54_cpu.png" width="732" height="415" align="center" title="user cpu"/>
+<break lines="1" section="php54perf2"/>
+<image filename="php54_system.png" width="732" height="416" align="center" title="system cpu"/>
+<break lines="1" section="php54perf3"/>
+<image filename="php54_mem.png" width="732" height="416" align="center" title="memory"/>
+<break lines="1" section="php54perf4"/>
+<image filename="php54_latency.png" width="732" height="415" align="center" title="latency"/>
 
 </slide>
