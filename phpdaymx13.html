@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PHP</title>
+
+		<meta name="description" content="PHP">
+		<meta name="author" content="Rasmus Lerdorf">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="/samdark.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="/github.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>PHP</h1>
+					<h3></h3>
+					<h3>Mexico City</h3>
+					<h3>Nov. 16, 2013</h3>
+					<a href="http://talks.php.net/show/phpdaymx">http://talks.php.net/show/phpdaymx</a><br><br>
+					<p>Rasmus Lerdorf<br>
+					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
+					</p>
+				</section>
+					<section>
+		<h2 margin-bottom="2em">1993</h2><br>
+		<pre><code data-trim class="php">#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+#define ishex(x) (((x) >= '0' && (x) <= '9') || ((x) >= 'a' && 
+                   (x) <= 'f') || ((x) >= 'A' && (x) <= 'F'))
+
+int htoi(char *s) {
+	int     value;
+	char    c;
+
+	c = s[0];
+	if(isupper(c)) c = tolower(c);
+	value=(c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10) * 16;
+
+	c = s[1];
+	if(isupper(c)) c = tolower(c);
+	value += c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10;
+
+	return(value);
+}
+
+void main(int argc, char *argv[]) {
+	char *params, *data, *dest, *s, *tmp;
+	char *name, *age;
+
+	puts("Content-type: text/html\r\n");
+	puts("<HTML><HEAD><TITLE>Form Example</TITLE></HEAD>");
+	puts("<BODY><H1>My Example Form</H1>");
+	puts("<FORM action=\"form.cgi\" method=\"GET\">");
+	puts("Name: <INPUT type=\"text\" name=\"name\">");
+	puts("Age: <INPUT type=\"text\" name=\"age\">");
+	puts("<BR><INPUT type=\"submit\">");
+	puts("</FORM>");
+
+	data = getenv("QUERY_STRING");
+	if(data && *data) {
+		params = data; dest = data;
+    	while(*data) {
+			if(*data=='+') *dest=' ';
+			else if(*data == '%' && ishex(*(data+1))&&ishex(*(data+2))) {
+				*dest = (char) htoi(data + 1);
+				data+=2;
+			} else *dest = *data;
+			data++;
+			dest++;
+		}
+		*dest = '\0';
+		s = strtok(params,"&");
+		do {
+			tmp = strchr(s,'=');
+			if(tmp) {
+				*tmp = '\0';
+				if(!strcmp(s,"name")) name = tmp+1;
+				else if(!strcmp(s,"age")) age = tmp+1;
+			}
+		} while(s=strtok(NULL,"&"));
+
+		printf("Hi %s, you are %s years old\n",name,age);
+	}
+	puts("</BODY></HTML>");
+}
+</code></pre>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">1993</h2><br>
+		<pre><code data-trim class="php">use CGI qw(:standard);
+print header;
+print start_html('Form Example'),
+    h1('My Example Form'),
+    start_form,
+    "Name: ", textfield('name'),
+    p,
+    "Age: ", textfield('age'),
+    p,
+    submit,
+    end_form;
+if(param()) {
+    print "Hi ",em(param('name')),
+        "You are ",em(param('age')),
+        " years old";
+}
+print end_html;</code></pre>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">1994</h2><br>
+		<pre><code data-trim class="php"><html><head><title>Form Example</title></head>
+<body><h1>My Example Form</h1>
+<form action="form.phtml" method="POST">
+Name: <input type="text" name="name">
+Age: <input type="text" name="age">
+<br><input type="submit">
+</form>
+<?if($name):?>
+Hi <?echo $name?>, you are <?echo $age?> years old
+<?endif?>
+</body></html></code></pre>
+	</section>
+	<section>
+		<h3 class="p">Focus on the Ecosystem</h3>
+		<ul>
+			<li>LAMP wasn't an accident</li>
+			<li>Robustness, Performance and Security</li>
+			<li><font color="ff2233">♥</font> shared hosting ISPs</li>
+		</ul>
+		<h3 class="p">Scale</h3>
+		<ul>
+			<li>Scaling up is expected</li>
+			<li>Scaling down is surprisingly hard</li>
+			<li>Doing both is rocket science</li>
+		</ul>
+	</section>
+	<section>
+		<h3 class="p">What was he thinking?</h3>
+		<ul>
+			<li>Case insensitive function names?</li>
+			<li>Naming inconsistencies?</li>
+			<li>What's with the $ signs?</li>
+			<li>Globals?</li>
+			<li>register_globals?</li>
+			<li>magic_quotes?</li>
+		</ul>
+		<h3 class="p">OMGWTFBBQ?</h3>
+		<pre><code data-trim class="php">
+array_search($needle, $haystack);
+strstr($haystack, $needle);
+in_array($needle, $haystack);
+substr_count($haystack, $needle);
+array_key_exists($needle, $haystack);
+strchr($haystack, $needle);
+</code></pre>
+	</section>
+	<section>
+		<h3 class="p">Performance</h3>
+		<ul>
+			<li>mod_php</li>
+			<li>shared-nothing perfect sandbox model</li>
+		</ul>
+		<h3 class="p">Robustness</h3>
+		<ul>
+			<li>SQL LIMIT clause</li>
+			<li>Promote Prefork shared-nothing model</li>
+		</ul>
+		<h3 class="p">Security</h3>
+		<ul>
+			<li>max_execution_time</li>
+			<li>memory_limit</li>
+			<li>safe mode</li>
+		</ul>
+	</section>
+	<section>
+		<h2>2013</h2>
+	</section>
+	<section>
+		<section id="php54perf">
+		<h2 margin-bottom="2em">PHP 5.4</h2><br>
+		<h3 class="p">Performance Improvements</h3>
+		<ul>
+			<li>FastCGI request handling</li>
+			<li>better memory handling</li>
+			<li>startup/shutdown</li>
+			<li>repeated run-time function binding</li>
+			<li>string constants</li>
+			<li>access to global constants</li>
+			<li>access to static properties</li>
+			<li>empty hashes</li>
+			<li>@ operator</li>
+			<li>unserialize()</li>
+		</ul>
+		</section>
+<section id="php54page2">
+		<h4 class="p">✔ Built-in Web Server</h4>
+		<h4 class="p">✔ Traits aka Horizontal Code Reuse</h4>
+		<p class="p">        (Compiler-assisted Copy-and-Paste)</p>
+		<h4 class="p">✔ Short Array Syntax</h4>
+		<pre><code data-trim class="php">
+$a = [1, 2, 3];
+$b = ['foo' => 'orange', 'bar' => 'apple'];
+</code></pre>
+		</section>
+<section id="php54page3">
+		<h4 class="p">✔ Function Array Dereferencing</h4>
+		<pre><code data-trim class="php">
+function fruits() {
+  return array('apple', 'banana', 'orange');
+}
+echo fruits()[0]; // Outputs: apple
+?></code></pre>
+		<h4 class="p">✔ $this from current scope supported in Closures</h4>
+		<pre><code data-trim class="php">
+class Foo {
+  private $prop = "bar";
+  public function getPrinter() {
+    return function() { echo ucfirst($this->prop); };
+  }
+}
+
+$a = new Foo;
+$func = $a->getPrinter();
+$func(); // Outputs: Bar
+?></code></pre>
+		</section>
+<section id="php54page4">
+		<h4 class="p">✔ &lt;?= is now always available</h4>
+		<h4 class="p">✔ New Session Object</h4>
+		<h4 class="p">✔ Callable Typehint</h4>
+		<h4 class="p">✔ Better support for asian chars in htmlspecialchars/htmlentities</h4>
+		<h4 class="p">✔ Multibyte support is now configurable at runtime</h4>
+		<h4 class="p">✔ JSON Improvements</h4>
+		<ul>
+			<li>JsonSerializable</li>
+		</ul>
+		<pre><code data-trim class="php">
+class Foo implements JsonSerializable {
+    private $data = 'Bar';
+    public function jsonSerialize() {
+        return array('data'=>$this->data);
+    }
+}
+echo json_encode(new Foo); // Outputs: {"data":"Bar"}</code></pre>
+		</section>
+<section id="php54page5">
+		<h4 class="p">✔ mysqlnd used by default everywhere</h4>
+		<h4 class="p">✔ iterator support added to mysqli (mysqli_result implements Traversable)</h4>
+		<h4 class="p">✔ Binary notation</h4>
+		<pre><code data-trim class="php">
+$mask = 0b010101;
+</code></pre>
+		<h4 class="p">✔ AES Support added to OpenSSL</h4>
+		<h4 class="p">✔ Tokyo Cabinet and DB5 support added to dba</h4>
+		<h4 class="p">✔ Added stack frame count arg to debug_backtrace()</h4>
+		<h4 class="p">✔ $_SERVER['REQUEST_TIME_FLOAT'] added</h4>
+		<h4 class="p">✔ Apache 2.4 support on Windows</h4>
+		</section>	</section>
+	<section>
+		<section id="php54perf1">
+		<h2 margin-bottom="2em">5.4 Performance</h2><br>
+		<p class="p">
+PHP 5.4 + Opcache vs. PHP 5.3 + APC
+</p>
+<p>user cpu</p>
+		<img src="/presentations/slides/intro/php54_cpu.png" width="732" height="415">
+		</section>
+<section id="php54perf2">
+<p>system cpu</p>
+		<img src="/presentations/slides/intro/php54_system.png" width="732" height="416">
+		</section>
+<section id="php54perf3">
+<p>memory</p>
+		<img src="/presentations/slides/intro/php54_mem.png" width="732" height="416">
+		</section>
+<section id="php54perf4">
+<p>latency</p>
+		<img src="/presentations/slides/intro/php54_latency.png" width="732" height="415">
+		</section>	</section>
+	<section>
+		<section id="php54trip1">
+		<h2 margin-bottom="2em">Watch out for...</h2><br>
+		<p class="p">✔ default charset is UTF-8 instead of ISO-8859-1</p>
+		<pre><code data-trim class="php">
+echo htmlspecialchars("abc".chr(0xE0)."def"); // 5.3 "abc�def"
+echo htmlspecialchars("abc".chr(0xE0)."def", NULL, 'UTF-8'); // 5.3 ""
+echo htmlspecialchars("abc".chr(0xE0)."def"); // 5.4 ""
+echo htmlspecialchars("abc".chr(0xE0)."def", ENT_IGNORE); // 5.4 "abcdef"</code></pre>
+		<p class="p">✔ array to string conversion notice</p>
+		<pre><code data-trim class="php">
+echo [1,2,3];
+// Notice: Array to string conversion in test.php code on line 1
+
+array_diff([1,2,3], [1,2, [3] ]);
+// Notice: Array to string conversion in test.php on line 2
+</code></pre>
+		<p class="p">✔ register_globals completely removed</p>
+		<p class="p">✔ magic quotes completely removed</p>
+		</section>
+<section id="php54trip2">
+		<p class="p">✔ removed variable break/continue</p>
+		<pre><code data-trim class="php">
+$var = 'label';
+while(1) {
+  break $var;
+  continue $var;
+}
+label:</code></pre>
+		<p class="p">✔ max_input_vars (default 1000)</p>
+		<p class="p">✔ "callable", "insteadof" and "trait" are now reserved words</p>
+		</section>
+<section id="php54trip3">
+		<p class="p">✔ extending an abstract constructor must match the signature</p>
+		<pre><code data-trim class="php">
+  abstract class Base {
+    abstract public function __construct();
+  }
+  class Foo extends Base {
+    public function __construct($bar) {}
+// FATAL  Declaration of Foo::__construct() must be compatible 
+//        with Base::__construct()
+  }
+</code></pre>
+		<p class="p">✔ stream_select() preserves keys of array arg</p>
+		<p class="p">✔ XSLT writes are disabled by default</p>
+		<p class="p">✔ mcrypt_generic_end() removed in favour of mcrypt_generic_deinit()</p>
+		<p class="p">✔ mysql_list_dbs() removed</p>
+		<p class="p">✔ PDO needs at least mysql client lib 4.1 now</p>
+		<p class="p">✔ Datetime ignores TZ env var and falls back to UTC if none set</p>
+		<p class="p">✔ Tiger hash output fixed - See bug 61307</p>
+		</section>	</section>
+	<section>
+		<section id="performance">
+		<h2 margin-bottom="2em">PHP 5.5</h2><br>
+		<h3 class="p">Performance Improvements</h3>
+		<ul>
+			<li>Nested calls</li>
+			<li>Call stack pre-allocated by compiler</li>
+			<li>Bundled opcode cache</li>
+		</ul>
+		</section>
+<section id="generators">
+		<h4 class="p">✔ Generators</h4>
+		<pre><code data-trim class="php">
+function xrange($start, $end) {
+    for ($i = $start; $i <= $end; $i ++) {
+        yield $i;
+    }
+}
+foreach (xrange(0, 5) as $i) {
+    echo $i, "\n";
+}</code></pre>
+		</section>
+<section id="finally">
+		<h4 class="p">✔ finally</h4>
+		<pre><code data-trim class="php">
+$db = mysqli_connect();
+try {
+   call_some_function($db);
+} finally {
+   mysqli_close($db);
+}</code></pre>
+		</section>
+<section id="foreachlist">
+		<h4 class="p">✔ list() in foreach</h4>
+		<pre><code data-trim class="php">
+$names = [ ['John','Smith'], ['Fred','Johnson'] ];
+foreach($names as list($first,$last)) { 
+    echo $first,$last; 
+}</code></pre>
+		</section>
+<section id="constarray">
+		<h4 class="p">✔ Const array/string Dereferencing</h4>
+		<pre><code data-trim class="php">
+echo array(1, 2, 3)[0]; //output 1
+echo "foobar"[3]; //output b
+echo [1,3,4][2]; //output 4</code></pre>
+		</section>
+<section id="others">
+		<h4 class="p">✔ empty() support for functions/expressions</h4>
+		<h4 class="p">✔ curl upload functionality rewritten</h4>
+		<h4 class="p">✔ Simplified password hashing API</h4>
+		<pre><code data-trim class="php">
+// Hash
+$hash = password_hash("super secret",PASSWORD_BCRYPT);
+
+// To validate $pwd against the stored hash
+if (password_verify($pwd, $hash)) {
+    echo 'Password is valid!';
+} else {
+    echo 'Invalid password.';
+}
+</code></pre>
+		</section>	</section>
+	<section>
+		<section id="php56">
+		<h2 margin-bottom="2em">PHP 5.6</h2><br>
+		<h4 class="p">✔ Variadic functions</h4>
+		<pre><code data-trim class="php">
+class MySQL implements DB {
+    public function query($query, ...$params) {
+        $stmt = $this->pdo->prepare($query);
+        $stmt->execute($params);
+        return $stmt;
+    }
+}
+
+$q = 'SELECT * FROM users WHERE id = ?';
+$user = $db->query($q, $userID)->fetch();</code></pre>
+		</section>
+<section id="php56unpack">
+		<h4 class="p">✔ Argument Unpacking</h4>
+		<pre><code data-trim class="php">
+// A better call_user_func_args
+$args1 = [1, 2, 3];
+$args2 = [4, 5, 6];
+test(...$args1, ...$args2); // [1, 2, 3, 4, 5, 6]
+test(1, 2, 3, ...$args2);   // [1, 2, 3, 4, 5, 6]
+test(...$args1, 4, 5, 6);   // [1, 2, 3, 4, 5, 6]</code></pre>
+		<h4 class="p">✔ Constant scalar expressions</h4>
+		<pre><code data-trim class="php">
+class Foo {
+    const FOO = 1 + 1;
+    const BAR = 1 << 1;
+    const GREETING = "HELLO";
+    const BAZ = self::GREETING." WORLD!"
+}</code></pre>
+		</section>
+<section id="php56pow">
+		<h4 class="p">✔ Add right-associative power operator **</h4>
+		<pre><code data-trim class="php">
+echo 2 ** 3 ** 2; // 512 (not 64)
+echo -3 ** 2; // -9 (not 9)
+echo 1 - 3 ** 2; // -8
+echo ~3 ** 2; // -10 (not 16)</code></pre>
+		<h4 class="p">✔ Internal operator overloading for internal features like GMP</h4>
+		<pre><code data-trim class="php">
+echo 2**512;
+echo "\n";
+$n = gmp_init(2);
+echo $n**512;
+</code></pre>
+		<pre><code data-trim class="php">1.3407807929943E+154
+13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
+		</code></pre>		</section>
+<section id="php56use">
+		<h4 class="p">✔ use function and use const namespace imports</h4>
+		<pre><code data-trim class="php">
+include 'template.inc';
+include 'db.inc';
+use function template\header, template\footer, db\query;
+
+header('My Page');
+query('select * from stuff');
+footer(); </code></pre>
+		<h4 class="p">✔ SSL Peer verification by default</h4>
+		<h4 class="p">✔ New phpdbg SAPI</h4>
+		<h4 class="p">✔ Support for > 2GB file uploads</h4>
+		<h4 class="p">✔ OCI8 Improvements</h4>
+		</section>	</section>
+	<section>
+		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
+		<h3 class="p">Are your deploys atomic?</h3>
+		<h3 class="p">Are you sure?</h3>
+		<h4 class="p">What happens to a request that is currently executing when you deploy?</h4>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
+		<img src="/presentations/slides/intro/dep1.png" width="642" height="300">
+	</section>
+	<section>
+		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
+		<h4 class="p">✔ Don't copy files into current document root</h4>
+		<h4 class="p">✔ Let existing requests finish on old code</h4>
+		<h4 class="p">✔ New requests start on new code</h4>
+		<h4 class="p">✔ Avoid clearing your opcode cache</h4>
+		<h4 class="p">✔ Minimal impact on production traffic</h4>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
+		<img src="/presentations/slides/intro/dep2.png" width="680" height="428">
+	</section>
+	<section>
+		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
+		<img src="/presentations/slides/intro/dep3.png" width="680" height="428">
+	</section>
+	<section>
+		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
+		<h4 class="p">2 Document Root directories</h4>
+		<h4 class="p">Symlink /var/www/site toggles between them</h4>
+		<h4 class="p">realpath() symlink at the web server level</h4>
+		<h4 class="p">Set Document Root to symlink realpath</h4>
+		<h4 class="p">Never hardcode the document root in code</h4>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
+		<h3 class="p">Apache</h3>
+		<h4 class="p">http://github.com/etsy/mod_realdoc</h4>
+		<h3 class="p">nginx</h3>
+		<h4 class="p">You can use $realpath_root</h4>
+		<p class="p">eg. fastcgi_param DOCUMENT_ROOT $realpath_root;</p>
+		<h3 class="p">PHP</h3>
+		<h4 class="p">http://github.com/etsy/incpath</h4>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">Conclusion</h2><br>
+		<ul>
+			<li>Still running PHP 5.2 or 5.3? Upgrade now!</li>
+			<li>Test your code on PHP 5.5 and upgrade soon</li>
+			<li>Help us test PHP 5.6</li>
+			<li>Contribute!</li>
+		</ul>
+	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				backgroundTransition: 'none',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
