@@ -1,4 +1,4 @@
-<slide title="Watch out for...">
+<slide title="Watch out for..." section="php54trip1">
 
 <break lines="1" />
 <blurb fontsize="3.5em">✔ default charset is UTF-8 instead of ISO-8859-1</blurb>
@@ -24,7 +24,7 @@ array_diff([1,2,3], [1,2, [3] ]);
 <break lines="1" />
 <blurb fontsize="3.5em">✔ magic quotes completely removed</blurb>
 
-<break lines="1" />
+<break lines="1"  section="php54trip2"/>
 <blurb fontsize="3.5em">✔ removed variable break/continue</blurb>
 <example fontsize="1.6em" result='0' title=""><![CDATA[<?php
 $var = 'label';
@@ -40,7 +40,7 @@ label:]]></example>
 <break lines="1" />
 <blurb fontsize="3.5em">✔ "callable", "insteadof" and "trait" are now reserved words</blurb>
 
-<break lines="1" />
+<break lines="1" section="php54trip3"/>
 <blurb fontsize="3.5em">✔ extending an abstract constructor must match the signature</blurb>
 <example fontsize="1.6em" result='0' title=""><![CDATA[<?php
   abstract class Base {

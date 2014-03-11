@@ -1,4 +1,4 @@
-<slide title="PHP 5.4">
+<slide title="PHP 5.4" section="php54perf">
 
 <break lines="1" />
 <blurb fontsize="6em">Performance Improvements</blurb>
@@ -15,7 +15,7 @@
 <item>unserialize()</item>
 </list>
 
-<break lines="1" />
+<break lines="1" section="php54page2"/>
 <blurb fontsize="4em">✔ Built-in Web Server</blurb>
 
 <break lines="1" />
@@ -29,7 +29,7 @@ $a = [1, 2, 3];
 $b = ['foo' => 'orange', 'bar' => 'apple'];
 ]]></example>
 
-<break lines="1" />
+<break lines="1" section="php54page3"/>
 <blurb fontsize="4em">✔ Function Array Dereferencing</blurb>
 <example fontsize="2em" result='0' title=""><![CDATA[<?php
 function fruits() {
@@ -53,7 +53,7 @@ $func = $a->getPrinter();
 $func(); // Outputs: Bar
 ?>]]></example>
 
-<break lines="1" />
+<break lines="1" section="php54page4"/>
 <blurb fontsize="4em">✔ &amp;lt;?= is now always available</blurb>
 
 <break lines="1" />
@@ -64,7 +64,6 @@ $func(); // Outputs: Bar
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Better support for asian chars in htmlspecialchars/htmlentities</blurb>
-
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Multibyte support is now configurable at runtime</blurb>
@@ -81,7 +80,7 @@ class Foo implements JsonSerializable {
 }
 echo json_encode(new Foo); // Outputs: {"data":"Bar"}]]></example>
 
-<break lines="1" />
+<break lines="1" section="php54page5"/>
 <blurb fontsize="4em">✔ mysqlnd used by default everywhere</blurb>
 
 <break lines="1" />
