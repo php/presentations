@@ -1,4 +1,4 @@
-<slide title="PHP 5.6">
+<slide title="PHP 5.6" section="php56">
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Variadic functions</blurb>
@@ -14,7 +14,7 @@ class MySQL implements DB {
 $q = 'SELECT * FROM users WHERE id = ?';
 $user = $db->query($q, $userID)->fetch();]]></example>
 
-<break lines="1" />
+<break lines="1" section="php56unpack"/>
 <blurb fontsize="4em">✔ Argument Unpacking</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 // A better call_user_func_args
@@ -34,7 +34,7 @@ class Foo {
     const BAZ = self::GREETING." WORLD!"
 }]]></example>
 
-<break lines="1" />
+<break lines="1" section="php56pow"/>
 <blurb fontsize="4em">✔ Add right-associative power operator **</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 echo 2 ** 3 ** 2; // 512 (not 64)
@@ -56,7 +56,7 @@ echo $n**512;
 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
 ]]></example>
 
-<break lines="1" />
+<break lines="1" section="php56use"/>
 <blurb fontsize="4em">✔ use function and use const namespace imports</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 include 'template.inc';

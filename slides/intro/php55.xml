@@ -1,4 +1,4 @@
-<slide title="PHP 5.5">
+<slide title="PHP 5.5" section="performance">
 
 <break lines="1" />
 <blurb fontsize="6em">Performance Improvements</blurb>
@@ -8,7 +8,7 @@
 <item>Bundled opcode cache</item>
 </list>
 
-<break lines="1" />
+<break lines="1" section="generators" />
 <blurb fontsize="4em">✔ Generators</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 function xrange($start, $end) {
@@ -20,7 +20,7 @@ foreach (xrange(0, 5) as $i) {
     echo $i, "\n";
 }]]></example>
 
-<break lines="1" />
+<break lines="1" section="finally" />
 <blurb fontsize="4em">✔ finally</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 $db = mysqli_connect();
@@ -30,7 +30,7 @@ try {
    mysqli_close($db);
 }]]></example>
 
-<break lines="1" />
+<break lines="1" section="foreachlist" />
 <blurb fontsize="4em">✔ list() in foreach</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 $names = [ ['John','Smith'], ['Fred','Johnson'] ];
@@ -38,14 +38,14 @@ foreach($names as list($first,$last)) {
     echo $first,$last; 
 }]]></example>
 
-<break lines="1" />
+<break lines="1" section="constarray" />
 <blurb fontsize="4em">✔ Const array/string Dereferencing</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
 echo array(1, 2, 3)[0]; //output 1
 echo "foobar"[3]; //output b
 echo [1,3,4][2]; //output 4]]></example>
 
-<break lines="1" />
+<break lines="1" section="others" />
 <blurb fontsize="4em">✔ empty() support for functions/expressions</blurb>
 
 <break lines="1" />
