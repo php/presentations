@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="/samdark.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="/github.css">
+		<link rel="stylesheet" href="/styles/github.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -67,20 +67,18 @@
 		</section>
 <section id="generators">
 		<h4 class="p">✔ Generators</h4>
-		<pre><code data-trim class="php">
-function xrange($start, $end) {
-    for ($i = $start; $i <= $end; $i ++) {
+		<pre><code>function xrange($start, $end) {
+    for ($i = $start; $i &lt;= $end; $i ++) {
         yield $i;
     }
 }
 foreach (xrange(0, 5) as $i) {
-    echo $i, "\n";
+    echo $i, &quot;\n&quot;;
 }</code></pre>
 		</section>
 <section id="finally">
 		<h4 class="p">✔ finally</h4>
-		<pre><code data-trim class="php">
-$db = mysqli_connect();
+		<pre><code>$db = mysqli_connect();
 try {
    call_some_function($db);
 } finally {
@@ -89,96 +87,85 @@ try {
 		</section>
 <section id="foreachlist">
 		<h4 class="p">✔ list() in foreach</h4>
-		<pre><code data-trim class="php">
-$names = [ ['John','Smith'], ['Fred','Johnson'] ];
+		<pre><code>$names = [ ['John','Smith'], ['Fred','Johnson'] ];
 foreach($names as list($first,$last)) { 
     echo $first,$last; 
 }</code></pre>
 		</section>
 <section id="constarray">
 		<h4 class="p">✔ Const array/string Dereferencing</h4>
-		<pre><code data-trim class="php">
-echo array(1, 2, 3)[0]; //output 1
-echo "foobar"[3]; //output b
+		<pre><code>echo array(1, 2, 3)[0]; //output 1
+echo &quot;foobar&quot;[3]; //output b
 echo [1,3,4][2]; //output 4</code></pre>
 		</section>
 <section id="others">
 		<h4 class="p">✔ empty() support for functions/expressions</h4>
 		<h4 class="p">✔ curl upload functionality rewritten</h4>
 		<h4 class="p">✔ Simplified password hashing API</h4>
-		<pre><code data-trim class="php">
-// Hash
-$hash = password_hash("super secret",PASSWORD_BCRYPT);
+		<pre><code>// Hash
+$hash = password_hash(&quot;super secret&quot;,PASSWORD_BCRYPT);
 
 // To validate $pwd against the stored hash
 if (password_verify($pwd, $hash)) {
     echo 'Password is valid!';
 } else {
     echo 'Invalid password.';
-}
-</code></pre>
+}</code></pre>
 		</section>	</section>
 	<section>
 		<section id="php56">
 		<h2 margin-bottom="2em">PHP 5.6</h2><br>
 		<h4 class="p">✔ Variadic functions</h4>
-		<pre><code data-trim class="php">
-class MySQL implements DB {
+		<pre><code>class MySQL implements DB {
     public function query($query, ...$params) {
-        $stmt = $this->pdo->prepare($query);
-        $stmt->execute($params);
+        $stmt = $this-&gt;pdo-&gt;prepare($query);
+        $stmt-&gt;execute($params);
         return $stmt;
     }
 }
 
 $q = 'SELECT * FROM users WHERE id = ?';
-$user = $db->query($q, $userID)->fetch();</code></pre>
+$user = $db-&gt;query($q, $userID)-&gt;fetch();</code></pre>
 		</section>
 <section id="php56unpack">
 		<h4 class="p">✔ Argument Unpacking</h4>
-		<pre><code data-trim class="php">
-// A better call_user_func_args
+		<pre><code>// A better call_user_func_args
 $args1 = [1, 2, 3];
 $args2 = [4, 5, 6];
 test(...$args1, ...$args2); // [1, 2, 3, 4, 5, 6]
 test(1, 2, 3, ...$args2);   // [1, 2, 3, 4, 5, 6]
 test(...$args1, 4, 5, 6);   // [1, 2, 3, 4, 5, 6]</code></pre>
 		<h4 class="p">✔ Constant scalar expressions</h4>
-		<pre><code data-trim class="php">
-class Foo {
+		<pre><code>class Foo {
     const FOO = 1 + 1;
-    const BAR = 1 << 1;
-    const GREETING = "HELLO";
-    const BAZ = self::GREETING." WORLD!"
+    const BAR = 1 &lt;&lt; 1;
+    const GREETING = &quot;HELLO&quot;;
+    const BAZ = self::GREETING.&quot; WORLD!&quot;
 }</code></pre>
 		</section>
 <section id="php56pow">
 		<h4 class="p">✔ Add right-associative power operator **</h4>
-		<pre><code data-trim class="php">
-echo 2 ** 3 ** 2; // 512 (not 64)
+		<pre><code>echo 2 ** 3 ** 2; // 512 (not 64)
 echo -3 ** 2; // -9 (not 9)
 echo 1 - 3 ** 2; // -8
 echo ~3 ** 2; // -10 (not 16)</code></pre>
 		<h4 class="p">✔ Internal operator overloading for internal features like GMP</h4>
-		<pre><code data-trim class="php">
-echo 2**512;
-echo "\n";
+		<pre><code>echo 2**512;
+echo &quot;\n&quot;;
 $n = gmp_init(2);
-echo $n**512;
-</code></pre>
-		<pre><code data-trim class="php">1.3407807929943E+154
+echo $n**512;</code></pre>
+		<pre><code>1.3407807929943E+154
 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
 		</code></pre>		</section>
 <section id="php56use">
 		<h4 class="p">✔ use function and use const namespace imports</h4>
-		<pre><code data-trim class="php">
-include 'template.inc';
+		<pre><code>include 'template.inc';
 include 'db.inc';
 use function template\header, template\footer, db\query;
 
 header('My Page');
 query('select * from stuff');
-footer(); </code></pre>
+footer();</code></pre>
 		<h4 class="p">✔ SSL Peer verification by default</h4>
 		<h4 class="p">✔ New phpdbg SAPI</h4>
 		<h4 class="p">✔ Support for > 2GB file uploads</h4>
@@ -283,7 +270,7 @@ footer(); </code></pre>
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
 					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]

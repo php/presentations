@@ -18,7 +18,7 @@
 		<link rel="stylesheet" href="/samdark.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="/github.css">
+		<link rel="stylesheet" href="/styles/github.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -54,13 +54,13 @@
 				</section>
 					<section>
 		<h2 margin-bottom="2em">1993</h2><br>
-		<pre><code data-trim class="php">#include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
-#include <string.h>
+		<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
 
-#define ishex(x) (((x) >= '0' && (x) <= '9') || ((x) >= 'a' && 
-                   (x) <= 'f') || ((x) >= 'A' && (x) <= 'F'))
+#define ishex(x) (((x) &gt;= '0' &amp;&amp; (x) &lt;= '9') || ((x) &gt;= 'a' &amp;&amp; \
+                   (x) &lt;= 'f') || ((x) &gt;= 'A' &amp;&amp; (x) &lt;= 'F'))
 
 int htoi(char *s) {
 	int     value;
@@ -68,11 +68,11 @@ int htoi(char *s) {
 
 	c = s[0];
 	if(isupper(c)) c = tolower(c);
-	value=(c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10) * 16;
+	value=(c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10) * 16;
 
 	c = s[1];
 	if(isupper(c)) c = tolower(c);
-	value += c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10;
+	value += c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10;
 
 	return(value);
 }
@@ -81,21 +81,21 @@ void main(int argc, char *argv[]) {
 	char *params, *data, *dest, *s, *tmp;
 	char *name, *age;
 
-	puts("Content-type: text/html\r\n");
-	puts("<HTML><HEAD><TITLE>Form Example</TITLE></HEAD>");
-	puts("<BODY><H1>My Example Form</H1>");
-	puts("<FORM action=\"form.cgi\" method=\"GET\">");
-	puts("Name: <INPUT type=\"text\" name=\"name\">");
-	puts("Age: <INPUT type=\"text\" name=\"age\">");
-	puts("<BR><INPUT type=\"submit\">");
-	puts("</FORM>");
+	puts(&quot;Content-type: text/html\r\n&quot;);
+	puts(&quot;&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Form Example&lt;/TITLE&gt;&lt;/HEAD&gt;&quot;);
+	puts(&quot;&lt;BODY&gt;&lt;H1&gt;My Example Form&lt;/H1&gt;&quot;);
+	puts(&quot;&lt;FORM action=\&quot;form.cgi\&quot; method=\&quot;GET\&quot;&gt;&quot;);
+	puts(&quot;Name: &lt;INPUT type=\&quot;text\&quot; name=\&quot;name\&quot;&gt;&quot;);
+	puts(&quot;Age: &lt;INPUT type=\&quot;text\&quot; name=\&quot;age\&quot;&gt;&quot;);
+	puts(&quot;&lt;BR&gt;&lt;INPUT type=\&quot;submit\&quot;&gt;&quot;);
+	puts(&quot;&lt;/FORM&gt;&quot;);
 
-	data = getenv("QUERY_STRING");
-	if(data && *data) {
+	data = getenv(&quot;QUERY_STRING&quot;);
+	if(data &amp;&amp; *data) {
 		params = data; dest = data;
     	while(*data) {
 			if(*data=='+') *dest=' ';
-			else if(*data == '%' && ishex(*(data+1))&&ishex(*(data+2))) {
+			else if(*data == '%' &amp;&amp; ishex(*(data+1))&amp;&amp;ishex(*(data+2))) {
 				*dest = (char) htoi(data + 1);
 				data+=2;
 			} else *dest = *data;
@@ -103,55 +103,55 @@ void main(int argc, char *argv[]) {
 			dest++;
 		}
 		*dest = '\0';
-		s = strtok(params,"&");
+		s = strtok(params,&quot;&amp;&quot;);
 		do {
 			tmp = strchr(s,'=');
 			if(tmp) {
 				*tmp = '\0';
-				if(!strcmp(s,"name")) name = tmp+1;
-				else if(!strcmp(s,"age")) age = tmp+1;
+				if(!strcmp(s,&quot;name&quot;)) name = tmp+1;
+				else if(!strcmp(s,&quot;age&quot;)) age = tmp+1;
 			}
-		} while(s=strtok(NULL,"&"));
+		} while(s=strtok(NULL,&quot;&amp;&quot;));
 
-		printf("Hi %s, you are %s years old\n",name,age);
+		printf(&quot;Hi %s, you are %s years old\n&quot;,name,age);
 	}
-	puts("</BODY></HTML>");
+	puts(&quot;&lt;/BODY&gt;&lt;/HTML&gt;&quot;);
 }
 </code></pre>
 	</section>
 	<section>
 		<h2 margin-bottom="2em">1993</h2><br>
-		<pre><code data-trim class="php">use CGI qw(:standard);
+		<pre><code>use CGI qw(:standard);
 print header;
 print start_html('Form Example'),
     h1('My Example Form'),
     start_form,
-    "Name: ", textfield('name'),
+    &quot;Name: &quot;, textfield('name'),
     p,
-    "Age: ", textfield('age'),
+    &quot;Age: &quot;, textfield('age'),
     p,
     submit,
     end_form;
 if(param()) {
-    print "Hi ",em(param('name')),
-        "You are ",em(param('age')),
-        " years old";
+    print &quot;Hi &quot;,em(param('name')),
+        &quot;You are &quot;,em(param('age')),
+        &quot; years old&quot;;
 }
 print end_html;</code></pre>
 	</section>
 	<section>
 		<h2 margin-bottom="2em">1994</h2><br>
-		<pre><code data-trim class="php"><html><head><title>Form Example</title></head>
-<body><h1>My Example Form</h1>
-<form action="form.phtml" method="POST">
-Name: <input type="text" name="name">
-Age: <input type="text" name="age">
-<br><input type="submit">
-</form>
-<?if($name):?>
-Hi <?echo $name?>, you are <?echo $age?> years old
-<?endif?>
-</body></html></code></pre>
+		<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Form Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;My Example Form&lt;/h1&gt;
+&lt;form action=&quot;form.phtml&quot; method=&quot;POST&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;
+&lt;br&gt;&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+&lt;?if($name):?&gt;
+Hi &lt;?echo $name?&gt;, you are &lt;?echo $age?&gt; years old
+&lt;?endif?&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
 	</section>
 	<section>
 		<h3 class="p">Focus on the Ecosystem</h3>
@@ -178,14 +178,12 @@ Hi <?echo $name?>, you are <?echo $age?> years old
 			<li>magic_quotes?</li>
 		</ul>
 		<h3 class="p">OMGWTFBBQ?</h3>
-		<pre><code data-trim class="php">
-array_search($needle, $haystack);
+		<pre><code>array_search($needle, $haystack);
 strstr($haystack, $needle);
 in_array($needle, $haystack);
 substr_count($haystack, $needle);
 array_key_exists($needle, $haystack);
-strchr($haystack, $needle);
-</code></pre>
+strchr($haystack, $needle);</code></pre>
 	</section>
 	<section>
 		<h3 class="p">Performance</h3>
@@ -230,32 +228,28 @@ strchr($haystack, $needle);
 		<h4 class="p">✔ Traits aka Horizontal Code Reuse</h4>
 		<p class="p">        (Compiler-assisted Copy-and-Paste)</p>
 		<h4 class="p">✔ Short Array Syntax</h4>
-		<pre><code data-trim class="php">
-$a = [1, 2, 3];
-$b = ['foo' => 'orange', 'bar' => 'apple'];
-</code></pre>
+		<pre><code>$a = [1, 2, 3];
+$b = ['foo' =&gt; 'orange', 'bar' =&gt; 'apple'];</code></pre>
 		</section>
 <section id="php54page3">
 		<h4 class="p">✔ Function Array Dereferencing</h4>
-		<pre><code data-trim class="php">
-function fruits() {
+		<pre><code>function fruits() {
   return array('apple', 'banana', 'orange');
 }
 echo fruits()[0]; // Outputs: apple
-?></code></pre>
+?&gt;</code></pre>
 		<h4 class="p">✔ $this from current scope supported in Closures</h4>
-		<pre><code data-trim class="php">
-class Foo {
-  private $prop = "bar";
+		<pre><code>class Foo {
+  private $prop = &quot;bar&quot;;
   public function getPrinter() {
-    return function() { echo ucfirst($this->prop); };
+    return function() { echo ucfirst($this-&gt;prop); };
   }
 }
 
 $a = new Foo;
-$func = $a->getPrinter();
+$func = $a-&gt;getPrinter();
 $func(); // Outputs: Bar
-?></code></pre>
+?&gt;</code></pre>
 		</section>
 <section id="php54page4">
 		<h4 class="p">✔ &lt;?= is now always available</h4>
@@ -267,22 +261,19 @@ $func(); // Outputs: Bar
 		<ul>
 			<li>JsonSerializable</li>
 		</ul>
-		<pre><code data-trim class="php">
-class Foo implements JsonSerializable {
+		<pre><code>class Foo implements JsonSerializable {
     private $data = 'Bar';
     public function jsonSerialize() {
-        return array('data'=>$this->data);
+        return array('data'=&gt;$this-&gt;data);
     }
 }
-echo json_encode(new Foo); // Outputs: {"data":"Bar"}</code></pre>
+echo json_encode(new Foo); // Outputs: {&quot;data&quot;:&quot;Bar&quot;}</code></pre>
 		</section>
 <section id="php54page5">
 		<h4 class="p">✔ mysqlnd used by default everywhere</h4>
 		<h4 class="p">✔ iterator support added to mysqli (mysqli_result implements Traversable)</h4>
 		<h4 class="p">✔ Binary notation</h4>
-		<pre><code data-trim class="php">
-$mask = 0b010101;
-</code></pre>
+		<pre><code>$mask = 0b010101;</code></pre>
 		<h4 class="p">✔ AES Support added to OpenSSL</h4>
 		<h4 class="p">✔ Tokyo Cabinet and DB5 support added to dba</h4>
 		<h4 class="p">✔ Added stack frame count arg to debug_backtrace()</h4>
@@ -314,26 +305,22 @@ PHP 5.4 + Opcache vs. PHP 5.3 + APC
 		<section id="php54trip1">
 		<h2 margin-bottom="2em">Watch out for...</h2><br>
 		<p class="p">✔ default charset is UTF-8 instead of ISO-8859-1</p>
-		<pre><code data-trim class="php">
-echo htmlspecialchars("abc".chr(0xE0)."def"); // 5.3 "abc�def"
-echo htmlspecialchars("abc".chr(0xE0)."def", NULL, 'UTF-8'); // 5.3 ""
-echo htmlspecialchars("abc".chr(0xE0)."def"); // 5.4 ""
-echo htmlspecialchars("abc".chr(0xE0)."def", ENT_IGNORE); // 5.4 "abcdef"</code></pre>
+		<pre><code>echo htmlspecialchars(&quot;abc&quot;.chr(0xE0).&quot;def&quot;); // 5.3 &quot;abc�def&quot;
+echo htmlspecialchars(&quot;abc&quot;.chr(0xE0).&quot;def&quot;, NULL, 'UTF-8'); // 5.3 &quot;&quot;
+echo htmlspecialchars(&quot;abc&quot;.chr(0xE0).&quot;def&quot;); // 5.4 &quot;&quot;
+echo htmlspecialchars(&quot;abc&quot;.chr(0xE0).&quot;def&quot;, ENT_IGNORE); // 5.4 &quot;abcdef&quot;</code></pre>
 		<p class="p">✔ array to string conversion notice</p>
-		<pre><code data-trim class="php">
-echo [1,2,3];
+		<pre><code>echo [1,2,3];
 // Notice: Array to string conversion in test.php code on line 1
 
 array_diff([1,2,3], [1,2, [3] ]);
-// Notice: Array to string conversion in test.php on line 2
-</code></pre>
+// Notice: Array to string conversion in test.php on line 2</code></pre>
 		<p class="p">✔ register_globals completely removed</p>
 		<p class="p">✔ magic quotes completely removed</p>
 		</section>
 <section id="php54trip2">
 		<p class="p">✔ removed variable break/continue</p>
-		<pre><code data-trim class="php">
-$var = 'label';
+		<pre><code>$var = 'label';
 while(1) {
   break $var;
   continue $var;
@@ -344,16 +331,14 @@ label:</code></pre>
 		</section>
 <section id="php54trip3">
 		<p class="p">✔ extending an abstract constructor must match the signature</p>
-		<pre><code data-trim class="php">
-  abstract class Base {
+		<pre><code>abstract class Base {
     abstract public function __construct();
   }
   class Foo extends Base {
     public function __construct($bar) {}
 // FATAL  Declaration of Foo::__construct() must be compatible 
 //        with Base::__construct()
-  }
-</code></pre>
+  }</code></pre>
 		<p class="p">✔ stream_select() preserves keys of array arg</p>
 		<p class="p">✔ XSLT writes are disabled by default</p>
 		<p class="p">✔ mcrypt_generic_end() removed in favour of mcrypt_generic_deinit()</p>
@@ -374,20 +359,18 @@ label:</code></pre>
 		</section>
 <section id="generators">
 		<h4 class="p">✔ Generators</h4>
-		<pre><code data-trim class="php">
-function xrange($start, $end) {
-    for ($i = $start; $i <= $end; $i ++) {
+		<pre><code>function xrange($start, $end) {
+    for ($i = $start; $i &lt;= $end; $i ++) {
         yield $i;
     }
 }
 foreach (xrange(0, 5) as $i) {
-    echo $i, "\n";
+    echo $i, &quot;\n&quot;;
 }</code></pre>
 		</section>
 <section id="finally">
 		<h4 class="p">✔ finally</h4>
-		<pre><code data-trim class="php">
-$db = mysqli_connect();
+		<pre><code>$db = mysqli_connect();
 try {
    call_some_function($db);
 } finally {
@@ -396,96 +379,85 @@ try {
 		</section>
 <section id="foreachlist">
 		<h4 class="p">✔ list() in foreach</h4>
-		<pre><code data-trim class="php">
-$names = [ ['John','Smith'], ['Fred','Johnson'] ];
+		<pre><code>$names = [ ['John','Smith'], ['Fred','Johnson'] ];
 foreach($names as list($first,$last)) { 
     echo $first,$last; 
 }</code></pre>
 		</section>
 <section id="constarray">
 		<h4 class="p">✔ Const array/string Dereferencing</h4>
-		<pre><code data-trim class="php">
-echo array(1, 2, 3)[0]; //output 1
-echo "foobar"[3]; //output b
+		<pre><code>echo array(1, 2, 3)[0]; //output 1
+echo &quot;foobar&quot;[3]; //output b
 echo [1,3,4][2]; //output 4</code></pre>
 		</section>
 <section id="others">
 		<h4 class="p">✔ empty() support for functions/expressions</h4>
 		<h4 class="p">✔ curl upload functionality rewritten</h4>
 		<h4 class="p">✔ Simplified password hashing API</h4>
-		<pre><code data-trim class="php">
-// Hash
-$hash = password_hash("super secret",PASSWORD_BCRYPT);
+		<pre><code>// Hash
+$hash = password_hash(&quot;super secret&quot;,PASSWORD_BCRYPT);
 
 // To validate $pwd against the stored hash
 if (password_verify($pwd, $hash)) {
     echo 'Password is valid!';
 } else {
     echo 'Invalid password.';
-}
-</code></pre>
+}</code></pre>
 		</section>	</section>
 	<section>
 		<section id="php56">
 		<h2 margin-bottom="2em">PHP 5.6</h2><br>
 		<h4 class="p">✔ Variadic functions</h4>
-		<pre><code data-trim class="php">
-class MySQL implements DB {
+		<pre><code>class MySQL implements DB {
     public function query($query, ...$params) {
-        $stmt = $this->pdo->prepare($query);
-        $stmt->execute($params);
+        $stmt = $this-&gt;pdo-&gt;prepare($query);
+        $stmt-&gt;execute($params);
         return $stmt;
     }
 }
 
 $q = 'SELECT * FROM users WHERE id = ?';
-$user = $db->query($q, $userID)->fetch();</code></pre>
+$user = $db-&gt;query($q, $userID)-&gt;fetch();</code></pre>
 		</section>
 <section id="php56unpack">
 		<h4 class="p">✔ Argument Unpacking</h4>
-		<pre><code data-trim class="php">
-// A better call_user_func_args
+		<pre><code>// A better call_user_func_args
 $args1 = [1, 2, 3];
 $args2 = [4, 5, 6];
 test(...$args1, ...$args2); // [1, 2, 3, 4, 5, 6]
 test(1, 2, 3, ...$args2);   // [1, 2, 3, 4, 5, 6]
 test(...$args1, 4, 5, 6);   // [1, 2, 3, 4, 5, 6]</code></pre>
 		<h4 class="p">✔ Constant scalar expressions</h4>
-		<pre><code data-trim class="php">
-class Foo {
+		<pre><code>class Foo {
     const FOO = 1 + 1;
-    const BAR = 1 << 1;
-    const GREETING = "HELLO";
-    const BAZ = self::GREETING." WORLD!"
+    const BAR = 1 &lt;&lt; 1;
+    const GREETING = &quot;HELLO&quot;;
+    const BAZ = self::GREETING.&quot; WORLD!&quot;
 }</code></pre>
 		</section>
 <section id="php56pow">
 		<h4 class="p">✔ Add right-associative power operator **</h4>
-		<pre><code data-trim class="php">
-echo 2 ** 3 ** 2; // 512 (not 64)
+		<pre><code>echo 2 ** 3 ** 2; // 512 (not 64)
 echo -3 ** 2; // -9 (not 9)
 echo 1 - 3 ** 2; // -8
 echo ~3 ** 2; // -10 (not 16)</code></pre>
 		<h4 class="p">✔ Internal operator overloading for internal features like GMP</h4>
-		<pre><code data-trim class="php">
-echo 2**512;
-echo "\n";
+		<pre><code>echo 2**512;
+echo &quot;\n&quot;;
 $n = gmp_init(2);
-echo $n**512;
-</code></pre>
-		<pre><code data-trim class="php">1.3407807929943E+154
+echo $n**512;</code></pre>
+		<pre><code>1.3407807929943E+154
 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
 		</code></pre>		</section>
 <section id="php56use">
 		<h4 class="p">✔ use function and use const namespace imports</h4>
-		<pre><code data-trim class="php">
-include 'template.inc';
+		<pre><code>include 'template.inc';
 include 'db.inc';
 use function template\header, template\footer, db\query;
 
 header('My Page');
 query('select * from stuff');
-footer(); </code></pre>
+footer();</code></pre>
 		<h4 class="p">✔ SSL Peer verification by default</h4>
 		<h4 class="p">✔ New phpdbg SAPI</h4>
 		<h4 class="p">✔ Support for > 2GB file uploads</h4>
@@ -572,7 +544,7 @@ footer(); </code></pre>
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
 					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
 					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]

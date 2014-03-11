@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <string.h>
 
-#define ishex(x) (((x) >= '0' && (x) <= '9') || ((x) >= 'a' && 
+#define ishex(x) (((x) >= '0' && (x) <= '9') || ((x) >= 'a' && \
                    (x) <= 'f') || ((x) >= 'A' && (x) <= 'F'))
 
 int htoi(char *s) {
