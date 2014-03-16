@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>mongoDB</topic>
+<title>From SQL to NoSQL</title>
+<event>Midwest PHP</event>
+<location>Minneapolis, MN, US</location>
+<date>Mar 16th, 2014</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@10gen.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/10557</joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<!-- DINOSAUR vs PLATIPUS -->
+<slide>slides/mongodb/relational-model.xml</slide>
+<slide>slides/mongodb/dinosaur.xml</slide>
+<slide>slides/mongodb/normal-form.xml</slide>
+<slide>slides/mongodb/normal-form1.xml</slide>
+<slide>slides/mongodb/normal-form2.xml</slide>
+<slide>slides/mongodb/normal-form3.xml</slide>
+
+<!-- DIFFERENT NoSQL -->
+<slide>slides/mongodb/nosql.xml</slide>
+<slide>slides/mongodb/nosql-kv.xml</slide>
+<slide>slides/mongodb/nosql-column.xml</slide>
+<slide>slides/mongodb/nosql-graph.xml</slide>
+<slide>slides/mongodb/nosql-document.xml</slide>
+<slide>slides/mongodb/platipus.xml</slide>
+
+<!-- ACID vs CAP -->
+<slide>slides/mongodb/acid.xml</slide>
+<slide>slides/mongodb/cap.xml</slide>
+
+<!-- A FEW NOTES ON MONGODB -->
+<slide>slides/mongodb/databasefield.xml</slide>
+<slide>slides/mongodb/collections-documents.xml</slide>
+<slide>slides/mongodb/document.xml</slide>
+<slide>slides/mongodb/mongodb-1nf.xml</slide>
+<slide>slides/mongodb/mongodb-2nf.xml</slide>
+<slide>slides/mongodb/mongodb-3nf.xml</slide>
+<slide>slides/mongodb/insert-intro.xml</slide>
+<slide>slides/mongodb/update-intro.xml</slide>
+<slide>slides/mongodb/update-atomicity.xml</slide>
+<slide>slides/mongodb/update-consistency.xml</slide>
+
+<slide>slides/mongodb/arbitrary-keys1.xml</slide>
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+<slide>slides/mongodb/embed-vs-link.xml</slide>
+
+<slide>slides/mongodb/writeconcern-consistency.xml</slide>
+<slide>slides/mongodb/writeconcern-consistency-list.xml</slide>
+
+<!-- REPLICATION -->
+<slide>slides/mongodb/availability.xml</slide>
+<slide>slides/mongodb/repl-features.xml</slide>
+<slide>slides/mongodb/repl-works-basic.xml</slide>
+<slide>slides/mongodb/repl-works-normal.xml</slide>
+<slide>slides/mongodb/repl-works-failover.xml</slide>
+
+<slide>slides/mongodb/repl-eventual-consistency.xml</slide>
+
+<slide>slides/mongodb/sql2nosql-conclusion.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>
