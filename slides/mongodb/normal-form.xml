@@ -1,7 +1,7 @@
 <slide>
 <title>Normalisation</title>
 
-<div effect="fade-out yes">
+<div effect="fade-out stop">
 <list>
 <bullet>*1NF*: A relation is in first normal form if the domain of each
 |aaaaaa|attribute contains| |cccccc|only atomic values, and the value of each attribute contains only a single value from that domain.|</bullet>
