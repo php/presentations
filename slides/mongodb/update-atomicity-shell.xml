@@ -1,0 +1,35 @@
+<slide>
+<title>Atomicity (ACID): Update operators</title>
+
+<div effect="fade-out">
+<blurb>Don't do this:</blurb>
+<example inline="1">
+r = db.steps.findOne( { 'person' : 'derickr' } );
+*r['steps_made']["20140202"] = r['steps_made']["20140202"] + 7124;*
+*db.steps.update( { 'person' : 'derickr' }, r );*
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Do this instead:</blurb>
+<example inline="1">
+db.steps.update(
+    { 'person' : 'derickr' }, 
+    { '$inc' : { "steps_made.20140202" : 7124 } } 
+);
+</example>
+
+<blurb>Other operators:</blurb>
+<example inline="1">db.steps.update( 
+    { 'person' : 'derickr' }, 
+    { '$addToSet' : { 'tags' : 'openstreetmap' } } 
+);</example>
+<example inline="1">db.steps.update( 
+    { 'person' : 'derickr' }, 
+    { '$push' : { 'tags' : {
+        '$each' : [ 'mongodb', 'xdebug' ],
+        '$slice' : -2 
+    } } }
+);</example>
+</div>
+</slide>
