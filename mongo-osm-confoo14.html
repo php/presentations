@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Finding a pub with MongoDB and OpenStreetMap</title>
+
+		<meta name="description" content="Finding a pub with MongoDB and OpenStreetMap">
+		<meta name="author" content="Derick Rethans">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="/samdark.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="/styles/github.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Finding a pub with MongoDB and OpenStreetMap</h1>
+					<h3>ConFoo</h3>
+					<h3>Montréal, Canada</h3>
+					<h3>February 27th, 2014</h3>
+					<a href=""></a><br><br>
+					<p>Derick Rethans<br>
+					<small><a href="http://twitter.com/derickr">derickr</a></small>
+					</p>
+				</section>
+					<section>
+		<p class="p">Finding a pub with MongoDB and OpenStreetMap</p>
+		<p class="p">Derick Rethans</p>
+		<p class="p">derick@mongodb.com—@derickr</p>
+		<p class="p">http://derickrethans.nl/talks/mongo-osm-confoo14</p>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/closed-pub.jpg" width="" height="">
+	</section>
+	<section>
+		<ul>
+			<li>The examples in this talk use data from OpenStreetMap</li>
+			<li>OpenStreetMap is a free worldwide map, created through crowdsourcing</li>
+			<li>The data is free to download and use under its open license.</li>
+			<li>It's sort of a WikiPedia for map data</li>
+		</ul>
+		<img src="/../presentations/slides/mongodb/../map/osm.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/flat-vs-round.png" width="" height="">
+		<p class="p">MongoDB 2.2 vs. MongoDB 2.4</p>
+	</section>
+	<section>
+	</section>
+	<section>
+		<p class="p">Example:</p>
+		<pre><code>
+{
+  loc : {
+    type : &quot;LineString&quot; ,
+    coordinates : [ [ -0.09, 51.49 ], [ 2.35, 48.86 ] ]
+  }
+}
+</code></pre>
+		<ul>
+			<li>GeoJSON is a format for encoding a variety of geographic data structures.</li>
+			<li>Used by various other HTML APIs as well: OpenLayers, Leaflet and through GDAL also PostGIS.</li>
+			<li>MongoDB supports three sub-formats: Point, LineString, and Polygon.</li>
+		</ul>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/geojson-point.png" width="" height="">
+		<pre><code>
+{
+    &quot;_id&quot; : &quot;n356277759&quot;,
+    &quot;ty&quot; : NumberLong(1),
+    &quot;l&quot; : {
+        &quot;type&quot; : &quot;Point&quot;,
+        &quot;coordinates&quot; : [
+            -0.1607376,
+            51.5138662
+        ]
+    },
+    &quot;ts&quot; : [
+        &quot;amenity=pub&quot;,
+        &quot;food=yes&quot;,
+        &quot;name=The Tyburn&quot;,
+        &quot;operator=wetherspoons&quot;,
+        &quot;real_ale=yes&quot;
+    ]
+}
+</code></pre>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/geojson-line.png" width="" height="">
+		<pre><code>
+{
+    &quot;_id&quot; : &quot;w4373934&quot;,
+    &quot;ty&quot; : NumberLong(2),
+    &quot;l&quot; : {
+        &quot;type&quot; : &quot;LineString&quot;,
+        &quot;coordinates&quot; : [
+            [ -0.1286202, 51.50752 ],
+            [ -0.1283857, 51.5075115 ],
+            [ -0.1282389, 51.5075112 ],
+            [ -0.1278265, 51.5075453 ]
+        ]
+    },
+    &quot;ts&quot; : [
+        &quot;highway=primary&quot;,
+        &quot;lit=yes&quot;,
+        &quot;name=Trafalgar Square&quot;,
+        &quot;oneway=yes&quot;,
+        &quot;postal_code=WC2&quot;,
+        &quot;sidewalk=left&quot;
+    ]
+}
+
+</code></pre>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/geojson-polygon.png" width="" height="">
+		<pre><code>
+{
+   &quot;_id&quot; : &quot;w161490892&quot;,
+   &quot;ty&quot; : NumberLong(2),
+   &quot;l&quot; : {
+      &quot;type&quot; : &quot;Polygon&quot;,
+      &quot;coordinates&quot; : [
+         [
+            [ -0.1356425, 51.497671 ],
+            [ -0.1355737, 51.4975662 ],
+            [ -0.1354639, 51.4975815 ],
+            [ -0.1354536, 51.497694 ],
+            [ -0.1356425, 51.497671 ]
+         ]
+      ]
+   },
+   &quot;ts&quot; : [
+      &quot;amenity=pub&quot;,
+      &quot;building=yes&quot;,
+      &quot;name=The Albert&quot;,
+      &quot;real_ale=yes&quot;
+   ]
+}
+</code></pre>
+	</section>
+	<section>
+		<ul>
+			<li>
+        We divide the surface of the earth into cells
+        
+    </li>
+			<li>Cells have a level which define the size of the cell</li>
+			<li>S2 provides 31 levels</li>
+			<li>The higher the level, the smaller the cell, and therefore the more needed to cover the earth</li>
+			<li>By default, we use all levels between 500m on a side and 100km on a side</li>
+		</ul>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/ldn-point.png" width="" height="">
+		<p class="p">amenity=toilets</p>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/ldn-line.png" width="" height="">
+		<p class="p">highway=primaryname=Trafalgar Square</p>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/ldn-polygon.png" width="" height="">
+		<p class="p">highway=pedestrianname=Trafalgar Squarearea=yes</p>
+	</section>
+	<section>
+		<p class="p"><tt>$near</tt></p>
+		<ul>
+			<li>find stuff near a point</li>
+			<li>index required</li>
+		</ul>
+		<p class="p"><tt>$geoWithin</tt></p>
+		<ul>
+			<li>find stuff within a polygon/circle</li>
+			<li>index <strong>not</strong> required</li>
+		</ul>
+		<p class="p"><tt>$geoIntersects</tt></p>
+		<ul>
+			<li>find stuff that intersects with other stuff</li>
+			<li>index <strong>not</strong> required</li>
+		</ul>
+	</section>
+	<section>
+		<pre><code>
+db.poiConcat.find( {
+  ts: &quot;amenity=pub&quot;,
+  l: {
+    *$near: {*
+      *$geometry: {*
+        *type: 'Point',*
+        *coordinates: [ -0.1204, 51.5168 ]*
+      *},*
+      *$maxDistance: 500*
+    *}*
+  }
+} ).limit(5).pretty();
+</code></pre>
+		<pre><code>
+{
+  &quot;_id&quot; : &quot;n26848690&quot;,
+  &quot;l&quot; : {
+    &quot;type&quot; : &quot;Point&quot;,
+    &quot;coordinates&quot; : [ -0.119473, 51.516787 ]
+  },
+  &quot;ts&quot; : [
+    &quot;addr:housenumber=64-68&quot;,
+    &quot;addr:street=Kingsway&quot;,
+    &quot;amenity=pub&quot;,
+    &quot;name=The Shakespeare's Head&quot;,
+    &quot;wifi=free&quot;
+  ]
+}
+</code></pre>
+	</section>
+	<section>
+		<ul>
+			<li>Starts from a point</li>
+			<li>Looks at concentric donuts from that point</li>
+			<li>Want to look at documents within the donut</li>
+			<li>If distance from query point to document is within the donut, output</li>
+			<li>Adapts size of the donut as needed</li>
+		</ul>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/near-1.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/near-2.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/near-3.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/near-4.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/near-5.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/near-6.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/near-7.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/hydepark.png" width="" height="">
+		<pre><code>
+hydepark = db.poiConcat.findOne( {
+  ts: { $all: [
+    &quot;name=Hyde Park&quot;, &quot;leisure=park&quot;
+  ] }
+} );
+
+db.poiConcat.find( {
+  *l: { $geoWithin: {*
+    *$geometry: hydepark.l*
+  *} },*
+  ts: &quot;amenity=cafe&quot;
+} );
+
+</code></pre>
+		<pre><code>
+{
+  &quot;_id&quot; : &quot;w19851241&quot;,
+  &quot;ty&quot; : NumberLong(2),
+  &quot;l&quot; : *{*
+    *&quot;type&quot; : &quot;Polygon&quot;,*
+    *&quot;coordinates&quot; : [*
+      *[ [ -0.1549378, 51.508331 ], … [ -0.1549378, 51.508331 ] ]*
+    *]*
+  *},*
+  &quot;ts&quot; : [
+    &quot;access=yes&quot;, &quot;leisure=park&quot;, &quot;name=Hyde Park&quot;,
+    &quot;wikipedia=http://en.wikipedia.org/wiki/Hyde_Park,_London&quot;
+  ]
+}
+</code></pre>
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/within-1.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/within-2.png" width="" height="">
+	</section>
+	<section>
+		<img src="/../presentations/slides/mongodb/charingcross.png" width="" height="">
+		<pre><code>
+building = db.poiConcat.findOne( {
+  _id: &quot;w30734457&quot;
+} );
+
+db.poiConcat.find( {
+  l: {
+    *$geoIntersects: {*
+      *$geometry: building.l*
+    *}*
+  },
+  ts: {
+    $exists: true
+  }
+} );
+
+</code></pre>
+		<pre><code>
+{ &quot;_id&quot; : &quot;w5059478&quot;, &quot;ts&quot; : [ &quot;branch=Charing Cross&quot;, &quot;electrified=rail&quot;, &quot;frequency=0&quot;, &quot;gauge=1435&quot;, &quot;history=Retrieved from v43&quot;, &quot;layer=-3&quot;, &quot;line=Northern&quot;, &quot;loading_gauge=deep-tube&quot;, &quot;name=Northern Line (Charing Cross Branch) Southbound&quot;, &quot;network=London Underground&quot;, &quot;oneway=yes&quot;, &quot;railway=subway&quot;, &quot;tunnel=yes&quot;, &quot;voltage=630&quot; ] }
+{ &quot;_id&quot; : &quot;w139389296&quot;, &quot;ts&quot; : [ &quot;branch=Charing Cross&quot;, &quot;electrified=rail&quot;, &quot;frequency=10&quot;, &quot;gauge=1435&quot;, &quot;layer=-2&quot;, &quot;line=Northern&quot;, &quot;loading_gauge=deep-tube&quot;, &quot;name=Northern Line (Charing Cross Branch)&quot;, &quot;network=London Underground&quot;, &quot;oneway=yes&quot;, &quot;railway=subway&quot;, &quot;tunnel=yes&quot;, &quot;voltage=630&quot; ] }
+{ &quot;_id&quot; : &quot;n595696911&quot;, &quot;ts&quot; : [ &quot;disused=yes&quot;, &quot;disused:amenity=bar&quot;, &quot;name=Kudos&quot;, &quot;toilets=yes&quot;, &quot;toilets:access=customers&quot; ] }
+{ &quot;_id&quot; : &quot;n595696974&quot;, &quot;ts&quot; : [ &quot;amenity=cafe&quot;, &quot;name=Costa&quot;, &quot;wheelchair=yes&quot; ] }
+{ &quot;_id&quot; : &quot;n653124873&quot;, &quot;ts&quot; : [ &quot;addr:city=London&quot;, &quot;addr:housenumber=441&quot;, &quot;addr:street=Strand&quot;, &quot;operator=Paperchase&quot;, &quot;phone=020 7497 2797&quot;, &quot;postal_code=WC2R 0QU&quot;, &quot;shop=stationery&quot;, &quot;website=http://www.paperchase.co.uk/london/strand/stry/wc2r0qr/&quot; ] }
+{ &quot;_id&quot; : &quot;n1163880380&quot;, &quot;ts&quot; : [ &quot;addr:housenumber=430&quot;, &quot;addr:street=Strand&quot;, &quot;name=Ryman&quot;, &quot;phone=+44 20 7240 4408&quot;, &quot;postal_code=WC2R 0QN&quot;, &quot;shop=stationery&quot;, &quot;website=http://www.ryman.co.uk/store-finder/branches/branch/?storeid=1037&quot;, &quot;wheelchair=limited&quot; ] }
+{ &quot;_id&quot; : &quot;n1571982051&quot;, &quot;ts&quot; : [ &quot;name=Charing Cross&quot;, &quot;railway=subway_entrance&quot;, &quot;source:name=survey&quot;, &quot;source:railway=survey&quot; ] }
+{ &quot;_id&quot; : &quot;n1571982070&quot;, &quot;ts&quot; : [ &quot;name=Charing Cross&quot;, &quot;railway=subway_entrance&quot;, &quot;source:name=survey&quot;, &quot;source:railway=survey&quot;, &quot;wheelchair=no&quot; ] }
+{ &quot;_id&quot; : &quot;n2066862842&quot;, &quot;ts&quot; : [ &quot;addr:housenumber=440&quot;, &quot;addr:street=Strand&quot;, &quot;amenity=bank&quot;, &quot;name=Coutts &amp; Co&quot;, &quot;phone=+44 2077 531000&quot;, &quot;postal_code=WC2R 0QS&quot;, &quot;website=http://www.coutts.com/locations/london-strand/&quot; ] }
+{ &quot;_id&quot; : &quot;w166702178&quot;, &quot;ts&quot; : [ &quot;layer=-3&quot;, &quot;line=Jubilee&quot;, &quot;name=Jubilee Line (disused)&quot;, &quot;network=London Underground&quot;, &quot;oneway=yes&quot;, &quot;railway=disused&quot;, &quot;tunnel=yes&quot; ] }
+{ &quot;_id&quot; : &quot;w166707824&quot;, &quot;ts&quot; : [ &quot;layer=-2&quot;, &quot;name=Northern Line Southbound&quot;, &quot;railway=platform&quot; ] }
+{ &quot;_id&quot; : &quot;w166707825&quot;, &quot;ts&quot; : [ &quot;layer=-2&quot;, &quot;name=Northern Line Northbound&quot;, &quot;railway=platform&quot; ] }
+</code></pre>
+	</section>
+	<section>
+		<ul>
+			<li>MongoDB's aggregation framework has as <tt>$geoNear</tt> pipeline operator</li>
+			<li>Also adds the <tt>distance</tt> as a new field to the document</li>
+		</ul>
+		<ul>
+			<li>Has to be the first operator in the pipeline</li>
+			<li>Only works if there is <strong>one</strong> 2dsphere index</li>
+		</ul>
+	</section>
+	<section>
+	</section>
+	<section>
+	</section>
+	<section>
+		<ul>
+			<li>Loop over all nodes, and:
+		
+	</li>
+			<li>Loop over all the ways, and:
+		
+	</li>
+		</ul>
+		<pre><code>node_cache: 45.1MB — poiConcat:  84.2MB</code></pre>
+		<p class="p">https://github.com/derickr/3angle</p>
+	</section>
+	<section>
+		<p class="p">http://derickrethans.nl/talks/mongo-osm-confoo14</p>
+		<p class="p">derick@mongodb.com—@derickr</p>
+	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				backgroundTransition: 'none',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
