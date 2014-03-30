@@ -65,4 +65,7 @@ if (password_verify($pwd, $hash)) {
 }
 ]]></example>
 
+<break lines="1" section="php55_done"/>
+<link href="http://php.net/migration55">php.net/migration55</link>
+
 </slide>

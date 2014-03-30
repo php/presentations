@@ -68,7 +68,28 @@ query('select * from stuff');
 footer(); ]]></example>
 
 <break lines="1" />
+<blurb fontsize="4em">✔ default_charset ini setting also applies to htmlspecialchars/entities/...</blurb>
+
+<break lines="1" />
 <blurb fontsize="4em">✔ SSL Peer verification by default</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ openssl certificate fingerprints</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ SAN x509 extension matching when verifing host names</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ automatic DoS prevention of TLS renogotiation attacks</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ and many more openssl-related options</blurb>
+
+<break lines="1" section="php56_1"/>
+<blurb fontsize="4em">✔ Asynchronous PostgreSQL database connections</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Non-blocking PostgreSQL queries</blurb>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ New phpdbg SAPI</blurb>
@@ -77,6 +98,21 @@ footer(); ]]></example>
 <blurb fontsize="4em">✔ Support for &gt; 2GB file uploads</blurb>
 
 <break lines="1" />
+<blurb fontsize="4em">✔ The php://input stream is now re-usable</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Added hash_compare() for timing attack safe string comparison</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ Added gost-crypto (CryptoPro S-box) hash algorithm</blurb>
+
+<break lines="1" />
+<blurb fontsize="4em">✔ FPM workers can now change their apparmor profile</blurb>
+
+<break lines="1" />
 <blurb fontsize="4em">✔ OCI8 Improvements</blurb>
+
+<break lines="1" section="php56_done"/>
+<link href="http://php.net/migration56">php.net/migration56</link>
 
 </slide>
