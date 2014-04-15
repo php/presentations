@@ -1,0 +1,29 @@
+<slide>
+<title>Querying</title>
+
+<example>
+SELECT * FROM table;
+
+$db->table->find();
+</example>
+<example>
+SELECT foo, bar FROM table;
+
+$db->table->find( [], ['foo', 'bar'] );
+</example>
+<example>
+SELECT * FROM table WHERE a = 42;
+
+$db->table->find( [ 'a' => 42 ] );
+</example>
+<example>
+SELECT * FROM table WHERE a = 'whisky' AND b > 18;
+
+$db->table->find( [ 'a' => 'whisky', 'b' => [ '$gt' => 18 ] ] );
+</example>
+<example>
+SELECT * FROM table1 LEFT JOIN table2 ON (table1.a = table2.b);
+
+???
+</example>
+</slide>

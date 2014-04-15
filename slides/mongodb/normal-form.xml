@@ -1,7 +1,6 @@
 <slide>
 <title>Normalisation</title>
 
-<div effect="fade-out stop">
 <list>
 <bullet>*1NF*: A relation is in first normal form if the domain of each
 |aaaaaa|attribute contains| |cccccc|only atomic values, and the value of each attribute contains only a single value from that domain.|</bullet>
@@ -9,15 +8,4 @@
 |cccccc|on a proper subset of any candidate key|</bullet>
 <bullet>*3NF*: Every non-prime attribute is non-transitively |aaaaaa|dependent on every| |cccccc|candidate key in the table. The attributes that do not contribute to the description of the primary key are removed from the table. In other words, no transitive dependency is allowed.|</bullet>
 </list>
-</div>
-<div effect="fade-in">
-<list>
-<bullet>*EKNF*: Elementary Key Normal Form</bullet>
-<bullet>*BCNF*: Boyce–Codd normal form</bullet>
-<bullet>*4NF*: Fourth normal form</bullet>
-<bullet>*5NF*: Fifth normal form</bullet>
-<bullet>*DKNF*: Domain/key normal form</bullet>
-<bullet>*6NF*: Sixth normal form</bullet>
-</list>
-</div>
 </slide>
