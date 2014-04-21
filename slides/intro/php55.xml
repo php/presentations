@@ -20,6 +20,25 @@ foreach (xrange(0, 5) as $i) {
     echo $i, "\n";
 }]]></example>
 
+<break lines="1" section="coroutines" />
+<blurb fontsize="4em">✔ Coroutines</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+function logger($fileName) {
+    $fileHandle = fopen($fileName, 'a');
+    while (true) {
+        fwrite($fileHandle, yield . "\n");
+    }
+}
+
+$logger = logger(__DIR__ . '/log');
+$logger->send('Foo');
+$logger->send('Bar');
+]]></example>
+
+<break lines="1" />
+<blurb>For an advanced explanation of coroutines, read this article by Nikita Popov</blurb>
+<link href="http://nikic.github.io/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html">Cooperative multitasking using coroutines</link>
+
 <break lines="1" section="finally" />
 <blurb fontsize="4em">✔ finally</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
