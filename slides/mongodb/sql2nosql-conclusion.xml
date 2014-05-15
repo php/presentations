@@ -5,7 +5,7 @@
 <list>
     <bullet>No real schema design "theory"</bullet>
     <bullet>Schema design depends on data access paterns</bullet>
-    <bullet>ACID vs. CAP</bullet>
+    <bullet>Replication and sharding</bullet>
     <bullet>Traditional relational database features are replaced by features
     for scalability</bullet>
 </list>
