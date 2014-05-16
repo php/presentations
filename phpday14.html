@@ -152,7 +152,7 @@ $args1 = [1, 2, 3];
 $args2 = [4, 5, 6];
 test(...$args1, ...$args2); // [1, 2, 3, 4, 5, 6]
 test(1, 2, 3, ...$args2);   // [1, 2, 3, 4, 5, 6]
-test(...$args1, 4, 5, 6);   // [1, 2, 3, 4, 5, 6]</code></pre>
+test(...$args1, 4, 5, 6);   // Fatal error: Cannot use positional argument after argument unpacking</code></pre>
 		</section>
 <section id="php56constscalar">
 		<h4 class="p">✔ Constant scalar expressions</h4>
