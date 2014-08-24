@@ -1,0 +1,21 @@
+<slide title="PHP 7" section="php7">
+
+<break lines="1" />
+<blurb fontsize="4em">✔ phpng engine improvements</blurb>
+<list>
+<bullet fontsize="3em" marginleft="2em" type="none">10-25% performance gain on most realworld applications</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">lower memory usage</bullet>
+<bullet fontsize="3em" marginleft="2em" type="none">Cleans up some things for a future JIT</bullet>
+</list>
+
+<break lines="1" section="php7ast"/>
+<blurb fontsize="4em">✔ Abstract Syntax Tree</blurb>
+
+<blurb fontsize="4em">✔ 64-bit integer support on Windows</blurb>
+
+<blurb fontsize="4em">✔ Catchable &quot;call to member function of non-object&quot;</blurb>
+
+<blurb fontsize="4em"> </blurb>
+
+<blurb fontsize="3em">Still very early. Many more things could be added </blurb>
+</slide>
