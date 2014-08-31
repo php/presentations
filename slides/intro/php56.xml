@@ -104,7 +104,7 @@ footer(); ]]></example>
 <blurb fontsize="4em">✔ The php://input stream is now re-usable</blurb>
 
 <break lines="1" />
-<blurb fontsize="4em">✔ Added hash_compare() for timing attack safe string comparison</blurb>
+<blurb fontsize="4em">✔ Added hash_equals() for timing attack safe string comparison</blurb>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Added gost-crypto (CryptoPro S-box) hash algorithm</blurb>
