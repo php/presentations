@@ -1,0 +1,10 @@
+<slide>
+<title>MongoDB types and PHP</title>
+
+<list>
+	<bullet>Unlike PHP, MongoDB does not type juggle</bullet>
+	<bullet>There is a date type, but it's UTC only (MongoDate)</bullet>
+	<bullet>When reading, everything will be an (associative) array, but never
+	an object</bullet>
+</list>
+</slide>

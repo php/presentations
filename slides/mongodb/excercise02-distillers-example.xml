@@ -4,7 +4,7 @@
 <div effect="fade-out">
 <blurb>Collection: distillery</blurb>
 <example><![CDATA[{
-	name: "Glenfiddch",
+	name: "Glenfiddich",
 	country: "Scotland",
 	region: "Speyside",
 	opening_year: 1887,
@@ -12,7 +12,7 @@
 }]]></example>
 <blurb>Collection: whisky</blurb>
 <example><![CDATA[{
-	name: "Glenfiddch 15",
+	name: "Glenfiddich 15",
 	age: 15,
 	strength: 50.3
 }]]></example>
@@ -21,14 +21,14 @@
 <div effect="fade-in">
 <blurb>Collection: distillery</blurb>
 <example><![CDATA[{
-	name: "Glenfiddch",
+	name: "Glenfiddich",
 	country: "Scotland",
 	region: "Speyside",
 	opening_year: 1887
 }]]></example>
 <blurb>Collection: whisky</blurb>
 <example><![CDATA[{
-	name: "Glenfiddch 15",
+	name: "Glenfiddich 15",
 	age: 15,
 	strength: 50.3,
 	distillery: "Glenfiddich"

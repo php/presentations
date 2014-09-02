@@ -5,15 +5,13 @@
 <tr>
 <td>
 <example inline="3">
-*{ "name" : "Blues Restaurant &amp; Bar" },*
-*{ "name" : "Yard" },*
-*{ "name" : "Le Sacré Coeur" },*
-*{ "name" : "Ask" },*
-{ "name" : "Vigata" },
-{ "name" : "Sedir" },
-{ "name" : "Parveen" },
-{ "name" : "Mem &amp; Laz" },
-{ "name" : "Gallipoli" }
+*{ "beer_name" : "Old Engine Oil" }*
+*{ "beer_name" : "Pilsner" }*
+*{ "beer_name" : "Du Monde Blanc" }*
+*{ "beer_name" : "Rallar Amber Ale" }*
+{ "beer_name" : "Beer Geek Breakfast" }
+{ "beer_name" : "Dirty Bastard" }
+{ "beer_name" : "Brixton Porter" }
 </example>
 </td>
 <td>
@@ -23,15 +21,15 @@
 <example inline="3">
 [
 *  { $limit : 4 },*
-*  { $sort : { name: 1 } }*
+*  { $sort : { beer_name: 1 } }*
 ]
 </example>
 
 <example inline="3">
-{ "name" : "Ask" },
-{ "name" : "Blues Restaurant &amp; Bar" },
-{ "name" : "Le Sacré Coeur" },
-{ "name" : "Yard" },
+{ "beer_name" : "Du Monde Blanc" }
+{ "beer_name" : "Old Engine Oil" }
+{ "beer_name" : "Pilsner" }
+{ "beer_name" : "Rallar Amber Ale" }
 </example>
 </td></tr></table>
 <break />
@@ -40,15 +38,13 @@
 <tr>
 <td>
 <example inline="3">
-*{ "name" : "Blues Restaurant &amp; Bar" },*
-{ "name" : "Yard" },
-*{ "name" : "Le Sacré Coeur" },*
-*{ "name" : "Ask" },*
-{ "name" : "Vigata" },
-{ "name" : "Sedir" },
-{ "name" : "Parveen" },
-{ "name" : "Mem &amp; Laz" },
-*{ "name" : "Gallipoli" }*
+{ "beer_name" : "Old Engine Oil" }
+{ "beer_name" : "Pilsner" }
+*{ "beer_name" : "Du Monde Blanc" }*
+{ "beer_name" : "Rallar Amber Ale" }
+*{ "beer_name" : "Beer Geek Breakfast" }*
+*{ "beer_name" : "Dirty Bastard" }*
+*{ "beer_name" : "Brixton Porter" }*
 </example>
 </td>
 <td>
@@ -57,16 +53,16 @@
 <td>
 <example inline="3">
 [
-*  { $sort : { name: 1 } },*
+*  { $sort : { beer_name: 1 } },*
 *  { $limit : 4 }*
 ]
 </example>
 
 <example inline="3">
-{ "name" : "Ask" },
-{ "name" : "Blues Restaurant &amp; Bar" },
-{ "name" : "Gallipoli" }
-{ "name" : "Le Sacré Coeur" },
+{ "beer_name" : "Beer Geek Breakfast" }
+{ "beer_name" : "Brixton Porter" }
+{ "beer_name" : "Dirty Bastard" }
+{ "beer_name" : "Du Monde Blanc" }
 </example>
 </td></tr></table>
 

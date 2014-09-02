@@ -5,15 +5,13 @@
 <tr>
 <td>
 <example inline="3">
-{ "name" : "Blues Restaurant &amp; Bar" },
-{ "name" : "Yard" },
-{ "name" : "Le Sacré Coeur" },
-{ "name" : "Ask" },
-{ "name" : "Vigata" },
-{ "name" : "Sedir" },
-{ "name" : "Parveen" },
-{ "name" : "Mem &amp; Laz" },
-{ "name" : "Gallipoli" }
+{ "beer_name" : "Old Engine Oil" }
+{ "beer_name" : "Pilsner" }
+{ "beer_name" : "Du Monde Blanc" }
+{ "beer_name" : "Rallar Amber Ale" }
+{ "beer_name" : "Beer Geek Breakfast" }
+{ "beer_name" : "Dirty Bastard" }
+{ "beer_name" : "Brixton Porter" }
 </example>
 </td>
 <td>
@@ -25,11 +23,11 @@
 </example>
 
 <example inline="3">
-{ "name" : "Blues Restaurant &amp; Bar" },
-{ "name" : "Yard" },
-{ "name" : "Le Sacré Coeur" },
-{ "name" : "Ask" },
-{ "name" : "Vigata" },
+{ "beer_name" : "Old Engine Oil" }
+{ "beer_name" : "Pilsner" }
+{ "beer_name" : "Du Monde Blanc" }
+{ "beer_name" : "Rallar Amber Ale" }
+{ "beer_name" : "Beer Geek Breakfast" }
 </example>
 </td></tr></table>
 </slide>

@@ -1,0 +1,11 @@
+<slide>
+<title>Excercise: import with types</title>
+
+<div>Update the import script to use types</div>
+
+<list>
+	<bullet>Import %beer_abv%, %beer_ibu%, %venue_lat%, %venue_lng% and %rating_score% as float.</bullet>
+	<bullet>Import %created_at% as %MongoDate% object</bullet>
+	<bullet>Fix the finding script</bullet>
+</list>
+</slide>

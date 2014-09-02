@@ -1,0 +1,12 @@
+<slide>
+<title>Excercise: querying</title>
+
+<div>Write a script that:</div>
+
+<list>
+	<bullet>Outputs the *date* date of the first "check-in" for *USA Hells*</bullet>
+	<bullet>List all *beer names* (with rating and date), where the beer has a
+	rating of *4.5 or higher*, ordered first by rating (highest first), and second by
+	date (earliest first).</bullet>
+</list>
+</slide>

@@ -6,30 +6,24 @@
 <td>
 <example inline="3">
 {
-  "_id" : "n306036143",
-  "tags" : {
-*    "amenity" : "cafe",*
-    "cuisine" : "italian",
-    "name" : "Saponara"
-  }
-},
+    "_id" : ObjectId("5400a24f44670a01098b47b2"),
+    "beer_name" : "Floris Framboise",
+    "brewery_name" : "Brouwerij Huyghe"
+}
 {
-  "_id" : "n306042529",
-  "tags" : {
-*    "amenity" : "restaurant",*
-    "cuisine" : "asian",
-    "layer" : "2",
-    "name" : "Wagamama"
-  }
-},
+    "_id" : ObjectId("5400a24f44670a01098b47b3"),
+    "beer_name" : "Arabier",
+    "brewery_name" : "Brouwerij De Dolle Brouwers"
+}
 {
-  "_id" : "n306042546",
-  "tags" : {
-*    "amenity" : "restaurant",*
-    "cuisine" : "sushi",
-    "layer" : "2",
-    "name" : "Yo! Sushi"
-  }
+    "_id" : ObjectId("5400a24f44670a01098b47b4"),
+    "beer_name" : "La Trappe Dubbel",
+    "brewery_name" : "Bierbrouwerij De Koningshoeven"
+}
+{
+    "_id" : ObjectId("5400a24f44670a01098b47b6"),
+    "beer_name" : "Marks &amp; Spencer Belgian Winter Beer",
+    "brewery_name" : "Brouwerij Huyghe"
 }
 </example>
 </td>
@@ -39,18 +33,22 @@
 <td>
 <example inline="3">
 { $group: {
-*  _id: '$tags.amenity',*
+*  _id: '$brewery_name',*
   count: { *'$sum': 1* }
 } }
 </example>
 
 <example inline="3">
 {
-  "_id" : "restaurant",
+  "_id" : "Brouwerij Huyghe",
   "count" : 2
 },
 {
-  "_id" : "cafe",
+  "_id" : "Brouwerij De Dolle Brouwers",
+  "count" : 1
+},
+{
+  "_id" : "Bierbrouwerij De Koningshoeven",
   "count" : 1
 },
 </example>

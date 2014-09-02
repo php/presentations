@@ -6,29 +6,22 @@
 <td>
 <example inline="3">
 {
-  "_id" : "n388320891",
-  "tags" : {
-*    "amenity" : "restaurant",*
-*    "cuisine" : "chinese",*
-    "name" : "China GaGa"
-  }
-},
+    "_id" : ObjectId("5400a24f44670a01098b488f"),
+    "beer_name" : "Reveller",
+    "brewery_name" : "Orchard Pig",
+    "beer_type" : "Cider"
+}
 {
-  "_id" : "n388826644",
-  "tags" : {
-*    "amenity" : "restaurant",*
-*    "cuisine" : "japanese",*
-    "name" : "Oisi"
-  }
-},
+    "_id" : ObjectId("5400a24f44670a01098b4890"),
+    "beer_name" : "Hacker-Pschorr Hefe Weisse",
+    "brewery_name" : "Paulaner Gruppe",
+    "beer_type" : "Hefeweizen"
+}
 {
-  "_id" : "n389031406",
-  "tags" : {
-*    "amenity" : "pub",*
-*    "cuisine" : "tapas",*
-    "food" : "yes",
-    "name" : "Tonic"
-  }
+    "_id" : ObjectId("5400a24f44670a01098b4891"),
+    "beer_name" : "Hacker-Pschorr Münchener Gold",
+    "brewery_name" : "Paulaner Gruppe",
+    "beer_type" : "Dortmunder / Export Lager"
 }
 </example>
 </td>
@@ -38,24 +31,24 @@
 <td>
 <example inline="3">
 { $group: {
-*  _id: '$tags.amenity',*
-  cuisines: { *'$addToSet': '$tags.cuisine'* }
+*  _id: '$brewery_name',*
+  beers: { *'$addToSet': '$beer_name'* }
 } }
 </example>
 
 <example inline="3">
 {
-  "_id" : "pub",
-  "cuisines" : [
-    "tapas"
-  ]
-},
+    "_id" : "Paulaner Gruppe",
+    "beers" : [
+        "Hacker-Pschorr Münchener Gold",
+        "Hacker-Pschorr Hefe Weisse"
+    ]
+}
 {
-  "_id" : "restaurant",
-  "cuisines" : [
-    "japanese",
-    "chinese"
-  ]
+    "_id" : "Orchard Pig",
+    "beers" : [ 
+        "Reveller" 
+    ] 
 }
 </example>
 </td></tr></table>

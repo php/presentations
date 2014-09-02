@@ -1,19 +1,22 @@
 <slide>
 <title>Aggregation example</title>
 
-<example result="3"><![CDATA[<?php
+<blurb>Find 10 venues with the most distinct beers</blurb>
+<example result="1"><![CDATA[<?php
 $m = new MongoClient();
 
-$res = $m->demo->poiConcat->aggregate( [
-    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
-    [ '$unwind' => '$ts' ],
-    [ '$match' => [ 'ts' => new MongoRegex( '/^cuisine=/' ) ] ],
-    [ '$group' => [ '_id' => '$ts', 'count' => [ '$sum' => 1 ] ] ],
-    /* and at last we sort by count */
+$res = $m->tutorial->beer->aggregate( [
+    [ '$match' => [ 'venue_name' => [ '$ne' => null ] ] ],
+    [ '$group' => [ '_id' => [ 'venue' => '$venue_name', 'beer' => '$beer_name' ] ] ], 
+    [ '$group' => [ '_id' => '$_id.venue', count => [ '$sum' => 1 ] ] ], 
     [ '$sort' => [ 'count' => -1 ] ],
+    [ '$limit' => 10 ],
 ] );
 
-var_dump( $res['result'] );
+foreach ( $res['result'] as $result )
+{
+    echo $result['_id'], ': ', $result['count'], "\n";
+}
 ?>]]>
 </example>
 </slide>

@@ -6,21 +6,12 @@
 <td>
 <example inline="3">
 {
-  "_id" : "n691721239",
-  "type" : NumberLong(1),
-  "loc" : [
-    -0.135621,
-    51.515325
-  ],
-  "tags" : {
-    "addr:city" : "London",
-    "addr:country" : "GB",
-    "addr:housenumber" : "187b",
-    "addr:street" : "Wardour Street",
-    "amenity" : "restaurant",
-    "cuisine" : "korean",
-    "name" : "Red Devil"
-  }
+    "beer_name" : "Crazy Goat",
+    "brewery_name" : "Lilleys Cider Barn",
+    "beer_type" : "Cider",
+    "beer_abv" : 6.8,
+    "beer_ibu" : 0,
+    "brewery_country" : "England"
 }
 </example>
 </td>
@@ -30,27 +21,22 @@
 <td>
 <example inline="3">
 { $project: {
-  *name:    '$tags.name',*
-  cuisine: '$tags.cuisine',
-*  address: {*
-*    nr:     '$tags.addr:housenumber',*
-*    street: '$tags.addr:street',*
-*    city:   '$tags.addr:city'*
+  *name:    '$beer_name',*
+*  brewery: {*
+*    name:    '$brewery_name',*
+*    country: '$brewery_country',*
 *  }*
 } }
 </example>
 
 <example inline="3">
-    {
-      "_id" : "n691721239",
-      *"name" : "Red Devil",*
-      "cuisine" : "korean",
-*      "address" : {*
-*        "nr" : "187b",*
-*        "street" : "Wardour Street",*
-*        "city" : "London"*
-*      }*
+{
+    "name": "Crazy Goat",
+    "brewery": {
+        "name": "Lilleys Cider Barn",
+        "country": "England",
     }
+}
 </example>
 </td></tr></table>
 </slide>

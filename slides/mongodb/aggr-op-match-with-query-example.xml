@@ -6,30 +6,19 @@
 <td>
 <example inline="3">
 {
-  "_id" : "n1240135999",
-  "tags" : {
-    "amenity" : "restaurant",
-    "cuisine" : "thai",
-    "name" : "Addie's Thai"
-  }
+    "beer_name" : "Premium Organic Cider",
+    "brewery_name" : "Dunkertons",
+    *"beer_abv" : 6.8*
 }
 {
-  "_id" : "n1242469688",
-  "tags" : {
-*    "addr:postcode" : "CR6 9EG",*
-    "addr:street" : "Farleigh Road",
-    "amenity" : "restaurant",
-    "cuisine" : "regional",
-    "name" : "The Horseshoe"
-  }
+    "beer_name" : "Belgian White",
+    "brewery_name" : "Blue Moon Brewing Company",
+    "beer_abv" : 5.4
 }
 {
-  "_id" : "n1242549289",
-  "tags" : {
-    "amenity" : "restaurant",
-    "cuisine" : "ethiopian",
-    "name" : "Queen of Sheba"
-  }
+    "beer_name" : "Premium Cloudy Cider",
+    "brewery_name" : "Addlestones (C&amp;C Group plc)",
+    "beer_abv" : 5.2
 }
 </example>
 </td>
@@ -39,20 +28,15 @@
 <td>
 <example inline="3">
 {  $match: {
-*  "tags.addr:postcode": { $exists: true }*
+*  "beer_abv": { $gte: 6 }*
 } }
 </example>
 
 <example inline="3">
 {
-  "_id" : "n1242469688",
-  "tags" : {
-*    "addr:postcode" : "CR6 9EG",*
-    "addr:street" : "Farleigh Road",
-    "amenity" : "restaurant",
-    "cuisine" : "regional",
-    "name" : "The Horseshoe"
-  }
+    "beer_name" : "Premium Organic Cider",
+    "brewery_name" : "Dunkertons",
+    *"beer_abv" : 6.8*
 }
 </example>
 </td></tr></table>

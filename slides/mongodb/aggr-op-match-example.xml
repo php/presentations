@@ -6,28 +6,19 @@
 <td>
 <example inline="3">
 {
-  "_id" : "w42931536",
-  "tags" : {
-    "amenity" : "restaurant",
-*    "cuisine" : "french",*
-    "name" : "Le Comptoir Gascon",
-  }
+    "beer_name" : "Gentleman's Wit",
+    "brewery_name" : "Camden Town Brewery",
+    "beer_type" : "Witbier"
 }
 {
-  "_id" : "w50732182",
-  "tags" : {
-    "amenity" : "restaurant",
-*    "cuisine" : "burger",*
-    "name" : "Starving Marvin's",
-  }
+    "beer_name" : "Old Rascal",
+    "brewery_name" : "Thatchers",
+    *"beer_type" : "Cider"*
 }
 {
-  "_id" : "w58537927",
-  "tags" : {
-    "amenity" : "restaurant",
-*    "cuisine" : "chinese",*
-    "name" : "Royal Garden Restaurant"
-  }
+    "beer_name" : "Byron Lager",
+    *"brewery_name" : "Camden Town Brewery",
+    "beer_type" : "Euro Lager"
 }
 </example>
 </td>
@@ -38,19 +29,16 @@
 <example inline="3">
 {
 *  $match: {*
-*    "tags.cuisine": "chinese"*
+*    "beer_type": "Cider"*
 *  }*
 }
 </example>
 
 <example inline="3">
 {
-  "_id" : "w58537927",
-  "tags" : {
-    "building" : "yes",
-*    "cuisine" : "chinese",*
-    "name" : "Royal Garden Restaurant"
-  }
+    "beer_name" : "Old Rascal",
+    "brewery_name" : "Thatchers",
+    *"beer_type" : "Cider"*
 }
 </example>
 </td></tr></table>

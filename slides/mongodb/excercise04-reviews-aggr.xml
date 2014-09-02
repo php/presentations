@@ -1,35 +1,12 @@
 <slide>
 <title>Excercise: Aggregation</title>
 
-<blurb>http://pastebin.com/rzYUULs2</blurb>
+<blurb>Write a script that uses the Aggregation Framework to:</blurb>
 
-<div effect="fade-out">
-<example><![CDATA[{
-    name: "Glenfiddich 15",
-    notes: [
-        {
-            user_name: "Derick", likes: 17, rating: 3.5,
-            note: "Caramel and honey, fruity with some hints of earth",
-        },
-        {
-            user_name: "Michael", likes: 9, rating: 3,
-            note: "Fruity and oaky",
-        }
-    ]
-},
-{
-    name: "Lagavullin 16",
-    notes: [
-        {
-            user_name: "Michael", likes: 7, rating: 4.5,
-            note: "Earty and full of nice peat smoke",
-        },
-    ]
-}]]></example>
-</div>
-
-<div effect="fade-in">
-<blurb>Write a script that uses the Aggregation Framework to list all review for a user
-sorted on rating</blurb>
-</div>
+<list>
+    <bullet>List the average %rating_score% per %beer_type%</bullet>
+    <bullet>Only include types if there are more than 5 ratings</bullet>
+    <bullet>Sort by highest rated type</bullet>
+    <bullet>Show only the top 8</bullet>
+</list>
 </slide>

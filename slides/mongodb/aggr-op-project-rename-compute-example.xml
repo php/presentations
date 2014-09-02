@@ -6,20 +6,13 @@
 <td>
 <example inline="3">
 {
-  "_id" : "n375475617",
-  "type" : NumberLong(1),
-  "loc" : [
-    -0.1502324,
-    51.4440935
-  ],
-*  "tags"* : {
-    "addr:housenumber" : "37",
-    "addr:street" : "Bedford Hill",
-    "amenity" : "restaurant",
-    "cuisine" : "greek",
-    "name" : "Meze Kitchen"
-  }
-},
+    "beer_name" : "Crazy Goat",
+    "brewery_name" : "Lilleys Cider Barn",
+    "beer_type" : "Cider",
+    "beer_abv" : 6.8,
+    "beer_ibu" : 0,
+    "brewery_country" : "England"
+}
 </example>
 </td>
 <td>
@@ -28,26 +21,21 @@
 <td>
 <example inline="3">
 { $project: {
-  address: { *$concat: [*
-*    '$tags.addr:housenumber',*
-*    ' ',*
-*    '$tags.addr:street'*
+  beer: { *$concat: [*
+*    '$beer_name',*
+*    ' (',*
+*    '$beer_type'*
+*    ')',*
 *  ]* },
-  'desc': *'$tags'*
+  'country': *'$brewery_country'*
 } }
 </example>
 
 <example inline="3">
 {
-  "_id" : "n375475617",
-*  "address" : "37 Bedford Hill",*
-*  "desc"* : {
-    "addr:housenumber" : "37",
-    "addr:street" : "Bedford Hill",
-    "amenity" : "restaurant",
-    "cuisine" : "greek",
-    "name" : "Meze Kitchen"
-  }
+    "_id" : ObjectId("5400a24f44670a01098b4657"),
+    "beer" : "Grazy Goat (Cider)",
+    "country" : "England"
 },
 </example>
 </td></tr></table>
