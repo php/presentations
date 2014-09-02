@@ -1,8 +1,8 @@
 <slide>
-<title>Querying by just the DEM</title>
+<title>Querying by just the elevation</title>
 
 <example inline="1">
-db.cities.find( { dem: { $gte : 1654 } } ).explain();
+db.cities.find( { elevation: { $gte : 1654 } } ).explain();
 </example>
 <example inline="1">
 {

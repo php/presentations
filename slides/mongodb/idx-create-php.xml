@@ -6,16 +6,17 @@
 <example><![CDATA[
 <?php
 $m = new MongoClient;
-$c = $m->demo->cities;
+$c = $m->tutorial->beer;
 
-// Create an index on the name attribute
-$c->ensureIndex( array( 'name' => 1 ) );
+// Create an index on the beer name attribute
+$c->ensureIndex( [ 'beer_name' => 1 ] );
 
-// Create a compound index on country code and feature code
-$c->ensureIndex( array( 'country_code' => 1, 'feature_code' => 1 ) );
+// Create a compound index on beer name and brewery name
+$c->ensureIndex( [ 'beer_name' => 1, 'brewery_name' => 1 ] );
 
-// Create a unique index on the area field of timezone:
-$c->ensureIndex( array( 'timezone.area' => 1 ) );
+// Create a unique index on the name field of the venue attribute
+$c->ensureIndex( [ 'venue.name' => 1 ] );
+?>
 ]]>
 </example>
 </slide>

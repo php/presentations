@@ -10,6 +10,8 @@ db.cities.find( { country_code: 'GB', population: { $gte: 500000 } } ).*explain(
 	|00aa00|"nscanned" : 4,|
 	|00aa00|"nscannedObjects" : 4,|
 	|00aa00|"n" : 4,|
+	"nscannedObjectsAllPlans" : 9,
+	"nscannedAllPlans" : 10,
 	"millis" : 0,
 	"nYields" : 0,
 	"nChunkSkips" : 0,
@@ -17,7 +19,7 @@ db.cities.find( { country_code: 'GB', population: { $gte: 500000 } } ).*explain(
 	"indexOnly" : false,
 	"indexBounds" : {
 		"country_code" : [ [ "GB", "GB" ] ],
-		"population" : [ [ 500000, 1.7976931348623157e+308 ] ]
+		"population" : [ [ 500000, Infinity ] ]
 	}
 }
 </example>

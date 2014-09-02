@@ -6,7 +6,7 @@
 <location>Rovinj, Croatia</location>
 <date>September 5th, 2014</date>
 <speaker>Derick Rethans</speaker>
-<email>derick@10gen.com</email>
+<email>derick@mongodb.com</email>
 <twitter>derickr</twitter>
 <url>http://derickrethans.nl/talks.html</url>
 <joindin></joindin>
@@ -140,6 +140,10 @@ Common Patterns
 <slide>slides/mongodb/idx-cities-by-name-and-pop.xml</slide>
 <slide>slides/mongodb/idx-cities-by-name-and-pop2.xml</slide>
 <slide>slides/mongodb/idx-cities-by-name-and-pop3.xml</slide>
+
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise05-indexes.xml</slide>
+
 <slide>slides/mongodb/idx-cities-by-pop-and-dem.xml</slide>
 <slide>slides/mongodb/idx-cities-by-pop-and-dem2.xml</slide>
 <slide>slides/mongodb/idx-stored2.xml</slide>

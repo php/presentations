@@ -1,0 +1,13 @@
+<slide>
+<title>Excercise: Indexes</title>
+
+<blurb>A common query is to find the ten highest rated beers ordered by %rating_score% first, and %created_at% second.<br/>Write a script to:</blurb>
+
+<list>
+<bullet>Run the query</bullet>
+<bullet>Run the query with explain</bullet>
+<bullet>Add the index</bullet>
+<bullet>Run the query again with explain</bullet>
+<bullet>Delete the index that you've created</bullet>
+</list>
+</slide>

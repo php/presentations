@@ -11,14 +11,14 @@ db.cities.find( { country_code: 'GB', population: { $gte: 500000 } } )
 	"nscanned" : 4,
 	"nscannedObjects" : 4,
 	"n" : 4,
+	"nscannedObjectsAllPlans" : 9,
+	"nscannedAllPlans" : 10,
 	"millis" : 0,
-	"nYields" : 0,
-	"nChunkSkips" : 0,
 	"isMultiKey" : false,
 	"indexOnly" : false,
 	"indexBounds" : {
 		"country_code" : [ [ "GB", "GB" ] ],
-		"population" : [ [ ~*1.7976931348623157e+308, 500000*~ ] ]
+		"population" : [ [ ~*Infinity, 500000*~ ] ]
 	}
 }
 </example>

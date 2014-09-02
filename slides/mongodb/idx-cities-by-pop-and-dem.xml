@@ -2,7 +2,7 @@
 <title>Let's imagine another compound index</title>
 
 <table>
-<tr><th>Country</th><th>Name</th><th>_Population_</th><th>_DEM_</th></tr>
+<tr><th>Country</th><th>Name</th><th>_Population_</th><th>_Elevation_</th></tr>
 <tr><td>AD</td><td>les Escaldes</td><td>15853</td><td>1033</td></tr>
 <tr><td>AD</td><td>Andorra la Vella</td><td>20430</td><td>1037</td></tr>
 <tr><td>...</td><td>...</td><td>...</td><td>...</td></tr>
@@ -12,5 +12,5 @@
 <tr><td>MX</td><td>Mexico City</td><td>12294193</td><td>2240</td></tr>
 <tr><td>...</td><td>...</td><td>...</td><td>...</td></tr>
 </table>
-<example>db.cities.ensureIndex( { population: 1, dem: 1 } );</example>
+<example>db.cities.ensureIndex( { population: 1, elevation: 1 } );</example>
 </slide>

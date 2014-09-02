@@ -1,7 +1,7 @@
 <slide>
-<title>Let's have a quick look on how index look-ups work</title>
+<title>A quick look on how index look-ups work</title>
 
-<example>db.cities.find( { population: { $gte: 2000000 }, dem: { $gte: 1654 } } );</example>
+<example>db.cities.find( { population: { $gte: 2000000 }, elevation: { $gte: 1654 } } );</example>
 
 <div effect="fade-out">
 <table>
