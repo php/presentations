@@ -27,7 +27,7 @@ res = db.poiConcat.aggregate( [ {
 ]]></example>
 </div>
 
-<div effect="fade-in-out">
+<div effect="fade-in-out stop">
 <example inline="1"><![CDATA[
 res = db.poiConcat.aggregate( [ {|
   |ff0000|'$geoNear' : { |

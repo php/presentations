@@ -1,7 +1,7 @@
 <slide>
 <title>Geo Operators</title>
 
-<blurb>%$near%</blurb>
+<blurb>%$geoNear%</blurb>
 <list>
      <bullet>find stuff near a point</bullet>
      <bullet>index required</bullet>

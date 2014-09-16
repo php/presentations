@@ -1,30 +1,13 @@
 <slide>
-<title>Geospatial indexes (2d indexes)</title>
+<title>Geospatial indexes</title>
 
 <blurb>MongoDB supports indexes on two dimensional fields:</blurb>
 <example>db.cities.ensureIndex( { location: '2d' } )</example>
 
-<example inline="1">
-db.cities.find( { location: { *$near: [ -0.088, 51.489 ]* } } );
-</example>
+<blurb>and</blurb>
 
-<example inline="1">
-db.cities.find( { location: { $near: [ -0.088, 51.489 ] } } ).explain();
-{
-    *"cursor" : "GeoSearchCursor",*
-    "nscanned" : 100,
-    "nscannedObjects" : 100,
-    "n" : 100,
-...
-</example>
+<blurb>MongoDB supports indexes on *geospatial fields*:</blurb>
+<example>db.cities.ensureIndex( { location: '2dsphere' } )</example>
 
-<list>
-<bullet>By default only 100 items, but changable with %limit()%</bullet>
-<bullet>You can also add %maxDistance%: 
-<example inline="1">
-db.cities.find( { location: { $near: [ -0.08, 51.48 ], *$maxDistance: 0.1* } } );
-</example>
-</bullet>
-</list>
 
 </slide>

@@ -13,5 +13,5 @@
 {/if}
 {if $attr}<div{if $align} align='{$align}'{/if}>{/if}
 <iframe style="clear: both; background-color: #fff; margin-left: 9px;" scrolling="no" frameborder="0" width="{$width}" height="{$height}" {if $inline}class='inline' {/if}{if $align}align='{$align}' {/if}src='{$source}'></iframe>
-<img src="{$pres->base}{get_attribute( $node, 'image' )}"/>
+<!--<img src="{$pres->base}{get_attribute( $node, 'image' )}"/>-->
 {if $attr}<span class='attribution'>{$attr}</span></div>{/if}

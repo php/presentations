@@ -15,6 +15,6 @@
 <list>
 	<bullet>GeoJSON is a format for encoding a variety of geographic data structures.</bullet>
 	<bullet>Used by various other HTML APIs as well: OpenLayers, Leaflet and through GDAL also PostGIS.</bullet>
-	<bullet>MongoDB supports three sub-formats: Point, LineString, and Polygon.</bullet>
+	<bullet>Point, MultiPoint, LineString, MultiLineString, Polygon, MultiPolygon and GeometryCollection.</bullet>
 </list>
 </slide>
