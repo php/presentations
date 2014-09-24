@@ -448,8 +448,44 @@ footer();</code></pre>
 		<h4 class="p">✔ Abstract Syntax Tree</h4>
 		<h4 class="p">✔ 64-bit integer support on Windows</h4>
 		<h4 class="p">✔ Catchable "call to member function of non-object"</h4>
+		</section>
+<section id="php7UVS">
+		<h4 class="p">✔ Uniform variable syntax</h4>
+		<pre><code>// support missing combinations of operations
+$foo()['bar']()
+[$obj1, $obj2][0]-&gt;prop
+getStr(){0}
+ 
+// support nested ::
+$foo['bar']::$baz
+$foo::$bar::$baz
+$foo-&gt;bar()::baz()
+ 
+// support nested ()
+foo()()
+$foo-&gt;bar()()
+Foo::bar()()
+$foo()()
+ 
+// support operations on arbitrary (...) expressions
+(...)['foo']
+(...)-&gt;foo
+(...)-&gt;foo()
+(...)::$foo
+(...)::foo()
+(...)()
+ 
+// two more practical examples for the last point
+(function() { ... })()
+($obj-&gt;closure)()
+ 
+// support all operations on dereferencable scalars
+// (not very useful)
+&quot;string&quot;-&gt;toLower()
+[$obj, 'method']()
+'Foo'::$bar</code></pre>
 		<h4 class="p"> </h4>
-		<p class="p">Still very early. Many more things could be added </p>
+		<p class="p">Still very early. Many more things will likely be added</p>
 		</section>	</section>
 	<section>
 		<img src="/presentations/slides/intro/lovehack-white-1000.png" width="1001" height="421">
