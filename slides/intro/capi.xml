@@ -1,6 +1,26 @@
 <slide title="">
-<break lines="8"/>
+<break lines="4"/>
 
 <blurb fontsize="8em">C API for the Web</blurb>
+
+<example type="C"><![CDATA[void Cos(void) {
+    Stack *s;
+    char temp[64];
+
+    s = Pop();
+    if(!s) {
+        Error("Stack error in cos");
+        return;
+    }
+    sprintf(temp,"%f",cos(s->douval));
+    Push(temp,DNUMBER);
+}]]></example>
+
+<blurb fontsize="4em">And you could then use it like this:</blurb>
+
+<example><![CDATA[<html><head><title>Cos Example</title></head>
+<body><h1>Cos Example</h1>
+<?echo Cos($input)?>
+</body></html>]]></example>
 
 </slide>

@@ -204,6 +204,23 @@ http://www.io.org/~rasmus</code></pre>
 	</section>
 	<section>
 		<h2>C API for the Web</h2>
+		<pre><code class="C">void Cos(void) {
+    Stack *s;
+    char temp[64];
+
+    s = Pop();
+    if(!s) {
+        Error(&quot;Stack error in cos&quot;);
+        return;
+    }
+    sprintf(temp,&quot;%f&quot;,cos(s-&gt;douval));
+    Push(temp,DNUMBER);
+}</code></pre>
+		<h4 class="p">And you could then use it like this:</h4>
+		<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Cos Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Cos Example&lt;/h1&gt;
+&lt;?echo Cos($input)?&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
 	</section>
 	<section>
 		<h3 class="p">Focus on the Ecosystem</h3>
