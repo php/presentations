@@ -1,0 +1,52 @@
+<slide title="">
+<break lines="4"/>
+
+<blurb fontsize="6em">PHP Announcement June 8, 1995</blurb>
+<blurb fontsize="4em">Posted to comp.infosystems.www.authoring.cgi</blurb>
+<example type="html"><![CDATA[Subject: Announce: Personal Home Page Tools (PHP Tools)
+
+Announcing the Personal Home Page Tools (PHP Tools) version 1.0.
+These tools are a set of small tight cgi binaries written in C.
+They perform a number of functions including:
+
+. Logging accesses to your pages in your own private log files
+. Real-time viewing of log information
+. Providing a nice interface to this log information
+. Displaying last access information right on your pages
+. Full daily and total access counters
+. Banning access to users based on their domain
+. Password protecting pages based on users' domains
+. Tracking accesses ** based on users' e-mail addresses **
+. Tracking referring URL's - HTTP_REFERER support
+. Performing server-side includes without needing server support for it
+. Ability to not log accesses from certain domains (ie. your own)
+. Easily create and display forms
+. Ability to use form information in following documents
+
+Here is what you don't need to use these tools:
+
+. You do not need root access - install in your ~/public_html dir
+. You do not need server-side includes enabled in your server
+. You do not need access to Perl or Tcl or any other script interpreter
+. You do not need access to the httpd log files
+
+The only requirement for these tools to work is that you have
+the ability to execute your own cgi programs.  Ask your system
+administrator if you are not sure what this means.
+
+The tools also allow you to implement a guestbook or any other
+form that needs to write information and display it to users
+later in about 2 minutes.
+
+The tools are in the public domain distributed under the GNU
+Public License.  Yes, that means they are free!
+
+For a complete demonstration of these tools, point your browser
+at: http://www.io.org/~rasmus
+
+--
+Rasmus Lerdorf
+rasmus@io.org
+http://www.io.org/~rasmus]]></example>
+
+</slide>
