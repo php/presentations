@@ -7,10 +7,11 @@ description of the primary key are removed from the table. In other words, no
 transitive dependency is allowed.</blurb>
 
 <table>
-<tr><th>Tournament</th><th>Year</th><th>Winner</th><th>Winner Date of Birth</th></tr>
-<tr><td>Indiana Invitational</td><td>1998</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
-<tr><td>Cleveland Open</td><td>1999</td><td>|ff0000|Bob Albertson|</td><td>|ff0000|28 September 1968|</td></tr>
-<tr><td>Des Moines Masters</td><td>1999</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
-<tr><td>Indiana Invitational</td><td>1999</td><td>|ff0000|Chip Masterson|</td><td>|ff0000|14 March 1977|</td></tr>
+<tr><th>_Brewery_</th><th>_Beer_</th><th>Venue</th><th>Venue City</th></tr>
+<tr><td>BrewDog</td><td>Brixton Porter</td><td>|ff0000|The Flying Dutchman|</td><td>|ff0000|Bergen|</td></tr>
+<tr><td>BrewDog</td><td>Cocoa Psycho</td><td>|ff0000|BrewDog Camden|</td><td>|ff0000|London|</td></tr>
+<tr><td>Nøgne Ø</td><td>Blonde</td><td>|ff0000|Pingvinen|</td><td>|ff0000|Bergen|</td></tr>
+<tr><td>Nøgne Ø</td><td>Funky Geyser</td><td>|ff0000|Cardinal|</td><td>|ff0000|Stavanger|</td></tr>
+<tr><td>Pookhill</td><td>Irish Whiskey Cask</td><td>|ff0000|GBBF|</td><td>|ff0000|London|</td></tr>
 </table>
 </slide>

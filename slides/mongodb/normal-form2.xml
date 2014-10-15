@@ -5,12 +5,11 @@
 proper subset of any candidate key</blurb>
 
 <table>
-<tr><th>Employee</th><th>Skill</th><th>Current Work Location</th></tr>
-<tr><td>Brown</td><td>Light Cleaning</td><td>73 Industrial Way</td></tr>
-<tr><td>Brown</td><td>Typing</td><td>|ff0000|73 Industrial Way|</td></tr>
-<tr><td>Harrison</td><td>Light Cleaning</td><td>73 Industrial Way</td></tr>
-<tr><td>Jones</td><td>Shorthand</td><td>114 Main Street</td></tr>
-<tr><td>Jones</td><td>Typing</td><td>|ff0000|114 Main Street|</td></tr>
-<tr><td>Jones</td><td>Whittling</td><td>|ff0000|114 Main Street|</td></tr>
+<tr><th>_Brewery_</th><th>_Beer_</th><th>Brewery Country</th></tr>
+<tr><td>BrewDog</td><td>Brixton Porter</td><td>Scotland</td></tr>
+<tr><td>BrewDog</td><td>Cocoa Psycho</td><td>|ff0000|Scotland|</td></tr>
+<tr><td>Nøgne Ø</td><td>Blonde</td><td>Norway</td></tr>
+<tr><td>Nøgne Ø</td><td>Funky Geyser</td><td>Norway</td></tr>
+<tr><td>Pookhill</td><td>Irish Whiskey Cask</td><td>England</td></tr>
 </table>
 </slide>

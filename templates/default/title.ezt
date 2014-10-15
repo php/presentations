@@ -1,2 +1,3 @@
 {use $node}
-<h1>{$node->nodeValue}</h1>
+{var $style = get_attribute( $node, 'style' )}
+<h1{if $style} class='style-{$style}'{/if}>{$node->nodeValue}</h1>

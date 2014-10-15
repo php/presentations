@@ -6,9 +6,9 @@ only atomic values, and the value of each attribute contains only a single
 value from that domain.</blurb>
 
 <table>
-<tr><th>Customer ID</th><th>First Name</th><th>Surname</th><th>Telephone Number</th></tr>
-<tr><td>123</td><td>Robert</td><td>Ingram</td><td>555-861-2025</td></tr>
-<tr><td>456</td><td>Jane</td><td>Wright</td><td>|ff0000|555-403-1659, 555-776-4100|</td></tr>
-<tr><td>789</td><td>Maria</td><td>Fernandez</td><td>555-808-9633</td></tr>
+<tr><th>_ID_</th><th>Brewery</th><th>Beers</th></tr>
+<tr><td>123</td><td>BrewDog</td><td>Brixton Porter</td></tr>
+<tr><td>456</td><td>Nøgne Ø</td><td>|ff0000|Blonde, Funky Geyser|</td></tr>
+<tr><td>789</td><td>Pookhill</td><td>Irish Whiskey Cask</td></tr>
 </table>
 </slide>
