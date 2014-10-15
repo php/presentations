@@ -3,17 +3,17 @@
 	<title>Unix timestamps and timezones</title>
 
 	<example result="1"><![CDATA[<?php
-  $date = strtotime( '2010-03-07 20:48:21 America/Toronto' );
+  $date = strtotime( '2014-03-07 20:48:21 America/Toronto' );
   echo date( 'Y-m-d', $date ), "\n";
 ?>]]></example>
 
 <div effect="hide">
 <blurb>Explanation:</blurb>
-	<blurb                 >%$d = strtotime('2010-03-07 20:48 America/Toronto');%</blurb>
-	<blurb effect="fade-in">%$d = |ef2929|1268012901|; // string is turned into a number%</blurb>
-	<blurb effect="fade-in">%echo date('Y-m-d', 1268012901), "\n";%</blurb>
+	<blurb                 >%$d = strtotime('2014-03-07 20:48 America/Toronto');%</blurb>
+	<blurb effect="fade-in">%$d = |ef2929|1394243280|; // string is turned into a number%</blurb>
+	<blurb effect="fade-in">%echo date('Y-m-d', 1394243280), "\n";%</blurb>
 	<blurb effect="fade-in">Number is converted to a date/time string using the *default* timezone:<br/>
-	%"2010-03-08" |555753|(01:48:21 Europe/London)|%</blurb>
+	%"2014-03-08" |555753|(01:48:21 Europe/London)|%</blurb>
 </div>
 
 </slide>
