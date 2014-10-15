@@ -1,32 +1,31 @@
-<slide>
+<slide style="future">
+<title>Xdebug branch coverage display</title>
 
 <image align="right" filename="vld-path-3-paths.png"/>
+
+<blurb>test.php</blurb>
 <example>
-<![CDATA[<?php
-function loopy($i)
-{
-    do
-    {
-        echo $i, ' ';
-
-    } while( $i-- );
-    echo "\n";
-}
-
-function ifthenelse( $a, $b )
-{
-    if ($a) {
-        echo "A HIT\n";
-    }
-    if ($b) {
-        echo "B HIT\n";
-    }
-}
-
-loopy(0);
-ifthenelse( true, false );
-ifthenelse( false, true );
-?>]]>
+<![CDATA[  1 <?php
+  2 function ifthenelse( $a, $b )
+  3 {
+  4     if ($a) {
+  5         echo "A HIT\n";
+  6     }
+  7     if ($b) {
+  8         echo "B HIT\n";
+  9     }
+ 10 }
+ 11 ?>]]>
 </example>
+
+<blurb>branch.php</blurb>
+<example><![CDATA[…
+xdebug_start_code_coverage(
+	XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE | XDEBUG_CC_BRANCH_CHECK
+);
+
+ifthenelse( true, false ); 
+ifthenelse( false, true ); 
+…]]></example>
 
 </slide>

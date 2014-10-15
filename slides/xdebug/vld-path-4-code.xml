@@ -1,0 +1,34 @@
+<slide>
+<title>Xdebug code coverage</title>
+
+<example>
+<![CDATA[<?php
+function ifthenelse( $a, $b )
+{
+    if ($a) {
+        echo "A HIT\n";
+    }
+    if ($b) {
+        echo "B HIT\n";
+    }
+}]]>
+</example>
+<example>
+<![CDATA[<?php
+require 'vendor/autoload.php';
+include 'test.php';
+
+$coverage = new PHP_CodeCoverage;
+
+$coverage->start('coverage1');
+ifthenelse( true, false ); 
+$coverage->stop();
+
+$coverage->start('coverage2');
+ifthenelse( false, true );
+$coverage->stop();
+
+$writer = new PHP_CodeCoverage_Report_HTML;
+$writer->process($coverage, '/tmp/code-coverage-report');]]>
+</example>
+</slide>
