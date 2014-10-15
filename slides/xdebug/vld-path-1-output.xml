@@ -1,0 +1,142 @@
+<slide>
+<title>vld paths #1: output</title>
+
+<example>
+<![CDATA[
+Function trycatch:
+Finding entry points
+Branch analysis from position: 0
+Jump found. Position 1 = 17, Position 2 = 26
+Branch analysis from position: 17
+Jump found. Position 1 = -2
+Branch analysis from position: 26
+Jump found. Position 1 = 29, Position 2 = 38
+Branch analysis from position: 29
+Jump found. Position 1 = -2
+Branch analysis from position: 38
+Jump found. Position 1 = 41, Position 2 = 50
+Branch analysis from position: 41
+Jump found. Position 1 = -2
+Branch analysis from position: 50
+Jump found. Position 1 = 64
+Branch analysis from position: 64
+Jump found. Position 1 = -2
+Found catch point at position: 53
+Branch analysis from position: 53
+Jump found. Position 1 = 54, Position 2 = 57
+Branch analysis from position: 54
+Jump found. Position 1 = 64
+Branch analysis from position: 64
+Branch analysis from position: 57
+Jump found. Position 1 = 58, Position 2 = 61
+Branch analysis from position: 58
+Jump found. Position 1 = 64
+Branch analysis from position: 64
+Branch analysis from position: 61
+Jump found. Position 1 = 62, Position 2 = -2
+Branch analysis from position: 62
+Jump found. Position 1 = -2
+Found catch point at position: 57
+Branch analysis from position: 57
+Found catch point at position: 61
+Branch analysis from position: 61
+filename:       /home/derick/dev/php/derickr-xdebug/tests/bug01034-003.inc
+function name:  trycatch
+number of ops:  68
+compiled vars:  !0 = $action, !1 = $f, !2 = $e
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+   6     0  E >   EXT_NOP                                                  
+         1        RECV                                             !0      
+   8     2        EXT_STMT                                                 
+         3        ECHO                                                     'Let%27s+do+some+stuff%21%0A'
+   9     4        EXT_STMT                                                 
+         5        EXT_FCALL_BEGIN                                          
+         6        SEND_VAL                                                 3
+         7        SEND_VAL                                                 7
+         8        DO_FCALL                                      2  $0      'pow'
+         9        EXT_FCALL_END                                            
+        10        MUL                                              ~1      5, $0
+        11        ASSIGN                                                   !1, ~1
+  11    12        NOP                                                      
+  12    13        NOP                                                      
+  13    14        EXT_STMT                                                 
+        15        CASE                                             ~3      !0, 1
+        16      > JMPZ                                                     ~3, ->26
+        17    >   EXT_STMT                                                 
+        18        FETCH_CLASS                                   4  :4      'ExceptionFoo'
+        19        EXT_FCALL_BEGIN                                          
+        20        NEW                                              $5      :4
+        21        SEND_VAL                                                 'test'
+        22        DO_FCALL_BY_NAME                              1          
+        23        EXT_FCALL_END                                            
+        24      > THROW                                         0          $5
+  14    25*       JMP                                                      ->29
+        26    >   EXT_STMT                                                 
+        27        CASE                                             ~3      !0, 2
+        28      > JMPZ                                                     ~3, ->38
+        29    >   EXT_STMT                                                 
+        30        FETCH_CLASS                                   4  :7      'ExceptionBaz'
+        31        EXT_FCALL_BEGIN                                          
+        32        NEW                                              $8      :7
+        33        SEND_VAL                                                 'test'
+        34        DO_FCALL_BY_NAME                              1          
+        35        EXT_FCALL_END                                            
+        36      > THROW                                         0          $8
+  15    37*       JMP                                                      ->41
+        38    >   EXT_STMT                                                 
+        39        CASE                                             ~3      !0, 3
+        40      > JMPZ                                                     ~3, ->50
+        41    >   EXT_STMT                                                 
+        42        FETCH_CLASS                                   4  :10     'Exception'
+        43        EXT_FCALL_BEGIN                                          
+        44        NEW                                              $11     :10
+        45        SEND_VAL                                                 'test'
+        46        DO_FCALL_BY_NAME                              1          
+        47        EXT_FCALL_END                                            
+        48      > THROW                                         0          $11
+  16    49*       JMP                                                      ->50
+  17    50    >   EXT_STMT                                                 
+        51        ECHO                                                     'Not+thrown%0A'
+  18    52      > JMP                                                      ->64
+        53  E > > CATCH                                        57          'ExceptionFoo', !2
+  19    54    >   EXT_STMT                                                 
+        55        ECHO                                                     'caught%0A'
+  20    56      > JMP                                                      ->64
+        57  E > > CATCH                                        61          'ExceptionBar', !2
+  21    58    >   EXT_STMT                                                 
+        59        ECHO                                                     'caught%0A'
+  22    60      > JMP                                                      ->64
+        61  E > > CATCH                                        64          'ExceptionBaz', !2
+  23    62    >   EXT_STMT                                                 
+        63        ECHO                                                     'caught%0A'
+  26    64    >   EXT_STMT                                                 
+        65        ECHO                                                     'And+do+some+more%0A'
+  27    66        EXT_STMT                                                 
+        67      > RETURN                                                   null
+
+branch: #  0; line:     6-   13; sop:     0; eop:    16; out1:  17; out2:  26
+branch: # 17; line:    13-   13; sop:    17; eop:    24; out1:  -2
+branch: # 26; line:    14-   14; sop:    26; eop:    28; out1:  29; out2:  38
+branch: # 29; line:    14-   14; sop:    29; eop:    36; out1:  -2
+branch: # 38; line:    15-   15; sop:    38; eop:    40; out1:  41; out2:  50
+branch: # 41; line:    15-   15; sop:    41; eop:    48; out1:  -2
+branch: # 50; line:    17-   18; sop:    50; eop:    52; out1:  64
+branch: # 53; line:    18-   18; sop:    53; eop:    53; out1:  54; out2:  57
+branch: # 54; line:    19-   20; sop:    54; eop:    56; out1:  64
+branch: # 57; line:    20-   20; sop:    57; eop:    57; out1:  58; out2:  61
+branch: # 58; line:    21-   22; sop:    58; eop:    60; out1:  64
+branch: # 61; line:    22-   22; sop:    61; eop:    61; out1:  62; out2:  -2
+branch: # 62; line:    23-   26; sop:    62; eop:    63; out1:  64
+branch: # 64; line:    26-   27; sop:    64; eop:    67; out1:  -2
+path #1: 0, 17, 
+path #2: 0, 26, 29, 
+path #3: 0, 26, 38, 41, 
+path #4: 0, 26, 38, 50, 64, 
+path #5: 53, 54, 64, 
+path #6: 53, 57, 58, 64, 
+path #7: 53, 57, 61, 62, 64, 
+End of function trycatch
+]]>
+</example>
+</slide>

@@ -4,13 +4,11 @@
 
 	<list>
 		<bullet>DBGp, common Debugging protocol</bullet>
-		<bullet>Cross-language: PHP, Python, Perl...</bullet>
+		<bullet>Cross-language: PHP, *HHVM*, Python, Perl...</bullet>
 	</list>
 <break/>
 	<list>
-		<bullet>Eclipse/PDT (Java based — free)</bullet>
 		<bullet>Komodo (Linux, Windows, Mac — commercial)</bullet>
-		<bullet>MacGDBp (free)</bullet>
 		<bullet>Netbeans (Java-based — free)</bullet>
 		<bullet>PHPStorm (Java-based — commercial)</bullet>
 		<bullet>(and many others: <link href="http://xdebug.org/docs/remote#clients"/>)</bullet>

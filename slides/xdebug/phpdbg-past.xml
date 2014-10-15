@@ -1,0 +1,12 @@
+<slide style="past">
+<title>PHPDBG</title>
+
+<list>
+	<bullet>Extra SAPI module that comes with PHP 5.6</bullet>
+	<bullet>it takes itself very serious:
+	<blurb>~40:0 vote confirms the awesomeness.~</blurb>
+	</bullet>
+	<bullet>It does some things that Xdebug does, but not as good</bullet>
+	<bullet>It does some things that VLD does, but not as good</bullet>
+</list>
+</slide>

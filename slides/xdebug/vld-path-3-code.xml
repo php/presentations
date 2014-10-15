@@ -1,0 +1,24 @@
+<slide>
+<title>Xdebug code coverage</title>
+
+<example>
+<![CDATA[
+--TEST--
+Test for bug #1034: path coverage
+--FILE--
+<?php
+include 'dump-branch-coverage.inc';
+
+xdebug_start_code_coverage(XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE | XDEBUG_CC_BRANCH_CHECK);
+
+include 'bug01034-004.inc';
+
+xdebug_stop_code_coverage(false);
+$c = xdebug_get_code_coverage();
+dump_branch_coverage($c);
+?>
+--EXPECTF--
+…
+]]>
+</example>
+</slide>

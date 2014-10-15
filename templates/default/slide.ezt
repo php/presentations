@@ -1,4 +1,5 @@
 {use $node, $pres, $slideNr, $css = array("core.css")}
+{var $style = get_attribute( $node, 'style' )}
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -8,6 +9,9 @@
 {foreach $css as $cssFile}
 	<link type="text/css" rel="stylesheet" href="/{$cssFile}"/>
 {/foreach}
+{if $style}
+	<link type="text/css" rel="stylesheet" href="/style-{$style}.css"/>
+{/if}
 	<!--[if lt IE 8]>
 	<script src="IE8.js" type="text/javascript"></script>
 	<![endif]-->

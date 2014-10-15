@@ -1,0 +1,41 @@
+<slide>
+<title>vld paths #2: output</title>
+
+<example>
+<![CDATA[
+Function ifthenelse:
+filename:       /home/derick/dev/php/derickr-xdebug/tests/bug01034-004.inc
+function name:  ifthenelse
+number of ops:  15
+compiled vars:  !0 = $a, !1 = $b
+line     #* E I O op                           fetch          ext  return  operands
+-------------------------------------------------------------------------------------
+  12     0  E >   EXT_NOP                                                  
+         1        RECV                                             !0      
+         2        RECV                                             !1      
+  14     3        EXT_STMT                                                 
+         4      > JMPZ                                                     !0, ->8
+  15     5    >   EXT_STMT                                                 
+         6        ECHO                                                     'A+HIT%0A'
+  16     7      > JMP                                                      ->8
+  17     8    >   EXT_STMT                                                 
+         9      > JMPZ                                                     !1, ->13
+  18    10    >   EXT_STMT                                                 
+        11        ECHO                                                     'B+HIT%0A'
+  19    12      > JMP                                                      ->13
+  20    13    >   EXT_STMT                                                 
+        14      > RETURN                                                   null
+
+branch: #  0; line:    12-   14; sop:     0; eop:     4; out1:   5; out2:   8
+branch: #  5; line:    15-   16; sop:     5; eop:     7; out1:   8
+branch: #  8; line:    17-   17; sop:     8; eop:     9; out1:  10; out2:  13
+branch: # 10; line:    18-   19; sop:    10; eop:    12; out1:  13
+branch: # 13; line:    20-   20; sop:    13; eop:    14; out1:  -2
+path #1: 0, 5, 8, 10, 13, 
+path #2: 0, 5, 8, 13, 
+path #3: 0, 8, 10, 13, 
+path #4: 0, 8, 13, 
+End of function ifthenelse
+]]>
+</example>
+</slide>

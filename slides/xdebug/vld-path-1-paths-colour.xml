@@ -1,0 +1,44 @@
+<slide>
+
+<image align="right" filename="vld-path-1-paths-colour.png"/>
+
+<example>
+<![CDATA[  1 <?php
+  2 class ExceptionFoo extends Exception {}
+  3 class ExceptionBar extends Exception {}
+  4 class ExceptionBaz extends Exception {}
+  5 
+  6 function trycatch($action)
+  7 {
+  8     echo "Let's do some stuff!\n";
+  9     $f = 5 * pow(3, 7);
+ 10 
+ 11     try {
+ 12         switch ($action) {
+ 13             case 1: throw new ExceptionFoo("test");
+ 14             case 2: throw new ExceptionBaz("test");
+ 15             case 3: throw new Exception("test");
+ 16         }
+ 17         echo "Not thrown\n";
+ 18     } catch (ExceptionFoo $e) {
+ 19         echo "caught\n";
+ 20     } catch (ExceptionBar $e) {
+ 21         echo "caught\n";
+ 22     } catch (ExceptionBaz $e) {
+ 23         echo "caught\n";
+ 24     }
+ 25 
+ 26     echo "And do some more\n";
+ 27 }
+ 28 
+ 29 trycatch(1);
+ 30 trycatch(2);
+ 31 try {
+ 32     trycatch(3);
+ 33 } catch ( Exception $e ) {
+ 34     echo "CAUGHT IN MAIN\n";
+ 35 }
+ 36 ?>]]>
+</example>
+
+</slide>

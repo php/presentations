@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
-	<title>Compiling</title>
-	<subtitle>Disassembler</subtitle>
+	<title>vld</title>
 
-	<blurb>Disassembler: vld</blurb>
 	<blurb>Dumps oparray per element:</blurb>
 	<list marginleft="3em" fontsize="4em">
 		<bullet>main script</bullet>
 		<bullet>function</bullet>
 		<bullet>class method</bullet>
-		<bullet>path analysis and dead code analysis</bullet>
+		<bullet>dead code analysis</bullet>
 	</list>
 <break/>
 	<blurb>Usage:</blurb>
