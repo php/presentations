@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Parsing Dates</title>
 
 <break lines="5"/>
 	<div effect="fade-out">
@@ -9,7 +8,6 @@
 	<div effect="fade-in-out stop">
 		<blurb class="xlarge" align="center">|cc0000|08|/|00cc00|03|/|0000cc|10|</blurb>
 		<blurb class="xlarge" align="center">|cc0000|Aug| |00cc00|3rd|, |0000cc|2010|</blurb>
-		<blurb align="center">(default)</blurb>
 	</div>
 	<div effect="fade-in-out">
 		<blurb class="xlarge" align="center">|cc0000|08|/|00cc00|03|/|0000cc|10|</blurb>

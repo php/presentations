@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+
+	<div effect="fade-out">
+		<break lines="10"/>
+		<image filename="notes.png"/>
+	</div>
+	<div effect="fade-in-out">
+		<break lines="10"/>
+		<blurb class="large" align="center">12:23 PM</blurb>
+		<blurb class="large" align="center">3:01 PM</blurb>
+	</div>
+	<div effect="fade-in-out">
+		<blurb class="xlarge" align="center">Which is first?</blurb>
+	</div>
+	<div effect="fade-in-out">
+		<break lines="8"/>
+		<blurb class="xlarge" align="center">Is 12 PM noon or midnight?</blurb>
+	</div>
+	<div effect="fade-in">
+		<break lines="8"/>
+		<blurb class="xlarge" align="center">Is this pascal‽</blurb>
+	</div>
+</slide>

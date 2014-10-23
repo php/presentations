@@ -1,0 +1,20 @@
+<slide>
+
+<div effect="fade-out">
+<break lines="4"/>
+<blurb class="xlarge" align="center">GMT is not what you think it is</blurb>
+</div>
+
+<div effect="fade-in-out">
+<break lines="2"/>
+<blurb class="xlarge" align="center">*GMT* is an astronomical unit, related to UT(1)</blurb>
+</div>
+<div effect="fade-in-out">
+<break lines="10"/>
+<blurb class="large" align="center">*GMT* is *also* the timezone abbreviation meaning *G*reenwich *M*ean*t*ime</blurb>
+</div>
+<div effect="fade-in">
+<break lines="5"/>
+<blurb class="xlarge" align="center">*GMT* is |ff0000|not| the timezone that London is at</blurb>
+</div>
+</slide>

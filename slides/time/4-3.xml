@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+
+	<div effect="fade-out">
+		<break lines="10"/>
+		<image filename="notes.png"/>
+	</div>
+	<div effect="fade-in-out">
+		<break lines="10"/>
+		<blurb class="large" align="center">5/7</blurb>
+	</div>
+	<div effect="fade-in-out">
+		<blurb class="xlarge" align="center">3/12</blurb>
+	</div>
+	<div effect="fade-in-out">
+		<break lines="8"/>
+		<blurb class="xlarge" align="center">10/8</blurb>
+	</div>
+	<div effect="fade-in-out">
+		<break lines="8"/>
+		<blurb class="xlarge" align="center">10/8</blurb>
+	</div>
+	<div effect="fade-in stop">
+		<break lines="8"/>
+		<blurb class="xlarge" align="center">10/8 *= 1 ¼?*</blurb>
+	</div>
+</slide>

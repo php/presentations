@@ -1,0 +1,19 @@
+<slide>
+<title>Conclusion</title>
+
+<div effect="fade-in">
+<list><bullet>Be explicit</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Be explicit: Don't use ambiguous date formats, "October 4th" is perfectly fine, "10/4" is stupid.</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Be explicit: Not AM and PM, but 24-hour clock ("military time")</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Be explicit: Don't use "GMT" for "UTC" ("London") time, we are at BST right now</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Be explicit: Use UTC offsets for timezones (UTC-0400), or just specify the location (like America/New_York)</bullet></list>
+</div>
+</slide>

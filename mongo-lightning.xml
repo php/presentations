@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>Localization and Internationalization</topic>
+<title>Lightning!!</title>
+<event>Engineering Off-site</event>
+<location>Mt. Vernon, NJ, US</location>
+<date>October 22th, 2014</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin></joindin>
+<twitter>derickr</twitter>
+
+<slide>slides/time/left-blank.xml</slide>
+<slide>slides/time/am-pm.xml</slide>
+<slide>slides/time/4-3.xml</slide>
+<slide>slides/time/date-parse-from-format3.xml</slide>
+<slide>slides/time/month-day-do-it-right.xml</slide>
+<slide>slides/time/jira.xml</slide>
+<slide>slides/time/gmt-is-not-what-you-think-it-is.xml</slide>
+<slide>slides/time/iceland.xml</slide>
+
+<slide>slides/time/problems-timezones.xml</slide>
+<slide>slides/time/problems-dst.xml</slide>
+<slide>slides/time/problems-dst2.xml</slide>
+<slide>slides/time/problems-dst3.xml</slide>
+<slide>slides/time/problems-timezone-abbr.xml</slide>
+
+<slide>slides/time/be-a-good-citizen.xml</slide>
+</presentation>
