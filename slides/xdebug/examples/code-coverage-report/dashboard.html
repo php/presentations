@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /home/httpd/html/test/xdebug/code-coverage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/nv.d3.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.min.js"></script>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="row">
+     <div class="col-md-12">
+      <ol class="breadcrumb">
+        <li><a href="index.html">/home/httpd/html/test/xdebug/code-coverage</a></li>
+        <li class="active">(Dashboard)</li>
+
+      </ol>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#287">PHP_Token_FUNCTION</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#256">PHP_Token_Includes</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#429">PHP_Token_INTERFACE</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#708">PHP_Token_NAMESPACE</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#55">Runtime</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#54">PHP_Token_Stream</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#203">PHP_TokenWithScopeAndVisibility</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#109">PHP_TokenWithScope</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/autoload_real.php.html#5">ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#43">ClassLoader</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#57">PHP_CodeCoverage_Filter</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#54">PHP_Token</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#57">PHP_CodeCoverage_Parser</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#59">PHP_CodeCoverage</a></td><td class="text-right">1%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Driver.php.html#57">PHP_CodeCoverage_Driver</a></td><td class="text-right">18%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#59">PHP_CodeCoverage</a></td><td class="text-right">6781</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#54">PHP_Token_Stream</a></td><td class="text-right">5112</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#43">ClassLoader</a></td><td class="text-right">2862</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#57">PHP_CodeCoverage_Parser</a></td><td class="text-right">2652</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#287">PHP_Token_FUNCTION</a></td><td class="text-right">1482</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#57">PHP_CodeCoverage_Filter</a></td><td class="text-right">1406</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#55">Runtime</a></td><td class="text-right">870</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#429">PHP_Token_INTERFACE</a></td><td class="text-right">650</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#109">PHP_TokenWithScope</a></td><td class="text-right">600</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#203">PHP_TokenWithScopeAndVisibility</a></td><td class="text-right">420</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Driver.php.html#57">PHP_CodeCoverage_Driver</a></td><td class="text-right">105</td></tr>
+       <tr><td><a href="vendor/composer/autoload_real.php.html#5">ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#708">PHP_Token_NAMESPACE</a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#256">PHP_Token_Includes</a></td><td class="text-right">20</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#438"><abbr title="PHP_Token_INTERFACE::hasParent">hasParent</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#443"><abbr title="PHP_Token_INTERFACE::getPackage">getPackage</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#433"><abbr title="PHP_Token_INTERFACE::getName">getName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#401"><abbr title="PHP_Token_FUNCTION::getSignature">getSignature</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#326"><abbr title="PHP_Token_FUNCTION::getName">getName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#368"><abbr title="PHP_Token_FUNCTION::getCCN">getCCN</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#486"><abbr title="PHP_Token_INTERFACE::arrayToName">arrayToName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#499"><abbr title="PHP_Token_INTERFACE::getParent">getParent</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#158"><abbr title="PHP_Token_Stream::__destruct">__destruct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#166"><abbr title="PHP_Token_Stream::__toString">__toString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#145"><abbr title="PHP_Token_Stream::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#710"><abbr title="PHP_Token_NAMESPACE::getName">getName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#517"><abbr title="PHP_Token_INTERFACE::hasInterfaces">hasInterfaces</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#525"><abbr title="PHP_Token_INTERFACE::getInterfaces">getInterfaces</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#294"><abbr title="PHP_Token_FUNCTION::getArguments">getArguments</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#279"><abbr title="PHP_Token_Includes::getType">getType</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#295"><abbr title="PHP_CodeCoverage_Parser::getCacheTokens">getCacheTokens</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#84"><abbr title="PHP_Token::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#280"><abbr title="PHP_CodeCoverage_Parser::setCacheTokens">setCacheTokens</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#117"><abbr title="PHP_CodeCoverage_Parser::getLinesToBeIgnored">getLinesToBeIgnored</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#330"><abbr title="PHP_CodeCoverage_Filter::setWhitelistedFiles">setWhitelistedFiles</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#74"><abbr title="PHP_CodeCoverage_Parser::getAllowedLines">getAllowedLines</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#95"><abbr title="PHP_Token::__toString">__toString</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#103"><abbr title="PHP_Token::getLine">getLine</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#228"><abbr title="PHP_TokenWithScopeAndVisibility::getKeywords">getKeywords</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#261"><abbr title="PHP_Token_Includes::getName">getName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#205"><abbr title="PHP_TokenWithScopeAndVisibility::getVisibility">getVisibility</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#196"><abbr title="PHP_TokenWithScope::getEndLine">getEndLine</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#122"><abbr title="PHP_TokenWithScope::getDocblock">getDocblock</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#158"><abbr title="PHP_TokenWithScope::getEndTokenId">getEndTokenId</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#181"><abbr title="PHP_Token_Stream::getFilename">getFilename</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#192"><abbr title="PHP_Token_Stream::scan">scan</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#621"><abbr title="PHP_Token_Stream::addFunctionToMap">addFunctionToMap</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#68"><abbr title="Runtime::canCollectCodeCoverage">canCollectCodeCoverage</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#612"><abbr title="PHP_Token_Stream::seek">seek</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#601"><abbr title="PHP_Token_Stream::offsetUnset">offsetUnset</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#584"><abbr title="PHP_Token_Stream::offsetGet">offsetGet</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#593"><abbr title="PHP_Token_Stream::offsetSet">offsetSet</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#79"><abbr title="Runtime::getBinary">getBinary</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#138"><abbr title="Runtime::getNameWithVersion">getNameWithVersion</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#194"><abbr title="Runtime::isHHVM">isHHVM</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#204"><abbr title="Runtime::isPHP">isPHP</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#184"><abbr title="Runtime::hasXdebug">hasXdebug</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#170"><abbr title="Runtime::getVersion">getVersion</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#146"><abbr title="Runtime::getName">getName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#158"><abbr title="Runtime::getVendorUrl">getVendorUrl</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#575"><abbr title="PHP_Token_Stream::offsetExists">offsetExists</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#567"><abbr title="PHP_Token_Stream::next">next</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#292"><abbr title="PHP_Token_Stream::getInterfaces">getInterfaces</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#307"><abbr title="PHP_Token_Stream::getTraits">getTraits</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#278"><abbr title="PHP_Token_Stream::getFunctions">getFunctions</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#264"><abbr title="PHP_Token_Stream::getClasses">getClasses</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#248"><abbr title="PHP_Token_Stream::count">count</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#256"><abbr title="PHP_Token_Stream::tokens">tokens</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#334"><abbr title="PHP_Token_Stream::getIncludes">getIncludes</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#381"><abbr title="PHP_Token_Stream::getFunctionForLine">getFunctionForLine</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#552"><abbr title="PHP_Token_Stream::key">key</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#560"><abbr title="PHP_Token_Stream::current">current</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#544"><abbr title="PHP_Token_Stream::valid">valid</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#536"><abbr title="PHP_Token_Stream::rewind">rewind</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#390"><abbr title="PHP_Token_Stream::parse">parse</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#529"><abbr title="PHP_Token_Stream::getLinesOfCode">getLinesOfCode</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#319"><abbr title="PHP_CodeCoverage_Filter::getWhitelistedFiles">getWhitelistedFiles</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#308"><abbr title="PHP_CodeCoverage_Filter::setBlacklistedFiles">setBlacklistedFiles</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#164"><abbr title="PHP_CodeCoverage::getReport">getReport</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#174"><abbr title="PHP_CodeCoverage::clear">clear</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#132"><abbr title="PHP_CodeCoverage::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/autoload_real.php.html#16"><abbr title="ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47::getLoader">getLoader</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#314"><abbr title="ClassLoader::findFileWithExtension">findFileWithExtension</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/autoload_real.php.html#9"><abbr title="ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47::loadClassLoader">loadClassLoader</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#186"><abbr title="PHP_CodeCoverage::filter">filter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#199"><abbr title="PHP_CodeCoverage::getData">getData</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#366"><abbr title="PHP_CodeCoverage::merge">merge</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#398"><abbr title="PHP_CodeCoverage::setCacheTokens">setCacheTokens</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#309"><abbr title="PHP_CodeCoverage::append">append</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#236"><abbr title="PHP_CodeCoverage::setTests">setTests</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#214"><abbr title="PHP_CodeCoverage::setData">setData</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#225"><abbr title="PHP_CodeCoverage::getTests">getTests</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#287"><abbr title="ClassLoader::findFile">findFile</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#271"><abbr title="ClassLoader::loadClass">loadClass</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#85"><abbr title="ClassLoader::addClassMap">addClassMap</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#102"><abbr title="ClassLoader::add">add</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#77"><abbr title="ClassLoader::getClassMap">getClassMap</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#72"><abbr title="ClassLoader::getFallbackDirsPsr4">getFallbackDirsPsr4</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#62"><abbr title="ClassLoader::getPrefixesPsr4">getPrefixesPsr4</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#67"><abbr title="ClassLoader::getFallbackDirs">getFallbackDirs</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#149"><abbr title="ClassLoader::addPsr4">addPsr4</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#194"><abbr title="ClassLoader::set">set</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#252"><abbr title="ClassLoader::register">register</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#260"><abbr title="ClassLoader::unregister">unregister</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#242"><abbr title="ClassLoader::getUseIncludePath">getUseIncludePath</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#231"><abbr title="ClassLoader::setUseIncludePath">setUseIncludePath</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#212"><abbr title="ClassLoader::setPsr4">setPsr4</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#57"><abbr title="ClassLoader::getPrefixes">getPrefixes</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#415"><abbr title="PHP_CodeCoverage::getCacheTokens">getCacheTokens</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#150"><abbr title="PHP_CodeCoverage_Filter::addDirectoryToWhitelist">addDirectoryToWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#165"><abbr title="PHP_CodeCoverage_Filter::addFileToWhitelist">addFileToWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#175"><abbr title="PHP_CodeCoverage_Filter::addFilesToWhitelist">addFilesToWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#134"><abbr title="PHP_CodeCoverage_Filter::removeFileFromBlacklist">removeFileFromBlacklist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#119"><abbr title="PHP_CodeCoverage_Filter::removeDirectoryFromBlacklist">removeDirectoryFromBlacklist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#95"><abbr title="PHP_CodeCoverage_Filter::addFileToBlacklist">addFileToBlacklist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#105"><abbr title="PHP_CodeCoverage_Filter::addFilesToBlacklist">addFilesToBlacklist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#189"><abbr title="PHP_CodeCoverage_Filter::removeDirectoryFromWhitelist">removeDirectoryFromWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#204"><abbr title="PHP_CodeCoverage_Filter::removeFileFromWhitelist">removeFileFromWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#286"><abbr title="PHP_CodeCoverage_Filter::hasWhitelist">hasWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#297"><abbr title="PHP_CodeCoverage_Filter::getBlacklistedFiles">getBlacklistedFiles</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#275"><abbr title="PHP_CodeCoverage_Filter::getWhitelist">getWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#265"><abbr title="PHP_CodeCoverage_Filter::getBlacklist">getBlacklist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#219"><abbr title="PHP_CodeCoverage_Filter::isFile">isFile</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#245"><abbr title="PHP_CodeCoverage_Filter::isFiltered">isFiltered</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#80"><abbr title="PHP_CodeCoverage_Filter::addDirectoryToBlacklist">addDirectoryToBlacklist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Driver.php.html#131"><abbr title="PHP_CodeCoverage_Driver::cleanup">cleanup</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#489"><abbr title="PHP_CodeCoverage::setProcessUncoveredFilesFromWhitelist">setProcessUncoveredFilesFromWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#509"><abbr title="PHP_CodeCoverage::applyCoversAnnotationFilter">applyCoversAnnotationFilter</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#473"><abbr title="PHP_CodeCoverage::setAddUncoveredFilesFromWhitelist">setAddUncoveredFilesFromWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#457"><abbr title="PHP_CodeCoverage::setMapTestClassNameToCoveredClassName">setMapTestClassNameToCoveredClassName</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#441"><abbr title="PHP_CodeCoverage::setForceCoversAnnotation">setForceCoversAnnotation</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#425"><abbr title="PHP_CodeCoverage::setCheckForUnintentionallyCoveredCode">setCheckForUnintentionallyCoveredCode</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#546"><abbr title="PHP_CodeCoverage::initializeFilesThatAreSeenTheFirstTime">initializeFilesThatAreSeenTheFirstTime</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#562"><abbr title="PHP_CodeCoverage::addUncoveredFilesFromWhitelist">addUncoveredFilesFromWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#627"><abbr title="PHP_CodeCoverage::performUnintentionallyCoveredCodeCheck">performUnintentionallyCoveredCodeCheck</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#600"><abbr title="PHP_CodeCoverage::processUncoveredFileFromWhitelist">processUncoveredFileFromWhitelist</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Driver.php.html#78"><abbr title="PHP_CodeCoverage_Driver::__construct">__construct</a></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#248"><abbr title="PHP_CodeCoverage::start">start</a></a></td><td class="text-right">10%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#275"><abbr title="PHP_CodeCoverage::stop">stop</a></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Driver.php.html#99"><abbr title="PHP_CodeCoverage_Driver::stop">stop</a></a></td><td class="text-right">25%</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Driver.php.html#89"><abbr title="PHP_CodeCoverage_Driver::start">start</a></a></td><td class="text-right">50%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#117"><abbr title="PHP_CodeCoverage_Parser::getLinesToBeIgnored">getLinesToBeIgnored</abbr></a></td><td class="text-right">1806</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#390"><abbr title="PHP_Token_Stream::parse">parse</abbr></a></td><td class="text-right">420</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#314"><abbr title="ClassLoader::findFileWithExtension">findFileWithExtension</abbr></a></td><td class="text-right">342</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#79"><abbr title="Runtime::getBinary">getBinary</abbr></a></td><td class="text-right">272</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#368"><abbr title="PHP_Token_FUNCTION::getCCN">getCCN</abbr></a></td><td class="text-right">240</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#158"><abbr title="PHP_TokenWithScope::getEndTokenId">getEndTokenId</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#309"><abbr title="PHP_CodeCoverage::append">append</abbr></a></td><td class="text-right">156</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#122"><abbr title="PHP_TokenWithScope::getDocblock">getDocblock</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#326"><abbr title="PHP_Token_FUNCTION::getName">getName</abbr></a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#228"><abbr title="PHP_TokenWithScopeAndVisibility::getKeywords">getKeywords</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#205"><abbr title="PHP_TokenWithScopeAndVisibility::getVisibility">getVisibility</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#192"><abbr title="PHP_Token_Stream::scan">scan</abbr></a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#219"><abbr title="PHP_CodeCoverage_Filter::isFile">isFile</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#334"><abbr title="PHP_Token_Stream::getIncludes">getIncludes</abbr></a></td><td class="text-right">90</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#627"><abbr title="PHP_CodeCoverage::performUnintentionallyCoveredCodeCheck">performUnintentionallyCoveredCodeCheck</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#509"><abbr title="PHP_CodeCoverage::applyCoversAnnotationFilter">applyCoversAnnotationFilter</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#443"><abbr title="PHP_Token_INTERFACE::getPackage">getPackage</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#366"><abbr title="PHP_CodeCoverage::merge">merge</abbr></a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#294"><abbr title="PHP_Token_FUNCTION::getArguments">getArguments</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#546"><abbr title="PHP_CodeCoverage::initializeFilesThatAreSeenTheFirstTime">initializeFilesThatAreSeenTheFirstTime</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#600"><abbr title="PHP_CodeCoverage::processUncoveredFileFromWhitelist">processUncoveredFileFromWhitelist</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#401"><abbr title="PHP_Token_FUNCTION::getSignature">getSignature</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#74"><abbr title="PHP_CodeCoverage_Parser::getAllowedLines">getAllowedLines</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#525"><abbr title="PHP_Token_INTERFACE::getInterfaces">getInterfaces</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#149"><abbr title="ClassLoader::addPsr4">addPsr4</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#287"><abbr title="ClassLoader::findFile">findFile</abbr></a></td><td class="text-right">42</td></tr>
+       <tr><td><a href="vendor/composer/autoload_real.php.html#16"><abbr title="ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47::getLoader">getLoader</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#132"><abbr title="PHP_CodeCoverage::__construct">__construct</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#102"><abbr title="ClassLoader::add">add</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#562"><abbr title="PHP_CodeCoverage::addUncoveredFilesFromWhitelist">addUncoveredFilesFromWhitelist</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#499"><abbr title="PHP_Token_INTERFACE::getParent">getParent</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#710"><abbr title="PHP_Token_NAMESPACE::getName">getName</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#517"><abbr title="PHP_Token_INTERFACE::hasInterfaces">hasInterfaces</abbr></a></td><td class="text-right">20</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#261"><abbr title="PHP_Token_Includes::getName">getName</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#245"><abbr title="PHP_CodeCoverage_Filter::isFiltered">isFiltered</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#199"><abbr title="PHP_CodeCoverage::getData">getData</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#212"><abbr title="ClassLoader::setPsr4">setPsr4</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#275"><abbr title="PHP_CodeCoverage::stop">stop</abbr></a></td><td class="text-right">10</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#248"><abbr title="PHP_CodeCoverage::start">start</abbr></a></td><td class="text-right">9</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#307"><abbr title="PHP_Token_Stream::getTraits">getTraits</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#271"><abbr title="ClassLoader::loadClass">loadClass</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#381"><abbr title="PHP_Token_Stream::getFunctionForLine">getFunctionForLine</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#292"><abbr title="PHP_Token_Stream::getInterfaces">getInterfaces</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#278"><abbr title="PHP_Token_Stream::getFunctions">getFunctions</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/composer/autoload_real.php.html#9"><abbr title="ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47::loadClassLoader">loadClassLoader</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#264"><abbr title="PHP_Token_Stream::getClasses">getClasses</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#85"><abbr title="ClassLoader::addClassMap">addClassMap</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#612"><abbr title="PHP_Token_Stream::seek">seek</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#158"><abbr title="Runtime::getVendorUrl">getVendorUrl</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#170"><abbr title="Runtime::getVersion">getVersion</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#184"><abbr title="Runtime::hasXdebug">hasXdebug</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#146"><abbr title="Runtime::getName">getName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/composer/ClassLoader.php.html#194"><abbr title="ClassLoader::set">set</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#621"><abbr title="PHP_Token_Stream::addFunctionToMap">addFunctionToMap</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/sebastian/environment/src/Runtime.php.html#68"><abbr title="Runtime::canCollectCodeCoverage">canCollectCodeCoverage</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#166"><abbr title="PHP_Token_Stream::__toString">__toString</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token/Stream.php.html#145"><abbr title="PHP_Token_Stream::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#80"><abbr title="PHP_CodeCoverage_Filter::addDirectoryToBlacklist">addDirectoryToBlacklist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#489"><abbr title="PHP_CodeCoverage::setProcessUncoveredFilesFromWhitelist">setProcessUncoveredFilesFromWhitelist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#473"><abbr title="PHP_CodeCoverage::setAddUncoveredFilesFromWhitelist">setAddUncoveredFilesFromWhitelist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#105"><abbr title="PHP_CodeCoverage_Filter::addFilesToBlacklist">addFilesToBlacklist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#119"><abbr title="PHP_CodeCoverage_Filter::removeDirectoryFromBlacklist">removeDirectoryFromBlacklist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#150"><abbr title="PHP_CodeCoverage_Filter::addDirectoryToWhitelist">addDirectoryToWhitelist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#134"><abbr title="PHP_CodeCoverage_Filter::removeFileFromBlacklist">removeFileFromBlacklist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#457"><abbr title="PHP_CodeCoverage::setMapTestClassNameToCoveredClassName">setMapTestClassNameToCoveredClassName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#441"><abbr title="PHP_CodeCoverage::setForceCoversAnnotation">setForceCoversAnnotation</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#204"><abbr title="PHP_CodeCoverage_Filter::removeFileFromWhitelist">removeFileFromWhitelist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#189"><abbr title="PHP_CodeCoverage_Filter::removeDirectoryFromWhitelist">removeDirectoryFromWhitelist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Filter.php.html#175"><abbr title="PHP_CodeCoverage_Filter::addFilesToWhitelist">addFilesToWhitelist</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#398"><abbr title="PHP_CodeCoverage::setCacheTokens">setCacheTokens</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage.php.html#425"><abbr title="PHP_CodeCoverage::setCheckForUnintentionallyCoveredCode">setCheckForUnintentionallyCoveredCode</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-token-stream/src/Token.php.html#486"><abbr title="PHP_Token_INTERFACE::arrayToName">arrayToName</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="vendor/phpunit/php-code-coverage/src/CodeCoverage/Parser.php.html#280"><abbr title="PHP_CodeCoverage_Parser::setCacheTokens">setCacheTokens</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="http://github.com/sebastianbergmann/php-code-coverage" target="_top">PHP_CodeCoverage 3.0-dev</a> using <a href="http://php.net/" target="_top">PHP 5.4.33-dev</a> at Wed Oct 15 18:27:29 BST 2014.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="js/holder.js" type="text/javascript"></script>
+  <script src="js/d3.min.js" type="text/javascript"></script>
+  <script src="js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([13,1,1,0,0,0,0,0,0,0,0,159], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([123,0,1,2,0,0,1,0,0,0,0,4], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.scatter.onlyCircles(false);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,53,"<a href=\"vendor\/composer\/ClassLoader.php.html#43\">ClassLoader<\/a>"],[0,7,"<a href=\"vendor\/composer\/autoload_real.php.html#5\">ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47<\/a>"],[1.7241379310345,84,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#59\">PHP_CodeCoverage<\/a>"],[18.181818181818,13,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#57\">PHP_CodeCoverage_Driver<\/a>"],[0,37,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#57\">PHP_CodeCoverage_Filter<\/a>"],[0,51,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Parser.php.html#57\">PHP_CodeCoverage_Parser<\/a>"],[0,3,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#54\">PHP_Token<\/a>"],[0,24,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#109\">PHP_TokenWithScope<\/a>"],[0,20,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#203\">PHP_TokenWithScopeAndVisibility<\/a>"],[0,4,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#256\">PHP_Token_Includes<\/a>"],[0,38,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#287\">PHP_Token_FUNCTION<\/a>"],[0,25,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#429\">PHP_Token_INTERFACE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#555\">PHP_Token_ABSTRACT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#556\">PHP_Token_AMPERSAND<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#557\">PHP_Token_AND_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#558\">PHP_Token_ARRAY<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#559\">PHP_Token_ARRAY_CAST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#560\">PHP_Token_AS<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#561\">PHP_Token_AT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#562\">PHP_Token_BACKTICK<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#563\">PHP_Token_BAD_CHARACTER<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#564\">PHP_Token_BOOLEAN_AND<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#565\">PHP_Token_BOOLEAN_OR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#566\">PHP_Token_BOOL_CAST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#567\">PHP_Token_BREAK<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#568\">PHP_Token_CARET<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#569\">PHP_Token_CASE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#570\">PHP_Token_CATCH<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#571\">PHP_Token_CHARACTER<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#572\">PHP_Token_CLASS<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#573\">PHP_Token_CLASS_C<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#574\">PHP_Token_CLASS_NAME_CONSTANT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#575\">PHP_Token_CLONE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#576\">PHP_Token_CLOSE_BRACKET<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#577\">PHP_Token_CLOSE_CURLY<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#578\">PHP_Token_CLOSE_SQUARE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#579\">PHP_Token_CLOSE_TAG<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#580\">PHP_Token_COLON<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#581\">PHP_Token_COMMA<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#582\">PHP_Token_COMMENT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#583\">PHP_Token_CONCAT_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#584\">PHP_Token_CONST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#585\">PHP_Token_CONSTANT_ENCAPSED_STRING<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#586\">PHP_Token_CONTINUE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#587\">PHP_Token_CURLY_OPEN<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#588\">PHP_Token_DEC<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#589\">PHP_Token_DECLARE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#590\">PHP_Token_DEFAULT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#591\">PHP_Token_DIV<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#592\">PHP_Token_DIV_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#593\">PHP_Token_DNUMBER<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#594\">PHP_Token_DO<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#595\">PHP_Token_DOC_COMMENT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#596\">PHP_Token_DOLLAR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#597\">PHP_Token_DOLLAR_OPEN_CURLY_BRACES<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#598\">PHP_Token_DOT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#599\">PHP_Token_DOUBLE_ARROW<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#600\">PHP_Token_DOUBLE_CAST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#601\">PHP_Token_DOUBLE_COLON<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#602\">PHP_Token_DOUBLE_QUOTES<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#603\">PHP_Token_ECHO<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#604\">PHP_Token_ELSE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#605\">PHP_Token_ELSEIF<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#606\">PHP_Token_EMPTY<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#607\">PHP_Token_ENCAPSED_AND_WHITESPACE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#608\">PHP_Token_ENDDECLARE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#609\">PHP_Token_ENDFOR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#610\">PHP_Token_ENDFOREACH<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#611\">PHP_Token_ENDIF<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#612\">PHP_Token_ENDSWITCH<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#613\">PHP_Token_ENDWHILE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#614\">PHP_Token_END_HEREDOC<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#615\">PHP_Token_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#616\">PHP_Token_EVAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#617\">PHP_Token_EXCLAMATION_MARK<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#618\">PHP_Token_EXIT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#619\">PHP_Token_EXTENDS<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#620\">PHP_Token_FILE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#621\">PHP_Token_FINAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#622\">PHP_Token_FOR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#623\">PHP_Token_FOREACH<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#624\">PHP_Token_FUNC_C<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#625\">PHP_Token_GLOBAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#626\">PHP_Token_GT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#627\">PHP_Token_IF<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#628\">PHP_Token_IMPLEMENTS<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#629\">PHP_Token_INC<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#630\">PHP_Token_INCLUDE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#631\">PHP_Token_INCLUDE_ONCE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#632\">PHP_Token_INLINE_HTML<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#633\">PHP_Token_INSTANCEOF<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#634\">PHP_Token_INT_CAST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#635\">PHP_Token_ISSET<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#636\">PHP_Token_IS_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#637\">PHP_Token_IS_GREATER_OR_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#638\">PHP_Token_IS_IDENTICAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#639\">PHP_Token_IS_NOT_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#640\">PHP_Token_IS_NOT_IDENTICAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#641\">PHP_Token_IS_SMALLER_OR_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#642\">PHP_Token_LINE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#643\">PHP_Token_LIST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#644\">PHP_Token_LNUMBER<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#645\">PHP_Token_LOGICAL_AND<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#646\">PHP_Token_LOGICAL_OR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#647\">PHP_Token_LOGICAL_XOR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#648\">PHP_Token_LT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#649\">PHP_Token_METHOD_C<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#650\">PHP_Token_MINUS<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#651\">PHP_Token_MINUS_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#652\">PHP_Token_MOD_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#653\">PHP_Token_MULT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#654\">PHP_Token_MUL_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#655\">PHP_Token_NEW<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#656\">PHP_Token_NUM_STRING<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#657\">PHP_Token_OBJECT_CAST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#658\">PHP_Token_OBJECT_OPERATOR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#659\">PHP_Token_OPEN_BRACKET<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#660\">PHP_Token_OPEN_CURLY<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#661\">PHP_Token_OPEN_SQUARE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#662\">PHP_Token_OPEN_TAG<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#663\">PHP_Token_OPEN_TAG_WITH_ECHO<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#664\">PHP_Token_OR_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#665\">PHP_Token_PAAMAYIM_NEKUDOTAYIM<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#666\">PHP_Token_PERCENT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#667\">PHP_Token_PIPE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#668\">PHP_Token_PLUS<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#669\">PHP_Token_PLUS_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#670\">PHP_Token_PRINT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#671\">PHP_Token_PRIVATE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#672\">PHP_Token_PROTECTED<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#673\">PHP_Token_PUBLIC<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#674\">PHP_Token_QUESTION_MARK<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#675\">PHP_Token_REQUIRE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#676\">PHP_Token_REQUIRE_ONCE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#677\">PHP_Token_RETURN<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#678\">PHP_Token_SEMICOLON<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#679\">PHP_Token_SL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#680\">PHP_Token_SL_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#681\">PHP_Token_SR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#682\">PHP_Token_SR_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#683\">PHP_Token_START_HEREDOC<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#684\">PHP_Token_STATIC<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#685\">PHP_Token_STRING<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#686\">PHP_Token_STRING_CAST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#687\">PHP_Token_STRING_VARNAME<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#688\">PHP_Token_SWITCH<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#689\">PHP_Token_THROW<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#690\">PHP_Token_TILDE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#691\">PHP_Token_TRY<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#692\">PHP_Token_UNSET<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#693\">PHP_Token_UNSET_CAST<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#694\">PHP_Token_USE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#695\">PHP_Token_VAR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#696\">PHP_Token_VARIABLE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#697\">PHP_Token_WHILE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#698\">PHP_Token_WHITESPACE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#699\">PHP_Token_XOR_EQUAL<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#702\">PHP_Token_HALT_COMPILER<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#705\">PHP_Token_DIR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#706\">PHP_Token_GOTO<\/a>"],[0,4,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#708\">PHP_Token_NAMESPACE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#728\">PHP_Token_NS_C<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#729\">PHP_Token_NS_SEPARATOR<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#732\">PHP_Token_CALLABLE<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#733\">PHP_Token_INSTEADOF<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#734\">PHP_Token_TRAIT<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#735\">PHP_Token_TRAIT_C<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#738\">PHP_Token_FINALLY<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#739\">PHP_Token_YIELD<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#742\">PHP_Token_ELLIPSIS<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#743\">PHP_Token_POW<\/a>"],[100,0,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#744\">PHP_Token_POW_EQUAL<\/a>"],[0,71,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#54\">PHP_Token_Stream<\/a>"],[0,29,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#55\">Runtime<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.scatter.onlyCircles(false);
+    chart.tooltipContent(function(key, y, e, graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#57\">ClassLoader::getPrefixes<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#62\">ClassLoader::getPrefixesPsr4<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#67\">ClassLoader::getFallbackDirs<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#72\">ClassLoader::getFallbackDirsPsr4<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#77\">ClassLoader::getClassMap<\/a>"],[0,2,"<a href=\"vendor\/composer\/ClassLoader.php.html#85\">ClassLoader::addClassMap<\/a>"],[0,5,"<a href=\"vendor\/composer\/ClassLoader.php.html#102\">ClassLoader::add<\/a>"],[0,6,"<a href=\"vendor\/composer\/ClassLoader.php.html#149\">ClassLoader::addPsr4<\/a>"],[0,2,"<a href=\"vendor\/composer\/ClassLoader.php.html#194\">ClassLoader::set<\/a>"],[0,3,"<a href=\"vendor\/composer\/ClassLoader.php.html#212\">ClassLoader::setPsr4<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#231\">ClassLoader::setUseIncludePath<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#242\">ClassLoader::getUseIncludePath<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#252\">ClassLoader::register<\/a>"],[0,1,"<a href=\"vendor\/composer\/ClassLoader.php.html#260\">ClassLoader::unregister<\/a>"],[0,2,"<a href=\"vendor\/composer\/ClassLoader.php.html#271\">ClassLoader::loadClass<\/a>"],[0,6,"<a href=\"vendor\/composer\/ClassLoader.php.html#287\">ClassLoader::findFile<\/a>"],[0,18,"<a href=\"vendor\/composer\/ClassLoader.php.html#314\">ClassLoader::findFileWithExtension<\/a>"],[0,2,"<a href=\"vendor\/composer\/autoload_real.php.html#9\">ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47::loadClassLoader<\/a>"],[0,5,"<a href=\"vendor\/composer\/autoload_real.php.html#16\">ComposerAutoloaderInit4ee5e517013556cfd4ff053523258e47::getLoader<\/a>"],[0,5,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#132\">PHP_CodeCoverage::__construct<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#164\">PHP_CodeCoverage::getReport<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#174\">PHP_CodeCoverage::clear<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#186\">PHP_CodeCoverage::filter<\/a>"],[0,3,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#199\">PHP_CodeCoverage::getData<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#214\">PHP_CodeCoverage::setData<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#225\">PHP_CodeCoverage::getTests<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#236\">PHP_CodeCoverage::setTests<\/a>"],[10,3,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#248\">PHP_CodeCoverage::start<\/a>"],[25,4,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#275\">PHP_CodeCoverage::stop<\/a>"],[0,12,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#309\">PHP_CodeCoverage::append<\/a>"],[0,7,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#366\">PHP_CodeCoverage::merge<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#398\">PHP_CodeCoverage::setCacheTokens<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#415\">PHP_CodeCoverage::getCacheTokens<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#425\">PHP_CodeCoverage::setCheckForUnintentionallyCoveredCode<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#441\">PHP_CodeCoverage::setForceCoversAnnotation<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#457\">PHP_CodeCoverage::setMapTestClassNameToCoveredClassName<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#473\">PHP_CodeCoverage::setAddUncoveredFilesFromWhitelist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#489\">PHP_CodeCoverage::setProcessUncoveredFilesFromWhitelist<\/a>"],[0,7,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#509\">PHP_CodeCoverage::applyCoversAnnotationFilter<\/a>"],[0,6,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#546\">PHP_CodeCoverage::initializeFilesThatAreSeenTheFirstTime<\/a>"],[0,5,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#562\">PHP_CodeCoverage::addUncoveredFilesFromWhitelist<\/a>"],[0,6,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#600\">PHP_CodeCoverage::processUncoveredFileFromWhitelist<\/a>"],[0,7,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage.php.html#627\">PHP_CodeCoverage::performUnintentionallyCoveredCodeCheck<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#78\">PHP_CodeCoverage_Driver::__construct<\/a>"],[50,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#89\">PHP_CodeCoverage_Driver::start<\/a>"],[25,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#99\">PHP_CodeCoverage_Driver::stop<\/a>"],[100,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#112\">PHP_CodeCoverage_Driver::ensureDriverCanWork<\/a>"],[100,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#117\">PHP_CodeCoverage_Driver::doStart<\/a>"],[100,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#124\">PHP_CodeCoverage_Driver::doStop<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#131\">PHP_CodeCoverage_Driver::cleanup<\/a>"],[100,6,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Driver.php.html#140\">PHP_CodeCoverage_Driver::filter<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#80\">PHP_CodeCoverage_Filter::addDirectoryToBlacklist<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#95\">PHP_CodeCoverage_Filter::addFileToBlacklist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#105\">PHP_CodeCoverage_Filter::addFilesToBlacklist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#119\">PHP_CodeCoverage_Filter::removeDirectoryFromBlacklist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#134\">PHP_CodeCoverage_Filter::removeFileFromBlacklist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#150\">PHP_CodeCoverage_Filter::addDirectoryToWhitelist<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#165\">PHP_CodeCoverage_Filter::addFileToWhitelist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#175\">PHP_CodeCoverage_Filter::addFilesToWhitelist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#189\">PHP_CodeCoverage_Filter::removeDirectoryFromWhitelist<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#204\">PHP_CodeCoverage_Filter::removeFileFromWhitelist<\/a>"],[0,9,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#219\">PHP_CodeCoverage_Filter::isFile<\/a>"],[0,3,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#245\">PHP_CodeCoverage_Filter::isFiltered<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#265\">PHP_CodeCoverage_Filter::getBlacklist<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#275\">PHP_CodeCoverage_Filter::getWhitelist<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#286\">PHP_CodeCoverage_Filter::hasWhitelist<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#297\">PHP_CodeCoverage_Filter::getBlacklistedFiles<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#308\">PHP_CodeCoverage_Filter::setBlacklistedFiles<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#319\">PHP_CodeCoverage_Filter::getWhitelistedFiles<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Filter.php.html#330\">PHP_CodeCoverage_Filter::setWhitelistedFiles<\/a>"],[0,6,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Parser.php.html#74\">PHP_CodeCoverage_Parser::getAllowedLines<\/a>"],[0,42,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Parser.php.html#117\">PHP_CodeCoverage_Parser::getLinesToBeIgnored<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Parser.php.html#280\">PHP_CodeCoverage_Parser::setCacheTokens<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-code-coverage\/src\/CodeCoverage\/Parser.php.html#295\">PHP_CodeCoverage_Parser::getCacheTokens<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#84\">PHP_Token::__construct<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#95\">PHP_Token::__toString<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#103\">PHP_Token::getLine<\/a>"],[0,11,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#122\">PHP_TokenWithScope::getDocblock<\/a>"],[0,12,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#158\">PHP_TokenWithScope::getEndTokenId<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#196\">PHP_TokenWithScope::getEndLine<\/a>"],[0,10,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#205\">PHP_TokenWithScopeAndVisibility::getVisibility<\/a>"],[0,10,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#228\">PHP_TokenWithScopeAndVisibility::getKeywords<\/a>"],[0,3,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#261\">PHP_Token_Includes::getName<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#279\">PHP_Token_Includes::getType<\/a>"],[0,6,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#294\">PHP_Token_FUNCTION::getArguments<\/a>"],[0,11,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#326\">PHP_Token_FUNCTION::getName<\/a>"],[0,15,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#368\">PHP_Token_FUNCTION::getCCN<\/a>"],[0,6,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#401\">PHP_Token_FUNCTION::getSignature<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#433\">PHP_Token_INTERFACE::getName<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#438\">PHP_Token_INTERFACE::hasParent<\/a>"],[0,7,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#443\">PHP_Token_INTERFACE::getPackage<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#486\">PHP_Token_INTERFACE::arrayToName<\/a>"],[0,4,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#499\">PHP_Token_INTERFACE::getParent<\/a>"],[0,4,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#517\">PHP_Token_INTERFACE::hasInterfaces<\/a>"],[0,6,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#525\">PHP_Token_INTERFACE::getInterfaces<\/a>"],[0,4,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token.php.html#710\">PHP_Token_NAMESPACE::getName<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#145\">PHP_Token_Stream::__construct<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#158\">PHP_Token_Stream::__destruct<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#166\">PHP_Token_Stream::__toString<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#181\">PHP_Token_Stream::getFilename<\/a>"],[0,10,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#192\">PHP_Token_Stream::scan<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#248\">PHP_Token_Stream::count<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#256\">PHP_Token_Stream::tokens<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#264\">PHP_Token_Stream::getClasses<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#278\">PHP_Token_Stream::getFunctions<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#292\">PHP_Token_Stream::getInterfaces<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#307\">PHP_Token_Stream::getTraits<\/a>"],[0,9,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#334\">PHP_Token_Stream::getIncludes<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#381\">PHP_Token_Stream::getFunctionForLine<\/a>"],[0,20,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#390\">PHP_Token_Stream::parse<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#529\">PHP_Token_Stream::getLinesOfCode<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#536\">PHP_Token_Stream::rewind<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#544\">PHP_Token_Stream::valid<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#552\">PHP_Token_Stream::key<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#560\">PHP_Token_Stream::current<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#567\">PHP_Token_Stream::next<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#575\">PHP_Token_Stream::offsetExists<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#584\">PHP_Token_Stream::offsetGet<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#593\">PHP_Token_Stream::offsetSet<\/a>"],[0,1,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#601\">PHP_Token_Stream::offsetUnset<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#612\">PHP_Token_Stream::seek<\/a>"],[0,2,"<a href=\"vendor\/phpunit\/php-token-stream\/src\/Token\/Stream.php.html#621\">PHP_Token_Stream::addFunctionToMap<\/a>"],[0,2,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#68\">Runtime::canCollectCodeCoverage<\/a>"],[0,16,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#79\">Runtime::getBinary<\/a>"],[0,1,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#138\">Runtime::getNameWithVersion<\/a>"],[0,2,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#146\">Runtime::getName<\/a>"],[0,2,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#158\">Runtime::getVendorUrl<\/a>"],[0,2,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#170\">Runtime::getVersion<\/a>"],[0,2,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#184\">Runtime::hasXdebug<\/a>"],[0,1,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#194\">Runtime::isHHVM<\/a>"],[0,1,"<a href=\"vendor\/sebastian\/environment\/src\/Runtime.php.html#204\">Runtime::isPHP<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
