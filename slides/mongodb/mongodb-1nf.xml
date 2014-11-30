@@ -2,31 +2,28 @@
 <title>MongoDB and the First Normal Form</title>
 
 <table>
-<tr><th>Customer ID</th><th>First Name</th><th>Surname</th><th>Telephone Number</th></tr>
-<tr><td>123</td><td>Robert</td><td>Ingram</td><td>861-2025</td></tr>
-<tr><td>456</td><td>Jane</td><td>Wright</td><td>|ff0000|403-1659, 776-4100|</td></tr>
-<tr><td>789</td><td>Maria</td><td>Fernandez</td><td>808-9633</td></tr>
+<tr><th>_ID_</th><th>Brewery</th><th>Beers</th></tr>
+<tr><td>123</td><td>BrewDog</td><td>Brixton Porter</td></tr>
+<tr><td>456</td><td>Nøgne Ø</td><td>|ff0000|Blonde, Funky Geyser|</td></tr>
+<tr><td>789</td><td>Pookhill</td><td>Irish Whiskey Cask</td></tr>
 </table>
 
 <div effect="fade-in">
 <example>
 {
 	"Customer ID": 123, 
-	"First Name": "Robert", 
-	"Surname": "Ingram", 
-	"Telephone Number": '861-2025' 
+	"Brewery": "BrewDog", 
+	"Beers": 'Brixton Porter' 
 }
 { 
 	"Customer ID": 456, 
-	"First Name": "Jane", 
-	"Surname": "Wright", 
-	"Telephone Number": [ '403-1659', '776-4100' ] 
+	"Brewery": "Nøgne Ø", 
+	"Beers": [ 'Blonde', 'Funky Geyser' ] 
 }
 { 
 	"Customer ID": 789, 
-	"First Name": "Maria", 
-	"Surname": "Fermandez", 
-	"Telephone Number": [ '808-9633' ] 
+	"Brewery": "Pookhill", 
+	"Beers": [ 'Irish Whiskey Cask' ] 
 }
 </example>
 </div>

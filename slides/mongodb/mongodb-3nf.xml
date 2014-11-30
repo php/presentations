@@ -2,29 +2,31 @@
 <title>MongoDB and the Third Normal Form</title>
 
 <table>
-<tr><th>Tournament</th><th>Year</th><th>Winner</th><th>Date of Birth</th></tr>
-<tr><td>Indiana Invitational</td><td>1998</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
-<tr><td>Cleveland Open</td><td>1999</td><td>|ff0000|Bob Albertson|</td><td>|ff0000|28 September 1968|</td></tr>
-<tr><td>Des Moines Masters</td><td>1999</td><td>|ff0000|Al Fredrickson|</td><td>|ff0000|21 July 1975|</td></tr>
-<tr><td>Indiana Invitational</td><td>1999</td><td>|ff0000|Chip Masterson|</td><td>|ff0000|14 March 1977|</td></tr>
+<tr><th>_Brewery_</th><th>_Beer_</th><th>Venue</th><th>Venue City</th></tr>
+<tr><td>BrewDog</td><td>Brixton Porter</td><td>|ff0000|The Flying Dutchman|</td><td>|ff0000|Bergen|</td></tr>
+<tr><td>BrewDog</td><td>Cocoa Psycho</td><td>|ff0000|BrewDog Camden|</td><td>|ff0000|London|</td></tr>
+<tr><td>Nøgne Ø</td><td>Blonde</td><td>|ff0000|Pingvinen|</td><td>|ff0000|Bergen|</td></tr>
+<tr><td>Nøgne Ø</td><td>Funky Geyser</td><td>|ff0000|Cardinal|</td><td>|ff0000|Stavanger|</td></tr>
+<tr><td>Pookhill</td><td>Irish Whiskey Cask</td><td>|ff0000|GBBF|</td><td>|ff0000|London|</td></tr>
 </table>
 
 <div effect="fade-in">
 <example>
-{ "Tournament": "Indiana Invitational",
-  "Winners": [
-    { "Year": 1998, "Winner": "Al Fredrickson", "Date of Birth": "21 July 1975" },
-    { "Year": 1999, "Winner": "Chip Masterson", "Date of Birth": "14 March 1977" },
+{ "Brewery": "BrewDog",
+  "Beers": [
+    { "Beer": "Brixton Porter", "Venue": "The Flying Dutchman", "Venue City": "Bergen" },
+    { "Beer": "Cocoa Psycho", "Venue": "BrewDog Camden", "Venue City": "London" },
   ]
 }
-{ "Tournament": "Cleveland Open",
-  "Winners": [
-    { "Year": 1999, "Winner": "Bob Albertson", "Date of Birth": "28 September 1968" },
+{ "Brewery": "Nøgne Ø",
+  "Beers": [
+    { "Beer": "Blonde", "Venue": "Pingvinen", "Venue City": "Bergen" },
+    { "Beer": "Funky Geyser", "Venue": "Cardinal", "Venue City": "Stavanger" },
   ]
 }
-{ "Tournament": "Des Moines Masters",
-  "Winners": [
-    { "Year": 1999, "Winner": "Al Fredrickson", "Date of Birth": "21 July 1975" },
+{ "Brewery": "Pookhill",
+  "Beers": [
+    { "Beer": "Irish Whiskey Cask", "Venue": "GBBF", "Venue City": "London" },
   ]
 }
 </example>

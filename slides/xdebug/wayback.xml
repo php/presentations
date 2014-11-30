@@ -1,0 +1,11 @@
+<slide>
+<title>Wayback</title>
+
+<list>
+	<bullet>Uses traces to store a *full* history of a script run</bullet>
+	<bullet>Binary, and indexed</bullet>
+	<bullet>Extensions to DBGp to %step_back% and %seek%</bullet>
+	<bullet>Playback runner to "act" as PHP/Xdebug</bullet>
+	<bullet>Browser integration</bullet>
+</list>
+</slide>

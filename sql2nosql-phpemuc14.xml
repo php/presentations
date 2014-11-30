@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>mongoDB</topic>
+<title>Normalising the right way</title>
+<event>PHP EM Unconference</event>
+<location>Leicester, UK</location>
+<date>November 29th, 2014</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>https://joind.in/12967</joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<!-- DINOSAUR vs PLATIPUS -->
+<slide>slides/mongodb/document.xml</slide>
+<slide>slides/mongodb/mongodb-1nf.xml</slide>
+<slide>slides/mongodb/mongodb-3nf.xml</slide>
+
+<slide>slides/mongodb/query-side-by-side.xml</slide>
+<slide>slides/mongodb/update-intro.xml</slide>
+<slide>slides/mongodb/update-atomicity.xml</slide>
+<slide>slides/mongodb/update-consistency.xml</slide>
+
+<slide>slides/mongodb/arbitrary-keys1.xml</slide>
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+
+<slide>slides/mongodb/many-to-many1.xml</slide>
+<slide>slides/mongodb/many-to-many2.xml</slide>
+<slide>slides/mongodb/many-to-many3.xml</slide>
+<slide>slides/mongodb/many-to-many4.xml</slide>
+
+<slide>slides/mongodb/embed-vs-link.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>
