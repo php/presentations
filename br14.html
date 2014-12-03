@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Coding and Dreaming</title>
+
+		<meta name="description" content="Coding and Dreaming">
+		<meta name="author" content="Rasmus Lerdorf">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="/samdark.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="/styles/github.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Coding and Dreaming</h1>
+					<h3>PHP Conference Brazil</h3>
+					<h3>São Paulo</h3>
+					<h3>Dec. 6, 2014</h3>
+					<a href="http://talks.php.net/br14">http://talks.php.net/br14</a><br><br>
+					<p>Rasmus Lerdorf<br>
+					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
+					</p>
+				</section>
+					<section>
+		<h2 margin-bottom="2em">1993</h2><br>
+		<pre><code class="C">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+
+#define ishex(x) (((x) &gt;= '0' &amp;&amp; (x) &lt;= '9') || ((x) &gt;= 'a' &amp;&amp; \
+                   (x) &lt;= 'f') || ((x) &gt;= 'A' &amp;&amp; (x) &lt;= 'F'))
+
+int htoi(char *s) {
+	int     value;
+	char    c;
+
+	c = s[0];
+	if(isupper(c)) c = tolower(c);
+	value=(c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10) * 16;
+
+	c = s[1];
+	if(isupper(c)) c = tolower(c);
+	value += c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10;
+
+	return(value);
+}
+
+void main(int argc, char *argv[]) {
+	char *params, *data, *dest, *s, *tmp;
+	char *name, *age;
+
+	puts(&quot;Content-type: text/html\r\n&quot;);
+	puts(&quot;&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Form Example&lt;/TITLE&gt;&lt;/HEAD&gt;&quot;);
+	puts(&quot;&lt;BODY&gt;&lt;H1&gt;My Example Form&lt;/H1&gt;&quot;);
+	puts(&quot;&lt;FORM action=\&quot;form.cgi\&quot; method=\&quot;GET\&quot;&gt;&quot;);
+	puts(&quot;Name: &lt;INPUT type=\&quot;text\&quot; name=\&quot;name\&quot;&gt;&quot;);
+	puts(&quot;Age: &lt;INPUT type=\&quot;text\&quot; name=\&quot;age\&quot;&gt;&quot;);
+	puts(&quot;&lt;BR&gt;&lt;INPUT type=\&quot;submit\&quot;&gt;&quot;);
+	puts(&quot;&lt;/FORM&gt;&quot;);
+
+	data = getenv(&quot;QUERY_STRING&quot;);
+	if(data &amp;&amp; *data) {
+		params = data; dest = data;
+    	while(*data) {
+			if(*data=='+') *dest=' ';
+			else if(*data == '%' &amp;&amp; ishex(*(data+1))&amp;&amp;ishex(*(data+2))) {
+				*dest = (char) htoi(data + 1);
+				data+=2;
+			} else *dest = *data;
+			data++;
+			dest++;
+		}
+		*dest = '\0';
+		s = strtok(params,&quot;&amp;&quot;);
+		do {
+			tmp = strchr(s,'=');
+			if(tmp) {
+				*tmp = '\0';
+				if(!strcmp(s,&quot;name&quot;)) name = tmp+1;
+				else if(!strcmp(s,&quot;age&quot;)) age = tmp+1;
+			}
+		} while(s=strtok(NULL,&quot;&amp;&quot;));
+
+		printf(&quot;Hi %s, you are %s years old\n&quot;,name,age);
+	}
+	puts(&quot;&lt;/BODY&gt;&lt;/HTML&gt;&quot;);
+}
+</code></pre>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">1993</h2><br>
+		<pre><code class="Perl">use CGI qw(:standard);
+print header;
+print start_html('Form Example'),
+    h1('My Example Form'),
+    start_form,
+    &quot;Name: &quot;, textfield('name'),
+    p,
+    &quot;Age: &quot;, textfield('age'),
+    p,
+    submit,
+    end_form;
+if(param()) {
+    print &quot;Hi &quot;,em(param('name')),
+        &quot;You are &quot;,em(param('age')),
+        &quot; years old&quot;;
+}
+print end_html;</code></pre>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">1994</h2><br>
+		<pre><code class="PHP">&lt;html&gt;&lt;head&gt;&lt;title&gt;Form Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;My Example Form&lt;/h1&gt;
+&lt;form action=&quot;form.phtml&quot; method=&quot;POST&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;
+&lt;br&gt;&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+&lt;?if($name):?&gt;
+Hi &lt;?echo $name?&gt;, you are &lt;?echo $age?&gt; years old
+&lt;?endif?&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+	</section>
+	<section>
+		<h3 class="p">PHP Announcement June 8, 1995</h3>
+		<h4 class="p">Posted to comp.infosystems.www.authoring.cgi</h4>
+		<pre><code class="html">Subject: Announce: Personal Home Page Tools (PHP Tools)
+
+Announcing the Personal Home Page Tools (PHP Tools) version 1.0.
+These tools are a set of small tight cgi binaries written in C.
+They perform a number of functions including:
+
+. Logging accesses to your pages in your own private log files
+. Real-time viewing of log information
+. Providing a nice interface to this log information
+. Displaying last access information right on your pages
+. Full daily and total access counters
+. Banning access to users based on their domain
+. Password protecting pages based on users' domains
+. Tracking accesses ** based on users' e-mail addresses **
+. Tracking referring URL's - HTTP_REFERER support
+. Performing server-side includes without needing server support for it
+. Ability to not log accesses from certain domains (ie. your own)
+. Easily create and display forms
+. Ability to use form information in following documents
+
+Here is what you don't need to use these tools:
+
+. You do not need root access - install in your ~/public_html dir
+. You do not need server-side includes enabled in your server
+. You do not need access to Perl or Tcl or any other script interpreter
+. You do not need access to the httpd log files
+
+The only requirement for these tools to work is that you have
+the ability to execute your own cgi programs.  Ask your system
+administrator if you are not sure what this means.
+
+The tools also allow you to implement a guestbook or any other
+form that needs to write information and display it to users
+later in about 2 minutes.
+
+The tools are in the public domain distributed under the GNU
+Public License.  Yes, that means they are free!
+
+For a complete demonstration of these tools, point your browser
+at: http://www.io.org/~rasmus
+
+--
+Rasmus Lerdorf
+rasmus@io.org
+http://www.io.org/~rasmus</code></pre>
+	</section>
+	<section>
+		<h2>C API for the Web</h2>
+		<pre><code class="C">void Cos(void) {
+    Stack *s;
+    char temp[64];
+
+    s = Pop();
+    if(!s) {
+        Error(&quot;Stack error in cos&quot;);
+        return;
+    }
+    sprintf(temp,&quot;%f&quot;,cos(s-&gt;douval));
+    Push(temp,DNUMBER);
+}</code></pre>
+		<h4 class="p">And you could then use it like this:</h4>
+		<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Cos Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Cos Example&lt;/h1&gt;
+&lt;?echo Cos($input)?&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+	</section>
+	<section>
+		<h3 class="p">Focus on the Ecosystem</h3>
+		<ul>
+			<li>LAMP wasn't an accident</li>
+			<li>Robustness, Performance and Security</li>
+			<li><font color="ff2233">♥</font> shared hosting ISPs</li>
+		</ul>
+		<h3 class="p">Scale</h3>
+		<ul>
+			<li>Scaling up is expected</li>
+			<li>Scaling down is surprisingly hard</li>
+			<li>Doing both is rocket science</li>
+		</ul>
+	</section>
+	<section>
+		<h3 class="p">Performance</h3>
+		<ul>
+			<li>mod_php</li>
+			<li>shared-nothing perfect sandbox model</li>
+		</ul>
+		<h3 class="p">Robustness</h3>
+		<ul>
+			<li>SQL LIMIT clause</li>
+			<li>Promote Prefork shared-nothing model</li>
+		</ul>
+		<h3 class="p">Security</h3>
+		<ul>
+			<li>max_execution_time</li>
+			<li>memory_limit</li>
+			<li>safe mode</li>
+		</ul>
+	</section>
+	<section>
+		<h3 class="p">What was he thinking?</h3>
+		<ul>
+			<li>Case insensitive function names?</li>
+			<li>Naming inconsistencies?</li>
+			<li>What's with the $ signs?</li>
+			<li>Globals?</li>
+			<li>register_globals?</li>
+			<li>magic_quotes?</li>
+		</ul>
+		<h3 class="p">OMGWTFBBQ?</h3>
+		<pre><code>array_search($needle, $haystack);
+strstr($haystack, $needle);
+in_array($needle, $haystack);
+substr_count($haystack, $needle);
+array_key_exists($needle, $haystack);
+strchr($haystack, $needle);</code></pre>
+	</section>
+	<section>
+		<h2>2014</h2>
+	</section>
+	<section>
+		<section id="performance">
+		<h2 margin-bottom="2em">PHP 5.5</h2><br>
+		<h3 class="p">Performance Improvements</h3>
+		<ul>
+			<li>Nested calls</li>
+			<li>Call stack pre-allocated by compiler</li>
+			<li>Bundled opcode cache</li>
+		</ul>
+		</section>
+<section id="generators">
+		<h4 class="p">✔ Generators</h4>
+		<pre><code>function xrange($start, $end) {
+    for ($i = $start; $i &lt;= $end; $i ++) {
+        yield $i;
+    }
+}
+foreach (xrange(0, 5) as $i) {
+    echo $i, &quot;\n&quot;;
+}</code></pre>
+		</section>
+<section id="coroutines">
+		<h4 class="p">✔ Coroutines</h4>
+		<pre><code>function logger($fileName) {
+    $fileHandle = fopen($fileName, 'a');
+    while (true) {
+        fwrite($fileHandle, yield . &quot;\n&quot;);
+    }
+}
+
+$logger = logger(__DIR__ . '/log');
+$logger-&gt;send('Foo');
+$logger-&gt;send('Bar');</code></pre>
+		<p class="p">For an advanced explanation of coroutines, read this article by Nikita Popov</p>
+		<div align="" style="font-size: ; color: ; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://nikic.github.io/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html" target="">Cooperative multitasking using coroutines</a></div><br />
+		</section>
+<section id="finally">
+		<h4 class="p">✔ finally</h4>
+		<pre><code>$db = mysqli_connect();
+try {
+   call_some_function($db);
+} finally {
+   mysqli_close($db);
+}</code></pre>
+		</section>
+<section id="foreachlist">
+		<h4 class="p">✔ list() in foreach</h4>
+		<pre><code>$names = [ ['John','Smith'], ['Fred','Johnson'] ];
+foreach($names as list($first,$last)) { 
+    echo $first,$last; 
+}</code></pre>
+		</section>
+<section id="constarray">
+		<h4 class="p">✔ Const array/string Dereferencing</h4>
+		<pre><code>echo array(1, 2, 3)[0]; //output 1
+echo &quot;foobar&quot;[3]; //output b
+echo [1,3,4][2]; //output 4</code></pre>
+		</section>
+<section id="others">
+		<h4 class="p">✔ empty() support for functions/expressions</h4>
+		<h4 class="p">✔ curl upload functionality rewritten</h4>
+		<h4 class="p">✔ Simplified password hashing API</h4>
+		<pre><code>// Hash
+$hash = password_hash(&quot;super secret&quot;,PASSWORD_BCRYPT);
+
+// To validate $pwd against the stored hash
+if (password_verify($pwd, $hash)) {
+    echo 'Password is valid!';
+} else {
+    echo 'Invalid password.';
+}</code></pre>
+		</section>
+<section id="php55_done">
+		<div align="" style="font-size: ; color: ; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://php.net/migration55" target="">php.net/migration55</a></div><br />
+		</section>	</section>
+	<section>
+		<section id="php56">
+		<h2 margin-bottom="2em">PHP 5.6</h2><br>
+		<div align="" style="font-size: 2em; color: ; margin-left: 0em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://php.net/spec" target="">http://php.net/spec</a></div><br />
+		</section>
+<section id="php56variadic">
+		<h4 class="p">✔ Variadic functions</h4>
+		<pre><code>class MySQL implements DB {
+    public function query($query, ...$params) {
+        $stmt = $this-&gt;pdo-&gt;prepare($query);
+        $stmt-&gt;execute($params);
+        return $stmt;
+    }
+}
+
+$q = 'SELECT * FROM users WHERE id = ?';
+$user = $db-&gt;query($q, $userID)-&gt;fetch();</code></pre>
+		</section>
+<section id="php56unpack">
+		<h4 class="p">✔ Argument Unpacking</h4>
+		<pre><code>// A better call_user_func_args
+$args1 = [1, 2, 3];
+$args2 = [4, 5, 6];
+test(...$args1, ...$args2); // [1, 2, 3, 4, 5, 6]
+test(1, 2, 3, ...$args2);   // [1, 2, 3, 4, 5, 6]
+test(...$args1, 4, 5, 6);   // Fatal error: Cannot use positional argument after argument unpacking</code></pre>
+		</section>
+<section id="php56constscalar">
+		<h4 class="p">✔ Constant scalar expressions</h4>
+		<pre><code>class Foo {
+    const FOO = 1 + 1;
+    const BAR = 1 &lt;&lt; 1;
+    const GREETING = &quot;HELLO&quot;;
+    const BAZ = self::GREETING.&quot; WORLD!&quot;
+}</code></pre>
+		</section>
+<section id="php56pow">
+		<h4 class="p">✔ Add right-associative power operator **</h4>
+		<pre><code>echo 2 ** 3 ** 2; // 512 (not 64)
+echo -3 ** 2; // -9 (not 9)
+echo 1 - 3 ** 2; // -8
+echo ~3 ** 2; // -10 (not 16)</code></pre>
+		</section>
+<section id="php56opoverload">
+		<h4 class="p">✔ Internal operator overloading for internal features like GMP</h4>
+		<pre><code>echo 2**512;
+echo &quot;\n&quot;;
+$n = gmp_init(2);
+echo $n**512;</code></pre>
+		<pre><code>1.3407807929943E+154
+13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
+		</code></pre>		</section>
+<section id="php56use">
+		<h4 class="p">✔ use function and use const namespace imports</h4>
+		<pre><code>include 'template.inc';
+include 'db.inc';
+use function template\header, template\footer, db\query;
+
+header('My Page');
+query('select * from stuff');
+footer();</code></pre>
+		</section>
+<section id="php56_0">
+		<h4 class="p">✔ default_charset ini now applies to internal funcs</h4>
+		<h4 class="p">✔ SSL Peer verification by default</h4>
+		<h4 class="p">✔ openssl certificate fingerprints</h4>
+		<h4 class="p">✔ SAN x509 ext matching when verifying host names</h4>
+		<h4 class="p">✔ automatic DoS prevention of TLS renegotiation attacks</h4>
+		<h4 class="p">✔ and many more openssl-related options</h4>
+		</section>
+<section id="php56_1">
+		<h4 class="p">✔ Asynchronous PostgreSQL database connections</h4>
+		<h4 class="p">✔ Non-blocking PostgreSQL queries</h4>
+		<h4 class="p">✔ New phpdbg SAPI</h4>
+		<h4 class="p">✔ Support for > 2GB file uploads</h4>
+		<h4 class="p">✔ The php://input stream is now re-usable</h4>
+		<h4 class="p">✔ Added hash_equals() for timing attack safe string comparison</h4>
+		<h4 class="p">✔ Added gost-crypto (CryptoPro S-box) hash algorithm</h4>
+		<h4 class="p">✔ FPM workers can now change their apparmor profile</h4>
+		<h4 class="p">✔ OCI8 Improvements</h4>
+		</section>
+<section id="php56_done">
+		<div align="" style="font-size: ; color: ; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://php.net/migration56" target="">php.net/migration56</a></div><br />
+		</section>	</section>
+	<section>
+		<section id="php7">
+		<h2 margin-bottom="2em">PHP 7</h2><br>
+		<h4 class="p">✔ phpng engine improvements</h4>
+		<ul>
+			<li>10-25% performance gain on most realworld applications</li>
+			<li>lower memory usage</li>
+			<li>Cleans up some things for a future JIT</li>
+		</ul>
+		</section>
+<section id="php7ast">
+		<h4 class="p">✔ Abstract Syntax Tree</h4>
+		<h4 class="p">✔ 64-bit integer support on Windows</h4>
+		<h4 class="p">✔ Catchable "call to member function of non-object"</h4>
+		</section>
+<section id="php7UVS">
+		<h4 class="p">✔ Uniform variable syntax</h4>
+		<pre><code>// support missing combinations of operations
+$foo()['bar']()
+[$obj1, $obj2][0]-&gt;prop
+getStr(){0}
+ 
+// support nested ::
+$foo['bar']::$baz
+$foo::$bar::$baz
+$foo-&gt;bar()::baz()
+ 
+// support nested ()
+foo()()
+$foo-&gt;bar()()
+Foo::bar()()
+$foo()()
+ 
+// support operations on arbitrary (...) expressions
+(...)['foo']
+(...)-&gt;foo
+(...)-&gt;foo()
+(...)::$foo
+(...)::foo()
+(...)()
+ 
+// two more practical examples for the last point
+(function() { ... })()
+($obj-&gt;closure)()
+ 
+// support all operations on dereferencable scalars
+// (not very useful)
+&quot;string&quot;-&gt;toLower()
+[$obj, 'method']()
+'Foo'::$bar</code></pre>
+		<h4 class="p"> </h4>
+		<p class="p">Still very early. Many more things will likely be added</p>
+		</section>	</section>
+	<section>
+		<img src="/presentations/slides/intro/lovehack-white-1000.png" width="1001" height="421">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/rasmus.jpg" width="523" height="700">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/Greenland1.jpg" width="1024" height="685">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/Greenland2.jpg" width="1024" height="685">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/Greenland3.jpg" width="1024" height="685">
+	</section>
+	<section>
+		<h2>Work on things that matter (to you)</h2>
+	</section>
+	<section>
+		<h2>Sense of Purpose</h2>
+		<h4 class="p">The Purpose Economy: How Your Desire for Impact, Personal Growth and Community Is Changing the World</h4>
+		<h4 class="p">by Aaron Hurst</h4>
+	</section>
+	<section>
+		<h4 class="p">We are running out of things that can be solved in isolation with our keyboards</h4>
+	</section>
+	<section>
+		<section id="sahana0">
+		<img src="/presentations/slides/intro/slideshow_images/sahana3.png" width="1000" height="720">
+		</section>
+<section id="sahana1">
+		<img src="/presentations/slides/intro/slideshow_images/sahana_final.png" width="1000" height="720">
+		</section>	</section>
+	<section>
+		<img src="/presentations/slides/intro/barros1.png" width="480" height="320">
+		<img src="/presentations/slides/intro/barros2.jpg" width="250" height="196">
+		<img src="/presentations/slides/intro/barros3.jpg" width="250" height="367">
+		<img src="/presentations/slides/intro/sasa.jpg" width="600" height="400">
+	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				backgroundTransition: 'none',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast',
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
