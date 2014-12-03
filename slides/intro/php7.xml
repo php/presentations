@@ -15,6 +15,21 @@
 
 <blurb fontsize="4em">✔ Catchable &quot;call to member function of non-object&quot;</blurb>
 
+<blurb fontsize="4em">✔ Various cleanups (remove old ASP/script tags and more)</blurb>
+
+<break lines="1" section="php7coalesce"/>
+<blurb fontsize="4em">✔ Null Coalesce Operator</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+$a = NULL;
+$b = 1;
+$c = 2;
+
+echo $a ?? $b; // 1
+echo $c ?? $b; // 2
+echo $a ?? $b ?? $c; // 1
+echo $a ?? $x ?? $c; // 2
+]]></example>
+
 <break lines="1" section="php7UVS"/>
 
 <blurb fontsize="4em">✔ Uniform variable syntax</blurb>
@@ -56,5 +71,7 @@ $foo()()
 
 <blurb fontsize="4em"> </blurb>
 
-<blurb fontsize="3em">Still very early. Many more things will likely be added</blurb>
+<blurb fontsize="3em">Still early. More things will likely be added</blurb>
+
+<blurb fontsize="3em">First RC scheduled for June 2015</blurb>
 </slide>
