@@ -2,7 +2,7 @@
 
 <break lines="1" />
 
-<example><![CDATA[<html><head><title>Form Example</title></head>
+<example type="PHP"><![CDATA[<html><head><title>Form Example</title></head>
 <body><h1>My Example Form</h1>
 <form action="form.phtml" method="POST">
 Name: <input type="text" name="name">
