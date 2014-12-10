@@ -2,7 +2,7 @@
 
 <break lines="1" />
 
-<example><![CDATA[use CGI qw(:standard);
+<example type="Perl"><![CDATA[use CGI qw(:standard);
 print header;
 print start_html('Form Example'),
     h1('My Example Form'),
