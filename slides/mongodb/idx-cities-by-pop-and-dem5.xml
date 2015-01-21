@@ -17,7 +17,7 @@ db.cities.find( { population: { $gte: 2000000 }, elevation: { $gte : 1654 } } )
 ...
 </example>
 <div effect="fade-in">
-<blurb>MongoDB can only use one index at the same time.</blurb>
+<blurb>In most cases, MongoDB can only use one index at the same time.</blurb>
 </div>
 
 </slide>
