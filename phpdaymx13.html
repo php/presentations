@@ -12,27 +12,25 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="/reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="/samdark.css" id="theme">
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="/styles/github.css">
+		<link rel="stylesheet" href="/reveal.js/lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		 <!-- Printing and PDF exports -->
 		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = '/reveal.js/css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
@@ -47,14 +45,14 @@
 					<h3></h3>
 					<h3>Mexico City</h3>
 					<h3>Nov. 16, 2013</h3>
-					<a href="http://talks.php.net/show/phpdaymx">http://talks.php.net/show/phpdaymx</a><br><br>
+					<a href="http://talks.php.net/phpdaymx13">http://talks.php.net/phpdaymx13</a><br><br>
 					<p>Rasmus Lerdorf<br>
 					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
 					</p>
 				</section>
 					<section>
 		<h2 margin-bottom="2em">1993</h2><br>
-		<pre><code>#include &lt;stdio.h&gt;
+		<pre><code class="C">#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 #include &lt;ctype.h&gt;
 #include &lt;string.h&gt;
@@ -121,7 +119,7 @@ void main(int argc, char *argv[]) {
 	</section>
 	<section>
 		<h2 margin-bottom="2em">1993</h2><br>
-		<pre><code>use CGI qw(:standard);
+		<pre><code class="Perl">use CGI qw(:standard);
 print header;
 print start_html('Form Example'),
     h1('My Example Form'),
@@ -141,7 +139,7 @@ print end_html;</code></pre>
 	</section>
 	<section>
 		<h2 margin-bottom="2em">1994</h2><br>
-		<pre><code>&lt;html&gt;&lt;head&gt;&lt;title&gt;Form Example&lt;/title&gt;&lt;/head&gt;
+		<pre><code class="PHP">&lt;html&gt;&lt;head&gt;&lt;title&gt;Form Example&lt;/title&gt;&lt;/head&gt;
 &lt;body&gt;&lt;h1&gt;My Example Form&lt;/h1&gt;
 &lt;form action=&quot;form.phtml&quot; method=&quot;POST&quot;&gt;
 Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
@@ -368,6 +366,21 @@ foreach (xrange(0, 5) as $i) {
     echo $i, &quot;\n&quot;;
 }</code></pre>
 		</section>
+<section id="coroutines">
+		<h4 class="p">✔ Coroutines</h4>
+		<pre><code>function logger($fileName) {
+    $fileHandle = fopen($fileName, 'a');
+    while (true) {
+        fwrite($fileHandle, yield . &quot;\n&quot;);
+    }
+}
+
+$logger = logger(__DIR__ . '/log');
+$logger-&gt;send('Foo');
+$logger-&gt;send('Bar');</code></pre>
+		<p class="p">For an advanced explanation of coroutines, read this article by Nikita Popov</p>
+		<div align="" style="font-size: ; color: ; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://nikic.github.io/2012/12/22/Cooperative-multitasking-using-coroutines-in-PHP.html" target="">Cooperative multitasking using coroutines</a></div><br />
+		</section>
 <section id="finally">
 		<h4 class="p">✔ finally</h4>
 		<pre><code>$db = mysqli_connect();
@@ -403,10 +416,16 @@ if (password_verify($pwd, $hash)) {
 } else {
     echo 'Invalid password.';
 }</code></pre>
+		</section>
+<section id="php55_done">
+		<div align="" style="font-size: ; color: ; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://php.net/migration55" target="">php.net/migration55</a></div><br />
 		</section>	</section>
 	<section>
 		<section id="php56">
 		<h2 margin-bottom="2em">PHP 5.6</h2><br>
+		<div align="" style="font-size: 2em; color: ; margin-left: 0em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://php.net/spec" target="">http://php.net/spec</a></div><br />
+		</section>
+<section id="php56variadic">
 		<h4 class="p">✔ Variadic functions</h4>
 		<pre><code>class MySQL implements DB {
     public function query($query, ...$params) {
@@ -426,7 +445,9 @@ $args1 = [1, 2, 3];
 $args2 = [4, 5, 6];
 test(...$args1, ...$args2); // [1, 2, 3, 4, 5, 6]
 test(1, 2, 3, ...$args2);   // [1, 2, 3, 4, 5, 6]
-test(...$args1, 4, 5, 6);   // [1, 2, 3, 4, 5, 6]</code></pre>
+test(...$args1, 4, 5, 6);   // Fatal error: Cannot use positional argument after argument unpacking</code></pre>
+		</section>
+<section id="php56constscalar">
 		<h4 class="p">✔ Constant scalar expressions</h4>
 		<pre><code>class Foo {
     const FOO = 1 + 1;
@@ -441,6 +462,8 @@ test(...$args1, 4, 5, 6);   // [1, 2, 3, 4, 5, 6]</code></pre>
 echo -3 ** 2; // -9 (not 9)
 echo 1 - 3 ** 2; // -8
 echo ~3 ** 2; // -10 (not 16)</code></pre>
+		</section>
+<section id="php56opoverload">
 		<h4 class="p">✔ Internal operator overloading for internal features like GMP</h4>
 		<pre><code>echo 2**512;
 echo &quot;\n&quot;;
@@ -458,10 +481,28 @@ use function template\header, template\footer, db\query;
 header('My Page');
 query('select * from stuff');
 footer();</code></pre>
+		</section>
+<section id="php56_0">
+		<h4 class="p">✔ default_charset ini now applies to internal funcs</h4>
 		<h4 class="p">✔ SSL Peer verification by default</h4>
+		<h4 class="p">✔ openssl certificate fingerprints</h4>
+		<h4 class="p">✔ SAN x509 ext matching when verifying host names</h4>
+		<h4 class="p">✔ automatic DoS prevention of TLS renegotiation attacks</h4>
+		<h4 class="p">✔ and many more openssl-related options</h4>
+		</section>
+<section id="php56_1">
+		<h4 class="p">✔ Asynchronous PostgreSQL database connections</h4>
+		<h4 class="p">✔ Non-blocking PostgreSQL queries</h4>
 		<h4 class="p">✔ New phpdbg SAPI</h4>
 		<h4 class="p">✔ Support for > 2GB file uploads</h4>
+		<h4 class="p">✔ The php://input stream is now re-usable</h4>
+		<h4 class="p">✔ Added hash_equals() for timing attack safe string comparison</h4>
+		<h4 class="p">✔ Added gost-crypto (CryptoPro S-box) hash algorithm</h4>
+		<h4 class="p">✔ FPM workers can now change their apparmor profile</h4>
 		<h4 class="p">✔ OCI8 Improvements</h4>
+		</section>
+<section id="php56_done">
+		<div align="" style="font-size: ; color: ; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://php.net/migration56" target="">php.net/migration56</a></div><br />
 		</section>	</section>
 	<section>
 		<h2 margin-bottom="2em">Deploying Web Apps</h2><br>
@@ -515,39 +556,40 @@ footer();</code></pre>
 			<li>Help us test PHP 5.6</li>
 			<li>Contribute!</li>
 		</ul>
+		<div align="" style="font-size: 2.5em; color: ; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;">Slides: <a href=":-:url:-:" target="">http://talks.php.net/phpdaymx13</a></div><br />
+		<div align="" style="font-size: 2.5em; color: ; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;">5.2->5.3: <a href="http://php.net/migration53" target="">http://php.net/migration53</a></div><br />
+		<div align="" style="font-size: 2.5em; color: ; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;">5.3->5.4: <a href="http://php.net/migration54" target="">http://php.net/migration54</a></div><br />
+		<div align="" style="font-size: 2.5em; color: ; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;">5.4->5.5: <a href="http://php.net/migration55" target="">http://php.net/migration55</a></div><br />
+		<div align="" style="font-size: 2.5em; color: ; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;">mysqlnd: <a href="http://php.net/mysqlnd" target="">http://php.net/mysqlnd</a></div><br />
+		<div align="" style="font-size: 2.5em; color: ; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;">Wiki: <a href="http://wiki.php.net" target="">http://wiki.php.net</a></div><br />
+		<div align="" style="font-size: 2.5em; color: ; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;">Bugs: <a href="http://bugs.php.net" target="">http://bugs.php.net</a></div><br />
 	</section>
 			</div>
 
 		</div>
 
 		<script src="/reveal.js/lib/js/head.min.js"></script>
-		<script src="/reveal.js/js/reveal.min.js"></script>
+		<script src="/reveal.js/js/reveal.js"></script>
 
 		<script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
-				backgroundTransition: 'none',
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
 				transitionSpeed: 'fast',
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
+				// Optional reveal.js plugins
 				dependencies: [
 					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
-					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
 

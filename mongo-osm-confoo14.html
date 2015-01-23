@@ -12,27 +12,53 @@
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="/reveal.js/css/reveal.min.css">
-		<link rel="stylesheet" href="/samdark.css" id="theme">
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="/styles/github.css">
+		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
+		<link rel="stylesheet" href="/styles/xcode.css">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<!-- Override a few styles -->
+        <style>
+        /*
+		   Not actually sure why this block isn't being picked up from the syntax highlight css 
+		   If you change the syntax highlight theme, copy the first block here
+		*/
+        .reveal pre code {
+                display: block;
+                overflow-x: auto;
+                padding: 0.5em;
+                background: #fff;
+                color: black;
+                -webkit-text-size-adjust: none;
+        }
+        /* Left-align h3 and h4 if they are p elements */
+        h3.p {
+                text-align: left;
+        }
+        h4.p {
+                text-align: left;
+        }
+        /* and left-aligned but slightly indented bullet lists */
+        .reveal ul {
+            display: block;
+            margin: 0 0 1em 3em;
+        }
+        </style>
+
+		 <!-- Printing and PDF exports -->
 		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = '/reveal.js/css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
@@ -59,7 +85,7 @@
 		<p class="p">http://derickrethans.nl/talks/mongo-osm-confoo14</p>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/closed-pub.jpg" width="" height="">
+		<img src="/presentations/slides/mongodb/closed-pub.jpg" width="" height="">
 	</section>
 	<section>
 		<ul>
@@ -68,11 +94,11 @@
 			<li>The data is free to download and use under its open license.</li>
 			<li>It's sort of a WikiPedia for map data</li>
 		</ul>
-		<img src="/../presentations/slides/mongodb/../map/osm.png" width="" height="">
+		<img src="/presentations/slides/mongodb/../map/osm.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/flat-vs-round.png" width="" height="">
-		<p class="p">MongoDB 2.2 vs. MongoDB 2.4</p>
+		<img src="/presentations/slides/mongodb/flat-vs-round.png" width="" height="">
+		<p class="p"><strong>2d</strong> index vs. <strong>2dsphere</strong> index</p>
 	</section>
 	<section>
 	</section>
@@ -89,11 +115,11 @@
 		<ul>
 			<li>GeoJSON is a format for encoding a variety of geographic data structures.</li>
 			<li>Used by various other HTML APIs as well: OpenLayers, Leaflet and through GDAL also PostGIS.</li>
-			<li>MongoDB supports three sub-formats: Point, LineString, and Polygon.</li>
+			<li>Point, MultiPoint, LineString, MultiLineString, Polygon, MultiPolygon and GeometryCollection.</li>
 		</ul>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/geojson-point.png" width="" height="">
+		<img src="/presentations/slides/mongodb/geojson-point.png" width="" height="">
 		<pre><code>
 {
     &quot;_id&quot; : &quot;n356277759&quot;,
@@ -116,7 +142,7 @@
 </code></pre>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/geojson-line.png" width="" height="">
+		<img src="/presentations/slides/mongodb/geojson-line.png" width="" height="">
 		<pre><code>
 {
     &quot;_id&quot; : &quot;w4373934&quot;,
@@ -143,7 +169,7 @@
 </code></pre>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/geojson-polygon.png" width="" height="">
+		<img src="/presentations/slides/mongodb/geojson-polygon.png" width="" height="">
 		<pre><code>
 {
    &quot;_id&quot; : &quot;w161490892&quot;,
@@ -182,19 +208,19 @@
 		</ul>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/ldn-point.png" width="" height="">
+		<img src="/presentations/slides/mongodb/ldn-point.png" width="" height="">
 		<p class="p">amenity=toilets</p>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/ldn-line.png" width="" height="">
+		<img src="/presentations/slides/mongodb/ldn-line.png" width="" height="">
 		<p class="p">highway=primaryname=Trafalgar Square</p>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/ldn-polygon.png" width="" height="">
+		<img src="/presentations/slides/mongodb/ldn-polygon.png" width="" height="">
 		<p class="p">highway=pedestrianname=Trafalgar Squarearea=yes</p>
 	</section>
 	<section>
-		<p class="p"><tt>$near</tt></p>
+		<p class="p"><tt>$geoNear</tt></p>
 		<ul>
 			<li>find stuff near a point</li>
 			<li>index required</li>
@@ -252,28 +278,28 @@ db.poiConcat.find( {
 		</ul>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/near-1.png" width="" height="">
+		<img src="/presentations/slides/mongodb/near-1.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/near-2.png" width="" height="">
+		<img src="/presentations/slides/mongodb/near-2.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/near-3.png" width="" height="">
+		<img src="/presentations/slides/mongodb/near-3.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/near-4.png" width="" height="">
+		<img src="/presentations/slides/mongodb/near-4.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/near-5.png" width="" height="">
+		<img src="/presentations/slides/mongodb/near-5.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/near-6.png" width="" height="">
+		<img src="/presentations/slides/mongodb/near-6.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/near-7.png" width="" height="">
+		<img src="/presentations/slides/mongodb/near-7.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/hydepark.png" width="" height="">
+		<img src="/presentations/slides/mongodb/hydepark.png" width="" height="">
 		<pre><code>
 hydepark = db.poiConcat.findOne( {
   ts: { $all: [
@@ -307,13 +333,13 @@ db.poiConcat.find( {
 </code></pre>
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/within-1.png" width="" height="">
+		<img src="/presentations/slides/mongodb/within-1.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/within-2.png" width="" height="">
+		<img src="/presentations/slides/mongodb/within-2.png" width="" height="">
 	</section>
 	<section>
-		<img src="/../presentations/slides/mongodb/charingcross.png" width="" height="">
+		<img src="/presentations/slides/mongodb/charingcross.png" width="" height="">
 		<pre><code>
 building = db.poiConcat.findOne( {
   _id: &quot;w30734457&quot;
@@ -381,32 +407,27 @@ db.poiConcat.find( {
 		</div>
 
 		<script src="/reveal.js/lib/js/head.min.js"></script>
-		<script src="/reveal.js/js/reveal.min.js"></script>
+		<script src="/reveal.js/js/reveal.js"></script>
 
 		<script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
-				backgroundTransition: 'none',
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transitionSpeed: 'fast',
 
-				// Parallax scrolling
-				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-				// parallaxBackgroundSize: '2100px 900px',
-
-				// Optional libraries used to extend on reveal.js
+				// Optional reveal.js plugins
 				dependencies: [
 					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
-					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});
 
