@@ -7,6 +7,6 @@ can have a note for each whisky. Design a schema that allows for:</blurb>
 <list>
 	<bullet>User profiles: name, country</bullet>
 	<bullet>Whiskies: name, age, etc (ignore the distillery bit)</bullet>
-	<bullet>Tasting notes: date, text, likes, and rating</bullet>
+	<bullet>Tasting notes: date, text, likes *(just a counter)*, and rating</bullet>
 </list>
 </slide>
