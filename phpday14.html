@@ -17,8 +17,36 @@
 		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="/reveal.js/lib/css/zenburn.css">
+		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
+		<link rel="stylesheet" href="/styles/xcode.css">
+
+		<!-- Override a few styles -->
+        <style>
+        /*
+		   Not actually sure why this block isn't being picked up from the syntax highlight css 
+		   If you change the syntax highlight theme, copy the first block here
+		*/
+        .reveal pre code {
+                display: block;
+                overflow-x: auto;
+                padding: 0.5em;
+                background: #fff;
+                color: black;
+                -webkit-text-size-adjust: none;
+        }
+        /* Left-align h3 and h4 if they are p elements */
+        h3.p {
+                text-align: left;
+        }
+        h4.p {
+                text-align: left;
+        }
+        /* and left-aligned but slightly indented bullet lists */
+        .reveal ul {
+            display: block;
+            margin: 0 0 1em 3em;
+        }
+        </style>
 
 		 <!-- Printing and PDF exports -->
 		<script>
@@ -309,7 +337,7 @@ footer();</code></pre>
 					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: '/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
 					{ src: '/reveal.js/plugin/notes/notes.js', async: true }
 				]
