@@ -18,9 +18,14 @@
 
 <blurb fontsize="4em">And you could then use it like this:</blurb>
 
-<example><![CDATA[<html><head><title>Cos Example</title></head>
+<example type="nohighlight"><![CDATA[<html><head><title>Cos Example</title></head>
 <body><h1>Cos Example</h1>
-<?echo Cos($input)?>
+<?echo Cos($input)>
 </body></html>]]></example>
-
+<notes>
+Actually the very first markup used html comments
+&amp;lt;? ... &amp;gt; came shortly after.
+Note the lack of the closing '?'
+BUT nobody was interested!
+</notes>
 </slide>

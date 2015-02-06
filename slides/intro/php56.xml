@@ -5,7 +5,7 @@
 
 <break lines="1" section="php56variadic"/>
 <blurb fontsize="4em">✔ Variadic functions</blurb>
-<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 class MySQL implements DB {
     public function query($query, ...$params) {
         $stmt = $this->pdo->prepare($query);
@@ -19,7 +19,7 @@ $user = $db->query($q, $userID)->fetch();]]></example>
 
 <break lines="1" section="php56unpack"/>
 <blurb fontsize="4em">✔ Argument Unpacking</blurb>
-<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 // A better call_user_func_args
 $args1 = [1, 2, 3];
 $args2 = [4, 5, 6];
@@ -29,7 +29,7 @@ test(...$args1, 4, 5, 6);   // Fatal error: Cannot use positional argument after
 
 <break lines="1" section="php56constscalar"/>
 <blurb fontsize="4em">✔ Constant scalar expressions</blurb>
-<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 class Foo {
     const FOO = 1 + 1;
     const BAR = 1 << 1;
@@ -39,7 +39,7 @@ class Foo {
 
 <break lines="1" section="php56pow"/>
 <blurb fontsize="4em">✔ Add right-associative power operator **</blurb>
-<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 echo 2 ** 3 ** 2; // 512 (not 64)
 echo -3 ** 2; // -9 (not 9)
 echo 1 - 3 ** 2; // -8
@@ -47,21 +47,21 @@ echo ~3 ** 2; // -10 (not 16)]]></example>
 
 <break lines="1" section="php56opoverload"/>
 <blurb fontsize="4em">✔ Internal operator overloading for internal features like GMP</blurb>
-<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 echo 2**512;
 echo "\n";
 $n = gmp_init(2);
 echo $n**512;
 ]]></example>
 <break lines="1" />
-<example fontsize="2em" marginleft="7em" hide='1' result='1' title=""><![CDATA[
+<example hide='1' result='1' title=""><![CDATA[
 1.3407807929943E+154
 13407807929942597099574024998205846127479365820592393377723561443721764030073546976801874298166903427690031858186486050853753882811946569946433649006084096
 ]]></example>
 
 <break lines="1" section="php56use"/>
 <blurb fontsize="4em">✔ use function and use const namespace imports</blurb>
-<example fontsize="2em" marginleft="7em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 include 'template.inc';
 include 'db.inc';
 use function template\header, template\footer, db\query;

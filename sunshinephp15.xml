@@ -1,0 +1,56 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<notes>
+PHP in 2015 with a focus on performance
+Conference theme is team work, so talk about open source and oxytocin
+</notes>
+
+<topic>PHP</topic>
+<title>Good Chemistry</title>
+<event>Sunshine PHP</event>
+<location>Miami</location>
+<date>Feb. 6, 2016</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/sunshinephp15</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/20years.xml</slide>
+<slide>slides/intro/phpannounce.xml</slide>
+<slide>slides/intro/capi.xml</slide>
+<slide>slides/intro/opensource.xml</slide>
+<slide>slides/intro/osoxy.xml</slide>
+
+<slide>slides/intro/php7_2015.xml</slide>
+<slide>slides/intro/perf2014.xml</slide>
+<slide>slides/intro/benchlies.xml</slide>
+<slide>slides/intro/benchbox.xml</slide>
+<slide>slides/intro/drupalbench.xml</slide>
+<slide>slides/intro/wpbench.xml</slide>
+<slide>slides/intro/bbbench.xml</slide>
+<slide>slides/intro/mwbench.xml</slide>
+<slide>slides/intro/opencartbench.xml</slide>
+<slide>slides/intro/wardrobebench.xml</slide>
+<slide>slides/intro/geeklogbench.xml</slide>
+<slide>slides/intro/traqbench.xml</slide>
+<slide>slides/intro/moodlebench.xml</slide>
+<slide>slides/intro/zencartbench.xml</slide>
+
+<slide>slides/intro/freeoxy.xml</slide>
+<slide>slides/intro/php_contribute.xml</slide>
+
+</presentation>

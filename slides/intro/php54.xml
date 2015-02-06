@@ -24,14 +24,14 @@
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Short Array Syntax</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 $a = [1, 2, 3];
 $b = ['foo' => 'orange', 'bar' => 'apple'];
 ]]></example>
 
 <break lines="1" section="php54page3"/>
 <blurb fontsize="4em">✔ Function Array Dereferencing</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 function fruits() {
   return array('apple', 'banana', 'orange');
 }
@@ -40,7 +40,7 @@ echo fruits()[0]; // Outputs: apple
 
 <break lines="1" />
 <blurb fontsize="4em">✔ $this from current scope supported in Closures</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 class Foo {
   private $prop = "bar";
   public function getPrinter() {
@@ -71,7 +71,7 @@ $func(); // Outputs: Bar
 <break lines="1" />
 <blurb fontsize="4em">✔ JSON Improvements</blurb>
 <list><item>JsonSerializable</item></list>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 class Foo implements JsonSerializable {
     private $data = 'Bar';
     public function jsonSerialize() {
@@ -88,7 +88,7 @@ echo json_encode(new Foo); // Outputs: {"data":"Bar"}]]></example>
 
 <break lines="1" />
 <blurb fontsize="4em">✔ Binary notation</blurb>
-<example fontsize="2em" result='0' title=""><![CDATA[<?php
+<example result='0' title=""><![CDATA[<?php
 $mask = 0b010101;
 ]]></example>
 

@@ -1,35 +1,35 @@
 <slide title="Array to String">
 
 <blurb fontsize="4em">New notice on array to string conversion</blurb>
-<example fontsize="2em" result='1' title=""><![CDATA[<?php
+<example result='1' title=""><![CDATA[<?php
 error_reporting(-1);
 $a = [1,2,3];
 echo $a;]]></example>
 
 <break lines="1"/>
 
-<example fontsize="2em" result='1' title="Careful"><![CDATA[<?php
+<example result='1' title="Careful"><![CDATA[<?php
 $a = [1,2,3];
 $b = [3,4,5];
 print_r(array_intersect($a,$b));]]></example>
 
 <break lines="1"/>
 
-<example fontsize="2em" result='1' title=""><![CDATA[<?php
+<example result='1' title=""><![CDATA[<?php
 $a = [1,2,[3]];
 $b = [[3],4,5];
 print_r(array_intersect($a,$b));]]></example>
 
 <break lines="1"/>
 
-<example fontsize="2em" result='1' title=""><![CDATA[<?php
+<example result='1' title=""><![CDATA[<?php
 $a = [1,2,[3]];
 $b = [[999],4,5];
 print_r(array_intersect($a,$b));]]></example>
 
 <break lines="1"/>
 
-<example fontsize="2em" result='1' title=""><![CDATA[<?php
+<example result='1' title=""><![CDATA[<?php
 $a = [1,2,[3]];
 $b = ['Array',4,5];
 print_r(array_intersect($a,$b));]]></example>

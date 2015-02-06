@@ -1,0 +1,87 @@
+<slide title="" section="php_contribute">
+
+<blurb fontsize="10em">Help us test!</blurb>
+
+<break section="php_contribute1"/>
+
+<blurb fontsize="10em">It is really easy!</blurb>
+
+<break section="php_contribute2"/>
+
+<blurb fontsize="1.5em" align="left">Install Vagrant and Virtualbox</blurb>
+<blurb fontsize="1.2em" align="left">Then:</blurb>
+
+<example fontsize="1.2em" result='0' type="shell" title=""><![CDATA[
+$ git clone https://github.com/rlerdorf/php7dev.git
+
+$ cd php7dev
+
+$ vagrant up
+... (takes a bit - it is downloading 1.5G)
+
+$ vagrant ssh
+]]></example>
+
+<blurb fontsize="1.1em" align="left">It will NAT, DHCP and also has a fixed address of 192.168.7.7</blurb>
+
+<break lines="1" section="php_contribute3"/>
+
+<blurb fontsize="1.1em" align="left">http://192.168.7.7/ will show you the PHP 7 phpinfo() page</blurb>
+<blurb fontsize="1.1em" align="left">Now you have a working Rasmus-approved dev box on your network</blurb>
+
+<break lines="1" section="php_contribute4"/>
+
+<blurb fontsize="1.1em" align="left">Switching PHP versions is trivial</blurb>
+<example fontsize="1.2em" result='0' title="" type="shell"><![CDATA[
+vagrant@php7dev:~$ sudo newphp 56
+Activating PHP 5.6.6-dev and restarting php-fpm
+
+vagrant@php7dev:~$ sudo newphp 7 debug
+Activating PHP 7.0.0-dev and restarting php-fpm
+]]></example>
+
+<blurb fontsize="1.1em" align="left">20 pre-compiled versions</blurb>
+<example fontsize="0.8em" result='0' title="" type="shell"><![CDATA[
+/usr/local/php53            /usr/local/php54-zts        /usr/local/php56-debug-zts
+/usr/local/php53-debug      /usr/local/php55            /usr/local/php56-zts
+/usr/local/php53-debug-zts  /usr/local/php55-debug      /usr/local/php70
+/usr/local/php53-zts        /usr/local/php55-debug-zts  /usr/local/php70-debug
+/usr/local/php54            /usr/local/php55-zts        /usr/local/php70-debug-zts
+/usr/local/php54-debug      /usr/local/php56            /usr/local/php70-zts
+/usr/local/php54-debug-zts  /usr/local/php56-debug
+]]></example>
+
+<break lines="1" section="php_contribute5"/>
+
+<blurb fontsize="1.1em" align="left">Build any version</blurb>
+<example fontsize="1.2em" result='0' title="" type="shell"><![CDATA[
+$ cd php-src
+$ git checkout master
+$ git pull -r
+$ make distclean
+$ ./buildconf -f
+$ ./cn
+$ make
+$ sudo make install
+]]></example>
+
+<blurb fontsize="1.1em" align="left">or</blurb>
+
+<example fontsize="1.2em" result='0' title="" type="shell"><![CDATA[
+$ cd php-src
+$ git checkout PHP-5.6
+$ git pull -r
+$ make distclean
+$ ./buildconf -f
+$ ./cn56
+$ make
+$ sudo make install
+]]></example>
+
+<break lines="1" section="php_contribute6"/>
+
+<link fontsize="1.25em" marginleft="2em" href="https://github.com/rlerdorf/php7dev">github.com/rlerdorf/php7dev</link>
+<blurb fontsize="1.1em">Report Bugs</blurb>
+<blurb fontsize="1.1em">Useful bug reports, please!</blurb>
+
+</slide>

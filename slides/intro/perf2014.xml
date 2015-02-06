@@ -1,0 +1,9 @@
+<slide title="" section="perf2014">
+<blurb align="left" fontsize="0.8em">Time and number of machine instructions for 100 requests against Wordpress-3.6.0 front page</blurb>
+<literal><![CDATA[
+<div id="perf2014_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/perf2014.js"></script>
+]]></literal>
+<blurb fontsize="0.5em">(click on legend items to show/hide data sets)</blurb>
+
+</slide>
