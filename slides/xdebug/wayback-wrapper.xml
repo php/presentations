@@ -1,0 +1,17 @@
+<slide>
+<title>Wayback: Wrapper</title>
+
+<list>
+	<bullet>Program that acts as a DBGp client (just like Xdebug)</bullet>
+	<bullet>Can read the special format trace files</bullet>
+	<bullet>Implements extra DBGp commands for: %seek%, %step_back%,
+	%get_time_range%</bullet>
+	<bullet>Update DBGp spec</bullet>
+	<bullet>Push IDEs to implement the extra commands</bullet>
+</list>
+<div effect="fade-in">
+<list>
+	<bullet>Finish dumper</bullet>
+</list>
+</div>
+</slide>

@@ -1,0 +1,11 @@
+<slide>
+<title>Wayback</title>
+
+<list>
+	<bullet>It is another tracing module, like the "human readable",
+	"computerized" or "HTML" versions</bullet>
+	<bullet><example>
+php -dxdebug.auto_trace=1 -dxdebug.trace_format=3
+</example></bullet>
+</list>
+</slide>
