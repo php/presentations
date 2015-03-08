@@ -36,6 +36,28 @@ echo $a ?? $b ?? $c; // 1
 echo $a ?? $x ?? $c; // 2
 ]]></example>
 
+<break lines="1" section="php7excep"/>
+<blurb fontsize="1.1em" align="left">✔ Exceptions on Fatals</blurb>
+<example fontsize="1.5em" result='0' title=""><![CDATA[
+<?php
+function call_method($obj) {
+    $obj->method();
+}
+
+call_method(null);
+// Fatal error: Call to a member function method() on a non-object
+]]></example>
+
+<example fontsize="1.5em" result='0' title=""><![CDATA[
+<?php
+try {
+    call_method(null);
+} catch (EngineException $e) {
+    echo "Exception: {$e->getMessage()}\n";
+}
+// Exception: Call to a member function method() on a non-object
+]]></example>
+
 <break lines="1" section="php7cleanups"/>
 <blurb fontsize="1.1em" align="left">✔ Removal of many deprecated featuresBR/
      (Your PHP4 code will break!)</blurb>
