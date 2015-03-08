@@ -15,16 +15,15 @@
 
 <notes>
 PHP in 2015 with a focus on performance
-Conference theme is team work, so talk about open source and oxytocin
 </notes>
 
 <topic>PHP</topic>
-<title>Good Chemistry</title>
-<event>Sunshine PHP</event>
-<location>Miami</location>
-<date>Feb. 6, 2015</date>
+<title>PHP</title>
+<event>PHP Australia</event>
+<location>Sydney</location>
+<date>Mar. 12, 2015</date>
 <speaker>Rasmus Lerdorf</speaker>
-<url>http://talks.php.net/sunshinephp15</url>
+<url>http://talks.php.net/oz15</url>
 <twitter>@rasmus</twitter>
 
 <slide>slides/intro/titlepage.xml</slide>
@@ -33,7 +32,6 @@ Conference theme is team work, so talk about open source and oxytocin
 <slide>slides/intro/phpannounce.xml</slide>
 <slide>slides/intro/capi.xml</slide>
 <slide>slides/intro/opensource.xml</slide>
-<slide>slides/intro/osoxy.xml</slide>
 
 <slide>slides/intro/php7_2015.xml</slide>
 <slide>slides/intro/perf2014.xml</slide>
@@ -50,7 +48,6 @@ Conference theme is team work, so talk about open source and oxytocin
 <slide>slides/intro/moodlebench.xml</slide>
 <slide>slides/intro/zencartbench.xml</slide>
 
-<slide>slides/intro/freeoxy.xml</slide>
 <slide>slides/intro/php_contribute.xml</slide>
 
 </presentation>
