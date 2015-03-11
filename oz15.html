@@ -191,14 +191,6 @@ BUT nobody was interested!<br />
 </aside>
 	</section>
 	<section>
-		<h1 style="text-align:center;"></h1>
-		<h1 style="text-align:center;">Open Source!</h1>
-<aside class="notes"><br />
-Entered the world of open source<br />
-Although the term didn't exist at the time<br />
-</aside>
-	</section>
-	<section>
 		<section id="php7">
 		<h2 margin-bottom="2em">PHP 7</h2><br>
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ engine improvements</p>
@@ -232,13 +224,13 @@ echo $a ?? $x ?? $c; // 2</code></pre>
 		</section>
 <section id="php7excep">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ Exceptions on Fatals</p>
-		<pre><code data-trim style="font-size:1.5em;">function call_method($obj) {
+		<pre><code data-trim style="font-size:1.1em;">function call_method($obj) {
     $obj-&gt;method();
 }
 
 call_method(null);
 // Fatal error: Call to a member function method() on a non-object</code></pre>
-		<pre><code data-trim style="font-size:1.5em;">try {
+		<pre><code data-trim style="font-size:1.1em;">try {
     call_method(null);
 } catch (EngineException $e) {
     echo &quot;Exception: {$e-&gt;getMessage()}\n&quot;;

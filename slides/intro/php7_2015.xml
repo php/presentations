@@ -38,7 +38,7 @@ echo $a ?? $x ?? $c; // 2
 
 <break lines="1" section="php7excep"/>
 <blurb fontsize="1.1em" align="left">✔ Exceptions on Fatals</blurb>
-<example fontsize="1.5em" result='0' title=""><![CDATA[
+<example fontsize="1.1em" result='0' title=""><![CDATA[
 <?php
 function call_method($obj) {
     $obj->method();
@@ -48,7 +48,7 @@ call_method(null);
 // Fatal error: Call to a member function method() on a non-object
 ]]></example>
 
-<example fontsize="1.5em" result='0' title=""><![CDATA[
+<example fontsize="1.1em" result='0' title=""><![CDATA[
 <?php
 try {
     call_method(null);
