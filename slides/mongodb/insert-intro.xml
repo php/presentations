@@ -6,9 +6,9 @@
 $m = new MongoClient;
 
 $m->dbname->steps->insert( [
-        person => "derickr",
-        steps_made: [
-                "20140201" => 10800,
+        'person' => 'derickr',
+        'steps_made' => [
+                '20140201' => 10800,
         ]
 ] );
 ?>]]>
