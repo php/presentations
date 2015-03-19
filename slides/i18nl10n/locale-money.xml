@@ -20,6 +20,3 @@ foreach ($locales as $country => $locale) {
 }
 ?></pre>]]></example>
 </slide>
-<!--
-vim: encoding=utf8
--->
