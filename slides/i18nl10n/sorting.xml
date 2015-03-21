@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <slide fontsize="6em">
 	<title>Sorting Strings</title>
-	<subtitle>The French Are Weird</subtitle>
 
 	<blurb>
 		How would you sort: *côté* (side), *côte* (coast), *cote* (dimension), *coté* (with dimensions)?
 	</blurb>
-	
-	<break/>
+<div effect="fade-out">
 	<blurb>
 		Logical is: cote, cot*é*, c*ô*te, c*ô*t*é*
 	</blurb>
+</div>
 
-<div effect="hide">
-	<break/>
+<div effect="fade-in-out">
 	<blurb>
 		But the french do it like: cote, c*ô*te, cot*é*, c*ô*t*é*
 	</blurb>
+</div>
 
-	<break lines="4"/>
+<div effect="fade-in">
 	<blurb>The french are not the only ones with "weird" sorting!</blurb>
 
 	<list>
