@@ -1,0 +1,12 @@
+<slide>
+<title>Create a Text Search Index</title>
+
+<example><![CDATA[<?php
+$m = new MongoClient;
+
+$m->demo->articles->ensureIndex(
+	[ 'subject' => 'text', 'post' => 'text' ],
+	[ 'weights' => [ 'subject' => 10, 'post' => 5 ] ]
+);
+?>]]></example>
+</slide>

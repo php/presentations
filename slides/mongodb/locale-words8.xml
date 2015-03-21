@@ -1,0 +1,12 @@
+<slide>
+<title>MongoDB and locale based sorting: conclusion</title>
+
+<list>
+	<bullet>Standard sort order is Unicode code point</bullet>
+	<bullet>Collators from PHP can help</bullet>
+	<bullet>Not a really good solution</bullet>
+	<bullet>We really need locale support in indexes</bullet>
+	<bullet>WiredTiger engine supports it</bullet>
+	<bullet>Vote for:<br/>%https://jira.mongodb.org/browse/SERVER-1920%</bullet>
+</list>
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Locale Based Sorting (3)</title>
+
+<example result="1"><![CDATA[<?php
+$m = new MongoClient;
+$c = $m->demo->collate;
+
+foreach ( $c->find()->sort( [ "de_DE@collation=phonebook" => 1 ] ) as $word )
+{
+	echo $word['word'], ' ';
+}
+echo "\n";
+?>]]></example>
+</slide>

@@ -1,0 +1,30 @@
+<slide>
+<title>Locale Based Sorting (1)</title>
+
+<example result="2"><![CDATA[<?php
+$words = [ 'bailey', 'boffey', 'böhm', 'brown', 'серге́й', 'сергій', 'swag', 'svere' ];
+$collations = [ 'de_DE@collation=phonebook', 'sv@collation=standard', 'ru' ];
+
+$m = new MongoClient;
+$c = $m->demo->collate;
+$c->drop();
+
+$collators = [];
+
+foreach ( $collations as $collation )
+{
+    $c->createIndex( [ $collation => 1 ] );
+    $collators[$collation] = new Collator( $collation );
+}
+
+foreach ( $words as $word )
+{
+    $doc = [ 'word' => $word ];
+    foreach ( $collations as $collation )
+    {
+        $sortKey = $collators[$collation]->getSortKey( $word );
+        $doc[$collation] = bin2hex( $sortKey );
+    }
+    $c->insert( $doc );
+}
+?>]]></example></slide>

@@ -1,0 +1,11 @@
+<slide>
+<title>Text is difficult</title>
+
+<example result="1"><![CDATA[<?php
+echo substr("Åmsterdam PHP", 0, 1), "\n";
+?>]]></example>
+
+<example result="1"><![CDATA[<?php
+var_dump("Å" === "Å");
+?>]]></example>
+</slide>

@@ -1,0 +1,11 @@
+<slide>
+<title>Elasticsearch</title>
+
+<image filename="logo-elastic.png"/>
+<break lines="2"/>
+<list>
+	<bullet>Elasticsearch is a full text search engine</bullet>
+	<bullet>Support for custom stemming, tokenizing, stop-words, languages, etc.</bullet>
+	<bullet>It's a separate easy to scale NoSQL solution on its own, focussed on text search</bullet>
+</list>
+</slide>

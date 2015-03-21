@@ -1,0 +1,20 @@
+<slide>
+<title>Locale Based Sorting (2)</title>
+
+<example result="1"><![CDATA[<?php
+$collations = [ 'de_DE@collation=phonebook', 'sv@collation=standard', 'ru' ];
+
+$m = new MongoClient;
+$c = $m->demo->collate;
+
+foreach ( $c->find() as $word )
+{
+	echo $word['word'], "\n";
+	foreach ( $collations as $collation )
+	{
+		printf("  %-30s %s\n", $collation, $word[$collation]);
+	}
+	echo "\n";
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,22 @@
+<slide>
+<title>Text indexing, the easy way (2)</title>
+
+<example><![CDATA[<?php
+$m = new MongoClient;
+$m->demo->articles->drop();
+
+foreach ( glob( '201*rst' ) as $file )
+{
+	$c = file_get_contents( $file );
+	$c = str_replace('\\n', "\n", $c);
+	preg_match( '/^.*/', $c, $match );
+
+	$m->demo->articles->insert( [
+		'_id' => $file,
+		'subject' => $match[ 0 ],
+		'text' => $c,
+		'simple_index' => preg_split( '/[ \n]/', $c ),
+	] );
+}]]></example>
+
+</slide>

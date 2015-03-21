@@ -1,0 +1,18 @@
+<slide>
+<title>We can make it work!</title>
+
+<example result="3"><![CDATA[
+<?php
+$words = [
+    'bailey', 'boffey', 'böhm', 'brown', 'серге́й', 'сергій', 'swag', 'svere'
+];
+
+$collator = new Collator( 'sv@collation=default' );
+foreach ( $words as $word )
+{
+    $sortKey = $collator->getSortKey( $word );
+    printf("%-26s: %-12s\n", bin2hex( $sortKey ), $word );
+}
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,15 @@
+<slide>
+<title>Configuring up Elasticsearch</title>
+
+<blurb>Setup mappings:<example>curl -XPUT "localhost:9200/articles/_mapping/articles" -d '
+{
+  "articles" : { 
+    "_source" : { "enabled" : true },
+    "properties" : { 
+      "subject" : { "type" : "string", "boost" : 2.0, "analyzer" : "english" },
+      "text": { "type" : "string", "analyzer" : "english" }
+    }
+  }
+}'</example></blurb>
+
+</slide>

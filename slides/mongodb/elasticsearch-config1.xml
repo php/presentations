@@ -1,0 +1,11 @@
+<slide>
+<title>Configuring up Elasticsearch</title>
+
+<blurb>Setup index:<example>curl -XPUT 'localhost:9200/articles' -d '
+index :
+  number_of_replicas : 1 
+  number_of_shards : 1 
+'
+</example></blurb>
+
+</slide>

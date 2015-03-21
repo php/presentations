@@ -1,0 +1,55 @@
+<slide>
+<title>Sorting with MongoDB</title>
+
+<blurb>We have the following words in a field:</blurb>
+<div effect="fade-out">
+<list>
+	<bullet>bailey</bullet>
+	<bullet>сергій</bullet>
+	<bullet>boffey</bullet>
+	<bullet>brown</bullet>
+	<bullet>svere</bullet>
+	<bullet>серге́й</bullet>
+	<bullet>swag</bullet>
+	<bullet>böhm</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<example>
+{ "_id" : ObjectId("53fc721844670a35498b4567"), "word" : "bailey" }
+{ "_id" : ObjectId("53fc721844670a35498b4568"), "word" : "boffey" }
+{ "_id" : ObjectId("53fc721844670a35498b4569"), "word" : "böhm" }
+{ "_id" : ObjectId("53fc721844670a35498b456a"), "word" : "brown" }
+{ "_id" : ObjectId("53fc721844670a35498b456b"), "word" : "серге́й" }
+{ "_id" : ObjectId("53fc721844670a35498b456c"), "word" : "сергій" }
+{ "_id" : ObjectId("53fc721844670a35498b456d"), "word" : "swag" }
+{ "_id" : ObjectId("53fc721844670a35498b456e"), "word" : "svere" }
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Let's sort them:</blurb>
+<example>
+es:PRIMARY> db.collate.find( {}, { _id: 0, word: 1 }).sort( { word:1 } ).pretty();
+
+{ "word" : "bailey" }
+{ "word" : "boffey" }
+{ "word" : "brown" }
+{ "word" : "böhm" }
+{ "word" : "svere" }
+{ "word" : "swag" }
+{ "word" : "серге́й" }
+{ "word" : "сергій" }
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Success!</blurb>
+</div>
+
+<div effect="fade-in">
+<blurb>Success?</blurb>
+</div>
+
+</slide>

@@ -1,0 +1,13 @@
+<slide>
+<title>Wrap-up</title>
+
+<list>
+	<bullet>First steps: Naïve indexing</bullet>
+	<bullet>Theory: tokenizing and stemming</bullet>
+	<bullet>MongoDB text search</bullet>
+	<bullet>Sorting and collation — languages are difficult</bullet>
+	<bullet>Using ElasticSearch with MongoDB — awesome match</bullet>
+</list>
+
+<blurb class="big" align="center">~enough — trough — bough~<br/>~dough — sought — through~<br/>~thorough — hiccough — hough — lough~</blurb>
+</slide>

@@ -1,0 +1,20 @@
+<slide>
+<title>Text indexing, the easy way (1)</title>
+
+<example><![CDATA[Xdebug 2.1.0beta3 released
+==========================
+
+.. articleMetaData::
+   :Where: London, UK
+   :Date: 2010-02-27 23:57 Europe/London
+   :Tags: blog, php, xdebug, extensions
+
+I've just released Xdebug 2.1.0beta3 which includes a few crash bugs as well as
+the issue that headers sent from PHP scripts are not actually set.
+
+You can find the full changelog here_ and get the latest version from the
+`download page`_.
+
+.. _here: http://xdebug.org/updates.php#x_2_1_0beta3
+.. _`download page`: http://xdebug.org/download.php]]></example>
+</slide>

@@ -1,0 +1,21 @@
+<slide>
+<title>Configuring up Elasticsearch</title>
+
+<blurb>Setup river:<example>curl -XPUT "localhost:9200/_river/articles/_meta" -d '
+{
+  "type": "mongodb",
+  "mongodb": { 
+    "servers": [
+      { "host": "localhost", "port": 27017 }
+    ],
+    "options": { "secondary_read_preference": true },
+    "db": "demo",
+    "collection": "articles"
+  },
+  "index": { 
+    "name": "articles",
+    "type": "articles"
+  }
+}'</example></blurb>
+
+</slide>

@@ -1,0 +1,13 @@
+<slide>
+<title>Simple query from PHP</title>
+
+<example result="1"><![CDATA[<?php
+$url = 'http://localhost:9200/articles/articles/_search?q=subject:xdebug&fields=subject';
+$a = json_decode( file_get_contents( $url ) );
+
+foreach ( $a->hits->hits as $hit )
+{
+	printf("%.2f: %s\n", $hit->_score, $hit->fields->subject[0] );
+}
+?>]]></example>
+</slide>
