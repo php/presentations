@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <slide fontsize="6em">
-	<title>ICU Locales</title>
-	<subtitle>Array Sorting Example</subtitle>
+	<title>Array Sorting Example</title>
 
 	<example result='1'><![CDATA[<pre>#  orig  norm  loc   trad
 --------------------------
 <?php
-	$d = $c = $b = $a = array('mapa', 'kilo', 'libro', 'llave', 'loca');
-	sort($b);
-	locale_set_default('es_VE');
-	sort($c, SORT_LOCALE_STRING);
-	locale_set_default('es_VE@collation=traditional');
-	sort($d, SORT_LOCALE_STRING);
+$d = $c = $b = $a = array('mapa', 'kilo', 'libro', 'llave', 'loca');
+sort($b);
+$col1 = new Collator('es_VE');
+$col1->sort($c);
+$col2 = new Collator('es_VE@collation=traditional');
+$col2->sort($d);
 
-	for ($i = 0; $i < 5; ++$i) {
-		echo sprintf('%d. %-5s %-5s %-5s %-5s<br/>',
-			$i + 1, $a[$i], $b[$i], $c[$i], $d[$i]);
-	}
+for ($i = 0; $i < 5; ++$i) {
+	echo sprintf('%d. %-5s %-5s %-5s %-5s<br/>',
+		$i + 1, $a[$i], $b[$i], $c[$i], $d[$i]);
+}
 ?>]]></example>
 </slide>

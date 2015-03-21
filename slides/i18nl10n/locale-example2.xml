@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <slide fontsize="6em">
-	<title>ICU Locales</title>
-	<subtitle>Example</subtitle>
+	<title>Locales — example</title>
 
 	<blurb>Comparing strings:</blurb>
 	<example result='1'><![CDATA[<?php
