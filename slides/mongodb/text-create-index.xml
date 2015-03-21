@@ -2,8 +2,8 @@
 <title>Create a Text Search Index</title>
 
 <example>
-db.t.ensureIndex(
-	{ title: "text", post: "text" },
-	{ weights: {title: 10, post: 5} }
+db.articles.ensureIndex(
+	{ subject: "text", post: "text" },
+	{ weights: {subject: 10, post: 5} }
 );</example>
 </slide>

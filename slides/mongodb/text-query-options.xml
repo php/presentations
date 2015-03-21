@@ -1,24 +1,24 @@
 <slide>
-<title>Text Search Query Options</title>
+<title>Query Options and Sorting</title>
 
-<example inline="3">
-db.collection.runCommand( "text", 
-    {
-        // OR, AND, PHRASE, NEGATION
-        search: "coffee",
-      
-        // post-search ‘find’ filter
-        filter: { about: /desserts/ },
+<example result="1"><![CDATA[<?php
+$m = new MongoClient;
 
-        // result limit
-        limit: 2,
+$cursor = $m->demo->articles->find(
+	[
+		'$text' => [ '$search' => '"advent" "xdebug"' ],
+		'subject' => new MongoRegex( '/an/' )
+	],
+	[
+		'_id' => 0, 'subject' => 1,
+		'score' => [ '$meta' => 'textScore' ]
+	]
+)->limit( 4 )->sort( [ 'score' => [ '$meta' => 'textScore' ] ] );
 
-        // result projection, 1/0 = include/exclude
-        project: { comments: 1, _id: 0 },
-
-        // default stemmer override
-        language: "english"
-    }
-)
+foreach ( $cursor as $record )
+{
+	printf( "Score: %4.2f, Title: %s\n", $record['score'], $record['subject'] );
+}
+?>]]>
 </example>
 </slide>

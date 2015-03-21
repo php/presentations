@@ -3,26 +3,26 @@
 
 <blurb>summer *OR* olympics (or strongly preferred: both)</blurb>
 <example>
-t.runCommand( "text", "Summer Olympics" ) );
+db.articles.find( { '$text' : { '$search' : "Summer Olympics" } } );
 </example>
 
 <blurb>*phrase* "Summer Olympics"</blurb>
 <example>
-t.runCommand( "text", "\"Summer Olympics\"" ) );
+db.articles.find( { '$text' : { '$search' : "\"Summer Olympics\"" } } );
 </example>
 
 <blurb>phrase "wild flowers" *OR* Sydney</blurb>
 <example>
-t.runCommand( "text", "\"wild flowers\" Sydney" ) );
+db.articles.find( { '$text' : { '$search' : "\"wild flowers\" Sydney" } } );
 </example>
 
 <blurb>wild *AND* flowers</blurb>
 <example>
-t.runCommand( "text", "\"wild\" \"flowers\"" ) );
+db.articles.find( { '$text' : { '$search' : "\"wild\" \"flowers\"" } } );
 </example>
 
 <blurb>industry *ANDNOT* Melbourne *ANDNOT* Physics</blurb>
 <example inline="3">
-t.runCommand( "text", "industry *-*Melbourne *-*Physics" ) );
+db.articles.find( { '$text' : { '$search' : "industry *-*Melbourne *-*Physics" } } );
 </example>
 </slide>

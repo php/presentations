@@ -1,6 +1,25 @@
 <slide>
-<title>Run a Text Search Command</title>
+<title>Do a Text Search Query</title>
 
+<div effect="fade-out">
 <example>
-db.t.runCommand( "text", { search: "MongoDB" } );</example>
+db.articles.find(
+	{ '$text' : { '$search' : '"advent" "xdebug"' } },
+	{ subject: 1, _id: 0 }
+);
+</example>
+</div>
+
+<div effect="fade-in">
+<example result="1"><![CDATA[<?php
+$m = new MongoClient;
+$cursor = $m->demo->articles->find(
+	[ '$text' => [ '$search' => '"advent" "xdebug"' ] ],
+	[ 'subject' => 1, '_id' => 0 ]
+);
+foreach ( $cursor as $result ) {
+	echo $result['subject'], "\n";
+}
+?>]]></example>
+</div>
 </slide>
