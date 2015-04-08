@@ -3,77 +3,13 @@
 	<title>Pretty Printing Variables</title>
 
 <div effect="fade-out">
-<html><![CDATA[array(3) {
-  [0]=>
-  NULL
-  [1]=>
-  float(3.141592654)
-  [2]=>
-  array(1) {
-    ["dutch"]=>
-    object(locale)#1 (6) {
-      ["lang"]=>
-      string(2) "nl"
-      ["variation"]=>
-      string(2000) "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
-      ["charsets"]=>
-      array(2) {
-        [0]=>
-        string(9) "iso-88591"
-        [1]=>
-        string(11) "iso-8859-15"
-      }
-      ["mb_supported":"locale":private]=>
-      bool(false)
-      ["self":protected]=>
-      object(locale)#1 (6) {
-        ["lang"]=>
-        string(2) "nl"
-        ["variation"]=>
-        string(2000) "abcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcdabcd"
-        ["charsets"]=>
-        array(2) {
-          [0]=>
-          string(9) "iso-88591"
-          [1]=>
-          string(11) "iso-8859-15"
-        }
-        ["mb_supported":"locale":private]=>
-        bool(false)
-        ["self":protected]=>
-        *RECURSION*
-        ["id":protected]=>
-        int(1)
-      }
-      ["id":protected]=>
-      int(1)
-    }
-  }
-}]]></html>
+<iframe filename="http://whisky/test/xdebug/var_dump.php"/>
 </div>
-
 <div effect="fade-in">
-	<html><![CDATA[<pre class='xdebug-var-dump' dir='ltr'>
-<b>array</b>
-  0 <font color='#888a85'>=&gt;</font> <font color='#3465a4'>null</font>
-  1 <font color='#888a85'>=&gt;</font> <small>float</small> <font color='#f57900'>3.141592654</font>
-  2 <font color='#888a85'>=&gt;</font> 
-    <b>array</b>
-      'dutch' <font color='#888a85'>=&gt;</font> 
-        <b>object</b>(<i>locale</i>)[<i>1</i>]
-          <i>public</i> 'lang' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'nl'</font> <i>(length=2)</i>
-          <i>public</i> 'variation' <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'abcdabcdabcdabcdabcdabcda'...</font> <i>(length=2000)</i>
-          <i>public</i> 'charsets' <font color='#888a85'>=&gt;</font> 
-            <b>array</b>
-              0 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'iso-88591'</font> <i>(length=9)</i>
-              1 <font color='#888a85'>=&gt;</font> <small>string</small> <font color='#cc0000'>'iso-8859-15'</font> <i>(length=11)</i>
-          <i>private</i> 'mb_supported' <font color='#888a85'>=&gt;</font> <small>boolean</small> <font color='#75507b'>false</font>
-          <i>protected</i> 'self' <font color='#888a85'>=&gt;</font> 
-            <i>&</i><b>object</b>(<i>locale</i>)[<i>1</i>]
-          <i>protected</i> 'id' <font color='#888a85'>=&gt;</font> <small>int</small> <font color='#4e9a06'>1</font>
-</pre>]]></html>
 	<blurb>Options:</blurb>
 	<example><![CDATA[<?php
+ini_set( 'xdebug.file_link_format', 'xdebug://%f@%l' );
+ini_set( 'xdebug.overload_var_dump', 2 );
 ini_set( 'xdebug.var_display_max_data', 25 );
 ini_set( 'xdebug.var_display_max_depth', 4 );
 ini_set( 'xdebug.var_display_max_children', 32 );
