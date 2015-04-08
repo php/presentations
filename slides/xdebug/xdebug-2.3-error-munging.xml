@@ -1,0 +1,18 @@
+<slide>
+<title>Xdebug 2.3: Munging Errors</title>
+
+<blurb>%xdebug.halt_level%:</blurb>
+<example><![CDATA[
+<?php
+ini_set('xdebug.halt_level', E_USER_NOTICE | E_NOTICE);
+trigger_error("Testing");
+echo "Hi!\n";
+?>]]>
+</example>
+<break/>
+<blurb>%xdebug.force_error_reporting% &amp; %xdebug.force_display_errors%:</blurb>
+<list>
+	<bullet>Overrides %error_reporting% or %display_errors%</bullet>
+	<bullet>Can not be changed with %ini_st()%, only on CLI or in %php.ini%</bullet>
+</list>
+</slide>

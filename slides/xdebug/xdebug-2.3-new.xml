@@ -1,0 +1,10 @@
+<slide>
+<title>Xdebug 2.3: New debugging features</title>
+
+<list>
+	<bullet>Exception breakpoints wildcard and inheritance</bullet>
+	<bullet>Constants</bullet>
+	<bullet>Include error code and exception message in exception breakpoints (needs IDE support)</bullet>
+	<bullet>Warnings when SELinux is in the way</bullet>
+</list>
+</slide>
