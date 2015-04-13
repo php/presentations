@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>mongoDB</topic>
+<title>Textwrangling and Wordsmithing</title>
+<event>PHP Dorset</event>
+<location>Bournemouth, UK</location>
+<date>April 13th, 2015</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/14372</joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<!-- introduction -->
+<slide>slides/mongodb/text-search-examples.xml</slide>
+<slide>slides/mongodb/text-difficult.xml</slide>
+
+<!-- searches -->
+<slide>slides/mongodb/text-wrangling-agenda.xml</slide>
+
+<!-- naïve way of importing text -->
+<slide>slides/mongodb/naive-import1.xml</slide>
+<slide>slides/mongodb/naive-import2.xml</slide>
+<slide>slides/mongodb/naive-import3.xml</slide>
+<slide>slides/mongodb/naive-import4.xml</slide>
+
+<!-- tokenization -->
+<slide>slides/search/tokenize.xml</slide>
+<slide>slides/search/tokenize-japanese.xml</slide>
+<slide>slides/search/tokenize-domain-specific.xml</slide>
+
+<!-- stemming -->
+<slide>slides/mongodb/text-stemming-examples.xml</slide>
+
+<slide>slides/mongodb/text-stopwords.xml</slide>
+<slide>slides/mongodb/text-stopwords-examples.xml</slide>
+
+<!-- MongoDB text search -->
+<slide>slides/mongodb/text-when-to-use.xml</slide>
+<slide>slides/mongodb/text-create-index-php.xml</slide>
+<slide>slides/mongodb/text-run-command.xml</slide>
+<slide>slides/mongodb/text-index-options.xml</slide>
+<slide>slides/mongodb/text-language-specific.xml</slide>
+<slide>slides/mongodb/text-query-syntax.xml</slide>
+<slide>slides/mongodb/text-query-options.xml</slide>
+
+
+<!-- locale sorting -->
+<slide>slides/i18nl10n/sorting.xml</slide> <!-- unicode and ucs2, ucs4 -->
+<slide>slides/i18nl10n/locale-example2.xml</slide>
+<slide>slides/i18nl10n/locale-example-arrays.xml</slide>
+
+<slide>slides/mongodb/locale-words1.xml</slide>
+<slide>slides/mongodb/locale-words2.xml</slide>
+<slide>slides/mongodb/locale-words3.xml</slide>
+<slide>slides/mongodb/locale-words4.xml</slide>
+<slide>slides/mongodb/locale-words5.xml</slide>
+<slide>slides/mongodb/locale-words6.xml</slide>
+<slide>slides/mongodb/locale-words7.xml</slide>
+<slide>slides/mongodb/locale-words8.xml</slide>
+
+<!-- elastic search -->
+<slide>slides/mongodb/elasticsearch.xml</slide>
+<slide>slides/mongodb/elasticsearch-mongodb.xml</slide>
+<slide>slides/mongodb/elasticsearch-config.xml</slide>
+<slide>slides/mongodb/elasticsearch-config2.xml</slide>
+<slide>slides/mongodb/elasticsearch-query.xml</slide>
+
+<slide>slides/mongodb/search-conclusion.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>
