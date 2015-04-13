@@ -4,7 +4,7 @@
 <example result="3"><![CDATA[
 <?php
 $words = [
-    'bailey', 'boffey', 'böhm', 'brown', 'серге́й', 'сергій', 'swag', 'svere'
+    'bailey', 'boffey', 'böhm', 'brown', 'серге́й', 'сергий', 'swag', 'svere'
 ];
 
 $collator = new Collator( 'sv@collation=default' );

@@ -5,7 +5,7 @@
 <div effect="fade-out">
 <list>
 	<bullet>bailey</bullet>
-	<bullet>сергій</bullet>
+	<bullet>сергий</bullet>
 	<bullet>boffey</bullet>
 	<bullet>brown</bullet>
 	<bullet>svere</bullet>
@@ -22,7 +22,7 @@
 { "_id" : ObjectId("53fc721844670a35498b4569"), "word" : "böhm" }
 { "_id" : ObjectId("53fc721844670a35498b456a"), "word" : "brown" }
 { "_id" : ObjectId("53fc721844670a35498b456b"), "word" : "серге́й" }
-{ "_id" : ObjectId("53fc721844670a35498b456c"), "word" : "сергій" }
+{ "_id" : ObjectId("53fc721844670a35498b456c"), "word" : "сергий" }
 { "_id" : ObjectId("53fc721844670a35498b456d"), "word" : "swag" }
 { "_id" : ObjectId("53fc721844670a35498b456e"), "word" : "svere" }
 </example>
@@ -40,7 +40,7 @@ es:PRIMARY> db.collate.find( {}, { _id: 0, word: 1 }).sort( { word:1 } ).pretty(
 { "word" : "svere" }
 { "word" : "swag" }
 { "word" : "серге́й" }
-{ "word" : "сергій" }
+{ "word" : "сергий" }
 </example>
 </div>
 

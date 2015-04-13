@@ -2,7 +2,7 @@
 <title>Locale Based Sorting (1)</title>
 
 <example result="2"><![CDATA[<?php
-$words = [ 'bailey', 'boffey', 'böhm', 'brown', 'серге́й', 'сергій', 'swag', 'svere' ];
+$words = [ 'bailey', 'boffey', 'böhm', 'brown', 'серге́й', 'сергий', 'swag', 'svere' ];
 $collations = [ 'de_DE@collation=phonebook', 'sv@collation=standard', 'ru' ];
 
 $m = new MongoClient;
