@@ -5,10 +5,9 @@
 	<bullet>MongoDB 2.6.6, Elasticsearch 1.4.4</bullet>
 	<bullet>Install a few plugins:<example>
 bin/plugin -install elasticsearch/elasticsearch-mapper-attachments/2.4.3
-bin/plugin --install com.github.richardwilly98.elasticsearch/elasticsearch-river-mongodb/2.0.6
 bin/plugin -install mobz/elasticsearch-head</example></bullet>
 	<bullet>Configure MongoDB as a replica set</bullet>
-	<bullet>Configure mappings and river</bullet>
+	<bullet>Configure mappings</bullet>
 </list>
 
 </slide>

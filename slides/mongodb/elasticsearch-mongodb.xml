@@ -5,7 +5,7 @@
 <image filename="logo-mongodb-header.png"/>
 <break lines="2"/>
 <list>
-	<bullet>A "river" feeds data from MongoDB into Elasticsearch</bullet>
+	<bullet>A script feeds data from MongoDB into Elasticsearch</bullet>
 	<bullet>Works as a replication slave</bullet>
 	<bullet>Updates and inserts are nearly instantaneous</bullet>
 	<bullet>Best of both worlds: MongoDB as a modern database, Elasticsearch as a first class search engine</bullet>
