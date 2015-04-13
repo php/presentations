@@ -21,6 +21,36 @@ get_config();
 // Catchable fatal error: Return value of get_config() must
 //  be of the type array, integer returned in %s on line %d
 ]]></example>
+<break lines="1" section="php7STH"/>
+
+<blurb fontsize="1.1em" align="left">✔ Coercive Scalar Types</blurb>
+
+<example fontsize="1.5em" result='0' title=""><![CDATA[
+<?php
+logmsg(1, "2.5", 3);
+
+function logmsg(string $msg, int $level, float $severity) {
+    var_dump($msg);      // string(1) "1"
+    var_dump($level);    // int(2)
+    var_dump($severity); // float(3)
+}
+]]></example>
+<blurb fontsize="1.1em" align="left">✔ Strict Scalar Types</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+declare(strict_types=1);
+
+logmsg(1, "2.5", 3);
+function logmsg(string $msg, int $level, float $severity) {
+    var_dump($msg);      // string(1) "1"
+    var_dump($level);    // int(2)
+    var_dump($severity); // float(3)
+}
+]]></example>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+Fatal error: Argument 1 passed to logmsg() must be of the type string, integer given, 
+called in test.php on line 4 and defined in test.php on line 5
+]]></example>
 
 <break lines="1" section="php7coalesce"/>
 <blurb fontsize="1.1em" align="left">✔ Null Coalesce Operator</blurb>
@@ -34,6 +64,20 @@ echo $a ?? $b; // 1
 echo $c ?? $b; // 2
 echo $a ?? $b ?? $c; // 1
 echo $a ?? $x ?? $c; // 2
+]]></example>
+
+<break lines="1" section="Spaceship"/>
+<blurb fontsize="1.1em" align="left">✔ Spaceship Operator</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+
+function cmp_php5($a, $b) {
+    return ($a < $b) ? -1 : (($a >$b) ? 1 : 0);
+}
+
+function cmp_php7($a, $b) {
+    return $a <=> $b;
+}
 ]]></example>
 
 <break lines="1" section="php7excep"/>
