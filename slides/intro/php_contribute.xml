@@ -55,17 +55,23 @@ Activating PHP 7.0.0-dev and restarting php-fpm
 
 <blurb fontsize="1.1em" align="left">Build any version</blurb>
 <example fontsize="1.2em" result='0' title="" type="shell"><![CDATA[
-$ cd php-src
-$ git checkout master
-$ git pull -r
-$ make distclean
-$ ./buildconf -f
-$ ./cn
-$ make
-$ sudo make install
+$ makephp 7
+Build log in /tmp/build.log
+Building PHP 7.0
+configuring...
+compiling...
+installing...
+done
+Building PHP 7.0-debug
+configuring...
+compiling...
+installing...
+done
 ]]></example>
 
-<blurb fontsize="1.1em" align="left">or</blurb>
+<break lines="1" section="php_contribute5a"/>
+
+<blurb fontsize="1.1em" align="left">or manually</blurb>
 
 <example fontsize="1.2em" result='0' title="" type="shell"><![CDATA[
 $ cd php-src
