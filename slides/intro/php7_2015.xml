@@ -96,6 +96,33 @@ try {
 // Exception: Call to a member function method() on a non-object
 ]]></example>
 
+<break lines="1" section="php7closecall"/>
+<blurb fontsize="1.1em" align="left">✔ Added Closure::call()</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+$f = function () {
+    return $this->n;
+};
+class MyClass {
+    private $n = 42;
+}
+$myC = new MyClass;
+$c = $f->bindTo($myC, "MyClass");
+$c();
+]]></example>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+$f = function () {
+    return $this->n;
+};
+class MyClass {
+    private $n = 42;
+}
+$myC = new MyClass;
+$f->call($myC);
+]]></example>
+
 <break lines="1" section="php7cleanups"/>
 <blurb fontsize="1.1em" align="left">✔ Removal of many deprecated featuresBR/
      (Your PHP4 code will break!)</blurb>
@@ -130,18 +157,31 @@ try {
 ]]></example>
 
 
-<break lines="1" section="php7nonobject"/>
+<break lines="1" section="php7reserved"/>
+<blurb fontsize="1.1em" align="left">✔ New reserved words:</blurb>
+<list>
+<bullet fontsize="1em" type="none">bool</bullet>
+<bullet fontsize="1em" type="none">int</bullet>
+<bullet fontsize="1em" type="none">float</bullet>
+<bullet fontsize="1em" type="none">string</bullet>
+<bullet fontsize="1em" type="none">null</bullet>
+<bullet fontsize="1em" type="none">false</bullet>
+<bullet fontsize="1em" type="none">true</bullet>
+<bullet fontsize="1em" type="none">resource</bullet>
+<bullet fontsize="1em" type="none">object</bullet>
+<bullet fontsize="1em" type="none">mixed</bullet>
+<bullet fontsize="1em" type="none">numeric</bullet>
+</list>
+
+<break lines="1" section="php7num"/>
 
 <blurb fontsize="1.1em" align="left">✔ 64-bit integer support on Windows</blurb>
-
 <blurb fontsize="1.1em" align="left">✔ Cleanup edge-case integer overflow/underflow</blurb>
-
-<blurb fontsize="1.1em" align="left">✔ Catchable &quot;call to member function of non-object&quot;</blurb>
+<blurb fontsize="1.1em" align="left">✔ Support for strings with length >= 2^31 bytes in 64 bit builds.</blurb>
+<blurb fontsize="1.1em" align="left">✔ Parse error on invalid numeric literals</blurb>
 <example result='0' title=""><![CDATA[
-$this->getAction()->invoke();
-// PHP 5.5: Fatal error: Call to a member function invoke() on a non-object in file on line N
-// PHP 5.6: Fatal error: Call to a member function invoke() on null in file on line N
-// PHP 7.0: Catchable fatal error: Call to a member function invoke() on null in file on line N
+<?php
+$mask = 0855;  // Parse error: Invalid numeric literal
 ]]></example>
 
 <break lines="1" section="php7UVS"/>
@@ -150,6 +190,11 @@ $this->getAction()->invoke();
 
 <example result='0' title=""><![CDATA[
 <?php
+// left-to-right
+$this->$belongs_to['column']
+// vs.
+$this->{$belongs_to['column']}
+
 // support missing combinations of operations
 $foo()['bar']()
 [$obj1, $obj2][0]->prop

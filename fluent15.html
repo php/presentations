@@ -262,6 +262,26 @@ call_method(null);
 }
 // Exception: Call to a member function method() on a non-object</code></pre>
 		</section>
+<section id="php7closecall">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Added Closure::call()</p>
+		<pre><code data-trim style="font-size:1.1em;">$f = function () {
+    return $this-&gt;n;
+};
+class MyClass {
+    private $n = 42;
+}
+$myC = new MyClass;
+$c = $f-&gt;bindTo($myC, &quot;MyClass&quot;);
+$c();</code></pre>
+		<pre><code data-trim style="font-size:1.1em;">$f = function () {
+    return $this-&gt;n;
+};
+class MyClass {
+    private $n = 42;
+}
+$myC = new MyClass;
+$f-&gt;call($myC);</code></pre>
+		</section>
 <section id="php7cleanups">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ Removal of many deprecated features<BR/>
      (Your PHP4 code will break!)</p>
@@ -293,18 +313,37 @@ call_method(null);
   (use PDO::ATTR_EMULATE_PREPARES instead)
 - CN_match and SNI_server_name stream context option (use peer_name instead)</code></pre>
 		</section>
-<section id="php7nonobject">
+<section id="php7reserved">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ New reserved words:</p>
+		<ul>
+			<li style="font-size: 1em;">bool</li>
+			<li style="font-size: 1em;">int</li>
+			<li style="font-size: 1em;">float</li>
+			<li style="font-size: 1em;">string</li>
+			<li style="font-size: 1em;">null</li>
+			<li style="font-size: 1em;">false</li>
+			<li style="font-size: 1em;">true</li>
+			<li style="font-size: 1em;">resource</li>
+			<li style="font-size: 1em;">object</li>
+			<li style="font-size: 1em;">mixed</li>
+			<li style="font-size: 1em;">numeric</li>
+		</ul>
+		</section>
+<section id="php7num">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ 64-bit integer support on Windows</p>
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ Cleanup edge-case integer overflow/underflow</p>
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ Catchable "call to member function of non-object"</p>
-		<pre><code data-trim>$this-&gt;getAction()-&gt;invoke();
-// PHP 5.5: Fatal error: Call to a member function invoke() on a non-object in file on line N
-// PHP 5.6: Fatal error: Call to a member function invoke() on null in file on line N
-// PHP 7.0: Catchable fatal error: Call to a member function invoke() on null in file on line N</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Support for strings with length >= 2^31 bytes in 64 bit builds.</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Parse error on invalid numeric literals</p>
+		<pre><code data-trim>$mask = 0855;  // Parse error: Invalid numeric literal</code></pre>
 		</section>
 <section id="php7UVS">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ Uniform variable syntax</p>
-		<pre><code data-trim>// support missing combinations of operations
+		<pre><code data-trim>// left-to-right
+$this-&gt;$belongs_to['column']
+// vs.
+$this-&gt;{$belongs_to['column']}
+
+// support missing combinations of operations
 $foo()['bar']()
 [$obj1, $obj2][0]-&gt;prop
 getStr(){0}
