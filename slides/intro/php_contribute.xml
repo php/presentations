@@ -33,10 +33,10 @@ $ vagrant ssh
 
 <blurb fontsize="1.1em" align="left">Switching PHP versions is trivial</blurb>
 <example fontsize="1.2em" result='0' title="" type="shell"><![CDATA[
-vagrant@php7dev:~$ sudo newphp 56
+vagrant@php7dev:~$ newphp 56
 Activating PHP 5.6.6-dev and restarting php-fpm
 
-vagrant@php7dev:~$ sudo newphp 7 debug
+vagrant@php7dev:~$ newphp 7 debug
 Activating PHP 7.0.0-dev and restarting php-fpm
 ]]></example>
 
