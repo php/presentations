@@ -46,6 +46,26 @@ Fatal error: Argument 1 passed to logmsg() must be of the
 type string, integer given
 ]]></example>
 
+<break lines="1" section="php7anon"/>
+<blurb fontsize="1.1em" align="left">✔ Anonymous Classes</blurb>
+<example fontsize="1.5em" result='0' title=""><![CDATA[
+<?php
+return new class($controller) implements Page {
+    public function __construct($controller) {
+        /* ... */
+    }
+    /* ... */
+};
+
+class MyObject extends MyStuff {
+    public function getInterface() {
+        return new class implements MyInterface {
+            /* ... */
+        };
+    }
+}
+]]></example>
+
 <break lines="1" section="php7coalesce"/>
 <blurb fontsize="1.1em" align="left">✔ Null Coalesce Operator</blurb>
 <example fontsize="1.5em" result='0' title=""><![CDATA[
