@@ -7,6 +7,8 @@
 <bullet fontsize="1em" type="none">Lower memory usage</bullet>
 <bullet fontsize="1em" type="none">Native thread local storage</bullet>
 </list>
+<blurb fontsize="1.1em" align="left">✔ Persistent secondary file-based cache for OPCache</blurb>
+
 <break lines="1" section="php7ast"/>
 <blurb fontsize="1.1em" align="left">✔ Abstract Syntax Tree</blurb>
 
@@ -262,9 +264,8 @@ echo "\u{1F602}";
 
 <blurb fontsize="1.1em" align="left">✔ ICU IntlChar class added to intl extension</blurb>
 
-<break lines="1" section="php7more"/>
 
-<blurb fontsize="1.5em">More things will be added</blurb>
+<break lines="1" section="php7more"/>
 
 <blurb fontsize="1.5em">First RC scheduled for June 2015</blurb>
 

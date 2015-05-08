@@ -1,0 +1,199 @@
+<slide title="Test Box Specs" section="boxspecs">
+
+<list>
+<bullet fontsize="0.8em" type="none">Gigabyte Z87X-UD3H i7-4771 4 cores @ 3.50GHz w/ 16G of Ram @ 1600MHz</bullet>
+<bullet fontsize="0.8em" type="none">Hyperthreading enabled for a total of 8 virtual cores</bullet>
+<bullet fontsize="0.8em" type="none">Toshiba THNSNHH256GBST SSD</bullet>
+<bullet fontsize="0.8em" type="none">Linux debian 3.16.0-4-amd64 #1 SMP Debian 3.16.7-ckt9-2 (2015-04-13) x86_64 GNU/Linux</bullet>
+<bullet fontsize="0.8em" type="none">MySQL 5.6.24</bullet>
+<bullet fontsize="0.8em" type="none">nginx-1.6.2 + php-fpm for all tests unless indicated otherwise</bullet>
+<bullet fontsize="0.8em" type="none">Quiet local 100Mbps network</bullet>
+<bullet fontsize="0.8em" type="none">siege benchmark tool run from a separate machine</bullet>
+</list>
+
+<break lines="1" section="phpconf1"/>
+
+<blurb align="left">All versions of PHP compiled locally using gcc-4.9.2 -O2</blurb>
+<example result='0' title="configure flags" type="bash"><![CDATA[./configure --disable-debug       --with-apxs2=/usr/bin/apxs2 \
+            --enable-zend-signals --with-gd \
+            --without-pear        --with-jpeg-dir=/usr \
+            --with-png-dir=/usr   --with-vpx-dir=/usr \
+            --with-t1lib=/usr     --with-freetype-dir=/usr \
+            --enable-exif         --enable-gd-native-ttf \
+            --with-zlib           --with-mysql=/usr \
+            --with-gmp            --with-zlib-dir=/usr \
+            --with-gettext        --with-kerberos \
+            --with-imap-ssl       --with-mcrypt=/usr/local \
+            --with-iconv          --enable-sockets \
+            --with-openssl        --with-pspell \
+            --with-pdo-sqlite     --with-pdo-mysql=mysqlnd \
+            --enable-soap         --enable-xmlreader \
+            --enable-phar=shared  --with-xsl \
+            --enable-ftp          --enable-cgi \
+            --with-curl=/usr      --with-tidy \
+            --with-xmlrpc         --enable-mbstring \
+            --enable-sysvsem      --enable-sysvshm \
+            --enable-shmop        --with-readline \
+            --enable-pcntl        --enable-fpm \
+            --enable-intl         --enable-zip \
+            --with-imap           --with-mysqli=mysqlnd \
+            --enable-calendar     --prefix=/usr/local \
+            --with-mysql-sock=/var/run/mysqld/mysqld.sock \
+            --with-config-file-scan-dir=/etc/php7/conf.d \
+            --with-config-file-path=/etc/php7 
+]]></example>
+
+<break lines="1" section="phpconf2"/>
+
+<example result='0' type="ini" title="php.ini"><![CDATA[[PHP]
+zend.multibyte=On
+date.timezone="America/Los_Angeles"
+display_startup_errors=On
+zend.enable_gc=Off
+include_path="/usr/local/lib/php"
+default_charset="UTF-8"
+error_reporting=-1
+
+variables_order=GPCS
+sendmail_path=""
+
+max_execution_time=60
+memory_limit=512M
+post_max_size=1024M
+cgi.force_redirect=0
+cgi.fix_pathinfo=1
+
+magic_quotes=0
+magic_quotes_gpc=0
+user_ini.filename=
+realpath_cache_size=2M
+cgi.check_shebang_line=0
+
+max_input_vars=1000
+max_file_uploads=50
+
+zend_extension=opcache.so
+opcache.enable=1
+opcache.memory_consumption=256
+opcache.interned_strings_buffer=8
+opcache.max_accelerated_files=10000
+opcache.revalidate_freq=60
+opcache.fast_shutdown=1
+opcache.enable_cli=1
+]]></example>
+
+<break lines="1" section="phpconf3"/>
+
+<example result='0' type="ini" title="php-fpm.d/www.conf"><![CDATA[[www]
+user = www-data
+group = www-data
+listen = /var/run/php-fpm.sock
+listen.owner = www-data
+listen.group = www-data
+listen.mode = 0660
+
+pm = static
+pm.max_children = 10
+pm.status_path = /status
+ping.path = /ping
+ping.response = pong
+]]></example>
+
+<break lines="1" section="nginxconf1"/>
+
+<example result='0' type="nginx" title="nginx.conf"><![CDATA[user www-data;
+worker_processes 4;
+pid /var/run/nginx.pid;
+
+events {
+        worker_connections 768;
+}
+
+http {
+        sendfile on;
+        tcp_nopush on;
+        tcp_nodelay on;
+        keepalive_timeout 65;
+        types_hash_max_size 2048;
+
+        include /etc/nginx/mime.types;
+        default_type application/octet-stream;
+
+        access_log /var/log/nginx/access.log;
+        error_log /var/log/nginx/error.log;
+
+        gzip on;
+        gzip_disable "msie6";
+
+        include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/sites-enabled/*;
+}
+]]></example>
+
+<break lines="1" section="nginxconf2"/>
+
+<example result='0' type="nginx" title="php.conf"><![CDATA[location ~ \.php {
+  include                  fastcgi_params;
+  fastcgi_keep_conn        on;
+  fastcgi_index            index.php;
+  fastcgi_split_path_info  ^(.+\.php)(/.+)$;
+  fastcgi_param PATH_INFO  $fastcgi_path_info;
+  fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+  fastcgi_intercept_errors on;
+  fastcgi_pass             unix:/var/run/php-fpm.sock;
+}
+]]></example>
+<example result='0' title="hhvm.conf"><![CDATA[location ~ \.php$ {
+  include           fastcgi_params;
+  fastcgi_keep_conn on;
+  fastcgi_pass      unix:/var/run/hhvm/server.sock;
+  fastcgi_index     index.php;
+  fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+}
+]]></example>
+
+<break lines="1" section="nginxconf3"/>
+
+<example result='0' type="nginx" title="sites-enabled/wordpress"><![CDATA[server {
+    listen 80;
+    server_name wordpress;
+    root /var/www/wordpress;
+    access_log /var/log/nginx/wordpress-access.log;
+    error_log /var/log/nginx/wordpress-error.log;
+
+    location / {
+        index     index.html index.htm index.php;
+        autoindex on;
+    }
+
+    location ~ /\.  { return 403; }
+
+    include backend.conf;
+}
+]]></example>
+
+<break lines="1" section="hhvmconf1"/>
+
+<blurb fontsize="1em">HipHop VM 3.7.0 (rel) from http://dl.hhvm.com/ubuntu</blurb>
+
+<example result='0' type="ini" title="server.ini"><![CDATA[
+pid = /var/run/hhvm/pid
+hhvm.server.file_socket = /var/run/hhvm/server.sock
+hhvm.server.type = fastcgi
+hhvm.server.default_document = index.php
+hhvm.log.use_log_file = true
+hhvm.log.file = /var/log/hhvm/error.log
+hhvm.repo.central.path = /var/run/hhvm/hhvm.hhbc
+]]></example>
+<example result='0' type="ini" title="php.ini"><![CDATA[
+session.save_handler = files
+session.save_path = /var/lib/php5
+session.gc_maxlifetime = 1440
+
+hhvm.log.level = Warning
+hhvm.log.always_log_unhandled_exceptions = true
+hhvm.log.runtime_error_reporting_level = 8191
+hhvm.mysql.typed_results = false
+]]></example>
+
+</slide>

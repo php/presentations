@@ -1,0 +1,27 @@
+<slide title="" section="traqbench">
+
+<literal><![CDATA[
+<div id="traqbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/may1/traqbench.js"></script>
+]]></literal>
+
+<break section="traqfix" />
+
+<blurb fontsize="1.1em" align="left">Had to fix one line of code in the Avalon database library:</blurb>
+
+<example fontsize="1em" marginleft="7em" result='0' title=""><![CDATA[
+diff --git a/database/model.php b/database/model.php
+index 6c5f7da..c93e726 100644
+--- a/database/model.php
++++ b/database/model.php
+@@ -397,7 +397,7 @@ public function __get($var) {
+           $belongs_to['column'] = $var . '_id';
+       }
+       $model = $belongs_to['model'];
+-      return $this->$var = $model::find($belongs_to['foreign_key'], $this->$belongs_to['column']);
++      return $this->$var = $model::find($belongs_to['foreign_key'], $this->{$belongs_to['column']});
+   } else {
+       $val = $this->$var;
+]]></example>
+
+</slide>
