@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>mongoDB</topic>
+<title>MongoDB Essentials</title>
+<event>php[tek]</event>
+<location>Rosemont, IL, US</location>
+<date>May 18th, 2015</date>
+<speaker>Derick Rethans &amp; Jeremy Mikola</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>https://joind.in/13776</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+<slide>slides/mongodb/half-tutorial-topics.xml</slide>
+
+<slide>slides/mongodb/section-intro.xml</slide>
+
+<!-- From SQL to NoSQL bit -->
+<slide>slides/mongodb/relational-model.xml</slide>
+<slide>slides/mongodb/normal-form.xml</slide>
+
+<!-- DIFFERENT NoSQL -->
+<slide>slides/mongodb/nosql.xml</slide>
+<slide>slides/mongodb/nosql-kv.xml</slide>
+<slide>slides/mongodb/nosql-column.xml</slide>
+<slide>slides/mongodb/nosql-graph.xml</slide>
+<slide>slides/mongodb/nosql-document.xml</slide>
+<slide>slides/mongodb/cap.xml</slide>
+
+<!-- DOCUMENT and MongoDB -->
+<slide>slides/mongodb/collections-documents.xml</slide>
+<slide>slides/mongodb/document.xml</slide>
+
+<slide>slides/mongodb/connecting.xml</slide>
+
+<slide>slides/mongodb/insert-js.xml</slide>
+<slide>slides/mongodb/insert-php-shortarray.xml</slide>
+- single
+
+<slide>slides/mongodb/id.xml</slide>
+
+<!-- FIRST EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise-import-untappd.xml</slide>
+
+<slide>slides/mongodb/query.xml</slide>
+<slide>slides/mongodb/query2.xml</slide>
+- findOne
+- find
+
+<slide>slides/mongodb/query-advanced-ops.xml</slide>
+
+<slide>slides/mongodb/cursors.xml</slide>
+- cursor
+<slide>slides/mongodb/limit-skip.xml</slide>
+- limit/skip
+
+<!-- SECOND EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise-finding-data.xml</slide>
+
+<slide>slides/mongodb/types.xml</slide>
+<slide>slides/mongodb/types-php.xml</slide>
+
+<!-- THIRD EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise-import-with-types.xml</slide>
+
+
+<slide>slides/mongodb/update2a.xml</slide>
+
+<!-- SCHEMA DESIGN -->
+<slide>slides/mongodb/section-schema-design.xml</slide>
+Common Patterns
+
+- RDBMS-normalisation.
+
+<slide>slides/mongodb/blog.xml</slide>
+<slide>slides/mongodb/blog2.xml</slide>
+
+<slide>slides/mongodb/considerations.xml</slide>
+
+
+<slide>slides/mongodb/one-to-many1.xml</slide>
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/tip-array-key.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+
+<!-- SECOND EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise02-distillers-storage.xml</slide>
+<slide>slides/mongodb/excercise02-distillers-example.xml</slide>
+
+
+<slide>slides/mongodb/embed-vs-link.xml</slide>
+
+
+<!-- THIRD EXCERCISE -->
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise03-reviews.xml</slide>
+<slide>slides/mongodb/excercise03-reviews-example.xml</slide>
+<slide>slides/mongodb/excercise03-push-to-add-review.xml</slide>
+<slide>slides/mongodb/excercise03-add-like.xml</slide>
+
+
+<!-- COMMANDS and AGGREGATION -->
+<slide>slides/mongodb/commands.xml</slide>
+
+<slide>slides/mongodb/section-aggregation.xml</slide>
+<slide>slides/mongodb/aggr-aggr-framework.xml</slide>
+
+<slide>slides/mongodb/aggr-pipeline.xml</slide>
+<slide>slides/mongodb/aggr-pipelines-ops.xml</slide>
+<slide>slides/mongodb/aggr-our-example-data.xml</slide>
+<slide>slides/mongodb/aggr-op-match.xml</slide>
+<slide>slides/mongodb/aggr-op-match-example.xml</slide>
+<slide>slides/mongodb/aggr-op-match-with-query-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project.xml</slide>
+<slide>slides/mongodb/aggr-op-project-incl-excl-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project-rename-compute-example.xml</slide>
+<slide>slides/mongodb/aggr-op-project-create-sub-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group.xml</slide>
+<slide>slides/mongodb/aggr-op-group-sum-count-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group-collect-example.xml</slide>
+<slide>slides/mongodb/aggr-op-group-compound-example.xml</slide>
+<slide>slides/mongodb/aggr-op-unwind.xml</slide>
+<slide>slides/mongodb/aggr-op-unwind-example.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-skip-limit.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-example.xml</slide>
+<slide>slides/mongodb/aggr-op-limit-example.xml</slide>
+<slide>slides/mongodb/aggr-op-skip-example.xml</slide>
+<slide>slides/mongodb/aggr-op-sort-limit-skip-example.xml</slide>
+
+<!-- FOURTH EXCERCISE -->
+<slide>slides/mongodb/aggregation-example-cuisine6-sort.xml</slide>
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise04-reviews-aggr.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+
+
+<!-- INDEXES -->
+<slide>slides/mongodb/section-indexes.xml</slide>
+
+<slide>slides/mongodb/idx-create-php.xml</slide>
+
+<slide>slides/mongodb/idx-cities-by-name-and-pop.xml</slide>
+<slide>slides/mongodb/idx-cities-by-name-and-pop2.xml</slide>
+<slide>slides/mongodb/idx-cities-by-name-and-pop3.xml</slide>
+
+<slide>slides/mongodb/excercise.xml</slide>
+<slide>slides/mongodb/excercise05-indexes.xml</slide>
+
+<slide>slides/mongodb/idx-cities-by-pop-and-dem.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem2.xml</slide>
+<slide>slides/mongodb/idx-stored2.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem4.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem6.xml</slide>
+<slide>slides/mongodb/idx-cities-by-pop-and-dem5.xml</slide>
+
+<slide>slides/mongodb/idx-recap1.xml</slide>
+<slide>slides/mongodb/idx-recap2.xml</slide>
+<slide>slides/mongodb/idx-recap3.xml</slide>
+
+<slide>slides/mongodb/idx-which-one-is-picked.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
+
+<!-- REPLICATION -->
+<slide>slides/mongodb/section-replication.xml</slide>
+<slide>slides/mongodb/repl-use-cases.xml</slide>
+<slide>slides/mongodb/repl-features.xml</slide>
+<slide>slides/mongodb/repl-works-basic.xml</slide>
+<slide>slides/mongodb/repl-works-normal.xml</slide>
+<slide>slides/mongodb/repl-works-failover.xml</slide>
+<slide>slides/mongodb/repl-oplog.xml</slide>
+
+<slide>slides/mongodb/replication-setup.xml</slide>
+
+<slide>slides/mongodb/repl-eventual-consistency.xml</slide>
+
+<!-- SHARDING -->
+<slide>slides/mongodb/section-sharding.xml</slide>
+<slide>slides/mongodb/sharding-agenda.xml</slide>
+<slide>slides/mongodb/sharding-the-story.xml</slide>
+<slide>slides/mongodb/sharding-vertical-scale.xml</slide>
+<slide>slides/mongodb/sharding-horizontal-scale.xml</slide>
+<slide>slides/mongodb/sharding-data-store-old.xml</slide>
+<slide>slides/mongodb/sharding-data-store-now.xml</slide>
+<slide>slides/mongodb/sharding-why.xml</slide>
+<slide>slides/mongodb/sharding-working-set.xml</slide>
+<slide>slides/mongodb/sharding-throughput.xml</slide>
+<slide>slides/mongodb/sharding-mongo-approach.xml</slide>
+<slide>slides/mongodb/sharding-partition.xml</slide>
+<slide>slides/mongodb/sharding-chunks.xml</slide>
+<slide>slides/mongodb/sharding-manages.xml</slide>
+<slide>slides/mongodb/sharding-auto-shard.xml</slide>
+<slide>slides/mongodb/sharding-architecture.xml</slide>
+<slide>slides/mongodb/sharding-shard.xml</slide>
+<slide>slides/mongodb/sharding-config-server.xml</slide>
+<slide>slides/mongodb/sharding-mongos-manages.xml</slide>
+<slide>slides/mongodb/sharding-infrastructure.xml</slide>
+<slide>slides/mongodb/sharding-configuration.xml</slide>
+<slide>slides/mongodb/sharding-example-setup.xml</slide>
+<slide>slides/mongodb/sharding-start-config.xml</slide>
+<slide>slides/mongodb/sharding-start-mongos.xml</slide>
+<slide>slides/mongodb/sharding-start-db.xml</slide>
+<slide>slides/mongodb/sharding-add-shard.xml</slide>
+<slide>slides/mongodb/sharding-verify-added.xml</slide>
+<slide>slides/mongodb/sharding-enable.xml</slide>
+<slide>slides/mongodb/sharding-key-title.xml</slide>
+<slide>slides/mongodb/sharding-shard-key.xml</slide>
+<slide>slides/mongodb/sharding-key-considerations.xml</slide>
+
+<slide>slides/mongodb/sharding-key-example.xml</slide>
+<slide>slides/mongodb/sharding-key-example2.xml</slide>
+
+<slide>slides/mongodb/sharding-mechanics.xml</slide>
+<slide>slides/mongodb/sharding-partitioning.xml</slide>
+<slide>slides/mongodb/sharding-chunk-is-range.xml</slide>
+<slide>slides/mongodb/sharding-chunk-splitting.xml</slide>
+<slide>slides/mongodb/sharding-balancing.xml</slide>
+<slide>slides/mongodb/sharding-acquire-lock.xml</slide>
+<slide>slides/mongodb/sharding-move-chunk.xml</slide>
+<slide>slides/mongodb/sharding-commit-migration.xml</slide>
+<slide>slides/mongodb/sharding-cleanup.xml</slide>
+<slide>slides/mongodb/sharding-balancing-tips.xml</slide>
+<slide>slides/mongodb/sharding-routing.xml</slide>
+<slide>slides/mongodb/sharding-routing-types.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query1.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query2.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query3.xml</slide>
+<slide>slides/mongodb/sharding-targeted-query4.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query1.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query2.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query3.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-query4.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query1.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query2.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query3.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query4.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query5.xml</slide>
+<slide>slides/mongodb/sharding-non-targeted-with-sort-query6.xml</slide>
+
+<slide>slides/mongodb/sharding-geo-aware.xml</slide>
+<slide>slides/mongodb/sharding-add-tag.xml</slide>
+<slide>slides/mongodb/sharding-tag-shard-range.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+</presentation>
