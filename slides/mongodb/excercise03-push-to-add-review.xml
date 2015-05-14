@@ -6,9 +6,9 @@
     notes: [
         {
             user_name: "Derick",
-            date: 2013-10-02,
+            date: ISODate("2013-10-02"),
             note: "Caramel and honey, fruity with some hints of earth",
-            likes: 17
+            likes: 17,
             rating: 3,
         }
     ]
@@ -21,7 +21,7 @@ $c = $m->demo->whisky;
 
 $newReview = array(
     user_name => "Michael",
-    date => 2013-10-01,
+    date => new MongoDate(strtotime("2013-10-01")),
     note => "No peat, but fruity",
     rating => 1,
 );

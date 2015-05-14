@@ -7,7 +7,7 @@ $m = new MongoClient();
 // Find with 'projection'
 $record = $m->demo->talks->findOne(
   array( 'talks.title' => 'Xdebug' ),
-  array( 'name' => true, 'talks.url' => true )
+  array( 'name' => 1, 'talks.url' => 1 )
 );
 ?>]]></example>
 </slide>

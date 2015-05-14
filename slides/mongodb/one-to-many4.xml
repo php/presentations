@@ -9,7 +9,7 @@
     { name: "Adam", text: "It was great having you in Sou..." },
     { name: "Jake", text: "I don't think you can ever re..." },
   ],
-},
+}
 { _id: 7,
   name: "What is PHP doing?",
   date: "2012-07-13",
@@ -19,8 +19,8 @@
 }]]></example>
 <blurb>Views collection:</blurb>
 <example><![CDATA[
-{ article_id: 4, time: 1350297458, ip: "192.168.42.101" },
-{ article_id: 4, time: 1350298912, ip: "192.168.42.102" },
-{ article_id: 7, time: 1350297458, ip: "192.168.42.101" },
+{ article_id: 4, time: 1350297458, ip: "192.168.42.101" }
+{ article_id: 4, time: 1350298912, ip: "192.168.42.102" }
+{ article_id: 7, time: 1350297458, ip: "192.168.42.101" }
 ]]></example>
 </slide>

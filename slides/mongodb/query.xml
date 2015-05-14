@@ -9,7 +9,7 @@ $record = $m->demo->talks->findOne();
 // Search on the _id field being 'derickr'
 $record = $m->demo->talks->findOne( array( '_id' => 'derickr' ) );
 
-// Search on the array element key 'title' in the 'talks' field
+// Search on the 'talks' embedded document's 'title' field
 $record = $m->demo->talks->findOne(
   array(
     'talks.title' => 'Xdebug'

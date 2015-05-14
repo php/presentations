@@ -4,13 +4,13 @@
 <list>
 	<bullet>null</bullet>
 	<bullet>boolean</bullet>
-	<bullet>integer (both 32-bit and 64-bit, MongoInt32, MongoInt64)</bullet>
+	<bullet>integer (32 and 64-bit, MongoInt32, MongoInt64)</bullet>
 	<bullet>double</bullet>
 	<bullet>string (UTF-8)</bullet>
 	<bullet>array</bullet>
-	<bullet>associative array ("object" for JavaScript)</bullet>
-	<bullet>MongoId (In the form of %4cb4ab6d7addf98506010000%)</bullet>
-	<bullet>MongoDate</bullet>
-	<bullet>MongoBinData</bullet>
+	<bullet>document (associative array in PHP)</bullet>
+	<bullet>ObjectIDs (MongoId)</bullet>
+	<bullet>UTC date (MongoDate)</bullet>
+	<bullet>Binary data (MongoBinData)</bullet>
 </list>
 </slide>

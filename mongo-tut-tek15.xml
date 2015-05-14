@@ -6,8 +6,8 @@
 <location>Rosemont, IL, US</location>
 <date>May 18th, 2015</date>
 <speaker>Derick Rethans &amp; Jeremy Mikola</speaker>
-<email>derick@mongodb.com</email>
-<twitter>derickr</twitter>
+<email>derick@mongodb.com &amp; jmikola@mongodb.com</email>
+<twitter>derickr &amp; @jmikola</twitter>
 <url>http://derickrethans.nl/talks.html</url>
 <joindin>https://joind.in/13776</joindin>
 <slide>slides/mongodb/title.xml</slide>
@@ -84,8 +84,8 @@ Common Patterns
 
 <slide>slides/mongodb/one-to-many1.xml</slide>
 <slide>slides/mongodb/one-to-many2.xml</slide>
-<slide>slides/mongodb/tip-array-key.xml</slide>
 <slide>slides/mongodb/one-to-many4.xml</slide>
+<slide>slides/mongodb/tip-array-key.xml</slide>
 
 <!-- SECOND EXCERCISE -->
 <slide>slides/mongodb/excercise.xml</slide>

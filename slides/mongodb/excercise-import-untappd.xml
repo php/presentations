@@ -1,5 +1,5 @@
 <slide>
-<title>Excercise: Import Beer</title>
+<title>Exercise: Import Beer</title>
 
 <list>
 	<bullet>%git clone https://github.com/derickr/mongo-tutorial.git%</bullet>
@@ -8,8 +8,8 @@
 	<bullet>Write a script to import each beer into the *tutorial* database and the *beer* collection</bullet>
 	<bullet>Verify the result on the mongo shell:
 <example>
-mongo tutorial
-db.beer.count();
+$ mongo tutorial
+> db.beer.count();
 </example>
 	</bullet>
 </list>

@@ -1,9 +1,9 @@
 <slide>
 <title>Updating documents</title>
 
-<blurb>Update only updates the *first* document it finds by default.</blurb>
+<blurb>Update only modifies the *first* document it finds by default.</blurb>
 
-<blurb>You can set an option to get all matching documents to be updated</blurb>
+<blurb>You can set an option to modify *all* matched documents</blurb>
 
 <example result="0"><![CDATA[<?php
 $m = new MongoClient;
@@ -16,7 +16,7 @@ $c->insert( [ '_id' => 'green-elephpant', 'generation' => 3, 'price' => 7.5 ] );
 
 $c->update(
     [ 'generation' => [ '$lte' => 2 ] ],  // criteria
-    [ '$dec' => [ 'price' => 2.0 ] ],     // update spec
+    [ '$inc' => [ 'price' => -2.0 ] ],    // update spec
     [ 'multiple' => true ]                // options: multiple
 );
 ?>]]></example>

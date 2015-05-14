@@ -2,15 +2,15 @@
 <title>Connecting to MongoDB</title>
 
 <blurb>No databases or collections have to do be explicitly created:</blurb>
-<break />
 
 <example><![CDATA[<?php
 $m = new MongoClient();
-$database = $m->demo;
-$collection = $database->testCollection;
+$database = $m->selectDB( 'demo' );
+$collection = $database->selectCollection( 'testCollection' );
+// or
+$collection = $m->selectCollection( 'demo', 'testCollection' );
 ?>]]>
 </example>
-<break/>
 
 <blurb>Different connection strings:</blurb>
 <list>

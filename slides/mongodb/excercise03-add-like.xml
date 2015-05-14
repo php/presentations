@@ -6,9 +6,9 @@
     notes: [
         {
             user_name: "Derick",
-            date: 2013-10-02,
+            date: ISODate("2013-10-02"),
             note: "Caramel and honey, fruity with some hints of earth",
-            likes: 17
+            likes: 17,
             rating: 3,
         }
     ]
@@ -20,7 +20,7 @@ $m = new MongoClient;
 $c = $m->demo->whisky;
 
 $c->update(
-    array( 'name' => 'Glenfiddich 15', 'user_name' => 'Derick' ),
+    array( 'name' => 'Glenfiddich 15', 'notes.user_name' => 'Derick' ),
     array( '$inc => array( 'notes.$.likes' => 1 ) )
 );
 ?>]]></example>

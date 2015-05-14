@@ -3,8 +3,8 @@
 
 <list>
 	<bullet>Unlike PHP, MongoDB does not type juggle</bullet>
-	<bullet>There is a date type, but it's UTC only (MongoDate)</bullet>
-	<bullet>When reading, everything will be an (associative) array, but never
-	an object</bullet>
+	<bullet>There is a date type, but it is only a Unix timestamp</bullet>
+	<bullet>When retrieving data, documents will be returned as an
+	(associative) array, but never as an object</bullet>
 </list>
 </slide>

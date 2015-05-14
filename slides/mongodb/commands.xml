@@ -2,9 +2,10 @@
 <title>Commands</title>
 
 <list>
-	<bullet>Are run on the database</bullet>
+	<bullet>Are run against a database</bullet>
 	<bullet>Some (aggregation) return a cursor</bullet>
 	<bullet>Others return one document</bullet>
-	<bullet>Some commands have helpers in the drivers and shell, most don't</bullet>
+	<bullet>Some common commands have helpers in the drivers and shell, most
+	commands don't have a helper</bullet>
 </list>
 </slide>

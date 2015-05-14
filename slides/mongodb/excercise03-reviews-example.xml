@@ -11,13 +11,13 @@
 <blurb>Collection: user</blurb>
 <example><![CDATA[{
     name: "Derick",
-    country: "England"
+    country: "England",
 }]]></example>
 <blurb>Collection: notes</blurb>
 <example><![CDATA[{
     user_name: "Derick",
     whisky_name: "Glenfiddich 15",
-    date: 2013-10-02,
+    date: ISODate("2013-10-02"),
     note: "Caramel and honey, fruity with some hints of earth",
     likes: 17,
     rating: 3,
@@ -27,7 +27,7 @@
 <div effect="fade-in-out">
 <blurb>Collection: whisky</blurb>
 <example><![CDATA[{
-    name: "Glenfiddch 15",
+    name: "Glenfiddich 15",
     age: 15,
     strength: 50.3,
 }]]></example>
@@ -38,9 +38,9 @@
     tasting_notes: [
         {
             whisky_name: "Glenfiddich 15",
-            date: 2013-10-02,
+            date: ISODate("2013-10-02"),
             note: "Caramel and honey, fruity with some hints of earth",
-            likes: 17
+            likes: 17,
             rating: 3,
         }
     ]
@@ -50,15 +50,15 @@
 <div effect="fade-in">
 <blurb>Collection: whisky</blurb>
 <example><![CDATA[{
-    name: "Glenfiddch 15",
+    name: "Glenfiddich 15",
     age: 15,
     strength: 50.3,
-    notes: [
+    tasting_notes: [
         {
             user_name: "Derick",
-            date: 2013-10-02,
+            date: ISODate("2013-10-02"),
             note: "Caramel and honey, fruity with some hints of earth",
-            likes: 17
+            likes: 17,
             rating: 3,
         }
     ]
@@ -66,7 +66,7 @@
 <blurb>Collection: user</blurb>
 <example><![CDATA[{
     name: "Derick",
-    country: "England"
+    country: "England",
 }]]></example>
 </div>
 
