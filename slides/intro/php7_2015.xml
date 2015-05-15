@@ -50,7 +50,7 @@ type string, integer given
 
 <break lines="1" section="php7anon"/>
 <blurb fontsize="1.1em" align="left">✔ Anonymous Classes</blurb>
-<example fontsize="1.5em" result='0' title=""><![CDATA[
+<example fontsize="1.2em" result='0' title=""><![CDATA[
 <?php
 return new class($controller) implements Page {
     public function __construct($controller) {
