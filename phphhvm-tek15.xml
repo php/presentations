@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>One Extension, Two Engines</title>
+<event>php[tek]</event>
+<location>Rosemont, IL, US</location>
+<date>May 21th, 2015</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>https://joind.in/13748</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- HISTORY of the DRIVER -->
+first driver (0.8.4) april 2009
+ - used resources and classes (for types code/date/id/regex/bindata only)
+ - only very basic crud operations:
+   static function_entry mongo_functions[] = {
+  PHP_FE( mongo_connect , NULL )
+  PHP_FE( mongo_close , NULL )
+  PHP_FE( mongo_remove , NULL )
+  PHP_FE( mongo_query , NULL )
+  PHP_FE( mongo_insert , NULL )
+  PHP_FE( mongo_batch_insert , NULL )
+  PHP_FE( mongo_update , NULL )
+  PHP_FE( mongo_has_next , NULL )
+  PHP_FE( mongo_next , NULL )
+  PHP_FE( mongo_gridfs_init , NULL )
+  PHP_FE( mongo_gridfs_store , NULL )
+  PHP_FE( mongo_gridfile_write , NULL )
+  {NULL, NULL, NULL}
+ - many existing functionality through PHP based classes
+
+0.9.0 - 5.3 support (may 2009)
+- does db, cursor and collection classes
+
+1.0.0 - sept 2009
+- the choice to always return arrays is made
+
+nov 2011 - I start helping out
+jan 2012 - Hannes does the odd patch
+feb 2012 - Kristina retires - 1.2.8
+by now, we don't rely on PHP classes at all anymore
+jun 2012 - Hannes starts helping out properly
+aug 2012 - merge in new connection handling (no more connection pools) 1.3.0alpha1
+         - we start using sane branches with git
+sep 2012 - jeremy starts doing the odd patches
+nov 2012 - 1.3! 
+
+releases now come close to MongoDB server releases
+
+1.4 ssl support may 2013 (2.4)
+may 2013 - Jeremy starts helping out properly
+1.5 sasl support, command cursors apr 2014 (2.6)
+1.6 rewritten cursor support. MONGO_METHOD refactoring / MongoDB 3.0 support jan 2015 (3.0)
+
+</presentation>
