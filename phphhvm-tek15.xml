@@ -56,4 +56,58 @@ may 2013 - Jeremy starts helping out properly
 1.5 sasl support, command cursors apr 2014 (2.6)
 1.6 rewritten cursor support. MONGO_METHOD refactoring / MongoDB 3.0 support jan 2015 (3.0)
 
+That much for history, the current state of the driver is:
+
+- Three guys working on it
+- It supports everything up to MongoDB 3.0
+- There are some... issues:
+
+  - GridFS
+  - Some interesting design choices (array/object output)
+
+<!-- NEW GOALS -->
+
+- Easier to maintain
+- Easier to prototype
+- Support other engines without redoing it all
+
+- MongoDB vs Mongo extension
+
+<!-- THE ENGINES -->
+
+<!-- PHP 5 -->
+
+<!-- HHVM -->
+
+Explain what HHVM is.
+
+<!-- PHP 7 -->
+
+Explain that PHP 7 is totally different
+
+
+<!-- NEW ARCHITECTURE -->
+
+libbson, libmongoc, Hippo, Phongo and Phplib (flip?)
+Other packages on top (GridFS)
+Composer
+
+<!-- ISSUES -->
+
+HHVM is not mature, and certainly not documented.
+
+- SLow going, mention the hhvm cookbook
+- issues with cursor and foreach iteration
+- APIs changing in Phongo meant that things had to be redone for Hippo
+- Namespaces for drivers, exception and bson classes
+
+<!-- CURRENT STATUS -->
+
+Phongo in alpha (0.6.3) 
+Hippo in pre-alpha (but you can do all basic ops)
+phplib (as mongodb/mongodb) on packagist: https://packagist.org/packages/mongodb/mongodb (0.2.0)
+
+
+
+
 </presentation>
