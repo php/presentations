@@ -4,7 +4,6 @@
 
 <list>
 	<bullet>High Availability (auto-failover)</bullet>
-    <bullet>Read Scaling (extra copies to read from)</bullet>
     <bullet>Backups
 		<list>
 		    <bullet>Online, Delayed Copy (fat finger)</bullet>

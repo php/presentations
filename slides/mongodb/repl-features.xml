@@ -7,7 +7,6 @@
     <bullet>Reads can be from primary (default) or a secondary</bullet>
     <bullet>Any (one) node can be primary</bullet>
     <bullet>Consensus election of primary</bullet>
-    <bullet>Automatic failover</bullet>
-    <bullet>Automatic recovery</bullet>
+    <bullet>Automatic failover and recovery</bullet>
 </list>
 </slide>

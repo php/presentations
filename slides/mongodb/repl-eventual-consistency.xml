@@ -4,15 +4,16 @@
 <list>
     <bullet>Read Preference / Slave Okay
 		<list>
-			<bullet>driver will always send writes to Primary</bullet>
-			<bullet>driver will send read requests to Secondaries</bullet>
+			<bullet>Driver will always send writes to primary</bullet>
+			<bullet>Driver will send read requests to secondaries</bullet>
+			<bullet>Options to prefer primary, secondary, or nearest</bullet>
 		</list>
 	</bullet>
 
     <bullet>Warning!
 		<list>
 			<bullet>Secondaries may be out of date</bullet>
-			<bullet>Not applicable for all applications</bullet>
+			<bullet>Not appropriate for all applications</bullet>
 		</list>
 	</bullet>
 </list>
