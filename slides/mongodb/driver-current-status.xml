@@ -14,10 +14,10 @@
             <bullet>array/object deserialization</bullet>
             <bullet>positional arguments/options array</bullet>
             <bullet>not a clear strategy for which command we add helpers</bullet>
-            <bullet>static MongoCursor::timeout and ::slaveOkaym methods</bullet>
+            <bullet>static MongoCursor::timeout and ::slaveOkay methods</bullet>
             <bullet>MongoLog and stream context listeners</bullet>
         </list>
     </bullet>
-    <bullet>The GridFS implementation could get some more love</bullet>
+    <bullet>GridFS implementation could get some more love</bullet>
 </list>
 </slide>
