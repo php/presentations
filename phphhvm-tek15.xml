@@ -94,16 +94,16 @@ That much for history, the current state of the driver is:
 <slide>slides/mongodb/new-driver-goals.xml</slide>
 
 <!-- THE ENGINES -->
+<slide>slides/mongodb/the-engines.xml</slide>
 
 <!-- PHP 5 -->
+<slide>slides/mongodb/engines-php5.xml</slide>
 
 <!-- HHVM -->
-
-Explain what HHVM is.
+<slide>slides/mongodb/engines-hhvm.xml</slide>
 
 <!-- PHP 7 -->
-
-Explain that PHP 7 is totally different
+<slide>slides/mongodb/engines-php7.xml</slide>
 
 
 <!-- NEW ARCHITECTURE -->
@@ -111,6 +111,8 @@ Explain that PHP 7 is totally different
 libbson, libmongoc, Hippo, Phongo and Phplib (flip?)
 Other packages on top (GridFS)
 Composer
+
+<slide>slides/mongodb/new-architecture.xml</slide>
 
 - MongoDB vs Mongo extension
 
@@ -121,7 +123,7 @@ Composer
 
 HHVM is not mature, and certainly not documented.
 
-- SLow going, mention the hhvm cookbook
+- Slow going, mention the hhvm cookbook
 - issues with cursor and foreach iteration
 - APIs changing in Phongo meant that things had to be redone for Hippo
 - Namespaces for drivers, exception and bson classes

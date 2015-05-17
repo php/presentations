@@ -1,0 +1,26 @@
+<slide>
+<title>Which engines?</title>
+
+<table>
+<tr>
+	<td><image filename="engine-php5.jpg"/></td>
+	<td><image filename="engine-hhvm.jpg"/></td>
+	<td><image filename="engine-php7.jpg"/></td>
+</tr>
+<tr>
+	<td><blurb>PHP 5</blurb></td>
+	<td><blurb>HHVM</blurb></td>
+	<td><blurb>PHP 7</blurb></td>
+</tr>
+<tr>
+	<td><div effect="fade-in"><blurb>Our old favourite</blurb></div></td>
+	<td><div effect="fade-in"><blurb>New kid on the block</blurb></div></td>
+	<td><div effect="fade-in"><blurb>PHP's newest invention</blurb></div></td>
+</tr>
+<tr>
+	<td><div effect="fade-in"><blurb>PHP 5.3 and higher</blurb></div></td>
+	<td><div effect="fade-in"><blurb>Some random unstable version</blurb></div></td>
+	<td><div effect="fade-in"><blurb>It's not out yet</blurb></div></td>
+</tr>
+</table>
+</slide>

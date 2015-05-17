@@ -1,0 +1,10 @@
+<slide>
+<title>Engine: PHP 7</title>
+
+<list>
+    <bullet>User land code (mostly) compatible with PHP 5</bullet>
+    <bullet>Internals quite a lot **different** than PHP 5</bullet>
+</list>
+
+<div effect="fade-in"><image filename="elephpants2.jpg"/></div>
+</slide>
