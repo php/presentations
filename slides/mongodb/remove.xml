@@ -1,0 +1,22 @@
+<slide>
+<title>Deleting documents</title>
+
+<blurb>Unlike %update%, %remove% deletes *all* matched documents by default.</blurb>
+
+<blurb>You can set an option to remove only the *first* matched document</blurb>
+
+<example result="0"><![CDATA[<?php
+$m = new MongoClient;
+$c = $m->demo->products;
+$c->drop();
+
+$c->insert( [ '_id' => 'blue-elephpant',  'generation' => 1, 'price' => 7.5 ] );
+$c->insert( [ '_id' => 'pink-elephpant',  'generation' => 2, 'price' => 8.0 ] );
+$c->insert( [ '_id' => 'green-elephpant', 'generation' => 3, 'price' => 7.5 ] );
+
+$c->remove(
+    [ 'price' => [ '$lt' => 8.0 ] ],  // criteria
+    [ 'justOne' => true ]             // options: justOne
+);
+?>]]></example>
+</slide>
