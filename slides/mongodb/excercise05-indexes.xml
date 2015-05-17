@@ -1,5 +1,5 @@
 <slide>
-<title>Excercise: Indexes</title>
+<title>Exercise: Indexes</title>
 
 <blurb>A common query is to find the ten highest rated beers ordered by %rating_score% first, and %created_at% second.<br/>Write a script to:</blurb>
 
