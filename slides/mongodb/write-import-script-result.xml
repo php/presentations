@@ -17,8 +17,8 @@ $d = $m->demo->poi;
 $d->drop();
 
 // 3 ADD: Create an index on "name" and a "2d" index on "loc"
-$d->ensureIndex( array( 'loc' => '2d' ) );
-$d->ensureIndex( array( 'name' => 1 ) );
+$d->ensureIndex( [ 'loc' => '2d' ] );
+$d->ensureIndex( [ 'name' => 1 ] );
 
 var_dump($d->getIndexInfo());
 ]]></example>

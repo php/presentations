@@ -4,14 +4,14 @@
 <example result="1"><![CDATA[<?php
 $m = new MongoClient;
 $c = $m->demo->continent;
-$r = $c->find( array(
-    'cities' => array(
-        '$elemMatch' => array(
-            'population' => array( '$gte' => 11000000 ),
-            'dem' => array( '$gte' => 100 ),
-        )
-    )
-) );
+$r = $c->find( [
+    'cities' => [
+        '$elemMatch' => [
+            'population' => [ '$gte' => 11000000 ],
+            'dem' => [ '$gte' => 100 ],
+        ]
+    ]
+] );
 
 foreach( $r as $c ) {
     echo $c['name'], "\n";

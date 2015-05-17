@@ -20,8 +20,8 @@ $m = new MongoClient;
 $c = $m->demo->whisky;
 
 $c->update(
-    array( 'name' => 'Glenfiddich 15', 'notes.user_name' => 'Derick' ),
-    array( '$inc => array( 'notes.$.likes' => 1 ) )
+    [ 'name' => 'Glenfiddich 15', 'notes.user_name' => 'Derick' ],
+    [ '$inc => [ 'notes.$.likes' => 1 ] ]
 );
 ?>]]></example>
 </div>

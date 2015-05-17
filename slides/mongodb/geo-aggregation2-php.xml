@@ -12,21 +12,21 @@ $center = new GeoJSONPoint(
 $maxDist =     500; // in meters
 $rEarth  = 6371000;
 
-$res = $c->aggregate( array(
-  '$geoNear' => array(
+$res = $c->aggregate( [
+  '$geoNear' => [
     'near' => $center->p,
     'distanceField' => 'distance',
     'distanceMultiplier' => $rEarth,
     'maxDistance' => $maxDist / $rEarth,
     'spherical' => true,
-    'query' => array(
-      '$or' => array( 
-        array( TAGS => 'amenity=pub' ),
-        array( TAGS => 'amenity=bar' )
-      )
-    ),
-  )
-) );
+    'query' => [
+      '$or' => [
+        [ TAGS => 'amenity=pub' ],
+        [ TAGS => 'amenity=bar' ]
+      ]
+    ],
+  ]
+] );
 ]]></example>
 </div>
 
@@ -39,21 +39,21 @@ $center = new GeoJSONPoint(
 $maxDist =     500; // in meters
 $rEarth  = 6371000;
 
-$res = $c->aggregate( array(
-  |ff0000|'$geoNear' => array(|
+$res = $c->aggregate( [
+  |ff0000|'$geoNear' => [|
     |ff0000|'near' => $center->p,|
     'distanceField' => 'distance',
     'distanceMultiplier' => $rEarth,
     'maxDistance' => $maxDist / $rEarth,
     |ff0000|'spherical' => true,|
-    |ff0000|'query' => array(|
-      |ff0000|'$or' => array(|
-        |ff0000|array( TAGS => 'amenity=pub' ),|
-        |ff0000|array( TAGS => 'amenity=bar' )|
-      |ff0000|)|
-    |ff0000|),|
-  |ff0000|)|
-) );
+    |ff0000|'query' => [|
+      |ff0000|'$or' => [|
+        |ff0000|[ TAGS => 'amenity=pub' ],|
+        |ff0000|[ TAGS => 'amenity=bar' ]|
+      |ff0000|]|
+    |ff0000|],|
+  |ff0000|]|
+] );
 ]]></example>
 </div>
 
@@ -67,21 +67,21 @@ $center = new GeoJSONPoint(
 |ff0000|$maxDist =     500; // in meters|
 |ff0000|$rEarth  = 6371000;|
 
-$res = $c->aggregate( array(
-  '$geoNear' => array(
+$res = $c->aggregate( [
+  '$geoNear' => [
     'near' => $center->p,
     |ff0000|'distanceField' => 'distance',|
     |ff0000|'distanceMultiplier' => $rEarth,|
     |ff0000|'maxDistance' => $maxDist / $rEarth,|
     'spherical' => true,
-    'query' => array(
-      '$or' => array( 
-        array( TAGS => 'amenity=pub' ),
-        array( TAGS => 'amenity=bar' )
-      )
-    ),
-  )
-) );
+    'query' => [
+      '$or' => [
+        [ TAGS => 'amenity=pub' ],
+        [ TAGS => 'amenity=bar' ]
+      ]
+    ],
+  ]
+] );
 ]]></example>
 </div>
 

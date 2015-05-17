@@ -10,11 +10,11 @@ $c = $m->demo->elephpants; $c->drop();
 function birthDay( $c, $name )
 {
     $c->update(
-        array( 'name' => $name ),                 // criteria
-        array( '$inc' => array( 'age' => 1 ) ),   // update spec
-        array( 'upsert' => true )                 // options
+        [ 'name' => $name ],            // criteria
+        [ '$inc' => [ 'age' => 1 ] ],   // update spec
+        [ 'upsert' => true ]            // options
     );
-    echo $c->findOne( array( 'name' => 'Santon' ) )['age'], "\n";
+    echo $c->findOne( [ 'name' => 'Santon' ] )['age'], "\n";
 }
 
 birthDay( $c, 'Santon' );

@@ -10,17 +10,17 @@ $m = new MongoClient;
 $c = $m->demo->bits;
 $c->remove();
 
-$c->insert( array( 'bitmask' => 0b1001 ) );
+$c->insert( [ 'bitmask' => 0b1001 ] );
 echo decbin( $c->findOne()['bitmask'] ), "\n";
 
-$c->update( array(), array( '$bit' => array( 'bitmask' => array( 'and' => 0b0101 ) ) ) );
+$c->update( [], [ '$bit' => [ 'bitmask' => [ 'and' => 0b0101 ] ] ] );
 echo decbin( $c->findOne()['bitmask'] ), "\n";
 
-$c->update( array(), array( '$bit' => array( 'bitmask' => array( 'or' => 0b10100 ) ) ) );
+$c->update( [], [ '$bit' => [ 'bitmask' => [ 'or' => 0b10100 ] ] ] );
 echo decbin( $c->findOne()['bitmask'] ), "\n";
 
 // this is not in yet ;-)
-$c->update( array(), array( '$bit' => array( 'bitmask' => array( 'xor' => 0b01110 ) ) ) );
+$c->update( [], [ '$bit' => [ 'bitmask' => [ 'xor' => 0b01110 ] ] ] );
 echo decbin( $c->findOne()['bitmask'] ), "\n";
 ?>]]></example>
 </slide>

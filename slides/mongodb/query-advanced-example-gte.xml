@@ -5,14 +5,14 @@
 <example><![CDATA[<?php
 $m = new MongoClient;
 $c = $m->demo->cities;
-$c->insert( array( "name" => "Buenos Aires", "population" => 13076300 ) );
-$c->insert( array( "name" => "Dhaka", "population" => 10356500 ) );
-$c->insert( array( "name" => "São Paulo", "population" => 10021295 ) );
-$c->insert( array( "name" => "Shanghai", "population" => 14608512 ) );
-$c->insert( array( "name" => "Delhi", "population" => 10927986 ) );
-$c->insert( array( "name" => "Mumbai", "population" => 12691836 ) );
-$c->insert( array( "name" => "Seoul", "population" => 10349312 ) );
-$c->insert( array( "name" => "Mexico City", "population" => 12294193 ) );
+$c->insert( [ "name" => "Buenos Aires", "population" => 13076300 ] );
+$c->insert( [ "name" => "Dhaka", "population" => 10356500 ] );
+$c->insert( [ "name" => "São Paulo", "population" => 10021295 ] );
+$c->insert( [ "name" => "Shanghai", "population" => 14608512 ] );
+$c->insert( [ "name" => "Delhi", "population" => 10927986 ] );
+$c->insert( [ "name" => "Mumbai", "population" => 12691836 ] );
+$c->insert( [ "name" => "Seoul", "population" => 10349312 ] );
+$c->insert( [ "name" => "Mexico City", "population" => 12294193 ] );
 ?>]]></example>
 </div>
 
@@ -25,9 +25,9 @@ $c = $m->demo->cities;
 
 $r = $c->find(
   // query
-  array( 'population' => array( '$gte' => 12000000 ) ),
+  [ 'population' => [ '$gte' => 12000000 ] ],
   // projection
-  array( 'name' => true, 'population' => true, '_id' => false )
+  [ 'name' => true, 'population' => true, '_id' => false ]
 );
 
 foreach( $r as $res )

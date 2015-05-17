@@ -6,21 +6,21 @@ $m = new MongoClient;
 $c = $m->demo->presentations;
 $c->remove();
 
-$c->insert( array(
+$c->insert( [
   '_id' => 'mongo-tut-zendcon12',
   'name' => 'Hands-On MongoDB'
-) );
+] );
 
 $c->update(
-  array( 'name' => 'Hands-On MongoDB' ), // criteria
-  array( '$set' => array( 'lastviewed' => time() ) ) // modifiers
+  [ 'name' => 'Hands-On MongoDB' ], // criteria
+  [ '$set' => [ 'lastviewed' => time() ] ] // modifiers
 );
 
 /* document is now:
-array(
+[
   '_id' => 'mongo-tut-zendcon12',
   'name' => 'Hands-On MongoDB'
   'lastviewed' => 1350296073,
-) */
+] */
 ?>]]></example>
 </slide>

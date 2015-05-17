@@ -5,8 +5,8 @@
 $m = new MongoClient();
 $c = $m->demo->cities;
 
-$cursor = $c->find( array( 'country_code' => 'RU' ) )
-            ->sort( array( 'name' => 1 ) )
+$cursor = $c->find( [ 'country_code' => 'RU' ] )
+            ->sort( [ 'name' => 1 ] )
             ->limit( 5 )->skip( 25 );
 
 foreach ( $cursor as $r ) {

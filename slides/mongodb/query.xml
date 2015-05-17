@@ -7,13 +7,11 @@ $m = new MongoClient();
 $record = $m->demo->talks->findOne();
 
 // Search on the _id field being 'derickr'
-$record = $m->demo->talks->findOne( array( '_id' => 'derickr' ) );
+$record = $m->demo->talks->findOne( [ '_id' => 'derickr' ] );
 
 // Search on the 'talks' embedded document's 'title' field
 $record = $m->demo->talks->findOne(
-  array(
-    'talks.title' => 'Xdebug'
-  )
+  [ 'talks.title' => 'Xdebug' ]
 );
 ?>]]></example>
 </slide>

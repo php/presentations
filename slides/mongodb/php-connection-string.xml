@@ -2,7 +2,7 @@
 <title>Connection String</title>
 
 <example result="0"><![CDATA[<?php
-$options = array( 'replicaSet' => 'seta' );
+$options = [ 'replicaSet' => 'seta' ];
 
 $m = new MongoClient( 'mongodb://localhost:13000/?replicaSet=seta' );
 

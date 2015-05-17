@@ -12,7 +12,7 @@ $c = $m->demo->articles;
 
 $c->insert( [ 'name' => 'Derick', '_id' => 'derickr' ] );
 
-$d = array( 'name' => 'Derick' );
+$d = [ 'name' => 'Derick' ];
 $c->insert( $d );
 var_dump( $d );
 ?>]]></example>

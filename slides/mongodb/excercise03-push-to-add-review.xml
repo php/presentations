@@ -19,16 +19,16 @@
 $m = new MongoClient;
 $c = $m->demo->whisky;
 
-$newReview = array(
+$newReview = [
     user_name => "Michael",
     date => new MongoDate(strtotime("2013-10-01")),
     note => "No peat, but fruity",
     rating => 1,
-);
+];
 
 $c->update(
-    array( 'name' => 'Glenfiddich 15' ),
-    array( '$push => array( 'notes' => $newReview ) )
+    [ 'name' => 'Glenfiddich 15' ],
+    [ '$push => [ 'notes' => $newReview ] ]
 );
 ?>]]></example>
 </div>

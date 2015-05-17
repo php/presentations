@@ -5,21 +5,21 @@
 <example result="2"><![CDATA[<?php
 $m = new MongoClient;
 $c = $m->demo->continent; $c->drop();
-$c->insert( array(
+$c->insert( [
     'name' => 'South America',
-    'cities' => array(
-        array( "name" => "Buenos Aires", "population" => 13076300, "dem" => 131 ),
-        array( "name" => "São Paulo", "population" => 10021295, "dem" => 769 ),
-    )
-) );
-$c->insert( array(
+    'cities' => [
+        [ "name" => "Buenos Aires", "population" => 13076300, "dem" => 131 ],
+        [ "name" => "São Paulo", "population" => 10021295, "dem" => 769 ],
+    ]
+] );
+$c->insert( [
     'name' => 'Asia',
-    'cities' => array(
-        array( "name" => "Karachi", "population" => 11624219, "dem" => 38 ),
-        array( "name" => "Moscow", "population" => 10381222, "dem" => 144 ),
-        array( "name" => "İstanbul", "population" => 11174257, "dem" => 39 ),
-    )
-) );
+    'cities' => [
+        [ "name" => "Karachi", "population" => 11624219, "dem" => 38 ],
+        [ "name" => "Moscow", "population" => 10381222, "dem" => 144 ],
+        [ "name" => "İstanbul", "population" => 11174257, "dem" => 39 ],
+    ]
+] );
 ?>]]></example>
 
 <blurb>Contitent with a city of more than 11 million people and above 100
@@ -30,10 +30,10 @@ meter.</blurb>
 <example result="1"><![CDATA[<?php
 $m = new MongoClient;
 $c = $m->demo->continent;
-$r = $c->find( array(
-    'cities.population' => array( '$gte' => 11000000 ),
-    'cities.dem' => array( '$gte' => 100 ),
-) );
+$r = $c->find( [
+    'cities.population' => [ '$gte' => 11000000 ],
+    'cities.dem' => [ '$gte' => 100 ],
+] );
 
 foreach( $r as $c ) {
     echo $c['name'], "\n";

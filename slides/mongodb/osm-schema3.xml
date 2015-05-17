@@ -1,13 +1,13 @@
 <slide>
 <title>Tags as documents</title>
 
-<example>$doc = array(
+<example>$doc = [
     'tags' => [
         [ 'name' => 'A440' ],
         [ 'highway' => 'secondary' ],
         [ 'oneway' => 'yes' ],
     ]
-);
+];
 $db->poi->ensureIndex( [ 'tags' => 1 ] );
 
 // Road with name=Strand

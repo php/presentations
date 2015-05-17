@@ -6,7 +6,7 @@
 <example result="0"><![CDATA[<?php
 $m = new MongoClient; $c = $m->demo->pubs; $c->drop();
 
-$c->ensureIndex( array( 'l' => '2d' ) );
+$c->ensureIndex( [ 'l' => '2d' ] );
 $c->insert([ 'name' => 'Betsy Smith',   'l' => [ -0.193, 51.537 ] ]);
 $c->insert([ 'name' => 'London Tavern', 'l' => [ -0.202, 51.545 ] ]);
 
