@@ -27,7 +27,7 @@ $r = $c->find(
   // query
   [ 'population' => [ '$gte' => 12000000 ] ],
   // projection
-  [ 'name' => true, 'population' => true, '_id' => false ]
+  [ 'name' => 1, 'population' => 1, '_id' => 0 ]
 );
 
 foreach( $r as $res )

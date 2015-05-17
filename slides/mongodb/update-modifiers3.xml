@@ -17,6 +17,6 @@ $c->update(
     [ '_id' => 'circ5' ],
     [ '$push' => [ 'elephpants' => [ 'name' => 'Bobo', 'year' => 2012 ] ] ]
 );
-var_dump( $c->findOne( [ 'name' => 'Funny Led' ], [ 'elephpants' => true ] ) );
+var_dump( $c->findOne( [ 'name' => 'Funny Led' ], [ 'elephpants' => 1 ] ) );
 ?>]]></example>
 </slide>
