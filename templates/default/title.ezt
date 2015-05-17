@@ -1,3 +1,11 @@
-{use $node}
+{use $node, $pres}
 {var $style = get_attribute( $node, 'style' )}
-<h1{if $style} class='style-{$style}'{/if}>{$node->nodeValue}</h1>
+<h1{if $style} class='style-{$style}'{/if}>
+{foreach $node->childNodes as $child}
+	{if is_set( $child->tagName )}
+		{include $child->tagName . '.ezt' send $child as $node, $pres, true as $inline}
+	{else}
+{raw format_text( $pres, $child->nodeValue )}
+	{/if}
+{/foreach}
+</h1>
