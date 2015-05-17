@@ -1,0 +1,14 @@
+<slide>
+<title>History: 0.8.4 (April 2009)</title>
+
+<image filename="author-kristina.png" align="right"/>
+<list>
+	<bullet>Resources for connections</bullet>
+	<bullet>Classes for types (Code, Date, Object ID, Regex and BinData)</bullet>
+	<bullet>Very few functions:<br/>
+%mongo_connect%, %mongo_close%, %mongo_remove%, %mongo_query%, %mongo_insert%,
+%mongo_batch_insert%, %mongo_update%, %mongo_has_next%, %mongo_next%,
+%mongo_gridfs_init%, %mongo_gridfs_store%, %mongo_gridfile_write%</bullet>
+	<bullet>Additional functionality through PHP files</bullet>
+</list>
+</slide>

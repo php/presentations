@@ -36,11 +36,15 @@ first driver (0.8.4) april 2009
   {NULL, NULL, NULL}
  - many existing functionality through PHP based classes
 
+<slide>slides/mongodb/driver-history-0.8.4.xml</slide>
+<slide>slides/mongodb/driver-history-0.8.4-2.xml</slide>
+
 0.9.0 - 5.3 support (may 2009)
 - does db, cursor and collection classes
 
 1.0.0 - sept 2009
 - the choice to always return arrays is made
+
 
 nov 2011 - I start helping out
 jan 2012 - Hannes does the odd patch

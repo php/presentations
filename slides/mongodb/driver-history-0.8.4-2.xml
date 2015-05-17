@@ -1,0 +1,27 @@
+<slide>
+<title>History: 0.8.4 (April 2009)</title>
+
+<image filename="author-kristina.png" align="right"/>
+<example><![CDATA[
+<?php
+include "Mongo.php";
+
+$m = new Mongo();
+$c = $m->selectCollection("phpt", "find");
+$c->drop();
+
+$c->insert( array(
+    "foo" => "bar",
+    "a" => "b",
+    "b" => "c")
+);
+
+$cursor = $c->find(array("foo"=>"bar"), array("a"=>1,"b"=>1));
+
+while ($cursor->hasNext()) {
+    var_dump($cursor->getNext());
+}
+
+?>
+]]></example>
+</slide>
