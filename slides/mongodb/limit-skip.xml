@@ -1,6 +1,7 @@
 <slide>
 <title>Cursor methods</title>
 
+<blurb>Before starting iteration, several methods may be called to configure the query.</blurb>
 <example result="1"><![CDATA[<?php
 $m = new MongoClient();
 $c = $m->demo->cities;
