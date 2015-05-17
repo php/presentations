@@ -13,6 +13,9 @@
 <slide>slides/mongodb/title.xml</slide>
 <slide>slides/mongodb/me.xml</slide>
 
+<slide>slides/mongodb/1e2e-agenda.xml</slide>
+<slide>slides/mongodb/1e3e-agenda.xml</slide>
+
 <!-- HISTORY of the DRIVER -->
 first driver (0.8.4) april 2009
  - used resources and classes (for types code/date/id/regex/bindata only)
