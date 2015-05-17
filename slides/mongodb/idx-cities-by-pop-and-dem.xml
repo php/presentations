@@ -12,5 +12,5 @@
 <tr><td>MX</td><td>Mexico City</td><td>12294193</td><td>2240</td></tr>
 <tr><td>...</td><td>...</td><td>...</td><td>...</td></tr>
 </table>
-<example>db.cities.ensureIndex( { population: 1, elevation: 1 } );</example>
+<example>db.cities.createIndex( { population: 1, elevation: 1 } );</example>
 </slide>

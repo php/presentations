@@ -3,11 +3,12 @@
 
 <list>
     <bullet>%$match%</bullet>
+    <bullet>%$geoNear%</bullet>
     <bullet>%$project%</bullet>
     <bullet>%$group%</bullet>
     <bullet>%$unwind%</bullet>
 </list>
-<break lines="2"/>
+<break/>
 <list>
     <bullet>%$sort%</bullet>
     <bullet>%$limit%</bullet>

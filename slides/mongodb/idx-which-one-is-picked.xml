@@ -2,7 +2,7 @@
 <title>How does MongoDB pick an index?</title>
 
 <list>
-	<bullet>MongoDB does not keep statistics</bullet>
+	<bullet>MongoDB does not keep cardinality statistics</bullet>
 	<bullet>MongoDB tries all the possible indexes</bullet>
 	<bullet>When it has found the fastest one, it remembers it</bullet>
 	<bullet>MongoDB will re-try plans once in a while</bullet>

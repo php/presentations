@@ -37,7 +37,7 @@
   count: { *'$sum': 1* }
 } }
 </example>
-
+<blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
   "_id" : "Brouwerij Huyghe",
