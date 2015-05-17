@@ -2,7 +2,7 @@
 <title>Sorting by descending elevation - take 2</title>
 
 <example inline="1">
-db.cities.ensureIndex( { elevation: -1 } );
+db.cities.createIndex( { elevation: -1 } );
 db.cities.find( { population: { $gte: 2000000 }, elevation: { $gte : 1654 } } )
          .sort( { elevation: -1 } ).explain();
 </example>

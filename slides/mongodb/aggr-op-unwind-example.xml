@@ -16,10 +16,6 @@
         "Final Frontier DIPA",
         "Imperial Stout",
         "Svaneke Choko Stout",
-        "Henrik Kaffesort",
-        "Hibernate",
-        "Pop Loves",
-        "Beer Geek Breakfast"
     ]
 }
 </example>
@@ -33,7 +29,7 @@
 *  $unwind: '$beers'*
 }
 </example>
-
+<blurb align="center" class="large">↓</blurb>
 <example inline="3">
 { "_id" : "Denmark", "beers" : "Mochaccino Messiah" }
 { "_id" : "Denmark", "beers" : "Texas Ranger" }
@@ -43,10 +39,6 @@
 { "_id" : "Denmark", "beers" : "Final Frontier DIPA" }
 { "_id" : "Denmark", "beers" : "Imperial Stout" }
 { "_id" : "Denmark", "beers" : "Svaneke Choko Stout" }
-{ "_id" : "Denmark", "beers" : "Henrik Kaffesort" }
-{ "_id" : "Denmark", "beers" : "Hibernate" }
-{ "_id" : "Denmark", "beers" : "Pop Loves" }
-{ "_id" : "Denmark", "beers" : "Beer Geek Breakfast" }
 </example>
 </td></tr></table>
 </slide>

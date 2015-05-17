@@ -17,7 +17,7 @@
 }
 {
     "beer_name" : "Byron Lager",
-    *"brewery_name" : "Camden Town Brewery",
+    "brewery_name" : "Camden Town Brewery",
     "beer_type" : "Euro Lager"
 }
 </example>
@@ -33,7 +33,7 @@
 *  }*
 }
 </example>
-
+<blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
     "beer_name" : "Old Rascal",

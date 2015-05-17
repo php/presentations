@@ -35,7 +35,7 @@
   beers: { *'$addToSet': '$beer_name'* }
 } }
 </example>
-
+<blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
     "_id" : "Paulaner Gruppe",

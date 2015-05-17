@@ -27,11 +27,13 @@
 </td>
 <td>
 <example inline="3">
-{  $match: {
-*  "beer_abv": { $gte: 6 }*
-} }
+{
+  $match: {
+*    "beer_abv": { $gte: 6 }*
+  }
+}
 </example>
-
+<blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
     "beer_name" : "Premium Organic Cider",

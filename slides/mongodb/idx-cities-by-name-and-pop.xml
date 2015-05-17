@@ -16,7 +16,7 @@
 <tr><td>...</td><td>...</td><td>...</td></tr>
 </table>
 <example>
-db.cities.ensureIndex( { country_code: 1, population: 1 } );
+db.cities.createIndex( { country_code: 1, population: 1 } );
 </example>
 
 </slide>

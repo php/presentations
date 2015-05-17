@@ -2,10 +2,9 @@
 <title>When can indexes not be used?</title>
 
 <list>
-	<bullet>Many sorts of negations (%$ne%, %$not%, %$nin%).</bullet>
-	<bullet>Tricky aritmethic (%$mod%).</bullet>
+	<bullet>Many types of negations (%$ne%, %$not%, %$nin%).</bullet>
+	<bullet>Tricky arithmetic (%$mod%).</bullet>
 	<bullet>Most regular expressions (%/ondo/%), unless anchored to the start of the string (%/^Lon/%).</bullet>
 	<bullet>JavaScript expressions in %$where% clauses, such as %where elevation > population%. In that case, try to pre-compute.</bullet>
-	<bullet>map/reduce</bullet>
 </list>
 </slide>

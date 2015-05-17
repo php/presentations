@@ -3,7 +3,7 @@
 
 <blurb>Indexes are used from left to right.</blurb>
 
-<example inline="1">$c->ensureIndex( [ 'country_code' => 1, 'timezone' => 1, 'asciiname' => 1 ] )</example>
+<example inline="1">$c->createIndex( [ 'country_code' => 1, 'timezone' => 1, 'asciiname' => 1 ] )</example>
 <break/>
 <div effect="fade-in">
 <example inline="1">|00aa00|✔| %$c->find(['country_code' => 'GB']);%</example>
