@@ -2,7 +2,7 @@
 <title>Distribute data in chunks across nodes</title>
 
 <list>
-    <bullet>Initially 1 chunk</bullet>
+    <bullet>Initially one chunk</bullet>
     <bullet>Default max chunk size: 64mb</bullet>
     <bullet>MongoDB automatically splits &amp; migrates chunks when max reached</bullet>
 </list>

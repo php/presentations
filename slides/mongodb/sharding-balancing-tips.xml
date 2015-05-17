@@ -2,7 +2,7 @@
 <title>Balancing tips</title>
 
 <list>
-	<bullet>Run the balancer at low traffic times:
+	<bullet>Run the balancer during low traffic periods:
 		<example>use config;
 
 db.settings.update(
@@ -11,6 +11,7 @@ db.settings.update(
 );</example>
 	</bullet>
 	<bullet>Can be triggered manually using %moveChunk%</bullet>
+	<bullet>Pre-creating ranges for heavy insertion loads can avoid over-populating a single shard</bullet>
 	<bullet>Feel free to write your own smart balancer!</bullet>
 </list>
 </slide>

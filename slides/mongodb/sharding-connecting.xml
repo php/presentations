@@ -1,0 +1,18 @@
+<slide>
+<title>Connection String</title>
+
+<example result="0"><![CDATA[<?php
+$m = new MongoClient( 'mongodb://localhost:27019' );
+
+$m = new MongoClient( 'mongodb://localhost:27019,example.com:27019' );
+
+$m = new MongoClient( 'mongodb://user:password@localhost:27019/demo', $options );
+?>]]></example>
+
+<list>
+	<bullet>Remember: mongos may be run on the app server</bullet>
+	<bullet>Add multiple hosts for redundancy</bullet>
+	<bullet>Don't use %->authenticate()%</bullet>
+</list>
+
+</slide>

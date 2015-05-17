@@ -6,9 +6,9 @@
 <list>
 	<bullet>*Don’t use this setup in production!*
 		<list>
-			<bullet>Only one Config server (No Fault Tolerance)</bullet>
-			<bullet>Shard not in a replica set (Low Availability)</bullet>
-			<bullet>Only one Mongos and shard (No Performance Improvement)</bullet>
+			<bullet>Only one config server (no fault tolerance)</bullet>
+			<bullet>Shard is not a replica set (low availability)</bullet>
+			<bullet>Only one mongos and shard (no performance improvement)</bullet>
 			<bullet>Useful for development or demonstrating configuration mechanics</bullet>
 		</list>
 	</bullet>

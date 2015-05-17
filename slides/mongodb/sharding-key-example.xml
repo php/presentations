@@ -8,14 +8,13 @@
 	time: ISODate( '2013-04-24 10:38:05 '),
 	subject: "This is a test",
 	recipients: [ "derick@10gen.com", "derick@example.com" ],
-	body: "...",
-	continent: "Asia",
+	body: "..."
 }
 </example>
 
 <list>
 	<bullet>Lots of emails per user</bullet>
 	<bullet>Most common query: get user emails sorted by time</bullet>
-	<bullet>Index on %{ _id }%, %{ user, time }%, and %{ recipients }%</bullet>
+	<bullet>Index on %{ _id: 1 }%, %{ user: 1, time: -1 }%, <br/>and %{ recipients: 1 }%</bullet>
 </list>
 </slide>

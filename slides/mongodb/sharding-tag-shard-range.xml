@@ -10,7 +10,7 @@
 <example>
 sh.addTagRange(
 	"demo.emails",                                     // database.collection
-	{ continent: "Asia" }, { continent: "Australia" }, // range
+	{ continent: "Asia" }, { continent: "Australia" }, // range (min, max)
 	"ASIA"                                             // tag
 );
 sh.addTagRange(
