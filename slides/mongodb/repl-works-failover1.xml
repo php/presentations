@@ -1,0 +1,11 @@
+<slide>
+<title>How MongoDB replication works</title>
+
+<break lines="2"/>
+<image filename="repl-set-down.png"/>
+
+<list>
+	<bullet>PRIMARY may fail</bullet>
+	<bullet>Automatic election of new PRIMARY if majority exists</bullet>
+</list>
+</slide>
