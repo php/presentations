@@ -2,8 +2,8 @@
 <title>IDs</title>
 
 <list>
-	<bullet>Every document needs a unique ID</bullet>
-	<bullet>ID consists of: 4 bytes timestamp, 3 byte machine id, 2 bytes PID and 3 bytes counter:<br/>%|994444|507e6384| |449944|44670a| |444499|3e6e| |999944|000000|%</bullet>
+	<bullet>Every document needs a unique, immutable ID</bullet>
+	<bullet>ID consists of: 4-byte timestamp, 3-byte machine identifier, 2-byte PID and 3-byte counter:<br/>%|994444|507e6384| |449944|44670a| |444499|3e6e| |999944|000000|%</bullet>
 </list>
 
 <example result="1" stop="true"><![CDATA[<?php
