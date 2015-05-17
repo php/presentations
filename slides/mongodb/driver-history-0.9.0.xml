@@ -1,0 +1,11 @@
+<slide>
+<title>History: 0.9.0 (May 2009)</title>
+
+<image filename="author-kristina.png" align="right"/>
+
+<list>
+    <bullet>Support for PHP 5.3</bullet>
+    <bullet>Reimplements most PHP based functionality into C</bullet>
+    <bullet>Tests are implemented with PHPUnit</bullet>
+</list>
+</slide>

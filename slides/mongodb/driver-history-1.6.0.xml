@@ -1,0 +1,10 @@
+<slide>
+<title>History: 1.4.0-1.6.0</title>
+
+<blurb>Releases now come together with MongoDB server releases</blurb>
+<list>
+    <bullet>May 2013 — 1.4.0 — MongoDB 2.4<br/>SSL support, Jeremy starts helping out <image filename="author-jeremy.png" align="right"/></bullet>
+    <bullet>Apr 2014 — 1.5.0 — MongoDB 2.6<br/>SASL support, command cursors</bullet>
+    <bullet>Jan 2015 — 1.6.0 — MongoDB 3.0<br/>Rewritten cursor support, and MONGO_METHOD refactoring</bullet>
+</list>
+</slide>

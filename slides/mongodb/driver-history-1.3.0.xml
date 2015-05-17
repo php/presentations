@@ -1,0 +1,11 @@
+<slide>
+<title>History: 1.3.0 (November 2012)</title>
+
+<list>
+    <bullet>Hannes starts helping out <image filename="author-hannes.png" align="right" /> (June 2012)</bullet>
+    <bullet>Rewritten connection handling and replica set connection management</bullet>
+    <bullet>Sane branching in GIT:
+<table><tr><td><image filename="mongo-git-messy.png"/> <image filename="mongo-git-not-messy.png"/></td></tr></table>
+</bullet>
+</list>
+</slide>

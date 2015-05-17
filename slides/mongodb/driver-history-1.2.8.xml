@@ -1,0 +1,10 @@
+<slide>
+<title>History: 1.2.8 (February 2012)</title>
+
+<list>
+    <bullet>I start helping out <image filename="author-derickr.png" align="right" /> as a contractor, after having messed with integer types (November 2011)</bullet>
+    <bullet>We no longer use any functionality implemented as PHP classes</bullet>
+    <bullet>Connection handling uses connection pools</bullet>
+    <bullet>Kristina's last release <image filename="author-kristina.png" align="right" /></bullet>
+</list>
+</slide>

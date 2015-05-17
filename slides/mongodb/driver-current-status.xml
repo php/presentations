@@ -1,0 +1,23 @@
+<slide>
+<title>MongoDB driver — current</title>
+
+<table><tr>
+<td><image filename="author-derickr.png"/></td>
+<td><image filename="author-hannes.png"/></td>
+<td><image filename="author-jeremy.png"/></td>
+</tr></table>
+
+<blurb>The driver generally works well, but there are issues:</blurb>
+<list>
+    <bullet>Former "great" design choices, among them:
+        <list>
+            <bullet>array/object deserialization</bullet>
+            <bullet>positional arguments/options array</bullet>
+            <bullet>not a clear strategy for which command we add helpers</bullet>
+            <bullet>static MongoCursor::timeout and ::slaveOkaym methods</bullet>
+            <bullet>MongoLog and stream context listeners</bullet>
+        </list>
+    </bullet>
+    <bullet>The GridFS implementation could get some more love</bullet>
+</list>
+</slide>

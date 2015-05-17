@@ -1,0 +1,19 @@
+<slide>
+<title>History: 1.0.0 (September 2009)</title>
+
+<list>
+    <bullet>Query operators don't have to start with %$% anymore:
+    <example><![CDATA[<?php
+$m = new Mongo;
+$c = $m->selectCollection( 'dbname', 'colname' );
+$r = $c->find( array( "fieldname" => array( "$gte" => 42 ) ) );
+?>]]></example>
+    <blurb>%ini_set( 'mongo.cmd', '@' );%</blurb>
+    <example><![CDATA[<?php
+$m = new Mongo;
+$c = $m->selectCollection( 'dbname', 'colname' );
+$r = $c->find( array( "fieldname" => array( "@gte" => 42 ) ) );
+?>]]></example>
+    </bullet>
+</list>
+</slide>

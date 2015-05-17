@@ -1,0 +1,25 @@
+<slide>
+<title>History: 1.0.0 (September 2009)</title>
+
+<list>
+    <bullet>Both BSON arrays and documents come now back into PHP as arrays:
+    <example result="1"><![CDATA[<?php
+$m = new Mongo;
+$c = $m->selectCollection( 'demo', 'test' );
+$c->drop();
+
+$doc1 = new StdClass;
+$doc1->foo = 'bar';
+$doc2 = array( 'foo' => 'bar' );
+
+$c->insert( $doc1 );
+$c->insert( $doc2 );
+
+foreach( $c->find( array( 'foo' => 'bar' ), array( '_id' => 0 ) ) as $result )
+{
+    var_dump( $result );
+}
+?>]]></example>
+    </bullet>
+</list>
+</slide>
