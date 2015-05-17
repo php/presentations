@@ -11,6 +11,6 @@
 		</list></bullet>
 	</list></bullet>
     <bullet>Secondaries query the primary's oplog and apply what they find</bullet>
-    <bullet>All replicas contain an oplog</bullet>
+    <bullet>All replica set members contain an oplog</bullet>
 </list>
 </slide>
