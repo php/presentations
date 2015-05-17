@@ -15,7 +15,7 @@ $c = $m->demo->talks;
 
 $c->insert(
     [ '_id' => 'mongodb' ],      // document
-    [ 'safe' => true, 'w' => 2 ] // options
+    [ 'w' => 1 ]                 // options
 );
 ?>]]></example>
 

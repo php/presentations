@@ -21,6 +21,6 @@
 
 <blurb>From PHP, enforce the write tags by:</blurb>
 <example><![CDATA[
-$c->insert( [ … ], [ 'safe' => 'allUses' ] );
+$c->insert( [ … ], [ 'w' => 'allUses' ] );
 ]]></example>
 </slide>
