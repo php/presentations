@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<slide>
+	<title>About Him</title>
+
+	<image filename="jmikola_cartoon.png" align="right" pdf-float="1" x-offset="21.3" y-offset="10" pdf-scale="0.25"/>
+
+	<blurb>Jeremy Mikola</blurb>
+	<list>
+		<bullet>Lives in Hoboken, NJ (which has a Dutch name)</bullet>
+		<bullet>Also maintains the PHP MongoDB driver</bullet>
+		<bullet>Contributor on React PHP, Doctrine MongoDB, and a few other things</bullet>
+		<bullet>Sausage aficionado</bullet>
+	</list>
+</slide>
