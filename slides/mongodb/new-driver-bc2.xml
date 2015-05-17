@@ -1,0 +1,9 @@
+<slide>
+<title>A note on backwards compatibility</title>
+
+<list>
+    <bullet>Old extension name is "Mongo"</bullet>
+    <bullet>New extension name will be "MongoDB"</bullet>
+    <bullet>You will be able to load both "mongo.so" and "mongodb.so"</bullet>
+</list>
+</slide>

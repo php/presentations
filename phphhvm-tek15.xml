@@ -91,7 +91,7 @@ That much for history, the current state of the driver is:
 - Easier to prototype
 - Support other engines without redoing it all
 
-- MongoDB vs Mongo extension
+<slide>slides/mongodb/new-driver-goals.xml</slide>
 
 <!-- THE ENGINES -->
 
@@ -111,6 +111,11 @@ Explain that PHP 7 is totally different
 libbson, libmongoc, Hippo, Phongo and Phplib (flip?)
 Other packages on top (GridFS)
 Composer
+
+- MongoDB vs Mongo extension
+
+<slide>slides/mongodb/new-driver-bc.xml</slide>
+<slide>slides/mongodb/new-driver-bc2.xml</slide>
 
 <!-- ISSUES -->
 
