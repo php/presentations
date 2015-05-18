@@ -6,22 +6,19 @@
 <td>
 <example inline="3">
 {
-    "_id" : ObjectId("5400a24f44670a01098b488f"),
-    "beer_name" : "Reveller",
-    "brewery_name" : "Orchard Pig",
-    "beer_type" : "Cider"
+  "beer_name" : "Reveller",
+  "brewery_name" : "Orchard Pig",
+  "beer_type" : "Cider"
 }
 {
-    "_id" : ObjectId("5400a24f44670a01098b4890"),
-    "beer_name" : "Hacker-Pschorr Hefe Weisse",
-    "brewery_name" : "Paulaner Gruppe",
-    "beer_type" : "Hefeweizen"
+  "beer_name" : "Hefe Weisse",
+  "brewery_name" : "Paulaner Gruppe",
+  "beer_type" : "Hefeweizen"
 }
 {
-    "_id" : ObjectId("5400a24f44670a01098b4891"),
-    "beer_name" : "Hacker-Pschorr Münchener Gold",
-    "brewery_name" : "Paulaner Gruppe",
-    "beer_type" : "Dortmunder / Export Lager"
+  "beer_name" : "Münchener Gold",
+  "brewery_name" : "Paulaner Gruppe",
+  "beer_type" : "Dortmunder Lager"
 }
 </example>
 </td>
@@ -38,17 +35,17 @@
 <blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
-    "_id" : "Paulaner Gruppe",
-    "beers" : [
-        "Hacker-Pschorr Münchener Gold",
-        "Hacker-Pschorr Hefe Weisse"
-    ]
+  "_id" : "Paulaner Gruppe",
+  "beers" : [
+    "Münchener Gold",
+    "Hefe Weisse"
+  ]
 }
 {
-    "_id" : "Orchard Pig",
-    "beers" : [ 
-        "Reveller" 
-    ] 
+  "_id" : "Orchard Pig",
+  "beers" : [ 
+    "Reveller" 
+  ] 
 }
 </example>
 </td></tr></table>

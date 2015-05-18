@@ -6,24 +6,20 @@
 <td>
 <example inline="3">
 {
-    "_id" : ObjectId("5400a24f44670a01098b47b2"),
     "beer_name" : "Floris Framboise",
-    "brewery_name" : "Brouwerij Huyghe"
+    "brewery_name" : "Huyghe"
 }
 {
-    "_id" : ObjectId("5400a24f44670a01098b47b3"),
     "beer_name" : "Arabier",
-    "brewery_name" : "Brouwerij De Dolle Brouwers"
+    "brewery_name" : "De Dolle Brouwers"
 }
 {
-    "_id" : ObjectId("5400a24f44670a01098b47b4"),
     "beer_name" : "La Trappe Dubbel",
-    "brewery_name" : "Bierbrouwerij De Koningshoeven"
+    "brewery_name" : "De Koningshoeven"
 }
 {
-    "_id" : ObjectId("5400a24f44670a01098b47b6"),
-    "beer_name" : "Marks &amp; Spencer Belgian Winter Beer",
-    "brewery_name" : "Brouwerij Huyghe"
+    "beer_name" : "Belgian Winter Beer",
+    "brewery_name" : "Huyghe"
 }
 </example>
 </td>
@@ -40,15 +36,15 @@
 <blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
-  "_id" : "Brouwerij Huyghe",
+  "_id" : "Huyghe",
   "count" : 2
 },
 {
-  "_id" : "Brouwerij De Dolle Brouwers",
+  "_id" : "De Dolle Brouwers",
   "count" : 1
 },
 {
-  "_id" : "Bierbrouwerij De Koningshoeven",
+  "_id" : "De Koningshoeven",
   "count" : 1
 },
 </example>

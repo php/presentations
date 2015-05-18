@@ -6,17 +6,17 @@
 <td>
 <example inline="3">
 {
-    "_id" : "Denmark",
-    "beers" : [
-        "Mochaccino Messiah",
-        "Texas Ranger",
-        "Tipsy Gypsy",
-        "Carlsberg",
-        "Black Ball",
-        "Final Frontier DIPA",
-        "Imperial Stout",
-        "Svaneke Choko Stout",
-    ]
+  "_id" : "Denmark",
+  "beers" : [
+    "Mochaccino Messiah",
+    "Texas Ranger",
+    "Tipsy Gypsy",
+    "Carlsberg",
+    "Black Ball",
+    "Final Frontier DIPA",
+    "Imperial Stout",
+    "Svaneke Choko Stout",
+  ]
 }
 </example>
 </td>
@@ -31,14 +31,14 @@
 </example>
 <blurb align="center" class="large">↓</blurb>
 <example inline="3">
-{ "_id" : "Denmark", "beers" : "Mochaccino Messiah" }
-{ "_id" : "Denmark", "beers" : "Texas Ranger" }
-{ "_id" : "Denmark", "beers" : "Tipsy Gypsy" }
-{ "_id" : "Denmark", "beers" : "Carlsberg" }
-{ "_id" : "Denmark", "beers" : "Black Ball" }
-{ "_id" : "Denmark", "beers" : "Final Frontier DIPA" }
-{ "_id" : "Denmark", "beers" : "Imperial Stout" }
-{ "_id" : "Denmark", "beers" : "Svaneke Choko Stout" }
+{ "_id": "Denmark", "beers": "Mochaccino Messiah" }
+{ "_id": "Denmark", "beers": "Texas Ranger" }
+{ "_id": "Denmark", "beers": "Tipsy Gypsy" }
+{ "_id": "Denmark", "beers": "Carlsberg" }
+{ "_id": "Denmark", "beers": "Black Ball" }
+{ "_id": "Denmark", "beers": "Final Frontier DIPA" }
+{ "_id": "Denmark", "beers": "Imperial Stout" }
+{ "_id": "Denmark", "beers": "Svaneke Choko Stout" }
 </example>
 </td></tr></table>
 </slide>

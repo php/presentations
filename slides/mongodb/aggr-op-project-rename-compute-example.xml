@@ -6,12 +6,12 @@
 <td>
 <example inline="3">
 {
-    "beer_name" : "Crazy Goat",
-    "brewery_name" : "Lilleys Cider Barn",
-    "beer_type" : "Cider",
-    "beer_abv" : 6.8,
-    "beer_ibu" : 0,
-    "brewery_country" : "England"
+  "beer_name" : "Crazy Goat",
+  "brewery_name" : "Lilleys",
+  "beer_type" : "Cider",
+  "beer_abv" : 6.8,
+  "beer_ibu" : 0,
+  "brewery_country" : "England"
 }
 </example>
 </td>
@@ -33,9 +33,9 @@
 <blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
-    "_id" : ObjectId("5400a24f44670a01098b4657"),
-    "beer" : "Grazy Goat (Cider)",
-    "country" : "England"
+  "_id" : ObjectId("5400a24f44670a01098b4657"),
+  "beer" : "Grazy Goat (Cider)",
+  "country" : "England"
 },
 </example>
 </td></tr></table>

@@ -6,14 +6,14 @@
 <td>
 <example inline="3">
 {
-    "_id" : ObjectId("5400a24f44670a01098b4657"),
-    "beer_name" : "Honey's Midford Cider",
-    *"brewery_name" : "Honey And Daughters",*
-    *"beer_type" : "Cider",*
-    "beer_abv" : 6.5,
-    "beer_ibu" : 0,
-    "rating_score" : 4,
-    "brewery_country" : "England"
+  "_id" : "honey-daughters",
+  "beer_name" : "Midford Cider",
+  *"brewery_name" : "Honey",*
+  *"beer_type" : "Cider",*
+  "beer_abv" : 6.5,
+  "beer_ibu" : 0,
+  "rating_score" : 4,
+  "brewery_country" : "England"
 }
 </example>
 </td>
@@ -23,18 +23,18 @@
 <td>
 <example inline="3">
 {
-    *$project: {*
-        *_id: 0,*
-        *beer_name: 1,*
-        *brewery_name: 1*
-    *}*
+  *$project: {*
+    *_id: 0,*
+    *beer_name: 1,*
+    *brewery_name: 1*
+  *}*
 }
 </example>
 <blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
-    "beer_name" : "Honey's Midford Cider",
-    "brewery_name" : "Honey And Daughters",
+  "beer_name" : "Midford Cider",
+  "brewery_name" : "Honey",
 }
 </example>
 </td></tr></table>

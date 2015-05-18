@@ -6,18 +6,18 @@
 <td>
 <example inline="3">
 {
-    "beer_name" : "Premium Organic Cider",
+    "beer_name" : "Organic Cider",
     "brewery_name" : "Dunkertons",
     *"beer_abv" : 6.8*
 }
 {
     "beer_name" : "Belgian White",
-    "brewery_name" : "Blue Moon Brewing Company",
+    "brewery_name" : "Blue Moon",
     "beer_abv" : 5.4
 }
 {
-    "beer_name" : "Premium Cloudy Cider",
-    "brewery_name" : "Addlestones (C&amp;C Group plc)",
+    "beer_name" : "Cloudy Cider",
+    "brewery_name" : "Addlestones",
     "beer_abv" : 5.2
 }
 </example>
@@ -36,7 +36,7 @@
 <blurb align="center" class="large">↓</blurb>
 <example inline="3">
 {
-    "beer_name" : "Premium Organic Cider",
+    "beer_name" : "Organic Cider",
     "brewery_name" : "Dunkertons",
     *"beer_abv" : 6.8*
 }

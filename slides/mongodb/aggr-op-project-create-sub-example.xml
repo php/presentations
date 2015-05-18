@@ -7,7 +7,7 @@
 <example inline="3">
 {
     "beer_name" : "Crazy Goat",
-    "brewery_name" : "Lilleys Cider Barn",
+    "brewery_name" : "Lilleys",
     "beer_type" : "Cider",
     "beer_abv" : 6.8,
     "beer_ibu" : 0,
@@ -33,7 +33,7 @@
 {
     "name": "Crazy Goat",
     "brewery": {
-        "name": "Lilleys Cider Barn",
+        "name": "Lilleys",
         "country": "England",
     }
 }
