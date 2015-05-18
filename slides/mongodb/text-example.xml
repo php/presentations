@@ -10,7 +10,7 @@ t.save( { _id: 1 , title: "1st post",
 t.save( { _id: 2 , title: "2nd post" , 
                      post: "this is my second blog entry." } );
 
-t.ensureIndex ( { title: "text", post: "text" },
+t.createIndex ( { title: "text", post: "text" },
                 { weights: {title: 10, post: 5}} );</example>
 </div>
 

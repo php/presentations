@@ -16,7 +16,7 @@
 
 <list>
 	<bullet>New PRIMARY elected</bullet>
-	<bullet>Replicaset re-established</bullet>
+	<bullet>Replica set re-established</bullet>
 </list>
 </div>
 
@@ -32,7 +32,7 @@
 <image filename="repl-set-recovered.png"/>
 
 <list>
-	<bullet>Replicaset re-established</bullet>
+	<bullet>Replica set re-established</bullet>
 </list>
 </div>
 </slide>

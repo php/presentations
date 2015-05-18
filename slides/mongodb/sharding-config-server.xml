@@ -3,11 +3,11 @@
 
 <list>
 	<bullet>
-		Config Server
+		Config server
 		<list>
 			<bullet>Stores cluster chunk ranges and locations</bullet>
 			<bullet>Can have only 1 or 3 (production must have 3)</bullet>
-			<bullet>Two phase commit (not a replica set)</bullet>
+			<bullet>Two-phase commit (not a replica set)</bullet>
 		</list>
 		</bullet>
 </list>

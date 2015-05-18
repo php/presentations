@@ -8,7 +8,7 @@
 	<bullet>Shard a collection with the given key:<br/>
 	%sh.shardCollection("&amp;lt;dbname&amp;gt;.people", {"country":1})%</bullet>
 
-	<bullet>Use a compound shard key to prevent duplicates:<br/>
+	<bullet>Granular shard keys can avoid indivisible chunks:<br/>
 	%sh.shardCollection("&amp;lt;dbname&amp;gt;.cars", {"year":1, "uniqueid":1})%</bullet>
 
 </list>

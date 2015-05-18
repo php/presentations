@@ -10,7 +10,8 @@
 <break/>
 <blurb>Considerations</blurb>
 <list>
-    <bullet>Only single document writes are atomic</bullet>
-    <bullet>No joins</bullet>
+    <bullet>Only single-document writes are atomic</bullet>
+    <bullet>No joins (reference vs. embed)</bullet>
+    <bullet>Growing documents may require relocation</bullet>
 </list>
 </slide>

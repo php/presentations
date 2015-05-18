@@ -4,7 +4,7 @@
 <example><![CDATA[<?php
 $m = new MongoClient;
 
-$m->demo->articles->ensureIndex(
+$m->demo->articles->createIndex(
 	[ 'subject' => 'text', 'post' => 'text' ],
 	[ 'weights' => [ 'subject' => 10, 'post' => 5 ] ]
 );

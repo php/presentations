@@ -10,8 +10,8 @@
 $m = new MongoClient( 'mongodb://localhost:13000/?replSet=seta&w=2' );
 $c = $m->demo->talks;
 
-$c->insert( array( '_id' => 'mongodb' ) );
-$c->insert( array( '_id' => 'mongodb' ) );
+$c->insert( [ '_id' => 'mongodb' ] );
+$c->insert( [ '_id' => 'mongodb' ] );
 ?>]]></example>
 
 <list>

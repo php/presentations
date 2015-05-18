@@ -5,7 +5,6 @@
 <image filename="repl-set1.png"/>
 
 <list>
-	<bullet>Set is made up of 2 or more nodes</bullet>
-	<bullet>It makes most sense to have an *odd* number of nodes</bullet>
+	<bullet>A set should have 3 or more nodes, and always an *odd* number of voters (for calculating majority)</bullet>
 </list>
 </slide>

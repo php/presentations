@@ -8,10 +8,10 @@ $m = new MongoClient;
 $c = $m->demo->elephpants;
 $c->drop();
 
-$c->insert( array( '_id' => 'e42', 'name' => 'Kamubpo', 'age' => 17 ) );
-$c->insert( array( '_id' => 'e43', 'name' => 'Denali', 'age' => 17 ) );
+$c->insert( [ '_id' => 'e42', 'name' => 'Kamubpo', 'age' => 17 ] );
+$c->insert( [ '_id' => 'e43', 'name' => 'Denali', 'age' => 17 ] );
 
-$c->update( array( 'age' => 17 ), array( '$inc' => array( 'age' => 1 ) ) );
+$c->update( [ 'age' => 17 ], [ '$inc' => [ 'age' => 1 ] ] );
 
 var_dump( iterator_to_array( $c->find() ) );
 ?>]]></example>

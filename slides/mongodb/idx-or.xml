@@ -2,7 +2,7 @@
 <title>Indexes with $or</title>
 
 <example inline="1">
-db.cities.ensureIndex( { country_code: 1 } );
+db.cities.createIndex( { country_code: 1 } );
 db.cities.find( { *$or*: [|f10000|{country_code: 'NL'}|, |00cc00|{country_code: 'BE'}|] } ).explain();
 </example>
 <example inline="1">

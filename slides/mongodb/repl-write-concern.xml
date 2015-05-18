@@ -3,7 +3,6 @@
 
 <list>
 	<bullet>Safe mode:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => 1 ] );%</bullet>
-	<bullet>Safe mode:<br/>%$c->insert( [ 'text' => 'example' ], [ 'safe' => true ] );%</bullet>
 	<bullet>Two nodes:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => 2 ] );%</bullet>
 	<bullet>Majority of nodes:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => "majority" ] );%</bullet>
 	<bullet>Tagged nodes:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => "allDCs" ] );%</bullet>

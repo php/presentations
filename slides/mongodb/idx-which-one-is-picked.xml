@@ -8,8 +8,8 @@
 	<bullet>MongoDB will re-try plans once in a while</bullet>
 	<bullet>Indexes can be "hinted":
 <example>
-db.cities.ensureIndex( { population: 1, elevation: 1 } );
-db.cities.ensureIndex( { elevation: -1 } );
+db.cities.createIndex( { population: 1, elevation: 1 } );
+db.cities.createIndex( { elevation: -1 } );
 db.cities.find( { population: { $gte: 2000000 }, elevation: { $gte : 1654 } })
          .sort( { elevation: -1 } )
          .hint( { elevation: -1 } );</example>

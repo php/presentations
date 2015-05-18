@@ -2,20 +2,20 @@
 <title>Inserting a document</title>
 
 <example result="0"><![CDATA[<?php
-$document = array(
+$document = [
   "_id" => "derickr",
   "name" => "Derick Rethans",
-  "talks" => array(
-    array(
+  "talks" => [
+    [
       "title" => "Profiling PHP Applications",
       "url" => "http://derickrethans.nl/talks/profiling-phptour.pdf",
-    ),
-    array(
+    ],
+    [
       "title" => "Xdebug",
       "url" => "http://derickrethans.nl/talks/xdebug-phpbcn11.pdf",
-    )
-  )
-);
+    ]
+  ]
+];
 
 $m = new MongoClient();
 var_dump( $m->demo->talks->insert( $document ) );

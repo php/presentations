@@ -2,14 +2,14 @@
 <title>More about indexes</title>
 
 	<blurb>Compound indexes:</blurb>
-	<example>$myCol->ensureIndex( [ _id => 1, ts => -1 ] )</example>
+	<example>$myCol->createIndex( [ _id => 1, ts => -1 ] )</example>
 <break/>
 	<blurb>Indexes can be made on nested fields:</blurb>
-	<example>$myCol->ensureIndex( [ "article.title" => -1 ] )</example>
+	<example>$myCol->createIndex( [ "article.title" => -1 ] )</example>
 <break/>
 	<blurb>Indexes can be made on array values:</blurb>
 	<example><![CDATA[$myCol->insert( [ '_id' => 42, 'values' => [ 'fourty', 'two' ] ] );
-$myCol->ensureIndex( [ 'values' => 1 ] );]]>
+$myCol->createIndex( [ 'values' => 1 ] );]]>
 </example>
 <break/>
 	<blurb>Searching with regexp: %^%:</blurb>

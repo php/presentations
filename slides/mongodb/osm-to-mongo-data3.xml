@@ -19,7 +19,7 @@
 
 <div effect="fade-in">
 <blurb>We need an index for that:</blurb>
-<example>db.poi.ensureIndex( { "tags.amenity" : 1 } );</example>
+<example>db.poi.createIndex( { "tags.amenity" : 1 } );</example>
 <blurb>And the new "explain" output:</blurb>
 <example inline="1">db.poi.find( { 'tags.amenity' : 'pub' } ).explain();
 {

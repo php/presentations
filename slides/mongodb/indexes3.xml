@@ -6,7 +6,7 @@ $m = new MongoClient;
 $c = $m->demo->elephpants;
 $c->drop();
 
-$c->ensureIndex( [ 'name' => 1 ] );
+$c->createIndex( [ 'name' => 1 ] );
 
 $c->insert( [ '_id' => 'ele1', 'name' => 'Jumbo' ] );
 $c->insert( [ '_id' => 'ele2', 'name' => 'Tantor' ] );

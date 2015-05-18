@@ -15,7 +15,6 @@ mongod -f /etc/mongodb.conf --dbpath=~/repl-arb --port 13002 --replSet seta --re
 logpath=/var/log/mongodb/mongodb.log
 logappend=true
 smallfiles=true
-replSet=seta
 </example>
 </div>
 <div effect="fade-in">

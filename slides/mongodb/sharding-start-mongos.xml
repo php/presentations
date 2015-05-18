@@ -6,6 +6,6 @@
 <list>
 	<bullet>%mongos --configdb &amp;lt;hostname&amp;gt;:27019%</bullet>
 	<bullet>For 3 config servers:<br/> %mongos --configdb &amp;lt;host1&amp;gt;:&amp;lt;port1&amp;gt;,&amp;lt;host2&amp;gt;:&amp;lt;port2&amp;gt;,&amp;lt;host3&amp;gt;:&amp;lt;port3&amp;gt;%</bullet>
-	<bullet>This is always how to start a new mongos, even if the cluster is already running</bullet>
+	<bullet>This is how one always starts a new mongos, even if the cluster is already running</bullet>
 </list>
 </slide>

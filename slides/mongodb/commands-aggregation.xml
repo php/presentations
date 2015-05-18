@@ -1,7 +1,7 @@
 <slide>
 <title>Aggregation Framework</title>
 
-<blurb>Powerfull framework for running multiple operations in a pipeline, mostly replacing M/R:</blurb>
+<blurb>Powerful framework for running multiple operations in a pipeline, mostly replacing M/R:</blurb>
 <list>
 	<bullet>%$match%: for matching documents, à la %find()%.</bullet>
 	<bullet>%$project%: for "rewriting" documents, but more powerful with

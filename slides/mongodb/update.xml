@@ -6,14 +6,14 @@ $m = new MongoClient;
 $c = $m->demo->elephpants;
 $c->remove();
 
-$c->insert( array( '_id' => 'e42', 'name' => 'Kamubpo' ) );
-var_dump( $c->findOne( array( '_id' => 'e42' ) ) );
+$c->insert( [ '_id' => 'e42', 'name' => 'Kamubpo' ] );
+var_dump( $c->findOne( [ '_id' => 'e42' ] ) );
 
-$c->update( array( '_id' => 'e42' ), array( 'name' => 'Bo Tat' ) );
-var_dump( $c->findOne( array( '_id' => 'e42' ) ) );
+$c->update( [ '_id' => 'e42' ], [ 'name' => 'Bo Tat' ] );
+var_dump( $c->findOne( [ '_id' => 'e42' ] ) );
 
-$c->update( array( 'name' => 'Bo Tat' ), array( 'age' => '17' ) );
-var_dump( $c->findOne( array( '_id' => 'e42' ) ) );
+$c->update( [ 'name' => 'Bo Tat' ], [ 'age' => '17' ] );
+var_dump( $c->findOne( [ '_id' => 'e42' ] ) );
 ?>]]></example>
 
 <blurb>update() replaces the document matching criteria entirely with a new object.</blurb>

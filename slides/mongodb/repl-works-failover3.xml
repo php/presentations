@@ -1,0 +1,10 @@
+<slide>
+<title>How MongoDB replication works</title>
+
+<break lines="2"/>
+<image filename="repl-set-recovering.png"/>
+
+<list>
+	<bullet>Automatic recovery</bullet>
+</list>
+</slide>

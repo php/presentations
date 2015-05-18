@@ -8,14 +8,25 @@
 <list>
     <bullet>$lt, $lte, $gt, $gte (&lt;, &lt;=, &gt;, &gt;=)</bullet>
     <bullet>$ne (not equal)</bullet>
-    <bullet>$exists (field exists)</bullet>
-    <bullet>$mod (modulo)</bullet>
 </list>
 <blurb>Logical:</blurb>
 <list>
     <bullet>$or, $and</bullet>
     <bullet>$nor (not or)</bullet>
     <bullet>$not</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Meta:</blurb>
+<list>
+    <bullet>$exists (field exists)</bullet>
+    <bullet>$type (field type)</bullet>
+</list>
+<blurb>Evaluation:</blurb>
+<list>
+    <bullet>$mod (modulo)</bullet>
+    <bullet>$where (JS expression)</bullet>
 </list>
 </div>
 
@@ -27,10 +38,6 @@
     <bullet>$all (value needs to match all elements of the given array)</bullet>
     <bullet>$size (exact size of array)</bullet>
 	<bullet>$elemMatch (element in an array matches the specified match expression)</bullet>
-</list>
-<blurb>Others:</blurb>
-<list>
-    <bullet>$type</bullet>
 </list>
 </div>
 </slide>

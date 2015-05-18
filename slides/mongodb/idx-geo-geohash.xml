@@ -26,7 +26,7 @@
 </div>
 
 <div effect="fade-in">
-<example inline="1">db.cities.ensureIndex( { location: '2d', *bits: 4* } )</example>
+<example inline="1">db.cities.createIndex( { location: '2d', *bits: 4* } )</example>
 <list>
 	<bullet>Default %bits% is 26, about 0.3 meter resolution (~½ * 40000 / 2^26~)</bullet>
 </list>

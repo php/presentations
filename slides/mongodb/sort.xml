@@ -5,8 +5,8 @@
 $m = new MongoClient();
 $c = $m->demo->cities;
 
-$cursor = $c->find( array( 'country_code' => 'IS' ) )
-            ->sort( array( 'name' => -1 ) );
+$cursor = $c->find( [ 'country_code' => 'IS' ] )
+            ->sort( [ 'name' => -1 ] );
 
 foreach ( $cursor as $r ) {
     var_dump( $r['name'] );

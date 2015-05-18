@@ -1,14 +1,14 @@
 <slide>
 <title>Tags as dictionary</title>
 
-<example>$doc = array(
+<example>$doc = [
     'tags' => [
         [ 'k' => 'name', 'v' => 'A440' ],
         [ 'k' => 'highway', 'v' => 'secondary' ],
         [ 'k' => 'oneway', 'v' => 'yes' ]
     ]
-);
-$db->poi->ensureIndex( [ 'tags.v' => 1, 'tags.k' => 1 ] );
+];
+$db->poi->createIndex( [ 'tags.v' => 1, 'tags.k' => 1 ] );
 
 // Road with name=Strand
 $db->poi->find( [

@@ -4,13 +4,13 @@
 <list>
     <bullet>Change operations are written to the oplog
 		<list>
+		<bullet>A single update/delete affecting multiple documents can result in many oplog entries</bullet>
 		<bullet>The oplog is a capped collection (fixed size)
 			<list>
-			<bullet>Must have enough space to allow new secondaries to catch up after copying from a primary</bullet>
-			<bullet>Must have enough space to cope with any applicable slaveDelay</bullet>
+			<bullet>Must have enough space to allow new secondaries to catch up after syncing from a primary, and cope with any applicable slaveDelay</bullet>
 		</list></bullet>
 	</list></bullet>
     <bullet>Secondaries query the primary's oplog and apply what they find</bullet>
-    <bullet>All replicas contain an oplog</bullet>
+    <bullet>All replica set members contain an oplog</bullet>
 </list>
 </slide>

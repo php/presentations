@@ -22,18 +22,18 @@ db.poiConcat.find( {
     <blurb>*No index:*<br/> BasicCursor, n: 40, nscannedObjects: 2802711, millis: 1246</blurb>
 </div>
 <div effect="fade-in">
-    <blurb>*ensureIndex( { ts: 1 } )*<br/>BtreeCursor ts_1, n: 40, nscannedObjects: 3326, millis: 46</blurb>
+    <blurb>*createIndex( { ts: 1 } )*<br/>BtreeCursor ts_1, n: 40, nscannedObjects: 3326, millis: 46</blurb>
 </div>
 <div effect="fade-in-out">
-    <blurb>*ensureIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 257</blurb>
+    <blurb>*createIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 257</blurb>
 </div>
 <div effect="fade-in-out">
-    <blurb>*ensureIndex( { ts: 1} )* &amp;&amp; *ensureIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 256</blurb>
+    <blurb>*createIndex( { ts: 1} )* &amp;&amp; *createIndex( { l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 196884, millis: 256</blurb>
 </div>
 <div effect="fade-in-out">
-    <blurb>*ensureIndex( { l: '2dsphere', ts: 1 } )*<br/>S2Cursor, n: 40, nscannedObjects: 523, millis: 8</blurb>
+    <blurb>*createIndex( { l: '2dsphere', ts: 1 } )*<br/>S2Cursor, n: 40, nscannedObjects: 523, millis: 8</blurb>
 </div>
 <div effect="fade-in">
-    <blurb>*ensureIndex( { ts: 1, l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 523, millis: 8</blurb>
+    <blurb>*createIndex( { ts: 1, l: '2dsphere' } )*<br/>S2Cursor, n: 40, nscannedObjects: 523, millis: 8</blurb>
 </div>
 </slide>

@@ -10,8 +10,8 @@ $m = new MongoClient;
 $c = $m->demo->talks;
 
 try {
-	$c->insert( array( '_id' => 'derickr' ) );
-	$c->insert( array( '_id' => 'derickr' ) );
+	$c->insert( [ '_id' => 'derickr' ] );
+	$c->insert( [ '_id' => 'derickr' ] );
 } catch ( Exception $e ) {
     echo $e->getMessage(), "\n";
 }
@@ -24,8 +24,8 @@ try {
 $m = new MongoClient('mongodb://localhost/?w=0');
 $c = $m->demo->talks;
 
-$c->insert( array( '_id' => 'derickr' ) );
-$c->insert( array( '_id' => 'derickr' ) );
+$c->insert( [ '_id' => 'derickr' ] );
+$c->insert( [ '_id' => 'derickr' ] );
 ?>]]></example>
 </div>
 </slide>

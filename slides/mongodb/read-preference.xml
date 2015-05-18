@@ -13,7 +13,7 @@ $c->find(...);
 <example result="0"><![CDATA[<?php
 $m = new MongoClient( 'mongodb://localhost:13000/?replicaSet=poiset' );
 $c = $m->phpunit->test;
-$c->setReadPreference( Mongo::RP_SECONDARY, array( 'dc' => 'europe' ) );
+$c->setReadPreference( Mongo::RP_SECONDARY, [ 'dc' => 'europe' ] );
 $c->find(...);
 ?>]]></example>
 

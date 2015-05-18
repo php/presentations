@@ -18,8 +18,8 @@ $m = new MongoClient;
 $c = $m->demo->elephpants;
 $c->drop();
 
-$c->insert( array( '_id' => 'ele1', 'name' => 'Jumbo' ) );
-$c->insert( array( '_id' => 'ele2', 'name' => 'Tantor' ) );
+$c->insert( [ '_id' => 'ele1', 'name' => 'Jumbo' ] );
+$c->insert( [ '_id' => 'ele2', 'name' => 'Tantor' ] );
 
 var_dump( $c->find( [ '_id' => 'ele1' ] )->explain() );
 ?>]]>

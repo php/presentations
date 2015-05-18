@@ -4,7 +4,7 @@
 <blurb>MongoDB can return data from the *index only*:</blurb>
 
 <example inline="1">
-db.cities.ensureIndex( { country_code: 1, name: 1 } );
+db.cities.createIndex( { country_code: 1, name: 1 } );
 db.cities.find(
 	{ country_code: 'NL' }, *{ country_code: 1, name: 1, _id: 0 }*
 ).explain();
