@@ -16,7 +16,7 @@
 </div>
 <div effect="fade-in">
 <example inline="1">|ff0000|✘| %$c->find(['timezone' => 'Europe/London']);%</example>
-<example inline="1">|ff0000|✘| %$c->find(['asciiname' => 'Europe/London']);%</example>
+<example inline="1">|ff0000|✘| %$c->find(['asciiname' => 'London']);%</example>
 </div>
 <div effect="fade-in">
 <example inline="1">|00aa00|✔| %$c->find(['country_code' => 'GB']).sort(['timezone' => 1, 'asciiname' => 1]);%</example>
