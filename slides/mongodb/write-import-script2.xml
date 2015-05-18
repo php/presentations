@@ -7,8 +7,8 @@
 </list>
 <example><![CDATA[<?php
 // 1 ADD: Indexes for the tags
-$d->ensureIndex( [ 'tags_indexed' => 1 ] );
-$d->ensureIndex( [ 'tags_indexed.k' => 1, 'tags_indexed.v' => 1 ] );
+$d->createIndex( [ 'tags_indexed' => 1 ] );
+$d->createIndex( [ 'tags_indexed.k' => 1, 'tags_indexed.v' => 1 ] );
 
 var_dump($d->getIndexInfo());
 ]]></example>

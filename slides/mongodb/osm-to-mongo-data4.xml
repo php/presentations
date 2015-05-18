@@ -12,15 +12,15 @@
     }
 }
 </example>
-<example>db.poi.ensureIndex( { "tags.amenity" : 1 } );</example>
+<example>db.poi.createIndex( { "tags.amenity" : 1 } );</example>
 <div effect="fade-in">
-<example>db.poi.ensureIndex( { "tags.highway" : 1 } );</example>
+<example>db.poi.createIndex( { "tags.highway" : 1 } );</example>
 </div>
 <div effect="fade-in">
-<example>db.poi.ensureIndex( { "tags.ref" : 1 } );</example>
+<example>db.poi.createIndex( { "tags.ref" : 1 } );</example>
 </div>
 <div effect="fade-in">
-<example>db.poi.ensureIndex( { "tags.???" : 1 } );</example>
+<example>db.poi.createIndex( { "tags.???" : 1 } );</example>
 <list>
     <bullet>Lots of indexes make things slow</bullet>
     <bullet>Limited to 64 indexes</bullet>

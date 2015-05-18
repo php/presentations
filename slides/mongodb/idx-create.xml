@@ -1,16 +1,16 @@
 <slide>
 <title>Creating Indexes</title>
 
-<blurb>The %_id% field is always indexed. Additional indexes can be created with %ensureIndex%:</blurb>
+<blurb>The %_id% field is always indexed. Additional indexes can be created with %createIndex%:</blurb>
 
 <example>
 // Create an index on the name attribute
-db.cities.ensureIndex( { name: 1 } );
+db.cities.createIndex( { name: 1 } );
 
 // Create a compound index on country code and feature code
-db.cities.ensureIndex( { country_code: 1, feature_code: 1 } );
+db.cities.createIndex( { country_code: 1, feature_code: 1 } );
 
 // Create an index on the area field of timezone:
-db.cities.ensureIndex( { 'timezone.area': 1 } );
+db.cities.createIndex( { 'timezone.area': 1 } );
 </example>
 </slide>

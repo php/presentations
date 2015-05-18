@@ -5,14 +5,14 @@
 Basic, default weights:
 </blurb>
 <example>
-db.articles.ensureIndex( { subject: "text", post: "text" } );
+db.articles.createIndex( { subject: "text", post: "text" } );
 </example>
 
 <blurb>
 Explicit weights:
 </blurb>
 <example>
-db.articles.ensureIndex( { subject: "text", post: "text" },
+db.articles.createIndex( { subject: "text", post: "text" },
                          { weights: { "subject": 10 } } );
 </example>
 
@@ -20,14 +20,14 @@ db.articles.ensureIndex( { subject: "text", post: "text" },
 Wildcard field: text at any depth, default weights:
 </blurb>
 <example>
-db.articles.ensureIndex( { "$**": "text" } );
+db.articles.createIndex( { "$**": "text" } );
 </example>
 
 <blurb>
 Wildcard field: override default weights and explicit weights:
 </blurb>
 <example>
-db.articles.ensureIndex( { "$**": "text" },
+db.articles.createIndex( { "$**": "text" },
                          { weights: {"$**": 10, post: 5 } } );
 </example>
 </slide>

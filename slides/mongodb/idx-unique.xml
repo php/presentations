@@ -4,7 +4,7 @@
 <blurb>Unique indexes prevent multiple documents to match the same index key:</blurb>
 
 <example inline="1">
-> db.cities.ensureIndex( { country_code: 1, name: 1 }, *{ unique: true }* );
+> db.cities.createIndex( { country_code: 1, name: 1 }, *{ unique: true }* );
 </example>
 
 <div effect="fade-in">
@@ -19,7 +19,7 @@ demo.cities.$country_code_1_name_1  dup key: { : "AR", : "Mercedes" }
 <example>
 > db.cities.remove( { 'country_code': 'AR', name: 'Mercedes' } );
 
-> db.cities.ensureIndex( { country_code: 1, name: 1 }, { unique: true } );
+> db.cities.createIndex( { country_code: 1, name: 1 }, { unique: true } );
 
 E11000 duplicate key error index:
 demo.cities.$country_code_1_name_1  dup key: { : "AR", : "San Pedro" }
@@ -30,7 +30,7 @@ demo.cities.$country_code_1_name_1  dup key: { : "AR", : "San Pedro" }
 <blurb>You can force the index with *dropDups* (|ff9999|This could delete a lot of data!|):</blurb>
 
 <example inline="1">
-> db.cities.ensureIndex( { country_code: 1, name: 1 },
+> db.cities.createIndex( { country_code: 1, name: 1 },
                          { unique: true, *|f10000|dropDups : true|* } );
 </example>
 </div>

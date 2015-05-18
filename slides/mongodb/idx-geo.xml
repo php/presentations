@@ -2,12 +2,12 @@
 <title>Geospatial indexes</title>
 
 <blurb>MongoDB supports indexes on two dimensional fields:</blurb>
-<example>db.cities.ensureIndex( { location: '2d' } )</example>
+<example>db.cities.createIndex( { location: '2d' } )</example>
 
 <blurb>and</blurb>
 
 <blurb>MongoDB supports indexes on *geospatial fields*:</blurb>
-<example>db.cities.ensureIndex( { location: '2dsphere' } )</example>
+<example>db.cities.createIndex( { location: '2dsphere' } )</example>
 
 
 </slide>

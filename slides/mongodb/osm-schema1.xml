@@ -8,9 +8,9 @@
         'oneway' => 'yes'
     ]
 ];
-$db->poi->ensureIndex( [ 'tags.name' => 1 ] );
-$db->poi->ensureIndex( [ 'tags.highway' => 1 ] );
-$db->poi->ensureIndex( [ 'tags.oneway' => 1 ] );
+$db->poi->createIndex( [ 'tags.name' => 1 ] );
+$db->poi->createIndex( [ 'tags.highway' => 1 ] );
+$db->poi->createIndex( [ 'tags.oneway' => 1 ] );
 
 // Road with name=Strand
 $db->poi->find( [ 'tags.name' => 'Strand' ] );

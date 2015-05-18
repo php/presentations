@@ -2,7 +2,7 @@
 <title>Create a Text Search Index</title>
 
 <example>
-db.articles.ensureIndex(
+db.articles.createIndex(
 	{ subject: "text", post: "text" },
 	{ weights: {subject: 10, post: 5} }
 );</example>

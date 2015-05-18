@@ -12,7 +12,7 @@
 
 <div effect="fade-in">
 <example inline="1">
-db.cities.ensureIndex( { admin1_code: 1 }, *{ sparse: true }* );
+db.cities.createIndex( { admin1_code: 1 }, *{ sparse: true }* );
 </example>
 <image filename="mongo-compound-index-sparse2.png"/>
 </div>
