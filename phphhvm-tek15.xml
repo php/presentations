@@ -126,6 +126,9 @@ HHVM is not mature, and certainly not documented.
 - Slow going, mention the hhvm cookbook
 - issues with cursor and foreach iteration
 - APIs changing in Phongo meant that things had to be redone for Hippo
+
+<slide>slides/mongodb/moving-target.xml</slide>
+
 - Namespaces for drivers, exception and bson classes
 
 <!-- CURRENT STATUS -->
