@@ -1,19 +1,13 @@
 <slide>
 <title>MongoDB driver — current</title>
 
-<table><tr>
-<td><image filename="author-derickr.png"/></td>
-<td><image filename="author-hannes.png"/></td>
-<td><image filename="author-jeremy.png"/></td>
-</tr></table>
-
-<blurb>The driver generally works well, but there are issues:</blurb>
 <list>
-    <bullet>Former "great" design choices, among them:
+	<bullet>
+	<blurb>Former "great" design choices:</blurb>
         <list>
             <bullet>array/object deserialization</bullet>
             <bullet>positional arguments/options array</bullet>
-            <bullet>not a clear strategy for which command we add helpers</bullet>
+            <bullet>no clear strategy for when to add command helpers</bullet>
             <bullet>static MongoCursor::timeout and ::slaveOkay methods</bullet>
             <bullet>MongoLog and stream context listeners</bullet>
         </list>
