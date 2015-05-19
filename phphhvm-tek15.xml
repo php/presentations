@@ -138,15 +138,17 @@ Composer
 
 <!-- ISSUES -->
 
+- APIs changing in Phongo meant that things had to be redone for Hippo
+- Namespaces for drivers, exception and bson classes
+
+<slide>slides/mongodb/moving-target.xml</slide>
+
 HHVM is not mature, and certainly not documented.
 
 - Slow going, mention the hhvm cookbook
 - issues with cursor and foreach iteration
-- APIs changing in Phongo meant that things had to be redone for Hippo
 
-<slide>slides/mongodb/moving-target.xml</slide>
-
-- Namespaces for drivers, exception and bson classes
+<slide>slides/mongodb/hhvm-maturity.xml</slide>
 
 <!-- CURRENT STATUS -->
 
@@ -154,7 +156,10 @@ Phongo in alpha (0.6.3)
 Hippo in pre-alpha (but you can do all basic ops)
 phplib (as mongodb/mongodb) on packagist: https://packagist.org/packages/mongodb/mongodb (0.2.0)
 
+<slide>slides/mongodb/new-current-status.xml</slide>
+<slide>slides/mongodb/new-still-to-do.xml</slide>
 
+<slide>slides/mongodb/resources.xml</slide>
 
 
 </presentation>

@@ -1,0 +1,13 @@
+<slide>
+<title>APIs are a moving target</title>
+
+<image filename="moving-target.jpg" align="right" />
+
+<list>
+<bullet>Phongo is not ready yet</bullet>
+<bullet>We are still playing around with the API to make it even better</bullet>
+<bullet>%MongoDB\Driver\RuntimeException% → %MongoDB\Driver\Exception\RuntimeException%</bullet>
+<bullet>Namespace "arguments":<br/>%MongoDB\BSON\Binary% vs. %BSON\Binary%</bullet>
+<bullet>Changes in result types:<br/>%CommandResult% and %QueryResult% → %Result%</bullet>
+</list>
+</slide>
