@@ -1,0 +1,12 @@
+<slide>
+<title>phplib</title>
+
+<image filename="logo-composer-transparent3.png" align="right"/>
+<list>
+<bullet>Userland library sitting on top of Phongo/Hippo</bullet>
+<bullet>Implements the convenience methods that the basic APIs lack</bullet>
+<bullet>Installable by composer:
+<example><![CDATA[$ mkdir new-project && cd new-project
+$ php composer.phar require mongodb/mongodb]]></example></bullet>
+</list>
+</slide>

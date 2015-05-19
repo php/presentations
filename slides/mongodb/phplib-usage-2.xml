@@ -1,0 +1,31 @@
+<slide>
+<title>phplib usage</title>
+
+<example><![CDATA[<?php
+require 'vendor/autoload.php';
+$m = new MongoDB\Client("mongodb://localhost:27017");
+$d = $m->selectDatabase( 'demo' );
+$c = $d->selectCollection( 'test' );
+
+$c->drop();
+
+$doc = [
+    'string' => 'bar',
+    'number_i' => 55,
+    'number_l' => 12345678901234567,
+    'bool' => true,
+    'null' => null,
+    'float' => M_PI,
+];
+
+$r = $c->insertOne( $doc );
+
+$cursor = $c->find( [] );
+
+foreach ( $cursor->toArray() as $key => $result )
+{
+    print_r( $result );
+}
+?>]]>
+</example>
+</slide>
