@@ -1,0 +1,10 @@
+<slide>
+<title>Phongo</title>
+
+<list>
+	<bullet>New backwards breaking MongoDB extension for PHP 5.3 and higher</bullet>
+	<bullet>Very minimal API</bullet>
+	<bullet>Meant to be build upon by PHP libraries (like the 0.8.4 driver)</bullet>
+	<bullet>Uses PHP namespaces</bullet>
+</list>
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Hippo</title>
+
+<image filename="hippo.jpg" align="right" attr="Sander van der Wel - https://www.flickr.com/photos/jar0d/4023203232/"/>
+<list>
+<bullet>"Same" implementation of phongo APIs as extension for HHVM</bullet>
+<bullet>Drop-in replacement</bullet>
+<bullet>No shared code, as this is C++</bullet>
+<bullet>Parts of it can be written in Hack</bullet>
+</list>
+
+<break lines="3"/>
+<image filename="hhvmhack.png" align="center"/>
+</slide>

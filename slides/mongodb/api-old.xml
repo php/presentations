@@ -1,0 +1,30 @@
+<slide>
+<title>Old API (mongo.so)</title>
+
+<example><![CDATA[<?php
+$m = new MongoClient("mongodb://localhost:27017");
+
+$m->demo->test->drop();
+
+
+$doc = [
+    'string' => 'bar',
+    'number_i' => 55,
+    'number_l' => 12345678901234567,
+    'bool' => true,
+    'null' => null,
+    'float' => M_PI,
+];
+
+$r = $m->demo->test->insert( $doc );
+
+$cursor = $m->demo->test->find();
+
+
+foreach ( $cursor as $key => $result )
+{
+    print_r( $result );
+}
+?>]]>
+</example>
+</slide>

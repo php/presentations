@@ -1,0 +1,28 @@
+<slide>
+<title>Hippo (implementation)</title>
+
+<blurb>%ext_mongo.php% (extract)</blurb>
+<example><![CDATA[<?hh
+namespace MongoDB\Driver;
+
+<<__NativeData("MongoDBDriverManager")>>
+class Manager {
+    <<__Native>>
+    function __construct(string $dsn = "localhost", array $options = array(), array $driverOptions = array());
+}]]></example>
+
+<blurb>%src/MongoDB/Driver/Manager% (extract)</blurb>
+<example><![CDATA[void HHVM_METHOD(MongoDBDriverManager, __construct, const String &dsn, const Array &options, const Array &driverOptions)
+{
+    MongoDBDriverManagerData* data = Native::data<MongoDBDriverManagerData>(this_);
+    mongoc_client_t *client;
+
+    client = mongoc_client_new(dsn.c_str());
+
+    if (!client) {
+        throw Object(SystemLib::AllocExceptionObject("Can't connect"));
+    }
+
+    data->m_client = client;
+}]]></example>
+</slide>

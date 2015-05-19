@@ -1,0 +1,30 @@
+<slide>
+<title>Phongo API (mongodb.so)</title>
+
+<example><![CDATA[<?php
+$m = new MongoDB\Driver\Manager("mongodb://localhost:27017");
+
+$c = new MongoDB\Driver\Command( [ 'drop' => 'test' ] );
+$cursor = $m->executeCommand( 'demo', $c );
+
+$doc = [
+    'string' => 'bar',
+    'number_i' => 55,
+    'number_l' => 12345678901234567,
+    'bool' => true,
+    'null' => null,
+    'float' => M_PI,
+];
+
+$r = $m->executeInsert( 'demo.test', $doc );
+
+$q = new MongoDB\Driver\Query( [] );
+$cursor = $m->executeQuery( 'demo.test', $q );
+
+foreach ( $cursor->toArray() as $key => $result )
+{
+    print_r( $result );
+}
+?>]]>
+</example>
+</slide>

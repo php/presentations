@@ -1,0 +1,53 @@
+<slide>
+<title>Hippo (implementation)</title>
+
+<blurb>%ext_mongo.php% (extract)</blurb>
+<example><![CDATA[<?hh
+namespace MongoDB\Driver;
+
+<<__NativeData("MongoDBDriverReadPreference")>>
+final class ReadPreference {
+    <<__Native>>
+    private function _setReadPreference(int $readPreference): void;
+
+    <<__Native>>
+    private function _setReadPreferenceTags(array $tagSets): void;
+
+    public function __construct(int $readPreference, mixed $tagSets = null)
+    {
+        if ($tagSets !== NULL && Utils::mustBeArrayOrObject('parameter 2', $tagSets)) {
+            return;
+        }
+
+        switch ($readPreference) {
+            case ReadPreference::RP_PRIMARY:
+            case ReadPreference::RP_PRIMARY_PREFERRED:
+            case ReadPreference::RP_SECONDARY:
+            case ReadPreference::RP_SECONDARY_PREFERRED:
+            case ReadPreference::RP_NEAREST:
+                // calling into Native
+                $this->_setReadPreference($readPreference);
+
+                if ($tagSets) {
+                    // calling into Native, might throw exception
+                    $this->_setReadPreferenceTags($tagSets);
+                }
+
+                break;
+
+            default:
+                Utils::throwHippoException(Utils::ERROR_INVALID_ARGUMENT, "Invalid ReadPreference");
+                break;
+        }
+    }
+}]]></example>
+
+<blurb>%src/MongoDB/Driver/Manager% (extract)</blurb>
+<example><![CDATA[void HHVM_METHOD(MongoDBDriverReadPreference, _setReadPreference, int readPreference)
+{
+    MongoDBDriverReadPreferenceData* data = Native::data<MongoDBDriverReadPreferenceData>(this_);
+
+    data->m_read_preference = mongoc_read_prefs_new((mongoc_read_mode_t) readPreference);
+} ]]></example>
+</slide>
+
