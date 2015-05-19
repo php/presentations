@@ -1,0 +1,18 @@
+<slide>
+<title>Phongo output</title>
+
+<example><![CDATA[Array
+(
+    [_id] => BSON\ObjectID Object
+        (
+            [oid] => 555b6be7b8c96e1a676318d1
+        )
+
+    [string] => bar
+    [number_i] => 55
+    [number_l] => 12345678901234567
+    [bool] => 1
+    [null] => 
+    [float] => 3.1415926535898
+)]]></example>
+</slide>
