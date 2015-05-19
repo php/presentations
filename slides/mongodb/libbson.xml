@@ -1,0 +1,14 @@
+<slide>
+<title>libbson</title>
+
+<image filename="bson.jpg" align="right" attr="Larry Smith - https://www.flickr.com/photos/lsmith2010/15255541569/"/>
+<blurb>%libbson% is a new shared library written in C for developers wanting to
+work with the BSON serialization format.</blurb>
+
+<list>
+	<bullet>It's used by %libmongoc%</bullet>
+	<bullet>It's used by the drivers directly as well</bullet>
+	<bullet>High performance %BSON% serialization and deserialization</bullet>
+	<bullet>Callback API for deserialization</bullet>
+</list>
+</slide>

@@ -1,0 +1,12 @@
+<slide>
+<title>mongo-c-driver (libmongoc)</title>
+
+<blurb>mongo-c-driver is a client library written in C for MongoDB</blurb>
+
+<list>
+<bullet>Meant as a low level driver for applications *and* higher level languages</bullet>
+<bullet>About two years old</bullet>
+<bullet>%git@github.com:mongodb/mongo-c-driver.git%</bullet>
+<bullet>Used by the PHP and HHVM drivers</bullet>
+</list>
+</slide>
