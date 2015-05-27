@@ -1,0 +1,25 @@
+<slide title="" section="wpbench">
+
+<literal><![CDATA[
+<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/may26/wpbench.js"></script>
+]]></literal>
+
+<break lines="1" section="fdo"/>
+<blurb fontsize="1.1em" align="center">GCC Feedback-Directed Optimization (FDO)</blurb>
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ make clean
+$ make -j8 prof-gen
+...
+$ sapi/cgi/php-cgi -T 1000 /var/www/wordpress/index.php > /dev/null
+$ make prof-clean
+$ make -j8 prof-use
+]]></example>
+
+<break lines="1" section="wpbench_fdo"/>
+<literal><![CDATA[
+<div id="wpbench_fdo_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/may26/wpbench_fdo.js"></script>
+]]></literal>
+
+</slide>
