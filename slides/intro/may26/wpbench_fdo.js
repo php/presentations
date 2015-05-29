@@ -70,7 +70,7 @@ window["render_wpbench_fdo"] = function() {
                 },
                 format: '{point.y:.0f}'
 			},
-			visible: true
+			visible: false 
         }, {
             name: 'r/s @ 20',
 			yAxis: 0,
@@ -107,7 +107,7 @@ window["render_wpbench_fdo"] = function() {
                 },
                 format: '{point.y:.0f}'
 			},
-			visible: true
+			visible: false
         }, {
             name: 'latency @ 10',
 			yAxis: 1,
