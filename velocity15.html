@@ -37,6 +37,11 @@
                 -webkit-text-size-adjust: none;
         }
 
+        .reveal section img {
+               box-shadow: none;
+               border: none;
+        }
+
         .reveal code.shell {
             display: block;
             overflow-x: auto;
