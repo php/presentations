@@ -171,8 +171,40 @@ sys	0m0.000s
 ]]></example>
 
 <break lines="1" section="php7ast"/>
-<blurb fontsize="1.1em" align="left">✔ Abstract Syntax Tree</blurb>
+<blurb fontsize="1.1em" align="left">✔ Abstract Syntax Tree!!</blurb>
 
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+echo substr("abc", [1,2]);
+]]></example>
+
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan -a test.php
+AST_STMT_LIST @ 1
+    0: AST_STMT_LIST @ 2
+        0: AST_ECHO @ 2
+            0: AST_CALL @ 2
+                0: AST_NAME @ 2
+                    flags: NAME_NOT_FQ (1)
+                    0: "substr"
+                1: AST_ARG_LIST @ 2
+                    0: "abc"
+                    1: AST_ARRAY @ 2
+                        0: AST_ARRAY_ELEM @ 2
+                            flags: 0
+                            0: 1
+                            1: null
+                        1: AST_ARRAY_ELEM @ 2
+                            flags: 0
+                            0: 2
+                            1: null
+]]></example>
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan -a test.php
+test.php:2 TypeError arg#2(start) is int[] but substr() takes int
+]]></example>
+
+<break lines="1" section="php7ret"/>
 <blurb fontsize="1.1em" align="left">✔ Return Types</blurb>
 <example fontsize="1.1em" result='0' title=""><![CDATA[
 <?php
@@ -317,6 +349,7 @@ $f->call($myC);
      (Your PHP4 code will break!)</blurb>
 <example result='0' title=""><![CDATA[
 - ext/ereg (use ext/pcre instead)
+- preg_replace() eval modifier (use preg_replace_callback() instead)
 - ext/mysql (use ext/mysqli or ext/pdo_mysql instead)
 - Assignment of new by reference
 - Scoped calls of non-static methods from incompatible $this context
@@ -339,7 +372,6 @@ $f->call($myC);
 - # style comments in ini files (use ; style comments instead)
 - String category names in setlocale() (use LC_* constants instead)
 - Unsafe curl file uploads (use CurlFile instead)
-- preg_replace() eval modifier (use preg_replace_callback() instead)
 - PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT driver option 
   (use PDO::ATTR_EMULATE_PREPARES instead)
 - CN_match and SNI_server_name stream context option (use peer_name instead)
@@ -419,6 +451,44 @@ $foo()()
 'Foo'::$bar
 ]]></example>
 
+<break lines="1" section="php7phanbc"/>
+
+<example fontsize="1em" result='0' title=""><![CDATA[
+  echo preg_replace('/:-:(.*?):-:/e', '$this->pres->\\1', $text);
+]]></example>
+<example fontsize="1em" result='0' title=""><![CDATA[
+  echo preg_replace_callback(
+    '/:-:(.*?):-:/', 
+    function($matches) {
+      return $this->pres->$matches[1];
+    },
+    $text);
+]]></example>
+
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan -b display.php
+Files scanned: 1
+Time:		0.13s
+Classes:	8
+Methods:	55
+Functions:	5
+Closures:	5
+Traits:		0
+Conditionals:	307
+Issues found:	1
+
+display.php:416 CompatError expression may not be PHP 7 compatible
+]]></example>
+
+<example fontsize="1em" result='0' title=""><![CDATA[
+  echo preg_replace_callback(
+    '/:-:(.*?):-:/', 
+    function($matches) {
+      return $this->pres->{$matches[1]};
+    },
+    $text);
+]]></example>
+
 <break lines="1" section="php7unicode"/>
 
 <blurb fontsize="1.1em" align="left">✔  Unicode Codepoint Escape Syntax</blurb>
@@ -434,6 +504,6 @@ echo "\u{1F602}";
 
 <break lines="1" section="php7more"/>
 
-<blurb fontsize="1.5em">First RC scheduled for June 2015</blurb>
+<blurb fontsize="1.5em">GA release scheduled for October 2015</blurb>
 
 </slide>
