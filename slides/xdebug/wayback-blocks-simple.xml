@@ -1,0 +1,40 @@
+<slide>
+<title>Wayback: blocks</title>
+
+<div effect="fade-out"><blurb>Header:</blurb>
+<example><![CDATA[
+0000000: 5742 0100 291f e754 f0de bc9a 7856 3412  WB..)..T....xV4.
+]]></example>
+</div>
+<div effect="fade-in-out"><blurb>File contents:</blurb>
+<example><![CDATA[
+0000010: 4300 0001 5700 0000 3c3f 7068 700a 7265  C...W...<?php.re
+0000020: 7175 6972 6520 2769 6e63 6c75 6465 2e70  quire 'include.p
+0000030: 6870 273b 0a0a 2474 6573 7420 3d20 6e65  hp';..$test = ne
+0000040: 7720 5465 7374 696e 673b 0a0a 7661 725f  w Testing;..var_
+0000050: 6475 6d70 2820 2474 6573 742d 3e74 6573  dump( $test->tes
+0000060: 7428 342c 2035 2920 293b 0a0a 3f3e 0a00  t(4, 5) );..?>..
+0000070: 5858 5858 5858 5858 5858 5858 5858 5858  XXXXXXXXXXXXXXXX
+]]></example>
+</div>
+<div effect="fade-in-out"><blurb>Function entry:</blurb>
+<example><![CDATA[
+0000150: 4903 1402 4214 0000 d017 0400 0100 0000  I...B...........
+0000160: 0000 0000 0000 0000 0600 0000 0200 0000  ................
+0000170: 0000 1702 0107 0000 0054 6573 7469 6e67  .........Testing
+0000180: 0001 0400 0000 7465 7374 0058 5858 5858  ......test.XXXXX
+]]></example>
+</div>
+<div effect="fade-in-out"><blurb>File table:</blurb>
+<example><![CDATA[
+00001e0: 4602 0000 0001 2d00 0000 2f68 6f6d 652f  F.....-.../home/
+00001f0: 6874 7470 642f 6874 6d6c 2f74 6573 742f  httpd/html/test/
+0000200: 7864 6562 7567 2f77 6179 6261 636b 2f6d  xdebug/wayback/m
+0000210: 6169 6e2e 7068 7000 0100 0130 0000 002f  ain.php....0.../
+0000220: 686f 6d65 2f68 7474 7064 2f68 746d 6c2f  home/httpd/html/
+0000230: 7465 7374 2f78 6465 6275 672f 7761 7962  test/xdebug/wayb
+0000240: 6163 6b2f 696e 636c 7564 652e 7068 7000  ack/include.php.
+0000250: 5858 5858 5858 5858 5858 5858 5858 5858  XXXXXXXXXXXXXXXX
+]]></example>
+</div>
+</slide>
