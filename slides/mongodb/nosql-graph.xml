@@ -1,11 +1,12 @@
 <slide>
 <title>NoSQL: Graph</title>
 
+<image filename="graph.png" align="right"/>
+
 <blurb>Example implementations:</blurb>
 <list>
 <bullet>neo4j</bullet>
 </list>
-
 <break/>
 
 <blurb>Data model:</blurb>
