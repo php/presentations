@@ -2,11 +2,11 @@
 <title>MongoDB</title>
 <list>
 	<bullet>Open source, high performance database</bullet>
-    <bullet>Key Innovations</bullet>
-    <bullet>Horizontally scalable</bullet>
-    <bullet>Agile</bullet>
-    <bullet>Easy to Deploy in the Cloud / Virtual Servers</bullet>
-    <bullet>Version 2.0 released September ’11</bullet>
-    <bullet>100,000+ downloads per month</bullet>
+    <bullet>NoSQL, or rather, "modern database"</bullet>
+	<bullet>You talk to it with language drivers</bullet>
+	<bullet>There are official supported drivers for: PHP, Python, Perl, Ruby, Java, Scala, C#/.net, C, C++…</bullet>
+	<bullet>MongoDB Inc provides support and enterprise tools</bullet>
 </list>
+
+<image filename="mongodb-logo-large.png"/>
 </slide>
