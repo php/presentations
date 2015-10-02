@@ -2,8 +2,8 @@
 <title>Current status</title>
 
 <list>
-	<bullet>phongo in alpha state (0.6.3)<br/>%pecl install mongodb%</bullet>
-	<bullet>hippo in pre-alpha<br/>%https://github.com/10gen-labs/mongo-hhvm-driver-prototype%</bullet>
+	<bullet>phongo in beta state (1.0.0beta1)<br/>%pecl install mongodb%</bullet>
+	<bullet>hippo in alpha<br/>%https://github.com/mongodb-labs/mongo-hhvm-driver-prototype/releases/tag/1.0alpha1%</bullet>
 	<bullet>phplib in alpha state (0.2.0)<br/>%https://packagist.org/packages/mongodb/mongodb%</bullet>
 </list>
 

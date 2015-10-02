@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="generator" content="eZ Components; http://ezcomponents.org" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><style type="text/css">body {
+	background-color: #ffffff;
+	color: #2e3436;
+	font-family: sans-serif;
+	font-size: 120%;
+}
+
+a {
+	color: #3456a4
+}
+
+a:hover {
+	color: #729fcf;
+}
+
+a:visited {
+	color: #204a87;
+}
+
+a.footnote {
+	vertical-align: super;
+}
+
+p {
+	margin: 0.5em 0em 1em 0em;
+}
+
+hr {
+	background-color: #204a87;
+	border: none;
+	height: 1px;
+}
+
+pre {
+	background-color: #eeeeef;
+	font-family: monospace;
+}
+
+table {
+	border: 1px solid #babdb6;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+thead td,
+thead th {
+	background-color: #eeeeef;
+	text-align: center;
+	font-weight: bold;
+}
+
+tbody td {
+	border: 1px solid #babdb6;
+}
+
+blockquote p:before,
+blockquote p:after {
+	content: '"';
+}
+
+blockquote p {
+	margin-bottom: .5em;
+}
+
+blockquote cite {
+	margin-left: 1em;
+	color: #555753;
+}
+
+div.image,
+div.figure {
+	margin: 1em;
+	padding: 1px;
+	border: 1px solid #babdb6;
+}
+
+div.image img,
+div.figure img {
+	margin: 0px auto;
+}
+
+div.image p,
+div.figure p {
+	margin: 0em;
+	font-size: 90%;
+	color: #555753;
+}
+
+p.note {
+	margin-left: 2em;
+	padding: .2em;
+	border: 1px solid #8ae234;
+}
+
+p.notice {
+	margin-left: 2em;
+	padding: .2em;
+	border: 1px solid #4e9a06;
+}
+
+p.warning {
+	margin-left: 2em;
+	padding: .2em;
+	border: 1px solid #ce5c00;
+}
+
+p.attention {
+	margin-left: 2em;
+	padding: .2em;
+	border: 1px solid #a40000;
+}
+
+p.danger {
+	margin-left: 2em;
+	padding: .2em;
+	border: 2px solid #a40000;
+}
+</style><title>Persistence in Hippo and Phongo</title></head><body><h1><a name="persistence_in_hippo_and_phongo" id="persistence_in_hippo_and_phongo"></a>Persistence in Hippo and Phongo</h1><p>This document discusses the methods how compound structures (documents, arrays, objects) are persisted through the drivers. And how they are brought back into PHP land.</p><h2><a name="serialization_to_bson" id="serialization_to_bson"></a>Serialization to BSON</h2><h3><a name="arrays" id="arrays"></a>Arrays</h3><p>If an array is a <em>packed array</em> — i.e. the keys start at 0 and are sequential without gaps: <strong>BSON array</strong>.</p><p>If the array is not packed — i.e. having associative (string) keys, the keys don't start at 0, or when there are gaps:: <strong>BSON object</strong></p><p>A top-level (root) document, <strong>always</strong> serializes as a BSON document.</p><h4><a name="examples" id="examples"></a>Examples</h4><p>These serialize as a BSON array:</p><pre>[ 8, 5, 2, 3 ] =&gt; [ 8, 5, 2, 3 ]
+[ 0 =&gt; 4, 1 =&gt; 9 ] =&gt; [ 4, 9 ]
+
+
+</pre><p>These serialize as a BSON document:</p><pre>[ 0 =&gt; 1, 2 =&gt; 8, 3 =&gt; 12 ] =&gt; { "0" : 1, "2" : 8, "3" : 12 }
+[ "foo" =&gt; 42 ] =&gt; { "foo" : 42 }
+[ 1 =&gt; 9, 0 =&gt; 10 ] =&gt; { "1" : 9, "0" : 10 }
+
+</pre><p>Note that the five examples are <em>extracts</em> of a full document, and represent only <strong>one</strong> value inside a document.</p><h3><a name="objects" id="objects"></a>Objects</h3><p>If an object is of the <em>stdClass</em>, serialize as a <strong>BSON document</strong>.</p><p>If an object is a supported class that implements <code>MongoDB\BSON\Type</code>, then use the BSON serialization logic for that specific type. <code>MongoDB\BSON\Type</code> instances (excluding <code>MongoDB\BSON\Serializable</code>) may only be serialized as a document field value. Attempting to serialize such an object as a root document will throw a <code>MongoDB\Driver\Exception\UnexpectedValueException</code>.</p><p>If an object is of an unknown class implementing the <code>MongoDB\BSON\Type</code> interface, then throw a <code>MongoDB\Driver\Exception\UnexpectedValueException</code>.</p><p>If an object is of any other class, without implementing any special interface, serialize as a <strong>BSON document</strong>. Keep only <em>public</em> properties, and ignore <em>protected</em> and <em>private</em> properties.</p><p>If an object is of a class that implements the <code>MongoDB\BSON\Serializable</code> interface, call <code>bsonSerialize</code> and use the returned array or <code>stdClass</code> to serialize as a BSON document or array. The BSON type will be determined by the following:</p><ol><li><p>Root documents must be serialized as a BSON document.</p></li><li><p><code>MongoDB\BSON\Persistable</code> objects must be serialized as a BSON document.</p></li><li><p>If <code>bsonSerialize</code> returns a packed array, serialize as a BSON array.</p></li><li><p>If <code>bsonSerialize</code> returns a non-packed array or <code>stdClass</code>, serialize as a BSON document.</p></li><li><p>If <code>bsonSerialize</code> did not return an array or <code>stdClass</code>, throw an <code>MongoDB\Driver\Exception\UnexpectedValueException</code> exception.</p></li></ol><p>If an object is of a class that implements the <code>MongoDB\BSON\Persistable</code> interface (which implies <code>MongoDB\BSON\Serializable</code>), obtain the properties in a similar way as in the previous paragraphs, but <em>also</em> add an additional property <code>__pclass</code> as a Binary value, with subtype <code>0x80</code> and data bearing the fully qualified class name of the object that is being serialized.</p><p>The <code>__pclass</code> property is added to the array or object returned by <code>bsonSerialize</code>, which means it will overwrite any <code>__pclass</code> key/property in the <code>bsonSerialize</code> return value. If you want to avoid this behaviour and set your own <code>__pclass</code> value, you must <strong>not</strong> implement <code>MongoDB\BSON\Persistable</code> and should instead implement <code>MongoDB\BSON\Serializable</code> directly.</p><h4><a name="examples__1" id="examples__1"></a>Examples</h4><pre>stdClass {
+  public $foo = 42;
+} =&gt; { "foo" : 42 }
+
+MyClass {
+  public $foo = 42;
+  protected $prot = "wine";
+  private $fpr = "cheese";
+} =&gt; { "foo" : 42 }
+
+AnotherClass1 implements MongoDB\BSON\Serializable {
+  public $foo = 42;
+  protected $prot = "wine";
+  private $fpr = "cheese";
+  function bsonSerialize() {
+      return [ 'foo' =&gt; $this-&gt;foo, 'prot' =&gt; $this-&gt;prot ];
+  }
+} =&gt; { "foo" : 42, "prot" : "wine" }
+
+AnotherClass2 implements MongoDB\BSON\Serializable {
+  public $foo = 42;
+  function bsonSerialize() {
+      return $this;
+  }
+} =&gt; MongoDB\Driver\Exception\UnexpectedValueException("bsonSerialize() did not return an array or stdClass")
+
+AnotherClass3 implements MongoDB\BSON\Serializable {
+  private $elements = [ 'foo', 'bar' ];
+  function bsonSerialize() {
+      return $this-&gt;elements;
+  }
+} =&gt; { "0" : "foo", "1" : "bar" }
+
+ContainerClass implements MongoDB\BSON\Serializable {
+  public $things = AnotherClass4 implements MongoDB\BSON\Serializable {
+    private $elements = [ 0 =&gt; 'foo', 2 =&gt; 'bar' ];
+    function bsonSerialize() {
+      return $this-&gt;elements;
+    }
+  }
+  function bsonSerialize() {
+      return [ 'things' =&gt; $this-&gt;things ];
+  }
+} =&gt; { "things" : { "0" : "foo", "2" : "bar" } }
+
+ContainerClass implements MongoDB\BSON\Serializable {
+  public $things = AnotherClass5 implements MongoDB\BSON\Serializable {
+    private $elements = [ 0 =&gt; 'foo', 2 =&gt; 'bar' ];
+    function bsonSerialize() {
+      return array_values($this-&gt;elements);
+    }
+  }
+  function bsonSerialize() {
+      return [ 'things' =&gt; $this-&gt;things ];
+  }
+} =&gt; { "things" : [ "foo", "bar" ] }
+
+ContainerClass implements MongoDB\BSON\Serializable {
+  public $things = AnotherClass6 implements MongoDB\BSON\Serializable {
+    private $elements = [ 'foo', 'bar' ];
+    function bsonSerialize() {
+      return (object) $this-&gt;elements;
+    }
+  }
+  function bsonSerialize() {
+      return [ 'things' =&gt; $this-&gt;things ];
+  }
+} =&gt; { "things" : { "0" : "foo", "1" : "bar" } }
+
+UpperClass implements MongoDB\BSON\Persistable {
+  public $foo = 42;
+  protected $prot = "wine";
+  private $fpr = "cheese";
+  function bsonSerialize() {
+      return [ 'foo' =&gt; $this-&gt;foo, 'prot' =&gt; $this-&gt;prot ];
+  }
+} =&gt; { "foo" : 42, "prot" : "wine", "__pclass" : { "$type" : "80", "$binary" : "VXBwZXJDbGFzcw==" } }
+
+
+</pre><h2><a name="deserialization_from_bson" id="deserialization_from_bson"></a>Deserialization from BSON</h2><p>For compound types, there are three data types:</p><ul><li><p><code>root</code>: refers to the top-level BSON document <em>only</em></p></li><li><p><code>document</code>: refers to embedded BSON documents <em>only</em></p></li><li><p><code>array</code>: refers to a BSON array</p></li></ul><p>Each of those three data types can be mapped against different PHP types. The possible mapping values are:</p><ul><li><p><em>not set</em> or <code>NULL</code> — this is the default.</p><ul><li><p>A BSON document (root or embedded) with a <code>__pclass</code> property <a href="#_footnote_0_1" class="footnote">1</a> becomes a PHP object of the class name as defined by the <code>__pclass</code> property.</p><p>If the named class implements the <code>MongoDB\BSON\Persistable</code> interface, then the properties of the BSON document, including the <code>__pclass</code> property, are sent as an associative array to the <code>bsonUnserialize</code> function to initialise the object's properties.</p><p>If the named class does not exist or does not implement the <code>MongoDB\BSON\Persistable</code> interface, <code>stdClass</code> will be used and each BSON document key (including <code>__pclass</code>) will be set as a public <code>stdClass</code> property.</p></li><li><p>A BSON document (root or embedded) without a <code>__pclass</code> property <a href="#_footnote_0_1" class="footnote">1</a> becomes a PHP <code>stdClass</code> object, with each BSON document key set as a public <code>stdClass</code> property.</p></li><li><p>A BSON array will be deserialized as a PHP <code>array</code>.</p></li></ul></li><li><p><code>"array"</code> — turns a BSON array or BSON document into a PHP array. There will be no special treatment of a <code>__pclass</code> property <a href="#_footnote_0_1" class="footnote">1</a>, but it may be set as an element in the returned array if it was present in the BSON document.</p></li><li><p><code>"object"</code> or <code>"stdClass"</code> — turns a BSON array or BSON document into a <code>stdClass</code> object. There will be no special treatment of a <code>__pclass</code> property <a href="#_footnote_0_1" class="footnote">1</a>, but it may be set as a public property in the returned object if it was present in the BSON document.</p></li><li><p><code>any other string</code> — defines the class name that the BSON array or BSON object should be deserialized as. For BSON objects that include <code>__pclass</code> properties, that class will take priority.</p><p>If the named class does not exist, is not concrete (i.e. it is abstract or an interface), or does not implement <code>MongoDB\BSON\Unserializable</code>, then an <code>MongoDB\Driver\Exception\InvalidArgumentException</code> exception is thrown.</p><p>If the BSON object has a <code>__pclass</code> property and that class exists and implements <code>MongoDB\BSON\Persistable</code>, it will supersede the class provided in the type map.</p><p>The properties of the BSON document, <strong>including</strong> the <code>__pclass</code> property if it exists, will be sent as an associative array to the <code>bsonUnserialize</code> function to initialise the object's properties.</p></li></ul><h3><a name="typemaps" id="typemaps"></a>TypeMaps</h3><p>TypeMaps can be set through the <code>setTypeMap()</code> method on a <code>MongoDB\Driver\Cursor</code> object, or the <code>$typeMap</code> argument of <code>MongoDB\BSON\toPHP()</code> (previously, <code>MongoDB\BSON\toArray()</code>). Each of the three classes (<code>root</code>, <code>document</code> and <code>array</code>) can be individually set.</p><p>If the value in the map is <code>NULL</code>, it means the same as the <em>default</em> value for that item.</p><h3><a name="examples__2" id="examples__2"></a>Examples</h3><p>These examples use the following classes:</p><ul><li><p><code>MyClass</code>, which does <strong>not</strong> implement any interface</p></li><li><p><code>YourClass</code>, which implements <code>MongoDB\BSON\Unserializable</code></p></li><li><p><code>OurClass</code>, which implements <code>MongoDB\BSON\Persistable</code></p></li><li><p><code>TheirClass</code>, which extends <code>OurClass</code></p></li></ul><p>The <code>bsonUnserialize()</code> method of <code>YourClass</code>, <code>OurClass</code>, <code>TheirClass</code> iterate over the array and set the properties without modifications. It <strong>also</strong> sets the <code>$unserialized</code> property to <code>true</code>:</p><pre>function bsonUnserialize( array $map )
+{
+    foreach ( $map as $k =&gt; $value )
+    {
+        $this-&gt;$k = $value;
+    }
+    $this-&gt;unserialized = true;
+}
+
+</pre><pre>/* typemap: [] (all defaults) */
+{ "foo": "yes", "bar" : false }
+  -&gt; stdClass { $foo =&gt; 'yes', $bar =&gt; false }
+
+{ "foo": "no", "array" : [ 5, 6 ] }
+  -&gt; stdClass { $foo =&gt; 'no', $array =&gt; [ 5, 6 ] }
+
+{ "foo": "no", "obj" : { "embedded" : 3.14 } }
+  -&gt; stdClass { $foo =&gt; 'no', $obj =&gt; stdClass { $embedded =&gt; 3.14 } }
+
+{ "foo": "yes", "__pclass": "MyClass" }
+  -&gt; stdClass { $foo =&gt; 'yes', $__pclass =&gt; 'MyClass' }
+
+{ "foo": "yes", "__pclass": { "$type" : "80", "$binary" : "MyClass" } }
+  -&gt; stdClass { $foo =&gt; 'yes', $__pclass =&gt; Binary(0x80, 'MyClass') }
+
+{ "foo": "yes", "__pclass": { "$type" : "80", "$binary" : "YourClass") }
+  -&gt; stdClass { $foo =&gt; 'yes', $__pclass =&gt; Binary(0x80, 'YourClass') }
+
+{ "foo": "yes", "__pclass": { "$type" : "80", "$binary" : "OurClass") }
+  -&gt; OurClass { $foo =&gt; 'yes', $__pclass =&gt; Binary(0x80, 'OurClass'), $unserialized =&gt; true }
+
+{ "foo": "yes", "__pclass": { "$type" : "44", "$binary" : "YourClass") }
+  -&gt; stdClass { $foo =&gt; 'yes', $__pclass =&gt; Binary(0x44, 'YourClass') }
+
+</pre><pre>/* typemap: [ "root" =&gt; "MissingClass" ] */
+{ "foo": "yes" }
+  -&gt; MongoDB\Driver\Exception\InvalidArgumentException("MissingClass does not exist")
+
+/* typemap: [ "root" =&gt; "MyClass" ] */
+{ "foo": "yes", "__pclass" : { "$type": "80", "$binary": "MyClass" } }
+  -&gt; MongoDB\Driver\Exception\InvalidArgumentException("MyClass does not implement Unserializable interface")
+
+/* typemap: [ "root" =&gt; "MongoDB\BSON\Unserializable" ] */
+{ "foo": "yes" }
+  -&gt; MongoDB\Driver\Exception\InvalidArgumentException("Unserializable is not a concrete class")
+
+/* typemap: [ "root" =&gt; "YourClass" ] */
+{ "foo": "yes", "__pclass" : { "$type": "80", "$binary": "MongoDB\BSON\Unserializable" } }
+  -&gt; YourClass { $foo =&gt; "yes", $__pclass =&gt; Binary(0x80, "MongoDB\BSON\Unserializable"), $unserialized =&gt; true }
+
+/* typemap: [ "root" =&gt; "YourClass" ] */
+{ "foo": "yes", "__pclass" : { "$type": "80", "$binary": "MyClass" } }
+  -&gt; YourClass { $foo =&gt; "yes", $__pclass =&gt; Binary(0x80, "MyClass"), $unserialized =&gt; true }
+
+/* typemap: [ "root" =&gt; "YourClass" ] */
+{ "foo": "yes", "__pclass" : { "$type": "80", "$binary": "OurClass" } }
+  -&gt; OurClass { $foo =&gt; "yes", $__pclass =&gt; Binary(0x80, "OurClass"), $unserialized =&gt; true }
+
+/* typemap: [ "root" =&gt; "YourClass" ] */
+{ "foo": "yes", "__pclass" : { "$type": "80", "$binary": "TheirClass" } }
+  -&gt; TheirClass { $foo =&gt; "yes", $__pclass =&gt; Binary(0x80, "TheirClass"), $unserialized =&gt; true }
+
+/* typemap: [ "root" =&gt; "OurClass" ] */
+{ foo: "yes", "__pclass" : { "$type": "80", "$binary": "TheirClass" } }
+  -&gt; TheirClass { $foo =&gt; "yes", $__pclass =&gt; Binary(0x80, "TheirClass"), $unserialized =&gt; true }
+
+</pre><pre>/* typemap: [ 'root' =&gt; 'YourClass' ] */
+{ foo: "yes", "__pclass" : { "$type": "80", "$binary": "YourClass" } }
+  -&gt; YourClass { $foo =&gt; 'yes', $__pclass =&gt; Binary(0x80, 'YourClass'), $unserialized =&gt; true }
+
+</pre><pre>/* typemap: [ 'root' =&gt; 'array', 'document' =&gt; 'array' ] */
+{ "foo": "yes", "bar" : false }
+  -&gt; [ "foo" =&gt; "yes", "bar" =&gt; false ]
+
+{ "foo": "no", "array" : [ 5, 6 ] }
+  -&gt; [ "foo" =&gt; "no", "array" =&gt; [ 5, 6 ] ]
+
+{ "foo": "no", "obj" : { "embedded" : 3.14 } }
+  -&gt; [ "foo" =&gt; "no", "obj" =&gt; [ "embedded =&gt; 3.14 ] ]
+
+{ "foo": "yes", "__pclass": "MyClass" }
+  -&gt; [ "foo" =&gt; "yes", "__pclass" =&gt; "MyClass" ]
+
+{ "foo": "yes", "__pclass" : { "$type": "80", "$binary": "MyClass" } }
+  -&gt; [ "foo" =&gt; "yes", "__pclass" =&gt; Binary(0x80, "MyClass") ]
+
+{ "foo": "yes", "__pclass" : { "$type": "80", "$binary": "OurClass" } }
+  -&gt; [ "foo" =&gt; "yes", "__pclass" =&gt; Binary(0x80, "OurClass") ]
+
+</pre><pre>/* typemap: [ 'root' =&gt; 'object', 'document' =&gt; 'object' ] */
+{ "foo": "yes", "__pclass": { "$type": "80", "$binary": "MyClass" } }
+  -&gt; stdClass { $foo =&gt; "yes", "__pclass" =&gt; Binary(0x80, "MyClass") }
+
+
+</pre><h2><a name="related_tickets" id="related_tickets"></a>Related Tickets</h2><ul><li><p><a href="https://jira.mongodb.org/browse/PHPC-248">PHPC-248</a>: Allow -&gt;setTypeMap() to set 'array' and 'stdclass'</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-249">PHPC-249</a>: empty array should be serialized as array</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-260">PHPC-260</a>: Allow "object" as an alias of "stdClass" for setTypeMap()</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-274">PHPC-274</a>: zval_to_bson() ignores BSONSerializable interface</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-275">PHPC-275</a>: object_to_bson() should throw exception if bsonSerialize() returns non-array</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-288">PHPC-288</a>: ODS (Object Document Serializer) support and integrations</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-311">PHPC-311</a>: Rename BSON from/toArray() methods to from/toPHP()</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-315">PHPC-315</a>: Support explicit type mapping for top-level documents</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-318">PHPC-318</a>: Cursor type map should apply to top-level document</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-319">PHPC-319</a>: Top level documents should be deserialized as stdClass by default</p></li><li><p><a href="https://jira.mongodb.org/browse/PHPC-329">PHPC-329</a>: Determine if ODM class should always supersede the type map</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-55">HHVM-55</a>: Implement BSONPeristable interface</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-56">HHVM-56</a>: Implement BSONSerializable interface</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-57">HHVM-57</a>: Implement BSONUnserializable interface</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-63">HHVM-63</a>: Empty array should be serialized as empty array, and empty object should be serialized as empty object</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-64">HHVM-64</a>: Allow -&gt;setTypeMap() to set 'array' and 'stdclass'</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-67">HHVM-67</a>: ODM should only match field of specific name (__pclass)</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-84">HHVM-84</a>: Implement MongoDBBSONSerializable</p></li><li><p><a href="https://jira.mongodb.org/browse/HHVM-85">HHVM-85</a>: Implement MongoDBBSONUnserializable / MongoDBBSONPersistable</p></li><li><p><a href="https://jira.mongodb.org/browse/PHP-1457">PHP-1457</a>: MongoCollection::insert() Non-public properties of objects.</p></li></ul><h2><a name="unrelated_tickets" id="unrelated_tickets"></a>Unrelated Tickets</h2><ul><li><p><a href="https://jira.mongodb.org/browse/PHPC-314">PHPC-314</a>: Prototype type map syntax for documents within field paths</p></li></ul><ul class="footnotes"><li><a name="_footnote_0_1" id="_footnote_0_1">1</a><p>A <code>__pclass</code> property is only deemed to exist if there exists a property with that name,  <strong>and</strong> it is a Binary value, <strong>and</strong> the sub-type of the Binary value is <code>0x80</code>. If any of these three conditions is not met, the <code>__pclass</code> property does not exist and should be treated as any other normal property.</p></li></ul></body></html>

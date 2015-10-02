@@ -4,10 +4,9 @@
 <image filename="cookbook.jpg" align="right"/>
 <list>
 <bullet>Not a lot of the APIs are documented</bullet>
-<bullet>Some articles by Sara</bullet>
-<bullet>HHVM has "issues"</bullet>
+<bullet>HHVM has "issues" regarding exceptions and ctors</bullet>
 <bullet>Bundling and configuring</bullet>
-<bullet>Composer for HHVM?</bullet>
+<bullet>Sharing connections and state</bullet>
 <bullet>HHVM cookbook:<br/>%https://github.com/derickr/hhvm-hni-cookbook%</bullet>
 </list>
 </slide>
