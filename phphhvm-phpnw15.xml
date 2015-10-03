@@ -126,14 +126,20 @@ Composer
 <slide>slides/mongodb/api-new.xml</slide>
 
 <slide>slides/mongodb/hippo.xml</slide>
+<slide>slides/mongodb/hippo-impl-def.xml</slide>
 <slide>slides/mongodb/hippo-impl.xml</slide>
 <slide>slides/mongodb/hippo-impl-2.xml</slide>
+<slide>slides/mongodb/hippo-vs-phongo.xml</slide>
 
 <slide>slides/mongodb/api-new.xml</slide>
 <slide>slides/mongodb/api-phongo.xml</slide>
 <slide>slides/mongodb/api-hippo.xml</slide>
 <slide>slides/mongodb/api-phongo-new.xml</slide>
 <slide>slides/mongodb/api-serialization-spec.xml</slide>
+
+- PHP 7...
+
+<slide>slides/mongodb/phongo-php5-7.xml</slide>
 
 <slide>slides/mongodb/phplib.xml</slide>
 <slide>slides/mongodb/phplib-usage-2.xml</slide>

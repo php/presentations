@@ -1,0 +1,21 @@
+<slide>
+<title>Hippo (implementation)</title>
+
+<blurb>%ext_mongo.php% (extract)</blurb>
+<example><![CDATA[<?hh
+namespace MongoDB\Driver;
+    <<__Native>> 
+    public function __construct(string $dsn = "localhost", array $options = array(), array $driverOptions = array());
+
+    <<__Native>>
+    public function __debugInfo() : array;
+…
+    <<__Native>>
+    public function executeQuery(string $namespace, Query $query, ReadPreference $readPreference = null): Cursor;
+…
+    <<__Native>>
+    public function selectServer(ReadPreference $readPreference): Server;
+
+}]]></example>
+
+</slide>

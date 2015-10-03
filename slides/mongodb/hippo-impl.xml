@@ -1,28 +1,25 @@
 <slide>
 <title>Hippo (implementation)</title>
 
-<blurb>%ext_mongo.php% (extract)</blurb>
-<example><![CDATA[<?hh
-namespace MongoDB\Driver;
-
-<<__NativeData("MongoDBDriverManager")>>
-class Manager {
-    <<__Native>>
-    function __construct(string $dsn = "localhost", array $options = array(), array $driverOptions = array());
-}]]></example>
-
-<blurb>%src/MongoDB/Driver/Manager% (extract)</blurb>
+<blurb>%src/MongoDB/Driver/Manager.cpp%</blurb>
 <example><![CDATA[void HHVM_METHOD(MongoDBDriverManager, __construct, const String &dsn, const Array &options, const Array &driverOptions)
 {
     MongoDBDriverManagerData* data = Native::data<MongoDBDriverManagerData>(this_);
+    mongoc_uri_t *uri;
     mongoc_client_t *client;
 
-    client = mongoc_client_new(dsn.c_str());
+    uri = hippo_mongo_driver_manager_make_uri(dsn.c_str(), options);
+    client = mongoc_client_new_from_uri(uri);
 
     if (!client) {
-        throw Object(SystemLib::AllocExceptionObject("Can't connect"));
+        throw MongoDriver::Utils::throwRunTimeException("Failed to create Manager from URI: '" + dsn + "'");
     }
 
     data->m_client = client;
+
+    hippo_mongo_driver_manager_apply_ssl_opts(data->m_client, driverOptions);
+
+    hippo_mongo_driver_manager_apply_rp(data->m_client, options);
+    hippo_mongo_driver_manager_apply_wc(data->m_client, options);
 }]]></example>
 </slide>
