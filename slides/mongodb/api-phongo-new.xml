@@ -1,7 +1,7 @@
 <slide>
 <title>Phongo output (New)</title>
 
-<example><![CDATA[StdClass
+<example><![CDATA[stdClass
 (
     [_id] => MongoDB\BSON\ObjectID Object
         (

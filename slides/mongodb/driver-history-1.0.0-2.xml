@@ -5,7 +5,7 @@
 <example result="1"><![CDATA[<?php
 $m = new Mongo; $c = $m->selectCollection( 'demo', 'test' ); $c->drop();
 
-$doc1 = new StdClass;
+$doc1 = new stdClass;
 $doc1->foo = 'bar';
 $doc2 = array( 'foo' => 'bar' );
 
