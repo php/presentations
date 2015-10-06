@@ -314,6 +314,32 @@ try {
 // Exception: Call to a member function method() on a non-object
 ]]></example>
 
+<break lines="1" section="php7assert"/>
+<blurb fontsize="1.1em" align="left">✔ Zero-cost Assertions</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+function test($arg) {
+    assert($arg > 20 && $arg < 110, "$arg is invalid");
+}
+ini_set('zend.assertions',0); test(16);
+ini_set('zend.assertions',1); test(17);
+ini_set('assert.exception',1); test(18);
+]]></example>
+<example fontsize="0.5em" result='1' hide='1' title=""><![CDATA[
+Warning: assert(): 17 is invalid failed in /home/rasmus/assert.php on line 3
+Fatal error: Uncaught AssertionError: 18 is invalid in /home/rasmus/assert.php:3
+Stack trace:
+#0 /home/rasmus/assert.php(3): assert(false, '18 is invalid')
+#1 /home/rasmus/assert.php(13): test(18)
+#2 {main}
+  thrown in /home/rasmus/assert.php on line 3
+]]></example>
+<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+; Completely skip compiling assert() calls
+; (can only be set in php.ini)
+zend.assertions = -1
+]]></example>
+
 <break lines="1" section="php7closecall"/>
 <blurb fontsize="1.1em" align="left">✔ Added Closure::call()</blurb>
 <example fontsize="1.1em" result='0' title=""><![CDATA[

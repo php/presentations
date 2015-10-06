@@ -1,0 +1,55 @@
+<presentation 
+    template="simple" 
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<notes>
+PHP in 2015 with a focus on performance
+</notes>
+
+<topic>PHP</topic>
+<title>Speeding up the Web with PHP 7</title>
+<event>PHPConf Taiwan 2015</event>
+<location>Taipei</location>
+<date>Oct.9, 2015</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/taiwan15</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/20years.xml</slide>
+<slide>slides/intro/phpannounce.xml</slide>
+<slide>slides/intro/capi.xml</slide>
+
+<slide>slides/intro/php7_2015s.xml</slide>
+<slide>slides/intro/perf2014.xml</slide>
+<slide>slides/intro/php7_perf.xml</slide>
+<slide>slides/intro/benchlies.xml</slide>
+<slide>slides/intro/may1/benchbox.xml</slide>
+<slide>slides/intro/may1/drupalbench.xml</slide>
+<slide>slides/intro/may26/wpbench.xml</slide>
+<slide>slides/intro/may1/bbbench.xml</slide>
+<slide>slides/intro/may1/mwbench.xml</slide>
+<slide>slides/intro/may1/opencartbench.xml</slide>
+<slide>slides/intro/may1/wardrobebench.xml</slide>
+<slide>slides/intro/may1/geeklogbench.xml</slide>
+<slide>slides/intro/may1/magentobench.xml</slide>
+<slide>slides/intro/may1/traqbench.xml</slide>
+<slide>slides/intro/may1/cachetbench.xml</slide>
+<slide>slides/intro/may1/moodlebench.xml</slide>
+<slide>slides/intro/may1/zencartbench.xml</slide>
+
+<slide>slides/intro/php_contribute.xml</slide>
+
+</presentation>
