@@ -15,13 +15,13 @@ $doc = [
     'null' => null,
     'float' => M_PI,
 ];
-
-$r = $m->executeInsert( 'demo.test', $doc );
-
+$bw = new MongoDB\Driver\BulkWrite();
+$bw->insert( 'demo.test', $doc );
+$m->executeBulkWrite( 'demo.test', $bw );
 $q = new MongoDB\Driver\Query( [] );
 $cursor = $m->executeQuery( 'demo.test', $q );
 
-foreach ( $cursor->toArray() as $key => $result )
+foreach ( $cursor as $key => $result )
 {
     print_r( $result );
 }
