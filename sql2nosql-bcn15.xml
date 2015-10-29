@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>mongoDB</topic>
+<title>From SQL to NoSQL</title>
+<event>PHP Barcelona</event>
+<location>Barcelona, Spain</location>
+<date>October 31st, 2015</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://derickrethans.nl/talks/sql2nosql-bcn15</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- DINOSAUR vs PLATIPUS -->
+<slide>slides/mongodb/relational-model.xml</slide>
+<slide>slides/mongodb/normal-form.xml</slide>
+<slide>slides/mongodb/normal-form1.xml</slide>
+<slide>slides/mongodb/normal-form3.xml</slide>
+
+<!-- DIFFERENT NoSQL -->
+<slide>slides/mongodb/nosql.xml</slide>
+<slide>slides/mongodb/nosql-kv.xml</slide>
+<slide>slides/mongodb/nosql-column.xml</slide>
+<slide>slides/mongodb/nosql-graph.xml</slide>
+<slide>slides/mongodb/nosql-document.xml</slide>
+
+<!-- ACID vs CAP -->
+<slide>slides/mongodb/cap.xml</slide>
+
+<!-- A FEW NOTES ON MONGODB -->
+<slide>slides/mongodb/mongodb.xml</slide>
+<slide>slides/mongodb/databasefield.xml</slide>
+<slide>slides/mongodb/collections-documents.xml</slide>
+<slide>slides/mongodb/document.xml</slide>
+<slide>slides/mongodb/mongodb-1nf.xml</slide>
+<slide>slides/mongodb/mongodb-3nf.xml</slide>
+<slide>slides/mongodb/insert-intro-shell.xml</slide>
+<slide>slides/mongodb/query-side-by-side-js.xml</slide>
+<slide>slides/mongodb/update-intro-shell.xml</slide>
+
+<slide>slides/mongodb/arbitrary-keys1.xml</slide>
+<slide>slides/mongodb/one-to-many2.xml</slide>
+<slide>slides/mongodb/one-to-many4.xml</slide>
+
+<!-- REPLICATION -->
+<!-- <slide>slides/mongodb/repl-features.xml</slide> -->
+<slide>slides/mongodb/repl-works-normal.xml</slide>
+<slide>slides/mongodb/repl-eventual-consistency.xml</slide>
+
+<!-- SHARDING -->
+<slide>slides/mongodb/sharding-vertical-scale.xml</slide>
+<slide>slides/mongodb/sharding-horizontal-scale.xml</slide>
+<slide>slides/mongodb/sharding-working-set.xml</slide>
+<slide>slides/mongodb/sharding-partition.xml</slide>
+<slide>slides/mongodb/sharding-manages.xml</slide>
+<slide>slides/mongodb/sharding-infrastructure.xml</slide>
+
+<slide>slides/mongodb/use-cases.xml</slide>
+
+<slide>slides/mongodb/sql2nosql-conclusion.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>
