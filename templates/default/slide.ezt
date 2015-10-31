@@ -108,11 +108,11 @@ function processPrevEvent()
 }
 
 $('*').keypress(function(event) {
-    if (event.keyCode == '39') {
+    if (event.keyCode == '34') {
         processNextEvent();
         event.preventDefault();
     }
-    if (event.keyCode == '37') {
+    if (event.keyCode == '33') {
         processPrevEvent();
         event.preventDefault();
     }
