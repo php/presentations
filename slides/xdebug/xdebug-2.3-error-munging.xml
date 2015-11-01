@@ -13,6 +13,6 @@ echo "Hi!\n";
 <blurb>%xdebug.force_error_reporting% &amp; %xdebug.force_display_errors%:</blurb>
 <list>
 	<bullet>Overrides %error_reporting% or %display_errors%</bullet>
-	<bullet>Can not be changed with %ini_st()%, only on CLI or in %php.ini%</bullet>
+	<bullet>Can not be changed with %ini_set()%, only on CLI or in %php.ini%</bullet>
 </list>
 </slide>
