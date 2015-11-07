@@ -1,0 +1,24 @@
+<slide style="future">
+<title>Function Monitoring</title>
+
+	<example><![CDATA[<?php
+xdebug_start_function_monitor( [ 'strrev', 'array_push' ] );
+
+echo strrev("yes!"), "\n";
+
+var_dump(xdebug_get_monitored_functions());
+
+xdebug_stop_function_monitor();
+?>]]></example>
+	<blurb>Output:</blurb>
+	<example>
+array(1) {
+  [0] =>
+  array(3) {
+    'function' => string(6) "strrev"
+    'filename' => string(1) "/tmp/test-monitor.php"
+    'lineno' => int(4)
+  }
+}
+	</example>
+</slide>
