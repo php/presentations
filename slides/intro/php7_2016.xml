@@ -4,17 +4,13 @@
 
 <blurb fontsize="1.1em" align="left">✔ engine improvements</blurb>
 <list>
-<bullet fontsize="1em" type="none">100%+ performance gain on most real-world applications</bullet>
-<bullet fontsize="1em" type="none">Lower memory usage</bullet>
-<bullet fontsize="1em" type="none">Native thread local storage</bullet>
+<bullet fontsize="1em">100%+ performance gain on most real-world applications</bullet>
+<bullet fontsize="1em">Lower memory usage, sometimes drastically lower</bullet>
 </list>
 
 <break lines="1" section="php7pcache1"/>
 <blurb fontsize="1.1em" align="left">✔ Persistent secondary file-based cache for OPCache</blurb>
 <image filename="pcache.png" />
-
-<break lines="1" section="php7pcache2"/>
-<image filename="deploycache.png" />
 
 <break lines="1" section="php7pcache3"/>
 <example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
@@ -200,45 +196,93 @@ AST_STMT_LIST @ 1
                             1: null
 ]]></example>
 <example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
-% phan -a test.php
+% phan test.php
 test.php:2 TypeError arg#2(start) is int[] but substr() takes int
 ]]></example>
+
+<break lines="1" section="php7excep"/>
+<blurb fontsize="1.1em" align="left">✔ Exceptions on Fatals</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+function call_method($obj) {
+    $obj->method();
+}
+call_method(null);
+]]></example>
+<example fontsize="0.85em" result='0' title="" type="shell nohighlight"><![CDATA[
+Fatal error: Uncaught Error: Call to a member function method() on null in file:2
+Stack trace:
+#0 file(4): call_method(NULL)
+#1 {main}
+  thrown in file on line 2
+]]></example>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+try {
+    call_method(null);
+} catch (Error $e) {
+    echo "Caught Exception: {$e->getMessage()}\n";
+}
+]]></example>
+<example fontsize="0.85em" result='0' title="" type="shell nohighlight"><![CDATA[
+Caught Exception: Call to a member function method() on null
+]]></example>
+
+<break lines="1" section="php7hier"/>
+<blurb fontsize="2em" align="center">PHP 7 Exception Hierarchy</blurb>
+<break lines="1"/>
+<list fontsize="1.5em">
+<bullet fontsize="1.5em" type="none">|ab5c5c|Throwable|</bullet>
+<bullet fontsize="1.25em" marginleft="2em" type="none">➥ |ab5c5c|Exception| implements Throwable</bullet>
+<bullet fontsize="1.25em" marginleft="2em" type="none">➥ |ab5c5c|Error| implements Throwable</bullet>
+<bullet fontsize="1em" marginleft="4em" type="none">➥ |ab5c5c|TypeError| extends Error</bullet>
+<bullet fontsize="1em" marginleft="4em" type="none">➥ |ab5c5c|ParseError| extends Error</bullet>
+</list>
 
 <break lines="1" section="php7ret"/>
 <blurb fontsize="1.1em" align="left">✔ Return Types</blurb>
 <example fontsize="1.1em" result='0' title=""><![CDATA[
-<?php
 function get_config(): array {
     return 42;
 }
 get_config();
-
-// Catchable fatal error: Return value of get_config() must
-//  be of the type array, integer returned in %s on line %d
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Fatal error: Uncaught TypeError: Return value of get_config() must be
+of the type array, integer returned in file:2
+Stack trace:
+#0 file(4): get_config()
+#1 {main}
+  thrown in file on line 2
 ]]></example>
 <break lines="1" section="php7STH"/>
 
 <blurb fontsize="1.1em" align="left">✔ Coercive Scalar Types</blurb>
 
 <example fontsize="1.1em" result='0' title=""><![CDATA[
-<?php
 function logmsg(string $msg, int $level, float $severity) {
     var_dump($msg);      // string(1) "1"
     var_dump($level);    // int(2)
     var_dump($severity); // float(3)
 }
-logmsg(1, "2.5", 3);
+logmsg(1, "2.5 bananas", 3);
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Notice: A non well formed numeric value encountered in file on line 2
 ]]></example>
 <blurb fontsize="1.1em" align="left">✔ Strict Scalar Types</blurb>
 <example fontsize="1.1em" result='0' title=""><![CDATA[
-<?php
 declare(strict_types=1);
-
+...
 logmsg(1, "2.5", 3);
 ]]></example>
-<example fontsize="1.1em" result='0' title=""><![CDATA[
-Fatal error: Argument 1 passed to logmsg() must be of the 
-type string, integer given
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Fatal error: Uncaught TypeError: Argument 1 passed to logmsg() must be of the
+type string, integer given, called in file on line 7 and defined in file:3
+Stack trace:
+#0 file(7): logmsg(1, '2.5', 3)
+#1 {main}
+  thrown in file on line 2
 ]]></example>
 
 <break lines="1" section="php7anon"/>
@@ -295,26 +339,30 @@ function cmp_php7($a, $b) {
 }
 ]]></example>
 
-<break lines="1" section="php7excep"/>
-<blurb fontsize="1.1em" align="left">✔ Exceptions on Fatals</blurb>
+<break lines="1" section="php7assert"/>
+<blurb fontsize="1.1em" align="left">✔ Zero-cost Assertions</blurb>
 <example fontsize="1.1em" result='0' title=""><![CDATA[
 <?php
-function call_method($obj) {
-    $obj->method();
+function test($arg) {
+    assert($arg > 20 && $arg < 110, "$arg is invalid");
 }
-
-call_method(null);
-// Fatal error: Call to a member function method() on a non-object
+ini_set('zend.assertions',0); test(16);
+ini_set('zend.assertions',1); test(17);
+ini_set('assert.exception',1); test(18);
 ]]></example>
-
-<example fontsize="1.1em" result='0' title=""><![CDATA[
-<?php
-try {
-    call_method(null);
-} catch (EngineException $e) {
-    echo "Exception: {$e->getMessage()}\n";
-}
-// Exception: Call to a member function method() on a non-object
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Warning: assert(): 17 is invalid failed in file on line 2
+Fatal error: Uncaught AssertionError: 18 is invalid in file:2
+Stack trace:
+#0 file(2): assert(false, '18 is invalid')
+#1 file(6): test(18)
+#2 {main}
+  thrown in file on line 2
+]]></example>
+<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+; Completely skip compiling assert() calls
+; (can only be set in php.ini)
+zend.assertions = -1
 ]]></example>
 
 <break lines="1" section="php7closecall"/>
@@ -451,44 +499,6 @@ $foo()()
 'Foo'::$bar
 ]]></example>
 
-<break lines="1" section="php7phanbc"/>
-
-<example fontsize="1em" result='0' title=""><![CDATA[
-  echo preg_replace('/:-:(.*?):-:/e', '$this->pres->\\1', $text);
-]]></example>
-<example fontsize="1em" result='0' title=""><![CDATA[
-  echo preg_replace_callback(
-    '/:-:(.*?):-:/', 
-    function($matches) {
-      return $this->pres->$matches[1]; // Oops!
-    },
-    $text);
-]]></example>
-
-<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
-% phan -b display.php
-Files scanned: 1
-Time:		0.13s
-Classes:	8
-Methods:	55
-Functions:	5
-Closures:	5
-Traits:		0
-Conditionals:	307
-Issues found:	1
-
-display.php:416 CompatError expression may not be PHP 7 compatible
-]]></example>
-
-<example fontsize="1em" result='0' title=""><![CDATA[
-  echo preg_replace_callback(
-    '/:-:(.*?):-:/', 
-    function($matches) {
-      return $this->pres->{$matches[1]}; // Ok
-    },
-    $text);
-]]></example>
-
 <break lines="1" section="php7unicode"/>
 
 <blurb fontsize="1.1em" align="left">✔  Unicode Codepoint Escape Syntax</blurb>
@@ -501,9 +511,8 @@ echo "\u{1F602}";
 
 <blurb fontsize="1.1em" align="left">✔ ICU IntlChar class added to intl extension</blurb>
 
-
 <break lines="1" section="php7more"/>
 
-<blurb fontsize="1.5em">GA release scheduled for November 2015</blurb>
+<blurb fontsize="1.5em">GA release scheduled for Nov.26 or Dec.12</blurb>
 
 </slide>

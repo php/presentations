@@ -1,0 +1,107 @@
+<slide title="" section="phan">
+
+<blurb fontsize="20em" align="center">Static Analysis</blurb>
+<break lines="3"/>
+<link fontsize="1.25em" align="center" href="https://github.com/rlerdorf/phan">github.com/rlerdorf/phan</link>
+
+<break lines="1" section="phan1"/>
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan -h
+Usage: phan [options] [files...]
+  -f <filename>   A file containing a list of PHP files to be analyzed
+  -q              Quick mode - doesn't recurse into all function calls
+  -b              Check for potential PHP 5 -> PHP 7 BC issues
+  -i              Ignore undeclared functions and classes
+  -c              Comma-separated list of classes that require parent::__construct() to be called
+  -m <mode>       Output mode: verbose, short, json, csv
+  -o <filename>   Output filename
+  -p              Show progress bar
+  -g [node_name]  Output a graphviz (.gv) file of the class hierarchy
+  -a              Dump AST of provides files (for debugging)
+  -s              Dump scope tree (for debugging)
+  -u              Dump user defined functions (for debugging)
+  -h			  This help
+]]></example>
+
+<break lines="1" section="phan2"/>
+
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan -b display.php
+Files scanned: 1
+Time:		0.13s
+Classes:	8
+Methods:	55
+Functions:	5
+Closures:	5
+Traits:		0
+Conditionals:	307
+Issues found:	1
+
+display.php:416 CompatError expression may not be PHP 7 compatible
+]]></example>
+
+<example fontsize="1em" result='0' title=""><![CDATA[
+  echo preg_replace('/:-:(.*?):-:/e', '$this->pres->\\1', $text);
+]]></example>
+
+<example fontsize="1em" result='0' title=""><![CDATA[
+  echo preg_replace_callback(
+    '/:-:(.*?):-:/', 
+    function($matches) {
+      return $this->pres->$matches[1]; // Oops!
+    },
+    $text);
+]]></example>
+
+<example fontsize="1em" result='0' title=""><![CDATA[
+  echo preg_replace_callback(
+    '/:-:(.*?):-:/', 
+    function($matches) {
+      return $this->pres->{$matches[1]}; // Ok
+    },
+    $text);
+]]></example>
+
+<break lines="1" section="phan3"/>
+
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+% git clone https://github.com/Seldaek/monolog.git
+% cd monolog
+% find . -name '*.php' | grep -v test > filelist.txt
+% phan -i -b -f filelist.txt
+Files scanned: 81
+Time:		0.22s
+Classes:	81
+Methods:	437
+Functions:	0
+Closures:	13
+Traits:		0
+Conditionals:	363
+Issues found:	21
+
+./src/Monolog/Logger.php:320 CompatError expression may not be PHP 7 compatible
+./src/Monolog/Logger.php:445 CompatError expression may not be PHP 7 compatible
+./src/Monolog/Registry.php:119 CompatError expression may not be PHP 7 compatible
+./src/Monolog/Handler/NewRelicHandler.php:55 TypeError Default value for string $level can't be int
+./src/Monolog/Handler/RedisHandler.php:41 TypeError Default value for integer $capSize can't be bool
+./src/Monolog/Formatter/NormalizerFormatter.php:62 TypeError arg#1(val) is array but is_infinite() takes float
+./src/Monolog/Formatter/NormalizerFormatter.php:65 TypeError arg#1(val) is array but is_nan() takes float
+./src/Monolog/Formatter/NormalizerFormatter.php:94 TypeError arg#1(e) is array but Monolog\Formatter\NormalizerFormatter::normalizeException() takes Except
+ion defined at ./src/Monolog/Formatter/NormalizerFormatter.php:115
+./src/Monolog/Formatter/NormalizerFormatter.php:98 TypeError arg#1(object) is array but method_exists() takes object|string
+./src/Monolog/Formatter/NormalizerFormatter.php:105 TypeError arg#1(object) is array but get_class() takes object
+./src/Monolog/Formatter/GelfMessageFormatter.php:60 TypeError property is declared to be string but was assigned null
+./src/Monolog/Handler/StreamHandler.php:124 TypeError return void but getDirFromStream() is declared to return null|string
+./src/Monolog/Handler/SocketHandler.php:219 TypeError arg#2(seconds) is float but stream_set_timeout() takes int
+./src/Monolog/Handler/SocketHandler.php:219 TypeError arg#3(microseconds) is float but stream_set_timeout() takes int
+./src/Monolog/Handler/FirePHPHandler.php:81 TypeError return array but createRecordHeader() is declared to return string
+./src/Monolog/Handler/FirePHPHandler.php:153 TypeError arg#1(array_arg) is string but current() takes array
+./src/Monolog/Handler/FirePHPHandler.php:154 TypeError arg#1(array_arg) is string but key() takes array
+./src/Monolog/Handler/FirePHPHandler.php:154 TypeError arg#1(array_arg) is string but current() takes array
+./src/Monolog/Handler/SwiftMailerHandler.php:83 TypeError arg#1(content) is null but Monolog\Handler\SwiftMailerHandler::buildMessage() takes string define
+d at ./src/Monolog/Handler/SwiftMailerHandler.php:55
+./src/Monolog/Handler/NewRelicHandler.php:66 TypeError property is declared to be string but was assigned null
+./src/Monolog/Handler/ChromePHPHandler.php:178 TypeError return int but headersAccepted() is declared to return boolean
+]]></example>
+
+</slide>

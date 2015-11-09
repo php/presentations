@@ -1,0 +1,101 @@
+<slide title="" section="smem">
+
+<blurb fontsize="1.3em" align="left">Measuring Memory Use</blurb>
+
+<list>
+<bullet fontsize="0.8em" type="none">VSZ - Virtual Memory Size (swapped out, shared libs, everything)</bullet>
+<bullet fontsize="0.8em" type="none">RSS - Resident Set Size (everything not swapped out)</bullet>
+<bullet fontsize="0.8em" type="none">SIZE - Data segment of the process</bullet>
+</list>
+
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+debian:/home/rasmus# ps ef -o command,vsize,rss,size -C php-fpm
+COMMAND                        VSZ   RSS  SIZE
+php-fpm: master process (/u 459152  9912  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+ \_ php-fpm: pool www       459152  7732  3304
+]]></example>
+
+<break lines="1" section="smemtop"/>
+
+<blurb fontsize="1.3em" align="left">top isn't helpful either</blurb>
+
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+debian:/home/rasmus# top -p $(pgrep -d , php-fpm)
+top - 07:04:14 up 19 days, 15:21,  1 user,  load average: 0.00, 0.04, 0.51
+Tasks:  11 total,   0 running,  11 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+KiB Mem:  16355868 total, 15789244 used,   566624 free,   493148 buffers
+KiB Swap:        0 total,        0 used,        0 free. 13514376 cached Mem
+
+  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                    
+13950 root      20   0  459152   9912   6016 S   0.0  0.1   0:00.02 php-fpm                                                                    
+13951 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13952 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13953 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13954 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13955 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13956 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13957 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13958 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13959 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
+13960 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm 
+]]></example>
+
+<break lines="1" section="smembaseintro"/>
+
+<blurb fontsize="1.3em" align="left">smem!</blurb>
+
+<list>
+<bullet fontsize="0.8em" type="none">USS - Unique Set Size</bullet>
+<bullet fontsize="0.8em" type="none">PSS - Proportional Set Size</bullet>
+<bullet fontsize="0.8em" type="none">RSS - Resident Set Size</bullet>
+</list>
+
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+debian:/home/rasmus# smem -t -k -U www-data -P ".*php-fpm"
+  PID User     Command                         Swap      USS      PSS      RSS 
+12570 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12571 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12572 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12573 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12574 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12575 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12576 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12577 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12578 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+12579 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
+-------------------------------------------------------------------------------
+   10 1                                           0     1.5M     6.1M    75.9M 
+]]></example>
+
+<break lines="1" section="smemload"/>
+
+<blurb fontsize="1.3em" align="left">Serving Drupal 8</blurb>
+
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+debian:/home/rasmus# smem -t -k -U www-data -P ".*php-fpm"
+  PID User     Command                         Swap      USS      PSS      RSS 
+13233 www-data php-fpm: pool www                  0   792.0K     1.3M     9.2M 
+13231 www-data php-fpm: pool www                  0   792.0K     1.3M     9.2M 
+13235 www-data php-fpm: pool www                  0   792.0K     1.3M     9.2M 
+13232 www-data php-fpm: pool www                  0   796.0K     1.3M     9.2M 
+13234 www-data php-fpm: pool www                  0   792.0K     1.3M     9.3M 
+13227 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
+13229 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
+13230 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
+13226 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
+13228 www-data php-fpm: pool www                  0   808.0K     1.3M     9.3M 
+-------------------------------------------------------------------------------
+   10 1                                           0     7.8M    12.9M    92.4M 
+]]></example>
+
+</slide>

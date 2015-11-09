@@ -1,0 +1,89 @@
+<slide title="" section="php_contribute">
+
+<blurb fontsize="10em">Test your applications</blurb>
+<blurb fontsize="10em">Test your extensions</blurb>
+
+<break section="php_contribute1"/>
+
+<blurb fontsize="10em">It is really easy!</blurb>
+
+<break section="php_contribute2"/>
+
+<blurb fontsize="1.5em" align="left">Install Vagrant and Virtualbox</blurb>
+<blurb fontsize="1.2em" align="left">Then:</blurb>
+
+<example fontsize="1.2em" result='0' type="shell nohighlight" title=""><![CDATA[
+$ git clone https://github.com/rlerdorf/php7dev.git
+
+$ cd php7dev
+
+$ vagrant up
+... (takes a bit - it is downloading 1.5G)
+
+$ vagrant ssh
+]]></example>
+
+<blurb fontsize="1.1em" align="left">It will NAT, DHCP and also has a fixed address of 192.168.7.7</blurb>
+
+<break lines="1" section="php_contribute3"/>
+
+<blurb fontsize="1.1em" align="left">http://192.168.7.7/ will show you the PHP 7 phpinfo() page</blurb>
+<blurb fontsize="1.1em" align="left">Now you have a working Rasmus-approved dev box on your network</blurb>
+
+<break lines="1" section="php_contribute4"/>
+
+<blurb fontsize="1.1em" align="left">Switching PHP versions is trivial</blurb>
+<example fontsize="1.2em" result='0' title="" type="shell nohighlight"><![CDATA[
+vagrant@php7dev:~$ newphp 56
+Activating PHP 5.6.6-dev and restarting php-fpm
+
+vagrant@php7dev:~$ newphp 7 debug
+Activating PHP 7.0.0-dev and restarting php-fpm
+]]></example>
+
+<blurb fontsize="1.1em" align="left">24 pre-compiled versions</blurb>
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+/usr/local/php53            /usr/local/php55            /usr/local/php70
+/usr/local/php53-debug      /usr/local/php55-debug      /usr/local/php70-debug
+/usr/local/php53-debug-zts  /usr/local/php55-debug-zts  /usr/local/php70-debug-zts
+/usr/local/php53-zts        /usr/local/php55-zts        /usr/local/php70-zts
+/usr/local/php54            /usr/local/php56            /usr/local/php71
+/usr/local/php54-debug      /usr/local/php56-debug      /usr/local/php71-debug
+/usr/local/php54-debug-zts  /usr/local/php56-debug-zts  /usr/local/php71-debug-zts
+/usr/local/php54-zts        /usr/local/php56-zts        /usr/local/php71-zts
+]]></example>
+
+<break lines="1" section="php_contribute5"/>
+
+<blurb fontsize="1.1em" align="left">Build any version</blurb>
+<example fontsize="1.2em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ makephp 7
+Build log in /tmp/build.log
+Building PHP 7.0
+configuring...
+compiling...
+installing...
+done
+Building PHP 7.0-debug
+configuring...
+compiling...
+installing...
+done
+]]></example>
+
+<break lines="1" section="php_contribute5a"/>
+
+<blurb fontsize="1.1em" align="left">or manually</blurb>
+
+<example fontsize="1.2em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ cd php-src
+$ git checkout PHP-5.6
+$ git pull -r
+$ make distclean
+$ ./buildconf -f
+$ ./cn56
+$ make
+$ sudo make install
+]]></example>
+
+</slide>

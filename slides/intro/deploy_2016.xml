@@ -1,0 +1,49 @@
+<slide title="" section="deploy">
+
+<blurb fontsize="20em" align="center">Let's deploy it!</blurb>
+
+<break lines="1" section="deploy0"/>
+
+<blurb fontsize="2em" align="left">Atomic</blurb>
+<blurb fontsize="2em" align="left">No performance hit</blurb>
+<list>
+<bullet fontsize="1.5em">No restarts</bullet>
+<bullet fontsize="1.5em">No LB removal</bullet>
+<bullet fontsize="1.5em">No thundering herd</bullet>
+<bullet fontsize="1.5em">Cache reuse</bullet>
+</list>
+
+<break lines="1" section="deploy1"/>
+<blurb fontsize="1.1em" align="left">Must be able to serve two versions of the site concurrently!</blurb>
+<image filename="atomic_deploy1.png" />
+
+<break lines="1" section="deploy2"/>
+<image filename="atomic_deploy2.png" />
+
+<break lines="1" section="deploy3"/>
+<blurb fontsize="1.1em" align="left">Requests that begin on DocumentRoot A must finish on A</blurb>
+
+<break lines="1" section="deploy4"/>
+<blurb fontsize="1.1em" align="left">Set the DocumentRoot to symlink target!</blurb>
+
+
+<blurb fontsize="1.1em" align="left">Easy with nginx</blurb>
+<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+    fastcgi_param DOCUMENT_ROOT $realpath_root
+]]></example>
+<blurb fontsize="1.1em" align="left">Apache</blurb>
+<link fontsize="1.25em" align="left" marginleft="1em" href="https://github.com/etsy/mod_realdoc">github.com/etsy/mod_realdoc</link>
+
+<break lines="1" section="deploy5"/>
+
+<blurb fontsize="1.1em" align="left">Avoid hardcoding full paths</blurb>
+<blurb fontsize="1.1em" align="left">Watch your include_path setting</blurb>
+
+<blurb fontsize="1.1em" align="left">incpath extension can resolve your include_path for you</blurb>
+<link fontsize="1.25em" align="left" marginleft="1em" href="https://github.com/etsy/incpath">https://github.com/etsy/incpath</link>
+
+<break lines="1" section="deploy6"/>
+<blurb fontsize="1.1em" align="left">Version all static assets</blurb>
+<blurb fontsize="1.1em" align="left">DB Schema changes need special care</blurb>
+
+</slide>
