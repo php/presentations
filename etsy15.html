@@ -1018,12 +1018,12 @@ KiB Swap:        0 total,        0 used,        0 free. 13514376 cached Mem
 		</section>
 <section id="bc7_1">
 		<p class="p" style="font-size:1.1em;text-align:left;">Left-to-right semantics for complicated expressions</p>
-		<pre><code class="ini" data-trim style="font-size:1.1em;">$$foo['bar']['baz'] // interpreted as ($$foo)['bar']['baz']
+		<pre><code class="php" data-trim style="font-size:1.1em;">$$foo['bar']['baz'] // interpreted as ($$foo)['bar']['baz']
 $foo-&gt;$bar['baz']   // interpreted as ($foo-&gt;$bar)['baz']
 $foo-&gt;$bar['baz']() // interpreted as ($foo-&gt;$bar)['baz']()
 Foo::$bar['baz']()  // interpreted as (Foo::$bar)['baz']()</code></pre>
 		<p class="p" style="font-size:0.8em;text-align:left;">To restore the previous behaviour add explicit curly braces:</p>
-		<pre><code class="ini" data-trim style="font-size:1.1em;">${$foo['bar']['baz']}
+		<pre><code class="php" data-trim style="font-size:1.1em;">${$foo['bar']['baz']}
 $foo-&gt;{$bar['baz']}
 $foo-&gt;{$bar['baz']}()
 Foo::{$bar['baz']}()</code></pre>
@@ -1031,9 +1031,9 @@ Foo::{$bar['baz']}()</code></pre>
 		</section>
 <section id="bc7_2">
 		<p class="p" style="font-size:1.1em;text-align:left;">Removed support for /e (PREG_REPLACE_EVAL) modifier</p>
-		<pre><code class="ini" data-trim style="font-size:1.1em;">echo preg_replace('/:-:(.*?):-:/e', '$this-&gt;pres-&gt;\\1', $text);</code></pre>
+		<pre><code class="php" data-trim style="font-size:1.1em;">echo preg_replace('/:-:(.*?):-:/e', '$this-&gt;pres-&gt;\\1', $text);</code></pre>
 		<p class="p" style="font-size:0.8em;text-align:left;">Change to:</p>
-		<pre><code class="ini" data-trim style="font-size:1.1em;">echo preg_replace_callback(
+		<pre><code class="php" data-trim style="font-size:1.1em;">echo preg_replace_callback(
   '/:-:(.*?):-:/', 
   function($matches) {
     return $this-&gt;pres-&gt;{$matches[1]}; // Careful!

@@ -7,7 +7,7 @@
 
 <break lines="1" section="bc7_1"/>
 <blurb fontsize="1.1em" align="left">Left-to-right semantics for complicated expressions</blurb>
-<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+<example fontsize="1.1em" result='0' title="" type="php"><![CDATA[
 $$foo['bar']['baz'] // interpreted as ($$foo)['bar']['baz']
 $foo->$bar['baz']   // interpreted as ($foo->$bar)['baz']
 $foo->$bar['baz']() // interpreted as ($foo->$bar)['baz']()
@@ -15,7 +15,7 @@ Foo::$bar['baz']()  // interpreted as (Foo::$bar)['baz']()
 ]]></example>
 
 <blurb fontsize="0.8em" align="left">To restore the previous behaviour add explicit curly braces:</blurb>
-<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+<example fontsize="1.1em" result='0' title="" type="php"><![CDATA[
 ${$foo['bar']['baz']}
 $foo->{$bar['baz']}
 $foo->{$bar['baz']}()
@@ -25,11 +25,11 @@ Foo::{$bar['baz']}()
 
 <break lines="1" section="bc7_2"/>
 <blurb fontsize="1.1em" align="left">Removed support for /e (PREG_REPLACE_EVAL) modifier</blurb>
-<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+<example fontsize="1.1em" result='0' title="" type="php"><![CDATA[
 echo preg_replace('/:-:(.*?):-:/e', '$this->pres->\\1', $text);
 ]]></example>
 <blurb fontsize="0.8em" align="left">Change to:</blurb>
-<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+<example fontsize="1.1em" result='0' title="" type="php"><![CDATA[
 echo preg_replace_callback(
   '/:-:(.*?):-:/', 
   function($matches) {
