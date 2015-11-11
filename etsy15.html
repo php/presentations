@@ -590,7 +590,21 @@ echo memory_get_usage(true);
 			<li style="font-size: 1em;list-style-type: none;">plus hundreds of micro-optimizations</li>
 		</ul>
 		</section>
-<section id="php7detail3">
+<section id="php7perfdetail3">
+		<p class="p" style="font-size:1.1em;">HugePage support in Opcache</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1.1em;">./configure --enable-huge-code-pages</code></pre>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">opcache.memory_consumption=256
+opcache.huge_code_pages=1</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1.1em;">% sysctl -w vm.nr_hugepages=256
+% service php-fpm start
+% cat /proc/meminfo | grep Huge
+HugePages_Total:     256
+HugePages_Free:      231
+HugePages_Rsvd:      119
+HugePages_Surp:        0
+Hugepagesize:       2048 kB</code></pre>
+		</section>
+<section id="php7detail4">
 		<h1 style="text-align:center;">JIT?</h1>
 		</section>	</section>
 	<section>
