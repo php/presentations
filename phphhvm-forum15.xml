@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>One Extension, Three Engines</title>
+<event>Forum PHP</event>
+<location>Paris, France</location>
+<date>Oct 27th, 2015</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/15252</joindin>
+<slide>slides/mongodb/one-ext-two-engines.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/mongodb/1e2e-agenda.xml</slide>
+<slide>slides/mongodb/1e3e-agenda.xml</slide>
+
+<!-- HISTORY of the DRIVER -->
+first driver (0.8.4) april 2009
+ - used resources and classes (for types code/date/id/regex/bindata only)
+ - only very basic crud operations:
+   static function_entry mongo_functions[] = {
+  PHP_FE( mongo_connect , NULL )
+  PHP_FE( mongo_close , NULL )
+  PHP_FE( mongo_remove , NULL )
+  PHP_FE( mongo_query , NULL )
+  PHP_FE( mongo_insert , NULL )
+  PHP_FE( mongo_batch_insert , NULL )
+  PHP_FE( mongo_update , NULL )
+  PHP_FE( mongo_has_next , NULL )
+  PHP_FE( mongo_next , NULL )
+  PHP_FE( mongo_gridfs_init , NULL )
+  PHP_FE( mongo_gridfs_store , NULL )
+  PHP_FE( mongo_gridfile_write , NULL )
+  {NULL, NULL, NULL}
+ - many existing functionality through PHP based classes
+
+jun 2012 - Hannes starts helping out properly
+aug 2012 - merge in new connection handling (no more connection pools) 1.3.0alpha1
+         - we start using sane branches with git
+sep 2012 - jeremy starts doing the odd patches
+nov 2012 - 1.3! 
+
+<slide>slides/mongodb/driver-current-status.xml</slide>
+
+<!-- NEW GOALS -->
+
+- Easier to maintain
+- Easier to prototype
+- Support other engines without redoing it all
+
+<slide>slides/mongodb/new-driver-goals.xml</slide>
+
+<!-- THE ENGINES -->
+<slide>slides/mongodb/the-engines.xml</slide>
+
+<!-- PHP 5 -->
+<slide>slides/mongodb/engines-php5.xml</slide>
+
+<!-- HHVM -->
+<slide>slides/mongodb/engines-hhvm.xml</slide>
+
+<!-- PHP 7 -->
+<slide>slides/mongodb/engines-php7.xml</slide>
+
+
+<!-- NEW ARCHITECTURE -->
+
+libbson, libmongoc, Hippo, Phongo and Phplib (flip?)
+Other packages on top (GridFS)
+Composer
+
+<slide>slides/mongodb/new-architecture.xml</slide>
+
+- MongoDB vs Mongo extension
+
+<slide>slides/mongodb/libbson.xml</slide>
+<slide>slides/mongodb/libmongoc.xml</slide>
+
+<slide>slides/mongodb/phongo.xml</slide>
+<slide>slides/mongodb/new-driver-bc2.xml</slide>
+<slide>slides/mongodb/api-old.xml</slide>
+<slide>slides/mongodb/api-new.xml</slide>
+
+<slide>slides/mongodb/hippo.xml</slide>
+<slide>slides/mongodb/hippo-impl-def.xml</slide>
+<slide>slides/mongodb/hippo-impl.xml</slide>
+<slide>slides/mongodb/hippo-impl-2.xml</slide>
+<slide>slides/mongodb/hippo-vs-phongo.xml</slide>
+
+<slide>slides/mongodb/api-new.xml</slide>
+<slide>slides/mongodb/api-phongo.xml</slide>
+<slide>slides/mongodb/api-hippo.xml</slide>
+<slide>slides/mongodb/api-serialization-spec.xml</slide>
+
+- PHP 7...
+
+<slide>slides/mongodb/phongo-php5-7.xml</slide>
+
+<slide>slides/mongodb/phplib.xml</slide>
+<slide>slides/mongodb/phplib-usage-2.xml</slide>
+
+<!-- ISSUES -->
+
+- APIs changing in Phongo meant that things had to be redone for Hippo
+- Namespaces for drivers, exception and bson classes
+
+<slide>slides/mongodb/moving-target.xml</slide>
+
+HHVM is not mature, and certainly not documented.
+
+- Slow going, mention the hhvm cookbook
+- issues with cursor and foreach iteration
+
+<slide>slides/mongodb/hhvm-maturity.xml</slide>
+
+<!-- CURRENT STATUS -->
+
+Phongo in alpha (0.6.3) 
+Hippo in pre-alpha (but you can do all basic ops)
+phplib (as mongodb/mongodb) on packagist: https://packagist.org/packages/mongodb/mongodb (0.2.0)
+
+<slide>slides/mongodb/new-current-status.xml</slide>
+<slide>slides/mongodb/new-still-to-do.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+
+</presentation>
