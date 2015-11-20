@@ -1,0 +1,109 @@
+<slide title="" section="etsy_deploy">
+
+<blurb fontsize="8em" align="center">How do you manage deploys?</blurb>
+
+<break lines="1" section="etsy_deploy0"/>
+
+<blurb fontsize="2em" align="left">At Etsy we use irc</blurb>
+<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
+Channel: #push Topic: <prod> *joe *steve frank|bob
+devbot: Swapping symlinks. Your code is about to start taking production traffic
+pushbot: joe steve frank : Your code is live. Time to watch graphs: http://et.sy/abcd
+Rasmus: .join
+*** pushbot has changed the topic on #push to <prod> joe steve frank|bob Rasmus
+frank: .good
+*** pushbot has changed the topic on #push to <prod> *joe *steve *frank|bob Rasmus
+joe: .done
+*** pushbot has changed the topic on #push to <prod> bob Rasmus
+pushbot: bob Rasmus: You're up
+bob: .in
+*** pushbot has changed the topic on #push *bob Rasmus
+Rasmus: .in
+*** pushbot has changed the topic on #push *bob *Rasmus
+]]></example>
+
+<break lines="1" section="etsy_deploy1"/>
+<image filename="deployinator.png"/>
+
+<break lines="1" section="etsy_deploy2"/>
+<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
+Channel: #push Topic: <princess> bob Rasmus
+Jenkins: Starting build #36803 for job qa
+Jenkins: Starting build #38784 for job princess
+Jenkins: Project qa build #36803: SUCCESS in 6 min 19 sec: http://ci.etsy/job/qa/36803/
+pushbot: bob Rasmus : qa tests have passed
+devbot: [who_tried] Everyone in this push has run Try recently. w00t!
+Jenkins: Project princess build #38784: SUCCESS in 1 min 10 sec: http://ci.etsy/job/princess/38784/
+pushbot: bob Rasmus : princess tests have passed
+bob: .good
+Rasmus: .good
+*** pushbot has changed the topic on #push to <princess> *bob *Rasmus
+pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
+Jenkins: qa: last build: 36803 (9 min 5 sec ago): SUCCESS: http://ci.etsy/job/qa/36803/
+Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci.etsy/job/princess/38784/
+]]></example>
+
+<break lines="1" section="etsy_deploy3"/>
+<blurb fontsize="2.5em" align="left">Deploy to Production:</blurb>
+<list>
+<bullet fontsize="2em" align="left">ssh to deploy host</bullet>
+<bullet fontsize="2em" align="left">dsh to all targets</bullet>
+<bullet fontsize="2em" align="left">rsync files</bullet>
+</list>
+
+<break lines="1" section="etsy_deploy4"/>
+<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
+Channel: #push Topic: <prod> bob Rasmus
+devbot: Swapping symlinks. Your code is about to start taking production traffic
+pushbot: bob Rasmus : Your code is live. Time to watch graphs: http://etsy/et5cp
+Jenkins: Starting build #39452 for job prod
+pushbot: bob Rasmus : prod tests have passed
+Jenkins: Project prod build #39452: SUCCESS in 30 sec: http://ci.etsy/job/prod/39452/
+bob: .good
+Rasmus: .good
+*** pushbot has changed the topic on #push to <prod> *bob *Rasmus
+pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
+Jenkins: prod: last build: 39452 (1 min 39 sec ago): SUCCESS: http://ci.etsy/job/prod/39452/
+bob: .done
+pushbot: clear
+*** pushbot has changed the topic on #push to clear
+]]></example>
+
+<break lines="1" section="etsy_deploy5"/>
+<blurb fontsize="2.5em" align="left">Graph Everything!</blurb>
+<list>
+<bullet fontsize="2em" align="left">Statsd</bullet>
+<bullet fontsize="2em" align="left">Ganglia</bullet>
+<bullet fontsize="2em" align="left">Graphite</bullet>
+</list>
+
+<break lines="1" section="etsy_deploy6"/>
+<blurb fontsize="2.5em" align="left">Log Everything!</blurb>
+<list>
+<bullet fontsize="2em" align="left">logster</bullet>
+<bullet fontsize="2em" align="left">Supergrep</bullet>
+<bullet fontsize="2em" align="left">Logstash</bullet>
+<bullet fontsize="2em" align="left">Elastic Search</bullet>
+</list>
+
+<break lines="1" section="etsy_deploy7"/>
+<list>
+<bullet fontsize="1.5em" align="left">Commit to master</bullet>
+<bullet fontsize="1.5em" align="left">Deploy from HEAD</bullet>
+<bullet fontsize="1.5em" align="left">Branches?</bullet>
+<bullet fontsize="1.5em" align="left">Branches are in code via feature flags</bullet>
+</list>
+
+<break lines="1" section="etsy_deploy8"/>
+<blurb fontsize="2.5em" align="left">Blameless post-mortems</blurb>
+
+<break lines="1" section="etsy_deploy9"/>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/deployinator">github.com/etsy/deployinator</link>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/statsd">github.com/etsy/statsd</link>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/logster">github.com/etsy/logster</link>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/morgue">github.com/etsy/morgue</link>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/feature">github.com/etsy/feature</link>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/supergrep">github.com/etsy/supergrep</link>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/PushBot">github.com/etsy/PushBot</link>
+<link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/TryLib">github.com/etsy/TryLib</link>
+</slide>

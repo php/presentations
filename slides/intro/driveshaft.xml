@@ -1,0 +1,56 @@
+<slide title="" section="driveshaft">
+
+<blurb fontsize="8em" align="center">Using Gearman?</blurb>
+<blurb fontsize="8em" align="center">Check out Driveshaft!</blurb>
+<link fontsize="1.2em" align="center" href="https://github.com/keyurdg/driveshaft">github.com/keyurdg/driveshaft</link>
+
+<break lines="1" section="driveshaft1"/>
+<list>
+<bullet fontsize="1.5em" align="center">Manages pools of workers</bullet>
+<bullet fontsize="1.5em" align="center">Registers jobs with Gearmand for each pool</bullet>
+<bullet fontsize="1.5em" align="center">Jobs are run by hitting an endpoint over HTTP/S</bullet>
+</list>
+
+<break lines="1" section="driveshaft2"/>
+<example fontsize="1.1em" result='0' title="" type="json"><![CDATA[
+{
+    "gearman_servers_list":
+    [
+        "localhost"
+    ],
+    "pools_list":
+    {
+        "ShopStats":
+        {
+            "job_processing_uri": "http://localhost/job.php",
+            "worker_count": 20,
+            "jobs_list":
+            [
+                "ShopStats"
+            ]
+        },
+        "Newsfeed":
+        {
+            "job_processing_uri": "http://localhost/job.php",
+            "worker_count": 10,
+            "jobs_list":
+            [
+                "Newsfeed"
+            ]
+        },
+        "Regular":
+        {
+            "job_processing_uri": "http://localhost/job.php",
+            "worker_count": 5,
+            "jobs_list":
+            [
+                "Sum3",
+                "Sum",
+                "Sum2"
+            ]
+        }
+    }
+}
+]]></example>
+
+</slide>

@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Coding and Dreaming</title>
+
+		<meta name="description" content="Coding and Dreaming">
+		<meta name="author" content="Rasmus Lerdorf">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
+
+		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
+		<link rel="stylesheet" href="/styles/xcode.css">
+
+		<!-- Override a few styles -->
+        <style>
+        /*
+		   Not actually sure why this block isn't being picked up from the syntax highlight css 
+		   If you change the syntax highlight theme, copy the first block here
+		*/
+        .reveal pre code {
+                display: block;
+                max-height: 600px;
+                overflow-x: auto;
+                padding: 0.5em;
+                line-height: 125%;
+                background: #fff;
+                color: black;
+                -webkit-text-size-adjust: none;
+        }
+
+        .reveal section img {
+               box-shadow: none;
+               border: none;
+        }
+
+        .reveal code.shell {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #000;
+            color: #ddd;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+        /* Left-align h3 and h4 if they are p elements */
+        h3.p {
+                text-align: left;
+        }
+        h4.p {
+                text-align: left;
+        }
+        /* and left-aligned but slightly indented bullet lists */
+        .reveal ul {
+            display: block;
+            margin: 0 0 1em 3em;
+        }
+		/* Example titles */
+		p.example {
+			text-align: left;
+			margin: 0 0 -0.5em 1em;
+			font-weight: bold;
+		}
+		/* Example output style */
+		pre.output {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: black;
+			line-height: 200%;
+            -webkit-text-size-adjust: none;
+		}
+
+        </style>
+
+		 <!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <!-- Needed for charts to work. Fall back to network if no local copy -->
+        <script type='text/javascript' src='/jquery.min.js'></script> 
+        <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">\x3C/script>')</script>
+        <script src="/highcharts.js"></script>
+        <script>window.Highcharts || document.write('<script src="http://code.highcharts.com/highcharts.js">\x3C/script>')</script>
+
+		<!--[if lt IE 9]>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Coding and Dreaming</h1>
+					<h3>Codemotion</h3>
+					<h3>Milan</h3>
+					<h3>Nov. 21, 2015</h3>
+					<a href="http://talks.php.net/cm1">http://talks.php.net/cm1</a><br><br>
+					<p>Rasmus Lerdorf<br>
+					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
+					</p>
+					<aside class="notes">
+											</aside>
+				</section>
+					<section>
+		<h1 style="text-align:center;">20 Years of PHP!??</h1>
+<aside class="notes"><br />
+Argh!<br />
+</aside>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">1993</h2><br>
+		<pre><code class="C" data-trim style="font-size:1.1em;">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+
+#define ishex(x) (((x) &gt;= '0' &amp;&amp; (x) &lt;= '9') || ((x) &gt;= 'a' &amp;&amp; \
+                   (x) &lt;= 'f') || ((x) &gt;= 'A' &amp;&amp; (x) &lt;= 'F'))
+
+int htoi(char *s) {
+	int     value;
+	char    c;
+
+	c = s[0];
+	if(isupper(c)) c = tolower(c);
+	value=(c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10) * 16;
+
+	c = s[1];
+	if(isupper(c)) c = tolower(c);
+	value += c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10;
+
+	return(value);
+}
+
+void main(int argc, char *argv[]) {
+	char *params, *data, *dest, *s, *tmp;
+	char *name, *age;
+
+	puts(&quot;Content-type: text/html\r\n&quot;);
+	puts(&quot;&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Form Example&lt;/TITLE&gt;&lt;/HEAD&gt;&quot;);
+	puts(&quot;&lt;BODY&gt;&lt;H1&gt;My Example Form&lt;/H1&gt;&quot;);
+	puts(&quot;&lt;FORM action=\&quot;form.cgi\&quot; method=\&quot;GET\&quot;&gt;&quot;);
+	puts(&quot;Name: &lt;INPUT type=\&quot;text\&quot; name=\&quot;name\&quot;&gt;&quot;);
+	puts(&quot;Age: &lt;INPUT type=\&quot;text\&quot; name=\&quot;age\&quot;&gt;&quot;);
+	puts(&quot;&lt;BR&gt;&lt;INPUT type=\&quot;submit\&quot;&gt;&quot;);
+	puts(&quot;&lt;/FORM&gt;&quot;);
+
+	data = getenv(&quot;QUERY_STRING&quot;);
+	if(data &amp;&amp; *data) {
+		params = data; dest = data;
+    	while(*data) {
+			if(*data=='+') *dest=' ';
+			else if(*data == '%' &amp;&amp; ishex(*(data+1))&amp;&amp;ishex(*(data+2))) {
+				*dest = (char) htoi(data + 1);
+				data+=2;
+			} else *dest = *data;
+			data++;
+			dest++;
+		}
+		*dest = '\0';
+		s = strtok(params,&quot;&amp;&quot;);
+		do {
+			tmp = strchr(s,'=');
+			if(tmp) {
+				*tmp = '\0';
+				if(!strcmp(s,&quot;name&quot;)) name = tmp+1;
+				else if(!strcmp(s,&quot;age&quot;)) age = tmp+1;
+			}
+		} while(s=strtok(NULL,&quot;&amp;&quot;));
+
+		printf(&quot;Hi %s, you are %s years old\n&quot;,name,age);
+	}
+	puts(&quot;&lt;/BODY&gt;&lt;/HTML&gt;&quot;);
+}</code></pre>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">1993</h2><br>
+<br/>
+		<pre><code class="Perl" data-trim>use CGI qw(:standard);
+print header;
+print start_html('Form Example'),
+    h1('My Example Form'),
+    start_form,
+    &quot;Name: &quot;, textfield('name'),
+    p,
+    &quot;Age: &quot;, textfield('age'),
+    p,
+    submit,
+    end_form;
+if(param()) {
+    print &quot;Hi &quot;,em(param('name')),
+        &quot;You are &quot;,em(param('age')),
+        &quot; years old&quot;;
+}
+print end_html;</code></pre>
+	</section>
+	<section>
+		<h2 margin-bottom="2em">1994</h2><br>
+<br/>
+		<pre><code class="PHP" data-trim>&lt;html&gt;&lt;head&gt;&lt;title&gt;Form Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;My Example Form&lt;/h1&gt;
+&lt;form action=&quot;form.phtml&quot; method=&quot;POST&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;
+&lt;br&gt;&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+&lt;?if($name):?&gt;
+Hi &lt;?echo $name?&gt;, you are &lt;?echo $age?&gt; years old
+&lt;?endif?&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+	</section>
+	<section>
+		<h3 class="p">PHP Announcement June 8, 1995</h3>
+		<h4 class="p">Posted to comp.infosystems.www.authoring.cgi</h4>
+		<pre><code class="html" data-trim>Subject: Announce: Personal Home Page Tools (PHP Tools)
+
+Announcing the Personal Home Page Tools (PHP Tools) version 1.0.
+These tools are a set of small tight cgi binaries written in C.
+They perform a number of functions including:
+
+. Logging accesses to your pages in your own private log files
+. Real-time viewing of log information
+. Providing a nice interface to this log information
+. Displaying last access information right on your pages
+. Full daily and total access counters
+. Banning access to users based on their domain
+. Password protecting pages based on users' domains
+. Tracking accesses ** based on users' e-mail addresses **
+. Tracking referring URL's - HTTP_REFERER support
+. Performing server-side includes without needing server support for it
+. Ability to not log accesses from certain domains (ie. your own)
+. Easily create and display forms
+. Ability to use form information in following documents
+
+Here is what you don't need to use these tools:
+
+. You do not need root access - install in your ~/public_html dir
+. You do not need server-side includes enabled in your server
+. You do not need access to Perl or Tcl or any other script interpreter
+. You do not need access to the httpd log files
+
+The only requirement for these tools to work is that you have
+the ability to execute your own cgi programs.  Ask your system
+administrator if you are not sure what this means.
+
+The tools also allow you to implement a guestbook or any other
+form that needs to write information and display it to users
+later in about 2 minutes.
+
+The tools are in the public domain distributed under the GNU
+Public License.  Yes, that means they are free!
+
+For a complete demonstration of these tools, point your browser
+at: http://www.io.org/~rasmus
+
+--
+Rasmus Lerdorf
+rasmus@io.org
+http://www.io.org/~rasmus</code></pre>
+<aside class="notes"><br />
+- focused on problems that could be solved<br />
+- PHP was hidden in there in these two points:<br />
+  . Easily create and display forms<br />
+  . Ability to use form information in following documents<br />
+</aside>
+	</section>
+	<section>
+		<h2>C API for the Web</h2>
+		<pre><code class="C" data-trim>void Cos(void) {
+    Stack *s;
+    char temp[64];
+
+    s = Pop();
+    if(!s) {
+        Error(&quot;Stack error in cos&quot;);
+        return;
+    }
+    sprintf(temp,&quot;%f&quot;,cos(s-&gt;douval));
+    Push(temp,DNUMBER);
+}</code></pre>
+		<h4 class="p">And you could then use it like this:</h4>
+		<pre><code class="nohighlight" data-trim>&lt;html&gt;&lt;head&gt;&lt;title&gt;Cos Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Cos Example&lt;/h1&gt;
+&lt;?echo Cos($input)&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+<aside class="notes"><br />
+Actually the very first markup used html comments<br />
+&lt;? ... &gt; came shortly after.<br />
+Note the lack of the closing '?'<br />
+BUT nobody was interested!<br />
+</aside>
+	</section>
+	<section>
+		<h3 class="p">Focus on the Ecosystem</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">LAMP wasn't an accident</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Robustness, Performance and Security</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;"><font color="ff2233">♥</font> shared hosting ISPs</li>
+		</ul>
+<br/>
+		<h3 class="p">Scale</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Scaling up is expected</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Scaling down is surprisingly hard</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Doing both is rocket science</li>
+		</ul>
+	</section>
+	<section>
+		<h3 class="p">Performance</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">mod_php</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">shared-nothing perfect sandbox model</li>
+		</ul>
+		<h3 class="p">Robustness</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">SQL LIMIT clause</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">Promote Prefork shared-nothing model</li>
+		</ul>
+		<h3 class="p">Security</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">max_execution_time</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">memory_limit</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">safe mode</li>
+		</ul>
+	</section>
+	<section>
+		<h3 class="p">What was he thinking?</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Case insensitive function names?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Naming inconsistencies?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">What's with the $ signs?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Globals?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">register_globals?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">magic_quotes?</li>
+		</ul>
+		<h3 class="p">OMGWTFBBQ?</h3>
+		<pre><code data-trim style="font-size:1.6em;">array_search($needle, $haystack);
+strstr($haystack, $needle);
+in_array($needle, $haystack);
+substr_count($haystack, $needle);
+array_key_exists($needle, $haystack);
+strchr($haystack, $needle);</code></pre>
+	</section>
+	<section>
+		<img src="/presentations/slides/intro/lovehack-white-1000.png" align="center" width="1001" height="421">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/rasmus.jpg" align="center" width="523" height="700">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/Greenland1.jpg" align="center" width="1024" height="685">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/Greenland2.jpg" align="center" width="1024" height="685">
+	</section>
+	<section data-background="#000000">
+		<img src="/presentations/slides/intro/Greenland3.jpg" align="center" width="1024" height="685">
+	</section>
+	<section>
+		<h3 class="p" style="text-align:center;">Work on things that matter (to you)</h3>
+	</section>
+	<section>
+		<h2 style="text-align:center;">Sense of Purpose</h2>
+<br/>
+<br/>
+		<h4 class="p" style="text-align:center;">The Purpose Economy: How Your Desire for Impact, Personal Growth and Community Is Changing the World</h4>
+		<h4 class="p" style="text-align:center;">by Aaron Hurst</h4>
+	</section>
+	<section>
+		<h4 class="p" style="text-align:center;">We are running out of things that can be solved in isolation with our keyboards</h4>
+	</section>
+	<section>
+		<section id="sahana0">
+		<img src="/presentations/slides/intro/slideshow_images/sahana3.png" align="center" width="1000" height="720">
+		</section>
+<section id="sahana1">
+		<img src="/presentations/slides/intro/slideshow_images/sahana_final.png" align="center" width="1000" height="720">
+		</section>	</section>
+	<section>
+		<img src="/presentations/slides/intro/barros1.png" align="left" width="480" height="320">
+		<img src="/presentations/slides/intro/barros2.jpg" align="left" width="250" height="196">
+		<img src="/presentations/slides/intro/barros3.jpg" align="left" width="250" height="367">
+		<img src="/presentations/slides/intro/sasa.jpg" align="center" width="600" height="400">
+	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1024,
+				height: 768,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transitionSpeed: 'fast',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+			/* This draws the graph on the slide on a slidechanged event */
+			Reveal.addEventListener('slidechanged', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+			/* This draws the graph if we got here directly without coming from another slide */
+			Reveal.addEventListener('ready', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+		</script>
+
+	</body>
+</html>
