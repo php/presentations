@@ -11,6 +11,11 @@
 <blurb fontsize="10em">It is really easy!</blurb>
 
 <break section="php_contribute2"/>
+<blurb fontsize="1.5em" align="left">Full Vagrant Debian Dev Environment</blurb>
+<blurb fontsize="1.2em" align="left">Or if you prefer Docker:</blurb>
+<link fontsize="1.2em" align="left" href="https://github.com/janatzend/docker-php7-nightly-build">github.com/janatzend/docker-php7-nightly-build</link>
+
+<break section="php_contribute25"/>
 
 <blurb fontsize="1.5em" align="left">Install Vagrant and Virtualbox</blurb>
 <blurb fontsize="1.2em" align="left">Then:</blurb>
