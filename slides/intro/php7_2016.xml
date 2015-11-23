@@ -306,16 +306,16 @@ class MyObject extends MyStuff {
 ]]></example>
 
 <break lines="1" section="php7coalesce"/>
-<blurb fontsize="1.1em" align="left">✔ Null Coalesce Operator</blurb>
+<blurb fontsize="1.1em" align="left">✔ Coalesce Operator</blurb>
 <example fontsize="1.5em" result='0' title=""><![CDATA[
 <?php
 $a = NULL;
-$b = 1;
+$b = 0;
 $c = 2;
 
-echo $a ?? $b; // 1
+echo $a ?? $b; // 0
 echo $c ?? $b; // 2
-echo $a ?? $b ?? $c; // 1
+echo $a ?? $b ?? $c; // 0
 echo $a ?? $x ?? $c; // 2
 ]]></example>
 

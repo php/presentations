@@ -9,10 +9,14 @@
 <example fontsize="1.1em" result='0' title=""><![CDATA[
 <?php
 $a = [];
-for($i=0; $i < 100000;$i++) $a[] = ['abc'];
+for($i=0; $i < 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
 echo memory_get_usage(true);
-// PHP 5.x  43M
-// PHP 7.0  6M
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled
 ]]></example>
 
 <break lines="1" section="php7perfdetail2"/>

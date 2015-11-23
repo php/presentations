@@ -390,14 +390,14 @@ class MyObject extends MyStuff {
 }</code></pre>
 		</section>
 <section id="php7coalesce">
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ Null Coalesce Operator</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Coalesce Operator</p>
 		<pre><code data-trim style="font-size:1.5em;">$a = NULL;
-$b = 1;
+$b = 0;
 $c = 2;
 
-echo $a ?? $b; // 1
+echo $a ?? $b; // 0
 echo $c ?? $b; // 2
-echo $a ?? $b ?? $c; // 1
+echo $a ?? $b ?? $c; // 0
 echo $a ?? $x ?? $c; // 2</code></pre>
 		</section>
 <section id="Spaceship">
@@ -562,8 +562,8 @@ $bytes = random_bytes(10);
 
 var_dump( $int );
 var_dump( bin2hex($bytes) );</code></pre>
-		<pre class="output" style="font-size:1.2em;">int(-57)
-string(20) "0fccee1859e2ed386eab"
+		<pre class="output" style="font-size:1.2em;">int(333)
+string(20) "bbecaff173062f10e091"
 		</pre>		</section>
 <section id="php7more">
 		<p class="p" style="font-size:1.5em;">GA release scheduled for Nov.26 or Dec.3</p>
@@ -585,10 +585,14 @@ string(20) "0fccee1859e2ed386eab"
 			<li style="font-size: 1em;list-style-type: none;">Immutable array optimization</li>
 		</ul>
 		<pre><code data-trim style="font-size:1.1em;">$a = [];
-for($i=0; $i &lt; 100000;$i++) $a[] = ['abc'];
+for($i=0; $i &lt; 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
 echo memory_get_usage(true);
-// PHP 5.x  43M
-// PHP 7.0  6M</code></pre>
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled</code></pre>
 		</section>
 <section id="php7perfdetail2">
 		<ul>
