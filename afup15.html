@@ -120,7 +120,11 @@
 					<aside class="notes">
 											</aside>
 				</section>
-					<section>
+					<section data-background="#000000">
+		<h1 style="text-align:center;"><font color="FFFFFF">Merci AFUP!</font></h1>
+		<img src="/presentations/slides/intro/fr-peace-black.png" align="center" width="640" height="550">
+	</section>
+	<section>
 		<section id="php7">
 		<img src="/presentations/slides/intro/php7trans-200.png"  width="" height="">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ engine improvements</p>
@@ -551,8 +555,18 @@ $foo()()
 echo &quot;\u{1F602}&quot;;</code></pre>
 		<pre class="output" style="font-size:1.2em;">‮Right-to-left text😂		</pre>		<p class="p" style="font-size:1.1em;text-align:left;">✔ ICU IntlChar class added to intl extension</p>
 		</section>
+<section id="php7csprng">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ CSPRNG</p>
+		<pre><code data-trim style="font-size:1.2em;">$int   = random_int(-500, 500);
+$bytes = random_bytes(10);
+
+var_dump( $int );
+var_dump( bin2hex($bytes) );</code></pre>
+		<pre class="output" style="font-size:1.2em;">int(-57)
+string(20) "0fccee1859e2ed386eab"
+		</pre>		</section>
 <section id="php7more">
-		<p class="p" style="font-size:1.5em;">GA release scheduled for Nov.26 or Dec.12</p>
+		<p class="p" style="font-size:1.5em;">GA release scheduled for Nov.26 or Dec.3</p>
 		</section>	</section>
 	<section>
 		<section id="perf2014">
@@ -1214,9 +1228,21 @@ Rasmus: .in
 *** pushbot has changed the topic on #push *bob *Rasmus</code></pre>
 		</section>
 <section id="etsy_deploy1">
-		<img src="/presentations/slides/intro/deployinator.png"  width="" height="">
+		<p class="p" style="font-size:2em;text-align:left;">pushbot commands</p>
+		<ul>
+			<li style="list-style-type: none;"><strong>.join</strong>    - join push queue</li>
+			<li style="list-style-type: none;"><strong>.in</strong>        - code has been pushed</li>
+			<li style="list-style-type: none;"><strong>.good</strong> - your stuff looks good</li>
+			<li style="list-style-type: none;"><strong>.uhoh</strong> - your stuff looks bad</li>
+			<li style="list-style-type: none;"><strong>.hold</strong>  - there is a problem, hold everything</li>
+			<li style="list-style-type: none;"><strong>.nm</strong>      - never mind (leave queue)</li>
+			<li style="list-style-type: none;"><strong>.done</strong> - push done</li>
+		</ul>
 		</section>
 <section id="etsy_deploy2">
+		<img src="/presentations/slides/intro/deployinator.png"  width="" height="">
+		</section>
+<section id="etsy_deploy3">
 		<pre><code class="shell nohighlight" data-trim style="font-size:1.1em;">Channel: #push Topic: &lt;princess&gt; bob Rasmus
 Jenkins: Starting build #36803 for job qa
 Jenkins: Starting build #38784 for job princess
@@ -1232,7 +1258,7 @@ pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
 Jenkins: qa: last build: 36803 (9 min 5 sec ago): SUCCESS: http://ci.etsy/job/qa/36803/
 Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci.etsy/job/princess/38784/</code></pre>
 		</section>
-<section id="etsy_deploy3">
+<section id="etsy_deploy4">
 		<p class="p" style="font-size:2.5em;text-align:left;">Deploy to Production:</p>
 		<ul>
 			<li style="font-size: 2em;">ssh to deploy host</li>
@@ -1240,7 +1266,7 @@ Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci.etsy
 			<li style="font-size: 2em;">rsync files</li>
 		</ul>
 		</section>
-<section id="etsy_deploy4">
+<section id="etsy_deploy5">
 		<pre><code class="shell nohighlight" data-trim style="font-size:1.1em;">Channel: #push Topic: &lt;prod&gt; bob Rasmus
 devbot: Swapping symlinks. Your code is about to start taking production traffic
 pushbot: bob Rasmus : Your code is live. Time to watch graphs: http://etsy/et5cp
@@ -1256,7 +1282,7 @@ bob: .done
 pushbot: clear
 *** pushbot has changed the topic on #push to clear</code></pre>
 		</section>
-<section id="etsy_deploy5">
+<section id="etsy_deploy6">
 		<p class="p" style="font-size:2.5em;text-align:left;">Graph Everything!</p>
 		<ul>
 			<li style="font-size: 2em;">Statsd</li>
@@ -1264,7 +1290,7 @@ pushbot: clear
 			<li style="font-size: 2em;">Graphite</li>
 		</ul>
 		</section>
-<section id="etsy_deploy6">
+<section id="etsy_deploy7">
 		<p class="p" style="font-size:2.5em;text-align:left;">Log Everything!</p>
 		<ul>
 			<li style="font-size: 2em;">logster</li>
@@ -1273,7 +1299,7 @@ pushbot: clear
 			<li style="font-size: 2em;">Elastic Search</li>
 		</ul>
 		</section>
-<section id="etsy_deploy7">
+<section id="etsy_deploy8">
 		<ul>
 			<li style="font-size: 1.5em;">Commit to master</li>
 			<li style="font-size: 1.5em;">Deploy from HEAD</li>
@@ -1281,10 +1307,10 @@ pushbot: clear
 			<li style="font-size: 1.5em;">Branches are in code via feature flags</li>
 		</ul>
 		</section>
-<section id="etsy_deploy8">
+<section id="etsy_deploy9">
 		<p class="p" style="font-size:2.5em;text-align:left;">Blameless post-mortems</p>
 		</section>
-<section id="etsy_deploy9">
+<section id="etsy_deploy10">
 		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/deployinator" target="">github.com/etsy/deployinator</a></div>
 		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/statsd" target="">github.com/etsy/statsd</a></div>
 		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/logster" target="">github.com/etsy/logster</a></div>

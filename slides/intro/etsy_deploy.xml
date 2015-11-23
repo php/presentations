@@ -23,9 +23,21 @@ Rasmus: .in
 ]]></example>
 
 <break lines="1" section="etsy_deploy1"/>
-<image filename="deployinator.png"/>
+<blurb fontsize="2em" align="left">pushbot commands</blurb>
+<list>
+<bullet type="none">*.join*    - join push queue</bullet>
+<bullet type="none">*.in*        - code has been pushed</bullet>
+<bullet type="none">*.good* - your stuff looks good</bullet>
+<bullet type="none">*.uhoh* - your stuff looks bad</bullet>
+<bullet type="none">*.hold*  - there is a problem, hold everything</bullet>
+<bullet type="none">*.nm*      - never mind (leave queue)</bullet>
+<bullet type="none">*.done* - push done</bullet>
+</list>
 
 <break lines="1" section="etsy_deploy2"/>
+<image filename="deployinator.png"/>
+
+<break lines="1" section="etsy_deploy3"/>
 <example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
 Channel: #push Topic: <princess> bob Rasmus
 Jenkins: Starting build #36803 for job qa
@@ -43,7 +55,7 @@ Jenkins: qa: last build: 36803 (9 min 5 sec ago): SUCCESS: http://ci.etsy/job/qa
 Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci.etsy/job/princess/38784/
 ]]></example>
 
-<break lines="1" section="etsy_deploy3"/>
+<break lines="1" section="etsy_deploy4"/>
 <blurb fontsize="2.5em" align="left">Deploy to Production:</blurb>
 <list>
 <bullet fontsize="2em" align="left">ssh to deploy host</bullet>
@@ -51,7 +63,7 @@ Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci.etsy
 <bullet fontsize="2em" align="left">rsync files</bullet>
 </list>
 
-<break lines="1" section="etsy_deploy4"/>
+<break lines="1" section="etsy_deploy5"/>
 <example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
 Channel: #push Topic: <prod> bob Rasmus
 devbot: Swapping symlinks. Your code is about to start taking production traffic
@@ -69,7 +81,7 @@ pushbot: clear
 *** pushbot has changed the topic on #push to clear
 ]]></example>
 
-<break lines="1" section="etsy_deploy5"/>
+<break lines="1" section="etsy_deploy6"/>
 <blurb fontsize="2.5em" align="left">Graph Everything!</blurb>
 <list>
 <bullet fontsize="2em" align="left">Statsd</bullet>
@@ -77,7 +89,7 @@ pushbot: clear
 <bullet fontsize="2em" align="left">Graphite</bullet>
 </list>
 
-<break lines="1" section="etsy_deploy6"/>
+<break lines="1" section="etsy_deploy7"/>
 <blurb fontsize="2.5em" align="left">Log Everything!</blurb>
 <list>
 <bullet fontsize="2em" align="left">logster</bullet>
@@ -86,7 +98,7 @@ pushbot: clear
 <bullet fontsize="2em" align="left">Elastic Search</bullet>
 </list>
 
-<break lines="1" section="etsy_deploy7"/>
+<break lines="1" section="etsy_deploy8"/>
 <list>
 <bullet fontsize="1.5em" align="left">Commit to master</bullet>
 <bullet fontsize="1.5em" align="left">Deploy from HEAD</bullet>
@@ -94,10 +106,10 @@ pushbot: clear
 <bullet fontsize="1.5em" align="left">Branches are in code via feature flags</bullet>
 </list>
 
-<break lines="1" section="etsy_deploy8"/>
+<break lines="1" section="etsy_deploy9"/>
 <blurb fontsize="2.5em" align="left">Blameless post-mortems</blurb>
 
-<break lines="1" section="etsy_deploy9"/>
+<break lines="1" section="etsy_deploy10"/>
 <link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/deployinator">github.com/etsy/deployinator</link>
 <link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/statsd">github.com/etsy/statsd</link>
 <link fontsize="1.2em" align="left" marginleft="2em" href="https://github.com/etsy/logster">github.com/etsy/logster</link>

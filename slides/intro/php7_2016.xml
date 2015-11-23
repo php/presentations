@@ -511,8 +511,19 @@ echo "\u{1F602}";
 
 <blurb fontsize="1.1em" align="left">✔ ICU IntlChar class added to intl extension</blurb>
 
+<break lines="1" section="php7csprng"/>
+<blurb fontsize="1.1em" align="left">✔ CSPRNG</blurb>
+<example fontsize="1.2em" result='1' title=""><![CDATA[
+<?php
+$int   = random_int(-500, 500);
+$bytes = random_bytes(10);
+
+var_dump( $int );
+var_dump( bin2hex($bytes) );
+]]></example>
+
 <break lines="1" section="php7more"/>
 
-<blurb fontsize="1.5em">GA release scheduled for Nov.26 or Dec.12</blurb>
+<blurb fontsize="1.5em">GA release scheduled for Nov.26 or Dec.3</blurb>
 
 </slide>
