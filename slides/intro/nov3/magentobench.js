@@ -12,7 +12,7 @@ window["render_magentobench"] = function() {
 			style: { fontSize: '20px' }
         },
         xAxis: [{
-            categories: [ 'PHP 5.5', 'PHP 5.6', 'PHP 7', 'HHVM 3.7' ],
+            categories: [ 'PHP 5.5', 'PHP 5.6', 'PHP 7', 'HHVM 3.10.1' ],
             labels: {
                 style: { color: '#000', fontSize: '20px' }
             }
