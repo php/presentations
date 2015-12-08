@@ -102,7 +102,7 @@ ping.response = pong
 <break lines="1" section="nginxconf1"/>
 
 <example result='0' type="nginx" title="nginx.conf"><![CDATA[user www-data;
-worker_processes 4;
+worker_processes 8;
 pid /var/run/nginx.pid;
 
 events {

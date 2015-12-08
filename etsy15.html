@@ -386,14 +386,14 @@ class MyObject extends MyStuff {
 }</code></pre>
 		</section>
 <section id="php7coalesce">
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ Null Coalesce Operator</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Coalesce Operator</p>
 		<pre><code data-trim style="font-size:1.5em;">$a = NULL;
-$b = 1;
+$b = 0;
 $c = 2;
 
-echo $a ?? $b; // 1
+echo $a ?? $b; // 0
 echo $c ?? $b; // 2
-echo $a ?? $b ?? $c; // 1
+echo $a ?? $b ?? $c; // 0
 echo $a ?? $x ?? $c; // 2</code></pre>
 		</section>
 <section id="Spaceship">
@@ -551,8 +551,18 @@ $foo()()
 echo &quot;\u{1F602}&quot;;</code></pre>
 		<pre class="output" style="font-size:1.2em;">‮Right-to-left text😂		</pre>		<p class="p" style="font-size:1.1em;text-align:left;">✔ ICU IntlChar class added to intl extension</p>
 		</section>
+<section id="php7csprng">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ CSPRNG</p>
+		<pre><code data-trim style="font-size:1.2em;">$int   = random_int(-500, 500);
+$bytes = random_bytes(10);
+
+var_dump( $int );
+var_dump( bin2hex($bytes) );</code></pre>
+		<pre class="output" style="font-size:1.2em;">int(401)
+string(20) "d46f28769226172c66d2"
+		</pre>		</section>
 <section id="php7more">
-		<p class="p" style="font-size:1.5em;">GA release scheduled for Nov.26 or Dec.12</p>
+		<p class="p" style="font-size:1.5em;">GA release scheduled for Dec.3</p>
 		</section>	</section>
 	<section>
 		<section id="perf2014">
@@ -571,10 +581,14 @@ echo &quot;\u{1F602}&quot;;</code></pre>
 			<li style="font-size: 1em;list-style-type: none;">Immutable array optimization</li>
 		</ul>
 		<pre><code data-trim style="font-size:1.1em;">$a = [];
-for($i=0; $i &lt; 100000;$i++) $a[] = ['abc'];
+for($i=0; $i &lt; 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
 echo memory_get_usage(true);
-// PHP 5.x  43M
-// PHP 7.0  6M</code></pre>
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled</code></pre>
 		</section>
 <section id="php7perfdetail2">
 		<ul>
@@ -1194,6 +1208,9 @@ d at ./src/Monolog/Handler/SwiftMailerHandler.php:55
 		</section>	</section>
 	<section>
 		<section id="php_contribute">
+		<img src="/presentations/slides/intro/rasmus_php7.jpg" align="center" width="" height="">
+		</section>
+<section id="php_contribute0">
 		<h2>Test your applications</h2>
 		<h2>Test your extensions</h2>
 		</section>
@@ -1201,6 +1218,11 @@ d at ./src/Monolog/Handler/SwiftMailerHandler.php:55
 		<h2>It is really easy!</h2>
 		</section>
 <section id="php_contribute2">
+		<p class="p" style="font-size:1.5em;text-align:left;">Full Vagrant Debian Dev Environment</p>
+		<p class="p" style="font-size:1.2em;text-align:left;">Or if you prefer Docker:</p>
+		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/janatzend/docker-php7-nightly-build" target="">github.com/janatzend/docker-php7-nightly-build</a></div>
+		</section>
+<section id="php_contribute25">
 		<p class="p" style="font-size:1.5em;text-align:left;">Install Vagrant and Virtualbox</p>
 		<p class="p" style="font-size:1.2em;text-align:left;">Then:</p>
 		<pre><code class="shell nohighlight" data-trim style="font-size:1.2em;">$ git clone https://github.com/rlerdorf/php7dev.git
