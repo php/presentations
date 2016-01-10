@@ -2,40 +2,77 @@
 
 <blurb fontsize="20em" align="center">Static Analysis</blurb>
 <break lines="3"/>
-<link fontsize="1.25em" align="center" href="https://github.com/rlerdorf/phan">github.com/rlerdorf/phan</link>
+<link fontsize="1.25em" align="center" href="https://github.com/etsy/phan">github.com/etsy/phan</link>
 
 <break lines="1" section="phan1"/>
 <example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
 % phan -h
-Usage: phan [options] [files...]
-  -f <filename>   A file containing a list of PHP files to be analyzed
-  -q              Quick mode - doesn't recurse into all function calls
-  -b              Check for potential PHP 5 -> PHP 7 BC issues
-  -i              Ignore undeclared functions and classes
-  -c              Comma-separated list of classes that require parent::__construct() to be called
-  -m <mode>       Output mode: verbose, short, json, csv
-  -o <filename>   Output filename
-  -p              Show progress bar
-  -g [node_name]  Output a graphviz (.gv) file of the class hierarchy
-  -a              Dump AST of provides files (for debugging)
-  -s              Dump scope tree (for debugging)
-  -u              Dump user defined functions (for debugging)
-  -h			  This help
+Usage: ./phan [options] [files...]
+ -f, --fileset <filename>
+  A file containing a list of PHP files to be analyzed
+
+ -l, --directory <directory>
+  A directory to recursively read PHP files from to analyze
+
+ -3, --exclude-directory-list <dir_list>
+  A comma-separated list of directories for which any files
+  therein should be parsed but not analyzed.
+
+ -s, --state-file <filename>
+  Save state to the given file and read from it to speed up
+  future executions
+
+ -r, --reanalyze-file-list <file-list>
+  Force a re-analysis of any files passed in even if they haven't
+  changed since the last analysis
+
+ -d, --project-root-directory
+  Hunt for a directory named .phan in the current or parent
+  directory and read configuration file config.php from that
+  path.
+
+ -m <mode>, --output-mode
+  Output mode: text, codeclimate
+
+ -o, --output <filename>
+  Output filename
+
+ -p, --progress-bar
+  Show progress bar
+
+ -a, --dump-ast
+  Emit an AST for each file rather than analyze
+
+ -q, --quick
+  Quick mode - doesn't recurse into all function calls
+
+ -b, --backward-compatibility-checks
+  Check for potential PHP 5 -> PHP 7 BC issues
+
+ -i, --ignore-undeclared
+ Ignore undeclared functions and classes
+
+ -y, --minimum-severity <level in {0,5,10}>
+  Minimum severity level (low=0, normal=5, critical=10) to report.
+  Defaults to 0.
+
+ -c, --parent-constructor-required
+  Comma-separated list of classes that require
+  parent::__construct() to be called
+
+ -x, --dead-code-detection
+  Emit issues for classes, methods, functions, constants and
+  properties that are probably never referenced and can
+  possibly be removed.
+
+ -h,--help
+  This help information
 ]]></example>
 
 <break lines="1" section="phan2"/>
 
 <example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
-% phan -b display.php
-Files scanned: 1
-Time:		0.13s
-Classes:	8
-Methods:	55
-Functions:	5
-Closures:	5
-Traits:		0
-Conditionals:	307
-Issues found:	1
+% phan -i -b display.php
 
 display.php:416 CompatError expression may not be PHP 7 compatible
 ]]></example>
@@ -69,39 +106,33 @@ display.php:416 CompatError expression may not be PHP 7 compatible
 % cd monolog
 % find . -name '*.php' | grep -v test > filelist.txt
 % phan -i -b -f filelist.txt
-Files scanned: 81
-Time:		0.22s
-Classes:	81
-Methods:	437
-Functions:	0
-Closures:	13
-Traits:		0
-Conditionals:	363
-Issues found:	21
 
-./src/Monolog/Logger.php:320 CompatError expression may not be PHP 7 compatible
-./src/Monolog/Logger.php:445 CompatError expression may not be PHP 7 compatible
-./src/Monolog/Registry.php:119 CompatError expression may not be PHP 7 compatible
-./src/Monolog/Handler/NewRelicHandler.php:55 TypeError Default value for string $level can't be int
-./src/Monolog/Handler/RedisHandler.php:41 TypeError Default value for integer $capSize can't be bool
-./src/Monolog/Formatter/NormalizerFormatter.php:62 TypeError arg#1(val) is array but is_infinite() takes float
-./src/Monolog/Formatter/NormalizerFormatter.php:65 TypeError arg#1(val) is array but is_nan() takes float
-./src/Monolog/Formatter/NormalizerFormatter.php:94 TypeError arg#1(e) is array but Monolog\Formatter\NormalizerFormatter::normalizeException() takes Except
-ion defined at ./src/Monolog/Formatter/NormalizerFormatter.php:115
-./src/Monolog/Formatter/NormalizerFormatter.php:98 TypeError arg#1(object) is array but method_exists() takes object|string
-./src/Monolog/Formatter/NormalizerFormatter.php:105 TypeError arg#1(object) is array but get_class() takes object
-./src/Monolog/Formatter/GelfMessageFormatter.php:60 TypeError property is declared to be string but was assigned null
-./src/Monolog/Handler/StreamHandler.php:124 TypeError return void but getDirFromStream() is declared to return null|string
-./src/Monolog/Handler/SocketHandler.php:219 TypeError arg#2(seconds) is float but stream_set_timeout() takes int
-./src/Monolog/Handler/SocketHandler.php:219 TypeError arg#3(microseconds) is float but stream_set_timeout() takes int
-./src/Monolog/Handler/FirePHPHandler.php:81 TypeError return array but createRecordHeader() is declared to return string
-./src/Monolog/Handler/FirePHPHandler.php:153 TypeError arg#1(array_arg) is string but current() takes array
-./src/Monolog/Handler/FirePHPHandler.php:154 TypeError arg#1(array_arg) is string but key() takes array
-./src/Monolog/Handler/FirePHPHandler.php:154 TypeError arg#1(array_arg) is string but current() takes array
-./src/Monolog/Handler/SwiftMailerHandler.php:83 TypeError arg#1(content) is null but Monolog\Handler\SwiftMailerHandler::buildMessage() takes string define
-d at ./src/Monolog/Handler/SwiftMailerHandler.php:55
-./src/Monolog/Handler/NewRelicHandler.php:66 TypeError property is declared to be string but was assigned null
-./src/Monolog/Handler/ChromePHPHandler.php:178 TypeError return int but headersAccepted() is declared to return boolean
+./src/Monolog/ErrorHandler.php:167 PhanTypeMismatchProperty Assigning null to property but \Monolog\errorhandler::reservedMemory is string
+./src/Monolog/Formatter/GelfMessageFormatter.php:60 PhanTypeMismatchProperty Assigning null to property but \Monolog\Formatter\gelfmessageformatter::extraPrefix is string
+./src/Monolog/Formatter/NormalizerFormatter.php:62 PhanTypeMismatchArgumentInternal Argument 1 (val) is array but \is_infinite() takes float
+./src/Monolog/Formatter/NormalizerFormatter.php:65 PhanTypeMismatchArgumentInternal Argument 1 (val) is array but \is_nan() takes float
+./src/Monolog/Formatter/NormalizerFormatter.php:98 PhanTypeMismatchArgumentInternal Argument 1 (object) is array but \method_exists() takes object|string
+./src/Monolog/Formatter/NormalizerFormatter.php:99 PhanNonClassMethodCall Call to method __toString on non-class type array
+./src/Monolog/Formatter/NormalizerFormatter.php:105 PhanTypeMismatchArgumentInternal Argument 1 (object) is array but \get_class() takes object
+./src/Monolog/Handler/ChromePHPHandler.php:178 PhanTypeMismatchReturn Returning type int but headersAccepted() is declared to return bool
+./src/Monolog/Handler/ElasticSearchHandler.php:124 PhanTypeMismatchArgumentInternal Argument 3 (previous) is \Elastica\Exception\exceptioninterface but \runtimeexception::__construct() takes \runtimeexception|\throwable
+./src/Monolog/Handler/FirePHPHandler.php:81 PhanTypeMismatchReturn Returning type array but createRecordHeader() is declared to return string
+./src/Monolog/Handler/FirePHPHandler.php:153 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
+./src/Monolog/Handler/FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
+./src/Monolog/Handler/FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \key() takes array
+./src/Monolog/Handler/FlowdockHandler.php:70 PhanTypeMissingReturn Method \Monolog\Handler\flowdockhandler::getdefaultformatter is declared to return \Monolog\Formatter\formatterinterface but has no return value
+./src/Monolog/Handler/GelfHandler.php:55 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\gelfhandler::publisher is \Gelf\imessagepublisher|\Gelf\publisher|\Gelf\publisherinterface
+./src/Monolog/Handler/RedisHandler.php:41 PhanTypeMismatchDefault Default value for int $capSize can't be bool
+./src/Monolog/Handler/SocketHandler.php:115 PhanTypeMismatchProperty Assigning float to property but \Monolog\Handler\sockethandler::timeout is int
+./src/Monolog/Handler/SocketHandler.php:126 PhanTypeMismatchProperty Assigning float to property but \Monolog\Handler\sockethandler::writingTimeout is int
+./src/Monolog/Handler/SocketHandler.php:218 PhanTypeMismatchArgumentInternal Argument 2 (seconds) is float but \stream_set_timeout() takes int
+./src/Monolog/Handler/SocketHandler.php:218 PhanTypeMismatchArgumentInternal Argument 3 (microseconds) is float but \stream_set_timeout() takes int
+./src/Monolog/Handler/SocketHandler.php:274 PhanTypeMismatchProperty Assigning resource to property but \Monolog\Handler\sockethandler::resource is null
+./src/Monolog/Handler/StreamHandler.php:65 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\streamhandler::stream is resource|string
+./src/Monolog/Handler/StreamHandler.php:86 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\streamhandler::stream is resource|string
+./src/Monolog/Handler/StreamHandler.php:105 PhanTypeMismatchProperty Assigning array|string to property but \Monolog\Handler\streamhandler::errorMessage is null
+./src/Monolog/Handler/SwiftMailerHandler.php:83 PhanTypeMismatchArgument Argument 1 (content) is null but \Monolog\Handler\swiftmailerhandler::buildmessage() takes string defined at ./src/Monolog/Handler/SwiftMailerHandler.php:55
+./src/Monolog/Handler/SyslogUdp/UdpSocket.php:38 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\SyslogUdp\udpsocket::socket is resource
 ]]></example>
 
 </slide>
