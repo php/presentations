@@ -522,8 +522,4 @@ var_dump( $int );
 var_dump( bin2hex($bytes) );
 ]]></example>
 
-<break lines="1" section="php7more"/>
-
-<blurb fontsize="1.5em">GA release scheduled for Dec.3</blurb>
-
 </slide>
