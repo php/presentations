@@ -4,7 +4,6 @@
 <image filename="moving-target.jpg" align="right" />
 
 <list>
-<bullet>Phongo has been release as 1.0.0</bullet>
 <bullet>%MongoDB\Driver\RuntimeException% → %MongoDB\Driver\Exception\RuntimeException%</bullet>
 <bullet>Namespace "arguments":<br/>%MongoDB\BSON\Binary% vs. %BSON\Binary%</bullet>
 <bullet>Changes in result types:<br/>%CommandResult% and %QueryResult% → %Result%</bullet>
