@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>One Extension, Three Engines</title>
+
+		<meta name="description" content="One Extension, Three Engines">
+		<meta name="author" content="Derick Rethans">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="/samdark.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="/styles/github.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = '/reveal.js/css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>One Extension, Three Engines</h1>
+					<h3>Forum PHP</h3>
+					<h3>Paris, France</h3>
+					<h3>Oct 27th, 2015</h3>
+					<a href="http://derickrethans.nl/talks.html">http://derickrethans.nl/talks.html</a><br><br>
+					<p>Derick Rethans<br>
+					<small><a href="http://twitter.com/derickr">derickr</a></small>
+					</p>
+				</section>
+					<section>
+		<p class="p">One Extension,Two Engines</p>
+		<p class="p">Derick Rethans</p>
+		<p class="p">derick@mongodb.com—@derickr</p>
+		<p class="p">http://joind.in/15252</p>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/../tdd/derick_photo.jpg" width="" height="">
+		<p class="p">Derick Rethans</p>
+		<ul>
+			<li>I'm Dutch/British living in London</li>
+			<li>One of the PHP/HHVM MongoDB driver maintainers</li>
+			<li>Author of the PHP debugger tool Xdebug, PHP's Date/Time/Timezone support, and a bunch of other PHP extensions</li>
+			<li>I ♥🌍 maps </li>
+			<li>I ♥🍺 beer </li>
+		</ul>
+	</section>
+	<section>
+	</section>
+	<section>
+	</section>
+	<section>
+		<ul>
+			<li>
+	
+        
+    </li>
+			<li>GridFS implementation could get some more love</li>
+		</ul>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/new.png" width="" height="">
+		<ul>
+			<li>Support for multiple engines</li>
+			<li>Well thought out and minimalistic API</li>
+			<li>Faster to write and maintain</li>
+			<li>Easier to maintain</li>
+			<li>Keep backwards compatibility</li>
+			<li>Build on top of existing code</li>
+		</ul>
+	</section>
+	<section>
+	</section>
+	<section>
+		<ul>
+			<li>PHP 5.4 - PHP 5.6</li>
+			<li>Not sure what else to say really...</li>
+		</ul>
+	</section>
+	<section>
+		<ul>
+			<li>From Facebook</li>
+			<li>HipHop for PHP: compiles PHP to binary via C++</li>
+			<li>HHVM: a JIT engine</li>
+			<li>Also supports Hack language, "Xdebug", etc...</li>
+			<li>Written in C++, and OCAML, and others</li>
+		</ul>
+		<img src="//home/httpd/presentations/slides/mongodb/hhvm.png" width="" height="">
+	</section>
+	<section>
+		<ul>
+			<li>User land code (mostly) compatible with PHP 5</li>
+			<li>Internals quite a lot <blink>different</blink> than PHP 5</li>
+		</ul>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/new-architecture.png" width="" height="">
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/bson.jpg" width="" height="">
+		<p class="p"><tt>libbson</tt> is a new shared library written in C for developers wanting to
+work with the BSON serialization format.</p>
+		<ul>
+			<li>It's used by <tt>libmongoc</tt></li>
+			<li>It's used by the drivers directly as well</li>
+			<li>High performance <tt>BSON</tt> serialization and deserialization</li>
+			<li>Callback API for deserialization</li>
+		</ul>
+	</section>
+	<section>
+		<p class="p">mongo-c-driver is a client library written in C for MongoDB</p>
+		<ul>
+			<li>Meant as a low level driver for applications <strong>and</strong> higher level languages</li>
+			<li>About two years old</li>
+			<li><tt>git@github.com:mongodb/mongo-c-driver.git</tt></li>
+			<li>Used by the PHP and HHVM drivers</li>
+		</ul>
+	</section>
+	<section>
+		<ul>
+			<li>New backwards breaking MongoDB extension for PHP 5.4 and higher</li>
+			<li>Very minimal API</li>
+			<li>Meant to be build upon by PHP libraries (like the 0.8.4 driver)</li>
+			<li>Uses PHP namespaces</li>
+		</ul>
+	</section>
+	<section>
+		<ul>
+			<li>Old extension name is "Mongo"</li>
+			<li>New extension name will be "MongoDB"</li>
+			<li>You will be able to load both "mongo.so" and "mongodb.so"</li>
+		</ul>
+		<p class="p">pecl site:</p>
+		<img src="//home/httpd/presentations/slides/mongodb/mongo-x2.png" width="" height="">
+		<p class="p"><tt>http://docs.php.net/manual/en/refs.database.php</tt>:</p>
+		<img src="//home/httpd/presentations/slides/mongodb/mongo-x2b.png" width="" height="">
+	</section>
+	<section>
+		<pre><code>$m = new MongoClient(&quot;mongodb://localhost:27017&quot;);
+
+$m-&gt;demo-&gt;test-&gt;drop();
+
+
+$doc = [
+    'string' =&gt; 'bar',
+    'number_i' =&gt; 55,
+    'number_l' =&gt; 12345678901234567,
+    'bool' =&gt; true,
+    'null' =&gt; null,
+    'float' =&gt; M_PI,
+];
+
+$r = $m-&gt;demo-&gt;test-&gt;insert( $doc );
+
+$cursor = $m-&gt;demo-&gt;test-&gt;find();
+
+
+foreach ( $cursor as $key =&gt; $result )
+{
+    print_r( $result );
+}
+?&gt;</code></pre>
+	</section>
+	<section>
+		<pre><code>$m = new MongoDB\Driver\Manager(&quot;mongodb://localhost:27017&quot;);
+
+$c = new MongoDB\Driver\Command( [ 'drop' =&gt; 'test' ] );
+$cursor = $m-&gt;executeCommand( 'demo', $c );
+
+$doc = [
+    'string' =&gt; 'bar',
+    'number_i' =&gt; 55,
+    'number_l' =&gt; 12345678901234567,
+    'bool' =&gt; true,
+    'null' =&gt; null,
+    'float' =&gt; M_PI,
+];
+$bw = new MongoDB\Driver\BulkWrite();
+$bw-&gt;insert( 'demo.test', $doc );
+$m-&gt;executeBulkWrite( 'demo.test', $bw );
+$q = new MongoDB\Driver\Query( [] );
+$cursor = $m-&gt;executeQuery( 'demo.test', $q );
+
+foreach ( $cursor as $key =&gt; $result )
+{
+    print_r( $result );
+}
+?&gt;</code></pre>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/hippo.jpg" width="" height="">
+		<ul>
+			<li>"Same" implementation of phongo APIs as extension for HHVM</li>
+			<li>Drop-in replacement</li>
+			<li>No shared code, as this is C++</li>
+			<li>Parts of it can be written in Hack</li>
+		</ul>
+		<img src="//home/httpd/presentations/slides/mongodb/hhvmhack.png" width="" height="">
+	</section>
+	<section>
+		<p class="p"><tt>ext_mongo.php</tt> (extract)</p>
+		<pre><code>&lt;?hh
+namespace MongoDB\Driver;
+    &lt;&lt;__Native&gt;&gt; 
+    public function __construct(string $dsn = &quot;localhost&quot;, array $options = array(), array $driverOptions = array());
+
+    &lt;&lt;__Native&gt;&gt;
+    public function __debugInfo() : array;
+…
+    &lt;&lt;__Native&gt;&gt;
+    public function executeQuery(string $namespace, Query $query, ReadPreference $readPreference = null): Cursor;
+…
+    &lt;&lt;__Native&gt;&gt;
+    public function selectServer(ReadPreference $readPreference): Server;
+
+}</code></pre>
+	</section>
+	<section>
+		<p class="p"><tt>src/MongoDB/Driver/Manager.cpp</tt></p>
+		<pre><code>void HHVM_METHOD(MongoDBDriverManager, __construct, const String &amp;dsn, const Array &amp;options, const Array &amp;driverOptions)
+{
+    MongoDBDriverManagerData* data = Native::data&lt;MongoDBDriverManagerData&gt;(this_);
+    mongoc_uri_t *uri;
+    mongoc_client_t *client;
+
+    uri = hippo_mongo_driver_manager_make_uri(dsn.c_str(), options);
+    client = mongoc_client_new_from_uri(uri);
+
+    if (!client) {
+        throw MongoDriver::Utils::throwRunTimeException(&quot;Failed to create Manager from URI: '&quot; + dsn + &quot;'&quot;);
+    }
+
+    data-&gt;m_client = client;
+
+    hippo_mongo_driver_manager_apply_ssl_opts(data-&gt;m_client, driverOptions);
+
+    hippo_mongo_driver_manager_apply_rp(data-&gt;m_client, options);
+    hippo_mongo_driver_manager_apply_wc(data-&gt;m_client, options);
+}</code></pre>
+	</section>
+	<section>
+		<p class="p"><tt>ext_mongo.php</tt> (extract)</p>
+		<pre><code>&lt;?hh
+namespace MongoDB\Driver;
+
+&lt;&lt;__NativeData(&quot;MongoDBDriverReadPreference&quot;)&gt;&gt;
+final class ReadPreference {
+    &lt;&lt;__Native&gt;&gt;
+    private function _setReadPreference(int $readPreference): void;
+
+    &lt;&lt;__Native&gt;&gt;
+    private function _setReadPreferenceTags(array $tagSets): void;
+
+    public function __construct(int $readPreference, mixed $tagSets = null)
+    {
+        if ($tagSets !== NULL &amp;&amp; Utils::mustBeArrayOrObject('parameter 2', $tagSets)) {
+            return;
+        }
+
+        switch ($readPreference) {
+            case ReadPreference::RP_PRIMARY:
+            case ReadPreference::RP_PRIMARY_PREFERRED:
+            case ReadPreference::RP_SECONDARY:
+            case ReadPreference::RP_SECONDARY_PREFERRED:
+            case ReadPreference::RP_NEAREST:
+                // calling into Native
+                $this-&gt;_setReadPreference($readPreference);
+
+                if ($tagSets) {
+                    // calling into Native, might throw exception
+                    $this-&gt;_setReadPreferenceTags($tagSets);
+                }
+
+                break;
+
+            default:
+                Utils::throwHippoException(Utils::ERROR_INVALID_ARGUMENT, &quot;Invalid ReadPreference&quot;);
+                break;
+        }
+    }
+}</code></pre>
+		<p class="p"><tt>src/MongoDB/Driver/Manager</tt> (extract)</p>
+		<pre><code>void HHVM_METHOD(MongoDBDriverReadPreference, _setReadPreference, int readPreference)
+{
+    MongoDBDriverReadPreferenceData* data = Native::data&lt;MongoDBDriverReadPreferenceData&gt;(this_);
+
+    data-&gt;m_read_preference = mongoc_read_prefs_new((mongoc_read_mode_t) readPreference);
+} </code></pre>
+	</section>
+	<section>
+		<p class="p"><tt>src/MongoDB/Driver/Manager.cpp</tt></p>
+		<pre><code>void HHVM_METHOD(MongoDBDriverManager, __construct, const String &amp;dsn, const Array &amp;options, const Array &amp;driverOptions)
+{
+…</code></pre>
+		<p class="p"><tt>src/MongoDB/Manager.c</tt></p>
+		<pre><code>PHP_METHOD(Manager, __construct)
+{
+    php_phongo_manager_t     *intern;
+    zend_error_handling       error_handling;
+    mongoc_uri_t             *uri;
+    char                     *uri_string;
+    int                       uri_string_len;
+    zval                     *options = NULL;
+    bson_t                    bson_options = BSON_INITIALIZER;
+    zval                     *driverOptions = NULL;
+    (void)return_value; (void)return_value_ptr; (void)return_value_used;
+
+    zend_replace_error_handling(EH_THROW, phongo_exception_from_phongo_domain(PHONGO_ERROR_INVALID_ARGUMENT), &amp;error_handling TSRMLS_CC);
+    intern = (php_phongo_manager_t *)zend_object_store_get_object(getThis() TSRMLS_CC);
+
+    if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, &quot;s|a!a!&quot;, &amp;uri_string, &amp;uri_string_len, &amp;options, &amp;driverOptions) == FAILURE) {
+        zend_restore_error_handling(&amp;error_handling TSRMLS_CC);
+        return;
+    }
+    zend_restore_error_handling(&amp;error_handling TSRMLS_CC);
+
+    if (options) {
+        zval_to_bson(options, PHONGO_BSON_NONE, &amp;bson_options, NULL TSRMLS_CC);
+    }
+…
+</code></pre>
+	</section>
+	<section>
+		<pre><code>$m = new MongoDB\Driver\Manager(&quot;mongodb://localhost:27017&quot;);
+
+$c = new MongoDB\Driver\Command( [ 'drop' =&gt; 'test' ] );
+$cursor = $m-&gt;executeCommand( 'demo', $c );
+
+$doc = [
+    'string' =&gt; 'bar',
+    'number_i' =&gt; 55,
+    'number_l' =&gt; 12345678901234567,
+    'bool' =&gt; true,
+    'null' =&gt; null,
+    'float' =&gt; M_PI,
+];
+$bw = new MongoDB\Driver\BulkWrite();
+$bw-&gt;insert( 'demo.test', $doc );
+$m-&gt;executeBulkWrite( 'demo.test', $bw );
+$q = new MongoDB\Driver\Query( [] );
+$cursor = $m-&gt;executeQuery( 'demo.test', $q );
+
+foreach ( $cursor as $key =&gt; $result )
+{
+    print_r( $result );
+}
+?&gt;</code></pre>
+	</section>
+	<section>
+		<pre><code>Array
+(
+    [_id] =&gt; BSON\ObjectID Object
+        (
+            [oid] =&gt; 555b6be7b8c96e1a676318d1
+        )
+
+    [string] =&gt; bar
+    [number_i] =&gt; 55
+    [number_l] =&gt; 12345678901234567
+    [bool] =&gt; 1
+    [null] =&gt; 
+    [float] =&gt; 3.1415926535898
+)</code></pre>
+	</section>
+	<section>
+		<pre><code>stdClass
+(
+    [_id] =&gt; MongoDB\BSON\ObjectID Object
+        (
+            [oid] =&gt; 555b6be7b8c96e1a676318d1
+        )
+
+    [string] =&gt; bar
+    [number_i] =&gt; 55
+    [number_l] =&gt; 12345678901234567
+    [bool] =&gt; 1
+    [null] =&gt; 
+    [float] =&gt; 3.1415926535898
+)</code></pre>
+	</section>
+	<section>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/phongo-pull-request.png" width="" height="">
+		<ul>
+			<li>Sigh</li>
+			<li>Order of elements in structs</li>
+			<li><tt>char&nbsp;*</tt> vs. <tt>zend_string</tt></li>
+			<li>zend_hash changes</li>
+			<li>Not coming out until: after 1.0 for hippo and phongo; PHP 7 is actually released; throrough review</li>
+		</ul>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/logo-composer-transparent3.png" width="" height="">
+		<ul>
+			<li>Userland library sitting on top of Phongo/Hippo</li>
+			<li>Implements the convenience methods that the basic APIs lack</li>
+			<li>Installable by composer:
+</li>
+		</ul>
+	</section>
+	<section>
+		<pre><code>require 'vendor/autoload.php';
+$m = new MongoDB\Client(&quot;mongodb://localhost:27017&quot;);
+$d = $m-&gt;selectDatabase( 'demo' );
+$c = $d-&gt;selectCollection( 'test' );
+
+$c-&gt;drop();
+
+$doc = [
+    'string' =&gt; 'bar',
+    'number_i' =&gt; 55,
+    'number_l' =&gt; 12345678901234567,
+    'bool' =&gt; true,
+    'null' =&gt; null,
+    'float' =&gt; M_PI,
+];
+
+$r = $c-&gt;insertOne( $doc );
+
+$cursor = $c-&gt;find( [] );
+
+foreach ( $cursor-&gt;toArray() as $key =&gt; $result )
+{
+    print_r( $result );
+}
+?&gt;</code></pre>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/moving-target.jpg" width="" height="">
+		<ul>
+			<li>Phongo has been release as 1.0.0</li>
+			<li><tt>MongoDB\Driver\RuntimeException</tt> → <tt>MongoDB\Driver\Exception\RuntimeException</tt></li>
+			<li>Namespace "arguments":<tt>MongoDB\BSON\Binary</tt> vs. <tt>BSON\Binary</tt></li>
+			<li>Changes in result types:<tt>CommandResult</tt> and <tt>QueryResult</tt> → <tt>Result</tt></li>
+			<li>Proper specification on how to serialize/deserialize</li>
+		</ul>
+	</section>
+	<section>
+		<img src="//home/httpd/presentations/slides/mongodb/cookbook.jpg" width="" height="">
+		<ul>
+			<li>Not a lot of the APIs are documented</li>
+			<li>HHVM has "issues" regarding exceptions and ctors</li>
+			<li>Bundling and configuring</li>
+			<li>Sharing connections and state</li>
+			<li>HHVM cookbook:<tt>https://github.com/derickr/hhvm-hni-cookbook</tt></li>
+		</ul>
+	</section>
+	<section>
+		<ul>
+			<li>phongo has been released as 1.0.0<tt>pecl&nbsp;install&nbsp;mongodb</tt></li>
+			<li>hippo has a release candidate<tt>https://github.com/mongodb-labs/mongo-hhvm-driver-prototype/releases/tag/1.0.0RC1</tt></li>
+			<li>phplib in alpha state (1.0.0-alpha1)<tt>https://packagist.org/packages/mongodb/mongodb</tt></li>
+		</ul>
+		<img src="//home/httpd/presentations/slides/mongodb/elephpant-beer.jpg" width="" height="">
+	</section>
+	<section>
+		<ul>
+			<li>---Align APIs---</li>
+			<li>Finish Phongo, Hippo and phplib</li>
+			<li>Add GridFS library to phplib</li>
+			<li>Write documentation and tutorials</li>
+		</ul>
+		<img src="//home/httpd/presentations/slides/mongodb/elephpants-to-do.jpg" width="" height="">
+	</section>
+	<section>
+		<p class="p">http://joind.in/15252</p>
+		<p class="p">derick@mongodb.com—@derickr</p>
+	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				backgroundTransition: 'none',
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				transitionSpeed: 'fast',
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.pack.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true, callback: function() { return !!document.body.classList; } },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
