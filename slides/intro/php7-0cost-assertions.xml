@@ -1,0 +1,30 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Zero-cost Assertions</blurb>
+<example><![CDATA[
+<?php
+function test($arg) {
+    assert($arg > 20 && $arg < 110, "$arg is invalid");
+}
+ini_set('zend.assertions',0); test(16);
+ini_set('zend.assertions',1); test(17);
+ini_set('assert.exception',1); test(18);
+?>]]></example>
+<example><![CDATA[
+Warning: assert(): 17 is invalid failed in file on line 2
+Fatal error: Uncaught AssertionError: 18 is invalid in file:2
+Stack trace:
+#0 file(2): assert(false, '18 is invalid')
+#1 file(6): test(18)
+#2 {main}
+  thrown in file on line 2
+]]></example>
+<example><![CDATA[
+; Completely skip compiling assert() calls
+; (can only be set in php.ini)
+zend.assertions = -1
+]]></example>
+
+</slide>

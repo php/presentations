@@ -1,0 +1,18 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Coalesce Operator</blurb>
+<example><![CDATA[
+<?php
+$a = NULL;
+$b = 0;
+$c = 2;
+
+echo $a ?? $b; // 0
+echo $c ?? $b; // 2
+echo $a ?? $b ?? $c; // 0
+echo $a ?? $x ?? $c; // 2
+?>]]></example>
+
+</slide>

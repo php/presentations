@@ -1,0 +1,21 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>PHP 7 Exception Hierarchy</blurb>
+<break lines="1"/>
+<list>
+<bullet>|ab5c5c|Throwable|
+	<list>
+		<bullet>|ab5c5c|Exception| implements Throwable</bullet>
+		<bullet>|ab5c5c|Error| implements Throwable
+			<list>
+				<bullet>|ab5c5c|TypeError| extends Error</bullet>
+				<bullet>|ab5c5c|ParseError| extends Error</bullet>
+			</list>
+		</bullet>
+	</list>
+</bullet>
+</list>
+
+</slide>

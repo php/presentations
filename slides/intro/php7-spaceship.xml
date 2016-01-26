@@ -1,0 +1,25 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Tie Advanced X1 Operator</blurb>
+<image filename="tieadvancedx1.jpg" align="right"/>
+<example><![CDATA[
+|=|  Tie Fighter
+k=k  Tie Interceptor
+<==> Tie Bomber  
+<=>  Tie Advanced X1 ✔ 
+]]></example>
+<example><![CDATA[
+<?php
+
+function cmp_php5($a, $b) {
+    return ($a < $b) ? -1 : (($a >$b) ? 1 : 0);
+}
+
+function cmp_php7($a, $b) {
+    return $a <=> $b;
+}
+?>]]></example>
+
+</slide>

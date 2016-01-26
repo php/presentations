@@ -1,0 +1,16 @@
+<slide>
+<title>Performance: Memory Size</title>
+
+<list>
+<bullet>Much more cpu cache friendly</bullet>
+<bullet>New memory allocator similar to jemalloc</bullet>
+<bullet>Faster hashtable iteration API</bullet>
+<bullet>Array duplication optimization</bullet>
+<bullet>PCRE JIT enabled by default</bullet>
+<bullet>Fast ZPP (ZendParseParameters) implementation</bullet>
+<bullet>Faster stack-allocated zvals (instead of heap)</bullet>
+<bullet>Optimized VM calling</bullet>
+<bullet>Global register variables with gcc 4.8+</bullet>
+<bullet>plus hundreds of micro-optimizations</bullet>
+</list>
+</slide>

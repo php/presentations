@@ -1,0 +1,32 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Exceptions on Fatals</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+function call_method($obj) {
+    $obj->method();
+}
+call_method(null);
+]]></example>
+<example><![CDATA[
+Fatal error: Uncaught Error: Call to a member function method() on null in file:2
+Stack trace:
+#0 file(4): call_method(NULL)
+#1 {main}
+  thrown in file on line 2
+]]></example>
+
+<example><![CDATA[
+<?php
+try {
+    call_method(null);
+} catch (Error $e) {
+    echo "Caught Exception: {$e->getMessage()}\n";
+}
+]]></example>
+<example><![CDATA[
+Caught Exception: Call to a member function method() on null
+]]></example>
+
+</slide>

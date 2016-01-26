@@ -1,0 +1,16 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ CSPRNG</blurb>
+<example result='1'><![CDATA[
+<?php
+$int   = random_int(-500, 500);
+$bytes = random_bytes(10);
+
+var_dump( $int );
+var_dump( bin2hex($bytes) );
+?>
+]]></example>
+
+</slide>

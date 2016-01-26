@@ -1,0 +1,21 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Return Types</blurb>
+<example><![CDATA[
+function get_config(): array {
+    return 42;
+}
+get_config();
+]]></example>
+<example><![CDATA[
+Fatal error: Uncaught TypeError: Return value of get_config() must be
+of the type array, integer returned in file:2
+Stack trace:
+#0 file(4): get_config()
+#1 {main}
+  thrown in file on line 2
+]]></example>
+
+</slide>

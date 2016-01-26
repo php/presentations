@@ -1,0 +1,130 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<example><![CDATA[
+/var/tmp
+├── 7eeb6fe88104116c27c5650ddd83abf0
+│   └── usr
+│       └── local
+│           └── bin
+│               └── composer.bin
+└── 7eeb6fe88104116c27c5650ddd83abf0phar:
+    └── usr
+        └── local
+            └── bin
+                └── composer
+                    ├── bin
+                    │   └── composer.bin
+                    ├── src
+                    │   ├── bootstrap.php.bin
+                    │   └── Composer
+                    │       ├── Command
+                    │       │   ├── AboutCommand.php.bin
+                    │       │   ├── ArchiveCommand.php.bin
+                    │       │   ├── ClearCacheCommand.php.bin
+                    │       │   ├── Command.php.bin
+                    │       │   ├── ConfigCommand.php.bin
+                    │       │   ├── CreateProjectCommand.php.bin
+                    │       │   ├── DependsCommand.php.bin
+                    │       │   ├── DiagnoseCommand.php.bin
+                    │       │   ├── DumpAutoloadCommand.php.bin
+                    │       │   ├── GlobalCommand.php.bin
+                    │       │   ├── Helper
+                    │       │   │   └── DialogHelper.php.bin
+                    │       │   ├── HomeCommand.php.bin
+                    │       │   ├── InitCommand.php.bin
+                    │       │   ├── InstallCommand.php.bin
+                    │       │   ├── LicensesCommand.php.bin
+                    │       │   ├── RemoveCommand.php.bin
+                    │       │   ├── RequireCommand.php.bin
+                    │       │   ├── RunScriptCommand.php.bin
+                    │       │   ├── SearchCommand.php.bin
+                    │       │   ├── SelfUpdateCommand.php.bin
+                    │       │   ├── ShowCommand.php.bin
+                    │       │   ├── StatusCommand.php.bin
+                    │       │   ├── UpdateCommand.php.bin
+                    │       │   └── ValidateCommand.php.bin
+                    │       ├── Composer.php.bin
+                    │       ├── Console
+                    │       │   └── Application.php.bin
+                    │       ├── Factory.php.bin
+                    │       ├── IO
+                    │       │   ├── BaseIO.php.bin
+                    │       │   ├── ConsoleIO.php.bin
+                    │       │   └── IOInterface.php.bin
+                    │       ├── Package
+                    │       │   ├── BasePackage.php.bin
+                    │       │   └── PackageInterface.php.bin
+                    │       ├── Script
+                    │       │   └── ScriptEvents.php.bin
+                    │       └── Util
+                    │           └── ErrorHandler.php.bin
+                    └── vendor
+                        ├── autoload.php.bin
+                        ├── composer
+                        │   ├── autoload_classmap.php.bin
+                        │   ├── autoload_namespaces.php.bin
+                        │   ├── autoload_psr4.php.bin
+                        │   ├── autoload_real.php.bin
+                        │   └── ClassLoader.php.bin
+                        └── symfony
+                            └── console
+                                └── Symfony
+                                    └── Component
+                                        └── Console
+                                            ├── Application.php.bin
+                                            ├── Command
+                                            │   ├── Command.php.bin
+                                            │   ├── HelpCommand.php.bin
+                                            │   └── ListCommand.php.bin
+                                            ├── Descriptor
+                                            │   ├── ApplicationDescription.php.bin
+                                            │   ├── DescriptorInterface.php.bin
+                                            │   ├── Descriptor.php.bin
+                                            │   ├── JsonDescriptor.php.bin
+                                            │   ├── MarkdownDescriptor.php.bin
+                                            │   ├── TextDescriptor.php.bin
+                                            │   └── XmlDescriptor.php.bin
+                                            ├── Formatter
+                                            │   ├── OutputFormatterInterface.php.bin
+                                            │   ├── OutputFormatter.php.bin
+                                            │   ├── OutputFormatterStyleInterface.php.bin
+                                            │   ├── OutputFormatterStyle.php.bin
+                                            │   └── OutputFormatterStyleStack.php.bin
+                                            ├── Helper
+                                            │   ├── DebugFormatterHelper.php.bin
+                                            │   ├── DescriptorHelper.php.bin
+                                            │   ├── DialogHelper.php.bin
+                                            │   ├── FormatterHelper.php.bin
+                                            │   ├── HelperInterface.php.bin
+                                            │   ├── Helper.php.bin
+                                            │   ├── HelperSet.php.bin
+                                            │   ├── InputAwareHelper.php.bin
+                                            │   ├── ProcessHelper.php.bin
+                                            │   ├── ProgressHelper.php.bin
+                                            │   ├── QuestionHelper.php.bin
+                                            │   ├── TableHelper.php.bin
+                                            │   ├── Table.php.bin
+                                            │   └── TableStyle.php.bin
+                                            ├── Input
+                                            │   ├── ArgvInput.php.bin
+                                            │   ├── ArrayInput.php.bin
+                                            │   ├── InputArgument.php.bin
+                                            │   ├── InputAwareInterface.php.bin
+                                            │   ├── InputDefinition.php.bin
+                                            │   ├── InputInterface.php.bin
+                                            │   ├── InputOption.php.bin
+                                            │   └── Input.php.bin
+                                            └── Output
+                                                ├── ConsoleOutputInterface.php.bin
+                                                ├── ConsoleOutput.php.bin
+                                                ├── NullOutput.php.bin
+                                                ├── OutputInterface.php.bin
+                                                ├── Output.php.bin
+                                                └── StreamOutput.php.bin
+
+32 directories, 87 files
+]]></example>
+
+</slide>

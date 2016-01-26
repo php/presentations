@@ -1,0 +1,38 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Abstract Syntax Tree!!</blurb>
+
+<example><![CDATA[
+<?php
+echo substr("abc", [1,2]);
+]]></example>
+
+<example><![CDATA[
+% phan -a test.php
+AST_STMT_LIST @ 1
+    0: AST_STMT_LIST @ 2
+        0: AST_ECHO @ 2
+            0: AST_CALL @ 2
+                0: AST_NAME @ 2
+                    flags: NAME_NOT_FQ (1)
+                    0: "substr"
+                1: AST_ARG_LIST @ 2
+                    0: "abc"
+                    1: AST_ARRAY @ 2
+                        0: AST_ARRAY_ELEM @ 2
+                            flags: 0
+                            0: 1
+                            1: null
+                        1: AST_ARRAY_ELEM @ 2
+                            flags: 0
+                            0: 2
+                            1: null
+]]></example>
+<example><![CDATA[
+% phan test.php
+test.php:2 TypeError arg#2(start) is int[] but substr() takes int
+]]></example>
+
+</slide>

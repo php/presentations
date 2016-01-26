@@ -1,0 +1,5 @@
+{use $node, $pres}
+{foreach $node->childNodes as $child}
+{raw $child->nodeValue}
+{/foreach}
+</h1>

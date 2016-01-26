@@ -1,0 +1,20 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Strict Scalar Types</blurb>
+<example><![CDATA[
+declare(strict_types=1);
+...
+logmsg(1, "2.5", 3);
+]]></example>
+<example><![CDATA[
+Fatal error: Uncaught TypeError: Argument 1 passed to logmsg() must be of the
+type string, integer given, called in file on line 7 and defined in file:3
+Stack trace:
+#0 file(7): logmsg(1, '2.5', 3)
+#1 {main}
+  thrown in file on line 2
+]]></example>
+
+</slide>

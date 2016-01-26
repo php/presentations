@@ -1,0 +1,22 @@
+<slide>
+<title>Performance: Memory Size</title>
+
+<list>
+<bullet>zval size reduced from 24 to 16 bytes</bullet>
+<bullet>Hashtable size reduced from 72 to 56 bytes</bullet>
+<bullet>Hashtable bucket size reduced from 72 to 32 bytes</bullet>
+<bullet>Immutable array optimization</bullet>
+</list>
+<example><![CDATA[
+<?php
+$a = [];
+for($i=0; $i < 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
+echo memory_get_usage(true);
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled
+]]></example>
+</slide>

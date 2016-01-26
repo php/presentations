@@ -1,0 +1,15 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ 64-bit integer support on Windows</blurb>
+<blurb>✔ Cleanup edge-case integer overflow/underflow</blurb>
+<blurb>✔ Support for strings with length >= 2³¹ bytes in 64 bit builds.</blurb>
+<blurb>✔ Parse error on invalid numeric literals</blurb>
+<example><![CDATA[
+<?php
+$mask = 0855;  // Parse error: Invalid numeric literal
+?>
+]]></example>
+
+</slide>

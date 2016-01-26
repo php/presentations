@@ -1,0 +1,24 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Anonymous Classes</blurb>
+<example><![CDATA[
+<?php
+return new class($controller) implements Page {
+    public function __construct($controller) {
+        /* ... */
+    }
+    /* ... */
+};
+
+class MyObject extends MyStuff {
+    public function getInterface() {
+        return new class implements MyInterface {
+            /* ... */
+        };
+    }
+}
+?>]]></example>
+
+</slide>

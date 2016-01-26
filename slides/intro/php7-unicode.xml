@@ -1,0 +1,14 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔  Unicode Codepoint Escape Syntax</blurb>
+<example result='1'><![CDATA[
+<?php
+echo "\u{202E}Right-to-left text";
+
+echo "\u{1F602}";
+?>
+]]></example>
+
+</slide>
