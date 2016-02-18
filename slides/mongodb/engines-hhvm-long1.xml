@@ -1,0 +1,15 @@
+<slide>
+<title>HipHop for PHP</title>
+
+<list>
+    <bullet>From Facebook</bullet>
+    <bullet>Started out as HipHop for PHP</bullet>
+	<bullet>Compiles PHP to (a huge) binary via C++</bullet>
+    <bullet>Dynamic typing makes this difficult</bullet>
+	<bullet>Function parity lacking</bullet>
+	<bullet>Deprecated in 2013</bullet>
+</list>
+
+<break lines="2"/>
+<image filename="hhvm.png"/>
+</slide>

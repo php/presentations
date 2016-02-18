@@ -1,0 +1,14 @@
+<slide>
+<title>HHVM</title>
+
+<list>
+	<bullet>Development started in 2010</bullet>
+    <bullet>A JIT engine, first to byte code, than to native code</bullet>
+	<bullet>Support for PHP 5.4 and newer features</bullet>
+    <bullet>Also supports Hack language, "Xdebug", etc...</bullet>
+    <bullet>Written in C++, and OCAML, and others</bullet>
+</list>
+
+<break lines="2"/>
+<image filename="hhvm.png"/>
+</slide>

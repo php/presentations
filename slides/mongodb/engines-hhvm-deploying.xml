@@ -1,0 +1,15 @@
+<slide>
+<title>HHVM in production</title>
+
+<list>
+    <bullet>Drop in replacement for PHP-FPM via FastCGI</bullet>
+    <bullet>Current version is 3.12.0 ("LTS")</bullet>
+	<bullet>Supports almost all standard PHP frameworks and many more extensions</bullet>
+    <bullet>Easy to run on 64 bit Linux Debian/Ubuntu</bullet>
+	<bullet>Worksish on Mac OSX</bullet>
+	<bullet>Good luck compiling it</bullet>
+</list>
+
+<break lines="2"/>
+<image filename="hhvm.png"/>
+</slide>

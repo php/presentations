@@ -4,6 +4,9 @@
 <blurb>%ext_mongo.php% (extract)</blurb>
 <example><![CDATA[<?hh
 namespace MongoDB\Driver;
+
+<<__NativeData("MongoDBDriverManager")>>
+class Manager {
     <<__Native>> 
     public function __construct(string $dsn = "localhost", array $options = array(), array $driverOptions = array());
 

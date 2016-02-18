@@ -1,0 +1,14 @@
+<slide>
+<title>Introducing Hack</title>
+
+<list>
+	<bullet>A statically typed language for HHVM</bullet>
+	<bullet>Type Hinting</bullet>
+	<bullet>Static anaylyser (hh_client/hh_server)</bullet>
+	<bullet>Comparable with PHP, Evolved from PHP</bullet>
+	<bullet>Impossible to Google</bullet>
+	<bullet>Integrates with extension writing</bullet>
+</list>
+
+<image filename="hack.png"/>
+</slide>

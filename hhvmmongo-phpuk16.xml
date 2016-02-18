@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>HHVM and MongoDB — the perfect combination</title>
+<event>PHP UK Confernce</event>
+<location>London, UK</location>
+<date>Feb 18th, 2016</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>https://joind.in/talk/057d8</joindin>
+<slide>slides/mongodb/hhvmmongo.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+<slide>slides/mongodb/what-is-mongodb.xml</slide>
+<slide>slides/mongodb/databasefield.xml</slide>
+
+<!--
+In this talk we will discuss using HHVM and MongoDB together. In the last
+months I have written an HHVM extension for MongoDB, that mimics the API of a
+similar PHP extension. On top of each extension we have a layer in PHP that
+provides the more user friendly aspects of the driver. The PHP part of the
+driver gets accelerated to nearly the same speed as the extension written in
+C++, while being vastly easier to update and maintain. We will dive in to the
+architecture of the whole setup, HHVM's JIT and extension APIs as well as some
+comparisons between running your app on PHP+MongoDB and HHVM+MongoDB. 
+-->
+
+<slide>slides/mongodb/driver-current-status.xml</slide>
+<slide>slides/mongodb/new-driver-goals.xml</slide>
+
+<!-- THE ENGINES -->
+<slide>slides/mongodb/the-engines.xml</slide>
+
+<!-- PHP 5 -->
+<slide>slides/mongodb/engines-php5.xml</slide>
+
+<!-- PHP 7 -->
+<slide>slides/mongodb/engines-php7.xml</slide>
+
+<!-- HHVM
+
+HHVM - PERFORMANCE
+- Is it actually much faster? 
+- YES!  
+- But of course it depends !
+- Without JIT, it isn’t (in CLI for example) 
+- JIT needs some warm up requests to find the hot paths 
+- The more your scripts do, the more you gain.
+
+- Repo Authoritive Mode
+
+	- Preanalyse files
+	- PHP files assumed unchanged
+	- Delete cache manually
+
+Hack
+• A statically typed language for HHVM 
+• Comparable with PHP: 
+ – Interoperates with no overhead 
+   – Same representation at runtime 
+• Evolved from PHP: 
+ – If you know PHP, you know Hack! 
+• Designed for incremental adoption : 
+ – Gradual typing 
+
+HACK - TYPE HINTING
+- Scalars  
+- bool, int, float, num, string  
+- Return typehints  
+- Typed properties  
+- Constructor arg promotion 
+- Static analyzer (hh_client/hh_server) looks for mismatches and errors without running code
+
+HACK - TYPE CHECKER
+- hh_client / hh_server 
+- Only runs on linux right now, needs OCaml 
+- hh_client spawns hh_server 
+- hh_server watches file system on each save 
+- makes hh_client really fast 
+- doesn’t check with < ?php  !
+- Integration for vim and emacs available, more should come
+
+Hack Type System 
+  
+• What must be annotated? 
+  – Class members 
+  – Function parameters 
+  – Return types 
+• What is inferred? 
+  – All the rest 
+• Annotating is an incremental process
+
+
+Hack Types
+
+• Nullable : ? int , ? MyClassName
+• Tuples: ( int , bool , X) 
+• Closures: (function( int): int) 
+• CollecAons: Vector< int > , Map<string, int > 
+• Generics: A<T> , foo<T>(T $x): T 
+• Constraints: foo<T as A>(T $x): T 
+• Type aliasing: [new]type t = ... 
+• Extensible records: shape(‘x’ => int) 
+
+Hack is written in Ocaml ! 
+  
+• OCaml was a good choice: 
+  – Ideal for symbolic computation 
+  – Excellent performance 
+  – Can be compiled to JS 
+  – Interoperates well with C 
+  
+• The challenge: 
+  – The runtime doesn’t support multicore 
+
+HHVM - WRITING EXTENSIONS
+- It’s not that hard (compared to PHP extensions anyway) 
+- You can write the “easy” stuff in PHP/Hack 
+- And switch to C++ for the harder stuff
+- We wrote an extension to use New Relic with HHVM 
+- See blog.liip.ch/archive/2014/03/27/hhvm-and-new-relic.html for details
+
+
+HHVM - DRAWBACKS?
+- Not every library works yet (eg. Doctrine DBAL only in dev branch) 
+- Not really open dev model, Facebook controls it totally (and CLA needed for contribution), the far future is unknown 
+- Still kind of moving target 
+- Type Checker only really useful, when all your important classes are converted to < ?hh 
+- No easy way back, when you start using Hack. 
+- If you need exotic extensions ...
+- No PHP 7 support yet
+- Under PHP license, hard to separate
+- Dev team is active on IRC (freenode #hhvm)
+-->
+
+
+
+<slide>slides/mongodb/engines-hhvm-long1.xml</slide>
+<slide>slides/mongodb/engines-hhvm-long2.xml</slide>
+<slide>slides/mongodb/engines-hhvm-deploying.xml</slide>
+<slide>slides/mongodb/engines-hhvm-performance.xml</slide>
+
+<!-- HACK -->
+<slide>slides/mongodb/hack-lang1.xml</slide>
+
+<!-- NEW ARCHITECTURE -->
+
+libbson, libmongoc, Hippo, Phongo and Phplib (flip?)
+Other packages on top (GridFS)
+Composer
+
+<slide>slides/mongodb/new-architecture.xml</slide>
+
+- MongoDB vs Mongo extension
+
+<slide>slides/mongodb/phongo.xml</slide>
+
+<slide>slides/mongodb/hippo.xml</slide>
+<slide>slides/mongodb/hippo-impl-def.xml</slide>
+<slide>slides/mongodb/hippo-impl.xml</slide>
+<slide>slides/mongodb/hippo-impl-2.xml</slide>
+<slide>slides/mongodb/hippo-vs-phongo.xml</slide>
+
+<slide>slides/mongodb/api-new.xml</slide>
+<slide>slides/mongodb/phplib.xml</slide>
+<slide>slides/mongodb/phplib-usage-2.xml</slide>
+<slide>slides/mongodb/api-new.xml</slide>
+
+HHVM is not mature, and certainly not documented.
+
+- Slow going, mention the hhvm cookbook
+- issues with cursor and foreach iteration
+
+<slide>slides/mongodb/hhvm-maturity.xml</slide>
+<slide>slides/mongodb/ghost-bug.xml</slide>
+
+<!-- CURRENT STATUS -->
+
+<slide>slides/mongodb/new-current-status.xml</slide>
+
+- PHP 7...
+
+<slide>slides/mongodb/phongo-php5-7.xml</slide>
+<slide>slides/mongodb/engines-hhvm-performance-php7.xml</slide>
+
+<slide>slides/mongodb/useless-benchmarks.xml</slide>
+<slide>slides/mongodb/benchmark-bson.xml</slide>
+<slide>slides/mongodb/benchmark-lib.xml</slide>
+<slide>slides/mongodb/benchmark-php7-vs-hhvm.xml</slide>
+
+phongo tests:
+hhvm: 127 for 235; php 5.6: 51 for 260; php 7.0: 51 for 261
+
+compiling:
+phongo: 3.5sec (29.2), hippo: 12.8sec (2m41)
+
+library tests:
+7.0: Time: 5.88 seconds, Memory: 12.00Mb
+5.6: Time: 6.63 seconds, Memory: 18.00Mb
+hhvm: Time: 8.39 seconds, Memory: 35.21Mb
+
+
+
+<slide>slides/mongodb/resources.xml</slide>
+
+
+</presentation>
