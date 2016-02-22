@@ -1,6 +1,6 @@
 <slide title="" section="bc7">
 
-<blurb fontsize="20em" align="center">Top-3 Things that might bite you</blurb>
+<blurb fontsize="20em" align="center">Top-5 Things that might bite you</blurb>
 <break lines="3"/>
 <blurb fontsize="1.5em" align="center">For the full list see</blurb>
 <link fontsize="1.25em" align="center" margintop="-0.75em" href="http://php.net/manual/en/migration70.php">php.net/migration70</link>
@@ -40,6 +40,23 @@ echo preg_replace_callback(
 <blurb fontsize="0.8em" align="left">Detection: grep, warnings in logs or unit test failures</blurb>
 
 <break lines="1" section="bc7_3"/>
+<blurb fontsize="1.1em" align="left">$HTTP_RAW_POST_DATA global removed</blurb>
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[
+if (empty($GLOBALS['HTTP_RAW_POST_DATA']) &&
+    strpos($_SERVER['CONTENT_TYPE'], 'www-form-urlencoded') === false) {
+    $GLOBALS['HTTP_RAW_POST_DATA'] = file_get_contents("php://input");
+}
+]]></example>
+<blurb fontsize="0.8em" align="left">Detection: grep, warnings in logs or unit test failures</blurb>
+
+<break lines="1" section="bc7_4"/>
+<blurb fontsize="1.1em" align="left">session.lazy_write enabled by default</blurb>
+<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+session.lazy_write = 0
+]]></example>
+<blurb fontsize="0.8em" align="left">Detection: Can cause out-of-band session read timing issues</blurb>
+
+<break lines="1" section="bc7_5"/>
 <blurb fontsize="1.1em" align="left">Invalid octal literals now produce a parse error</blurb>
 <example fontsize="1.1em" result='0' title="" type="php"><![CDATA[
 echo 05678; // PHP 5.x outputs 375

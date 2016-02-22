@@ -1,0 +1,111 @@
+<slide title="Hyperthreading and NUMA" section="numa">
+
+<list>
+<bullet fontsize="1em" type="circle">HyperThreading handles extreme loads better</bullet>
+<bullet fontsize="1em" type="circle">If you don't have multi-socket servers, turn on HT and move on</bullet>
+<bullet fontsize="1em" type="circle">For multi-socket servers, things get interesting</bullet>
+</list>
+
+<break lines="1" section="numa_singlesocket"/>
+
+<example fontsize="1em" result='0' title="Digital Ocean" type="shell nohighlight"><![CDATA[
+$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    1
+Core(s) per socket:    1
+Socket(s):             2
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 63
+Model name:            Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz
+Stepping:              2
+CPU MHz:               1797.917
+BogoMIPS:              3595.83
+Virtualization:        VT-x
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              30720K
+NUMA node0 CPU(s):     0,1
+]]></example>
+
+<break lines="1" section="numa_multisocket"/>
+<example fontsize="1em" result='0' title="Multi-socket bare metal without HT" type="shell nohighlight"><![CDATA[
+$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                24
+On-line CPU(s) list:   0-23
+Thread(s) per core:    1
+Core(s) per socket:    12
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 63
+Model name:            Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+Stepping:              2
+CPU MHz:               1203.320
+BogoMIPS:              5005.24
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              30720K
+NUMA node0 CPU(s):     0-11
+NUMA node1 CPU(s):     12-23
+]]></example>
+
+<break lines="1" section="numa_multisocket_ht"/>
+<example fontsize="1em" result='0' title="Multi-socket bare metal with HT" type="shell nohighlight"><![CDATA[
+$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                48
+On-line CPU(s) list:   0-47
+Thread(s) per core:    2
+Core(s) per socket:    12
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 63
+Model name:            Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+Stepping:              2
+CPU MHz:               1200.000
+BogoMIPS:              5004.73
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              30720K
+NUMA node0 CPU(s):     0-11,24-35
+NUMA node1 CPU(s):     12-23,36-47
+]]></example>
+
+<break lines="1" section="htop_graphs"/>
+<image width="800" height="325" filename="htop_ht.png" align="center"/>
+<image width="979" height="229" filename="htop.png" align="center"/>
+
+<break lines="1" section="numa_graph"/>
+<image width="979" height="507" filename="numa_ht.png" align="center"/>
+
+<break lines="1" section="numa_solutions"/>
+<break lines="1" />
+<blurb fontsize="4em">Solutions?</blurb>
+<list>
+<bullet fontsize="1em" type="circle">numactl --interleave=all httpd/php-fpm</bullet>
+<bullet fontsize="1em" type="circle">split multi-socket with containers</bullet>
+<bullet fontsize="1em" type="circle">ignore it</bullet>
+</list>
+
+</slide>

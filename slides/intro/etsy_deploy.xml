@@ -5,14 +5,14 @@
 <break lines="1" section="etsy_deploy0"/>
 
 <blurb fontsize="2em" align="left">At Etsy we use irc</blurb>
-<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
-Channel: #push Topic: <prod> *joe *steve frank|bob
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Channel: #push Topic: <prod> *joe frank|bob
 devbot: Swapping symlinks. Your code is about to start taking production traffic
-pushbot: joe steve frank : Your code is live. Time to watch graphs: http://et.sy/abcd
+pushbot: joe frank : Your code is live. Time to watch graphs: http://etsy/abcd
 Rasmus: .join
-*** pushbot has changed the topic on #push to <prod> joe steve frank|bob Rasmus
+*** pushbot has changed the topic on #push to <prod> joe frank|bob Rasmus
 frank: .good
-*** pushbot has changed the topic on #push to <prod> *joe *steve *frank|bob Rasmus
+*** pushbot has changed the topic on #push to <prod> *joe *frank|bob Rasmus
 joe: .done
 *** pushbot has changed the topic on #push to <prod> bob Rasmus
 pushbot: bob Rasmus: You're up
@@ -38,21 +38,21 @@ Rasmus: .in
 <image filename="deployinator.png"/>
 
 <break lines="1" section="etsy_deploy3"/>
-<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
 Channel: #push Topic: <princess> bob Rasmus
 Jenkins: Starting build #36803 for job qa
 Jenkins: Starting build #38784 for job princess
-Jenkins: Project qa build #36803: SUCCESS in 6 min 19 sec: http://ci.etsy/job/qa/36803/
+Jenkins: Project qa build #36803: SUCCESS in 6 min 19 sec: http://ci/job/qa/36803/
 pushbot: bob Rasmus : qa tests have passed
 devbot: [who_tried] Everyone in this push has run Try recently. w00t!
-Jenkins: Project princess build #38784: SUCCESS in 1 min 10 sec: http://ci.etsy/job/princess/38784/
+Jenkins: Project princess build #38784: SUCCESS in 1 min 10 sec: http://ci/job/princess/38784/
 pushbot: bob Rasmus : princess tests have passed
 bob: .good
 Rasmus: .good
 *** pushbot has changed the topic on #push to <princess> *bob *Rasmus
 pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
-Jenkins: qa: last build: 36803 (9 min 5 sec ago): SUCCESS: http://ci.etsy/job/qa/36803/
-Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci.etsy/job/princess/38784/
+Jenkins: qa: last build: 36803 (9 min 5 sec ago): SUCCESS: http://ci/job/qa/36803/
+Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci/job/princess/38784/
 ]]></example>
 
 <break lines="1" section="etsy_deploy4"/>
@@ -64,18 +64,18 @@ Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci.etsy
 </list>
 
 <break lines="1" section="etsy_deploy5"/>
-<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
 Channel: #push Topic: <prod> bob Rasmus
 devbot: Swapping symlinks. Your code is about to start taking production traffic
 pushbot: bob Rasmus : Your code is live. Time to watch graphs: http://etsy/et5cp
 Jenkins: Starting build #39452 for job prod
 pushbot: bob Rasmus : prod tests have passed
-Jenkins: Project prod build #39452: SUCCESS in 30 sec: http://ci.etsy/job/prod/39452/
+Jenkins: Project prod build #39452: SUCCESS in 30 sec: http://ci/job/prod/39452/
 bob: .good
 Rasmus: .good
 *** pushbot has changed the topic on #push to <prod> *bob *Rasmus
 pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
-Jenkins: prod: last build: 39452 (1 min 39 sec ago): SUCCESS: http://ci.etsy/job/prod/39452/
+Jenkins: prod: last build: 39452 (1 min 39 sec ago): SUCCESS: http://ci/job/prod/39452/
 bob: .done
 pushbot: clear
 *** pushbot has changed the topic on #push to clear
