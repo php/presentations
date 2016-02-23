@@ -550,6 +550,61 @@ pushbot: clear
 		<img src="/presentations/slides/intro/mem.png" align="center" width="882" height="465">
 		</section>	</section>
 	<section>
+		<section id="php7_tune_opcache">
+		<h2 margin-bottom="2em">PHP 7 Tuning</h2><br>
+		<p class="p" style="font-size:2em;">Opcache</p>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">opcache.memory_consumption=2048
+opcache.max_accelerated_files=100000
+opcache.validate_timestamps=1
+opcache.revalidate_freq=2
+opcache.save_comments=0
+opcache.enable_file_override=0
+opcache.enable_cli=0
+opcache.max_wasted_percentage=10
+opcache.interned_strings_buffer=128
+opcache.fast_shutdown=1
+opcache.huge_code_pages=1
+opcache.optimization_level=0x7FFFBFFF</code></pre>
+		</section>
+<section id="php7_tune_huge">
+		<p class="p" style="font-size:2em;">Huge Pages</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1.2em;">$ sysctl -w vm.nr_hugepages=512
+vm.nr_hugepages = 512
+(Add it to your /etc/sysctl.conf)
+
+$ grep Huge /proc/meminfo
+AnonHugePages:      6144 kB
+HugePages_Total:     512
+HugePages_Free:      300
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB</code></pre>
+		</section>
+<section id="php7_tune_realpath">
+		<p class="p" style="font-size:2em;">increase realpath_cache_size</p>
+		<pre><code class="ini" data-trim style="font-size:2em;">realpath_cache_size=128k</code></pre>
+		</section>
+<section id="php7_tune_mysql">
+		<p class="p" style="font-size:2em;">If using MySQL, use mysqlnd</p>
+		<img src="/presentations/slides/intro/mysqli.png" align="center" width="958" height="167">
+		<img src="/presentations/slides/intro/pdo.png" align="center" width="952" height="95">
+		<p class="p" style="font-size:1em;">Check your command buffer usage</p>
+		<img src="/presentations/slides/intro/mysqlnd.png" align="center" width="947" height="140">
+		</section>
+<section id="php7_tune_tmpfs">
+		<p class="p" style="font-size:2em;">DocumentRoot on tmpfs</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ mount | grep tmpfs
+tmpfs on /var/www type tmpfs (rw,relatime,size=12288000k,mode=755)
+
+$ ls -la /var/www
+total 5
+drwxr-xr-x  5 root   root    160 Feb 23 02:47 .
+drwxr-xr-x 26 root   root   4096 Feb  7 19:40 ..
+lrwxrwxrwx  1 root   root     14 Feb 23 02:47 current -&gt; /var/www/A
+drwxrwxr-x 25 apache apache  640 Feb 11 22:04 A
+drwxrwxr-x 25 apache apache  640 Feb 11 22:04 B</code></pre>
+		</section>	</section>
+	<section>
 		<section id="numa">
 		<h2 margin-bottom="2em">Hyperthreading and NUMA</h2><br>
 		<ul>
