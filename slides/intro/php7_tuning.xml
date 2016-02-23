@@ -63,4 +63,27 @@ drwxrwxr-x 25 apache apache  640 Feb 11 22:04 A
 drwxrwxr-x 25 apache apache  640 Feb 11 22:04 B
 ]]></example>
 
+<break lines="1" section="php7_tune_app"/>
+<blurb fontsize="2em">Application-level changes?</blurb>
+<example fontsize="1.1em" result='0' title="Remember this?"><![CDATA[
+<?php
+$a = [];
+for($i=0; $i < 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
+echo memory_get_usage(true);
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled
+]]></example>
+
+<example fontsize="1.1em" result='0' title="Use it!"><![CDATA[
+include 'config.php'; // $config = [ ... ]
+]]></example>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+include 'countries.php'; // $countries = [ 'CA'=>'Canada', ... ]
+]]></example>
+
 </slide>
