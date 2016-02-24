@@ -105,6 +105,7 @@ NUMA node1 CPU(s):     12-23,36-47
 <list>
 <bullet fontsize="1em" type="circle">numactl --interleave=all httpd/php-fpm</bullet>
 <bullet fontsize="1em" type="circle">split multi-socket with containers</bullet>
+<bullet fontsize="1em" type="circle">BIOS Snoop Mode setting? HS/ES/COD?</bullet>
 <bullet fontsize="1em" type="circle">ignore it</bullet>
 </list>
 
