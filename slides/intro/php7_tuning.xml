@@ -1,0 +1,89 @@
+<slide title="PHP 7 Tuning" section="php7_tune_opcache">
+
+<blurb fontsize="2em">Opcache</blurb>
+
+<example fontsize="1.1em" marginleft="7em" result='0' title="" type="ini"><![CDATA[<?php
+opcache.memory_consumption=2048
+opcache.max_accelerated_files=100000
+opcache.validate_timestamps=1
+opcache.revalidate_freq=2
+opcache.save_comments=0
+opcache.enable_file_override=0
+opcache.enable_cli=0
+opcache.max_wasted_percentage=10
+opcache.interned_strings_buffer=128
+opcache.fast_shutdown=1
+opcache.huge_code_pages=1
+opcache.optimization_level=0x7FFFBFFF
+]]></example>
+
+<break lines="1" section="php7_tune_huge"/>
+
+<blurb fontsize="2em">Huge Pages</blurb>
+
+<example fontsize="1.2em" marginleft="7em" result='0' title="" type="shell nohighlight"><![CDATA[<?php
+$ sysctl -w vm.nr_hugepages=512
+vm.nr_hugepages = 512
+(Add it to your /etc/sysctl.conf)
+
+$ grep Huge /proc/meminfo
+AnonHugePages:      6144 kB
+HugePages_Total:     512
+HugePages_Free:      300
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+]]></example>
+
+<break lines="1" section="php7_tune_realpath"/>
+<blurb fontsize="2em">increase realpath_cache_size</blurb>
+<example fontsize="2em" marginleft="7em" result='0' title="" type="ini"><![CDATA[<?php
+realpath_cache_size=128k
+]]></example>
+
+<break lines="1" section="php7_tune_mysql"/>
+<blurb fontsize="2em">If using MySQL, use mysqlnd</blurb>
+<image width="958" height="167" filename="mysqli.png" align="center"/>
+<image width="952" height="95" filename="pdo.png" align="center"/>
+<blurb fontsize="1em">Check your command buffer usage</blurb>
+<image width="947" height="140" filename="mysqlnd.png" align="center"/>
+
+<break lines="1" section="php7_tune_tmpfs"/>
+<blurb fontsize="2em">DocumentRoot on tmpfs</blurb>
+<example fontsize="1em" marginleft="7em" result='0' title="" type="shell nohighlight"><![CDATA[<?php
+$ mount | grep tmpfs
+tmpfs on /var/www type tmpfs (rw,relatime,size=12288000k,mode=755)
+
+$ ls -la /var/www
+total 5
+drwxr-xr-x  5 root   root    160 Feb 23 02:47 .
+drwxr-xr-x 26 root   root   4096 Feb  7 19:40 ..
+lrwxrwxrwx  1 root   root     14 Feb 23 02:47 current -> /var/www/A
+drwxrwxr-x 25 apache apache  640 Feb 11 22:04 A
+drwxrwxr-x 25 apache apache  640 Feb 11 22:04 B
+]]></example>
+
+<break lines="1" section="php7_tune_app"/>
+<blurb fontsize="2em">Application-level changes?</blurb>
+<example fontsize="1.1em" result='0' title="Remember this?"><![CDATA[
+<?php
+$a = [];
+for($i=0; $i < 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
+echo memory_get_usage(true);
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled
+]]></example>
+
+<example fontsize="1.1em" result='0' title="Use it!"><![CDATA[
+include 'config.php'; // $config = [ ... ]
+]]></example>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+include 'countries.php'; // $countries = [ 'CA'=>'Canada', ... ]
+]]></example>
+
+</slide>

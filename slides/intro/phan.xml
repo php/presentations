@@ -8,23 +8,23 @@
 <example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
 % phan -h
 Usage: ./phan [options] [files...]
- -f, --fileset <filename>
+ -f, --file-list <filename>
   A file containing a list of PHP files to be analyzed
+
+ -r, --file-list-only
+  A file containing a list of PHP files to be analyzed to the
+  exclusion of any other directories or files passed in. This
+  is useful when running Phan from a stored state file and
+  passing in a small subset of files to be re-analyzed.
 
  -l, --directory <directory>
   A directory to recursively read PHP files from to analyze
 
  -3, --exclude-directory-list <dir_list>
   A comma-separated list of directories for which any files
-  therein should be parsed but not analyzed.
-
- -s, --state-file <filename>
-  Save state to the given file and read from it to speed up
-  future executions
-
- -r, --reanalyze-file-list <file-list>
-  Force a re-analysis of any files passed in even if they haven't
-  changed since the last analysis
+  included from that directory will not be analysis. Note
+  that adding a directory here will not cause its files to
+  be parsed.
 
  -d, --project-root-directory
   Hunt for a directory named .phan in the current or parent
@@ -32,7 +32,7 @@ Usage: ./phan [options] [files...]
   path.
 
  -m <mode>, --output-mode
-  Output mode: text, codeclimate
+  Output mode from 'text', 'json', 'codeclimate', or 'checkstyle'
 
  -o, --output <filename>
   Output filename
@@ -43,6 +43,12 @@ Usage: ./phan [options] [files...]
  -a, --dump-ast
   Emit an AST for each file rather than analyze
 
+ -e, --expand-file-list
+  Expand the list of files passed in to include any files
+  that depend on elements defined in those files. This is
+  useful when running Phan from a state file and passing in
+  just the set of changed files.
+
  -q, --quick
   Quick mode - doesn't recurse into all function calls
 
@@ -50,7 +56,7 @@ Usage: ./phan [options] [files...]
   Check for potential PHP 5 -> PHP 7 BC issues
 
  -i, --ignore-undeclared
- Ignore undeclared functions and classes
+  Ignore undeclared functions and classes
 
  -y, --minimum-severity <level in {0,5,10}>
   Minimum severity level (low=0, normal=5, critical=10) to report.
@@ -64,6 +70,14 @@ Usage: ./phan [options] [files...]
   Emit issues for classes, methods, functions, constants and
   properties that are probably never referenced and can
   possibly be removed.
+
+ -j, --processes <int>
+  The number of parallel processes to run during the analysis
+  phase. Defaults to 1.
+
+ -z, --signature-compatibility
+  Analyze signatures for methods that are overrides to ensure
+  compatiiblity with what they're overriding.
 
  -h,--help
   This help information
@@ -105,34 +119,122 @@ display.php:416 CompatError expression may not be PHP 7 compatible
 % git clone https://github.com/Seldaek/monolog.git
 % cd monolog
 % find . -name '*.php' | grep -v test > filelist.txt
-% phan -i -b -f filelist.txt
+% phan -i -f filelist.txt
 
-./src/Monolog/ErrorHandler.php:167 PhanTypeMismatchProperty Assigning null to property but \Monolog\errorhandler::reservedMemory is string
-./src/Monolog/Formatter/GelfMessageFormatter.php:60 PhanTypeMismatchProperty Assigning null to property but \Monolog\Formatter\gelfmessageformatter::extraPrefix is string
-./src/Monolog/Formatter/NormalizerFormatter.php:62 PhanTypeMismatchArgumentInternal Argument 1 (val) is array but \is_infinite() takes float
-./src/Monolog/Formatter/NormalizerFormatter.php:65 PhanTypeMismatchArgumentInternal Argument 1 (val) is array but \is_nan() takes float
-./src/Monolog/Formatter/NormalizerFormatter.php:98 PhanTypeMismatchArgumentInternal Argument 1 (object) is array but \method_exists() takes object|string
-./src/Monolog/Formatter/NormalizerFormatter.php:99 PhanNonClassMethodCall Call to method __toString on non-class type array
-./src/Monolog/Formatter/NormalizerFormatter.php:105 PhanTypeMismatchArgumentInternal Argument 1 (object) is array but \get_class() takes object
 ./src/Monolog/Handler/ChromePHPHandler.php:178 PhanTypeMismatchReturn Returning type int but headersAccepted() is declared to return bool
-./src/Monolog/Handler/ElasticSearchHandler.php:124 PhanTypeMismatchArgumentInternal Argument 3 (previous) is \Elastica\Exception\exceptioninterface but \runtimeexception::__construct() takes \runtimeexception|\throwable
+./src/Monolog/Handler/ElasticSearchHandler.php:124 PhanTypeMismatchArgumentInternal Argument 3 (previous) is \elastica\exception\exceptioninterface but \runtimeexception::__construct() takes \runtimeexception|\throwable
 ./src/Monolog/Handler/FirePHPHandler.php:81 PhanTypeMismatchReturn Returning type array but createRecordHeader() is declared to return string
 ./src/Monolog/Handler/FirePHPHandler.php:153 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
 ./src/Monolog/Handler/FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
 ./src/Monolog/Handler/FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \key() takes array
-./src/Monolog/Handler/FlowdockHandler.php:70 PhanTypeMissingReturn Method \Monolog\Handler\flowdockhandler::getdefaultformatter is declared to return \Monolog\Formatter\formatterinterface but has no return value
-./src/Monolog/Handler/GelfHandler.php:55 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\gelfhandler::publisher is \Gelf\imessagepublisher|\Gelf\publisher|\Gelf\publisherinterface
+./src/Monolog/Handler/FlowdockHandler.php:70 PhanTypeMissingReturn Method \monolog\handler\flowdockhandler::getdefaultformatter is declared to return \monolog\formatter\formatterinterface but has no return value
+./src/Monolog/Handler/GelfHandler.php:55 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\gelfhandler::publisher is \gelf\imessagepublisher|\gelf\publisher|\gelf\publisherinterface
+./src/Monolog/Handler/MandrillHandler.php:49 PhanSignatureMismatch Declaration of function send($content, array $records) should be compatible with function send(string $content, array $records) defined in ./src/Monolog/Handler/MailHandler.php:46
+./src/Monolog/Handler/NativeMailerHandler.php:117 PhanSignatureMismatch Declaration of function send($content, array $records) should be compatible with function send(string $content, array $records) defined in ./src/Monolog/Handler/MailHandler.php:46
 ./src/Monolog/Handler/RedisHandler.php:41 PhanTypeMismatchDefault Default value for int $capSize can't be bool
-./src/Monolog/Handler/SocketHandler.php:115 PhanTypeMismatchProperty Assigning float to property but \Monolog\Handler\sockethandler::timeout is int
-./src/Monolog/Handler/SocketHandler.php:126 PhanTypeMismatchProperty Assigning float to property but \Monolog\Handler\sockethandler::writingTimeout is int
+./src/Monolog/Handler/SocketHandler.php:115 PhanTypeMismatchProperty Assigning float to property but \monolog\handler\sockethandler::timeout is int
+./src/Monolog/Handler/SocketHandler.php:126 PhanTypeMismatchProperty Assigning float to property but \monolog\handler\sockethandler::writingTimeout is int
 ./src/Monolog/Handler/SocketHandler.php:218 PhanTypeMismatchArgumentInternal Argument 2 (seconds) is float but \stream_set_timeout() takes int
 ./src/Monolog/Handler/SocketHandler.php:218 PhanTypeMismatchArgumentInternal Argument 3 (microseconds) is float but \stream_set_timeout() takes int
-./src/Monolog/Handler/SocketHandler.php:274 PhanTypeMismatchProperty Assigning resource to property but \Monolog\Handler\sockethandler::resource is null
-./src/Monolog/Handler/StreamHandler.php:65 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\streamhandler::stream is resource|string
-./src/Monolog/Handler/StreamHandler.php:86 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\streamhandler::stream is resource|string
-./src/Monolog/Handler/StreamHandler.php:105 PhanTypeMismatchProperty Assigning array|string to property but \Monolog\Handler\streamhandler::errorMessage is null
-./src/Monolog/Handler/SwiftMailerHandler.php:83 PhanTypeMismatchArgument Argument 1 (content) is null but \Monolog\Handler\swiftmailerhandler::buildmessage() takes string defined at ./src/Monolog/Handler/SwiftMailerHandler.php:55
-./src/Monolog/Handler/SyslogUdp/UdpSocket.php:38 PhanTypeMismatchProperty Assigning null to property but \Monolog\Handler\SyslogUdp\udpsocket::socket is resource
+./src/Monolog/Handler/SocketHandler.php:274 PhanTypeMismatchProperty Assigning resource to property but \monolog\handler\sockethandler::resource is null
+./src/Monolog/Handler/StreamHandler.php:65 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\streamhandler::stream is resource|string
+./src/Monolog/Handler/StreamHandler.php:86 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\streamhandler::stream is resource|string
+./src/Monolog/Handler/StreamHandler.php:105 PhanTypeMismatchProperty Assigning array|string to property but \monolog\handler\streamhandler::errorMessage is null
+./src/Monolog/Handler/SwiftMailerHandler.php:43 PhanSignatureMismatch Declaration of function send($content, array $records) should be compatible with function send(string $content, array $records) defined in ./src/Monolog/Handler/MailHandler.php:46
+./src/Monolog/Handler/SyslogUdp/UdpSocket.php:38 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\syslogudp\udpsocket::socket is resource
+]]></example>
+
+<break lines="1" section="phan4"/>
+
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+ChromePHPHandler.php:178 PhanTypeMismatchReturn Returning type int but headersAccepted() is declared to return bool
+]]></example>
+
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[
+/**
+ * Verifies if the headers are accepted by the current user agent
+ *
+ * @return Boolean
+ */
+protected function headersAccepted() {
+    if (empty($_SERVER['HTTP_USER_AGENT'])) {
+        return false;
+    }
+    return preg_match('{\bChrome/\d+[\.\d+]*\b}', $_SERVER['HTTP_USER_AGENT']);
+}
+]]></example>
+<image width="1050" height="170" filename="preg_match.png" align="center"/>
+
+
+<break lines="1" section="phan5"/>
+
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
+]]></example>
+
+<example fontsize="0.8em" result='0' title="" type="php"><![CDATA[
+/**
+ * Base header creation function used by init headers & record headers
+ *
+ * @param  array  $meta    Wildfire Plugin, Protocol & Structure Indexes
+ * @param  string $message Log message
+ * @return array  Complete header string ready for the client as key and message as value
+ */
+protected function createHeader(array $meta, $message) {
+    $header = sprintf('%s-%s', self::HEADER_PREFIX, join('-', $meta));
+
+    return array($header => $message);
+}
+
+/**
+ * Creates message header from record
+ *
+ * @see createHeader()
+ * @param  array  $record
+ * @return string
+ */
+protected function createRecordHeader(array $record)
+{
+    // Wildfire is extensible to support multiple protocols & plugins in a single request,
+    // but we're not taking advantage of that (yet), so we're using "1" for simplicity's sake.
+    return $this->createHeader(
+        array(1, 1, 1, self::$messageIndex++),
+        $record['formatted']
+    );
+}
+
+/**
+ * Creates & sends header for a record, ensuring init headers have been sent prior
+ *
+ * @see sendHeader()
+ * @see sendInitHeaders()
+ * @param array $record
+ */
+protected function write(array $record)
+{
+    if (!self::$sendHeaders) {
+        return;
+    }
+
+    // WildFire-specific headers must be sent prior to any messages
+    if (!self::$initialized) {
+        self::$initialized = true;
+
+        self::$sendHeaders = $this->headersAccepted();
+        if (!self::$sendHeaders) {
+            return;
+        }
+
+        foreach ($this->getInitHeaders() as $header => $content) {
+            $this->sendHeader($header, $content);
+        }
+    }
+
+    $header = $this->createRecordHeader($record);
+    if (trim(current($header)) !== '') {
+        $this->sendHeader(key($header), current($header));
+    }
+}
 ]]></example>
 
 </slide>
