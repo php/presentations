@@ -9,7 +9,7 @@
 <email>derick@xdebug.org</email>
 <twitter>derickr</twitter>
 <url>http://derickrethans.nl/talks.html</url>
-<joindin>http://joind.in/XXXXX</joindin>
+<joindin>https://joind.in/talk/413cf</joindin>
 <slide>slides/mongodb/title.xml</slide>
 <slide>slides/mongodb/me.xml</slide>
 
@@ -37,6 +37,7 @@
 <slide>slides/xdebug/debugger-browser-extensions.xml</slide>
 <!-- <slide>slides/xdebug/debugger-connection-log.xml</slide> -->
 
+<slide>slides/xdebug/paths.xml</slide>
 <slide>slides/internals/vld2.xml</slide>
 
 <slide>slides/xdebug/vld-path-1-code.xml</slide>
@@ -64,8 +65,9 @@
 <slide>slides/xdebug/php7-happened.xml</slide>
 <slide>slides/xdebug/php7-sigh.xml</slide>
 
-<slide>slides/xdebug/xdebug-2.4-new.xml</slide>
 <slide>slides/xdebug/function-monitor.xml</slide>
+
+<slide>slides/mongodb/mongodbworld16.xml</slide>
 
 <slide>slides/xdebug/resources.xml</slide>
 

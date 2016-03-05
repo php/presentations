@@ -1,6 +1,9 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<slide fontsize="6em">
+<slide style="white">
 	<title>Activating the Remote Debugger</title>
+
+	<image filename="bugs.jpg"/>
+
+	<break lines="4"/>
 
 	<blurb>With browser extensions:</blurb>
 	<blurb class="small_blurb">The |bb0000|easiest| Xdebug (FireFox): <link href="https://addons.mozilla.org/en-US/firefox/addon/the-easiest-xdebug/"/></blurb>

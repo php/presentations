@@ -1,8 +1,10 @@
-<slide>
+<slide style="imagebg">
 <title>Today's agenda</title>
-<list>
-	<bullet>Past</bullet>
-	<bullet>Present</bullet>
-	<bullet>Future</bullet>
-</list>
+<image align="center" filename="train.jpg"/>
+<break lines="12"/>
+<div class="center-blurb">
+	<blurb>Past</blurb>
+	<blurb>Present</blurb>
+	<blurb>Future</blurb>
+</div>
 </slide>

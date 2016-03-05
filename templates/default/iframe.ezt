@@ -4,6 +4,7 @@
 {var $width = get_attribute( $node, 'width' )}
 {var $height = get_attribute( $node, 'height' )}
 {var $scrolling = get_attribute( $node, 'scrolling' )}
+{var $zoom = get_attribute( $node, 'zoom' )}
 {var $source = ''}
 {if !$width}{$width = 1010}{/if}
 {if !$height}{$height = 592}{/if}
@@ -13,7 +14,10 @@
 {$source = str_append($pres->base, get_attribute( $node, 'filename' ))}
 {/if}
 {if !$scrolling}{$scrolling = "no"}{/if}
+{if !$zoom}{$zoom = 1}{/if}
+{$height = $height / $zoom}
+{$width = $width / $zoom}
 {if $attr}<div{if $align} align='{$align}'{/if}>{/if}
-<iframe style="clear: both; background-color: #fff; margin-left: 9px;" scrolling="{$scrolling}" frameborder="0" width="{$width}" height="{$height}" {if $inline}class='inline' {/if}{if $align}align='{$align}' {/if}src='{$source}'></iframe>
+<iframe style="zoom={$zoom}; -moz-transform: scale({$zoom}); -moz-transform-origin: 0 0; clear: both; background-color: #fff; margin-left: 9px;" scrolling="{$scrolling}" frameborder="0" width="{$width}" height="{$height}" {if $inline}class='inline' {/if}{if $align}align='{$align}' {/if}src='{$source}'></iframe>
 <!--<img src="{$pres->base}{get_attribute( $node, 'image' )}"/>-->
 {if $attr}<span class='attribution'>{$attr}</span></div>{/if}
