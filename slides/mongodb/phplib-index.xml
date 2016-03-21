@@ -1,0 +1,21 @@
+<slide>
+<title>MongoDB &amp; PHP: Indexes</title>
+
+<example><![CDATA[<?php
+require 'vendor/autoload.php';
+
+$whiskies = (new MongoDB\Client)->dramio->whisky;
+
+// Create normal index
+$whiskies->createIndex( [ 'distiller_slug' => 1 );
+
+// Create unique index
+$whiskies->createIndex( [ 'name' => 1 ], [ 'unique' => true ] );
+
+// Create nested index
+$whiskies->createIndex( [ 'attributes.age' => 1 ] );
+
+// Create compound index
+$whiskies->createIndex( [ 'brand' => 1', 'age' => 1 ] );
+?>]]></example>
+</slide>

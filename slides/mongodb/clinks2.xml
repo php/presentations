@@ -1,0 +1,28 @@
+<slide>
+<title>Embedding Clinks (try 1)</title>
+
+<example inline="1"><![CDATA[
+{
+    "_id" : ObjectId("569ec058b8c96e09421b29f4"),
+    "clinked_by" : [ *{* *"slug" : "derick-rethans", "name" : "Derick Rethans"* *}* ]
+
+}
+]]></example>
+
+<blurb>See whether user has toasted:<example>
+$q = new Query( [ '_id' => new ObjectID( $checkin_id ), 'clinked_by.slug' => $slug );
+$res = iterator_to_array( $manager->executeQuery( 'dramio.checkins', $q ) );
+return count( $res[0] ) > 0;
+</example></blurb>
+
+<blurb>Remove Clink:<example inline="1">
+$q = [ '_id' => new ObjectID( $checkin_id ), 'clinked_by.slug' => $slug ];
+$spec = [ *'$pull'* => [
+    'clinked_by' => [ 'slug' => $user->slug, 'name' => $user->fullname ]
+] ];
+$bw = new BulkWrite;
+$bw->update( $q, $spec );
+$manager->executeBulkWrite( $bw );
+</example></blurb>
+
+</slide>

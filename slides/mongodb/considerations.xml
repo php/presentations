@@ -1,17 +1,13 @@
-<slide>
-<title>Schema considerations</title>
-
+<slide style="imagebg">
+<title>Schema Considerations</title>
+<image align="center" filename="keys.jpg"/>
+<break lines="10"/>
+<div class="center-blurb-wide">
 <list>
 <blurb>Access Patterns</blurb>
     <bullet>Read / Write Ratio</bullet>
     <bullet>Types of queries and updates</bullet>
     <bullet>Data life-cycle</bullet>
 </list>
-<break/>
-<blurb>Considerations</blurb>
-<list>
-    <bullet>Only single-document writes are atomic</bullet>
-    <bullet>No joins (reference vs. embed)</bullet>
-    <bullet>Growing documents may require relocation</bullet>
-</list>
+</div>
 </slide>

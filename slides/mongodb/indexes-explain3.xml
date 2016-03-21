@@ -1,0 +1,32 @@
+<slide>
+<title>Explain (Covering Index)</title>
+
+<example inline="1"><![CDATA[
+> db.whisky.find( { name: 'Ord 10' }, { _id: 0, name: 1 } ).explain();
+{
+    "queryPlanner" : {
+        "namespace" : "dramio.whisky",
+        "indexFilterSet" : false,
+        "parsedQuery" : { "name" : { "$eq" : "Ord 10" } },
+        "winningPlan" : {
+            *"stage" : "PROJECTION",*
+            "transformBy" : *{ "_id" : 0, "name" : 1 }*,
+            "inputStage" : {
+                *"stage" : "IXSCAN",*
+                "keyPattern" : {
+                    "name" : 1
+                },
+                "indexName" : "name_1",
+                "isMultiKey" : false,
+                "direction" : "forward",
+                "indexBounds" : {
+                    "name" : [
+                        "[\"Ord 10\", \"Ord 10\"]"
+                    ]
+                }
+            }
+        },
+    },
+}
+]]></example>
+</slide>

@@ -1,0 +1,21 @@
+<slide>
+<title>Embedding Clinks</title>
+
+<example inline="1"><![CDATA[
+{
+    "_id" : ObjectId("569ec058b8c96e09421b29f4"),
+    "clinked_by" : [ *{* *"slug" : "derick-rethans", "name" : "Derick Rethans"* *}* ]
+}
+]]></example>
+<blurb>*Con:* Not atomic<br/>*Pro:* Simple queries for status and update</blurb>
+<break lines="1"/>
+<example inline="1"><![CDATA[
+{
+    "_id" : ObjectId("569ec058b8c96e09421b29f4"),
+    "clinked_by" : [ *{ "slug" : "derick-rethans", "name" : "Derick Rethans" }* ]
+    *"clinked_count" : { "derick-rethans" : 13 }*
+}
+]]></example>
+<blurb>*Con:* More complex update queries<br/>*Pro:* Atomic; One *command* for update and getting state</blurb>
+
+</slide>

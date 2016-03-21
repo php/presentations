@@ -1,0 +1,20 @@
+<slide style="imagebg">
+<title>Data Model</title>
+<image align="center" filename="keys.jpg"/>
+<break lines="6"/>
+<div class="center-blurb-wide">
+<list>
+	<bullet>No relations between collections</bullet>
+	<bullet>No foreign keys</bullet>
+	<bullet>No transactions</bullet>
+</list>
+</div>
+<break lines="2"/>
+<div class="center-blurb-wide">
+<list>
+	<bullet>Use nested documents and arrays</bullet>
+	<bullet>Duplicate data</bullet>
+	<bullet>Use atomic operations</bullet>
+</list>
+</div>
+</slide>

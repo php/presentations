@@ -1,17 +1,23 @@
-<slide>
+<slide style="imagebg">
 <title>Embedding versus Linking</title>
 
+<image align="center" filename="keys.jpg"/>
+<break lines="5"/>
+<div class="center-blurb-wide">
 <blurb>Embedding</blurb>
 <list>
-    <bullet>Simple data structure</bullet>
-    <bullet>How often do you update?</bullet>
+    <bullet>Simpler data structure</bullet>
+    <bullet>What do you read often together?</bullet>
     <bullet>Will the document grow and grow?</bullet>
 </list>
-
+</div>
+<break lines="1"/>
+<div class="center-blurb-wide">
 <blurb>Linking</blurb>
 <list>
     <bullet>More complex data structure</bullet>
-    <bullet>Unlimited data size</bullet>
     <bullet>More, smaller documents</bullet>
+    <bullet>Unlimited data size</bullet>
 </list>
+</div>
 </slide>

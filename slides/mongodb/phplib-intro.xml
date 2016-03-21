@@ -1,0 +1,27 @@
+<slide>
+<title>MongoDB &amp; PHP</title>
+
+<list>
+	<bullet>Extension: %pecl/mongodb% (PHP 5.4 and higher)</bullet>
+	<bullet>Library: %phplib% (%mongodb/mongodb% on composer)</bullet>
+</list>
+
+<blurb>Installation:</blurb>
+<example>
+pecl install mongodb
+echo "extension=mongodb.so" > /etc/php5/cli/conf.d/20-mongodb.ini"
+
+mkdir new-project
+cd new-project
+composer require mongodb/mongodb
+</example>
+
+<blurb>In your script:</blurb>
+
+<example><![CDATA[<?php
+require 'vendor/autoload.php';
+
+$client = new \Mongo\Client;
+$collection = $client->selectCollection( 'databasename', 'collectionname' );
+?>]]></example>
+</slide>

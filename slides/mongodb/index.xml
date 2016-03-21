@@ -1,0 +1,127 @@
+<slide>
+<title>Indexes</title>
+
+<div effect="fade-out">
+<example>
+{
+  "_id" : ObjectId("56a7f861b8c96e06585e8195"),
+  "name" : "Glen Grant-Glenlivet 20",
+  "style" : "Single Cask",
+  "style_slug" : "single-cask",
+  "description" : "Distilled in 1995 and bottled in October 2005.",
+  "attributes": {
+    "age" : 20,
+    "cask_strength" : true,
+  },
+  "words" : [ "glen", "grant", "glenlivet", "20", "cadenheads" ],
+}
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  *"_id"* : ObjectId("56a7f861b8c96e06585e8195"),
+  "name" : "Glen Grant-Glenlivet 20",
+  "style" : "Single Cask",
+  "style_slug" : "single-cask",
+  "description" : "Distilled in 1995 and bottled in October 2005.",
+  "attributes": {
+    "age" : 20,
+    "cask_strength" : true,
+  },
+  "words" : [ "glen", "grant", "glenlivet", "20", "cadenheads" ],
+}
+</example>
+<list>
+<bullet>%_id%: automatic unique key</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  "_id" : ObjectId("56a7f861b8c96e06585e8195"),
+  *"name" : "Glen Grant-Glenlivet 20",*
+  "style_slug" : "single-cask",
+  "description" : "Distilled in 1995 and bottled in October 2005.",
+  "attributes": {
+    "age" : 20,
+    "cask_strength" : true,
+  },
+  "words" : [ "glen", "grant", "glenlivet", "20", "cadenheads" ],
+}
+</example>
+<list>
+<bullet>%_id%: automatic unique key</bullet>
+<bullet>%name%: unique key</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  "_id" : ObjectId("56a7f861b8c96e06585e8195"),
+  "name" : "Glen Grant-Glenlivet 20",
+  *"style_slug" : "single-cask",*
+  "description" : "Distilled in 1995 and bottled in October 2005.",
+  "attributes": {
+    "age" : 20,
+    "cask_strength" : true,
+  },
+  "words" : [ "glen", "grant", "glenlivet", "20", "cadenheads" ],
+}
+</example>
+<list>
+<bullet>%_id%: automatic unique key</bullet>
+<bullet>%name%: unique key</bullet>
+<bullet>%style_slug%: category lookups</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  "_id" : ObjectId("56a7f861b8c96e06585e8195"),
+  "name" : "Glen Grant-Glenlivet 20",
+  "style_slug" : "single-cask",
+  "description" : "Distilled in 1995 and bottled in October 2005.",
+  *"attributes": {*
+    *"age" : 20,*
+    "cask_strength" : true,
+  },
+  "words" : [ "glen", "grant", "glenlivet", "20", "cadenheads" ],
+}
+</example>
+<list>
+<bullet>%_id%: automatic unique key</bullet>
+<bullet>%name%: unique key</bullet>
+<bullet>%style_slug%: category lookups</bullet>
+<bullet>%attributes.age%: on nested fields</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  "_id" : ObjectId("56a7f861b8c96e06585e8195"),
+  "name" : "Glen Grant-Glenlivet 20",
+  "style_slug" : "single-cask",
+  "description" : "Distilled in 1995 and bottled in October 2005.",
+  "attributes": {
+    "age" : 20,
+    "cask_strength" : true,
+  },
+  *"words" : [ "glen", "grant", "glenlivet", "20", "cadenheads" ],*
+}
+</example>
+<list>
+<bullet>%_id%: automatic unique key</bullet>
+<bullet>%name%: unique key</bullet>
+<bullet>%style_slug%: category lookups</bullet>
+<bullet>%attributes.age%: on nested fields</bullet>
+<bullet>%words%: on array values</bullet>
+</list>
+</div>
+
+</slide>

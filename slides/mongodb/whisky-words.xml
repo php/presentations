@@ -1,0 +1,41 @@
+<slide>
+<title>Finding a Whisky by Words</title>
+
+<table class="leftalign">
+<tr>
+<td><image filename="whisky-words.png"/></td>
+<td align="left">
+<example>
+SELECT w.slug
+FROM whisky w
+LEFT JOIN whisky_words ww
+  ON (w._id = ww.whisky_id)
+WHERE ww.word = 'glenfiddich'
+</example>
+</td>
+</tr>
+</table>
+<table class="leftalign">
+<tr>
+<td>
+<example>
+name: "Glenfiddich 12",
+slug: "glenfiddich-12",
+words: [
+  "glenfiddich",
+  "12"
+],
+</example>
+</td>
+<td>
+<example>
+db.whisky.find(
+  { words: 'glenfiddich' },
+  { slug: 1 }
+).pretty();
+</example>
+</td>
+</tr>
+</table>
+
+</slide>

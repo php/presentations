@@ -1,0 +1,28 @@
+<slide>
+<title>Embedding Clinks (try 2)</title>
+
+<blurb>Add/Remove Clink:<example inline="1">
+$cmd = new \MongoDB\Driver\Command( [
+    'findAndModify' => 'checkins',
+    'query' => [ '_id' => new \MongoDB\BSON\ObjectID( $this->_id ) ],
+    'update' => [
+        *'$addToSet'* => [
+            "clinked_by" => [ 'slug' => $user->slug, 'name' => $user->fullname ]
+        ],
+        *'$inc' => [ "clinked_count.{$user_slug}" => 1 ]*
+    ],
+    *'new' => true,*
+] );
+
+$cursor = $manager->executeCommand( 'dramio', $cmd );
+*$cursor->setTypeMap(* [ 'document' => '\Dram\Checkin' ] );
+$result = $cursor->toArray()[0];
+
+return [
+    'newCheckin' => $result->value,
+    *'toastedNew' => $result->value->clinked_count->{$user->slug} == 1,*
+    *'toasted' => ($result->value->clinked_count->{$user->slug} % 2) == 1*
+];
+</example></blurb>
+
+</slide>

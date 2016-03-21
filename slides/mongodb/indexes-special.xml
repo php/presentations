@@ -1,0 +1,25 @@
+<slide style="imagebg">
+<title>Special Indexes</title>
+
+<image align="center" filename="index.jpg"/>
+<break lines="5"/>
+<div class="center-blurb-wide">
+<blurb>Geospatial Indexes (2d, and 2dsphere)</blurb>
+<list>
+	<bullet>Find objects near a pair of coordinates</bullet>
+	<bullet>Find objects intersecting other objects</bullet>
+	<bullet>GeoJSON: Point, Line, Polygon, GeometryCollection</bullet>
+</list>
+</div>
+
+<break/>
+
+<div class="center-blurb-wide">
+<blurb>Text Indexes</blurb>
+<list>
+	<bullet>"Full Text Search"</bullet>
+	<bullet>Stemming, Weighing, Ranking</bullet>
+</list>
+</div>
+</slide>
+

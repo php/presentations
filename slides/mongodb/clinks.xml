@@ -1,0 +1,43 @@
+<slide>
+<title>Embedding Clinks</title>
+
+<image filename="clink.gif"/>
+
+<div effect="fade-out">
+<example><![CDATA[
+{
+    "_id" : ObjectId("569ec058b8c96e09421b29f4"),
+    "created_at" : 1453244504,
+    "user" : "Derick Rethans",
+    "user_slug" : "derick-rethans",
+    "whisky" : "Ord 10",
+    "whisky_slug" : "glen-ord-10-cadenheads",
+    "distillery" : "Glen Ord",
+    "distillery_slug" : "glen-ord",
+    "clinked_by" : [
+    ]
+}
+]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[
+{
+    "_id" : ObjectId("569ec058b8c96e09421b29f4"),
+    "created_at" : 1453244504,
+    "user" : "Derick Rethans",
+    "user_slug" : "derick-rethans",
+    "whisky" : "Ord 10",
+    "whisky_slug" : "glen-ord-10-cadenheads",
+    "distillery" : "Glen Ord",
+    "distillery_slug" : "glen-ord",
+    "clinked_by" : [
+        *{*
+            *"slug" : "derick-rethans",*
+            *"name" : "Derick Rethans"*
+        *}*
+    ]
+}
+]]></example>
+</div>
+</slide>

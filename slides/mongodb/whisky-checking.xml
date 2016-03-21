@@ -1,0 +1,23 @@
+<slide>
+<title>Listing all Checkins</title>
+
+<table class="leftalign">
+<tr>
+<td><image filename="checkin2.png"/></td>
+<td align="left">
+<blurb>*Pro:* Quick to see all notes for a whisky</blurb>
+<blurb>*Con:*<br/>Difficult to see notes for user<br/>Document size limitations</blurb>
+</td>
+</tr>
+</table>
+<table class="leftalign">
+<tr>
+<td><image filename="checkin1.png"/></td>
+<td align="left">
+<blurb>*Pro:* Easy to see all notes for user *or* whisky</blurb>
+<blurb>*Con:* It takes two queries</blurb>
+</td>
+</tr>
+</table>
+
+</slide>

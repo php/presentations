@@ -1,0 +1,15 @@
+<slide style="imagebg">
+<title>Indexes</title>
+
+<image align="center" filename="index.jpg"/>
+<break lines="5"/>
+<div class="center-blurb-wide">
+<list>
+	<bullet>Indexes are just as important as in a relational database</bullet>
+	<bullet>Every collection has (automatically) an index on %_id%</bullet>
+	<bullet>Indexes can be: single field, compound key, on nested field names</bullet>
+	<bullet>MongoCursor->explain().</bullet>
+</list>
+</div>
+</slide>
+

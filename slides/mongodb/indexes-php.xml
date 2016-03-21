@@ -1,0 +1,30 @@
+<slide>
+<title>Creating Indexes</title>
+
+<blurb>Shell</blurb>
+<example>
+db.checkins.createIndex( { 'clinked_by.slug': 1 } );
+</example>
+
+<blurb>Driver</blurb>
+<example inline="1"><![CDATA[
+$cmd = new \MongoDB\Driver\Command( [
+    'createIndexes => 'checkins',
+    'indexes' => [
+        [ *'key'* => [ 'user_slug' => 1, 'friend_slug => 1 ], *'unique'* => true ],
+    ]
+] );
+$manager->executeCommand( $cmd );
+]]></example>
+
+<blurb>Library</blurb>
+<example inline="1"><![CDATA[
+require 'vendor/autoload.php';
+$collection = (new MongoDB\Client)->dramio->user;
+$collection->createIndex(
+    [ 'validation_code' => 1 ],
+    *[ 'sparse' => true ]*
+);
+]]></example>
+
+</slide>

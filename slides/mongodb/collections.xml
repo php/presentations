@@ -1,0 +1,85 @@
+<slide>
+<title>Collections</title>
+
+<div effect="fade-out">
+<example>
+{
+  "_id" : ObjectId("56b4f6dfb8c96e5c2e5121c7"),
+  "slug" : "ancnoc",
+  "name" : "anCnoc",
+  "region_slug" : "scotland-highlands",
+  "region" : "Scotland, Highlands",
+  "url" : "http://ancnoc.com/",
+}
+{
+  "_id" : ObjectId("56a6a6dab8c96e35ea7b3e24"),
+  "slug" : "suntory",
+  "name" : "Suntory",
+  "region_slug" : "japan",
+  "region" : "Japan",
+  "location" : "Osaka, Japan",
+  "description" : "Suntory Holdings Limited (サントリーホールディングス株式会社
+Santorī Hōrudingusu Kabushiki-Gaisha?) is a Japanese brewing and distilling
+company group. Established in 1899, it is one of the oldest companies in the
+distribution of alcoholic beverages in Japan, and makes Japanese whisky."
+}
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  *"_id" : ObjectId("56b4f6dfb8c96e5c2e5121c7"),*
+  *"slug" : "ancnoc",*
+  *"name" : "anCnoc",*
+  *"region_slug" : "scotland-highlands",*
+  *"region" : "Scotland, Highlands",*
+  "url" : "http://ancnoc.com/",
+}
+{
+  *"_id" : ObjectId("56a6a6dab8c96e35ea7b3e24"),*
+  *"slug" : "suntory",*
+  *"name" : "Suntory",*
+  *"region_slug" : "japan",*
+  *"region" : "Japan",*
+  "location" : "Osaka, Japan",
+  "description" : "Suntory Holdings Limited (サントリーホールディングス株式会社
+Santorī Hōrudingusu Kabushiki-Gaisha?) is a Japanese brewing and distilling
+company group. Established in 1899, it is one of the oldest companies in the
+distribution of alcoholic beverages in Japan, and makes Japanese whisky."
+}
+</example>
+<list>
+<bullet>Common fields</bullet>
+</list>
+</div>
+
+<div effect="fade-in stop">
+<example inline="1">
+{
+  "_id" : ObjectId("56b4f6dfb8c96e5c2e5121c7"),
+  "slug" : "ancnoc",
+  "name" : "anCnoc",
+  "region_slug" : "scotland-highlands",
+  "region" : "Scotland, Highlands",
+  *"url" : "http://ancnoc.com/",*
+}
+{
+  "_id" : ObjectId("56a6a6dab8c96e35ea7b3e24"),
+  "slug" : "suntory",
+  "name" : "Suntory",
+  "region_slug" : "japan",
+  "region" : "Japan",
+  *"location" : "Osaka, Japan",*
+  *"description" : "Suntory Holdings Limited (サントリーホールディングス株式会社*
+*Santorī Hōrudingusu Kabushiki-Gaisha?) is a Japanese brewing and distilling*
+*company group. Established in 1899, it is one of the oldest companies in the*
+*distribution of alcoholic beverages in Japan, and makes Japanese whisky."*
+}
+</example>
+<list>
+<bullet>Common fields</bullet>
+<bullet>Disparate fields</bullet>
+</list>
+</div>
+</slide>

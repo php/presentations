@@ -1,0 +1,18 @@
+<slide>
+<title>Embedding Clinks (try 2)</title>
+
+<example inline="1"><![CDATA[
+{
+    "_id" : ObjectId("569ec058b8c96e09421b29f4"),
+    "clinked_by" : [ *{ "slug" : "derick-rethans", "name" : "Derick Rethans" }* ]
+    *"clinked_count" : { "derick-rethans" : 1 }*
+}
+]]></example>
+
+<blurb>See whether user has toasted:<example inline="1">
+$q = new Query( [ '_id' => new ObjectID( $checkin_id ), 'clinked_by.slug' => $slug );
+$res = iterator_to_array( $manager->executeQuery( 'dramio.checkins', $q ) );
+return *(($res[0]->clinked_count->{$res[0]->user_slug} % 2) == 1);*
+</example></blurb>
+
+</slide>
