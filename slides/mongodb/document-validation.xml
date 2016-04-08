@@ -1,0 +1,21 @@
+<slide>
+<title>Enforcing Schema</title>
+
+<list>
+	<bullet>New in MongoDB 3.2</bullet>
+	<bullet>Allows you to set a *validator*, a query that every new or updated document must match</bullet>
+</list>
+<break lines="1"/>
+<blurb>Example:</blurb>
+<example inline="1">
+db.runCommand( {
+	*collMod:* "whisky",
+	*validator:* {
+		name: { $type: "string" },
+		age: { *$type:* "integer" },
+	},
+	validationLevel: *"moderate"*, // off, strict
+	validationAction: *"warn"*, // error, 
+} )
+</example>
+</slide>
