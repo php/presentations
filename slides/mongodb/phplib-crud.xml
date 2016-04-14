@@ -1,30 +1,30 @@
 <slide>
 <title>MongoDB &amp; PHP: CRUD</title>
 
-<example><![CDATA[<?php
+<example inline="1"><![CDATA[&lt;?php
 require 'vendor/autoload.php';
 
 $whiskies = (new MongoDB\Client)->dramio->whisky;
 
 // Find one document:
-$whisky = $whiskies->findOne( [ 'name' => 'Cambus 26' ] );
+$whisky = $whiskies->*findOne*( [ 'name' => 'Cambus 26' ] );
 
 // Find multiple documents:
-$cursor = $whiskies->find( [ 'style' => 'single-cask' ] );
+$cursor = $whiskies->*find*( [ 'style' => 'single-cask' ] );
 
 // Insert one document:
-$whiskies->insertOne( [ 'name' => 'Glenfiddich 15' ] );
+$whiskies->*insertOne*( [ 'name' => 'Glenfiddich 15' ] );
 
 // Insert multiple documents:
-$whiskies->insertMany( [
+$whiskies->*insertMany*( [
   [ 'name' => 'Glenlivet 12' ],
   [ 'name' => 'Glenlivet 15' ]
 ] );
 
 // Update document:
-$whiskies->updateOne( [ 'slug' => 'cambus-26' ], [ '$set' => [ 'age' => 26 ] ] );
+$whiskies->*updateOne*( [ 'slug' => 'cambus-26' ], [ *'$set'* => [ 'age' => 26 ] ] );
 
 // Remove document:
-$whiskies->deleteOne( [ 'name' => 'Jack Daniels' ] );
+$whiskies->*deleteOne*( [ 'name' => 'Jack Daniels' ] );
 ?>]]></example>
 </slide>
