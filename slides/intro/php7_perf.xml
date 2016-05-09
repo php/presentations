@@ -1,5 +1,19 @@
 <slide title="" section="php7perfdetail">
 
+<blurb fontsize="20em" align="center">JIT?</blurb>
+
+<break lines="1" section="php7perfdetail1"/>
+
+<blurb fontsize="1.1em">Improve CPU cache usage</blurb>
+<list>
+<bullet fontsize="1em" type="none">Step 1: Decrease overall data</bullet>
+<bullet fontsize="1em" type="none">Step 2: Better data locality and less indirections</bullet>
+<bullet fontsize="1em" type="none">Step 3: Save the world!</bullet>
+</list>
+
+<blurb fontsize="1.1em">|338833|Julien's performance talk at 12:00 today|</blurb>
+
+<break lines="1" section="php7perfdetail1"/>
 <list>
 <bullet fontsize="1em" type="none">zval size reduced from 24 to 16 bytes</bullet>
 <bullet fontsize="1em" type="none">Hashtable size reduced from 72 to 56 bytes</bullet>
@@ -22,11 +36,11 @@ echo memory_get_usage(true);
 <break lines="1" section="php7perfdetail2"/>
 
 <list>
-<bullet fontsize="1em" type="none">Much more cpu cache friendly</bullet>
 <bullet fontsize="1em" type="none">New memory allocator similar to jemalloc</bullet>
 <bullet fontsize="1em" type="none">Faster hashtable iteration API</bullet>
 <bullet fontsize="1em" type="none">Array duplication optimization</bullet>
 <bullet fontsize="1em" type="none">PCRE JIT enabled by default</bullet>
+<bullet fontsize="1em" type="none">Precomputed string hashes</bullet>
 <bullet fontsize="1em" type="none">Fast ZPP (ZendParseParameters) implementation</bullet>
 <bullet fontsize="1em" type="none">Faster stack-allocated zvals (instead of heap)</bullet>
 <bullet fontsize="1em" type="none">Optimized VM calling</bullet>

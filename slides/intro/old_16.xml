@@ -1,0 +1,105 @@
+<slide section="in1993">
+<example fontsize="0.82em" type="C"><![CDATA[#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+#include <string.h>
+
+#define ishex(x) (((x) >= '0' && (x) <= '9') || ((x) >= 'a' && \
+                   (x) <= 'f') || ((x) >= 'A' && (x) <= 'F'))
+
+int htoi(char *s) {
+	int     value;
+	char    c;
+
+	c = s[0];
+	if(isupper(c)) c = tolower(c);
+	value=(c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10) * 16;
+
+	c = s[1];
+	if(isupper(c)) c = tolower(c);
+	value += c >= '0' && c <= '9' ? c - '0' : c - 'a' + 10;
+
+	return(value);
+}
+
+void main(int argc, char *argv[]) {
+	char *params, *data, *dest, *s, *tmp;
+	char *name, *age;
+
+	puts("Content-type: text/html\r\n");
+	puts("<HTML><HEAD><TITLE>Form Example</TITLE></HEAD>");
+	puts("<BODY><H1>My Example Form</H1>");
+	puts("<FORM action=\"form.cgi\" method=\"GET\">");
+	puts("Name: <INPUT type=\"text\" name=\"name\">");
+	puts("Age: <INPUT type=\"text\" name=\"age\">");
+	puts("<BR><INPUT type=\"submit\">");
+	puts("</FORM>");
+
+	data = getenv("QUERY_STRING");
+	if(data && *data) {
+		params = data; dest = data;
+    	while(*data) {
+			if(*data=='+') *dest=' ';
+			else if(*data == '%' && ishex(*(data+1))&&ishex(*(data+2))) {
+				*dest = (char) htoi(data + 1);
+				data+=2;
+			} else *dest = *data;
+			data++;
+			dest++;
+		}
+		*dest = '\0';
+		s = strtok(params,"&");
+		do {
+			tmp = strchr(s,'=');
+			if(tmp) {
+				*tmp = '\0';
+				if(!strcmp(s,"name")) name = tmp+1;
+				else if(!strcmp(s,"age")) age = tmp+1;
+			}
+		} while(s=strtok(NULL,"&"));
+
+		printf("Hi %s, you are %s years old\n",name,age);
+	}
+	puts("</BODY></HTML>");
+}
+]]></example>
+
+<break lines="1" section="CGI.pm"/>
+
+<example type="Perl"><![CDATA[use CGI qw(:standard);
+print header;
+print start_html('Form Example'),
+    h1('My Example Form'),
+    start_form,
+    "Name: ", textfield('name'),
+    p,
+    "Age: ", textfield('age'),
+    p,
+    submit,
+    end_form;
+if(param()) {
+    print "Hi ",em(param('name')),
+        "You are ",em(param('age')),
+        " years old";
+}
+print end_html;]]></example>
+
+<break lines="1" section="oldphp"/>
+
+<example type="PHP"><![CDATA[<html><head><title>Form Example</title></head>
+<body><h1>My Example Form</h1>
+  <form action="form.phtml" method="POST">
+    Name: <input type="text" name="name">
+    Age: <input type="text" name="age">
+    <br><input type="submit">
+  </form>
+  <?if($name):?>
+    Hi <?echo $name?>, you are <?echo $age?> years old
+  <?endif?>
+</body></html>]]></example>
+
+<break lines="1" section="hearthack"/>
+
+<image width="1000" height="420" filename="lovehack-white-1000.png" align="center"/>
+
+</slide>

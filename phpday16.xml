@@ -1,0 +1,64 @@
+<presentation
+    template="simple"
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>Deploying PHP 7</title>
+<event>PHPDAY.IT</event>
+<location>Verona</location>
+<date>May 13, 2016</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/phpday16</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/php7_2016.xml</slide>
+<slide>slides/intro/perf2014.xml</slide>
+<slide>slides/intro/php7_perf.xml</slide>
+<slide>slides/intro/benchlies.xml</slide>
+<slide>slides/intro/nov3/benchbox.xml</slide>
+<slide>slides/intro/nov3/drupalbench.xml</slide>
+<slide>slides/intro/nov3/wpbench.xml</slide>
+<slide>slides/intro/nov3/bbbench.xml</slide>
+<slide>slides/intro/nov3/mwbench.xml</slide>
+<slide>slides/intro/nov3/opencartbench.xml</slide>
+<slide>slides/intro/nov3/wardrobebench.xml</slide>
+<slide>slides/intro/nov3/geeklogbench.xml</slide>
+<slide>slides/intro/nov3/magentobench.xml</slide>
+<slide>slides/intro/nov3/traqbench.xml</slide>
+<slide>slides/intro/nov3/cachetbench.xml</slide>
+<slide>slides/intro/nov3/moodlebench.xml</slide>
+<slide>slides/intro/nov3/zencartbench.xml</slide>
+
+<slide>slides/intro/smem.xml</slide>
+<slide>slides/intro/smembase.xml</slide>
+<slide>slides/intro/smemdrupal.xml</slide>
+<slide>slides/intro/smemwp.xml</slide>
+<slide>slides/intro/smembb.xml</slide>
+<slide>slides/intro/smemmoodle.xml</slide>
+<slide>slides/intro/smemwardrobe.xml</slide>
+
+<slide>slides/intro/bc7.xml</slide>
+<slide>slides/intro/phan.xml</slide>
+<slide>slides/intro/deploy_2016.xml</slide>
+<slide>slides/intro/etsy_deploy.xml</slide>
+
+<slide>slides/intro/php7prod.xml</slide>
+<slide>slides/intro/php7_tuning.xml</slide>
+<slide>slides/intro/numa.xml</slide>
+
+<slide>slides/intro/thank_you.xml</slide>
+
+</presentation>
