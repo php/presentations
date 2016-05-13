@@ -35,6 +35,10 @@ HugePages_Surp:        0
 Hugepagesize:       2048 kB
 ]]></example>
 
+<example fontsize="1.1em" marginleft="7em" result='0' title="" type="ini"><![CDATA[<?php
+USE_ZEND_ALLOC_HUGE_PAGES=1 httpd ...
+]]></example>
+
 <break lines="1" section="php7_tune_realpath"/>
 <blurb fontsize="2em">increase realpath_cache_size</blurb>
 <example fontsize="2em" marginleft="7em" result='0' title="" type="ini"><![CDATA[<?php

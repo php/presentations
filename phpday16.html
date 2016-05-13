@@ -558,8 +558,8 @@ $bytes = random_bytes(10);
 
 var_dump( $int );
 var_dump( bin2hex($bytes) );</code></pre>
-		<pre class="output" style="font-size:1.2em;">int(-306)
-string(20) "9873ab7dc8a54e860556"
+		<pre class="output" style="font-size:1.2em;">int(259)
+string(20) "8953b9ae2aed4675b644"
 		</pre>		</section>	</section>
 	<section>
 		<section id="perf2014">
@@ -1503,6 +1503,7 @@ HugePages_Free:      300
 HugePages_Rsvd:        0
 HugePages_Surp:        0
 Hugepagesize:       2048 kB</code></pre>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">USE_ZEND_ALLOC_HUGE_PAGES=1 httpd ...</code></pre>
 		</section>
 <section id="php7_tune_realpath">
 		<p class="p" style="font-size:2em;">increase realpath_cache_size</p>
