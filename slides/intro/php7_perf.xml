@@ -11,8 +11,6 @@
 <bullet fontsize="1em" type="none">Step 3: Save the world!</bullet>
 </list>
 
-<blurb fontsize="1.1em">|338833|Julien's performance talk at 12:00 today|</blurb>
-
 <break lines="1" section="php7perfdetail1"/>
 <list>
 <bullet fontsize="1em" type="none">zval size reduced from 24 to 16 bytes</bullet>
