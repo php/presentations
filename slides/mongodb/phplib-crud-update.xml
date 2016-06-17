@@ -1,0 +1,27 @@
+<slide>
+<title>MongoDB &amp; PHP: Update</title>
+
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+
+$whiskies = (new MongoDB\Client)->dramio->whisky;
+
+// Update *one* document:
+$whiskies->*updateOne*(
+    [ 'slug' => 'cambus-26' ], 
+    [ *'$set'* => [ 'age' => 26 ] ]
+);
+
+// Update *multiple* documents:
+$whiskies->*updateMany*(
+    [ 'region_slug' => 'scotland-highlands' ],
+    [ '$set' => [ 'region_slug' => 'Scotland, Highlands' ] ]
+);
+
+// Update one document, and push an element to an array:
+$whiskies->updateOne(
+    [ 'slug' => 'suntory-hibiki-12' ], 
+    [ *'$addToSet'* => [ 'tags' => 'japanese' ] ]
+);
+?>]]></example>
+</slide>

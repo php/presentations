@@ -3,23 +3,26 @@
 
 <example inline="1">
 db.cities.find( { country_code: 'GB', population: { $gte: 500000 } } )
-         .sort( { population: -1 }).explain();
+         *.sort( { population: -1 })*.explain();
 </example>
 <example inline="1">
 {
-	"cursor" : "BtreeCursor country_code_1_population_1 ~*reverse*~",
-	"nscanned" : 4,
-	"nscannedObjects" : 4,
-	"n" : 4,
-	"nscannedObjectsAllPlans" : 9,
-	"nscannedAllPlans" : 10,
-	"millis" : 0,
-	"isMultiKey" : false,
-	"indexOnly" : false,
-	"indexBounds" : {
-		"country_code" : [ [ "GB", "GB" ] ],
-		"population" : [ [ ~*Infinity, 500000*~ ] ]
-	}
+    "stage" : "FETCH",
+    "inputStage" : {
+        "stage" : "IXSCAN",
+        "keyPattern" : { "country_code" : 1, "population" : 1 },
+        "indexName" : "country_code_1_population_1",
+        "isMultiKey" : false,
+        "isUnique" : false,
+        "isSparse" : false,
+        "isPartial" : false,
+        "indexVersion" : 1,
+        "direction" : *"backward",*
+        "indexBounds" : {
+            "country_code" : [ "[\"GB\", \"GB\"]" ],
+            "population" : [ "[inf.0, 500000.0]" ]
+        }
+    }
 }
 </example>
 <example>

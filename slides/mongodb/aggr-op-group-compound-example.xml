@@ -6,41 +6,41 @@
 <td>
 <example inline="3">
 {
-  "beer_name" : "Sleigh Ride",
-  "beer_type" : "Cider",
-  "brewery_country" : "Wales"
+  "beer_name": "Sleigh Ride",
+  "beer_type": "Cider",
+  "brewery_country": "Wales"
 }
 {
-  "beer_name" : "Mulled Cider",
-  "beer_type" : "Cider",
-  "brewery_country" : "Wales"
+  "beer_name": "Mulled Cider",
+  "beer_type": "Cider",
+  "brewery_country": "Wales"
 }
 {
-  "beer_name" : "Mulled Cider",
-  "beer_type" : "Cider",
-  "brewery_country" : "Wales"
+  "beer_name": "Mulled Cider",
+  "beer_type": "Cider",
+  "brewery_country": "Wales"
 }
 {
-  "beer_name" : "Two Trees",
-  "beer_type" : "Perry",
-  "brewery_country" : "Wales"
+  "beer_name": "Two Trees",
+  "beer_type": "Perry",
+  "brewery_country": "Wales"
 }
 {
-  "beer_name" : "Longdon Perry",
-  "beer_type" : "Perry",
-  "brewery_country" : "England"
+  "beer_name": "Longdon Perry",
+  "beer_type": "Perry",
+  "brewery_country": "England"
 }
 </example>
 </td>
 <td>
-<blurb class="large">→</blurb>
+<blurb>→</blurb>
 </td>
 <td>
 <example inline="3">
 { $group: {
   _id: *{*
-*    'country' : '$brewery_country',*
-*    'type' : '$beer_type'*
+*    'country': '$brewery_country',*
+*    'type': '$beer_type'*
 *  }*
   beers: { *'$addToSet': '$beer_name'* }
 } }
@@ -49,16 +49,16 @@
 
 <example inline="3">
 {
-  "_id" : { "country" : "England", "type" : "Perry" },
-  "beers" : [ "Longdon Perry" ]
+  "_id": { "country": "England", "type": "Perry" },
+  "beers": [ "Longdon Perry" ]
 }
 {
-  "_id" : { "country" : "Wales", "type" : "Cider" },
-  "beers" : [ "Mulled Cider", "Sleigh Ride" ]
+  "_id": { "country": "Wales", "type": "Cider" },
+  "beers": [ "Mulled Cider", "Sleigh Ride" ]
 }
 {
-  "_id" : { "country" : "Wales", "type" : "Perry" },
-  "beers" : [ "Two Trees" ]
+  "_id": { "country": "Wales", "type": "Perry" },
+  "beers": [ "Two Trees" ]
 }
 </example>
 </td></tr></table>

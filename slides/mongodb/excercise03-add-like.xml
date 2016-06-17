@@ -16,10 +16,9 @@
 
 <div effect="fade-in">
 <example><![CDATA[<?php
-$m = new MongoClient;
-$c = $m->demo->whisky;
+$whisky = new (\MongoDB\Client)->demo->whisky;
 
-$c->update(
+$whisky->updateOne(
     [ 'name' => 'Glenfiddich 15', 'notes.user_name' => 'Derick' ],
     [ '$inc => [ 'notes.$.likes' => 1 ] ]
 );

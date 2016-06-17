@@ -1,0 +1,25 @@
+<slide>
+<title>MongoDB &amp; PHP: Query Operators</title>
+
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+$checkins = (new MongoDB\Client)->dramio->whisky;
+
+// Find checkins with a rating *greater than or equal to 3*:
+$cursor = $checkins->find( [ 'rating' => [ *'$gte' => 3* ] );
+
+// Find checkins with a rating *less than 4*, *or* *not* for a *single cask* whisky:
+$cursor = $checkins->find( [ *'$or'* => [
+    [ 'rating' => [ *'$lt' => 4* ],
+    [ 'style' => [ *'$ne'* => 'single-cask'] ],
+] ] );
+
+// Find checkins where the *description field exists*
+$cursor = $checkins->find( [ 'description' => [ *'$exists' => true* ] );
+
+// Find checkins where the region is an element *in* the array
+$cursor = $checkins->find( [ 'region_slug' => [
+    *'$in' => [ 'scotland-speyside', 'scotland-highlands' ]* 
+] ] );
+?>]]></example>
+</slide>

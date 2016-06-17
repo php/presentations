@@ -8,25 +8,23 @@
             user_name: "Derick",
             date: ISODate("2013-10-02"),
             note: "Caramel and honey, fruity with some hints of earth",
-            likes: 17,
-            rating: 3,
+            likes: 17, rating: 3,
         }
     ]
 }]]></example>
 
 <div effect="fade-in">
 <example><![CDATA[<?php
-$m = new MongoClient;
-$c = $m->demo->whisky;
+$whisky = new (\MongoDB\Client)->demo->whisky;
 
 $newReview = [
     user_name => "Michael",
-    date => new MongoDate(strtotime("2013-10-01")),
+    date => new \MongoDB\BSON\UTCDateTime( strtotime("2013-10-01") * 1000 ),
     note => "No peat, but fruity",
     rating => 1,
 ];
 
-$c->update(
+$whisky->updateOne(
     [ 'name' => 'Glenfiddich 15' ],
     [ '$push => [ 'notes' => $newReview ] ]
 );

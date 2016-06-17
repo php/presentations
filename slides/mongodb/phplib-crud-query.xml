@@ -1,0 +1,21 @@
+<slide>
+<title>MongoDB &amp; PHP: Query</title>
+
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+$whiskies = (new MongoDB\Client)->dramio->whisky;
+
+// Find one document:
+$whisky = $whiskies->*findOne*( [ 'name' => 'Cambus 26' ] );
+
+// Find one document, using a nested field:
+$whisky = $whiskies->findOne( [ *'date_time.month'* => 4 ] );
+
+// Find one document, but only show some fields:
+$whisky = $whiskies->findOne(
+    [ 'name' => 'Cambus 26' ], // query
+    [
+        *'projection' => [ '_id' => 0, 'name' => 1, 'region' => 1 ],*
+    ]
+);]]></example>
+</slide>

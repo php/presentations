@@ -1,0 +1,26 @@
+<slide>
+<title>MongoDB &amp; PHP: CRUD (Create)</title>
+
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+
+$whiskies = (new \MongoDB\Client)->dramio->whisky;
+
+$doc1 = [
+    "slug" => "ancnoc",
+    "name" => "anCnoc",
+    "region_slug" => "scotland-highlands",
+];
+$doc2 = [
+    "slug" => "ardmore",
+    "name" => "Ardmore",
+    "region_slug" => "scotland-speyside",
+];
+
+// Insert one document:
+$whiskies->*insertOne*( $doc1 );
+
+// Insert multiple documents:
+$whiskies->*insertMany*( [ $doc1, $doc2 ] );
+?>]]></example>
+</slide>

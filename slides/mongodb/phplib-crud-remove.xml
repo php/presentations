@@ -1,0 +1,15 @@
+<slide>
+<title>MongoDB &amp; PHP: Remove</title>
+
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+
+$whiskies = (new MongoDB\Client)->dramio->whisky;
+
+// Remove document:
+$whiskies->*deleteOne*( [ 'name' => 'Jack Daniels' ] );
+
+// Remove multiple documents:
+$whiskies->*deleteMany*( [ 'style_slug' => 'blended-grain' ] );
+?>]]></example>
+</slide>

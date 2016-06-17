@@ -1,0 +1,107 @@
+<slide>
+<title>Let's look at the query plan</title>
+
+<div effect="fade-out">
+<example inline="1">
+db.cities
+  .find( { country_code: 'GB', population: { $gte: 500000 } } )
+  .*explain("executionStats)*;
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Some stats about the query itself:</blurb>
+<example inline="1">
+{
+    "queryPlanner" : {
+        "plannerVersion" : 1,
+        "namespace" : "demo.cities",
+        "indexFilterSet" : false,
+        "parsedQuery" : {
+            "$and" : [
+                {
+                    "country_code" : {
+                        "$eq" : "GB"
+                    }
+                },
+                {
+                    "population" : {
+                        "$gte" : 500000
+                    }
+                }
+            ]
+        },
+</example>
+</div>
+<div effect="fade-in-out">
+<blurb>The chosen query plan:</blurb>
+<example inline="1">
+        "winningPlan" : {
+            *"stage" : "FETCH",*
+            "inputStage" : {
+                *"stage" : "IXSCAN",*
+                *"keyPattern" : { "country_code" : 1, "population" : 1 },*
+                "indexName" : *"country_code_1_population_1",*
+                "isMultiKey" : false,
+                "isUnique" : false,
+                "isSparse" : false,
+                "isPartial" : false,
+                "indexVersion" : 1,
+                *"direction" : "forward",*
+                "indexBounds" : {
+                    "country_code" : [ "[\"GB\", \"GB\"]" ],
+                    "population" : [ "[500000.0, inf.0]" ]
+                }
+            }
+        },
+</example>
+</div>
+<div effect="fade-in-out">
+<blurb>All the other considered plans:</blurb>
+<example inline="1">
+        "rejectedPlans" : [ ... ]
+    },
+</example>
+</div>
+<div effect="fade-in-out">
+<blurb>Statistics from the execution:</blurb>
+<example inline="1">
+    "executionStats" : {
+        *"nReturned" : 4,*
+        "executionTimeMillis" : 12,
+        *"totalKeysExamined" : 4,*
+        *"totalDocsExamined" : 4,*
+        "executionStages" : {
+            "stage" : "FETCH",
+            *"nReturned" : 4,*
+            "executionTimeMillisEstimate" : 10,
+            "inputStage" : {
+                "stage" : "IXSCAN",
+                *"nReturned" : 4,*
+                "executionTimeMillisEstimate" : 10,
+                "direction" : "forward",
+                "indexBounds" : {
+                    "country_code" : [ "[\"GB\", \"GB\"]" ],
+                    "population" : [ "[500000.0, inf.0]" ]
+                },
+                *"keysExamined" : 4,*
+            }
+        }
+    },
+</example>
+</div>
+<div effect="fade-in-out">
+<blurb>And some server info:</blurb>
+<example>
+    "serverInfo" : {
+        "host" : "whisky",
+        "port" : 27017,
+        "version" : "3.3.8",
+        "gitVersion" : "00ed8f3b275971093ddd2ee7d3ab558904e28af0"
+    },
+    "ok" : 1
+}
+</example>
+</div>
+
+</slide>

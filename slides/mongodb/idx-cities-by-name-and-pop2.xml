@@ -2,25 +2,218 @@
 <title>Let's look at the query plan</title>
 
 <example inline="1">
-db.cities.find( { country_code: 'GB', population: { $gte: 500000 } } ).*explain()*;
+db.cities
+  .find( { country_code: 'GB', population: { $gte: 500000 } } )
+  .*explain("executionStats)*;
 </example>
 <example inline="1">
 {
-	"cursor" : "*BtreeCursor country_code_1_population_1*",
-	|00aa00|"nscanned" : 4,|
-	|00aa00|"nscannedObjects" : 4,|
-	|00aa00|"n" : 4,|
-	"nscannedObjectsAllPlans" : 9,
-	"nscannedAllPlans" : 10,
-	"millis" : 0,
-	"nYields" : 0,
-	"nChunkSkips" : 0,
-	"isMultiKey" : false,
-	"indexOnly" : false,
-	"indexBounds" : {
-		"country_code" : [ [ "GB", "GB" ] ],
-		"population" : [ [ 500000, Infinity ] ]
-	}
+    "queryPlanner" : {
+        "plannerVersion" : 1,
+        "namespace" : "demo.cities",
+        "indexFilterSet" : false,
+        "parsedQuery" : {
+            "$and" : [
+                {
+                    "country_code" : {
+                        "$eq" : "GB"
+                    }
+                },
+                {
+                    "population" : {
+                        "$gte" : 500000
+                    }
+                }
+            ]
+        },
+        "winningPlan" : {
+            "stage" : "FETCH",
+            "inputStage" : {
+                "stage" : "IXSCAN",
+                "keyPattern" : {
+                    "country_code" : 1,
+                    "population" : 1
+                },
+                "indexName" : "country_code_1_population_1",
+                "isMultiKey" : false,
+                "isUnique" : false,
+                "isSparse" : false,
+                "isPartial" : false,
+                "indexVersion" : 1,
+                "direction" : "forward",
+                "indexBounds" : {
+                    "country_code" : [
+                        "[\"GB\", \"GB\"]"
+                    ],
+                    "population" : [
+                        "[500000.0, inf.0]"
+                    ]
+                }
+            }
+        },
+        "rejectedPlans" : [
+            {
+                "stage" : "FETCH",
+                "filter" : {
+                    "country_code" : {
+                        "$eq" : "GB"
+                    }
+                },
+                "inputStage" : {
+                    "stage" : "IXSCAN",
+                    "keyPattern" : {
+                        "population" : 1,
+                        "elevation" : 1
+                    },
+                    "indexName" : "population_1_elevation_1",
+                    "isMultiKey" : false,
+                    "isUnique" : false,
+                    "isSparse" : false,
+                    "isPartial" : false,
+                    "indexVersion" : 1,
+                    "direction" : "forward",
+                    "indexBounds" : {
+                        "population" : [
+                            "[500000.0, inf.0]"
+                        ],
+                        "elevation" : [
+                            "[MinKey, MaxKey]"
+                        ]
+                    }
+                }
+            },
+            {
+                "stage" : "FETCH",
+                "filter" : {
+                    "country_code" : {
+                        "$eq" : "GB"
+                    }
+                },
+                "inputStage" : {
+                    "stage" : "IXSCAN",
+                    "keyPattern" : {
+                        "population" : 1,
+                        "dem" : 1
+                    },
+                    "indexName" : "population_1_dem_1",
+                    "isMultiKey" : false,
+                    "isUnique" : false,
+                    "isSparse" : false,
+                    "isPartial" : false,
+                    "indexVersion" : 1,
+                    "direction" : "forward",
+                    "indexBounds" : {
+                        "population" : [
+                            "[500000.0, inf.0]"
+                        ],
+                        "dem" : [
+                            "[MinKey, MaxKey]"
+                        ]
+                    }
+                }
+            },
+            {
+                "stage" : "FETCH",
+                "filter" : {
+                    "population" : {
+                        "$gte" : 500000
+                    }
+                },
+                "inputStage" : {
+                    "stage" : "IXSCAN",
+                    "keyPattern" : {
+                        "country_code" : 1,
+                        "timezone" : 1,
+                        "asciiname" : 1
+                    },
+                    "indexName" : "country_code_1_timezone_1_asciiname_1",
+                    "isMultiKey" : false,
+                    "isUnique" : false,
+                    "isSparse" : false,
+                    "isPartial" : false,
+                    "indexVersion" : 1,
+                    "direction" : "forward",
+                    "indexBounds" : {
+                        "country_code" : [
+                            "[\"GB\", \"GB\"]"
+                        ],
+                        "timezone" : [
+                            "[MinKey, MaxKey]"
+                        ],
+                        "asciiname" : [
+                            "[MinKey, MaxKey]"
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "executionStats" : {
+        "executionSuccess" : true,
+        "nReturned" : 4,
+        "executionTimeMillis" : 12,
+        "totalKeysExamined" : 4,
+        "totalDocsExamined" : 4,
+        "executionStages" : {
+            "stage" : "FETCH",
+            "nReturned" : 4,
+            "executionTimeMillisEstimate" : 10,
+            "works" : 7,
+            "advanced" : 4,
+            "needTime" : 0,
+            "needYield" : 1,
+            "saveState" : 6,
+            "restoreState" : 6,
+            "isEOF" : 1,
+            "invalidates" : 0,
+            "docsExamined" : 4,
+            "alreadyHasObj" : 0,
+            "inputStage" : {
+                "stage" : "IXSCAN",
+                "nReturned" : 4,
+                "executionTimeMillisEstimate" : 10,
+                "works" : 5,
+                "advanced" : 4,
+                "needTime" : 0,
+                "needYield" : 0,
+                "saveState" : 6,
+                "restoreState" : 6,
+                "isEOF" : 1,
+                "invalidates" : 0,
+                "keyPattern" : {
+                    "country_code" : 1,
+                    "population" : 1
+                },
+                "indexName" : "country_code_1_population_1",
+                "isMultiKey" : false,
+                "isUnique" : false,
+                "isSparse" : false,
+                "isPartial" : false,
+                "indexVersion" : 1,
+                "direction" : "forward",
+                "indexBounds" : {
+                    "country_code" : [
+                        "[\"GB\", \"GB\"]"
+                    ],
+                    "population" : [
+                        "[500000.0, inf.0]"
+                    ]
+                },
+                "keysExamined" : 4,
+                "seeks" : 1,
+                "dupsTested" : 0,
+                "dupsDropped" : 0,
+                "seenInvalidated" : 0
+            }
+        }
+    },
+    "serverInfo" : {
+        "host" : "whisky",
+        "port" : 27017,
+        "version" : "3.3.8",
+        "gitVersion" : "00ed8f3b275971093ddd2ee7d3ab558904e28af0"
+    },
+    "ok" : 1
 }
 </example>
 <example>

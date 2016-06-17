@@ -13,15 +13,6 @@ db.cities.createIndex( { elevation: -1 } );
 db.cities.find( { population: { $gte: 2000000 }, elevation: { $gte : 1654 } })
          .sort( { elevation: -1 } )
          .hint( { elevation: -1 } );</example>
-<example inline="1">
-{
-	*"cursor" : "BtreeCursor elevation_-1",*
-	*|ff8000|"nscanned" : 614,|*
-	"nscannedObjects" : 614,
-	"n" : 6,
-	"millis" : 2,
-...
-</example>
 </bullet>
 </list>
 </slide>

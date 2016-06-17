@@ -5,19 +5,15 @@
 db.cities.find( { elevation: { $gte : 1654 } } ).explain();
 </example>
 <example inline="1">
-{
-	*|f10000|"cursor" : "BasicCursor",|*
-	"nscanned" : 22840,
-	"nscannedObjects" : 22840,
-	"n" : 614,
-	"millis" : 26,
-	"nYields" : 0,
-	"nChunkSkips" : 0,
-	"isMultiKey" : false,
-	"indexOnly" : false,
-	"indexBounds" : {
-	}
-}
+"winningPlan" : {
+    *"stage" : "COLLSCAN",*
+    "filter" : {
+        "elevation" : {
+            "$gte" : 1654
+        }
+    },
+    "direction" : "forward"
+},
 </example>
 <div effect="fade-in">
 <break/>

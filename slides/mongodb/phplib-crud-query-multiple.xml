@@ -1,0 +1,21 @@
+<slide>
+<title>MongoDB &amp; PHP: Query</title>
+
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+$whiskies = (new MongoDB\Client)->dramio->whisky;
+
+// Find multiple documents:
+$cursor = $whiskies->*find*( [ 'style_slug' => 'single-cask' ] );
+
+// Find multiple documents, with *sort*, *skip* over 5, and *limit* to 5:
+$cursor = $whiskies->find(
+    [ 'style_slug' => 'single-cask' ],
+    [
+        'projection' => [ '_id' => 0, 'name' => 1, 'region' => 1 ],
+        *'sort'* => [ 'name' => 1 ],
+        *'skip'* => 5,
+        *'limit'* => 5,
+    ]
+);]]></example>
+</slide>

@@ -4,17 +4,16 @@
 <example result="0"><![CDATA[<?php
 $options = [ 'replicaSet' => 'seta' ];
 
-$m = new MongoClient( 'mongodb://localhost:13000/?replicaSet=seta' );
+$m = new \MongoDB\Client( 'mongodb://localhost:13000/?replicaSet=seta' );
 
-$m = new MongoClient( 'mongodb://localhost:13000,localhost:13001', $options );
+$m = new \MongoDB\Client( 'mongodb://localhost:13000,localhost:13001', $options );
 
-$m = new MongoClient( 'mongodb://user:password@localhost:13000/demo', $options );
+$m = new \MongoDB\Client( 'mongodb://user:password@localhost:13000/demo', $options );
 ?>]]></example>
 
 <list>
-	<bullet>Add more than one host for seeding</bullet>
+	<bullet>Add more than one host for seeding (a majority)</bullet>
 	<bullet>Don't add the arbiters to the connection string</bullet>
-	<bullet>Don't use %->authenticate()%</bullet>
 </list>
 
 </slide>
