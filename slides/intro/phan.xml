@@ -5,7 +5,7 @@
 <link fontsize="1.25em" align="center" href="https://github.com/etsy/phan">github.com/etsy/phan</link>
 
 <break lines="1" section="phan1"/>
-<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 % phan -h
 Usage: ./phan [options] [files...]
  -f, --file-list <filename>
@@ -85,7 +85,7 @@ Usage: ./phan [options] [files...]
 
 <break lines="1" section="phan2"/>
 
-<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 % phan -i -b display.php
 
 display.php:416 CompatError expression may not be PHP 7 compatible
@@ -115,7 +115,7 @@ display.php:416 CompatError expression may not be PHP 7 compatible
 
 <break lines="1" section="phan3"/>
 
-<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 % git clone https://github.com/Seldaek/monolog.git
 % cd monolog
 % find . -name '*.php' | grep -v test > filelist.txt
@@ -146,7 +146,7 @@ display.php:416 CompatError expression may not be PHP 7 compatible
 
 <break lines="1" section="phan4"/>
 
-<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 ChromePHPHandler.php:178 PhanTypeMismatchReturn Returning type int but headersAccepted() is declared to return bool
 ]]></example>
 
@@ -168,11 +168,11 @@ protected function headersAccepted() {
 
 <break lines="1" section="phan5"/>
 
-<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
 ]]></example>
 
-<example fontsize="0.8em" result='0' title="" type="php"><![CDATA[
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[
 /**
  * Base header creation function used by init headers & record headers
  *
