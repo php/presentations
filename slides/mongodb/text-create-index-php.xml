@@ -1,12 +1,27 @@
 <slide>
 <title>Create a Text Search Index</title>
 
-<example><![CDATA[<?php
-$m = new MongoClient;
+<blurb>Driver</blurb>
+<example inline="1"><![CDATA[&lt;?php
+$cmd = new \MongoDB\Driver\Command( [
+    'createIndexes => 'articles',
+    'indexes' => [
+        [
+          'key' => [ 'subject' => *'text'*, 'post' => *'text'* ],
+          *'weights' => [ 'subject' => 10, 'post' => 5 ]*
+        ]
+    ]
+] );
+$manager->executeCommand( 'demo', $cmd );
+?>]]></example>
 
-$m->demo->articles->createIndex(
-	[ 'subject' => 'text', 'post' => 'text' ],
-	[ 'weights' => [ 'subject' => 10, 'post' => 5 ] ]
+<blurb>Library</blurb>
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+$collection = (new MongoDB\Client)->demo->articles;
+$collection->createIndex(
+    [ 'subject' => *'text'*, 'post' => *'text'* ],
+    [ *'weights' => [ 'subject' => 10, 'post' => 5 ]* ]
 );
 ?>]]></example>
 </slide>

@@ -1,25 +1,34 @@
 <slide>
 <title>Do a Text Search Query</title>
 
-<div effect="fade-out">
-<example>
-db.articles.find(
-	{ '$text' : { '$search' : '"advent" "xdebug"' } },
-	{ subject: 1, _id: 0 }
-);
-</example>
-</div>
+<example inline="1"><![CDATA[&lt;?php
+require 'vendor/autoload.php';
+$m = new \MongoDB\Client;
 
-<div effect="fade-in">
-<example result="1"><![CDATA[<?php
-$m = new MongoClient;
 $cursor = $m->demo->articles->find(
-	[ '$text' => [ '$search' => '"advent" "xdebug"' ] ],
+	[ *'$text'* => [ '$search' => '"advent" "xdebug"' ] ],
 	[ 'subject' => 1, '_id' => 0 ]
 );
 foreach ( $cursor as $result ) {
 	echo $result['subject'], "\n";
 }
 ?>]]></example>
+
+<div effect="fade-in">
+<blurb>Result:</blurb>
+<example>
+Contributing Advent 17: Printing stacks
+Contributing Advent 22: Documenting changes
+Contributing Advent 20: Xdebug halting on error
+Contributing Advent 8: The magic __FILE__ constant
+Contributing Advent 23: Reproducing issues
+Whisky Advent: part 3
+Whisky Advent: part 4
+Contributing Advent 1: Xdebug and hidden properties
+Contributing Advent 24: Wrapping up!
+Contributing Advent
+Contributing Advent 15: Xdebug connection timeout
+</example>
 </div>
+
 </slide>

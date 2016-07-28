@@ -7,18 +7,18 @@ db.checkins.createIndex( { 'clinked_by.slug': 1 } );
 </example>
 
 <blurb>Driver</blurb>
-<example inline="1"><![CDATA[
+<example inline="1"><![CDATA[&lt;?php
 $cmd = new \MongoDB\Driver\Command( [
     'createIndexes => 'checkins',
     'indexes' => [
         [ *'key'* => [ 'user_slug' => 1, 'friend_slug => 1 ], *'unique'* => true ],
     ]
 ] );
-$manager->executeCommand( $cmd );
+$manager->executeCommand( 'dramio', $cmd );
 ]]></example>
 
 <blurb>Library</blurb>
-<example inline="1"><![CDATA[
+<example inline="1"><![CDATA[&lt;?php
 require 'vendor/autoload.php';
 $collection = (new MongoDB\Client)->dramio->user;
 $collection->createIndex(

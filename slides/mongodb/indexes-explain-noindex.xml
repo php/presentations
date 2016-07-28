@@ -1,0 +1,24 @@
+<slide>
+<title>Explain (No Index)</title>
+
+<example inline="1"><![CDATA[
+> db.whisky.find( { distillery: 'Ord' } ).explain();
+{
+    "queryPlanner" : {
+        "namespace" : *"dramio.whisky",*
+        "indexFilterSet" : false,
+        "parsedQuery" : { "distillery" : { "$eq" : "Ord" } },
+        "winningPlan" : {
+            "stage" : *"COLLSCAN",*
+            "filter" : {
+                "distillery" : {
+                    *"$eq" : "Ord"*
+                }
+            },
+            "direction" : "forward"
+        },
+        *"rejectedPlans" : [ ]*
+    },
+}
+]]></example>
+</slide>

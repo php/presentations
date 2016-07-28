@@ -4,30 +4,34 @@
 <blurb>
 Basic, default weights:
 </blurb>
-<example>
-db.articles.createIndex( { subject: "text", post: "text" } );
+<example inline="1">
+$collection->createIndex( [ 'subject' => *'text'*, 'post' => *'text'* ] ),
 </example>
 
 <blurb>
 Explicit weights:
 </blurb>
-<example>
-db.articles.createIndex( { subject: "text", post: "text" },
-                         { weights: { "subject": 10 } } );
+<example inline="1">
+$collection->createIndex(
+    [ 'subject' => 'text', 'post' => 'text' ],
+    [ *'weights' => [ 'subject' => 10 ]* ]
+);
 </example>
 
 <blurb>
 Wildcard field: text at any depth, default weights:
 </blurb>
-<example>
-db.articles.createIndex( { "$**": "text" } );
+<example inline="1">
+$collection->createIndex( [ *'$\*\*'* => 'text' ] ),
 </example>
 
 <blurb>
-Wildcard field: override default weights and explicit weights:
+Wildcard: override default weights and explicit weights:
 </blurb>
-<example>
-db.articles.createIndex( { "$**": "text" },
-                         { weights: {"$**": 10, post: 5 } } );
+<example inline="1">
+$collection->createIndex(
+    [ '$\*\*' => 'text' ],
+    [ *'weights' => [ '$\*\*' => 10, 'post' => 5 ]* ]
+);
 </example>
 </slide>
