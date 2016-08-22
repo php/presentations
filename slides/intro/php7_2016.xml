@@ -321,12 +321,7 @@ echo $a ?? $x ?? $c; // 2
 
 <break lines="1" section="Spaceship"/>
 <blurb fontsize="1.1em" align="left">✔ Spaceship Operator</blurb>
-<example fontsize="1.5em" result='0' title=""><![CDATA[
-|=|  Tie Fighter
-k=k  Tie Interceptor
-<==> Tie Bomber  
-<=>  Tie Advanced X1 ✔ 
-]]></example>
+<image filename="lego-php-astronaut.png" width="230" height="345"/>
 <example fontsize="1.1em" result='0' title=""><![CDATA[
 <?php
 
