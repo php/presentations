@@ -561,8 +561,8 @@ $bytes = random_bytes(10);
 
 var_dump( $int );
 var_dump( bin2hex($bytes) );</code></pre>
-		<pre class="output" style="font-size:1.2em;">int(-427)
-string(20) "64699c4e73a7384777b7"
+		<pre class="output" style="font-size:1.2em;">int(-500)
+string(20) "2c036aad5b026c33fe7f"
 		</pre>		</section>	</section>
 	<section>
 		<section id="php7perfdetail">
@@ -1365,8 +1365,15 @@ pushbot: clear
 		</section>
 <section id="php71_void">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ void return type</p>
-		<pre><code class="ini" data-trim style="font-size:1.1em;">function should_return_nothing(): void {
+		<pre><code data-trim style="font-size:1.1em;">function should_return_nothing(): void {
     return 1; // Fatal error: A void function must not return a value
+}</code></pre>
+		</section>
+<section id="php71_nullable">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Nullable types</p>
+		<pre><code data-trim style="font-size:1.1em;">function answer(int $a, ?int $b): ?int  {
+    if($a &gt; $b) return $a;
+    else return null;
 }</code></pre>
 		</section>
 <section id="php71iterable">
@@ -1413,6 +1420,7 @@ Notice: A non well formed numeric string encountered in example.php on line 2</c
 			<li style="font-size: 0.8em;margin-left: -1em;">rand() and srand() are now aliased to mt_rand() and mt_srand()</li>
 			<li style="font-size: 0.8em;margin-left: -1em;">Calling a function with too few args is now an Error instead of a Warning</li>
 			<li style="font-size: 0.8em;margin-left: -1em;">Dropped support for sslv2 streams</li>
+			<li style="font-size: 0.8em;margin-left: -1em;">Dropped support for mcrypt</li>
 		</ul>
 		</section>	</section>
 	<section>

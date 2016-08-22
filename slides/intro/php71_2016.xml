@@ -5,10 +5,21 @@
 <break lines="1" section="php71_void"/>
 <blurb fontsize="1.1em" align="left">✔ void return type</blurb>
 
-<example fontsize="1.1em" result='0' title="" type="ini"><![CDATA[
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
 <?php
 function should_return_nothing(): void {
     return 1; // Fatal error: A void function must not return a value
+}
+]]></example>
+
+<break lines="1" section="php71_nullable"/>
+<blurb fontsize="1.1em" align="left">✔ Nullable types</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+function answer(int $a, ?int $b): ?int  {
+    if($a > $b) return $a;
+    else return null;
 }
 ]]></example>
 
@@ -76,6 +87,7 @@ class Token {
 <bullet marginleft="-1em" fontsize="0.8em">rand() and srand() are now aliased to mt_rand() and mt_srand()</bullet>
 <bullet marginleft="-1em" fontsize="0.8em">Calling a function with too few args is now an Error instead of a Warning</bullet>
 <bullet marginleft="-1em" fontsize="0.8em">Dropped support for sslv2 streams</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">Dropped support for mcrypt</bullet>
 </list>
 
 </slide>
