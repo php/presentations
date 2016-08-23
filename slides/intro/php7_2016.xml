@@ -501,7 +501,7 @@ $foo()()
 <?php
 echo "\u{202E}Right-to-left text";
 
-echo "\u{1F602}";
+echo " \u{26BD}";
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">✔ ICU IntlChar class added to intl extension</blurb>
