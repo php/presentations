@@ -135,183 +135,6 @@ Notice: Undefined variable: notes in /home/rasmus/src/web/pres2/reveal_template.
 			<li style="font-size: 1em;">Lower memory usage, sometimes drastically lower</li>
 		</ul>
 		</section>
-<section id="php7pcache1">
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ Persistent secondary file-based cache for OPCache</p>
-		<img src="/presentations/slides/intro/pcache.png"  width="" height="">
-		</section>
-<section id="php7pcache3">
-		<pre><code class="ini" data-trim style="font-size:1.1em;">; --enable-opcache-file
-; php.ini
-opcache.file_cache=/var/tmp
-
-; php-cli.ini
-opcache.enable_cli=1
-opcache.file_cache=/var/tmp
-opcache.file_cache_only=1</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ time composer &gt;/dev/null
-real	0m0.040s
-user	0m0.032s
-sys	0m0.004s
-
-$ time composer &gt;/dev/null
-real	0m0.019s
-user	0m0.016s
-sys	0m0.000s
-
-$ time php -d opcache.enable=0 /usr/local/bin/composer &gt;/dev/null
-real	0m0.033s
-user	0m0.032s
-sys	0m0.000s</code></pre>
-		</section>
-<section id="php7pcache4">
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.78em;">/var/tmp
-├── 7eeb6fe88104116c27c5650ddd83abf0
-│   └── usr
-│       └── local
-│           └── bin
-│               └── composer.bin
-└── 7eeb6fe88104116c27c5650ddd83abf0phar:
-    └── usr
-        └── local
-            └── bin
-                └── composer
-                    ├── bin
-                    │   └── composer.bin
-                    ├── src
-                    │   ├── bootstrap.php.bin
-                    │   └── Composer
-                    │       ├── Command
-                    │       │   ├── AboutCommand.php.bin
-                    │       │   ├── ArchiveCommand.php.bin
-                    │       │   ├── ClearCacheCommand.php.bin
-                    │       │   ├── Command.php.bin
-                    │       │   ├── ConfigCommand.php.bin
-                    │       │   ├── CreateProjectCommand.php.bin
-                    │       │   ├── DependsCommand.php.bin
-                    │       │   ├── DiagnoseCommand.php.bin
-                    │       │   ├── DumpAutoloadCommand.php.bin
-                    │       │   ├── GlobalCommand.php.bin
-                    │       │   ├── Helper
-                    │       │   │   └── DialogHelper.php.bin
-                    │       │   ├── HomeCommand.php.bin
-                    │       │   ├── InitCommand.php.bin
-                    │       │   ├── InstallCommand.php.bin
-                    │       │   ├── LicensesCommand.php.bin
-                    │       │   ├── RemoveCommand.php.bin
-                    │       │   ├── RequireCommand.php.bin
-                    │       │   ├── RunScriptCommand.php.bin
-                    │       │   ├── SearchCommand.php.bin
-                    │       │   ├── SelfUpdateCommand.php.bin
-                    │       │   ├── ShowCommand.php.bin
-                    │       │   ├── StatusCommand.php.bin
-                    │       │   ├── UpdateCommand.php.bin
-                    │       │   └── ValidateCommand.php.bin
-                    │       ├── Composer.php.bin
-                    │       ├── Console
-                    │       │   └── Application.php.bin
-                    │       ├── Factory.php.bin
-                    │       ├── IO
-                    │       │   ├── BaseIO.php.bin
-                    │       │   ├── ConsoleIO.php.bin
-                    │       │   └── IOInterface.php.bin
-                    │       ├── Package
-                    │       │   ├── BasePackage.php.bin
-                    │       │   └── PackageInterface.php.bin
-                    │       ├── Script
-                    │       │   └── ScriptEvents.php.bin
-                    │       └── Util
-                    │           └── ErrorHandler.php.bin
-                    └── vendor
-                        ├── autoload.php.bin
-                        ├── composer
-                        │   ├── autoload_classmap.php.bin
-                        │   ├── autoload_namespaces.php.bin
-                        │   ├── autoload_psr4.php.bin
-                        │   ├── autoload_real.php.bin
-                        │   └── ClassLoader.php.bin
-                        └── symfony
-                            └── console
-                                └── Symfony
-                                    └── Component
-                                        └── Console
-                                            ├── Application.php.bin
-                                            ├── Command
-                                            │   ├── Command.php.bin
-                                            │   ├── HelpCommand.php.bin
-                                            │   └── ListCommand.php.bin
-                                            ├── Descriptor
-                                            │   ├── ApplicationDescription.php.bin
-                                            │   ├── DescriptorInterface.php.bin
-                                            │   ├── Descriptor.php.bin
-                                            │   ├── JsonDescriptor.php.bin
-                                            │   ├── MarkdownDescriptor.php.bin
-                                            │   ├── TextDescriptor.php.bin
-                                            │   └── XmlDescriptor.php.bin
-                                            ├── Formatter
-                                            │   ├── OutputFormatterInterface.php.bin
-                                            │   ├── OutputFormatter.php.bin
-                                            │   ├── OutputFormatterStyleInterface.php.bin
-                                            │   ├── OutputFormatterStyle.php.bin
-                                            │   └── OutputFormatterStyleStack.php.bin
-                                            ├── Helper
-                                            │   ├── DebugFormatterHelper.php.bin
-                                            │   ├── DescriptorHelper.php.bin
-                                            │   ├── DialogHelper.php.bin
-                                            │   ├── FormatterHelper.php.bin
-                                            │   ├── HelperInterface.php.bin
-                                            │   ├── Helper.php.bin
-                                            │   ├── HelperSet.php.bin
-                                            │   ├── InputAwareHelper.php.bin
-                                            │   ├── ProcessHelper.php.bin
-                                            │   ├── ProgressHelper.php.bin
-                                            │   ├── QuestionHelper.php.bin
-                                            │   ├── TableHelper.php.bin
-                                            │   ├── Table.php.bin
-                                            │   └── TableStyle.php.bin
-                                            ├── Input
-                                            │   ├── ArgvInput.php.bin
-                                            │   ├── ArrayInput.php.bin
-                                            │   ├── InputArgument.php.bin
-                                            │   ├── InputAwareInterface.php.bin
-                                            │   ├── InputDefinition.php.bin
-                                            │   ├── InputInterface.php.bin
-                                            │   ├── InputOption.php.bin
-                                            │   └── Input.php.bin
-                                            └── Output
-                                                ├── ConsoleOutputInterface.php.bin
-                                                ├── ConsoleOutput.php.bin
-                                                ├── NullOutput.php.bin
-                                                ├── OutputInterface.php.bin
-                                                ├── Output.php.bin
-                                                └── StreamOutput.php.bin
-
-32 directories, 87 files</code></pre>
-		</section>
-<section id="php7ast">
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ Abstract Syntax Tree!!</p>
-		<pre><code data-trim style="font-size:1.1em;">echo substr(&quot;abc&quot;, [1,2]);</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.8em;">% phan -a test.php
-AST_STMT_LIST @ 1
-    0: AST_STMT_LIST @ 2
-        0: AST_ECHO @ 2
-            0: AST_CALL @ 2
-                0: AST_NAME @ 2
-                    flags: NAME_NOT_FQ (1)
-                    0: &quot;substr&quot;
-                1: AST_ARG_LIST @ 2
-                    0: &quot;abc&quot;
-                    1: AST_ARRAY @ 2
-                        0: AST_ARRAY_ELEM @ 2
-                            flags: 0
-                            0: 1
-                            1: null
-                        1: AST_ARRAY_ELEM @ 2
-                            flags: 0
-                            0: 2
-                            1: null</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.8em;">% phan test.php
-test.php:2 TypeError arg#2(start) is int[] but substr() takes int</code></pre>
-		</section>
 <section id="php7excep">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ Exceptions on Fatals</p>
 		<pre><code data-trim style="font-size:1.1em;">function call_method($obj) {
@@ -412,45 +235,6 @@ echo $a ?? $x ?? $c; // 2</code></pre>
 function cmp_php7($a, $b) {
     return $a &lt;=&gt; $b;
 }</code></pre>
-		</section>
-<section id="php7assert">
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ Zero-cost Assertions</p>
-		<pre><code data-trim style="font-size:1.1em;">function test($arg) {
-    assert($arg &gt; 20 &amp;&amp; $arg &lt; 110, &quot;$arg is invalid&quot;);
-}
-ini_set('zend.assertions',0); test(16);
-ini_set('zend.assertions',1); test(17);
-ini_set('assert.exception',1); test(18);</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">Warning: assert(): 17 is invalid failed in file on line 2
-Fatal error: Uncaught AssertionError: 18 is invalid in file:2
-Stack trace:
-#0 file(2): assert(false, '18 is invalid')
-#1 file(6): test(18)
-#2 {main}
-  thrown in file on line 2</code></pre>
-		<pre><code class="ini" data-trim style="font-size:1.1em;">; Completely skip compiling assert() calls
-; (can only be set in php.ini)
-zend.assertions = -1</code></pre>
-		</section>
-<section id="php7closecall">
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ Added Closure::call()</p>
-		<pre><code data-trim style="font-size:1.1em;">$f = function () {
-    return $this-&gt;n;
-};
-class MyClass {
-    private $n = 42;
-}
-$myC = new MyClass;
-$c = $f-&gt;bindTo($myC, &quot;MyClass&quot;);
-$c();</code></pre>
-		<pre><code data-trim style="font-size:1.1em;">$f = function () {
-    return $this-&gt;n;
-};
-class MyClass {
-    private $n = 42;
-}
-$myC = new MyClass;
-$f-&gt;call($myC);</code></pre>
 		</section>
 <section id="php7cleanups">
 		<p class="p" style="font-size:1.1em;text-align:left;">✔ Removal of many deprecated features<BR/>
@@ -561,8 +345,8 @@ $bytes = random_bytes(10);
 
 var_dump( $int );
 var_dump( bin2hex($bytes) );</code></pre>
-		<pre class="output" style="font-size:1.2em;">int(-221)
-string(20) "f083364202516c8c5845"
+		<pre class="output" style="font-size:1.2em;">int(-363)
+string(20) "98ee21d594529d55a327"
 		</pre>		</section>	</section>
 	<section>
 		<section id="php7perfdetail">
@@ -625,87 +409,48 @@ Hugepagesize:       2048 kB</code></pre>
 		<h1 style="text-align:center;">JIT?</h1>
 		</section>	</section>
 	<section>
-		<section id="smem">
-		<p class="p" style="font-size:1.3em;text-align:left;">Measuring Memory Use</p>
-		<ul>
-			<li style="font-size: 0.8em;list-style-type: none;">VSZ - Virtual Memory Size (swapped out, shared libs, everything)</li>
-			<li style="font-size: 0.8em;list-style-type: none;">RSS - Resident Set Size (everything not swapped out)</li>
-			<li style="font-size: 0.8em;list-style-type: none;">SIZE - Data segment of the process</li>
-		</ul>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">debian:/home/rasmus# ps ef -o command,vsize,rss,size -C php-fpm
-COMMAND                        VSZ   RSS  SIZE
-php-fpm: master process (/u 459152  9912  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304
- \_ php-fpm: pool www       459152  7732  3304</code></pre>
-		</section>
-<section id="smemtop">
-		<p class="p" style="font-size:1.3em;text-align:left;">top isn't helpful either</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">debian:/home/rasmus# top -p $(pgrep -d , php-fpm)
-top - 07:04:14 up 19 days, 15:21,  1 user,  load average: 0.00, 0.04, 0.51
-Tasks:  11 total,   0 running,  11 sleeping,   0 stopped,   0 zombie
-%Cpu(s):  0.0 us,  0.0 sy,  0.0 ni, 99.9 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
-KiB Mem:  16355868 total, 15789244 used,   566624 free,   493148 buffers
-KiB Swap:        0 total,        0 used,        0 free. 13514376 cached Mem
+		<section id="drupalbench">
 
-  PID USER      PR  NI    VIRT    RES    SHR S  %CPU %MEM     TIME+ COMMAND                                                                    
-13950 root      20   0  459152   9912   6016 S   0.0  0.1   0:00.02 php-fpm                                                                    
-13951 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13952 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13953 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13954 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13955 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13956 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13957 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13958 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13959 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm                                                                    
-13960 www-data  20   0  459152   7732   3836 S   0.0  0.0   0:00.00 php-fpm</code></pre>
+<div id="drupalbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/drupalbench.js"></script>
+		</section>	</section>
+	<section>
+		<section id="wpbench">
+
+<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/wpbench.js"></script>
 		</section>
-<section id="smembaseintro">
-		<p class="p" style="font-size:1.3em;text-align:left;">smem!</p>
-		<ul>
-			<li style="font-size: 0.8em;list-style-type: none;">USS - Unique Set Size</li>
-			<li style="font-size: 0.8em;list-style-type: none;">PSS - Proportional Set Size</li>
-			<li style="font-size: 0.8em;list-style-type: none;">RSS - Resident Set Size</li>
-		</ul>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">debian:/home/rasmus# smem -t -k -U www-data -P &quot;.*php-fpm&quot;
-  PID User     Command                         Swap      USS      PSS      RSS 
-12570 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12571 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12572 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12573 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12574 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12575 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12576 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12577 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12578 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
-12579 www-data php-fpm: pool www                  0   156.0K   621.0K     7.6M 
--------------------------------------------------------------------------------
-   10 1                                           0     1.5M     6.1M    75.9M</code></pre>
+<section id="fdo">
+		<p class="p" style="font-size:1.1em;text-align:center;">GCC Feedback-Directed Optimization (FDO)</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ make clean
+$ make -j8 prof-gen
+...
+$ sapi/cgi/php-cgi -T 1000 /var/www/wordpress/index.php &gt; /dev/null
+$ make prof-clean
+$ make -j8 prof-use</code></pre>
 		</section>
-<section id="smemload">
-		<p class="p" style="font-size:1.3em;text-align:left;">Serving Drupal 8</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">debian:/home/rasmus# smem -t -k -U www-data -P &quot;.*php-fpm&quot;
-  PID User     Command                         Swap      USS      PSS      RSS 
-13233 www-data php-fpm: pool www                  0   792.0K     1.3M     9.2M 
-13231 www-data php-fpm: pool www                  0   792.0K     1.3M     9.2M 
-13235 www-data php-fpm: pool www                  0   792.0K     1.3M     9.2M 
-13232 www-data php-fpm: pool www                  0   796.0K     1.3M     9.2M 
-13234 www-data php-fpm: pool www                  0   792.0K     1.3M     9.3M 
-13227 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
-13229 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
-13230 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
-13226 www-data php-fpm: pool www                  0   808.0K     1.3M     9.2M 
-13228 www-data php-fpm: pool www                  0   808.0K     1.3M     9.3M 
--------------------------------------------------------------------------------
-   10 1                                           0     7.8M    12.9M    92.4M</code></pre>
+<section id="wpbench_fdo">
+
+<div id="wpbench_fdo_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/wpbench_fdo.js"></script>
+		</section>	</section>
+	<section>
+		<section id="bbbench">
+
+<div id="bbbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/bbbench.js"></script>
+		</section>	</section>
+	<section>
+		<section id="moodlebench">
+
+<div id="moodlebench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/moodlebench.js"></script>
+		</section>	</section>
+	<section>
+		<section id="wardrobebench">
+
+<div id="wardrobebench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/wardrobebench.js"></script>
 		</section>	</section>
 	<section>
 		<section id="smembase">
