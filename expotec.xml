@@ -24,24 +24,21 @@
 
 <slide>slides/intro/titlepage.xml</slide>
 
-<slide>slides/intro/php7_2016s.xml</slide>
+<slide>slides/intro/php7_speed.xml</slide>
 <slide>slides/intro/php7_perf.xml</slide>
 
 <slide>slides/intro/nov3/drupalbench.xml</slide>
 <slide>slides/intro/nov3/wpbench.xml</slide>
-<slide>slides/intro/nov3/bbbench.xml</slide>
 <slide>slides/intro/nov3/moodlebench.xml</slide>
 <slide>slides/intro/nov3/wardrobebench.xml</slide>
 
 <slide>slides/intro/smembase.xml</slide>
 <slide>slides/intro/smemdrupal.xml</slide>
 <slide>slides/intro/smemwp.xml</slide>
-<slide>slides/intro/smembb.xml</slide>
 <slide>slides/intro/smemmoodle.xml</slide>
-<slide>slides/intro/smemwardrobe.xml</slide>
 
+<slide>slides/intro/php7_2016s.xml</slide>
 <slide>slides/intro/bc7.xml</slide>
-<slide>slides/intro/phan.xml</slide>
 <slide>slides/intro/deploy_2016.xml</slide>
 
 <slide>slides/intro/php7prod.xml</slide>
