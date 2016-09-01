@@ -20,8 +20,8 @@ $result = $cursor->toArray()[0];
 
 return [
     'newCheckin' => $result->value,
-    *'toastedNew' => $result->value->clinked_count->{$user->slug} == 1,*
-    *'toasted' => ($result->value->clinked_count->{$user->slug} % 2) == 1*
+    *'clinkedNew' => $result->value->clinked_count->{$user->slug} == 1,*
+    *'clinked' => ($result->value->clinked_count->{$user->slug} % 2) == 1*
 ];
 </example></blurb>
 

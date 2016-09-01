@@ -9,7 +9,7 @@
 }
 ]]></example>
 
-<blurb>See whether user has toasted:<example inline="1">
+<blurb>See whether user has clinked:<example inline="1">
 $q = new Query( [ '_id' => new ObjectID( $checkin_id ), 'clinked_by.slug' => $slug );
 $res = iterator_to_array( $manager->executeQuery( 'dramio.checkins', $q ) );
 return *(($res[0]->clinked_count->{$res[0]->user_slug} % 2) == 1);*
