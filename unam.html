@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Deploying PHP 7</title>
+
+		<meta name="description" content="Deploying PHP 7">
+		<meta name="author" content="Rasmus Lerdorf">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
+
+		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
+		<link rel="stylesheet" href="/styles/xcode.css">
+
+		<!-- Override a few styles -->
+        <style>
+        /*
+		   Not actually sure why this block isn't being picked up from the syntax highlight css 
+		   If you change the syntax highlight theme, copy the first block here
+		*/
+        .reveal pre {
+                width: 100%;
+        }
+
+        .reveal pre code {
+                display: block;
+                max-height: 600px;
+                overflow-x: auto;
+                padding: 0.5em;
+                line-height: 125%;
+                background: #fff;
+                color: black;
+                -webkit-text-size-adjust: none;
+        }
+
+        .reveal section img {
+               box-shadow: none;
+               border: none;
+        }
+
+        .reveal code.shell {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #000;
+            color: #ddd;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+        /* Left-align h3 and h4 if they are p elements */
+        h3.p {
+                text-align: left;
+        }
+        h4.p {
+                text-align: left;
+        }
+        /* and left-aligned but slightly indented bullet lists */
+        .reveal ul {
+            display: block;
+            margin: 0 0 1em 3em;
+        }
+		/* Example titles */
+		p.example {
+			text-align: left;
+			margin: 0 0 -0.5em 1em;
+			font-weight: bold;
+		}
+		/* Example output style */
+		pre.output {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: black;
+			line-height: 200%;
+            -webkit-text-size-adjust: none;
+		}
+
+        </style>
+
+		 <!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <!-- Needed for charts to work. Fall back to network if no local copy -->
+        <script type='text/javascript' src='/jquery.min.js'></script> 
+        <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">\x3C/script>')</script>
+        <script src="/highcharts.js"></script>
+        <script>window.Highcharts || document.write('<script src="http://code.highcharts.com/highcharts.js">\x3C/script>')</script>
+
+		<!--[if lt IE 9]>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Deploying PHP 7</h1>
+					<h3>PHP Meetup</h3>
+					<h3>Mexico City</h3>
+					<h3>Sept.21, 2016</h3>
+					<a href="http://talks.php.net/unam">http://talks.php.net/unam</a><br><br>
+					<p>Rasmus Lerdorf<br>
+					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
+					</p>
+					<aside class="notes">
+						
+Notice: Undefined variable: notes in /home/rasmus/src/web/pres2/reveal_template.php on line 125
+					</aside>
+				</section>
+					<section>
+		<section id="php7_speed">
+		<img src="/presentations/slides/intro/php7trans-200.png"  width="" height="">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ engine improvements</p>
+		<ul>
+			<li style="font-size: 1em;">100%+ performance gain on most real-world applications</li>
+			<li style="font-size: 1em;">Lower memory usage, sometimes drastically lower</li>
+		</ul>
+		</section>	</section>
+	<section>
+		<section id="php7perfdetail">
+		<h1 style="text-align:center;">JIT?</h1>
+		</section>
+<section id="php7perfdetail1">
+		<p class="p" style="font-size:1.1em;">Improve CPU cache usage</p>
+		<ul>
+			<li style="font-size: 1em;list-style-type: none;">Step 1: Decrease overall data</li>
+			<li style="font-size: 1em;list-style-type: none;">Step 2: Better data locality and less indirections</li>
+			<li style="font-size: 1em;list-style-type: none;">Step 3: Save the world!</li>
+		</ul>
+		</section>
+<section id="php7perfdetail1">
+		<ul>
+			<li style="font-size: 1em;list-style-type: none;">zval size reduced from 24 to 16 bytes</li>
+			<li style="font-size: 1em;list-style-type: none;">Hashtable size reduced from 72 to 56 bytes</li>
+			<li style="font-size: 1em;list-style-type: none;">Hashtable bucket size reduced from 72 to 32 bytes</li>
+			<li style="font-size: 1em;list-style-type: none;">Immutable array optimization</li>
+		</ul>
+		<pre><code data-trim style="font-size:1.1em;">$a = [];
+for($i=0; $i &lt; 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
+echo memory_get_usage(true);
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled</code></pre>
+		</section>
+<section id="php7perfdetail2">
+		<ul>
+			<li style="font-size: 1em;list-style-type: none;">New memory allocator similar to jemalloc</li>
+			<li style="font-size: 1em;list-style-type: none;">Faster hashtable iteration API</li>
+			<li style="font-size: 1em;list-style-type: none;">Array duplication optimization</li>
+			<li style="font-size: 1em;list-style-type: none;">PCRE JIT enabled by default</li>
+			<li style="font-size: 1em;list-style-type: none;">Precomputed string hashes</li>
+			<li style="font-size: 1em;list-style-type: none;">Fast ZPP (ZendParseParameters) implementation</li>
+			<li style="font-size: 1em;list-style-type: none;">Faster stack-allocated zvals (instead of heap)</li>
+			<li style="font-size: 1em;list-style-type: none;">Optimized VM calling</li>
+			<li style="font-size: 1em;list-style-type: none;">Global register variables with gcc 4.8+</li>
+			<li style="font-size: 1em;list-style-type: none;">plus hundreds of micro-optimizations</li>
+		</ul>
+		</section>
+<section id="php7perfdetail3">
+		<p class="p" style="font-size:1.1em;">HugePage support in Opcache</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1.1em;">./configure --enable-huge-code-pages</code></pre>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">opcache.memory_consumption=256
+opcache.huge_code_pages=1</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1.1em;">% sysctl -w vm.nr_hugepages=256
+% service php-fpm start
+% cat /proc/meminfo | grep Huge
+HugePages_Total:     256
+HugePages_Free:      231
+HugePages_Rsvd:      119
+HugePages_Surp:        0
+Hugepagesize:       2048 kB</code></pre>
+		</section>
+<section id="php7detail4">
+		<h1 style="text-align:center;">JIT?</h1>
+		</section>	</section>
+	<section>
+		<section id="drupalbench">
+
+<div id="drupalbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/drupalbench.js"></script>
+		</section>	</section>
+	<section>
+		<section id="wpbench">
+
+<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/wpbench.js"></script>
+		</section>
+<section id="fdo">
+		<p class="p" style="font-size:1.1em;text-align:center;">GCC Feedback-Directed Optimization (FDO)</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ make clean
+$ make -j8 prof-gen
+...
+$ sapi/cgi/php-cgi -T 1000 /var/www/wordpress/index.php &gt; /dev/null
+$ make prof-clean
+$ make -j8 prof-use</code></pre>
+		</section>
+<section id="wpbench_fdo">
+
+<div id="wpbench_fdo_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/wpbench_fdo.js"></script>
+		</section>	</section>
+	<section>
+		<section id="moodlebench">
+
+<div id="moodlebench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/moodlebench.js"></script>
+		</section>	</section>
+	<section>
+		<section id="wardrobebench">
+
+<div id="wardrobebench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/nov3/wardrobebench.js"></script>
+		</section>	</section>
+	<section>
+		<section id="smembase">
+
+<div id="smembase_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/smembase.js"></script>
+		</section>	</section>
+	<section>
+		<section id="smemdrupal">
+
+<div id="smemdrupal_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/smemdrupal.js"></script>
+		</section>	</section>
+	<section>
+		<section id="smemwp">
+
+<div id="smemwp_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/smemwp.js"></script>
+		</section>	</section>
+	<section>
+		<section id="smemmoodle">
+
+<div id="smemmoodle_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/smemmoodle.js"></script>
+		</section>	</section>
+	<section>
+		<section id="php7">
+		<img src="/presentations/slides/intro/php7trans-200.png"  width="" height="">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ engine improvements</p>
+		<ul>
+			<li style="font-size: 1em;">100%+ performance gain on most real-world applications</li>
+			<li style="font-size: 1em;">Lower memory usage, sometimes drastically lower</li>
+		</ul>
+		</section>
+<section id="php7excep">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Exceptions on Fatals</p>
+		<pre><code data-trim style="font-size:1.1em;">function call_method($obj) {
+    $obj-&gt;method();
+}
+call_method(null);</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.85em;">Fatal error: Uncaught Error: Call to a member function method() on null in file:2
+Stack trace:
+#0 file(4): call_method(NULL)
+#1 {main}
+  thrown in file on line 2</code></pre>
+		<pre><code data-trim style="font-size:1.1em;">try {
+    call_method(null);
+} catch (Error $e) {
+    echo &quot;Caught Exception: {$e-&gt;getMessage()}\n&quot;;
+}</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.85em;">Caught Exception: Call to a member function method() on null</code></pre>
+		</section>
+<section id="php7hier">
+		<p class="p" style="font-size:2em;text-align:center;">PHP 7 Exception Hierarchy</p>
+<br/>
+		<ul>
+			<li style="font-size: 1.5em;list-style-type: none;"><font color="ab5c5c">Throwable</font></li>
+			<li style="font-size: 1.25em;margin-left: 2em;list-style-type: none;">➥ <font color="ab5c5c">Exception</font> implements Throwable</li>
+			<li style="font-size: 1.25em;margin-left: 2em;list-style-type: none;">➥ <font color="ab5c5c">Error</font> implements Throwable</li>
+			<li style="font-size: 1em;margin-left: 4em;list-style-type: none;">➥ <font color="ab5c5c">TypeError</font> extends Error</li>
+			<li style="font-size: 1em;margin-left: 4em;list-style-type: none;">➥ <font color="ab5c5c">ParseError</font> extends Error</li>
+		</ul>
+		</section>
+<section id="php7ret">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Return Types</p>
+		<pre><code data-trim style="font-size:1.1em;">function get_config(): array {
+    return 42;
+}
+get_config();</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">Fatal error: Uncaught TypeError: Return value of get_config() must be
+of the type array, integer returned in file:2
+Stack trace:
+#0 file(4): get_config()
+#1 {main}
+  thrown in file on line 2</code></pre>
+		</section>
+<section id="php7STH">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Coercive Scalar Types</p>
+		<pre><code data-trim style="font-size:1.1em;">function logmsg(string $msg, int $level, float $severity) {
+    var_dump($msg);      // string(1) &quot;1&quot;
+    var_dump($level);    // int(2)
+    var_dump($severity); // float(3)
+}
+logmsg(1, &quot;2.5 bananas&quot;, 3);</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">Notice: A non well formed numeric value encountered in file on line 2</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Strict Scalar Types</p>
+		<pre><code data-trim style="font-size:1.1em;">declare(strict_types=1);
+...
+logmsg(1, &quot;2.5&quot;, 3);</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;">Fatal error: Uncaught TypeError: Argument 1 passed to logmsg() must be of the
+type string, integer given, called in file on line 7 and defined in file:3
+Stack trace:
+#0 file(7): logmsg(1, '2.5', 3)
+#1 {main}
+  thrown in file on line 2</code></pre>
+		</section>
+<section id="php7anon">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Anonymous Classes</p>
+		<pre><code data-trim style="font-size:1.2em;">return new class($controller) implements Page {
+    public function __construct($controller) {
+        /* ... */
+    }
+    /* ... */
+};
+
+class MyObject extends MyStuff {
+    public function getInterface() {
+        return new class implements MyInterface {
+            /* ... */
+        };
+    }
+}</code></pre>
+		</section>
+<section id="php7coalesce">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Coalesce Operator</p>
+		<pre><code data-trim style="font-size:1.5em;">$a = NULL;
+$b = 0;
+$c = 2;
+
+echo $a ?? $b; // 0
+echo $c ?? $b; // 2
+echo $a ?? $b ?? $c; // 0
+echo $a ?? $x ?? $c; // 2</code></pre>
+		</section>
+<section id="Spaceship">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Spaceship Operator</p>
+		<img src="/presentations/slides/intro/lego-php-astronaut.png"  width="230" height="345">
+		<pre><code data-trim style="font-size:1.1em;">function cmp_php5($a, $b) {
+    return ($a &lt; $b) ? -1 : (($a &gt;$b) ? 1 : 0);
+}
+
+function cmp_php7($a, $b) {
+    return $a &lt;=&gt; $b;
+}</code></pre>
+		</section>
+<section id="php7cleanups">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Removal of many deprecated features<BR/>
+     (Your PHP4 code will break!)</p>
+		<pre><code data-trim>- ext/ereg (use ext/pcre instead)
+- preg_replace() eval modifier (use preg_replace_callback() instead)
+- ext/mysql (use ext/mysqli or ext/pdo_mysql instead)
+- Assignment of new by reference
+- Scoped calls of non-static methods from incompatible $this context
+
+- dl() in php-fpm
+- set_magic_quotes_runtime() and magic_quotes_runtime()
+- set_socket_blocking() (use stream_set_blocking() instead)
+- mcrypt_generic_end() (use mcrypt_generic_deinit() instead)
+- mcrypt_ecb, mcrypt_cbc, mcrypt_cfb and mcrypt_ofb 
+  (use mcrypt_encrypt() and mcrypt_decrypt() instead)
+- datefmt_set_timezone_id() and IntlDateFormatter::setTimeZoneID() 
+  (use datefmt_set_timezone() or IntlDateFormatter::setTimeZone() instead)
+
+- xsl.security_prefs (use XsltProcessor::setSecurityPrefs() instead)
+- iconv.input_encoding, iconv.output_encoding, iconv.internal_encoding,
+  mbstring.http_input, mbstring.http_output and mbstring.internal_encoding
+  (use php.input_encoding, php.internal_encoding and php.output_encoding instead)
+
+- $is_dst parameter of the mktime() and gmmktime() functions
+- # style comments in ini files (use ; style comments instead)
+- String category names in setlocale() (use LC_* constants instead)
+- Unsafe curl file uploads (use CurlFile instead)
+- PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT driver option 
+  (use PDO::ATTR_EMULATE_PREPARES instead)
+- CN_match and SNI_server_name stream context option (use peer_name instead)</code></pre>
+		</section>
+<section id="php7reserved">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ New reserved words:</p>
+		<ul>
+			<li style="font-size: 1em;list-style-type: none;">bool</li>
+			<li style="font-size: 1em;list-style-type: none;">int</li>
+			<li style="font-size: 1em;list-style-type: none;">float</li>
+			<li style="font-size: 1em;list-style-type: none;">string</li>
+			<li style="font-size: 1em;list-style-type: none;">null</li>
+			<li style="font-size: 1em;list-style-type: none;">false</li>
+			<li style="font-size: 1em;list-style-type: none;">true</li>
+			<li style="font-size: 1em;list-style-type: none;">resource</li>
+			<li style="font-size: 1em;list-style-type: none;">object</li>
+			<li style="font-size: 1em;list-style-type: none;">mixed</li>
+			<li style="font-size: 1em;list-style-type: none;">numeric</li>
+		</ul>
+		</section>
+<section id="php7num">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ 64-bit integer support on Windows</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Cleanup edge-case integer overflow/underflow</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Support for strings with length >= 2^31 bytes in 64 bit builds.</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Parse error on invalid numeric literals</p>
+		<pre><code data-trim>$mask = 0855;  // Parse error: Invalid numeric literal</code></pre>
+		</section>
+<section id="php7UVS">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ Uniform variable syntax</p>
+		<pre><code data-trim>// left-to-right
+$this-&gt;$belongs_to['column']
+// vs.
+$this-&gt;{$belongs_to['column']}
+
+// support missing combinations of operations
+$foo()['bar']()
+[$obj1, $obj2][0]-&gt;prop
+getStr(){0}
+ 
+// support nested ::
+$foo['bar']::$baz
+$foo::$bar::$baz
+$foo-&gt;bar()::baz()
+ 
+// support nested ()
+foo()()
+$foo-&gt;bar()()
+Foo::bar()()
+$foo()()
+ 
+// support operations on arbitrary (...) expressions
+(...)['foo']
+(...)-&gt;foo
+(...)-&gt;foo()
+(...)::$foo
+(...)::foo()
+(...)()
+ 
+// two more practical examples for the last point
+(function() { ... })()
+($obj-&gt;closure)()
+ 
+// support all operations on dereferencable scalars
+// (not very useful)
+&quot;string&quot;-&gt;toLower()
+[$obj, 'method']()
+'Foo'::$bar</code></pre>
+		</section>
+<section id="php7unicode">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔  Unicode Codepoint Escape Syntax</p>
+		<pre><code data-trim style="font-size:1.2em;">echo &quot;\u{202E}Right-to-left text&quot;;
+
+echo &quot; \u{26BD}&quot;;</code></pre>
+		<pre class="output" style="font-size:1.2em;">‮Right-to-left text ⚽		</pre>		<p class="p" style="font-size:1.1em;text-align:left;">✔ ICU IntlChar class added to intl extension</p>
+		</section>
+<section id="php7csprng">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ CSPRNG</p>
+		<pre><code data-trim style="font-size:1.2em;">$int   = random_int(-500, 500);
+$bytes = random_bytes(10);
+
+var_dump( $int );
+var_dump( bin2hex($bytes) );</code></pre>
+		<pre class="output" style="font-size:1.2em;">int(472)
+string(20) "7be20b35ed8a443e2411"
+		</pre>		</section>	</section>
+	<section>
+		<section id="bc7">
+		<h1 style="text-align:center;">Top-5 Things that might bite you</h1>
+<br/>
+<br/>
+<br/>
+		<p class="p" style="font-size:1.5em;text-align:center;">For the full list see</p>
+		<div align="center" style="font-size: 1.25em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: -0.75em; margin-bottom: ;"><a href="http://php.net/manual/en/migration70.php" target="">php.net/migration70</a></div>
+		</section>
+<section id="bc7_1">
+		<p class="p" style="font-size:1.1em;text-align:left;">Left-to-right semantics for complicated expressions</p>
+		<pre><code class="php" data-trim style="font-size:1.1em;">$$foo['bar']['baz'] // interpreted as ($$foo)['bar']['baz']
+$foo-&gt;$bar['baz']   // interpreted as ($foo-&gt;$bar)['baz']
+$foo-&gt;$bar['baz']() // interpreted as ($foo-&gt;$bar)['baz']()
+Foo::$bar['baz']()  // interpreted as (Foo::$bar)['baz']()</code></pre>
+		<p class="p" style="font-size:0.8em;text-align:left;">To restore the previous behaviour add explicit curly braces:</p>
+		<pre><code class="php" data-trim style="font-size:1.1em;">${$foo['bar']['baz']}
+$foo-&gt;{$bar['baz']}
+$foo-&gt;{$bar['baz']}()
+Foo::{$bar['baz']}()</code></pre>
+		<p class="p" style="font-size:0.8em;text-align:left;">Detection: phan or unit test failures</p>
+		</section>
+<section id="bc7_2">
+		<p class="p" style="font-size:1.1em;text-align:left;">Removed support for /e (PREG_REPLACE_EVAL) modifier</p>
+		<pre><code class="php" data-trim style="font-size:1.1em;">echo preg_replace('/:-:(.*?):-:/e', '$this-&gt;pres-&gt;\\1', $text);</code></pre>
+		<p class="p" style="font-size:0.8em;text-align:left;">Change to:</p>
+		<pre><code class="php" data-trim style="font-size:1.1em;">echo preg_replace_callback(
+  '/:-:(.*?):-:/', 
+  function($matches) {
+    return $this-&gt;pres-&gt;{$matches[1]}; // Careful!
+  },
+  $text);</code></pre>
+		<p class="p" style="font-size:0.8em;text-align:left;">Detection: grep, warnings in logs or unit test failures</p>
+		</section>
+<section id="bc7_3">
+		<p class="p" style="font-size:1.1em;text-align:left;">$HTTP_RAW_POST_DATA global removed</p>
+		<pre><code class="php" data-trim style="font-size:1em;">if (empty($GLOBALS['HTTP_RAW_POST_DATA']) &amp;&amp;
+    strpos($_SERVER['CONTENT_TYPE'], 'www-form-urlencoded') === false) {
+    $GLOBALS['HTTP_RAW_POST_DATA'] = file_get_contents(&quot;php://input&quot;);
+}</code></pre>
+		<p class="p" style="font-size:0.8em;text-align:left;">Detection: grep, warnings in logs or unit test failures</p>
+		</section>
+<section id="bc7_4">
+		<p class="p" style="font-size:1.1em;text-align:left;">session.lazy_write enabled by default</p>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">session.lazy_write = 0</code></pre>
+		<p class="p" style="font-size:0.8em;text-align:left;">Detection: Can cause out-of-band session read timing issues</p>
+		</section>
+<section id="bc7_5">
+		<p class="p" style="font-size:1.1em;text-align:left;">Invalid octal literals now produce a parse error</p>
+		<pre><code class="php" data-trim style="font-size:1.1em;">echo 05678; // PHP 5.x outputs 375</code></pre>
+		<pre class="output" style="font-size:0.5em;">Parse error: Invalid numeric literal in file.php on line 2		</pre>		<p class="p" style="font-size:0.8em;text-align:left;">Detecting parse errors is easy: php -l</p>
+		</section>	</section>
+	<section>
+		<section id="phan">
+		<h1 style="text-align:center;">Static Analysis</h1>
+<br/>
+<br/>
+<br/>
+		<div align="center" style="font-size: 1.25em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/phan" target="">github.com/etsy/phan</a></div>
+		</section>
+<section id="phan1">
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">% phan -h
+Usage: ./phan [options] [files...]
+ -f, --file-list &lt;filename&gt;
+  A file containing a list of PHP files to be analyzed
+
+ -r, --file-list-only
+  A file containing a list of PHP files to be analyzed to the
+  exclusion of any other directories or files passed in. This
+  is useful when running Phan from a stored state file and
+  passing in a small subset of files to be re-analyzed.
+
+ -l, --directory &lt;directory&gt;
+  A directory to recursively read PHP files from to analyze
+
+ -3, --exclude-directory-list &lt;dir_list&gt;
+  A comma-separated list of directories for which any files
+  included from that directory will not be analysis. Note
+  that adding a directory here will not cause its files to
+  be parsed.
+
+ -d, --project-root-directory
+  Hunt for a directory named .phan in the current or parent
+  directory and read configuration file config.php from that
+  path.
+
+ -m &lt;mode&gt;, --output-mode
+  Output mode from 'text', 'json', 'codeclimate', or 'checkstyle'
+
+ -o, --output &lt;filename&gt;
+  Output filename
+
+ -p, --progress-bar
+  Show progress bar
+
+ -a, --dump-ast
+  Emit an AST for each file rather than analyze
+
+ -e, --expand-file-list
+  Expand the list of files passed in to include any files
+  that depend on elements defined in those files. This is
+  useful when running Phan from a state file and passing in
+  just the set of changed files.
+
+ -q, --quick
+  Quick mode - doesn't recurse into all function calls
+
+ -b, --backward-compatibility-checks
+  Check for potential PHP 5 -&gt; PHP 7 BC issues
+
+ -i, --ignore-undeclared
+  Ignore undeclared functions and classes
+
+ -y, --minimum-severity &lt;level in {0,5,10}&gt;
+  Minimum severity level (low=0, normal=5, critical=10) to report.
+  Defaults to 0.
+
+ -c, --parent-constructor-required
+  Comma-separated list of classes that require
+  parent::__construct() to be called
+
+ -x, --dead-code-detection
+  Emit issues for classes, methods, functions, constants and
+  properties that are probably never referenced and can
+  possibly be removed.
+
+ -j, --processes &lt;int&gt;
+  The number of parallel processes to run during the analysis
+  phase. Defaults to 1.
+
+ -z, --signature-compatibility
+  Analyze signatures for methods that are overrides to ensure
+  compatiiblity with what they're overriding.
+
+ -h,--help
+  This help information</code></pre>
+		</section>
+<section id="phan2">
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">% phan -i -b display.php
+
+display.php:416 CompatError expression may not be PHP 7 compatible</code></pre>
+		<pre><code data-trim style="font-size:1em;">echo preg_replace('/:-:(.*?):-:/e', '$this-&gt;pres-&gt;\\1', $text);</code></pre>
+		<pre><code data-trim style="font-size:1em;">echo preg_replace_callback(
+    '/:-:(.*?):-:/', 
+    function($matches) {
+      return $this-&gt;pres-&gt;$matches[1]; // Oops!
+    },
+    $text);</code></pre>
+		<pre><code data-trim style="font-size:1em;">echo preg_replace_callback(
+    '/:-:(.*?):-:/', 
+    function($matches) {
+      return $this-&gt;pres-&gt;{$matches[1]}; // Ok
+    },
+    $text);</code></pre>
+		</section>
+<section id="phan3">
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">% git clone https://github.com/Seldaek/monolog.git
+% cd monolog
+% find . -name '*.php' | grep -v test &gt; filelist.txt
+% phan -i -f filelist.txt
+
+./src/Monolog/Handler/ChromePHPHandler.php:178 PhanTypeMismatchReturn Returning type int but headersAccepted() is declared to return bool
+./src/Monolog/Handler/ElasticSearchHandler.php:124 PhanTypeMismatchArgumentInternal Argument 3 (previous) is \elastica\exception\exceptioninterface but \runtimeexception::__construct() takes \runtimeexception|\throwable
+./src/Monolog/Handler/FirePHPHandler.php:81 PhanTypeMismatchReturn Returning type array but createRecordHeader() is declared to return string
+./src/Monolog/Handler/FirePHPHandler.php:153 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
+./src/Monolog/Handler/FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array
+./src/Monolog/Handler/FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \key() takes array
+./src/Monolog/Handler/FlowdockHandler.php:70 PhanTypeMissingReturn Method \monolog\handler\flowdockhandler::getdefaultformatter is declared to return \monolog\formatter\formatterinterface but has no return value
+./src/Monolog/Handler/GelfHandler.php:55 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\gelfhandler::publisher is \gelf\imessagepublisher|\gelf\publisher|\gelf\publisherinterface
+./src/Monolog/Handler/MandrillHandler.php:49 PhanSignatureMismatch Declaration of function send($content, array $records) should be compatible with function send(string $content, array $records) defined in ./src/Monolog/Handler/MailHandler.php:46
+./src/Monolog/Handler/NativeMailerHandler.php:117 PhanSignatureMismatch Declaration of function send($content, array $records) should be compatible with function send(string $content, array $records) defined in ./src/Monolog/Handler/MailHandler.php:46
+./src/Monolog/Handler/RedisHandler.php:41 PhanTypeMismatchDefault Default value for int $capSize can't be bool
+./src/Monolog/Handler/SocketHandler.php:115 PhanTypeMismatchProperty Assigning float to property but \monolog\handler\sockethandler::timeout is int
+./src/Monolog/Handler/SocketHandler.php:126 PhanTypeMismatchProperty Assigning float to property but \monolog\handler\sockethandler::writingTimeout is int
+./src/Monolog/Handler/SocketHandler.php:218 PhanTypeMismatchArgumentInternal Argument 2 (seconds) is float but \stream_set_timeout() takes int
+./src/Monolog/Handler/SocketHandler.php:218 PhanTypeMismatchArgumentInternal Argument 3 (microseconds) is float but \stream_set_timeout() takes int
+./src/Monolog/Handler/SocketHandler.php:274 PhanTypeMismatchProperty Assigning resource to property but \monolog\handler\sockethandler::resource is null
+./src/Monolog/Handler/StreamHandler.php:65 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\streamhandler::stream is resource|string
+./src/Monolog/Handler/StreamHandler.php:86 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\streamhandler::stream is resource|string
+./src/Monolog/Handler/StreamHandler.php:105 PhanTypeMismatchProperty Assigning array|string to property but \monolog\handler\streamhandler::errorMessage is null
+./src/Monolog/Handler/SwiftMailerHandler.php:43 PhanSignatureMismatch Declaration of function send($content, array $records) should be compatible with function send(string $content, array $records) defined in ./src/Monolog/Handler/MailHandler.php:46
+./src/Monolog/Handler/SyslogUdp/UdpSocket.php:38 PhanTypeMismatchProperty Assigning null to property but \monolog\handler\syslogudp\udpsocket::socket is resource</code></pre>
+		</section>
+<section id="phan4">
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">ChromePHPHandler.php:178 PhanTypeMismatchReturn Returning type int but headersAccepted() is declared to return bool</code></pre>
+		<pre><code class="php" data-trim style="font-size:1em;">/**
+ * Verifies if the headers are accepted by the current user agent
+ *
+ * @return Boolean
+ */
+protected function headersAccepted() {
+    if (empty($_SERVER['HTTP_USER_AGENT'])) {
+        return false;
+    }
+    return preg_match('{\bChrome/\d+[\.\d+]*\b}', $_SERVER['HTTP_USER_AGENT']);
+}</code></pre>
+		<img src="/presentations/slides/intro/preg_match.png" align="center" width="1050" height="170">
+		</section>
+<section id="phan5">
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">FirePHPHandler.php:154 PhanTypeMismatchArgumentInternal Argument 1 (array_arg) is string but \current() takes array</code></pre>
+		<pre><code class="php" data-trim style="font-size:1em;">/**
+ * Base header creation function used by init headers &amp; record headers
+ *
+ * @param  array  $meta    Wildfire Plugin, Protocol &amp; Structure Indexes
+ * @param  string $message Log message
+ * @return array  Complete header string ready for the client as key and message as value
+ */
+protected function createHeader(array $meta, $message) {
+    $header = sprintf('%s-%s', self::HEADER_PREFIX, join('-', $meta));
+
+    return array($header =&gt; $message);
+}
+
+/**
+ * Creates message header from record
+ *
+ * @see createHeader()
+ * @param  array  $record
+ * @return string
+ */
+protected function createRecordHeader(array $record)
+{
+    // Wildfire is extensible to support multiple protocols &amp; plugins in a single request,
+    // but we're not taking advantage of that (yet), so we're using &quot;1&quot; for simplicity's sake.
+    return $this-&gt;createHeader(
+        array(1, 1, 1, self::$messageIndex++),
+        $record['formatted']
+    );
+}
+
+/**
+ * Creates &amp; sends header for a record, ensuring init headers have been sent prior
+ *
+ * @see sendHeader()
+ * @see sendInitHeaders()
+ * @param array $record
+ */
+protected function write(array $record)
+{
+    if (!self::$sendHeaders) {
+        return;
+    }
+
+    // WildFire-specific headers must be sent prior to any messages
+    if (!self::$initialized) {
+        self::$initialized = true;
+
+        self::$sendHeaders = $this-&gt;headersAccepted();
+        if (!self::$sendHeaders) {
+            return;
+        }
+
+        foreach ($this-&gt;getInitHeaders() as $header =&gt; $content) {
+            $this-&gt;sendHeader($header, $content);
+        }
+    }
+
+    $header = $this-&gt;createRecordHeader($record);
+    if (trim(current($header)) !== '') {
+        $this-&gt;sendHeader(key($header), current($header));
+    }
+}</code></pre>
+		</section>	</section>
+	<section>
+		<section id="php7_tune_phpinfo">
+		<h2 margin-bottom="2em">PHP 7 Tuning</h2><br>
+		<p class="p" style="font-size:2em;">Check your phpinfo()</p>
+		<img src="/presentations/slides/intro/phpinfo1.png"  width="714" height="94">
+		</section>
+<section id="php7_tune_opcache">
+		<p class="p" style="font-size:2em;">Opcache</p>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">opcache.memory_consumption=2048
+opcache.max_accelerated_files=100000
+opcache.validate_timestamps=1
+opcache.revalidate_freq=2
+opcache.save_comments=0
+opcache.enable_file_override=0
+opcache.enable_cli=0
+opcache.max_wasted_percentage=10
+opcache.interned_strings_buffer=128
+opcache.fast_shutdown=1
+opcache.huge_code_pages=1</code></pre>
+		</section>
+<section id="php7_tune_opcache2">
+		<p class="p" style="font-size:2em;">Opcache</p>
+		<img src="/presentations/slides/intro/phpinfo2.png"  width="710" height="418">
+		</section>
+<section id="php7_tune_huge">
+		<p class="p" style="font-size:2em;">Huge Pages</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1.2em;">$ sysctl -w vm.nr_hugepages=512
+vm.nr_hugepages = 512
+(Add it to your /etc/sysctl.conf)
+
+$ grep Huge /proc/meminfo
+AnonHugePages:      6144 kB
+HugePages_Total:     512
+HugePages_Free:      300
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB</code></pre>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">USE_ZEND_ALLOC_HUGE_PAGES=1 httpd ...</code></pre>
+		</section>
+<section id="php7_tune_realpath">
+		<p class="p" style="font-size:2em;">increase realpath_cache_size</p>
+		<pre><code class="ini" data-trim style="font-size:2em;">realpath_cache_size=128k</code></pre>
+		</section>
+<section id="php7_tune_mysql">
+		<p class="p" style="font-size:2em;">If using MySQL, use mysqlnd</p>
+		<img src="/presentations/slides/intro/mysqli.png" align="center" width="958" height="167">
+		<img src="/presentations/slides/intro/pdo.png" align="center" width="952" height="95">
+		<p class="p" style="font-size:1em;">Check your command buffer usage</p>
+		<img src="/presentations/slides/intro/mysqlnd.png" align="center" width="947" height="140">
+		</section>
+<section id="php7_tune_tmpfs">
+		<p class="p" style="font-size:2em;">DocumentRoot on tmpfs</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ mount | grep tmpfs
+tmpfs on /var/www type tmpfs (rw,relatime,size=12288000k,mode=755)
+
+$ ls -la /var/www
+total 5
+drwxr-xr-x  5 root   root    160 Feb 23 02:47 .
+drwxr-xr-x 26 root   root   4096 Feb  7 19:40 ..
+lrwxrwxrwx  1 root   root     14 Feb 23 02:47 current -&gt; /var/www/A
+drwxrwxr-x 25 apache apache  640 Feb 11 22:04 A
+drwxrwxr-x 25 apache apache  640 Feb 11 22:04 B</code></pre>
+		</section>
+<section id="php7_tune_app">
+		<p class="p" style="font-size:2em;">Application-level changes?</p>
+<p class="example">Remember this?</p>
+		<pre><code data-trim style="font-size:1.1em;">$a = [];
+for($i=0; $i &lt; 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
+echo memory_get_usage(true);
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled</code></pre>
+<p class="example">Use it!</p>
+		<pre><code data-trim style="font-size:1.1em;">include 'config.php'; // $config = [ ... ]</code></pre>
+		<pre><code data-trim style="font-size:1.1em;">include 'countries.php'; // $countries = [ 'CA'=&gt;'Canada', ... ]</code></pre>
+		</section>	</section>
+	<section>
+		<section id="numa">
+		<h2 margin-bottom="2em">Hyperthreading and NUMA</h2><br>
+		<ul>
+			<li style="font-size: 1em;list-style-type: circle;">HyperThreading handles extreme loads better</li>
+			<li style="font-size: 1em;list-style-type: circle;">If you don't have multi-socket servers, turn on HT and move on</li>
+			<li style="font-size: 1em;list-style-type: circle;">For multi-socket servers, things get interesting</li>
+		</ul>
+		</section>
+<section id="numa_singlesocket">
+<p class="example">Digital Ocean</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                2
+On-line CPU(s) list:   0,1
+Thread(s) per core:    1
+Core(s) per socket:    1
+Socket(s):             2
+NUMA node(s):          1
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 63
+Model name:            Intel(R) Xeon(R) CPU E5-2650L v3 @ 1.80GHz
+Stepping:              2
+CPU MHz:               1797.917
+BogoMIPS:              3595.83
+Virtualization:        VT-x
+Hypervisor vendor:     KVM
+Virtualization type:   full
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              30720K
+NUMA node0 CPU(s):     0,1</code></pre>
+		</section>
+<section id="numa_multisocket">
+<p class="example">Multi-socket bare metal without HT</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                24
+On-line CPU(s) list:   0-23
+Thread(s) per core:    1
+Core(s) per socket:    12
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 63
+Model name:            Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+Stepping:              2
+CPU MHz:               1203.320
+BogoMIPS:              5005.24
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              30720K
+NUMA node0 CPU(s):     0-11
+NUMA node1 CPU(s):     12-23</code></pre>
+		</section>
+<section id="numa_multisocket_ht">
+<p class="example">Multi-socket bare metal with HT</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;">$ lscpu
+Architecture:          x86_64
+CPU op-mode(s):        32-bit, 64-bit
+Byte Order:            Little Endian
+CPU(s):                48
+On-line CPU(s) list:   0-47
+Thread(s) per core:    2
+Core(s) per socket:    12
+Socket(s):             2
+NUMA node(s):          2
+Vendor ID:             GenuineIntel
+CPU family:            6
+Model:                 63
+Model name:            Intel(R) Xeon(R) CPU E5-2680 v3 @ 2.50GHz
+Stepping:              2
+CPU MHz:               1200.000
+BogoMIPS:              5004.73
+Virtualization:        VT-x
+L1d cache:             32K
+L1i cache:             32K
+L2 cache:              256K
+L3 cache:              30720K
+NUMA node0 CPU(s):     0-11,24-35
+NUMA node1 CPU(s):     12-23,36-47</code></pre>
+		</section>
+<section id="htop_graphs">
+		<img src="/presentations/slides/intro/htop_ht.png" align="center" width="800" height="325">
+		<img src="/presentations/slides/intro/htop.png" align="center" width="979" height="229">
+		</section>
+<section id="numa_graph">
+		<img src="/presentations/slides/intro/numa_ht.png" align="center" width="979" height="507">
+		</section>
+<section id="numa_solutions">
+<br/>
+		<h4 class="p">Solutions?</h4>
+		<ul>
+			<li style="font-size: 1em;list-style-type: circle;">numactl --interleave=all httpd/php-fpm</li>
+			<li style="font-size: 1em;list-style-type: circle;">split multi-socket with containers</li>
+			<li style="font-size: 1em;list-style-type: circle;">BIOS Snoop Mode setting? HS/ES/COD?</li>
+			<li style="font-size: 1em;list-style-type: circle;">ignore it</li>
+		</ul>
+		</section>	</section>
+	<section>
+		<section id="deploy">
+		<h1 style="text-align:center;">Let's deploy it!</h1>
+		</section>
+<section id="deploy0">
+		<p class="p" style="font-size:2em;text-align:left;">Atomic</p>
+		<p class="p" style="font-size:2em;text-align:left;">No performance hit</p>
+		<ul>
+			<li style="font-size: 1.5em;">No restarts</li>
+			<li style="font-size: 1.5em;">No LB removal</li>
+			<li style="font-size: 1.5em;">No thundering herd</li>
+			<li style="font-size: 1.5em;">Cache reuse</li>
+		</ul>
+		</section>
+<section id="deploy1">
+		<p class="p" style="font-size:1.1em;text-align:left;">Must be able to serve two versions of the site concurrently!</p>
+		<img src="/presentations/slides/intro/atomic_deploy1.png"  width="" height="">
+		</section>
+<section id="deploy2">
+		<img src="/presentations/slides/intro/atomic_deploy2.png"  width="" height="">
+		</section>
+<section id="deploy3">
+		<p class="p" style="font-size:1.1em;text-align:left;">Requests that begin on DocumentRoot A must finish on A</p>
+		</section>
+<section id="deploy4">
+		<p class="p" style="font-size:1.1em;text-align:left;">Set the DocumentRoot to symlink target!</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">Easy with nginx</p>
+		<pre><code class="ini" data-trim style="font-size:1.1em;">fastcgi_param DOCUMENT_ROOT $realpath_root</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">Apache</p>
+		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/mod_realdoc" target="">github.com/etsy/mod_realdoc</a></div>
+		</section>
+<section id="deploy5">
+		<p class="p" style="font-size:1.1em;text-align:left;">Avoid hardcoding full paths</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">Watch your include_path setting</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">incpath extension can resolve your include_path for you</p>
+		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/incpath" target="">https://github.com/etsy/incpath</a></div>
+		</section>
+<section id="deploy6">
+		<p class="p" style="font-size:1.1em;text-align:left;">Version all static assets</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">DB Schema changes need special care</p>
+		</section>	</section>
+	<section>
+		<section id="prod_perc95">
+		<h2 margin-bottom="2em">PHP 7 in production</h2><br>
+		<img src="/presentations/slides/intro/perc95.png" align="center" width="882" height="465">
+		</section>
+<section id="prod_cpu">
+		<img src="/presentations/slides/intro/cpu.png" align="center" width="882" height="465">
+		</section>
+<section id="prod_mem">
+		<img src="/presentations/slides/intro/mem.png" align="center" width="882" height="465">
+		</section>	</section>
+	<section>
+		<section id="thank_you">
+		<h2 style="text-align:center;">Thank You</h2>
+		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/rlerdorf/php7dev" target="">https://github.com/rlerdorf/php7dev</a></div>
+		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/rlerdorf/phan" target="">https://github.com/rlerdorf/phan</a></div>
+		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://bugs.php.net" target="">https://bugs.php.net</a></div>
+		<div align="left" style="font-size: 1.2em; color: ; text-align: left; margin-left: 2em; margin-right: ; margin-top: ; margin-bottom: ;"><a href=":-:url:-:" target="">http://talks.php.net/unam</a></div>
+<br/>
+<br/>
+<br/>
+		<p class="p" style="font-size:1.1em;">Report Bugs</p>
+		<p class="p" style="font-size:1.1em;">Useful bug reports, please!</p>
+		</section>	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1024,
+				height: 768,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transitionSpeed: 'fast',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+			/* This draws the graph on the slide on a slidechanged event */
+			Reveal.addEventListener('slidechanged', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+			/* This draws the graph if we got here directly without coming from another slide */
+			Reveal.addEventListener('ready', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+		</script>
+
+	</body>
+</html>
