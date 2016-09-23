@@ -1,0 +1,51 @@
+<slide title="" section="php7perfdetail">
+
+<blurb fontsize="20em" align="center">JIT?</blurb>
+
+<break lines="1" section="php7perfdetail1"/>
+
+<blurb fontsize="1.1em">Improve CPU cache usage</blurb>
+<list>
+<bullet fontsize="1em" type="none">Step 1: Decrease overall data</bullet>
+<bullet fontsize="1em" type="none">Step 2: Better data locality and less indirections</bullet>
+<bullet fontsize="1em" type="none">Step 3: Save the world!</bullet>
+</list>
+
+<break lines="1" section="php7perfdetail1"/>
+<list>
+<bullet fontsize="1em" type="none">zval size reduced from 24 to 16 bytes</bullet>
+<bullet fontsize="1em" type="none">Hashtable size reduced from 72 to 56 bytes</bullet>
+<bullet fontsize="1em" type="none">Hashtable bucket size reduced from 72 to 32 bytes</bullet>
+<bullet fontsize="1em" type="none">Immutable array optimization</bullet>
+</list>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+$a = [];
+for($i=0; $i < 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
+echo memory_get_usage(true);
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled
+]]></example>
+
+<break lines="1" section="php7perfdetail2"/>
+
+<list>
+<bullet fontsize="1em" type="none">New memory allocator similar to jemalloc</bullet>
+<bullet fontsize="1em" type="none">Faster hashtable iteration API</bullet>
+<bullet fontsize="1em" type="none">Array duplication optimization</bullet>
+<bullet fontsize="1em" type="none">PCRE JIT enabled by default</bullet>
+<bullet fontsize="1em" type="none">Precomputed string hashes</bullet>
+<bullet fontsize="1em" type="none">Fast ZPP (ZendParseParameters) implementation</bullet>
+<bullet fontsize="1em" type="none">Faster stack-allocated zvals (instead of heap)</bullet>
+<bullet fontsize="1em" type="none">Optimized VM calling</bullet>
+<bullet fontsize="1em" type="none">Global register variables with gcc 4.8+</bullet>
+<bullet fontsize="1em" type="none">plus hundreds of micro-optimizations</bullet>
+</list>
+
+<break lines="1" section="php7detail4"/>
+<blurb fontsize="20em" align="center">JIT?</blurb>
+</slide>
