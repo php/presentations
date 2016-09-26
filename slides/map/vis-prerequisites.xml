@@ -3,8 +3,10 @@
 
 <list>
 	<bullet>ImageMagick</bullet>
-	<bullet>PHP 5.3+ (with GD)</bullet>
+	<bullet>PHP 7.0+ (with GD)</bullet>
 	<bullet>Osmosis</bullet>
 	<bullet>A working Mapnik rendering stack with all the default locations and users</bullet>
+	<bullet>A GIT clone of<br/>%https://github.com/derickr/osm-progress.git%</bullet>
+	<bullet>Lots of time</bullet>
 </list>
 </slide>

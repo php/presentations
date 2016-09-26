@@ -2,19 +2,16 @@
 <title>Music</title>
 
 <list>
-	<bullet>Jamendo to find CC-BY music</bullet>
+	<bullet>Kevin Maclead (%https://incompetech.com/%)</bullet>
 	<bullet>Match length with length of video</bullet>
-	<bullet>There's lots of "substandard" music</bullet>
 </list>
-
-<blurb>%http://www.jamendo.com/en/search ?qs=fq=license_cc:(sa AND -nd AND -nc) &amp;q=tags_idstr:"electronic"&amp;sort=duration asc%</blurb>
 
 <list>
 	<bullet>Use %mencoder% to add sound track:</bullet>
 </list>
 
 <example>mencoder -ovc copy \
-	-audiofile /home/derick/media/mp3/cc-by/Olga_Scotland_-_Ernst.mp3 -oac copy \
+	-audiofile /home/derick/media/mp3/cc-by/Artifact.mp3 -oac copy \
 	test.avi \
 	-o progress.avi</example>
 </slide>

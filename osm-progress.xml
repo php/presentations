@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>OpenStreetMap</topic>
+<title>Visualising Progress</title>
+<event>State of the Map</event>
+<location>Brussels, Belgium</location>
+<date>September 23rd, 2016</date>
+<speaker>Derick Rethans</speaker>
+<email>osm@derickrethans.nl</email>
+<twitter>derickr</twitter>
+<joindin>http://derickrethans.nl/talks/osm-progress</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/map/vis-what-about.xml</slide>
+
+<slide>slides/map/vis-first-one.xml</slide>
+<slide>slides/map/vis-not-too-spectacular.xml</slide>
+<slide>slides/map/vis-progress-what-does-it-show.xml</slide>
+<slide>slides/map/vis-how-does-it-work.xml</slide>
+<slide>slides/map/vis-prerequisites.xml</slide>
+<slide>slides/map/vis-getting-data.xml</slide>
+<slide>slides/map/vis-setup-replication.xml</slide>
+<slide>slides/map/vis-fetching-data.xml</slide>
+<slide>slides/map/vis-artwork.xml</slide>
+<slide>slides/map/vis-calculate-difference.xml</slide>
+<slide>slides/map/vis-render-edit-points.xml</slide>
+<slide>slides/map/vis-render-maps.xml</slide>
+<slide>slides/map/vis-combine-edit-points.xml</slide>
+<slide>slides/map/vis-convert-images-into-movie.xml</slide>
+<slide>slides/map/vis-music.xml</slide>
+<slide>slides/map/vis-examples.xml</slide>
+<slide>slides/map/vis-indonesia.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

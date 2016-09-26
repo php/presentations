@@ -2,19 +2,34 @@
 <title>Getting the data</title>
 
 <list>
-	<bullet>It is a lot easier if you do this *before* the party starts</bullet>
 	<bullet>I use an extract from %http://download.geofabrik.de/%</bullet>
 	<bullet>Create %config.txt% and change the coordinates:
-<example># osmosis
-bbox=left=-0.176 right=-0.115 top=51.53 bottom=51.50
+<example>name=Jakarta RT Mapping, DKI Jakarta
+# osmosis
+bbox=left=105.22 right=108.32 top=-4.51 bottom=-7.94
+poly=mali.poly
 # edits, make sure LON1 &lt; LON2 and LAT1 &gt; LAT2
-LON1=-0.15447
-LON2=-0.13512
-LAT1=51.5176
-LAT2=51.5086</example>
+LON1=106.50
+LON2=107.05
+LAT1=-5.97
+LAT2=-6.49
+# don't change those after you have run ./generate.sh
+ZOOMINFACTOR=200
+ZOOMOUTFACTOR=100
+ZOOM=0
+POINTS=1
+GPX=0
+MINUTELY=0
+# Setting this to "1" means that we don't use a title for fading, but just
+# from/to black.
+BLACK=1
+# If title overlay is set, we overlay in the right hand bottom corner the
+# title. This is generated from NAME through create-artwork.sh
+TITLE_OVERLAY=1
+</example>
 	</bullet>
 	<bullet>Extract the part that you need:<example>
-../osmosis-latest/bin/osmosis --rbf workers=3 file=great-britain-latest.osm.pbf \
+../osmosis-latest/bin/osmosis --rbf workers=16 file=great-britain.osm.pbf \
     --bb `cat config.txt | grep "bbox=" | cut -d "=" -f 2-` --lp --wx party.osm
 </example>
 	</bullet>
