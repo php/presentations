@@ -4,9 +4,9 @@
 <table>
 <tr><th>Use</th><th>Set size</th><th>Data protection</th><th>High Availability</th><th>Notes</th></tr>
 <tr><td> </td><td>1</td><td>No </td><td>No</td><td>Must use --journal to protect against crashes</td></tr>
-<tr><td>✔</td><td>2</td><td>Yes</td><td>No</td><td>On loss of one member, set becomes read-only</td></tr>
-<tr><td>✔</td><td>3</td><td>Yes</td><td>Yes - 1 failure</td><td>On loss of one member, two surviving nodes can elect new primary</td></tr>
+<tr><td>|008800|✔|</td><td>2</td><td>Yes</td><td>No</td><td>On loss of one member, set becomes read-only</td></tr>
+<tr><td>|008800|✔|</td><td>3</td><td>Yes</td><td>Yes - 1 failure</td><td>On loss of one member, two surviving nodes can elect new primary</td></tr>
 <tr><td> </td><td>4</td><td>Yes</td><td>Yes - 1 failure</td><td>On loss of two members, two surviving nodes are read-only</td></tr>
-<tr><td>✔</td><td>5</td><td>Yes</td><td>Yes - 2 failures</td><td>On loss of two members, three surviving nodes can elect new primary</td></tr>
+<tr><td>|008800|✔|</td><td>5</td><td>Yes</td><td>Yes - 2 failures</td><td>On loss of two members, three surviving nodes can elect new primary</td></tr>
 </table>
 </slide>

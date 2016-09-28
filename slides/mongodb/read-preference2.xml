@@ -1,18 +1,16 @@
 <slide>
 <title>Read preferences</title>
 
-<blurb>Allows the driver to select between candidate servers from a specific
-set</blurb>
+<blurb>Select between candidate servers from a specific set</blurb>
 <list>
 	<bullet>primary (default)</bullet>
 	<bullet>primary_preferred (%Mongo::RP_PRIMARY_PREFERRED%)</bullet>
 	<bullet>secondary</bullet>
-	<bullet>secondary_preferred (default when old slaveOkay is used)</bullet>
-	<bullet>nearest (within 15ms of closest)</bullet>
+	<bullet>secondary_preferred</bullet>
+	<bullet>nearest</bullet>
 </list>
 <break/>
 <list>
-	<bullet>You can restrict the candidates with read preference tags</bullet>
 	<bullet>Only the candidates within 15ms ping time from the fastest are used</bullet>
 	<bullet>Random (per-query) among the matched sets</bullet>
 </list>

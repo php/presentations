@@ -2,7 +2,7 @@
 <title>Eventual consistency</title>
 
 <list>
-    <bullet>Read Preference / Slave Okay
+    <bullet>Read Preferences (except %RP_PRIMARY%)
 		<list>
 			<bullet>Driver will always send writes to primary</bullet>
 			<bullet>Driver will send read requests to secondaries</bullet>

@@ -7,7 +7,7 @@
 	<bullet>Single datacentre</bullet>
 	<bullet>Multiple power/network zones</bullet>
 	<bullet>Automatic recovery of single node crash</bullet>
-	<bullet>w=2 viable as 2 out of 3 nodes available</bullet>
+	<bullet>%w=majority% viable as 2 out of 3 nodes available</bullet>
 	<bullet>Points of failure:
 		<list>
 			<bullet>Datacentre</bullet>

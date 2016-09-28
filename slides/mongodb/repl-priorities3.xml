@@ -3,7 +3,6 @@
 
 <image filename="repl-priorities.png"/>
 <list>
-    <bullet>Assuming all members are up to date</bullet>
     <bullet>Members A or B will be chosen first
 		<list>
 			<bullet>Highest priority</bullet>
@@ -11,13 +10,12 @@
 	</bullet>
     <bullet>Members C or D will be chosen when:
 		<list>
-			<bullet>A and B are unavailable</bullet>
-			<bullet>A and B are not up to date</bullet>
+			<bullet>A and B are unavailable, or not up to date</bullet>
 		</list>
 	</bullet>
     <bullet>Member E is never chosen
 		<list>
-			<bullet>priority:0 means it cannot be elected</bullet>
+			<bullet>%priority: 0% means it cannot be elected</bullet>
 		</list>
 	</bullet>
 </list>

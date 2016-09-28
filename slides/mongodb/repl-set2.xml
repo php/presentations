@@ -7,7 +7,7 @@
 	<bullet>Single datacentre</bullet>
 	<bullet>Multiple power/network zones</bullet>
 	<bullet>Automatic recovery of single node crash</bullet>
-	<bullet>w=2 not viable as losing one node means no writes</bullet>
+	<bullet>%w=majority% not viable as no writes with losing a node</bullet>
 	<bullet>Points of failure:
 		<list>
 			<bullet>Datacentre</bullet>

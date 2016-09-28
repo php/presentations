@@ -7,6 +7,8 @@ $m = new \MongoDB\Client( 'mongodb://localhost:27019' );
 $m = new \MongoDB\Client( 'mongodb://localhost:27019,example.com:27019' );
 
 $m = new \MongoDB\Client( 'mongodb://user:password@localhost:27019/demo', $options );
+
+$m = new \MongoDB\Client( 'mongodb:///tmp/mysocket.sock' );
 ?>]]></example>
 
 <list>

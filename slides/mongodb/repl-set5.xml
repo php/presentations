@@ -6,6 +6,6 @@
 <list>
 	<bullet>Three datacentres</bullet>
 	<bullet>Can survive full datacentre loss</bullet>
-	<bullet>Can do %w = { dc : 2 }% to guarantee write in two datacentres</bullet>
+	<bullet>Can do %w = { dc : 2 }% to guarantee write in two DCs</bullet>
 </list>
 </slide>

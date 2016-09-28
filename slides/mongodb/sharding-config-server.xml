@@ -6,13 +6,9 @@
 		Config server
 		<list>
 			<bullet>Stores cluster chunk ranges and locations</bullet>
-			<bullet>Can have only 1 or 3 (production must have 3)</bullet>
 			<bullet>A Replica Set</bullet>
+			<bullet>No arbiters or delayed members</bullet>
 		</list>
 		</bullet>
 </list>
-
-<break lines="2"/>
-
-<image filename="config-server.png"/>
 </slide>

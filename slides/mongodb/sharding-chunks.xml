@@ -3,7 +3,7 @@
 
 <list>
     <bullet>Initially one chunk</bullet>
-    <bullet>Default max chunk size: 64mb</bullet>
+    <bullet>Default max chunk size: *64mb*</bullet>
     <bullet>MongoDB automatically splits &amp; migrates chunks when max reached</bullet>
 </list>
 

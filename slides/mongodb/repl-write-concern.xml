@@ -1,10 +1,20 @@
 <slide>
 <title>Write concerns</title>
 
+<example><![CDATA[<?php
+$manager = new MongoDB\Driver\Manager('mongodb://localhost:27017');
+
+$bulk = new MongoDB\Driver\BulkWrite();
+$bulk->insert(['_id' => 1, 'x' => 1]);
+
+$result = $manager->executeBulkWrite( 'db.collection', $bulk, $wc );
+]]></example>
+
 <list>
-	<bullet>Safe mode:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => 1 ] );%</bullet>
-	<bullet>Two nodes:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => 2 ] );%</bullet>
-	<bullet>Majority of nodes:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => "majority" ] );%</bullet>
-	<bullet>Tagged nodes:<br/>%$c->insert( [ 'text' => 'example' ], [ 'w' => "allDCs" ] );%</bullet>
+	<bullet>Two nodes:<br/><example>$wc = new MongoDB\Driver\WriteConcern( 2 );</example></bullet>
+	<bullet>Majority of nodes:<br/><example>$wc = new MongoDB\Driver\WriteConcern( MongoDB\Driver\WriteConcern::MAJORITY  );</example></bullet>
+	<bullet>With timeout:<br/><example>$wc = new MongoDB\Driver\WriteConcern(
+    MongoDB\Driver\WriteConcern::MAJORITY, 10000
+);</example></bullet>
 </list>
 </slide>

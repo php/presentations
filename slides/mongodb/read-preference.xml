@@ -2,19 +2,24 @@
 <title>Read preferences</title>
 
 <example result="0"><![CDATA[<?php
-$m = new MongoClient(
-	'mongodb://localhost:13000/?' .
-	'replicaSet=poiset&readPreference=nearest&readPreferenceTags=dc:asia'
+$m = new \Mongo\Driver\Manager(
+    'mongodb://localhost:13000/?replicaSet=poiset' .
+    '&readPreference=nearest&readPreferenceTags=dc:asia'
 );
-$c = $m->phpunit->test;
-$c->find(...);
+
+$m->executeQuery( 'demo.test', $query );
 ?>]]></example>
-<blurb>or:</blurb>
+<blurb>or per-query:</blurb>
 <example result="0"><![CDATA[<?php
-$m = new MongoClient( 'mongodb://localhost:13000/?replicaSet=poiset' );
-$c = $m->phpunit->test;
-$c->setReadPreference( Mongo::RP_SECONDARY, [ 'dc' => 'europe' ] );
-$c->find(...);
+$m = new \Mongo\Driver\Manager(
+    'mongodb://localhost:13000/?replicaSet=poiset'
+);
+
+$rp = new MongoDB\Driver\ReadPreference(
+    MongoDB\Driver\ReadPreference::RP_NEAREST, [ [ 'dc' => 'asia' ] ]
+);
+
+$m->executeQuery( 'demo.test', $query, $rp );
 ?>]]></example>
 
 </slide>
