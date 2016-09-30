@@ -1,0 +1,50 @@
+<slide>
+<title>FOR</title>
+
+<table class="two">
+<tr>
+
+<td>
+<example inline="1">
+&amp;lt;?php
+for ( |dd0000|$i = 0|; |00dd00|$i &amp;lt; 42|; |0000dd|++$i| ) {
+    |dd00dd|echo $i;|
+}
+</example>
+</td>
+
+<td>
+<example inline="1">
+        |dd0000|init: AST_EXPR_LIST|
+            0: AST_ASSIGN
+                var: AST_VAR
+                    name: "i"
+                expr: 0
+        |00dd00|cond: AST_EXPR_LIST|
+            0: AST_BINARY_OP
+                flags: BINARY_IS_SMALLER (19)
+                left: AST_VAR
+                    name: "i"
+                right: 42
+        |0000dd|loop: AST_EXPR_LIST|
+            0: AST_PRE_INC
+                var: AST_VAR
+                    name: "i"
+        |dd00dd|stmts: …|</example>
+</td>
+</tr></table>
+
+<example inline="1">compiled vars:  !0 = $i
+line     #* E I O op                           fetch          ext  return  operands
+   2     0  E >   EXT_STMT                                                 
+         1        |dd0000|ASSIGN                                                   !0, 0|
+         2      > |dd0000|JMP                                                      ->6|
+   4     3    >   |dd00dd|EXT_STMT                                                 |
+         4        |dd00dd|ECHO                                                     !0|
+   2     5        |0000dd|PRE_INC                                                  !0|
+         6    >   |00dd00|IS_SMALLER                                       ~3      !0, 42|
+         7        |00dd00|EXT_STMT                                                 |
+         8      > |00dd00|JMPNZ                                                    ~3, ->3|
+         9    > > RETURN                                                   1
+</example>
+</slide>

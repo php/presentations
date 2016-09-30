@@ -1,0 +1,33 @@
+<slide>
+<title>TRY … CATCH … FINALLY</title>
+
+<example inline="1">&amp;lt;?php
+try {
+    echo "in try";
+} *catch* ( Exception1 $e ) {
+    echo "exception 1 thrown";
+} *catch* ( Exception2 $e ) {
+    echo "exception 2 thrown";
+|00dd00|} finally {|
+    |0000dd|echo "in finally";|
+}
+echo "after";
+</example>
+
+<example inline="1">
+line     #* E I O op            return  operands
+   3     0  E >   ECHO                  'in+try'
+         1      > JMP                   |00dd00|->7|
+   4     2  *E > > CATCH*                 'Exception1', !0, |dd00dd|->5|
+   5     3    >   ECHO                  'exception+1+thrown'
+         4      > JMP                   |00dd00|->7|
+   6     |dd00dd|5|  *E > > CATCH*                 'Exception2', !0
+   7     6    >   ECHO                  'exception+2+thrown'
+   8     |00dd00|7    > > FAST_CALL|             ->9
+         8    > > JMP                   ->11
+   9     |0000dd|9    >   ECHO                  'in+finally'|
+        |0000dd|10      > FAST_RET|              
+  11    11    >   ECHO                  'after'
+        12      > RETURN                1
+</example>
+</slide>

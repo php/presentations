@@ -1,0 +1,22 @@
+<slide>
+<title>DO .. WHILE</title>
+
+<example inline="1">&amp;lt;?php
+|dd0000|$i = 10;|
+do {
+    |0000dd|echo $i;|
+} while ( |00dd00|--$i| );
+</example>
+
+<example inline="1">compiled vars:  !0 = $i
+line     #* E I O op                           fetch          ext  return  operands
+   2     0  E >   EXT_STMT                                                 
+         1        |dd0000|ASSIGN                                                   !0, 10|
+   3     2        NOP                                                      
+   4     3    >   EXT_STMT                                                 
+         4        |0000dd|ECHO                                                     !0|
+   5     5        |00dd00|PRE_DEC                                          $2      !0|
+         6      > |00dd00|JMPNZ                                                    $2, ->3|
+         7    > > RETURN                                                   1
+</example>
+</slide>

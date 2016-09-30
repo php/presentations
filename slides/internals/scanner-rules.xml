@@ -1,0 +1,30 @@
+<slide>
+<title>Scanner Rules</title>
+
+<list>
+    <bullet>Gives Meaning to Tokens</bullet>
+    <bullet>Constructs AST through Rules:
+<example inline="1">class_declaration_statement:
+        class_modifiers T_CLASS |dd00dd|{ $&amp;lt;num>$ = CG(zend_lineno); }|
+        T_STRING extends_from implements_list backup_doc_comment '{' class_statement_list '}'
+            { $$ = *zend_ast_create_decl*(ZEND_AST_CLASS, $1, $&amp;lt;num>3, $7, *zend_ast_get_str*($4), $5, $6, $9, NULL); }
+    |
+…
+;
+</example>
+    <example inline="1">
+  case 167:
+#line 493 "/home/derick/dev/php/php-src.git/Zend/zend_language_parser.y"
+    |dd00dd|{ (yyval.num) = CG(zend_lineno); }|
+    break;
+
+  case 168:
+#line 495 "/home/derick/dev/php/php-src.git/Zend/zend_language_parser.y"
+    { (yyval.ast) = *zend_ast_create_decl*(ZEND_AST_CLASS, (yyvsp[(1) - (10)].num), (yyvsp[(3) - (10)].num), (yyvsp[(7) - (10)].str), *zend_ast_get_str*((yyvsp[(4) - (10)].ast)), (yyvsp[(5) - (10)].ast), (yyvsp[(6) - (10)].ast), (yyvsp[(9) - (10)].ast), NULL); }
+    break;
+    </example>
+
+</bullet>
+</list>
+</slide>
+

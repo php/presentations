@@ -1,0 +1,51 @@
+<slide>
+<title>IF with ELSE</title>
+
+<table class="two">
+<tr>
+
+<td>
+<example inline="1">
+if ( |0000dd|$a| == |00dd00|3.1415926| ) {
+    echo "Circles";
+} else {
+    echo "Squares";
+}
+</example>
+</td>
+
+<td>
+<example inline="1">AST_STMT_LIST
+    0: AST_IF
+        0: AST_IF_ELEM
+            cond: AST_BINARY_OP
+                flags: BINARY_IS_EQUAL (17)
+                left: AST_VAR
+                    name: "a"
+                right: 3.1415926
+            stmts: AST_STMT_LIST
+                0: AST_ECHO
+                    expr: "Circles"
+        1: AST_IF_ELEM
+            cond: null
+            stmts: AST_STMT_LIST
+                0: AST_ECHO
+                    expr: "Squares"</example>
+</td>
+</tr></table>
+
+<example inline="1">
+compiled vars:  |0000dd|!0 = $a|
+line     #* E I O op            return  operands
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   2     0  E >   EXT_STMT              
+         1        IS_EQUAL      ~1      |0000dd|!0|, 3.14159
+         2      > *JMPZ*                  ~1, ->|00dddd|6|
+   3     3    >   EXT_STMT              
+         4        ECHO                  'Circles'
+         5      > *JMP*                   ->|00dddd|8|
+   5     |00dddd|6|    >   EXT_STMT              
+         7        ECHO                  'Squares'
+         |00dddd|8|    > > RETURN                1
+</example>
+</slide>

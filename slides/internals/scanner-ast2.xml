@@ -1,0 +1,88 @@
+<slide>
+<title>Abstract Syntax Tree (formatted)</title>
+
+<div effect="fade-out">
+<example inline="1">AST_STMT_LIST
+    0: AST_CONST
+        …
+    1: *AST_CLASS*
+        flags: 0
+        name: Whisky
+        extends: null
+        implements: null
+        stmts: AST_STMT_LIST
+            0: AST_PROP_DECL
+                flags: MODIFIER_PRIVATE (1024)
+                0: AST_PROP_ELEM
+                    name: "name"
+                    default: null
+            1: *AST_METHOD*
+                flags: *MODIFIER_PUBLIC* (256)
+                name: *__construct*
+                params: AST_PARAM_LIST
+                    0: AST_PARAM
+                        flags: 0
+                        type: null
+                        name: "name"
+                        default: null
+                uses: null
+                *stmts: AST_STMT_LIST*
+                    0: AST_ASSIGN
+                        var: AST_PROP
+                            expr: AST_VAR
+                                name: "this"
+                            prop: "name"
+                        expr: AST_VAR
+                            name: "name"
+                returnType: null
+            2: AST_METHOD
+                flags: MODIFIER_PUBLIC (256)
+                name: drink
+                params: AST_PARAM_LIST
+                uses: null
+                stmts: AST_STMT_LIST
+                    0: AST_ECHO
+                        expr: AST_ENCAPS_LIST
+                            0: "Drinking "
+                            1: AST_PROP
+                                expr: AST_VAR
+                                    name: "this"
+                                prop: "name"
+                            2: "
+                            "
+                returnType: null</example>
+</div>
+
+<div effect="fade-in">
+<example inline="1">
+|0000dd|public| function |00dd00|__construct|( |0000dd|$name| )
+{
+    |00dddd|$this->name| |dd00dd|=| |ff0000|$name|
+}
+</example>
+
+<br/>
+
+<example inline="1">
+1: AST_METHOD
+    flags: MODIFIER_PUBLIC (256)
+    name: |00dd00|__construct|
+    params: AST_PARAM_LIST
+        0: AST_PARAM
+            flags: 0
+            type: null
+            name: |0000dd|"name"|
+            default: null
+    uses: null
+    stmts: AST_STMT_LIST
+        0: |dd00dd|AST_ASSIGN|
+            var: |00dddd|AST_PROP|
+                expr: AST_VAR
+                    name: |00dddd|"this"|
+                prop: |00dddd|"name"|
+            expr: AST_VAR
+                name: |ff0000|"name"|
+    returnType: null
+</example>
+</div>
+</slide>

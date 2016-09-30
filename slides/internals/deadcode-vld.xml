@@ -1,0 +1,28 @@
+<slide>
+<title>Dead Code</title>
+
+<image align="right" filename="deadcode.png"/>
+
+<example inline="1">&amp;lt;?php
+if ( $a &amp;lt; 42 ) {
+	echo "fourty";
+	return;
+	*echo "two";*
+}
+</example>
+
+<example inline="1">
+line   #* E I O op             return  operands
+   2   0  E >   IS_SMALLER     ~1      !0, 42
+       1      > JMPZ                   ~1, ->5
+   3   2    >   ECHO                   'fourty'
+   4   3      > RETURN                 null
+   5   *4\*       ECHO                   'two'*
+       5    > > RETURN                 1
+</example>
+
+<list>
+<bullet>Follow all branches</bullet>
+<bullet>Find unreached opcodes</bullet>
+</list>
+</slide>

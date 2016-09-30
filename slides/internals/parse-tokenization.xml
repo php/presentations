@@ -1,0 +1,49 @@
+<slide>
+<title>Tokenization</title>
+
+<div effect="fade-out">
+<blurb>Example script:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+namespace DramIO;
+class Whisky
+{
+    private $name;
+
+    public function __construct( $name )
+    {
+        $this->name = $name;
+    }
+
+    public function drink()
+    {
+        echo "Drinking {$this->name}\n";
+    }
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Example script:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+namespace DramIO;
+class Whisky
+{
+    private $name;
+
+    public function __construct($name)
+    {
+        $this->name = $name;␃]]></example>
+<blurb>In tokens:</blurb>
+<example inline="1"><![CDATA[*T_OPEN_TAG* &lt;?php
+*T_NAMESPACE* |777777|T_WS| *T_NS_SEPARATOR* *T_STRING* DramIO ; |777777|T_WS| 
+*T_CLASS* |777777|T_WS| *T_NS_SEPARATOR* *T_STRING* Whisky |777777|T_WS|
+{ |777777|T_WS| 
+    *T_PRIVATE* |777777|T_WS| *T_VARIABLE* $name ; |777777|T_WS| 
+
+    *T_PUBLIC* |777777|T_WS| *T_FUNCTION* |777777|T_WS| *T_STRING* __construct ( *T_VARIABLE* $name ) |777777|T_WS| 
+    { |777777|T_WS| 
+       *T_VARIABLE* $this *T_OBJECT_OPERATOR* -> *T_STRING* name |777777|T_WS| = |777777|T_WS| *T_VARIABLE* $name ;
+    ]]></example>
+</div>
+
+</slide>

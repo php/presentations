@@ -1,0 +1,36 @@
+<slide>
+<title>FOR (rewritten)</title>
+
+<example inline="1">
+for ( |dd0000|$i = 0|; |00dd00|$i &amp;lt; 42|; |0000dd|++$i| ) {
+    |dd00dd|echo $i;|
+}
+</example>
+
+<example inline="1">
+	|dd0000|$i = 0;|
+	goto COND;
+STMT:
+	|dd00dd|echo $i;|
+	|0000dd|++$i;|
+COND:
+	|00dd00|$_ = $i &amp;lt; 42;|
+	|00dd00|if ( ! $_ ) {|
+		|00dd00|goto STMT;|
+	|00dd00|}|
+</example>
+
+<example inline="1">compiled vars:  !0 = $i
+line     #* E I O op                           fetch          ext  return  operands
+   2     0  E >   EXT_STMT                                                 
+         1        |dd0000|ASSIGN                                                   !0, 0|
+         2      > |dd0000|JMP                                                      ->6|
+   4     3    >   |dd00dd|EXT_STMT                                                 |
+         4        |dd00dd|ECHO                                                     !0|
+   2     5        |0000dd|PRE_INC                                                  !0|
+         6    >   |00dd00|IS_SMALLER                                       ~3      !0, 42|
+         7        |00dd00|EXT_STMT                                                 |
+         8      > |00dd00|JMPNZ                                                    ~3, ->3|
+         9    > > RETURN                                                   1
+</example>
+</slide>

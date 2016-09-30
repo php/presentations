@@ -1,0 +1,12 @@
+<slide>
+<title>Byte Code</title>
+
+<list>
+    <bullet>In PHP also called Opcodes</bullet>
+    <bullet>Each function, method, or main body is represented by an Oparray</bullet>
+    <bullet>Each Oparray contains Opcodes with instructions for the Zend Engine</bullet>
+    <bullet>The Zend Engine executes each opcode in turn</bullet>
+    <bullet>Very similar to Assembler instructions</bullet>
+    <bullet>You can visualize them with the PECL *vld* extension</bullet>
+</list>
+</slide>

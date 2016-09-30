@@ -1,0 +1,28 @@
+<slide>
+<title>FOREACH</title>
+
+<example inline="1">&amp;lt;?php
+|dd0000|$a = [ 2.7, 4.9 ];|
+|00dd00|foreach ( $a as $key => $value )| {
+    echo $key, $value;
+}
+</example>
+
+<example inline="1">
+compiled vars:  !0 = $a, !1 = $value, !2 = $key
+line     #* E I O op                           fetch          ext  return  operands
+   2     0  E >   EXT_STMT                                                 
+         1        |dd0000|ASSIGN                                                   !0, &amp;lt;array>|
+   3     2        EXT_STMT                                                 
+         3      > |00dd00|FE_RESET_R                                       $4      !0,| |dd00dd|->11|
+         *4*    > > |00dd00|FE_FETCH_R                                       ~5      $4, !1,| |dd00dd|->11|
+         5    >   |00dd00|ASSIGN                                                   !2, ~5|
+   4     6        EXT_STMT                                                 
+         7        ECHO                                                     !2
+         8        EXT_STMT                                                 
+         9        ECHO                                                     !1
+        10      > *JMP                                                      ->4*
+        |dd00dd|11    >   FE_FREE                                                  $4|
+        12      > RETURN                                                   1
+</example>
+</slide>

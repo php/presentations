@@ -1,0 +1,327 @@
+<slide>
+<title>Abstract Syntax Tree</title>
+
+<blurb>Raw output from %ast\parse_code% function:</blurb>
+<example>
+object(ast\Node)#1 (4) {
+  ["kind"]=>
+  int(133)
+  ["flags"]=>
+  int(0)
+  ["lineno"]=>
+  int(1)
+  ["children"]=>
+  array(2) {
+    [0]=>
+    object(ast\Node)#2 (4) {
+      ["kind"]=>
+      int(257)
+      ["flags"]=>
+      int(0)
+      ["lineno"]=>
+      int(2)
+      ["children"]=>
+      array(1) {
+        ["name"]=>
+        object(ast\Node)#3 (4) {
+          ["kind"]=>
+          int(2048)
+          ["flags"]=>
+          int(2)
+          ["lineno"]=>
+          int(2)
+          ["children"]=>
+          array(1) {
+            ["name"]=>
+            string(6) "DramIO"
+          }
+        }
+      }
+    }
+    [1]=>
+    object(ast\Node\Decl)#4 (7) {
+      ["kind"]=>
+      int(69)
+      ["flags"]=>
+      int(0)
+      ["lineno"]=>
+      int(4)
+      ["children"]=>
+      array(3) {
+        ["extends"]=>
+        NULL
+        ["implements"]=>
+        NULL
+        ["stmts"]=>
+        object(ast\Node)#5 (4) {
+          ["kind"]=>
+          int(133)
+          ["flags"]=>
+          int(0)
+          ["lineno"]=>
+          int(5)
+          ["children"]=>
+          array(3) {
+            [0]=>
+            object(ast\Node)#6 (4) {
+              ["kind"]=>
+              int(139)
+              ["flags"]=>
+              int(1024)
+              ["lineno"]=>
+              int(6)
+              ["children"]=>
+              array(1) {
+                [0]=>
+                object(ast\Node)#7 (4) {
+                  ["kind"]=>
+                  int(774)
+                  ["flags"]=>
+                  int(0)
+                  ["lineno"]=>
+                  int(6)
+                  ["children"]=>
+                  array(2) {
+                    ["name"]=>
+                    string(4) "name"
+                    ["default"]=>
+                    NULL
+                  }
+                }
+              }
+            }
+            [1]=>
+            object(ast\Node\Decl)#8 (7) {
+              ["kind"]=>
+              int(68)
+              ["flags"]=>
+              int(256)
+              ["lineno"]=>
+              int(8)
+              ["children"]=>
+              array(4) {
+                ["params"]=>
+                object(ast\Node)#9 (4) {
+                  ["kind"]=>
+                  int(137)
+                  ["flags"]=>
+                  int(0)
+                  ["lineno"]=>
+                  int(8)
+                  ["children"]=>
+                  array(1) {
+                    [0]=>
+                    object(ast\Node)#10 (4) {
+                      ["kind"]=>
+                      int(773)
+                      ["flags"]=>
+                      int(0)
+                      ["lineno"]=>
+                      int(8)
+                      ["children"]=>
+                      array(3) {
+                        ["type"]=>
+                        NULL
+                        ["name"]=>
+                        string(4) "name"
+                        ["default"]=>
+                        NULL
+                      }
+                    }
+                  }
+                }
+                ["uses"]=>
+                NULL
+                ["stmts"]=>
+                object(ast\Node)#11 (4) {
+                  ["kind"]=>
+                  int(133)
+                  ["flags"]=>
+                  int(0)
+                  ["lineno"]=>
+                  int(9)
+                  ["children"]=>
+                  array(1) {
+                    [0]=>
+                    object(ast\Node)#12 (4) {
+                      ["kind"]=>
+                      int(517)
+                      ["flags"]=>
+                      int(0)
+                      ["lineno"]=>
+                      int(10)
+                      ["children"]=>
+                      array(2) {
+                        ["var"]=>
+                        object(ast\Node)#13 (4) {
+                          ["kind"]=>
+                          int(513)
+                          ["flags"]=>
+                          int(0)
+                          ["lineno"]=>
+                          int(10)
+                          ["children"]=>
+                          array(2) {
+                            ["expr"]=>
+                            object(ast\Node)#14 (4) {
+                              ["kind"]=>
+                              int(256)
+                              ["flags"]=>
+                              int(0)
+                              ["lineno"]=>
+                              int(10)
+                              ["children"]=>
+                              array(1) {
+                                ["name"]=>
+                                string(4) "this"
+                              }
+                            }
+                            ["prop"]=>
+                            string(4) "name"
+                          }
+                        }
+                        ["expr"]=>
+                        object(ast\Node)#15 (4) {
+                          ["kind"]=>
+                          int(256)
+                          ["flags"]=>
+                          int(0)
+                          ["lineno"]=>
+                          int(10)
+                          ["children"]=>
+                          array(1) {
+                            ["name"]=>
+                            string(4) "name"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                ["returnType"]=>
+                NULL
+              }
+              ["endLineno"]=>
+              int(11)
+              ["name"]=>
+              string(11) "__construct"
+              ["docComment"]=>
+              NULL
+            }
+            [2]=>
+            object(ast\Node\Decl)#16 (7) {
+              ["kind"]=>
+              int(68)
+              ["flags"]=>
+              int(256)
+              ["lineno"]=>
+              int(13)
+              ["children"]=>
+              array(4) {
+                ["params"]=>
+                object(ast\Node)#17 (4) {
+                  ["kind"]=>
+                  int(137)
+                  ["flags"]=>
+                  int(0)
+                  ["lineno"]=>
+                  int(13)
+                  ["children"]=>
+                  array(0) {
+                  }
+                }
+                ["uses"]=>
+                NULL
+                ["stmts"]=>
+                object(ast\Node)#18 (4) {
+                  ["kind"]=>
+                  int(133)
+                  ["flags"]=>
+                  int(0)
+                  ["lineno"]=>
+                  int(14)
+                  ["children"]=>
+                  array(1) {
+                    [0]=>
+                    object(ast\Node)#19 (4) {
+                      ["kind"]=>
+                      int(282)
+                      ["flags"]=>
+                      int(0)
+                      ["lineno"]=>
+                      int(15)
+                      ["children"]=>
+                      array(1) {
+                        ["expr"]=>
+                        object(ast\Node)#20 (4) {
+                          ["kind"]=>
+                          int(131)
+                          ["flags"]=>
+                          int(0)
+                          ["lineno"]=>
+                          int(15)
+                          ["children"]=>
+                          array(3) {
+                            [0]=>
+                            string(9) "Drinking "
+                            [1]=>
+                            object(ast\Node)#21 (4) {
+                              ["kind"]=>
+                              int(513)
+                              ["flags"]=>
+                              int(0)
+                              ["lineno"]=>
+                              int(15)
+                              ["children"]=>
+                              array(2) {
+                                ["expr"]=>
+                                object(ast\Node)#22 (4) {
+                                  ["kind"]=>
+                                  int(256)
+                                  ["flags"]=>
+                                  int(0)
+                                  ["lineno"]=>
+                                  int(15)
+                                  ["children"]=>
+                                  array(1) {
+                                    ["name"]=>
+                                    string(4) "this"
+                                  }
+                                }
+                                ["prop"]=>
+                                string(4) "name"
+                              }
+                            }
+                            [2]=>
+                            string(1) "
+"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                ["returnType"]=>
+                NULL
+              }
+              ["endLineno"]=>
+              int(16)
+              ["name"]=>
+              string(5) "drink"
+              ["docComment"]=>
+              NULL
+            }
+          }
+        }
+      }
+      ["endLineno"]=>
+      int(17)
+      ["name"]=>
+      string(6) "Whisky"
+      ["docComment"]=>
+      NULL
+    }
+  }
+}
+</example>
+</slide>

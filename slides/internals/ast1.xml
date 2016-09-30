@@ -1,0 +1,12 @@
+<slide>
+<title>Abstract Syntax Tree</title>
+
+<list>
+    <bullet>An AST describes the structure of the parser script</bullet>
+    <bullet>Each node is a language construct</bullet>
+    <bullet>Nested structures are represented through a tree</bullet>
+    <bullet>Not all the original information from the original source code is kept</bullet>
+    <bullet>The *php-ast* extension on Nikita Popov's (nikic) GitHub account can visualize them</bullet>
+    <bullet>Optimisations are possible by modifications of the tree</bullet>
+</list>
+</slide>

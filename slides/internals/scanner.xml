@@ -1,0 +1,31 @@
+<slide>
+<title>Scanner Rules</title>
+
+<example inline="1">top_statement:
+        statement                           { $$ = $1; }
+    |   function_declaration_statement      { $$ = $1; }
+    |   |0000dd|class_declaration_statement|         { $$ = $1; }
+    |   trait_declaration_statement         { $$ = $1; }
+…
+;
+
+|0000dd|class_declaration_statement|:
+        |dd00dd|class_modifiers| T_CLASS { $&amp;lt;num>$ = CG(zend_lineno); }
+        T_STRING extends_from implements_list backup_doc_comment '{' class_statement_list '}'
+            { $$ = *zend_ast_create_decl*(ZEND_AST_CLASS, $1, $&amp;lt;num>3, $7, *zend_ast_get_str*($4), $5, $6, $9, NULL); }
+    |   T_CLASS { $&amp;lt;num>$ = CG(zend_lineno); }
+        T_STRING extends_from implements_list backup_doc_comment '{' class_statement_list '}'
+            { $$ = *zend_ast_create_decl*(ZEND_AST_CLASS, 0, $&amp;lt;num>2, $6, *zend_ast_get_str*($3), $4, $5, $8, NULL); }
+;
+
+|dd00dd|class_modifiers|:
+        |00dddd|class_modifier|                  { $$ = $1; }
+    |   |dd00dd|class_modifiers| |00dddd|class_modifier|  { $$ = *zend_add_class_modifier*($1, $2); }
+;
+
+|00dddd|class_modifier|:
+        T_ABSTRACT      { $$ = ZEND_ACC_EXPLICIT_ABSTRACT_CLASS; }
+    |   T_FINAL         { $$ = ZEND_ACC_FINAL; }
+;
+</example>
+</slide>

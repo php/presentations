@@ -1,0 +1,54 @@
+<slide>
+<title style="center">Stages</title>
+
+<break lines="2"/>
+<div effect="fade-out">
+	<div class="center">
+	<blurb>Parse Script</blurb>
+	<blurb>Create Logical Representation</blurb>
+	<blurb>Create Executable Code</blurb>
+	<blurb>Execute Bytecode</blurb>
+	</div>
+</div>
+
+<div effect="fade-in-out">
+	<div class="center">
+	<blurb>*Parse Script*</blurb>
+	<blurb class="small">Convert code into Tokens</blurb><br/>
+	<blurb>Create Logical Representation</blurb>
+	<blurb>Create Executable Code</blurb>
+	<blurb>Execute Bytecode</blurb>
+	</div>
+</div>
+
+<div effect="fade-in-out">
+	<div class="center">
+	<blurb>Parse Script</blurb><br/>
+	<blurb>*Create Logical Representation*</blurb>
+	<blurb class="small">Convert Tokens into Abstract Syntax Tree (AST)</blurb><br/>
+	<blurb>Create Executable Code</blurb>
+	<blurb>Execute Bytecode</blurb>
+	</div>
+</div>
+
+<div effect="fade-in-out">
+	<div class="center">
+	<blurb>Parse Script</blurb>
+	<blurb>Create Logical Representation</blurb><br/>
+	<blurb>*Create Executable Code*</blurb>
+	<blurb class="small">Convert AST into Opcodes (Bytecode)</blurb><br/>
+	<blurb>Execute Bytecode</blurb>
+	</div>
+</div>
+
+<div effect="fade-in">
+	<div class="center">
+	<blurb>Parse Script</blurb>
+	<blurb>Create Logical Representation</blurb>
+	<blurb>Create Executable Code</blurb><br/>
+	<blurb>*Execute Bytecode*</blurb>
+	<blurb class="small">Run the Opcodes with the Zend Engine</blurb><br/>
+	</div>
+</div>
+
+</slide>

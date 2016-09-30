@@ -1,0 +1,18 @@
+<slide>
+<title>Recap</title>
+
+<list>
+	<bullet>Stages:<br/>Code → Tokens → Parsing → AST → Byte Code</bullet>
+	<bullet>All looping structures are jumps</bullet>
+	<bullet>Code analysis for Fun and Profit</bullet>
+</list>
+
+<break/>
+<blurb>*Tools*</blurb>
+<list>
+	<bullet>PHP's tokenizer: http://php.net/tokenizer</bullet>
+	<bullet>Nikita's AST extension: https://github.com/nikic/php-ast</bullet>
+	<bullet>VLD: https://pecl.php.net/vld</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,36 @@
+<slide>
+<title>IF</title>
+
+<example inline="1">
+if ( |0000dd|$a| == |00dd00|42| )
+{
+    echo "To life, the universe, and everything.\n";
+}
+</example>
+
+<example inline="1">
+AST_STMT_LIST
+    0: AST_IF
+        0: AST_IF_ELEM
+            cond: AST_BINARY_OP
+                flags: BINARY_IS_EQUAL (17)
+                left: AST_VAR
+                    |0000dd|name: "a"|
+                right: |00dd00|42|
+            stmts: AST_STMT_LIST
+                0: AST_ECHO
+                    expr: "To life, the universe, and everything.
+</example>
+
+<example inline="1">
+compiled vars:  |0000dd|!0 = $a|
+line     #* E I O op            return  operands
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   2     0  E >   EXT_STMT              
+         1        IS_EQUAL      |dd0000|~1|      |0000dd|!0|, |00dd00|42|
+         2      > *JMPZ*                  |dd0000|~1|, ->|00dddd|5|
+   4     3    >   EXT_STMT              
+         4        ECHO                  'To+life%2C+the+universe%2C+and+everything.%0A'
+         |00dddd|5|    > > RETURN                1
+</example>
+</slide>
