@@ -1,0 +1,52 @@
+<presentation
+    template="simple"
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>Deploying PHP 7</title>
+<event>PHP Conf Philippines</event>
+<location>Manila</location>
+<date>Oct.13, 2016</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/ph16</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/php7_speed.xml</slide>
+<slide>slides/intro/php7_perf_s.xml</slide>
+
+<slide>slides/intro/nov3/drupalbench.xml</slide>
+<slide>slides/intro/nov3/wpbench.xml</slide>
+<slide>slides/intro/nov3/moodlebench.xml</slide>
+<slide>slides/intro/nov3/wardrobebench.xml</slide>
+<slide>slides/intro/nov3/cachetbench.xml</slide>
+
+<slide>slides/intro/smembase.xml</slide>
+<slide>slides/intro/smemdrupal.xml</slide>
+<slide>slides/intro/smemwp.xml</slide>
+<slide>slides/intro/smemmoodle.xml</slide>
+
+<slide>slides/intro/php7_2016s.xml</slide>
+<slide>slides/intro/bc7.xml</slide>
+<slide>slides/intro/phan.xml</slide>
+<slide>slides/intro/php7_tuning.xml</slide>
+<slide>slides/intro/numa.xml</slide>
+<slide>slides/intro/deploy_2016.xml</slide>
+
+<slide>slides/intro/php7prod.xml</slide>
+
+<slide>slides/intro/thank_you.xml</slide>
+
+</presentation>

@@ -92,9 +92,8 @@ NUMA node0 CPU(s):     0-11,24-35
 NUMA node1 CPU(s):     12-23,36-47
 ]]></example>
 
-<break lines="1" section="htop_graphs"/>
-<image width="800" height="325" filename="htop_ht.png" align="center"/>
-<image width="979" height="229" filename="htop.png" align="center"/>
+<break lines="1" section="numa_qpi"/>
+<image width="751" height="295" filename="numa.png" align="center"/>
 
 <break lines="1" section="numa_graph"/>
 <image width="979" height="507" filename="numa_ht.png" align="center"/>
