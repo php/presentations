@@ -1,0 +1,25 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Class Constant Visibility</blurb>
+<example><![CDATA[
+<?php
+class Token {
+    // Constants default to public
+    const PUBLIC_CONST = 0;
+
+    // Constants then also can have a defined visibility
+    private const PRIVATE_CONST = 0;
+    protected const PROTECTED_CONST = 0;
+    public const PUBLIC_CONST_TWO = 0;
+
+    // Both FOO and BAR are "private const"
+    private const FOO = 1, BAR = 2;
+}
+?>
+]]></example>
+<blurb>Constants can only have one visibility declaration list</blurb>
+<blurb>Interfaces only support public constants</blurb>
+
+</slide>

@@ -1,0 +1,26 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ %Iterable% psuedo-type</blurb>
+<example><![CDATA[<?php
+function foo( iterable $iterable )
+{
+    foreach ( $iterable as $value )
+    {
+        // ...
+    }
+}
+?>]]></example>
+<blurb>%array% or instance of %Traversable%</blurb>
+
+<blurb>✔ Generators are also Iterable</blurb>
+<example><![CDATA[<?php
+function gen(): iterable
+{
+    yield 1;
+    yield 2;
+    yield 3;
+}]]></example>
+
+</slide>

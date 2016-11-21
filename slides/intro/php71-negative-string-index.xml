@@ -1,0 +1,18 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Negative String Offsets</blurb>
+<example><![CDATA[
+$str = 'abcdef';
+var_dump( $str[ -2 ] ); // => string(1) "e"
+ 
+$str{-3} = '.';
+var_dump( $str );     // => string(6) "abc.ef"
+ 
+var_dump( isset( $str{-4} ) );  // => bool(true)
+ 
+var_dump( isset( $str{-10} ) ); // => bool(false)
+]]></example>
+
+</slide>

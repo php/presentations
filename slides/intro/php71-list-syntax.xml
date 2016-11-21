@@ -1,0 +1,27 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Square Bracket for Array Destructoring</blurb>
+
+<blurb>With %list()%:</blurb>
+<example><![CDATA[
+<?php
+list( $a, $b, $c ) = $array;
+ 
+list( "a" => $a, "b" => $b, "c" => $c ) = $array;
+?>
+]]></example>
+
+<break/>
+
+<blurb>With %[ ]%:</blurb>
+<example><![CDATA[
+<?php
+[ $a, $b, $c ] = $array;
+ 
+[ "a" => $a, "b" => $b, "c" => $c ] = $array;
+?>
+]]></example>
+
+</slide>

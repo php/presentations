@@ -1,0 +1,26 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Nullable types</blurb>
+<example><![CDATA[<?php
+function say(?string $msg) {
+    if ($msg) {
+        echo $msg;
+    }
+}
+
+function findElephpant( $name ) : ?Elephpant
+{
+    if ( ( $elephpant = findElephpantInDB( $name ) ) == FALSE )
+    {
+        return NULL;
+    }
+
+    return $elephpant;
+}
+?>]]></example>
+
+<blurb>%= null% implies %?% type hint</blurb>
+
+</slide>

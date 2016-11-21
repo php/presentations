@@ -1,0 +1,22 @@
+<slide>
+<image filename="php7trans-200.png" />
+<break/>
+
+<blurb>✔ Microseconds Support Improved</blurb>
+<example><![CDATA[
+<?php
+$now = new DateTimeImmutable();
+echo $now->format( 'H:i:s.u' ), "\n";
+?>
+]]></example>
+<blurb>%15:52:27.340830%</blurb>
+
+<blurb>Be aware:</blurb>
+<example><![CDATA[
+<?php
+var_dump( new DateTimeImmutable() == new DateTimeImmutable() );
+?>
+]]></example>
+
+
+</slide>

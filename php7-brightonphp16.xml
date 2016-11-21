@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>PHP</topic>
+<title>PHP 7 (and 7.1)</title>
+<event>Brighton PHP</event>
+<location>Brighton, UK</location>
+<date>Nov 21st, 2016</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin></joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- new features -->
+<slide>slides/intro/php7-engine-improv.xml</slide>
+<slide>slides/intro/php-versions-bench.xml</slide>
+<slide>slides/intro/php7-opcache-persist.xml</slide>
+<slide>slides/intro/php7-opcache-composer.xml</slide>
+<slide>slides/intro/php7-opcache-tree.xml</slide>
+
+<slide>slides/intro/php7-ast.xml</slide>
+<slide>slides/intro/php7-fatal-exception.xml</slide>
+<slide>slides/intro/php7-exception-hiearchy.xml</slide>
+
+<slide>slides/intro/php7-types-return.xml</slide>
+<slide>slides/intro/php7-types-coercive.xml</slide>
+<slide>slides/intro/php7-types-strict.xml</slide>
+
+<slide>slides/intro/php7-anon-class.xml</slide>
+<slide>slides/intro/php7-coalesce.xml</slide>
+<slide>slides/intro/php7-spaceship.xml</slide>
+<slide>slides/intro/php7-enterprise.xml</slide>
+<slide>slides/intro/php7-0cost-assertions.xml</slide>
+
+<slide>slides/intro/php7-sizet.xml</slide>
+<slide>slides/intro/php7-uvs.xml</slide>
+<slide>slides/intro/php7-unicode.xml</slide>
+<slide>slides/intro/php7-csprng.xml</slide>
+
+<slide>slides/intro/php7-bench-drupal8.xml</slide>
+<slide>slides/intro/php7-mem-drupal8.xml</slide>
+<slide>slides/intro/php7-bench-wp411.xml</slide>
+<slide>slides/intro/php7-mem-wp411.xml</slide>
+<slide>slides/intro/php7-bench-magento2-dev.xml</slide>
+<slide>slides/intro/php7-bench-mediawiki124.xml</slide>
+<slide>slides/intro/php7-bench-phpbb313.xml</slide>
+
+<slide>slides/intro/php7-speedy-elephpant.xml</slide>
+
+<slide>slides/intro/php7-badoo-1.xml</slide>
+<slide>slides/intro/php7-badoo-2.xml</slide>
+<slide>slides/intro/php7-badoo-3.xml</slide>
+
+<slide>slides/intro/php71-title.xml</slide>
+
+<slide>slides/intro/php71-nullable.xml</slide>
+<slide>slides/intro/php71-void-return.xml</slide>
+<slide>slides/intro/php71-list-keys.xml</slide>
+<slide>slides/intro/php71-list-syntax.xml</slide>
+<slide>slides/intro/php71-class-constants.xml</slide>
+<slide>slides/intro/php71-negative-string-index.xml</slide>
+<slide>slides/intro/php71-iterable-psuedo-type.xml</slide>
+<slide>slides/intro/php71-microseconds.xml</slide>
+
+
+<slide>slides/mongodb/resources.xml</slide>
+
+
+</presentation>
