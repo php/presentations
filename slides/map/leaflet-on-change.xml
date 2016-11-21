@@ -1,19 +1,14 @@
 <slide>
-<title>Showing a Map</title>
+<title>Detecting Change Event</title>
 <div effect="fade-out">
-<iframe filename='examples/leaflet.php?lat=:-:lat:-:&amp;lon=:-:lon:-:'/>
+<iframe filename='examples/leaflet-on-change.php?lat=:-:lat:-:&amp;lon=:-:lon:-:'/>
 </div>
 <div effect="fade-in">
 <example><![CDATA[
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Leaflet</title>
-    <meta charset="utf-8" />
-    
-    <link rel="stylesheet" href="leaflet/leaflet.css" />
-    <!--[if lte IE 8]><link rel="stylesheet" href="leaflet/leaflet.ie.css" /><![endif]-->
-    <script src="leaflet/leaflet.js"></script>
+    …
 </head>
 <body>
     <div id="map" style="width: 1004px; height: 590px"></div>
@@ -25,6 +20,15 @@
             osm = new L.TileLayer(osmUrl, {maxZoom: 18, attribution: osmAttrib});
         
         map.setView(new L.LatLng(:-:lat:-:, :-:lon:-:), 13).addLayer(osm);
+
+        map.on('moveend', changeLocation);
+
+        function changeLocation(event) {
+            center = map.getCenter();
+
+            alert( center.lat + ' - ' + center.lng );
+        }
+
     </script>
 </body>
 </html>]]></example>

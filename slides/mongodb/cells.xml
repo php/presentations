@@ -9,8 +9,9 @@
         </list>
     </bullet>
     <bullet>Cells have a level which define the size of the cell</bullet>
-    <bullet>S2 provides 31 levels</bullet>
+    <bullet>S2 provides 31 levels.</bullet>
+	<bullet>Level 0 is a ⅙th of the globe</bullet>
+	<bullet>Each further level devides by 4</bullet>
     <bullet>The higher the level, the smaller the cell, and therefore the more needed to cover the earth</bullet>
-    <bullet>By default, we use all levels between 500m on a side and 100km on a side</bullet>
 </list>
 </slide>

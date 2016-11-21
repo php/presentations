@@ -1,7 +1,7 @@
 <slide>
 <title>Aggregation: $geoNear example</title>
 
-<iframe align="right" width="500" filename='examples/3angle/?l=pubsaggr&amp;zoom=17;&amp;lat=:-:lat:-:&amp;lon=:-:lon:-:'/>
+<iframe align="right" width="500" filename='examples/3angle/?l=pubsaggr&amp;zoom=16;&amp;lat=:-:lat:-:&amp;lon=:-:lon:-:'/>
 
 <div effect="fade-out">
 <example inline="1"><![CDATA[
@@ -13,7 +13,7 @@ res = db.poiConcat.aggregate( [ {
     },
     'distanceField' : 'distance',
     'distanceMultiplier' : 1,
-    'maxDistance' : 500,
+    'maxDistance' : 5000,
     'spherical' : true,
     'query' : { 
       '$or' : [

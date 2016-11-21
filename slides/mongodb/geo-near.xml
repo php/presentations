@@ -4,7 +4,7 @@
 <!--
 <image filename="near-pub.png" align="right"/>
 -->
-<iframe align="right" width="500" filename='examples/3angle/?l=fivepubs&amp;zoom=17;&amp;lat=:-:lat:-:&amp;lon=:-:lon:-:'/>
+<iframe align="right" width="500" filename='examples/3angle/?l=fivepubs&amp;zoom=14;&amp;lat=:-:lat:-:&amp;lon=:-:lon:-:'/>
 
 <example inline="1">
 db.poiConcat.find( {

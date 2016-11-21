@@ -16,7 +16,6 @@ db.poiConcat.find( {
   *} },*
   ts: "amenity=cafe"
 } );
-
 </example>
 
 <example inline="1">

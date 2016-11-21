@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Locate All The Things</title>
+<event>TrueNorth PHP</event>
+<location>Missisauga, ON, Canada</location>
+<lat>43.6124</lat><lon>-79.7537</lon>
+<date>November 5th, 2016</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<joindin>http://joind.in/19711</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/mongodb/closed-pub.xml</slide>
+<!-- A few words about our dataset -->
+
+<slide>slides/mongodb/few-words-about-osm.xml</slide>
+
+<slide>slides/map/osm-data.xml</slide>
+
+<slide>slides/mongodb/osm-import-tags-section.xml</slide>
+
+<slide>slides/map/osm-tags1.xml</slide>
+<slide>slides/map/osm-tags2.xml</slide>
+<slide>slides/map/osm-tags3.xml</slide>
+
+
+<slide>slides/mongodb/osm-to-mongo-data.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data2.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data3.xml</slide>
+<slide>slides/mongodb/osm-to-mongo-data4.xml</slide>
+
+<slide>slides/mongodb/osm-import-4times-section.xml</slide>
+<slide>slides/mongodb/osm-schema1.xml</slide>
+<slide>slides/mongodb/osm-schema2.xml</slide>
+<slide>slides/mongodb/osm-schema4.xml</slide>
+<slide>slides/mongodb/osm-schema3.xml</slide>
+<slide>slides/mongodb/osm-schema-summary.xml</slide>
+
+<!-- DATA STORAGE -->
+<!--
+	No more [ lon, lat ], but geojson instead
+
+SAY WHERE ELSE GeoJson is used
+-->
+<slide>slides/mongodb/osm-import-location-section.xml</slide>
+<slide>slides/mongodb/geojson.xml</slide>
+
+<!--
+	POINT:
+    show an image, and the GeoJson under 
+-->
+<slide>slides/mongodb/geojson-point.xml</slide>
+<!--
+	LINESTRING:
+    show an image, and the GeoJson under 
+-->
+<slide>slides/mongodb/geojson-linestring.xml</slide>
+<!--
+	POLYGON:
+    show an image, and the GeoJson under 
+-->
+<slide>slides/mongodb/geojson-polygon.xml</slide>
+
+<!--
+	CELLS,
+    We divide the surface of the earth into cells
+        A library called S2 from Google does the hard work
+    Cells have a level which define the size of the cell.
+    S2 provides 31 levels
+    The higher the level, the smaller the cell, and therefore the more needed to cover the earth
+    By default, we use all levels between 500m on a side and 100km on a side
+-->
+<slide>slides/mongodb/cells.xml</slide>
+<!--
+	Show grid of (part of) London:
+	- Point, Westminster palace
+	- Line, Oxford Street
+    - Polygon, Hyde Park
+-->
+<slide>slides/mongodb/cells-level10-example-london-1.xml</slide>
+<slide>slides/mongodb/cells-level10-example-london-2.xml</slide>
+<slide>slides/mongodb/cells-level10-example-london-3.xml</slide>
+
+<slide>slides/map/osm-xapi.xml</slide>
+<slide>slides/map/osm-data.xml</slide>
+<slide>slides/map/import-script-manchester.xml</slide>
+
+
+<!-- operators
+    $near
+        find stuff near a point
+        index required
+    $geoWithin
+        find stuff within a polygon/circle
+        index NOT required
+    $geoIntersects
+        find stuff that intersects with other stuff
+        index NOT required
+
+-->
+<slide>slides/mongodb/geo-in-2.4.xml</slide>
+
+<!-- near
+	- Example with road and park
+	- slide with index/no index, and comparsion with 2.2?
+-->
+<!-- geoWithin
+	- Example with road and park
+	- slide with index/no index, and comparsion with 2.2?
+-->
+<!-- geoIntersects
+	- Example with road and park
+	- slide with index/no index, and comparsion with 2.2?
+-->
+<slide>slides/mongodb/geo-near.xml</slide>
+
+<!--
+	NEAR
+
+    Starts from a point
+    Looks at concentric donuts from that point
+    Want to look at documents within the donut
+    If distance from query point to document is within the donut, output
+    Adapts size of the donut as needed
+-->
+<!--
+	GeoWithin/GeoIntersecs
+
+    Generate a covering for geometry in query
+    Look at all points in all overlapping cells
+        Cells may be larger or smaller than our covering
+        Must look at cells that contain our covering
+        Must look at cells that we contain
+    See if documents are within or intersect our query geometry
+
+	Show examples of:
+	- within: The Palace of Westminster (point) in "City of Westminster" (polygon)
+	- intersect: thames (line) crossing London (polygon)
+-->
+<slide>slides/mongodb/geo-within.xml</slide>
+<slide>slides/mongodb/geo-within-2.xml</slide>
+
+<slide>slides/mongodb/geo-intersects.xml</slide>
+
+
+<!--
+Without index:
+    $near
+        Look at every point
+        Sort by distance
+        Very slow, so requires an index.
+    $geoWithin
+        Look at every document
+        Is it within the query polygon?
+        Order is arbitrary
+    $geoIntersects
+        Look at every document
+        Does it intersect with the query geometry?
+        Order is arbitrary
+-->
+<!-- AGGREGATION:
+
+	- show tube stations per borough
+	- show pubs by borough
+
+http://docs.mongodb.org/manual/reference/aggregation/#stage._S_geoNear
+
+- distance is important
+- $geoNear in aggregation can't deal with more than one 2dsphere index
+- spherical option is *required* when using a 2dsphere index
+-->
+<slide>slides/mongodb/geo-aggregation.xml</slide>
+<slide>slides/mongodb/geo-aggregation2.xml</slide>
+
+<slide>slides/mongodb/osm-import-leaflet-section.xml</slide>
+
+<slide>slides/map/leaflet.xml</slide>
+<slide>slides/map/leaflet-ajax.xml</slide>
+<slide>slides/map/leaflet-json-return.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

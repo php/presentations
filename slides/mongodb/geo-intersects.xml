@@ -33,6 +33,5 @@ db.poiConcat.find( {
 { "_id" : "n2066862842", "ts" : [ "addr:housenumber=440", "addr:street=Strand", "amenity=bank", "name=Coutts &amp; Co", "phone=+44 2077 531000", "postal_code=WC2R 0QS", "website=http://www.coutts.com/locations/london-strand/" ] }
 { "_id" : "w166702178", "ts" : [ "layer=-3", "line=Jubilee", "name=Jubilee Line (disused)", "network=London Underground", "oneway=yes", "railway=disused", "tunnel=yes" ] }
 { "_id" : "w166707824", "ts" : [ "layer=-2", "name=Northern Line Southbound", "railway=platform" ] }
-{ "_id" : "w166707825", "ts" : [ "layer=-2", "name=Northern Line Northbound", "railway=platform" ] }
 </example>
 </slide>

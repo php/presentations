@@ -13,7 +13,7 @@ $db->poi->createIndex( [ 'tags' => 1 ] );
 // Road with name=Strand
 $db->poi->find( [ 'tags' => 'name=Strand' ] );
 // All roads
-$db->poi->find( [ 'tags' => new MongoRegex( '/^highway=/' ) ] );</example>
+$db->poi->find( [ 'tags' => new \MongoDB\BSON\Regex( '/^highway=/' ) ] );</example>
 <list>
     <bullet>One index required</bullet>
     <bullet>Good for finding key/value combinations</bullet>

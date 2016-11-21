@@ -1,0 +1,27 @@
+<slide>
+<title>Feature Return JSON + GeoJSON</title>
+
+<example>
+<![CDATA[[
+    {
+        "type": "Feature",
+        "properties": {
+            "popupContent": "<b>The Drake and Firkin<\/b><br\/>amenity: pub\n",
+            "changed": false,
+            "name": "The Drake and Firkin",
+            "classes": "amenitypub"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -79.750616,
+                43.610471
+            ]
+        }
+    },
+    …
+]]]>
+</example>
+
+<blurb align="center">https://github.com/derickr/3angle</blurb>
+</slide>

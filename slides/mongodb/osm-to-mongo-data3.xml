@@ -8,12 +8,23 @@
 <blurb>Let's look at the "explain" output:</blurb>
 <example inline="1">db.poi.find( { 'tags.amenity' : 'pub' } ).explain();
 {
-    "cursor" : "BasicCursor",
-    "isMultiKey" : false,
-*|e70000|    "n" : 3895,|*
-*|e70000|    "nscannedObjects" : 2347913,|*
-    "nscanned" : 2347913,
-    ...
+    "queryPlanner" : {
+        "plannerVersion" : 1,
+        "namespace" : "demo.poiConcat",
+        "indexFilterSet" : false,
+        "parsedQuery" : {
+            "tags.amenity" : { "$eq" : "pub" }
+        },
+        "winningPlan" : {
+            "stage" : *"COLLSCAN"*,
+            "filter" : {
+                "tags.amenity" : { "$eq" : "pub" }
+            },
+            "direction" : "forward"
+        },
+        "rejectedPlans" : [ ]
+    },
+    …
 </example>
 </div>
 
@@ -22,13 +33,24 @@
 <example>db.poi.createIndex( { "tags.amenity" : 1 } );</example>
 <blurb>And the new "explain" output:</blurb>
 <example inline="1">db.poi.find( { 'tags.amenity' : 'pub' } ).explain();
-{
-    "cursor" : "BtreeCursor tags.amenity_1",
-    "isMultiKey" : false,
-    "n" : 3895,
-*|00e700|    "nscannedObjects" : 3895,|*
-    "nscanned" : 3895,
-    ...
+…
+        "winningPlan" : {
+            "stage" : "FETCH",
+            "inputStage" : {
+                *|007700|"stage" : "IXSCAN",|*
+                "keyPattern" : { "tags.amenity" : 1 },
+                "indexName" : "tags.amenity_1",
+                "isMultiKey" : false,
+                "isUnique" : false,
+                "isSparse" : false,
+                "isPartial" : false,
+                "indexVersion" : 1,
+                "direction" : "forward",
+                "indexBounds" : {
+                    "tags.amenity" : [ "[\"pub\", \"pub\"]" ]
+                }
+            }
+        },
 </example>
 </div>
 </slide>

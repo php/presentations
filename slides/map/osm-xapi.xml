@@ -1,48 +1,14 @@
 <slide>
 <title>Fetching OSM data</title>
 
-<div effect="fade-out stop">
-<blurb>The whole planet (bad idea as it's 26GB):</blurb>
+<blurb>The whole planet (bad idea as it's 53GB):</blurb>
 <example>http://planet.openstreetmap.org/planet/planet-latest.osm.bz2</example>
 
 <blurb>A whole country:</blurb>
-<example>http://download.geofabrik.de/openstreetmap/europe/great_britain/england.osm.bz2</example>
+<example>http://download.geofabrik.de/europe/great-britain-latest.osm.bz2</example>
 
 <blurb>A metro extract:</blurb>
-<example>http://metro.teczno.com/#manchester</example>
+<example>https://mapzen.com/data/metro-extracts/</example>
 
-<blurb>XAPI (via Overpass):</blurb>
-<example>http://www.overpass-api.de/api/xapi?map?bbox=7.12,50.73,7.25,50.81</example>
-<example>http://www.overpass-api.de/api/xapi?*[bbox=7.1,51.2,7.2,51.3][amenity=pub]</example>
-</div>
-
-<div effect="fade-in">
-<blurb>Overpass</blurb>
-<example inline="3"><![CDATA[
-&lt;?php
-$bb = '&lt;bbox-query e="0.334" n="51.691" s="51.286" w="-0.510"/>';
-
-*$data = &lt;&lt;&lt;ENDDATA*
-*&lt;union>*
-*    &lt;query type="node">&lt;has-kv k="amenity" v="pub"/>$bb&lt;/query>*
-*    &lt;query type="way">&lt;has-kv k="amenity" v="pub"/>$bb&lt;/query>*
-*&lt;/union>*
-*&lt;query type="node">*
-*    &lt;has-kv k="real_cider" v="yes"/>*
-*&lt;/query>*
-*&lt;print/>*
-*ENDDATA;*
-
-$params = array(
-    'http' => array(
-        'method' => 'POST', 'content' => $data,
-        'header' => 'Content-Type: application/x-www-form-urlencoded'
-    )
-);
-$ctx = stream_context_create($params);
-echo file_get_contents("http://overpass-api.de/api/interpreter", false, $ctx);
-?>
-]]></example>
-</div>
 
 </slide>

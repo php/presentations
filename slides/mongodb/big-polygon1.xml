@@ -7,7 +7,7 @@
 
 <div effect="fade-in">
 <list>
-	<bullet>Queries larger than a hemsiphere</bullet>
+	<bullet>Queries larger than a hemisphere</bullet>
 	<bullet>Special *CRS*: %urn:x-mongodb:crs:strictwinding:EPSG:4326%</bullet>
 	<bullet>"strictwinding" means "counter clockwise"
 	<image filename="bigp-london3a.png"/>
