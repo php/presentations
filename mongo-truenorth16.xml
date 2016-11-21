@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Grown-up MongoDB: Schema Design</title>
+<event>TrueNorth PHP</event>
+<location>Missisauga, ON, Canada</location>
+<date>Nov 4th, 2016</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>http://joind.in/19710</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/mongodb/agenda-grownup.xml</slide>
+
+** Terms **
+
+<slide>slides/mongodb/collections-documents.xml</slide>
+
+<slide>slides/mongodb/document-title.xml</slide>
+<slide>slides/mongodb/document-simple.xml</slide>
+<slide>slides/mongodb/document-complex.xml</slide>
+
+<slide>slides/mongodb/collections-title.xml</slide>
+<slide>slides/mongodb/collections.xml</slide>
+
+<slide>slides/mongodb/index-title.xml</slide>
+<slide>slides/mongodb/index.xml</slide>
+
+** From PHP **
+
+<slide>slides/mongodb/phplib-title.xml</slide>
+<slide>slides/mongodb/phplib-intro.xml</slide>
+<slide>slides/mongodb/phplib-crud.xml</slide>
+<slide>slides/mongodb/phplib-index.xml</slide>
+
+<slide>slides/mongodb/keys-title.xml</slide>
+<slide>slides/mongodb/data-model.xml</slide>
+
+Common Patterns
+
+- RDBMS-normalisation.
+
+<slide>slides/mongodb/eav.xml</slide>
+<slide>slides/mongodb/eav2.xml</slide>
+<slide>slides/mongodb/eav3.xml</slide>
+
+<slide>slides/mongodb/dram-erd.xml</slide>
+<slide>slides/mongodb/dram-erd-in-mongo.xml</slide>
+<slide>slides/mongodb/whisky-words.xml</slide>
+<slide>slides/mongodb/whisky-checking.xml</slide>
+
+<slide>slides/mongodb/clinks.xml</slide>
+<slide>slides/mongodb/clinks1.xml</slide>
+<slide>slides/mongodb/clinks2.xml</slide>
+<slide>slides/mongodb/clinks3.xml</slide>
+<slide>slides/mongodb/clinks4.xml</slide>
+<slide>slides/mongodb/clinks5.xml</slide>
+
+<slide>slides/mongodb/document-validation.xml</slide>
+
+<slide>slides/mongodb/embed-vs-link.xml</slide>
+
+<slide>slides/mongodb/index-title.xml</slide>
+<slide>slides/mongodb/indexes-new.xml</slide>
+<slide>slides/mongodb/indexes-php.xml</slide>
+
+<slide>slides/mongodb/indexes-explain-noindex.xml</slide>
+
+<slide>slides/mongodb/indexes-explain2.xml</slide>
+<slide>slides/mongodb/indexes-explain-index-sort.xml</slide>
+<slide>slides/mongodb/indexes-explain3.xml</slide>
+
+<slide>slides/mongodb/indexes-special.xml</slide>
+
+<!-- MongoDB text search -->
+<!--
+<slide>slides/mongodb/text-create-index-php.xml</slide>
+<slide>slides/mongodb/text-run-command.xml</slide>
+<slide>slides/mongodb/text-index-options.xml</slide>
+<slide>slides/mongodb/text-query-syntax.xml</slide>
+-->
+<slide>slides/mongodb/recap-grownup.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>
