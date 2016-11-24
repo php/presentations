@@ -1,0 +1,23 @@
+<slide>
+<title>Where did you taste the most *distinct* beers?</title>
+
+<div effect="fade-in"><list><bullet>*group by* country and *collect* beer names</bullet></list></div>
+<div effect="fade-in"><list><bullet>*create documents* out of collection</bullet></list></div>
+<div effect="fade-in"><list><bullet>*group by* country and *count* items</bullet></list></div>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline:</blurb>
+<example>db.beer.aggregate( [
+</example></div>
+<div effect="fade-in"><example inline="1">    { '$group' : {
+        '_id' : '$brewery_country',
+        'beers' : *{ '$addToSet' : '$beer_name' }*,
+    } },
+</example></div>
+<div effect="fade-in"><example inline="1">    { *'$unwind' : '$beers'* },</example></div>
+<div effect="fade-in"><example inline="1">    { '$group' : { '_id' : *'$_id'*, 'count' : { '$sum' : 1 } } },</example></div>
+<div effect="fade-in"><example>    { '$sort' : { 'count' : -1 } },
+] ).pretty()</example></div>
+
+</slide>

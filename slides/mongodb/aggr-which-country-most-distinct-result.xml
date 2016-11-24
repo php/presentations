@@ -1,0 +1,32 @@
+<slide>
+<title>Where did you taste the most ~distinct~ beers?</title>
+
+<example>db.beer.aggregate( [
+    { '$group' : {
+        '_id' : '$brewery_country',
+        'beers' : { '$addToSet' : '$beer_name' },
+    } },
+    { '$unwind' : '$beers' },
+    { '$group' : { '_id' : '$_id', 'count' : { '$sum' : 1 } } },
+    { '$sort' : { 'count' : -1 } },
+] ).pretty()
+
+</example>
+
+<blurb>Result:</blurb>
+<example inline="1">{ "_id" : "England", "count" : 912 }
+{ "_id" : "United States", "count" : 320 }
+{ "_id" : "Belgium", "count" : 185 }
+{ "_id" : "Scotland", "count" : 93 }
+{ "_id" : "Germany", "count" : 80 }
+{ "_id" : "Netherlands", "count" : 79 }
+{ "_id" : "Norway", "count" : 60 }
+{ "_id" : "Wales", "count" : 55 }
+{ "_id" : "Canada", "count" : 50 }
+{ "_id" : "Denmark", "count" : 31 }
+{ "_id" : "Sweden", "count" : 26 }
+{ "_id" : "France", "count" : 25 }
+…
+</example>
+
+</slide>

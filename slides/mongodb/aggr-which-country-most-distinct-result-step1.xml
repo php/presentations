@@ -1,0 +1,31 @@
+<slide>
+<title>Where did you taste the most ~distinct~ beers?</title>
+
+<example>db.beer.aggregate( [
+    { '$group' : {
+        '_id' : '$brewery_country',
+        'beers' : { '$addToSet' : '$beer_name' },
+    } },
+] ).pretty()
+</example>
+
+<blurb>Result:</blurb>
+<example inline="1">{
+    "_id" : "Portugal",
+    "beers" : [
+        "Cheers Sem álcool",
+        …
+        "Super Bock Preta Sem Alcool"
+    ]
+}
+{
+    "_id" : "Canada",
+    "beers" : [
+        "CID Rosé",
+        …
+        "Revenante",
+    ]
+}
+</example>
+
+</slide>

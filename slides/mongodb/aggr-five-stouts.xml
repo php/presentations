@@ -1,0 +1,20 @@
+<slide>
+<title>Can you give me a ~five~ recommendations for ~stouts~?</title>
+
+<blurb>Logical Approach:</blurb>
+<div effect="fade-in"><list><bullet>*find* stouts</bullet></list></div>
+<div effect="fade-in"><list><bullet>*group by* rating</bullet></list></div>
+<div effect="fade-in"><list><bullet>only *show* the beer name</bullet></list></div>
+<div effect="fade-in"><list><bullet>*limit* by *1*</bullet></list></div>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline:</blurb>
+<example>db.beer.aggregate( [
+</example></div>
+<div effect="fade-in"><example>    { '$sort' : { 'beer_abv' : -1 } },
+    { '$limit' : 1 },</example></div>
+<div effect="fade-in"><example inline="1">    { *'$project' : { 'beer_name' : 1 }* },
+] ).pretty()</example></div>
+
+</slide>

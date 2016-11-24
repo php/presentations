@@ -1,0 +1,22 @@
+<slide>
+<title>Can you group beers of a similar IBU together?</title>
+
+<blurb>Pipeline:</blurb>
+<example inline="1">db.beer.aggregate( [
+    { '$match' : { 'beer_ibu' : { '$gte' : 0 } } },
+    { '$bucketAuto' : {
+        groupBy: '$beer_ibu',
+        buckets: 10,
+        granularity: *'1-2-5'*
+    } },
+] ).pretty()</example>
+
+<blurb>Result:</blurb>
+<example inline="1">
+{ "_id" : { "min" : *1*, "max" : *2*0 }, "count" : 184 }
+{ "_id" : { "min" : *2*0, "max" : *5*0 }, "count" : 535 }
+{ "_id" : { "min" : *5*0, "max" : *1*00 }, "count" : 215 }
+{ "_id" : { "min" : *1*00, "max" : *5*00 }, "count" : 27 }
+</example>
+
+</slide>

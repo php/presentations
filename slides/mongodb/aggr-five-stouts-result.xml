@@ -1,0 +1,29 @@
+<slide>
+<title>What is your favourite ~German~ beer?</title>
+
+<example>db.beer.aggregate( [
+    { '$match' : { 'brewery_country' : 'Germany' } },
+    { '$sort' : { 'rating_score' : -1 } },
+    { '$project' : { 'beer_name' : 1 } },
+] ).pretty()</example>
+
+<blurb>Result:</blurb>
+<example inline="1">{
+    "_id" : {
+        "k" : "untappd_20140504143324",
+        "u" : "derick"
+    },
+    "beer_name" : "Tokyo* (16.5%)"
+}
+</example>
+
+<div effect="fade-in">
+<blurb>To get rid of the %_id% field too:</blurb>
+<example inline="1">db.beer.aggregate( [
+    { '$match' : { 'brewery_country' : 'Germany' } },
+    { '$sort' : { 'rating_score' : -1 } },
+    { '$project' : { *'_id' : 0*, 'beer_name' : 1 } },
+] ).pretty()</example>
+</div>
+
+</slide>

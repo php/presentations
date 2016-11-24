@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Adventures in Aggregating Beer</title>
+<event>DPC 2016</event>
+<location>Amsterdam, Netherlands</location>
+<date>Nov 24th, 2016</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin></joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/mongodb/i-like-beer.xml</slide>
+<slide>slides/mongodb/beer-questions.xml</slide>
+
+<slide>slides/mongodb/aggr-our-example-data.xml</slide>
+
+<slide>slides/mongodb/aggr-aggr-framework-img.xml</slide>
+<slide>slides/mongodb/aggr-aggr-framework.xml</slide>
+
+<slide>slides/mongodb/aggr-pipeline.xml</slide>
+<slide>slides/mongodb/aggr-pipelines-ops.xml</slide>
+
+<slide>slides/mongodb/aggr-favourite-beer.xml</slide>
+<slide>slides/mongodb/aggr-favourite-beer-result.xml</slide>
+
+<slide>slides/mongodb/aggr-favourite-german-beer.xml</slide>
+<slide>slides/mongodb/aggr-favourite-german-beer-result.xml</slide>
+
+<slide>slides/mongodb/aggr-strongest-beer.xml</slide>
+<slide>slides/mongodb/aggr-strongest-beer-result.xml</slide>
+
+<slide>slides/mongodb/aggr-which-venue.xml</slide>
+<slide>slides/mongodb/aggr-which-venue-result.xml</slide>
+
+<slide>slides/mongodb/aggr-which-country-most-distinct.xml</slide>
+
+<slide>slides/mongodb/aggr-which-country-most-distinct-result-step1.xml</slide>
+<slide>slides/mongodb/aggr-which-country-most-distinct-result-step2.xml</slide>
+<slide>slides/mongodb/aggr-which-country-most-distinct-result-step3.xml</slide>
+<slide>slides/mongodb/aggr-which-country-most-distinct-result-step4.xml</slide>
+
+<slide>slides/mongodb/aggr-closest-pub.xml</slide>
+<slide>slides/mongodb/aggr-closest-pub-result.xml</slide>
+
+<slide>slides/mongodb/aggr-most-style.xml</slide>
+
+<slide>slides/mongodb/aggr-ibu-histogram.xml</slide>
+<slide>slides/mongodb/aggr-ibu-histogram-result.xml</slide>
+<slide>slides/mongodb/aggr-ibu-histogram-result-1-2-5.xml</slide>
+<slide>slides/mongodb/aggr-ibu-histogram-result-powersof2.xml</slide>
+
+<slide>slides/mongodb/aggr-facet.xml</slide>
+<slide>slides/mongodb/aggr-facet-result.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+</presentation>

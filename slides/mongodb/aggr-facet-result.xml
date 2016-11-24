@@ -1,0 +1,46 @@
+<slide>
+<title>Give an *overview* of number of beers per *x*</title>
+
+<example inline="1">db.beer.aggregate( [
+    { *'$facet'* : {
+        'beer_type' :       [ { *'$sortByCount'* : '$beer_type' } ],
+        'brewery_country' : [ { '$sortByCount' : '$brewery_country' } ],
+        'ibu' : [
+            { '$match' : { 'beer_abv' : { '$gte' : 0 } } },
+            { '$bucket' : {
+                groupBy: '$beer_abv',
+                boundaries: [ 0, 2, 4, 6, 8, 10 ],
+                default: 'way-too-much',
+            } }
+        ],
+    } },
+] ).pretty()</example>
+
+<blurb>Result:</blurb>
+<example>
+{
+    "abv" : [
+        { "_id" : 0, "count" : 64 },
+        { "_id" : 2, "count" : 240 },
+        { "_id" : 4, "count" : 2248 },
+        { "_id" : 6, "count" : 966 },
+        { "_id" : 8, "count" : 435 },
+        { "_id" : "way-too-much", "count" : 187 }
+    ],
+
+    "beer_type" : [
+        { "_id" : "Cider", "count" : 730 },
+        { "_id" : "English Bitter", "count" : 164 },
+        { "_id" : "Stout", "count" : 139 },
+        …
+    ],
+    "brewery_country" : [
+        { "_id" : "England", "count" : 1971 },
+        { "_id" : "United States", "count" : 501 },
+        { "_id" : "Belgium", "count" : 405 },
+        …
+    ],
+}
+</example>
+
+</slide>

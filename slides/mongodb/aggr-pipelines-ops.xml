@@ -1,17 +1,15 @@
 <slide>
-<title>Pipeline Operators</title>
+<title>Pipeline Stages</title>
 
 <list>
     <bullet>%$match%</bullet>
-    <bullet>%$geoNear%</bullet>
     <bullet>%$project%</bullet>
     <bullet>%$group%</bullet>
     <bullet>%$unwind%</bullet>
-</list>
-<break/>
-<list>
-    <bullet>%$sort%</bullet>
-    <bullet>%$limit%</bullet>
-    <bullet>%$skip%</bullet>
+    <bullet>%$sample% (new in 3.2)</bullet>
+    <bullet>%$sortByCount% (new in 3.4)</bullet>
+    <bullet>%$bucket% / %$bucketAuto% (new in 3.4)</bullet>
+    <bullet>%$geoNear%</bullet>
+    <bullet>%$sort%, %$limit%, %$skip%</bullet>
 </list>
 </slide>

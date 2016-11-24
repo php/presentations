@@ -1,26 +1,33 @@
 <slide>
 <title>Our Example data</title>
 
-<example>
+<example inline="1">
 {
-	"_id" : ObjectId("5400a24f44670a01098b491d"),
-	"beer_name" : "Aurora Australis",
-	"brewery_name" : "Bridge Road Brewers",
-	"beer_type" : "Belgian Quad",
-	"beer_abv" : 11,
-	"beer_ibu" : 30,
-	"comment" : "Red wine flavours. Brewed in Australia but packaged in Norway.",
-	"venue_name" : "Olympen",
-	"venue_city" : "Oslo",
-	"venue_state" : "Oslo",
-	"venue_lat" : 59.9121,
-	"venue_lng" : 10.7643,
-	"rating_score" : 4.5,
-	"created_at" : ISODate("2014-07-06T20:38:17Z"),
-	"checkin_url" : "https://untappd.com/c/97860912",
-	"beer_url" : "https://untappd.com/beer/300283",
-	"brewery_url" : "https://untappd.com/brewery/3174",
-	"brewery_country" : "Australia"
+    "_id" : {
+        "k" : "untappd_20140706213817",
+        "u" : "derick"
+    },
+    "beer_name" : "Aurora Australis",
+    "brewery_name" : "Bridge Road Brewers",
+    *"beer_type" : "Belgian Quad"*,
+    "comment" : "Red wine flavours. Brewed in Australia but packaged in Norway.",
+    "venue_name" : "Olympen",
+    "venue_city" : "Oslo",
+    "venue_state" : "Oslo",
+    "checkin_url" : "https://untappd.com/c/97860912",
+    "beer_url" : "https://untappd.com/beer/300283",
+    "brewery_url" : "https://untappd.com/brewery/3174",
+    *"brewery_country" : "Australia",*
+    *"beer_abv" : 11*,
+    "beer_ibu" : 30,
+    *"rating_score" : 4.5*,
+    "l" : {
+        "type" : "Point",
+        "coordinates" : [
+            10.7643,
+            59.9121
+        ]
+    }
 }
 </example>
 </slide>

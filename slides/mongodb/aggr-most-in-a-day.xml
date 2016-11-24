@@ -1,0 +1,23 @@
+<slide>
+<title>In ~which venue~ did you taste the most beers?</title>
+
+<blurb>Logical Approach:</blurb>
+<div effect="fade-in"><list><bullet>*group by* venue</bullet></list></div>
+<div effect="fade-in"><list><bullet>*sort* by count</bullet></list></div>
+<div effect="fade-in"><list><bullet>*limit* by *1*</bullet></list></div>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline:</blurb>
+<example>db.beer.aggregate( [
+</example></div>
+<div effect="fade-in"><example inline="1">    { '$group' : {
+        *'_id' : '$venue_name',*
+        *'count' : { '$sum' : 1 },*
+    } },
+</example></div>
+<div effect="fade-in"><example inline="1">    { '$sort' : { 'count' : -1 } },
+    { '$limit' : 1 },
+] ).pretty()</example></div>
+
+</slide>

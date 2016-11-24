@@ -1,0 +1,55 @@
+<slide>
+<title>What is the ~strongest~ beer you've had?</title>
+
+<div effect="fade-out">
+<example>db.beer.aggregate( [
+    { '$sort' : { 'beer_abv' : -1 } },
+    { '$limit' : 1 },
+    { '$project' : { 'beer_name' : 1 } },
+] ).pretty()</example>
+
+<blurb>Result:</blurb>
+<example inline="1">{
+    "_id" : {
+        "k" : "untappd_20140504143324",
+        "u" : "derick"
+    },
+    "beer_name" : "Tokyo* (16.5%)"
+}
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>To get rid of the %_id% field:</blurb>
+<example inline="1">db.beer.aggregate( [
+    { '$sort' : { 'beer_abv' : -1 } },
+    { '$limit' : 1 },
+    { '$project' : { *'_id' : 0*, 'beer_name' : 1 } },
+] ).pretty()</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>To rename the field:</blurb>
+<example inline="1">db.beer.aggregate( [
+    { '$sort' : { 'beer_abv' : -1 } },
+    { '$limit' : 1 },
+    { '$project' : { '_id' : 0, *'beer' : '$beer_name'* } }
+] ).pretty()</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>To add beer name and brewery together:</blurb>
+<example inline="1">db.beer.aggregate( [
+    { '$sort' : { 'beer_abv' : -1 } },
+    { '$limit' : 1 },
+    { '$project' : {
+        '_id' : 0,
+        *'beer' : { '$concat' : [ '$beer_name', ' / ', '$brewery_name' ] }*
+    } }
+] ).pretty()</example>
+
+<blurb>Result:</blurb>
+<example inline="1">{ "beer" : "Tokyo* (16.5%) / BrewDog" }</example>
+</div>
+
+</slide>

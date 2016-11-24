@@ -1,0 +1,30 @@
+<slide>
+<title>What is the ~closet pub~ for ~x~ beer?</title>
+
+<example inline="1">db.beer.aggregate( [
+    { $geoNear: {
+        near: { type: "Point", coordinates: [ -0.1, 52.1 ] },
+        distanceField: "dist.calculated",
+        maxDistance: 2000000,
+        query: { beer_name: *"Heineken"* },
+        includeLocs: "dist.location",
+        num: 1,
+        spherical: true
+    } },
+    { '$project' : { '_id' : 0, 'venue_name' : 1, 'venue_city' : 1, 'dist' : 1 } },
+] ).pretty() </example>
+
+<blurb>Result:</blurb>
+<example inline="1">{
+    "venue_name" : "KLM Crown Lounge 52 (Intercontinental)",
+    "venue_city" : "Luchthaven Schiphol",
+    "dist" : {
+        *"calculated" : 332405.39819979493,*
+        "location" : {
+            "type" : "Point",
+            *"coordinates" : [ 4.76131, 52.3112 ]*
+        }
+    }
+}</example>
+
+</slide>

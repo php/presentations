@@ -1,0 +1,28 @@
+<slide>
+<title>Give an *overview* of number of beers per *x*</title>
+
+<blurb>Facets, new in MongoDB 3.4.</blurb>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline:</blurb>
+<example inline="1">db.beer.aggregate( [
+    { *'$facet'* : {
+        'beer_type' :       [ { *'$sortByCount'* : '$beer_type' } ],
+</example></div>
+<div effect="fade-in">
+<example inline="1">        'brewery_country' : [ { '$sortByCount' : '$brewery_country' } ],
+</example></div>
+<div effect="fade-in">
+<example inline="1">        'abv' : [
+            { '$match' : { 'beer_abv' : { '$gte' : 0 } } },
+            { *'$bucket'* : {
+                groupBy: '$beer_abv',
+                boundaries: [ 0, 2, 4, 6, 8, 10 ],
+                default: 'way-too-much',
+            } }
+        ],
+    } },
+] ).pretty()</example></div>
+
+</slide>

@@ -1,0 +1,31 @@
+<slide>
+<title>What is your favourite ~German~ beer?</title>
+
+<example>db.beer.aggregate( [
+    { '$match' : { 'brewery_country' : 'Germany' } },
+    { '$sort' : { 'rating_score' : -1 } },
+    { '$limit' : 1 },
+] ).pretty()</example>
+
+<blurb>Result:</blurb>
+<example inline="1">{
+    "_id" : { "k" : "untappd_20141115152335", "u" : "derick" },
+    "beer_name" : *"Aventinus Eisbock"*,
+    "brewery_name" : "Weisses Bräuhaus G. Schneider &amp; Sohn",
+    "beer_type" : "Eisbock",
+    "comment" : "This is the stuff. I can't say why I like it so much though",
+    "venue_name" : "Tap East",
+    "venue_city" : "Stratford",
+    "venue_state" : "Greater London",
+    "checkin_url" : "https://untappd.com/c/129666676",
+    "beer_url" : "https://untappd.com/beer/67996",
+    "brewery_url" : "https://untappd.com/brewery/1023",
+    *"brewery_country" : "Germany",*
+    "beer_abv" : 12,
+    "beer_ibu" : 15,
+    *"rating_score" : 4.5,*
+    "l" : { "type" : "Point", "coordinates" : [ -0.00878692, 51.5443 ] }
+}
+</example>
+
+</slide>

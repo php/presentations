@@ -1,0 +1,25 @@
+<slide>
+<title>What is the ~closet pub~ for ~x~ beer?</title>
+
+<blurb>Logical Approach:</blurb>
+<div effect="fade-in"><list><bullet>*find geographically closest item*</bullet></list></div>
+<div effect="fade-in"><list><bullet>*remove* unwanted fields</bullet></list></div>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline:</blurb>
+<example>db.beer.aggregate( [
+</example></div>
+<div effect="fade-in"><example inline="1">    { $geoNear: {
+        *near: { type: "Point", coordinates: [ -0.1, 52.1 ] },*
+        distanceField: *"dist.calculated",*
+        maxDistance: *2000000,*
+        *query*: { beer_name: "Heineken" },
+        includeLocs: *"dist.location",*
+        *num: 1,*
+        spherical: true
+    } },</example></div>
+<div effect="fade-in"><example inline="1">    { '$project' : { '_id' : 0, 'venue_name' : 1, 'venue_city' : 1, 'dist' : 1 } },
+] ).pretty()</example></div>
+
+</slide>

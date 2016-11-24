@@ -1,0 +1,30 @@
+<slide>
+<title>What is your ~favourite~ beer?</title>
+
+<example>db.beer.aggregate( [
+    { '$sort' : { 'rating_score' : -1 } },
+    { '$limit' : 1 },
+] ).pretty()</example>
+
+<blurb>Result:</blurb>
+<example inline="1">
+{
+    "_id" : { "k" : "untappd_20140701215547", "u" : "derick" },
+    "beer_name" : *"Odin's Tipple"*,
+    "brewery_name" : "HaandBryggeriet",
+    "beer_type" : "Russian Imperial Stout",
+    "comment" : "My first 5? Salty seaweed smell. Dark chocolate and just awesome.",
+    "venue_name" : "Cardinal",
+    "venue_city" : "Stavanger",
+    "venue_state" : "Rogaland",
+    "checkin_url" : "https://untappd.com/c/96477647",
+    "beer_url" : "https://untappd.com/beer/10907",
+    "brewery_url" : "https://untappd.com/brewery/2206",
+    "brewery_country" : "Norway",
+    "beer_abv" : 11,
+    *"rating_score" : 5,*
+    "l" : { "type" : "Point", "coordinates" : [ 5.73126, 58.971 ] }
+}
+</example>
+
+</slide>

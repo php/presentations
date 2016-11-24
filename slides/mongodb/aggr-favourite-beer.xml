@@ -1,0 +1,17 @@
+<slide>
+<title>What is your ~favourite~ beer?</title>
+
+<blurb>Logical Approach:</blurb>
+<div effect="fade-in"><list><bullet>*sort* by rating *descendingly*</bullet></list></div>
+<div effect="fade-in"><list><bullet>*limit* by *1*</bullet></list></div>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline:</blurb>
+<example>db.beer.aggregate( [
+</example></div>
+<div effect="fade-in"><example>    { '$sort' : { 'rating_score' : -1 } },</example></div>
+<div effect="fade-in"><example>    { '$limit' : 1 },
+] ).pretty()</example></div>
+
+</slide>

@@ -1,0 +1,34 @@
+<slide>
+<title>What is your most tasted style?</title>
+
+<blurb>Logical Approach:</blurb>
+<div effect="fade-in"><list><bullet>*group* by style and add *count*</bullet>
+<bullet>*sort* by *count* descendingly</bullet></list></div>
+
+<div effect="fade-in-out">
+<break/>
+<blurb>Pipeline:</blurb>
+<example>db.beer.aggregate( [
+    { '$group' : { '_id' : '$beer_type', 'count' : { '$sum': 1 } } },
+    { '$sort' : { 'count' : -1 } },
+] ).pretty()</example></div>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline (in 3.4):</blurb>
+<example inline="1">db.beer.aggregate( [
+    { *'$sortByCount'* : '$beer_type' },
+] ).pretty()</example>
+
+<break/>
+<blurb>Result:</blurb>
+<example>
+{ "_id" : "Cider", "count" : 730 }
+{ "_id" : "English Bitter", "count" : 164 }
+{ "_id" : "Stout", "count" : 139 }
+{ "_id" : "English Pale Ale", "count" : 135 }
+…
+</example>
+</div>
+
+</slide>

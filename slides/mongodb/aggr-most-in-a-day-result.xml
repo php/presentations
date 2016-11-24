@@ -1,0 +1,18 @@
+<slide>
+<title>In ~which venue~ did you taste the most beers?</title>
+
+<example>db.beer.aggregate( [
+    { '$group' : {
+        '_id' : '$venue_name',
+        'count' : { '$sum' : 1 },
+    } },
+    { '$sort' : { 'count' : 1 } },
+    { '$limit' : 1 },
+] ).pretty()
+
+</example>
+
+<blurb>Result:</blurb>
+<example inline="1">{ "_id" : "Euston Cider Tap", "count" : 217 }</example>
+
+</slide>

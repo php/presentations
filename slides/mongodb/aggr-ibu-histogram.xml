@@ -1,0 +1,20 @@
+<slide>
+<title>Can you group beers of a similar IBU together?</title>
+
+<blurb>Logical Approach:</blurb>
+<div effect="fade-in"><list><bullet>*find* all beers with an IBU</bullet>
+<bullet>do some *magic grouping*</bullet></list></div>
+
+<div effect="fade-in">
+<break/>
+<blurb>Pipeline:</blurb>
+<example>db.beer.aggregate( [
+</example></div>
+<div effect="fade-in"><example inline="1">    { '$match' : { 'beer_ibu' : { '$gte' : 0 } } },</example></div>
+<div effect="fade-in"><example inline="1">    { *'$bucketAuto'* : {
+        groupBy: *'$beer_ibu'*,
+        buckets: *10*,
+    } },
+] ).pretty()</example></div>
+
+</slide>
