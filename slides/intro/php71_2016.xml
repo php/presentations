@@ -85,6 +85,7 @@ class Token {
 <list>
 <bullet marginleft="-1em" fontsize="0.8em">new 'void' and 'iterable' keywords</bullet>
 <bullet marginleft="-1em" fontsize="0.8em">rand() and srand() are now aliased to mt_rand() and mt_srand()</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">Mersenne Twister algorithm has been tweaked</bullet>
 <bullet marginleft="-1em" fontsize="0.8em">Calling a function with too few args is now an Error instead of a Warning</bullet>
 <bullet marginleft="-1em" fontsize="0.8em">Dropped support for sslv2 streams</bullet>
 <bullet marginleft="-1em" fontsize="0.8em">Dropped support for mcrypt</bullet>
