@@ -1,0 +1,11 @@
+<slide>
+<title>gdb: how to debug a program</title>
+
+<blurb>Three ways:</blurb>
+
+<list>
+	<bullet>Start the program *through* %gdb%:<br/>%gdb --args program options%"</bullet>
+	<bullet>Run %gdb% on a binary and core file:<br/>%gdb program core%</bullet>
+	<bullet>Attach %gdb% to a process:<br/>%gdb -p {{processid}}%</bullet>
+</list>
+</slide>

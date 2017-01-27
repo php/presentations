@@ -1,0 +1,22 @@
+<slide>
+<title>gdb: attach to running process</title>
+
+<blurb>%gdb -p {{processid}}%</blurb>
+
+<example inline="2">
+(gdb) *break zif_strlen*
+Breakpoint 1 at 0xa7a8a4: file /home/derick/dev/php/php-src.git/Zend/zend_builtin_functions.c, line 570.
+(gdb) *cont*
+Continuing.
+</example>
+
+<blurb>
+Breakpoints:
+</blurb>
+<example inline="2">
+zif_~funcname~
+zim_~classname~_~funcname~
+</example>
+
+
+</slide>

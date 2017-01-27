@@ -1,0 +1,19 @@
+<slide>
+<title>*lsof*: list open sockets</title>
+
+<image filename="phpstorm-cant-listen.png"/>
+
+<div effect="fade-in">
+<blurb>Invocation</blurb>
+<example inline="2">lsof |aa0000|-i -TCP:9000|</example>
+
+<break/>
+
+<blurb>Output</blurb>
+<example inline="2">
+COMMAND    PID   USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+*php-fpm*   4376 www-data  3u  IPv4  58057      0t0  *TCP \*:9000 (LISTEN)*
+</example>
+</div>
+
+</slide>

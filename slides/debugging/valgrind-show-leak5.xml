@@ -1,0 +1,25 @@
+<slide>
+<title>leak: valgrind</title>
+
+<example inline="2">&#160;
+$ valgrind *--leak-check=full* php -n -cvalgrind-gc/php.ini valgrind-gc/bug0894-001.php
+==28418== HEAP SUMMARY:
+==28418==     in use at exit: 2,982 bytes in 75 blocks
+==28418==   total heap usage: 29,680 allocs, 29,605 frees, 3,638,264 bytes allocated
+==28418== 
+==28418== 32 bytes in 1 blocks are definitely lost in loss record 32 of 69
+==28418==    at 0x4C29B76: malloc (vg_replace_malloc.c:299)
+==28418==    by 0xA2E861: __zend_malloc (in /usr/local/php/7.0dev/bin/php)
+==28418==    by 0xA2DB2C: _emalloc (in /usr/local/php/7.0dev/bin/php)
+==28418==    by 0xF4B87A0: *???*
+==28418==    by 0xF4B8809: *???*
+==28418==    by 0xF4B9ABE: *???*
+==28418==    by 0xAA695B: *zend_std_get_gc* (in /usr/local/php/7.0dev/bin/php)
+==28418==    by 0xA92EBA: *???* (in /usr/local/php/7.0dev/bin/php)
+==28418==    by 0xA93268: *???* (in /usr/local/php/7.0dev/bin/php)
+==28418==    by 0xA94354: *zend_gc_collect_cycles* (in /usr/local/php/7.0dev/bin/php)
+==28418==    by 0xA7A1BE: *???* (in /usr/local/php/7.0dev/bin/php)
+==28418==    by 0xABC508: *???* (in /usr/local/php/7.0dev/bin/php)
+</example>
+
+</slide>

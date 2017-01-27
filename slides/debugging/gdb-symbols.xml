@@ -1,0 +1,28 @@
+<slide>
+<title>gdb: symbols</title>
+
+<example inline="2">
+*No locals.*
+*No symbol table info available.*
+</example>
+
+<div effect="fade-in">
+<break/>
+<list>
+	<bullet>compilers compile source code to assembly code</bullet>
+	<bullet>assembler converts assembly code to binaries</bullet>
+	<bullet>CPUs don't care what your variables are called</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<break/>
+<list>
+	<bullet>normally binaries are stripped to save space</bullet>
+	<bullet>don't strip symbols, add debugging info: %-ggdb3%</bullet>
+	<bullet>symbols can be external (%apache2-dbg% etc. packages)</bullet>
+</list>
+</div>
+
+
+</slide>

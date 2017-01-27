@@ -1,0 +1,11 @@
+<slide>
+<title>valgrind</title>
+
+<list>
+	<bullet>framework for CPU instrumentation</bullet>
+	<bullet>emulates a CPU</bullet>
+	<bullet>cachegrind tool: performance analysis</bullet>
+	<bullet>memcheck tool: memory leaks and corruption</bullet>
+	<bullet>can interact with gdb</bullet>
+</list>
+</slide>

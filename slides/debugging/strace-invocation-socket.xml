@@ -1,0 +1,36 @@
+<slide>
+<title>*strace*: WI-31522</title>
+
+<div effect="fade-out">
+<image filename="wi-32522.png" attr="https://youtrack.jetbrains.com/issue/WI-31522"/>
+</div>
+
+<div effect="fade-in">
+<blurb>Invocation</blurb>
+<image align="right" filename="hang.png"/>
+<example inline="2">strace |aa0000|*-F* -e open -o /tmp/strace.log| |0000ff|php| |00aa00|test.php|</example>
+
+<break/>
+<blurb>Output</blurb>
+
+<example inline="2">
+31505 *socket(PF_INET, SOCK_STREAM, IPPROTO_TCP) = 4*
+31505 fcntl(*4*, F_SETFL, O_RDONLY|O_NONBLOCK) = 0
+31505 connect(*4*, {sa_family=AF_INET, sin_port=htons(9000), sin_addr=inet_addr("127.0.0.1")}, 16) = -1 EINPROGRESS (Operation now in progress)
+…
+31517 execve("/bin/sh", ["sh", "-c", "nohup sleep 30 > /dev/null 2> /d"...], [/\* 51 vars \*/]) = 0
+31518 execve("/bin/sleep", ["sleep", "30"], [/\* 51 vars \*/] &lt;unfinished ...>
+31505 recvfrom(*4*, "run -i 25\0", 128, 0, NULL, NULL) = 10
+31505 *close(4)*                          = 0  *// XDEBUG CLOSES THE SOCKET*
+…
+31518 &lt;... execve resumed> )            = 0
+31518 nanosleep({30, 0},  &lt;unfinished ...>
+31518 &lt;... nanosleep resumed> NULL)     = 0
+31518 close(1)                          = 0
+31518 close(2)                          = 0
+31518 exit_group(0)                     = ? *// SOCKET IN FORKED PROCESS IS CLOSED*
+31518 +++ exited with 0 +++
+</example>
+</div>
+
+</slide>

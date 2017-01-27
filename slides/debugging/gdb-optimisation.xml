@@ -1,0 +1,118 @@
+<slide>
+<title>gdb: optimisation</title>
+
+<div effect="fade-out">
+<table class="two">
+<tr><td>
+<blurb>PHP:</blurb>
+<example inline="2"><![CDATA[
+&lt;?php
+
+
+
+
+
+$a = 42;
+$b = 98;
+$a = 45;
+
+printf("%d\n", $a * $b);
+?>
+]]></example>
+</td><td>
+<blurb>C:</blurb>
+<example inline="2"><![CDATA[
+#include &lt;stdio.h>
+
+int main(void)
+{
+	int a, b;
+
+	a = 42;
+	b = 98;
+	a = 45;
+
+	printf("%d\n", a * b);
+}
+]]></example>
+</td></tr>
+</table>
+</div>
+
+<div effect="fade-in-out">
+<table class="two">
+<tr><td>
+<blurb>PHP:</blurb>
+<example inline="2"><![CDATA[
+&lt;?php
+
+
+
+
+
+|777777|// $a = 42;|
+$b = 98;
+$a = 45;
+
+printf("%d\n", $a * $b);
+?>
+]]></example>
+</td><td>
+<blurb>C:</blurb>
+<example inline="2"><![CDATA[
+#include &lt;stdio.h>
+
+int main(void)
+{
+	int a, b;
+
+	|777777|// a = 42;|
+	b = 98;
+	a = 45;
+
+	printf("%d\n", a * b);
+}
+]]></example>
+</td></tr>
+</table>
+</div>
+
+<div effect="fade-in-out">
+<table class="two">
+<tr><td>
+<blurb>PHP:</blurb>
+<example inline="2"><![CDATA[
+&lt;?php
+
+
+
+
+
+|777777|// $a = 42;|
+|777777|// $b = 98;|
+|777777|// $a = 45;|
+
+printf("%d\n", 4410);
+?>
+]]></example>
+</td><td>
+<blurb>C:</blurb>
+<example inline="2"><![CDATA[
+#include &lt;stdio.h>
+
+int main(void)
+{
+	|777777|// int a, b;|
+
+	|777777|// a = 42;|
+	|777777|// b = 98;|
+	|777777|// a = 45;|
+
+	printf("%d\n", 4410);
+}
+]]></example>
+</td></tr>
+</table>
+</div>
+
+</slide>

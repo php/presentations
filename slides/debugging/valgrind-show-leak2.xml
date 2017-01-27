@@ -1,0 +1,19 @@
+<slide>
+<title>leak: reproducing</title>
+
+<blurb>PHP compiled in debug mode:</blurb>
+
+<example inline="2">
+$ php -n -cvalgrind-gc/php.ini *-d report_memleaks=1* valgrind-gc/bug0894-001.php
+Created array of 9 BSON objects
+[Fri Jan 27 10:21:11 2017]  Script:  '/home/derick/docs/debugging-demo/valgrind-gc/bug0894-001.php'
+*/usr/php/7.0dev/include/php/Zend/zend_string.h(121)* :  Freeing 0x7FF48D202EA0 (56 bytes), script=/home/derick/docs/debugging-demo/valgrind-gc/bug0894-001.php
+Last leak repeated 1 time
+…
+[Fri Jan 27 10:21:11 2017]  Script:  '/home/derick/docs/debugging-demo/valgrind-gc/bug0894-001.php'
+/usr/php/7.0dev/include/php/Zend/zend_string.h(121) :  Freeing 0x7FF48D27A000 (32 bytes), script=/home/derick/docs/debugging-demo/valgrind-gc/bug0894-001.php
+Last leak repeated 1 time
+=== Total *20* memory leaks detected ===
+</example>
+
+</slide>

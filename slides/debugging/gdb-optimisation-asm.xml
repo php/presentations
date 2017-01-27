@@ -1,0 +1,102 @@
+<slide>
+<title>gdb: optimisation (assembler)</title>
+
+<div effect="fade-out">
+<blurb>%gcc *|ff0000|-S|* -O0 -o opt1-O0.asm opt1.c%</blurb>
+<example inline="2"><![CDATA[
+main:
+.LFB0:
+    .cfi_startproc
+    pushq   %rbp
+    .cfi_def_cfa_offset 16
+    .cfi_offset 6, -16
+    movq    %rsp, %rbp
+    .cfi_def_cfa_register 6
+    subq    $16, %rsp
+    movl    *$42*, -4(%rbp)
+    movl    *$98*, -8(%rbp)
+    movl    *$45*, -4(%rbp)
+    movl    -4(%rbp), %eax
+    *imull*   -8(%rbp), %eax
+    movl    %eax, %esi
+    movl    $.LC0, %edi
+    movl    $0, %eax
+    *call    printf*
+    movl    $0, %eax
+    leave
+    .cfi_def_cfa 7, 8
+    ret
+    .cfi_endproc
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>%gcc -S *|ff0000|-O2|* -o opt1-O2.asm opt1.c%</blurb>
+<example inline="2"><![CDATA[
+main:
+.LFB11:
+    .cfi_startproc
+    subq    $8, %rsp
+    .cfi_def_cfa_offset 16
+    movl    *$4410*, %esi
+    movl    $.LC0, %edi
+    xorl    %eax, %eax
+    *call    printf*
+    xorl    %eax, %eax
+    addq    $8, %rsp
+    .cfi_def_cfa_offset 8
+    ret
+    .cfi_endproc
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>%gcc -S *|ff0000|-O0 -g|* -o opt1-O0-q.asm opt1.c%</blurb>
+<example inline="2"><![CDATA[
+main:
+.LFB0:
+    *.file 1 "opt1.c"*
+    *.loc 1 4 0*
+    .cfi_startproc
+    pushq   %rbp
+    .cfi_def_cfa_offset 16
+    .cfi_offset 6, -16
+    movq    %rsp, %rbp
+    .cfi_def_cfa_register 6
+    subq    $16, %rsp
+    *.loc 1 7 0*
+    movl    $42, -4(%rbp)
+    *.loc 1 8 0*
+    movl    $98, -8(%rbp)
+    *.loc 1 9 0*
+    movl    $45, -4(%rbp)
+    *.loc 1 11 0*
+    movl    -4(%rbp), %eax
+    imull   -8(%rbp), %eax
+    movl    %eax, %esi
+    movl    $.LC0, %edi
+    movl    $0, %eax
+    call    printf
+    movl    $0, %eax
+    *.loc 1 12 0*
+    leave
+    .cfi_def_cfa 7, 8
+    ret
+    .cfi_endproc
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>%gcc -S *|ff0000|-O0 -g|* -o opt1-O0-q.asm opt1.c%</blurb>
+<example inline="2"><![CDATA[
+.Ldebug_info0:
+…
+    .string "int"
+…
+    .string "a"
+…
+    .string "b"
+]]></example>
+</div>
+
+</slide>

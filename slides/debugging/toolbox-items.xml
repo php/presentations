@@ -1,0 +1,11 @@
+<slide>
+<title>The Toolbox</title>
+
+<list>
+	<bullet>*strace*: trace system calls and signals</bullet>
+	<bullet>*lsof*: list open ~files~</bullet>
+	<bullet>*gdb*: the GNU debugger</bullet>
+	<bullet>*valgrind*: a suite of tools for debugging and profiling programs</bullet>
+	<bullet>*gcc*: the GNU compiler</bullet>
+</list>
+</slide>

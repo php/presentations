@@ -1,0 +1,28 @@
+<slide>
+<title>*strace*: trace system calls</title>
+
+<blurb>Invocation</blurb>
+<example inline="2">strace |aa0000|{{options}}| |0000ff|{{program}}| |00aa00|{{arguments}}|</example>
+
+<break/>
+
+<blurb>Example</blurb>
+<example inline="2">strace |aa0000|-o /tmp/strace.log| |0000ff|php| |00aa00|-v|</example>
+
+<break/>
+<blurb>Output</blurb>
+
+<example>
+execve("/usr/local/php/7.0dev/bin/php", ["php", "-v"], [/* 49 vars */]) = 0
+brk(NULL)                               = 0x1536000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fb019780000
+access("/etc/ld.so.preload", R_OK)      = 0
+open("/etc/ld.so.preload", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+close(3)                                = 0
+open("/usr/lib/x86_64-linux-gnu/tls/x86_64/libcrypt.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+…
+</example>
+
+</slide>

@@ -1,0 +1,13 @@
+<slide>
+<title>lsof: files in Unix</title>
+
+<blurb>Basically, everything is a file pointer:</blurb>
+
+<list>
+	<bullet>stdin, stdout, stderr</bullet>
+	<bullet>open files</bullet>
+	<bullet>listening network sockets</bullet>
+	<bullet>open network sockets</bullet>
+	<bullet>pipes</bullet>
+</list>
+</slide>

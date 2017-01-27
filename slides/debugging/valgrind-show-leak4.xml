@@ -1,0 +1,29 @@
+<slide>
+<title>leak: valgrind</title>
+
+<example inline="2">$ *export USE_ZEND_ALLOC=0*
+$ valgrind php -n -cvalgrind-gc/php.ini valgrind-gc/bug0894-001.php
+==28355== Memcheck, a memory error detector
+==28355== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==28355== Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info
+==28355== Command: php -n -cvalgrind-gc/php.ini valgrind-gc/bug0894-001.php
+==28355== 
+Created array of 9 BSON objects
+==28355== 
+==28355== HEAP SUMMARY:
+==28355==     in use at exit: 2,982 bytes in 75 blocks
+==28355==   total heap usage: 29,680 allocs, 29,605 frees, 3,638,264 bytes allocated
+==28355== 
+==28355== LEAK SUMMARY:
+==28355==    *definitely lost: 768 bytes in 20 blocks*
+==28355==    indirectly lost: 0 bytes in 0 blocks
+==28355==      possibly lost: 0 bytes in 0 blocks
+==28355==    still reachable: 2,214 bytes in 55 blocks
+==28355==         suppressed: 0 bytes in 0 blocks
+==28355== Rerun with *--leak-check=full* to see details of leaked memory
+==28355== 
+==28355== For counts of detected and suppressed errors, rerun with: -v
+==28355== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+</example>
+
+</slide>

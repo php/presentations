@@ -1,0 +1,56 @@
+<slide>
+<title>gdb: backtrace</title>
+
+<image filename="segfault.png"/>
+
+<div effect="fade-in-out">
+<blurb>*gdb* to the rescue:</blurb>
+
+<example inline="2">
+derick@whisky:~/docs/debugging-demo $ *gdb --args php gdb1/bug01180.php*
+GNU gdb (Debian 7.10-1+b1) 7.10
+Copyright (C) 2015 Free Software Foundation, Inc.
+…
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+*Reading symbols from php...(no debugging symbols found)...done.*
+(gdb) run
+Starting program: */usr/php/7.0dev-nodebug/bin/php gdb1/bug01180.php*
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+*Program received signal SIGSEGV, Segmentation fault.*
+*__strcmp_sse2_unaligned () at ../sysdeps/x86_64/multiarch/strcmp-sse2-unaligned.S:32*
+*32 ../sysdeps/x86_64/multiarch/strcmp-sse2-unaligned.S: No such file or directory.*
+(gdb) 
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="2">
+(gdb) *bt full*
+#0  __strcmp_sse2_unaligned () at ../sysdeps/x86_64/multiarch/strcmp-sse2-unaligned.S:32
+*No locals.*
+#1  0x00007fffed6d672d in xdebug_branch_info_mark_end_of_function_reached *()*
+   from /usr/php/7.0dev-nodebug/lib/php/extensions/no-debug-non-zts-20151012/xdebug.so
+*No symbol table info available.*
+#2  0x00007fffed6d910a in xdebug_code_coverage_end_of_function ()
+   from /usr/php/7.0dev-nodebug/lib/php/extensions/no-debug-non-zts-20151012/xdebug.so
+No symbol table info available.
+#3  0x00007fffed6d3664 in xdebug_execute_ex ()
+   from /usr/php/7.0dev-nodebug/lib/php/extensions/no-debug-non-zts-20151012/xdebug.so
+No symbol table info available.
+#4  0x00000000008e0e2d in *?? ()*
+No symbol table info available.
+#5  0x000000000089cbbb in execute_ex ()
+No symbol table info available.
+#6  0x00007fffed6d35ff in xdebug_execute_ex ()
+   from /usr/php/7.0dev-nodebug/lib/php/extensions/no-debug-non-zts-20151012/xdebug.so
+No symbol table info available.
+#7  0x00000000008e0e2d in ?? ()
+No symbol table info available.
+---Type &lt;return> to continue, or q &lt;return> to quit---
+</example>
+</div>
+
+</slide>

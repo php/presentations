@@ -1,0 +1,12 @@
+<slide>
+<title>*strace*: trace system calls</title>
+
+<blurb>…a system call is the programmatic way in which a computer
+program ~*requests a service from the kernel*~ of the operating system it is
+executed on. …</blurb>
+<blurb align="right">~https://en.wikipedia.org/wiki/System_call~</blurb>
+
+<break/>
+<image filename="Priv_rings.svg.png" attr="CC-BY-SA 3.0: Hertzsprung at English Wikipedia"/>
+
+</slide>

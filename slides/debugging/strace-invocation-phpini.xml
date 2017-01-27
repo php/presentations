@@ -1,0 +1,22 @@
+<slide>
+<title>*strace*: case: which ini files is PHP reading</title>
+
+<blurb>Invocation</blurb>
+<example inline="2">strace |aa0000|{{options}}| |0000ff|{{program}}| |00aa00|{{arguments}}|</example>
+
+<break/>
+
+<blurb>Example</blurb>
+<example inline="2">strace |aa0000|*-e open* -o /tmp/strace.log| |0000ff|php| |00aa00|-v|
+cat /tmp/strace.log | grep ini</example>
+
+<break/>
+<blurb>Output</blurb>
+
+<example>open("/usr/local/php/7.0dev/bin/php-cli.ini", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/php/7.0dev/lib/php-cli.ini", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/php/7.0dev/bin/php.ini", O_RDONLY) = -1 ENOENT (No such file or directory)
+open("/usr/local/php/7.0dev/lib/php.ini", O_RDONLY) = 3
+</example>
+
+</slide>

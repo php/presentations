@@ -1,0 +1,118 @@
+<slide>
+<title>gdb: PHP specific tools</title>
+
+<example inline="2">
+(gdb) *break zif_strlen*
+Breakpoint 1 at 0xa7a8a4: file /home/derick/dev/php/php-src.git/Zend/zend_builtin_functions.c, line 570.
+(gdb) *cont*
+Continuing.
+Breakpoint 1, zif_strlen (execute_data=0x7f6259816b60, return_value=0x7f6259816b40) at /home/derick/dev/php/php-src.git/Zend/zend_builtin_functions.c:570
+570		ZEND_PARSE_PARAMETERS_START(1, 1)
+(gdb) *source /home/derick/dev/php/php-src.git/.gdbinit*
+(gdb) *zbacktrace*
+[0x7f6259816360] strlen("slide.ezt") [internal function]
+[0x7f6259816210] ezcTemplate->process("slide.ezt") /home/httpd/pres2/vendor/zetacomponents/template/src/template.php:308 
+[0x7f6259816130] Presentation->display("25") /home/httpd/pres2/show2.php:224 
+[0x7f6259816030] (main) /home/httpd/pres2/show2.php:154 
+(gdb) *bt full*
+#0  zif_strlen (execute_data=0x7f6259816360, return_value=0x7f6259816340) at /home/derick/dev/php/php-src.git/Zend/zend_builtin_functions.c:570
+        _num_args = 1486543680
+        _arg = 0x100000001
+        error_code = 0
+        _max_num_args = 32610
+        _expected_type = Z_EXPECTED_BOOL
+        _error = 0x0
+        _optional = 0 '\000'
+        _flags = 0
+        _min_num_args = 42916368
+        _i = 32610
+        _real_arg = 0x7fffecd445e0
+        s = 0x10e30b0
+        __PRETTY_FUNCTION__ = "zif_strlen"
+#1  0x0000000000aba7fb in execute_internal (execute_data=0x7f6259816360, return_value=0x7f6259816340)
+    at /home/derick/dev/php/php-src.git/Zend/zend_execute.c:2053
+No locals.
+#2  0x00007f62587aa0d4 in php_uopz_execute_internal (execute_data=0x7f6259816360, return_value=0x7f6259816340) at /tmp/pear/temp/uopz/src/executors.c:56
+No locals.
+#3  0x00007f62595beab4 in xdebug_execute_internal (current_execute_data=0x7f6259816360, return_value=0x7f6259816340)
+    at /home/derick/dev/php/derickr-xdebug/xdebug.c:2169
+        edata = 0x7f6259816360
+        fse = 0x28eda10
+        do_return = 0
+        function_nr = 151
+        restore_error_handler_situation = 0
+        tmp_error_cb = 0x0
+#4  0x0000000000abd0a1 in ZEND_DO_FCALL_SPEC_HANDLER () at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:844
+        should_change_scope = 0
+        call = 0x7f6259816360
+        fbc = 0x289cac0
+        object = 0x7f6253a8ef80
+        ret = 0x7f6259816340
+        __PRETTY_FUNCTION__ = "ZEND_DO_FCALL_SPEC_HANDLER"
+#5  0x0000000000abf6d1 in ZEND_USER_OPCODE_SPEC_HANDLER () at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:1568
+        ret = 2
+#6  0x0000000000abbf05 in execute_ex (ex=0x7f6259816210) at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:414
+        orig_opline = 0x7f6253e6b6c0
+        orig_execute_data = 0x7f6259816130
+#7  0x00007f62587aa105 in php_uopz_execute (execute_data=0x7f6259816210) at /tmp/pear/temp/uopz/src/executors.c:61
+No locals.
+#8  0x00007f62595be51c in xdebug_execute_ex (execute_data=0x7f6259816210) at /home/derick/dev/php/derickr-xdebug/xdebug.c:2007
+        op_array = 0x59816210
+        edata = 0x7f625980b338
+        dummy = 0x7f62587a9e55 &lt;uopz_return_handler+74>
+        fse = 0x91
+        xfse = 0x2ae2100
+        magic_cookie = 0x0
+        do_return = 32610
+        function_nr = 1501651248
+        le = 0x200000001
+        code_coverage_func_info = {class = 0x15980ae00 &lt;error: Cannot access memory at address 0x15980ae00>, function = 0x7f62598161e0 "\200\267\207Yb\177", 
+          type = 1501606712, internal = 32610}
+        code_coverage_function_name = 0x0
+        code_coverage_file_name = 0x0
+#9  0x0000000000abceeb in ZEND_DO_FCALL_SPEC_HANDLER () at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:800
+        call = 0x7f6259816210
+        fbc = 0x7f625980b338
+        object = 0x7f6253a8ef80
+        ret = 0x7f62598161e0
+        __PRETTY_FUNCTION__ = "ZEND_DO_FCALL_SPEC_HANDLER"
+#10 0x0000000000abf6d1 in ZEND_USER_OPCODE_SPEC_HANDLER () at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:1568
+        ret = 2
+#11 0x0000000000abbf05 in execute_ex (ex=0x7f6259816130) at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:414
+        orig_opline = 0x7f6253e6cd80
+        orig_execute_data = 0x7f6259816030
+#12 0x00007f62587aa105 in php_uopz_execute (execute_data=0x7f6259816130) at /tmp/pear/temp/uopz/src/executors.c:61
+No locals.
+#13 0x00007f62595be51c in xdebug_execute_ex (execute_data=0x7f6259816130) at /home/derick/dev/php/derickr-xdebug/xdebug.c:2007
+        op_array = 0x59816130
+        edata = 0x7f6259805e48
+        dummy = 0x7f62587a9e55 &lt;uopz_return_handler+74>
+        fse = 0x73
+        xfse = 0x28eef70
+        magic_cookie = 0x0
+        do_return = 32610
+        function_nr = 1501650992
+        le = 0x100000001
+        code_coverage_func_info = {class = 0x159805ab0 &lt;error: Cannot access memory at address 0x159805ab0>, function = 0x7f62598160f0 "@A\207Yb\177", 
+          type = 1501584968, internal = 32610}
+        code_coverage_function_name = 0x0
+        code_coverage_file_name = 0x0
+#14 0x0000000000abceeb in ZEND_DO_FCALL_SPEC_HANDLER () at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:800
+        call = 0x7f6259816130
+        fbc = 0x7f6259805e48
+        object = 0x7f62598044c0
+        ret = 0x7f62598160f0
+        __PRETTY_FUNCTION__ = "ZEND_DO_FCALL_SPEC_HANDLER"
+#15 0x0000000000abf6d1 in ZEND_USER_OPCODE_SPEC_HANDLER () at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:1568
+        ret = 2
+#16 0x0000000000abbf05 in execute_ex (ex=0x7f6259816030) at /home/derick/dev/php/php-src.git/Zend/zend_vm_execute.h:414
+        orig_opline = 0x0
+        orig_execute_data = 0x0
+#17 0x00007f62587aa105 in php_uopz_execute (execute_data=0x7f6259816030) at /tmp/pear/temp/uopz/src/executors.c:61
+No locals.
+#18 0x00007f62595be51c in xdebug_execute_ex (execute_data=0x7f6259816030) at /home/derick/dev/php/derickr-xdebug/xdebug.c:2007
+---Type &lt;return> to continue, or q &lt;return> to quit---
+</example>
+
+
+</slide>

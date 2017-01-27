@@ -1,0 +1,11 @@
+<slide>
+<title>gdb</title>
+
+<list>
+	<bullet>a debugger</bullet>
+	<bullet>Like Xdebug/PhpStorm, but then for C programs</bullet>
+	<bullet>Works through hardware interrupts</bullet>
+	<bullet>Fairly low level</bullet>
+	<bullet>Can be used to make a backtrace</bullet>
+</list>
+</slide>

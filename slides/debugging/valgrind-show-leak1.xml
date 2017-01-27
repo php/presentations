@@ -1,0 +1,10 @@
+<slide>
+<title>leak: reproducing</title>
+
+<example inline="2">
+$ *php -c valgrind-gc/php.ini valgrind-gc/bug0894-001.php*
+Created array of 9 BSON objects
+</example>
+<blurb class="big-centre">☹</blurb>
+
+</slide>

@@ -1,0 +1,31 @@
+<slide>
+<title>gdb: wrong optimisations</title>
+
+<example>
+ ZEND_API zend_function *zend_std_get_static_method(zend_class_entry *ce, const char *function_name_strval, int function_name_strlen, const zend_literal *key TSRMLS_DC) /* {{{ */
+ {
+ 	zend_function *fbc = NULL;
+ 	char *lc_class_name, *lc_function_name = NULL;
+ 	ulong hash_value;
+ 	ALLOCA_FLAG(use_heap)
+ 
+ 	if (EXPECTED(key != NULL)) {
++#if (ZEND_GCC_VERSION == 4009) &amp;&amp; !(defined(ZTS) &amp;&amp; defined(NETWARE)) &amp;&amp; !(defined(ZTS) &amp;&amp; defined(HPUX)) &amp;&amp; !defined(DARWIN)
++		/* This is a workaround for bug in GCC 4.9.2 */
++		use_heap = 0;
++#endif
+ 		lc_function_name = Z_STRVAL(key->constant);
+ 		hash_value = key->hash_value;
+ 	} else {
+
+…
+ 
+ 	if (UNEXPECTED(!key)) {
+ 		free_alloca(lc_function_name, use_heap);
+ 	}
+ 
+ 	return fbc;
+ }
+ /* }}} */
+</example>
+</slide>
