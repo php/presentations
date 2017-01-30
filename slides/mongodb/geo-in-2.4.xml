@@ -4,19 +4,17 @@
 <blurb>%$geoNear%</blurb>
 <list>
      <bullet>find things near a point</bullet>
-     <bullet>index required</bullet>
 </list>
+<break/>
 
 <blurb>%$geoWithin%</blurb>
 <list>
      <bullet>find things within a polygon/circle</bullet>
-     <bullet>index *not* required</bullet>
 </list>
-
+<break/>
 <blurb>%$geoIntersects%</blurb>
 <list>
      <bullet>find things that intersects with other things</bullet>
-     <bullet>index *not* required</bullet>
 </list>
 
 </slide>
