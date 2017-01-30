@@ -1,0 +1,11 @@
+<slide>
+<title>gdb: short case</title>
+
+<list>
+	<bullet>A short reproducible case is *vital*</bullet>
+	<bullet>Open Source maintainers don't know all other code</bullet>
+	<bullet>docker required? no thanks</bullet>
+	<bullet>examples: 5 MB PHPUnit tests, static access only on docker with Ubuntu...</bullet>
+</list>
+
+</slide>
