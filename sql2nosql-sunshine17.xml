@@ -183,43 +183,6 @@ Add slide about unique indexes.
 <slide>slides/mongodb/php-connection-string.xml</slide>
 <slide>slides/mongodb/repl-eventual-consistency.xml</slide>
 
-<!-- SHARDING -->
-<slide>slides/mongodb/section-sharding.xml</slide>
-<slide>slides/mongodb/sharding-agenda.xml</slide>
-<slide>slides/mongodb/sharding-the-story.xml</slide>
-<slide>slides/mongodb/sharding-vertical-scale.xml</slide>
-<slide>slides/mongodb/sharding-horizontal-scale.xml</slide>
-<slide>slides/mongodb/sharding-data-store-old.xml</slide>
-<slide>slides/mongodb/sharding-data-store-now.xml</slide>
-<slide>slides/mongodb/sharding-why.xml</slide>
-<slide>slides/mongodb/sharding-working-set.xml</slide>
-<slide>slides/mongodb/sharding-throughput.xml</slide>
-<slide>slides/mongodb/sharding-mongo-approach.xml</slide>
-<slide>slides/mongodb/sharding-partition.xml</slide>
-<slide>slides/mongodb/sharding-chunks.xml</slide>
-<slide>slides/mongodb/sharding-manages.xml</slide>
-<slide>slides/mongodb/sharding-auto-shard.xml</slide>
-<slide>slides/mongodb/sharding-architecture.xml</slide>
-<slide>slides/mongodb/sharding-shard.xml</slide>
-<slide>slides/mongodb/sharding-config-server.xml</slide>
-<slide>slides/mongodb/sharding-mongos-manages.xml</slide>
-<slide>slides/mongodb/sharding-infrastructure.xml</slide>
-<slide>slides/mongodb/sharding-configuration.xml</slide>
-
-<slide>slides/mongodb/sharding-shard-key.xml</slide>
-<slide>slides/mongodb/sharding-key-considerations.xml</slide>
-- hashed shard keys can help with the 512-byte size limitation
-
-<slide>slides/mongodb/sharding-key-example.xml</slide>
-<slide>slides/mongodb/sharding-key-example2.xml</slide>
-<slide>slides/mongodb/sharding-connecting.xml</slide>
-
-<slide>slides/mongodb/sharding-mechanics.xml</slide>
-<slide>slides/mongodb/sharding-partitioning.xml</slide>
-<slide>slides/mongodb/sharding-chunk-is-range.xml</slide>
-<slide>slides/mongodb/sharding-chunk-splitting.xml</slide>
-<slide>slides/mongodb/sharding-balancing.xml</slide>
-
 <slide>slides/mongodb/questions.xml</slide>
 <slide>slides/mongodb/resources.xml</slide>
 </presentation>
