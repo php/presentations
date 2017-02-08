@@ -1,0 +1,81 @@
+<slide title="" section="phan_ts">
+
+<blurb fontsize="2em" align="center">Type Safety</blurb>
+
+<blurb fontsize="1.5em" align="left">Legacy code</blurb>
+<example fontsize="1em" result='0' title=""><![CDATA[
+class Data {
+    function __construct($data) {
+        $this->haystack = $data;
+    }
+    function find($needle) {
+        return in_array($needle, $this->haystack, true);
+    }
+}
+$storage = new Data(['apple','orange','banana']);
+
+$fruit = false;
+$storage->find($fruit);
+]]></example>
+
+<break lines="1" section="phan_ts2"/>
+<blurb fontsize="1em" align="left">Going straight to strict types risks runtime fatals</blurb>
+<example fontsize="1em" result='0' title="" type="line-numbers" extra="data-highlight-lines='6,13'" nostrip="1"><![CDATA[
+<?php declare(strict_types=1);
+class Data {
+    function __construct(array $data) {
+        $this->haystack = $data;
+    }
+    function find(string $needle):bool {
+        return in_array($needle, $this->haystack, true);
+    }
+}
+$storage = new Data(['apple','orange','banana']);
+
+$fruit = false;
+$storage->find($fruit);
+]]></example>
+
+<example fontsize=".65em" result='0' title="" type="shell nohighlight"><![CDATA[
+Fatal error: Uncaught TypeError: Argument 1 passed to Data::find() must be of the type string, boolean given,
+                                 called in test.php on line 13 and defined in test.php:6
+Stack trace:
+#0 test.php(13): Data->find(false)
+#1 {main}
+thrown in test.php on line 6
+]]></example>
+
+<break lines="1" section="phan_ts3"/>
+
+<blurb fontsize="1em" align="left">Intermediate step</blurb>
+
+<example fontsize=".75em" result='0' title="" type="line-numbers" extra="data-highlight-lines='15,22'"><![CDATA[
+class Data {
+    /** @var array $haystack */
+    public $haystack;
+
+    /**
+     * @param array $data
+     */
+    function __construct($data) {
+        $this->haystack = $data;
+    }
+    /**
+     * @param string $needle
+     * @return bool
+     */
+    function find($needle) {
+        return in_array($needle, $this->haystack, true);
+    }
+}
+$storage = new Data(['apple','orange','banana']);
+
+$fruit = false;
+$storage->find($fruit);
+]]></example>
+<example fontsize=".65em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ phan test.php
+test.php:22 PhanTypeMismatchArgument Argument 1 (needle) is bool but \Data::find() takes string defined at test.php:15
+]]></example>
+
+</slide>

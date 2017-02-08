@@ -1,5 +1,6 @@
-<slide title="1993">
-<example fontsize="1.1em" type="C"><![CDATA[#include <stdio.h>
+<slide title="" section="hist_1993">
+<blurb fontsize="6em" align="center">1993</blurb>
+<example fontsize="0.8em" type="C"><![CDATA[#include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>

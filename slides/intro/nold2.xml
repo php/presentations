@@ -1,6 +1,5 @@
-<slide title="1993">
-
-<break lines="1" />
+<slide title="" section="hist_1993_2">
+<blurb fontsize="6em" align="center">1993</blurb>
 
 <example type="Perl"><![CDATA[use CGI qw(:standard);
 print header;

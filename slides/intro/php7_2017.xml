@@ -1,0 +1,275 @@
+<slide title="" section="php7">
+
+<image filename="php7trans-200.png" />
+
+<blurb fontsize="1.1em" align="left">engine improvements</blurb>
+<list>
+<bullet fontsize="1em">100%+ performance gain on most real-world applications</bullet>
+<bullet fontsize="1em">Lower memory usage, sometimes drastically lower</bullet>
+</list>
+
+<break lines="1" section="php7excep"/>
+<blurb fontsize="1.1em" align="left">Exceptions on Fatals</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+function call_method($obj) {
+    $obj->method();
+}
+call_method(null);
+]]></example>
+<example fontsize="0.85em" result='0' title="" type="shell nohighlight"><![CDATA[
+Fatal error: Uncaught Error: Call to a member function method() on null in file:2
+Stack trace:
+#0 file(4): call_method(NULL)
+#1 {main}
+  thrown in file on line 2
+]]></example>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+try {
+    call_method(null);
+} catch (Error $e) {
+    echo "Caught Exception: {$e->getMessage()}\n";
+}
+]]></example>
+<example fontsize="0.85em" result='0' title="" type="shell nohighlight"><![CDATA[
+Caught Exception: Call to a member function method() on null
+]]></example>
+
+<break lines="1" section="php7hier"/>
+<blurb fontsize="2em" align="center">PHP 7 Exception Hierarchy</blurb>
+<break lines="1"/>
+<list fontsize="1.5em">
+<bullet fontsize="1.5em" type="none">|ab5c5c|Throwable|</bullet>
+<bullet fontsize="1.25em" marginleft="2em" type="none">➥ |ab5c5c|Exception| implements Throwable</bullet>
+<bullet fontsize="1.25em" marginleft="2em" type="none">➥ |ab5c5c|Error| implements Throwable</bullet>
+<bullet fontsize="1em" marginleft="4em" type="none">➥ |ab5c5c|TypeError| extends Error</bullet>
+<bullet fontsize="1em" marginleft="4em" type="none">➥ |ab5c5c|ParseError| extends Error</bullet>
+</list>
+
+<break lines="1" section="php7ret"/>
+<blurb fontsize="1.1em" align="left">Return Types</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+function get_config(): array {
+    return 42;
+}
+get_config();
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Fatal error: Uncaught TypeError: Return value of get_config() must be
+of the type array, integer returned in file:2
+Stack trace:
+#0 file(4): get_config()
+#1 {main}
+  thrown in file on line 2
+]]></example>
+<break lines="1" section="php7STH"/>
+
+<blurb fontsize="1.1em" align="left">Coercive Scalar Types</blurb>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+function logmsg(string $msg, int $level, float $severity) {
+    var_dump($msg);      // string(1) "1"
+    var_dump($level);    // int(2)
+    var_dump($severity); // float(3)
+}
+logmsg(1, "2.5 bananas", 3);
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Notice: A non well formed numeric value encountered in file on line 2
+]]></example>
+<blurb fontsize="1.1em" align="left">Strict Scalar Types</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+declare(strict_types=1);
+...
+logmsg(1, "2.5", 3);
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Fatal error: Uncaught TypeError: Argument 1 passed to logmsg() must be of the
+type string, integer given, called in file on line 7 and defined in file:3
+Stack trace:
+#0 file(7): logmsg(1, '2.5', 3)
+#1 {main}
+  thrown in file on line 2
+]]></example>
+
+<break lines="1" section="php7anon"/>
+<blurb fontsize="1.1em" align="left">Anonymous Classes</blurb>
+<example fontsize="1.2em" result='0' title=""><![CDATA[
+<?php
+return new class($controller) implements Page {
+    public function __construct($controller) {
+        /* ... */
+    }
+    /* ... */
+};
+
+class MyObject extends MyStuff {
+    public function getInterface() {
+        return new class implements MyInterface {
+            /* ... */
+        };
+    }
+}
+]]></example>
+
+<break lines="1" section="php7coalesce"/>
+<blurb fontsize="1.1em" align="left">Coalesce Operator</blurb>
+<example fontsize="1.5em" result='0' title=""><![CDATA[
+<?php
+$a = NULL;
+$b = 0;
+$c = 2;
+
+echo $a ?? $b; // 0
+echo $c ?? $b; // 2
+echo $a ?? $b ?? $c; // 0
+echo $a ?? $x ?? $c; // 2
+]]></example>
+
+<break lines="1" section="Spaceship"/>
+<blurb fontsize="1.1em" align="left">Spaceship Operator</blurb>
+<image filename="lego-php-astronaut.png" width="230" height="345"/>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+
+function cmp_php5($a, $b) {
+    return ($a < $b) ? -1 : (($a >$b) ? 1 : 0);
+}
+
+function cmp_php7($a, $b) {
+    return $a <=> $b;
+}
+]]></example>
+
+<break lines="1" section="php7cleanups"/>
+<blurb fontsize="1.1em" align="left">Removal of many deprecated featuresBR/
+     (Your PHP4 code will break!)</blurb>
+<example result='0' title=""><![CDATA[
+- ext/ereg (use ext/pcre instead)
+- preg_replace() eval modifier (use preg_replace_callback() instead)
+- ext/mysql (use ext/mysqli or ext/pdo_mysql instead)
+- Assignment of new by reference
+- Scoped calls of non-static methods from incompatible $this context
+
+- dl() in php-fpm
+- set_magic_quotes_runtime() and magic_quotes_runtime()
+- set_socket_blocking() (use stream_set_blocking() instead)
+- mcrypt_generic_end() (use mcrypt_generic_deinit() instead)
+- mcrypt_ecb, mcrypt_cbc, mcrypt_cfb and mcrypt_ofb 
+  (use mcrypt_encrypt() and mcrypt_decrypt() instead)
+- datefmt_set_timezone_id() and IntlDateFormatter::setTimeZoneID() 
+  (use datefmt_set_timezone() or IntlDateFormatter::setTimeZone() instead)
+
+- xsl.security_prefs (use XsltProcessor::setSecurityPrefs() instead)
+- iconv.input_encoding, iconv.output_encoding, iconv.internal_encoding,
+  mbstring.http_input, mbstring.http_output and mbstring.internal_encoding
+  (use php.input_encoding, php.internal_encoding and php.output_encoding instead)
+
+- $is_dst parameter of the mktime() and gmmktime() functions
+- # style comments in ini files (use ; style comments instead)
+- String category names in setlocale() (use LC_* constants instead)
+- Unsafe curl file uploads (use CurlFile instead)
+- PDO::PGSQL_ATTR_DISABLE_NATIVE_PREPARED_STATEMENT driver option 
+  (use PDO::ATTR_EMULATE_PREPARES instead)
+- CN_match and SNI_server_name stream context option (use peer_name instead)
+]]></example>
+
+
+<break lines="1" section="php7reserved"/>
+<blurb fontsize="1.1em" align="left">New reserved words:</blurb>
+<list>
+<bullet fontsize="1em" type="none">bool</bullet>
+<bullet fontsize="1em" type="none">int</bullet>
+<bullet fontsize="1em" type="none">float</bullet>
+<bullet fontsize="1em" type="none">string</bullet>
+<bullet fontsize="1em" type="none">null</bullet>
+<bullet fontsize="1em" type="none">false</bullet>
+<bullet fontsize="1em" type="none">true</bullet>
+<bullet fontsize="1em" type="none">resource</bullet>
+<bullet fontsize="1em" type="none">object</bullet>
+<bullet fontsize="1em" type="none">mixed</bullet>
+<bullet fontsize="1em" type="none">numeric</bullet>
+</list>
+
+<break lines="1" section="php7num"/>
+
+<blurb fontsize="1.1em" align="left">64-bit integer support on Windows</blurb>
+<blurb fontsize="1.1em" align="left">Cleanup edge-case integer overflow/underflow</blurb>
+<blurb fontsize="1.1em" align="left">Support for strings with length >= 2^31 bytes in 64 bit builds.</blurb>
+<blurb fontsize="1.1em" align="left">Parse error on invalid numeric literals</blurb>
+<example result='0' title=""><![CDATA[
+<?php
+$mask = 0855;  // Parse error: Invalid numeric literal
+]]></example>
+
+<break lines="1" section="php7UVS"/>
+
+<blurb fontsize="1.1em" align="left">Uniform variable syntax</blurb>
+
+<example result='0' title=""><![CDATA[
+<?php
+// left-to-right
+$this->$belongs_to['column']
+// vs.
+$this->{$belongs_to['column']}
+
+// support missing combinations of operations
+$foo()['bar']()
+[$obj1, $obj2][0]->prop
+getStr(){0}
+ 
+// support nested ::
+$foo['bar']::$baz
+$foo::$bar::$baz
+$foo->bar()::baz()
+ 
+// support nested ()
+foo()()
+$foo->bar()()
+Foo::bar()()
+$foo()()
+ 
+// support operations on arbitrary (...) expressions
+(...)['foo']
+(...)->foo
+(...)->foo()
+(...)::$foo
+(...)::foo()
+(...)()
+ 
+// two more practical examples for the last point
+(function() { ... })()
+($obj->closure)()
+ 
+// support all operations on dereferencable scalars
+// (not very useful)
+"string"->toLower()
+[$obj, 'method']()
+'Foo'::$bar
+]]></example>
+
+<break lines="1" section="php7unicode"/>
+
+<blurb fontsize="1.1em" align="left">Unicode Codepoint Escape Syntax</blurb>
+<example fontsize="1.2em" result='1' title=""><![CDATA[
+<?php
+echo "\u{202E}Right-to-left text";
+
+echo " \u{26BD}";
+]]></example>
+
+<blurb fontsize="1.1em" align="left">ICU IntlChar class added to intl extension</blurb>
+
+<break lines="1" section="php7csprng"/>
+<blurb fontsize="1.1em" align="left">CSPRNG</blurb>
+<example fontsize="1.2em" result='1' title=""><![CDATA[
+<?php
+$int   = random_int(-500, 500);
+$bytes = random_bytes(10);
+
+var_dump( $int );
+var_dump( bin2hex($bytes) );
+]]></example>
+
+</slide>

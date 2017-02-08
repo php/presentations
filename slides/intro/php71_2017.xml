@@ -1,0 +1,94 @@
+<slide title="" section="php71">
+
+<blurb fontsize="20em" align="center">PHP 7.1</blurb>
+
+<break lines="1" section="php71_void"/>
+<blurb fontsize="1.1em" align="left">void return type</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+function should_return_nothing(): void {
+    return 1; // Fatal error: A void function must not return a value
+}
+]]></example>
+
+<break lines="1" section="php71_nullable"/>
+<blurb fontsize="1.1em" align="left">Nullable types</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+function answer(int $a, ?int $b): ?int  {
+    if($a > $b) return $a;
+    else return null;
+}
+]]></example>
+
+<break lines="1" section="php71iterable"/>
+<blurb fontsize="1.1em" align="left">Iterable pseudo-type</blurb>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+function foo(iterable $iterable) {
+    foreach ($iterable as $value) {
+        // ...
+    }
+}
+function bar(): iterable {
+    return [1, 2, 3];
+}
+]]></example>
+
+<break lines="1" section="php71neg"/>
+<blurb fontsize="1.1em" align="left">Negative string offsets</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+$str='abcdef';
+var_dump($str[-2]); // => string(1) "e"
+]]></example>
+
+<break lines="1" section="php71list"/>
+<blurb fontsize="1.1em" align="left">List keys</blurb>
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+list($first, $second, $third) = [1, 2, 3];
+[$first, $second, $third] = [1, 2, 3];
+]]></example>
+
+<break lines="1" section="php71arith"/>
+
+<blurb fontsize="1.1em" align="left">Warn about invalid strings in arithmetic</blurb>
+
+<example fontsize="1.1em" result='0' title=""><![CDATA[
+<?php
+$numberOfApples = "10 apples" + "5 pears";
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Notice: A non well formed numeric string encountered in example.php on line 2
+Notice: A non well formed numeric string encountered in example.php on line 2
+]]></example>
+
+<break lines="1" section="php71classconst"/>
+<blurb fontsize="1.1em" align="left">Class constant visibility</blurb>
+<example fontsize="1.2em" result='0' title=""><![CDATA[
+<?php
+class Token {
+    // Constants default to public
+    const PUBLIC_CONST = 0;
+ 
+    private const PRIVATE_CONST = 0;
+    protected const PROTECTED_CONST = 0;
+    public const PUBLIC_CONST_TWO = 0;
+]]></example>
+
+<break lines="1" section="php71cleanups"/>
+<blurb fontsize="1.1em" align="left">Things that may break your code</blurb>
+<list>
+<bullet marginleft="-1em" fontsize="0.8em">new 'void' and 'iterable' keywords</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">rand() and srand() are now aliased to mt_rand() and mt_srand()</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">Mersenne Twister algorithm has been tweaked</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">Calling a function with too few args is now an Error instead of a Warning</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">Dropped support for sslv2 streams</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">Dropped support for mcrypt</bullet>
+</list>
+
+</slide>

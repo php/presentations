@@ -1,0 +1,85 @@
+<slide title="" section="phan">
+
+<blurb fontsize="20em" align="center">Static Analysis</blurb>
+<break lines="2"/>
+<link fontsize="2em" align="center" href="https://github.com/etsy/phan">github.com/etsy/phan</link>
+
+<break lines="1" section="phan1"/>
+
+<blurb fontsize="1.5em" align="left">It can catch dumb mistakes</blurb>
+
+<example fontsize="1em" result='0' title="" type="line-numbers" extra="data-highlight-lines='2'"><![CDATA[
+$a = [1,2,3];
+if(count($a > 1)) {
+    echo "Test";
+}
+]]></example>
+
+<example fontsize=".75em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan test.php
+test.php:2 PhanTypeComparisonFromArray array to int comparison
+]]></example>
+
+<break lines="1" section="phan2"/>
+
+<blurb fontsize="1.5em" align="left">Check phpdoc comments</blurb>
+<example fontsize=".75em" result='0' title="" type="line-numbers" extra="data-highlight-lines='10,11'"><![CDATA[
+class C {
+    /** @var int $prop */
+    public $prop;
+
+    /**
+     * @param string $arg
+     * @return int
+     */
+    function test($arg) {
+        $this->prop = $arg;
+        return $arg;
+    }
+}
+]]></example>
+
+<example fontsize=".75em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan test.php
+test.php:10 PhanTypeMismatchProperty Assigning string to property but \C::prop is int
+test.php:11 PhanTypeMismatchReturn Returning type string but test() is declared to return int
+]]></example>
+
+<break lines="1" section="phan3"/>
+<blurb fontsize="1.5em" align="left">Help with refactoring</blurb>
+<example fontsize="1em" result='0' title="" type="line-numbers" extra="data-highlight-lines='8'"><![CDATA[
+class C {
+    /**
+     * @deprecated
+     */
+    static function legacy_function() { }
+}
+
+C::legacy_function();
+]]></example>
+<example fontsize=".65em" result='0' title="" type="shell nohighlight"><![CDATA[
+% phan test.php
+test.php:8 PhanDeprecatedFunction Call to deprecated function \C::legacy_function() defined at test.php:5
+]]></example>
+
+<break lines="1" section="phan4"/>
+<blurb fontsize="1.5em" align="left">Install with composer</blurb>
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ composer require --dev etsy/phan
+]]></example>
+<blurb fontsize="1.5em" align="left">Create .phan/config.php</blurb>
+<example fontsize="1em" result='0' title="" nostrip="1"><![CDATA[
+<?php
+use \Phan\Issue;
+return [
+    'should_visit_all_nodes' => true,
+    'minimum_severity' => Issue::SEVERITY_LOW,
+    'directory_list' => [ 'src', 'vendor' ],
+    'exclude_analysis_directory_list' => [ 'vendor' ]
+];
+]]></example>
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ ./vendor/bin/phan
+]]></example>
+
+</slide>
