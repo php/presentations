@@ -8,6 +8,9 @@
 <break lines="1" section="fdo"/>
 <blurb fontsize="1.1em" align="center">GCC Feedback-Directed Optimization (FDO)</blurb>
 <example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ gcc --version
+gcc (Debian 6.3.0-6) 6.3.0 20170205
+
 $ make clean
 $ make -j8 prof-gen
 ...

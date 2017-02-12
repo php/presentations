@@ -309,7 +309,10 @@ echo memory_get_usage(true);
 		</section>
 <section id="fdo">
 		<p class="p" style="font-size:1.1em;text-align:center;">GCC Feedback-Directed Optimization (FDO)</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ make clean
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ gcc --version
+gcc (Debian 6.3.0-6) 6.3.0 20170205
+
+$ make clean
 $ make -j8 prof-gen
 ...
 $ sapi/cgi/php-cgi -T 1000 /var/www/wordpress/index.php &gt; /dev/null
@@ -552,8 +555,8 @@ $bytes = random_bytes(10);
 
 var_dump( $int );
 var_dump( bin2hex($bytes) );</code></pre>
-		<pre class="output" style="font-size:1.2em;">int(318)
-string(20) "a4b84838477a448a3836"
+		<pre class="output" style="font-size:1.2em;">int(-393)
+string(20) "b8f75dd4979e96d916fb"
 		</pre>		</section>	</section>
 	<section>
 		<section id="php71">

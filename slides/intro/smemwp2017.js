@@ -4,7 +4,7 @@ window["render_smemwp"] = function() {
             type: 'column'
         },
         title: {
-            text: 'Wordpress 4.7.2 Memory',
+            text: 'Wordpress 4.3 Memory',
 			style: { fontSize: '40px' }
         },
         subtitle: {
@@ -44,7 +44,7 @@ window["render_smemwp"] = function() {
         series: [{
             name: 'USS - Unique Set Size',
 			yAxis: 0,
-            data: [110.4, 87.3, 75.1, 70.6, 10.3,10.5,10.2,10.1],
+            data: [110.4,87.3,75.1,70.6,10.3,10.5,10.2,10.1],
             dataLabels: {
                 enabled: true,
                 rotation: -90,

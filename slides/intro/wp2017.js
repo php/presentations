@@ -4,11 +4,11 @@ window["render_wpbench"] = function() {
             type: 'column'
         },
         title: {
-            text: 'Wordpress 4.7.2',
+            text: 'Wordpress 4.3',
 			style: { fontSize: '40px' }
         },
         subtitle: {
-            text: 'http://wordpress/2017/02/05/hello-world/',
+            text: 'http://wordpress/?p=1',
 			style: { fontSize: '20px' }
         },
         xAxis: [{
@@ -56,7 +56,7 @@ window["render_wpbench"] = function() {
         series: [{
             name: 'r/s @ 10',
 			yAxis: 0,
-            data: [81.17,102.23,101.52,106.27,204.06,208.35,210.53,216.27],
+            data: [193.84,235.50,239.18,256.64,579.14,586.91,591.64,623.38],
             dataLabels: {
                 enabled: true,
                 rotation: -90,
@@ -74,7 +74,7 @@ window["render_wpbench"] = function() {
         }, {
             name: 'r/s @ 20',
 			yAxis: 0,
-            data: [81.36,101.31,101.94,106.31,205.52,208.43,210.88,214.58],
+            data: [195.27,239.06,244.96,259.67,590.74,595.85,603.15,636.81],
             dataLabels: {
                 enabled: true,
                 rotation: -90,
@@ -93,7 +93,7 @@ window["render_wpbench"] = function() {
         }, {
             name: 'r/s @ 40',
 			yAxis: 0,
-            data: [81.69,101.55,101.72,105.58,204.43,209.04,210.45,214.66],
+            data: [194.51,239.05,242.52,258.51,588.31,595.48,600.65,634.11],
             dataLabels: {
                 enabled: true,
                 rotation: -90,
@@ -111,7 +111,7 @@ window["render_wpbench"] = function() {
         }, {
             name: 'latency @ 10',
 			yAxis: 1,
-			data: [120,100,100,90,50,50,50,50],
+			data: [50,40,40,40,20,20,20,20],
 			tooltip: { valueSuffix: 'ms' },
             dataLabels: {
                 enabled: true,
@@ -130,7 +130,7 @@ window["render_wpbench"] = function() {
 		}, {
             name: 'latency @ 20',
 			yAxis: 1,
-			data: [250,200,200,190,100,100,100,90],
+			data: [100,80,80,80,30,30,30,30],
 			tooltip: { valueSuffix: 'ms' },
             dataLabels: {
                 enabled: true,
@@ -149,7 +149,7 @@ window["render_wpbench"] = function() {
 		}, {
             name: 'latency @ 40',
 			yAxis: 1,
-			data: [490,390,390,380,200,190,190,190],
+			data: [200,170,170,160,70,70,70,60],
 			tooltip: { valueSuffix: 'ms' },
             dataLabels: {
                 enabled: true,
