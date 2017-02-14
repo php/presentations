@@ -19,7 +19,7 @@ $whisky = new (\MongoDB\Client)->demo->whisky;
 
 $newReview = [
     user_name => "Michael",
-    date => new \MongoDB\BSON\UTCDateTime( strtotime("2013-10-01") * 1000 ),
+    date => new \MongoDB\BSON\UTCDateTime( new DateTimeImmutable("2017-02-02") ),
     note => "No peat, but fruity",
     rating => 1,
 ];

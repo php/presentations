@@ -103,7 +103,6 @@ Common Patterns
 
 <!-- COMMANDS and AGGREGATION -->
 <slide>slides/mongodb/section-aggregation.xml</slide>
-<slide>slides/mongodb/aggr-aggr-framework.xml</slide>
 
 <slide>slides/mongodb/aggr-pipeline.xml</slide>
 <slide>slides/mongodb/aggr-pipelines-ops.xml</slide>
@@ -122,9 +121,6 @@ Common Patterns
 <slide>slides/mongodb/aggr-op-unwind.xml</slide>
 <slide>slides/mongodb/aggr-op-unwind-example.xml</slide>
 <slide>slides/mongodb/aggr-op-sort-skip-limit.xml</slide>
-<slide>slides/mongodb/aggr-op-sort-example.xml</slide>
-<slide>slides/mongodb/aggr-op-limit-example.xml</slide>
-<slide>slides/mongodb/aggr-op-skip-example.xml</slide>
 <slide>slides/mongodb/aggr-op-sort-limit-skip-example.xml</slide>
 
 <!-- FOURTH EXCERCISE -->
