@@ -35,8 +35,8 @@ class Whisky
         $this->name = $name;␃]]></example>
 <blurb>In tokens:</blurb>
 <example inline="1"><![CDATA[*T_OPEN_TAG* &lt;?php
-*T_NAMESPACE* |777777|T_WS| *T_NS_SEPARATOR* *T_STRING* DramIO ; |777777|T_WS| 
-*T_CLASS* |777777|T_WS| *T_NS_SEPARATOR* *T_STRING* Whisky |777777|T_WS|
+*T_NAMESPACE* |777777|T_WS| *T_STRING* DramIO ; |777777|T_WS| 
+*T_CLASS* |777777|T_WS| *T_STRING* Whisky |777777|T_WS|
 { |777777|T_WS| 
     *T_PRIVATE* |777777|T_WS| *T_VARIABLE* $name ; |777777|T_WS| 
 
