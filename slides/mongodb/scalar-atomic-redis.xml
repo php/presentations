@@ -17,7 +17,7 @@
 		</div>
 		<div effect="fade-in">
 			<example inline="2">
-127.0.0.1:6379> HINCRBY whisky:ben-nevis-19:props age 1
+127.0.0.1:6379> *HINCRBY* whisky:ben-nevis-19:props age 1
 (integer) *20*</example>
 			<example inline="2">
 127.0.0.1:6379> HGETALL whisky:ben-nevis-19:props

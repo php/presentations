@@ -1,41 +1,11 @@
-GET /_search
-{
-    "query": {
-        "function_score": {
-          "query": { "match_all": {} },
-          "boost": "5", 
-          "functions": [
-              {
-                  "filter": { "match": { "test": "bar" } },
-                  "random_score": {}, 
-                  "weight": 23
-              },
-              {
-                  "filter": { "match": { "test": "cat" } },
-                  "weight": 42
-              }
-          ],
-          "max_boost": 42,
-          "score_mode": "max",
-          "boost_mode": "multiply",
-          "min_score" : 42
-        }
-    }
-}
+<slide>
+<title>Elasticsearch: Indexes</title>
 
+<list>
+	<bullet>Elasticsearch provides a Full Text Search index</bullet>
+	<bullet>Configurable per "index" and "type"</bullet>
+	<bullet>Allows for stemming, stop words, boosting, etc.</bullet>
+	<bullet>Indexes are asynchronously build</bullet>
+</list>
 
-
-
-BOOST:
-
-curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -d'
-{
-  "query": {
-    "multi_match" : {
-      "query" : "this is a test",
-      "fields" : [ "subject^3", "message" ] 
-    }
-  }
-}
-'
-
+</slide>

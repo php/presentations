@@ -45,7 +45,7 @@ Intro into DB types and their data types
 <slide>slides/mongodb/scalar-document.xml</slide>
 <slide>slides/mongodb/scalar-mongodb.xml</slide>
 <slide>slides/mongodb/document-complex.xml</slide>
-<slide>slides/mongodb/scalar-mongodb-insert.xml</slide>
+<slide>slides/mongodb/phplib-crud-insert.xml</slide>
 <slide>slides/mongodb/scalar-couchdb.xml</slide>
 <slide>slides/mongodb/scalar-couchdb-example.xml</slide>
 <slide>slides/mongodb/scalar-couchdb-insert.xml</slide>
@@ -71,7 +71,7 @@ Intro into DB types and their data types
 
 <slide>slides/mongodb/scalar-storage-overview.xml</slide>
 
-<slide>slides/mongodb/scalar-section-manipulation.xml</slide>
+<slide>slides/mongodb/scalar-section-query.xml</slide>
 
 Manipulation
 
@@ -80,17 +80,19 @@ Manipulation
         Query operations on nested fields
 
 <slide>slides/mongodb/scalar-query-redis.xml</slide>
-<slide>slides/mongodb/scalar-query-elasticsearch.xml</slide>
 <slide>slides/mongodb/scalar-query-couchdb.xml</slide>
 <slide>slides/mongodb/scalar-query-mongodb.xml</slide>
+<slide>slides/mongodb/scalar-query-mongodb-aggregation.xml</slide>
+<slide>slides/mongodb/scalar-query-elasticsearch.xml</slide>
 <slide>slides/mongodb/scalar-query-mysql.xml</slide>
-<slide>slides/mongodb/scalar-query-postgresql.xml</slide>
+<slide>slides/mongodb/scalar-query-postgresql-hstore.xml</slide>
+<slide>slides/mongodb/scalar-query-postgresql-jsonb.xml</slide>
 
     Indexes
-		Redis
-		MongoDB
-		CouchDB
-		ElasticSearch
+        Redis
+        MongoDB
+        CouchDB
+        ElasticSearch
         MySQL
             only through virtual columns
             Not on arrays
@@ -99,11 +101,14 @@ Manipulation
         Geospatial from GeoJSON sources (not PostGIS)
 
 <slide>slides/mongodb/scalar-index-redis.xml</slide>
+<slide>slides/mongodb/scalar-index-couchdb.xml</slide>
+<slide>slides/mongodb/index.xml</slide>
 <slide>slides/mongodb/scalar-index-elasticsearch.xml</slide>
 <slide>slides/mongodb/scalar-index-postgresql.xml</slide>
-<slide>slides/mongodb/scalar-index-mongodb.xml</slide>
 <slide>slides/mongodb/scalar-index-mysql.xml</slide>
 
+
+<slide>slides/mongodb/scalar-section-manipulation.xml</slide>
     Storing/Update
         Atomicity
             ACID
@@ -115,20 +120,15 @@ Manipulation
 <slide>slides/mongodb/scalar-nosql-acid.xml</slide>
 <slide>slides/mongodb/scalar-atomic-redis.xml</slide>
 <slide>slides/mongodb/scalar-atomic-couchdb.xml</slide>
-<slide>slides/mongodb/scalar-atomic-mongodb.xml</slide>
-<slide>slides/mongodb/scalar-atomic-mysql.xml</slide>
-
-<slide>slides/mongodb/scalar-manipulate-mongodb.xml</slide>
-<slide>slides/mongodb/scalar-manipulate-elasticsearch.xml</slide>
-<slide>slides/mongodb/scalar-manipulate-postgresql.xml</slide>
+<slide>slides/mongodb/update-atomicity.xml</slide>
 
     Schema validation
         None can do that, besides MongoDB
 
 <slide>slides/mongodb/scalar-validate.xml</slide>
-<slide>slides/mongodb/scalar-validate-mongodb.xml</slide>
+<slide>slides/mongodb/document-validation.xml</slide>
 
-<slide>slides/mongodb/scalar-section-conclusion.xml</slide>
+<slide>slides/mongodb/scalar-conclusion.xml</slide>
 
 
 Conclusion

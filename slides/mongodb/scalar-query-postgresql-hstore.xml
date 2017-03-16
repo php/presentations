@@ -1,0 +1,32 @@
+<slide>
+<title>PostgreSQL: Query HSTORE</title>
+
+<example inline="2">
+INSERT INTO users VALUES('
+    "_id" => "derick@localhost",
+    "location" => "London, UK",
+    "count_unique" => 13,
+    "isAdmin" => true
+');
+</example>
+
+<blurb>Get value for a key:</blurb>
+<example inline="2">
+SELECT *hdoc->isAdmin* FROM users;
+</example>
+
+<blurb>Find users with unique count larger than 10:</blurb>
+<example inline="2">
+SELECT hdoc->_id FROM users WHERE hdoc->count_unique > 10;
+</example>
+
+<blurb>Does key exists?</blurb>
+<example inline="2">
+SELECT *hdoc ? age* FROM users;
+</example>
+
+<blurb>Match key/value pair</blurb>
+<example inline="2">
+SELECT \* FROM users WHERE *hdoc @> '"location"=>"London, UK"' :: hstore*;
+</example>
+</slide>

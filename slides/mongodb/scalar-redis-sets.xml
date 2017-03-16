@@ -1,24 +1,26 @@
 <slide>
 <title>Redis: Sets</title>
 
-<list>
-	<bullet>Unordered collections of strings</bullet>
-<!--	<bullet>SINTER, SPOP, SCARD</bullet>
-	<bullet>SUNIONSTORE</bullet> -->
-</list>
+<blurb>Unordered collections of strings</blurb>
 
-<example>
-127.0.0.1:6379> SADD whisky:glenfiddich-12:tags fruity
+<blurb>Adding elements</blurb>
+<example inline="2">
+127.0.0.1:6379> *SADD* whisky:glenfiddich-12:tags fruity
 (integer) 1
-127.0.0.1:6379> SADD whisky:glenfiddich-12:tags vanilla
+127.0.0.1:6379> SADD *whisky:glenfiddich-12:tags* vanilla
 (integer) 1
-127.0.0.1:6379> SADD whisky:glenfiddich-12:tags fruity
-(integer) 0
+127.0.0.1:6379> SADD whisky:glenfiddich-12:tags *fruity*
+(integer) *0*
 127.0.0.1:6379> SADD whisky:glenfiddich-12:tags "medium long finish"
 (integer) 1
-127.0.0.1:6379> SISMEMBER whisky:glenfiddich-12:tags peaty
+</example>
+<break/>
+
+<blurb>Queries</blurb>
+<example inline="2">
+127.0.0.1:6379> *SISMEMBER* whisky:glenfiddich-12:tags peaty
 (integer) 0
-127.0.0.1:6379> SMEMBERS whisky:glenfiddich-12:tags
+127.0.0.1:6379> *SMEMBERS* whisky:glenfiddich-12:tags
 1) "medium long finish"
 2) "vanilla"
 3) "fruity"

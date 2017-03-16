@@ -1,0 +1,49 @@
+<slide>
+<title>CouchDB: Indexes</title>
+
+<div effect="fade-out">
+<list>
+    <bullet>Secondary keys with a Map/Reduce views</bullet>
+    <bullet>Documents in the "views" field of a "design" document</bullet>
+    <bullet>The %map()% function is called once per document</bullet>
+    <bullet>View output sorted by key</bullet>
+    <bullet>View results are stored in btrees</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<example>
+{
+    "_id" : "569ae205b8c96e09421b2869",
+    "slug" : "arran",
+    "name" : "Arran",
+    "region_slug" : "scotland-islands",
+}
+</example>
+
+<blurb>Map function:</blurb>
+<example inline="2">
+function(doc) {
+    if(doc.region_slug &amp;&amp; doc.slug) {
+      emit(doc.region_slug, doc.slug);
+    }
+}
+</example>
+
+<blurb>Query:</blurb>
+<example>
+curl -XGET localhost:5984/dramio/_design/docs/_view/by_region
+</example>
+
+<example inline="2">
+{
+    "total_rows": 1,
+    "offset": 0,
+    "rows": [
+        { "key": "scotland-islands", "id": "569ae205b8c96e09421b2869", "value": "arran" },
+    ]
+}
+</example>
+</div>
+
+</slide>

@@ -7,7 +7,7 @@
 $m = new MongoClient;
 $c = $m->demo->steps;
 $r = $c->findOne( [ 'person' => 'derickr' ] );
-*$r['steps_made']["20140202"] = $r['steps_made']["20140202"] + 7124;*
+*$r['steps_made']["20170202"] = $r['steps_made']["20170202"] + 7124;*
 *$c->update( [ 'person' => 'derickr' ], $r );*
 </example>
 </div>
@@ -19,7 +19,7 @@ $m = new MongoClient;
 $c = $m->demo->steps;
 $c->update(
     [ 'person' => 'derickr' ], 
-    [ '$inc' => [ "steps_made.20140202" => 7124 ] ] 
+    [ *'$inc'* => [ "steps_made.20170202" => 7124 ] ] 
 );
 </example>
 

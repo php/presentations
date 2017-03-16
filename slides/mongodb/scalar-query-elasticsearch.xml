@@ -1,28 +1,29 @@
+<slide>
+<title>Elasticsearch: Query</title>
 
-curl -XGET '192.168.42.202:9200/users/_search?q=count:16'
+<blurb>Elasticsearch is primarily a Full Text Search engine</blurb>
 
+<break/>
+<blurb>Simple:</blurb>
+<example inline="2">
+curl -XGET '192.168.42.202:9200/users/*_search*?q=*count:16*'
+</example>
 
-curl -XGET 'localhost:9200/bank/_search?pretty' -H 'Content-Type: application/json' -d'
+<break/>
+<blurb>Complex:</blurb>
+<example inline="2">
+curl -XGET 'localhost:9200/*whisky*/_search?pretty' -H 'Content-Type: application/json' -d'
 {
   "query": {
     "bool": {
       "should": [
-        { "match": { "address": "mill" } },
-        { "match": { "address": "lane" } }
+        { "match": { "distillery": "penderyn" } },
+        { "match": { "whisky": "sherry" } }
       ]
     }
   }
 }
 '
+</example>
 
-GET /bank/_search
-{
-  "query": {
-    "bool": {
-      "should": [
-        { "match": { "address": "mill" } },
-        { "match": { "address": "lane" } }
-      ]
-    }
-  }
-}
+</slide>

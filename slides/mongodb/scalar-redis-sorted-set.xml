@@ -3,31 +3,28 @@
 
 <list>
 	<bullet>A combination between a set and a hash</bullet>
-	<bullet>every element in a sorted set is associated with a floating point value, called the score</bullet>
-<!--	<bullet>Sorting:
-		<list> 
-			<bullet>If A and B are two elements with a different score, then A > B if A.score is > B.score.</bullet>
-			<bullet>If A and B have exactly the same score, then A > B if the A string is lexicographically greater than the B string. A and B strings can't be equal since sorted sets only have unique elements.</bullet>
-		</list>
-	</bullet>
-	<bullet>ZADD, ZRANGE, ZREVRANGE</bullet>
-	<bullet>ZRANGEBYSCORE, ZRANGEBYLEX</bullet>a -->
+	<bullet>Every element in a sorted set is associated with a floating point value, called the score</bullet>
+</list>
 
-<example>
-127.0.0.1:6379> ZADD whisky:rating 4 pulteney-11 2.0 glenfarclas-12 4.0 fettercairn-23
+<example inline="2">
+127.0.0.1:6379> *ZADD* whisky:rating *4 pulteney-11* 2.0 glenfarclas-12 4.0 fettercairn-23
 (integer) 3
-127.0.0.1:6379> ZRANGE whisky:rating 0 -1 WITHSCORES
+</example>
+
+<example inline="2">
+127.0.0.1:6379> *ZRANGE* whisky:rating *0 -1 WITHSCORES*
 1) "glenfarclas-12"
 2) "2"
 3) "fettercairn-23"
 4) "4"
 5) "pulteney-11"
 6) "4"
-127.0.0.1:6379> ZRANGEBYSCORE whisky:rating 3 5
+</example>
+
+<example inline="2">
+127.0.0.1:6379> *ZRANGEBYSCORE* whisky:rating *3 5*
 1) "fettercairn-23"
 2) "pulteney-11"
 </example>
-
-</list>
 
 </slide>

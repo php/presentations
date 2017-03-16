@@ -1,24 +1,22 @@
-Through virtual coolumns
+<slide>
+<title>MySQL</title>
 
-mysql> CREATE TABLE jemp (
-    ->     c JSON,
-    ->     g INT GENERATED ALWAYS AS (c->"$.id"),
-    ->     INDEX i (g)
-    -> );
-Query OK, 0 rows affected (0.28 sec)
+<list>
+	<bullet>Does not support indexing of whole JSON fields</bullet>
+	<bullet>Indexing of JSON fields are done through generated columns</bullet>
+	<bullet>Can't index multi-value JSON fields (arrays)</bullet>
+</list>
 
-mysql> INSERT INTO jemp (c) VALUES
-     >   ('{"id": "1", "name": "Fred"}'), ('{"id": "2", "name": "Wilma"}'),
-     >   ('{"id": "3", "name": "Barney"}'), ('{"id": "4", "name": "Betty"}');
-Query OK, 4 rows affected (0.04 sec)
-Records: 4  Duplicates: 0  Warnings: 0
+<break/>
+<blurb>Create virtual column:</blurb>
+<example inline="2">
+ALTER TABLE whisky ADD COLUMN abv FLOAT *GENERATED ALWAYS AS (properties->"$.abv");*
+</example>
 
-mysql> SELECT c->>"$.name" AS name
-     >     FROM jemp WHERE g > 2;
-+--------+
-| name   |
-+--------+
-| Barney |
-| Betty  |
-+--------+
-2 rows in set (0.00 sec)
+<break/>
+<blurb>Create index:</blurb>
+<example inline="2">
+CREATE INDEX abv_idx ON whisky (abv);
+</example>
+
+</slide>

@@ -1,70 +1,28 @@
- Among these keyword-sentence pairs is this one:
+<slide>
+<title>MySQL: Query JSON object</title>
 
-mascot: The MySQL mascot is a dolphin named "Sakila".
+<blurb>Create and Insert:</blurb>
+<example>
+CREATE TABLE whisky (name VARCHAR(255), properties JSON);
 
-One way to insert this as a JSON object into the facts table is to use the MySQL JSON_OBJECT() function. In this case, you must escape each quote character using a backslash, as shown here:
+INSERT INTO whisky VALUES
+  ( "Glen Albyn 24", '{"age": 24, "cask_strength": false, "abv": 47.5 }' ),
+  ( "Glenrothes-Glenlivet 24", '{"age": 24, "cask_strength": true, "coloured": false }' );
+</example>
 
-mysql> INSERT INTO facts VALUES 
-     >   (JSON_OBJECT("mascot", "Our mascot is a dolphin named \"Sakila\"."));
+<break/>
+<blurb>Query:</blurb>
+<example inline="2">
+SELECT name, *properties->>"$.age"* FROM whisky WHERE *properties->"$.cask_strength" = true*;
+</example>
 
-This does not work in the same way if you insert the value as a JSON object literal, in which case, you must use the double backslash escape sequence, like this:
-
-mysql> INSERT INTO facts VALUES 
-     >   ('{"mascot": "Our mascot is a dolphin named \\"Sakila\\"."}');
-
-Using the double backslash keeps MySQL from performing escape sequence processing, and instead causes it to pass the string literal to the storage engine for processing. After inserting the JSON object in either of the ways just shown, you can see that the backslashes are present in the JSON column value by doing a simple SELECT, like this:
-
-mysql> SELECT sentence FROM facts;
-+---------------------------------------------------------+
-| sentence                                                |
-+---------------------------------------------------------+
-| {"mascot": "Our mascot is a dolphin named \"Sakila\"."} |
-+---------------------------------------------------------+
-
-To look up this particular sentence employing mascot as the key, you can use the column-path operator ->, as shown here:
-
-mysql> SELECT col->"$.mascot" FROM qtest;
-+---------------------------------------------+
-| col->"$.mascot"                             |
-+---------------------------------------------+
-| "Our mascot is a dolphin named \"Sakila\"." |
-+---------------------------------------------+
-1 row in set (0.00 sec)
-
-This leaves the backslashes intact, along with the surrounding quote marks. To display the desired value using mascot as the key, but without including the surrounding quote marks or any escapes, use the inline path operator ->>, like this:
-
-mysql> SELECT sentence->>"$.mascot" FROM facts;
-+-----------------------------------------+
-| sentence->>"$.mascot"                   |
-+-----------------------------------------+
-| Our mascot is a dolphin named "Sakila". |
-+-----------------------------------------+
-
-
-
-
-mysql> SELECT c, JSON_EXTRACT(c, "$.id"), g
-     > FROM jemp
-     > WHERE JSON_EXTRACT(c, "$.id") > 1
-     > ORDER BY JSON_EXTRACT(c, "$.name");
-+-------------------------------+-----------+------+
-| c                             | c->"$.id" | g    |
-+-------------------------------+-----------+------+
-| {"id": "3", "name": "Barney"} | "3"       |    3 |
-| {"id": "4", "name": "Betty"}  | "4"       |    4 |
-| {"id": "2", "name": "Wilma"}  | "2"       |    2 |
-+-------------------------------+-----------+------+
-3 rows in set (0.00 sec)
-
-mysql> SELECT c, c->"$.id", g
-     > FROM jemp
-     > WHERE c->"$.id" > 1
-     > ORDER BY c->"$.name";
-+-------------------------------+-----------+------+
-| c                             | c->"$.id" | g    |
-+-------------------------------+-----------+------+
-| {"id": "3", "name": "Barney"} | "3"       |    3 |
-| {"id": "4", "name": "Betty"}  | "4"       |    4 |
-| {"id": "2", "name": "Wilma"}  | "2"       |    2 |
-+-------------------------------+-----------+------+
-3 rows in set (0.00 sec)
+<break/>
+<blurb>Result:</blurb>
+<example>
++-------------------------+---------------------+
+| name                    | properties->"$.age" |
++-------------------------+---------------------+
+| Glenrothes-Glenlivet 24 | 24                  |
++-------------------------+---------------------+
+</example>
+</slide>

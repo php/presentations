@@ -1,0 +1,75 @@
+<slide>
+<title>MongoDB: Aggregation</title>
+
+<div effect="fade-out">
+<example>
+db.whisky.aggregate( [
+	{ $match: { region_slug: /^scotland-/ } },
+	{ $group : {
+		_id: '$region', 
+		whiskies: { '$push' : '$name' }
+	} }
+] );
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="2">
+db.whisky.aggregate( [
+	{ *$match*: { region_slug: */^scotland-/* } },
+	{ $group : {
+		_id: '$region', 
+		whiskies: { '$push' : '$name' }
+	} }
+] );
+</example>
+<list>
+	<bullet>*$match* with regular expression</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<example inline="2">
+db.whisky.aggregate( [
+	{ $match: { region_slug: /^scotland-/ } },
+	{ *$group* : {
+		_id: *'$region'*, 
+		whiskies: { '$push' : '$name' }
+	} }
+] );
+</example>
+<list>
+	<bullet>$match with regular expression</bullet>
+	<bullet>*$group* by the value of *$region*</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<example inline="2">
+db.whisky.aggregate( [
+	{ $match: { region_slug: /^scotland-/ } },
+	{ $group : {
+		_id: *'$region'*, 
+		whiskies: { *'$push' : '$name'* }
+	} }
+] );
+</example>
+<list>
+	<bullet>$match with regular expression</bullet>
+	<bullet>$group by the value of $region</bullet>
+	<bullet>For each matched document, add *$name* to correct bucket</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<example>
+{ "_id" : "Scotland, Lowlands", "whiskies" : [ "Cambus 26" ] }
+{ "_id" : "Scotland, Speyside", "whiskies" : [ "Glenfarclas 15", "Glen Spey-Glenlivet 19", "Glenrothes-Glenlivet 24", "Glen Grant-Glenlivet 20", "Glen Mohr 23", "Glenfiddich 12", "Glen Moray New Whisky Test 12", "yamazaki 15", "Yamazaki 13", "Cuba Cask End 18" ] }
+{ "_id" : "Scotland, Islay", "whiskies" : [ "Bunnahabhain 18", "Auriverdes", "Bunnahabhain 12", "Bowmore 12 Wine Cask", "Laphroaig 18" ] }
+{ "_id" : "Scotland, Islands", "whiskies" : [ "Arran 12", "Talisker 10" ] }
+{ "_id" : "Scotland, Campbeltown", "whiskies" : [ "Hazelburn 10" ] }
+{ "_id" : "Scotland, Highlands", "whiskies" : [ "Glengoyne 14", "Ord 10 +3", "Glen 23", "Glen 24", "Glen 25", "New Dram With Unknown Bottler", "Yamazaki 18", "Yamazaki 16", "Yamazaki 14", "Glengoyne-14" ] }
+</example>
+</div>
+
+</slide>

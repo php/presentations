@@ -1,0 +1,79 @@
+<slide>
+<title>MongoDB: Query</title>
+
+<div effect="fade-out">
+<example inline="2">
+db.checkins.find( {
+	region_slug: 'scotland-islay',
+	rating: { $gte: 3 }
+}, {
+	whisky: 1, rating: 1, age: 1
+} ).pretty();
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="2">
+db.checkins.find( {
+	*region_slug: 'scotland-islay',*
+	rating: { $gte: 3 }
+}, {
+	whisky: 1, rating: 1, age: 1
+} ).pretty();
+</example>
+
+<list>
+	<bullet>Equality Match</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<example inline="2">
+db.checkins.find( {
+	region_slug: 'scotland-islay',
+	*rating: { $gte: 3 }*
+}, {
+	whisky: 1, rating: 1, age: 1
+} ).pretty();
+</example>
+
+<list>
+	<bullet>Equality Match</bullet>
+	<bullet>Match with a Query Operator</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<example inline="2">
+db.checkins.find( {
+	region_slug: 'scotland-islay',
+	rating: { $gte: 3 }
+}, {
+	*whisky: 1, rating: 1, age: 1*
+} ).pretty();
+</example>
+
+<list>
+	<bullet>Equality Match</bullet>
+	<bullet>Match with a Query Operator</bullet>
+	<bullet>Projection</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<example inline="2">
+{
+	"_id" : ObjectId("569c1bd8b8c96e09421b292a"),
+	"whisky" : "Auriverdes",
+	"rating" : 3.5
+}
+{
+	"_id" : ObjectId("56a2b8fcb8c96e7205499230"),
+	"whisky" : "Bunnahabhain 12",
+	"rating" : 3.5,
+	"age" : 12
+}
+</example>
+</div>
+
+</slide>
