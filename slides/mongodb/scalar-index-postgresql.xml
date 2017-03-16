@@ -1,0 +1,93 @@
+GIN Index
+
+12.9. GIN and GiST Index Types
+
+There are two kinds of indexes that can be used to speed up full text searches. Note that indexes are not mandatory for full text searching, but in cases where a column is searched on a regular basis, an index is usually desirable.
+
+CREATE INDEX name ON table USING GIN (column);
+
+    Creates a GIN (Generalized Inverted Index)-based index. The column must be of tsvector type.
+
+
+
+8.14.4. jsonb Indexing
+
+GIN indexes can be used to efficiently search for keys or key/value pairs occurring within a large number of jsonb documents (datums). Two GIN "operator classes" are provided, offering different performance and flexibility trade-offs.
+
+The default GIN operator class for jsonb supports queries with top-level key-exists operators ?, ?& and ?| operators and path/value-exists operator @>. (For details of the semantics that these operators implement, see Table 9-41.) An example of creating an index with this operator class is:
+
+CREATE INDEX idxgin ON api USING GIN (jdoc);
+
+The non-default GIN operator class jsonb_path_ops supports indexing the @> operator only. An example of creating an index with this operator class is:
+
+CREATE INDEX idxginp ON api USING GIN (jdoc jsonb_path_ops);
+
+Consider the example of a table that stores JSON documents retrieved from a third-party web service, with a documented schema definition. A typical document is:
+
+{
+    "guid": "9c36adc1-7fb5-4d5b-83b4-90356a46061a",
+    "name": "Angela Barton",
+    "is_active": true,
+    "company": "Magnafone",
+    "address": "178 Howard Place, Gulf, Washington, 702",
+    "registered": "2009-11-07T08:53:22 +08:00",
+    "latitude": 19.793713,
+    "longitude": 86.513373,
+    "tags": [
+        "enim",
+        "aliquip",
+        "qui"
+    ]
+}
+
+We store these documents in a table named api, in a jsonb column named jdoc. If a GIN index is created on this column, queries like the following can make use of the index:
+
+-- Find documents in which the key "company" has value "Magnafone"
+SELECT jdoc->'guid', jdoc->'name' FROM api WHERE jdoc @> '{"company": "Magnafone"}';
+
+However, the index could not be used for queries like the following, because though the operator ? is indexable, it is not applied directly to the indexed column jdoc:
+
+-- Find documents in which the key "tags" contains key or array element "qui"
+SELECT jdoc->'guid', jdoc->'name' FROM api WHERE jdoc -> 'tags' ? 'qui';
+
+Still, with appropriate use of expression indexes, the above query can use an index. If querying for particular items within the "tags" key is common, defining an index like this may be worthwhile:
+
+CREATE INDEX idxgintags ON api USING GIN ((jdoc -> 'tags'));
+
+Now, the WHERE clause jdoc -> 'tags' ? 'qui' will be recognized as an application of the indexable operator ? to the indexed expression jdoc -> 'tags'. (More information on expression indexes can be found in Section 11.7.)
+
+Another approach to querying is to exploit containment, for example:
+
+-- Find documents in which the key "tags" contains array element "qui"
+SELECT jdoc->'guid', jdoc->'name' FROM api WHERE jdoc @> '{"tags": ["qui"]}';
+
+A simple GIN index on the jdoc column can support this query. But note that such an index will store copies of every key and value in the jdoc column, whereas the expression index of the previous example stores only data found under the tags key. While the simple-index approach is far more flexible (since it supports queries about any key), targeted expression indexes are likely to be smaller and faster to search than a simple index.
+
+Although the jsonb_path_ops operator class supports only queries with the @> operator, it has notable performance advantages over the default operator class jsonb_ops. A jsonb_path_ops index is usually much smaller than a jsonb_ops index over the same data, and the specificity of searches is better, particularly when queries contain keys that appear frequently in the data. Therefore search operations typically perform better than with the default operator class.
+
+The technical difference between a jsonb_ops and a jsonb_path_ops GIN index is that the former creates independent index items for each key and value in the data, while the latter creates index items only for each value in the data. [1] Basically, each jsonb_path_ops index item is a hash of the value and the key(s) leading to it; for example to index {"foo": {"bar": "baz"}}, a single index item would be created incorporating all three of foo, bar, and baz into the hash value. Thus a containment query looking for this structure would result in an extremely specific index search; but there is no way at all to find out whether foo appears as a key. On the other hand, a jsonb_ops index would create three index items representing foo, bar, and baz separately; then to do the containment query, it would look for rows containing all three of these items. While GIN indexes can perform such an AND search fairly efficiently, it will still be less specific and slower than the equivalent jsonb_path_ops search, especially if there are a very large number of rows containing any single one of the three index items.
+
+A disadvantage of the jsonb_path_ops approach is that it produces no index entries for JSON structures not containing any values, such as {"a": {}}. If a search for documents containing such a structure is requested, it will require a full-index scan, which is quite slow. jsonb_path_ops is therefore ill-suited for applications that often perform such searches.
+
+jsonb also supports btree and hash indexes. These are usually useful only if it's important to check equality of complete JSON documents. The btree ordering for jsonb datums is seldom of great interest, but for completeness it is:
+
+Object > Array > Boolean > Number > String > Null
+
+Object with n pairs > object with n - 1 pairs
+
+Array with n elements > array with n - 1 elements
+
+Objects with equal numbers of pairs are compared in the order:
+
+key-1, value-1, key-2 ...
+
+Note that object keys are compared in their storage order; in particular, since shorter keys are stored before longer keys, this can lead to results that might be unintuitive, such as:
+
+{ "aa": 1, "c": 1} > {"b": 1, "d": 1}
+
+Similarly, arrays with equal numbers of elements are compared in the order:
+
+element-1, element-2 ...
+
+Primitive JSON values are compared using the same comparison rules as for the underlying PostgreSQL data type. Strings are compared using the default database collation.
+

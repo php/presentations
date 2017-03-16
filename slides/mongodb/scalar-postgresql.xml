@@ -1,0 +1,11 @@
+<slide>
+<title>PostgreSQL</title>
+
+<list>
+	<bullet>Different non-scalar types: *HSTORE*, JSON and *JSONB*</bullet>
+	<bullet>Much richer query and index support than MySQL</bullet>
+</list>
+
+<image filename="postgresql-logo.png"/>
+
+</slide>

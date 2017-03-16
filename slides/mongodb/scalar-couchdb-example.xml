@@ -1,0 +1,85 @@
+<slide>
+<title>CouchDB Document</title>
+
+<div effect="fade-out">
+<example>
+{
+  "_id" : "derick@localhost",
+  "_rev" : "1-0af7eb105d22a8560e4636733a5d8a6e",
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  "confirmed" : true,
+  "confirmed_at" : 1452546148,
+  "location" : "London, UK",
+  "words" : [ "derick", "rethans", "london", "uk" ],
+  "count" : 16,
+  "count_unique" : 13,
+  "badges" : [
+    { "n": "unique1", "l": 1 },
+    { "n": "age21", "l": 3 }
+  ],
+  "isAdmin" : true
+}
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  *"_id" : "derick@localhost",*
+  "_rev" : "1-0af7eb105d22a8560e4636733a5d8a6e",
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  "confirmed" : true,
+  "confirmed_at" : 1452546148,
+  "location" : "London, UK",
+  "words" : [ "derick", "rethans", "london", "uk" ],
+  "count" : 16,
+  "count_unique" : 13,
+  "badges" : [
+    { "n": "unique1", "l": 1 },
+    { "n": "age21", "l": 3 }
+  ],
+  "isAdmin" : true
+}
+</example>
+<list>
+<bullet>%_id%: each document has a unique ID</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+{
+  "_id" : "derick@localhost",
+  *"_rev" : "1-0af7eb105d22a8560e4636733a5d8a6e",*
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  "confirmed" : true,
+  "confirmed_at" : 1452546148,
+  "location" : "London, UK",
+  "words" : [ "derick", "rethans", "london", "uk" ],
+  "count" : 16,
+  "count_unique" : 13,
+  "badges" : [
+    { "n": "unique1", "l": 1 },
+    { "n": "age21", "l": 3 }
+  ],
+  "isAdmin" : true
+}
+</example>
+<list>
+<bullet>%_id%: each document has a unique ID</bullet>
+<bullet>%_rev%: each document has an associated revision</bullet>
+</list>
+</div>
+</slide>

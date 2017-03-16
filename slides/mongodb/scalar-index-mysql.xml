@@ -1,0 +1,24 @@
+Through virtual coolumns
+
+mysql> CREATE TABLE jemp (
+    ->     c JSON,
+    ->     g INT GENERATED ALWAYS AS (c->"$.id"),
+    ->     INDEX i (g)
+    -> );
+Query OK, 0 rows affected (0.28 sec)
+
+mysql> INSERT INTO jemp (c) VALUES
+     >   ('{"id": "1", "name": "Fred"}'), ('{"id": "2", "name": "Wilma"}'),
+     >   ('{"id": "3", "name": "Barney"}'), ('{"id": "4", "name": "Betty"}');
+Query OK, 4 rows affected (0.04 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> SELECT c->>"$.name" AS name
+     >     FROM jemp WHERE g > 2;
++--------+
+| name   |
++--------+
+| Barney |
+| Betty  |
++--------+
+2 rows in set (0.00 sec)

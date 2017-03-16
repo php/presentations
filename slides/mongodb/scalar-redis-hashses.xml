@@ -1,0 +1,25 @@
+<slide>
+<title>Redis: Hash</title>
+
+<list>
+	<bullet>A typical hash implementation</bullet>
+	<!-- <bullet>HGETALL, HKEYS, HVALS</bullet> -->
+</list>
+
+<example>
+127.0.0.1:6379> HSET whisky:ben-nevis-19:props distillery ben-nevis
+(integer) 1
+127.0.0.1:6379> HMSET whisky:ben-nevis-19:props region scotland-highlands age 19
+OK
+127.0.0.1:6379> HGETALL whisky:ben-nevis-19:props
+1) "distillery"
+2) "ben-nevis"
+3) "region"
+4) "scotland-highlands"
+5) "age"
+6) "19"
+127.0.0.1:6379> HGET whisky:ben-nevis-19:props age
+"19"
+</example>
+
+</slide>

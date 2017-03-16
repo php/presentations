@@ -1,0 +1,11 @@
+<slide>
+<title>Atomicity</title>
+
+<list>
+	<bullet>Manipulation of data can cause race conditions</bullet>
+	<bullet>Tradiational databases: ACID</bullet>
+	<bullet>Different data bases and types handle atomicity differently</bullet>
+</list>
+
+<image filename="atoms.jpg"/>
+</slide>

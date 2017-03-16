@@ -1,0 +1,12 @@
+<slide>
+<title>CouchDB</title>
+
+<list>
+	<bullet>An Apache project</bullet>
+	<bullet>Documents are JSON objects</bullet>
+	<bullet>Interaction through REST API (curl), or an HTTP Client (like Guzzle)</bullet>
+</list>
+
+<image filename="CouchDB.png"/>
+
+</slide>

@@ -1,0 +1,35 @@
+<slide>
+<title>PostgreSQL: HSTORE</title>
+
+<list>
+	<bullet>Stores a set of key/value pairs as strings</bullet>
+	<bullet>Can be useful for semi structured data</bullet>
+	<bullet>Useful for 'extra' data that isn't often queried</bullet>
+</list>
+
+<example inline="2">
+CREATE EXTENSION *hstore*;
+</example>
+
+<example inline="2">
+CREATE TABLE users (hdoc *HSTORE*);
+</example>
+
+<example inline="2">
+INSERT INTO users VALUES(*'*
+    "_id" => "derick@localhost",
+    "email" => "derick@localhost",
+    "fullname" => "Derick Rethans",
+    "slug" => "derick-rethans",
+    "created_at" => *1452546141*,
+    "timezone" => "Europe/London",
+    "confirmed" => *true*,
+    "confirmed_at" => 1452546148,
+    "location" => "London, UK",
+    "count" => 16,
+    "count_unique" => 13,
+    "isAdmin" => true
+*'*);
+</example>
+
+</slide>

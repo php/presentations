@@ -1,0 +1,14 @@
+<slide>
+<title>ElasticSearch</title>
+
+<list>
+	<bullet>Near Realtime (NRT) Text Search engine</bullet>
+	<bullet>Based on Lucene</bullet>
+	<bullet>Index ("Database"), Type ("table") (common fields)</bullet>
+	<bullet>Documents are JSON objects</bullet>
+	<bullet>Interaction through REST interface or %elastic/elasticsearch-php%</bullet>
+</list>
+
+<image filename="elasticsearch-lt.svg"/>
+
+</slide>

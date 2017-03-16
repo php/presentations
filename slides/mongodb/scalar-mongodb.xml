@@ -1,0 +1,14 @@
+<slide>
+<title>MongoDB</title>
+
+<list>
+	<bullet>An Open Source project by a commerical entity</bullet>
+	<bullet>Documents are *BSON* objects on disk</bullet>
+	<bullet>Documents are language specific data structures in the client</bullet>
+	<bullet>Interaction through language drivers (pecl/mongodb) with an
+optional library (mongodb/mongodb)</bullet>
+</list>
+
+<image filename="mongodb-logo.png"/>
+
+</slide>

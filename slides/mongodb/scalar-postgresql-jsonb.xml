@@ -1,0 +1,10 @@
+<slide>
+<title>PostgreSQL: JSONB</title>
+
+<list>
+	<bullet>Very similar to MySQLs's *JSON* type</bullet>
+	<bullet>Can be indexed, unlike MySQL's *JSON* or PostgreSQL's *JSON* type</bullet>
+	<bullet>Supports richer data types as *values* compared to *HSTORE*</bullet>
+</list>
+
+</slide>

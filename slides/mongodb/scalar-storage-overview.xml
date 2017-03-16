@@ -1,0 +1,36 @@
+<slide>
+<title>Storage Types Overview</title>
+
+<table>
+<tr><th>~Database~</th><th>List</th><th>Set</th><th>Hash</th><th>Sorted Set</th><th>Document</th></tr>
+<tr><th>Redis</th>
+<td>|00cc00|🗸|</td> <td>|00cc00|🗸|</td> <td>|00cc00|🗸|</td> <td>|00cc00|🗸|</td> <td>|ff0000|🗶|</td>
+</tr>
+
+<tr><th>CouchDB</th>
+<td>|ff0000|🗶|</td> <td>|ff0000|🗶|</td> <td>|00cc00|🗸|</td> <td>|ff0000|🗶|</td> <td>|00cc00|🗸|</td>
+</tr>
+
+<tr><th>MongoDB</th>
+<td>|ff0000|🗶|</td> <td>|00cc00|🗸|</td> <td>|00cc00|🗸|</td> <td>|ff0000|🗶|</td> <td>|00cc00|🗸|</td>
+</tr>
+
+<tr><th>ElasticSearch</th>
+<td>|ff0000|🗶|</td> <td>|ff0000|🗶|</td> <td>|00cc00|🗸|</td> <td>|ff0000|🗶|</td> <td>|00cc00|🗸|</td>
+</tr>
+
+<tr><th>MySQL</th>
+<td>|ff0000|🗶|</td> <td>|ff0000|🗶|</td> <td>|ff0000|🗶|</td> <td>|ff0000|🗶|</td> <td>JSON</td>
+</tr>
+
+<tr><th>PostgreSQL</th>
+<td>|ff0000|🗶|</td> <td>|ff0000|🗶|</td> <td>HSTORE</td> <td>|ff0000|🗶|</td> <td>JSONB</td>
+</tr>
+</table>
+
+<list>
+<bullet>JSON, HSTORE and JSONB are types for a specific *field*</bullet>
+<bullet>*Hashes* in Document DBs are nested (JSON) fields</bullet>
+<bullet>MongoDB'S *Set* can be emulated through operators</bullet>
+</list>
+</slide>

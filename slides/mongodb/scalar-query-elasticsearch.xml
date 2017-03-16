@@ -1,0 +1,28 @@
+
+curl -XGET '192.168.42.202:9200/users/_search?q=count:16'
+
+
+curl -XGET 'localhost:9200/bank/_search?pretty' -H 'Content-Type: application/json' -d'
+{
+  "query": {
+    "bool": {
+      "should": [
+        { "match": { "address": "mill" } },
+        { "match": { "address": "lane" } }
+      ]
+    }
+  }
+}
+'
+
+GET /bank/_search
+{
+  "query": {
+    "bool": {
+      "should": [
+        { "match": { "address": "mill" } },
+        { "match": { "address": "lane" } }
+      ]
+    }
+  }
+}

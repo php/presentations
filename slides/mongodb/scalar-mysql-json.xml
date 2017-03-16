@@ -1,0 +1,10 @@
+<slide>
+<title>MySQL: JSON type</title>
+
+<list>
+	<bullet>Interaction is through strings containing JSON</bullet>
+	<bullet>Storage is optimised</bullet>
+	<bullet>Manipulation through specific SQL operators</bullet>
+	<bullet>Field order is not preserved</bullet>
+</list>
+</slide>

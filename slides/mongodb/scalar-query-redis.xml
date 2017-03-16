@@ -1,0 +1,23 @@
+<slide>
+<title>Redis: Query</title>
+
+<blurb>Sets:</blurb>
+<list>
+	<bullet>*SISMEMBER* key value</bullet>
+	<bullet>*SMEMBERS* key value</bullet>
+</list>
+
+<blurb>Hashes:</blurb>
+<list>
+	<bullet>*HGETALL* key</bullet>
+	<bullet>*HMGET* key hashkey1 ..hashkey2</bullet>
+</list>
+
+<blurb>List/Sorted Set:</blurb>
+<list>
+	<bullet>*LRANGE* key left right</bullet>
+	<bullet>*ZRANGE* key left right</bullet>
+</list>
+
+</slide>
+

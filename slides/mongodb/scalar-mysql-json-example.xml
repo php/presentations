@@ -1,0 +1,31 @@
+<slide>
+<title>MySQL JSON Document</title>
+
+<blurb>Create table:</blurb>
+<example inline="2">
+mysql> CREATE TABLE users (jdoc *JSON*);
+</example>
+
+<blurb>Insert document:</blurb>
+<example inline="2">
+mysql> INSERT INTO users VALUES(*'*{
+    '>   "_id" : "derick@localhost",
+    '>   "email" : "derick@localhost",
+    '>   "fullname" : "Derick Rethans",
+    '>   "slug" : "derick-rethans",
+    '>   "created_at" : 1452546141,
+    '>   "timezone" : "Europe/London",
+    '>   "confirmed" : true,
+    '>   "confirmed_at" : 1452546148,
+    '>   "location" : "London, UK",
+    '>   "words" : [ "derick", "rethans", "london", "uk" ],
+    '>   "count" : 16, "count_unique" : 13,
+    '>   "badges" : [
+    '>     { "n": "unique1", "l": 1 },
+    '>     { "n": "age21", "l": 3 }
+    '>   ],
+    '>   "isAdmin" : true
+    '> }
+    '> *'*);
+</example>
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Redis</title>
+
+<list>
+	<bullet>*Keys* in Redis are binary safe strings</bullet>
+	<bullet>*Values* in Redis are binary safe "Strings" *or*</bullet>
+	<bullet>Lists, Sets, Hashses, Sorted Sets and some others</bullet>
+	<bullet>Interaction through %redis-cli% or %predis/predis%</bullet>
+	<bullet>Normal Strings are special too</bullet>
+</list>
+
+<image filename="redis-300dpi.png"/>
+
+</slide>

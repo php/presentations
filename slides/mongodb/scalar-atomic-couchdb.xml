@@ -1,0 +1,52 @@
+<slide>
+<title>CouchDB: Document Updates</title>
+
+<list>
+	<bullet>Relies on CAS for updating whole documents</bullet>
+</list>
+
+<break/>
+<div effect="fade-out">
+<example inline="2">
+curl -X PUT http://localhost:5984/demo/*derick@localhost* \
+	-H 'Content-Type: application/json' \
+	-d \
+'
+{
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+}
+'
+</example>
+<blurb>Return:</blurb>
+<example inline="2">
+{"error":"conflict","reason":"Document update conflict."}
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="2">
+curl -X PUT http://localhost:5984/demo/*derick@localhost* \
+	-H 'Content-Type: application/json' \
+	-d \
+'
+{
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  *"_rev": "1-0af7eb105d22a8560e4636733a5d8a6e"*
+}
+'
+</example>
+<blurb>Return:</blurb>
+<example inline="2">
+{"ok":true,"id":"derick@localhost","rev":*"2-9fef838094560ca9cece87a5728b4d79"*}
+</example>
+</div>
+
+</slide>

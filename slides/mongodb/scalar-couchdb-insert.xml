@@ -1,0 +1,32 @@
+<slide>
+<title>CouchDB: Insert Document</title>
+
+<example inline="2">
+curl -X PUT http://localhost:5984/demo/*derick@localhost* \
+	-H 'Content-Type: application/json' \
+	-d \
+'
+{
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  "confirmed" : true,
+  "confirmed_at" : 1452546148,
+  "location" : "London, UK",
+  "words" : [ "derick", "rethans", "london", "uk" ],
+  "count" : 16,
+  "count_unique" : 13,
+  "badges" : [
+    { "n": "unique1", "l": 1 }, { "n": "age21", "l": 3 }
+  ],
+  "isAdmin" : true
+}
+'
+</example>
+<blurb>Return:</blurb>
+<example inline="2">
+{"ok":true,"id":*"derick@localhost"*,"rev":*"1-0af7eb105d22a8560e4636733a5d8a6e"*}
+</example>
+</slide>

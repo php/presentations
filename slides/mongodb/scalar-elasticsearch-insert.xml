@@ -1,0 +1,36 @@
+
+<slide>
+<title>Elasticsearch: Insert Document</title>
+
+<example>
+curl -XPUT 'localhost:9200/users?pretty&amp;pretty'
+</example>
+
+
+<example inline="2">
+curl -XPUT 'localhost:9200/users/external/derick@localhost?pretty&amp;pretty' \
+	-H 'Content-Type: application/json' -d'
+{
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  "confirmed" : true,
+  "confirmed_at" : 1452546148,
+  "location" : "London, UK",
+  "words" : [ "derick", "rethans", "london", "uk" ],
+  "count" : 16,
+  "count_unique" : 13,
+  "badges" : [
+    { "n": "unique1", "l": 1 }, { "n": "age21", "l": 3 }
+  ],
+  "isAdmin" : true
+}
+'
+</example>
+<blurb>Return:</blurb>
+<example inline="2">
+{ "_index" : "users", "_type" : "external", "_id" : "derick@localhost", "_version" : 1, "created" : true }
+</example>
+</slide>

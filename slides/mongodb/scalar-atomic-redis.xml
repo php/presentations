@@ -1,0 +1,51 @@
+<slide>
+<title>Redis: Atomic Operations</title>
+
+<list>
+	<bullet>*INCR*/*HINCRBY*:
+		<div effect="fade-out">
+			<example inline="2">
+127.0.0.1:6379> HGETALL whisky:ben-nevis-19:props
+1) "distillery"
+2) "ben-nevis"
+3) "region"
+4) "scotland-highlands"
+5) "abv"
+6) "51.1"
+7) "age"
+8) *"19"*</example>
+		</div>
+		<div effect="fade-in">
+			<example inline="2">
+127.0.0.1:6379> HINCRBY whisky:ben-nevis-19:props age 1
+(integer) *20*</example>
+			<example inline="2">
+127.0.0.1:6379> HGETALL whisky:ben-nevis-19:props
+1) "distillery"
+2) "ben-nevis"
+3) "region"
+4) "scotland-highlands"
+5) "abv"
+6) "51.1"
+7) "age"
+8) *"20"* </example>
+		</div>
+	</bullet>
+</list>
+<div effect="fade-in">
+	<list>
+		<bullet effect="fade-in">Queues with lists: *LPUSH*, *RPOP* / *BLPOP*</bullet>
+	</list>
+</div>
+<div effect="fade-in">
+	<list>
+		<bullet effect="fade-in">Sets through *SADD* and *SREM* (REMove)</bullet>
+	</list>
+</div>
+<div effect="fade-in">
+	<list>
+		<bullet effect="fade-in">Transactions with: *MULTI* ... *DISCARD*/*EXEC*</bullet>
+	</list>
+</div>
+
+</slide>

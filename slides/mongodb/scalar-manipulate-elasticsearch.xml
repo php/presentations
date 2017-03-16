@@ -1,0 +1,59 @@
+derick@singlemalt:~ $ curl -XGET '192.168.42.202:9200/users/_search?q=count:16'{"took":6,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":2,"max_score":1.0,"hits":[{"_index":"users","_type":"external","_id":"derick@localhost","_score":1.0,"_source":{"email":"derick@localhost","fullname":"Derick Rethans","slug":"derick-rethans","created_at":1452546141,"timezone":"Europe/London","confirmed":true,"confirmed_at":1452546148,"location":"London, UK","words":["derick","rethans","london","uk"],"count":16,"count_unique":13,"badges":[{"n":"unique1","l":1},{"n":"age21","l":3}],"isAdmin":true}},{"_index":"users","_type":"external","_id":"1","_score":1.0,"_source":
+{
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  "confirmed" : true,
+  "confirmed_at" : 1452546148,
+  "location" : "London, UK",
+  "words" : [ "derick", "rethans", "london", "uk" ],
+  "count" : 16,
+  "count_unique" : 13,
+  "badges" : [
+    { "n": "unique1", "l": 1 }, { "n": "age21", "l": 3 }
+  ],
+  "isAdmin" : true
+}
+}]}}
+derick@singlemalt:~ $ curl -XPOST '192.168.42.202:9200/users/external/derick@localhost/_update?pretty&pretty' -H 'Content-Type: application/json' -d'
+{
+  "doc" : { "isAdmin" : false }
+}
+'
+{
+  "_index" : "users",
+  "_type" : "external",
+  "_id" : "derick@localhost",
+  "_version" : 7
+}
+
+derick@singlemalt:~ $ curl -XGET '192.168.42.202:9200/users/_search?q=count:16'{"took":4,"timed_out":false,"_shards":{"total":5,"successful":5,"failed":0},"hits":{"total":2,"max_score":1.0,"hits":[{"_index":"users","_type":"external","_id":"derick@localhost","_score":1.0,"_source":{"email":"derick@localhost","fullname":"Derick Rethans","slug":"derick-rethans","created_at":1452546141,"timezone":"Europe/London","confirmed":true,"confirmed_at":1452546148,"location":"London, UK","words":["derick","rethans","london","uk"],"count":16,"count_unique":13,"badges":[{"n":"unique1","l":1},{"n":"age21","l":3}],"isAdmin":false}},{"_index":"users","_type":"external","_id":"1","_score":1.0,"_source":
+{
+  "email" : "derick@localhost",
+  "fullname" : "Derick Rethans",
+  "slug" : "derick-rethans",
+  "created_at" : 1452546141,
+  "timezone" : "Europe/London",
+  "confirmed" : true,
+  "confirmed_at" : 1452546148,
+  "location" : "London, UK",
+  "words" : [ "derick", "rethans", "london", "uk" ],
+  "count" : 16,
+  "count_unique" : 13,
+  "badges" : [
+    { "n": "unique1", "l": 1 }, { "n": "age21", "l": 3 }
+  ],
+  "isAdmin" : true
+}
+}]}}
+
+
+
+
+
+POST /customer/external/1/_update?pretty
+{
+  "script" : "ctx._source.age += 5"
+}
