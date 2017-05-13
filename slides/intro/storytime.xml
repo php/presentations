@@ -1,0 +1,44 @@
+<slide title="" section="storytime">
+
+<blurb fontsize="2.5em" align="center">Tangential Story Time</blurb>
+<list>
+<bullet fontsize="1em" >1995 computers were slow!</bullet>
+<bullet fontsize="1em" >32M of memory was a lot! (typical home PC had 8)</bullet>
+<bullet fontsize="1em" >100 Mbps ethernet didn't exist yet</bullet>
+<bullet fontsize="1em" >The data volume wasn't necessarily smaller</bullet>
+</list>
+
+<break lines="1" section="select_star"/>
+<example fontsize="3em" result='0' title="" type="sql"><![CDATA[
+SELECT * FROM logins
+]]></example>
+<list>
+<bullet fontsize="1.5em" >1 second per MB transferred</bullet>
+<bullet fontsize="1.5em" >Ate up server memory quickly</bullet>
+<bullet fontsize="1.5em" >Rarely needed them all</bullet>
+</list>
+
+<break lines="1" section="msql_changelog"/>
+<example fontsize="1em" result='0' title="" type="nohighlight"><![CDATA[
+mSQL 1.0 Patch 9         20 - Oct - 1995
+---------------------------------------
+
+    o Fixed close of stdin in keyFD handling (new key code)
+    o Fixed memory leak in the client library
+    o Fixed force close of UNIX socket when over-ridden by the
+        environment variable
+    o Fixed a couple of core dumps introduced by the new key code
+    o Replace sorting code with a new algorithm (mmap only)
+    o Fixed bug in msqlUpdate() that reported a duplicate key error
+        if you updated the key field to the same value.
+    o Merged in the LIMIT patch from Rasmus Lerdorf <rasmus@io.org>
+    o Fixed locale problem with LANG make variable
+    o Inlined a few calls to bcopy and bcmp for performance
+    o Removed libmisc.a  All misc finctions are now in libmsql.a
+    o Fixed problem with field definition info (eg IS_PRI_KEY) being
+        destroyed after a join.
+    o Added a msql_tmpnam() function to get around the NeXT's
+        problem with it's own tmpnam().
+]]></example>
+
+</slide>
