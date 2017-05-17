@@ -4,7 +4,7 @@
 <blurb>Select between candidate servers from a specific set</blurb>
 <list>
 	<bullet>primary (default)</bullet>
-	<bullet>primary_preferred (%Mongo::RP_PRIMARY_PREFERRED%)</bullet>
+	<bullet>primary_preferred (%RP_PRIMARY_PREFERRED%)</bullet>
 	<bullet>secondary</bullet>
 	<bullet>secondary_preferred</bullet>
 	<bullet>nearest</bullet>
