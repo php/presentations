@@ -1,0 +1,21 @@
+<slide>
+<title>zval?</title>
+
+<blurb>PHP's representation of a value</blurb>
+
+<list>
+    <bullet>Contains the type: %Z_TYPE_P(points_array)%</bullet>
+    <bullet>Contains the value: %Z_ARRVAL_P(points_array)%</bullet>
+</list>
+
+<break/>
+<blurb>%IS_DOUBLE%, %IS_STRING%, %IS_ARRAY%, …</blurb>
+<blurb>%Z_DVAL_P(lat)%, %Z_STRVAL_P(type)%, …</blurb>
+
+<break/>
+<example><![CDATA[
+    if (Z_TYPE_P(points_array) != IS_ARRAY) {
+        return;
+    }
+]]></example>
+</slide>

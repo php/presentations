@@ -1,0 +1,19 @@
+<slide>
+<title>Parsing Input Parameters</title>
+
+<table>
+<tr><th>letter</th><th>variable</th><th>C data-type</th></tr>
+<tr><td>a</td><td>array</td><td>%zval*%</td></tr>
+<tr><td>b</td><td>boolean</td><td>%zend_bool%</td></tr>
+<tr><td>d</td><td>double</td><td>%double%</td></tr>
+<tr><td>l</td><td>long</td><td>%zend_long%</td></tr>
+<tr><td>O</td><td>object of specific type</td><td>%zval*%, %zend_class_entry%</td></tr>
+<tr><td>P</td><td>path</td><td>%zend_string*%</td></tr>
+<tr><td>s</td><td>string</td><td>%char*%, %size_t%</td></tr>
+<tr><td>S</td><td>string</td><td>%zend_string*%</td></tr>
+<tr><td>z</td><td>the actual zval</td><td>%zval*%</td></tr>
+</table>
+
+<image filename="inputs.jpg" attr="Clive Darra - https://www.flickr.com/photos/fsse-info/3414368958/ - CC-BY-SA"/>
+
+</slide>

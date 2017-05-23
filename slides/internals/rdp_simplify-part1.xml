@@ -1,0 +1,28 @@
+<slide>
+<title>Parsing Input Parameters</title>
+
+<example inline="2"><![CDATA[
+PHP_FUNCTION(rdp_simplify)
+{   
+    *zval*      *points_array;
+    *double*     epsilon;  
+    
+    if (*zend_parse_parameters*(ZEND_NUM_ARGS() TSRMLS_CC, *"zd"*, &points_array, &epsilon)
+            == FAILURE) {
+        return; 
+    }
+                    
+    if (Z_TYPE_P(points_array) != IS_ARRAY) {
+        return;
+    }
+]]></example>
+
+<break/>
+<blurb>%zend_parse_parameters%</blurb>
+<list>
+    <bullet>A format letter for every type</bullet>
+    <bullet>Matched with a C data type</bullet>
+    <bullet>Cleaned up for you</bullet>
+</list>
+
+</slide>

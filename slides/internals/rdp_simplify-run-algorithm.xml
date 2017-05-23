@@ -1,0 +1,7 @@
+<slide>
+<title>Run Algorithm</title>
+
+<example><![CDATA[    rdp_simplify(points, epsilon, 0, points->count - 1);]]></example>
+<break lines="6"/>
+<image filename="Douglas-Peucker_animated.gif" attr="https://commons.wikimedia.org/wiki/File:Douglas-Peucker_animated.gif — CC-By_SA"/>
+</slide>

@@ -1,0 +1,9 @@
+<slide background="tracing.jpg">
+<title>Speed</title>
+
+<break lines="3"/>
+<list>
+	<bullet>PHP is fast, but things can be ~faster~</bullet>
+	<bullet>Implementations in C (and C++) usually ~outperform~ code in PHP</bullet>
+</list>
+</slide>

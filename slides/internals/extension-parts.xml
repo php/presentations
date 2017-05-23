@@ -1,0 +1,13 @@
+<slide>
+<title>What makes up an Extension?</title>
+
+<list>
+    <bullet>%config.m4%: configure options and build instructions</bullet>
+    <bullet>%php_extension.h%: header files and glue</bullet>
+    <bullet>%extension.c%: extension definition and function implementation</bullet>
+</list>
+<break/>
+<list>
+    <bullet>%algorithms.c%: C implementation of algorithms</bullet>
+</list>
+</slide>

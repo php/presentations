@@ -1,0 +1,46 @@
+<slide>
+<title>Converting from PHP variables</title>
+
+<div effect="fade-out">
+<example><![CDATA[
+    points = geo_hashtable_to_array(points_array TSRMLS_CC);
+    if (!points) {
+        return;
+    }
+]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="2"><![CDATA[
+geo_array \*geo_hashtable_to_array(zval \*array TSRMLS_DC)
+{
+    geo_array *tmp;
+    int element_count, i = 0;
+    zval *entry;
+    double lon, lat;
+
+    element_count = *zend_hash_num_elements*(Z_ARRVAL_P(array));
+    *tmp = geo_array_ctor(element_count);*
+
+    *ZEND_HASH_FOREACH_VAL*(Z_ARRVAL_P(array), entry) {
+        if (!parse_point_pair(entry, &lon, &lat TSRMLS_CC)) {
+            goto failure;
+        }
+
+        tmp->x[i] = lon;
+        tmp->y[i] = lat;
+        tmp->status[i] = 1;
+
+        i++;
+    } ZEND_HASH_FOREACH_END();
+
+    return tmp;
+
+failure:
+    *geo_array_dtor(tmp);*
+    return NULL;
+}
+]]></example>
+</div>
+
+</slide>

@@ -1,0 +1,9 @@
+<slide>
+<title>Building the Extension</title>
+
+<list>
+    <bullet>%phpize%<break/>Brings in headers and creates %configure% script</bullet>
+    <bullet>%./configure%<break/>Runs system checks, and creates %Makefile%</bullet>
+    <bullet>%make%<break/>Builds the extension</bullet>
+</list>
+</slide>

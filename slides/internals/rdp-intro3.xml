@@ -1,0 +1,14 @@
+<slide>
+<title>Ramer–Douglas–Peucker algorithm</title>
+
+<list>
+    <bullet>Recursive algorithm for line/polygon simplification</bullet>
+    <bullet>Computationally intensive</bullet>
+    <bullet>100 runs with episilon of 0.01:<list>
+        <bullet>PHP function: *45.3s*</bullet>
+        <bullet>C implementation in extension: *0.37s*</bullet>
+    </list></bullet>
+</list>
+<break/>
+<image filename="Douglas-Peucker_animated.gif" attr="https://commons.wikimedia.org/wiki/File:Douglas-Peucker_animated.gif — CC-By_SA"/>
+</slide>

@@ -1,0 +1,31 @@
+<slide>
+<title>The Meat</title>
+
+<blurb>Module (Extension) definition:</blurb>
+<example><![CDATA[
+zend_module_entry geospatial_module_entry = {
+#if ZEND_MODULE_API_NO >= 20010901
+    STANDARD_MODULE_HEADER,
+#endif
+    "geospatial",
+    geospatial_functions,
+    PHP_MINIT(geospatial),
+    NULL,
+    NULL,
+    NULL,
+    PHP_MINFO(geospatial),
+#if ZEND_MODULE_API_NO >= 20010901
+    PHP_GEOSPATIAL_VERSION,
+#endif
+    STANDARD_MODULE_PROPERTIES
+};
+]]></example>
+
+<blurb>Handle Shared Object Loading:</blurb>
+<example><![CDATA[
+#ifdef COMPILE_DL_GEOSPATIAL
+ZEND_GET_MODULE(geospatial)
+#endif
+]]></example>
+
+</slide>

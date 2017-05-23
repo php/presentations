@@ -1,0 +1,23 @@
+<slide>
+<title>Build Instructions</title>
+<subtitle>config.m4</subtitle>
+
+<blurb>Comments:</blurb>
+<example><![CDATA[
+dnl $Id$
+dnl config.m4 for extension geospatial
+]]></example>
+
+<blurb>Configure option definition:</blurb>
+<example><![CDATA[
+PHP_ARG_ENABLE(geospatial, whether to enable geospatial support,
+[  --enable-geospatial           Enable geospatial support])
+]]></example>
+
+<blurb>Build instructions:</blurb>
+<example><![CDATA[
+if test "$PHP_GEOSPATIAL" != "no"; then
+  PHP_NEW_EXTENSION(geospatial, geospatial.c geo_array.c, $ext_shared)
+fi
+]]></example>
+</slide>

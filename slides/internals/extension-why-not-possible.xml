@@ -1,0 +1,9 @@
+<slide background="escher.jpg">
+<title>Unpossible in userland</title>
+
+<break lines="3"/>
+<list>
+	<bullet>Information or resources shared between requests: *persistent connections*, *PHP objects*</bullet>
+	<bullet>Peeking into internals: *vld*, *Xdebug*, *opcache*</bullet>
+</list>
+</slide>

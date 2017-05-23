@@ -1,0 +1,12 @@
+<slide>
+<title>What are extensions?</title>
+
+<list>
+	<bullet>Additional functions and classes</bullet>
+	<bullet>Written in C</bullet>
+	<bullet>Either compiled in, or a shared object</bullet>
+	<bullet>Bundled with PHP, distributed through PECL, or distributed separately</bullet>
+</list>
+<break/>
+<image filename="limo.png" attr="https://commons.wikimedia.org/wiki/File:Luxury_Stretched_Limousine_Cadillac.png - Keithmsyverson - CC-BY 4.0"/>
+</slide>

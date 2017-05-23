@@ -1,0 +1,33 @@
+<slide>
+<title>Header File</title>
+
+<blurb>Guard:</blurb>
+<example><![CDATA[
+#ifndef PHP_GEOSPATIAL_H
+#define PHP_GEOSPATIAL_H
+]]></example>
+
+<example><![CDATA[
+#define PHP_GEOSPATIAL_VERSION "0.1.1-dev"
+]]></example>
+
+<blurb>Module definition:</blurb>
+<example><![CDATA[
+extern zend_module_entry geospatial_module_entry;
+#define phpext_geospatial_ptr &geospatial_module_entry
+]]></example>
+
+<blurb>Module initialiser declarations:</blurb>
+<example><![CDATA[
+PHP_MINIT_FUNCTION(geospatial);
+PHP_MINFO_FUNCTION(geospatial);
+]]></example>
+
+<blurb>Forward declarations:</blurb>
+<example><![CDATA[
+PHP_FUNCTION(rdp_simplify);
+
+#endif /* PHP_GEOSPATIAL_H */
+]]></example>
+
+</slide>

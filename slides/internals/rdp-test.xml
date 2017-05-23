@@ -1,0 +1,29 @@
+<slide>
+<title>Example Test File</title>
+
+<blurb>%tests/rdp-belgium.phpt%</blurb>
+
+<example inline="2"><![CDATA[
+*--TEST--*
+Test for rdp_simplify
+*--FILE--*
+&lt;?php
+$json = json_decode( file_get_contents( dirname( &#95;&#95;FILE&#95;&#95; ) . '/rdp-belgium.json' ) );
+$points = $json[0]->geometry->coordinates[0];
+
+$result = RDP_Simplify( $points, 0.001 );
+var_dump( count( $result ) );
+
+$result = RDP_Simplify( $points, 0.01 );
+var_dump( count( $result ) );
+?>
+*--EXPECT--*
+int(1029)
+int(261)
+]]></example>
+
+<list>
+    <bullet>Sections: TEST, INI, FILE, EXPECT, EXPECTF</bullet>
+    <bullet>Simple PHP script</bullet>
+</list>
+</slide>

@@ -1,0 +1,42 @@
+<slide>
+<title>RDP (C)</title>
+
+<example><![CDATA[
+void rdp_simplify(geo_array *points, double epsilon, int start, int end)
+{
+    double firstX = points->x[start], firstY = points->y[start];
+    double lastX = points->x[end], lastY = points->y[end];
+    int    index = -1, i;
+    double dist  = 0.0, current_dist;
+
+    if (end - start < 2) {
+        return;
+    }
+
+    for (i = start + 1; i < end; i++) {
+        if (!points->status[i]) {
+            continue;
+        }
+
+        current_dist = rdp_find_perpendicular_distable(points->x[i], points->y[i], firstX, firstY, lastX, lastY);
+
+        if (current_dist > dist) {
+            dist = current_dist;
+            index = i;
+        }
+    }
+
+    if (dist > epsilon) {
+        rdp_simplify(points, epsilon, start, index);
+        rdp_simplify(points, epsilon, index, end);
+
+        return;
+    } else {
+        for (i = start + 1; i < end; i++) {
+            points->status[i] = 0;
+        }
+        return;
+    }
+}
+]]></example>
+</slide>

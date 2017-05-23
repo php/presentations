@@ -1,0 +1,9 @@
+<slide>
+<title>Tests</title>
+
+<list>
+    <bullet>Go into the %tests/% directory</bullet>
+    <bullet>%phpt% format</bullet>
+    <bullet>Run with %make test% in top source directory</bullet>
+</list>
+</slide>

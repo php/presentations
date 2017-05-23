@@ -1,0 +1,23 @@
+<slide>
+<title>Build Instructions</title>
+<subtitle>config.w32</subtitle>
+
+<blurb>Comments:</blurb>
+<example><![CDATA[
+// $Id$
+// vim:ft=javascript
+]]></example>
+
+<blurb>Configure option definition:</blurb>
+<example><![CDATA[
+ARG_ENABLE("geospatial", "enable geospatial support", "no");
+
+]]></example>
+
+<blurb>Build instructions:</blurb>
+<example><![CDATA[
+if (PHP_GEOSPATIAL != "no") {
+    EXTENSION("geospatial", "geospatial.c geo_array.c");
+}
+]]></example>
+</slide>

@@ -1,0 +1,10 @@
+<slide background="bubble-wrap.jpg" background_attr="https://pixabay.com/en/bubble-wrap-blow-packaging-1183728/ — CC0">
+<title>Wrapping Libraries</title>
+
+<break lines="3"/>
+<list>
+	<bullet>Database drivers: *libmongoc*, *libmysql*, …</bullet>
+	<bullet>Image processing: *GD*, *Cairo*, *ImageMagick*, …</bullet>
+	<bullet>Image recognition: *OpenCV*, *Dlib*, …</bullet>
+</list>
+</slide>

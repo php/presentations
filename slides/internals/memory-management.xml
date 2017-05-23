@@ -1,0 +1,18 @@
+<slide>
+<title>Memory Management</title>
+
+<list>
+    <bullet>If you allocate something, you need to free it</bullet>
+    <bullet>PHP Memory Management helpers: %emalloc%, %efree%</bullet>
+    <bullet>To prevent PHP from cleaning up input arguments:<break/>
+        <example>Z_ADDREF(zval);</example>
+    </bullet>
+</list>
+<div effect="fade-in">
+<list>
+    <bullet>But make sure to remove the reference later:<break/>
+        <example><![CDATA[zval_ptr_dtor(&zval);]]></example>
+    </bullet>
+</list>
+</div>
+</slide>

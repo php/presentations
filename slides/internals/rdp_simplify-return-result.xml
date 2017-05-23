@@ -1,0 +1,24 @@
+<slide>
+<title>Return Result</title>
+
+<example inline="2"><![CDATA[
+PHP_FUNCTION(rdp_simplify)
+{
+…
+    zval       pair;
+…
+    array_init(*return_value*);
+
+    for (i = 0; i < points->count; i++) {
+        if (points->status[i]) {
+            *array_init(&pair);*
+            *add_next_index_double*(&pair, points->x[i]);
+            add_next_index_double(&pair, points->y[i]);
+            *add_next_index_zval*(*return_value*, &pair);
+        }
+    }
+
+    *geo_array_dtor(points);*
+}
+]]></example>
+</slide>
