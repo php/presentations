@@ -5,10 +5,10 @@
 <break lines="1" section="php71_void"/>
 <blurb fontsize="1.1em" align="left">void return type</blurb>
 
-<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
 <?php
 function should_return_nothing(): void {
-    return 1; // Fatal error: A void function must not return a value
+  return 1; // Fatal error: A void function must not return a value
 }
 ]]></example>
 
@@ -81,7 +81,7 @@ class Token {
 ]]></example>
 
 <break lines="1" section="safeinterrupts"/>
-<blurb fontsize="1.1em" align="left">Safe Interrupts</blurb>
+<blurb fontsize="1.8em" align="left">Safe Interrupts</blurb>
 <blurb fontsize="1.1em" align="left">The VM now checks for interrupts on each loop iteration, user function entry and internal function exit. This will reduce the number of segfaults and deadlocks when a time out happens.</blurb>
 
 <break lines="1" section="php71cleanups"/>
