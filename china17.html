@@ -480,6 +480,10 @@ Notice: A non well formed numeric string encountered in example.php on line 2</c
     protected const PROTECTED_CONST = 0;
     public const PUBLIC_CONST_TWO = 0;</code></pre>
 		</section>
+<section id="safeinterrupts">
+		<p class="p" style="font-size:1.1em;text-align:left;">Safe Interrupts</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">The VM now checks for interrupts on each loop iteration, user function entry and internal function exit. This will reduce the number of segfaults and deadlocks when a time out happens.</p>
+		</section>
 <section id="php71cleanups">
 		<p class="p" style="font-size:1.1em;text-align:left;">Things that may break your code</p>
 		<ul>

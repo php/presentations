@@ -80,6 +80,10 @@ class Token {
     public const PUBLIC_CONST_TWO = 0;
 ]]></example>
 
+<break lines="1" section="safeinterrupts"/>
+<blurb fontsize="1.1em" align="left">Safe Interrupts</blurb>
+<blurb fontsize="1.1em" align="left">The VM now checks for interrupts on each loop iteration, user function entry and internal function exit. This will reduce the number of segfaults and deadlocks when a time out happens.</blurb>
+
 <break lines="1" section="php71cleanups"/>
 <blurb fontsize="1.1em" align="left">Things that may break your code</blurb>
 <list>
