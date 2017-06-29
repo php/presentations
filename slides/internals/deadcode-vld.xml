@@ -23,6 +23,6 @@ line   #* E I O op             return  operands
 
 <list>
 <bullet>Follow all branches</bullet>
-<bullet>Find unreached opcodes</bullet>
+<bullet>Find unreachable opcodes</bullet>
 </list>
 </slide>
