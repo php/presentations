@@ -1,0 +1,65 @@
+<slide>
+<title>Switch</title>
+
+<example><![CDATA[<?php
+switch ( $a ) {
+    case 1: echo "one"; break;
+    case 2: echo "two"; break;
+    case 3: echo "three"; break;
+    case 4: echo "four"; break;
+    case 5: echo "five"; break;
+    case 6: echo "six"; break;
+}
+]]></example>
+
+<blurb>PHP 7.2</blurb>
+<example>
+compiled vars:  !0 = $a
+line     #* E I O op            return  operands
+--------------------------------------------------
+   2     0  E >   EXT_STMT              
+         1        SWITCH_LONG           !0, [ 1:->15, 2:->19, 3:->23, 4:->27, 5:->31, 6:->35, ], ->39
+   3     2        CASE          ~1      !0, 1
+         3      > JMPNZ                 ~1, ->15
+   5     4    >   CASE          ~1      !0, 2
+         5      > JMPNZ                 ~1, ->19
+   7     6    >   CASE          ~1      !0, 3
+         7      > JMPNZ                 ~1, ->23
+   9     8    >   CASE          ~1      !0, 4
+         9      > JMPNZ                 ~1, ->27
+  11    10    >   CASE          ~1      !0, 5
+        11      > JMPNZ                 ~1, ->31
+  13    12    >   CASE          ~1      !0, 6
+        13      > JMPNZ                 ~1, ->35
+        14    > > JMP                   ->39
+   4    15    >   EXT_STMT              
+        16        ECHO                  'one'
+        17        EXT_STMT              
+        18      > JMP                   ->43
+   6    19    >   EXT_STMT              
+        20        ECHO                  'two'
+        21        EXT_STMT              
+        22      > JMP                   ->43
+   8    23    >   EXT_STMT              
+        24        ECHO                  'three'
+        25        EXT_STMT              
+        26      > JMP                   ->43
+  10    27    >   EXT_STMT              
+        28        ECHO                  'four'
+        29        EXT_STMT              
+        30      > JMP                   ->43
+  12    31    >   EXT_STMT              
+        32        ECHO                  'five'
+        33        EXT_STMT              
+        34      > JMP                   ->43
+  14    35    >   EXT_STMT              
+        36        ECHO                  'six'
+        37        EXT_STMT              
+        38      > JMP                   ->43
+  16    39    >   EXT_STMT              
+        40        ECHO                  'default'
+        41        EXT_STMT              
+        42      > JMP                   ->43
+  18    43    > > RETURN                1
+</example>
+</slide>

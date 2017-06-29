@@ -1,0 +1,13 @@
+<slide>
+<title>Xdebug 2.6</title>
+
+<list>
+	<bullet>Support for PHP 7.2
+		<list>
+			<bullet>switch optimisation</bullet>
+		</list>
+	</bullet>
+	<bullet>Support for PHP 5 dropped</bullet>
+	<bullet>Filters: Tracing, Code Coverage</bullet>
+</list>
+</slide>

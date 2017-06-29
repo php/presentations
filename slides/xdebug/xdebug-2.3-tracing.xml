@@ -1,0 +1,19 @@
+<slide>
+<title>Xdebug 2.3: Tracing</title>
+
+<blurb>Rendering variables as serialized text:</blurb>
+<blurb>%xdebug.collect_params = 5%</blurb>
+
+<example>
+function result() {}; result("Oh no, what does this say?", 42);
+</example>
+
+<example>
+-> result(czoyNjoiT2ggbm8sIHdoYXQgZG9lcyB0aGlzIHNheT8iOw==, aTo0Mjs=)
+</example>
+
+<break lines="2"/>
+
+<blurb>Shared secret for profiling and tracing with %profiler_enable_trigger_value% and %trace_enable_trigger_value%</blurb>
+
+</slide>

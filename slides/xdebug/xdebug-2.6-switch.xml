@@ -1,0 +1,62 @@
+<slide>
+<title>Switch</title>
+
+<example><![CDATA[<?php
+switch ( $a ) {
+    case 1: echo "one"; break;
+    case 2: echo "two"; break;
+    case 3: echo "three"; break;
+    case 4: echo "four"; break;
+    case 5: echo "five"; break;
+    case 6: echo "six"; break;
+}
+]]></example>
+
+<blurb>PHP 7.1</blurb>
+<example>
+compiled vars:  !0 = $a
+line     #* E I O op            return  operands
+--------------------------------------------------
+   3     0  E >   EXT_STMT              
+         1        CASE          ~1      !0, 1
+         2      > JMPNZ                 ~1, ->13
+   5     3    >   CASE          ~1      !0, 2
+         4      > JMPNZ                 ~1, ->17
+   7     5    >   CASE          ~1      !0, 3
+         6      > JMPNZ                 ~1, ->21
+   9     7    >   CASE          ~1      !0, 4
+         8      > JMPNZ                 ~1, ->25
+  11     9    >   CASE          ~1      !0, 5
+        10      > JMPNZ                 ~1, ->29
+  13    11    >   CASE          ~1      !0, 6
+        12      > JMPZNZ                ~1, ->37
+   4    13    >   EXT_STMT              
+        14        ECHO                  'one'
+        15        EXT_STMT              
+  18    16      > RETURN                1
+   6    17    >   EXT_STMT              
+        18        ECHO                  'two'
+        19        EXT_STMT              
+  18    20      > RETURN                1
+   8    21    >   EXT_STMT              
+        22        ECHO                  'three'
+        23        EXT_STMT              
+  18    24      > RETURN                1
+  10    25    >   EXT_STMT              
+        26        ECHO                  'four'
+        27        EXT_STMT              
+  18    28      > RETURN                1
+  12    29    >   EXT_STMT              
+        30        ECHO                  'five'
+        31        EXT_STMT              
+  18    32      > RETURN                1
+  14    33    >   EXT_STMT              
+        34        ECHO                  'six'
+        35        EXT_STMT              
+  18    36      > RETURN                1
+  16    37    >   EXT_STMT              
+        38        ECHO                  'default'
+        39        EXT_STMT              
+  18    40      > RETURN                1
+</example>
+</slide>
