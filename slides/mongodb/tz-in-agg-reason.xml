@@ -1,0 +1,10 @@
+<slide>
+<title>Why?</title>
+
+<list>
+	<bullet>MongoDB stores date information solely as a Unix time stamp</bullet>
+	<bullet>Microseconds since 1970-01-01 00:00 UTC</bullet>
+	<bullet>No way to do a group-by-day in any other time zone without hacks</bullet>
+	<bullet>Can't output in anything else besides UTC</bullet>
+</list>
+</slide>

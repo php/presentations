@@ -1,0 +1,33 @@
+<slide>
+<title>What are time zones?</title>
+
+<list>
+	<bullet>A set of rules indicating between which times which UTC offset is applicable</bullet>
+	<bullet>Indicated by a %Region%/%Area% identifier<br/>(like %Europe/Madrid%, or %America/Los_Angeles%)</bullet>
+</list>
+
+<break/>
+
+<example>
+derick@singlemalt:~ $ zdump -v Europe/Madrid
+</example>
+
+<example>
+Mon Dec 31 23:59:59 1900 UT = Mon Dec 31 23:45:15 1900 LMT isdst=0 gmtoff=-884
+Tue Jan  1 00:00:00 1901 UT = Tue Jan  1 00:00:00 1901 WET isdst=0 gmtoff=0
+Mon Apr 15 22:59:59 1918 UT = Mon Apr 15 22:59:59 1918 WET isdst=0 gmtoff=0
+Mon Apr 15 23:00:00 1918 UT = Tue Apr 16 00:00:00 1918 WEST isdst=1 gmtoff=3600
+Sun Oct  6 23:59:59 1918 UT = Mon Oct  7 00:59:59 1918 WEST isdst=1 gmtoff=3600
+Mon Oct  7 00:00:00 1918 UT = Mon Oct  7 00:00:00 1918 WET isdst=0 gmtoff=0
+Sun Apr  6 22:59:59 1919 UT = Sun Apr  6 22:59:59 1919 WET isdst=0 gmtoff=0
+...
+Sun Oct 29 00:59:59 2017 UT = Sun Oct 29 02:59:59 2017 CEST isdst=1 gmtoff=7200
+Sun Oct 29 01:00:00 2017 UT = Sun Oct 29 02:00:00 2017 CET isdst=0 gmtoff=3600
+Sun Mar 25 00:59:59 2018 UT = Sun Mar 25 01:59:59 2018 CET isdst=0 gmtoff=3600
+Sun Mar 25 01:00:00 2018 UT = Sun Mar 25 03:00:00 2018 CEST isdst=1 gmtoff=7200
+Sun Oct 28 00:59:59 2018 UT = Sun Oct 28 02:59:59 2018 CEST isdst=1 gmtoff=7200
+Sun Oct 28 01:00:00 2018 UT = Sun Oct 28 02:00:00 2018 CET isdst=0 gmtoff=3600
+Sun Mar 31 00:59:59 2019 UT = Sun Mar 31 01:59:59 2019 CET isdst=0 gmtoff=3600
+...
+</example>
+</slide>

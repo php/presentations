@@ -1,0 +1,30 @@
+<slide>
+<title>Additions to $dateToString</title>
+
+<example inline="1">
+db.cities.aggregate( [
+    { $match: { population: { $gte: 1000000 } } },
+    { $sort: { population: -1 } },
+    { $project: {
+        _id: 0,
+        name: '$name',
+        time: {
+            *$dateToString:* {
+                date: ISODate(),
+                format: '\%Y-\%m-\%d \%H:\%M:\%S *%z*',
+                *timezone: '$timezone'*
+            }
+        }
+    } }
+] );
+</example>
+
+<example>{ "name" : "Shanghai", "time" : "2017-07-27 22:49:24 +0800" }
+{ "name" : "Buenos Aires", "time" : "2017-07-27 11:49:24 -0300" }
+{ "name" : "Mumbai", "time" : "2017-07-27 20:19:24 +0530" }
+{ "name" : "Mexico City", "time" : "2017-07-27 09:49:24 -0500" }
+{ "name" : "Karachi", "time" : "2017-07-27 19:49:24 +0500" }
+{ "name" : "İstanbul", "time" : "2017-07-27 17:49:24 +0300" }
+…
+</example>
+</slide>

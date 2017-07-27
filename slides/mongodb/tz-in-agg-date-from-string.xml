@@ -1,0 +1,23 @@
+<slide>
+<title>New $dateFromString operator</title>
+
+<blurb>Creating a date from a string</blurb>
+
+<example inline="1">
+db.foursquare.aggregate( [
+    { $project: {
+        _id: 0,
+        may17th:     { *$dateFromString: { dateString: "2017-05-17" }* },
+        july4th:     { *$dateFromString: { dateString: "4/7/2017" }* },
+        nextWeekDay: { *$dateFromString: { dateString: "2017-07-27 next weekday" }* },
+    } },
+    { $limit: 1 }
+] );
+</example>
+
+<example>
+{ "may17th" : ISODate("2017-05-17T00:00:00Z"),
+  "july4th" : ISODate("2017-04-07T00:00:00Z"),
+  "nextWeekDay" : ISODate("2017-07-28T00:00:00Z") }
+</example>
+</slide>

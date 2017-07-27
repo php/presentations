@@ -1,0 +1,62 @@
+<slide>
+<title>New $dateFromString operator</title>
+
+<div effect="fade-out">
+<blurb>Convert integer (as Unix time stamp) to ISODate:</blurb>
+
+<example inline="1">
+db.foursquare.aggregate( [
+    { $project: { date: {
+        $dateFromString: {
+            *dateString: {*
+                *$concat: [ '@', { $substr: [ '$createdAt', 0, -1 ] } ]*
+            *}*
+        } 
+    } } },
+] );
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Expressed in a different time zone:</blurb>
+
+<example inline="1">
+db.foursquare.aggregate( [
+    { $project: {
+        _id: 0,
+        dateInLondon: {
+            $dateFromString: {
+                dateString: "2017-07-27 16:22:27.132",
+                *timezone: "Europe/London"*
+            }
+        }
+    } },
+    { $limit: 1 }
+] );
+</example>
+<example>
+{ "dateInLondon" : ISODate("2017-07-27T15:22:27.132Z") }
+</example>
+</div>
+<div effect="fade-in">
+<blurb>Expressed in a different time zone:</blurb>
+
+<example inline="1">
+db.foursquare.aggregate( [
+    { $project: {
+        _id: 0,
+        dateInLondon: {
+            $dateFromString: {
+                dateString: "2017-07-27 16:22:27.132",
+                *timezone: "+01:00"*
+            }
+        }
+    } },
+    { $limit: 1 }
+] );
+</example>
+<example>
+{ "dateInLondon" : ISODate("2017-07-27T15:22:27.132Z") }
+</example>
+</div>
+</slide>

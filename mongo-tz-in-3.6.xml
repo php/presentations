@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Time Zone support in Aggregation</title>
+<event>Drivers Meeting</event>
+<location>online</location>
+<date>July 27th, 2017</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin></joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/mongodb/tz-in-agg-reason.xml</slide>
+<slide>slides/mongodb/tz-in-agg-about-tz.xml</slide>
+<slide>slides/time/problems-condensed.xml</slide>
+<slide>slides/mongodb/tz-in-agg-how.xml</slide>
+<slide>slides/mongodb/tz-in-agg-date-extraction.xml</slide>
+<slide>slides/mongodb/tz-in-agg-date-to-string.xml</slide>
+<slide>slides/mongodb/tz-in-agg-date-from-string.xml</slide>
+<slide>slides/mongodb/tz-in-agg-date-from-string-with-tz.xml</slide>
+<slide>slides/mongodb/tz-in-agg-date-to-parts.xml</slide>
+<slide>slides/mongodb/tz-in-agg-date-from-parts.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+</presentation>

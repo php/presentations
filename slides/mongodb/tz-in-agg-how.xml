@@ -1,0 +1,15 @@
+<slide>
+<title>How?</title>
+
+<list>
+    <bullet>Vendorize a library: %timelib%</bullet>
+    <bullet>DST calculations, parsing, etc.</bullet>
+    <bullet>Also used in PHP and HHVM</bullet>
+    <bullet>Comes with built-in database,<br/>but also: %/usr/share/zoneinfo% and archive</bullet>
+    <bullet>%processManagement.timeZoneInfo%</bullet>
+</list>
+<break/>
+<list>
+    <bullet>Project as part of the Server-Query team</bullet>
+</list>
+</slide>

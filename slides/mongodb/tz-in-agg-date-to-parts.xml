@@ -1,0 +1,48 @@
+<slide>
+<title>New $dateToParts operator</title>
+
+<blurb>Converts a date into its consituent parts.<br/><br/>A short cut for having to use a date extracting operator for each element:</blurb>
+
+<div effect="fade-out">
+<example inline="1">
+db.cities.aggregate( [
+    { $project: {
+        _id: 0,
+        blownUp: { *$dateToParts:* {
+            date: ISODate(),
+            timezone: "-04:30"
+
+        } }
+    } }
+] );
+</example>
+<example>
+{ "blownUp" : {
+    "year" : 2017, "month" : 7, "day" : 27, 
+    "hour" : 11, "minute" : 3, "second" : 54, "millisecond" : 966
+} }
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="1">
+db.cities.aggregate( [
+    { $project: {
+        _id: 0,
+        blownUp: { *$dateToParts:* {
+            date: ISODate(),
+            timezone: "-04:30",
+            *iso8601: true,*
+        } }
+    } }
+] );
+</example>
+<example>
+{ "blownUp" : {
+    "isoYear" : 2017, "isoWeekYear" : 30, "isoDayOfWeek" : 4,
+    "hour" : 11, "minute" : 6, "second" : 44, "millisecond" : 502
+} }
+</example>
+</div>
+
+</slide>

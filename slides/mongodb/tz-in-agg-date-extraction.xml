@@ -1,0 +1,90 @@
+<slide>
+<title>Date Extraction Operators</title>
+
+<div effect="fade-out">
+<blurb>In MongoDB 3.4:</blurb>
+
+<!--
+    // Convert unix time stamp to ISODate
+    { $project: { date: {
+        $dateFromString: {
+            dateString: {
+                $concat: [ '@', { $substr: [ '$createdAt', 0, -1 ] } ]
+            }
+        } 
+    } } },
+    // Extract venue and hour
+-->
+<example inline="1">
+db.foursquare.aggregate( [
+    { $project: {
+        _id: 0,
+        venue: '$venue.name',
+        *hour: { $hour: '$date' }*
+    } }
+] );
+</example>
+
+<example>
+{ "venue" : "London Paddington Railway Station (PAD)", "hour" : 8 }
+{ "venue" : "Platform 7 (Heathrow Express)", "hour" : 8 }
+{ "venue" : "Heathrow Express Train - Paddington [PAD] to Heathrow [HXX]", "hour" : 8 }
+{ "venue" : "SkyTeam Lounge", "hour" : 9 }
+{ "venue" : "Gate 15", "hour" : 10 }
+{ "venue" : "Gate D23", "hour" : 13 }
+{ "venue" : "Amsterdam Airport Schiphol (AMS)", "hour" : 13 }
+{ "venue" : "Station Amsterdam Lelylaan", "hour" : 13 }
+{ "venue" : "Station Amsterdam Sloterdijk", "hour" : 13 }
+{ "venue" : "Station Amsterdam Centraal", "hour" : 13 }
+{ "venue" : "Burgermeester", "hour" : 16 }
+{ "venue" : "De Eland", "hour" : 17 }
+...
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>In MongoDB 3.6:</blurb>
+
+<example inline="1">
+db.foursquare.aggregate( [
+    { $project: {
+        _id: 0,
+        venue: '$venue.name',
+        hour: { $hour: *{ date: '$date' }* }
+    } }
+] );
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>In MongoDB 3.6:</blurb>
+
+<example inline="1">
+db.foursquare.aggregate( [
+    { $project: {
+        _id: 0,
+        venue: '$venue.name',
+        hour: { $hour: { date: '$date', *timezone: 'Europe/London'* } }
+    } }
+] );
+</example>
+
+<example>
+{ "venue" : "London Paddington Railway Station (PAD)", "hour" : 9 }
+{ "venue" : "Platform 7 (Heathrow Express)", "hour" : 9 }
+{ "venue" : "Heathrow Express Train - Paddington [PAD] to Heathrow [HXX]", "hour" : 9 }
+{ "venue" : "SkyTeam Lounge", "hour" : 10 }
+{ "venue" : "Gate 15", "hour" : 11 }
+{ "venue" : "Gate D23", "hour" : 14 }
+{ "venue" : "Amsterdam Airport Schiphol (AMS)", "hour" : 14 }
+{ "venue" : "Station Amsterdam Lelylaan", "hour" : 14 }
+{ "venue" : "Station Amsterdam Sloterdijk", "hour" : 14 }
+{ "venue" : "Station Amsterdam Centraal", "hour" : 14 }
+{ "venue" : "Burgermeester", "hour" : 17 }
+{ "venue" : "De Eland", "hour" : 18 }
+{ "venue" : "WEBclusive HQ", "hour" : 12 }
+{ "venue" : "Station Utrecht Centraal", "hour" : 17 }
+...
+</example>
+</div>
+</slide>

@@ -1,0 +1,24 @@
+<slide>
+<title>New $dateFromParts operator</title>
+
+<blurb>Creates an ISODate from parts + timezone</blurb>
+
+<example inline="1">
+db.tz.aggregate( [
+    { $project: {
+        date: { *$dateFromParts*: {
+            'year': 2017, 'month': 2, 'day': 8, 'hour': 13, 'minute': 7,
+            'timezone': 'America/New_York'
+        } }
+    } }
+] );
+</example>
+
+<blurb>
+Which returns:
+</blurb>
+
+<example>
+{ date: ISODate( "2017-02-08T18:07:00Z" ) }
+</example>
+</slide>
