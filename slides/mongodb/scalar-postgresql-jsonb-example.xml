@@ -8,7 +8,7 @@ CREATE TABLE users (jdoc *JSONB*);
 
 <blurb>Insert document:</blurb>
 <example inline="2">
-INSERT INTO users VALUES(*'*
+INSERT INTO users VALUES(*'*{
     "_id" : "derick@localhost",
     "email" : "derick@localhost",
     "fullname" : "Derick Rethans",
