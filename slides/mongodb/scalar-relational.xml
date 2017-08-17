@@ -2,8 +2,8 @@
 <title>Relational Databases</title>
 
 <list>
-	<bullet>Traditionally data is stored normalized</bullet>
-	<bullet>Normal forms</bullet>
+	<bullet>Traditionally data is stored normalised</bullet>
+	<bullet>Theory: Normal Forms</bullet>
 	<bullet>Additional data types to store "unstructured" data</bullet>
 	<bullet>Examples: *MySQL*, *PostgreSQL*</bullet>
 </list>

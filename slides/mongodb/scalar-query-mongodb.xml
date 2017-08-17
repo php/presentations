@@ -61,18 +61,13 @@ db.checkins.find( {
 </div>
 
 <div effect="fade-in">
-<example inline="2">
-{
-	"_id" : ObjectId("569c1bd8b8c96e09421b292a"),
-	"whisky" : "Auriverdes",
-	"rating" : 3.5
-}
-{
-	"_id" : ObjectId("56a2b8fcb8c96e7205499230"),
-	"whisky" : "Bunnahabhain 12",
-	"rating" : 3.5,
-	"age" : 12
-}
+<break lines="1"/>
+<blurb>As SQL:</blurb>
+<example class="big">
+SELECT whisky, rating, age
+FROM   checkins
+WHERE  region_slug = "scotland-islay" AND
+       rating >= 3;
 </example>
 </div>
 

@@ -2,10 +2,10 @@
 <title>Key/Value Stores</title>
 
 <list>
-	<bullet>The simplest type</bullet>
+	<bullet>The "simplest"  data store</bullet>
 	<bullet>Operations by key *only*</bullet>
 	<bullet>Values do not have to be simple scalars</bullet>
-	<bullet>*Redis*</bullet>
+	<bullet>Example: *Redis*</bullet>
 </list>
 
 </slide>

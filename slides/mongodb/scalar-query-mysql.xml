@@ -3,26 +3,26 @@
 
 <blurb>Create and Insert:</blurb>
 <example>
-CREATE TABLE whisky (name VARCHAR(255), properties JSON);
+CREATE TABLE whisky (name VARCHAR(255), props JSON);
 
 INSERT INTO whisky VALUES
   ( "Glen Albyn 24", '{"age": 24, "cask_strength": false, "abv": 47.5 }' ),
-  ( "Glenrothes-Glenlivet 24", '{"age": 24, "cask_strength": true, "coloured": false }' );
+  ( "Glenrothes 24", '{"age": 24, "cask_strength": true, "coloured": false }' );
 </example>
 
 <break/>
 <blurb>Query:</blurb>
 <example inline="2">
-SELECT name, *properties->>"$.age"* FROM whisky WHERE *properties->"$.cask_strength" = true*;
+SELECT name, *props->>"$.age"* FROM whisky WHERE *props->"$.cask_strength" = true*;
 </example>
 
 <break/>
 <blurb>Result:</blurb>
 <example>
 +-------------------------+---------------------+
-| name                    | properties->"$.age" |
+| name                    | props->"$.age"      |
 +-------------------------+---------------------+
-| Glenrothes-Glenlivet 24 | 24                  |
+| Glenrothes 24           | 24                  |
 +-------------------------+---------------------+
 </example>
 </slide>

@@ -2,11 +2,6 @@
 <slide>
 <title>Elasticsearch: Insert Document</title>
 
-<example>
-curl -XPUT 'localhost:9200/users?pretty&amp;pretty'
-</example>
-
-
 <example inline="2">
 curl -XPUT 'localhost:9200/users/external/derick@localhost?pretty&amp;pretty' \
 	-H 'Content-Type: application/json' -d'

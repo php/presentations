@@ -21,7 +21,7 @@
 <blurb>branch.php</blurb>
 <example><![CDATA[…
 xdebug_start_code_coverage(
-	XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE | XDEBUG_CC_BRANCH_CHECK
+    XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE | XDEBUG_CC_BRANCH_CHECK
 );
 
 ifthenelse( true, false ); 
