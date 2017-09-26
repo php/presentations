@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>PHP</topic>
+<title>Debugging Your Set-Up</title>
+<event>PHP NorthWest 2017</event>
+<location>Manchester, UK</location>
+<lat>51.15056</lat><lon>4.43284</lon>
+<date>January 27th, 2017</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<joindin>https://joind.in/22137</joindin>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+In this session we will look at low-level (Linux) system debugging tools to
+find out what is going on (or wrong!) with your PHP environment, although the
+techniques are also valid for other programs besides PHP. We will cover
+debugging crashes with gdb, checking out memory leaks with valgrind, and many
+other tools to find out what is going wrong, and hopefully, figure out why.
+
+This session teaches tools to help out with tracking down bugs, and provides
+information on how to get better at debugging connection issues, crashes, files
+not being written, etc. The session is also valuable for people who want to
+help out with providing good bug reports for Open Source projects.
+
+<slide>slides/debugging/storytime.xml</slide>
+
+- don't jump to conclusions
+  - unless you know what you're doing ;-) https://jira.mongodb.org/browse/PHPC-894 / https://github.com/mongodb/mongo-php-driver/issues/514
+<slide>slides/debugging/jump-conclusions.xml</slide>
+
+<slide>slides/debugging/jump-memory-leak.xml</slide>
+
+<slide>slides/debugging/toolbox.xml</slide>
+<slide>slides/debugging/toolbox-items.xml</slide>
+
+<slide>slides/debugging/section-strace.xml</slide>
+<slide>slides/debugging/strace-systemcalls.xml</slide>
+<slide>slides/debugging/strace-invocation.xml</slide>
+<slide>slides/debugging/strace-invocation-phpini.xml</slide>
+<slide>slides/debugging/strace-invocation-socket.xml</slide>
+<slide>slides/debugging/demo.xml</slide>
+- strace
+  - what is it?
+  - how does it work?
+  - php.ini loading
+
+<slide>slides/debugging/jump-conclusions.xml</slide>
+<slide>slides/debugging/section-lsof.xml</slide>
+<slide>slides/debugging/lsof-files-unix.xml</slide>
+<slide>slides/debugging/lsof-invocation.xml</slide>
+<slide>slides/debugging/demo.xml</slide>
+<slide>slides/debugging/lsof-invocation-cant-listen.xml</slide>
+- lsof -i
+  - what is it?
+  - how does it work?
+  - socket with xdebug and fork
+    - set size: https://youtrack.jetbrains.com/issue/WI-31522, "PHP Scripts with Background Child Process" email
+  - setsize
+
+
+- small test case
+  - https://github.com/sebastianbergmann/php-code-coverage/issues/488
+
+<slide>slides/debugging/section-gdb.xml</slide>
+<slide>slides/debugging/gdb-what-is-it.xml</slide>
+<slide>slides/debugging/gdb-backtrace.xml</slide>
+<slide>slides/debugging/gdb-symbols.xml</slide>
+<slide>slides/debugging/demo.xml</slide>
+<slide>slides/debugging/gdb-optimisation.xml</slide>
+<slide>slides/debugging/gdb-optimisation-asm.xml</slide>
+<slide>slides/debugging/gdb-optimisation-wrong.xml</slide>
+<slide>slides/debugging/gdb-short-case.xml</slide>
+<slide>slides/debugging/gdb-usage.xml</slide>
+<slide>slides/debugging/gdb-debug-core.xml</slide>
+<slide>slides/debugging/gdb-attach.xml</slide>
+<slide>slides/debugging/demo.xml</slide>
+<slide>slides/debugging/gdb-zbacktrace.xml</slide>
+- gdb
+  - what is it?
+  - how does it work?
+  - talk about memory management in PHP
+  - crashes
+    - core files
+	- 
+  - attach to running PID
+  - run from within
+  - httpd -X
+  - symbols included
+    - optimisation
+  - zbacktrace
+
+<slide>slides/debugging/section-valgrind.xml</slide>
+<slide>slides/debugging/valgrind-how.xml</slide>
+<slide>slides/debugging/jump-memory-leak.xml</slide>
+<slide>slides/debugging/valgrind-show-leak1.xml</slide>
+<slide>slides/debugging/demo.xml</slide>
+<slide>slides/debugging/valgrind-show-leak2.xml</slide>
+<slide>slides/debugging/valgrind-show-leak3.xml</slide>
+<slide>slides/debugging/valgrind-show-leak4.xml</slide>
+<slide>slides/debugging/valgrind-show-leak5.xml</slide>
+<slide>slides/debugging/valgrind-show-leak6.xml</slide>
+<slide>slides/debugging/valgrind-wrap-up.xml</slide>
+- valgrind
+  - what is it?
+  - how does it work?
+  - memory leaks
+    - get_properties/get_gc
+  - run from with in
+  - use with gdb
+  - USE_ZEND_ALLOC=0
+  - ZEND_DONT_UNLOAD_MODULES
+
+** OPTIMISATION GONE WRONG **
+- gcc -S
+  - what is it?
+  - how does it work?
+  - compiler bug with alloca: https://bugs.xdebug.org/view.php?id=1337 https://bugs.php.net/bug.php?id=73545,
+  - don't use xdebug (sigh)
+    - https://github.com/xdebug/xdebug/commit/c36ea38141cb9403ff4bf72602fcf4ae62e5ba1e
+	- https://bugs.php.net/bug.php?id=73545
+
+
+<slide>slides/debugging/toolbox-items.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Storing Non-Scalar Data</title>
+<event>PHP NorthWest 2017</event>
+<location>Manchester, UK</location>
+<date>September 30th, 2017</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin>https://joind.in/22136</joindin>
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/mongodb/scalar-non-scalar-examples.xml</slide>
+<!-- <slide>slides/mongodb/scalar-non-scalar-example-vector.xml</slide> -->
+<slide>slides/mongodb/scalar-non-scalar-example-tag-cloud.xml</slide>
+<slide>slides/mongodb/scalar-non-scalar-example-product-properties.xml</slide>
+<!-- <slide>slides/mongodb/scalar-non-scalar-example-addresses.xml</slide> -->
+<slide>slides/mongodb/scalar-what-is-it-not.xml</slide>
+
+<slide>slides/mongodb/scalar-agenda.xml</slide>
+
+Intro into DB types and their data types
+<slide>slides/mongodb/scalar-section-dbs-and-types.xml</slide>
+
+    Key/Value:
+        Redis
+            LISTS
+            SETS
+            HASHES
+            Sorted SET
+<slide>slides/mongodb/scalar-key-value.xml</slide>
+<slide>slides/mongodb/scalar-redis.xml</slide>
+<!-- <slide>slides/mongodb/scalar-redis-lists.xml</slide> -->
+<slide>slides/mongodb/scalar-redis-sets.xml</slide>
+<slide>slides/mongodb/scalar-redis-hashses.xml</slide>
+<!-- <slide>slides/mongodb/scalar-redis-sorted-set.xml</slide> -->
+
+    Document:
+        MongoDB
+        CouchDB
+        Elastic Search
+<slide>slides/mongodb/scalar-document.xml</slide>
+<slide>slides/mongodb/scalar-mongodb.xml</slide>
+<slide>slides/mongodb/document-complex.xml</slide>
+<slide>slides/mongodb/phplib-crud-insert.xml</slide>
+<slide>slides/mongodb/scalar-couchdb.xml</slide>
+<slide>slides/mongodb/scalar-couchdb-example.xml</slide>
+<slide>slides/mongodb/scalar-couchdb-insert.xml</slide>
+<slide>slides/mongodb/scalar-elasticsearch.xml</slide>
+<slide>slides/mongodb/scalar-elasticsearch-example.xml</slide>
+<slide>slides/mongodb/scalar-elasticsearch-insert.xml</slide>
+
+    Relational:
+        MySQL
+            JSON
+        PostgreSQL
+            HSTORE
+            JSON
+            JSONB
+<slide>slides/mongodb/scalar-relational.xml</slide>
+<slide>slides/mongodb/scalar-mysql.xml</slide>
+<slide>slides/mongodb/scalar-mysql-json.xml</slide>
+<slide>slides/mongodb/scalar-mysql-json-example.xml</slide>
+<slide>slides/mongodb/scalar-postgresql.xml</slide>
+<slide>slides/mongodb/scalar-postgresql-hstore.xml</slide>
+<slide>slides/mongodb/scalar-postgresql-jsonb.xml</slide>
+<slide>slides/mongodb/scalar-postgresql-jsonb-example.xml</slide>
+
+<!-- <slide>slides/mongodb/scalar-storage-overview.xml</slide> -->
+
+<slide>slides/mongodb/scalar-section-query.xml</slide>
+
+Manipulation
+
+    Query
+        Query operators for $in, $elemMatch, etc
+        Query operations on nested fields
+
+<slide>slides/mongodb/scalar-query-redis.xml</slide>
+<slide>slides/mongodb/scalar-query-couchdb.xml</slide>
+<slide>slides/mongodb/scalar-query-mongodb.xml</slide>
+<slide>slides/mongodb/scalar-query-mongodb-aggregation.xml</slide>
+<slide>slides/mongodb/scalar-query-elasticsearch.xml</slide>
+<slide>slides/mongodb/scalar-query-mysql.xml</slide>
+<slide>slides/mongodb/scalar-query-postgresql-hstore.xml</slide>
+<!-- <slide>slides/mongodb/scalar-query-postgresql-jsonb.xml</slide> -->
+
+    Indexes
+        Redis
+        MongoDB
+        CouchDB
+        ElasticSearch
+        MySQL
+            only through virtual columns
+            Not on arrays
+        PostgreSQL
+            GIN/GIST 
+        Geospatial from GeoJSON sources (not PostGIS)
+
+<slide>slides/mongodb/indexes-title.xml</slide>
+<slide>slides/mongodb/scalar-index-redis.xml</slide>
+<slide>slides/mongodb/scalar-index-couchdb.xml</slide>
+<slide>slides/mongodb/index.xml</slide>
+<slide>slides/mongodb/scalar-index-elasticsearch.xml</slide>
+<slide>slides/mongodb/scalar-index-postgresql.xml</slide>
+<slide>slides/mongodb/scalar-index-mysql.xml</slide>
+
+
+<slide>slides/mongodb/scalar-section-manipulation.xml</slide>
+    Storing/Update
+        Atomicity
+            ACID
+            Single document with update specifiers
+        Partitioning on JSON data
+        Manipulation of JSON data
+<slide>slides/mongodb/scalar-atomicity.xml</slide>
+<!-- <slide>slides/mongodb/acid.xml</slide> -->
+<slide>slides/mongodb/scalar-nosql-acid.xml</slide>
+<slide>slides/mongodb/scalar-atomic-redis.xml</slide>
+<slide>slides/mongodb/scalar-atomic-couchdb.xml</slide>
+<slide>slides/mongodb/update-atomicity.xml</slide>
+
+    Schema validation
+        None can do that, besides MongoDB
+
+<slide>slides/mongodb/scalar-validate.xml</slide>
+<slide>slides/mongodb/document-validation.xml</slide>
+
+<slide>slides/mongodb/scalar-conclusion.xml</slide>
+
+
+Conclusion
+
+
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>
