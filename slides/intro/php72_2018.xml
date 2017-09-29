@@ -1,0 +1,157 @@
+<slide title="" section="php72">
+
+<blurb fontsize="20em" align="center">PHP 7.2</blurb>
+
+<break lines="1" section="php72_opt"/>
+<blurb fontsize="1.6em" align="left">Initial DCE and SCCP optimizations</blurb>
+
+<break lines="1" section="php72_widening"/>
+<blurb fontsize="1.1em" align="left">Parameter Type Widening</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+class Orig {
+  public function fn(array $arg) {  }
+}
+class Wider extends Orig {
+  public function fn($arg) { }
+}
+]]></example>
+<blurb fontsize="1.1em" align="left">In PHP 7.1 you would get:</blurb>
+<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
+Warning: Declaration of Wider::fn($arg) should be compatible with Orig::fn(array $arg)
+]]></example>
+
+<break lines="1" section="php72_commas"/>
+<blurb fontsize="1.1em" align="left">Allow trailing commas everywhere</blurb>
+
+<example fontsize="1em" result='0' title="" type=""><![CDATA[
+<?php
+// Arrays (already possible)
+$array = [1, 2, 3,];
+
+// Grouped namepaces
+use Foo\Bar\{ Foo, Bar, Baz, };
+ 
+// Function/method arguments (call)
+fooCall($arg1, $arg2, $arg3,);
+
+use Foo\Bar\{ Foo, Bar, Baz, };
+
+class Foo implements
+    // Interface implementations on a class
+    FooInterface,
+    BarInterface,
+    BazInterface,
+{
+    // Trait implementations on a class
+    use
+        FooTrait,
+        BarTrait,
+        BazTrait,
+    ;
+ 
+    // Class member lists
+    const
+        A = 1010,
+        B = 1021,
+        C = 1032,
+        D = 1043,
+    ;
+]]></example>
+
+<break lines="1" section="php72_object"/>
+<blurb fontsize="1.1em" align="left">Object typehint</blurb>
+
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function fn(object $obj): object {
+	return json_decode('{}');
+}
+fn("not an object");
+]]></example>
+
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Warning: Uncaught TypeError: Argument 1 passed to fn() must be an object,
+         string given, called in php shell code on line 1 and defined in ...
+]]></example>
+
+
+<break lines="1" section="php72_unqouted"/>
+<blurb fontsize="1.1em" align="left">Deprecate unquoted strings</blurb>
+
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+echo HELLO;
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+Warning: Use of undefined constant HELLO - assumed 'HELLO' (this will throw
+         an Error in a future version of PHP) in php shell code on line 1
+]]></example>
+
+<break lines="1" section="php72_mail"/>
+<blurb fontsize="1.1em" align="left">extra headers array arg for mail() and mb_send_mail()</blurb>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+$to      = 'nobody@example.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = ['From'     => 'webmaster@example.com',
+            'Reply-To' => 'webmaster@example.com',
+            'X-Mailer' => 'PHP/' . phpversion() ];
+
+mail($to, $subject, $message, $headers);
+]]></example>
+
+<break lines="1" section="php72_argon2i"/>
+<blurb fontsize="1.1em" align="left">Argon2i added to password_hash()</blurb>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+$options = [
+    'memory_cost' => 2048,
+    'time_cost' => 10,
+    'threads' => 2
+];
+echo password_hash("rasmuslerdorf", PASSWORD_ARGON2I, $options);
+]]></example>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+$argon2i$v=19$m=2048,t=10,p=2$akUuWkoxRDlMSi5TVGhYLg$j0D1Cl4aR8UMHOGGx5JtZ1BmCApr8RmOJA9qFWm5mz8
+]]></example>
+
+<break lines="1" section="php72_sodium"/>
+<blurb fontsize="1.1em" align="left">Add Sodium Crypto Library</blurb>
+
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+// On Alice's computer:
+$msg = 'This comes from Alice.';
+$signed_msg = sodium_crypto_sign($msg, $secret_sign_key);
+]]></example>
+
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+// On Bob's computer:
+$original_msg = sodium_crypto_sign_open($signed_msg, $alice_sign_publickey);
+if ($original_msg === false) {
+    throw new Exception("Invalid signature");
+} else {
+    echo $original_msg; // Displays "This comes from Alice."
+}
+]]></example>
+
+<link fontsize="1em" marginleft="-1em" leader="see: " href="https://paragonie.com/book/pecl-libsodium"/>
+
+<break lines="1" section="php72cleanups"/>
+<blurb fontsize="1.1em" align="left">Things that may break your code</blurb>
+<list>
+<bullet marginleft="-1em" fontsize="0.8em">mcrypt extension has been removed</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">__autoload() deprecated, use spl_autoload_register()</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">create_function() deprecated, use anonymous functions</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">each() deprecated, use foreach()</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">read_exif_data() deprecated, use exif_read_data()</bullet>
+</list>
+
+<blurb fontsize="1.1em" align="left">Full details are at:</blurb>
+<link fontsize="0.8em" marginleft="-1em" leader="" href="https://github.com/php/php-src/blob/PHP-7.2/UPGRADING"/>
+<blurb fontsize="1.1em" align="left">And for extension authors:</blurb>
+<link fontsize="0.8em" marginleft="-1em" leader="" href="https://github.com/php/php-src/blob/PHP-7.2/UPGRADING.INTERNALS"/>
+
+</slide>

@@ -23,7 +23,7 @@ test.php:2 PhanTypeComparisonFromArray array to int comparison
 <break lines="1" section="phan2"/>
 
 <blurb fontsize="1.5em" align="left">Check phpdoc comments</blurb>
-<example fontsize=".75em" result='0' title="" type="line-numbers" extra="data-highlight-lines='10,11'"><![CDATA[
+<example fontsize=".75em" result='0' title="" type="line-numbers" extra="data-highlight-lines='9,10,11'"><![CDATA[
 class C {
     /** @var int $prop */
     public $prop;
@@ -32,17 +32,23 @@ class C {
      * @param string $arg
      * @return int
      */
-    function test($arg) {
+    function test(?$arg) {
         $this->prop = $arg;
         return $arg;
     }
 }
 ]]></example>
 
-<example fontsize=".75em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
 % phan test.php
-test.php:10 PhanTypeMismatchProperty Assigning string to property but \C::prop is int
-test.php:11 PhanTypeMismatchReturn Returning type string but test() is declared to return int
+test.php:9 PhanTypeMismatchDeclaredParamNullable Doc-block of $arg in test
+           is phpdoc param type string which is not a permitted replacement
+           of the nullable param type ?string declared in the signature 
+           ('?T' should be documented as 'T|null' or '?T')
+test.php:10 PhanTypeMismatchProperty Assigning string to property
+            but \C::prop is int
+test.php:11 PhanTypeMismatchReturn Returning type string 
+            but test() is declared to return int
 ]]></example>
 
 <break lines="1" section="phan3"/>
@@ -57,15 +63,16 @@ class C {
 
 C::legacy_function();
 ]]></example>
-<example fontsize=".65em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 % phan test.php
-test.php:8 PhanDeprecatedFunction Call to deprecated function \C::legacy_function() defined at test.php:5
+test.php:8 PhanDeprecatedFunction Call to deprecated function 
+           \C::legacy_function() defined at test.php:5
 ]]></example>
 
 <break lines="1" section="phan4"/>
 <blurb fontsize="1.5em" align="left">Install with composer</blurb>
 <example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
-$ composer require --dev etsy/phan
+$ composer require --dev phan/phan
 ]]></example>
 <blurb fontsize="1.5em" align="left">Create .phan/config.php</blurb>
 <example fontsize="1em" result='0' title="" nostrip="1"><![CDATA[

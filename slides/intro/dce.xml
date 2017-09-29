@@ -1,0 +1,214 @@
+<slide title="" section="dce">
+
+<blurb fontsize="2em" align="center">Dead Code Elimination (DCE)</blurb>
+<blurb fontsize="1.5em" align="center">Escape Analysis</blurb>
+<blurb fontsize="1.4em" align="center">Sparse conditional constant propagation</blurb>
+
+<break lines="1" section="dce0"/>
+
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+php -d opcache.optimization_level=-1 -d opcache.opt_debug_level=0x20000 script
+]]></example>
+
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function fn() {
+    $a = 1;
+    return 0;
+}
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.1</blurb>
+<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+fn: (lines=2, args=0, vars=1, tmps=0)
+L0:   ASSIGN CV0($a) int(1)
+L1:   RETURN int(0)
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.2</blurb>
+<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+fn: (lines=1, args=0, vars=0, tmps=0)
+L0:   RETURN int(0)
+]]></example>
+
+<break lines="1" section="dce1"/>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function foo(string $s1, string $s2, string $s3, string $s4) {
+    $x = ($s1 . $s2) . ($s3 . $s4);
+    $x = 0;
+    return $x;
+}
+]]></example>
+
+<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+PHP 7.1                                   PHP 7.2
+foo: (lines=10, args=4, vars=5, tmps=3)   foo: (lines=5, args=4, vars=4, tmps=3)
+L0:   CV0($s1) = RECV 1                   L0:   CV0($s1) = RECV 1
+L1:   CV1($s2) = RECV 2                   L1:   CV1($s2) = RECV 2
+L2:   CV2($s3) = RECV 3                   L2:   CV2($s3) = RECV 3
+L3:   CV3($s4) = RECV 4                   L3:   CV3($s4) = RECV 4
+L4:   T6 = CONCAT CV0($s1) CV1($s2)       L4:   RETURN int(0)
+L5:   T7 = CONCAT CV2($s3) CV3($s4)
+L6:   T5 = CONCAT T6 T7
+L7:   ASSIGN CV4($x) T5
+L8:   ASSIGN CV4($x) int(0)
+L9:   RETURN CV4($x)
+]]></example>
+
+<break lines="1" section="dce2"/>
+<blurb fontsize="1.1em" align="left">Try to trick it</blurb>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function foo($a) {
+    $b = $a += 3;
+    return $a;
+}
+]]></example>
+<blurb fontsize="1.1em" align="left">PHP 7.2</blurb>
+<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+foo: (lines=3, args=1, vars=1, tmps=1)
+L0:   CV0($a) = RECV 1
+L1:   ASSIGN_ADD CV0($a) int(3)
+L2:   RETURN CV0($a)
+]]></example>
+
+<break lines="1" section="dce3"/>
+
+<blurb fontsize="1.1em" align="left">But...</blurb>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+function foo(int $x, int $y) {
+    $a = [$x];
+    $a[1] = $y;
+    $a = $y;
+    return $a;
+}
+]]></example>
+
+<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+PHP 7.2                                    PHP 7.3
+foo: (lines=7, args=2, vars=3, tmps=1)     foo: (lines=4, args=2, vars=3, tmps=0)
+L0:   CV0($x) = RECV 1                     L0:     CV0($x) = RECV 1
+L1:   CV1($y) = RECV 2                     L1:     CV1($y) = RECV 2
+L2:   CV2($a) = INIT_ARRAY 1 CV0($x) NEXT  L2:     CV2($a) = QM_ASSIGN CV1($y)
+L3:   ASSIGN_DIM CV2($a) int(1)            L3:     RETURN CV2($a)
+L4:   OP_DATA CV1($y)
+L5:   ASSIGN CV2($a) CV1($y)
+L6:   RETURN CV2($a)
+]]></example>
+
+<break lines="1" section="dce4"/>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+class A { }
+function foo(int $x) {
+    $a = new A;
+    $a->foo = $x;
+    return $x;
+}
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
+<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+foo: (lines=2, args=1, vars=1, tmps=0)
+L0:   CV0($x) = RECV 1
+L1:   RETURN CV0($x)
+]]></example>
+
+<break lines="1" section="dce5"/>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+class A {
+    function __destruct() {}
+}
+function foo(int $x) {
+    $a = new A;
+    $a->foo = $x;
+    return $x;
+}
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
+<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+foo: (lines=7, args=1, vars=2, tmps=1)
+L0:   CV0($x) = RECV 1
+L1:   V2 = NEW 0 string("A")
+L2:   DO_FCALL
+L3:   CV1($a) = QM_ASSIGN V2
+L4:   ASSIGN_OBJ CV1($a) string("foo")
+L5:   OP_DATA CV0($x)
+L6:   RETURN CV0($x)
+]]></example>
+
+<break lines="1" section="dce6"/>
+
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function foo() {
+    $a = 1;
+    $b = $a + 2;
+    $a += $b;
+    return $a;
+}
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.2</blurb>
+<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+foo: (lines=1, args=0, vars=0, tmps=1)
+L0:   RETURN int(4)
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
+<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+foo: (lines=1, args=0, vars=0, tmps=0)
+L0:   RETURN int(4)
+]]></example>
+
+<break lines="1" section="dce7"/>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function foo(int $x) {
+    if ($x) {
+        $a = [0,1];
+    } else {
+        $a = [0,2];
+    }
+    return $a[0];
+}
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
+<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+foo: (lines=2, args=1, vars=1, tmps=0)
+L0:   CV0($x) = RECV 1
+L1:   RETURN int(0)
+]]></example>
+
+<break lines="1" section="dce8"/>
+
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function foo() {
+    $o = new stdClass();
+    $o->foo = 0;
+    $i = 1;
+    $c = $i < 2;
+    if ($c) {
+        $k = 2 * $i;
+        $o->foo = $i;
+        echo $o->foo;
+    }
+    $o->foo += 2;
+    $o->foo++;
+    return $o->foo;
+}
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
+<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+foo: (lines=2, args=0, vars=0, tmps=0)
+L0:   ECHO int(1)
+L1:   RETURN int(4)
+]]></example>
+
+</slide>

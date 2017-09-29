@@ -73,9 +73,10 @@ $storage = new Data(['apple','orange','banana']);
 $fruit = false;
 $storage->find($fruit);
 ]]></example>
-<example fontsize=".65em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize=".9em" result='0' title="" type="shell nohighlight"><![CDATA[
 $ phan test.php
-test.php:22 PhanTypeMismatchArgument Argument 1 (needle) is bool but \Data::find() takes string defined at test.php:15
+test.php:22 PhanTypeMismatchArgument Argument 1 (needle) is bool
+            but \Data::find() takes string defined at test.php:15
 ]]></example>
 
 </slide>
