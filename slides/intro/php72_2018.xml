@@ -18,8 +18,9 @@ class Wider extends Orig {
 }
 ]]></example>
 <blurb fontsize="1.1em" align="left">In PHP 7.1 you would get:</blurb>
-<example fontsize="0.8em" result='0' title="" type="shell nohighlight"><![CDATA[
-Warning: Declaration of Wider::fn($arg) should be compatible with Orig::fn(array $arg)
+<example fontsize="1em" result='0' title="" type="result nohighlight"><![CDATA[
+Warning: Declaration of Wider::fn($arg) should be 
+         compatible with Orig::fn(array $arg)
 ]]></example>
 
 <break lines="1" section="php72_commas"/>
@@ -71,7 +72,7 @@ function fn(object $obj): object {
 fn("not an object");
 ]]></example>
 
-<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="0.9em" result='0' title="" type="result nohighlight"><![CDATA[
 Warning: Uncaught TypeError: Argument 1 passed to fn() must be an object,
          string given, called in php shell code on line 1 and defined in ...
 ]]></example>
@@ -84,7 +85,7 @@ Warning: Uncaught TypeError: Argument 1 passed to fn() must be an object,
 <?php
 echo HELLO;
 ]]></example>
-<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="0.9em" result='0' title="" type="result nohighlight"><![CDATA[
 Warning: Use of undefined constant HELLO - assumed 'HELLO' (this will throw
          an Error in a future version of PHP) in php shell code on line 1
 ]]></example>
@@ -113,7 +114,7 @@ $options = [
 ];
 echo password_hash("rasmuslerdorf", PASSWORD_ARGON2I, $options);
 ]]></example>
-<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="0.9em" result='0' title="" type="result nohighlight"><![CDATA[
 $argon2i$v=19$m=2048,t=10,p=2$akUuWkoxRDlMSi5TVGhYLg$j0D1Cl4aR8UMHOGGx5JtZ1BmCApr8RmOJA9qFWm5mz8
 ]]></example>
 

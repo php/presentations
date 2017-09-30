@@ -55,6 +55,17 @@
             line-height: 125%;
             -webkit-text-size-adjust: none;
         }
+
+        .reveal code.result {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: #000;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+
         /* Left-align h3 and h4 if they are p elements */
         h3.p {
                 text-align: left;
@@ -399,7 +410,8 @@ class Wider extends Orig {
   public function fn($arg) { }
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">In PHP 7.1 you would get:</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.8em;" >Warning: Declaration of Wider::fn($arg) should be compatible with Orig::fn(array $arg)</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >Warning: Declaration of Wider::fn($arg) should be 
+         compatible with Orig::fn(array $arg)</code></pre>
 		</section>
 <section id="php72_commas">
 		<p class="p" style="font-size:1.1em;text-align:left;">Allow trailing commas everywhere</p>
@@ -441,13 +453,13 @@ class Foo implements
 	return json_decode('{}');
 }
 fn(&quot;not an object&quot;);</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Warning: Uncaught TypeError: Argument 1 passed to fn() must be an object,
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >Warning: Uncaught TypeError: Argument 1 passed to fn() must be an object,
          string given, called in php shell code on line 1 and defined in ...</code></pre>
 		</section>
 <section id="php72_unqouted">
 		<p class="p" style="font-size:1.1em;text-align:left;">Deprecate unquoted strings</p>
 		<pre><code data-trim style="font-size:1.05em;" >echo HELLO;</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Warning: Use of undefined constant HELLO - assumed 'HELLO' (this will throw
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >Warning: Use of undefined constant HELLO - assumed 'HELLO' (this will throw
          an Error in a future version of PHP) in php shell code on line 1</code></pre>
 		</section>
 <section id="php72_mail">
@@ -469,7 +481,7 @@ mail($to, $subject, $message, $headers);</code></pre>
     'threads' =&gt; 2
 ];
 echo password_hash(&quot;rasmuslerdorf&quot;, PASSWORD_ARGON2I, $options);</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$argon2i$v=19$m=2048,t=10,p=2$akUuWkoxRDlMSi5TVGhYLg$j0D1Cl4aR8UMHOGGx5JtZ1BmCApr8RmOJA9qFWm5mz8</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >$argon2i$v=19$m=2048,t=10,p=2$akUuWkoxRDlMSi5TVGhYLg$j0D1Cl4aR8UMHOGGx5JtZ1BmCApr8RmOJA9qFWm5mz8</code></pre>
 		</section>
 <section id="php72_sodium">
 		<p class="p" style="font-size:1.1em;text-align:left;">Add Sodium Crypto Library</p>
@@ -503,20 +515,20 @@ if ($original_msg === false) {
 		<section id="dce">
 		<p class="p" style="font-size:2em;text-align:center;">Dead Code Elimination (DCE)</p>
 		<p class="p" style="font-size:1.5em;text-align:center;">Escape Analysis</p>
-		<p class="p" style="font-size:1.4em;text-align:center;">Sparse conditional constant propagation</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">Sparse Conditional Constant Propagation</p>
 		</section>
 <section id="dce0">
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >php -d opcache.optimization_level=-1 -d opcache.opt_debug_level=0x20000 script</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >php -d opcache.optimization_level=-1 -d opcache.opt_debug_level=0x20000 script</code></pre>
 		<pre><code data-trim style="font-size:1.05em;" >function fn() {
     $a = 1;
     return 0;
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.1</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >fn: (lines=2, args=0, vars=1, tmps=0)
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >fn: (lines=2, args=0, vars=1, tmps=0)
 L0:   ASSIGN CV0($a) int(1)
 L1:   RETURN int(0)</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.2</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >fn: (lines=1, args=0, vars=0, tmps=0)
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >fn: (lines=1, args=0, vars=0, tmps=0)
 L0:   RETURN int(0)</code></pre>
 		</section>
 <section id="dce1">
@@ -525,7 +537,7 @@ L0:   RETURN int(0)</code></pre>
     $x = 0;
     return $x;
 }</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >PHP 7.1                                   PHP 7.2
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >PHP 7.1                                   PHP 7.2
 foo: (lines=10, args=4, vars=5, tmps=3)   foo: (lines=5, args=4, vars=4, tmps=3)
 L0:   CV0($s1) = RECV 1                   L0:   CV0($s1) = RECV 1
 L1:   CV1($s2) = RECV 2                   L1:   CV1($s2) = RECV 2
@@ -545,7 +557,7 @@ L9:   RETURN CV4($x)</code></pre>
     return $a;
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.2</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >foo: (lines=3, args=1, vars=1, tmps=1)
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >foo: (lines=3, args=1, vars=1, tmps=1)
 L0:   CV0($a) = RECV 1
 L1:   ASSIGN_ADD CV0($a) int(3)
 L2:   RETURN CV0($a)</code></pre>
@@ -558,7 +570,7 @@ L2:   RETURN CV0($a)</code></pre>
     $a = $y;
     return $a;
 }</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >PHP 7.2                                    PHP 7.3
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >PHP 7.2                                    PHP 7.3
 foo: (lines=7, args=2, vars=3, tmps=1)     foo: (lines=4, args=2, vars=3, tmps=0)
 L0:   CV0($x) = RECV 1                     L0:     CV0($x) = RECV 1
 L1:   CV1($y) = RECV 2                     L1:     CV1($y) = RECV 2
@@ -576,7 +588,7 @@ function foo(int $x) {
     return $x;
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=1, vars=1, tmps=0)
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=1, vars=1, tmps=0)
 L0:   CV0($x) = RECV 1
 L1:   RETURN CV0($x)</code></pre>
 		</section>
@@ -590,7 +602,7 @@ function foo(int $x) {
     return $x;
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=7, args=1, vars=2, tmps=1)
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=7, args=1, vars=2, tmps=1)
 L0:   CV0($x) = RECV 1
 L1:   V2 = NEW 0 string(&quot;A&quot;)
 L2:   DO_FCALL
@@ -607,10 +619,10 @@ L6:   RETURN CV0($x)</code></pre>
     return $a;
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.2</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=1, args=0, vars=0, tmps=1)
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=1, args=0, vars=0, tmps=1)
 L0:   RETURN int(4)</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=1, args=0, vars=0, tmps=0)
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=1, args=0, vars=0, tmps=0)
 L0:   RETURN int(4)</code></pre>
 		</section>
 <section id="dce7">
@@ -623,7 +635,7 @@ L0:   RETURN int(4)</code></pre>
     return $a[0];
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=1, vars=1, tmps=0)
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=1, vars=1, tmps=0)
 L0:   CV0($x) = RECV 1
 L1:   RETURN int(0)</code></pre>
 		</section>
@@ -643,7 +655,7 @@ L1:   RETURN int(0)</code></pre>
     return $o-&gt;foo;
 }</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=0, vars=0, tmps=0)
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=0, vars=0, tmps=0)
 L0:   ECHO int(1)
 L1:   RETURN int(4)</code></pre>
 		</section>	</section>

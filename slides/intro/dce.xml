@@ -2,11 +2,11 @@
 
 <blurb fontsize="2em" align="center">Dead Code Elimination (DCE)</blurb>
 <blurb fontsize="1.5em" align="center">Escape Analysis</blurb>
-<blurb fontsize="1.4em" align="center">Sparse conditional constant propagation</blurb>
+<blurb fontsize="1.4em" align="center">Sparse Conditional Constant Propagation</blurb>
 
 <break lines="1" section="dce0"/>
 
-<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+<example fontsize="0.9em" result='0' title="" type="result nohighlight"><![CDATA[
 php -d opcache.optimization_level=-1 -d opcache.opt_debug_level=0x20000 script
 ]]></example>
 
@@ -19,14 +19,14 @@ function fn() {
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.1</blurb>
-<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 fn: (lines=2, args=0, vars=1, tmps=0)
 L0:   ASSIGN CV0($a) int(1)
 L1:   RETURN int(0)
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.2</blurb>
-<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 fn: (lines=1, args=0, vars=0, tmps=0)
 L0:   RETURN int(0)
 ]]></example>
@@ -41,7 +41,7 @@ function foo(string $s1, string $s2, string $s3, string $s4) {
 }
 ]]></example>
 
-<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 PHP 7.1                                   PHP 7.2
 foo: (lines=10, args=4, vars=5, tmps=3)   foo: (lines=5, args=4, vars=4, tmps=3)
 L0:   CV0($s1) = RECV 1                   L0:   CV0($s1) = RECV 1
@@ -66,7 +66,7 @@ function foo($a) {
 }
 ]]></example>
 <blurb fontsize="1.1em" align="left">PHP 7.2</blurb>
-<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 foo: (lines=3, args=1, vars=1, tmps=1)
 L0:   CV0($a) = RECV 1
 L1:   ASSIGN_ADD CV0($a) int(3)
@@ -85,7 +85,7 @@ function foo(int $x, int $y) {
 }
 ]]></example>
 
-<example fontsize="1em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 PHP 7.2                                    PHP 7.3
 foo: (lines=7, args=2, vars=3, tmps=1)     foo: (lines=4, args=2, vars=3, tmps=0)
 L0:   CV0($x) = RECV 1                     L0:     CV0($x) = RECV 1
@@ -109,7 +109,7 @@ function foo(int $x) {
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
-<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1.05em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 foo: (lines=2, args=1, vars=1, tmps=0)
 L0:   CV0($x) = RECV 1
 L1:   RETURN CV0($x)
@@ -129,7 +129,7 @@ function foo(int $x) {
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
-<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1.05em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 foo: (lines=7, args=1, vars=2, tmps=1)
 L0:   CV0($x) = RECV 1
 L1:   V2 = NEW 0 string("A")
@@ -153,13 +153,13 @@ function foo() {
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.2</blurb>
-<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1.05em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 foo: (lines=1, args=0, vars=0, tmps=1)
 L0:   RETURN int(4)
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
-<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1.05em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 foo: (lines=1, args=0, vars=0, tmps=0)
 L0:   RETURN int(4)
 ]]></example>
@@ -178,7 +178,7 @@ function foo(int $x) {
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
-<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1.05em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 foo: (lines=2, args=1, vars=1, tmps=0)
 L0:   CV0($x) = RECV 1
 L1:   RETURN int(0)
@@ -205,7 +205,7 @@ function foo() {
 ]]></example>
 
 <blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
-<example fontsize="1.05em" hide="0" result="0" title="" type="shell nohighlight"><![CDATA[
+<example fontsize="1.05em" hide="0" result="0" title="" type="result nohighlight"><![CDATA[
 foo: (lines=2, args=0, vars=0, tmps=0)
 L0:   ECHO int(1)
 L1:   RETURN int(4)
