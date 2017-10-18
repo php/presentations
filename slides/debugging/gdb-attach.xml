@@ -4,7 +4,7 @@
 <blurb>%gdb -p {{processid}}%</blurb>
 
 <example inline="2">
-(gdb) *break zif_strlen*
+(gdb) *break zif_php_uname*
 Breakpoint 1 at 0xa7a8a4: file /home/derick/dev/php/php-src.git/Zend/zend_builtin_functions.c, line 570.
 (gdb) *cont*
 Continuing.

@@ -8,7 +8,7 @@
 <div effect="fade-in">
 <blurb>Invocation</blurb>
 <image align="right" filename="hang.png"/>
-<example inline="2">strace |aa0000|*-F* -e open -o /tmp/strace.log| |0000ff|php| |00aa00|test.php|</example>
+<example inline="2">strace |aa0000|*-F* -o /tmp/strace.log| |0000ff|php| |00aa00|test.php|</example>
 
 <break/>
 <blurb>Output</blurb>
