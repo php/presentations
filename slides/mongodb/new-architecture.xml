@@ -1,5 +1,10 @@
 <slide>
-<title>New architecture</title>
+<title>Libraries, Extensions, and Drivers</title>
 
+<div effect="fade-out">
 <image filename="new-architecture.png" />
+</div>
+<div effect="fade-in">
+<image filename="new-architecture-sans-hhvm.png" />
+</div>
 </slide>

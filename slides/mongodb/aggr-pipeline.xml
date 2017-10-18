@@ -5,7 +5,7 @@
     <bullet>Process a stream of documents
 		<list>
 			<bullet>Original input is a collection</bullet>
-			<bullet>Final output is a cursor (or inline result)</bullet>
+			<bullet>Final output is a cursor</bullet>
 		</list>
 	</bullet>
     <bullet>Series of operators

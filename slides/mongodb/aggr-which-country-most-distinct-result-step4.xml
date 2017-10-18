@@ -1,5 +1,5 @@
 <slide>
-<title>Where did you taste the most ~distinct~ beers?</title>
+<title>From which country did you taste the most ~distinct~ beers?</title>
 
 <example inline="1">db.beer.aggregate( [
     { '$group' : {
