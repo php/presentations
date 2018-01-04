@@ -2,12 +2,10 @@
 <title>What makes up an Extension?</title>
 
 <list>
-    <bullet>%config.m4%: configure options and build instructions</bullet>
-    <bullet>%php_extension.h%: header files and glue</bullet>
-    <bullet>%extension.c%: extension definition and function implementation</bullet>
-</list>
-<break/>
-<list>
-    <bullet>%algorithms.c%: C implementation of algorithms</bullet>
+    <bullet>%config.m4% / %config.w32%<br/>configure options and build instructions</bullet>
+    <bullet>%php_extension.h%<br/>header files and glue</bullet>
+    <bullet>%extension.c%<br/>extension definition and function implementation</bullet>
+    <bullet>%algorithms.c%<br/>C implementation of algorithms</bullet>
+    <bullet>%tests/*.phpt%<br/>Tests written in PHP</bullet>
 </list>
 </slide>

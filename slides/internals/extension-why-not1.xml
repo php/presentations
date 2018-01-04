@@ -1,0 +1,12 @@
+<slide>
+<title>Why not implement something in an extension?</title>
+
+<list>
+	<bullet>It takes a lot more time to write</bullet>
+	<bullet>It takes a lot more time to debug</bullet>
+	<bullet>It takes a lot more time to maintain</bullet>
+</list>
+<break lines="3"/>
+<image filename="time.png"/>
+</slide>
+

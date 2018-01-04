@@ -1,11 +1,12 @@
 <slide>
-<title>The Meat</title>
+<title>Extension Set-Up</title>
+<subtitle>Auxiliary Init and Info sections</subtitle>
 
 <blurb>Module INITialisation</blurb>
 <example><![CDATA[
 PHP_MINIT_FUNCTION(geospatial)
 {
-    REGISTER_DOUBLE_CONSTANT("GEO_DEG_TO_RAD", GEO_DEG_TO_RAD, CONST_CS|CONST_PERSISTENT);
+    REGISTER_DOUBLE_CONSTANT("GEO_DIAMETER", GEO_DIAMETER, CONST_CS|CONST_PERSISTENT);
     return SUCCESS;
 }
 ]]></example>
