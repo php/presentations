@@ -1,0 +1,26 @@
+<slide background="wireshark-light.jpg">
+<title>Extending the dissector: subtree</title>
+
+<blurb>Definition:</blurb>
+<example inline="2">
+{ &amp;hf_mongo_msg_sections_section,
+	{ "Section", *"mongo.msg.sections.section",*
+	*FT_NONE,* BASE_NONE, NULL, 0x0,
+	NULL, HFILL }
+},
+</example>
+
+<break/>
+
+<blurb>Add to tree:</blurb>
+<example inline="2">
+ti = proto_tree_add_item(
+	tree,
+	*hf_mongo_msg_sections_section,*
+	tvb, offset, 1 + section_len,
+	ENC_NA
+);
+
+*section_tree* = proto_item_add_subtree(ti, ett_mongo_section);
+</example>
+</slide>

@@ -1,0 +1,17 @@
+<slide>
+<title>Configuring Wireshark</title>
+
+<image filename="wireshark-preferences.png"/>
+
+<div effect="fade-in">
+<break/>
+<blurb>%/tmp/ssl-debug.txt%</blurb>
+
+<example>
+ssl_decrypt_pre_master_secret:
+   session uses Diffie-Hellman key exchange
+   (cipher suite 0xC030 TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384)
+   and cannot be decrypted using a RSA private key file.
+</example>
+</div>
+</slide>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Wireshark and MongoDB 3.6</title>
+<event>WIP</event>
+<location>Online</location>
+<date>January 18th, 2018</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks.html</url>
+<joindin>https://derickrethans.nl/talks/wireshark-mongo</joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/mongodb/wireshark-title.xml</slide>
+<slide>slides/mongodb/wireshark-what.xml</slide>
+
+<slide>slides/mongodb/wireshark-example-start.xml</slide>
+<slide>slides/mongodb/wireshark-example-is-master.xml</slide>
+
+<slide>slides/mongodb/wireshark-3.6.xml</slide>
+
+<slide>slides/mongodb/wireshark-dissectors.xml</slide>
+<slide>slides/mongodb/wireshark-dissectors-subtree.xml</slide>
+<slide>slides/mongodb/wireshark-dissectors-items.xml</slide>
+<slide>slides/mongodb/wireshark-dissectors-bitmask.xml</slide>
+<slide>slides/mongodb/wireshark-example-op-msg.xml</slide>
+
+<slide>slides/mongodb/wireshark-dissectors-op-compressed.xml</slide>
+<slide>slides/mongodb/wireshark-example-op-compressed.xml</slide>
+
+<slide>slides/mongodb/wireshark-ssl-keys.xml</slide>
+<slide>slides/mongodb/wireshark-ssl-wireshark-config.xml</slide>
+<slide>slides/mongodb/wireshark-example-ssl.xml</slide>
+
+<slide>slides/mongodb/wireshark-3.8.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

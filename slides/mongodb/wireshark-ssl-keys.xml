@@ -1,0 +1,27 @@
+<slide background="wireshark-light.jpg">
+<title>SSL: Reading secrets</title>
+
+<blurb>Wireshark:</blurb>
+<list>
+	<bullet>Can decrypt SSL if it has the private key</bullet>
+	<bullet>Can not decrypt SSL if the key exchange is DH</bullet>
+</list>
+
+<div effect="fade-in">
+<break lines="1"/>
+<blurb>But we can hack around it with %LD_PRELOAD%:</blurb>
+<blurb>Download:</blurb>
+<example>https://git.lekensteyn.nl/peter/wireshark-notes/tree/src/sslkeylog.c</example>
+
+<blurb>Compile:</blurb>
+<example>
+cc sslkeylog.c -shared -o libsslkeylog.so -fPIC -ldl
+</example>
+
+<blurb>Use:</blurb>
+<example>
+SSLKEYLOGFILE=/tmp/premaster.txt LD_PRELOAD=./libsslkeylog.so \
+  ./mongo --ssl --sslPEMKeyFile=/tmp/ssl/ssl/client.pem --sslCAFile=/tmp/ssl/ssl/ca.pem
+</example>
+</div>
+</slide>

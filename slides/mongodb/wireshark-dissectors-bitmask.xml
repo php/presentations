@@ -1,0 +1,39 @@
+<slide background="wireshark-light.jpg">
+<title>Extending the dissector: bitmask</title>
+
+<blurb>Definition:</blurb>
+<example inline="2">
+{ *&amp;hf_mongo_msg_flags,*
+	{ "Message Flags", "mongo.msg.flags",
+	FT_UINT32, BASE_HEX, NULL, 0x0,
+	"Bit vector of msg options.", HFILL }
+},
+{ *&amp;hf_mongo_msg_flags_checksumpresent,*
+	{ "ChecksumPresent", "mongo.msg.flags.checksumpresent",
+	FT_BOOLEAN, 32, *TFS(&amp;tfs_yes_no)*, *0x00000001,*
+	"The message ends with 4 bytes containing a CRC-32C [1] checksum", HFILL }
+},
+</example>
+
+<break/>
+
+<blurb>Add to tree:</blurb>
+<example inline="2">
+static const int * mongo_msg_flags[] = {
+	*&amp;hf_mongo_msg_flags_checksumpresent,*
+	&amp;hf_mongo_msg_flags_moretocome,
+	&amp;hf_mongo_msg_flags_exhaustallowed,
+	NULL
+};
+
+*proto_tree_add_bitmask*(
+	tree,
+	tvb, offset,
+	*hf_mongo_msg_flags,*
+	ett_mongo_msg_flags,
+	*mongo_msg_flags,*
+	ENC_LITTLE_ENDIAN
+);
+</example>
+
+</slide>

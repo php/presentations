@@ -1,0 +1,14 @@
+<slide background="wireshark-light.jpg">
+<title>MongoDB 3.6</title>
+
+<break lines="2"/>
+<list>
+	<bullet>New *OP_MSG*:<br/>Extensible Message Format</bullet>
+	<bullet>Improved *OP_COMPRESSED*:<br/>Compression on by default (introduced in 3.4)</bullet>
+</list>
+
+<break lines="2"/>
+<div effect="fade-in">
+<blurb class="big-centre">Wireshark did not support either</blurb>
+</div>
+</slide>

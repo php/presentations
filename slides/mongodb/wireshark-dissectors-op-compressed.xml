@@ -1,0 +1,26 @@
+<slide background="wireshark-light.jpg">
+<title>Extending the dissector: OP_COMPRESSED</title>
+
+<list>
+	<bullet>*zlib* available by default, and has helper API</bullet>
+	<bullet>*snappy* is optional, and needs manual deflating:
+<example>
+#ifdef HAVE_SNAPPY
+  case MONGO_COMPRESSOR_SNAPPY: {
+..
+  } break;
+#endif</example>
+	</bullet>
+	<bullet>Decompression creates a new *data source*:
+<example inline="2">
+if (ret == SNAPPY_OK) {
+    compressed_tvb = tvb_new_child_real_data(tvb, decomp_buf, orig_size, orig_size);
+    *add_new_data_source* (pinfo, compressed_tvb, "Decompressed Data");
+</example></bullet>
+	<bullet>Re-run dissector on decompressed data:
+<example inline="2">
+dissect_opcode_types(compressed_tvb, pinfo, 0, tree, opcode, *effective_opcode*);
+</example></bullet>
+</list>
+
+</slide>

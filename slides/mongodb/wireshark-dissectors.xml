@@ -1,0 +1,46 @@
+<slide background="wireshark-light.jpg">
+<title>Extending the dissector: OP_MSG</title>
+
+<list>
+	<bullet>Add new function for dissecting OP_MSG:
+<example>
+case OP_MSG:
+    offset = dissect_mongo_op_msg(tvb, pinfo, offset, mongo_tree);
+</example></bullet>
+	<bullet>Consume bytes, and build tree with information</bullet>
+	<bullet>Items, Subtrees and Bitmasks</bullet>
+	<bullet>Wireshark API and tooling makes it hard to make undetected mistakes</bullet>
+	<bullet>They have a nicer workflow with Gerrit than the server project</bullet>
+</list>
+<![CDATA[
+
+OP_COMPRESSED:
+
+static const value_string compressor_vals[] = {
+  { MONGO_COMPRESSOR_NOOP,   "Noop (Uncompressed)" },
+  { MONGO_COMPRESSOR_SNAPPY, "Snappy" },
+  { MONGO_COMPRESSOR_ZLIB,   "Zlib" },
+  { 0,  NULL }
+};
+
+
+  - zlib available by default (hard-dependency)
+  - snappy is optional, and needs more work
+
+#ifdef HAVE_SNAPPY
+  case MONGO_COMPRESSOR_SNAPPY: {
+..
+  } break;
+#endif
+
+  - decompression creates a new "data source":
+
+      if (ret == SNAPPY_OK) {
+        compressed_tvb = tvb_new_child_real_data(tvb, decompressed_buffer, (guint32)orig_size, (guint32)orig_size);
+        add_new_data_source(pinfo, compressed_tvb, "Decompressed Data");
+
+  - decompressed data source runs the dissector again, with the embedded (effective) opcode:
+
+        dissect_opcode_types(compressed_tvb, pinfo, 0, tree, opcode, effective_opcode);
+]]>
+</slide>

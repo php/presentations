@@ -1,0 +1,15 @@
+<slide background="wireshark-light.jpg">
+<title>The SSL/OP_COMPRESSED rabbit hole</title>
+
+<div effect="fade-out">
+<image filename="wireshark-ssl-SSL.png"/>
+</div>
+
+<div effect="fade-in-out">
+<image filename="wireshark-ssl-MONGO.png"/>
+</div>
+
+<div effect="fade-in">
+<image filename="wireshark-ssl-OP_COMPRESSED.png"/>
+</div>
+</slide>
