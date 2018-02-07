@@ -1,14 +1,14 @@
 <slide>
 <title>Xdebug</title>
-<div effect="fade-out">
-    <list>
-        <bullet>It's Open Source and free (as in "free beer")</bullet>
-        <bullet>Working on Xdebug takes up a lot of spare time</bullet>
-        <bullet>I don't have a lot of spare time</bullet>
-    </list>
-</div>
-<div effect="fade-in">
-    <break/>
-    <image align="center" filename="xdebug-donate.jpg" pdf-scale="0.8" y-offset="4"/>
-</div>
+<list>
+	<bullet>It's Open Source and free (as in "free beer")</bullet>
+	<bullet>Using Xdebug saves you a lot of time</bullet>
+	<bullet>Working on Xdebug takes up a lot of time</bullet>
+</list>
+
+<break lines="5"/>
+<image align="center" filename="patreon.png" pdf-scale="0.8" y-offset="4"/>
+
+<blurb align="center">https://www.patreon.com/derickr</blurb>
+
 </slide>
