@@ -1,7 +1,12 @@
 <slide>
 <title>Xdebug 2.6 — Filters</title>
 
-<blurb>Connection timeout configurable</blurb>
-<blurb class="small">&#160;→ Used to be 200ms</blurb>
+<blurb>Restrictions on where Xdebug does work</blurb>
+<blurb class="small">&#160;→ Code Coverage</blurb>
+<blurb class="small">&#160;→ Stack Traces &amp; Function Traces</blurb>
 <break/>
+<blurb>Modes:</blurb>
+<blurb class="small">&#160;→ Black list or White list</blurb>
+<blurb class="small">&#160;→ On Path-Prefix</blurb>
+<blurb class="small">&#160;→ On Class-Prefix (traces only)</blurb>
 </slide>

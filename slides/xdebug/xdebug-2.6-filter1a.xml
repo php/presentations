@@ -1,0 +1,8 @@
+<slide>
+<title>Xdebug 2.6 — xdebug_set_filter</title>
+
+<blurb>%$filter_group%<br/>%XDEBUG_FILTER_CODE_COVERAGE% or %XDEBUG_FILTER_TRACING%</blurb>
+<blurb>%$filter_type%<br/>%XDEBUG_PATH_WHITELIST%, %XDEBUG_PATH_BLACKLIST%,  %XDEBUG_NAMESPACE_WHITELIST%, or %XDEBUG_NAMESPACE_BLACKLIST%</blurb>
+<blurb>%$array_of_filters%<br/>array containing path or class prefixes</blurb>
+
+</slide>

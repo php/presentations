@@ -10,12 +10,12 @@ php ~/phpunit-5.7.22.phar --coverage-html=/tmp/coverage
 <example>
 <![CDATA[cat /tmp/auto_prepend.php]]>
 </example>
-<example>
-<![CDATA[<?php
+<example inline="2">
+<![CDATA[&lt;?php
 xdebug_set_filter(
 	XDEBUG_FILTER_CODE_COVERAGE,
 	XDEBUG_PATH_WHITELIST,
-	[ '/home/derick/zeta-new-Document/src' ]
+	[ '/home/derick/zeta-new-Document/src*/*' ]
 );]]>
 </example>
 <example inline="2">

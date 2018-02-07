@@ -1,0 +1,16 @@
+<slide>
+<title>Xdebug 2.6 — xdebug_set_filter</title>
+
+<example><![CDATA[<?php
+xdebug_set_filter(
+	XDEBUG_FILTER_TRACING,
+	XDEBUG_NAMESPACE_WHITELIST,
+	[
+		'',
+		'Dram',
+		'MongoDB\\',
+	]
+);
+]]></example>
+
+</slide>
