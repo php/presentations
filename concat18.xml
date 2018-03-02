@@ -1,0 +1,48 @@
+<presentation
+    template="simple"
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>PHP in 2018</title>
+<event>conc.at</event>
+<location>Salzburg</location>
+<date>Mar.3, 2018</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/concat18</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/80s.xml</slide>
+<slide>slides/intro/90s.xml</slide>
+<slide>slides/intro/nold.xml</slide>
+<slide>slides/intro/nold2.xml</slide>
+<slide>slides/intro/nold3.xml</slide>
+
+<slide>slides/intro/php7_speed.xml</slide>
+<slide>slides/intro/php7_perf_s.xml</slide>
+
+<slide>slides/intro/wp2017may.xml</slide>
+<slide>slides/intro/smemwp2017.xml</slide>
+<slide>slides/intro/php7prod.xml</slide>
+<slide>slides/intro/web_impact.xml</slide>
+
+<slide>slides/intro/php72_2018.xml</slide>
+<slide>slides/intro/dce.xml</slide>
+
+<slide>slides/intro/phan_2018.xml</slide>
+
+<slide>slides/intro/thank_you.xml</slide>
+
+</presentation>

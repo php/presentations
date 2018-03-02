@@ -1,0 +1,50 @@
+<slide title="" section="phan">
+
+<blurb fontsize="20em" align="center">Static Analysis</blurb>
+<break lines="2"/>
+<link fontsize="2em" align="center" href="https://github.com/phan/phan">github.com/phan/phan</link>
+<break lines="1" section="phan0"/>
+<blurb fontsize="1.5em" align="left">Install with composer</blurb>
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ composer require --dev phan/phan
+]]></example>
+<blurb fontsize="1.5em" align="left">Create .phan/config.php</blurb>
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ phan --init
+]]></example>
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ ./vendor/bin/phan
+]]></example>
+
+<break lines="1" section="phan1"/>
+<blurb fontsize="2em" align="left">Checks</blurb>
+<list>
+<bullet>phpdoc type annotations</bullet>
+<bullet>Everything is defined and accessible</bullet>
+<bullet>Type safety</bullet>
+<bullet>PHP version compatibility</bullet>
+<bullet>No-ops</bullet>
+<bullet>Unreachable code</bullet>
+<bullet>Unused use statements</bullet>
+<bullet>Redefinitions</bullet>
+<bullet>Signature compatibility and final on inheritance</bullet>
+<bullet>and many more</bullet>
+</list>
+
+<break lines="1" section="phan2"/>
+<blurb fontsize="1.5em" align="left">User plugins</blurb>
+<link fontsize="1.5em" align="center" href="https://github.com/phan/phan/wiki/Writing-Plugins-for-Phan">Writing Plugins for Phan</link>
+<blurb fontsize="1.5em" align="left">Included sample plugins</blurb>
+<list>
+<bullet>DemoPlugin</bullet>
+<bullet>PregRegexCheckerPlugin</bullet>
+<bullet>PrintfRegexCheckerPlugin</bullet>
+<bullet>UnreachableCodePlugin</bullet>
+<bullet>DollarDollarPlugin</bullet>
+<bullet>NonBoolBranchPlugin</bullet>
+<bullet>NumericalComparisonPlugin</bullet>
+</list>
+<break lines="1" section="phan3"/>
+<blurb fontsize="2em" align="left">Daemon mode</blurb>
+<movie filename="phanvid.mp4" align="center" width="1848" height="1008" autoplay="false" replay="0"/>
+</slide>
