@@ -6,9 +6,9 @@
     <bullet>%$project%</bullet>
     <bullet>%$group%</bullet>
     <bullet>%$unwind%</bullet>
-    <bullet>%$sample% (new in 3.2)</bullet>
-    <bullet>%$sortByCount% (new in 3.4)</bullet>
-    <bullet>%$bucket% / %$bucketAuto% (new in 3.4)</bullet>
+    <bullet>%$sample%</bullet>
+    <bullet>%$sortByCount%</bullet>
+    <bullet>%$bucket% / %$bucketAuto%</bullet>
     <bullet>%$geoNear%</bullet>
     <bullet>%$sort%, %$limit%, %$skip%</bullet>
 </list>

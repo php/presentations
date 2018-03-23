@@ -14,6 +14,4 @@ db.runCommand( {
 	validationAction: *"warn"*, // error, 
 } )
 </example>
-<break/>
-	<blurb>MongoDB 3.6 adds JSON Schema support</blurb>
 </slide>

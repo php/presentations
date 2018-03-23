@@ -13,6 +13,7 @@
     <bullet>Warning!
 		<list>
 			<bullet>Secondaries may be out of date</bullet>
+			<bullet>Failover may happen while you're trying to write</bullet>
 			<bullet>Not appropriate for all applications</bullet>
 		</list>
 	</bullet>

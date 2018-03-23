@@ -1,0 +1,28 @@
+<slide>
+<title>Enforcing Schema</title>
+
+<blurb>Allows you to set a *validator*, a query that every new or updated document must match</blurb>
+<blurb>Example with JSON schema:</blurb>
+<example inline="1">
+db.runCommand( {
+    collMod: "whisky",
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            *required*: [ "name", "age" ],
+            properties: {
+                name: {
+                    *bsonType*: "string",
+                    description: "The name of the whisky.",
+                },
+                age: {
+                    bsonType: "int",
+                    *minimum: 3,*
+                    description: "The age in years of the whisky".
+                }
+            }
+        }
+    },
+} )
+</example>
+</slide>
