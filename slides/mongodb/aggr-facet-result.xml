@@ -3,9 +3,7 @@
 
 <example inline="1">db.beer.aggregate( [
     { *'$facet'* : {
-        'beer_type' :       [ { *'$sortByCount'* : '$beer_type' } ],
-        'brewery_country' : [ { '$sortByCount' : '$brewery_country' } ],
-        'ibu' : [
+        'abv' : [
             { '$match' : { 'beer_abv' : { '$gte' : 0 } } },
             { '$bucket' : {
                 groupBy: '$beer_abv',
@@ -13,6 +11,8 @@
                 default: 'way-too-much',
             } }
         ],
+        'beer_type' :       [ { *'$sortByCount'* : '$beer_type' } ],
+        'brewery_country' : [ { '$sortByCount' : '$brewery_country' } ],
     } },
 ] ).pretty()</example>
 

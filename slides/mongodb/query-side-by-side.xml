@@ -2,35 +2,35 @@
 <title>Querying</title>
 
 <example>
-SELECT * FROM table;
+SELECT * FROM whisky;
 
-$collection->find( [] );
+$whisky->find( [] );
 </example>
 <example>
-SELECT foo, bar FROM table;
+SELECT name, age FROM whisky;
 
-$collection->find( [], [ 'foo' => 1, 'bar' => 1 ] );
+$whisky->find( [], [ 'name' => 1, 'age' => 1 ] );
 </example>
 <example>
-SELECT * FROM table WHERE a = 42;
+SELECT * FROM whisky WHERE age = 42;
 
-$collection->find( [ 'a' => 42 ] );
+$whisky->find( [ 'age' => 42 ] );
 </example>
 <example>
-SELECT * FROM table WHERE a = 'whisky' AND b > 18;
+SELECT * FROM whisky WHERE name = 'Macallan' AND age > 18;
 
-$collection->find( [ 'a' => 'whisky', 'b' => [ '$gt' => 18 ] ] );
+$whisky->find( [ 'a' => 'Macallan', 'age' => [ '$gt' => 18 ] ] );
 </example>
 <example inline="1">
-SELECT * FROM table WHERE a = 'whisky' OR b > 18;
+SELECT * FROM whisky WHERE name = 'Macallan' OR age > 18;
 
-$collection->find( [ '$or' => *[*
-	[ 'a' => 'whisky' ],
-	[ 'b' => [ '$gt' => 18 ] ]
+$whisky->find( [ '$or' => *[*
+	[ 'name' => 'Macallan' ],
+	[ 'age' => [ '$gt' => 18 ] ]
 *]* ] );
 </example>
 <example>
-SELECT * FROM table1 LEFT JOIN table2 ON (table1.a = table2.b);
+SELECT * FROM whisky LEFT JOIN distillery ON (whisky.distillery_id = distillery.id);
 
 ???
 </example>
