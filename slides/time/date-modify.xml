@@ -4,7 +4,7 @@
 
   <example result="0"><![CDATA[<?php
   date_default_timezone_set("Europe/London");
-  $ts = new DateTime("2010-03-08 15:53:55");
+  $ts = new DateTime("2018-03-17 15:53:55");
 
   $ts->modify("+2 days");
 
@@ -16,8 +16,8 @@
 <blurb>Result:</blurb>
   <blurb class='pre'>   Mon, 08 Mar 2010 15:53:55 +0000</blurb>
 
-  <blurb effect="fade-in" class='pre'>   |ef2929|Wed, 10 Mar| 2010 15:53:55 +0000</blurb>
-  <blurb effect="fade-in" class='pre'>   |ef2929|Fri, 02 Apr| 2010 15:53:55 |ef2929|+0100|</blurb>
-  <blurb effect="fade-in" class='pre'>   Fri, |ef2929|09 Apr| 2010 15:53:55 +0100</blurb>
+  <blurb effect="fade-in" class='pre'>   |ef2929|Mon, 19 Mar| 2018 15:53:55 +0000</blurb>
+  <blurb effect="fade-in" class='pre'>   |ef2929|Fri, 13 Apr| 2018 00:00:00 |ef2929|+0100|</blurb>
+  <blurb effect="fade-in" class='pre'>   Fri, |ef2929|20 Apr| 2018 00:00:00 +0100</blurb>
 
 </slide>

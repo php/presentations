@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide>
-	<title>Default Timezones</title>
+    <title>Default Timezones</title>
 
-	<blurb>Setting a default timezone:</blurb>
-	<example result="0"><![CDATA[<?php
-	date_default_timezone_set("Europe/Oslo");
-	$ts = new DateTime("1978-12-22 09:15");
-	echo $ts->format("e");
+    <blurb>Setting a default timezone:</blurb>
+    <example result="0"><![CDATA[<?php
+    date_default_timezone_set("Europe/Oslo");
+    $ts = new DateTime("1978-12-22 09:15");
+    echo $ts->format("e");
 ?>]]></example>
 <break/>
 
-	<blurb>Getting a default timezone:</blurb>
-	<example result="0"><![CDATA[<?php
-	$default_identifier = date_default_timezone_get();
-	echo $default_identifier;
+    <blurb>Getting a default timezone:</blurb>
+    <example result="0"><![CDATA[<?php
+    $default_identifier = date_default_timezone_get();
+    echo $default_identifier;
 ?>]]></example>
 <break/>
 
-	<blurb>Default timezone is 'guessed' in the following order:</blurb>
-	<list>
-		<bullet>~date_default_timezone_set()~ value</bullet>
-		<bullet>php.ini's %date.timezone% setting</bullet>
-	</list>
+    <blurb>Default timezone is 'guessed' in the following order:</blurb>
+    <list>
+        <bullet>~date_default_timezone_set()~ value</bullet>
+        <bullet>php.ini's %date.timezone% setting</bullet>
+    </list>
 </slide>

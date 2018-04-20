@@ -1,0 +1,31 @@
+<slide>
+<title>Storing date/time in a database</title>
+<subtitle>Query in MongoDB</subtitle>
+
+<example><![CDATA[{
+	'title' : 'Giving a talk: Advanced Date/Time handling with PHP',
+	'time' : { 
+		'ts': ISODate("2018-04-19 15:27:32"), // ms since Epoch
+		'tz': 'Europe/London',
+	}
+}]]></example>
+
+<blurb>Query:</blurb>
+<example><![CDATA[
+db.dates.aggregate( { '$project' : {
+	local_date: {
+		'$dateToString' : {
+			format: '%Y-%m-%d %H:%M:%S',
+			date: '$time.ts',
+			timezone: '$time.tz'
+		}
+	}
+} } );
+]]></example>
+
+<blurb>Result:</blurb>
+<example><![CDATA[{
+	"_id" : ObjectId("5ad8a9148cb588e5ea33f228"),
+	"local_date" : "2018-04-19 16:34:57"
+}]]></example>
+</slide>

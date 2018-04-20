@@ -2,11 +2,11 @@
 <slide>
   <title>Parsing Dates</title>
 
-  <blurb align='center'>"|a4000000|22||3464a4|apr||f57900|2006| |ad7fa8|8|:|ef2929|36|:|73d216|14| # |c4a000|Europe/Oslo| |75507b|CEST|"</blurb>
+  <blurb align='center'>"|a4000000|22||3464a4|apr||f57900|2018| |ad7fa8|8|:|ef2929|36|:|73d216|14| # |c4a000|Europe/Oslo| |75507b|CEST|"</blurb>
 
 <blurb>Parsing strings with the ~date_parse()~ function:</blurb>
   <example result="1"><![CDATA[<?php
-$date = "22apr2006 8:36:14.43 # Europe/Oslo CEST";
+$date = "22apr2018 8:36:14.43 # Europe/Oslo CEST";
 $t = date_parse( $date );
 
 echo $t['year'], '-', $t['month'], '-', $t['day'], " ";

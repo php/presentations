@@ -1,26 +1,26 @@
 <slide>
 <title>Storing date/time in a database</title>
-<subtitle>Conclusion</subtitle>
-
-<blurb>If you want to future proof a specific date and time (Oct 1st,
-13:00)-ie, storing a time in *local time*:</blurb>
-<example><![CDATA[{
-	'title' : 'Giving a talk: Advanced Date/Time handling with PHP',
-	'time' : { 
-		'tz': 'America/Montreal',
-		'dt': '2012-10-01 13:00',
-	}
-}]]></example>
-<break />
+<subtitle>Summary</subtitle>
 
 <blurb>If you want to store a time for an appointment for a group of people
 all in different timezones-ie, store a *specific point in time*:</blurb>
 <example><![CDATA[{
 	'title' : 'Meeting about getting rid of Daylight Saving Time',
 	'time' : { 
-		'tz': 'America/Montreal',
-		'ts': 1349110800,
+		'ts': ISODate("2018-04-19 15:27:32"),
+		'tz': 'Europe/London',
 	},
 	'attendees' : [ 'Arthur David Olson', 'Paul Eggert' ],
+}]]></example>
+<break />
+
+<blurb>If you want to future proof a specific date and time (Oct 1st,
+13:00)-ie, storing a time in *local time*:</blurb>
+<example><![CDATA[{
+	'title' : 'Giving a talk: Advanced Date/Time handling with PHP',
+	'time' : { 
+		'dt': '2018-04-18 19:40',
+		'tz': 'Europe/London',
+	}
 }]]></example>
 </slide>

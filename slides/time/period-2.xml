@@ -4,10 +4,10 @@
 	<subtitle>Iterating over a period</subtitle>
 
 	<example result="1"><![CDATA[<?php
-$db = new DateTimeImmutable( '2013-12-31' );
-$de = new DateTimeImmutable( '2014-12-31' );
+$db = new DateTimeImmutable( '2017-12-31' );
+$de = new DateTimeImmutable( '2018-12-31' );
 $di = DateInterval::createFromDateString(
-	'third tuesday of next month'
+	'first thursday of next month'
 );
 $dp = new DatePeriod(
 	$db, $di, $de, DatePeriod::EXCLUDE_START_DATE

@@ -12,7 +12,7 @@ $i = new DateInterval( 'P3DT6H' );
 
 // from a difference
 $d1 = new DateTimeImmutable();
-$d2 = new DateTimeImmutable( "2014-06-20 11:45 Europe/London" );
+$d2 = new DateTimeImmutable( "2018-04-21 11:00 Europe/London" );
 $i = $d1->diff( $d2 );
 
 // displaying the difference

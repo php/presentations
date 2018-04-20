@@ -4,7 +4,7 @@
 
 	<blurb>Standard:</blurb>
   <example result="1"><![CDATA[<?php
-  $ts = new DateTime("2014-03-08 15:53:55");
+  $ts = new DateTime("2018-04-17 15:53:55");
   $new = $ts->modify("+2 days");
   echo $ts->format(DateTime::RFC2822), "\n";
   echo $new->format(DateTime::RFC2822), "\n";

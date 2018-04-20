@@ -4,7 +4,7 @@
 
 	<blurb>Parsing strings for date time information:</blurb>
 	<example><![CDATA[<?php
-  $dt = new DateTime("2010-03-08 08:43:57");
+  $dt = new DateTime("2018-03-08 08:43:57");
 ?>]]></example>
 <break/>
 
@@ -14,7 +14,7 @@
 <break/>
 
 	<example result="1"><![CDATA[<?php
-  $dt = new DateTime("2010-03-08 08:44:12");
+  $dt = new DateTime("2018-03-08 08:44:12");
   echo $dt->format( 'U' ), "\n";
 ?>]]></example>
 <break/>
