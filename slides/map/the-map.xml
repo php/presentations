@@ -1,0 +1,19 @@
+<slide>
+<title>Goals &amp; Steps</title>
+
+<blurb>Goals</blurb>
+<list>
+	<bullet>Council overview map</bullet>
+	<bullet>Big map for an overview of the ward<br/>— "what estate agents do"</bullet>
+</list>
+
+<break/>
+<blurb>Steps</blurb>
+<list>
+	<bullet>Obtain boundary data</bullet>
+	<bullet>Obtain and process OpenStreetMap data</bullet>
+	<bullet>Style and massage data with QGis</bullet>
+	<bullet>Render maps, and split them up for 4x4 printing</bullet>
+</list>
+
+</slide>

@@ -1,0 +1,11 @@
+<slide>
+<title>Clipping Data to Brent Polygon</title>
+
+<list>
+	<bullet>Download polygon:<br/><example>http://polygons.openstreetmap.fr/?id=75767</example></bullet>
+	<bullet>Remove prefix and postfix:<br/>%{"type":"GeometryCollection","geometries":[%<br/>%]}%</bullet>
+	<bullet>Create shape file:<br/><example>ogr2ogr brent-polygon.shp brent-polygon-one-feature.geojson</example></bullet>
+	<bullet>Clip data:<br/><example>ogr2ogr -clipsrc brent-polygon.shp -f "GeoJSON" \
+	ways-in-brent.geojson ways-in-brent-raw.geojson</example></bullet>
+</list>
+</slide>

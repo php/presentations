@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>OpenStreetMap</topic>
+<title>Mapping and Elections</title>
+<event>OpenStreetMap Q&amp;A</event>
+<location>London, UK</location>
+<date>May 9th, 2018</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<url>https://derickrethans.nl/talks.html</url>
+<joindin>https://derickrethans.nl/talks/election-map-osmqa18a</joindin>
+<twitter>derickr</twitter>
+
+<slide>slides/mongodb/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- MAPS -->
+<slide>slides/map/story.xml</slide>
+<slide>slides/map/local-elections.xml</slide>
+<slide>slides/map/leaflet-tory.xml</slide>
+
+<slide>slides/map/the-map.xml</slide>
+<slide>slides/map/boundary-data.xml</slide>
+<slide>slides/map/boundary-data-json1.xml</slide>
+<slide>slides/map/boundary-data-json2.xml</slide>
+
+<slide>slides/map/openstreetmap-brent.xml</slide>
+<slide>slides/map/clipping-polygon.xml</slide>
+
+
+<slide>slides/map/qgis-set-up.xml</slide>
+<slide>slides/map/qgis-result-overview.xml</slide>
+<slide>slides/map/qgis-result-ward.xml</slide>
+
+<slide>slides/map/didnt-win.xml</slide>
+
+<slide>slides/map/other-win1.xml</slide>
+<slide>slides/map/other-win2.xml</slide>
+
+<!-- EXIT -->
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide> <!-- resources -->
+</presentation>
