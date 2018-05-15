@@ -1,9 +1,5 @@
-<slide style="white">
+<slide style="white" background="bugs.jpg">
 	<title>Activating the Remote Debugger</title>
-
-	<image filename="bugs.jpg"/>
-
-	<break lines="4"/>
 
 	<blurb>With browser extensions:</blurb>
 	<blurb>Firefox:<br/><link href="https://addons.mozilla.org/en-gb/firefox/tag/xdebug"/></blurb>
