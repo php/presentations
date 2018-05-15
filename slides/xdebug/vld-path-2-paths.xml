@@ -3,16 +3,7 @@
 <image align="right" filename="vld-path-2-paths.png"/>
 <example>
 <![CDATA[  1 <?php
-  2 function loopy($i)
-  3 {
-  4     do
-  5     {
-  6         echo $i, ' ';
-  7 
-  8     } while( $i-- );
-  9     echo "\n";
- 10 }
- 11 
+…
  12 function ifthenelse( $a, $b )
  13 {
  14     if ($a) {
