@@ -1,19 +1,14 @@
 <slide>
 <title>Returning Scalar Values</title>
 
-<blurb>Return Immediately:</blurb>
-<example>RETURN_BOOL(!mongoc_cursor_is_alive(intern->cursor));</example>
-<example>RETURN_LONG(zend_memory_usage(0));</example>
-<example>RETURN_STRING(i->function.function);</example>
+<blurb>Set Return Value:</blurb>
+<example>RETVAL_FALSE;</example>
+<example>RETVAL_STRING(trace_fname);</example>
 
 <break/>
 
-<blurb>Just Set Return Value:</blurb>
-<example>RETVAL_FALSE;</example>
-<example>#if PHP_VERSION_ID >= 70000
-    RETVAL_STRING(trace_fname);
-#else
-    RETVAL_STRING(trace_fname, 1);
-#endif
-</example>
+<blurb>Set Value and Return Immediately:</blurb>
+<example>RETURN_BOOL(!mongoc_cursor_is_alive(intern->cursor));</example>
+<example>RETURN_LONG(zend_memory_usage(0));</example>
+<example>RETURN_STRING(i->function.function);</example>
 </slide>
