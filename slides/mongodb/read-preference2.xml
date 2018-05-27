@@ -1,13 +1,14 @@
 <slide>
-<title>Read preferences</title>
+<title>Read Preference</title>
+<subtitle>%\MongoDB\Driver\ReadPreference%</subtitle>
 
 <blurb>Select between candidate servers from a specific set</blurb>
 <list>
-	<bullet>primary (default)</bullet>
-	<bullet>primary_preferred (%RP_PRIMARY_PREFERRED%)</bullet>
-	<bullet>secondary</bullet>
-	<bullet>secondary_preferred</bullet>
-	<bullet>nearest</bullet>
+	<bullet>%RP_PRIMARY% (default)</bullet>
+	<bullet>%RP_PRIMARY_PREFERRED%</bullet>
+	<bullet>%RP_SECONDARY%</bullet>
+	<bullet>%RP_SECONDARY_PREFERRED%</bullet>
+	<bullet>%RP_NEAREST%</bullet>
 </list>
 <break/>
 <list>

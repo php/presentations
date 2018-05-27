@@ -1,0 +1,26 @@
+<slide>
+<title>Write Some Code</title>
+
+<blurb>Write a script that:</blurb>
+<list>
+	<bullet>Connects to the Replica Set</bullet>
+	<bullet>Inserts a Document</bullet>
+	<bullet>Reads Document from Secondary</bullet>
+</list>
+
+<break/>
+<example>
+mkdir new-project
+cd new-project
+composer require mongodb/mongodb
+</example>
+<example><![CDATA[<?php
+require 'vendor/autoload.php';
+
+$client = new \Mongo\Client( $dsn );
+$collection = $client->selectCollection( 'databasename', 'collectionname' );
+?>]]></example>
+
+<break/>
+<blurb>See slides: ~9~, ~22~, ~28~</blurb>
+</slide>

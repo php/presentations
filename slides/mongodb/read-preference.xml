@@ -1,17 +1,18 @@
 <slide>
-<title>Read preferences</title>
+<title>Read Preference</title>
+<subtitle>%\MongoDB\Driver\ReadPreference%</subtitle>
 
 <example result="0"><![CDATA[<?php
-$m = new \Mongo\Driver\Manager(
+$m = new \MongoDB\Client(
     'mongodb://localhost:13000/?replicaSet=poiset' .
     '&readPreference=nearest&readPreferenceTags=dc:asia'
 );
 
-$m->executeQuery( 'demo.test', $query );
+$m->demo->test->find( $query );
 ?>]]></example>
 <blurb>or per-query:</blurb>
 <example result="0"><![CDATA[<?php
-$m = new \Mongo\Driver\Manager(
+$m = new \MongoDB\Client(
     'mongodb://localhost:13000/?replicaSet=poiset'
 );
 
@@ -19,7 +20,7 @@ $rp = new MongoDB\Driver\ReadPreference(
     MongoDB\Driver\ReadPreference::RP_NEAREST, [ [ 'dc' => 'asia' ] ]
 );
 
-$m->executeQuery( 'demo.test', $query, $rp );
+$m->demo->test->find( $query, [ 'readPreference' => $rp ] );
 ?>]]></example>
 
 </slide>

@@ -1,38 +1,28 @@
 <slide>
-<title>Setting up replication</title>
+<title>Setting up Replication</title>
+
+<blurb>Open three terminals, and create three directories: %db1%, %db2% and %arb%</blurb>
 
 <blurb>Starting the daemons (2 data, 1 arbiter):</blurb>
-
 <example>
-mongod -f /etc/mongodb.conf --dbpath=~/repl-slave0 --port 13000 --replSet seta
-mongod -f /etc/mongodb.conf --dbpath=~/repl-slave1 --port 13001 --replSet seta
-mongod -f /etc/mongodb.conf --dbpath=~/repl-arb --port 13002 --replSet seta --rest
+mongod --dbpath=./db1 --port 13000 --replSet seta --smallfiles --logpath=db1.log
+mongod --dbpath=./db2 --port 13001 --replSet seta --smallfiles --logpath=db2.log
+mongod --dbpath=./arb --port 13002 --replSet seta --smallfiles --logpath=arb.log
 </example>
 
-<div effect="fade-out">
-<blurb>Sample %/etc/mongodb.conf%</blurb>
-<example>
-logpath=/var/log/mongodb/mongodb.log
-logappend=true
-smallfiles=true
-</example>
-</div>
-<div effect="fade-in">
 <blurb>Configure the set:</blurb>
 <example>
-mongo whisky:13000
+$ mongo localhost:13000
 
-> db.adminCommand( {
-  replSetInitiate: {
-    _id: 'seta',
-    members: [
-     { _id: 0, host: 'whisky:13000', tags: { 'dc': 'west', 'use': 'accounting' } },
-     { _id: 1, host: 'whisky:13001', tags: { 'dc': 'east', 'use': 'reporting' } },
-    ]
-  }
-} );
-
-PRIMARY> rs.addArb('whisky:13002');
+> rs.initiate( { _id: 'seta', members: [ { _id: 0, host: 'localhost:13000' } ] } );
+seta:PRIMARY> rs.add('localhost:13001');
+seta:PRIMARY> rs.addArb('localhost:13002');
 </example>
-</div>
+
+<blurb>Check whether it worked:</blurb>
+<example>
+seta:PRIMARY> db.isMaster();
+seta:PRIMARY> rs.status();
+</example>
+
 </slide>

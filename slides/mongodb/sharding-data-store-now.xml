@@ -2,17 +2,8 @@
 <title>Data Store Scalability Today</title>
 
 <list>
-	<bullet>
-		MongoDB auto-sharding available
-	</bullet>
-	<bullet>
-		A data store that is
-		<list>
-            <bullet>Free and publicly available</bullet>
-            <bullet>Open source (https://github.com/mongodb/mongo)</bullet>
-            <bullet>Horizontally scalable</bullet>
-            <bullet>Application independent</bullet>
-		</list>
-	</bullet>
+	<bullet>MongoDB has auto-sharding</bullet>
+	<bullet>Horizontally scalable</bullet>
+	<bullet>Application independent</bullet>
 </list>
 </slide>

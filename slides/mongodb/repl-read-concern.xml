@@ -1,0 +1,21 @@
+<slide>
+<title>Read Concern</title>
+<subtitle>%\MongoDB\Driver\ReadConcern%</subtitle>
+
+<list>
+	<bullet>%local%: No guarantees</bullet>
+	<bullet>%available%: No guarantees</bullet>
+	<bullet>%majority%: Returns data acknowledged by a majority of the nodes</bullet>
+	<bullet>%lineralizable%: Returns data acknowledged by a majority of the nodes, completed before the start of the read operation</bullet>
+</list>
+
+<example result="0"><![CDATA[<?php
+$m = new \MongoDB\Client(
+    'mongodb://localhost:13000/?replicaSet=poiset'
+);
+
+$rc = new MongoDB\Driver\ReadConcern( MongoDB\Driver\ReadConcern::LINEARIZABLE );
+
+$m->demo->test->find( $query, [ 'readConcern' => $rc, 'maxTimeMS' => 200 ] );
+?>]]></example>
+</slide>
