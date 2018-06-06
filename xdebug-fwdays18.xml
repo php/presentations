@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>Debugging</topic>
+<title>What's New in Xdebug</title>
+<event>fwdays 2018</event>
+<location>Kyiv, Ukraine</location>
+<date>June 10th, 2018</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<twitter>derickr</twitter>
+<url>http://derickrethans.nl/talks.html</url>
+<joindin></joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/shutup.xml</slide>
+
+<slide>slides/xdebug/tracing.xml</slide>
+<slide>slides/xdebug/functiontrace-summary.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.3-error-munging.xml</slide>
+
+<slide>slides/xdebug/analyse-running-script.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.3-new.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-new-dbgp.xml</slide>
+
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/debugger-browser-extensions.xml</slide>
+<slide>slides/xdebug/phpstorm.xml</slide>
+<slide>slides/xdebug/debugger-connection-log.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/profile2.xml</slide>
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/paths.xml</slide>
+
+<slide>slides/xdebug/vld-path-4-code.xml</slide>
+<slide>slides/xdebug/vld-path-4-output.xml</slide>
+
+<slide>slides/xdebug/vld-path-3-code.xml</slide>
+<slide>slides/xdebug/vld-path-3-output.xml</slide>
+<slide>slides/xdebug/vld-path-3-paths.xml</slide>
+
+<slide>slides/xdebug/vld-path-5-wrapup.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.4-new.xml</slide>
+<slide>slides/xdebug/function-monitor.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.5-new.xml</slide>
+
+<slide>slides/xdebug/happy-15th.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.6-new.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-switch.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-switch2.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-switch3.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.6-filter1.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-filter1a.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-filter1b.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-filter2.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-filter2a.xml</slide>
+
+<slide>slides/xdebug/donate.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
