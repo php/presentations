@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PHP in 2018</title>
+
+		<meta name="description" content="PHP in 2018">
+		<meta name="author" content="Rasmus Lerdorf">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
+
+		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
+		<link rel="stylesheet" href="/styles/xcode.css">
+
+		<!-- Override a few styles -->
+        <style>
+        /*
+		   Not actually sure why this block isn't being picked up from the syntax highlight css 
+		   If you change the syntax highlight theme, copy the first block here
+		*/
+        .reveal pre {
+                width: 100%;
+        }
+
+        .reveal pre code {
+                display: block;
+                max-height: 600px;
+                overflow-x: auto;
+                padding: 0.5em;
+                line-height: 125%;
+                background: #fff;
+                color: black;
+                -webkit-text-size-adjust: none;
+        }
+
+        .reveal section img {
+               box-shadow: none;
+               border: none;
+        }
+
+        .reveal code.shell {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #000;
+            color: #ddd;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+
+        .reveal code.result {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: #000;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+
+        /* Left-align h3 and h4 if they are p elements */
+        h3.p {
+                text-align: left;
+        }
+        h4.p {
+                text-align: left;
+        }
+        /* and left-aligned but slightly indented bullet lists */
+        .reveal ul {
+            display: block;
+            margin: 0 0 1em 3em;
+        }
+		/* Example titles */
+		p.example {
+			text-align: left;
+			margin: 0 0 -0.5em 1em;
+			font-weight: bold;
+		}
+		/* Example output style */
+		pre.output {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: black;
+			line-height: 200%;
+            -webkit-text-size-adjust: none;
+		}
+
+        </style>
+
+		 <!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <!-- Needed for charts to work. Fall back to network if no local copy -->
+        <script type='text/javascript' src='/jquery.min.js'></script> 
+        <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">\x3C/script>')</script>
+        <script src="/highcharts.js"></script>
+        <script>window.Highcharts || document.write('<script src="http://code.highcharts.com/highcharts.js">\x3C/script>')</script>
+
+		<!--[if lt IE 9]>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>PHP in 2018</h1>
+					<h3>Shift Dev Conf</h3>
+					<h3>Split</h3>
+					<h3>June 1, 2018</h3>
+					<a href="http://talks.php.net/shift">http://talks.php.net/shift</a><br><br>
+					<p>Rasmus Lerdorf<br>
+					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
+					</p>
+					<aside class="notes">
+											</aside>
+				</section>
+					<section>
+		<section id="hist_80s">
+		<h1 style="text-align:center;text-transform:none">1980s</h1>
+		<img src="/presentations/slides/intro/timex.jpg" align="center" width="" height="">
+		</section>
+<section id="hist_80s_1">
+		<img src="/presentations/slides/intro/vic20.jpg" align="center" width="" height="">
+		</section>
+<section id="hist_80s_2">
+		<img src="/presentations/slides/intro/hayes.jpg" align="center" width="" height="">
+		</section>
+<section id="hist_80s_3">
+		<img src="/presentations/slides/intro/Zmodem.gif" align="center" width="" height="">
+		</section>	</section>
+	<section>
+		<section id="hist_90s">
+		<h1 style="text-align:center;text-transform:none">1990s</h1>
+		<img src="/presentations/slides/intro/gopher.gif" align="center" width="" height="">
+		</section>
+<section id="hist_90s_1">
+		<img src="/presentations/slides/intro/mosaic.jpg" align="center" width="" height="">
+		</section>	</section>
+	<section>
+		<section id="hist_1993">
+		<h3 class="p" style="text-align:center;">1993</h3>
+		<pre><code class="C" data-trim style="font-size:0.8em;" >#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;string.h&gt;
+
+#define ishex(x) (((x) &gt;= '0' &amp;&amp; (x) &lt;= '9') || ((x) &gt;= 'a' &amp;&amp; \
+                   (x) &lt;= 'f') || ((x) &gt;= 'A' &amp;&amp; (x) &lt;= 'F'))
+
+int htoi(char *s) {
+	int     value;
+	char    c;
+
+	c = s[0];
+	if(isupper(c)) c = tolower(c);
+	value=(c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10) * 16;
+
+	c = s[1];
+	if(isupper(c)) c = tolower(c);
+	value += c &gt;= '0' &amp;&amp; c &lt;= '9' ? c - '0' : c - 'a' + 10;
+
+	return(value);
+}
+
+void main(int argc, char *argv[]) {
+	char *params, *data, *dest, *s, *tmp;
+	char *name, *age;
+
+	puts(&quot;Content-type: text/html\r\n&quot;);
+	puts(&quot;&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;Form Example&lt;/TITLE&gt;&lt;/HEAD&gt;&quot;);
+	puts(&quot;&lt;BODY&gt;&lt;H1&gt;My Example Form&lt;/H1&gt;&quot;);
+	puts(&quot;&lt;FORM action=\&quot;form.cgi\&quot; method=\&quot;GET\&quot;&gt;&quot;);
+	puts(&quot;Name: &lt;INPUT type=\&quot;text\&quot; name=\&quot;name\&quot;&gt;&quot;);
+	puts(&quot;Age: &lt;INPUT type=\&quot;text\&quot; name=\&quot;age\&quot;&gt;&quot;);
+	puts(&quot;&lt;BR&gt;&lt;INPUT type=\&quot;submit\&quot;&gt;&quot;);
+	puts(&quot;&lt;/FORM&gt;&quot;);
+
+	data = getenv(&quot;QUERY_STRING&quot;);
+	if(data &amp;&amp; *data) {
+		params = data; dest = data;
+    	while(*data) {
+			if(*data=='+') *dest=' ';
+			else if(*data == '%' &amp;&amp; ishex(*(data+1))&amp;&amp;ishex(*(data+2))) {
+				*dest = (char) htoi(data + 1);
+				data+=2;
+			} else *dest = *data;
+			data++;
+			dest++;
+		}
+		*dest = '\0';
+		s = strtok(params,&quot;&amp;&quot;);
+		do {
+			tmp = strchr(s,'=');
+			if(tmp) {
+				*tmp = '\0';
+				if(!strcmp(s,&quot;name&quot;)) name = tmp+1;
+				else if(!strcmp(s,&quot;age&quot;)) age = tmp+1;
+			}
+		} while(s=strtok(NULL,&quot;&amp;&quot;));
+
+		printf(&quot;Hi %s, you are %s years old\n&quot;,name,age);
+	}
+	puts(&quot;&lt;/BODY&gt;&lt;/HTML&gt;&quot;);
+}</code></pre>
+		</section>	</section>
+	<section>
+		<section id="hist_1993_2">
+		<h3 class="p" style="text-align:center;">1993</h3>
+		<pre><code class="Perl" data-trim >use CGI qw(:standard);
+print header;
+print start_html('Form Example'),
+    h1('My Example Form'),
+    start_form,
+    &quot;Name: &quot;, textfield('name'),
+    p,
+    &quot;Age: &quot;, textfield('age'),
+    p,
+    submit,
+    end_form;
+if(param()) {
+    print &quot;Hi &quot;,em(param('name')),
+        &quot;You are &quot;,em(param('age')),
+        &quot; years old&quot;;
+}
+print end_html;</code></pre>
+		</section>	</section>
+	<section>
+		<section id="hist_1994">
+		<h3 class="p" style="text-align:center;">1994-1995</h3>
+		<pre><code class="PHP" data-trim >&lt;html&gt;&lt;head&gt;&lt;title&gt;Form Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;My Example Form&lt;/h1&gt;
+&lt;form action=&quot;form.phtml&quot; method=&quot;POST&quot;&gt;
+Name: &lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;
+Age: &lt;input type=&quot;text&quot; name=&quot;age&quot;&gt;
+&lt;br&gt;&lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+&lt;?if($name):?&gt;
+Hi &lt;?echo $name?&gt;, you are &lt;?echo $age?&gt; years old
+&lt;?endif?&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+		</section>	</section>
+	<section>
+		<section id="php7_speed">
+		<img src="/presentations/slides/intro/php7trans-200.png"  width="" height="">
+		<p class="p" style="font-size:1.1em;text-align:left;">✔ engine improvements</p>
+		<ul>
+			<li style="font-size: 1em;">100%+ performance gain on most real-world applications</li>
+			<li style="font-size: 1em;">Lower memory usage, sometimes drastically lower</li>
+		</ul>
+		</section>	</section>
+	<section>
+		<section id="php7perfdetail">
+		<h1 style="text-align:center;">JIT?</h1>
+		</section>
+<section id="php7perfdetail1">
+		<p class="p" style="font-size:1.1em;">Improve CPU cache usage</p>
+		<ul>
+			<li style="font-size: 1em;list-style-type: none;">Step 1: Decrease overall data</li>
+			<li style="font-size: 1em;list-style-type: none;">Step 2: Better data locality and less indirections</li>
+			<li style="font-size: 1em;list-style-type: none;">Step 3: Save the world!</li>
+		</ul>
+		</section>
+<section id="php7perfdetail1">
+		<ul>
+			<li style="font-size: 1em;list-style-type: none;">zval size reduced from 24 to 16 bytes</li>
+			<li style="font-size: 1em;list-style-type: none;">Hashtable size reduced from 72 to 56 bytes</li>
+			<li style="font-size: 1em;list-style-type: none;">Hashtable bucket size reduced from 72 to 32 bytes</li>
+			<li style="font-size: 1em;list-style-type: none;">Immutable array optimization</li>
+		</ul>
+		<pre><code data-trim style="font-size:1.1em;" >$a = [];
+for($i=0; $i &lt; 100000;$i++) {
+    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
+}
+echo memory_get_usage(true);
+
+// PHP 5.x  109M
+// PHP 7.0   42M no opcache
+// PHP 7.0    6M with opcache enabled</code></pre>
+		</section>
+<section id="php7perfdetail2">
+		<ul>
+			<li style="font-size: 1em;list-style-type: none;">New memory allocator similar to jemalloc</li>
+			<li style="font-size: 1em;list-style-type: none;">Faster hashtable iteration API</li>
+			<li style="font-size: 1em;list-style-type: none;">Array duplication optimization</li>
+			<li style="font-size: 1em;list-style-type: none;">PCRE JIT enabled by default</li>
+			<li style="font-size: 1em;list-style-type: none;">Precomputed string hashes</li>
+			<li style="font-size: 1em;list-style-type: none;">Fast ZPP (ZendParseParameters) implementation</li>
+			<li style="font-size: 1em;list-style-type: none;">Faster stack-allocated zvals (instead of heap)</li>
+			<li style="font-size: 1em;list-style-type: none;">Optimized VM calling</li>
+			<li style="font-size: 1em;list-style-type: none;">Global register variables with gcc 4.8+</li>
+			<li style="font-size: 1em;list-style-type: none;">plus hundreds of micro-optimizations</li>
+		</ul>
+		</section>
+<section id="php7detail4">
+		<h1 style="text-align:center;">JIT?</h1>
+		</section>	</section>
+	<section>
+		<section id="wpbench">
+
+<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/wp2017may.js"></script>
+		</section>
+<section id="fdo">
+		<p class="p" style="font-size:1.1em;text-align:center;">GCC Feedback-Directed Optimization (FDO)</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ gcc --version
+gcc (Debian 6.3.0-14) 6.3.0 20170415
+
+$ make clean
+$ make -j8 prof-gen
+...
+$ sapi/cgi/php-cgi -T 1000 /var/www/wordpress/index.php &gt; /dev/null
+$ make prof-clean
+$ make -j8 prof-use</code></pre>
+		</section>	</section>
+	<section>
+		<section id="smemwp">
+
+<div id="smemwp_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/smemwp2017.js"></script>
+		</section>	</section>
+	<section>
+		<section id="prod_perc95">
+		<h2 margin-bottom="2em">PHP 7 in production</h2><br>
+		<img src="/presentations/slides/intro/perc95.png" align="center" width="882" height="465">
+		</section>
+<section id="prod_cpu">
+		<img src="/presentations/slides/intro/cpu.png" align="center" width="882" height="465">
+		</section>
+<section id="prod_mem">
+		<img src="/presentations/slides/intro/mem.png" align="center" width="882" height="465">
+		</section>	</section>
+	<section>
+		<section id="impact">
+		<h1 style="text-align:center;">Saving the Planet?</h1>
+		</section>
+<section id="impact1">
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">Around 2 billion sites on the web</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">On 10 million physical machines</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">PHP drives at least 50%</li>
+		</ul>
+		</section>
+<section id="impact2">
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">Currently ~5% PHP 7 Adoption</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">which is about 250k physical servers</li>
+		</ul>
+		</section>
+<section id="impact3">
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">3000 KWH/year per server costs approx. US$400</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">Data center cooling doubles that</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">0.5kg CO2 per KWH</li>
+		</ul>
+		</section>
+<section id="impact4">
+		<p class="p" style="font-size:2em;text-align:left;">At 5% Adoption</p>
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">US $200M savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">750M KWH Savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">375M kg less CO2</li>
+		</ul>
+		</section>
+<section id="impact5">
+		<p class="p" style="font-size:2em;text-align:left;">At 100% Adoption</p>
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">$4B savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">15B KWH Savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">7.5B kg less CO2</li>
+		</ul>
+		</section>
+<section id="impact6">
+		<h1 style="text-align:center;">Do your part</h1>
+		<h1 style="text-align:center;">Upgrade to PHP 7!</h1>
+		</section>	</section>
+	<section>
+		<section id="php72">
+		<h1 style="text-align:center;">PHP 7.2</h1>
+		</section>
+<section id="php72_opt">
+		<p class="p" style="font-size:1.6em;text-align:left;">Initial DCE and SCCP optimizations</p>
+		</section>
+<section id="php72_widening">
+		<p class="p" style="font-size:1.1em;text-align:left;">Parameter Type Widening</p>
+		<pre><code data-trim style="font-size:1.1em;" >class Orig {
+  public function fn(array $arg) {  }
+}
+class Wider extends Orig {
+  public function fn($arg) { }
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">In PHP 7.1 you would get:</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >Warning: Declaration of Wider::fn($arg) should be 
+         compatible with Orig::fn(array $arg)</code></pre>
+		</section>
+<section id="php72_commas">
+		<p class="p" style="font-size:1.1em;text-align:left;">Allow trailing commas everywhere</p>
+		<pre><code data-trim style="font-size:1em;" >// Arrays (already possible)
+$array = [1, 2, 3,];
+
+// Grouped namepaces
+use Foo\Bar\{ Foo, Bar, Baz, };
+ 
+// Function/method arguments (call)
+fooCall($arg1, $arg2, $arg3,);
+
+use Foo\Bar\{ Foo, Bar, Baz, };
+
+class Foo implements
+    // Interface implementations on a class
+    FooInterface,
+    BarInterface,
+    BazInterface,
+{
+    // Trait implementations on a class
+    use
+        FooTrait,
+        BarTrait,
+        BazTrait,
+    ;
+ 
+    // Class member lists
+    const
+        A = 1010,
+        B = 1021,
+        C = 1032,
+        D = 1043,
+    ;</code></pre>
+		</section>
+<section id="php72_object">
+		<p class="p" style="font-size:1.1em;text-align:left;">Object typehint</p>
+		<pre><code data-trim style="font-size:1.05em;" >function fn(object $obj): object {
+	return json_decode('{}');
+}
+fn(&quot;not an object&quot;);</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >Warning: Uncaught TypeError: Argument 1 passed to fn() must be an object,
+         string given, called in php shell code on line 1 and defined in ...</code></pre>
+		</section>
+<section id="php72_unqouted">
+		<p class="p" style="font-size:1.1em;text-align:left;">Deprecate unquoted strings</p>
+		<pre><code data-trim style="font-size:1.05em;" >echo HELLO;</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >Warning: Use of undefined constant HELLO - assumed 'HELLO' (this will throw
+         an Error in a future version of PHP) in php shell code on line 1</code></pre>
+		</section>
+<section id="php72_mail">
+		<p class="p" style="font-size:1.1em;text-align:left;">extra headers array arg for mail() and mb_send_mail()</p>
+		<pre><code data-trim style="font-size:1.05em;" >$to      = 'nobody@example.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = ['From'     =&gt; 'webmaster@example.com',
+            'Reply-To' =&gt; 'webmaster@example.com',
+            'X-Mailer' =&gt; 'PHP/' . phpversion() ];
+
+mail($to, $subject, $message, $headers);</code></pre>
+		</section>
+<section id="php72_argon2i">
+		<p class="p" style="font-size:1.1em;text-align:left;">Argon2i added to password_hash()</p>
+		<pre><code data-trim style="font-size:1.05em;" >$options = [
+    'memory_cost' =&gt; 2048,
+    'time_cost' =&gt; 10,
+    'threads' =&gt; 2
+];
+echo password_hash(&quot;rasmuslerdorf&quot;, PASSWORD_ARGON2I, $options);</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >$argon2i$v=19$m=2048,t=10,p=2$akUuWkoxRDlMSi5TVGhYLg$j0D1Cl4aR8UMHOGGx5JtZ1BmCApr8RmOJA9qFWm5mz8</code></pre>
+		</section>
+<section id="php72_sodium">
+		<p class="p" style="font-size:1.1em;text-align:left;">Add Sodium Crypto Library</p>
+		<pre><code data-trim style="font-size:1.05em;" >// On Alice's computer:
+$msg = 'This comes from Alice.';
+$signed_msg = sodium_crypto_sign($msg, $secret_sign_key);</code></pre>
+		<pre><code data-trim style="font-size:1.05em;" >// On Bob's computer:
+$original_msg = sodium_crypto_sign_open($signed_msg, $alice_sign_publickey);
+if ($original_msg === false) {
+    throw new Exception(&quot;Invalid signature&quot;);
+} else {
+    echo $original_msg; // Displays &quot;This comes from Alice.&quot;
+}</code></pre>
+		<div align="" style="font-size: 1em; color: ; text-align: ; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;">see: <a href="https://paragonie.com/book/pecl-libsodium" target="">https://paragonie.com/book/pecl-libsodium</a></div>
+		</section>
+<section id="php72cleanups">
+		<p class="p" style="font-size:1.1em;text-align:left;">Things that may break your code</p>
+		<ul>
+			<li style="font-size: 0.8em;margin-left: -1em;">mcrypt extension has been removed</li>
+			<li style="font-size: 0.8em;margin-left: -1em;">__autoload() deprecated, use spl_autoload_register()</li>
+			<li style="font-size: 0.8em;margin-left: -1em;">create_function() deprecated, use anonymous functions</li>
+			<li style="font-size: 0.8em;margin-left: -1em;">each() deprecated, use foreach()</li>
+			<li style="font-size: 0.8em;margin-left: -1em;">read_exif_data() deprecated, use exif_read_data()</li>
+		</ul>
+		<p class="p" style="font-size:1.1em;text-align:left;">Full details are at:</p>
+		<div align="" style="font-size: 0.8em; color: ; text-align: ; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/php/php-src/blob/PHP-7.2/UPGRADING" target="">https://github.com/php/php-src/blob/PHP-7.2/UPGRADING</a></div>
+		<p class="p" style="font-size:1.1em;text-align:left;">And for extension authors:</p>
+		<div align="" style="font-size: 0.8em; color: ; text-align: ; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/php/php-src/blob/PHP-7.2/UPGRADING.INTERNALS" target="">https://github.com/php/php-src/blob/PHP-7.2/UPGRADING.INTERNALS</a></div>
+		</section>	</section>
+	<section>
+		<section id="dce">
+		<p class="p" style="font-size:2em;text-align:center;">Dead Code Elimination (DCE)</p>
+		<p class="p" style="font-size:1.5em;text-align:center;">Escape Analysis</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">Sparse Conditional Constant Propagation</p>
+		</section>
+<section id="dce0">
+		<pre><code class="result nohighlight" data-trim style="font-size:0.9em;" >php -d opcache.optimization_level=-1 -d opcache.opt_debug_level=0x20000 script</code></pre>
+		<pre><code data-trim style="font-size:1.05em;" >function fn() {
+    $a = 1;
+    return 0;
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.1</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >fn: (lines=2, args=0, vars=1, tmps=0)
+L0:   ASSIGN CV0($a) int(1)
+L1:   RETURN int(0)</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.2</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >fn: (lines=1, args=0, vars=0, tmps=0)
+L0:   RETURN int(0)</code></pre>
+		</section>
+<section id="dce1">
+		<pre><code data-trim style="font-size:1.05em;" >function foo(string $s1, string $s2, string $s3, string $s4) {
+    $x = ($s1 . $s2) . ($s3 . $s4);
+    $x = 0;
+    return $x;
+}</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >PHP 7.1                                   PHP 7.2
+foo: (lines=10, args=4, vars=5, tmps=3)   foo: (lines=5, args=4, vars=4, tmps=3)
+L0:   CV0($s1) = RECV 1                   L0:   CV0($s1) = RECV 1
+L1:   CV1($s2) = RECV 2                   L1:   CV1($s2) = RECV 2
+L2:   CV2($s3) = RECV 3                   L2:   CV2($s3) = RECV 3
+L3:   CV3($s4) = RECV 4                   L3:   CV3($s4) = RECV 4
+L4:   T6 = CONCAT CV0($s1) CV1($s2)       L4:   RETURN int(0)
+L5:   T7 = CONCAT CV2($s3) CV3($s4)
+L6:   T5 = CONCAT T6 T7
+L7:   ASSIGN CV4($x) T5
+L8:   ASSIGN CV4($x) int(0)
+L9:   RETURN CV4($x)</code></pre>
+		</section>
+<section id="dce2">
+		<p class="p" style="font-size:1.1em;text-align:left;">Try to trick it</p>
+		<pre><code data-trim style="font-size:1.05em;" >function foo($a) {
+    $b = $a += 3;
+    return $a;
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.2</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >foo: (lines=3, args=1, vars=1, tmps=1)
+L0:   CV0($a) = RECV 1
+L1:   ASSIGN_ADD CV0($a) int(3)
+L2:   RETURN CV0($a)</code></pre>
+		</section>
+<section id="dce3">
+		<p class="p" style="font-size:1.1em;text-align:left;">But...</p>
+		<pre><code data-trim style="font-size:1.05em;" >function foo(int $x, int $y) {
+    $a = [$x];
+    $a[1] = $y;
+    $a = $y;
+    return $a;
+}</code></pre>
+		<pre><code class="result nohighlight" data-trim style="font-size:1em;" >PHP 7.2                                    PHP 7.3
+foo: (lines=7, args=2, vars=3, tmps=1)     foo: (lines=4, args=2, vars=3, tmps=0)
+L0:   CV0($x) = RECV 1                     L0:     CV0($x) = RECV 1
+L1:   CV1($y) = RECV 2                     L1:     CV1($y) = RECV 2
+L2:   CV2($a) = INIT_ARRAY 1 CV0($x) NEXT  L2:     CV2($a) = QM_ASSIGN CV1($y)
+L3:   ASSIGN_DIM CV2($a) int(1)            L3:     RETURN CV2($a)
+L4:   OP_DATA CV1($y)
+L5:   ASSIGN CV2($a) CV1($y)
+L6:   RETURN CV2($a)</code></pre>
+		</section>
+<section id="dce4">
+		<pre><code data-trim style="font-size:1.05em;" >class A { }
+function foo(int $x) {
+    $a = new A;
+    $a-&gt;foo = $x;
+    return $x;
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=1, vars=1, tmps=0)
+L0:   CV0($x) = RECV 1
+L1:   RETURN CV0($x)</code></pre>
+		</section>
+<section id="dce5">
+		<pre><code data-trim style="font-size:1.05em;" >class A {
+    function __destruct() {}
+}
+function foo(int $x) {
+    $a = new A;
+    $a-&gt;foo = $x;
+    return $x;
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=7, args=1, vars=2, tmps=1)
+L0:   CV0($x) = RECV 1
+L1:   V2 = NEW 0 string(&quot;A&quot;)
+L2:   DO_FCALL
+L3:   CV1($a) = QM_ASSIGN V2
+L4:   ASSIGN_OBJ CV1($a) string(&quot;foo&quot;)
+L5:   OP_DATA CV0($x)
+L6:   RETURN CV0($x)</code></pre>
+		</section>
+<section id="dce6">
+		<pre><code data-trim style="font-size:1.05em;" >function foo() {
+    $a = 1;
+    $b = $a + 2;
+    $a += $b;
+    return $a;
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.2</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=1, args=0, vars=0, tmps=1)
+L0:   RETURN int(4)</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=1, args=0, vars=0, tmps=0)
+L0:   RETURN int(4)</code></pre>
+		</section>
+<section id="dce7">
+		<pre><code data-trim style="font-size:1.05em;" >function foo(int $x) {
+    if ($x) {
+        $a = [0,1];
+    } else {
+        $a = [0,2];
+    }
+    return $a[0];
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=1, vars=1, tmps=0)
+L0:   CV0($x) = RECV 1
+L1:   RETURN int(0)</code></pre>
+		</section>
+<section id="dce8">
+		<pre><code data-trim style="font-size:1.05em;" >function foo() {
+    $o = new stdClass();
+    $o-&gt;foo = 0;
+    $i = 1;
+    $c = $i &lt; 2;
+    if ($c) {
+        $k = 2 * $i;
+        $o-&gt;foo = $i;
+        echo $o-&gt;foo;
+    }
+    $o-&gt;foo += 2;
+    $o-&gt;foo++;
+    return $o-&gt;foo;
+}</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">PHP 7.3</p>
+		<pre><code class="result nohighlight" data-trim style="font-size:1.05em;" >foo: (lines=2, args=0, vars=0, tmps=0)
+L0:   ECHO int(1)
+L1:   RETURN int(4)</code></pre>
+		</section>	</section>
+	<section>
+		<section id="phan">
+		<h1 style="text-align:center;">Static Analysis</h1>
+<br/>
+<br/>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/phan/phan" target="">github.com/phan/phan</a></div>
+		</section>
+<section id="phan0">
+		<p class="p" style="font-size:1.5em;text-align:left;">Install with composer</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ composer require --dev phan/phan</code></pre>
+		<p class="p" style="font-size:1.5em;text-align:left;">Create .phan/config.php</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --init</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ ./vendor/bin/phan</code></pre>
+		</section>
+<section id="phan1">
+		<p class="p" style="font-size:2em;text-align:left;">Checks</p>
+		<ul>
+			<li>phpdoc type annotations</li>
+			<li>Everything is defined and accessible</li>
+			<li>Type safety</li>
+			<li>PHP version compatibility</li>
+			<li>No-ops</li>
+			<li>Unreachable code</li>
+			<li>Unused use statements</li>
+			<li>Redefinitions</li>
+			<li>Signature compatibility and final on inheritance</li>
+			<li>and many more</li>
+		</ul>
+		</section>
+<section id="phan2">
+		<p class="p" style="font-size:1.5em;text-align:left;">User plugins</p>
+		<div align="center" style="font-size: 1.5em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/phan/phan/wiki/Writing-Plugins-for-Phan" target="">Writing Plugins for Phan</a></div>
+		<p class="p" style="font-size:1.5em;text-align:left;">Included sample plugins</p>
+		<ul>
+			<li>DemoPlugin</li>
+			<li>PregRegexCheckerPlugin</li>
+			<li>PrintfRegexCheckerPlugin</li>
+			<li>UnreachableCodePlugin</li>
+			<li>DollarDollarPlugin</li>
+			<li>NonBoolBranchPlugin</li>
+			<li>NumericalComparisonPlugin</li>
+		</ul>
+		</section>
+<section id="phan3">
+		<p class="p" style="font-size:2em;text-align:left;">Daemon mode</p>
+	<div id="container">
+      <video id='video' controls="controls" preload='none'
+        width="1848"  >
+        <source id='mp4' src="presentations/slides/intro/phanvid.mp4" type='video/mp4'/>
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+    </div>		</section>	</section>
+	<section>
+		<section id="thank_you">
+		<h2 style="text-align:center;">Thank You</h2>
+		<div align="left" style="font-size: 1em; color: ; text-align: left; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href=":-:url:-:" target="">http://talks.php.net/shift</a></div>
+		<div align="left" style="font-size: 1em; color: ; text-align: left; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/phan/phan" target="">https://github.com/phan/phan</a></div>
+		<div align="left" style="font-size: 1em; color: ; text-align: left; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://paragonie.com/book/pecl-libsodium" target="">https://paragonie.com/book/pecl-libsodium</a></div>
+		<div align="left" style="font-size: 1em; color: ; text-align: left; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/php/php-src/blob/PHP-7.2/UPGRADING" target="">https://github.com/php/php-src/blob/PHP-7.2/UPGRADING</a></div>
+		<div align="left" style="font-size: 1em; color: ; text-align: left; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://bugs.php.net" target="">https://bugs.php.net</a></div>
+<br/>
+<br/>
+<br/>
+		<p class="p" style="font-size:1.1em;">Report Bugs</p>
+		<p class="p" style="font-size:1.1em;">Useful bug reports, please!</p>
+		</section>	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1024,
+				height: 768,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transitionSpeed: 'fast',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '/reveal.js/plugin/line-numbers/line-numbers.js' }
+				]
+			});
+			/* This draws the graph on the slide on a slidechanged event */
+			Reveal.addEventListener('slidechanged', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+			/* This draws the graph if we got here directly without coming from another slide */
+			Reveal.addEventListener('ready', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+		</script>
+
+	</body>
+</html>
