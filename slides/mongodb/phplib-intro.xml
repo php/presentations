@@ -2,7 +2,7 @@
 <title>MongoDB &amp; PHP</title>
 
 <list>
-	<bullet>Extension: %pecl/mongodb% (PHP 5.4 and higher)</bullet>
+	<bullet>Extension: %pecl/mongodb% (PHP 5.5 and higher)</bullet>
 	<bullet>Library: %phplib% (%mongodb/mongodb% on composer)</bullet>
 </list>
 
