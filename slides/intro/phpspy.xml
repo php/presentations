@@ -1,0 +1,88 @@
+<slide title="" section="phpspy">
+
+<blurb fontsize="20em" align="center">phpspy</blurb>
+
+<break lines="1" section="spy1"/>
+<blurb fontsize="1.1em" align="left">Low-overhead sampling profiler</blurb>
+
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ phpspy -s 200000000 -- php -r 'sleep(1);' 
+0 sleep <internal>:-1
+1 <main> <internal>:-1
+# - - - - -
+
+0 sleep <internal>:-1
+1 <main> <internal>:-1
+# - - - - -
+
+0 sleep <internal>:-1
+1 <main> <internal>:-1
+# - - - - -
+
+0 sleep <internal>:-1
+1 <main> <internal>:-1
+# - - - - -
+
+0 sleep <internal>:-1
+1 <main> <internal>:-1
+# - - - - -
+
+process_vm_readv: No such process
+]]></example>
+
+<break lines="1" section="spy2"/>
+<blurb fontsize="1.1em" align="left">Attach to a running process</blurb>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ sudo phpspy -r -p $(pgrep -n php-fpm)
+
+0 wp_installing /var/www/wordpress/wp-includes/load.php:944
+1 wp_load_alloptions /var/www/wordpress/wp-includes/option.php:189
+2 get_option /var/www/wordpress/wp-includes/option.php:90
+3 create_initial_taxonomies /var/www/wordpress/wp-includes/taxonomy.php:43
+4 WP_Hook::apply_filters /var/www/wordpress/wp-includes/class-wp-hook.php:286
+5 WP_Hook::do_action /var/www/wordpress/wp-includes/class-wp-hook.php:310
+6 do_action /var/www/wordpress/wp-includes/plugin.php:453
+7 <main> /var/www/wordpress/wp-settings.php:450
+8 <main> /var/www/wordpress/wp-config.php:89
+9 <main> /var/www/wordpress/wp-load.php:37
+10 <main> /var/www/wordpress/wp-blog-header.php:13
+11 <main> /var/www/wordpress/index.php:17
+# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -
+
+0 mysqli_query <internal>:-1
+1 wpdb::_do_query /var/www/wordpress/wp-includes/wp-db.php:1924
+2 wpdb::query /var/www/wordpress/wp-includes/wp-db.php:1813
+3 wpdb::get_results /var/www/wordpress/wp-includes/wp-db.php:2488
+4 _prime_comment_caches /var/www/wordpress/wp-includes/comment.php:2871
+5 WP_Comment_Query::get_comments /var/www/wordpress/wp-includes/class-wp-comment-query.php:427
+6 WP_Comment_Query::query /var/www/wordpress/wp-includes/class-wp-comment-query.php:346
+7 get_comments /var/www/wordpress/wp-includes/comment.php:226
+8 WP_Widget_Recent_Comments::widget /var/www/wordpress/wp-includes/widgets/class-wp-widget-recent-comments.php:99
+9 WP_Widget::display_callback /var/www/wordpress/wp-includes/class-wp-widget.php:372
+10 dynamic_sidebar /var/www/wordpress/wp-includes/widgets.php:743
+11 <main> /var/www/wordpress/wp-content/themes/twentyfifteen/sidebar.php:41
+12 load_template /var/www/wordpress/wp-includes/template.php:688
+13 locate_template /var/www/wordpress/wp-includes/template.php:647
+14 get_sidebar /var/www/wordpress/wp-includes/general-template.php:110
+15 <main> /var/www/wordpress/wp-content/themes/twentyfifteen/header.php:49
+16 load_template /var/www/wordpress/wp-includes/template.php:688
+17 locate_template /var/www/wordpress/wp-includes/template.php:647
+18 get_header /var/www/wordpress/wp-includes/general-template.php:41
+19 <main> /var/www/wordpress/wp-content/themes/twentyfifteen/single.php:10
+20 <main> /var/www/wordpress/wp-includes/template-loader.php:74
+21 <main> /var/www/wordpress/wp-blog-header.php:19
+22 <main> /var/www/wordpress/index.php:17
+# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -
+]]></example>
+
+<break lines="1" section="spy3"/>
+<blurb fontsize="1.1em" align="left">Generate a flame graph</blurb>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ phpspy phan > /tmp/output
+$ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl > flame.svg
+]]></example>
+
+<break lines="1" section="spy4"/>
+<object filename="phan.svg" type="image/svg+xml" width="80%" height="80%" align="center"/>
+
+</slide>
