@@ -11,7 +11,7 @@
 <bullet fontsize="1em" type="none">Step 3: Save the world!</bullet>
 </list>
 
-<break lines="1" section="php7perfdetail1"/>
+<break lines="1" section="php7perfdetail2"/>
 <list>
 <bullet fontsize="1em" type="none">zval size reduced from 24 to 16 bytes</bullet>
 <bullet fontsize="1em" type="none">Hashtable size reduced from 72 to 56 bytes</bullet>
@@ -31,7 +31,7 @@ echo memory_get_usage(true);
 // PHP 7.0    6M with opcache enabled
 ]]></example>
 
-<break lines="1" section="php7perfdetail2"/>
+<break lines="1" section="php7perfdetail3"/>
 
 <list>
 <bullet fontsize="1em" type="none">New memory allocator similar to jemalloc</bullet>

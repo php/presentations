@@ -261,128 +261,6 @@ Hi &lt;?echo $name?&gt;, you are &lt;?echo $age?&gt; years old
 &lt;/body&gt;&lt;/html&gt;</code></pre>
 		</section>	</section>
 	<section>
-		<section id="php7_speed">
-		<img src="/presentations/slides/intro/php7trans-200.png"  width="" height="">
-		<p class="p" style="font-size:1.1em;text-align:left;">✔ engine improvements</p>
-		<ul>
-			<li style="font-size: 1em;">100%+ performance gain on most real-world applications</li>
-			<li style="font-size: 1em;">Lower memory usage, sometimes drastically lower</li>
-		</ul>
-		</section>	</section>
-	<section>
-		<section id="php7perfdetail">
-		<h1 style="text-align:center;">JIT?</h1>
-		</section>
-<section id="php7perfdetail1">
-		<p class="p" style="font-size:1.1em;">Improve CPU cache usage</p>
-		<ul>
-			<li style="font-size: 1em;list-style-type: none;">Step 1: Decrease overall data</li>
-			<li style="font-size: 1em;list-style-type: none;">Step 2: Better data locality and less indirections</li>
-			<li style="font-size: 1em;list-style-type: none;">Step 3: Save the world!</li>
-		</ul>
-		</section>
-<section id="php7perfdetail1">
-		<ul>
-			<li style="font-size: 1em;list-style-type: none;">zval size reduced from 24 to 16 bytes</li>
-			<li style="font-size: 1em;list-style-type: none;">Hashtable size reduced from 72 to 56 bytes</li>
-			<li style="font-size: 1em;list-style-type: none;">Hashtable bucket size reduced from 72 to 32 bytes</li>
-			<li style="font-size: 1em;list-style-type: none;">Immutable array optimization</li>
-		</ul>
-		<pre><code data-trim style="font-size:1.1em;" >$a = [];
-for($i=0; $i &lt; 100000;$i++) {
-    $a[] = ['abc','def','ghi','jkl','mno','pqr'];
-}
-echo memory_get_usage(true);
-
-// PHP 5.x  109M
-// PHP 7.0   42M no opcache
-// PHP 7.0    6M with opcache enabled</code></pre>
-		</section>
-<section id="php7perfdetail2">
-		<ul>
-			<li style="font-size: 1em;list-style-type: none;">New memory allocator similar to jemalloc</li>
-			<li style="font-size: 1em;list-style-type: none;">Faster hashtable iteration API</li>
-			<li style="font-size: 1em;list-style-type: none;">Array duplication optimization</li>
-			<li style="font-size: 1em;list-style-type: none;">PCRE JIT enabled by default</li>
-			<li style="font-size: 1em;list-style-type: none;">Precomputed string hashes</li>
-			<li style="font-size: 1em;list-style-type: none;">Fast ZPP (ZendParseParameters) implementation</li>
-			<li style="font-size: 1em;list-style-type: none;">Faster stack-allocated zvals (instead of heap)</li>
-			<li style="font-size: 1em;list-style-type: none;">Optimized VM calling</li>
-			<li style="font-size: 1em;list-style-type: none;">Global register variables with gcc 4.8+</li>
-			<li style="font-size: 1em;list-style-type: none;">plus hundreds of micro-optimizations</li>
-		</ul>
-		</section>
-<section id="php7detail4">
-		<h1 style="text-align:center;">JIT?</h1>
-		</section>	</section>
-	<section>
-		<section id="wpbench">
-
-<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
-<script src="presentations/slides/intro/wp2018.js"></script>
-		</section>	</section>
-	<section>
-		<section id="smemwp">
-
-<div id="smemwp_container" class="stretch" style="margin: 0 auto"></div>
-<script src="presentations/slides/intro/smemwp2018.js"></script>
-		</section>	</section>
-	<section>
-		<section id="prod_perc95">
-		<h2 margin-bottom="2em">PHP 7 in production</h2><br>
-		<img src="/presentations/slides/intro/perc95.png" align="center" width="882" height="465">
-		</section>
-<section id="prod_cpu">
-		<img src="/presentations/slides/intro/cpu.png" align="center" width="882" height="465">
-		</section>
-<section id="prod_mem">
-		<img src="/presentations/slides/intro/mem.png" align="center" width="882" height="465">
-		</section>	</section>
-	<section>
-		<section id="impact">
-		<h1 style="text-align:center;">Saving the Planet?</h1>
-		</section>
-<section id="impact1">
-		<ul>
-			<li style="font-size: 1.5em;margin-left: -1em;">Around 2 billion sites on the web</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">On 10 million physical machines</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">PHP drives at least 50%</li>
-		</ul>
-		</section>
-<section id="impact2">
-		<ul>
-			<li style="font-size: 1.5em;margin-left: -1em;">Currently ~5% PHP 7 Adoption</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">which is about 250k physical servers</li>
-		</ul>
-		</section>
-<section id="impact3">
-		<ul>
-			<li style="font-size: 1.5em;margin-left: -1em;">3000 KWH/year per server costs approx. US$400</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">Data center cooling doubles that</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">0.5kg CO2 per KWH</li>
-		</ul>
-		</section>
-<section id="impact4">
-		<p class="p" style="font-size:2em;text-align:left;">At 5% Adoption</p>
-		<ul>
-			<li style="font-size: 1.5em;margin-left: -1em;">US $200M savings</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">750M KWH Savings</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">375M kg less CO2</li>
-		</ul>
-		</section>
-<section id="impact5">
-		<p class="p" style="font-size:2em;text-align:left;">At 100% Adoption</p>
-		<ul>
-			<li style="font-size: 1.5em;margin-left: -1em;">$4B savings</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">15B KWH Savings</li>
-			<li style="font-size: 1.5em;margin-left: -1em;">7.5B kg less CO2</li>
-		</ul>
-		</section>
-<section id="impact6">
-		<h1 style="text-align:center;">Do your part</h1>
-		<h1 style="text-align:center;">Upgrade to PHP 7!</h1>
-		</section>	</section>
-	<section>
 		<section id="php73">
 		<h1 style="text-align:center;">PHP 7.3</h1>
 		</section>
@@ -524,6 +402,62 @@ echo array_key_last($a);
 		<div align="" style="font-size: 0.8em; color: ; text-align: ; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING" target="">https://github.com/php/php-src/blob/PHP-7.3/UPGRADING</a></div>
 		<p class="p" style="font-size:1.1em;text-align:left;">And for extension authors:</p>
 		<div align="" style="font-size: 0.8em; color: ; text-align: ; margin-left: -1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING.INTERNALS" target="">https://github.com/php/php-src/blob/PHP-7.3/UPGRADING.INTERNALS</a></div>
+		</section>	</section>
+	<section>
+		<section id="wpbench">
+
+<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/wp2018.js"></script>
+		</section>	</section>
+	<section>
+		<section id="smemwp">
+
+<div id="smemwp_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/smemwp2018.js"></script>
+		</section>	</section>
+	<section>
+		<section id="impact">
+		<h1 style="text-align:center;">Saving the Planet?</h1>
+		</section>
+<section id="impact1">
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">Around 2 billion sites on the web</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">On 10 million physical machines</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">PHP drives at least 50%</li>
+		</ul>
+		</section>
+<section id="impact2">
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">Currently ~50% PHP 7 Adoption</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">which is about 2.5M physical servers</li>
+		</ul>
+		</section>
+<section id="impact3">
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">3000 KWH/year per server costs approx. US$400</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">Data center cooling doubles that</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">0.5kg CO2 per KWH</li>
+		</ul>
+		</section>
+<section id="impact4">
+		<p class="p" style="font-size:2em;text-align:left;">At 50% Adoption</p>
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">US $2B savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">7.5B KWH Savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">3.75B kg less CO2</li>
+		</ul>
+		</section>
+<section id="impact5">
+		<p class="p" style="font-size:2em;text-align:left;">Let's double that to 100%!</p>
+		<ul>
+			<li style="font-size: 1.5em;margin-left: -1em;">$4B savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">15B KWH Savings</li>
+			<li style="font-size: 1.5em;margin-left: -1em;">7.5B kg less CO2</li>
+		</ul>
+		</section>
+<section id="impact6">
+		<h1 style="text-align:center;">Do your part</h1>
+		<h1 style="text-align:center;">Upgrade to PHP 7!</h1>
 		</section>	</section>
 	<section>
 		<section id="dce">
