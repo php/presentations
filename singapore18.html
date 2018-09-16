@@ -666,9 +666,20 @@ C::fn(&quot;test&quot;, [1,2,3], ['max'=&gt;10]);
 		</section>
 <section id="phan4">
 		<p class="p" style="font-size:2em;text-align:left;">Daemon mode</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --daemonize-tcp-port default &amp;</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --daemonize-tcp-port default &amp;
+[1] 28610
+Listening for Phan analysis requests at tcp://127.0.0.1:4846
+Awaiting analysis requests for directory '/home/rasmus/phan_demo'
+
+$ vi src/script.php</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan_client -l src/script.php
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 1 (union) is array{0:1} but \C::fn() takes int|string defined at src/script.php:8 in src/script.php on line 14
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 3 (shaped) is array{max:10} but \C::fn() takes array{mode:string,max:int} defined at src/script.php:8 in src/script.php on line 16</code></pre>
+		</section>
+<section id="phan5">
+		<p class="p" style="font-size:1.5em;text-align:left;">vim integration</p>
 	<div id="container">
-      <video id='video' controls="controls" preload='none'
+      <video id='video' controls="controls" preload='none' onclick='this.paused ? this.play() : this.pause();'
         width="1848"  >
         <source id='mp4' src="presentations/slides/intro/phanvid.mp4" type='video/mp4'/>
         <p>Your user agent does not support the HTML5 Video element.</p>
