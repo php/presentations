@@ -10,7 +10,12 @@ $ composer require --dev phan/phan
 ]]></example>
 <blurb fontsize="1.5em" align="left">Create .phan/config.php</blurb>
 <example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
-$ phan --init
+<?php
+return [
+    'target_php_version' => '7.2',
+    'directory_list' => [ 'src/' ],
+    "exclude_analysis_directory_list" => [ 'vendor/' ],
+];
 ]]></example>
 <example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 $ ./vendor/bin/phan
@@ -19,7 +24,7 @@ $ ./vendor/bin/phan
 <break lines="1" section="phan1"/>
 <blurb fontsize="2em" align="left">Checks</blurb>
 <list>
-<bullet>phpdoc type annotations</bullet>
+<bullet>enhanced phpdoc type annotations</bullet>
 <bullet>Everything is defined and accessible</bullet>
 <bullet>Type safety</bullet>
 <bullet>PHP version compatibility</bullet>
@@ -32,19 +37,50 @@ $ ./vendor/bin/phan
 </list>
 
 <break lines="1" section="phan2"/>
+<blurb fontsize="1em" align="left">Enhanced PHPDoc type annotations</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[
+<?php
+class C {
+  /**
+   * @param string|int $union
+   * @param int[] $generic
+   * @param array{mode:string,max:int} $shaped
+   */
+  static function fn($union, array $generic, $shaped) { }
+}
+C::fn("test", [1,2,3], ['mode'=>"test", 'max'=>10]);
+C::fn(1, [1,2,3], ['mode'=>"test", 'max'=>10]);
+C::fn("test", [1,2,3], ['max'=>10,'mode'=>"test"]);
+
+C::fn([1], [1,2,3], ['mode'=>"test", 'max'=>10]);
+// PhanTypeMismatchArgument Argument 1 (union) is array{0:1}
+// but \C::fn() takes int|string
+
+C::fn("test", [1,2,3], ['max'=>10]);
+// PhanTypeMismatchArgument Argument 3 (shaped) is array{max:10}
+// but \C::fn() takes array{mode:string,max:int
+]]></example>
+
+<break lines="1" section="phan3"/>
 <blurb fontsize="1.5em" align="left">User plugins</blurb>
 <link fontsize="1.5em" align="center" href="https://github.com/phan/phan/wiki/Writing-Plugins-for-Phan">Writing Plugins for Phan</link>
 <blurb fontsize="1.5em" align="left">Included sample plugins</blurb>
-<list>
-<bullet>DemoPlugin</bullet>
-<bullet>PregRegexCheckerPlugin</bullet>
-<bullet>PrintfRegexCheckerPlugin</bullet>
-<bullet>UnreachableCodePlugin</bullet>
-<bullet>DollarDollarPlugin</bullet>
-<bullet>NonBoolBranchPlugin</bullet>
-<bullet>NumericalComparisonPlugin</bullet>
+<list style="column-count:2;column-gap:1.8em;font-size:0.8em">
+<bullet>Demo Plugin</bullet>
+<bullet>Preg Regex Checker</bullet>
+<bullet>Printf Checker</bullet>
+<bullet>Unreachable Code</bullet>
+<bullet>DollarDollar</bullet>
+<bullet>NonBool Branch</bullet>
+<bullet>Numerical Comparison</bullet>
+<bullet>Has PHPDoc</bullet>
+<bullet>Duplicate Expression</bullet>
 </list>
-<break lines="1" section="phan3"/>
+<break lines="1" section="phan4"/>
 <blurb fontsize="2em" align="left">Daemon mode</blurb>
+<example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ phan --daemonize-tcp-port default &
+]]></example>
+
 <movie filename="phanvid.mp4" align="center" width="1848" height="1008" autoplay="false" replay="0"/>
 </slide>

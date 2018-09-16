@@ -1,0 +1,171 @@
+<slide title="" section="php73">
+
+<blurb fontsize="20em" align="center">PHP 7.3</blurb>
+
+<break lines="1" section="php73_heredoc"/>
+<blurb fontsize="1.1em" align="left">Flexible Heredoc</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+class foo {
+    public $bar = <<<EOT
+    bar
+    EOT;
+}
+]]></example>
+
+<break lines="1" section="php73_continue"/>
+<blurb fontsize="1.1em" align="left">Continue in Switch</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
+while ($foo) {
+    switch ($bar) {
+        case "baz":
+            continue;
+    }
+}
+]]></example>
+<example fontsize="1.1em" result='0' title="" type="nohighlight"><![CDATA[
+Warning: "continue" targeting switch is equivalent to "break".
+         Did you mean to use "continue 2"?
+]]></example>
+
+<break lines="1" section="php73_listrefs"/>
+<blurb fontsize="1.1em" align="left">List References</blurb>
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+$array = [1, 2];
+list($a, &$b) = $array;
+// or
+[$a, &$b] = $array;
+]]></example>
+
+<break lines="1" section="php73_commas"/>
+<blurb fontsize="1.1em" align="left">Trailing comma allowed in function calls</blurb>
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+$newArray = array_merge(
+    $arrayOne,
+    $arrayTwo,
+    ['foo', 'bar'],
+);
+
+# Parse error
+function bar($a, $b,) { }
+
+# Parse error
+foo(,);
+
+# Parse error
+foo('function', 'bar',,);
+
+# Also parse error
+foo(, 'function', 'bar');
+]]></example>
+
+<break lines="1" section="php73_hrtime"/>
+<blurb fontsize="1.1em" align="left">New Monotonic Timer function</blurb>
+<example fontsize="1.0em" result='0' title="" type=""><![CDATA[
+php > print_r(hrtime());
+Array
+(
+    [0] => 2320165    // seconds
+    [1] => 979969517  // nanoseconds
+)
+php > print_r(hrtime(true));
+2320183081647424
+]]></example>
+
+<break lines="1" section="php73_fpm_status"/>
+<blurb fontsize="1.1em" align="left">New fpm_get_status() function</blurb>
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+print_r(fpm_get_status());
+Array (
+    [pool] => www
+    [process-manager] => static
+    [start-time] => 1536934549
+    [start-since] => 26
+    [accepted-conn] => 20039
+    [listen-queue] => 0
+    [max-listen-queue] => 0
+    [listen-queue-len] => 0
+    [idle-processes] => 0
+    [active-processes] => 47
+    [total-processes] => 47
+    [max-active-processes] => 514
+    [max-children-reached] => 0
+    [slow-requests] => 0
+    [procs] => Array (
+            [0] => Array (
+                    [pid] => 10819
+                    [state] => Running
+                    [start-time] => 1536934549
+                    [start-since] => 26
+                    [requests] => 2001
+                    [request-duration] => 8108
+                    [request-method] => GET
+                    [request-uri] => /index.php
+                    [query-string] => p=1
+                    [request-length] => 0
+                    [user] => -
+                    [script] => /var/www/wordpress/index.php
+                    [last-request-cpu] => 0
+                    [last-request-memory] => 0
+                )
+            ...
+]]></example>
+
+<break lines="1" section="php73_iscountable"/>
+<blurb fontsize="1.1em" align="left">is_countable()</blurb>
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+
+if (is_array($foo) || $foo instanceof Countable) {
+    // $foo is countable
+}
+
+if (is_countable($foo)) {
+    // $foo is countable
+}
+]]></example>
+
+<break lines="1" section="php73_array_key"/>
+<blurb fontsize="1.1em" align="left">array_key_first()/array_key_last()</blurb>
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[
+<?php
+$a = ['abc'=>'First', 'def'=>'Second', 'ghi'=>'Third'];
+echo array_key_first($a);
+// abc
+echo array_key_last($a);
+// ghi
+]]></example>
+
+<break lines="1" section="php73_opt"/>
+<blurb fontsize="1.6em" align="left">DCE and SCCP optimizations</blurb>
+
+<break lines="1" section="php73misc"/>
+<blurb fontsize="1.1em" align="left">Other changes</blurb>
+<list>
+<bullet marginleft="-1em" fontsize="0.8em">Upgraded from PCRE to PCRE2</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">getallheaders() now available in php-fpm</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">full case-mapping for mbstring</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">preg_quote() now also escapes '#'</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">new gmp functions: gmp_binomial, gmp_lcm, gmp_perfect_power, gmp_kronecker</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">new JsonException</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">default ftp transfer mode is now binary</bullet>
+</list>
+
+
+<break lines="1" section="php73cleanups"/>
+<blurb fontsize="1.1em" align="left">Things that may break your code</blurb>
+<list>
+<bullet marginleft="-1em" fontsize="0.8em">PCRE2 differences (should be rare)</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">ODBCRouter and Birdstep support have been removed</bullet>
+<bullet marginleft="-1em" fontsize="0.8em">Various deprecations - see UPGRADING</bullet>
+</list>
+
+<blurb fontsize="1.1em" align="left">Full details are at:</blurb>
+<link fontsize="0.8em" marginleft="-1em" leader="" href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING"/>
+<blurb fontsize="1.1em" align="left">And for extension authors:</blurb>
+<link fontsize="0.8em" marginleft="-1em" leader="" href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING.INTERNALS"/>
+
+</slide>
