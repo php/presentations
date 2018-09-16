@@ -58,7 +58,7 @@ C::fn([1], [1,2,3], ['mode'=>"test", 'max'=>10]);
 
 C::fn("test", [1,2,3], ['max'=>10]);
 // PhanTypeMismatchArgument Argument 3 (shaped) is array{max:10}
-// but \C::fn() takes array{mode:string,max:int
+// but \C::fn() takes array{mode:string,max:int}
 ]]></example>
 
 <break lines="1" section="phan3"/>
