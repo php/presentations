@@ -1,9 +1,11 @@
 <slide title="" section="phpspy">
 
 <blurb fontsize="20em" align="center">phpspy</blurb>
+<blurb fontsize="1.1em" align="center">Low-overhead sampling profiler</blurb>
+<link fontsize="1em" align="center" href="https://github.com/adsr/phpspy">https://github.com/adsr/phpspy</link>
 
 <break lines="1" section="spy1"/>
-<blurb fontsize="1.1em" align="left">Low-overhead sampling profiler</blurb>
+<blurb fontsize="1.1em" align="left">Sample frequency in nanoseconds</blurb>
 
 <example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
 $ phpspy -s 200000000 -- php -r 'sleep(1);' 
