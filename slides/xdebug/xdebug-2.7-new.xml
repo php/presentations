@@ -1,0 +1,26 @@
+<slide>
+<title>Xdebug 2.7 (beta)</title>
+
+<list>
+	<bullet>Support for PHP 7.3</bullet>
+	<bullet>Support for debugging connections in forked processes
+<example><![CDATA[
+lightdm─┬─Xorg───3*[{Xorg}]
+        ├─lightdm─┬─sh─┬─ssh-agent
+        │         │    └─xfce4-session─┬─agent───2*[{agent}]
+        │         │                    ├─applet.py
+        │         │                    ├─blueman-applet───3*[{blueman-applet}]
+        │         │                    ├─evolution-alarm───5*[{evolution-alarm}]
+        │         │                    ├─light-locker───3*[{light-locker}]
+        │         │                    ├─nm-applet───3*[{nm-applet}]
+        │         │                    ├─pasystray───2*[{pasystray}]
+        │         │                    ├─polkit-gnome-au───2*[{polkit-gnome-au}]
+        │         │                    └─2*[{xfce4-session}]
+        │         └─2*[{lightdm}]
+        └─2*[{lightdm}]
+]]>
+</example>
+	</bullet>
+</list>
+<blurb class="centre">A few things left to fix…</blurb>
+</slide>
