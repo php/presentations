@@ -1,0 +1,26 @@
+<slide>
+<title>Exercise Steps</title>
+<subtitle>Polar to Cartesian Coordinates</subtitle>
+
+<blurb>%geospatial.c%</blurb>
+<list>
+	<bullet>Add the function definition to %geospatial_functions%</bullet>
+	<bullet>Add arg-info struct</bullet>
+	<bullet>Add %PHP_FUNCTION% implementation that uses %zend_parse_parameters% and calls %polar_to_cartesian%</bullet>
+</list>
+
+<blurb>%algorithms.h%</blurb>
+<list>
+	<bullet>Add macro for deg2rad and rad2deg:
+<example><![CDATA[#define deg2rad(deg) ((deg) * M_PI / 180.0)
+#define rad2deg(rad) ((rad) * 180.0 / M_PI)]]></example>
+	</bullet>
+</list>
+
+<blurb>%algorithms.c%</blurb>
+<list>
+	<bullet>Implement algorithm</bullet>
+</list>
+
+<blurb>Run tests!: %make test%</blurb>
+</slide>

@@ -1,0 +1,15 @@
+<slide>
+<title>Exercise</title>
+
+<blurb>Adding new functions to the geospatial extension</blurb>
+
+<blurb>Required:</blurb>
+
+<list>
+	<bullet>Linux, or possibly a Mac</bullet>
+	<bullet>Compiler, automake, autoconf, m4 and friends</bullet>
+	<bullet>PHP, with development headers for PHP 7.0+</bullet>
+	<bullet>A git clone of<br/>%https://github.m/derickr/php-ext-tutorial.git%</bullet>
+	<bullet>PDF of slides for reference:<br/>%:-:url:-:%</bullet>
+</list>
+</slide>
