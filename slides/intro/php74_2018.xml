@@ -18,9 +18,9 @@ class User {
 ]]></example>
 
 <break lines="1" section="php74_preload"/>
-<blurb fontsize="1.1em" align="left">Opcache Preloading</blurb>
+<blurb fontsize="1em" align="left">Opcache Preloading</blurb>
 
-<example fontsize="1.1em" result='0' title="a.php" type=""><![CDATA[<?php
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
 class A {
     function __construct() {
         echo "A";
@@ -28,7 +28,7 @@ class A {
 }
 ]]></example>
 
-<example fontsize="1.1em" result='0' title="script.php" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
 spl_autoload_register('__load');
 function __load($c) {
     echo "Autoloader called for $c\n";
@@ -46,8 +46,7 @@ A
 
 <break lines="1" section="php74_preload2"/>
 
-<example fontsize="1.1em" result='0' title="preload.php" type=""><![CDATA[<?php
-<?php
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
 function preload($filename) {
     if (!opcache_compile_file($filename)) {
         trigger_error("Preloading Failed", E_USER_ERROR);

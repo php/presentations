@@ -804,15 +804,13 @@ $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code
 }</code></pre>
 		</section>
 <section id="php74_preload">
-		<p class="p" style="font-size:1.1em;text-align:left;">Opcache Preloading</p>
-<p class="example">a.php</p>
+		<p class="p" style="font-size:1em;text-align:left;">Opcache Preloading</p>
 		<pre><code data-trim style="font-size:1.1em;" >class A {
     function __construct() {
         echo &quot;A&quot;;
     }
 }</code></pre>
-<p class="example">script.php</p>
-		<pre><code data-trim style="font-size:1.1em;" >spl_autoload_register('__load');
+		<pre><code data-trim style="font-size:1em;" >spl_autoload_register('__load');
 function __load($c) {
     echo &quot;Autoloader called for $c\n&quot;;
     require &quot;/home/rasmus/&quot;.strtolower($c).&quot;.php&quot;;
@@ -824,9 +822,7 @@ Autoloader called for A
 A</code></pre>
 		</section>
 <section id="php74_preload2">
-<p class="example">preload.php</p>
-		<pre><code data-trim style="font-size:1.1em;" >&lt;?php
-function preload($filename) {
+		<pre><code data-trim style="font-size:1em;" >function preload($filename) {
     if (!opcache_compile_file($filename)) {
         trigger_error(&quot;Preloading Failed&quot;, E_USER_ERROR);
     }
