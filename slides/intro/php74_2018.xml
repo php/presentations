@@ -1,0 +1,65 @@
+<slide title="" section="php74">
+
+<blurb fontsize="20em" align="center">PHP 7.4</blurb>
+
+<break lines="1" section="php74_typedprop"/>
+<blurb fontsize="1.1em" align="left">Typed Properties</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
+class User {
+    public int $id;
+    public string $name;
+ 
+    public function __construct(int $id, string $name) {
+        $this->id = $id;
+        $this->name = $name;
+    }
+}
+]]></example>
+
+<break lines="1" section="php74_preload"/>
+<blurb fontsize="1.1em" align="left">Opcache Preloading</blurb>
+
+<example fontsize="1.1em" result='0' title="a.php" type=""><![CDATA[<?php
+class A {
+    function __construct() {
+        echo "A";
+    }
+}
+]]></example>
+
+<example fontsize="1.1em" result='0' title="script.php" type=""><![CDATA[<?php
+spl_autoload_register('__load');
+function __load($c) {
+    echo "Autoloader called for $c\n";
+    require "/home/rasmus/".strtolower($c).".php";
+}
+
+new A;
+]]></example>
+
+<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ php script.php 
+Autoloader called for A
+A
+]]></example>
+
+<break lines="1" section="php74_preload2"/>
+
+<example fontsize="1.1em" result='0' title="preload.php" type=""><![CDATA[<?php
+<?php
+function preload($filename) {
+    if (!opcache_compile_file($filename)) {
+        trigger_error("Preloading Failed", E_USER_ERROR);
+    }
+}
+
+preload("/home/rasmus/a.php");
+]]></example>
+
+<example fontsize="1.1em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ php -d opcache.preload=preload.php script.php 
+A
+]]></example>
+
+</slide>
