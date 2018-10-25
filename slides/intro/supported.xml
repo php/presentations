@@ -1,4 +1,9 @@
 <slide section="supported">
 <blurb fontsize="10em" align="center">Version Support</blurb>
 <image filename="http://php.net/images/supported-versions.php" align="center"/>
+<table columns="2" border="0" width="60%" align="left" marginleft="1em" fontsize="6em">
+<cell bgcolor="#90C090" fontsize="1em">Active Support</cell><cell>Regular releases and security fixes</cell>
+<cell bgcolor="#F09030" fontsize="1em">Security Fixes</cell><cell>Only security fixes</cell>
+<cell bgcolor="F03030" fontsize="1em">End of Life</cell><cell>No longer supported</cell>
+</table>
 </slide>
