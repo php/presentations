@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="10gen-strict.css">
+<topic>MongoDB</topic>
+<title>Sharks on the Wire</title>
+<event>Developer Advocacy Day</event>
+<location>Online</location>
+<date>January 18th, 2018</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@mongodb.com</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks.html</url>
+<joindin>https://derickrethans.nl/talks/wireshark-mongo</joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/mongodb/data.xml</slide>
+
+<slide>slides/mongodb/wire-header.xml</slide>
+<slide>slides/mongodb/wire-op-query.xml</slide>
+<slide>slides/mongodb/wire-op-reply.xml</slide>
+<slide>slides/mongodb/wire-op-msg.xml</slide>
+
+<slide>slides/mongodb/bson.xml</slide>
+<slide>slides/mongodb/bson-why.xml</slide>
+<slide>slides/mongodb/bson-types.xml</slide>
+
+<slide>slides/mongodb/wireshark-title.xml</slide>
+<slide>slides/mongodb/wireshark-what.xml</slide>
+
+<slide>slides/mongodb/wireshark-example-start.xml</slide>
+<slide>slides/mongodb/wireshark-example-is-master.xml</slide>
+
+<slide>slides/mongodb/wireshark-3.6.xml</slide>
+
+<slide>slides/mongodb/wireshark-dissectors.xml</slide>
+<slide>slides/mongodb/wireshark-example-op-msg.xml</slide>
+
+<slide>slides/mongodb/wireshark-dissectors-op-compressed.xml</slide>
+<slide>slides/mongodb/wireshark-example-op-compressed.xml</slide>
+
+<slide>slides/mongodb/wireshark-unwind-bug.xml</slide>
+
+<slide>slides/mongodb/wireshark-ssl-keys.xml</slide>
+<slide>slides/mongodb/wireshark-ssl-wireshark-config.xml</slide>
+<slide>slides/mongodb/wireshark-example-ssl.xml</slide>
+
+<slide>slides/mongodb/wireshark-4.0.xml</slide>
+<slide>slides/mongodb/wireshark-4.2.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

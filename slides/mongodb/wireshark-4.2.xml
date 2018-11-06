@@ -1,0 +1,16 @@
+<slide background="wireshark-light.jpg">
+<title>MongoDB 4.2 and Wireshark?</title>
+
+<break lines="2"/>
+<list>
+	<bullet>*OP_MSG*: Multiple sections</bullet>
+	<bullet>*OP_MSG*: Checksum</bullet>
+</list>
+
+<div effect="fade-in">
+<blurb class="big-centre">No Wireshark support</blurb>
+</div>
+<div effect="fade-in">
+<blurb class="big-centre">yet…</blurb>
+</div>
+</slide>

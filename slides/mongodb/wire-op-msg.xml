@@ -1,0 +1,34 @@
+<slide>
+<title>OP_MSG</title>
+
+<example inline="2">
+struct OP_MSG {
+    MsgHeader header;          // standard message header
+    uint32 flagBits;           // message flags
+    Sections[] sections;       // data sections
+    optional&amp;lt;uint32> checksum; // optional CRC-32C checksum
+}</example>
+
+<break/>
+
+<blurb>Flags</blurb>
+<example>
+Bit  Name              Description
+ 0   checksumPresent   The message ends with 4 bytes containing a CRC-32C.
+ 1   moreToCome
+16   exhaustAllowed
+</example>
+
+<break/>
+
+<blurb>Sections</blurb>
+<blurb class="small">
+Kind byte indicating its type, followed by:
+
+<list>
+	<bullet>Kind 0: Body — single BSON doc</bullet>
+	<bullet>Kind 1: Document Sequence</bullet>
+</list>
+</blurb>
+
+</slide>

@@ -1,0 +1,48 @@
+<slide>
+<title>Header</title>
+
+<blurb>Common Preamble:</blurb>
+<example inline="2"><![CDATA[struct MsgHeader {
+    int32   *messageLength*; // total message size, including this
+    int32   requestID;     // identifier for this message
+    int32   responseTo;    // requestID from the original request
+    int32   *opCode*;        // request type - see table below for details
+}]]>?</example>
+
+<blurb>The following ~Opcodes~ have been defined:</blurb>
+<div effect="fade-out">
+<example inline="2">~Opcode Name     Value     Comment~
+
+OP_REPLY            1     Reply to a client request. responseTo is set.
+OP_UPDATE        2001     Update document.
+OP_INSERT        2002     Insert new document.
+RESERVED         2003     Formerly used for OP_GET_BY_OID.
+OP_QUERY         2004     Query a collection.
+OP_GET_MORE      2005     Get more data from a query. See Cursors.
+OP_DELETE        2006     Delete documents.
+OP_KILL_CURSORS  2007     Notify database that the client has finished with the cursor.
+OP_COMMAND       2010     Cluster internal protocol representing a command request.
+OP_COMMANDREPLY  2011     Cluster internal protocol representing a reply to an OP_COMMAND.
+OP_MSG           2013     Send a message using the format introduced in MongoDB 3.6.
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="2">~Opcode Name     Value     Comment~
+
+*OP_REPLY            1     Reply to a client request. responseTo is set.*
+|999999|OP_UPDATE        2001     Update document.|
+|999999|OP_INSERT        2002     Insert new document.|
+|999999|RESERVED         2003     Formerly used for OP_GET_BY_OID.|
+*OP_QUERY         2004     Query a collection.*
+|999999|OP_GET_MORE      2005     Get more data from a query. See Cursors.|
+|999999|OP_DELETE        2006     Delete documents.|
+|999999|OP_KILL_CURSORS  2007     Notify database that the client has finished with the cursor.|
+|999999|OP_COMMAND       2010     Cluster internal protocol representing a command request.|
+|999999|OP_COMMANDREPLY  2011     Cluster internal protocol representing a reply to an OP_COMMAND.|
+*OP_MSG           2013     Send a message using the format introduced in MongoDB 3.6.*
+</example>
+<blurb>Only a few are used in MongoDB 4.0</blurb>
+</div>
+
+</slide>

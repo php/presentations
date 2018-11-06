@@ -1,0 +1,23 @@
+<slide>
+<title>OP_REPLY</title>
+
+<example inline="2">struct OP_REPLY {
+    MsgHeader header;         // standard message header
+    int32     responseFlags;  // bit vector - see details below
+    int64     cursorID;       // cursor id if client needs to do get more's
+    int32     startingFrom;   // where in the cursor this reply is starting
+    int32     numberReturned; // number of documents in the reply
+    document* documents;      // documents
+}</example>
+
+<blurb>Response Flags:</blurb>
+
+<list>
+	<bullet>%0%: *CursorNotFound*: getMore: ~Cursor ID~ not valid</bullet>
+	<bullet>%1%: *QueryFailure*: Is set when query failed.</bullet>
+	<bullet>%2%: *ShardConfigStale*: mongos only: is set, it needs to update config from the server.</bullet>
+	<bullet>%3%: *AwaitCapable*: Always set.</bullet>
+	<bullet>%4-31%: *Reserved*</bullet>
+</list>
+
+</slide>
