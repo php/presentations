@@ -1,0 +1,15 @@
+<slide>
+<title>OP_QUERY</title>
+
+<example inline="2">
+struct OP_QUERY {
+    MsgHeader header;                 // standard message header
+    int32     flags;                  // bit vector of query options
+    cstring   fullCollectionName ;    // "dbname.collectionname"
+    int32     numberToSkip;           // number of documents to skip
+    int32     numberToReturn;         // number of documents to return in the first batch
+    document  query;                  // query object.
+  [ document  returnFieldsSelector; ] // Selector indicating the fields to return
+}
+</example>
+</slide>

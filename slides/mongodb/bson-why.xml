@@ -1,0 +1,16 @@
+<slide>
+<title>Why BSON?</title>
+
+<list>
+	<bullet>"JSON"'s range of data types is restricted</bullet>
+	<bullet>BSON is optimised for parsing</bullet>
+	<bullet>Or as the marketing spiel on the web site says:
+		<list>
+			<bullet>*Lightweight*: Keeping spatial overhead to a minimum is important for any data representation format, especially when used over the network.</bullet>
+			<bullet>*Traversable*: BSON is designed to be traversed easily. This is a vital property in its role as the primary data representation for MongoDB.</bullet>
+			<bullet>*Efficient*: Encoding data to BSON and decoding from BSON can be performed very quickly in most languages due to the use of C data types.</bullet>
+		</list>
+	</bullet>
+</list>
+</slide>
+

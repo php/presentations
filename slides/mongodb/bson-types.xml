@@ -1,0 +1,36 @@
+<slide>
+<title>BSON Specification</title>
+
+<example inline="2">
+*document* ::= int32 e_list "\x00"  size, elements and trailing \0
+
+*e_list*   ::= *element* e_list     
+           |     ""     
+
+*element*  ::= "\x01" e_name double           64-bit binary floating point
+           | "\x02" e_name string           UTF-8 string
+           | "\x03" e_name *document*         Embedded document
+           | "\x04" e_name *document*         Array
+           | "\x05" e_name binary           Binary data
+           | "\x07" e_name (byte*12)        ObjectId
+           | "\x08" e_name "\x00"           Boolean "false"
+           | "\x08" e_name "\x01"           Boolean "true"
+           | "\x09" e_name int64            UTC datetime
+           | "\x0A" e_name                  Null value
+           | "\x0B" e_name cstring cstring  Regular expression: pattern, options
+           | "\x0D" e_name string           JavaScript code
+           | "\x0F" e_name code_w_s         JavaScript code w/ scope
+           | "\x10" e_name int32            32-bit integer
+           | "\x11" e_name uint64           Timestamp
+           | "\x12" e_name int64            64-bit integer
+           | "\x13" e_name decimal128       128-bit decimal floating point
+           | "\xFF" e_name                  Min key
+           | "\x7F" e_name                  Max key
+
+*e_name*   ::= cstring                  Key name
+*string*   ::= int32 (byte\*) "\x00"     String
+*cstring*  ::= (byte\*) "\x00"           UTF-8 encoded characters followed by '\x00'.
+binary   ::= int32 subtype (byte\*)    Binary - size, subtype(byte), and data.
+code_w_s ::= int32 string *document*    Code w/ scope
+</example>
+</slide>

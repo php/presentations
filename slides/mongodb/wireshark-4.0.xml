@@ -1,0 +1,16 @@
+<slide background="wireshark-light.jpg">
+<title>MongoDB 4.0 and Wireshark</title>
+
+<div effect="fade-in">
+	<blurb class="big-centre">Always SSL?</blurb>
+	<blurb class="centre">When working on the dissectors last, I inadvertently made port %27017% always expect SSL. ~Oops!~</blurb>
+</div>
+
+<break/>
+
+<div effect="fade-in">
+	<blurb class="big-centre">TLS 1.3</blurb>
+	<blurb class="centre">Changes pre-master key exchange.</blurb>
+	<blurb class="centre">Has a new API for intercepting keys.</blurb>
+</div>
+</slide>

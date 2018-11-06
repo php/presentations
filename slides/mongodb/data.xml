@@ -1,0 +1,11 @@
+<slide>
+<title>Wire Protocol</title>
+
+<list>
+	<bullet>MongoDB's binary protocol</bullet>
+	<bullet>Header + Payload:<list>
+		<bullet>Header is binary structure</bullet>
+		<bullet>Payload is BSON</bullet>
+	</list></bullet>
+</list>
+</slide>
