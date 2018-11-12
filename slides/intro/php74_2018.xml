@@ -18,7 +18,7 @@ class User {
 ]]></example>
 
 <break lines="1" section="php74_preload"/>
-<blurb fontsize="1em" align="left">Opcache Preloading</blurb>
+<blurb fontsize="1em" align="left">Without Opcache Preloading</blurb>
 
 <example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
 class A {
@@ -45,6 +45,8 @@ A
 ]]></example>
 
 <break lines="1" section="php74_preload2"/>
+
+<blurb fontsize="1em" align="left">With Opcache Preloading</blurb>
 
 <example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
 function preload($filename) {

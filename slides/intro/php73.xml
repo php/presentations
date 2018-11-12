@@ -140,7 +140,7 @@ echo array_key_last($a);
 ]]></example>
 
 <break lines="1" section="php73_opt"/>
-<blurb fontsize="1.6em" align="left">DCE and SCCP optimizations</blurb>
+<blurb fontsize="1.6em" align="left">More DCE and SCCP optimizations</blurb>
 
 <break lines="1" section="php73misc"/>
 <blurb fontsize="1.1em" align="left">Other changes</blurb>

@@ -5,29 +5,24 @@
 <link fontsize="1em" align="center" href="https://github.com/adsr/phpspy">https://github.com/adsr/phpspy</link>
 
 <break lines="1" section="spy1"/>
-<blurb fontsize="1.1em" align="left">Sample frequency in nanoseconds</blurb>
+<blurb fontsize="1.1em" align="left">Sample frequency in nanoseconds (or Hz)</blurb>
 
 <example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
 $ phpspy -s 200000000 -- php -r 'sleep(1);' 
 0 sleep <internal>:-1
 1 <main> <internal>:-1
-# - - - - -
 
 0 sleep <internal>:-1
 1 <main> <internal>:-1
-# - - - - -
 
 0 sleep <internal>:-1
 1 <main> <internal>:-1
-# - - - - -
 
 0 sleep <internal>:-1
 1 <main> <internal>:-1
-# - - - - -
 
 0 sleep <internal>:-1
 1 <main> <internal>:-1
-# - - - - -
 
 process_vm_readv: No such process
 ]]></example>
