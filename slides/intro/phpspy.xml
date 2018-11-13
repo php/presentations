@@ -73,13 +73,37 @@ $ sudo phpspy -r -p $(pgrep -n php-fpm)
 ]]></example>
 
 <break lines="1" section="spy3"/>
+<blurb fontsize="1.1em" align="left">Memory usage on stack frames</blurb>
+<example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
+$ sudo phpspy -m php src/phan.php
+
+0 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+1 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+2 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+3 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+4 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+5 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+6 <main> /home/rasmus/phan/src/phan.php:1
+# mem 119159776 123721960
+
+0 ast\parse_code <internal>:-1
+1 Phan\AST\Parser::parseCode /home/rasmus/phan/src/Phan/AST/Parser.php:42
+2 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+3 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+4 <main> /home/rasmus/phan/src/phan.php:1
+# mem 82471616 123721960
+]]></example>
+
+<blurb fontsize="1em" align="left">perf/callgrind output support soon, Adam?</blurb>
+
+<break lines="1" section="spy4"/>
 <blurb fontsize="1.1em" align="left">Generate a flame graph</blurb>
 <example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
 $ phpspy phan > /tmp/output
 $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl > flame.svg
 ]]></example>
 
-<break lines="1" section="spy4"/>
+<break lines="1" section="spy5"/>
 <object filename="phan.svg" type="image/svg+xml" width="80%" height="80%" align="center"/>
 
 </slide>

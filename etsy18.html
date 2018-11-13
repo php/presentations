@@ -906,11 +906,32 @@ process_vm_readv: No such process</code></pre>
 # 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -</code></pre>
 		</section>
 <section id="spy3">
+		<p class="p" style="font-size:1.1em;text-align:left;">Memory usage on stack frames</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ sudo phpspy -m php src/phan.php
+
+0 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+1 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+2 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+3 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+4 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+5 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+6 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
+# mem 119159776 123721960
+
+0 ast\parse_code &lt;internal&gt;:-1
+1 Phan\AST\Parser::parseCode /home/rasmus/phan/src/Phan/AST/Parser.php:42
+2 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+3 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+4 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
+# mem 82471616 123721960</code></pre>
+		<p class="p" style="font-size:1em;text-align:left;">perf/callgrind output support soon, Adam?</p>
+		</section>
+<section id="spy4">
 		<p class="p" style="font-size:1.1em;text-align:left;">Generate a flame graph</p>
 		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy phan &gt; /tmp/output
 $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code></pre>
 		</section>
-<section id="spy4">
+<section id="spy5">
 		<object data="/presentations/slides/intro/phan.svg" type="image/svg+xml" align="center" width="80%" height="80%">Use a newer browser, please</object>
 		</section>	</section>
 	<section>
