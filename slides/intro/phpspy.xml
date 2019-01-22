@@ -94,7 +94,7 @@ $ sudo phpspy -m php src/phan.php
 # mem 82471616 123721960
 ]]></example>
 
-<blurb fontsize="1em" align="left">perf/callgrind output support soon, Adam?</blurb>
+<blurb fontsize="1em" align="left">perf/callgrind output support soon, hopefully</blurb>
 
 <break lines="1" section="spy4"/>
 <blurb fontsize="1.1em" align="left">Generate a flame graph</blurb>
