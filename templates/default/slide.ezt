@@ -15,7 +15,7 @@
 	<!--[if lt IE 8]>
 	<script src="IE8.js" type="text/javascript"></script>
 	<![endif]-->
-	<script type="text/javascript" src="/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="/jquery-3.3.1.js"></script>
 	<script type="text/javascript">
 {literal}
 
@@ -58,11 +58,11 @@ $(document).ready(function() {
 {/literal}
 {/if}
 {literal}
-    $("*[class^='effect']").hide();
-    $("*[class^='effect-fade-out']").show();
-	var f = $("div div:first").select(":first");
+	$("*[class^='effect']").hide();
+	$("*[class^='effect-fade-out']").show();
+//	var f = $("div div:first").select(":first");
 
-	$("body").addClass(f[0].className);
+//	$("body").addClass(f[0].className);
 {/literal}
 {literal}
 });
@@ -107,7 +107,7 @@ function processPrevEvent()
 {literal}
 }
 
-$('*').keypress(function(event) {
+$('*').on("keydown", function(event) {
     if (event.keyCode == '34' || event.keyCode == '39') {
         processNextEvent();
         event.preventDefault();

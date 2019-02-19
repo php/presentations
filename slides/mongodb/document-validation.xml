@@ -1,5 +1,5 @@
 <slide>
-<title>Enforcing Schema</title>
+<title>MongoDB Data Validation</title>
 
 <blurb>Allows you to set a *validator*, a query that every new or updated document must match</blurb>
 <blurb>Example:</blurb>
