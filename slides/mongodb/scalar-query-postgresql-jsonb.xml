@@ -1,4 +1,33 @@
 <slide>
 <title>PostgreSQL: Query JSONB</title>
 
+<example inline="2">
+INSERT INTO users VALUES('{
+    "_id" : "derick@localhost",
+    "email" : "derick@localhost",
+    "words" : [ "derick", "rethans", "london", "uk" ]
+}');
+</example>
+
+You might add a B-tree index on hdoc->>'email';
+
+<blurb>Find %_id% for %email% address (B-tree-index):</blurb>
+<example inline="2">
+SELECT hdoc->>'_id' FROM users WHERE *hdoc->>'email'* = 'derick@localhost';
+</example>
+
+<blurb>Find %users% without a %country% value set:</blurb>
+<example inline="2">
+SELECT hdoc->>'_id' FROM users WHERE hdoc->>'country' IS NOT NULL;
+</example>
+
+<blurb>Find users where %words% includes %london% (GIN index):</blurb>
+<example inline="2">
+SELECT \* FROM users WHERE *hdoc* @> '{"words": ["london"]}';
+</example>
+
+<blurb>Update or add field:</blurb>
+<example inline="2">
+UPDATE users SET hdoc = hdoc || '{"country": "Europe"}';
+</example>
 </slide>
