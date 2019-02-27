@@ -1,0 +1,17 @@
+<slide>
+<title>Step Debugging: Xdebug connects to IDE</title>
+
+<break lines='2'/>
+
+<div effect="fade-out">
+<blurb class="centre">Normal operation</blurb>
+<break/>
+<image filename="xdebug-dbgp-connect1-anim.gif"/>
+</div>
+
+<div effect="fade-in">
+<blurb class="centre">Operation with %xdebug.remote_connect_back%</blurb>
+<break/>
+<image filename="xdebug-dbgp-connect2-anim.gif"/>
+</div>
+</slide>

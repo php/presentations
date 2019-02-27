@@ -1,14 +1,18 @@
 <slide>
-<title>Xdebug</title>
+<title>Supporting Xdebug</title>
 <list>
 	<bullet>It's Open Source and free (as in "free beer")</bullet>
 	<bullet>Using Xdebug saves you a lot of time</bullet>
 	<bullet>Working on Xdebug takes up a lot of time</bullet>
 </list>
 
-<break lines="5"/>
+<break lines="2"/>
+<blurb align="center">*Features and Bugs*</blurb>
+<blurb align="center">%https://bugs.xdebug.org%</blurb>
+
+<break lines="2"/>
 <image align="center" filename="patreon.png" pdf-scale="0.8" y-offset="4"/>
 
-<blurb align="center">https://www.patreon.com/derickr</blurb>
+<blurb align="center">%https://www.patreon.com/derickr%</blurb>
 
 </slide>

@@ -1,5 +1,5 @@
 <slide>
-<title>Switch</title>
+<title>PHP 7.1: Switch</title>
 
 <example><![CDATA[<?php
 switch ( $a ) {
@@ -12,11 +12,10 @@ switch ( $a ) {
 }
 ]]></example>
 
-<blurb>PHP 7.1</blurb>
 <example>
 compiled vars:  !0 = $a
 line     #* E I O op            return  operands
---------------------------------------------------
+
    3     0  E >   EXT_STMT              
          1        CASE          ~1      !0, 1
          2      > JMPNZ                 ~1, ->13

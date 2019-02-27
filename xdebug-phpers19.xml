@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>Debugging</topic>
+<title>Xdebug</title>
+<event>PHPers Day 2019</event>
+<location>Gdańsk, Poland</location>
+<date>March 2nd, 2019</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks.html</url>
+<joindin>https://joind.in/26005</joindin>
+<slide>slides/mongodb/title.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.3-error-munging.xml</slide>
+
+<slide>slides/xdebug/step-debugging.xml</slide>
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/debugger-browser-extensions.xml</slide>
+<slide>slides/xdebug/dbgp-connection.xml</slide>
+<slide>slides/xdebug/phpstorm.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.3-new.xml</slide>
+
+<slide>slides/xdebug/paths.xml</slide>
+
+<slide>slides/xdebug/vld-path-4-code.xml</slide>
+<slide>slides/xdebug/vld-path-4-output.xml</slide>
+
+<slide>slides/xdebug/vld-path-3-code.xml</slide>
+<slide>slides/xdebug/vld-path-3-output.xml</slide>
+<slide>slides/xdebug/vld-path-3-paths.xml</slide>
+
+<slide>slides/xdebug/vld-path-5-wrapup.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.6-new.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-new-dbgp.xml</slide>
+<slide>slides/xdebug/debugger-connection-log.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-switch.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-switch2.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.6-filter1.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-filter1a.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-filter1b.xml</slide>
+<slide>slides/xdebug/xdebug-2.6-filter2.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.7-new.xml</slide>
+
+<slide>slides/xdebug/focus-on-xdebug.xml</slide>
+<slide>slides/xdebug/focus-on-xdebug2.xml</slide>
+<slide>slides/xdebug/focus-on-xdebug3.xml</slide>
+
+<slide>slides/xdebug/donate.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

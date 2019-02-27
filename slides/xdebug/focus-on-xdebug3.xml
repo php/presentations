@@ -1,0 +1,21 @@
+<slide>
+<title>The Xdebug Experience: The Plan</title>
+
+<blurb>*Xdebug ~2.8~*</blurb>
+<list>
+	<bullet>Set up a local CI</bullet>
+	<bullet>Improve 'breakpoint' behaviour</bullet>
+</list>
+<break/>
+<blurb>*Xdebug ~3~*</blurb>
+<list>
+	<bullet>The Big Refactor™
+		<list>
+			<bullet>Introducing modes</bullet>
+			<bullet>Simplify configuration and validation</bullet>
+		</list>
+	</bullet>
+	<bullet>Performance Improvements</bullet>
+	<bullet>Async debugging</bullet>
+</list>
+</slide>

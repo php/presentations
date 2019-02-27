@@ -1,5 +1,5 @@
 <slide>
-	<title>Activating the Remote Debugger</title>
+	<title>Activating the Step Debugger</title>
 
 <div effect="fade-out">
 	<blurb>php.ini settings:</blurb>
@@ -11,8 +11,8 @@
 <div effect="fade-in-out">
 	<blurb>php.ini settings:</blurb>
 	<blurb class="small_blurb">%  xdebug.remote_enable=1%</blurb>
-	<blurb class="small_blurb">%  xdebug.remote_host=localhost%</blurb>
-	<blurb class="small_blurb">%  xdebug.remote_port=9000%</blurb>
+	<blurb class="small_blurb">|777777|%  xdebug.remote_host=localhost%|</blurb>
+	<blurb class="small_blurb">|777777|%  xdebug.remote_port=9000%|</blurb>
 	<blurb class="small_blurb">*%  xdebug.remote_connect_back=1%*</blurb>
 </div>
 
