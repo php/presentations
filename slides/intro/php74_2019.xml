@@ -17,6 +17,15 @@ class User {
 }
 ]]></example>
 
+<break lines="1" section="null_coalesce_assign"/>
+
+<blurb fontsize="1em" align="left">Null Coalescing Assignment Operator</blurb>
+
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+$this->config['value']   = $this->config['value'] ?? 'default_value';
+$this->config['value'] ??= 'default_value';
+]]></example>
+
 <break lines="1" section="php74_preload"/>
 <blurb fontsize="1em" align="left">Without Opcache Preloading</blurb>
 
@@ -63,15 +72,6 @@ $ php -d opcache.preload=preload.php script.php
 A
 ]]></example>
 
-<break lines="1" section="null_coalesce_assign"/>
-
-<blurb fontsize="1em" align="left">Null Coalescing Assignment Operator</blurb>
-
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
-$this->config['value']   = $this->config['value'] ?? 'default_value';
-$this->config['value'] ??= 'default_value';
-]]></example>
-
 <break lines="1" section="ffi"/>
 
 <blurb fontsize="1em" align="left">FFI - Foreign Function Interface</blurb>
@@ -85,4 +85,51 @@ $ffi = FFI::cdef(
 $ffi->printf("Hello %s!\n", "world");
 ]]></example>
 
+<break lines="1" section="ffi_example"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<?php
+    $ffi = FFI::load("php_gifenc.h");
+
+    $w = 240; $h = 180;
+    $cols = $ffi->new("uint8_t[12]");
+    /* 4 colours: 000000, FF0000, 00FF00, 0000FF */
+    $cols[3] = 0xFF; $cols[7] = 0xFF; $cols[11] = 0xFF;
+
+    $gif = $ffi->ge_new_gif("test.gif", $w, $h, $cols, 2, 0);
+
+    for($i = 0; $i < 16; $i++) {
+        for ($j = 0; $j < $w*$h; $j++) {
+            $gif->frame[$j] = ($i*6 + $j) / 12 % 8;
+        }
+        echo "Add frame $i\n";
+        $ffi->ge_add_frame($gif, 5);
+    }
+    $ffi->ge_close_gif($gif);
+]]></example>
+<break lines="1" section="ffi_example_header"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+#define FFI_SCOPE "gifenc"
+#define FFI_LIB "libgifenc.so"
+
+typedef struct ge_GIF {
+    uint16_t w, h;
+    int depth;
+    int fd;
+    int offset;
+    int nframes;
+    uint8_t *frame, *back;
+    uint32_t partial;
+    uint8_t buffer[0xFF];
+} ge_GIF;
+
+ge_GIF *ge_new_gif(
+    const char *fname, uint16_t width, uint16_t height,
+    uint8_t *palette, int depth, int loop
+);
+void ge_add_frame(ge_GIF *gif, uint16_t delay);
+void ge_close_gif(ge_GIF* gif);
+]]></example>
+
+<break lines="1" section="ffi_example_output"/>
+<image width="240" height="180" filename="test.gif" align="center"/>
 </slide>
