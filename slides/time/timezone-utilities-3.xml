@@ -12,7 +12,7 @@
 
   <blurb>Restrict by country:</blurb>
   <example result="1"><![CDATA[<?php
-  $ids = timezone_identifiers_list( DateTimeZone::PER_COUNTRY, 'US' );
+  $ids = timezone_identifiers_list( DateTimeZone::PER_COUNTRY, 'CA' );
   echo implode( ", ", $ids );
 ?>]]></example>
 </slide>

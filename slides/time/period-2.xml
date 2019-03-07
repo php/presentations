@@ -4,8 +4,8 @@
 	<subtitle>Iterating over a period</subtitle>
 
 	<example result="1"><![CDATA[<?php
-$db = new DateTimeImmutable( '2017-12-31' );
-$de = new DateTimeImmutable( '2018-12-31' );
+$db = new DateTimeImmutable( '2018-12-31' );
+$de = new DateTimeImmutable( '2019-12-31' );
 $di = DateInterval::createFromDateString(
 	'first thursday of next month'
 );

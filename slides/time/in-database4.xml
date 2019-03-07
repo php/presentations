@@ -3,7 +3,7 @@
 <subtitle>Summary</subtitle>
 
 <blurb>If you want to store a time for an appointment for a group of people
-all in different timezones-ie, store a *specific point in time*:</blurb>
+all in different timezones—store a *specific point in time*:</blurb>
 <example><![CDATA[{
 	'title' : 'Meeting about getting rid of Daylight Saving Time',
 	'time' : { 
