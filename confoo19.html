@@ -125,8 +125,8 @@
 			<div class="slides">
 				<section>
 					<h1>PHP in 2019</h1>
-					<h3>Confoop</h3>
-					<h3>London</h3>
+					<h3>Confoo</h3>
+					<h3>Montréal</h3>
 					<h3>Mar.15, 2019</h3>
 					<a href="http://talks.php.net/confoo19">http://talks.php.net/confoo19</a><br><br>
 					<p>Rasmus Lerdorf<br>
@@ -837,6 +837,11 @@ $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code
 		<p class="p" style="font-size:1em;text-align:left;">Null Coalescing Assignment Operator</p>
 		<pre><code data-trim style="font-size:1em;" >$this-&gt;config['value']   = $this-&gt;config['value'] ?? 'default_value';
 $this-&gt;config['value'] ??= 'default_value';</code></pre>
+		</section>
+<section id="weakref">
+		<p class="p" style="font-size:1em;text-align:left;">Weak References</p>
+		<pre><code data-trim style="font-size:1em;" >$std = new stdClass;
+$wr = WeakReference::create($std);</code></pre>
 		</section>
 <section id="php74_preload">
 		<p class="p" style="font-size:1em;text-align:left;">Without Opcache Preloading</p>

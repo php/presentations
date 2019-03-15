@@ -26,6 +26,15 @@ $this->config['value']   = $this->config['value'] ?? 'default_value';
 $this->config['value'] ??= 'default_value';
 ]]></example>
 
+<break lines="1" section="weakref"/>
+
+<blurb fontsize="1em" align="left">Weak References</blurb>
+
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+$std = new stdClass;
+$wr = WeakReference::create($std);
+]]></example>
+
 <break lines="1" section="php74_preload"/>
 <blurb fontsize="1em" align="left">Without Opcache Preloading</blurb>
 
