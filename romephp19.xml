@@ -1,0 +1,41 @@
+<presentation
+    template="simple"
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>PHP in 2019</title>
+<event>CodeMotion</event>
+<location>Rome</location>
+<date>Mar.23, 2019</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/romephp19</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/php73.xml</slide>
+<slide>slides/intro/dce2018.xml</slide>
+<slide>slides/intro/wp2018.xml</slide>
+<slide>slides/intro/smemwp2018.xml</slide>
+
+<slide>slides/intro/supported.xml</slide>
+<slide>slides/intro/web_impact_2018.xml</slide>
+
+<slide>slides/intro/phan_2018.xml</slide>
+<slide>slides/intro/phpspy.xml</slide>
+
+<slide>slides/intro/php74_2019.xml</slide>
+<slide>slides/intro/thank_you_2019.xml</slide>
+
+</presentation>

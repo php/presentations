@@ -1,0 +1,37 @@
+<presentation
+    template="simple"
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>25 Years of PHP</title>
+<event>CodeMotion</event>
+<location>Rome</location>
+<date>Mar.23, 2019</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/rome19</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/greenland.xml</slide>
+<slide>slides/intro/80s.xml</slide>
+<slide>slides/intro/90s.xml</slide>
+<slide>slides/intro/nold.xml</slide>
+<slide>slides/intro/nold2.xml</slide>
+<slide>slides/intro/nold3.xml</slide>
+
+<slide>slides/intro/eco.xml</slide>
+<slide>slides/intro/thank_you_2019a.xml</slide>
+
+</presentation>
