@@ -22,38 +22,28 @@
 $(document).ready(function() {
 {/literal}
 {if $pres->forPdf}
+	var requestedIndex = parseInt({$pres->pdfIndex});
 {literal}
     var effect = $("*[class^='effect']:first");
+	var count  = 0;
     if (effect.length) {
 		do
 		{
-			var eclass = effect.attr('class');
-			var sclass = $(effect).hasClass('stop');
-			if ($(effect).hasClass('effect-fade-out')) {
-				$(effect).removeClass('effect-fade-out');
-				if (!sclass) {
-					$(effect).hide();
-				}
-			}
-			if ($(effect).hasClass('effect-fade-in')) {
-				$(effect).removeClass('effect-fade-in');
+			if (count == requestedIndex) {
 				$(effect).show();
-			}
-			if ($(effect).hasClass('effect-fade-in-out')) {
-				$(effect).removeClass('effect-fade-in-out');
-				$(effect).addClass('effect-fade-out');
+			} else if (count < requestedIndex && $(effect).hasClass('effect-fade-in')) {
 				$(effect).show();
+			} else {
+				$(effect).hide();
 			}
-			if ($(effect).hasClass('effect-slide')) {
-				$(effect).removeClass('effect-slide');
-				$(effect).show();
-			}
-			if ($(effect).hasClass('effect-hide')) {
-				$(effect).removeClass('effect-hide');
-				$(effect).show();
-			}
+			$(effect).removeClass('effect-fade-in');
+			$(effect).removeClass('effect-fade-out');
+			$(effect).removeClass('effect-fade-in-out');
+			$(effect).removeClass('effect-hide');
+			$(effect).removeClass('effect-slide');
 			var effect = $("*[class^='effect']:first");
-		} while (!sclass && effect.length);
+			count++;
+		} while (effect.length);
 	}
 {/literal}
 {/if}

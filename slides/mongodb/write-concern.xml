@@ -1,0 +1,11 @@
+<slide>
+<title>Write Concern</title>
+
+<image align="right" filename="write-concern.svg"/>
+<list>
+	<bullet>%w% controls acknowledgement behaviour</bullet>
+	<bullet>%majority% scales with the size of the replica set</bullet>
+	<bullet>%majority% and journaling collectively guarantee durability and avoid data loss due to roll backs</bullet>
+</list>
+
+</slide>

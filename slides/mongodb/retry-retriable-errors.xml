@@ -1,0 +1,10 @@
+<slide>
+<title>Retryable Errors</title>
+
+<list>
+	<bullet>Any network error (e.g. socket timeout, dropped connection)</bullet>
+	<bullet>Server response clearly indicating a transient error (e.g. *not master*)<br/>
+		<small>Most commonly caused by a replica set failover or step down</small>
+	</bullet>
+</list>
+</slide>

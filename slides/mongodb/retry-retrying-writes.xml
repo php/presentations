@@ -1,0 +1,22 @@
+<slide>
+<title>Retrying Writes</title>
+
+<blurb>Given that:</blurb>
+<list>
+	<bullet><small>Sessions are cluster-wide and exist beyond the scope of a connection</small></bullet>
+	<bullet><small>Each write can be uniquely identified by a session and statement ID</small></bullet>
+	<bullet><small>Drivers can rely on SDAM and server selection to re-select the primary</small></bullet>
+</list>
+
+<blurb>Drivers can safely retry single-document writes by resending the original command to the primary:</blurb>
+
+<list>
+	<bullet><small>If the write already executed, return the result we missed</small></bullet>
+	<bullet><small>If the write never executed, do it now and return its result</small></bullet>
+</list>
+
+note:
+Single-document writes excludes updateMany and deleteMany. Doctrine ODM’s
+UnitOfWork generates many single-document writes, so it is a great candidate
+for retrying writes (or transactions).
+</slide>

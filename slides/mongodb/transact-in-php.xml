@@ -1,0 +1,22 @@
+<slide>
+<title>Transactions in PHP</title>
+
+<example><![CDATA[
+<?php
+
+require_once 'vendor/autoload.php';
+
+$client = new MongoDB\Client;
+
+$session = $client->startSession();
+$session->startTransaction([
+    'readConcern' => new MongoDB\Driver\ReadConcern('snapshot'),
+    'writeConcern' => new MongoDB\Driver\WriteConcern('majority'),
+]);
+
+$client->test->foo->insertOne(['x' => 1], ['session' => $session]);
+$client->test->bar->insertOne(['y' => 2], ['session' => $session]);
+
+$session->commitTransaction();
+]]></example>
+</slide>

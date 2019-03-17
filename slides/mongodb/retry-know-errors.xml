@@ -1,0 +1,11 @@
+<slide>
+<title>Error Types</title>
+
+<list>
+	<bullet>Any retry strategy should consider the kind of failure<br/>
+		<small>Transient network error, persistent outage, command error</small>
+	</bullet>
+	<bullet>A retry attempt may be necessary to differentiate transience from persistence</bullet>
+	<bullet>If a command response reports failure, retrying probably isn’t going to help</bullet>
+</list>
+</slide>

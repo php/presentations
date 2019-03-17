@@ -1,0 +1,17 @@
+<slide>
+<title>Retryable Writes</title>
+
+<list>>
+	<bullet>Add %retryWrites=true% to your connection string</bullet>
+	<bullet>Disable try-once behaviour (%serverSelectionTryOnce=false%)</bullet>
+	<bullet>Tune %serverSelectionTimeoutMS% closer to expected election time (e.g. 15 seconds)</bullet>
+</list>>
+
+<blurb>Use the driver as you would normally:</blurb>
+<list>
+	<bullet>Multi-document writes (e.g. %updateMany%) may still fail; you’re no worse off</bullet>
+	<bullet>Single-document writes may still fail after one retry attemp</bullet>t
+</list>
+
+<blurb>Drivers will default to %retryWrites=true% with MongoDB&#160;4.2</blurb>
+</slide>

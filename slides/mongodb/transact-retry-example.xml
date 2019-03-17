@@ -1,0 +1,88 @@
+<slide>
+<title>Retry Example</title>
+
+<example><![CDATA[
+private function runTransactionWithRetry(callable $txnFunc, \MongoDB\Client $client, \MongoDB\Driver\Session $session)
+{
+    while (true) {
+        try {
+            $txnFunc($client, $session);  // performs transaction
+            break;
+        } catch (\MongoDB\Driver\Exception\CommandException $error) {
+            $resultDoc = $error->getResultDocument();
+
+            // If transient error, retry the whole transaction
+            if (isset($resultDoc->errorLabels) && in_array('TransientTransactionError', $resultDoc->errorLabels)) {
+                continue;
+            } else {
+                throw $error;
+            }
+        } catch (\MongoDB\Driver\Exception\Exception $error) {
+            throw $error;
+        }
+    }
+}
+
+private function commitWithRetry(\MongoDB\Driver\Session $session)
+{
+    while (true) {
+        try {
+            $session->commitTransaction();
+            echo "Transaction committed.\n";
+            break;
+        } catch (\MongoDB\Driver\Exception\CommandException $error) {
+            $resultDoc = $error->getResultDocument();
+
+            if (isset($resultDoc->errorLabels) && in_array('UnknownTransactionCommitResult', $resultDoc->errorLabels)) {
+                echo "UnknownTransactionCommitResult, retrying commit operation ...\n";
+                continue;
+            } else {
+                echo "Error during commit ...\n";
+                throw $error;
+            }
+        } catch (\MongoDB\Driver\Exception\Exception $error) {
+            echo "Error during commit ...\n";
+            throw $error;
+        }
+    }
+}
+
+private function updateEmployeeInfo(\MongoDB\Client $client, \MongoDB\Driver\Session $session)
+{
+    $session->startTransaction([
+        'readConcern' => new \MongoDB\Driver\ReadConcern("snapshot"),
+        'writeConcern' => new \MongoDB\Driver\WriteConcern(\MongoDB\Driver\WriteConcern::MAJORITY)
+    ]);
+
+    try {
+        $client->hr->employees->updateOne(
+            ['employee' => 3],
+            ['$set' => ['status' => 'Inactive']],
+            ['session' => $session]
+        );
+        $client->reporting->events->insertOne(
+            ['employee' => 3, 'status' => [ 'new' => 'Inactive', 'old' => 'Active']],
+            ['session' => $session]
+        );
+    } catch (\MongoDB\Driver\Exception\Exception $error) {
+        echo "Caught exception during transaction, aborting.\n";
+        $session->abortTransaction();
+        throw $error;
+    }
+
+    $this->commitWithRetry($session);
+}
+
+private function doUpdateEmployeeInfo(\MongoDB\Client $client)
+{
+    // Start a session.
+    $session = $client->startSession();
+
+    try {
+        $this->runTransactionWithRetry([$this, 'updateEmployeeInfo'], $client, $session);
+    } catch (\MongoDB\Driver\Exception\Exception $error) {
+        // Do something with error
+    }
+}
+]]></example>
+</slide>

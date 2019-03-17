@@ -1,0 +1,24 @@
+<slide>
+<title>Do Not Try This At Home</title>
+
+<example inline="2">
+<![CDATA[
+function retry(*Closure $retry*, $numRetries = 1)
+{
+    if ($numRetries < 1) {
+        return *$retry()*;
+    }
+
+    for ($i = 0; $i <= $numRetries; $i++) {
+        try {
+            return *$retry()*;
+        } catch (MongoDB\Driver\Exception $e) {
+            if ($i === $numRetries) {
+                throw $e;
+            }
+        }
+    }     
+}
+]]>
+</example>
+</slide>

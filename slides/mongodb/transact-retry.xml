@@ -1,0 +1,15 @@
+<slide>
+<title>Retrying Transactions</title>
+
+<blurb>Transactions can be retried if an operation fails, as can commit operations</blurb>
+<list>
+	<bullet>Drivers automatically retry commit and abort once, but not other writes</bullet>
+</list>
+
+<blurb>A RuntimeException thrown by the driver or library may be associated with one or more error labels, which can be checked using the %hasErrorLabel()% method</blurb>
+<list>
+	<bullet>%TransientTransactionError% implies entire transaction can be retried</bullet>
+	<bullet>%UnknownTransactionCommitResult% implies commit can be retried</bullet>
+	<bullet>Applications can, and should, handle both</bullet>
+</list>
+</slide>

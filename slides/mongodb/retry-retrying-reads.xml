@@ -1,0 +1,15 @@
+<slide>
+<title>Retrying Reads</title>
+
+<list>
+	<bullet>Queries that return a single document are always safe to retry</bullet>
+	<bullet>Short-running queries that return a single batch of documents (i.e. will not leave behind a cursor) may be safe to retry</bullet>
+	<bullet>Drivers will aim to retry most read commands in MongoDB 4.2:
+		<list>
+			<bullet>Requires server functionality to detect dropped sockets and abort operations</bullet>
+			<bullet>getMore cannot be retried, since cursor iteration is forward only</bullet>
+		</list>
+	</bullet>
+</list>
+
+</slide>

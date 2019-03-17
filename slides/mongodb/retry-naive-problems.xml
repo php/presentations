@@ -1,0 +1,11 @@
+<slide>
+<title>What's the problem?</title>
+
+<list>
+	<bullet>Operations can change the state of the system<br/>
+		<small>Reads or writes may continue to run on the server after the client moves on. Write operations may not be idempotent and safe to execute multiple times.</small>
+	</bullet>
+	<bullet>At best, retrying may waste time or consume resources</bullet>
+	<bullet>At worst, retrying may inadvertently alter the data itself</bullet>
+</list>
+</slide>

@@ -1,0 +1,18 @@
+<slide>
+<title>Logical Sessions</title>
+
+<list>
+<bullet>Sessions maintain cluster-wide state about the user and their operations
+	<list>
+		<bullet>In earlier versions of MongoDB, state was tied to connection objects</bullet>
+		<bullet>Sessions live throughout a cluster and are not tied to connection objects</bullet>
+	</list>
+</bullet>
+<bullet>Sessions can be created and used as an explicit option for database operations
+	<list>
+		<bullet>Group operations by passing the same session (e.g. causal consistency)</bullet>
+		<bullet>By default, drivers will use an implicit session for single operations</bullet>
+	</list>
+</bullet>
+</list>
+</slide>

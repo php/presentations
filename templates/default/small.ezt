@@ -1,4 +1,4 @@
-{use $node}
+{use $node, $pres}
 {foreach $node->childNodes as $child}
-<small>{$child->nodeValue}</small>
+<small>{raw format_text( $pres, $child->nodeValue )}</small>
 {/foreach}

@@ -1,0 +1,50 @@
+<slide>
+<title>Causal Consitency</title>
+
+<div effect="fade-out stop">
+<list>
+	<bullet>Casual relationship when an operation logically depends on a preceding operation</bullet>
+	<bullet>Causal consistency comes with several guarantees:
+		<list>
+			<bullet>Read your own writes, monotonic reads/writes, and writes follow reads</bullet>
+			<bullet>Satisfied by majority read and write concerns (when durability required)</bullet>
+		</list>
+	</bullet>
+	<bullet>Applications can obtain causal consistency by using explicit sessions</bullet>
+</list>
+
+https://docs.mongodb.com/manual/core/read-isolation-consistency-recency/#causal-consistency-guarantees
+https://docs.mongodb.com/manual/core/read-isolation-consistency-recency/#examples
+</div>
+
+<div effect="fade-in">
+<example><![CDATA[
+use MongoDB\Driver\ReadConcern, MongoDB\Driver\WriteConcern;
+
+$items = $client->selectDatabase(
+    'test',
+    [
+        'readConcern' => new ReadConcern(ReadConcern::MAJORITY),
+        'writeConcern' => new WriteConcern(WriteConcern::MAJORITY, 1000),
+    ]
+)->items;
+
+$s1 = $client->startSession(
+    [ 'causalConsistency' => true ]
+);
+
+$currentDate = new \MongoDB\BSON\UTCDateTime();
+
+$items->updateOne(
+    [ 'sku' => '111', 'end' => [ '$exists' => false ] ],
+    [ '$set' => [ 'end' => $currentDate ] ],
+    [ 'session' => $s1 ]
+);
+$items->insertOne(
+    [ 'sku' => '111-nuts', 'name' => 'Pecans', 'start' => $currentDate ],
+    [ 'session' => $s1 ]
+);
+]]>
+</example>
+</div>
+</slide>

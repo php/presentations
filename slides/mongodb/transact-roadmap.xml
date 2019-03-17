@@ -1,0 +1,11 @@
+<slide>
+<title>Committed to Transactions</title>
+
+<blurb>*MongoDB 3.0*<br/><small>*WiredTiger storage engine* introduced</small></blurb>
+<blurb>*MongoDB 3.2*<br/><small>WiredTiger the default, introduced *read concerns*</small></blurb>
+<blurb>*MongoDB 3.6*<br/><small>introduced *logical sessions*, the underlying framework for causal consistency and retryable writes</small></blurb>
+<blurb>*MongoDB 4.0*<br/><small>introduced *multi-document transactions* for replica sets</small></blurb>
+<blurb>*MongoDB 4.2*<br/><small>will add transaction support for sharded clusters</small></blurb>
+
+<blurb>Transactions were the long-term solution to support retryability for multi-document writes</blurb>
+</slide>

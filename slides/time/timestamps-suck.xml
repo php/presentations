@@ -7,13 +7,13 @@
   echo date( 'Y-m-d', $date ), "\n";
 ?>]]></example>
 
-<div effect="hide">
+<div effect="fade-in">
 <blurb>Explanation:</blurb>
 	<blurb                 >%$d = strtotime('2018-03-07 20:48 America/Toronto');%</blurb>
+</div>
 	<blurb effect="fade-in">%$d = |ef2929|1394243280|; // string is turned into a number%</blurb>
 	<blurb effect="fade-in">%echo date('Y-m-d', 1394243280), "\n";%</blurb>
 	<blurb effect="fade-in">Number is converted to a date/time string using the *default* timezone:<br/>
 	%"2018-03-08" |555753|(01:48:21 Europe/London)|%</blurb>
-</div>
 
 </slide>

@@ -1,0 +1,15 @@
+<slide>
+<title>Transactions Overview</title>
+
+<list>
+	<bullet>All operations within a transaction must route to the same member (i.e. %primary%)</bullet>
+	<bullet>Read and write concerns are specified once, when starting a transaction</bullet>
+	<bullet>While many operations are supported, there are some restrictions (e.g. DDL)
+		<list>
+			<bullet>Databases and collections must exist prior to starting the transaction</bullet>
+			<bullet>Cursors created outside a transaction cannot be used within, and vice versa</bullet>
+		</list>
+	</bullet>
+	<bullet>Transactions and retryable writes (i.e. %retryWrites=true%) are mutually exclusive</bullet>
+</list>
+</slide>

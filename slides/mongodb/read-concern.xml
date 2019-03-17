@@ -1,0 +1,19 @@
+<slide>
+<title>Read Concern</title>
+
+<list>
+<bullet>%*local*% and %*available*% are most permissive</bullet>
+<bullet>%*majority*% guarantees that the data has been acknowledged by a majority</bullet>
+<bullet>%*linearizable*% provides additional guarantees over majority to avoid returning stale data. Introduced in MongoDB 3.4 to satisfy the *Jepsen* test framework.</bullet>
+<bullet>%*snapshot*% may be used with majority-committed transactions to guarantee that reads within that transaction use a snapshot of majority-committed data</bullet>
+</list>
+
+“In plain English, under linearizability, writes should appear to be instantaneous. Imprecisely, once a write completes, all later reads (where “later” is defined by wall-clock start time) should return the value of that write or the value of a later write. Once a read returns a particular value, all later reads should return that value or the value of a later write.”
+
+https://docs.mongodb.com/manual/reference/read-concern-local/
+https://docs.mongodb.com/manual/reference/read-concern-available/
+https://docs.mongodb.com/manual/reference/read-concern-linearizable/
+https://stackoverflow.com/a/44763501/162228
+http://www.bailis.org/blog/linearizability-versus-serializability/
+https://docs.mongodb.com/manual/reference/read-concern-snapshot/
+</slide>

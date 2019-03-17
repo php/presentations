@@ -5,7 +5,7 @@
 <list>
 	<bullet>No relations between collections</bullet>
 	<bullet>No foreign keys</bullet>
-	<bullet>---No transactions---</bullet>
+	<bullet>Multi-document transactions</bullet>
 </list>
 </div>
 <break lines="2"/>
