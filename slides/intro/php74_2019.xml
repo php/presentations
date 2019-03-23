@@ -17,6 +17,21 @@ class User {
 }
 ]]></example>
 
+<break lines="1" section="php74_serialize"/>
+<blurb fontsize="1.1em" align="left">__serialize/__unserialize</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
+class Test {
+    public $prop;
+    public function __serialize() {
+        return ['prop' => $this->prop];
+    }
+    public function __unserialize(array $data) {
+        $this->prop = $data['prop'];
+    }
+}
+]]></example>
+
 <break lines="1" section="null_coalesce_assign"/>
 
 <blurb fontsize="1em" align="left">Null Coalescing Assignment Operator</blurb>
