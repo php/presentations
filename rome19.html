@@ -292,6 +292,87 @@ Hi &lt;?echo $name?&gt;, you are &lt;?echo $age?&gt; years old
 &lt;/body&gt;&lt;/html&gt;</code></pre>
 		</section>	</section>
 	<section>
+		<h3 class="p">PHP Announcement June 8, 1995</h3>
+		<h4 class="p">Posted to comp.infosystems.www.authoring.cgi</h4>
+		<pre><code class="html" data-trim >Subject: Announce: Personal Home Page Tools (PHP Tools)
+
+Announcing the Personal Home Page Tools (PHP Tools) version 1.0.
+These tools are a set of small tight cgi binaries written in C.
+They perform a number of functions including:
+
+. Logging accesses to your pages in your own private log files
+. Real-time viewing of log information
+. Providing a nice interface to this log information
+. Displaying last access information right on your pages
+. Full daily and total access counters
+. Banning access to users based on their domain
+. Password protecting pages based on users' domains
+. Tracking accesses ** based on users' e-mail addresses **
+. Tracking referring URL's - HTTP_REFERER support
+. Performing server-side includes without needing server support for it
+. Ability to not log accesses from certain domains (ie. your own)
+. Easily create and display forms
+. Ability to use form information in following documents
+
+Here is what you don't need to use these tools:
+
+. You do not need root access - install in your ~/public_html dir
+. You do not need server-side includes enabled in your server
+. You do not need access to Perl or Tcl or any other script interpreter
+. You do not need access to the httpd log files
+
+The only requirement for these tools to work is that you have
+the ability to execute your own cgi programs.  Ask your system
+administrator if you are not sure what this means.
+
+The tools also allow you to implement a guestbook or any other
+form that needs to write information and display it to users
+later in about 2 minutes.
+
+The tools are in the public domain distributed under the GNU
+Public License.  Yes, that means they are free!
+
+For a complete demonstration of these tools, point your browser
+at: http://www.io.org/~rasmus
+
+--
+Rasmus Lerdorf
+rasmus@io.org
+http://www.io.org/~rasmus</code></pre>
+<aside class="notes"><br />
+- focused on problems that could be solved<br />
+- PHP was hidden in there in these two points:<br />
+  . Easily create and display forms<br />
+  . Ability to use form information in following documents<br />
+</aside>
+	</section>
+	<section>
+		<h2>C API for the Web</h2>
+		<pre><code class="C" data-trim >void Cos(void) {
+    Stack *s;
+    char temp[64];
+
+    s = Pop();
+    if(!s) {
+        Error(&quot;Stack error in cos&quot;);
+        return;
+    }
+    sprintf(temp,&quot;%f&quot;,cos(s-&gt;douval));
+    Push(temp,DNUMBER);
+}</code></pre>
+		<h4 class="p">And you could then use it like this:</h4>
+		<pre><code class="nohighlight" data-trim >&lt;html&gt;&lt;head&gt;&lt;title&gt;Cos Example&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;&lt;h1&gt;Cos Example&lt;/h1&gt;
+&lt;?echo Cos($input)&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+<aside class="notes"><br />
+Actually the very first markup used html comments<br />
+&lt;? ... &gt; came shortly after.<br />
+Note the lack of the closing '?'<br />
+BUT nobody was interested!<br />
+</aside>
+	</section>
+	<section>
 		<h3 class="p">Focus on the Ecosystem</h3>
 		<ul>
 			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">LAMP wasn't an accident</li>
@@ -306,6 +387,87 @@ Hi &lt;?echo $name?&gt;, you are &lt;?echo $age?&gt; years old
 			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Doing both is rocket science</li>
 		</ul>
 	</section>
+	<section>
+		<h3 class="p">Performance</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">mod_php</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">shared-nothing perfect sandbox model</li>
+		</ul>
+		<h3 class="p">Robustness</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">SQL LIMIT clause</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">Promote Prefork shared-nothing model</li>
+		</ul>
+		<h3 class="p">Security</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">max_execution_time</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">memory_limit</li>
+			<li style="font-size: 1.1em;margin-left: 1em;list-style-type: bullet;">safe mode</li>
+		</ul>
+	</section>
+	<section>
+		<section id="omg">
+		<h3 class="p">What was he thinking?</h3>
+		<ul>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Case insensitive function names?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Naming inconsistencies?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">What's with the $ signs?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">Globals?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">register_globals?</li>
+			<li style="font-size: 1.1em;margin-left: 2em;list-style-type: none;">magic_quotes?</li>
+		</ul>
+		</section>
+<section id="omg1">
+		<h3 class="p">OMGWTFBBQ?</h3>
+		<pre><code data-trim style="font-size:1.6em;" >array_search($needle, $haystack);
+strstr($haystack, $needle);
+in_array($needle, $haystack);
+substr_count($haystack, $needle);
+array_key_exists($needle, $haystack);
+strchr($haystack, $needle);</code></pre>
+		</section>	</section>
+	<section data-background-color="#000000">
+		<section id="j">
+		<img src="/presentations/slides/intro/carl1.jpg" align="center" width="533" height="800">
+		</section>
+<section id="j1">
+		<img src="/presentations/slides/intro/carl2.jpg" align="center" width="" height="">
+		</section>
+<section id="j2">
+		<img src="/presentations/slides/intro/carl_linuxtag.jpg" align="center" width="" height="">
+		</section>
+<section id="j3">
+		<img src="/presentations/slides/intro/tridge.jpg" align="center" width="" height="">
+		</section>
+<section id="j4">
+		<img src="/presentations/slides/intro/roorkee.jpg" align="center" width="" height="">
+		</section>
+<section id="j5">
+		<img src="/presentations/slides/intro/arthurcclarke.jpg" align="center" width="" height="">
+		</section>	</section>
+	<section>
+		<img src="/presentations/slides/intro/lovehack-white-1000.png" align="center" width="1001" height="421">
+	</section>
+	<section>
+		<h3 class="p" style="text-align:center;">Work on things that matter (to you)</h3>
+	</section>
+	<section>
+		<h2 style="text-align:center;">Sense of Purpose</h2>
+<br/>
+<br/>
+		<h4 class="p" style="text-align:center;">The Purpose Economy: How Your Desire for Impact, Personal Growth and Community Is Changing the World</h4>
+		<h4 class="p" style="text-align:center;">by Aaron Hurst</h4>
+	</section>
+	<section>
+		<h4 class="p" style="text-align:center;">We are running out of things that can be solved in isolation with our keyboards</h4>
+	</section>
+	<section>
+		<section id="sahana0">
+		<img src="/presentations/slides/intro/slideshow_images/sahana3.png" align="center" width="1000" height="720">
+		</section>
+<section id="sahana1">
+		<img src="/presentations/slides/intro/slideshow_images/sahana_final.png" align="center" width="1000" height="720">
+		</section>	</section>
 	<section>
 		<section id="thank_you">
 		<h2 style="text-align:center;">Thank You</h2>
