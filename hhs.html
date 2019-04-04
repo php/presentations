@@ -17,6 +17,15 @@
 		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
 
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
 		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
 		<link rel="stylesheet" href="/styles/xcode.css">
 
