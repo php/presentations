@@ -1,0 +1,48 @@
+<presentation
+    template="simple"
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>25 Years of PHP</title>
+<event>HHS Programming Club</event>
+<location>Sunnyvale</location>
+<date>Apr.5, 2019</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/hhs</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/80s.xml</slide>
+<slide>slides/intro/90s.xml</slide>
+<slide>slides/intro/nold.xml</slide>
+<slide>slides/intro/nold2.xml</slide>
+<slide>slides/intro/nold3.xml</slide>
+<slide>slides/intro/phpannounce.xml</slide>
+<slide>slides/intro/capi.xml</slide>
+<slide>slides/intro/eco.xml</slide>
+<slide>slides/intro/php73.xml</slide>
+<slide>slides/intro/dce2018.xml</slide>
+<slide>slides/intro/wp2018.xml</slide>
+<slide>slides/intro/smemwp2018.xml</slide>
+<slide>slides/intro/journey2.xml</slide>
+<slide>slides/intro/lovehack.xml</slide>
+<slide>slides/intro/matter.xml</slide>
+<slide>slides/intro/purpose.xml</slide>
+<slide>slides/intro/matter2.xml</slide>
+<slide>slides/intro/sahana.xml</slide>
+
+<slide>slides/intro/thank_you_2019a.xml</slide>
+
+</presentation>
