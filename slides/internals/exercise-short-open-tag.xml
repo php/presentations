@@ -1,0 +1,29 @@
+<slide>
+<title>Exercise: Deprecate Short Open Tags</title>
+
+<blurb>Compiling PHP:</blurb>
+<example>
+./buildconf
+./configure --disable-all --prefix=/usr/local/php/deep-dive
+make clean &amp;&amp; make -j 4 &amp;&amp; make install
+</example>
+
+<blurb>In %Zend/zend_language_scanner.l%, find:</blurb>
+<example><![CDATA[<INITIAL>"<?" {
+    if (CG(short_tags)) {
+        BEGIN(ST_IN_SCRIPTING);
+        if (PARSER_MODE()) {
+            SKIP_TOKEN(T_OPEN_TAG);
+        }
+        RETURN_TOKEN(T_OPEN_TAG);
+    } else {
+        goto inline_char_handler;
+    }
+}
+]]></example>
+
+<blurb>Make it an error with:</blurb>
+<example>
+zend_error(E_COMPILE_ERROR, "Short Open Tags are no more on line %d", CG(zend_lineno));
+</example>
+</slide>
