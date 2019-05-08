@@ -17,6 +17,16 @@ class User {
 }
 ]]></example>
 
+<break lines="1" section="php74_arrow"/>
+<blurb fontsize="1.1em" align="left">Arrow Functions</blurb>
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
+$cb = function ($x) use ($y) {
+          return $x + $y;
+      };
+
+$cb = fn($x) => $x + $y;
+]]></example>
+
 <break lines="1" section="php74_serialize"/>
 <blurb fontsize="1.1em" align="left">__serialize/__unserialize</blurb>
 
@@ -51,6 +61,13 @@ $wr = WeakReference::create($std);
 ]]></example>
 
 <break lines="1" section="php74_preload"/>
+<blurb fontsize="1.8em" align="center">Opcache Preloading</blurb>
+<list>
+<item fontsize="1em">Loads userspace code at server startup as if it was part of core PHP</item>
+<item fontsize="1em">Trades some flexibility for performance</item>
+<item fontsize="1em">Inspired by the “Class Data Sharing” feature in Java's Hotspot VM</item>
+</list>
+<break lines="1" section="php74_preload1"/>
 <blurb fontsize="1em" align="left">Without Opcache Preloading</blurb>
 
 <example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php

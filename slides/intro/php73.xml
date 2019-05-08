@@ -164,7 +164,7 @@ echo array_key_last($a);
 </list>
 
 <blurb fontsize="1.1em" align="left">Full details are at:</blurb>
-<link fontsize="0.8em" marginleft="-1em" leader="" href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING"/>
+<link fontsize="0.8em" marginleft="-1em" leader="" href="https://php.net/migration73"/>
 <blurb fontsize="1.1em" align="left">And for extension authors:</blurb>
 <link fontsize="0.8em" marginleft="-1em" leader="" href="https://github.com/php/php-src/blob/PHP-7.3/UPGRADING.INTERNALS"/>
 
