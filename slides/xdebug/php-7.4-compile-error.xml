@@ -1,0 +1,32 @@
+<slide>
+<title>PHP 7.4 compile errors</title>
+
+<blurb>Changes with regards to new/removed OP codes: ✔</blurb>
+<example>
+<![CDATA[+#if PHP_VERSION_ID < 70400
+                XDEBUG_SET_OPCODE_OVERRIDE_COMMON(ZEND_ADD_TRAIT);
+                XDEBUG_SET_OPCODE_OVERRIDE_COMMON(ZEND_BIND_TRAITS);
++#endif]]>
+</example>
+<example>
+<![CDATA[+#if PHP_VERSION_ID < 70400
+                && opcode.opcode != ZEND_VERIFY_ABSTRACT_CLASS
+-               && opcode.opcode != ZEND_OP_DATA
+                && opcode.opcode != ZEND_ADD_INTERFACE
++#endif
++               && opcode.opcode != ZEND_OP_DATA]]>
+</example>
+
+<blurb>Changes to fetching debugging information: ✘</blurb>
+<example><![CDATA[…/xdebug_var.c:267:16: error: implicit declaration of function ‘Z_OBJDEBUG_P’; did you mean ‘Z_OBJCE_P’?
+  *properties = Z_OBJDEBUG_P(parent, *is_temp);
+                ^~~~~~~~~~~~
+                Z_OBJCE_P]]></example>
+
+<blurb>Changes to how static members are stored internally: ✘</blurb>
+<example><![CDATA[…/xdebug_var.c:319:112: error: ‘zend_class_entry’ has no member named ‘static_members_table’; did you mean ‘static_members_table__ptr’?
+    if (cce && cce->static_members_table) {
+                    ^~~~~~~~~~~~~~~~~~~~
+                    static_members_table__ptr]]></example>
+
+</slide>

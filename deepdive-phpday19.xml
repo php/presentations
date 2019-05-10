@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<presentation css="10gen-strict.css">
+<presentation css="derick.css">
 <topic>PHP</topic>
 <title>PHP Deep Dive</title>
 <event>phpDay 2019</event>
@@ -8,9 +8,10 @@
 <speaker>Derick Rethans</speaker>
 <email>derick@php.net</email>
 <twitter>derickr</twitter>
-<joindin>https://joind.in/XXXXX</joindin>
+<url>https://derickrethans.nl/talks/deepdive-phpday19</url>
+<joindin></joindin>
 
-<slide>slides/mongodb/title.xml</slide>
+<slide>slides/xdebug/title.xml</slide>
 <slide>slides/mongodb/me.xml</slide>
 
 <slide>slides/internals/title-agenda.xml</slide>
@@ -114,6 +115,7 @@ Useful implementations
 
 
 <slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
 
 <slide>slides/mongodb/resources.xml</slide>
 

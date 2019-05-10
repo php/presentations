@@ -1,0 +1,77 @@
+<slide>
+<title>Configuration Settings</title>
+
+<table class="two">
+<tr>
+<td>
+<example inline="2">
+*|aaaaaa|xdebug.|auto_trace*                     ~xdebug.trace.autostart~
+*|aaaaaa|xdebug.|cli_color*
+|aaaaaa|xdebug.|debug.collect_assignments
+|aaaaaa|xdebug.|debug.collect_includes
+|aaaaaa|xdebug.|debug.collect_params
+|aaaaaa|xdebug.|debug.collect_return
+|aaaaaa|xdebug.|debug.collect_vars
+*|aaaaaa|xdebug.|coverage_enable*                ~xdebug.mode~
+*|aaaaaa|xdebug.|default_enable*                 ~xdebug.mode~
+|aaaaaa|xdebug.|debug.dump.COOKIE
+|aaaaaa|xdebug.|debug.dump.ENV
+|aaaaaa|xdebug.|debug.dump.FILES
+|aaaaaa|xdebug.|debug.dump.GET
+|aaaaaa|xdebug.|debug.dump.POST
+|aaaaaa|xdebug.|debug.dump.REQUEST
+|aaaaaa|xdebug.|debug.dump.SERVER
+|aaaaaa|xdebug.|debug.dump.SESSION
+|aaaaaa|xdebug.|debug.dump_globals
+|aaaaaa|xdebug.|debug.dump_once
+|aaaaaa|xdebug.|debug.dump_undefined
+*|aaaaaa|xdebug.|extended_info*
+|aaaaaa|xdebug.|debug.file_link_format
+|aaaaaa|xdebug.|debug.filename_format
+|aaaaaa|xdebug.|debug.force_display_errors
+|aaaaaa|xdebug.|debug.force_error_reporting
+|aaaaaa|xdebug.|debug.gc_stats_enable
+*|aaaaaa|xdebug.|gc_stats_output_dir*            ~xdebug.output_dir~
+*|aaaaaa|xdebug.|gc_stats_output_name*           ~xdebug.output_name~
+|aaaaaa|xdebug.|debug.halt_level
+*|aaaaaa|xdebug.|idekey*
+|aaaaaa|xdebug.|debug.max_nesting_level
+|aaaaaa|xdebug.|debug.max_stack_frames
+|aaaaaa|xdebug.|debug.overload_var_dump
+</example></td><td><example inline="2">
+*|aaaaaa|xdebug.|profiler_aggregate*
+*|aaaaaa|xdebug.|profiler_append*
+*|aaaaaa|xdebug.|profiler_enable*                ~xdebug.mode~
+*|aaaaaa|xdebug.|profiler_enable_trigger*        ~xdebug.enable_trigger~
+*|aaaaaa|xdebug.|profiler_enable_trigger_value*  ~xdebug.enable_trigger_value~
+*|aaaaaa|xdebug.|profiler_output_dir*            ~xdebug.output_dir~
+*|aaaaaa|xdebug.|profiler_output_name*           ~xdebug.output_name~
+|aaaaaa|xdebug.|remote.addr_header
+|aaaaaa|xdebug.|remote.autostart
+|aaaaaa|xdebug.|remote.connect_back
+|aaaaaa|xdebug.|remote.cookie_expire_time
+*|aaaaaa|xdebug.|remote_enable*                  ~xdebug.mode~
+*|aaaaaa|xdebug.|remote_handler*
+|aaaaaa|xdebug.|remote.host
+|aaaaaa|xdebug.|remote.log
+|aaaaaa|xdebug.|remote.mode
+|aaaaaa|xdebug.|remote.port
+|aaaaaa|xdebug.|remote.timeout
+*|aaaaaa|xdebug.|scream*                         ~always on ☺~
+|aaaaaa|xdebug.|debug.show_error_trace
+|aaaaaa|xdebug.|debug.show_exception_trace
+|aaaaaa|xdebug.|debug.show_local_vars
+*|aaaaaa|xdebug.|show_mem_delta*
+*|aaaaaa|xdebug.|trace_enable_trigger*           ~xdebug.enable_trigger~
+*|aaaaaa|xdebug.|trace_enable_trigger_value*     ~xdebug.enable_trigger_value~
+|aaaaaa|xdebug.|trace.format
+|aaaaaa|xdebug.|trace.options
+*|aaaaaa|xdebug.|trace_output_dir*               ~xdebug.output_dir~
+*|aaaaaa|xdebug.|trace_output_name*              ~xdebug.output_name~
+|aaaaaa|xdebug.|debug.var_display_max_children
+|aaaaaa|xdebug.|debug.var_display_max_data
+|aaaaaa|xdebug.|debug.var_display_max_depth
+
+</example>
+</td></tr></table>
+</slide>

@@ -1,0 +1,29 @@
+<slide>
+<title>Introducing Modes</title>
+
+<break lines="5"/>
+<div effect="fade-in-out">
+<blurb class="big-centre">Debug</blurb>
+<blurb class="center">Every day debugging aide</blurb>
+</div>
+<div effect="fade-in-out">
+<blurb class="big-centre">Step Debugger</blurb>
+<blurb class="center">Debugging applications with an IDE<br/><small>Previously: remote debugger</small></blurb>
+</div>
+<div effect="fade-in-out">
+<blurb class="big-centre">Tracer</blurb>
+<blurb class="center">Tracing the execution of a script to a file</blurb>
+</div>
+<div effect="fade-in-out">
+<blurb class="big-centre">Profiler</blurb>
+<blurb class="center">Profiling application performance</blurb>
+</div>
+<div effect="fade-in-out">
+<blurb class="big-centre">Code Coverage</blurb>
+<blurb class="center">Which code is run during tests</blurb>
+</div>
+<div effect="fade-in-out">
+<blurb class="big-centre">Time Traveller</blurb>
+<blurb class="big-centre"> 🧙</blurb>
+</div>
+</slide>

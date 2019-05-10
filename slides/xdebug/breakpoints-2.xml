@@ -1,0 +1,49 @@
+<slide>
+<title>Missed Breakpoints</title>
+
+<table class="two">
+<tr><td>
+<example inline="2"><![CDATA[
+  |aaaaaa|  1| &lt;?php
+  |aaaaaa|  2| function demo($a, $b, $c, $d) 
+  |aaaaaa|  3| {
+*● |aaaaaa|  4|     if ( // breakpoint here*
+  |aaaaaa|  5|         $a
+  |aaaaaa|  6|         && $b
+  |aaaaaa|  7|         && ($c || $d)
+  |aaaaaa|  8|     ) {
+  |aaaaaa|  9|         echo "It's true!";
+  |aaaaaa| 10|     }
+  |aaaaaa| 11| }
+  |aaaaaa| 12| 
+  |aaaaaa| 13| demo(true, true, true, false);
+]]></example>
+<div effect="fade-in-out">
+<blurb class="big-centre">demo</blurb>
+</div>
+</td>
+<td><div effect="fade-in">
+<example inline="2"><![CDATA[
+function name:  demo
+number of ops:  14
+compiled vars:  !0 = $a, !1 = $b, !2 = $c, !3 = $d
+line     #* E I O op          return  operands
+   2     0  E >   EXT_NOP
+         1        RECV        !0
+         2        RECV        !1
+         3        RECV        !2
+         4        RECV        !3
+   5     5        EXT_STMT
+         6      > JMPZ                !0, ->12
+   6     7    > > JMPZ                !1, ->12
+   7     8    > > JMPNZ               !2, ->10
+         9    > > JMPZ                !3, ->12
+   9    10    >   EXT_STMT
+        11        ECHO                'It%27s+true%21'
+  11    12    >   EXT_STMT
+        13      > RETURN              null
+]]>
+</example>
+</div>
+</td></tr></table>
+</slide>

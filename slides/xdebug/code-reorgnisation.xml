@@ -1,0 +1,20 @@
+<slide>
+<title>Code Reorganisation</title>
+
+<example inline="2">
+*derick@singlemalt:~/dev/php/xdebug-xdebug$ ls ***.[hc]*
+config.h                xdebug_filter.c        xdebug_monitor.c       xdebug_superglobals.h
+php_xdebug.h            xdebug_filter.h        xdebug_monitor.h       xdebug_trace_computerized.c
+usefulstuff.c           xdebug_gc_stats.c      xdebug_private.c       xdebug_trace_computerized.h
+usefulstuff.h           xdebug_gc_stats.h      xdebug_private.h       xdebug_trace_html.c
+xdebug_branch_info.c    xdebug_handler_dbgp.c  xdebug_profiler.c      xdebug_trace_html.h
+xdebug_branch_info.h    xdebug_handler_dbgp.h  xdebug_profiler.h      xdebug_trace_textual.c
+xdebug.c                xdebug_handlers.c      xdebug_set.c           xdebug_trace_textual.h
+xdebug_code_coverage.c  xdebug_handlers.h      xdebug_set.h           xdebug_tracing.c
+xdebug_code_coverage.h  xdebug_hash.c          xdebug_stack.c         xdebug_tracing.h
+xdebug_com.c            xdebug_hash.h          xdebug_stack.h         xdebug_var.c
+xdebug_com.h            xdebug_llist.c         xdebug_str.c           xdebug_var.h
+xdebug_compat.c         xdebug_llist.h         xdebug_str.h           xdebug_xml.c
+xdebug_compat.h         xdebug_mm.h            xdebug_superglobals.c  xdebug_xml.h
+</example>
+</slide>
