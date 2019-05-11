@@ -1,0 +1,11 @@
+<slide>
+<title>Exercise: Make PHP Strict by Default</title>
+
+<list>
+	<bullet>In %Zend/zend_compile.c%, find what %strict_types% does</bullet>
+	<bullet>Find where the ~flags~ gets initialised</bullet>
+	<bullet>Change the flags, compile, and run the tests</bullet>
+	<bullet>Write a few scripts to test whether you can still turn off strict types</bullet>
+</list>
+
+</slide>
