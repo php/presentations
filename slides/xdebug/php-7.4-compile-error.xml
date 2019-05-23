@@ -17,16 +17,19 @@
 +               && opcode.opcode != ZEND_OP_DATA]]>
 </example>
 
-<blurb>Changes to fetching debugging information: ✘</blurb>
-<example><![CDATA[…/xdebug_var.c:267:16: error: implicit declaration of function ‘Z_OBJDEBUG_P’; did you mean ‘Z_OBJCE_P’?
-  *properties = Z_OBJDEBUG_P(parent, *is_temp);
-                ^~~~~~~~~~~~
-                Z_OBJCE_P]]></example>
+<blurb>Changes to fetching debugging information: ✔</blurb>
+<example><![CDATA[#if PHP_VERSION_ID >= 70400
+    *properties = zend_get_properties_for(parent, ZEND_PROP_PURPOSE_DEBUG);
+#else
+    *properties = Z_OBJDEBUG_P(parent, *is_temp);
+#endif
+]]></example>
 
-<blurb>Changes to how static members are stored internally: ✘</blurb>
-<example><![CDATA[…/xdebug_var.c:319:112: error: ‘zend_class_entry’ has no member named ‘static_members_table’; did you mean ‘static_members_table__ptr’?
-    if (cce && cce->static_members_table) {
-                    ^~~~~~~~~~~~~~~~~~~~
-                    static_members_table__ptr]]></example>
+<blurb>Changes to how static members are stored internally: |777777|✔|</blurb>
+<example><![CDATA[
+- if (cce && … && cce->static_members_table) {
+-         ZVAL_COPY(&tmp_retval, &cce->static_members_table[zpp->offset]);
++ if (cce && … && CE_STATIC_MEMBERS(cce)) {
++         ZVAL_COPY(&tmp_retval, &CE_STATIC_MEMBERS(cce)[zpp->offset]);]]></example>
 
 </slide>
