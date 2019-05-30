@@ -1,0 +1,37 @@
+<slide>
+<title>Calendar</title>
+
+<table class="big"><tr>
+<td><example inline="2" class="big">
+      December 2020
+ w| Mo Tu We Th Fr Sa Su
+49|     1  2  3  4  5  6
+50|  7  8  9 10 11 12 13
+51| 14 15 16 17 18 19 20
+52| 21 22 23 24 25 26 27
+*53| 28 29 30 31         *
+
+      January 2021
+ w| Mo Tu We Th Fr Sa Su
+*53|              1  2  3*
+ 1|  4  5  6  7  8  9 10
+ 2| 11 12 13 14 15 16 17
+ 3| 18 19 20 21 22 23 24
+ 4| 25 26 27 28 29 30 31
+</example></td>
+<td>
+<blurb>ISO 8601 calendar:</blurb>
+<list>
+	<bullet>52-53 weeks</bullet>
+	<bullet>7 days each week</bullet>
+</list>
+<break lines="2"/>
+<example result="3"><![CDATA[<?php
+$date = new DateTimeImmutable("2021-01-02");
+echo $date->format('o-\WW-\DN');
+?>]]></example>
+
+</td>
+</tr></table>
+
+</slide>

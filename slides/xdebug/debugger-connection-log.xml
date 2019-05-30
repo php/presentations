@@ -1,22 +1,22 @@
 <slide>
 <title>Step Debugger Logs</title>
 
+<blurb>Logging debugging communication:</blurb>
 <example>xdebug.remote_log=/tmp/remote.log</example>
 
-<list>
-	<bullet>Logs all debugger communication</bullet>
-	<bullet>Also shows connection attempts and failures:</bullet>
-</list>
+<div effect="fade-in">
+<blurb>Also shows connection attempts and failures:</blurb>
 
 <example inline="2">
 xdebug.remote_connect_back=0
-xdebug.remote_host=nothere
-xdebug.remote_port=9002
+xdebug.remote_port=9991
 
-I: Connecting to configured address/port: nothere:9002.
-E: Could not connect to client. *:-(*
+I: Connecting to configured address/port: localhost:9991.
+I: Connected to client. *|009900|:-)|*
 </example>
+</div>
 
+<div effect="fade-in">
 <example inline="2">
 xdebug.remote_connect_back=1
 |777777|xdebug.remote_host=SomethingEntirelyDifferent|
@@ -26,12 +26,16 @@ I: Checking remote connect back address.
 W: Remote address not found, connecting to configured address/port: nothere:9003. *:-|*
 E: Could not connect to client. *:-(*
 </example>
+</div>
 
+<div effect="fade-in">
 <example inline="2">
 xdebug.remote_connect_back=0
-xdebug.remote_port=9991
+xdebug.remote_host=nothere
+xdebug.remote_port=9002
 
-I: Connecting to configured address/port: localhost:9991.
-I: Connected to client. *|009900|:-)|*
+I: Connecting to configured address/port: nothere:9002.
+E: Could not connect to client. *:-(*
 </example>
+</div>
 </slide>

@@ -25,7 +25,7 @@
 |aaaaaa|xdebug.|debug.dump_globals
 |aaaaaa|xdebug.|debug.dump_once
 |aaaaaa|xdebug.|debug.dump_undefined
-*|aaaaaa|xdebug.|extended_info*
+---*|00cc00|xdebug.extended_info|*---                  ~removed in Xdebug 2.8~
 |aaaaaa|xdebug.|debug.file_link_format
 |aaaaaa|xdebug.|debug.filename_format
 |aaaaaa|xdebug.|debug.force_display_errors
