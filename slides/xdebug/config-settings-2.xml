@@ -32,7 +32,7 @@
 |aaaaaa|xdebug.|force_error_reporting
 |aaaaaa|xdebug.|gc_stats_enable
 *|00cc00|xdebug.gc_stats_output_dir|*
-|aaaaaa|xdebug.|gc_stats_output_name
+*|00cc00|xdebug.gc_stats_output_name|*
 |aaaaaa|xdebug.|halt_level
 |aaaaaa|xdebug.|idekey
 |aaaaaa|xdebug.|max_nesting_level
@@ -45,7 +45,7 @@
 |aaaaaa|xdebug.|profiler_enable_trigger
 |aaaaaa|xdebug.|profiler_enable_trigger_value
 *|00cc00|xdebug.profiler_output_dir|*
-|aaaaaa|xdebug.|profiler_output_name
+*|00cc00|xdebug.profiler_output_name|*
 |aaaaaa|xdebug.|remote_addr_header
 |aaaaaa|xdebug.|remote_autostart
 |aaaaaa|xdebug.|remote_connect_back
@@ -61,13 +61,13 @@
 |aaaaaa|xdebug.|show_error_trace
 |aaaaaa|xdebug.|show_exception_trace
 |aaaaaa|xdebug.|show_local_vars
-|aaaaaa|xdebug.|show_mem_delta
+*xdebug.show_mem_delta*
 |aaaaaa|xdebug.|trace_enable_trigger
 |aaaaaa|xdebug.|trace_enable_trigger_value
 |aaaaaa|xdebug.|trace_format
 |aaaaaa|xdebug.|trace_options
 *|00cc00|xdebug.trace_output_dir|*
-|aaaaaa|xdebug.|trace_output_name
+*|00cc00|xdebug.trace_output_name|*
 |aaaaaa|xdebug.|var_display_max_children
 |aaaaaa|xdebug.|var_display_max_data
 |aaaaaa|xdebug.|var_display_max_depth

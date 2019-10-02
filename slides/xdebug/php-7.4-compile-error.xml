@@ -25,7 +25,7 @@
 #endif
 ]]></example>
 
-<blurb>Changes to how static members are stored internally: |777777|✔|</blurb>
+<blurb>Changes to how static members are stored internally: ✔</blurb>
 <example><![CDATA[
 - if (cce && … && cce->static_members_table) {
 -         ZVAL_COPY(&tmp_retval, &cce->static_members_table[zpp->offset]);
