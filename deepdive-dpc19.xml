@@ -76,6 +76,12 @@ Opcodes
 <slide>slides/internals/loops.xml</slide>
 <slide>slides/internals/jumps-complex-dot.xml</slide>
 
+<!-- EXERCISE: STRICT SWITCH -->
+<slide>slides/internals/switch-confusion.xml</slide>
+<slide>slides/internals/switch.xml</slide>
+<slide>slides/internals/exercise-strict-switch.xml</slide>
+<slide>slides/internals/switch-followup.xml</slide>
+
 <!--
 Try/Catch nonsense
 - FASTCALL/FASTRET

@@ -1,0 +1,39 @@
+<slide>
+<title>Switch</title>
+
+<example inline="1">&amp;lt;?php
+$variable = '42';
+
+switch ($variable) {
+    case true:
+        die('true');
+
+    case 42:
+        die('42');
+
+    case '42':
+        die("'42'");
+}
+</example>
+
+<example inline="1">
+compiled vars:  !0 = $variable
+line     #* E I O op              return  operands
+
+   2     0  E >   EXT_STMT                
+         1        ASSIGN                  !0, '42'
+   4     2        EXT_STMT                
+         3      > JMPNZ                   !0, ->8
+   8     4    >   IS_EQUAL        ~1      !0, 42
+         5      > JMPNZ                   ~1, ->10
+  11     6    >   IS_EQUAL        ~1      !0, '42'
+         7      > JMPZNZ                  ~1, ->14, ->12
+   6     8    >   EXT_STMT                
+         9      > EXIT                    'true'
+   9    10    >   EXT_STMT                
+        11      > EXIT                    '42'
+  12    12    >   EXT_STMT                
+        13      > EXIT                    '%%%2742%27'
+  14    14    > > RETURN                  1
+</example>
+</slide>

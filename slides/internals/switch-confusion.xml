@@ -1,0 +1,17 @@
+<slide>
+<title>Switch?</title>
+
+<example result="1"><![CDATA[<?php
+$t = 'false';
+
+switch ($t) {
+    case true:
+        echo 'true';
+        break;
+
+    case false:
+        echo 'false';
+        break;
+}
+?>]]></example>
+</slide>

@@ -1,0 +1,41 @@
+<slide>
+<title>Switch follow-up</title>
+
+<example inline="1">&amp;lt;?php
+function foo()
+{
+    return '42';
+}
+
+switch (foo()) {
+    case true:
+        die('true');
+
+    case 42:
+        die('42');
+
+    case '42':
+        die("'42'");
+}</example>
+
+<div effect="fade-in">
+<example inline="2">
+line     #* E I O op              return  operands
+   2     0  E >   NOP                     
+   7     1        INIT_FCALL              'foo'
+         2        DO_UCALL        *$0*      
+         3        *CASE*            ~1      $0, &amp;lt;true>
+         4      > JMPNZ                   ~1, ->10
+  11     5    >   *CASE*            ~1      $0, 42
+         6      > JMPNZ                   ~1, ->11
+  14     7    >   *CASE*            ~1      $0, '42'
+         8      > JMPNZ                   ~1, ->12
+         9    > > JMP                     ->13
+   9    10    > > EXIT                    'true'
+  12    11    > > EXIT                    '42'
+  15    12    > > EXIT                    '%2742%27'
+        13    >   FREE                    $0
+  17    14      > RETURN                  1
+</example>
+</div>
+</slide>

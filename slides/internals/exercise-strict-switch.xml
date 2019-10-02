@@ -1,0 +1,10 @@
+<slide>
+<title>Exercise: Make %switch% Strict</title>
+
+<list>
+	<bullet>%IS_EQUAL% vs. %IS_IDENTICAL%</bullet>
+	<bullet>The %zend_compile_switch% function in %Zend/zend_compile.c% compiles the AST node</bullet>
+	<bullet>Change the behaviour, compile, and run the tests</bullet>
+</list>
+
+</slide>
