@@ -18,6 +18,6 @@
 {$height = $height / $zoom}
 {$width = $width / $zoom}
 {if $attr}<div{if $align} align='{$align}'{/if}>{/if}
-<iframe style="zoom={$zoom}; -moz-transform: scale({$zoom}); -moz-transform-origin: 0 0; clear: both; background-color: #fff; scrolling="{$scrolling}" frameborder="0" width="{$width}" height="{$height}" {if $inline}class='inline' {/if}{if $align}align='{$align}' {/if}src='{$source}'></iframe>
+<iframe style="zoom={$zoom}; -moz-transform: scale({$zoom}); -moz-transform-origin: 0 0; clear: both; background-color: #fff;" scrolling="{$scrolling}" frameborder="0" width="{$width}" height="{$height}" {if $inline}class='inline' {/if}{if $align}align='{$align}' {/if}src='{$source}'></iframe>
 <!--<img src="{$pres->base}{get_attribute( $node, 'image' )}"/>-->
 {if $attr}<span class='attribution'>{$attr}</span></div>{/if}

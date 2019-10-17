@@ -3,9 +3,9 @@
 
 <blurb>*Xdebug ~2.8~*</blurb>
 <list>
-	<bullet>Improve 'breakpoint' behaviour&#160;✔</bullet>
-	<bullet>Initial PHP 7.4 support&#160;✔</bullet>
-	<bullet>Set up a local CI&#160;✔</bullet>
+	<bullet>|00ff00|✔| Improve 'breakpoint' behaviour</bullet>
+	<bullet>|00ff00|✔| PHP 7.4 support</bullet>
+	<bullet>|00ff00|✔| Set up a local CI</bullet>
 </list>
 <break/>
 <blurb>*Xdebug ~3~*</blurb>
@@ -13,7 +13,7 @@
 	<bullet>The Big Refactor™
 		<list>
 			<bullet>Introducing modes</bullet>
-			<bullet>Simplify configuration and validation <small>(in progress…)</small></bullet>
+			<bullet>Simplify configuration and validation</bullet>
 		</list>
 	</bullet>
 	<bullet>Performance Improvements</bullet>

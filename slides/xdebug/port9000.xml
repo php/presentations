@@ -1,9 +1,9 @@
 <slide>
 <title>Copy-cats</title>
 
+<break lines="3"/>
 <image filename="port9000.png"/>
-<div effect="fade-in">
+
 <break lines="3"/>
 <blurb class="centre">PHP-FPM picked the same port as Xdebug (DBGp) ☹</blurb>
-</div>
 </slide>
