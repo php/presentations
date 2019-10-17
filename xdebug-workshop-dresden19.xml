@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>Debugging</topic>
+<title>Xdebug Workshop</title>
+<event>PHP UserGroup Dresden</event>
+<location>Dresden, Germany</location>
+<date>October 4th, 2019</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/xdebug-workshop-dresden19</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+Morning - Xdebug essentials:
+- Setup fur (remote) debugging via web requests and CLI (in PHPStorm)
+- Usage of breakpoints (with conditionals)
+- What is debuggable with Xdebug and what is not
+
+<slide>slides/xdebug/step-debugging.xml</slide>
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/debugger-browser-extensions.xml</slide>
+<slide>slides/xdebug/dbgp-connection.xml</slide>
+<slide>slides/xdebug/port9000.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.6-new-dbgp.xml</slide>
+<slide>slides/xdebug/debugger-connection-log.xml</slide>
+<slide>slides/xdebug/breakpoints-2.xml</slide>
+
+
+<slide>slides/xdebug/phpstorm.xml</slide>
+<slide>slides/mongodb/excercise.xml</slide>
+
+- Stack &amp; Function Traces
+<slide>slides/xdebug/functiontrace-computerized.xml</slide>
+<slide>slides/xdebug/functiontrace-summary.xml</slide>
+<slide>slides/mongodb/excercise.xml</slide>
+
+Afternoon - Xdebug advanced:
+- Understanding code coverage output / reports
+- Code Coverage Whitelist Filter and how to use it with PHPUnit
+- Garbage Collection Stats
+
+<slide>slides/xdebug/paths.xml</slide>
+
+<slide>slides/xdebug/vld-path-4-code.xml</slide>
+<slide>slides/xdebug/vld-path-4-output.xml</slide>
+
+<slide>slides/xdebug/vld-path-3-code.xml</slide>
+<slide>slides/xdebug/vld-path-3-output.xml</slide>
+<slide>slides/xdebug/vld-path-3-paths.xml</slide>
+
+<slide>slides/xdebug/vld-path-5-wrapup.xml</slide>
+<slide>slides/mongodb/excercise.xml</slide>
+
+- Profiling with Xdebug (Cachegrind files and configuration options)
+<slide>slides/xdebug/profile2.xml</slide>
+<slide>slides/xdebug/profiling.xml</slide>
+<slide>slides/xdebug/profiling2.xml</slide>
+
+<slide>slides/mongodb/excercise.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
