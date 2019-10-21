@@ -1,0 +1,35 @@
+<slide>
+<title>Episode #10: LSP and Operator Precedence</title>
+
+Episode 10 — LSP and Operator Precedence — Nikita Popov
+https://wiki.php.net/rfc/lsp_errors — https://github.com/php/php-src/pull/4000/files
+https://wiki.php.net/rfc/ternary_associativity — https://github.com/php/php-src/pull/4017/files#diff-02b0ba36e963ebca22e7f764721073a5R1
+http://wiki.php.net/rfc/concatenation_precedence — Deprecate only: https://github.com/php/php-src/pull/4001/files
+
+<div effect="fade-out">
+<blurb>Compare:</blurb>
+<example>
+interface I {
+    public function method(array $a);
+}
+class C implements I {
+    public function method(int $a) {}
+}
+// Fatal error: Declaration of C::method(int $a) must be compatible with I::method(array $a)
+</example>
+
+<blurb>With:</blurb>
+<example>class C1 {
+    public function method(array $a) {}
+}
+class C2 extends C1 {
+    public function method(int $a) {}
+}
+// Warning: Declaration of C2::method(int $a) should be compatible with C1::method(array $a)
+</example>
+</div>
+
+<div effect="fade-in"><blurb class="big-centre"><break lines="2"/>PHP 8 — 😥</blurb></div>
+
+</slide>
+

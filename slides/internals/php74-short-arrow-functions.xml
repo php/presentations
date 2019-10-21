@@ -1,0 +1,38 @@
+<slide>
+<title>Episode #4: Short Arrow Functions</title>
+
+Episode 4 — Short Arrow Functions — Nikita Popov
+
+<audio filename="nikita-popov.mp3"/>
+
+<image filename="nikita-popov.jpg" align="left" attr="Nikita Popov"/>
+
+<blurb>Arrow functions have the following basic form:</blurb>
+
+<example>
+fn(parameter_list) => expr
+</example>
+
+<blurb>Traditional Closure:</blurb>
+
+<example>
+$arrow = function ($x) use ($y) {
+    return $x + $y;
+};
+</example>
+
+<div effect="fade-out">
+<break lines="9"/></div>
+<div effect="fade-in">
+<blurb>New Short Closure:</blurb>
+
+<example>
+$arrow = fn($x) => $x + $y;
+</example>
+<break lines="5"/>
+</div>
+
+<blurb align="right">https://wiki.php.net/rfc/arrow_functions_v2</blurb> — https://github.com/php/php-src/pull/3941/files
+
+</slide>
+

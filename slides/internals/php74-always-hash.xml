@@ -1,0 +1,33 @@
+<slide>
+<title>Always available hash extension</title>
+
+Always available hash extension — Kalle Sommer Nielsen
+https://wiki.php.net/rfc/permanent_hash_ext
+
+<blurb>PHP 7.3:</blurb>
+<blurb>
+&lt;pre>&lt;span style="background-color:#4E4E4E">&lt;font color="#FFFF55"> ⮯ &lt;/font>&lt;/span>&lt;span style="background-color:#4E4E4E">PHP-7.3 &lt;/span>&lt;span style="background-color:#303030"> 𝑷 &lt;/span>&lt;span style="background-color:#303030">&lt;font color="#FFFFFF">&lt;b>7.3.6-dev&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#303030"> &lt;/span>&lt;span style="background-color:#303030">&lt;font color="#AA0000">ＡＵ &lt;/font>&lt;/span>&lt;span style="background-color:#303030">&lt;font color="#55FF55">&lt;b>ＤＮ&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#303030">&lt;font color="#55FFFF">&lt;b>⁶⁴&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#262626"> 𝑿 &lt;/span>&lt;span style="background-color:#262626">&lt;font color="#FFFFFF">&lt;b>3.0.0-dev&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#303030"> &lt;/span>&lt;span style="background-color:#1C1C1C">                                &lt;/span>
+&lt;span style="background-color:#4E4E4E">&lt;font color="#55FF55">&lt;b>derick@singlemalt&lt;/b>&lt;/font>:&lt;font color="#5555FF">&lt;b>~/dev/php/php-src.git&lt;/b>&lt;/font>$ ./configure --help | grep hash         
+  --with-mhash=DIR        Include mhash support                                 
+  --disable-hash          Disable hash support                                  
+&lt;/span>&lt;/pre>
+</blurb>
+
+<break/>
+
+<div effect="fade-in">
+<blurb>PHP 7.4:</blurb>
+<blurb>
+&lt;pre>&lt;span style="background-color:#4E4E4E">&lt;font color="#FFFF55"> ⮯ &lt;/font>&lt;/span>&lt;span style="background-color:#4E4E4E">PHP-7.3 &lt;/span>&lt;span style="background-color:#303030"> 𝑷 &lt;/span>&lt;span style="background-color:#303030">&lt;font color="#FFFFFF">&lt;b>7.4.0-dev&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#303030"> &lt;/span>&lt;span style="background-color:#303030">&lt;font color="#AA0000">ＡＵ &lt;/font>&lt;/span>&lt;span style="background-color:#303030">&lt;font color="#55FF55">&lt;b>ＤＮ&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#303030">&lt;font color="#55FFFF">&lt;b>⁶⁴&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#262626"> 𝑿 &lt;/span>&lt;span style="background-color:#262626">&lt;font color="#FFFFFF">&lt;b>3.0.0-dev&lt;/b>&lt;/font>&lt;/span>&lt;span style="background-color:#303030"> &lt;/span>&lt;span style="background-color:#1C1C1C">                                &lt;/span>
+&lt;span style="background-color:#4E4E4E">&lt;font color="#55FF55">&lt;b>derick@singlemalt&lt;/b>&lt;/font>:&lt;font color="#5555FF">&lt;b>~/dev/php/php-src.git&lt;/b>&lt;/font>$ ./configure --help | grep hash         
+  --with-mhash=DIR        Include mhash support                                 
+&lt;/span>&lt;/pre>
+</blurb>
+</div>
+
+<div effect="fade-in">
+<blurb class="centre">~yes, I know this one is boring~</blurb>
+</div>
+
+</slide>
+

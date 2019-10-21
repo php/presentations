@@ -1,0 +1,30 @@
+<slide>
+<title>Covariant Return Types</title>
+
+Covariant Returns and Contravariant Parameters — Levi Morrison
+https://wiki.php.net/rfc/covariant-returns-and-contravariant-parameters —
+
+typed properties are invariant
+
+<example>
+&lt;?php
+class 🍞 {}
+class 🥖 extends 🍞 {}
+
+class Bakery
+{
+	public function gimme(): 🥖 {}
+}
+
+class Patisserie extends Bakery
+{
+	public function gimme(): 🍞 {}
+}
+?>
+</example>
+
+<blurb class="error">Fatal error: Declaration of Patisserie::gimme(): 🍞 must be compatible with Bakery::gimme(): 🥖</blurb>
+<break lines="2"/>
+<blurb class="center">Return types are *co-variant*:<br/>~they can *not* return a more broad type~</blurb>
+</slide>
+

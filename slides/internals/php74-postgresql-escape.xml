@@ -1,0 +1,31 @@
+<slide>
+<title>Episode #22: PostGreSQL escape characters</title>
+
+<audio filename="matteo-becatti.mp3"/>
+
+<image filename="matteo-becatti.png" align="right" attr="Matteo Becatti"/>
+
+Episode 22 — PostGreSQL escape characters — with Matteo Beccati
+
+<blurb>*Given:*</blurb>
+<list>
+	<bullet>*That:* PDO uses %?% as prepared value place holder</bullet>
+	<bullet>*And:* New SQL syntax uses %?% as an operator:
+<example>
+SELECT * FROM tbl WHERE json_col ? 'foo';
+</example>
+	</bullet>
+	<bullet>*Then:* We're in trouble</bullet>
+</list>
+
+<div effect="fade-in">
+<break lines="3"/>
+<blurb>PHP 7.4 has an escape character to provide the solution:</blurb>
+<example inline="1">
+$stmt = $pdo->prepare('SELECT \* FROM tbl WHERE json_col *??* ?');
+</example>
+</div>
+
+https://wiki.php.net/rfc/pdo_escape_placeholders — https://github.com/php/php-src/pull/4217/files#diff-ebfd69a4c47ba09ff22a1b349e499292R22
+</slide>
+

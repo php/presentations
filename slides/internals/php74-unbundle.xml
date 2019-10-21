@@ -1,0 +1,26 @@
+<slide>
+<title>Unbundling Extensions</title>
+
+<blurb>The following extensions are following 🦕 and 🦖, like when the ☄️  hit:</blurb>
+
+<div effect="fade-in">
+<blurb>%ext/recode%<br/>← <small>Depends on the Recode library which had its latest release in 2001</small><br/>→ Alternative: %iconv%</blurb>
+Unbundle ext/recode
+https://wiki.php.net/rfc/unbundle_recode
+</div>
+
+<div effect="fade-in">
+<break/>
+<blurb>%ext/wddx%<br/>← <small>Entirely useless as everybody now uses JSON for this</small><br/>→ Moved to Siberia^WPECL    ☃️  ❄️  ⛄ </blurb>
+Unbundle ext/wddx
+https://wiki.php.net/rfc/deprecate-and-remove-ext-wddx
+</div>
+
+<div effect="fade-in">
+<break/>
+<blurb>%ext/interbase%<br/>← <small>Access to Interbase and Firebird databases</small><br/>→ Moved to PECL</blurb>
+Deprecate and remove ext/interbase
+https://wiki.php.net/rfc/deprecate-and-remove-ext-interbase
+</div>
+</slide>
+

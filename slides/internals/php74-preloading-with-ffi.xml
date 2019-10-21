@@ -1,0 +1,36 @@
+<slide>
+<title>Preloading and FFI</title>
+
+FFI - Foreign Function Interface — Dmitri Stogov
+
+<blurb class="center">🐌 Processing FFI on each request is slow, but preloading is fast! 🚀</blurb>
+
+<break lines="1"/>
+
+<blurb>%preload.inc%:</blurb>
+<example>
+&lt;?php
+FFI::load(__DIR__ . '/astro-preload.h');
+</example>
+
+<blurb>%astro-preload.h%:</blurb>
+<example>
+#define FFI_SCOPE "ASTRO"
+
+void sunpos(double d, double *L, double *M, double *ra, double *decl, double *rad);
+</example>
+
+<blurb>Run:</blurb>
+
+<example>
+&lt;?php
+$ffi = FFI::scope('ASTRO');
+…
+$ffi->sunpos(
+    $dayNr,
+    FFI::addr($L), FFI::addr($M), FFI::addr($ra), FFI::addr($decl), FFI::addr($rad)
+);
+</example>
+
+</slide>
+

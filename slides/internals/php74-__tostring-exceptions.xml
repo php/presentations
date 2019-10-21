@@ -1,0 +1,42 @@
+<slide>
+<title>Episode #14: __toString Exceptions</title>
+
+<image filename="nikita-popov.jpg" align="left" attr="Nikita Popov"/>
+
+Episode 14 — __toString Exceptions — Nikita Popov
+
+<example result="1">
+&lt;?php
+class 💥
+{
+	function __toString()
+	{
+		throw new Exception();
+	}
+}
+
+$💣  = new 💥;
+echo $💣;
+?>
+</example>
+<break lines="3"/>
+
+<div effect="fade-out">
+<blurb>PHP 7.3:</blurb>
+<example class="error">
+Fatal error: Method 💥::__toString() must not throw an exception, caught Exception
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 7.4:</blurb>
+<example class="error">
+Fatal error: Uncaught Exception
+</example>
+</div>
+
+<break lines="2"/>
+<blurb align="right">https://wiki.php.net/rfc/tostring_exceptions</blurb> — https://github.com/php/php-src/pull/3887/files
+
+</slide>
+

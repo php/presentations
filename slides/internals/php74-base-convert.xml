@@ -1,0 +1,47 @@
+<slide>
+<title>Episode #15: Base Convert Improvements</title>
+
+Episode 15 — Base Convert Improvements — Scott Dutton
+https://wiki.php.net/rfc/base_convert_improvements#vote — https://github.com/php/php-src/pull/4328/files
+
+<audio filename="scott-dutton.mp3"/>
+
+<image filename="scott-dutton.jpg" align="right" attr="Scott Dutton"/>
+
+<blurb>%base_convert% — ~Convert a number between arbitrary bases~</blurb>
+<example>
+base_convert (string $number, int $fromBase, int $toBase ) : string
+</example>
+
+<blurb>What does this output?</blurb>
+<example>
+&lt;?php
+echo base_convert("hello world", 16, 10), "\n";
+?>
+</example>
+
+<div effect="fade-in">
+<example inline="1" class="result">
+|ffffff|237|
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>This is what it really does:</blurb>
+<example inline="1">
+&amp;lt;?php
+echo base_convert("|cccccc|h||ff0000|e||cccccc|llo worl||ff0000|d|", 16, 10), "\n";
+?>
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>In PHP 7.4:</blurb>
+<example class="error">
+Deprecated: Invalid characters passed for attempted conversion, these have been ignored 
+</example>
+</div>
+
+Negative didn't pass
+</slide>
+

@@ -1,0 +1,27 @@
+<slide>
+<title>Typed Properties</title>
+
+<example result="0">
+&lt;?php
+class 🥃 
+{
+    public    int        $age;
+    public    Distillery $distillery;
+    private   ?Bottler   $bottler;
+}
+
+$whisky = new 🥃;
+$whisky->distillery = "Lagavullin";
+?>
+</example>
+<break/>
+
+<div effect="fade-in">
+<blurb class="error">
+TypeError: Typed property 🥃::$distillery must be an instance of Distillery, string used
+</blurb>
+
+<break lines="2"/>
+<blurb class="centre">Type validation is checked when writing</blurb>
+</div>
+</slide>

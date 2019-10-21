@@ -1,0 +1,32 @@
+<slide>
+<title>Episode #4: Short Arrow Functions</title>
+
+<blurb>Syntax:</blurb>
+
+<example>
+$arrow = fn($x) => $x + $y;
+</example>
+<break/>
+
+
+<list>
+	<bullet>Variables automatically captured *by-value*</bullet>
+	<bullet>Shorter prefix: %fn%</bullet>
+	<bullet>Implicit return is *one* expression</bullet>
+</list>
+
+<break/>
+
+<blurb>Great for filter:</blurb>
+<example>
+$this->existingSchemaPaths = array_filter($paths, function ($v) use ($names) {
+    return in_array($v, $names);
+});
+</example>
+<blurb>Becomes:</blurb>
+<example>
+$this->existingSchemaPaths = array_filter($paths, fn($v) => in_array($v, $names));
+</example>
+
+</slide>
+

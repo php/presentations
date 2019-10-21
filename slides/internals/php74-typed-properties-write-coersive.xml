@@ -1,0 +1,25 @@
+<slide>
+<title>Typed Properties</title>
+
+<example result="1">
+&lt;?php
+class 🥃 
+{
+    public    int        $age;
+    protected Distillery $distillery;
+    private   ?Bottler   $bottler;
+}
+
+$whisky = new 🥃;
+$whisky->age = "29";
+
+var_dump($whisky);
+?>
+</example>
+<break/>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb class="centre">Type-coercion when %strict_types=0%</blurb>
+</div>
+</slide>

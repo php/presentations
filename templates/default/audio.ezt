@@ -1,0 +1,5 @@
+{use $node, $pres}	
+{var $filename = get_attribute( $node, 'filename' )}
+<audio autoplay>
+<source src="{$pres->base}{$filename}" type="audio/mpeg">
+</audio>

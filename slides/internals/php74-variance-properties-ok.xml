@@ -1,0 +1,29 @@
+<slide>
+<title>Invariant Property Types</title>
+
+Covariant Returns and Contravariant Parameters — Levi Morrison
+https://wiki.php.net/rfc/covariant-returns-and-contravariant-parameters —
+
+typed properties are invariant
+
+<example>
+&lt;?php
+class 🌐 {}
+class 🌏 extends 🌐 {}
+
+class Bakery
+{
+	public 🌏 $gravity;
+}
+
+class Patisserie extends Bakery
+{
+	public 🌏 $gravity;
+}
+?>
+</example>
+
+<break lines="2"/>
+<blurb class="center">Property types are *in-variant*:<br/>~they can *not* represent a more specific or a more broad type~</blurb>
+</slide>
+

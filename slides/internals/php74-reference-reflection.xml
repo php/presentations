@@ -1,0 +1,43 @@
+<slide>
+<title>Reflection for references</title>
+
+Reflection for references — Nikita Popov
+https://wiki.php.net/rfc/reference_reflection — https://github.com/php/php-src/pull/3550/files#diff-3d0f8818dac092be87cf355bee98bccfR2
+
+<div effect="fade-out">
+<blurb>Detecting if %$array1[$key]% is a reference:</blurb>
+<example>
+&lt;?php
+$array2 = $array1;
+$array2[$key] = $unique_cookie;
+if ($array1[$key] === $unique_cookie) {
+    // $array1[$key] is a reference
+}
+?>
+</example>
+<blurb>No longer will work reliably in PHP 7.4 due to typed properties, so %ReferenceReflection% was added.</blurb>
+</div>
+
+<div effect="fade-in">
+<example result="1">
+&lt;?php
+$array = [0, 1, 2];
+$ref1 =&amp; $array[1];
+$ref2 =&amp; $array[2];
+$array[3] =&amp; $array[2];
+
+$r0 = ReflectionReference::fromArrayElement($array, 0);
+$r1 = ReflectionReference::fromArrayElement($array, 1);
+$r2 = ReflectionReference::fromArrayElement($array, 2);
+$r3 = ReflectionReference::fromArrayElement($array, 3);
+
+var_dump( $r0, $r1 );
+
+echo base64_encode( $r1->getId() ), "\n";
+echo base64_encode( $r2->getId() ), "\n";
+echo base64_encode( $r3->getId() ), "\n";
+</example>
+</div>
+
+</slide>
+

@@ -1,7 +1,8 @@
 {use $node, $pres}
 {var $class = get_attribute( $node, 'class' )}
+{var $style = get_attribute( $node, 'style' )}
 <div>
-<table{if $class} class="{$class}"{/if}>
+<table{if $class} class="{$class}"{/if} {if $style} style="{$style}"{/if}>
 {foreach $node->childNodes as $child}
 	{if is_set( $child->tagName )}
 		{include $child->tagName . '.ezt' send $child as $node, $pres}

@@ -1,0 +1,34 @@
+<slide>
+<title>Episode #10: LSP and Operator Precedence</title>
+
+Episode 10 — LSP and Operator Precedence — Nikita Popov
+https://wiki.php.net/rfc/ternary_associativity — https://github.com/php/php-src/pull/4017/files#diff-02b0ba36e963ebca22e7f764721073a5R1
+http://wiki.php.net/rfc/concatenation_precedence — Deprecate only: https://github.com/php/php-src/pull/4001/files
+
+<blurb>What does this return?</blurb>
+<example>
+&lt;?php
+$a = 3; $b = 7;
+echo "sum: " . $a + $b;
+?>
+</example>
+
+<div effect="fade-in">
+<blurb>Result:</blurb>
+<blurb class="result"><example inline="1">|ffffff|7|</example></blurb>
+</div>
+
+<div effect="fade-in">
+<break/>
+<blurb>In PHP 7.4:</blurb>
+<example class="error">
+Deprecated: The behavior of unparenthesized expressions containing both '.' and '+'/'-' ⏎
+    will change in PHP 8: '+'/'-' will take a higher precedence in Standard input code on line 3
+</example>
+
+<break/>
+<blurb>~The impact to existing open-source code is de facto invisible; all found occurrences are actual bugs. This is a strong indicator that the overall impact will also be very minimal.~</blurb>
+</div>
+
+</slide>
+

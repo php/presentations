@@ -1,0 +1,26 @@
+<slide>
+<title>Typed Properties</title>
+
+<example result="0">
+&lt;?php
+declare(strict_types=1);
+
+class 🥃 
+{
+    public    int        $age;
+    public    Distillery $distillery;
+    private   ?Bottler   $bottler;
+}
+
+$whisky = new 🥃;
+$whisky->age = 29;
+?>
+</example>
+<break/>
+
+<div effect="fade-in">
+<blurb class="error">
+TypeError: Typed property 🥃::$age must be int, string used
+</blurb>
+</div>
+</slide>

@@ -1,0 +1,28 @@
+<slide>
+<title>Episode #1: Saner String Number Comparisons</title>
+
+<audio filename="nikita-popov-first.mp3"/>
+
+<image filename="nikita-popov.jpg" align="left" attr="Nikita Popov"/>
+
+<div effect="fade-out">
+<blurb>Proposal:</blurb>
+
+<table style="width: 70%; align: right; font-size: 200%">
+<tr><th>Comparison</th><th>Before</th><th>After</th></tr>
+<tr><td>% 0 == "0"    %</td><td>true  </td><td>true</td></tr>
+<tr><td>% 0 == "0.0"  %</td><td>true  </td><td>true</td></tr>
+<tr><td>% 0 == "foo"  %</td><td>true  </td><td>false</td></tr>
+<tr><td>% 0 == ""     %</td><td>true  </td><td>false</td></tr>
+<tr><td>%42 == "&#160;&#160;&#160;&#160;42"%</td><td>true  </td><td>true</td></tr>
+<tr><td>%42 == "42foo"%</td><td>true  </td><td>false</td></tr>
+</table>
+
+<blurb align="right">*RFC*: https://wiki.php.net/rfc/string_to_number_comparison</blurb> — https://github.com/php/php-src/pull/3787/files
+</div>
+
+<div effect="fade-in">
+<blurb class="big-centre">PHP 8?</blurb>
+</div>
+</slide>
+

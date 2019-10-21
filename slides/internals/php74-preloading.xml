@@ -1,0 +1,22 @@
+<slide>
+<title>Preloading</title>
+
+Preloading — Dmitri Stogov
+
+<list>
+	<bullet>OPcache is awesome</bullet>
+	<bullet>It prevents a lot of work "compiling" PHP files</bullet>
+	<bullet>Still overhead: class resolving, checking whether files have modified, cache size/evictions</bullet>
+</list>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb>Added in 7.4:</blurb>
+<blurb class="center">A new %php.ini% directive: *%opcache.preload%*</blurb>
+<blurb>With this directive you can specify a single PHP file which will perform the preloading task.</blurb>
+
+<break lines="2"/>
+<blurb align="right">https://wiki.php.net/rfc/preload</blurb> — https://github.com/php/php-src/pull/3538
+</div>
+</slide>
+

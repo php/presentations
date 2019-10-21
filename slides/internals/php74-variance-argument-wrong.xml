@@ -1,0 +1,25 @@
+<slide>
+<title>Contravariant Argument Types</title>
+
+<example result="0">
+&lt;?php
+class 🐖 {}
+class 🐗 extends 🐖 {}
+
+class Asterix
+{
+	public function hunt(🐖 $animal) {}
+}
+
+class Gauls extends Asterix
+{
+	public function hunt(🐗 $animal) {}
+}
+?>
+</example>
+
+<blurb class="error">Warning: Declaration of Gauls::hunt(🐗 $animal) should be compatible with Asterix::hunt(🐖 $animal)</blurb>
+<break lines="2"/>
+<blurb class="center">Arguments types are *contra-variant*:<br/>~they can *not* accept a more specific type~</blurb>
+</slide>
+

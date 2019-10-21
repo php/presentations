@@ -1,0 +1,38 @@
+<slide>
+<title>New custom object serialization mechanism</title>
+
+New custom object serialization mechanism
+https://wiki.php.net/rfc/custom_object_serialization — https://github.com/php/php-src/pull/3761/files
+
+<blurb>PHP's serialisation mechanisms:</blurb>
+<list>
+	<bullet>Serializable interface</bullet>
+	<bullet>The __sleep()/__wakeup() magic methods</bullet>
+</list>
+<div effect="fade-in">
+<list>
+	<bullet>
+		<blurb>Two new *magic methods*:</blurb>
+<example>
+public function __serialize(): array;
+public function __unserialize(array $data): void;
+</example>
+	</bullet>
+</list>
+
+<example>
+class 🔥 {
+    private $temperature;
+
+    public function __serialize(): array {
+        return ["t" => $this->temperature];
+    }
+    public function __unserialize(array $data) {
+        $this->temperature = $data['t'];
+    }
+}
+</example>
+</div>
+
+</slide>
+

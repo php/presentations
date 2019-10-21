@@ -1,0 +1,17 @@
+<slide>
+<title>Spread Operator in Array Expression</title>
+
+Spread Operator in Array Expression — CHU Zhaowei
+https://wiki.php.net/rfc/spread_operator_for_array — https://github.com/php/php-src/pull/3640/files#diff-09edb373156c57c4d53fe48c3f3b5adbR17
+
+<example class="big" result="1">
+&lt;?php
+$apples = [ '🍎',  '🍏' ];
+$fruits = [ '🍐', '🍑', ...$apples, '🍓',  '🍅' ];
+
+echo "Fruit salad: ", implode( '', $fruits ), "\n";
+?>
+</example>
+
+</slide>
+

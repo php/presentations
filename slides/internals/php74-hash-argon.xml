@@ -1,0 +1,60 @@
+<slide>
+<title>Episode #12: Argon2 support from Sodium</title>
+
+<audio filename="sara-golemon.mp3"/>
+
+<image filename="sara-golemon.jpg" align="right" attr="Sara Golemon"/>
+Episode 12 — Argon — Sara Golemon
+Password Hashing Registry — Sara Golemon
+https://wiki.php.net/rfc/password_registry — https://github.com/php/php-src/pull/3609
+
+<div effect="fade-out">
+<example>
+&lt;?php
+print_r(password_algos());
+?>
+</example>
+
+<blurb>Result</blurb>
+<example inline="1" class="result">
+|ffffff|Array|
+|ffffff|(|
+|ffffff|    [0] => 2y|
+|ffffff|)|
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1" class="result">
+|ffffff|Array|
+|ffffff|(|
+|ffffff|    [0] => 2y|
+|ffffff|    [1] => argon2i|
+|ffffff|    [2] => argon2id|
+|ffffff|)|
+</example>
+</div>
+
+<div effect="fade-in">
+<example>
+password_hash(string $password, int $algo, array $options) : string
+password_verify(string $password, string $hash) : bool
+</example>
+<blurb>Options:</blurb>
+<list>
+	<bullet>
+    *memory_cost*: Maximum memory to compute the hash. Defaults to 64kb.
+	</bullet>
+	<bullet>
+    *time_cost*: Maximum amount of time to compute the hash. Defaults to 4.
+	</bullet>
+	<bullet>
+    *threads*: Number of threads to use for computing the hash. Defaults to 1.
+	</bullet>
+</list>
+<blurb><small>(The defaults are %PASSWORD_ARGON2_DEFAULT_MEMORY_COST%, %PASSWORD_ARGON2_DEFAULT_TIME_COST%, %PASSWORD_ARGON2_DEFAULT_THREADS%, which may change over time)</small></blurb>
+</div>
+Argon2 support from sodium — Sara Golemon
+https://wiki.php.net/rfc/sodium.argon.hash — https://github.com/php/php-src/pull/4012/files
+</slide>
+

@@ -1,0 +1,37 @@
+<slide>
+<title>E_WARNING for invalid container read array-access</title>
+
+E_WARNING for invalid container read array-access — David Walker
+https://wiki.php.net/rfc/notice-for-non-valid-array-container — https://github.com/php/php-src/pull/4386
+
+<example result="0">
+&lt;?php
+xdebug_disable(); error_reporting(-1);
+
+$var = false;
+$var[1][2][3][4][5];
+
+$var = array(123);
+$var[0][1];
+ 
+$a = [null];
+$c = null;
+$b = ($a[0][0] + $c[0]);
+</example>
+
+<div effect="fade-in">
+<example class="error">
+Notice:  Trying to access array offset on value of type bool in /tmp/example.php on line 6
+Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
+Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
+Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
+Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
+
+Notice:  Trying to access array offset on value of type int in /tmp/example.php on line 9
+
+Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 13
+Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 13
+</example>
+</div>
+
+</slide>

@@ -1,5 +1,7 @@
 {use $pres, $node}
 {var $result}
+{var $class = get_attribute( $node, 'class' )}
+<div{if $class} class='{$class}'{/if}>
 {if get_attribute( $node, 'inline' ) >= 1}
 <pre class='code'>{raw format_text( $pres, $node->nodeValue )}</pre>
 {else}
@@ -22,3 +24,4 @@
 </div>
  {/if}
 {/if}
+</div>

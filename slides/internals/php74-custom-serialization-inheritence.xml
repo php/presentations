@@ -1,0 +1,30 @@
+<slide>
+<title>New custom object serialization mechanism</title>
+
+<example result="1">
+&lt;?php
+class 🔥 {
+    private $temperature = 5000;
+
+    public function __serialize(): array       { return ['t' => $this->temperature]; }
+    public function __unserialize(array $data) { $this->temperature = $data['t'];    }
+}
+
+class ⭐ extends 🔥 {
+    private $size = 695510000;
+
+    public function __serialize(): array {
+        return [
+            's' => $this->size,
+            '🔥' => parent::__serialize(),
+        ];
+    }
+    public function __unserialize(array $data) {
+        parent::__unserialize( $data['🔥'] );
+        $this->size = $data['s'];
+    }
+}
+echo serialize( $test = new ⭐ );
+</example>
+
+</slide>

@@ -1,0 +1,31 @@
+<slide>
+<title>FFI — Foreign Function Interface</title>
+
+<blurb>Simple header file with defintions:</blurb>
+<example>
+void sunpos(double d, double *L, double *M, double *ra, double *decl, double *rad);
+</example>
+
+<break/>
+
+<blurb>In PHP, load definitions and call:</blurb>
+<example>
+&lt;?php
+$ffi = FFI::load(__DIR__ . '/astro.h');
+
+$dayNr = (time() - 946598400) / 86400.0;
+
+$L    = FFI::new('double');
+$M    = FFI::new('double');
+$ra   = FFI::new('double');
+$decl = FFI::new('double');
+$rad  = FFI::new('double');
+
+$ffi->sunpos(
+	$dayNr,
+	FFI::addr($L), FFI::addr($M), FFI::addr($ra), FFI::addr($decl), FFI::addr($rad)
+);
+</example>
+
+</slide>
+

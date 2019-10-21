@@ -1,0 +1,27 @@
+<slide>
+<title>Typed Properties</title>
+
+<example>
+&lt;?php
+class 🥃 
+{
+    public    int        $age;
+    protected Distillery $distillery;
+    private   ?Bottler   $bottler;
+}
+
+$whisky = new 🥃;
+
+echo $whisky->age;
+?>
+</example>
+<break/>
+<div effect="fade-in">
+<blurb class="error">
+Error: Typed property 🥃::$age must not be accessed before initialization
+</blurb>
+
+<break lines="2"/>
+<blurb class="centre">Uninitialized state is checked when reading</blurb>
+</div>
+</slide>

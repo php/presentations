@@ -1,0 +1,31 @@
+<slide>
+<title>Preloading → Zend Framework</title>
+
+<example inline="2">
+&amp;lt;?php
+function _preload( $path, *string $pattern = '/\.php$/'*)
+{
+    if ( is_dir( $path ) ) {
+        if ( $dh = opendir( $path ) ) {
+            while ( ( $file = readdir( $dh ) ) !== false ) {
+                if ( $file !== '.' &amp;&amp; $file !== '..' ) {
+                    _preload( $path . '/' . $file, $pattern );
+                }
+            }
+            closedir( $dh );
+        }
+    } else if ( is_file( $path ) &amp;&amp; preg_match( $pattern, $path ) ) {
+        if ( *!opcache_compile_file($path)* ) {
+            trigger_error( 'Preloading Failed', E_USER_ERROR );
+        }
+    }
+}
+ 
+_preload( '/var/www/ZendFramework/library' );
+</example>
+
+<break/>
+<blurb class="centre">Alternatively, you may just include all files instead of %opcache_compile_file()%</blurb>
+
+</slide>
+

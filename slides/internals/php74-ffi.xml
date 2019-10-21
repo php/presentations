@@ -1,0 +1,21 @@
+<slide>
+<title>FFI — Foreign Function Interface</title>
+
+FFI - Foreign Function Interface — Dmitri Stogov
+
+<break lines="3"/>
+<blurb class="big-centre">🐲 ¡Here Be Dragons! 🐲</blurb>
+<break lines="1"/>
+
+<list class="centre">
+	<bullet>🔀 A way to directly talk to C libraries from PHP</bullet>
+	<bullet>📕 Bundled with PHP 7.4, but not enabled by default</bullet>
+	<bullet>👷 Consider it experimental</bullet>
+	<bullet>🇫🇷 Documentation, qu'est-ce que c'est?</bullet>
+</list>
+
+<break lines="2"/>
+<blurb align="right">https://wiki.php.net/rfc/ffi</blurb> — https://github.com/php/php-src/commit/e089d506d5c7716c62cee5232d32ab22d0ddde26
+
+</slide>
+

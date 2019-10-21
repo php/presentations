@@ -1,0 +1,30 @@
+<slide>
+<title>Episode #19: Deprecate curly brace syntax for accessing array elements and string offsets</title>
+
+<audio filename="theodore-brown.mp3"/>
+
+<image filename="theodore-brown-big.jpeg" align="left" attr="Theodore Brown"/>
+Episode 19 — Deprecate curly brace syntax for accessing array elements and string offsets — with Theodore Brown
+https://wiki.php.net/rfc/deprecate_curly_braces_array_access — https://github.com/php/php-src/pull/4416/files
+
+<example result="1">
+&lt;?php
+$🌻 = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ];
+echo $🌻[4], "\n";
+echo $🌻{4}, "\n";
+
+$🎄 = "Christmas Tree";
+echo $🎄[4], "\n";
+echo $🎄{4}, "\n";
+?>
+</example>
+
+<div effect="fade-in">
+<blurb>In PHP 7.4:</blurb>
+<example class="error">
+Deprecated: Array and string offset access syntax with curly braces is deprecated
+Deprecated: Array and string offset access syntax with curly braces is deprecated
+</example>
+</div>
+
+</slide>

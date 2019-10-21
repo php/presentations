@@ -1,0 +1,51 @@
+<slide>
+<title>Episode #17: Numeric Literal Separator</title>
+
+Episode 17 — Numeric Literal Separator — Theodore Brown and Bishop Bettini
+https://wiki.php.net/rfc/numeric_literal_separator — https://github.com/php/php-src/pull/4165/files
+
+<audio filename="theodore-and-bishop.mp3"/>
+
+<image filename="theodore-brown.jpeg" align="right" attr="Theodore Brown"/>
+<image filename="bishop-bettini.png" align="right" attr="Bishop Bettini"/>
+
+<blurb>Representing big numbers:</blurb>
+<div effect="fade-out">
+<example>
+const ASTRONOMICAL_UNIT = 149597870700;
+const SPEED_OF_LIGHT    = 299792458;
+const EARTH_RADIUS      = 6378137;
+</example>
+</div>
+
+<div effect="fade-in">
+<example>
+const ASTRONOMICAL_UNIT = 149_597_870_700;
+const SPEED_OF_LIGHT    = 299_792_458;
+const EARTH_RADIUS      = 6_378_137;
+</example>
+</div>
+<break lines="3"/>
+<div effect="fade-in">
+<blurb>Also works for floats, hexadecimal, octal, and binary:</blurb>
+<example>
+$π       = 3.141_592_653_589_793_238_462_643_383_279_502_884_197_169_399_375_105_820_974_944_592_307_816_406_286_208_998_628_034_825_342_117_067_982_148_086_513_282_306_647_093_844_609_550_582_231_725_359_408;
+$ttwatch = 0x0085_0001;
+$perms   = 04_755;
+$gpio    = 0b01010100_01101000_01100101_01101111;
+</example>
+</div>
+
+<break/>
+
+<div effect="fade-in">
+<blurb>To avoid:</blurb>
+
+<example>
+$phoneNumber = 345_6789;
+$creditCard = 231_6547_9081_2543;
+$socialSecurity = 111_11_1111;
+</example>
+</div>
+
+</slide>

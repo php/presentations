@@ -1,0 +1,31 @@
+<slide>
+<title>Episode #3: Weak References</title>
+
+<audio filename="joe-watkins.mp3"/>
+
+<image filename="joe-watkins.jpg" align="left" attr="Joe Watkins"/>
+Episode 3 — Weak References — Joe Watkins
+
+<example>
+final class WeakReference {
+    public static function create(object $object) : WeakReference;
+    public function get() : ?object;
+}
+</example>
+
+<blurb>Example:</blurb>
+<example result="1">
+&lt;?php
+class 👻 { function boo() { echo "BOO!\n"; } }
+$boo = new 👻 ;
+$ref = WeakReference::create( $boo );
+
+$ref->get()->boo();
+unset( $boo );
+var_dump( $ref->get() );
+</example>
+
+
+<blurb align="right">*RFC*: https://wiki.php.net/rfc/weakrefs</blurb> — https://github.com/php/php-src/pull/3787/files
+</slide>
+

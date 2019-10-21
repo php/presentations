@@ -1,0 +1,38 @@
+<slide>
+<title>Null Coalescing Assignment Operator</title>
+
+Null Coalescing Assignment Operator — Midori Kocak
+https://wiki.php.net/rfc/null_coalesce_equal_operator — https://github.com/php/php-src/pull/1795
+
+<blurb>Assignment Operator:</blurb>
+<example>
+&lt;?php
+$rad = $degrees * M_PI / 180;
+$angle *= (M_PI / 180);
+?>
+</example>
+
+<break/>
+
+<div effect="fade-in">
+<blurb>Null Coalesce Operator:</blurb>
+<example>
+&lt;?php
+$this->data['comments']['user_id'] = $this->data['comments']['user_id'] ?? 'value';
+?>
+</example>
+</div>
+
+<break/>
+
+<div effect="fade-in">
+<blurb>Null Coalesce Assignment Operator:</blurb>
+<example>
+&lt;?php
+$this->data['comments']['user_id'] ??= 'value';
+?>
+</example>
+</div>
+
+</slide>
+

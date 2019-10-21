@@ -1,0 +1,25 @@
+<slide>
+<title>Preloading</title>
+<subtitle>Example</subtitle>
+
+<blurb>Enable *%opcache.preload%*:</blurb>
+<example inline="1">
+php \
+    -dopcache.enable=1 -dopcache.enable_cli=1 *-d opcache.preload=preload.inc* \
+    -d ffi.enable=1 \
+    -S 0.0.0.0:8080
+</example>
+
+<break lines="2"/>
+
+<blurb>Stats:</blurb>
+<example>
+var_dump(opcache_get_status()['preload_statistics']);
+</example>
+
+<break lines="2"/>
+
+<blurb>Once loaded, only a restart of the web server (or PHP-FPM) will reload files</blurb>
+
+</slide>
+

@@ -1,0 +1,23 @@
+<slide>
+<title>Deprecations in PHP 7.4</title>
+
+<list class="noicon">
+<bullet>🔥 The ~real~ type</bullet>
+<bullet>🔥 %FILTER_SANITIZE_MAGIC_QUOTES% filter</bullet>
+<bullet>🔥 Magic quotes legacy</bullet>
+<bullet>🔥 %array_key_exists()% with objects</bullet>
+<bullet>🔥 Reflection %export()% methods</bullet>
+<bullet>🔥 %mb_strrpos()% with encoding as 3rd argument</bullet>
+<bullet>🔥 %implode()% parameter order mix</bullet>
+<bullet>🔥 Unbinding %$this% from non-static closures</bullet>
+<bullet>🔥 %hebrevc()% function</bullet>
+<bullet>🔥 %convert_cyr_string()% function</bullet>
+<bullet>🔥 %money_format()% function → %NumberFormatter::formatCurrency()%</bullet>
+<bullet>🔥 %ezmlm_hash()% function</bullet>
+<bullet>🔥 %restore_include_path()% function</bullet>
+<bullet>🔥 %allow_url_include% INI directive</bullet>
+</list>
+
+???
+</slide>
+
