@@ -1,7 +1,7 @@
 <slide>
 <title>Xdebug code coverage</title>
 
-<example>
+<example class="medium">
 <![CDATA[<?php
 function ifthenelse( $a, $b )
 {
@@ -13,7 +13,7 @@ function ifthenelse( $a, $b )
     }
 }]]>
 </example>
-<example>
+<example class="medium">
 <![CDATA[<?php
 require 'vendor/autoload.php';
 include 'test.php';

@@ -2,14 +2,14 @@
 <title>Exercise: Deprecate Short Open Tags</title>
 
 <blurb>Compiling PHP:</blurb>
-<example>
+<example class="medium">
 ./buildconf
 ./configure --disable-all --prefix=/usr/local/php/deep-dive
 make clean &amp;&amp; make -j 4 &amp;&amp; make install
 </example>
 
 <blurb>In %Zend/zend_language_scanner.l%, find:</blurb>
-<example><![CDATA[<INITIAL>"<?" {
+<example class="medium"><![CDATA[<INITIAL>"<?" {
     if (CG(short_tags)) {
         BEGIN(ST_IN_SCRIPTING);
         if (PARSER_MODE()) {
@@ -24,6 +24,6 @@ make clean &amp;&amp; make -j 4 &amp;&amp; make install
 
 <blurb>Make it an error with:</blurb>
 <example>
-zend_error(E_COMPILE_ERROR, "Short Open Tags are no more on line %d", CG(zend_lineno));
+zend_error(E_COMPILE_ERROR, "{message} on line %d", CG(zend_lineno));
 </example>
 </slide>

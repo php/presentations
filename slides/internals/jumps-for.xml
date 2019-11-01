@@ -5,7 +5,7 @@
 <tr>
 
 <td>
-<example inline="1">
+<example class="medium" inline="1">
 &amp;lt;?php
 for ( |dd0000|$i = 0|; |00dd00|$i &amp;lt; 42|; |0000dd|++$i| ) {
     |dd00dd|echo $i;|
@@ -14,7 +14,7 @@ for ( |dd0000|$i = 0|; |00dd00|$i &amp;lt; 42|; |0000dd|++$i| ) {
 </td>
 
 <td>
-<example inline="1">
+<example class="medium" inline="1">
         |dd0000|init: AST_EXPR_LIST|
             0: AST_ASSIGN
                 var: AST_VAR
@@ -34,7 +34,7 @@ for ( |dd0000|$i = 0|; |00dd00|$i &amp;lt; 42|; |0000dd|++$i| ) {
 </td>
 </tr></table>
 
-<example inline="1">compiled vars:  !0 = $i
+<example class="medium" inline="1">compiled vars:  !0 = $i
 line     #* E I O op                           fetch          ext  return  operands
    2     0  E >   EXT_STMT                                                 
          1        |dd0000|ASSIGN                                                   !0, 0|

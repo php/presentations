@@ -4,8 +4,10 @@
 <blurb>Logging debugging communication:</blurb>
 <example>xdebug.remote_log=/tmp/remote.log</example>
 
-<div effect="fade-in">
+<break/>
 <blurb>Also shows connection attempts and failures:</blurb>
+
+<div effect="fade-out">
 
 <example inline="2">
 xdebug.remote_connect_back=0
@@ -16,7 +18,7 @@ I: Connected to client. *|009900|:-)|*
 </example>
 </div>
 
-<div effect="fade-in">
+<div effect="fade-in-out">
 <example inline="2">
 xdebug.remote_connect_back=1
 |777777|xdebug.remote_host=SomethingEntirelyDifferent|

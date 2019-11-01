@@ -3,7 +3,7 @@
 
 <image align="right" filename="complex-dot.png"/>
 
-<example inline="1">&amp;lt;?php
+<example class="medium" inline="1">&amp;lt;?php
 $a = [ 2.7, 4.9 ];
 |dd0000|foreach ( $a as $key => $value )| {
 	|00dd00|if ( $value &amp;lt; 3 ) {|
@@ -16,7 +16,7 @@ $a = [ 2.7, 4.9 ];
 }
 </example>
 
-<example inline="1">
+<example class="medium" inline="1">
 line     #* E I O op            return  operands
    2     0  E >   ASSIGN                !0, &amp;lt;array>
    3     1      > |dd0000|FE_RESET_R    $4      !0, ->12|

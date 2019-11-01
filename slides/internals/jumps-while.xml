@@ -9,15 +9,15 @@
 </example>
 
 <example inline="1">compiled vars:  !0 = $i
-line     #* E I O op                           fetch          ext  return  operands
-   2     0  E >   EXT_STMT                                                 
-         1        |dd0000|ASSIGN                                                   !0, 10|
-   3     2        EXT_STMT                                                 
-         3      > *JMP*                                                      ->|dd00dd|6|
-   4     4    >   EXT_STMT                                                 
-         5        |0000dd|ECHO                                                     !0|
-   3     |dd00dd|6|    >   |00dd00|PRE_DEC                                          $2      !0|
-         7      > |00dd00|JMPNZ                                                    $2, ->4|
-         8    > > RETURN                                                   1
+line     #* E I O op                           fetch   return  operands
+   2     0  E >   EXT_STMT                                     
+         1        |dd0000|ASSIGN                                       !0, 10|
+   3     2        EXT_STMT                                     
+         3      > *JMP*                                          ->|dd00dd|6|
+   4     4    >   EXT_STMT                                     
+         5        |0000dd|ECHO                                         !0|
+   3     |dd00dd|6|    >   |00dd00|PRE_DEC                              $2      !0|
+         7      > |00dd00|JMPNZ                                        $2, ->4|
+         8    > > RETURN                                       1
 </example>
 </slide>

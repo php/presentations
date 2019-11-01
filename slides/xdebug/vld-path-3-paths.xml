@@ -4,7 +4,7 @@
 <image align="right" filename="vld-path-3-paths.png"/>
 
 <blurb>test.php</blurb>
-<example>
+<example class="medium">
 <![CDATA[  1 <?php
   2 function ifthenelse( $a, $b )
   3 {
@@ -19,7 +19,7 @@
 </example>
 
 <blurb>branch.php</blurb>
-<example><![CDATA[…
+<example class="medium"><![CDATA[…
 xdebug_start_code_coverage(
     XDEBUG_CC_UNUSED | XDEBUG_CC_DEAD_CODE | XDEBUG_CC_BRANCH_CHECK
 );

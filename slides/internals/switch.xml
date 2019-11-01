@@ -1,7 +1,7 @@
 <slide>
 <title>Switch</title>
 
-<example inline="1">&amp;lt;?php
+<example class="medium" inline="1">&amp;lt;?php
 $variable = '42';
 
 switch ($variable) {
@@ -16,7 +16,7 @@ switch ($variable) {
 }
 </example>
 
-<example inline="1">
+<example class="medium" inline="1">
 compiled vars:  !0 = $variable
 line     #* E I O op              return  operands
 

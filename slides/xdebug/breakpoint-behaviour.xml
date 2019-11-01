@@ -4,54 +4,48 @@
 <div effect="fade-out">
 <table class="two">
 <tr><td>
-<example><![CDATA[
- 1: <?php
- 2: function scoped()
- 3: {
- 4:     $func = function()
- 5:     {
- 6:         $a = array( // breakpoint
- 7:             1 => "first",
- 8:             2 => "second",
- 9:         );
-10:     };
-11: 
-12:     $func();
-13: }
-14: 
-15: scoped();
-16: scoped();
-17: ?>
+<example inline="2"><![CDATA[
+  1: &lt;?php
+  2: function scoped()
+  3: {
+  4:     $func = function()
+  5:     {
+*● 6:         $a = array(*
+  7:             1 => "first",
+  8:             2 => "second",
+  9:         );
+ 10:     };
+ 11: 
+ 12:     $func();
+ 13: }
+ 14: 
+ 15: scoped();
+ 16: scoped();
+ 17: ?>
 ]]></example>
 </td><td>
 <example>
 function name:  scoped
 compiled vars:  !0 = $func
-line     #* E I O op                           return  operands
+line  #* op                       operands
+   4  1  EXT_STMT                 
+      2  DECLARE_LAMBDA_FUNCTION  '%00…closure.php0x7f2…'
 
-   2     0  E >   EXT_NOP                              
-   4     1        EXT_STMT                             
-         2        DECLARE_LAMBDA_FUNCTION              '%00…closure.php0x7f295f0c207e'
-
-  12     3        EXT_STMT                             
-         4        INIT_DYNAMIC_CALL                    !0
-         5        EXT_FCALL_BEGIN                      
-         6        DO_FCALL                             
-         7        EXT_FCALL_END                        
-  13     8        EXT_STMT                             
-         9      > RETURN                               null
-
+  12  3  EXT_STMT                 
+      4  INIT_DYNAMIC_CALL        !0
+      5  EXT_FCALL_BEGIN          
+      6  DO_FCALL                 
+      7  EXT_FCALL_END            
+  13  8  EXT_STMT                 
+      9  RETURN                   null
 
 function name:  {closure}
 
-line     #* E I O op                           return  operands
+line  #* op                       operands
+   7  1  EXT_STMT                 
 
-   4     0  E >   EXT_NOP                              
-   7     1        EXT_STMT                             
-
-  10     2        EXT_STMT                             
-         3      > RETURN                               null
-
+  10  2  EXT_STMT                 
+      3  RETURN                   null
 </example>
 </td></tr></table>
 
@@ -59,60 +53,52 @@ line     #* E I O op                           return  operands
 <div effect="fade-in">
 <table class="two">
 <tr><td>
-<example><![CDATA[
- 1: <?php
- 2: function scoped()
- 3: {
- 4:     $func = function()
- 5:     {
- 6:         $a = array( // breakpoint
- 7:             1 => "first",
- 8:             2 => "second",
- 9:         );
-10:     };
-11: 
-12:     $func();
-13: }
-14: 
-15: scoped();
-16: scoped();
-17: ?>
+<example inline="2"><![CDATA[
+  1: &lt;?php
+  2: function scoped()
+  3: {
+  4:     $func = function()
+  5:     {
+*● 6:         $a = array(*
+  7:             1 => "first",
+  8:             2 => "second",
+  9:         );
+ 10:     };
+ 11: 
+ 12:     $func();
+ 13: }
+ 14: 
+ 15: scoped();
+ 16: scoped();
+ 17: ?>
 ]]></example>
 <break/>
 <blurb>Turned off OPcache's optimiser →</blurb>
 </td><td>
 <example inline="2">
 function name:  scoped
-*compiled vars:  !0 = $func*
-line     #* E I O op                           return  operands
-
-   2     0  E >   EXT_NOP                              
-   4     1        EXT_STMT                             
-         2        DECLARE_LAMBDA_FUNCTION              '%00…closure.php0x7efeba02b07e'
-*  10     3        ASSIGN                               !0, ~1*
-  12     4        EXT_STMT                             
-         5        INIT_DYNAMIC_CALL                    !0
-         6        EXT_FCALL_BEGIN                      
-         7        DO_FCALL                             
-         8        EXT_FCALL_END                        
-  13     9        EXT_STMT                             
-        10      > RETURN                               null
-
+compiled vars:  !0 = $func
+line  #* op                       operands
+   4  1  EXT_STMT                 
+      2  DECLARE_LAMBDA_FUNCTION  '%00…closure.php0x7e…'
+*  10  3  ASSIGN                   !0, ~1*
+  12  4  EXT_STMT                 
+      5  INIT_DYNAMIC_CALL        !0
+      6  EXT_FCALL_BEGIN          
+      7  DO_FCALL                 
+      8  EXT_FCALL_END            
+  13  9  EXT_STMT                 
+     10  RETURN                   null
 
 function name:  {closure}
-compiled vars:  !0 = $a
-line     #* E I O op                           return  operands
-
-   4     0  E >   EXT_NOP                              
-   7     1        EXT_STMT                             
-*         2        ASSIGN                               !0, &amp;lt;array>*
-  10     3        EXT_STMT                             
-         4      > RETURN                               null
+*compiled vars:  !0 = $a*
+line  #* op                       operands
+   7  1  EXT_STMT                 
+*      2  ASSIGN                   !0, &amp;lt;array>*
+  10  3  EXT_STMT                 
+      4  RETURN                   null
 </example>
 </td></tr>
 </table>
-</div>
-<div effect="fade-in">
-<blurb class="big-centre">demo</blurb>
 </div>
 </slide>

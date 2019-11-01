@@ -1,13 +1,13 @@
 <slide>
 <title>FOR (rewritten)</title>
 
-<example inline="1">
+<example class="medium" inline="1">
 for ( |dd0000|$i = 0|; |00dd00|$i &amp;lt; 42|; |0000dd|++$i| ) {
     |dd00dd|echo $i;|
 }
 </example>
 
-<example inline="1">
+<example class="medium" inline="1">
 	|dd0000|$i = 0;|
 	goto COND;
 STMT:
@@ -20,7 +20,7 @@ COND:
 	|00dd00|}|
 </example>
 
-<example inline="1">compiled vars:  !0 = $i
+<example class="medium" inline="1">compiled vars:  !0 = $i
 line     #* E I O op                           fetch          ext  return  operands
    2     0  E >   EXT_STMT                                                 
          1        |dd0000|ASSIGN                                                   !0, 0|

@@ -7,8 +7,6 @@
 namespace DramIO;
 class Whisky
 {
-    private $name;
-
     public function __construct( $name )
     {
         $this->name = $name;
@@ -28,8 +26,6 @@ class Whisky
 namespace DramIO;
 class Whisky
 {
-    private $name;
-
     public function __construct($name)
     {
         $this->name = $name;␃]]></example>
@@ -38,8 +34,6 @@ class Whisky
 *T_NAMESPACE* |777777|T_WS| *T_STRING* DramIO ; |777777|T_WS| 
 *T_CLASS* |777777|T_WS| *T_STRING* Whisky |777777|T_WS|
 { |777777|T_WS| 
-    *T_PRIVATE* |777777|T_WS| *T_VARIABLE* $name ; |777777|T_WS| 
-
     *T_PUBLIC* |777777|T_WS| *T_FUNCTION* |777777|T_WS| *T_STRING* __construct ( *T_VARIABLE* $name ) |777777|T_WS| 
     { |777777|T_WS| 
        *T_VARIABLE* $this *T_OBJECT_OPERATOR* -> *T_STRING* name |777777|T_WS| = |777777|T_WS| *T_VARIABLE* $name ;

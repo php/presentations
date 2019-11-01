@@ -1,7 +1,7 @@
 <slide>
 <title>TRY … CATCH … FINALLY</title>
 
-<example inline="1">&amp;lt;?php
+<example class="medium" inline="1">&amp;lt;?php
 try {
     echo "in try";
 } *catch* ( Exception1 $e ) {
@@ -14,7 +14,7 @@ try {
 echo "after";
 </example>
 
-<example inline="1">
+<example class="medium" inline="1">
 line     #* E I O op            return  operands
    3     0  E >   ECHO                  'in+try'
          1      > JMP                   |00dd00|->7|

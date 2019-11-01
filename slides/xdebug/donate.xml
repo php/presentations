@@ -2,16 +2,18 @@
 <title>Supporting Xdebug</title>
 
 <blurb align="center">It's Open Source and free (as in "free beer")</blurb>
-<blurb align="center">Using Xdebug saves you a lot of time</blurb>
 <blurb align="center">I would like to work more on Xdebug, to help *you*</blurb>
 
-<break lines="2"/>
+<break lines="1"/>
 <blurb align="center">*Features and Bugs*</blurb>
 <blurb align="center">%https://bugs.xdebug.org%</blurb>
 
-<break lines="2"/>
+<break lines="1"/>
 <image align="center" filename="patreon.png" pdf-scale="0.8" y-offset="4"/>
-
 <blurb align="center">%https://www.patreon.com/derickr%</blurb>
+
+<break lines="1"/>
+<image align="center" filename="github-sponsor.png" pdf-scale="0.8" y-offset="4"/>
+<blurb align="center">%https://github.com/sponsors/derickr%</blurb>
 
 </slide>

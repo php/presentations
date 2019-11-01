@@ -1,7 +1,7 @@
 <slide>
 <title>Complex Loops</title>
 
-<example inline="1">&amp;lt;?php
+<example class="medium" inline="1">&amp;lt;?php
 $a = [ 2.7, 4.9 ];
 foreach ( $a as $key => $value ) {
 	if ( $value &amp;lt; 3 ) {
@@ -14,7 +14,7 @@ foreach ( $a as $key => $value ) {
 }
 </example>
 
-<example inline="1">line     #* E I O op                           fetch          ext  return  operands
+<example class="medium" inline="1">line     #* E I O op                           fetch          ext  return  operands
    2     0  E >   ASSIGN                                                   !0, &amp;lt;array>
    3     1      > FE_RESET_R                                       $4      !0, ->12
          2    > > FE_FETCH_R                                       ~5      $4, !1, ->12

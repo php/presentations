@@ -5,73 +5,77 @@
 <tr>
 <td>
 <example inline="2">
-*|aaaaaa|xdebug.|auto_trace*                     ~xdebug.always_start~
-*|aaaaaa|xdebug.|cli_color*
-|aaaaaa|xdebug.||0000ff|base|.collect_assignments
-|aaaaaa|xdebug.||0000ff|base|.collect_includes
-|aaaaaa|xdebug.||0000ff|base|.collect_params
-|aaaaaa|xdebug.||0000ff|base|.collect_return
-|aaaaaa|xdebug.||0000ff|base|.collect_vars
-*|aaaaaa|xdebug.|coverage_enable*                ~xdebug.mode~
-*|aaaaaa|xdebug.|default_enable*                 ~xdebug.mode~
-|aaaaaa|xdebug.||0000ff|display|.dump.COOKIE
-|aaaaaa|xdebug.||0000ff|display|.dump.ENV
-|aaaaaa|xdebug.||0000ff|display|.dump.FILES
-|aaaaaa|xdebug.||0000ff|display|.dump.GET
-|aaaaaa|xdebug.||0000ff|display|.dump.POST
-|aaaaaa|xdebug.||0000ff|display|.dump.REQUEST
-|aaaaaa|xdebug.||0000ff|display|.dump.SERVER
-|aaaaaa|xdebug.||0000ff|display|.dump.SESSION
-|aaaaaa|xdebug.||0000ff|display|.dump_globals
-*|aaaaaa|xdebug.|dump_once*
-|aaaaaa|xdebug.||0000ff|display|.dump_undefined
----*|00cc00|xdebug.extended_info|*---                  ~removed in Xdebug 2.8~
-|aaaaaa|xdebug.||0000ff|base|.file_link_format
-|aaaaaa|xdebug.||0000ff|base|.filename_format
-|aaaaaa|xdebug.||0000ff|base|.force_display_errors
-|aaaaaa|xdebug.||0000ff|base|.force_error_reporting
-|aaaaaa|xdebug.||0000ff|base|.gc_stats_enable
-*|aaaaaa|xdebug.|gc_stats_output_dir*            ~xdebug.output_dir~
-*|aaaaaa|xdebug.|gc_stats_output_name*           ~xdebug.output_name~
-|aaaaaa|xdebug.||0000ff|base|.halt_level
-*|aaaaaa|xdebug.|idekey*
-|aaaaaa|xdebug.||0000ff|base|.max_nesting_level
-|aaaaaa|xdebug.||0000ff|display|.max_stack_frames
-|aaaaaa|xdebug.||0000ff|display|.overload_var_dump
+*|aaaaaa|x.|auto_trace*          ~x.always_start~
+*|aaaaaa|x.|cli_color*
+|aaaaaa|x.||0000ff|base|.collect_assignments
+|aaaaaa|x.||0000ff|base|.collect_includes
+|aaaaaa|x.||0000ff|base|.collect_params
+|aaaaaa|x.||0000ff|base|.collect_return
+|aaaaaa|x.||0000ff|base|.collect_vars
+*|aaaaaa|x.|coverage_enable*             ~x.mode~
+*|aaaaaa|x.|default_enable*              ~x.mode~
+|aaaaaa|x.||0000ff|display|.dump.COOKIE
+|aaaaaa|x.||0000ff|display|.dump.ENV
+|aaaaaa|x.||0000ff|display|.dump.FILES
+|aaaaaa|x.||0000ff|display|.dump.GET
+|aaaaaa|x.||0000ff|display|.dump.POST
+|aaaaaa|x.||0000ff|display|.dump.REQUEST
+|aaaaaa|x.||0000ff|display|.dump.SERVER
+|aaaaaa|x.||0000ff|display|.dump.SESSION
+|aaaaaa|x.||0000ff|display|.dump_globals
+*|aaaaaa|x.|dump_once*
+|aaaaaa|x.||0000ff|display|.dump_undefined
+---*|00cc00|x.extended_info|*---         ~gone already~
+|aaaaaa|x.||0000ff|base|.file_link_format
 </example></td><td><example inline="2">
-*|aaaaaa|xdebug.|profiler_aggregate*
-*|aaaaaa|xdebug.|profiler_append*
-*|aaaaaa|xdebug.|profiler_enable*                ~xdebug.mode~
-*|aaaaaa|xdebug.|profiler_enable_trigger*        ~xdebug.enable_trigger~
-*|aaaaaa|xdebug.|profiler_enable_trigger_value*  ~xdebug.enable_trigger_value~
-*|aaaaaa|xdebug.|profiler_output_dir*            ~xdebug.output_dir~
-*|aaaaaa|xdebug.|profiler_output_name*           ~xdebug.output_name~
-|aaaaaa|xdebug.||0000ff|debugger|.addr_header
-*|aaaaaa|xdebug.|remote.autostart*               ~xdebug.always_start~
-|aaaaaa|xdebug.||0000ff|debugger|.connect_back
-|aaaaaa|xdebug.||0000ff|debugger|.cookie_expire_time
-*|aaaaaa|xdebug.|remote_enable*                  ~xdebug.mode~
-*|aaaaaa|xdebug.|remote_handler*
-|aaaaaa|xdebug.||0000ff|debugger|.host
-|aaaaaa|xdebug.||0000ff|debugger|.log
-|aaaaaa|xdebug.||0000ff|debugger|.mode
-|aaaaaa|xdebug.||0000ff|debugger|.port
-|aaaaaa|xdebug.||0000ff|debugger|.timeout
-*|aaaaaa|xdebug.|scream*                         ~always on ☺~
-|aaaaaa|xdebug.||0000ff|display|.show_error_trace
-|aaaaaa|xdebug.||0000ff|display|.show_exception_trace
-|aaaaaa|xdebug.||0000ff|display|.show_local_vars
-*|aaaaaa|xdebug.|show_mem_delta*                 ~always on~
-*|aaaaaa|xdebug.|trace_enable_trigger*           ~xdebug.enable_trigger~
-*|aaaaaa|xdebug.|trace_enable_trigger_value*     ~xdebug.enable_trigger_value~
-|aaaaaa|xdebug.||0000ff|tracing|.format
-|aaaaaa|xdebug.||0000ff|tracing|.options
-*|aaaaaa|xdebug.|trace_output_dir*               ~xdebug.output_dir~
-*|aaaaaa|xdebug.|trace_output_name*              ~xdebug.output_name~
-|aaaaaa|xdebug.||0000ff|display|.max_children
-|aaaaaa|xdebug.||0000ff|display|.max_data
-|aaaaaa|xdebug.||0000ff|display|.max_depth
-
+|aaaaaa|x.||0000ff|base|.filename_format
+|aaaaaa|x.||0000ff|base|.force_display_errors
+|aaaaaa|x.||0000ff|base|.force_error_reporting
+|aaaaaa|x.||0000ff|base|.gc_stats_enable
+*|aaaaaa|x.|gc_stats_output_dir*            ~x.output_dir~
+*|aaaaaa|x.|gc_stats_output_name*           ~x.output_name~
+|aaaaaa|x.||0000ff|base|.halt_level
+*|aaaaaa|x.|idekey*
+|aaaaaa|x.||0000ff|base|.max_nesting_level
+|aaaaaa|x.||0000ff|display|.max_stack_frames
+|aaaaaa|x.||0000ff|display|.overload_var_dump
+*|aaaaaa|x.|profiler_aggregate*
+*|aaaaaa|x.|profiler_append*
+*|aaaaaa|x.|profiler_enable*                ~x.mode~
+*|aaaaaa|x.|profiler_enable_trigger*        ~x.enable_trigger~
+*|aaaaaa|x.|profiler_enable_trigger_value*  ~x.enable_…_value~
+*|aaaaaa|x.|profiler_output_dir*            ~x.output_dir~
+*|aaaaaa|x.|profiler_output_name*           ~x.output_name~
+|aaaaaa|x.||0000ff|debugger|.addr_header
+*|aaaaaa|x.|remote.autostart*               ~x.always_start~
+|aaaaaa|x.||0000ff|debugger|.connect_back
+|aaaaaa|x.||0000ff|debugger|.cookie_expire_time
+</example></td>
+<!--
+<td><example inline="2">
+*|aaaaaa|x.|remote_enable*                  ~x.mode~
+*|aaaaaa|x.|remote_handler*
+|aaaaaa|x.||0000ff|debugger|.host
+|aaaaaa|x.||0000ff|debugger|.log
+|aaaaaa|x.||0000ff|debugger|.mode
+|aaaaaa|x.||0000ff|debugger|.port
+|aaaaaa|x.||0000ff|debugger|.timeout
+*|aaaaaa|x.|scream*                         ~always on ☺~
+|aaaaaa|x.||0000ff|display|.show_error_trace
+|aaaaaa|x.||0000ff|display|.show_exception_trace
+|aaaaaa|x.||0000ff|display|.show_local_vars
+*|aaaaaa|x.|show_mem_delta*                 ~always on~
+*|aaaaaa|x.|trace_enable_trigger*           ~x.enable_trigger~
+*|aaaaaa|x.|trace_enable_trigger_value*     ~x.enable_trigger_value~
+|aaaaaa|x.||0000ff|tracing|.format
+|aaaaaa|x.||0000ff|tracing|.options
+*|aaaaaa|x.|trace_output_dir*               ~x.output_dir~
+*|aaaaaa|x.|trace_output_name*              ~x.output_name~
+|aaaaaa|x.||0000ff|display|.max_children
+|aaaaaa|x.||0000ff|display|.max_data
+|aaaaaa|x.||0000ff|display|.max_depth
 </example>
-</td></tr></table>
+</td>
+-->
+</tr></table>
 </slide>

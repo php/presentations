@@ -63,7 +63,7 @@
 
 <br/>
 
-<example inline="1">
+<example class="medium" inline="1">
 1: AST_METHOD
     flags: MODIFIER_PUBLIC (256)
     name: |00dd00|__construct|

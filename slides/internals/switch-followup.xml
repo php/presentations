@@ -1,7 +1,7 @@
 <slide>
 <title>Switch follow-up</title>
 
-<example inline="1">&amp;lt;?php
+<example class="medium" inline="1">&amp;lt;?php
 function foo()
 {
     return '42';
@@ -19,7 +19,7 @@ switch (foo()) {
 }</example>
 
 <div effect="fade-in">
-<example inline="2">
+<example class="medium" inline="2">
 line     #* E I O op              return  operands
    2     0  E >   NOP                     
    7     1        INIT_FCALL              'foo'
