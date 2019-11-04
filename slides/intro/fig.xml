@@ -1,0 +1,24 @@
+<slide>
+<image filename="fig.png" width="25%"/>
+
+<break lines="2"/>
+<image align="right" filename="psrs.png"/>
+
+<list>
+	<bullet>2009: *PHP Standards Group*</bullet>
+	<bullet>2011: *Framework Interoperability Group*</bullet>
+</list>
+<break/>
+
+<list>
+	<bullet>*PSR-0* and *PSR-4*: key enabler for Composer</bullet>
+	<bullet>*PSR-1* and *PSR-12*: preset in many IDEs, which makes them the default coding standard for nearly all PHP projects</bullet>
+</list>
+<break/>
+
+<list>
+	<bullet>2017: *FIG 3.0*</bullet>
+	<bullet>2018: *Symfony leaves FIG*</bullet>
+</list>
+
+</slide>

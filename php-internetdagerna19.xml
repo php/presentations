@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title> The state of PHP</title>
+<event>InternetDagarna</event>
+<location>Stockholm, Sweden</location>
+<date>November 25th, 2019</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/php-internetdagerna19</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/intro/msx.xml</slide>
+
+<slide>slides/intro/nold3.xml</slide>
+<slide>slides/intro/phpannounce.xml</slide>
+<slide>slides/intro/capi.xml</slide>
+<slide>slides/intro/php-3018.xml</slide>
+
+<slide>slides/intro/ecosystem-beginning.xml</slide>
+<slide>slides/intro/interesting-choices.xml</slide>
+
+<slide>slides/intro/php-at-25.xml</slide>
+
+<slide>slides/intro/tools.xml</slide>
+
+<slide>slides/intro/pear-over-time.xml</slide>
+<slide>slides/intro/phpclasses.xml</slide>
+<slide>slides/intro/packagist.xml</slide>
+<slide>slides/intro/composer.xml</slide>
+
+<slide>slides/intro/frameworks.xml</slide>
+<slide>slides/intro/fig.xml</slide>
+
+<slide>slides/intro/var_dump.xml</slide>
+<slide>slides/xdebug/xdebug.xml</slide>
+<slide>slides/xdebug/local-vars.xml</slide>
+<slide>slides/xdebug/infinite.xml</slide>
+<slide>slides/xdebug/pimp1-quick.xml</slide>
+<slide>slides/xdebug/phpstorm.xml</slide>
+
+<slide>slides/intro/phpunit.xml</slide>
+<slide>slides/intro/phpstan.xml</slide>
+
+<slide>slides/internals/stages.xml</slide>
+
+<slide>slides/intro/php7-new.xml</slide>
+<slide>slides/intro/php7-prod.xml</slide>
+
+<slide>slides/intro/php7-dce-vld.xml</slide>
+
+<slide>slides/intro/new-in-php74.xml</slide>
+<slide>slides/internals/php74-typed-properties.xml</slide>
+<slide>slides/internals/php74-variance-return-ok.xml</slide>
+<slide>slides/internals/php74-variance-argument-wrong.xml</slide>
+
+<slide>slides/internals/php74-ffi.xml</slide>
+<slide>slides/internals/php74-preloading-setup.xml</slide>
+<slide>slides/internals/php74-preloading-zf.xml</slide>
+<slide>slides/internals/php74-preloading-with-ffi.xml</slide>
+<slide>slides/internals/php74-timeline.xml</slide>
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+
+<slide>slides/intro/new-in-php80.xml</slide>
+
+<slide>slides/intro/user-groups.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

@@ -1,0 +1,18 @@
+<slide>
+<title>What's new in PHP 7.4?</title>
+
+<list>
+<bullet>*Typed Properties*</bullet>
+<bullet>*FFI*</bullet>
+<bullet>*Preloading*</bullet>
+<bullet>Variance Checking for Arguments/Return Types</bullet>
+<bullet>Null Coalesce Assignment (%??=%)</bullet>
+<bullet>Spread Operator:<br/>%$apples = ['🍎',  '🍏']; $fruits = ['🍑', ...$apples, '🍅'];%</bullet>
+<bullet>Hash Extension always available</bullet>
+<bullet>New Custom Serialisation</bullet>
+<bullet>Weak References</bullet>
+<bullet>Short Arrow Functions: %$arrow = fn($x) => $x + $y;%</bullet>
+<bullet>Numerical Literal Separator: %3.141_592_653_589_793_238_462_643_383%</bullet>
+</list>
+
+</slide>

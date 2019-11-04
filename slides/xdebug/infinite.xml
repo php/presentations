@@ -2,7 +2,9 @@
 <slide fontsize="6em">
 	<title>Protection</title>
 
-	<image filename="infinite.png" align="right"/>
+	<image filename="infinite.png" width="75%" align="center"/>
+
+	<break lines="3" />
 
 	<example class="code_large" fontsize="1.7em">
 xdebug.max_nesting_level=4</example>

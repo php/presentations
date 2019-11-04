@@ -1,0 +1,24 @@
+<slide>
+<title>What Was Rasmus Thinking?</title>
+
+<break lines="3"/>
+<div effect="fade-in-out"><blurb class="big-centre">Case insensitive<br/>function names?</blurb></div>
+<div effect="fade-in-out"><blurb class="big-centre">Naming inconsistencies?</blurb></div>
+<div effect="fade-in-out"><blurb class="big-centre">What's with the %$% signs?</blurb></div>
+<div effect="fade-in-out"><blurb class="big-centre">Globals?</blurb></div>
+<div effect="fade-in-out"><blurb class="big-centre">%register_globals%‽</blurb></div>
+<div effect="fade-in-out"><blurb class="big-centre">⸘%magic_quotes%‽</blurb></div>
+
+<div effect="fade-in">
+<blurb class="big-centre">OMGWTFBBQ?</blurb>
+<example><![CDATA[<?php
+array_search($needle, $haystack);
+strstr($haystack, $needle);
+in_array($needle, $haystack);
+substr_count($haystack, $needle);
+array_key_exists($needle, $haystack);
+strchr($haystack, $needle);
+?>]]></example>
+</div>
+
+</slide>

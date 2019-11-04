@@ -1,0 +1,14 @@
+<slide>
+<title>LAMP</title>
+
+<blurb class="centre">Linux, Apache, MySQL, PHP</blurb>
+<break lines="2"/>
+
+<blurb>Performance:<br/><small>%mod_php%, shared-nothing, easy to scale up</small></blurb>
+<blurb>Robust:<br/><small>Prefork, shared-nothing, SQL LIMIT</small></blurb>
+<blurb>Security:<br/><small>%max_execution_time%, %memory_limit%, %"safe" mode%</small></blurb>
+
+<break lines="2"/>
+<blurb class="big-centre">Perfect for shared hosting</blurb>
+</slide>
+

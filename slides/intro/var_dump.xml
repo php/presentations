@@ -1,0 +1,18 @@
+<slide>
+<title>Debugging</title>
+
+<div effect="fade-out">
+<break lines="5"/>
+<blurb class="big-centre">With<br/><br/>%echo%, %var_dump%, and %print_r%</blurb>
+</div>
+
+<div effect="fade-in">
+<blurb class="big-centre">With helpers like *Kint*</blurb>
+
+<iframe zoom="2" width="1580" filename="http://whisky/test/xdebug/var_dump-kint.php"/>
+
+<break/>
+<blurb>%https://github.com/raveren/kint.git%</blurb>
+</div>
+
+</slide>

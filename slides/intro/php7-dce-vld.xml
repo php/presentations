@@ -1,0 +1,218 @@
+<slide>
+<title>Dead Code Elimination (DCE)</title>
+
+<div effect="fade-out">
+<example><![CDATA[
+php -d opcache.optimization_level=-1 -d vld.active=1 script
+]]></example>
+
+<example><![CDATA[
+<?php
+function fn() {
+    $a = 1;
+    return 0;
+}
+]]></example>
+
+<blurb>PHP 7.1</blurb>
+<example>
+compiled vars:  !0 = $a
+line     #* E I O op                           ext  return  operands
+   3     0  E >   QM_ASSIGN                         !0      1
+   4     1      > RETURN                                    0
+</example>
+
+<blurb>PHP 7.2</blurb>
+<example>
+compiled vars:  none
+line     #* E I O op                           ext  return  operands
+   4     0  E > > RETURN                                    0
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example><![CDATA[
+<?php
+function foo(string $s1, string $s2, string $s3, string $s4) {
+    $x = ($s1 . $s2) . ($s3 . $s4);
+    $x = 0;
+    return $x;
+}
+]]></example>
+
+<example><![CDATA[
+PHP 7.1                                   PHP 7.2
+foo: (lines=10, args=4, vars=5, tmps=3)   foo: (lines=5, args=4, vars=4, tmps=3)
+L0:   CV0($s1) = RECV 1                   L0:   CV0($s1) = RECV 1
+L1:   CV1($s2) = RECV 2                   L1:   CV1($s2) = RECV 2
+L2:   CV2($s3) = RECV 3                   L2:   CV2($s3) = RECV 3
+L3:   CV3($s4) = RECV 4                   L3:   CV3($s4) = RECV 4
+L4:   T6 = CONCAT CV0($s1) CV1($s2)       L4:   RETURN int(0)
+L5:   T7 = CONCAT CV2($s3) CV3($s4)
+L6:   T5 = CONCAT T6 T7
+L7:   ASSIGN CV4($x) T5
+L8:   ASSIGN CV4($x) int(0)
+L9:   RETURN CV4($x)
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Try to trick it:</blurb>
+<example><![CDATA[
+<?php
+function foo($a) {
+    $b = $a += 3;
+    return $a;
+}
+]]></example>
+
+<blurb>PHP 7.2</blurb>
+<example><![CDATA[
+compiled vars:  !0 = $a, !1 = $b
+line     #* E I O op                           ext  return  operands
+   2     0  E >   RECV                              !0      
+   3     1        ASSIGN_ADD                     0  !1      !0, 3
+   4     2      > RETURN                                    !0
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>But...</blurb>
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+function foo(int $x, int $y) {
+    $a = [$x];
+    $a[1] = $y;
+    $a = $y;
+    return $a;
+}
+]]></example>
+
+<table class="two"><tr>
+<td>
+<blurb>PHP 7.2</blurb>
+<example>
+compiled vars:  !0 = $x, !1 = $y, !2 = $a
+line     #*  op            return  operands
+   2     0   RECV          !0
+         1   RECV          !1
+   3     2   INIT_ARRAY    !2      !0
+   4     3   ASSIGN_DIM            !2, 1
+         4   OP_DATA               !1
+   5     5   ASSIGN                !2, !1
+   6     6   RETURN                !2
+</example>
+</td>
+<td>
+<blurb>PHP 7.3</blurb>
+<example>
+compiled vars:  !0 = $x, !1 = $y, !2 = $a
+line     #* op             return  operands
+   2     0  RECV           !0      
+         1  RECV           !1      
+   5     2  QM_ASSIGN      !2      !1
+   6     3  RETURN                 !2
+</example>
+</td>
+</tr>
+</table>
+</div>
+
+<div effect="fade-in-out">
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+class A { }
+function foo(int $x) {
+    $a = new A;
+    $a->foo = $x;
+    return $x;
+}
+]]></example>
+
+<blurb>PHP 7.3</blurb>
+<example><![CDATA[
+compiled vars:  !0 = $x
+line     #* op         return  operands
+   3     0  RECV       !0      
+   6     1  RETURN             !0
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+class A {
+    function __destruct() {}
+}
+function foo(int $x) {
+    $a = new A;
+    $a->foo = $x;
+    return $x;
+}
+]]></example>
+
+<blurb>PHP 7.3</blurb>
+<example><![CDATA[
+compiled vars:  !0 = $x, !1 = $a
+line     #* op            return  operands
+   5     0  RECV          !0      
+   6     1  NEW           $2      :9
+         2  DO_FCALL              
+         3  ASSIGN                !1, $2
+   7     4  ASSIGN_OBJ            !1, 'foo'
+         5  OP_DATA               !0
+   8     6  RETURN                !0
+   9     7* RETURN                null
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example><![CDATA[
+<?php
+function foo(int $x) {
+    if ($x) {
+        $a = [0,1];
+    } else {
+        $a = [0,2];
+    }
+    return $a[0];
+}
+]]></example>
+
+<blurb fontsize="1.1em" align="left">PHP 7.3</blurb>
+<example><![CDATA[
+compiled vars:  !0 = $x
+line     #* op          return  operands
+   2     0  RECV        !0      
+   8     1  RETURN              0
+]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example fontsize="1.05em" result='0' title="" type=""><![CDATA[
+<?php
+function foo() {
+    $o = new stdClass();
+    $o->foo = 0;
+    $i = 1;
+    $c = $i < 2;
+    if ($c) {
+        $k = 2 * $i;
+        $o->foo = $i;
+        echo $o->foo;
+    }
+    $o->foo += 2;
+    $o->foo++;
+    return $o->foo;
+}
+]]></example>
+
+<blurb>PHP 7.4</blurb>
+<example><![CDATA[
+compiled vars:  none
+line     #* op             return  operands
+  10     0  ECHO                   1
+  14     1  RETURN                 4
+]]></example>
+</div>
+
+</slide>

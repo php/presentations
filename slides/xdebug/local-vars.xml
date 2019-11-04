@@ -2,7 +2,7 @@
 <slide fontsize="6em">
 	<title>Local variables</title>
 
-	<image filename="local-vars.png" align="center"/>
+	<image width="75%" filename="local-vars.png" align="center"/>
 
 	<break lines="3" />
 	<example class="code_large">; enable showing local vars in error messages
