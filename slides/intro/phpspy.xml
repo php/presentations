@@ -96,6 +96,11 @@ $ sudo phpspy -m php src/phan.php
 
 <blurb fontsize="1em" align="left">perf/callgrind output support soon, hopefully</blurb>
 
+<break lines="1" section="spytop"/>
+
+<blurb fontsize="1.1em" align="center">Top-like output mode </blurb>
+<image width="772" height="452" filename="phpspy_top.gif" align="center"/>
+
 <break lines="1" section="spy4"/>
 <blurb fontsize="1.1em" align="left">Generate a flame graph</blurb>
 <example fontsize="0.9em" result='0' title="" type="shell nohighlight"><![CDATA[
