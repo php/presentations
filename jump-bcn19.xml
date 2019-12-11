@@ -13,8 +13,6 @@
 <slide>slides/xdebug/title.xml</slide>
 <slide>slides/mongodb/me.xml</slide>
 
-<slide>slides/internals/title-agenda.xml</slide>
-
 <slide>slides/internals/title-stages.xml</slide>
 <!-- INTRODUCTION
 Compile stages:
@@ -61,11 +59,11 @@ Opcodes
 <slide>slides/internals/rings.xml</slide>
 <slide>slides/internals/jumps-for.xml</slide>
 <slide>slides/internals/jumps-for-rewritten.xml</slide>
-<slide>slides/internals/jumps-while.xml</slide>
+<!--<slide>slides/internals/jumps-while.xml</slide>-->
 <slide>slides/internals/jumps-do-while.xml</slide>
 <slide>slides/internals/jumps-foreach.xml</slide>
 <slide>slides/internals/jumps-complex.xml</slide>
-<slide>slides/internals/loops.xml</slide>
+<!--<slide>slides/internals/loops.xml</slide>-->
 <slide>slides/internals/jumps-complex-dot.xml</slide>
 
 <!--
