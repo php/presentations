@@ -3,22 +3,22 @@
 
 <example result="0">
 &lt;?php
-class 🐖 {}
-class 🐗 extends 🐖 {}
+class 🐖pig {}
+class 🐗boar extends 🐖 {}
 
 class Asterix
 {
-	public function hunt(🐖 $animal) {}
+	public function hunt(🐖pig $animal) {}
 }
 
 class Gauls extends Asterix
 {
-	public function hunt(🐗 $animal) {}
+	public function hunt(🐗boar $animal) {}
 }
 ?>
 </example>
 
-<blurb class="error">Warning: Declaration of Gauls::hunt(🐗 $animal) should be compatible with Asterix::hunt(🐖 $animal)</blurb>
+<blurb class="error">Warning: Declaration of Gauls::hunt(🐗boar $animal) should be compatible with Asterix::hunt(🐖pig $animal)</blurb>
 <break lines="2"/>
 <blurb class="center">Arguments types are *contra-variant*:<br/>~they can *not* accept a more specific type~</blurb>
 </slide>

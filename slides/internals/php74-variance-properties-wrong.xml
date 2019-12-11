@@ -8,22 +8,22 @@ typed properties are invariant
 
 <example return="1">
 &lt;?php
-class 🌐 {}
-class 🌏 extends 🌐 {}
+class 🌐sphere {}
+class 🌏planet extends 🌐sphere {}
 
 class Bakery
 {
-	public 🌐 $temperature;
+	public 🌐sphere $temperature;
 }
 
 class Patisserie extends Bakery
 {
-	public 🌏 $temperature;
+	public 🌏planet $temperature;
 }
 ?>
 </example>
 
-<blurb class="error">Fatal error: Type of Patisserie::$temperature must be 🌐 (as in class Bakery)</blurb>
+<blurb class="error">Fatal error: Type of Patisserie::$temperature must be 🌐sphere (as in class Bakery)</blurb>
 <break lines="2"/>
 <blurb class="center">Property types are *in-variant*:<br/>~they can *not* represent a more specific or a more broad type~</blurb>
 </slide>

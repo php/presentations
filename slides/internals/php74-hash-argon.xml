@@ -37,8 +37,8 @@ print_r(password_algos());
 
 <div effect="fade-in">
 <example>
-password_hash(string $password, int $algo, array $options) : string
-password_verify(string $password, string $hash) : bool
+password_hash(string $pw, int $algo, array $options) : string
+password_verify(string $pw, string $hash) : bool
 </example>
 <blurb>Options:</blurb>
 <list>

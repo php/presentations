@@ -16,8 +16,9 @@ final class WeakReference {
 <blurb>Example:</blurb>
 <example result="1">
 &lt;?php
-class 👻 { function boo() { echo "BOO!\n"; } }
-$boo = new 👻 ;
+class 👻ghost { function boo() { echo "BOO!\n"; } }
+
+$boo = new 👻ghost;
 $ref = WeakReference::create( $boo );
 
 $ref->get()->boo();

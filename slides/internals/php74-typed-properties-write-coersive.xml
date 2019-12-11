@@ -3,14 +3,14 @@
 
 <example result="1">
 &lt;?php
-class 🥃 
+class 🥃whisky
 {
     public    int        $age;
     protected Distillery $distillery;
     private   ?Bottler   $bottler;
 }
 
-$whisky = new 🥃;
+$whisky = new 🥃whisky;
 $whisky->age = "29";
 
 var_dump($whisky);

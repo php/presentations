@@ -8,22 +8,22 @@ typed properties are invariant
 
 <example>
 &lt;?php
-class 🍞 {}
-class 🥖 extends 🍞 {}
+class 🍞bread {}
+class 🥖baguette extends 🍞bread {}
 
 class Bakery
 {
-	public function gimme(): 🥖 {}
+	public function gimme(): 🥖baguette {}
 }
 
 class Patisserie extends Bakery
 {
-	public function gimme(): 🍞 {}
+	public function gimme(): 🍞bread {}
 }
 ?>
 </example>
 
-<blurb class="error">Fatal error: Declaration of Patisserie::gimme(): 🍞 must be compatible with Bakery::gimme(): 🥖</blurb>
+<blurb class="error">Fatal error: Declaration of Patisserie::gimme(): 🍞bread must be compatible with Bakery::gimme(): 🥖baguette</blurb>
 <break lines="2"/>
 <blurb class="center">Return types are *co-variant*:<br/>~they can *not* return a more broad type~</blurb>
 </slide>

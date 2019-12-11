@@ -8,17 +8,17 @@ typed properties are invariant
 
 <example>
 &lt;?php
-class 🌐 {}
-class 🌏 extends 🌐 {}
+class 🌐sphere {}
+class 🌏planet extends 🌐sphere {}
 
 class Bakery
 {
-	public 🌏 $gravity;
+	public 🌏planet $gravity;
 }
 
 class Patisserie extends Bakery
 {
-	public 🌏 $gravity;
+	public 🌏planet $gravity;
 }
 ?>
 </example>

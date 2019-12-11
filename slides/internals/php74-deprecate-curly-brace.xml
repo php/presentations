@@ -9,13 +9,13 @@ https://wiki.php.net/rfc/deprecate_curly_braces_array_access — https://github.
 
 <example result="1">
 &lt;?php
-$🌻 = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ];
-echo $🌻[4], "\n";
-echo $🌻{4}, "\n";
+$🌻fibon = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ];
+echo $🌻fibon[4], "\n";
+echo $🌻fibon{4}, "\n";
 
-$🎄 = "Christmas Tree";
-echo $🎄[4], "\n";
-echo $🎄{4}, "\n";
+$🎄spruce = "Christmas Tree";
+echo $🎄spruce[4], "\n";
+echo $🎄spruce{4}, "\n";
 ?>
 </example>
 

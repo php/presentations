@@ -9,7 +9,7 @@ http://wiki.php.net/rfc/concatenation_precedence — Deprecate only: https://git
 <example result="1">
 &lt;?php
 $a = 3;
-echo $a == 1 ? 'one' : $a == 2 ? 'two' : $a == 3 ? 'three' : $a == 4 ? 'four' : 'other', "\n";
+echo $a == 1 ? 'one' : $a == 2 ? 'two' : $a == 3 ? 'three' : $a == 4 ? 'four' : 'other';
 ?>
 </example>
 
@@ -17,11 +17,14 @@ echo $a == 1 ? 'one' : $a == 2 ? 'two' : $a == 3 ? 'three' : $a == 4 ? 'four' : 
 <break/>
 <blurb>In PHP 7.4:</blurb>
 <example class="error">
-Deprecated: Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in Standard input code on line 3
+Deprecated: Unparenthesized `a ? b : c ? d : e` is deprecated.
+  Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in example.php on line 3
 
-Deprecated: Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in Standard input code on line 3
+Deprecated: Unparenthesized `a ? b : c ? d : e` is deprecated.
+  Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in example.php on line 3
 
-Deprecated: Unparenthesized `a ? b : c ? d : e` is deprecated. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in Standard input code on line 3
+Deprecated: Unparenthesized `a ? b : c ? d : e` is deprecated.
+  Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in example.php on line 3
 </example>
 </div>
 

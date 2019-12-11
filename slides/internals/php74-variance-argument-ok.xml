@@ -3,17 +3,17 @@
 
 <example result="1">
 &lt;?php
-class 🐖 {}
-class 🐗 extends 🐖 {}
+class 🐖pig {}
+class 🐗boar extends 🐖pig {}
 
 class Asterix
 {
-	public function hunt(🐗 $animal) {}
+	public function hunt(🐗boar $animal) {}
 }
 
 class Gauls extends Asterix
 {
-	public function hunt(🐖 $animal) {}
+	public function hunt(🐖pig $animal) {}
 }
 ?>
 </example>

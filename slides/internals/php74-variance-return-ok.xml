@@ -8,17 +8,17 @@ typed properties are invariant
 
 <example result="1">
 &lt;?php
-class 🍞 {}
-class 🥖 extends 🍞 {}
+class 🍞bread {}
+class 🥖baguette extends 🍞bread {}
 
 class Bakery
 {
-	public function gimme(): 🍞 {}
+	public function gimme(): 🍞bread {}
 }
 
 class Patisserie extends Bakery
 {
-	public function gimme(): 🥖 {}
+	public function gimme(): 🥖baguette {}
 }
 ?>
 </example>

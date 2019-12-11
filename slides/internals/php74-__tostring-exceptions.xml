@@ -7,7 +7,7 @@ Episode 14 — __toString Exceptions — Nikita Popov
 
 <example result="1">
 &lt;?php
-class 💥
+class 💥explode
 {
 	function __toString()
 	{
@@ -15,8 +15,8 @@ class 💥
 	}
 }
 
-$💣  = new 💥;
-echo $💣;
+$💣bomb  = new 💥explode;
+echo $💣bomb;
 ?>
 </example>
 <break lines="3"/>
@@ -24,7 +24,7 @@ echo $💣;
 <div effect="fade-out">
 <blurb>PHP 7.3:</blurb>
 <example class="error">
-Fatal error: Method 💥::__toString() must not throw an exception, caught Exception
+Fatal error: Method 💥explode::__toString() must not throw an exception, caught Exception
 </example>
 </div>
 

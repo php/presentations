@@ -21,16 +21,16 @@ $b = ($a[0][0] + $c[0]);
 
 <div effect="fade-in">
 <example class="error">
-Notice:  Trying to access array offset on value of type bool in /tmp/example.php on line 6
-Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
-Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
-Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
-Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 6
+Notice:  Trying to access array offset on value of type bool in example.php on line 6
+Notice:  Trying to access array offset on value of type null in example.php on line 6
+Notice:  Trying to access array offset on value of type null in example.php on line 6
+Notice:  Trying to access array offset on value of type null in example.php on line 6
+Notice:  Trying to access array offset on value of type null in example.php on line 6
 
-Notice:  Trying to access array offset on value of type int in /tmp/example.php on line 9
+Notice:  Trying to access array offset on value of type int in example.php on line 9
 
-Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 13
-Notice:  Trying to access array offset on value of type null in /tmp/example.php on line 13
+Notice:  Trying to access array offset on value of type null in example.php on line 13
+Notice:  Trying to access array offset on value of type null in example.php on line 13
 </example>
 </div>
 

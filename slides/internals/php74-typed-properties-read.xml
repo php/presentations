@@ -3,14 +3,14 @@
 
 <example>
 &lt;?php
-class 🥃 
+class 🥃whisky 
 {
     public    int        $age;
     protected Distillery $distillery;
     private   ?Bottler   $bottler;
 }
 
-$whisky = new 🥃;
+$whisky = new 🥃whisky;
 
 echo $whisky->age;
 ?>
@@ -18,7 +18,7 @@ echo $whisky->age;
 <break/>
 <div effect="fade-in">
 <blurb class="error">
-Error: Typed property 🥃::$age must not be accessed before initialization
+Error: Typed property 🥃whisky::$age must not be accessed before initialization
 </blurb>
 
 <break lines="2"/>

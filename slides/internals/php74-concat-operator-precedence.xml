@@ -22,8 +22,8 @@ echo "sum: " . $a + $b;
 <break/>
 <blurb>In PHP 7.4:</blurb>
 <example class="error">
-Deprecated: The behavior of unparenthesized expressions containing both '.' and '+'/'-' ⏎
-    will change in PHP 8: '+'/'-' will take a higher precedence in Standard input code on line 3
+The behavior of unparenthesized expressions containing both '.' and '+'/'-'
+    will change in PHP 8: '+'/'-' will take a higher precedence in example.php on line 3
 </example>
 
 <break/>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>Debugging</topic>
+<title>Xdebug 3.0</title>
+<event>Brussels PHP UG</event>
+<location>Brussels, Belgium</location>
+<date>December 11th, 2019</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/xdebug-brussels19</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/xdebug/focus-on-xdebug.xml</slide>
+The Xdebug Experience
+17 years
+
+<slide>slides/xdebug/config-settings-2.xml</slide>
+<slide>slides/xdebug/breakpoints-2.xml</slide>
+<slide>slides/xdebug/port9000.xml</slide>
+<!-- <slide>slides/xdebug/connect1.xml</slide> -->
+<!-- <slide>slides/xdebug/connect2.xml</slide> -->
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/debugger-connection-log.xml</slide>
+<slide>slides/xdebug/xdebug-slow.xml</slide>
+<slide>slides/xdebug/test-with-many-versions.xml</slide>
+
+<slide>slides/xdebug/focus-on-xdebug2.xml</slide>
+
+<slide>slides/xdebug/focus-on-xdebug3.xml</slide>
+breakpoint behaviour
+New versions (7.4)
+CI
+<!--
+<slide>slides/xdebug/xdebug-2.8.xml</slide>
+<slide>slides/xdebug/breakpoint-behaviour.xml</slide>
+<slide>slides/xdebug/xdebug-ci.xml</slide>
+-->
+<slide>slides/xdebug/xdebug-3.xml</slide>
+Code reorganisation
+Modes
+- only do what is needed
+Reduce Configuration Options
+Code Improvements (algorithms, memory, etc)
+<slide>slides/xdebug/code-reorgnisation.xml</slide>
+<slide>slides/xdebug/modes.xml</slide>
+<slide>slides/xdebug/config-settings-3.xml</slide>
+<slide>slides/xdebug/config-settings-3b.xml</slide>
+<slide>slides/xdebug/xdebug-slow.xml</slide>
+<slide>slides/xdebug/xdebug-hard.xml</slide>
+
+<slide>slides/xdebug/donate.xml</slide>
+<slide>slides/xdebug/business-support.xml</slide>
+<slide>slides/xdebug/transparency.xml</slide>
+
+<slide>slides/xdebug/xdebug-2.9.xml</slide>
+<slide>slides/xdebug/cc-speedup.xml</slide>
+
+
+<!--<slide>slides/xdebug/phpinternalsnews.xml</slide>-->
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

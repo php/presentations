@@ -3,28 +3,26 @@
 
 <example result="1">
 &lt;?php
-class 🔥 {
+class 🔥fire {
     private $temperature = 5000;
-
     public function __serialize(): array       { return ['t' => $this->temperature]; }
     public function __unserialize(array $data) { $this->temperature = $data['t'];    }
 }
 
-class ⭐ extends 🔥 {
+class ⭐star extends 🔥fire {
     private $size = 695510000;
-
     public function __serialize(): array {
         return [
             's' => $this->size,
-            '🔥' => parent::__serialize(),
+            '🔥fire' => parent::__serialize(),
         ];
     }
     public function __unserialize(array $data) {
-        parent::__unserialize( $data['🔥'] );
+        parent::__unserialize( $data['🔥fire'] );
         $this->size = $data['s'];
     }
 }
-echo serialize( $test = new ⭐ );
+echo serialize( $test = new ⭐star );
 </example>
 
 </slide>

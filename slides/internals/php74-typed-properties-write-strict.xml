@@ -5,14 +5,14 @@
 &lt;?php
 declare(strict_types=1);
 
-class 🥃 
+class 🥃whisky
 {
     public    int        $age;
     public    Distillery $distillery;
     private   ?Bottler   $bottler;
 }
 
-$whisky = new 🥃;
+$whisky = new 🥃whisky;
 $whisky->age = 29;
 ?>
 </example>
@@ -20,7 +20,7 @@ $whisky->age = 29;
 
 <div effect="fade-in">
 <blurb class="error">
-TypeError: Typed property 🥃::$age must be int, string used
+TypeError: Typed property 🥃whisky::$age must be int, string used
 </blurb>
 </div>
 </slide>
