@@ -42,8 +42,8 @@ $gpio    = 0b01010100_01101000_01100101_01101111;
 <blurb>To avoid:</blurb>
 
 <example>
-$phoneNumber = 345_6789;
-$creditCard = 231_6547_9081_2543;
+$phoneNumber    = 44_7503_067089;
+$creditCard     = 4231_6547_9081_2543;
 $socialSecurity = 111_11_1111;
 </example>
 </div>

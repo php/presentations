@@ -11,19 +11,19 @@ typed properties are invariant
 class 🌐sphere {}
 class 🌏planet extends 🌐sphere {}
 
-class Bakery
+class Copernicus
 {
-	public 🌐sphere $temperature;
+	public 🌐sphere $gravity;
 }
 
-class Patisserie extends Bakery
+class Galileo extends Copernicus
 {
-	public 🌏planet $temperature;
+	public 🌏planet $gravity;
 }
 ?>
 </example>
 
-<blurb class="error">Fatal error: Type of Patisserie::$temperature must be 🌐sphere (as in class Bakery)</blurb>
+<blurb class="error">Fatal error: Type of Galileo::$gravity must be 🌐sphere (as in class Copernicus)</blurb>
 <break lines="2"/>
 <blurb class="center">Property types are *in-variant*:<br/>~they can *not* represent a more specific or a more broad type~</blurb>
 </slide>

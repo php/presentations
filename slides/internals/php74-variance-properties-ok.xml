@@ -11,12 +11,12 @@ typed properties are invariant
 class 🌐sphere {}
 class 🌏planet extends 🌐sphere {}
 
-class Bakery
+class Copernicus
 {
 	public 🌏planet $gravity;
 }
 
-class Patisserie extends Bakery
+class Galileo extends Copernicus
 {
 	public 🌏planet $gravity;
 }
