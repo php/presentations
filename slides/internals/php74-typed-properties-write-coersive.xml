@@ -19,7 +19,6 @@ var_dump($whisky);
 <break/>
 
 <div effect="fade-in">
-<break lines="2"/>
 <blurb class="centre">Type-coercion when %strict_types=0%</blurb>
 </div>
 </slide>

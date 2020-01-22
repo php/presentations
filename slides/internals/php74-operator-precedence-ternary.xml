@@ -6,12 +6,15 @@ https://wiki.php.net/rfc/ternary_associativity — https://github.com/php/php-sr
 http://wiki.php.net/rfc/concatenation_precedence — Deprecate only: https://github.com/php/php-src/pull/4001/files
 
 <blurb>What does this return?</blurb>
-<example result="1">
+<example>
 &lt;?php
 $a = 3;
 echo $a == 1 ? 'one' : $a == 2 ? 'two' : $a == 3 ? 'three' : $a == 4 ? 'four' : 'other';
 ?>
 </example>
+<div effect="fade-in">
+<blurb>%four%</blurb>
+</div>
 
 <div effect="fade-in">
 <break/>

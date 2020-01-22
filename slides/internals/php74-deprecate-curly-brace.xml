@@ -7,7 +7,7 @@
 Episode 19 — Deprecate curly brace syntax for accessing array elements and string offsets — with Theodore Brown
 https://wiki.php.net/rfc/deprecate_curly_braces_array_access — https://github.com/php/php-src/pull/4416/files
 
-<example result="1">
+<example>
 &lt;?php
 $🌻fibon = [ 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144 ];
 echo $🌻fibon[4], "\n";
@@ -18,6 +18,14 @@ echo $🎄spruce[4], "\n";
 echo $🎄spruce{4}, "\n";
 ?>
 </example>
+<div effect="fade-in">
+<blurb>
+5
+5
+s
+s
+</blurb>
+</div>
 
 <div effect="fade-in">
 <blurb>In PHP 7.4:</blurb>
