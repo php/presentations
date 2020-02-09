@@ -29,8 +29,8 @@ breakpoint behaviour
 New versions (7.4)
 CI
 <!--
-<slide>slides/xdebug/xdebug-2.8.xml</slide>
-<slide>slides/xdebug/breakpoint-behaviour.xml</slide>
+<s lide>slides/xdebug/xdebug-2.8.xml</slide>
+<s lide>slides/xdebug/breakpoint-behaviour.xml</slide>
 -->
 
 <slide>slides/xdebug/test-with-many-versions.xml</slide>
@@ -52,10 +52,11 @@ Code Improvements (algorithms, memory, etc)
 <slide>slides/xdebug/config-settings-3b.xml</slide>
 
 <slide>slides/xdebug/xdebug-hard.xml</slide>
-<!-- <slide>slides/xdebug/connect1.xml</slide> -->
-<!-- <slide>slides/xdebug/connect2.xml</slide> -->
+<!-- <s lide>slides/xdebug/connect1.xml</slide> -->
+<!-- <s lide>slides/xdebug/connect2.xml</slide> -->
 <slide>slides/xdebug/debugger-activation.xml</slide>
 <slide>slides/xdebug/debugger-connection-log.xml</slide>
+<slide>slides/xdebug/live-demo.xml</slide>
 
 <slide>slides/xdebug/xdebug-cloud-announcement.xml</slide>
 
@@ -64,7 +65,7 @@ Code Improvements (algorithms, memory, etc)
 <slide>slides/xdebug/transparency.xml</slide>
 
 
-<!--<slide>slides/xdebug/phpinternalsnews.xml</slide>-->
+<!--<s lide>slides/xdebug/phpinternalsnews.xml</slide>-->
 <slide>slides/mongodb/questions.xml</slide>
 <slide>slides/xdebug/resources.xml</slide>
 
