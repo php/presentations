@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>The La(te)st PHP 7 — What's&#160;new&#160;in&#160;PHP&#160;7.4</title>
+<event>PHP UK Conference</event>
+<location>London, UK</location>
+<date>February 19th, 2020</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/php-phpuk20</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/internals/php74-typed-properties.xml</slide>
+<slide>slides/internals/php74-typed-properties-read.xml</slide>
+<slide>slides/internals/php74-typed-properties-write.xml</slide>
+<slide>slides/internals/php74-typed-properties-write-coersive.xml</slide>
+<slide>slides/internals/php74-typed-properties-write-strict.xml</slide>
+<slide>slides/internals/php74-variance-return-ok.xml</slide>
+<slide>slides/internals/php74-variance-return-wrong.xml</slide>
+<slide>slides/internals/php74-variance-argument-ok.xml</slide>
+<slide>slides/internals/php74-variance-argument-wrong.xml</slide>
+<slide>slides/internals/php74-variance-properties-ok.xml</slide>
+<slide>slides/internals/php74-variance-properties-wrong.xml</slide>
+
+<slide>slides/internals/php74-null-coalesce-assignment.xml</slide>
+<slide>slides/internals/php74-spread-operator.xml</slide>
+<slide>slides/internals/php74-invalid-container-read.xml</slide>
+
+<slide>slides/internals/php74-ffi.xml</slide>
+<slide>slides/internals/php74-ffi-example.xml</slide>
+<slide>slides/internals/php74-preloading.xml</slide>
+<slide>slides/internals/php74-preloading-setup.xml</slide>
+<slide>slides/internals/php74-preloading-zf.xml</slide>
+<slide>slides/internals/php74-preloading-with-ffi.xml</slide>
+
+<slide>slides/internals/php74-reference-reflection.xml</slide>
+<slide>slides/internals/php74-custom-serialization.xml</slide>
+<slide>slides/internals/php74-custom-serialization-inheritence.xml</slide>
+
+<slide>slides/internals/php74-always-hash.xml</slide>
+<slide>slides/internals/php74-unbundle.xml</slide>
+
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+<slide>slides/internals/phpinternalsnews-me.xml</slide>
+
+<slide>slides/internals/php74-saner-string-number-comparisons.xml</slide>
+<slide>slides/internals/php74-weakref.xml</slide>
+<slide>slides/internals/php74-short-arrow-functions.xml</slide>
+<slide>slides/internals/php74-short-arrow-functions-example.xml</slide>
+<slide>slides/internals/php74-lsp-operator-precedence-lsp.xml</slide>
+<slide>slides/internals/php74-operator-precedence-ternary.xml</slide>
+<slide>slides/internals/php74-concat-operator-precedence.xml</slide>
+<!--<slide>slides/internals/php74-hash-argon.xml</slide>-->
+<slide>slides/internals/php74-__tostring-exceptions.xml</slide>
+<slide>slides/internals/php74-base-convert.xml</slide>
+<slide>slides/internals/php74-numeric-literal-separator.xml</slide>
+<slide>slides/internals/php74-deprecate-curly-brace.xml</slide>
+<slide>slides/internals/php74-postgresql-escape.xml</slide>
+<!-- <slide>slides/internals/php74-arginfo.xml</slide> -->
+<slide>slides/internals/php74-deprecations.xml</slide>
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
