@@ -13,7 +13,7 @@ class 🥃whisky
 }
 
 $whisky = new 🥃whisky;
-$whisky->age = 29;
+$whisky->age = "29";
 ?>
 </example>
 <break/>
