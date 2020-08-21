@@ -2,19 +2,8 @@
 <slide fontsize="6em">
 	<title>Function traces</title>
 
-	<list>
-		<bullet>Different types: *Textual*, *Parsable* and *HTML*</bullet>
-		<bullet>Tracing only parts of an application with *xdebug_start_trace()* and *xdebug_stop_trace()*.</bullet>
-        <bullet>%xdebug.collect_return%:
-<example>
--> explode('/', '/xdebug-phpnw13/11') /home/httpd/pres2/show2.php:121
- >=> array (0 => '', 1 => 'xdebug-phpnw13', 2 => '11')
-                       </example></bullet>
-		<bullet>%xdebug.collect_assignments%:
-<example>
--> ezcTemplateVariableCollection->__set($name = 'slideNr', $value = '11') /home/httpd/pres2/show2.php:202
-   => $this->variables['slideNr'] = '11' /home/derick/dev/zetacomponents/trunk/Template/src/variable_collection.php:134
-</example>
-</bullet>
-	</list>
+	<image filename="trace-new.png"/>
+<break/>
+	<blurb class="center">Different types: *Textual*, *Parsable* and *HTML*</blurb>
+	<blurb class="center">Function and Method Calls, Assignments, Return Values</blurb>
 </slide>

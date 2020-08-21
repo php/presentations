@@ -1,0 +1,30 @@
+<slide>
+<title>Union Types</title>
+
+<example>
+&lt;?php
+declare(strict_types=1);
+
+class Number {
+
+
+
+    private $number;
+ 
+
+
+
+    public function setNumber($number) {
+        $this->number = $number;
+    }
+ 
+
+
+
+    public function getNumber() {
+        return $this->number;
+    }
+}
+</example>
+
+</slide>

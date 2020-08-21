@@ -1,0 +1,57 @@
+<slide>
+<title>Attributes: Reading</title>
+
+<table class="two">
+<tr><td>
+<example result="0">
+<![CDATA[<?php
+use MyORM\Attributes as ORM;
+
+class Distillery
+{
+    @@ORM\Column("string")
+    private $name;
+}
+]]></example><example><![CDATA[<?php
+namespace MyORM\Attributes;
+use PhpAttribute;
+
+@@PhpAttribute
+class Column {
+    public function __construct(public string $type) {  }
+}
+]]></example><example inline="1"><![CDATA[&lt;?php
+$rc = new \ReflectionClass(\Distillery::class);
+$rp = $rc->getProperty('name');
+
+foreach ($rp->getAttributes() as $attr) {
+    echo "Name: ", $attr->getName(), "\n";
+    var_dump($attr->getArguments());
+    var_dump($attr->*newInstance()*);
+}]]>
+</example>
+</td>
+<td>
+<div effect="fade-in">
+<example>
+Name: MyORM\Attributes\Column
+array(1) {
+  [0]=>
+  string(6) "string"
+}
+object(MyORM\Attributes\Column)#4 (1) {
+  ["type"]=>
+  string(6) "string"
+}
+</example>
+</div>
+
+<div effect="fade-in">
+	<break lines="2"/>
+	<blurb class="big-centre">%*PhpAttribute*%<br/>🠳<br/>%*Attribute*%</blurb>
+</div>
+
+</td>
+</tr>
+</table>
+</slide>

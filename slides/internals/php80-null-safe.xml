@@ -1,0 +1,30 @@
+<slide>
+<title>Null-safe Operator</title>
+
+<blurb>Checking for %null% at every step:</blurb>
+<example inline="2"><![CDATA[
+$country =  null;
+ 
+if ($session !== null) {
+    $user = $session->user;
+ 
+    if ($user !== null) {
+        $address = $user->getAddress();
+ 
+        if ($address !== null) {
+            $country = $address->country;
+        }
+    }
+}
+]]>
+</example>
+
+<div effect="fade-in">
+<blurb>With null-safe operator %?->%:</blurb>
+<example inline="2"><![CDATA[
+$country = $session?->user?->getAddress()?->country;
+]]>
+</example>
+</div>
+
+</slide>

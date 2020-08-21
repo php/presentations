@@ -1,0 +1,25 @@
+<slide>
+<title>Constructor Property Promotion</title>
+
+<example>
+&lt;?php
+class 🥃whisky 
+{
+    public    string      $name;
+    protected Distillery  $distillery;
+    public    int         $age;
+    private   ?Bottler    $bottler = null;
+</example>
+<div effect="fade-in">
+<example>
+    function __constructor(string $name, Distillery $distillery, int $age, ?Bottler $bottler)
+    {
+        $this->name = $name;
+        $this->distillery = $distillery;
+        $this->age = $age;
+        $this->bottler = $bottler;
+    }
+</example>
+</div>
+</slide>
+

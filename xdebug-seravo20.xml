@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>Debugging</topic>
+<title>Xdebug</title>
+<event>Seravo Webinar</event>
+<location>Online</location>
+<date>August 19th, 2020</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/xdebug-seravo20</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+
+<slide>slides/xdebug/xdebug-var-dump.xml</slide>
+<slide>slides/xdebug/functiontrace-summary.xml</slide>
+
+<slide>slides/xdebug/profiling.xml</slide>
+
+<slide>slides/xdebug/vld-path-4-output.xml</slide>
+
+<slide>slides/xdebug/analyse-running-script2.xml</slide>
+<slide>slides/xdebug/focus-on-xdebug.xml</slide>
+The Xdebug Experience
+17 years
+
+<slide>slides/xdebug/focus-on-xdebug3.xml</slide>
+breakpoint behaviour
+New versions (7.4)
+CI
+<!--
+<s lide>slides/xdebug/xdebug-2.8.xml</slide>
+<s lide>slides/xdebug/breakpoint-behaviour.xml</slide>
+-->
+
+<slide>slides/xdebug/cc-speedup.xml</slide>
+
+<slide>slides/xdebug/xdebug-3.xml</slide>
+Code reorganisation
+Modes
+- only do what is needed
+Reduce Configuration Options
+Code Improvements (algorithms, memory, etc)
+<slide>slides/xdebug/modes.xml</slide>
+
+<slide>slides/xdebug/xdebug-cloud.xml</slide>
+
+<!--<s lide>slides/xdebug/phpinternalsnews.xml</slide>-->
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

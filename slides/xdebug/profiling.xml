@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <slide fontsize="6em">
 	<title>Profiling</title>
-	<subtitle>KCacheGrind's Flat Profile and Call List</subtitle>
-	<image filename="pg1.png"/>
+	<image filename="callgrind-new.png"/>
 
+<break/>
 	<example class="code_large">xdebug.profiler_enable=1          ; enable profiler
 xdebug.profiler_output_dir=/tmp   ; output directory
 xdebug.profiler_output_name=cachegrind.out.%p</example>

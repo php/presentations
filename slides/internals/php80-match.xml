@@ -1,0 +1,51 @@
+<slide>
+<title>Match Expressions</title>
+
+<div effect="fade-out">
+<blurb>%switch% can be cumbersome:</blurb>
+<example inline="2"><![CDATA[
+&lt;?php
+switch ($this->lexer->lookahead['type']) {
+    case Lexer::T_SELECT:
+        $statement = $this->SelectStatement();
+        break;
+ 
+    case Lexer::T_UPDATE:
+        $statement = $this->UpdateStatement();
+        break;
+ 
+    case Lexer::T_DELETE:
+        $statement = $this->DeleteStatement();
+        break;
+ 
+    default:
+        $this->syntaxError('SELECT, UPDATE or DELETE');
+        break;
+}
+]]>
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>%match% improves this:</blurb>
+<example inline="2"><![CDATA[
+&lt;?php
+$statement = match ($this->lexer->lookahead['type']) {
+    Lexer::T_SELECT => $this->SelectStatement(),
+    Lexer::T_UPDATE => $this->UpdateStatement(),
+    Lexer::T_DELETE => $this->DeleteStatement(),
+    default => $this->syntaxError('SELECT, UPDATE or DELETE'),
+};]]>
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Differences with %switch%:</blurb>
+<list>
+<bullet>It is an expression, so returns a value</bullet>
+<bullet>%match% does not do type-juggling</bullet>
+<bullet>No automatic fall through</bullet>
+<bullet>Exception if nothing matched</bullet>
+</list>
+</div>
+</slide>

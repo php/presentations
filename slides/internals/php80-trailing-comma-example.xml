@@ -1,0 +1,21 @@
+<slide>
+<title>Trailing Comma in Function Declaration</title>
+
+<example inline="2">
+function microtime(bool $get_as_float = false*,*): string|float {}
+
+function gettimeofday(bool $return_float = false*,*): array|float {}
+
+function base64_decode(string $str, bool $strict = false*,*): string|false {}
+
+function implode(string|array $glue, array $pieces*,*): string {}
+
+function substr_replace(
+    string|array $str,
+    string|array $replace,
+    $start,
+    $length*,*
+) : string|array|false {}
+
+</example>
+</slide>

@@ -1,0 +1,13 @@
+<slide>
+<title>Attributes: Use Cases</title>
+
+<list>
+	<bullet>Replaces phpdoc annotations in Doctrine, Symfony, etc…</bullet>
+	<bullet>May add internal attributes:
+	<list>
+		<bullet>%&amp;lt;&amp;lt;Deprecated("Use xyz instead")>>%</bullet>
+		<bullet>%&amp;lt;&amp;lt;Jit>>%, %&amp;lt;&amp;lt;NoJit>>%</bullet>
+	</list>
+	</bullet>
+</list>
+</slide>

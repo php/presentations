@@ -1,0 +1,29 @@
+<slide>
+<title>Object Instantiation</title>
+
+<example inline="1">
+&amp;lt;?php
+class Settings
+{
+    function __construct(
+        public $includeDistillery   = true,
+        public $includeDescription  = true,
+        public $includeTastingNotes = false,
+        public $pageSize            = 64,
+        public $sortByField         = 'whisky',
+    ) {}
+}
+</example>
+<div effect="fade-in">
+<blurb>Instantiation with different includes:</blurb>
+<example inline="1">
+$settings = new \Settings(*false*, true, false);
+</example>
+</div>
+<div effect="fade-in">
+<blurb>Instantiation with different sort order:</blurb>
+<example inline="1">
+$settings = new \Settings(true, true, false, 64, *'rating'*);
+</example>
+</div>
+</slide>

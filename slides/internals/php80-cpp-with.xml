@@ -1,0 +1,17 @@
+<slide>
+<title>Constructor Property Promotion</title>
+
+<example inline="1">
+&amp;lt;?php
+class 🥃whisky 
+{
+    function __constructor(
+        *public*    string $name,
+        *protected* Distillery $distillery,
+        *public*    int $age,
+        *private*   ?Bottler $bottler = null*,*
+    ) {}
+}
+</example>
+</slide>
+

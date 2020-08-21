@@ -1,0 +1,25 @@
+<slide>
+<title>WeakMap</title>
+
+<example inline="2"><![CDATA[
+&lt;?php
+$map = new *WeakMap*;
+$obj = new stdClass;
+
+$map[$obj] = $dataForObj;
+unset($obj); // $obj automatically dropped from WeakMap! 
+]]></example>
+
+<break lines="2"/>
+<blurb class="centre">Use Case</blurb>
+<example><![CDATA[
+class FooBar {
+&lt;?php
+    private WeakMap $cache;
+
+    public function getSomethingWithCaching(object $obj) {
+        return $this->cache[$obj] ??= $this->computeSomethingExpensive($obj);
+    }
+} 
+?>]]></example>
+</slide>

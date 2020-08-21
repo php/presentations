@@ -1,0 +1,16 @@
+<slide>
+<title>Attributes</title>
+
+<example class="big">
+&lt;?php
+/** Entity */
+class Distillery
+{
+    /**
+     * @Id
+     * @Column(type=string)
+     */
+    private $name;
+}
+</example>
+</slide>

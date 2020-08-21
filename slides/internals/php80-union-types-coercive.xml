@@ -1,0 +1,23 @@
+<slide>
+<title>Coercive typing mode</title>
+
+<blurb>If the exact type of the value is not part of the union, then the target type is chosen in the following order of preference:</blurb>
+<list>
+<bullet>int</bullet>
+<bullet>float</bullet>
+<bullet>string</bullet>
+<bullet>bool</bullet>
+</list>
+
+<example inline="1">
+// type: *int|string*
+42.0  → 42          // *float* compatible with *int*
+42.1  → 42          // *float* compatible with *int*
+1e100 → "1.0E+100"  // *float* too large for *int* type, fall back to *string*
+INF   → "INF"       // *float* too large for *int* type, fall back to *string*
+true  → 1           // *bool* compatible with *int*
+new ObjectWithToString → "Result of __toString()"
+                    // *object* never compatible with *int*, fall back to *string*
+[]    → *TypeError*   // *array* *not* compatible with *int* or *string*
+</example>
+</slide>

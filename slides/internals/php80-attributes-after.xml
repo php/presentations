@@ -1,0 +1,29 @@
+<slide>
+<title>Attributes</title>
+
+<example inline="2" class="big"><![CDATA[
+&lt;?php
+use Doctrine\ORM\Attributes as ORM;
+
+*@@ORM\Entity*
+class Distillery
+{
+    *@@ORM\Id*
+    *@@ORM\Column("string")*
+    private $name;
+}]]>
+</example>
+
+<div effect="fade-in">
+<example inline="2" class="big"><![CDATA[
+    @@*ORM\Column*("string") // Class Name]]>
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="2" class="big"><![CDATA[
+    @@ORM\Column(*"string"*) // Constructor Arguments]]>
+</example>
+</div>
+
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Just-In-Time (JIT) Compiler</title>
+
+<list>
+<bullet>Compiles PHP code to x86 machine code</bullet>
+<bullet>Performance improvements mostly apply to math heavy code</bullet>
+<bullet>Part of opcache:
+<example>
+opcache.jit=on
+opcache.jit_buffer_size=128M 
+</example>
+</bullet>
+</list>
+</slide>

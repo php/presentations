@@ -1,0 +1,23 @@
+<slide>
+<title>Non-Capturing Catches</title>
+
+<break lines="2"/>
+<blurb class="center">Sometimes you don't need the Exception itself:</blurb>
+<break lines="2"/>
+
+<div effect="fade-out">
+<example class="big" inline="2"><![CDATA[try {
+    changeImportantData();
+} catch (PermissionException *$ex*) {
+    echo "You don't have permission to do this";
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<example class="big"><![CDATA[try {
+    changeImportantData();
+} catch (PermissionException) {
+    echo "You don't have permission to do this";
+}]]></example>
+</div>
+</slide>

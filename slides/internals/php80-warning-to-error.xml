@@ -1,0 +1,23 @@
+<slide>
+<title>Warning → Error exception</title>
+
+<blurb>Prototype:</blurb>
+<example>function array_fill( int $start_index, int $num, mixed $value ): array|false {}</example>
+
+<blurb>Code:</blurb>
+<example><![CDATA[
+<?php
+try {
+    var_dump(array_fill(0, -100, "foobar"));
+} catch( Throwable $e ) {
+    echo get_class( $e ), ': ', $e->getMessage();
+}
+?>]]></example>
+
+<blurb>PHP 7.4:</blurb>
+<example>Warning: array_fill(): Number of elements can't be negative</example>
+
+<blurb>PHP 8.0:</blurb>
+<example>ValueError: array_fill(): Argument #2 ($num) must be greater than or equal to 0</example>
+
+</slide>

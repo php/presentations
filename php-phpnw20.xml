@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>What's&#160;new&#160;in&#160;PHP&#160;8</title>
+<event>PHP North West</event>
+<location>Virtual Manchester, United Kingdom</location>
+<date>August 4th, 2020</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/php-phpnw20</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- TYPES -->
+<slide>slides/internals/php74-typed-properties.xml</slide>
+<slide>slides/internals/php74-variance-argument-ok.xml</slide>
+
+<slide>slides/internals/php80-union-types.xml</slide>
+<slide>slides/internals/php80-union-types-phpdoc.xml</slide>
+<slide>slides/internals/php80-union-types-new.xml</slide>
+<slide>slides/internals/php80-union-types-examples.xml</slide>
+<slide>slides/internals/php80-trailing-comma-example.xml</slide>
+<slide>slides/internals/php80-union-types-law.xml</slide>
+<slide>slides/internals/php80-union-types-coercive.xml</slide>
+
+Mixed Type v2
+<slide>slides/internals/php80-mixed-types.xml</slide>
+
+Constructor Property Promotion
+<slide>slides/internals/php80-cpp-without.xml</slide>
+<slide>slides/internals/php80-cpp-with.xml</slide>
+
+<slide>slides/internals/php80-named-without.xml</slide>
+<slide>slides/internals/php80-named-with.xml</slide>
+
+Attributes v2
+<slide>slides/internals/php80-attributes-before.xml</slide>
+<slide>slides/internals/php80-attributes-after.xml</slide>
+<slide>slides/internals/php80-attributes-attribute-definition.xml</slide>
+<slide>slides/internals/php80-attributes-use-cases.xml</slide>
+<slide>slides/internals/php80-attributes-syntax.xml</slide>
+
+New Syntax
+<slide>slides/internals/php80-match.xml</slide>
+<slide>slides/internals/php80-null-safe.xml</slide>
+<slide>slides/internals/php80-null-safe-short-circuit.xml</slide>
+
+Small Fry
+<slide>slides/internals/php80-str-functions.xml</slide>
+<slide>slides/internals/php80-weakmap.xml</slide>
+
+<slide>slides/internals/php80-warning-to-error.xml</slide>
+
+Non-Capturing Catches
+<slide>slides/internals/php80-new-catch.xml</slide>
+
+JIT
+<slide>slides/internals/php80-jit.xml</slide>
+
+<slide>slides/xdebug/php80-when.xml</slide>
+
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

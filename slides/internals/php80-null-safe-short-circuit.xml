@@ -1,0 +1,14 @@
+<slide>
+<title>Short Circuiting</title>
+
+<blurb>Example:</blurb>
+<example inline="2"><![CDATA[
+$country = $session?->user?->getAddress($session?->format)?->country;
+]]>
+</example>
+
+<div effect="fade-in"><list><bullet>If %$session->format% is %NULL%, %NULL% is passed to %getAddress()%</bullet></list></div>
+<div effect="fade-in"><list><bullet>If %$session->user% is NULL, %getAddress()% is not called</bullet></list></div>
+<div effect="fade-in"><list><bullet>If %getAddress()% returns %NULL%, %$country% is %NULL%</bullet></list></div>
+
+</slide>

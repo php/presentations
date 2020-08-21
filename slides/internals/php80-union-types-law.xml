@@ -1,0 +1,19 @@
+<slide>
+<title>Union Types — Rules</title>
+
+<blurb>All support types can be part of a union, with the following caveats:</blurb>
+<list>
+<bullet>*%void%* can't be part of a union type</bullet>
+<bullet>*%?Class%* is equivalent to *%Class|null%*</bullet>
+<bullet>*%false%* is an addition, as it is used in the PHP standard library<br/>e.g.: %*strpos() : int|false%*</bullet>
+<bullet>No redundant types, such as: *%bool|false%*, or: *%object|Whisky%*</bullet>
+</list>
+
+<blurb>Variance:</blurb>
+<list>
+<bullet>Union types follow standard variance rules</bullet>
+<bullet>Order is irrelevant: *%int|string%* and *%string|int%*</bullet>
+<bullet>%*array|Traversable*% is the same as %*iterable*%</bullet>
+</list>
+
+</slide>

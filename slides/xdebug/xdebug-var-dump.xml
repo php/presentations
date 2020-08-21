@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<slide fontsize="6em" style="past">
+<slide fontsize="6em">
 	<title>Pretty Printing Variables</title>
 
 <div effect="fade-out">
-<iframe zoom="1.5" filename="http://whisky/test/xdebug/var_dump.php"/>
+<iframe zoom="2.75" width="1720" height="900" filename="http://192.168.42.104/html/test/xdebug/var_dump.php"/>
 </div>
 <div effect="fade-in">
 	<blurb>Options:</blurb>
