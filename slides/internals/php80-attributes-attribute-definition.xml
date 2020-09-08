@@ -9,14 +9,14 @@ use MyORM\Attributes as ORM;
 
 class Distillery
 {
-    @@ORM\Column("string")
+    #[ORM\Column("string")]
     private $name;
 }
 ]]></example><example><![CDATA[<?php
 namespace MyORM\Attributes;
-use PhpAttribute;
+use Attribute;
 
-@@PhpAttribute
+#[Attribute]
 class Column {
     public function __construct(public string $type) {  }
 }
@@ -44,11 +44,6 @@ object(MyORM\Attributes\Column)#4 (1) {
   string(6) "string"
 }
 </example>
-</div>
-
-<div effect="fade-in">
-	<break lines="2"/>
-	<blurb class="big-centre">%*PhpAttribute*%<br/>🠳<br/>%*Attribute*%</blurb>
 </div>
 
 </td>

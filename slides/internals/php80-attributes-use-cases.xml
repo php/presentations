@@ -2,11 +2,24 @@
 <title>Attributes: Use Cases</title>
 
 <list>
-	<bullet>Replaces phpdoc annotations in Doctrine, Symfony, etc…</bullet>
+	<bullet>Replaces phpdoc annotations in Doctrine, Symfony, etc…
+<example inline="2"><![CDATA[
+&lt;?php
+use Doctrine\ORM\Attributes as ORM;
+
+*#[ORM\Entity]*
+class Distillery
+{
+    *#[ORM\Id]*
+    *#[ORM\Column("string")]*
+    private $name;
+}]]>
+</example>
+	</bullet>
 	<bullet>May add internal attributes:
 	<list>
-		<bullet>%&amp;lt;&amp;lt;Deprecated("Use xyz instead")>>%</bullet>
-		<bullet>%&amp;lt;&amp;lt;Jit>>%, %&amp;lt;&amp;lt;NoJit>>%</bullet>
+		<bullet><example inline="2">%#[Deprecated("Use xyz instead")]%</example></bullet>
+		<bullet><example inline="2">%#[Jit]%</example><example inline="2">%#[NoJit]%</example></bullet>
 	</list>
 	</bullet>
 </list>
