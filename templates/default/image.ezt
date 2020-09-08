@@ -2,6 +2,8 @@
 {var $align = get_attribute( $node, 'align' )}
 {var $attr = get_attribute( $node, 'attr' )}
 {var $width = get_attribute( $node, 'width' )}
+{var $zoom = get_attribute( $node, 'zoom' )}
+{if !$zoom}{$zoom = 1}{/if}
 {if $attr}<div{if $align} style='float: {$align}'{/if}><div>{/if}
-<img {if $inline}class='inline' {/if}{if $align}align='{$align}' class='{$align}' {/if}{if $width}width='{$width}' {/if}src='{$pres->base}{get_attribute( $node, 'filename' )}'/>
+<img style="zoom={$zoom}; -moz-transform: scale({$zoom}); -moz-transform-origin: top center; clear: both;" {if $inline}class='inline' {/if}{if $align}align='{$align}' class='{$align}' {/if}{if $width}width='{$width}' {/if}src='{$pres->base}{get_attribute( $node, 'filename' )}'/>
 {if $attr}<p class='attribution'>{$attr}</p></div></div>{/if}

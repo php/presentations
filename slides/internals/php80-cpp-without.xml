@@ -12,7 +12,7 @@ class 🥃whisky
 </example>
 <div effect="fade-in">
 <example>
-    function __constructor(string $name, Distillery $distillery, int $age, ?Bottler $bottler)
+    function __construct(string $name, Distillery $distillery, int $age, ?Bottler $bottler)
     {
         $this->name = $name;
         $this->distillery = $distillery;

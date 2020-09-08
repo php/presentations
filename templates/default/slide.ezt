@@ -115,7 +115,6 @@ $('*').on("keydown", function(event) {
 {var $imgAttr = get_attribute( $node, 'background_attr' )}
 {var $maincolor = get_attribute( $node, 'template' )}
 <body{if $img} style='background-image: url({$pres->base}{$img}); background-size: cover;'{/if}>
-<div class='twitter'>@derickr</div>
 <div class='whole-slide{if $maincolor} template-{$maincolor}{/if}'>
 {switch ( get_attribute( $node, 'type' ) )}
 	{case 'agenda'}

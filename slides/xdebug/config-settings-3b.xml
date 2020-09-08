@@ -5,77 +5,56 @@
 <tr>
 <td>
 <example inline="2">
-*|aaaaaa|x.|auto_trace*          ~x.always_start~
-*|aaaaaa|x.|cli_color*
-|aaaaaa|x.||0000ff|base|.collect_assignments
-|aaaaaa|x.||0000ff|base|.collect_includes
-|aaaaaa|x.||0000ff|base|.collect_params
-|aaaaaa|x.||0000ff|base|.collect_return
-|aaaaaa|x.||0000ff|base|.collect_vars
-*|aaaaaa|x.|coverage_enable*             ~x.mode~
-*|aaaaaa|x.|default_enable*              ~x.mode~
-|aaaaaa|x.||0000ff|display|.dump.COOKIE
-|aaaaaa|x.||0000ff|display|.dump.ENV
-|aaaaaa|x.||0000ff|display|.dump.FILES
-|aaaaaa|x.||0000ff|display|.dump.GET
-|aaaaaa|x.||0000ff|display|.dump.POST
-|aaaaaa|x.||0000ff|display|.dump.REQUEST
-|aaaaaa|x.||0000ff|display|.dump.SERVER
-|aaaaaa|x.||0000ff|display|.dump.SESSION
-|aaaaaa|x.||0000ff|display|.dump_globals
-*|aaaaaa|x.|dump_once*
-|aaaaaa|x.||0000ff|display|.dump_undefined
----*|00cc00|x.extended_info|*---         ~gone already~
-|aaaaaa|x.||0000ff|base|.file_link_format
+xdebug.cli_color
+xdebug.cloud.userid
+xdebug.collect_assignments
+xdebug.collect_return
+xdebug.dump.COOKIE
+xdebug.dump.ENV
+xdebug.dump.FILES
+xdebug.dump.GET
+xdebug.dump_globals
+xdebug.dump_once
+xdebug.dump.POST
+xdebug.dump.REQUEST
+xdebug.dump.SERVER
+xdebug.dump.SESSION
+xdebug.dump_undefined
+xdebug.file_link_format
+xdebug.filename_format
+xdebug.force_display_errors
+xdebug.force_error_reporting
+xdebug.gc_stats_output_name
+xdebug.halt_level
+xdebug.idekey
+|00dd00|xdebug.log|
+|00dd00|xdebug.log_level|
+xdebug.max_nesting_level
 </example></td><td><example inline="2">
-|aaaaaa|x.||0000ff|base|.filename_format
-|aaaaaa|x.||0000ff|base|.force_display_errors
-|aaaaaa|x.||0000ff|base|.force_error_reporting
-|aaaaaa|x.||0000ff|base|.gc_stats_enable
-*|aaaaaa|x.|gc_stats_output_dir*            ~x.output_dir~
-*|aaaaaa|x.|gc_stats_output_name*           ~x.output_name~
-|aaaaaa|x.||0000ff|base|.halt_level
-*|aaaaaa|x.|idekey*
-|aaaaaa|x.||0000ff|base|.max_nesting_level
-|aaaaaa|x.||0000ff|display|.max_stack_frames
-|aaaaaa|x.||0000ff|display|.overload_var_dump
-*|aaaaaa|x.|profiler_aggregate*
-*|aaaaaa|x.|profiler_append*
-*|aaaaaa|x.|profiler_enable*                ~x.mode~
-*|aaaaaa|x.|profiler_enable_trigger*        ~x.enable_trigger~
-*|aaaaaa|x.|profiler_enable_trigger_value*  ~x.enable_…_value~
-*|aaaaaa|x.|profiler_output_dir*            ~x.output_dir~
-*|aaaaaa|x.|profiler_output_name*           ~x.output_name~
-|aaaaaa|x.||0000ff|debugger|.addr_header
-*|aaaaaa|x.|remote.autostart*               ~x.always_start~
-|aaaaaa|x.||0000ff|debugger|.connect_back
-|aaaaaa|x.||0000ff|debugger|.cookie_expire_time
+xdebug.max_stack_frames
+|ff0000|xdebug.mode|
+xdebug.output_dir
+xdebug.profiler_append
+xdebug.profiler_output_name
+xdebug.remote_addr_header
+xdebug.remote_connect_back
+xdebug.remote_cookie_expire_time
+xdebug.remote_host
+xdebug.remote_port
+xdebug.remote_timeout
+xdebug.scream
+xdebug.show_error_trace
+xdebug.show_exception_trace
+xdebug.show_local_vars
+|ff0000|xdebug.start_upon_error|
+|ff0000|xdebug.start_with_request|
+xdebug.trace_format
+xdebug.trace_options
+xdebug.trace_output_name
+xdebug.trigger_value
+xdebug.var_display_max_children
+xdebug.var_display_max_data
+xdebug.var_display_max_depth
 </example></td>
-<!--
-<td><example inline="2">
-*|aaaaaa|x.|remote_enable*                  ~x.mode~
-*|aaaaaa|x.|remote_handler*
-|aaaaaa|x.||0000ff|debugger|.host
-|aaaaaa|x.||0000ff|debugger|.log
-|aaaaaa|x.||0000ff|debugger|.mode
-|aaaaaa|x.||0000ff|debugger|.port
-|aaaaaa|x.||0000ff|debugger|.timeout
-*|aaaaaa|x.|scream*                         ~always on ☺~
-|aaaaaa|x.||0000ff|display|.show_error_trace
-|aaaaaa|x.||0000ff|display|.show_exception_trace
-|aaaaaa|x.||0000ff|display|.show_local_vars
-*|aaaaaa|x.|show_mem_delta*                 ~always on~
-*|aaaaaa|x.|trace_enable_trigger*           ~x.enable_trigger~
-*|aaaaaa|x.|trace_enable_trigger_value*     ~x.enable_trigger_value~
-|aaaaaa|x.||0000ff|tracing|.format
-|aaaaaa|x.||0000ff|tracing|.options
-*|aaaaaa|x.|trace_output_dir*               ~x.output_dir~
-*|aaaaaa|x.|trace_output_name*              ~x.output_name~
-|aaaaaa|x.||0000ff|display|.max_children
-|aaaaaa|x.||0000ff|display|.max_data
-|aaaaaa|x.||0000ff|display|.max_depth
-</example>
-</td>
--->
 </tr></table>
 </slide>

@@ -23,7 +23,7 @@ class eZTranslationCache {
 class ezcTranslationCache {
 	protected $region;
 
-	function __constructor( $region ) {
+	function __construct( $region ) {
 		$this->region = $region;
 	}
 }

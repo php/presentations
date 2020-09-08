@@ -1,0 +1,9 @@
+<slide>
+<title>Diagnostic Log</title>
+
+<example result="1">
+<![CDATA[<?php
+xdebug_info();
+]]>
+</example>
+</slide>

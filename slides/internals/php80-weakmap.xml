@@ -12,9 +12,9 @@ unset($obj); // $obj automatically dropped from WeakMap!
 
 <break lines="2"/>
 <blurb class="centre">Use Case</blurb>
-<example><![CDATA[
-class FooBar {
+<example inline="2"><![CDATA[
 &lt;?php
+class FooBar {
     private WeakMap $cache;
 
     public function getSomethingWithCaching(object $obj) {

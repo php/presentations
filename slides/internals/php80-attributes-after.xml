@@ -16,13 +16,13 @@ class Distillery
 
 <div effect="fade-in">
 <example inline="2" class="big"><![CDATA[
-    #[*ORM\Column]*("string") // Class Name]]>
+    #[*ORM\Column*("string")] // Class Name]]>
 </example>
 </div>
 
 <div effect="fade-in">
 <example inline="2" class="big"><![CDATA[
-    #[ORM\Column](*"string"*) // Constructor Arguments]]>
+    #[ORM\Column(*"string"*)] // Constructor Arguments]]>
 </example>
 </div>
 

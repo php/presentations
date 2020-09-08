@@ -8,7 +8,7 @@
 {var $source = ''}
 {if !$width}{$width = 1010}{/if}
 {if !$height}{$height = 592}{/if}
-{if str_starts_with(get_attribute($node, 'filename'), 'http://')}
+{if str_starts_with(get_attribute($node, 'filename'), 'http')}
 {$source = get_attribute($node, 'filename')}
 {else}
 {$source = str_append($pres->base, get_attribute( $node, 'filename' ))}

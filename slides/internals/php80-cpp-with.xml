@@ -5,7 +5,7 @@
 &amp;lt;?php
 class 🥃whisky 
 {
-    function __constructor(
+    function __construct(
         *public*    string $name,
         *protected* Distillery $distillery,
         *public*    int $age,

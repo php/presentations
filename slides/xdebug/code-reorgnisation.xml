@@ -28,25 +28,29 @@ xdebug_handler_dbgp.c   xdebug_stack.h
 <div effect="fade-in">
 <example inline="2">
 *derick@gargleblaster:~/src$ ls -v ../\*.[ch] \*/\*.[ch]*
-../config.h            debugger/com.h          lib/str.c
-../php_xdebug.h        debugger/handlers.c     lib/str.h
-../xdebug.c            debugger/handlers.h     lib/usefulstuff.c
-base/base.c            debugger/handler_dbgp.c lib/usefulstuff.h
-base/base.h            debugger/handler_dbgp.h lib/var.c
-base/filter.c          gcstats/gcstats.c       lib/var.h
-base/filter.h          gcstats/gcstats.h       lib/xml.c
-base/monitor.c         gcstats/gc…private.h    lib/xml.h
-base/monitor.h         lib/compat.c            profiler/profiler.c
-base/stack.c           lib/compat.h            profiler/profiler.h
-base/stack.h           lib/hash.c              tracing/t…e_computerized.c
-base/superglobals.c    lib/hash.h              tracing/t…e_computerized.h
-base/superglobals.h    lib/llist.c             tracing/t…e_html.c
-coverage/branch_info.c lib/llist.h             tracing/t…e_html.h
-coverage/branch_info.h lib/mm.h                tracing/t…e_textual.c
-coverage/coverage.c    lib/private.c           tracing/t…e_textual.h
-coverage/coverage.h    lib/private.h           tracing/tracing.c
-coverage/cov…private.h lib/set.c               tracing/tracing.h
-debugger/com.c         lib/set.h               tracing/tracing_private.h
+base/base.c                      gcstats/gc_stats.c         lib/var_export_html.h
+base/base.h                      gcstats/gc_stats.h         lib/var_export_line.c
+base/filter.c                    gcstats/gc_stats_private.h lib/var_export_line.h
+base/filter.h                    lib/compat.c               lib/var_export_serialized.c
+base/monitor.c                   lib/compat.h               lib/var_export_serialized.h
+base/monitor.h                   lib/crc32.c                lib/var_export_text.c
+base/stack.c                     lib/crc32.h                lib/var_export_text.h
+base/stack.h                     lib/hash.c                 lib/var_export_xml.c
+base/superglobals.c              lib/hash.h                 lib/var_export_xml.h
+base/superglobals.h              lib/lib.c                  lib/xml.c
+coverage/branch_info.c           lib/lib.h                  lib/xml.h
+coverage/branch_info.h           lib/lib_private.h          profiler/profiler.c
+coverage/code_coverage.c         lib/llist.c                profiler/profiler.h
+coverage/code_coverage.h         lib/llist.h                profiler/profiler_private.h
+coverage/code_coverage_private.h lib/mm.h                   tracing/trace_computerized.c
+debugger/com.c                   lib/set.c                  tracing/trace_computerized.h
+debugger/com.h                   lib/set.h                  tracing/trace_html.c
+debugger/debugger.c              lib/str.c                  tracing/trace_html.h
+debugger/debugger.h              lib/str.h                  tracing/trace_textual.c
+debugger/debugger_private.h      lib/usefulstuff.c          tracing/trace_textual.h
+debugger/handlers.c              lib/usefulstuff.h          tracing/tracing.c
+debugger/handlers.h              lib/var.c                  tracing/tracing.h
+debugger/handler_dbgp.c          lib/var.h                  tracing/tracing_private.h
 </example>
 </div>
 </slide>
