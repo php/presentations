@@ -3,21 +3,24 @@
 
 <div effect="fade-out">
 	<blurb>php.ini settings:</blurb>
-	<blurb class="small_blurb">%  xdebug.remote_enable=1%</blurb>
-	<blurb class="small_blurb">%  xdebug.remote_host=localhost%</blurb>
-	<blurb class="small_blurb">%  xdebug.remote_port=9000%</blurb>
+	<blurb class="small_blurb">%xdebug.mode=debug%</blurb>
+	<blurb class="small_blurb">|777777|%xdebug.client_host=localhost%|</blurb>
+	<blurb class="small_blurb">|777777|%xdebug.client_port=9003%|</blurb>
 </div>
 
 <div effect="fade-in-out">
 	<blurb>php.ini settings:</blurb>
-	<blurb class="small_blurb">%  xdebug.remote_enable=1%</blurb>
-	<blurb class="small_blurb">|777777|%  xdebug.remote_host=localhost%|</blurb>
-	<blurb class="small_blurb">|777777|%  xdebug.remote_port=9000%|</blurb>
-	<blurb class="small_blurb">*%  xdebug.remote_connect_back=1%*</blurb>
+	<blurb class="small_blurb">%xdebug.mode=debug%</blurb>
+	<blurb class="small_blurb">|777777|%xdebug.client_host=localhost%|</blurb>
+	<blurb class="small_blurb">|777777|%xdebug.client_port=9003%|</blurb>
+	<blurb class="small_blurb">*%xdebug.discover_client_host=1%*</blurb>
 </div>
 
 <div effect="fade-in">
 	<blurb>On the shell:</blurb>
-	<blurb class="small_blurb">%  export XDEBUG_CONFIG="idekey=xdebugrocks"%</blurb>
+	<blurb class="small_blurb">%export XDEBUG_SESSION=yes%</blurb>
+</div>
+<div effect="fade-in">
+	<blurb class="small_blurb">%export XDEBUG_MODE=debug%</blurb>
 </div>
 </slide>

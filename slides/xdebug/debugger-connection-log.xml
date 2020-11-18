@@ -2,7 +2,7 @@
 <title>Step Debugger Logs</title>
 
 <blurb>Logging debugging communication:</blurb>
-<example>xdebug.remote_log=/tmp/remote.log</example>
+<example>xdebug.log=/tmp/remote.log</example>
 
 <break/>
 <blurb>Also shows connection attempts and failures:</blurb>
@@ -10,34 +10,24 @@
 <div effect="fade-out">
 
 <example inline="2">
-xdebug.remote_connect_back=0
-xdebug.remote_port=9991
+xdebug.cloud_id=f047e3fd-9d35-4989-94f3-4cb64a1e6376
 
-I: Connecting to configured address/port: localhost:9991.
-I: Connected to client. *|009900|:-)|*
-</example>
-</div>
-
-<div effect="fade-in-out">
-<example inline="2">
-xdebug.remote_connect_back=1
-|777777|xdebug.remote_host=SomethingEntirelyDifferent|
-xdebug.remote_port=9003
-
-I: Checking remote connect back address.
-W: Remote address not found, connecting to configured address/port: nothere:9003. *:-|*
-E: Could not connect to client. *:-(*
+[2912111] Log opened at 2020-11-18 10:11:31.536895
+[2912111] [Step Debug] INFO: Connecting to configured address/port:
+	n.cloud.xdebug.com:9020.
+[2912111] [Step Debug] INFO: Connected to debugging client: (null). :-)
 </example>
 </div>
 
 <div effect="fade-in">
 <example inline="2">
-xdebug.remote_connect_back=0
-xdebug.remote_host=nothere
-xdebug.remote_port=9002
+xdebug.client_discover_address=1
+|777777|xdebug.client_host=SomethingEntirelyDifferent|
+xdebug.client_port=9003
 
-I: Connecting to configured address/port: nothere:9002.
-E: Could not connect to client. *:-(*
+[Step Debug] Could not connect to debugging client.
+	Tried: SometimeEntirelyDifferent:9003
+	(fallback through xdebug.client_host/xdebug.client_port) :-(
 </example>
 </div>
 </slide>
