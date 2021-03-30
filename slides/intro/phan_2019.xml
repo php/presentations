@@ -12,7 +12,7 @@ $ composer require --dev phan/phan
 <example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
 <?php
 return [
-    'target_php_version' => '7.2',
+    'target_php_version' => '8.0',
     'directory_list' => [ 'src/' ],
     "exclude_analysis_directory_list" => [ 'vendor/' ],
 ];
@@ -29,6 +29,10 @@ $ ./vendor/bin/phan
 <blurb fontsize="1.5em" align="center">Dependency Graph Plugin</blurb>
 <link fontsize="2em" align="center" href="http://pdep.lerdorf.com/?mode=class&amp;node=\Grav\Common\File\CompiledFile&amp;d=1">pdep example</link>
 
+<notes>
+Show what depends on the \Grav\Common\File\CompiledFile trait
+</notes>
+
 <break lines="1" section="phan4"/>
 <blurb fontsize="2em" align="left">Daemon mode</blurb>
 <example fontsize="1em" result='0' title="" type="shell nohighlight"><![CDATA[
@@ -44,7 +48,10 @@ $ phan_client -l src/script.php
 Phan error: TypeError: PhanTypeMismatchArgument: Argument 1 (union) is array{0:1} but \C::fn() takes int|string defined at src/script.php:8 in src/script.php on line 14
 Phan error: TypeError: PhanTypeMismatchArgument: Argument 3 (shaped) is array{max:10} but \C::fn() takes array{mode:string,max:int} defined at src/script.php:8 in src/script.php on line 16
 ]]></example>
-
+<notes>
+You can run keep the entire graph in memory using daemon mode
+which allows editor integration...
+</notes>
 
 <break lines="1" section="phan5"/>
 <blurb fontsize="1.5em" align="left">vim integration</blurb>

@@ -42,6 +42,10 @@
 <blurb fontsize="1.1em" align="left">incpath extension can resolve your include_path for you</blurb>
 <link fontsize="1.25em" align="left" marginleft="1em" href="https://github.com/etsy/incpath">https://github.com/etsy/incpath</link>
 
+<notes>
+some contraints...
+</notes>
+
 <break lines="1" section="deploy6"/>
 <blurb fontsize="1.1em" align="left">Version all static assets</blurb>
 <blurb fontsize="1.1em" align="left">DB Schema changes need special care</blurb>

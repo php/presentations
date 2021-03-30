@@ -94,8 +94,6 @@ $ sudo phpspy -m php src/phan.php
 # mem 82471616 123721960
 ]]></example>
 
-<blurb fontsize="1em" align="left">perf/callgrind output support soon, hopefully</blurb>
-
 <break lines="1" section="spytop"/>
 
 <blurb fontsize="1.1em" align="center">Top-like output mode </blurb>

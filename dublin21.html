@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Modern PHP</title>
+
+		<meta name="description" content="Modern PHP">
+		<meta name="author" content="Rasmus Lerdorf">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
+		<link rel="stylesheet" href="/styles/xcode.css">
+
+		<!-- Override a few styles -->
+        <style>
+        /*
+		   Not actually sure why this block isn't being picked up from the syntax highlight css 
+		   If you change the syntax highlight theme, copy the first block here
+		*/
+        .reveal pre {
+                width: 100%;
+        }
+
+        .reveal pre code {
+                display: block;
+                max-height: 600px;
+                overflow-x: auto;
+                padding: 0.5em;
+                line-height: 125%;
+                background: #fff;
+                color: black;
+                -webkit-text-size-adjust: none;
+        }
+
+        .reveal section img {
+               box-shadow: none;
+               border: none;
+        }
+
+        .reveal code.shell {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #000;
+            color: #ddd;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+
+        .reveal code.result {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: #000;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+
+        /* Left-align h3 and h4 if they are p elements */
+        h3.p {
+                text-align: left;
+        }
+        h4.p {
+                text-align: left;
+        }
+        /* and left-aligned but slightly indented bullet lists */
+        .reveal ul {
+            display: block;
+            margin: 0 0 1em 3em;
+        }
+		/* Example titles */
+		p.example {
+			text-align: left;
+			margin: 0 0 -0.5em 1em;
+			font-weight: bold;
+		}
+		/* Example output style */
+		pre.output {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: black;
+			line-height: 200%;
+            -webkit-text-size-adjust: none;
+		}
+
+        </style>
+
+		 <!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <!-- Needed for charts to work. Fall back to network if no local copy -->
+        <script type='text/javascript' src='/jquery.min.js'></script> 
+        <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">\x3C/script>')</script>
+        <script src="/highcharts.js"></script>
+        <script>window.Highcharts || document.write('<script src="http://code.highcharts.com/highcharts.js">\x3C/script>')</script>
+
+		<!--[if lt IE 9]>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Modern PHP</h1>
+					<h3></h3>
+					<h3>Dublin - virtual</h3>
+					<h3>Mar.31, 2021</h3>
+					<a href="http://talks.php.net/dublin2021">http://talks.php.net/dublin2021</a><br><br>
+					<p>Rasmus Lerdorf<br>
+					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
+					</p>
+					<aside class="notes">
+											</aside>
+				</section>
+					<section>
+		<section id="etsyphp">
+		<p class="p" style="font-size:2em;text-align:center;">ETSY IS A PHP SHOP</p>
+		<p class="p" style="font-size:1.8em;text-align:center;">Yes, but...</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">we use a lot of</p>
+		<p class="p" style="font-size:1em;text-align:center;">Javascript, Python, Ruby, C, C++, Java, Go, Objective C, Swift, Kotlin, Rust, Scala, Dart</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">as well</p>
+<aside class="notes"><br />
+It depends on the team<br />
+Some teams barely touch PHP, if at all<br />
+</aside>
+		</section>
+		<section id="etsyphp1" >
+		<img src="/presentations/slides/intro/etsy_arch.png" align="left" width="265" height="581">
+		<p class="p" style="font-size:2em;text-align:center;">Web Serving Stack</p>
+		<ul>
+			<li style="font-size: 1.2em;margin-left: 4em;list-style-type: none;">Linux, Apache, MySQL, PHP</li>
+			<li style="font-size: 1.2em;margin-left: 4em;list-style-type: none;">Memcache, Gearman, StatsD, Vitess, Redis, Kafka, Varnish</li>
+			<li style="font-size: 1.2em;margin-left: 4em;list-style-type: none;">GCP, Terraform</li>
+		</ul>
+		<p class="p" style="font-size:2em;text-align:center;">API First!</p>
+<aside class="notes"><br />
+Global, Internal Load Balancer<br />
+Managed Instance Groups<br />
+Many other stacks not shown, like beacons, assets, downloads<br />
+</aside>
+		</section>	</section>
+	<section>
+		<section id="etsyfw">
+		<p class="p" style="font-size:2em;text-align:center;">Framework?</p>
+		<p class="p" style="font-size:1.8em;text-align:center;">We built our own over the years</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">(bad idea, don't do that)</p>
+<aside class="notes"><br />
+Including building our own ORM<br />
+There are many great frameworks out there<br />
+Laravel, Symfony<br />
+</aside>
+		</section>
+		<section id="etsyfw1" >
+		<p class="p" style="font-size:2em;text-align:left;">Request Routing</p>
+		<pre><code data-trim style="font-size:1em;" >https://etsy.com/awesome/123</code></pre>
+		<p class="p" style="font-size:1.2em;text-align:left;">.htaccess Apache rewrite rule</p>
+		<pre><code data-trim style="font-size:1em;" >RewriteRule ^awesome/(\d+)$   /awesome.php?id=$1 [L,NC,QSA]</code></pre>
+<aside class="notes"><br />
+request routing is a combination of mod_rewrite and PHP bridge code<br />
+<br />
+L    last<br />
+NC   case-insensitive<br />
+QSA  append query string<br />
+<br />
+We have tools that compile these routes for us<br />
+</aside>
+		</section>
+		<section id="etsyfw2" >
+		<p class="p" style="font-size:1.4em;text-align:left;">awesome.php</p>
+		<pre><code data-trim style="font-size:1em;" >require 'bootstrap.php';
+$request  = HTTP_Request::getInstance();
+$response = HTTP_Response::getInstance();
+$controller = new Awesome_Controller();
+$controller-&gt;doCoolThings($request, $response);</code></pre>
+<aside class="notes"><br />
+Very little code here, just routing us to the controller<br />
+</aside>
+		</section>
+		<section id="etsyfw3" >
+		<p class="p" style="font-size:1.4em;text-align:left;">Code/Awesome/Controller.php</p>
+		<pre><code data-trim style="font-size:1em;" >class Awesome_Controller extends Controller_Base {
+  public function doCoolThings($request, $response) {
+    $id = $request-&gt;getGet('id', 0);
+    if (!$id) {
+      $response-&gt;redirect_error(Constants::ERROR_NOT_FOUND);
+      return;
+    }
+    $thing = EtsyORM::getFinder('Thing')-&gt;findById($id);
+    $stuff = Api::endpoint('AwesomeStuff', [$thing-&gt;id, 'max'=&gt;10]);
+    $this-&gt;renderViewTree(New Awesome_View($thing, $stuff));
+  }
+}</code></pre>
+<aside class="notes"><br />
+The controller can make direct DB calls<br />
+And fan out to the API<br />
+</aside>
+		</section>
+		<section id="etsyfw4" >
+		<p class="p" style="font-size:1.4em;text-align:left;">Awesome_View</p>
+		<pre><code data-trim style="font-size:1em;" >class Awesome_View implements Neu_View {
+    const TEMPLATE = &quot;/templates/awesome/main.mustache&quot;;
+    use Neu_Traits_DefaultView;
+
+    public function __construct(AwesomeThing $thing, array $stuff) {
+        $this-&gt;thing = $thing;
+        $this-&gt;stuff = $stuff;
+    }
+    public function getCssFiles(): array {
+        return [ '/awesome/main.scss' ];
+    }
+    public function getTemplateData(): array {
+        return [ 'thing_id' =&gt; $this-&gt;thing-&gt;id,
+                 'thing_name' =&gt; $this-&gt;thing-&gt;name,
+                 'stuff' =&gt; $this-&gt;stuff ];
+    }
+}</code></pre>
+		</section>
+		<section id="etsyfw5" >
+		<p class="p" style="font-size:1.4em;text-align:left;">templates/awesome/main.mustache</p>
+		<pre><code data-trim style="font-size:1em;" >&lt;div&gt;
+    &lt;p&gt;{{thing_name}} ({{thing_id}})&lt;/p&gt;
+    &lt;ul&gt;
+    {{#stuff}}
+        &lt;li&gt;{{id}} {{description}}&lt;/li&gt;
+    {{/stuff}}
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+		</section>	</section>
+	<section>
+		<section id="phpspy">
+		<h1 style="text-align:center;">phpspy</h1>
+		<p class="p" style="font-size:1.1em;text-align:center;">Low-overhead sampling profiler</p>
+		<div align="center" style="font-size: 1em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/adsr/phpspy" target="">https://github.com/adsr/phpspy</a></div>
+		</section>
+		<section id="spy1" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Sample frequency in nanoseconds (or Hz)</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy -s 200000000 -- php -r 'sleep(1);' 
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+process_vm_readv: No such process</code></pre>
+		</section>
+		<section id="spy2" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Attach to a running process</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ sudo phpspy -r -p $(pgrep -n php-fpm)
+
+0 wp_installing /var/www/wordpress/wp-includes/load.php:944
+1 wp_load_alloptions /var/www/wordpress/wp-includes/option.php:189
+2 get_option /var/www/wordpress/wp-includes/option.php:90
+3 create_initial_taxonomies /var/www/wordpress/wp-includes/taxonomy.php:43
+4 WP_Hook::apply_filters /var/www/wordpress/wp-includes/class-wp-hook.php:286
+5 WP_Hook::do_action /var/www/wordpress/wp-includes/class-wp-hook.php:310
+6 do_action /var/www/wordpress/wp-includes/plugin.php:453
+7 &lt;main&gt; /var/www/wordpress/wp-settings.php:450
+8 &lt;main&gt; /var/www/wordpress/wp-config.php:89
+9 &lt;main&gt; /var/www/wordpress/wp-load.php:37
+10 &lt;main&gt; /var/www/wordpress/wp-blog-header.php:13
+11 &lt;main&gt; /var/www/wordpress/index.php:17
+# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -
+
+0 mysqli_query &lt;internal&gt;:-1
+1 wpdb::_do_query /var/www/wordpress/wp-includes/wp-db.php:1924
+2 wpdb::query /var/www/wordpress/wp-includes/wp-db.php:1813
+3 wpdb::get_results /var/www/wordpress/wp-includes/wp-db.php:2488
+4 _prime_comment_caches /var/www/wordpress/wp-includes/comment.php:2871
+5 WP_Comment_Query::get_comments /var/www/wordpress/wp-includes/class-wp-comment-query.php:427
+6 WP_Comment_Query::query /var/www/wordpress/wp-includes/class-wp-comment-query.php:346
+7 get_comments /var/www/wordpress/wp-includes/comment.php:226
+8 WP_Widget_Recent_Comments::widget /var/www/wordpress/wp-includes/widgets/class-wp-widget-recent-comments.php:99
+9 WP_Widget::display_callback /var/www/wordpress/wp-includes/class-wp-widget.php:372
+10 dynamic_sidebar /var/www/wordpress/wp-includes/widgets.php:743
+11 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/sidebar.php:41
+12 load_template /var/www/wordpress/wp-includes/template.php:688
+13 locate_template /var/www/wordpress/wp-includes/template.php:647
+14 get_sidebar /var/www/wordpress/wp-includes/general-template.php:110
+15 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/header.php:49
+16 load_template /var/www/wordpress/wp-includes/template.php:688
+17 locate_template /var/www/wordpress/wp-includes/template.php:647
+18 get_header /var/www/wordpress/wp-includes/general-template.php:41
+19 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/single.php:10
+20 &lt;main&gt; /var/www/wordpress/wp-includes/template-loader.php:74
+21 &lt;main&gt; /var/www/wordpress/wp-blog-header.php:19
+22 &lt;main&gt; /var/www/wordpress/index.php:17
+# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -</code></pre>
+		</section>
+		<section id="spy3" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Memory usage on stack frames</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ sudo phpspy -m php src/phan.php
+
+0 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+1 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+2 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+3 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+4 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+5 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+6 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
+# mem 119159776 123721960
+
+0 ast\parse_code &lt;internal&gt;:-1
+1 Phan\AST\Parser::parseCode /home/rasmus/phan/src/Phan/AST/Parser.php:42
+2 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+3 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+4 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
+# mem 82471616 123721960</code></pre>
+		</section>
+		<section id="spytop" >
+		<p class="p" style="font-size:1.1em;text-align:center;">Top-like output mode </p>
+		<img src="/presentations/slides/intro/phpspy_top.gif" align="center" width="772" height="452">
+		</section>
+		<section id="spy4" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Generate a flame graph</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy phan &gt; /tmp/output
+$ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code></pre>
+		</section>
+		<section id="spy5" >
+		<object data="/presentations/slides/intro/phan.svg" type="image/svg+xml" align="center" width="80%" height="80%">Use a newer browser, please</object>
+		</section>	</section>
+	<section>
+		<section id="phan">
+		<h1 style="text-align:center;">Static Analysis</h1>
+<br/>
+<br/>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/phan/phan" target="">github.com/phan/phan</a></div>
+		</section>
+		<section id="phan0" >
+		<p class="p" style="font-size:1.5em;text-align:left;">Install with composer</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ composer require --dev phan/phan</code></pre>
+		<p class="p" style="font-size:1.5em;text-align:left;">Create .phan/config.php</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >return [
+    'target_php_version' =&gt; '8.0',
+    'directory_list' =&gt; [ 'src/' ],
+    &quot;exclude_analysis_directory_list&quot; =&gt; [ 'vendor/' ],
+];</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ ./vendor/bin/phan</code></pre>
+		</section>
+		<section id="phan2" >
+		<p class="p" style="font-size:1.5em;text-align:center;">Phan in Browser</p>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://phan.github.io/demo/" target="">phan.github.io/demo/</a></div>
+		</section>
+		<section id="phan3" >
+		<p class="p" style="font-size:1.5em;text-align:center;">Dependency Graph Plugin</p>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://pdep.lerdorf.com/?mode=class&node=\Grav\Common\File\CompiledFile&d=1" target="">pdep example</a></div>
+<aside class="notes"><br />
+Show what depends on the \Grav\Common\File\CompiledFile trait<br />
+</aside>
+		</section>
+		<section id="phan4" >
+		<p class="p" style="font-size:2em;text-align:left;">Daemon mode</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --daemonize-tcp-port default &amp;
+[1] 28610
+Listening for Phan analysis requests at tcp://127.0.0.1:4846
+Awaiting analysis requests for directory '/home/rasmus/phan_demo'
+
+$ vi src/script.php</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan_client -l src/script.php
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 1 (union) is array{0:1} but \C::fn() takes int|string defined at src/script.php:8 in src/script.php on line 14
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 3 (shaped) is array{max:10} but \C::fn() takes array{mode:string,max:int} defined at src/script.php:8 in src/script.php on line 16</code></pre>
+<aside class="notes"><br />
+You can run keep the entire graph in memory using daemon mode<br />
+which allows editor integration...<br />
+</aside>
+		</section>
+		<section id="phan5" >
+		<p class="p" style="font-size:1.5em;text-align:left;">vim integration</p>
+	<div id="container">
+      <video id='video' controls="controls" preload='none' onclick='this.paused ? this.play() : this.pause();'
+        width="1848"  >
+        <source id='mp4' src="presentations/slides/intro/phanvid.mp4" type='video/mp4'/>
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+    </div>		</section>	</section>
+	<section>
+		<section id="deploy">
+		<h1 style="text-align:center;">Let's deploy it!</h1>
+		</section>
+		<section id="deploy0" >
+		<p class="p" style="font-size:2em;text-align:left;">Atomic</p>
+		<p class="p" style="font-size:2em;text-align:left;">No performance hit</p>
+		<ul>
+			<li style="font-size: 1.5em;">No restarts</li>
+			<li style="font-size: 1.5em;">No LB removal</li>
+			<li style="font-size: 1.5em;">No thundering herd</li>
+			<li style="font-size: 1.5em;">Cache reuse</li>
+		</ul>
+		</section>
+		<section id="deploy1" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Must be able to serve two versions of the site concurrently!</p>
+		<img src="/presentations/slides/intro/atomic_deploy1.png"  width="" height="">
+		</section>
+		<section id="deploy2" >
+		<img src="/presentations/slides/intro/atomic_deploy2.png"  width="" height="">
+		</section>
+		<section id="deploy3" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Requests that begin on DocumentRoot A must finish on A</p>
+		</section>
+		<section id="deploy4" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Set the DocumentRoot to symlink target!</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">Easy with nginx</p>
+		<pre><code class="ini" data-trim style="font-size:1.1em;" >fastcgi_param DOCUMENT_ROOT $realpath_root</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">Apache</p>
+		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/mod_realdoc" target="">github.com/etsy/mod_realdoc</a></div>
+		</section>
+		<section id="deploy5" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Avoid hardcoding full paths</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">Watch your include_path setting</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">incpath extension can resolve your include_path for you</p>
+		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/incpath" target="">https://github.com/etsy/incpath</a></div>
+<aside class="notes"><br />
+some contraints...<br />
+</aside>
+		</section>
+		<section id="deploy6" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Version all static assets</p>
+		<p class="p" style="font-size:1.1em;text-align:left;">DB Schema changes need special care</p>
+		</section>	</section>
+	<section>
+		<section id="etsy_deploy">
+		<h2 style="text-align:center;">How do you manage deploys?</h2>
+<aside class="notes"><br />
+ok, but how do you manage deploys with hundreds of developers?<br />
+</aside>
+		</section>
+		<section id="etsy_deploy0" >
+		<p class="p" style="font-size:2em;text-align:left;">At Etsy we use <strike>irc</strike> Slack</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Channel: #push Topic: &lt;prod&gt; *joe frank|bob
+devbot: Swapping symlinks. Your code is about to start taking production traffic
+pushbot: joe frank : Your code is live. Time to watch graphs: http://etsy/abcd
+Rasmus: .join
+*** pushbot has changed the topic on #push to &lt;prod&gt; joe frank|bob Rasmus
+frank: .good
+*** pushbot has changed the topic on #push to &lt;prod&gt; *joe *frank|bob Rasmus
+joe: .done
+*** pushbot has changed the topic on #push to &lt;prod&gt; bob Rasmus
+pushbot: bob Rasmus: You're up
+bob: .in
+*** pushbot has changed the topic on #push *bob Rasmus
+Rasmus: .in
+*** pushbot has changed the topic on #push *bob *Rasmus</code></pre>
+<aside class="notes"><br />
+.join in #push<br />
+</aside>
+		</section>
+		<section id="etsy_deploy1" >
+		<p class="p" style="font-size:2em;text-align:left;">pushbot commands</p>
+		<ul>
+			<li style="list-style-type: none;"><strong>.join</strong>    - join push queue</li>
+			<li style="list-style-type: none;"><strong>.in</strong>        - code has been pushed</li>
+			<li style="list-style-type: none;"><strong>.good</strong> - your stuff looks good</li>
+			<li style="list-style-type: none;"><strong>.uhoh</strong> - your stuff looks bad</li>
+			<li style="list-style-type: none;"><strong>.hold</strong>  - there is a problem, hold everything</li>
+			<li style="list-style-type: none;"><strong>.nm</strong>      - never mind (leave queue)</li>
+			<li style="list-style-type: none;"><strong>.done</strong> - push done</li>
+		</ul>
+		</section>
+		<section id="etsy_deploy2" >
+		<img src="/presentations/slides/intro/deployinator.png"  width="" height="">
+		</section>
+		<section id="etsy_deploy3" >
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Channel: #push Topic: &lt;princess&gt; bob Rasmus
+Jenkins: Starting build #36803 for job qa
+Jenkins: Starting build #38784 for job princess
+Jenkins: Project qa build #36803: SUCCESS in 6 min 19 sec: http://ci/job/qa/36803/
+pushbot: bob Rasmus : qa tests have passed
+devbot: [who_tried] Everyone in this push has run Try recently. w00t!
+Jenkins: Project princess build #38784: SUCCESS in 1 min 10 sec: http://ci/job/princess/38784/
+pushbot: bob Rasmus : princess tests have passed
+bob: .good
+Rasmus: .good
+*** pushbot has changed the topic on #push to &lt;princess&gt; *bob *Rasmus
+pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
+Jenkins: qa: last build: 36803 (9 min 5 sec ago): SUCCESS: http://ci/job/qa/36803/
+Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci/job/princess/38784/</code></pre>
+		</section>
+		<section id="etsy_deploy4" >
+		<p class="p" style="font-size:2.5em;text-align:left;">Deploy to Production:</p>
+		<ul>
+			<li style="font-size: 2em;">ssh to deploy host</li>
+			<li style="font-size: 2em;">dsh to all targets</li>
+			<li style="font-size: 2em;">rsync files</li>
+		</ul>
+		</section>
+		<section id="etsy_deploy5" >
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Channel: #push Topic: &lt;prod&gt; bob Rasmus
+devbot: Swapping symlinks. Your code is about to start taking production traffic
+pushbot: bob Rasmus : Your code is live. Time to watch graphs: http://etsy/et5cp
+Jenkins: Starting build #39452 for job prod
+pushbot: bob Rasmus : prod tests have passed
+Jenkins: Project prod build #39452: SUCCESS in 30 sec: http://ci/job/prod/39452/
+bob: .good
+Rasmus: .good
+*** pushbot has changed the topic on #push to &lt;prod&gt; *bob *Rasmus
+pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
+Jenkins: prod: last build: 39452 (1 min 39 sec ago): SUCCESS: http://ci/job/prod/39452/
+bob: .done
+pushbot: clear
+*** pushbot has changed the topic on #push to clear</code></pre>
+		</section>
+		<section id="etsy_deploy6" >
+		<p class="p" style="font-size:2.5em;text-align:left;">Graph Everything!</p>
+		<ul>
+			<li style="font-size: 2em;">Statsd</li>
+			<li style="font-size: 2em;">Grafana</li>
+		</ul>
+		</section>
+		<section id="etsy_deploy7" >
+		<p class="p" style="font-size:2.5em;text-align:left;">Log Everything!</p>
+		<ul>
+			<li style="font-size: 2em;">Supergrep</li>
+			<li style="font-size: 2em;">Logstash</li>
+			<li style="font-size: 2em;">Elastic Search</li>
+			<li style="font-size: 2em;">mtail</li>
+			<li style="font-size: 2em;">Prometheus</li>
+		</ul>
+		</section>
+		<section id="etsy_deploy8" >
+		<ul>
+			<li style="font-size: 1.5em;">Commit to master</li>
+			<li style="font-size: 1.5em;">Deploy from HEAD</li>
+			<li style="font-size: 1.5em;">Branches?</li>
+			<li style="font-size: 1.5em;">Branches are in code via feature flags</li>
+		</ul>
+		</section>
+		<section id="etsy_deploy9" >
+		<p class="p" style="font-size:2.2em;text-align:left;">Blameless post-mortems</p>
+<aside class="notes"><br />
+And when things go wrong...<br />
+</aside>
+		</section>	</section>
+	<section>
+		<section id="supported">
+		<h2 style="text-align:center;">Version Support</h2>
+		<img src="http://php.net/images/supported-versions.php" align="center" width="" height="">
+<font size="6em">
+<table align="left" width="60%" border="0" style="margin-left: 1em;"><tr>
+ <td bgcolor="#90C090"><span style="font-size: 1em;">Active Support</span>
+ </td> <td ><span style="">Regular releases and security fixes</span>
+ </td></tr>
+<tr>
+ <td bgcolor="#F09030"><span style="font-size: 1em;">Security Fixes</span>
+ </td> <td ><span style="">Only security fixes</span>
+ </td></tr>
+<tr>
+ <td bgcolor="F03030"><span style="font-size: 1em;">End of Life</span>
+ </td> <td ><span style="">No longer supported</span>
+ </td></tr>
+</table></font><br />
+		</section>	</section>
+	<section>
+		<section id="wpbench">
+
+<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/wp2021.js"></script>
+		</section>	</section>
+	<section>
+		<section id="php80">
+		<h1 style="text-align:center;">PHP 8.0</h1>
+		</section>
+		<section id="php80_namedargs" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Named Arguments</p>
+		<pre><code data-trim style="font-size:1em;" >htmlspecialchars($string, double_encode: false);
+
+// instead of
+
+htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);</code></pre>
+		</section>
+		<section id="php80_promotion" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Constructor Property Promotion</p>
+		<pre><code data-trim style="font-size:1.1em;" >class User {
+    function __construct(
+        public string $first_name,
+        public string $last_name,
+        private string $password = &quot;&quot;,
+        protected int $group = 1
+    ) { }
+}
+
+$u = new User(&quot;Rasmus&quot;, &quot;Lerdorf&quot;, group:2);
+echo $u-&gt;first_name;  // Rasmus</code></pre>
+		</section>
+		<section id="php80_nullsafe" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Nullsafe Operator with short-circuiting</p>
+		<p class="p" style="font-size:0.8em;text-align:left;">Similar to <font color="008822">?.</font> operator in Javascript, C# and Swift</p>
+		<pre><code data-trim style="font-size:1.1em;" >$country = $session?-&gt;user?-&gt;getAddress(geoip())?-&gt;country;
+
+// instead of
+
+if ($session !== null) {
+    $user = $session-&gt;user;
+
+    if ($user !== null) {
+        $address = $user-&gt;getAddress(geoip());
+
+        if ($address !== null) {
+            $country = $address-&gt;country;
+        }
+    }
+}</code></pre>
+		</section>
+		<section id="php80_match" >
+		<p class="p" style="font-size:1em;text-align:left;">Match Expression</p>
+		<pre><code data-trim style="font-size:0.9em;" >$statement = match ($this-&gt;lexer-&gt;lookahead['type']) {
+    Lexer::T_SELECT =&gt; $this-&gt;SelectStatement(),
+    Lexer::T_UPDATE =&gt; $this-&gt;UpdateStatement(),
+    Lexer::T_DELETE =&gt; $this-&gt;DeleteStatement(),
+    default =&gt; $this-&gt;syntaxError('SELECT, UPDATE or DELETE'),
+};
+// Throws UnhandledMatchError on no match and no default expr
+
+// instead of
+switch ($this-&gt;lexer-&gt;lookahead['type']) {
+    case Lexer::T_SELECT:
+        $statement = $this-&gt;SelectStatement();
+        break;
+    case Lexer::T_UPDATE:
+        $statement = $this-&gt;UpdateStatement();
+        break;
+    case Lexer::T_DELETE:
+        $statement = $this-&gt;DeleteStatement();
+        break;
+    default:
+        $this-&gt;syntaxError('SELECT, UPDATE or DELETE');
+        break;
+}</code></pre>
+<aside class="notes"><br />
+match is an expression, so it can return a value unlike switch<br />
+</aside>
+		</section>
+		<section id="php80_union1" >
+		<p class="p" style="font-size:1em;text-align:left;">Union Types</p>
+		<pre><code data-trim style="font-size:0.85em;" >class Store {
+    private static $data = [];
+
+    /**
+     * @param int|string $key
+     * @param int|float|string $val
+     */
+    static function add($key, $val): void {
+        if(!(is_int($key) || is_string($key))) {
+            throw new TypeError(&quot;Key must be an int or a string&quot;);
+        }
+        if(!(is_int($val) || is_float($val) || is_string($val))) {
+            throw new TypeError(&quot;Value must be an int, float or a string&quot;);
+        }
+        self::$data[$key] = $val;
+    }
+    /**
+     * @param int|string $key
+     * @return int|float|string
+     */
+    static function get($key) {
+        return self::$data[$key];
+    }
+}</code></pre>
+<aside class="notes"><br />
+Using soft doc-comment union types in previous versions<br />
+</aside>
+		</section>
+		<section id="php80_union2" >
+		<p class="p" style="font-size:1em;text-align:left;">Union Types</p>
+		<pre><code data-trim style="font-size:0.9em;" >&lt;?php
+class Store {
+    private static $data = [];
+
+    static function add(int|string $key, int|float|string $val): void {
+        self::$data[$key] = $val;
+    }
+    static function get(int|string $key): int|float|string {
+        return self::$data[$key];
+    }
+}
+Store::add('player2', [1,2,3]);
+// TypeError: Store::add(): Argument #2 ($val) must be of
+//                          type string|int|float, array given</code></pre>
+<aside class="notes"><br />
+Careful switching to runtime fatals for types<br />
+</aside>
+		</section>
+		<section id="php80_weakmap" >
+		<p class="p" style="font-size:1em;text-align:left;">weakMap</p>
+		<p class="p" style="font-size:0.8em;text-align:left;">Map objects to arbitrary values without preventing GC</p>
+		<pre><code data-trim style="font-size:0.7em;" >class Endpoint {
+    function __construct(public string $url, ?callable $dfunc=null, array $opts = []) {
+        $this-&gt;context = stream_context_create($opts);
+        $this-&gt;dfunc = $dfunc ? $dfunc : fn($x)=&gt;$x;
+    }
+}
+
+class Api {
+    static public ?weakMap $cache = null;
+    static public function fetch(Endpoint $ep): string|object {
+        if(!self::$cache) self::$cache = new weakMap;
+        return self::$cache[$ep] ??=
+               $ep-&gt;dfunc-&gt;call($ep, file_get_contents($ep-&gt;url, context:$ep-&gt;context));
+    }
+}
+
+$xkcd = new Endpoint(&quot;http://xkcd.com/info.0.json&quot;, fn($x)=&gt;json_decode($x, associative:false));
+$joke = new Endpoint(&quot;https://icanhazdadjoke.com/&quot;, opts:['http'=&gt;['header'=&gt;&quot;Accept:text/plain&quot;]]);
+echo '&lt;img src=&quot;'.Api::fetch($xkcd)-&gt;img.'&quot; alt=&quot;'.Api::fetch($xkcd)-&gt;alt.'&quot;&gt;'.&quot;\n&quot;;
+echo Api::fetch($joke) . &quot;\n&quot;;
+echo Api::$cache-&gt;count() . &quot;\n&quot;; // 2
+unset($xkcd);
+echo Api::$cache-&gt;count() . &quot;\n&quot;; // 1
+echo Api::fetch($joke) . &quot;\n&quot;;    // Same bad joke
+$joke = new Endpoint(&quot;https://icanhazdadjoke.com/&quot;, opts:['http'=&gt;['header'=&gt;&quot;Accept:text/plain&quot;]]);
+echo Api::fetch($joke) . &quot;\n&quot;;    // New bad joke
+echo Api::$cache-&gt;count() . &quot;\n&quot;; // 2?
+gc_collect_cycles();              // Force gc
+echo Api::$cache-&gt;count() . &quot;\n&quot;; // 1</code></pre>
+<aside class="notes"><br />
+Run example at http://pres2.localhost/weakmap.php<br />
+</aside>
+		</section>
+		<section id="php80_attributes" >
+		<p class="p" style="font-size:1em;text-align:left;">Attributes</p>
+		<pre><code data-trim style="font-size:0.7em;" >use Doctrine\ORM\Attributes as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+#[ORM\Entity]
+class User {
+    #[ORM\Id, ORM\Column(&quot;integer&quot;), ORM\GeneratedValue]
+    private $id;
+
+    #[ORM\Column(&quot;string&quot;, ORM\Column::UNIQUE)]
+    #[Assert\Email(array(&quot;message&quot; =&gt; &quot;The email '{{ value }}' is not a valid email.&quot;))]
+    private $email;
+
+    #[Assert\Range([&quot;min&quot; =&gt; 120, &quot;max&quot; =&gt; 180, &quot;minMessage&quot; =&gt; &quot;You must be at least {{ limit }}cm tall to enter&quot;])]
+    #[ORM\Column(ORM\Column::T_INTEGER)]
+    protected $height;
+
+    #[ORM\ManyToMany(Phonenumber::class)]
+    #[
+       ORM\JoinTable(&quot;users_phonenumbers&quot;),
+       ORM\JoinColumn(&quot;user_id&quot;, &quot;id&quot;),
+       ORM\InverseJoinColumn(&quot;phonenumber_id&quot;, &quot;id&quot;, ORM\JoinColumn::UNIQUE)
+     ]
+    private $phonenumbers;
+}</code></pre>
+<aside class="notes"><br />
+One per line, or comma-separated on same attribute line<br />
+</aside>
+		</section>	</section>
+	<section data-background-color="#000000">
+		<section id="j">
+		<img src="/presentations/slides/intro/carl1.jpg" align="center" width="533" height="800">
+		</section>
+		<section id="j1" >
+		<img src="/presentations/slides/intro/carl2.jpg" align="center" width="" height="">
+		</section>
+		<section id="j2" >
+		<img src="/presentations/slides/intro/carl_linuxtag.jpg" align="center" width="" height="">
+		</section>
+		<section id="j3" >
+		<img src="/presentations/slides/intro/tridge.jpg" align="center" width="" height="">
+<aside class="notes"><br />
+Tridge arguing with Linus<br />
+rsync, Samba, ccache, rzip<br />
+</aside>
+		</section>
+		<section id="j4" >
+		<img src="/presentations/slides/intro/roorkee.jpg" align="center" width="" height="">
+		</section>
+		<section id="j5" >
+		<img src="/presentations/slides/intro/arthurcclarke.jpg" align="center" width="" height="">
+<aside class="notes"><br />
+Arthur C. Clarke!<br />
+</aside>
+		</section>
+		<section id="j6" >
+		<img src="/presentations/slides/intro/carl_etsy.png" align="center" width="" height="">
+		</section>	</section>
+	<section>
+		<section id="ematter">
+		<p class="p" style="font-size:1.5em;text-align:center;">35+ years!</p>
+		<ul style="font-size:0.8em">
+			<li>Bell Northern Research - Toronto</li>
+			<li>Northern Telecom - Toronto</li>
+			<li>Digital Media Networks - Toronto</li>
+			<li>NovAtel - Calgary</li>
+			<li>Nutec Informática - Porto Alegre, Brazil</li>
+			<li>University of Toronto IT - Toronto</li>
+			<li>Bell Global Solutions - Toronto</li>
+			<li>IBM - Raleigh, NC</li>
+			<li>Linuxcare - San Francisco</li>
+			<li>Yahoo! - Sunnyvale</li>
+			<li>WePay - Palo Alto</li>
+			<li>Etsy</li>
+		</ul>
+<aside class="notes"><br />
+I was ready to retire after Yahoo!<br />
+Ad-driven balacing-act<br />
+I don't really like programming<br />
+I don't like flying either<br />
+</aside>
+		</section>
+		<section id="ematter1" >
+		<img src="/presentations/slides/intro/lovehack-white-1000.png" align="center" width="1001" height="421">
+		</section>
+		<section id="ematter2" >
+		<p class="p" style="font-size:1.8em;text-align:center;">Create more value than you capture. -Tim O'Reilly</p>
+<aside class="notes"><br />
+Etsy<br />
+</aside>
+		</section>
+		<section id="ematter3" >
+		<p class="p" style="font-size:2em;text-align:center;">Work on things that matter (to you)</p>
+		</section>	</section>
+	<section>
+		<section id="sahana0">
+		<img src="/presentations/slides/intro/slideshow_images/sahana3.png" align="center" width="1000" height="720">
+		</section>
+		<section id="sahana1" >
+		<img src="/presentations/slides/intro/slideshow_images/sahana_final.png" align="center" width="1000" height="720">
+<aside class="notes"><br />
+Can't end on a better point<br />
+</aside>
+		</section>	</section>
+	<section>
+		<section id="thank_you">
+		<p class="p" style="font-size:2em;text-align:center;">Thank You</p>
+<br/>
+		<div align="center" style="font-size: 1.4em; color: ; text-align: center; margin-left: 0em; margin-right: ; margin-top: ; margin-bottom: ;"><a href=":-:url:-:" target="">http://talks.php.net/dublin2021</a></div>
+<br/>
+		<p class="p" style="font-size:1.6em;text-align:center;">Interested in joining our team?</p>
+		<p class="p" style="font-size:1.3em;text-align:center;">Please email your CV/resume to</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">dublin-hiring@etsy.com</p>
+		<p class="p" style="font-size:1.2em;text-align:center;">We will be opening a wide array of positions!</p>
+		</section>	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1024,
+				height: 768,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transitionSpeed: 'fast',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '/reveal.js/plugin/line-numbers/line-numbers.js' }
+				]
+			});
+			/* This draws the graph on the slide on a slidechanged event */
+			Reveal.addEventListener('slidechanged', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+			/* This draws the graph if we got here directly without coming from another slide */
+			Reveal.addEventListener('ready', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+		</script>
+
+	</body>
+</html>

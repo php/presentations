@@ -1,0 +1,42 @@
+<presentation
+    template="simple"
+    navmode="html"
+    titlecolor="#000000"
+    navbarbackground="#bbbbbb"
+    navbartopiclinks="0"
+    logo1="images/php-med-trans.png"
+    titlesize="6em"
+    navbarheight="3.5em"
+    examplebackground="#ffffff"
+    outputbackground="#ffffff"
+    exampleclass="noshadow"
+    exampleoutputclass="noshadow"
+>
+
+<topic>PHP</topic>
+<title>Modern PHP</title>
+<event></event>
+<location>Dublin - virtual</location>
+<date>Mar.31, 2021</date>
+<speaker>Rasmus Lerdorf</speaker>
+<url>http://talks.php.net/dublin2021</url>
+<twitter>@rasmus</twitter>
+
+<slide>slides/intro/titlepage.xml</slide>
+
+<slide>slides/intro/etsyphp.xml</slide>
+<slide>slides/intro/etsyframework.xml</slide>
+<slide>slides/intro/phpspy.xml</slide>
+<slide>slides/intro/phan_2019.xml</slide>
+<slide>slides/intro/deploy_2016.xml</slide>
+<slide>slides/intro/etsy_deploy.xml</slide>
+<slide>slides/intro/supported.xml</slide>
+<slide>slides/intro/wp2021.xml</slide>
+<slide>slides/intro/php80_2021.xml</slide>
+<slide>slides/intro/journey_etsy.xml</slide>
+<slide>slides/intro/matter_etsy.xml</slide>
+<slide>slides/intro/sahana.xml</slide>
+
+<slide>slides/intro/thank_you_etsy.xml</slide>
+
+</presentation>
