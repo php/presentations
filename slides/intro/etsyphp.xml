@@ -25,6 +25,8 @@ Some teams barely touch PHP, if at all
 Global, Internal Load Balancer
 Managed Instance Groups
 Many other stacks not shown, like beacons, assets, downloads
+Gearman for longer-running Asynchronous tasks
+Crons for non-request triggered
 </notes>
 
 </slide>

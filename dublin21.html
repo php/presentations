@@ -169,6 +169,8 @@ Some teams barely touch PHP, if at all<br />
 Global, Internal Load Balancer<br />
 Managed Instance Groups<br />
 Many other stacks not shown, like beacons, assets, downloads<br />
+Gearman for longer-running Asynchronous tasks<br />
+Crons for non-request triggered<br />
 </aside>
 		</section>	</section>
 	<section>
@@ -258,6 +260,60 @@ And fan out to the API<br />
     &lt;/ul&gt;
 &lt;/div&gt;</code></pre>
 		</section>	</section>
+	<section>
+		<section id="phan">
+		<h1 style="text-align:center;">Static Analysis</h1>
+<br/>
+<br/>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/phan/phan" target="">github.com/phan/phan</a></div>
+		</section>
+		<section id="phan0" >
+		<p class="p" style="font-size:1.5em;text-align:left;">Install with composer</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ composer require --dev phan/phan</code></pre>
+		<p class="p" style="font-size:1.5em;text-align:left;">Create .phan/config.php</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >return [
+    'target_php_version' =&gt; '8.0',
+    'directory_list' =&gt; [ 'src/' ],
+    &quot;exclude_analysis_directory_list&quot; =&gt; [ 'vendor/' ],
+];</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ ./vendor/bin/phan</code></pre>
+		</section>
+		<section id="phan2" >
+		<p class="p" style="font-size:1.5em;text-align:center;">Phan in Browser</p>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://phan.github.io/demo/" target="">phan.github.io/demo/</a></div>
+		</section>
+		<section id="phan3" >
+		<p class="p" style="font-size:1.5em;text-align:center;">Dependency Graph Plugin</p>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://pdep.lerdorf.com/?mode=class&node=\Grav\Common\File\CompiledFile&d=1" target="">pdep example</a></div>
+<aside class="notes"><br />
+Show what depends on the \Grav\Common\File\CompiledFile trait<br />
+</aside>
+		</section>
+		<section id="phan4" >
+		<p class="p" style="font-size:2em;text-align:left;">Daemon mode</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --daemonize-tcp-port default &amp;
+[1] 28610
+Listening for Phan analysis requests at tcp://127.0.0.1:4846
+Awaiting analysis requests for directory '/home/rasmus/phan_demo'
+
+$ vi src/script.php</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan_client -l src/script.php
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 1 (union) is array{0:1} but \C::fn() takes int|string defined at src/script.php:8 in src/script.php on line 14
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 3 (shaped) is array{max:10} but \C::fn() takes array{mode:string,max:int} defined at src/script.php:8 in src/script.php on line 16</code></pre>
+<aside class="notes"><br />
+You can run keep the entire graph in memory using daemon mode<br />
+which allows editor integration...<br />
+</aside>
+		</section>
+		<section id="phan5" >
+		<p class="p" style="font-size:1.5em;text-align:left;">vim integration</p>
+	<div id="container">
+      <video id='video' controls="controls" preload='none' onclick='this.paused ? this.play() : this.pause();'
+        width="1848"  >
+        <source id='mp4' src="presentations/slides/intro/phanvid.mp4" type='video/mp4'/>
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+    </div>		</section>	</section>
 	<section>
 		<section id="phpspy">
 		<h1 style="text-align:center;">phpspy</h1>
@@ -355,64 +411,15 @@ process_vm_readv: No such process</code></pre>
 		<p class="p" style="font-size:1.1em;text-align:left;">Generate a flame graph</p>
 		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy phan &gt; /tmp/output
 $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code></pre>
+<aside class="notes"><br />
+sudo ptop<br />
+cd ~/phan<br />
+phan<br />
+</aside>
 		</section>
 		<section id="spy5" >
 		<object data="/presentations/slides/intro/phan.svg" type="image/svg+xml" align="center" width="80%" height="80%">Use a newer browser, please</object>
 		</section>	</section>
-	<section>
-		<section id="phan">
-		<h1 style="text-align:center;">Static Analysis</h1>
-<br/>
-<br/>
-		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/phan/phan" target="">github.com/phan/phan</a></div>
-		</section>
-		<section id="phan0" >
-		<p class="p" style="font-size:1.5em;text-align:left;">Install with composer</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ composer require --dev phan/phan</code></pre>
-		<p class="p" style="font-size:1.5em;text-align:left;">Create .phan/config.php</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >return [
-    'target_php_version' =&gt; '8.0',
-    'directory_list' =&gt; [ 'src/' ],
-    &quot;exclude_analysis_directory_list&quot; =&gt; [ 'vendor/' ],
-];</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ ./vendor/bin/phan</code></pre>
-		</section>
-		<section id="phan2" >
-		<p class="p" style="font-size:1.5em;text-align:center;">Phan in Browser</p>
-		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://phan.github.io/demo/" target="">phan.github.io/demo/</a></div>
-		</section>
-		<section id="phan3" >
-		<p class="p" style="font-size:1.5em;text-align:center;">Dependency Graph Plugin</p>
-		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://pdep.lerdorf.com/?mode=class&node=\Grav\Common\File\CompiledFile&d=1" target="">pdep example</a></div>
-<aside class="notes"><br />
-Show what depends on the \Grav\Common\File\CompiledFile trait<br />
-</aside>
-		</section>
-		<section id="phan4" >
-		<p class="p" style="font-size:2em;text-align:left;">Daemon mode</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --daemonize-tcp-port default &amp;
-[1] 28610
-Listening for Phan analysis requests at tcp://127.0.0.1:4846
-Awaiting analysis requests for directory '/home/rasmus/phan_demo'
-
-$ vi src/script.php</code></pre>
-		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan_client -l src/script.php
-Phan error: TypeError: PhanTypeMismatchArgument: Argument 1 (union) is array{0:1} but \C::fn() takes int|string defined at src/script.php:8 in src/script.php on line 14
-Phan error: TypeError: PhanTypeMismatchArgument: Argument 3 (shaped) is array{max:10} but \C::fn() takes array{mode:string,max:int} defined at src/script.php:8 in src/script.php on line 16</code></pre>
-<aside class="notes"><br />
-You can run keep the entire graph in memory using daemon mode<br />
-which allows editor integration...<br />
-</aside>
-		</section>
-		<section id="phan5" >
-		<p class="p" style="font-size:1.5em;text-align:left;">vim integration</p>
-	<div id="container">
-      <video id='video' controls="controls" preload='none' onclick='this.paused ? this.play() : this.pause();'
-        width="1848"  >
-        <source id='mp4' src="presentations/slides/intro/phanvid.mp4" type='video/mp4'/>
-        <p>Your user agent does not support the HTML5 Video element.</p>
-      </video>
-    </div>		</section>	</section>
 	<section>
 		<section id="deploy">
 		<h1 style="text-align:center;">Let's deploy it!</h1>

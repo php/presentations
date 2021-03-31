@@ -105,7 +105,11 @@ $ sudo phpspy -m php src/phan.php
 $ phpspy phan > /tmp/output
 $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl > flame.svg
 ]]></example>
-
+<notes>
+sudo ptop
+cd ~/phan
+phan
+</notes>
 <break lines="1" section="spy5"/>
 <object filename="phan.svg" type="image/svg+xml" width="80%" height="80%" align="center"/>
 
