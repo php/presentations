@@ -1,0 +1,222 @@
+<slide title="" section="php80">
+
+<blurb fontsize="20em" align="center">PHP 8.0</blurb>
+
+<break lines="1" section="php80_namedargs"/>
+<blurb fontsize="1.1em" align="left">Named Arguments</blurb>
+
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+htmlspecialchars($string, double_encode: false);
+
+// instead of
+
+htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+]]></example>
+
+<break lines="1" section="php80_promotion"/>
+<blurb fontsize="1.1em" align="left">Constructor Property Promotion</blurb>
+
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
+class User {
+    function __construct(
+        public string $first_name,
+        public string $last_name,
+        private string $password = "",
+        protected int $group = 1
+    ) { }
+}
+
+$u = new User("Rasmus", "Lerdorf", group:2);
+echo $u->first_name;  // Rasmus
+]]></example>
+
+<break lines="1" section="php80_nullsafe"/>
+<blurb fontsize="1.1em" align="left">Nullsafe Operator with short-circuiting</blurb>
+<blurb fontsize="0.8em" align="left">Similar to |008822|?.| operator in Javascript, C# and Swift</blurb>
+<example fontsize="1.1em" result='0' title="" type=""><![CDATA[<?php
+$country = $session?->user?->getAddress(geoip())?->country;
+
+// instead of
+
+if ($session !== null) {
+    $user = $session->user;
+
+    if ($user !== null) {
+        $address = $user->getAddress(geoip());
+
+        if ($address !== null) {
+            $country = $address->country;
+        }
+    }
+}
+]]></example>
+
+
+<break lines="1" section="php80_match"/>
+
+<blurb fontsize="1em" align="left">Match Expression</blurb>
+
+<example fontsize="0.9em" result='0' title="" type=""><![CDATA[<?php
+$statement = match ($this->lexer->lookahead['type']) {
+    Lexer::T_SELECT => $this->SelectStatement(),
+    Lexer::T_UPDATE => $this->UpdateStatement(),
+    Lexer::T_DELETE => $this->DeleteStatement(),
+    default => $this->syntaxError('SELECT, UPDATE or DELETE'),
+};
+// Throws UnhandledMatchError on no match and no default expr
+
+// instead of
+switch ($this->lexer->lookahead['type']) {
+    case Lexer::T_SELECT:
+        $statement = $this->SelectStatement();
+        break;
+    case Lexer::T_UPDATE:
+        $statement = $this->UpdateStatement();
+        break;
+    case Lexer::T_DELETE:
+        $statement = $this->DeleteStatement();
+        break;
+    default:
+        $this->syntaxError('SELECT, UPDATE or DELETE');
+        break;
+}
+]]></example>
+
+<notes>
+match is an expression, so it can return a value unlike switch
+</notes>
+
+<break lines="1" section="php80_union1"/>
+
+<blurb fontsize="1em" align="left">Union Types</blurb>
+
+<example fontsize="0.85em" result='0' title="" type=""><![CDATA[<?php
+class Store {
+    private static $data = [];
+
+    /**
+     * @param int|string $key
+     * @param int|float|string $val
+     */
+    static function add($key, $val): void {
+        if(!(is_int($key) || is_string($key))) {
+            throw new TypeError("Key must be an int or a string");
+        }
+        if(!(is_int($val) || is_float($val) || is_string($val))) {
+            throw new TypeError("Value must be an int, float or a string");
+        }
+        self::$data[$key] = $val;
+    }
+    /**
+     * @param int|string $key
+     * @return int|float|string
+     */
+    static function get($key) {
+        return self::$data[$key];
+    }
+}
+]]></example>
+
+<notes>
+Using soft doc-comment union types in previous versions
+</notes>
+
+<break lines="1" section="php80_union2" />
+
+<blurb fontsize="1em" align="left">Union Types</blurb>
+
+<example fontsize="0.9em" result='0' title="" type=""><![CDATA[<?php
+<?php
+class Store {
+    private static $data = [];
+
+    static function add(int|string $key, int|float|string $val): void {
+        self::$data[$key] = $val;
+    }
+    static function get(int|string $key): int|float|string {
+        return self::$data[$key];
+    }
+}
+Store::add('player2', [1,2,3]);
+// TypeError: Store::add(): Argument #2 ($val) must be of
+//                          type string|int|float, array given
+
+]]></example>
+
+<notes>
+Careful switching to runtime fatals for types
+</notes>
+
+<break lines="1" section="php80_weakmap"/>
+
+<blurb fontsize="1em" align="left">weakMap</blurb>
+<blurb fontsize="0.8em" align="left">Map objects to arbitrary values without preventing GC</blurb>
+<example fontsize="0.7em" result='0' title="" type=""><![CDATA[<?php
+class Endpoint {
+    function __construct(public string $url, ?callable $dfunc=null, array $opts = []) {
+        $this->context = stream_context_create($opts);
+        $this->dfunc = $dfunc ? $dfunc : fn($x)=>$x;
+    }
+}
+
+class Api {
+    static public ?weakMap $cache = null;
+    static public function fetch(Endpoint $ep): string|object {
+        if(!self::$cache) self::$cache = new weakMap;
+        return self::$cache[$ep] ??=
+               $ep->dfunc->call($ep, file_get_contents($ep->url, context:$ep->context));
+    }
+}
+
+$xkcd = new Endpoint("http://xkcd.com/info.0.json", fn($x)=>json_decode($x, associative:false));
+$joke = new Endpoint("https://icanhazdadjoke.com/", opts:['http'=>['header'=>"Accept:text/plain"]]);
+echo '<img src="'.Api::fetch($xkcd)->img.'" alt="'.Api::fetch($xkcd)->alt.'">'."\n";
+echo Api::fetch($joke) . "\n";
+echo Api::$cache->count() . "\n"; // 2
+unset($xkcd);
+echo Api::$cache->count() . "\n"; // 1
+echo Api::fetch($joke) . "\n";    // Same bad joke
+$joke = new Endpoint("https://icanhazdadjoke.com/", opts:['http'=>['header'=>"Accept:text/plain"]]);
+echo Api::fetch($joke) . "\n";    // New bad joke
+echo Api::$cache->count() . "\n"; // 2?
+gc_collect_cycles();              // Force gc
+echo Api::$cache->count() . "\n"; // 1
+]]></example>
+
+<notes>
+Run example at http://pres2.localhost/weakmap.php
+</notes>
+
+<break lines="1" section="php80_attributes"/>
+<blurb fontsize="1em" align="left">Attributes</blurb>
+<example fontsize="0.7em" result='0' title="" type=""><![CDATA[<?php
+use Doctrine\ORM\Attributes as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+#[ORM\Entity]
+class User {
+    #[ORM\Id, ORM\Column("integer"), ORM\GeneratedValue]
+    private $id;
+
+    #[ORM\Column("string", ORM\Column::UNIQUE)]
+    #[Assert\Email(array("message" => "The email '{{ value }}' is not a valid email."))]
+    private $email;
+
+    #[Assert\Range(["min" => 120, "max" => 180, "minMessage" => "You must be at least {{ limit }}cm tall to enter"])]
+    #[ORM\Column(ORM\Column::T_INTEGER)]
+    protected $height;
+
+    #[ORM\ManyToMany(Phonenumber::class)]
+    #[
+       ORM\JoinTable("users_phonenumbers"),
+       ORM\JoinColumn("user_id", "id"),
+       ORM\InverseJoinColumn("phonenumber_id", "id", ORM\JoinColumn::UNIQUE)
+     ]
+    private $phonenumbers;
+}
+]]></example>
+
+<notes>
+One per line, or comma-separated on same attribute line
+</notes>
+</slide>

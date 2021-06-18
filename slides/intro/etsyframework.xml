@@ -1,0 +1,98 @@
+<slide title="" section="etsyfw">
+
+<blurb fontsize="2em" align="center">Framework?</blurb>
+<blurb fontsize="1.8em" align="center">We built our own over the years</blurb>
+<blurb fontsize="1.4em" align="center">(bad idea, don't do that)</blurb>
+
+<notes>
+Including building our own ORM
+There are many great frameworks out there
+Laravel, Symfony
+</notes>
+
+<break lines="1" section="etsyfw1"/>
+<blurb fontsize="2em" align="left">Request Routing</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[
+    https://etsy.com/awesome/123
+]]></example>
+<blurb fontsize="1.2em" align="left">.htaccess Apache rewrite rule</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[
+    RewriteRule ^awesome/(\d+)$   /awesome.php?id=$1 [L,NC,QSA]
+]]></example>
+<notes>
+request routing is a combination of mod_rewrite and PHP bridge code
+
+L    last
+NC   case-insensitive
+QSA  append query string
+
+We have tools that compile these routes for us
+</notes>
+<break lines="1" section="etsyfw2"/>
+<blurb fontsize="1.4em" align="left">awesome.php</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+require 'bootstrap.php';
+$request  = HTTP_Request::getInstance();
+$response = HTTP_Response::getInstance();
+$controller = new Awesome_Controller();
+$controller->doCoolThings($request, $response);
+]]></example>
+<notes>
+Very little code here, just routing us to the controller
+</notes>
+
+<break lines="1" section="etsyfw3"/>
+<blurb fontsize="1.4em" align="left">Code/Awesome/Controller.php</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+class Awesome_Controller extends Controller_Base {
+  public function doCoolThings($request, $response) {
+    $id = $request->getGet('id', 0);
+    if (!$id) {
+      $response->redirect_error(Constants::ERROR_NOT_FOUND);
+      return;
+    }
+    $thing = EtsyORM::getFinder('Thing')->findById($id);
+    $stuff = Api::endpoint('AwesomeStuff', [$thing->id, 'max'=>10]);
+    $this->renderViewTree(New Awesome_View($thing, $stuff));
+  }
+}
+]]></example>
+<notes>
+The controller can make direct DB calls
+And fan out to the API
+</notes>
+<break lines="1" section="etsyfw4"/>
+<blurb fontsize="1.4em" align="left">Awesome_View</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+class Awesome_View implements Neu_View {
+    const TEMPLATE = "/templates/awesome/main.mustache";
+    use Neu_Traits_DefaultView;
+
+    public function __construct(AwesomeThing $thing, array $stuff) {
+        $this->thing = $thing;
+        $this->stuff = $stuff;
+    }
+    public function getCssFiles(): array {
+        return [ '/awesome/main.scss' ];
+    }
+    public function getTemplateData(): array {
+        return [ 'thing_id' => $this->thing->id,
+                 'thing_name' => $this->thing->name,
+                 'stuff' => $this->stuff ];
+    }
+}
+]]></example>
+
+<break lines="1" section="etsyfw5"/>
+<blurb fontsize="1.4em" align="left">templates/awesome/main.mustache</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[
+<div>
+    <p>{{thing_name}} ({{thing_id}})</p>
+    <ul>
+    {{#stuff}}
+        <li>{{id}} {{description}}</li>
+    {{/stuff}}
+    </ul>
+</div>
+]]></example>
+</slide>

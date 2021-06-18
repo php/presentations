@@ -94,12 +94,15 @@ $ sudo phpspy -m php src/phan.php
 # mem 82471616 123721960
 ]]></example>
 
-<blurb fontsize="1em" align="left">perf/callgrind output support soon, hopefully</blurb>
-
 <break lines="1" section="spytop"/>
 
 <blurb fontsize="1.1em" align="center">Top-like output mode </blurb>
 <image width="772" height="452" filename="phpspy_top.gif" align="center"/>
+<notes>
+sudo ptop
+cd ~/phan
+phan
+</notes>
 
 <break lines="1" section="spy4"/>
 <blurb fontsize="1.1em" align="left">Generate a flame graph</blurb>
@@ -107,7 +110,6 @@ $ sudo phpspy -m php src/phan.php
 $ phpspy phan > /tmp/output
 $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl > flame.svg
 ]]></example>
-
 <break lines="1" section="spy5"/>
 <object filename="phan.svg" type="image/svg+xml" width="80%" height="80%" align="center"/>
 

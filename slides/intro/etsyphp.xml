@@ -1,0 +1,32 @@
+<slide title="" section="etsyphp">
+
+<blurb fontsize="2em" align="center">ETSY IS A PHP SHOP</blurb>
+<blurb fontsize="1.8em" align="center">Yes, but...</blurb>
+<blurb fontsize="1.4em" align="center">we use a lot of</blurb>
+<blurb fontsize="1em" align="center">Javascript, Python, Ruby, C, C++, Java, Go, Objective C, Swift, Kotlin, Rust, Scala, Dart</blurb>
+<blurb fontsize="1.4em" align="center">as well</blurb>
+
+<notes>
+It depends on the team
+Some teams barely touch PHP, if at all
+</notes>
+
+<break lines="1" section="etsyphp1"/>
+<image width="265" height="581" filename="etsy_arch.png" align="left"/>
+<blurb fontsize="2em" align="center">Web Serving Stack</blurb>
+<list>
+<bullet fontsize="1.2em" marginleft="4em" type="none">Linux, Apache, MySQL, PHP</bullet>
+<bullet fontsize="1.2em" marginleft="4em" type="none">Memcache, Gearman, StatsD, Vitess, Redis, Kafka, Varnish</bullet>
+<bullet fontsize="1.2em" marginleft="4em" type="none">GCP, Terraform</bullet>
+</list>
+<blurb fontsize="2em" align="center">API First!</blurb>
+
+<notes>
+Global, Internal Load Balancer
+Managed Instance Groups
+Many other stacks not shown, like beacons, assets, downloads
+Gearman for longer-running Asynchronous tasks
+Crons for non-request triggered
+</notes>
+
+</slide>
