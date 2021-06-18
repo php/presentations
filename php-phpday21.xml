@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>What's&#160;new&#160;in&#160;PHP&#160;8.1</title>
+<event>phpDay 2021</event>
+<location>Virtual Verona, Italy</location>
+<date>June 8th, 2021</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/php-phpday21</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- PHP 8.1 RMs -->
+<slide>slides/internals/php81-rms.xml</slide>
+
+
+<!-- BIG NEW FEATURES -->
+Enumerations (https://wiki.php.net/rfc/enumerations)
+<slide>slides/internals/php81-enums-1.xml</slide>
+<slide>slides/internals/php81-enums-2.xml</slide>
+<slide>slides/internals/php81-enums-3.xml</slide>
+<slide>slides/internals/php81-enums-4.xml</slide>
+<slide>slides/internals/php81-enums-5.xml</slide>
+<slide>slides/internals/php81-enums-6.xml</slide>
+<slide>slides/internals/php81-enums-7.xml</slide>
+
+Fibers (https://wiki.php.net/rfc/fibers)
+<slide>slides/internals/php81-fibers.xml</slide>
+
+<!-- SYNTAX -->
+Implemented:
+Static Variables in Inherited Methods (https://wiki.php.net/rfc/static_variable_inheritance)
+<slide>slides/internals/php81-static-vars.xml</slide>
+
+Array unpacking with string keys (https://wiki.php.net/rfc/array_unpacking_string_keys)
+Noreturn type (https://wiki.php.net/rfc/noreturn_type) (never)
+<slide>slides/internals/php81-never-type.xml</slide>
+
+In voting:
+Final class constants (https://wiki.php.net/rfc/final_class_const)
+<slide>slides/internals/php81-final-class-constants.xml</slide>
+
+Still proposed:
+New in Initialisers (https://wiki.php.net/rfc/new_in_initializers)
+<slide>slides/internals/php81-new-in-initialisers.xml</slide>
+<slide>slides/internals/php81-new-in-initialisers-locations.xml</slide>
+
+Auto-capturing multi-statement closures (https://wiki.php.net/rfc/auto-capture-closure)
+<slide>slides/internals/php81-auto-capture-multi-statement-closures.xml</slide>
+
+Property Accessors (https://wiki.php.net/rfc/property_accessors)
+<slide>slides/internals/php81-property-accessors.xml</slide>
+<slide>slides/internals/php81-property-accessors-implicit.xml</slide>
+<slide>slides/internals/php81-property-accessors-explicit.xml</slide>
+<slide>slides/internals/php81-property-accessors-interface.xml</slide>
+
+<!-- FEATURES -->
+Voted in:
+Add IntlDatePatternGenerator (https://wiki.php.net/rfc/intldatetimepatterngenerator)
+<slide>slides/internals/php81-intl-date-pattern-generator.xml</slide>
+
+<!-- DEPRECATIONS -->
+Implemented:
+Restrict $GLOBALS usage (https://wiki.php.net/rfc/restrict_globals_usage)
+<slide>slides/internals/php81-restrict-globals-usage.xml</slide>
+
+Phasing out Serializable (https://wiki.php.net/rfc/phase_out_serializable)
+<slide>slides/internals/php81-serializable.xml</slide>
+
+Deprecate passing null to non-nullable arguments of internal functions (https://wiki.php.net/rfc/deprecate_null_to_scalar_internal_arg)
+<slide>slides/internals/php81-null-internal-functions.xml</slide>
+
+Voted in:
+Deprecate implicit non-integer-compatible float to int conversions (https://wiki.php.net/rfc/implicit-float-int-deprecate)
+<slide>slides/internals/php81-implicit-float-conversions.xml</slide>
+
+
+<slide>slides/xdebug/php81-when.xml</slide>
+
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

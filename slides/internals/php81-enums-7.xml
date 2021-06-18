@@ -1,0 +1,29 @@
+<slide>
+<title>Enumerations — Value Listing</title>
+
+<div>
+<example><![CDATA[<?php
+enum Currency: string {
+    case GBP = '£';
+    case EUR = '€';
+}]]></example>
+</div>
+
+<break lines="3"/>
+
+<div effect="fade-in">
+<blurb>List Cases:</blurb>
+<example inline="1">var_dump( Currency::cases() );</example>
+<example class="result" inline="1">array(2) {
+  [0] => *class* Currency#1 (2) {
+    public string $name => string(3) "GBP"
+    public string $value => string(2) "£"
+  }
+  [1] => class Currency#2 (2) {
+    public string $name => string(3) "EUR"
+    public string $value => string(3) "€"
+  }
+}
+</example>
+</div>
+</slide>

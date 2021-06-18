@@ -1,0 +1,31 @@
+<slide>
+<title>The 'never' Type</title>
+
+<blurb>Explicitly mark a function that it never returns:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+function redirect(string $uri): *never* {
+    header('Location: ' . $uri);
+    exit();
+}
+]]></example>
+
+<div effect="fade-in">
+<break lines="2"/>
+
+<blurb>Or implicitily:</blurb>
+<example>function redirectToLoginPage(): never {
+    redirect('/login');
+}</example>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+
+<blurb>Remarks:</blurb>
+<list>
+<bullet>Just like %void%, only as a return type</bullet>
+<bullet>It is a *bottom* type</bullet>
+</list>
+</div>
+
+</slide>

@@ -1,0 +1,47 @@
+<slide template="draft">
+<title>Property Accessors</title>
+
+<div effect="fade-out">
+<blurb>Interfaces:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+interface Namer {
+    public string $name { *get;* }
+}
+
+class Whisky implements Namer {
+    public string $name;
+}]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Inheritance:</blurb>
+<example><![CDATA[&lt;?php
+class Whisky {
+    public $name {
+        get { echo __METHOD__, "\n"; }
+        set { echo __METHOD__, "\n"; }
+    }
+}
+
+class SingleMalt {
+    public $name {
+        set { echo __METHOD__, "\n"; }
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Variance:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class Whisky {
+    public int|string $invariant { get; set; }
+    public int|string $covariant { get; }
+}
+
+class SingleMalt {
+    public int    $invariant; // Illegal
+    public string $covariant;
+}]]></example>
+</div>
+
+</slide>

@@ -1,0 +1,33 @@
+<slide>
+<title>Enumerations — Backed</title>
+
+<div>
+<example inline='1'><![CDATA[&lt;?php
+enum Currency*: string* {
+    case GBP *= '£'*;
+    case EUR = '€';
+}
+
+class Product {
+    function __construct(
+        private string $name, private float $amount, private Currency $currency) { }
+}
+
+$elephpant = new Product( 'Chilli', 5.50, Currency::GBP );
+var_dump( $elephpant );]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="1">class Product#1 (3) {
+  private string $name => string(6) "Chilli"
+  private float $amount => double(5.5)
+
+  private Currency $currency =>
+    class Currency#2 (2) {
+      public string $name => string(3) "GBP"
+      public string *$value* => string(2) "£"
+  }
+}
+</example>
+</div>
+</slide>

@@ -1,0 +1,25 @@
+<slide>
+<title>Enumerations — Typed</title>
+
+<div>
+<example inline="1"><![CDATA[&lt;?php
+enum Currency {
+    case GBP;
+    case EUR;
+}
+
+class Product {
+    function __construct(
+        private string $name, private float $amount, private Currency $currency) { }
+}
+
+$elephpant = new Product( 'Chilli', 5.50, *"EUR"* );
+]]></example>
+</div>
+<break/>
+<div effect="fade-in">
+<example inline="1">*TypeError: Product::__construct(): Argument #3 ($currency) must be of type Currency,*
+    *string given, called in /tmp/enum-2.php on line 12 in /tmp/enum-2.php on line 8*
+</example>
+</div>
+</slide>

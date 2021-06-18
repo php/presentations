@@ -1,0 +1,25 @@
+<slide template="draft">
+<title>Explicit Property Accessors</title>
+
+<example inline="1"><![CDATA[&lt;?php
+class Whisky {
+    *private* string *$_name*;
+
+    public string $name {
+        *get {*
+            return $this->_name;
+        *}*
+        *set* {
+            if (*$value* === '') {
+                thrown new ValueError('Name must be non-empty');
+            }
+            $this->_name = $value;
+        }
+    }
+
+    public function __construct(string $name) {
+        $this->name = $name;
+    }
+}]]></example>
+
+</slide>

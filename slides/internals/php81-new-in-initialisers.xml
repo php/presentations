@@ -1,0 +1,42 @@
+<slide template="draft">
+<title>New in Initialisers</title>
+
+<blurb>In PHP 8.0:</blurb>
+
+<example inline="1"><![CDATA[&lt;?php
+class Roci {
+    private Logger $logger;
+
+    public function __construct( ?Logger $logger = null )
+    {
+        $this->logger = $logger ?? new NullLogger;
+    }
+}]]></example>
+
+<blurb>From PHP 8.1:</blurb>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[&lt;?php
+class Roci {
+    public function __construct(
+        private Logger $logger = *new* NullLogger) {}
+}]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[&lt;?php
+class Roci {
+    public function __construct(
+        private Logger $logger = new FileLogger('/tmp/my-log.log')) {}
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[&lt;?php
+class Roci {
+    public function __construct(
+        private Logger $logger = new FileLogger(directory: '/tmp/logs')) {}
+}]]></example>
+</div>
+
+</slide>

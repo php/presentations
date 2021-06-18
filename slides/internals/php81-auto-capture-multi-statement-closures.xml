@@ -1,0 +1,31 @@
+<slide template="draft">
+<title>Auto-Capture with Statement List</title>
+
+<div effect="fade-in">
+<blurb>Auto-Capture with Single Expressions</blurb>
+<example inline="1"><![CDATA[&lt;?php
+$factor = M_PI / 180;
+
+$adder = *fn* ($x) *=>* $x * $factor;
+]]></example>
+
+<blurb>Manual-Capture with Statement List</blurb>
+<example inline="1"><![CDATA[$wordCharacters = 'A-Za-z-';
+
+$wordCounter = *function* ($sentence) *use ($wordCharacters)*: int *{*
+    $sanitised = preg_replace("/[^{$wordCharacters}]/", ' ', $sentence);
+    $condensed = preg_replace('/\s+/', ' ', $sanitised);
+    return count(explode(' ', $condensed));
+*}*]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Auto-Capture with Statement List</blurb>
+<example inline="1"><![CDATA[$wordCounter = *fn* ($sentence): int *{*
+    $sanitised = preg_replace("/[^{$wordCharacters}]/", ' ', $sentence);
+    $condensed = preg_replace('/\s+/', ' ', $sanitised);
+    return count(explode(' ', $condensed));
+*}*]]></example>
+</div>
+
+</slide>

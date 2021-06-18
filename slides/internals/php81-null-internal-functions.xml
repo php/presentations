@@ -1,0 +1,29 @@
+<slide>
+<title>Null to Non-Nullable Arguments for Internal Functions</title>
+
+<blurb>Internal Function:</blurb>
+<example><![CDATA[var_dump(str_contains("foobar", null));]]></example>
+<example class="result">bool(null)</example>
+
+<div effect="fade-in-out">
+<break/>
+<blurb>User Function:</blurb>
+<example><![CDATA[function my_str_contains(string $haystack, string $needle): bool {
+    return false !== strpos($haystack, $needle);
+}
+
+var_dump(my_str_contains("foobar", null));]]></example>
+<example class="result">TypeError: my_str_contains(): Argument #2 ($needle) must be of type string, null given</example>
+</div>
+
+<div effect="fade-in">
+<break lines="3"/>
+<list>
+    <bullet>PHP 8.1 will start throwing a deprecation warning:<br/>
+    <example class="result">Deprecated: Passing null to argument of type string is deprecated</example></bullet>
+    <bullet>PHP 9.0 will then make this a %TypeError%:<br/>
+    <example class="result">TypeError: str_contains(): Argument #2 ($needle) must be of type string, null given</example></bullet>
+</list>
+</div>
+
+</slide>

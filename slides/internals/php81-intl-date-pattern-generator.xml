@@ -1,0 +1,88 @@
+<slide template="draft">
+<title>IntlDatePatternGenerator</title>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+use IntlDateFormatter as IDF;
+
+$now = new \DateTimeImmutable;
+$locale = 'en_US';
+
+echo 'Short:  ', IDF::formatObject($now, [ IDF::SHORT, IDF::NONE ], $locale), "\n";
+echo 'Medium: ', IDF::formatObject($now, [ IDF::MEDIUM, IDF::NONE ], $locale), "\n";
+echo 'Long:   ', IDF::formatObject($now, [ IDF::LONG, IDF::NONE ], $locale), "\n";
+echo 'Manual: ', $now->format( 'n/d/Y' ), "\n";
+]]></example>
+<example class="result">
+Short:  5/31/21
+Medium: May 31, 2021
+Long:   May 31, 2021
+Manual: 5/31/2021
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[&lt;?php
+use IntlDateFormatter as IDF;
+
+$now = new \DateTimeImmutable;
+$locale = *'it_IT'*;
+
+echo 'Short:  ', IDF::formatObject($now, [ IDF::SHORT, IDF::NONE ], $locale), "\n";
+echo 'Medium: ', IDF::formatObject($now, [ IDF::MEDIUM, IDF::NONE ], $locale), "\n";
+echo 'Long:   ', IDF::formatObject($now, [ IDF::LONG, IDF::NONE ], $locale), "\n";
+echo 'Manual: ', $now->format( 'n/d/Y' ), "\n";
+]]></example>
+<example inline="1" class="result">
+Short:  30/05/21
+Medium: 30 mag 2021
+Long:   30 maggio 2021
+Manual: ---5/30/2021---
+        30/05/2021
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[&lt;?php
+use IntlDateFormatter as IDF;
+
+$now = new \DateTimeImmutable;
+
+$locale = 'it_IT';
+*$skeleton = 'YYYYMMdd';*
+
+$dtpg = new *\IntlDatePatternGenerator*($locale);
+$pattern = $dtpg->getBestPattern($skeleton), "\n";
+
+echo 'Correct: ', IDF::formatObject($now, *$pattern*, $locale), "\n";
+]]></example>
+<example inline="1" class="result">
+Correct: 30/05/2021
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[&lt;?php
+use IntlDateFormatter as IDF;
+
+$now = new \DateTimeImmutable;
+
+$locale = *'en_US'*;
+$skeleton = 'YYYYMMdd';
+
+$dtpg = new \IntlDatePatternGenerator($locale);
+$pattern = $dtpg->getBestPattern($skeleton), "\n";
+
+echo 'Correct: ', IDF::formatObject($now, $pattern, $locale), "\n";
+]]></example>
+<example inline="1" class="result">
+Correct: *05/30/2021*
+</example>
+</div>
+
+<div effect="fade-in">
+<break lines="3"/>
+<blurb class="big-centre">"Correct" 🤔</blurb>
+</div>
+
+</slide>

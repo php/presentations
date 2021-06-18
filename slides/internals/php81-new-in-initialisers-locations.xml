@@ -1,0 +1,31 @@
+<slide template="draft">
+<title>New in Initialisers — Where?</title>
+
+<div effect="fade-in">
+<blurb>Static variables:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+function counter()
+{
+    static $i = *new* Counter;
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Constants:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class Repository
+{
+    const DB = *new* DatabaseLink(dsn: 'sqlite://:memory:');
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>(Nested) Attributes:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+#[Constraint(*new Tries(3)*)]
+class Login
+{
+}]]></example>
+</div>
+
+</slide>

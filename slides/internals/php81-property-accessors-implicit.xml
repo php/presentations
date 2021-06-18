@@ -1,0 +1,21 @@
+<slide template="draft">
+<title>Implicit Property Accessors</title>
+
+<blurb>Standard Visibility</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class Whisky {
+    public string $name       { *get;* *set;* }
+]]></example>
+
+<div effect="fade-in">
+<blurb>Read-Only</blurb>
+<example inline="1"><![CDATA[    public string $distillery { *get;* }]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Asymetric Visibility</blurb>
+<example inline="1"><![CDATA[    public float  $abv        { get; *private set;* }
+}]]></example>
+</div>
+
+</slide>

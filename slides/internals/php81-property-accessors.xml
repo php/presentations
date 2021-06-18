@@ -1,0 +1,60 @@
+<slide template="draft">
+<title>Property Accessors</title>
+
+<div effect="fade-out">
+<blurb>PHP 7.3:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class Whisky {
+    private $name;
+ 
+    public function __construct(*string* $name) {
+        $this->name = $name;
+    }
+ 
+    public function getName(): *string* {
+        return $this->name;
+    }
+ 
+    public function setName(*string* $name): void {
+        $this->name = $name;
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>PHP 7.4:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class Whisky {
+    public *string* $name;
+ 
+    public function __construct(string $name) {
+        $this->name = $name;
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 8.0:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class Whisky {
+    public function __construct(*public* string $name) {
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb class="centre">Now also make sure it can't be empty 😭</blurb>
+</div>
+<div effect="fade-in">
+<blurb class="centre">… and read only 😭😭😭😭</blurb>
+</div>
+
+<div effect="fade-in">
+<blurb>Options:</blurb>
+<list>
+    <bullet>Going back to explicit setters/getters</bullet>
+    <bullet>Introduce magic %__get()%, %__set()%, and %__isset()%</bullet>
+</list>
+</div>
+
+</slide>

@@ -1,0 +1,32 @@
+<slide>
+<title>Enumerations — Backed Values</title>
+
+<div>
+<example><![CDATA[<?php
+enum Currency: string {
+    case GBP = '£';
+    case EUR = '€';
+}]]></example>
+</div>
+<break lines="3"/>
+<div effect="fade-in-out">
+<blurb>Value Property:</blurb>
+<example inline="1">var_dump( Currency::EUR*->value* );</example>
+<example class="result">string(3) "€"</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Create from Value:</blurb>
+<example inline="1">var_dump( Currency*::from('£')* );</example>
+<example class="result">class Currency#2 (2) {
+  public string $name => string(3) "GBP"
+  public string $value => string(2) "£"
+}</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Try Create from Value:</blurb>
+<example inline="1">var_dump( Currency*::tryFrom('$')* );</example>
+<example class="result">NULL</example>
+</div>
+</slide>

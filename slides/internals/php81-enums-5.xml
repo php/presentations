@@ -1,0 +1,28 @@
+<slide>
+<title>Enumerations — Functions</title>
+
+<div>
+<example><![CDATA[<?php
+enum Currency: string {
+    case GBP = '£';
+    case EUR = '€';
+
+    public function format( float $amount )
+    {
+        $pattern = match( $this ) {
+            Currency::GBP => "{$this->value} %.2f",
+            Currency::EUR => "%.2f {$this->value}",
+        };
+
+        return sprintf( $pattern, $amount );
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Calling Methods:</blurb>
+<example inline="1">$cur = Currency::GBP;
+echo $cur->format( 42.75 );</example>
+<example class="result">£ 42.75</example>
+</div>
+</slide>

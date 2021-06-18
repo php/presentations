@@ -1,0 +1,57 @@
+<slide>
+<title>Phasing out Serializable interface</title>
+
+<div effect="fade-out">
+<blurb>The Serializable mechanism has issues:</blurb>
+
+<example><![CDATA[<?php
+class 🔥 implements Serializable
+{
+    private $temperature;
+
+    public function serialize() {
+        return serialize($this->temperature);
+    }
+    public function unserialize($payload) {
+        $this->temperature = unserialize($payload);
+    }
+}]]></example>
+
+<list>
+    <bullet>State is required between nested calls with %parent::serialize%</bullet>
+    <bullet>There is no requirement for what *is* used in %serialize%/%unserialize%</bullet>
+</list>
+</div>
+
+<div effect="fade-in-out">
+<blurb>PHP 7.4 introduced a new serializing mechanism through magic methods, with a stricter set of guarantees:</blurb>
+<example><![CDATA[<?php
+class 🔥
+{
+    private $temperature;
+
+    public function __serialize(): array {
+        return ["t" => $this->temperature];
+    }
+    public function __unserialize(array $data) {
+        $this->temperature = $data['t'];
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb>PHP 8.1 starts the removal process of "only %Serializable%" classes:</blurb>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<list><bullet>In PHP 8.1, implementing %Serializable% will throw a deprecation warning</bullet></list>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<list><bullet>In PHP 9.0, the %Serializable% interface will be removed, and %unserialize% will stop understanding its serialisation format</bullet></list>
+</div>
+
+</slide>

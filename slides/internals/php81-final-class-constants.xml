@@ -1,0 +1,25 @@
+<slide template="draft">
+<title>Final Class Constants</title>
+
+<blurb class="centre">Currently, class constants are always overridable by child classes</blurb>
+
+<example inline="1"><![CDATA[&lt;?php
+class Universe
+{
+    *final* public const SPEED_OF_LIGHT = 299_458_792;
+}]]></example>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[class RingSpace extends Universe
+{
+    public const SPEED_OF_LIGHT = 12_758;
+}
+]]></example>
+
+<example class="result">
+Fatal error: RingSpace::SPEED_OF_LIGHT cannot override
+    final constant Universe::SPEED_OF_LIGHT
+</example>
+</div>
+
+</slide>

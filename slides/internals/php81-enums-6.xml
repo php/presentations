@@ -1,0 +1,27 @@
+<slide>
+<title>Enumerations — Static Methods</title>
+
+<div>
+<example><![CDATA[<?php
+enum Currency: string {
+    case GBP = '£';
+    case EUR = '€';
+
+    static public function fromLocale( string $locale )
+    {   
+        return match( $locale ) {
+            'nl_NL' => static::EUR,
+            'it_IT' => static::EUR,
+            'uk_GB' => static::GBP,
+        };
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Alternative Constructor:</blurb>
+<example inline="1">$cur = Currency::fromLocale( 'it_IT' );
+echo $cur->value, "\n";</example>
+<example class="result">€</example>
+</div>
+</slide>

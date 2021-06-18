@@ -1,0 +1,44 @@
+<slide>
+<title>Changes to $GLOBALS</title>
+
+<div effect="fade-out">
+<blurb>%$GLOBALS% uses INDIRECT variables:</blurb>
+<example><![CDATA[<?php
+$a = 1;
+$GLOBALS['a'] = 2;
+var_dump($a);]]></example>
+<example class="result">int(2)</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>%$GLOBALS% are by-ref:</blurb>
+<example><![CDATA[<?php
+$a = 1;
+$globals = $GLOBALS;
+$globals['a'] = 2;
+var_dump($a);]]></example>
+<example class="result">int(2)</example>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb class="centre">Writes to %$GLOBALS% as a whole are no longer supported</blurb>
+<break lines="2"/>
+<blurb>Generates compile-time error:</blurb>
+<example>
+$GLOBALS = [];
+$GLOBALS += [];
+</example>
+<break lines="2"/>
+<blurb>This no longer modifies %$a%:</blurb>
+<example>
+$a = 4;
+$globals = $GLOBALS;
+$globals['a'] = 1;
+
+var_dump($a);
+</example>
+<example class="result">int(4)</example>
+</div>
+
+</slide>

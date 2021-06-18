@@ -1,0 +1,26 @@
+<slide>
+<title>Static Variables in Inherited Methods</title>
+
+<example><![CDATA[<?php
+class A {
+    public static function counter() {
+        static $i = 0;
+        return ++$i;
+    }
+}
+class B extends A {}
+ 
+echo A::counter(), ' ',
+     A::counter(), ' ',
+     B::counter(), ' ',
+     B::counter();
+]]></example>
+
+<blurb>PHP 8.0:</blurb>
+<example>1 2 1 2</example>
+
+<div effect="fade-in">
+<blurb>PHP 8.1:</blurb>
+<example>1 2 3 4</example>
+</div>
+</slide>
