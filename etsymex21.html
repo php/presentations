@@ -425,8 +425,8 @@ $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code
 		<h1 style="text-align:center;">Let's deploy it!</h1>
 		</section>
 		<section id="deploy0" >
-		<p class="p" style="font-size:2em;text-align:left;">Atomic</p>
-		<p class="p" style="font-size:2em;text-align:left;">No performance hit</p>
+		<p class="p" style="font-size:1.7em;text-align:left;">Atomic</p>
+		<p class="p" style="font-size:1.7em;text-align:left;">No performance hit</p>
 		<ul>
 			<li style="font-size: 1.5em;">No restarts</li>
 			<li style="font-size: 1.5em;">No LB removal</li>
@@ -435,147 +435,40 @@ $ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code
 		</ul>
 		</section>
 		<section id="deploy1" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Must be able to serve two versions of the site concurrently!</p>
+		<p class="p" style="font-size:1em;text-align:left;">Must be able to serve two versions of the site concurrently!</p>
 		<img src="/presentations/slides/intro/atomic_deploy1.png"  width="" height="">
 		</section>
 		<section id="deploy2" >
 		<img src="/presentations/slides/intro/atomic_deploy2.png"  width="" height="">
 		</section>
 		<section id="deploy3" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Requests that begin on DocumentRoot A must finish on A</p>
+		<p class="p" style="font-size:1em;text-align:left;">Requests that begin on DocumentRoot A must finish on A</p>
 		</section>
 		<section id="deploy4" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Set the DocumentRoot to symlink target!</p>
-		<p class="p" style="font-size:1.1em;text-align:left;">Easy with nginx</p>
+		<p class="p" style="font-size:1em;text-align:left;">Set the DocumentRoot to symlink target!</p>
+		<p class="p" style="font-size:1em;text-align:left;">Easy with nginx</p>
 		<pre><code class="ini" data-trim style="font-size:1.1em;" >fastcgi_param DOCUMENT_ROOT $realpath_root</code></pre>
-		<p class="p" style="font-size:1.1em;text-align:left;">Apache</p>
+		<p class="p" style="font-size:1em;text-align:left;">Apache</p>
 		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/mod_realdoc" target="">github.com/etsy/mod_realdoc</a></div>
 		</section>
 		<section id="deploy5" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Avoid hardcoding full paths</p>
-		<p class="p" style="font-size:1.1em;text-align:left;">Watch your include_path setting</p>
-		<p class="p" style="font-size:1.1em;text-align:left;">incpath extension can resolve your include_path for you</p>
+		<p class="p" style="font-size:1em;text-align:left;">Avoid hardcoding full paths</p>
+		<p class="p" style="font-size:1em;text-align:left;">Watch your include_path setting</p>
+		<p class="p" style="font-size:1em;text-align:left;">incpath extension can resolve your include_path for you</p>
 		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/incpath" target="">https://github.com/etsy/incpath</a></div>
 <aside class="notes"><br />
 some contraints...<br />
 </aside>
 		</section>
 		<section id="deploy6" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Version all static assets</p>
-		<p class="p" style="font-size:1.1em;text-align:left;">DB Schema changes need special care</p>
+		<p class="p" style="font-size:1em;text-align:left;">Version all static assets</p>
+		<p class="p" style="font-size:1em;text-align:left;">DB Schema changes need special care</p>
 		</section>	</section>
 	<section>
-		<section id="etsy_deploy">
-		<h2 style="text-align:center;">How do you manage deploys?</h2>
-<aside class="notes"><br />
-ok, but how do you manage deploys with hundreds of developers?<br />
-</aside>
-		</section>
-		<section id="etsy_deploy0" >
-		<p class="p" style="font-size:2em;text-align:left;">At Etsy we use <strike>irc</strike> Slack</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Channel: #push Topic: &lt;prod&gt; *joe frank|bob
-devbot: Swapping symlinks. Your code is about to start taking production traffic
-pushbot: joe frank : Your code is live. Time to watch graphs: http://etsy/abcd
-Rasmus: .join
-*** pushbot has changed the topic on #push to &lt;prod&gt; joe frank|bob Rasmus
-frank: .good
-*** pushbot has changed the topic on #push to &lt;prod&gt; *joe *frank|bob Rasmus
-joe: .done
-*** pushbot has changed the topic on #push to &lt;prod&gt; bob Rasmus
-pushbot: bob Rasmus: You&#039;re up
-bob: .in
-*** pushbot has changed the topic on #push *bob Rasmus
-Rasmus: .in
-*** pushbot has changed the topic on #push *bob *Rasmus</code></pre>
-<aside class="notes"><br />
-.join in #push<br />
-</aside>
-		</section>
-		<section id="etsy_deploy1" >
-		<p class="p" style="font-size:2em;text-align:left;">pushbot commands</p>
-		<ul>
-			<li style="list-style-type: none;"><strong>.join</strong>    - join push queue</li>
-			<li style="list-style-type: none;"><strong>.in</strong>        - code has been pushed</li>
-			<li style="list-style-type: none;"><strong>.good</strong> - your stuff looks good</li>
-			<li style="list-style-type: none;"><strong>.uhoh</strong> - your stuff looks bad</li>
-			<li style="list-style-type: none;"><strong>.hold</strong>  - there is a problem, hold everything</li>
-			<li style="list-style-type: none;"><strong>.nm</strong>      - never mind (leave queue)</li>
-			<li style="list-style-type: none;"><strong>.done</strong> - push done</li>
-		</ul>
-		</section>
-		<section id="etsy_deploy2" >
-		<img src="/presentations/slides/intro/deployinator.png"  width="" height="">
-		</section>
-		<section id="etsy_deploy3" >
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Channel: #push Topic: &lt;princess&gt; bob Rasmus
-Jenkins: Starting build #36803 for job qa
-Jenkins: Starting build #38784 for job princess
-Jenkins: Project qa build #36803: SUCCESS in 6 min 19 sec: http://ci/job/qa/36803/
-pushbot: bob Rasmus : qa tests have passed
-devbot: [who_tried] Everyone in this push has run Try recently. w00t!
-Jenkins: Project princess build #38784: SUCCESS in 1 min 10 sec: http://ci/job/princess/38784/
-pushbot: bob Rasmus : princess tests have passed
-bob: .good
-Rasmus: .good
-*** pushbot has changed the topic on #push to &lt;princess&gt; *bob *Rasmus
-pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
-Jenkins: qa: last build: 36803 (9 min 5 sec ago): SUCCESS: http://ci/job/qa/36803/
-Jenkins: princess: last build: 38784 (2 min 54 sec ago): SUCCESS: http://ci/job/princess/38784/</code></pre>
-		</section>
-		<section id="etsy_deploy4" >
-		<p class="p" style="font-size:2.5em;text-align:left;">Deploy to Production:</p>
-		<ul>
-			<li style="font-size: 2em;">ssh to deploy host</li>
-			<li style="font-size: 2em;">dsh to all targets</li>
-			<li style="font-size: 2em;">rsync files</li>
-		</ul>
-		</section>
-		<section id="etsy_deploy5" >
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >Channel: #push Topic: &lt;prod&gt; bob Rasmus
-devbot: Swapping symlinks. Your code is about to start taking production traffic
-pushbot: bob Rasmus : Your code is live. Time to watch graphs: http://etsy/et5cp
-Jenkins: Starting build #39452 for job prod
-pushbot: bob Rasmus : prod tests have passed
-Jenkins: Project prod build #39452: SUCCESS in 30 sec: http://ci/job/prod/39452/
-bob: .good
-Rasmus: .good
-*** pushbot has changed the topic on #push to &lt;prod&gt; *bob *Rasmus
-pushbot: bob Rasmus : everyone is ready, checking on Jenkins...
-Jenkins: prod: last build: 39452 (1 min 39 sec ago): SUCCESS: http://ci/job/prod/39452/
-bob: .done
-pushbot: clear
-*** pushbot has changed the topic on #push to clear</code></pre>
-		</section>
-		<section id="etsy_deploy6" >
-		<p class="p" style="font-size:2.5em;text-align:left;">Graph Everything!</p>
-		<ul>
-			<li style="font-size: 2em;">Statsd</li>
-			<li style="font-size: 2em;">Grafana</li>
-		</ul>
-		</section>
-		<section id="etsy_deploy7" >
-		<p class="p" style="font-size:2.5em;text-align:left;">Log Everything!</p>
-		<ul>
-			<li style="font-size: 2em;">Supergrep</li>
-			<li style="font-size: 2em;">Logstash</li>
-			<li style="font-size: 2em;">Elastic Search</li>
-			<li style="font-size: 2em;">mtail</li>
-			<li style="font-size: 2em;">Prometheus</li>
-		</ul>
-		</section>
-		<section id="etsy_deploy8" >
-		<ul>
-			<li style="font-size: 1.5em;">Commit to master</li>
-			<li style="font-size: 1.5em;">Deploy from HEAD</li>
-			<li style="font-size: 1.5em;">Branches?</li>
-			<li style="font-size: 1.5em;">Branches are in code via feature flags</li>
-		</ul>
-		</section>
-		<section id="etsy_deploy9" >
-		<p class="p" style="font-size:2.2em;text-align:left;">Blameless post-mortems</p>
-<aside class="notes"><br />
-And when things go wrong...<br />
-</aside>
+		<section id="storage">
+
+<div id="storage_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/storage.js"></script>
 		</section>	</section>
 	<section>
 		<section id="supported">
@@ -601,12 +494,6 @@ And when things go wrong...<br />
 
 <div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
 <script src="presentations/slides/intro/wp2021.js"></script>
-		</section>	</section>
-	<section>
-		<section id="storage">
-
-<div id="storage_container" class="stretch" style="margin: 0 auto"></div>
-<script src="presentations/slides/intro/storage.js"></script>
 		</section>	</section>
 	<section>
 		<section id="php80">
@@ -949,6 +836,7 @@ $fn = Closure::fromCallable([Foo::class, &#039;method&#039;]);</code></pre>
 <aside class="notes"><br />
 Tridge arguing with Linus<br />
 rsync, Samba, ccache, rzip<br />
+RIP BitKeeper<br />
 </aside>
 		</section>
 		<section id="j4" >
