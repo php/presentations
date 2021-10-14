@@ -36,12 +36,11 @@ xdebug.max_stack_frames
 |00ff00|xdebug.output_dir|
 xdebug.profiler_append
 xdebug.profiler_output_name
-xdebug.remote_addr_header
-xdebug.remote_cookie_expire_time
-|0000ff|xdebug.discover_client_host|
+xdebug.client_discovery_header
 |0000ff|xdebug.client_host|
-|0000ff|xdebug.remote_port|
-xdebug.remote_timeout
+|0000ff|xdebug.client_port|
+|0000ff|xdebug.discover_client_host|
+xdebug.connect_timeout_ms
 xdebug.scream
 xdebug.show_error_trace
 xdebug.show_exception_trace

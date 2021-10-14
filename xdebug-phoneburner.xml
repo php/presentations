@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>Debugging</topic>
+<title>Xdebug 3.0</title>
+<event>Phoneburner</event>
+<location>Virtual London, UK</location>
+<date>June 18th, 2021</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<twitter>derickr</twitter>
+<url></url>
+<joindin>https://xdebug.org</joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/xdebug/focus-on-xdebug.xml</slide>
+The Xdebug Experience
+17 years
+
+<!--
+<s lide>slides/xdebug/xdebug-slow.xml</slide>
+
+<s lide>slides/xdebug/focus-on-xdebug3.xml</slide>
+-->
+breakpoint behaviour
+New versions (7.4)
+CI
+<!--
+<s lide>slides/xdebug/xdebug-2.8.xml</slide>
+<s lide>slides/xdebug/breakpoint-behaviour.xml</slide>
+
+<s lide>slides/xdebug/test-with-many-versions.xml</slide>
+<s lide>slides/xdebug/xdebug-ci.xml</slide>
+-->
+
+<slide>slides/xdebug/xdebug-3.xml</slide>
+Code reorganisation
+Modes
+- only do what is needed
+Reduce Configuration Options
+Code Improvements (algorithms, memory, etc)
+<slide>slides/xdebug/code-reorgnisation.xml</slide>
+<slide>slides/xdebug/modes.xml</slide>
+<slide>slides/xdebug/config-settings-3.xml</slide>
+<slide>slides/xdebug/config-settings-3b.xml</slide>
+
+<!-- <s lide>slides/xdebug/xdebug-hard.xml</slide> -->
+<!-- <s lide>slides/xdebug/connect1.xml</slide> -->
+<!-- <s lide>slides/xdebug/connect2.xml</slide> -->
+<slide>slides/xdebug/debugger-activation.xml</slide>
+<slide>slides/xdebug/debugger-connection-log.xml</slide>
+<slide>slides/xdebug/diagnostic-log.xml</slide>
+
+<slide>slides/xdebug/xdebug-3-speedup-1.xml</slide>
+
+<slide>slides/xdebug/xdebug-cloud-announcement.xml</slide>
+
+<slide>slides/xdebug/donate.xml</slide>
+<slide>slides/xdebug/business-support.xml</slide>
+<slide>slides/xdebug/transparency.xml</slide>
+
+<slide>slides/xdebug/xdebug-3.1.xml</slide>
+
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

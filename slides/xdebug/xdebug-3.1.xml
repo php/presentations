@@ -1,0 +1,28 @@
+<slide>
+<title>Xdebug 3.1</title>
+
+<blurb>PHP 8.1 support:</blurb>
+<list>
+	<bullet>Enums</bullet>
+	<bullet>Fibers</bullet>
+</list>
+<break/>
+<blurb>Improved Debugging:</blurb>
+<list>
+	<bullet>Breakpoint Correlation when Reached</bullet>
+	<bullet>Cloud ID set through browser extension</bullet>
+	<bullet>%xdebug_notify()%</bullet>
+</list>
+<break/>
+
+<blurb>Better Diagnostics Page</blurb>
+<break/>
+
+<blurb>Compressed profiling files</blurb>
+<break/>
+
+<blurb>Querying API for modes:<br/>
+	<example>xdebug_info('mode');</example>
+</blurb>
+
+</slide>

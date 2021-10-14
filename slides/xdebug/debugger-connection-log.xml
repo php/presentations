@@ -10,24 +10,21 @@
 <div effect="fade-out">
 
 <example inline="2">
-xdebug.cloud_id=f047e3fd-9d35-4989-94f3-4cb64a1e6376
-
-[2912111] Log opened at 2020-11-18 10:11:31.536895
-[2912111] [Step Debug] INFO: Connecting to configured address/port:
-	n.cloud.xdebug.com:9020.
-[2912111] [Step Debug] INFO: Connected to debugging client: (null). :-)
+[3553863] Log opened at 2021-05-14 09:46:40.912819
+[3553863] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[3553863] [Step Debug] INFO: Connected to debugging client: localhost:9003
+    (through xdebug.client_host/xdebug.client_port). :-)
 </example>
 </div>
 
 <div effect="fade-in">
 <example inline="2">
-xdebug.client_discover_address=1
-|777777|xdebug.client_host=SomethingEntirelyDifferent|
-xdebug.client_port=9003
-
-[Step Debug] Could not connect to debugging client.
-	Tried: SometimeEntirelyDifferent:9003
-	(fallback through xdebug.client_host/xdebug.client_port) :-(
+[3553807] Log opened at 2021-05-14 09:46:31.329802
+[3553807] [Step Debug] INFO: Connecting to configured address/port: localhost:9003.
+[3553807] [Step Debug] WARN: Creating socket for 'localhost:9003', poll success,
+    but error: Operation now in progress (29).
+[3553807] [Step Debug] ERR: Could not connect to debugging client.
+    Tried: localhost:9003 (through xdebug.client_host/xdebug.client_port) :-(
 </example>
 </div>
 </slide>
