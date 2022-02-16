@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>What's&#160;new&#160;in&#160;PHP&#160;8.1</title>
+<event>PHP UK Conference</event>
+<location>London, UK</location>
+<date>February 17th, 2022</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url></url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<!-- PHP 8.1 RMs -->
+<slide>slides/internals/php81-rms.xml</slide>
+
+
+<!-- BIG NEW FEATURES -->
+Enumerations (https://wiki.php.net/rfc/enumerations)
+<slide>slides/internals/php81-enums-1.xml</slide>
+<slide>slides/internals/php81-enums-2.xml</slide>
+<slide>slides/internals/php81-enums-3.xml</slide>
+<slide>slides/internals/php81-enums-4.xml</slide>
+<slide>slides/internals/php81-enums-5.xml</slide>
+<slide>slides/internals/php81-enums-6.xml</slide>
+<slide>slides/internals/php81-enums-7.xml</slide>
+
+<!-- SYNTAX -->
+Static Variables in Inherited Methods (https://wiki.php.net/rfc/static_variable_inheritance)
+<slide>slides/internals/php81-static-vars.xml</slide>
+
+Noreturn type (https://wiki.php.net/rfc/noreturn_type) (never)
+<slide>slides/internals/php81-never-type.xml</slide>
+
+Final class constants (https://wiki.php.net/rfc/final_class_const)
+<slide>slides/internals/php81-final-class-constants.xml</slide>
+
+Pure Intersection Types (https://wiki.php.net/rfc/pure-intersection-types)
+<slide>slides/internals/php81-pure-intersection.xml</slide>
+
+Array unpacking with string keys (https://wiki.php.net/rfc/array_unpacking_string_keys)
+<slide>slides/internals/php81-array-unpacking.xml</slide>
+
+New in Initialisers (https://wiki.php.net/rfc/new_in_initializers)
+<slide>slides/internals/php81-new-in-initialisers.xml</slide>
+<slide>slides/internals/php81-new-in-initialisers-locations.xml</slide>
+
+<!--
+Auto-capturing multi-statement closures (https://wiki.php.net/rfc/auto-capture-closure)
+<slide>slides/internals/php81-auto-capture-multi-statement-closures.xml</slide>
+-->
+
+<!--
+Property Accessors (https://wiki.php.net/rfc/property_accessors)
+<slide>slides/internals/php81-property-accessors.xml</slide>
+<slide>slides/internals/php81-property-accessors-implicit.xml</slide>
+<slide>slides/internals/php81-property-accessors-explicit.xml</slide>
+<slide>slides/internals/php81-property-accessors-interface.xml</slide>
+-->
+
+Readonly properties 2.0 (https://wiki.php.net/rfc/readonly_properties_v2)
+<slide>slides/internals/php81-readonly.xml</slide>
+
+Explicit Octal Integer Literal Notation (https://wiki.php.net/rfc/explicit_octal_notation)
+<slide>slides/internals/php81-octal-literal.xml</slide>
+
+<!-- FEATURES -->
+Add IntlDatePatternGenerator (https://wiki.php.net/rfc/intldatetimepatterngenerator)
+<slide>slides/internals/php81-intl-date-pattern-generator.xml</slide>
+
+Fibers (https://wiki.php.net/rfc/fibers)
+<slide>slides/internals/php81-fibers.xml</slide>
+
+Peppa
+<slide>slides/internals/peppa.xml</slide>
+
+Add array_is_list() (https://wiki.php.net/rfc/is_list)
+<slide>slides/internals/php81-array-is-list.xml</slide>
+
+Change Default mysqli Error Mode (https://wiki.php.net/rfc/mysqli_default_errmode)
+<slide>slides/internals/php81-mysqli-error-mode.xml</slide>
+
+
+<!-- DEPRECATIONS -->
+Implemented:
+Restrict $GLOBALS usage (https://wiki.php.net/rfc/restrict_globals_usage)
+<slide>slides/internals/php81-restrict-globals-usage.xml</slide>
+
+Phasing out Serializable (https://wiki.php.net/rfc/phase_out_serializable)
+<slide>slides/internals/php81-serializable.xml</slide>
+
+Deprecate passing null to non-nullable arguments of internal functions (https://wiki.php.net/rfc/deprecate_null_to_scalar_internal_arg)
+<slide>slides/internals/php81-null-internal-functions.xml</slide>
+
+Deprecate implicit non-integer-compatible float to int conversions (https://wiki.php.net/rfc/implicit-float-int-deprecate)
+<slide>slides/internals/php81-implicit-float-conversions.xml</slide>
+
+Add return type declarations for internal methods (https://wiki.php.net/rfc/internal_method_return_types)
+<slide>slides/internals/php81-return-type-internal.xml</slide>
+
+<!-- TIDBITS -->
+Other deprecations (https://wiki.php.net/rfc/deprecations_php_8_1)
+<slide>slides/internals/php81-deprecations.xml</slide>
+
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

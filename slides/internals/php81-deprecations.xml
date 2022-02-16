@@ -1,0 +1,27 @@
+<slide>
+<title>PHP 8.1 deprecations</title>
+
+<list>
+	<bullet>%date_sunrise()% and %date_sunset()%</bullet>
+	<bullet>%key()%, %current()%, %next()%, %prev()%, and %reset()% on objects</bullet>
+	<bullet>mb_check_encoding()% without argument</bullet>
+	<bullet>%FILE_BINARY% and %FILE_TEXT %constants</bullet>
+	<bullet>Passing bool for %$value% argument of %IntlCalendar::roll()%</bullet>
+	<bullet>Accessing static members on traits</bullet>
+	<bullet>%strptime()%</bullet>
+	<bullet>%strftime()% and %gmtstrftime()%</bullet>
+	<bullet>%mhash*()% function family</bullet>
+	<bullet>%ctype_*()% function family accepts int parameters</bullet>
+	<bullet>Return by reference with void type</bullet>
+	<bullet>NIL constant defined by the IMAP extension</bullet>
+	<bullet>Calling overloaded pgsql functions without the connection argument</bullet>
+	<bullet>%$num_points% parameter of %image(open|filled)polygon%</bullet>
+	<bullet>%mysqli::init()%</bullet>
+	<bullet>%filter.default% ini setting</bullet>
+	<bullet>%auto_detect_line_endings% ini setting</bullet>
+	<bullet>ssl_method option to SoapClient constructor</bullet>
+	<bullet>%FILTER_SANITIZE_STRING%</bullet>
+	<bullet>%oci8.old_oci_close_semantics% ini setting</bullet>
+	<bullet>%odbc_result_all()%</bullet>
+</list>
+</slide>

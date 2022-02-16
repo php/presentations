@@ -1,0 +1,47 @@
+<slide>
+<title>Pure Intersection Types</title>
+
+<div effect="fade-out">
+<blurb>To enforce a value is both %Traversable% and %Countable%:</blurb>
+<example><![CDATA[<?php
+class Test {
+    private ?Traversable $traversable = null;
+    private ?Countable $countable = null;
+    /** @var Traversable&Countable */
+    private $both = null;
+
+    public function __construct($countableIterator) {
+        $this->traversable =& $this->both;
+        $this->countable =& $this->both;
+        $this->both = $countableIterator;
+    }
+}
+]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>In PHP 8.1:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class Test {
+    private *Traversable&Countable* $countableIterator;
+
+    public function setIterator(*Traversable&Countable* $countableIterator): void {
+        $this->countableIterator = $countableIterator;
+    }
+
+    public function getIterator(): *Traversable&Countable* {
+        return $this->countableIterator;
+    }
+}
+]]></example>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<list>
+	<bullet>Only for class and interface names</bullet>
+	<bullet>Variance rules are respected, but they are complicated</bullet>
+</list>
+</div>
+
+</slide>

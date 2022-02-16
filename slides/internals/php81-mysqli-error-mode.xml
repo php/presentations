@@ -1,0 +1,24 @@
+<slide>
+<title>Change Default mysqli Error Mode</title>
+
+<div effect="fade-out">
+<break lines="4"/>
+<blurb class="centre">Old default:</blurb>
+
+<image align="center" filename="silence.png"/>
+</div>
+
+<div effect="fade-in">
+<break lines="3"/>
+<blurb class="centre">New default:</blurb>
+</div>
+
+<div effect="fade-in">
+<break lines="1"/>
+<blurb class="centre">%mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);%</blurb>
+</div>
+
+<div effect="fade-in"><blurb class="big-centre">Exceptions</blurb></div>
+<div effect="fade-in"><blurb class="big-centre">Exceptions</blurb></div>
+<div effect="fade-in"><blurb class="big-centre">Exceptions</blurb></div>
+</slide>

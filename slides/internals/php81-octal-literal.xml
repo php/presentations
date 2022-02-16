@@ -1,0 +1,26 @@
+<slide>
+<title>Explicit Octal Integer Literal Notation</title>
+
+<blurb>Adds support for the %0o% and %0O% prefixes, like %0x% and %0B%:</blurb>
+
+<example inline="1" class="big">
+0*o*16 === 14;  // true
+0*o*123 === 83; // true
+
+0*O*16 === 14;  // true
+0*O*123 === 83; // true
+
+016 === 0*o*16; // true
+016 === 0*O*16; // true
+</example>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb>Numeric strings are ~always~ decimal:</blurb>
+<example class="big" inline="1">
+(int) "*0*16"  ⇒ 16
+(int) "*0o*16" ⇒ 0
+</example>
+</div>
+
+</slide>

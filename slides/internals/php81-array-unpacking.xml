@@ -1,0 +1,41 @@
+<slide>
+<title>Array Unpacking with String Keys</title>
+
+<div effect="fade-out">
+<blurb>Added in PHP 7.4:</blurb>
+<example class="big">
+&lt;?php
+$apples = [ '🍎',  '🍏' ];
+$fruits = [ '🍐', '🍑', ...$apples, '🍓',  '🍅' ];
+
+echo "Fruit salad: ", implode( '', $fruits ), "\n";
+?>
+</example>
+<blurb>Result:</blurb>
+<example class="big">
+Fruit salad: 🍐🍑🍎🍏🍓🍅
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 8.1 adds support for string keys</blurb>
+<example class="big">
+&lt;?php
+$apples = [ 'red' => '🍎',  'green' => '🍏' ];
+$others = [ 'green' => '🍐', 'pink' => '🍑' ];
+$fruits = [ ...$apples, ...$others ];
+
+var_dump( $fruits );
+?>
+</example>
+<blurb>Result:</blurb>
+<example class="big">
+array(3) {
+  'red' => string(4) "🍎"
+  'green' => string(4) "🍐"
+  'pink' => string(4) "🍑"
+}
+</example>
+</div>
+
+</slide>

@@ -1,0 +1,14 @@
+<slide>
+<title>Added %array_is_list()%</title>
+
+<break lines="1"/>
+<blurb class="centre">%array_is_list(array $array): bool%</blurb>
+<break lines="1"/>
+<blurb class="centre">returns true, if:</blurb>
+
+<div effect="fade-in"><blurb class="big-centre">There are only *numeric* keys</blurb></div>
+<div effect="fade-in"><blurb class="big-centre">The numeric keys start with *%0%*</blurb></div>
+<div effect="fade-in"><blurb class="big-centre">Numeric keys are *increasing*</blurb></div>
+<div effect="fade-in"><blurb class="big-centre">Keys leave *no gaps*</blurb></div>
+
+</slide>

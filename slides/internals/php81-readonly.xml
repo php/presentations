@@ -1,0 +1,37 @@
+<slide>
+<title>Readonly Properties</title>
+
+<div effect="fade-out">
+<blurb>To enforce 'readonly'-bility:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class User
+{
+    public function __construct(*private* string $name) {}
+
+    *public function getName()*: string {
+        return $this->name;
+    }
+}
+]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>In PHP 8.1, with a real keyword, %readonly%:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class User
+{
+    public function __construct(public *readonly* string $name) {}
+}
+]]></example>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb>Restrictions:</blurb>
+<list>
+	<bullet>Can only be initialised once</bullet>
+	<bullet>Can only be initialised from the scope where it was declared</bullet>
+</list>
+</div>
+
+</slide>
