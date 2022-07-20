@@ -25,6 +25,6 @@ class Patisserie extends Bakery
 
 <blurb class="error">Fatal error: Declaration of Patisserie::gimme(): 🍞bread must be compatible with Bakery::gimme(): 🥖baguette</blurb>
 <break lines="2"/>
-<blurb class="center">Return types are *co-variant*:<br/>~they can *not* return a more broad type~</blurb>
+<blurb class="center">Return types are *co-variant*:<br/><br/>~they can *not* return a wider type~</blurb>
 </slide>
 

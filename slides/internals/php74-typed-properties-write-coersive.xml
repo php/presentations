@@ -5,9 +5,9 @@
 &lt;?php
 class 🥃whisky
 {
+    public    string     $name;
     public    int        $age;
-    protected Distillery $distillery;
-    private   ?Bottler   $bottler;
+    private   Distillery $distillery;
 }
 
 $whisky = new 🥃whisky;

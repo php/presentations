@@ -5,7 +5,8 @@
 &lt;?php
 class 🥃whisky
 {
-    public    int        $age;
+    public    string     $name;
+    private   int        $age;
     public    Distillery $distillery;
     private   ?Bottler   $bottler;
 }

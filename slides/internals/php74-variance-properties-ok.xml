@@ -24,6 +24,6 @@ class Galileo extends Copernicus
 </example>
 
 <break lines="2"/>
-<blurb class="center">Property types are *in-variant*:<br/>~they can *not* represent a more specific or a more broad type~</blurb>
+<blurb class="center">Property types are *in-variant*:<br/><br/>~they can *not* represent a more specific or a more broad type~</blurb>
 </slide>
 

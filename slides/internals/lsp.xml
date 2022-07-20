@@ -1,0 +1,15 @@
+<slide>
+<title>Liskov Substitution Principle</title>
+
+<image align="right" attr="By Kenneth C. Zirkel - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=32799771" filename="barbara-liskov.jpg"/>
+<blurb>Introduced by Barbara Liskov</blurb>
+<break lines="3"/>
+
+<blurb>A child class must be able to be used in place of a parent class</blurb>
+
+<list>
+    <bullet>Return types can return a more specific (narrower) type ~(covariance)~</bullet>
+    <bullet>Argument types can accept a more restricted (wider) type ~(contravariance)~</bullet>
+    <bullet>Property types can not change ~(invariance)~</bullet>
+</list>
+</slide>

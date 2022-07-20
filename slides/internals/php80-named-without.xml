@@ -6,11 +6,11 @@
 class Settings
 {
     function __construct(
-        public $includeDistillery   = true,
-        public $includeDescription  = true,
-        public $includeTastingNotes = false,
-        public $pageSize            = 64,
-        public $sortByField         = 'whisky',
+        public bool   $includeDistillery   = true,
+        public bool   $includeDescription  = true,
+        public bool   $includeTastingNotes = false,
+        public int    $pageSize            = 64,
+        public string $sortByField         = 'whisky',
     ) {}
 }
 </example>

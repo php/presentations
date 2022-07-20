@@ -1,0 +1,29 @@
+<slide>
+<title>Example Class</title>
+
+<example>
+&lt;?php
+class 🥃whisky 
+{
+    /**
+     * @var string
+     */
+    public    $name;
+
+    /**
+     * @var Distillery
+     */
+    private   $distillery;
+
+    /**
+     * @var Bottler|null
+     */
+    private   $bottler;
+
+    /**
+     * @var TastingNote[]
+     */
+    public    $tastingNotes;
+}
+</example>
+</slide>

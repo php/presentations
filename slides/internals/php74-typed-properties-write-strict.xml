@@ -7,9 +7,9 @@ declare(strict_types=1);
 
 class 🥃whisky
 {
+    public    string     $name;
     public    int        $age;
-    public    Distillery $distillery;
-    private   ?Bottler   $bottler;
+    private   Distillery $distillery;
 }
 
 $whisky = new 🥃whisky;

@@ -13,8 +13,9 @@ class 🥃whisky
 All types with the exception of %void% and %callable% are supported:
 </blurb>
 <example>
-    public    int        $age;
-    protected Distillery $distillery;
+    public    string     $name;
+    private   int        $age;
+    private   Distillery $distillery;
     private   ?Bottler   $bottler;
 </example>
 </div>
@@ -23,7 +24,10 @@ All types with the exception of %void% and %callable% are supported:
     Types are also legal on static properties:
 </blurb>
 <example>
-    public static iterable $tastingNotes;
+    /**
+     * @var TastingNote[]
+     */
+    public static array $tastingNotes;
 </example>
 </div>
 <div effect="fade-in">
@@ -32,15 +36,6 @@ All types with the exception of %void% and %callable% are supported:
 </blurb>
 <example>
     public int     $rating = 92;
-    public ?string $nullableStr = null;
-</example>
-</div>
-<div effect="fade-in">
-<blurb>
-    The type applies to all properties in one declaration:
-</blurb>
-<example>
-    public bool $chillFiltered, $colouringAdded;
 }
 </example>
 </div>

@@ -1,0 +1,25 @@
+<slide>
+<title>PHP 8.2: %null% and %false% types</title>
+
+<list>
+<bullet>%false% could only be used as part of a union (i.e. %string|false%)</bullet>
+<bullet>But not as %null|false% and had to use %null|bool%</bullet>
+<bullet>You could not use %null% standalone, even though it's a narrower type:
+<example inline="1"><![CDATA[&lt;?php
+class User {}
+
+class UserFinder {
+    function findUserByEmail(string $email) : User|null {}
+}
+
+class AlwaysNullUserFinder extends UserFinder {
+    function findUserByEmail(string $email) : ---null--- {}
+}
+?>]]></example>
+</bullet>
+</list>
+
+<blurb>%void% means: Does not return *anything*</blurb>
+<blurb>%null% means: Does return the *null* value</blurb>
+</slide>
+

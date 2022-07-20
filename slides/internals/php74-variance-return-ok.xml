@@ -24,6 +24,9 @@ class Patisserie extends Bakery
 </example>
 
 <break lines="2"/>
-<blurb class="center">Return types are *co-variant*:<br/>~they can return a more specific type~</blurb>
+<blurb class="center">
+    Return types are *co-variant*:<br/><br/>
+    ~they can return a more specific (narrower) type~
+</blurb>
 </slide>
 

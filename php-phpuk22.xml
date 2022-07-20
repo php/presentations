@@ -8,7 +8,7 @@
 <speaker>Derick Rethans</speaker>
 <email>derick@php.net</email>
 <twitter>derickr</twitter>
-<url></url>
+<url>https://derickrethans.nl/talks/php-phpuk22</url>
 <joindin></joindin>
 <slide>slides/xdebug/title.xml</slide>
 <slide>slides/mongodb/me.xml</slide>
@@ -46,19 +46,6 @@ Array unpacking with string keys (https://wiki.php.net/rfc/array_unpacking_strin
 New in Initialisers (https://wiki.php.net/rfc/new_in_initializers)
 <slide>slides/internals/php81-new-in-initialisers.xml</slide>
 <slide>slides/internals/php81-new-in-initialisers-locations.xml</slide>
-
-<!--
-Auto-capturing multi-statement closures (https://wiki.php.net/rfc/auto-capture-closure)
-<slide>slides/internals/php81-auto-capture-multi-statement-closures.xml</slide>
--->
-
-<!--
-Property Accessors (https://wiki.php.net/rfc/property_accessors)
-<slide>slides/internals/php81-property-accessors.xml</slide>
-<slide>slides/internals/php81-property-accessors-implicit.xml</slide>
-<slide>slides/internals/php81-property-accessors-explicit.xml</slide>
-<slide>slides/internals/php81-property-accessors-interface.xml</slide>
--->
 
 Readonly properties 2.0 (https://wiki.php.net/rfc/readonly_properties_v2)
 <slide>slides/internals/php81-readonly.xml</slide>

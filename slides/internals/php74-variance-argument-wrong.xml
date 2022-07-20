@@ -20,6 +20,6 @@ class Gauls extends Asterix
 
 <blurb class="error">Warning: Declaration of Gauls::hunt(🐗boar $animal) should be compatible with Asterix::hunt(🐖pig $animal)</blurb>
 <break lines="2"/>
-<blurb class="center">Arguments types are *contra-variant*:<br/>~they can *not* accept a more specific type~</blurb>
+<blurb class="center">Arguments types are *contra-variant*:<br/><br/>~they can *not* accept a narrower type~</blurb>
 </slide>
 

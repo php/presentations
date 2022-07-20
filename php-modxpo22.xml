@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>PHP's Type System Updates</title>
+<event>MODXpo'22</event>
+<location>Arnhem, The Netherlands</location>
+<date>July 8th, 2022</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/php-modxpo22</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/internals/type-history.xml</slide>
+
+<!-- TYPES -->
+<slide>slides/internals/php74-untyped-properties.xml</slide>
+<slide>slides/internals/php74-typed-properties.xml</slide>
+<slide>slides/internals/php74-typed-properties-read.xml</slide>
+<slide>slides/internals/php74-typed-properties-write.xml</slide>
+<slide>slides/internals/php74-typed-properties-write-coersive.xml</slide>
+<slide>slides/internals/php74-typed-properties-write-strict.xml</slide>
+
+<slide>slides/internals/lsp.xml</slide>
+
+<!-- VARIANCE -->
+https://wiki.php.net/rfc/covariant-returns-and-contravariant-parameters
+<slide>slides/internals/php74-variance-return-ok.xml</slide>
+<slide>slides/internals/php74-variance-return-wrong.xml</slide>
+<slide>slides/internals/php74-variance-argument-ok.xml</slide>
+<slide>slides/internals/php74-variance-argument-wrong.xml</slide>
+<slide>slides/internals/php74-variance-properties-ok.xml</slide>
+<slide>slides/internals/php74-variance-properties-wrong.xml</slide>
+
+<slide>slides/internals/php80-union-types.xml</slide>
+<slide>slides/internals/php80-union-types-phpdoc.xml</slide>
+<slide>slides/internals/php80-union-types-new.xml</slide>
+<slide>slides/internals/php80-union-types-examples.xml</slide>
+<slide>slides/internals/php80-union-types-law.xml</slide>
+<slide>slides/internals/php80-union-types-coercive.xml</slide>
+
+<!--
+Readonly properties 2.0 (https://wiki.php.net/rfc/readonly_properties_v2)
+<s lide>slides/internals/php81-readonly.xml</slide>
+-->
+
+Mixed Type v2
+<slide>slides/internals/php80-mixed-types.xml</slide>
+
+PHP 8.0:
+https://wiki.php.net/rfc/static_return_type
+static return type
+<slide>slides/internals/php80-static-return.xml</slide>
+
+
+Noreturn type (https://wiki.php.net/rfc/noreturn_type) (never)
+<slide>slides/internals/php81-never-type.xml</slide>
+
+Pure Intersection Types (https://wiki.php.net/rfc/pure-intersection-types)
+<slide>slides/internals/php81-pure-intersection.xml</slide>
+
+<!--
+Constructor Property Promotion
+<s lide>slides/internals/php80-cpp-without.xml</slide>
+<s lide>slides/internals/php80-cpp-with.xml</slide>
+
+<s lide>slides/internals/php80-named-without.xml</slide>
+<s lide>slides/internals/php80-named-with.xml</slide>
+-->
+
+<!-- BIG NEW FEATURES -->
+Enumerations (https://wiki.php.net/rfc/enumerations)
+<slide>slides/internals/php81-enums-1.xml</slide>
+<slide>slides/internals/php81-enums-2.xml</slide>
+<slide>slides/internals/php81-enums-3.xml</slide>
+<slide>slides/internals/php81-enums-4.xml</slide>
+<slide>slides/internals/php81-enums-5.xml</slide>
+<slide>slides/internals/php81-enums-6.xml</slide>
+<slide>slides/internals/php81-enums-7.xml</slide>
+
+PHP 8.2:
+
+https://wiki.php.net/rfc/null-false-standalone-types
+'null' and 'false' as standalone
+<slide>slides/internals/php82-null-false-standalone.xml</slide>
+
+https://wiki.php.net/rfc/true-type
+'true' type
+<slide>slides/internals/php82-true.xml</slide>
+
+https://wiki.php.net/rfc/dnf_types
+? Disjunctive Normal Form Types
+<slide>slides/internals/php82-dnf-types.xml</slide>
+
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

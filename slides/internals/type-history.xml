@@ -1,0 +1,281 @@
+<slide>
+<title>Type Safety</title>
+
+<div effect="fade-out">
+<break lines="5"/>
+<blurb class="big-centre">~the extent to which a programming language~<br/>~*discourages* or *prevents* type errors~</blurb>
+</div>
+
+<div effect="fade-in-out">
+    <blurb>*PHP 5.0*: Class name hints</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+<?php
+class Whisky
+{
+}
+
+function drink($whisky)
+{
+}
+
+$w = new Whisky;
+drink($w);
+?>
+    ]]></example></td>
+    <td><example inline="1"><![CDATA[
+&lt;?php
+class Whisky
+{
+}
+
+function drink(*Whisky* $whisky)
+{
+}
+
+$w = new Whisky;
+drink($w);
+?>
+    ]]></example></td>
+    </tr></table>
+</div>
+
+<div effect="fade-in-out">
+    <blurb>*PHP 5.1*: array typehint</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+<?php
+class Article
+{
+    public function renderNotes($notes)
+    {
+        foreach ($notes as $note)
+        {
+        }
+    }
+}
+
+$a = new Article;
+
+$a->renderNotes(
+    array(
+        'This was helpful',
+        'This was really helpful'
+    )
+);
+?>
+    ]]></example></td>
+    <td><example inline="1"><![CDATA[
+&lt;?php
+class Article
+{
+    public function renderNotes(*array* $notes)
+    {
+        foreach ($notes as $note)
+        {
+        }
+    }
+}
+
+$a = new Article;
+
+$a->renderNotes(
+    array(
+        'This was helpful',
+        'This was really helpful'
+    )
+);
+?>
+    ]]></example></td>
+    </tr></table>
+</div>
+<!--
+<div effect="fade-in-out">
+    https://wiki.php.net/rfc/callable
+    <blurb>*PHP 5.4*: callable typehint</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+    ]]></example></td>
+    <td><example><![CDATA[
+    ]]></example></td>
+    </tr></table>
+</div>
+-->
+<div effect="fade-in-out">
+    https://wiki.php.net/rfc/scalar_type_hints_v5
+    <blurb>*PHP 7.0*: Scalar Type Declarations (v5)</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+<?php
+function getObject($oid)
+{
+}
+
+getObject("12");
+?>
+    ]]></example></td>
+    <td><example inline="1"><![CDATA[
+&lt;?php
+*declare(strict_types=1);*
+function getObject(*int* $oid)
+{
+}
+
+getObject("12");
+?>
+    ]]></example>
+    <example>Uncaught TypeError: getObject():
+  Argument #1 ($oid) must be of type int, string given</example></td>
+    </tr></table>
+</div>
+
+<div effect="fade-in-out">
+    https://wiki.php.net/rfc/return_types
+    <blurb>*PHP 7.0*: Return type declarations</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+<?php
+class Article
+{
+    public function getComments()
+    {
+        return array();
+    }
+}
+    ]]></example></td>
+    <td><example inline="1"><![CDATA[
+&lt;?php
+class Article
+{
+    public function getComments() *: array*
+    {
+        return array();
+    }
+}
+    ]]></example></td>
+    </tr></table>
+</div>
+
+<div effect="fade-in-out">
+    https://wiki.php.net/rfc/nullable_types
+    <blurb>*PHP 7.1*: Nullable types</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+<?php
+declare(strict_types=1);
+function getObject(int $oid)
+{
+}
+
+getObject(12);
+getObject(null);
+?>
+    ]]></example></td>
+    <td><example inline="1"><![CDATA[
+&lt;?php
+declare(strict_types=1);
+function getObject(*?*int $oid)
+{
+}
+
+getObject(12);
+getObject(null);
+?>
+    ]]></example></td>
+    </tr></table>
+</div>
+
+<div effect="fade-in-out">
+    https://wiki.php.net/rfc/void_return_type
+    <blurb>*PHP 7.1*: Void return type</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+<?php declare(strict_types=1);
+
+class Article
+{
+    public function addNote(Note $n) 
+    {
+    }
+}
+
+$a = new Article;
+$a->addNote(new Note("It was lovely"));
+?>
+    ]]></example></td>
+    <td><example inline="1"><![CDATA[
+&lt;?php declare(strict_types=1);
+
+class Article
+{
+    public function addNote(Note $n) *: null*
+    {
+    }
+}
+
+$a = new Article;
+$a->addNote(new Note("It was lovely"));
+?>
+    ]]></example></td>
+    </tr></table>
+</div>
+
+<!--
+<div effect="fade-in-out">
+    https://wiki.php.net/rfc/object-typehint
+    <blurb>*PHP 7.2*: %object% Type Hint</blurb>
+    <table class="two"><tr>
+    <td><example><![CDATA[
+    ]]></example></td>
+    <td><example><![CDATA[
+    ]]></example></td>
+    </tr></table>
+</div>
+-->
+
+<div effect="fade-in-out">
+    https://wiki.php.net/rfc/parameter-no-type-variance
+    <blurb>*PHP 7.2*: Parameter type widening</blurb>
+    <table class="two"><tr>
+    <td><example inline="1"><![CDATA[
+&lt;?php
+class LibraryArticle
+{
+    public function getSlug(string $title) : void
+    {
+    }
+}
+
+class MyArticle extends Article
+{
+    public function getSlug($title) : void
+    {
+    }
+}
+    ]]></example>
+    <example>
+Warning: Declaration of
+    MyArticle::getSlug($title): void
+    should be compatible with
+    LibraryArticle::getSlug(string $title): void
+    </example></td>
+    <td><example inline="1"><![CDATA[
+&lt;?php
+class LibraryArticle
+{
+    public function getSlug(string $title) : void
+    {
+    }
+}
+
+class MyArticle extends Article
+{
+    public function getSlug($title) : void
+    {
+    }
+}
+    ]]></example></td>
+    </tr></table>
+</div>
+
+</slide>

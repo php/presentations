@@ -19,6 +19,6 @@ class Gauls extends Asterix
 </example>
 
 <break lines="2"/>
-<blurb class="center">Arguments types are *contra-variant*:<br/>~they can accept a more broad type~</blurb>
+<blurb class="center">Arguments types are *contra-variant*:<br/><br/>~they can accept a wider type~</blurb>
 </slide>
 

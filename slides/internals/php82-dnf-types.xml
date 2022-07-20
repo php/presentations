@@ -1,0 +1,59 @@
+<slide>
+<title>PHP 8.2: DNF Types</title>
+
+<blurb class="centre">Union Types: *%X|Y%*</blurb>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+class Number {
+    private *int|float* $number;
+ 
+    public function setNumber(*int|float* $number): void {
+        $this->number = $number;
+    }
+ 
+    public function getNumber(): *int|float* {
+        return $this->number;
+    }
+}
+]]></example>
+</div>
+
+<blurb class="centre">(Pure) Intersection Types: *%X&amp;Y%*</blurb>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+class Iteraty {
+    private *Traversable&Countable* $countableIterator;
+ 
+    public function setIterator(*Traversable&Countable* $countableIterator): void {
+        $this->countableIterator = $countableIterator;
+    }
+ 
+    public function getIterator(): *Traversable&Countable* {
+        return $this->countableIterator;
+    }
+}
+]]></example>
+</div>
+
+<blurb class="centre">Disjunctive Normal Form Types: *%(X&amp;A)|(Y&amp;B)%*</blurb>
+
+<div effect="fade-in-out">
+<example inline="1"><![CDATA[
+class Foreachy {
+    private *array|(Traversable&Countable)* $foreachableData;
+ 
+    public function setIterator(*array|(Traversable&Countable)* $foreachable): void {
+        $this->foreachableData = $foreachable;
+    }
+ 
+    public function getIterator(): *array(Traversable&Countable)* {
+        return $this->foreachableData;
+    }
+}
+]]></example>
+</div>
+
+</slide>
+

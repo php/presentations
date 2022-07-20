@@ -5,20 +5,21 @@
 &lt;?php
 class 🥃whisky 
 {
-    public    int        $age;
-    protected Distillery $distillery;
+    public    string     $name;
+    private   int        $age;
+    private   Distillery $distillery;
     private   ?Bottler   $bottler;
 }
 
 $whisky = new 🥃whisky;
 
-echo $whisky->age;
+echo $whisky->name;
 ?>
 </example>
 <break/>
 <div effect="fade-in">
 <blurb class="error">
-Error: Typed property 🥃whisky::$age must not be accessed before initialization
+Error: Typed property 🥃whisky::$name must not be accessed before initialization
 </blurb>
 
 <break lines="2"/>

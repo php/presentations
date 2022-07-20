@@ -1,0 +1,40 @@
+<slide>
+<title>Enumerations — Fetch Properties</title>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+enum Currency: string {
+    case GBP = '£';
+    case EUR = '€';
+}
+
+const PRICES = [
+	Currency::EUR => 19.99,
+	Currency::GBP => 17.99,
+];
+]]></example>
+
+<blurb>PHP 8.1:</blurb>
+<example class="result">
+Fatal error: Constant expression contains invalid operations
+</example>
+<blurb>PHP 8.2:</blurb>
+<example class="result">
+Fatal error: Constant expression contains invalid operations
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[&lt;?php
+enum Currency: string {
+    case GBP = '£';
+    case EUR = '€';
+}
+
+const PRICES = [
+	Currency::EUR*->value* => 19.99,
+	Currency::GBP*->value* => 17.99,
+];]]></example>
+</div>
+
+</slide>

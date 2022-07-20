@@ -1,0 +1,42 @@
+<slide>
+<title>Deprecating Dynamic Properties</title>
+
+<example>
+<![CDATA[<?php
+class ezcGraphDataSet
+{
+    protected $pallet;
+
+    function setPalette( $palette )
+    {
+        $this->palette = $palette;
+    }
+}
+
+$e = new ezcGraphDataSet;
+$e->setPalette( 'rgb' );
+]]></example>
+
+<div effect="fade-in">
+<example class="error">
+Deprecated: Creation of dynamic property ezcGraphDataSet::$palette is deprecated
+</example>
+</div>
+
+<div effect="fade-in">
+<example class="small">
+--- src/datasets/base.php
++++ src/datasets/base.php
+@@ -83,7 +83,7 @@ abstract class ezcGraphDataSet implements ArrayAccess, Iterator, Countable
+      *
+      * @var ezcGraphPalette
+      */
+-    protected $pallet;
++    protected $palette;
+
+     /**
+      * Array keys
+</example>
+</div>
+
+</slide>

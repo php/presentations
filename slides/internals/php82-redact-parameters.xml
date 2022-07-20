@@ -1,0 +1,37 @@
+<slide>
+<title>Sensitive Parameters</title>
+
+<example><![CDATA[<?php
+function logIn($userName, #[\SensitiveParameter] $password) {
+    throw new \Exception('Error');
+}
+
+logIn( 'derick', 'secret-elephpant' );]]></example>
+
+<div effect="fade-in-out">
+<break/>
+<blurb>Without Xdebug:</blurb>
+<example class="error" inline="1">
+Fatal error: Uncaught Exception: Error in Standard input code:4
+Stack trace:
+#0 Standard input code(7): logIn('derick', *Object(SensitiveParameterValue)*)
+#1 {main}
+  thrown in Standard input code on line 4
+</example>
+</div>
+
+<div effect="fade-in">
+<break/>
+<blurb>With Xdebug:</blurb>
+<example class="error" inline="1">
+Fatal error: Uncaught Exception: Error in Standard input code on line 4
+
+Exception: Error in Standard input code on line 4
+
+Call Stack:
+  4.8626  399576  1. {main}() Standard input code:0
+  4.8626  399576  2. logIn($userName = 'derick', $password = *'[Sensitive Parameter]'*) Standard input code:7
+</example>
+</div>
+
+</slide>

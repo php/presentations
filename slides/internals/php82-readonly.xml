@@ -1,0 +1,21 @@
+<slide>
+<title>Readonly Classes</title>
+
+<blurb>From PHP 8.2, marking all properties as %readonly%:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+*readonly* class User
+{
+    public function __construct(public string $name) {}
+}
+]]></example>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb>Additionally:</blurb>
+<list>
+	<bullet>Prevents dynamic properties from being created</bullet>
+	<bullet>Can't be used if there are untyped or static properties</bullet>
+</list>
+</div>
+
+</slide>

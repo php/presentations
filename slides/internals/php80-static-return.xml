@@ -1,0 +1,29 @@
+<slide>
+<title>%static% return type</title>
+
+<blurb>%self% is a special keyword that refers to the class that the method was *defined* on</blurb>
+<blurb>%static% is a special keyword that refers to the class that the method was *called* on</blurb>
+
+<example inline="1">
+<![CDATA[&lt;?php
+class Article
+{
+    private function __construct(private string $title) {}
+
+    static function createWithTitle(string $title) : *static* {
+        return new *static*("A: {$title}");
+    }
+}
+
+class Document extends Article
+{
+}
+
+$a = Article::createWithTitle('Article');
+$d = Document::createWithTitle('Document');
+
+var_dump($a, $d);
+
+?>]]></example>
+</slide>
+
