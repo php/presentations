@@ -1,0 +1,38 @@
+<slide>
+<title>Exercise</title>
+<div effect="fade-out">
+<list>
+	<bullet>GIT checkout: %https://github.com/derickr/workshop-webcamp22%</bullet>
+	<bullet>Run: %docker compose up%</bullet>
+	<bullet>Go to: %http://localhost:8123/info.php%</bullet>
+	<bullet>Let's go through the output...</bullet>
+</list>
+</div>
+<div effect="fade-in-out">
+<list>
+	<bullet>Fix permissions of %logs% directory to make it writeable to all</bullet>
+	<bullet>Refresh browser (%http://localhost:8123/info.php%)</bullet>
+	<bullet>Check output of log file (%./logs/xdebug.log%)</bullet>
+	<bullet>Start VS Code or PhpStorm</bullet>
+</list>
+</div>
+<div effect="fade-in">
+<blurb>*VS Code*:</blurb>
+<list>
+	<bullet>Open the GIT checkout folder</bullet>
+	<bullet>Open "Run and Debug" (%Ctrl-Shift-D%)</bullet>
+	<bullet>Click "create a launch.json file"</bullet>
+	<bullet>Open %static-properties.php%</bullet>
+	<bullet>Click green triangle / %F5% to start listening</bullet>
+</list>
+<break/>
+<blurb>*PhpStorm*</blurb>
+<list>
+	<bullet>Click: %File%, %New Project From Existing Files%</bullet>
+	<bullet>Select %Source files are in a local...configured%</bullet>
+	<bullet>Select workshop folder</bullet>
+	<bullet>Open %static-properties.php%</bullet>
+	<bullet>Click: %Run%, %Start Listening for PHP Debug Connections%</bullet>
+</list>
+</div>
+</slide>

@@ -18,10 +18,7 @@ enum Currency: string {
 <div effect="fade-in-out">
 <blurb>Create from Value:</blurb>
 <example inline="1">var_dump( Currency*::from('£')* );</example>
-<example class="result">class Currency#2 (2) {
-  public string $name => string(3) "GBP"
-  public string $value => string(2) "£"
-}</example>
+<example class="result">enum Currency::GBP : string("£");</example>
 </div>
 
 <div effect="fade-in">

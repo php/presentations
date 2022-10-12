@@ -10,10 +10,10 @@ class A {
 }
 class B extends A {}
  
-echo A::counter(), ' ',
-     A::counter(), ' ',
-     B::counter(), ' ',
-     B::counter();
+echo A::counter(), ' ';
+echo A::counter(), ' ';
+echo B::counter(), ' ';
+echo B::counter();
 ]]></example>
 
 <blurb>PHP 8.0:</blurb>

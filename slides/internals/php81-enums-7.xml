@@ -15,14 +15,10 @@ enum Currency: string {
 <blurb>List Cases:</blurb>
 <example inline="1">var_dump( Currency::cases() );</example>
 <example class="result" inline="1">array(2) {
-  [0] => *class* Currency#1 (2) {
-    public string $name => string(3) "GBP"
-    public string $value => string(2) "£"
-  }
-  [1] => class Currency#2 (2) {
-    public string $name => string(3) "EUR"
-    public string $value => string(3) "€"
-  }
+  [0]=>
+  enum(Currency::GBP)
+  [1]=>
+  enum(Currency::EUR)
 }
 </example>
 </div>

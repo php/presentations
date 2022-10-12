@@ -1,0 +1,25 @@
+<slide>
+<title>Show and Tell: %Fibers%</title>
+
+<blurb>*Everyone*:</blurb>
+<list>
+	<bullet>Open %fibers.php%</bullet>
+</list>
+<break/>
+
+<blurb>*VS Code*:</blurb>
+<list>
+	<bullet>Click green triangle / %F5% to start listening</bullet>
+</list>
+<break/>
+<blurb>*PhpStorm*</blurb>
+<list>
+	<bullet>Click: %Run%, %Start Listening for PHP Debug Connections%</bullet>
+</list>
+
+<break/>
+<blurb>*Everyone*:</blurb>
+<list>
+	<bullet>Open %http://localhost:8123/fibers.php% in browser</bullet>
+</list>
+</slide>

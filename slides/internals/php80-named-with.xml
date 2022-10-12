@@ -17,7 +17,7 @@ class Settings
 <div effect="fade-in">
 <blurb>Instantiation with different includes:</blurb>
 <example inline="2">
-$settings = new \Settings(*includeDistillery: false*);
+$settings = new \Settings(*includeDescription: false*);
 </example>
 </div>
 <div effect="fade-in">

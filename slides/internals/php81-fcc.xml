@@ -1,0 +1,98 @@
+<slide>
+<title>First Class Callable Syntax</title>
+
+<div effect="fade-out">
+<example inline="1">
+<![CDATA[&lt?php
+class Test {
+    public function getPrivateMethod() {
+        *return [$this, 'privateMethod'];*
+        |aaaaaa|return Closure::fromCallable([$this, 'privateMethod']);|
+        |aaaaaa|return $this->privateMethod(...);|
+    }
+
+    private function privateMethod() {
+        echo ___METHOD___, "\n";
+    }
+}
+
+$test = new Test;
+$privateMethod = $test->getPrivateMethod();
+$privateMethod();
+?>]]>
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+<![CDATA[&lt?php
+class Test {
+    public function getPrivateMethod() {
+        |bbbbbb|return [$this, 'privateMethod'];|
+        *return Closure::fromCallable([$this, 'privateMethod']);*
+        |aaaaaa|return $this->privateMethod(...);|
+    }
+
+    private function privateMethod() {
+        echo ___METHOD___, "\n";
+    }
+}
+
+$test = new Test;
+$privateMethod = $test->getPrivateMethod();
+$privateMethod();
+?>]]>
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="1">
+<![CDATA[&lt?php
+class Test {
+    public function getPrivateMethod() {
+        |bbbbbb|return [$this, 'privateMethod'];*|
+        |bbbbbb|return Closure::fromCallable([$this, 'privateMethod']);|
+        *return $this->privateMethod(...);*
+    }
+
+    private function privateMethod() {
+        echo ___METHOD___, "\n";
+    }
+}
+
+$test = new Test;
+$privateMethod = $test->getPrivateMethod();
+$privateMethod();
+?>]]>
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Syntactic Sugar</blurb>
+<example>
+$fn = Closure::fromCallable('strlen');
+$fn = strlen(...);
+
+$fn = Closure::fromCallable([$this, 'method']);
+$fn = $this->method(...)
+
+$fn = Closure::fromCallable([Foo::class, 'method']);
+$fn = Foo::method(...);
+</example>
+<break/>
+<blurb>Other variants</blurb>
+<example>
+strlen(...);
+$closure(...);
+$obj->method(...);
+$obj->$methodStr(...);
+($obj->property)(...);
+Foo::method(...);
+$classStr::$methodStr(...);
+self::{$complex . $expression}(...);
+[$obj, 'method'](...);
+[Foo::class, 'method'](...);
+</example>
+</div>
+
+</slide>

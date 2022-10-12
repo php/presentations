@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>What's New in PHP 8.x</title>
+<event>010PHP</event>
+<location>Den Haag, The Netherlands</location>
+<date>September 21st, 2022</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/php-010php22</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/internals/php80-union-types.xml</slide>
+<slide>slides/internals/php80-union-types-phpdoc.xml</slide>
+<slide>slides/internals/php80-union-types-new.xml</slide>
+<slide>slides/internals/php80-union-types-examples.xml</slide>
+<slide>slides/internals/php80-union-types-law.xml</slide>
+<!--<s lide>slides/internals/php80-union-types-coercive.xml</slide> -->
+
+Readonly properties 2.0 (https://wiki.php.net/rfc/readonly_properties_v2)
+<slide>slides/internals/php81-readonly.xml</slide>
+
+https://wiki.php.net/rfc/readonly_classes
+<slide>slides/internals/php82-readonly.xml</slide>
+
+Mixed Type v2
+<slide>slides/internals/php80-mixed-types.xml</slide>
+
+PHP 8.0:
+https://wiki.php.net/rfc/static_return_type
+static return type
+<slide>slides/internals/php80-static-return.xml</slide>
+
+Constructor Property Promotion
+<slide>slides/internals/php80-cpp-without.xml</slide>
+<slide>slides/internals/php80-cpp-with.xml</slide>
+
+<slide>slides/internals/php80-named-without.xml</slide>
+<slide>slides/internals/php80-named-with.xml</slide>
+
+<!-- BIG NEW FEATURES -->
+Enumerations (https://wiki.php.net/rfc/enumerations)
+<slide>slides/internals/php81-enums-1.xml</slide>
+<slide>slides/internals/php81-enums-2.xml</slide>
+<slide>slides/internals/php81-enums-3.xml</slide>
+<slide>slides/internals/php81-enums-4.xml</slide>
+<slide>slides/internals/php81-enums-5.xml</slide>
+<slide>slides/internals/php81-enums-6.xml</slide>
+<slide>slides/internals/php81-enums-7.xml</slide>
+
+https://wiki.php.net/rfc/fetch_property_in_const_expressions
+<slide>slides/internals/php82-enums-1.xml</slide>
+
+Noreturn type (https://wiki.php.net/rfc/noreturn_type) (never)
+<slide>slides/internals/php81-never-type.xml</slide>
+
+Pure Intersection Types (https://wiki.php.net/rfc/pure-intersection-types)
+<slide>slides/internals/php81-pure-intersection.xml</slide>
+
+Array unpacking with string keys (https://wiki.php.net/rfc/array_unpacking_string_keys)
+<slide>slides/internals/php81-array-unpacking.xml</slide>
+
+Fibers (https://wiki.php.net/rfc/fibers)
+<slide>slides/internals/php81-fibers.xml</slide>
+
+First Class Callable (https://wiki.php.net/rfc/first_class_callable_syntax)
+<slide>slides/internals/php81-fcc.xml</slide>
+
+PHP 8.2:
+
+https://wiki.php.net/rfc/null-false-standalone-types
+'null' and 'false' as standalone
+<slide>slides/internals/php82-null-false-standalone.xml</slide>
+
+https://wiki.php.net/rfc/true-type
+'true' type
+<slide>slides/internals/php82-true.xml</slide>
+
+https://wiki.php.net/rfc/dnf_types
+? Disjunctive Normal Form Types
+<slide>slides/internals/php82-dnf-types.xml</slide>
+
+https://wiki.php.net/rfc/deprecate_dynamic_properties
+<slide>slides/internals/php82-deprecate-dynamic-properties.xml</slide>
+
+https://wiki.php.net/rfc/redact_parameters_in_back_traces
+<slide>slides/internals/php82-redact-parameters.xml</slide>
+
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
