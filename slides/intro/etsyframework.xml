@@ -30,7 +30,7 @@ We have tools that compile these routes for us
 </notes>
 <break lines="1" section="etsyfw2"/>
 <blurb fontsize="1.4em" align="left">awesome.php</blurb>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 require 'bootstrap.php';
 $request  = HTTP_Request::getInstance();
 $response = HTTP_Response::getInstance();
@@ -43,7 +43,7 @@ Very little code here, just routing us to the controller
 
 <break lines="1" section="etsyfw3"/>
 <blurb fontsize="1.4em" align="left">Code/Awesome/Controller.php</blurb>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class Awesome_Controller extends Controller_Base {
   public function doCoolThings($request, $response) {
     $id = $request->getGet('id', 0);
@@ -63,7 +63,7 @@ And fan out to the API
 </notes>
 <break lines="1" section="etsyfw4"/>
 <blurb fontsize="1.4em" align="left">Awesome_View</blurb>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class Awesome_View implements Neu_View {
     const TEMPLATE = "/templates/awesome/main.mustache";
     use Neu_Traits_DefaultView;
@@ -85,7 +85,7 @@ class Awesome_View implements Neu_View {
 
 <break lines="1" section="etsyfw5"/>
 <blurb fontsize="1.4em" align="left">templates/awesome/main.mustache</blurb>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[
+<example fontsize="1em" result='0' title="" type="mustache"><![CDATA[
 <div>
     <p>{{thing_name}} ({{thing_id}})</p>
     <ul>

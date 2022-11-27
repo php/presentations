@@ -4,8 +4,7 @@
 
 <break lines="1" section="php81_readonly_props"/>
 <blurb fontsize="1.1em" align="left">Readonly properties</blurb>
-<link align="left" href="https://wiki.php.net/rfc/readonly_properties_v2"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class Test {
   public readonly string $prop;
 
@@ -21,8 +20,7 @@ $test->prop = "foobar"; // Error
 
 <break lines="1" section="php81_enums"/>
 <blurb fontsize="1.1em" align="left">Enums</blurb>
-<link align="left"  href="https://wiki.php.net/rfc/enumerations"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 enum Suit {
   case Hearts;
   case Diamonds;
@@ -36,9 +34,7 @@ pick_a_card('Spades');    // error
 ]]></example>
 
 <break lines="1" section="php81_fibers"/>
-<blurb fontsize="1.1em" align="left">Fibers</blurb>
-<link align="left" href="https://wiki.php.net/rfc/fibers"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
 
@@ -54,9 +50,7 @@ function await(PromiseInterface $promise, LoopInterface $loop): mixed {
 ]]></example>
 
 <break lines="1" section="php81_fibers"/>
-<blurb fontsize="1.1em" align="left">Static Variable Inheritance</blurb>
-<link align="left" href="https://wiki.php.net/rfc/static_variable_inheritance"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class A {
   public static function counter() {
     static $i = 0;
@@ -74,9 +68,7 @@ echo B::counter();
 ]]></example>
 
 <break lines="1" section="php81_never"/>
-<blurb fontsize="1.1em" align="left">Never Return Type</blurb>
-<link align="left" href="https://wiki.php.net/rfc/noreturn_type"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 function redirect(string $uri): never {
   header('Location: ' . $uri);
   exit();
@@ -87,9 +79,7 @@ echo "this will never be executed!";
 ]]></example>
 
 <break lines="1" section="php81_final"/>
-<blurb fontsize="1.1em" align="left">Final class constants</blurb>
-<link align="left" href="https://wiki.php.net/rfc/final_class_const"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class Foo {
     final public const X = "foo";
 }
@@ -102,9 +92,7 @@ class Bar extends Foo {
 ]]></example>
 
 <break lines="1" section="php81_new_init"/>
-<blurb fontsize="1.1em" align="left">New in initializers</blurb>
-<link align="left" href="https://wiki.php.net/rfc/new_in_initializers"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class Test {
   public function __construct(private Logger $logger = new NullLogger) {}
 }
@@ -121,9 +109,7 @@ class Test {
 ]]></example>
 
 <break lines="1" section="php81_first_class_callable"/>
-<blurb fontsize="1.1em" align="left">First-class callable syntax</blurb>
-<link align="left" href="https://wiki.php.net/rfc/first_class_callable_syntax"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 $fn = strlen(...);
 $fn = $this->method(...)
 $fn = Foo::method(...);
@@ -136,9 +122,7 @@ $fn = Closure::fromCallable([Foo::class, 'method']);
 ]]></example>
 
 <break lines="1" section="php81_pure_intersection"/>
-<blurb fontsize="1.1em" align="left">Pure intersection types</blurb>
-<link align="left" href="https://wiki.php.net/rfc/pure-intersection-types"/>
-<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class A {
   private Traversable&Countable $countableIterator;
 
@@ -152,5 +136,11 @@ class A {
 }
 ]]></example>
 
+<break lines="1" section="php81_misc"/>
+<list>
+    <bullet>Inheritance cache (avoid relinking classes)</bullet>
+    <bullet>JIT improvements and add support for ARM64</bullet>
+    <bullet>Optimize class name resolution</bullet>
+</list>
 
 </slide>

@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Modern PHP</title>
+
+		<meta name="description" content="Modern PHP">
+		<meta name="author" content="Rasmus Lerdorf">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/reveal.js/css/theme/white.css" id="theme">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!-- For syntax highlighting - note that these are not the generic highlight.js theme files - see https://github.com/nwinkler/reveal-highlight-themes -->
+		<link rel="stylesheet" href="/styles/xcode.css">
+
+		<!-- Override a few styles -->
+        <style>
+        /*
+		   Not actually sure why this block isn't being picked up from the syntax highlight css 
+		   If you change the syntax highlight theme, copy the first block here
+		*/
+        .reveal pre {
+                width: 100%;
+        }
+
+        .reveal pre code {
+                display: block;
+                max-height: 600px;
+                overflow-x: auto;
+                padding: 0.5em;
+                line-height: 125%;
+                background: #fff;
+                color: black;
+                -webkit-text-size-adjust: none;
+        }
+
+        .reveal section img {
+               box-shadow: none;
+               border: none;
+        }
+
+        .reveal code.shell {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #000;
+            color: #ddd;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+
+        .reveal code.result {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: #000;
+            line-height: 125%;
+            -webkit-text-size-adjust: none;
+        }
+
+        /* Left-align h3 and h4 if they are p elements */
+        h3.p {
+                text-align: left;
+        }
+        h4.p {
+                text-align: left;
+        }
+        /* and left-aligned but slightly indented bullet lists */
+        .reveal ul {
+            display: block;
+            margin: 0 0 1em 3em;
+        }
+		/* Example titles */
+		p.example {
+			text-align: left;
+			margin: 0 0 -0.5em 1em;
+			font-weight: bold;
+		}
+		/* Example output style */
+		pre.output {
+            display: block;
+            overflow-x: auto;
+            padding: 0.5em;
+            background: #ddd;
+            color: black;
+			line-height: 200%;
+            -webkit-text-size-adjust: none;
+		}
+
+        </style>
+
+		 <!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '/reveal.js/css/print/pdf.css' : '/reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+        <!-- Needed for charts to work. Fall back to network if no local copy -->
+        <script type='text/javascript' src='/jquery.min.js'></script> 
+        <script>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js">\x3C/script>')</script>
+        <script src="/highcharts.js"></script>
+        <script>window.Highcharts || document.write('<script src="http://code.highcharts.com/highcharts.js">\x3C/script>')</script>
+
+		<!--[if lt IE 9]>
+		<script src="/reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Modern PHP</h1>
+					<h3></h3>
+					<h3>Mexico City - in person 🎉</h3>
+					<h3>Dec.7, 2022</h3>
+					<a href="http://talks.php.net/etsymex22">http://talks.php.net/etsymex22</a><br><br>
+					<p>Rasmus Lerdorf<br>
+					<small><a href="http://twitter.com/@rasmus">@rasmus</a></small>
+					</p>
+					<aside class="notes">
+											</aside>
+				</section>
+					<section>
+		<section id="etsyphp">
+		<img src="/presentations/slides/intro/etsy_arch.png" align="left" width="265" height="581">
+		<p class="p" style="font-size:2em;text-align:center;">PHP at Etsy</p>
+		<ul>
+			<li style="font-size: 1.2em;margin-left: 4em;list-style-type: none;">Linux, Apache, MySQL, PHP</li>
+			<li style="font-size: 1.2em;margin-left: 4em;list-style-type: none;">Memcache, Gearman, StatsD, Vitess, Redis, Kafka, Varnish</li>
+			<li style="font-size: 1.2em;margin-left: 4em;list-style-type: none;">GCP, Terraform</li>
+		</ul>
+		<p class="p" style="font-size:2em;text-align:center;">API First!</p>
+<aside class="notes"><br />
+Global, Internal Load Balancer<br />
+Managed Instance Groups<br />
+Many other stacks not shown, like beacons, assets, downloads<br />
+Gearman for longer-running Asynchronous tasks<br />
+Crons for non-request triggered<br />
+</aside>
+		</section>	</section>
+	<section>
+		<section id="etsyfw">
+		<p class="p" style="font-size:2em;text-align:center;">Framework?</p>
+		<p class="p" style="font-size:1.8em;text-align:center;">We built our own over the years</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">(bad idea, don't do that)</p>
+<aside class="notes"><br />
+Including building our own ORM<br />
+There are many great frameworks out there<br />
+Laravel, Symfony<br />
+</aside>
+		</section>
+		<section id="etsyfw1" >
+		<p class="p" style="font-size:2em;text-align:left;">Request Routing</p>
+		<pre><code data-trim style="font-size:1em;" >https://etsy.com/awesome/123</code></pre>
+		<p class="p" style="font-size:1.2em;text-align:left;">.htaccess Apache rewrite rule</p>
+		<pre><code data-trim style="font-size:1em;" >RewriteRule ^awesome/(\d+)$   /awesome.php?id=$1 [L,NC,QSA]</code></pre>
+<aside class="notes"><br />
+request routing is a combination of mod_rewrite and PHP bridge code<br />
+<br />
+L    last<br />
+NC   case-insensitive<br />
+QSA  append query string<br />
+<br />
+We have tools that compile these routes for us<br />
+</aside>
+		</section>
+		<section id="etsyfw2" >
+		<p class="p" style="font-size:1.4em;text-align:left;">awesome.php</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >require &#039;bootstrap.php&#039;;
+$request  = HTTP_Request::getInstance();
+$response = HTTP_Response::getInstance();
+$controller = new Awesome_Controller();
+$controller-&gt;doCoolThings($request, $response);</code></pre>
+<aside class="notes"><br />
+Very little code here, just routing us to the controller<br />
+</aside>
+		</section>
+		<section id="etsyfw3" >
+		<p class="p" style="font-size:1.4em;text-align:left;">Code/Awesome/Controller.php</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >class Awesome_Controller extends Controller_Base {
+  public function doCoolThings($request, $response) {
+    $id = $request-&gt;getGet(&#039;id&#039;, 0);
+    if (!$id) {
+      $response-&gt;redirect_error(Constants::ERROR_NOT_FOUND);
+      return;
+    }
+    $thing = EtsyORM::getFinder(&#039;Thing&#039;)-&gt;findById($id);
+    $stuff = Api::endpoint(&#039;AwesomeStuff&#039;, [$thing-&gt;id, &#039;max&#039;=&gt;10]);
+    $this-&gt;renderViewTree(New Awesome_View($thing, $stuff));
+  }
+}</code></pre>
+<aside class="notes"><br />
+The controller can make direct DB calls<br />
+And fan out to the API<br />
+</aside>
+		</section>
+		<section id="etsyfw4" >
+		<p class="p" style="font-size:1.4em;text-align:left;">Awesome_View</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >class Awesome_View implements Neu_View {
+    const TEMPLATE = &quot;/templates/awesome/main.mustache&quot;;
+    use Neu_Traits_DefaultView;
+
+    public function __construct(AwesomeThing $thing, array $stuff) {
+        $this-&gt;thing = $thing;
+        $this-&gt;stuff = $stuff;
+    }
+    public function getCssFiles(): array {
+        return [ &#039;/awesome/main.scss&#039; ];
+    }
+    public function getTemplateData(): array {
+        return [ &#039;thing_id&#039; =&gt; $this-&gt;thing-&gt;id,
+                 &#039;thing_name&#039; =&gt; $this-&gt;thing-&gt;name,
+                 &#039;stuff&#039; =&gt; $this-&gt;stuff ];
+    }
+}</code></pre>
+		</section>
+		<section id="etsyfw5" >
+		<p class="p" style="font-size:1.4em;text-align:left;">templates/awesome/main.mustache</p>
+		<pre><code class="mustache" data-trim style="font-size:1em;" >&lt;div&gt;
+    &lt;p&gt;{{thing_name}} ({{thing_id}})&lt;/p&gt;
+    &lt;ul&gt;
+    {{#stuff}}
+        &lt;li&gt;{{id}} {{description}}&lt;/li&gt;
+    {{/stuff}}
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+		</section>	</section>
+	<section>
+		<section id="phan">
+		<h1 style="text-align:center;">Static Analysis</h1>
+<br/>
+<br/>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/phan/phan" target="">github.com/phan/phan</a></div>
+		</section>
+		<section id="phan0" >
+		<p class="p" style="font-size:1.5em;text-align:left;">Install with composer</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ composer require --dev phan/phan</code></pre>
+		<p class="p" style="font-size:1.5em;text-align:left;">Create .phan/config.php</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >return [
+    &#039;target_php_version&#039; =&gt; &#039;8.0&#039;,
+    &#039;directory_list&#039; =&gt; [ &#039;src/&#039; ],
+    &quot;exclude_analysis_directory_list&quot; =&gt; [ &#039;vendor/&#039; ],
+];</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ ./vendor/bin/phan</code></pre>
+		</section>
+		<section id="phan2" >
+		<p class="p" style="font-size:1.5em;text-align:center;">Phan in Browser</p>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://phan.github.io/demo/" target="">phan.github.io/demo/</a></div>
+		</section>
+		<section id="phan3" >
+		<p class="p" style="font-size:1.5em;text-align:center;">Dependency Graph Plugin</p>
+		<div align="center" style="font-size: 2em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="http://pdep.lerdorf.com/?mode=class&node=\Grav\Common\File\CompiledFile&d=1" target="">pdep example</a></div>
+<aside class="notes"><br />
+Show what depends on the \Grav\Common\File\CompiledFile trait<br />
+</aside>
+		</section>
+		<section id="phan4" >
+		<p class="p" style="font-size:2em;text-align:left;">Daemon mode</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --daemonize-tcp-port default &amp;
+[1] 28610
+Listening for Phan analysis requests at tcp://127.0.0.1:4846
+Awaiting analysis requests for directory &#039;/home/rasmus/phan_demo&#039;
+
+$ vi src/script.php</code></pre>
+		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan_client -l src/script.php
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 1 (union) is array{0:1} but \C::fn() takes int|string defined at src/script.php:8 in src/script.php on line 14
+Phan error: TypeError: PhanTypeMismatchArgument: Argument 3 (shaped) is array{max:10} but \C::fn() takes array{mode:string,max:int} defined at src/script.php:8 in src/script.php on line 16</code></pre>
+<aside class="notes"><br />
+You can run keep the entire graph in memory using daemon mode<br />
+which allows editor integration...<br />
+</aside>
+		</section>
+		<section id="phan5" >
+		<p class="p" style="font-size:1.5em;text-align:left;">vim integration</p>
+	<div id="container">
+      <video id='video' controls="controls" preload='none' onclick='this.paused ? this.play() : this.pause();'
+        width="1848"  >
+        <source id='mp4' src="presentations/slides/intro/phanvid.mp4" type='video/mp4'/>
+        <p>Your user agent does not support the HTML5 Video element.</p>
+      </video>
+    </div>		</section>	</section>
+	<section>
+		<section id="phpspy">
+		<h1 style="text-align:center;">phpspy</h1>
+		<p class="p" style="font-size:1.1em;text-align:center;">Low-overhead sampling profiler</p>
+		<div align="center" style="font-size: 1em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/adsr/phpspy" target="">https://github.com/adsr/phpspy</a></div>
+		</section>
+		<section id="spy1" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Sample frequency in nanoseconds (or Hz)</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy -s 200000000 -- php -r &#039;sleep(1);&#039; 
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+0 sleep &lt;internal&gt;:-1
+1 &lt;main&gt; &lt;internal&gt;:-1
+
+process_vm_readv: No such process</code></pre>
+		</section>
+		<section id="spy2" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Attach to a running process</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ sudo phpspy -r -p $(pgrep -n php-fpm)
+
+0 wp_installing /var/www/wordpress/wp-includes/load.php:944
+1 wp_load_alloptions /var/www/wordpress/wp-includes/option.php:189
+2 get_option /var/www/wordpress/wp-includes/option.php:90
+3 create_initial_taxonomies /var/www/wordpress/wp-includes/taxonomy.php:43
+4 WP_Hook::apply_filters /var/www/wordpress/wp-includes/class-wp-hook.php:286
+5 WP_Hook::do_action /var/www/wordpress/wp-includes/class-wp-hook.php:310
+6 do_action /var/www/wordpress/wp-includes/plugin.php:453
+7 &lt;main&gt; /var/www/wordpress/wp-settings.php:450
+8 &lt;main&gt; /var/www/wordpress/wp-config.php:89
+9 &lt;main&gt; /var/www/wordpress/wp-load.php:37
+10 &lt;main&gt; /var/www/wordpress/wp-blog-header.php:13
+11 &lt;main&gt; /var/www/wordpress/index.php:17
+# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -
+
+0 mysqli_query &lt;internal&gt;:-1
+1 wpdb::_do_query /var/www/wordpress/wp-includes/wp-db.php:1924
+2 wpdb::query /var/www/wordpress/wp-includes/wp-db.php:1813
+3 wpdb::get_results /var/www/wordpress/wp-includes/wp-db.php:2488
+4 _prime_comment_caches /var/www/wordpress/wp-includes/comment.php:2871
+5 WP_Comment_Query::get_comments /var/www/wordpress/wp-includes/class-wp-comment-query.php:427
+6 WP_Comment_Query::query /var/www/wordpress/wp-includes/class-wp-comment-query.php:346
+7 get_comments /var/www/wordpress/wp-includes/comment.php:226
+8 WP_Widget_Recent_Comments::widget /var/www/wordpress/wp-includes/widgets/class-wp-widget-recent-comments.php:99
+9 WP_Widget::display_callback /var/www/wordpress/wp-includes/class-wp-widget.php:372
+10 dynamic_sidebar /var/www/wordpress/wp-includes/widgets.php:743
+11 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/sidebar.php:41
+12 load_template /var/www/wordpress/wp-includes/template.php:688
+13 locate_template /var/www/wordpress/wp-includes/template.php:647
+14 get_sidebar /var/www/wordpress/wp-includes/general-template.php:110
+15 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/header.php:49
+16 load_template /var/www/wordpress/wp-includes/template.php:688
+17 locate_template /var/www/wordpress/wp-includes/template.php:647
+18 get_header /var/www/wordpress/wp-includes/general-template.php:41
+19 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/single.php:10
+20 &lt;main&gt; /var/www/wordpress/wp-includes/template-loader.php:74
+21 &lt;main&gt; /var/www/wordpress/wp-blog-header.php:19
+22 &lt;main&gt; /var/www/wordpress/index.php:17
+# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -</code></pre>
+		</section>
+		<section id="spy3" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Memory usage on stack frames</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ sudo phpspy -m php src/phan.php
+
+0 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+1 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+2 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+3 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
+4 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+5 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+6 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
+# mem 119159776 123721960
+
+0 ast\parse_code &lt;internal&gt;:-1
+1 Phan\AST\Parser::parseCode /home/rasmus/phan/src/Phan/AST/Parser.php:42
+2 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
+3 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
+4 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
+# mem 82471616 123721960</code></pre>
+		</section>
+		<section id="spytop" >
+		<p class="p" style="font-size:1.1em;text-align:center;">Top-like output mode </p>
+		<img src="/presentations/slides/intro/phpspy_top.gif" align="center" width="772" height="452">
+<aside class="notes"><br />
+sudo ptop<br />
+cd ~/phan<br />
+phan<br />
+</aside>
+		</section>
+		<section id="spy4" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Generate a flame graph</p>
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy phan &gt; /tmp/output
+$ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code></pre>
+		</section>
+		<section id="spy5" >
+		<object data="/presentations/slides/intro/phan.svg" type="image/svg+xml" align="center" width="80%" height="80%">Use a newer browser, please</object>
+		</section>	</section>
+	<section>
+		<section id="deploy">
+		<h1 style="text-align:center;">Let's deploy it!</h1>
+		</section>
+		<section id="deploy0" >
+		<p class="p" style="font-size:1.7em;text-align:left;">Atomic</p>
+		<p class="p" style="font-size:1.7em;text-align:left;">No performance hit</p>
+		<ul>
+			<li style="font-size: 1.5em;">No restarts</li>
+			<li style="font-size: 1.5em;">No LB removal</li>
+			<li style="font-size: 1.5em;">No thundering herd</li>
+			<li style="font-size: 1.5em;">Cache reuse</li>
+		</ul>
+		</section>
+		<section id="deploy1" >
+		<p class="p" style="font-size:1em;text-align:left;">Must be able to serve two versions of the site concurrently!</p>
+		<img src="/presentations/slides/intro/atomic_deploy1.png"  width="" height="">
+		</section>
+		<section id="deploy2" >
+		<img src="/presentations/slides/intro/atomic_deploy2.png"  width="" height="">
+		</section>
+		<section id="deploy3" >
+		<p class="p" style="font-size:1em;text-align:left;">Requests that begin on DocumentRoot A must finish on A</p>
+		</section>
+		<section id="deploy4" >
+		<p class="p" style="font-size:1em;text-align:left;">Set the DocumentRoot to symlink target!</p>
+		<p class="p" style="font-size:1em;text-align:left;">Easy with nginx</p>
+		<pre><code class="ini" data-trim style="font-size:1.1em;" >fastcgi_param DOCUMENT_ROOT $realpath_root</code></pre>
+		<p class="p" style="font-size:1em;text-align:left;">Apache</p>
+		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/mod_realdoc" target="">github.com/etsy/mod_realdoc</a></div>
+		</section>
+		<section id="deploy5" >
+		<p class="p" style="font-size:1em;text-align:left;">Avoid hardcoding full paths</p>
+		<p class="p" style="font-size:1em;text-align:left;">Watch your include_path setting</p>
+		<p class="p" style="font-size:1em;text-align:left;">incpath extension can resolve your include_path for you</p>
+		<div align="left" style="font-size: 1.25em; color: ; text-align: left; margin-left: 1em; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/etsy/incpath" target="">https://github.com/etsy/incpath</a></div>
+<aside class="notes"><br />
+some contraints...<br />
+</aside>
+		</section>
+		<section id="deploy6" >
+		<p class="p" style="font-size:1em;text-align:left;">Version all static assets</p>
+		<p class="p" style="font-size:1em;text-align:left;">DB Schema changes need special care</p>
+		</section>	</section>
+	<section>
+		<section id="supported">
+		<h2 style="text-align:center;">Version Support</h2>
+		<img src="http://php.net/images/supported-versions.php" align="center" width="" height="">
+<font size="6em">
+<table align="left" width="60%" border="0" style="margin-left: 1em;"><tr>
+ <td bgcolor="#90C090"><span style="font-size: 1em;">Active Support</span>
+ </td> <td ><span style="">Regular releases and security fixes</span>
+ </td></tr>
+<tr>
+ <td bgcolor="#F09030"><span style="font-size: 1em;">Security Fixes</span>
+ </td> <td ><span style="">Only security fixes</span>
+ </td></tr>
+<tr>
+ <td bgcolor="F03030"><span style="font-size: 1em;">End of Life</span>
+ </td> <td ><span style="">No longer supported</span>
+ </td></tr>
+</table></font><br />
+		</section>	</section>
+	<section>
+		<section id="wpbench">
+
+<div id="wpbench_container" class="stretch" style="margin: 0 auto"></div>
+<script src="presentations/slides/intro/wp2022.js"></script>
+		</section>	</section>
+	<section>
+		<section id="php80">
+		<h1 style="text-align:center;">PHP 8.0</h1>
+		<p class="p" style="font-size:1.1em;text-align:left;">Named Arguments</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >htmlspecialchars($string, double_encode: false);</code></pre>
+		<p class="p" style="font-size:1.1em;text-align:left;">Constructor Property Promotion</p>
+		<pre><code class="php" data-trim style="font-size:1.1em;" >class User {
+    function __construct(public string $name, private string $pwd = &quot;&quot;) { }
+}</code></pre>
+		</section>
+		<section id="php80_1" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Nullsafe Operator with short-circuiting</p>
+		<pre><code class="php" data-trim style="font-size:1.1em;" >$country = $session?-&gt;user?-&gt;getAddress(geoip())?-&gt;country;</code></pre>
+		<p class="p" style="font-size:1em;text-align:left;">Match Expression, Union Types</p>
+		<pre><code class="php" data-trim style="font-size:0.85em;" >function days_in_month(string|int $month, int $year): int {
+  $leap = $year % 400;
+    $leap = !$leap|!($leap%4)&amp;!!($leap%100); // 👀
+
+  return match(is_string($month) ? strtolower(substr($month, 0, 3)) : $month) {
+    &#039;apr&#039;, 4, &#039;jun&#039;, 6, &#039;sep&#039;, 9, &#039;nov&#039;, 11  =&gt; 30,
+    &#039;jan&#039;, 1, &#039;mar&#039;, 3, &#039;may&#039;, 5, &#039;jul&#039;, 7, &#039;aug&#039;, 8, &#039;oct&#039;, 10, &#039;dec&#039;, 12 =&gt; 31,
+    &#039;feb&#039;, 2 =&gt; $leap ? 29 : 28,
+    default =&gt; throw new InvalidArgumentException(&quot;Invalid month&quot;),
+  };
+}</code></pre>
+		</section>
+		<section id="php80_2" >
+		<p class="p" style="font-size:1em;text-align:left;">weakMap</p>
+		<p class="p" style="font-size:0.8em;text-align:left;"> - Map objects to arbitrary values without preventing GC</p>
+		<p class="p" style="font-size:1em;text-align:left;">Attributes</p>
+		<p class="p" style="font-size:0.8em;text-align:left;"> - Structured metadata</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >function login(int $user_id, #[\SensitiveParameter] string $pwd) { }</code></pre>
+		</section>	</section>
+	<section>
+		<section id="php81">
+		<h1 style="text-align:center;">PHP 8.1</h1>
+		</section>
+		<section id="php81_readonly_props" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Readonly properties</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >class Test {
+  public readonly string $prop;
+
+  public function __construct(string $prop) {
+    $this-&gt;prop = $prop; // Initialized once in same scope
+  }
+}
+
+$test = new Test(&quot;foobar&quot;);
+var_dump($test-&gt;prop);
+$test-&gt;prop = &quot;foobar&quot;; // Error</code></pre>
+		</section>
+		<section id="php81_enums" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Enums</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >enum Suit {
+  case Hearts;
+  case Diamonds;
+  case Clubs;
+  case Spades;
+}
+
+function pick_a_card(Suit $suit) { ... }
+pick_a_card(Suit::Clubs); // ok
+pick_a_card(&#039;Spades&#039;);    // error</code></pre>
+		</section>
+		<section id="php81_fibers" >
+		<pre><code class="php" data-trim style="font-size:1em;" >use React\EventLoop\LoopInterface;
+use React\Promise\PromiseInterface;
+
+function await(PromiseInterface $promise, LoopInterface $loop): mixed {
+  $fiber = Fiber::this();
+  $promise-&gt;done(
+    fn(mixed $value) =&gt; $loop-&gt;futureTick(fn() =&gt; $fiber-&gt;resume($value)),
+    fn(Throwable $reason) =&gt; $loop-&gt;futureTick(fn() =&gt; $fiber-&gt;throw($reason))
+  );
+
+  return Fiber::suspend();
+}</code></pre>
+		</section>
+		<section id="php81_fibers" >
+		<pre><code class="php" data-trim style="font-size:1em;" >class A {
+  public static function counter() {
+    static $i = 0;
+    return ++$i;
+  }
+}
+class B extends A {}
+
+echo A::counter();
+echo A::counter();
+echo B::counter();
+echo B::counter();
+// PHP 8.0 outputs 1212
+// PHP 8.1 outputs 1234</code></pre>
+		</section>
+		<section id="php81_never" >
+		<pre><code class="php" data-trim style="font-size:1em;" >function redirect(string $uri): never {
+  header(&#039;Location: &#039; . $uri);
+  exit();
+}
+
+redirect(&#039;/index.html&#039;);
+echo &quot;this will never be executed!&quot;;</code></pre>
+		</section>
+		<section id="php81_final" >
+		<pre><code class="php" data-trim style="font-size:1em;" >class Foo {
+    final public const X = &quot;foo&quot;;
+}
+
+class Bar extends Foo {
+    public const X = &quot;bar&quot;;
+}
+
+// Fatal error: Bar::X cannot override final constant Foo::X</code></pre>
+		</section>
+		<section id="php81_new_init" >
+		<pre><code class="php" data-trim style="font-size:1em;" >class Test {
+  public function __construct(private Logger $logger = new NullLogger) {}
+}
+
+// instead of
+
+class Test {
+  private Logger $logger;
+
+  public function __construct(?Logger $logger = null) {
+        $this-&gt;logger = $logger ?? new NullLogger;
+    }
+}</code></pre>
+		</section>
+		<section id="php81_first_class_callable" >
+		<pre><code class="php" data-trim style="font-size:1em;" >$fn = strlen(...);
+$fn = $this-&gt;method(...)
+$fn = Foo::method(...);
+
+// instead of
+
+$fn = Closure::fromCallable(&#039;strlen&#039;);
+$fn = Closure::fromCallable([$this, &#039;method&#039;]);
+$fn = Closure::fromCallable([Foo::class, &#039;method&#039;]);</code></pre>
+		</section>
+		<section id="php81_pure_intersection" >
+		<pre><code class="php" data-trim style="font-size:1em;" >class A {
+  private Traversable&amp;Countable $countableIterator;
+
+  public function setIterator(Traversable&amp;Countable $countableIterator): void {
+    $this-&gt;countableIterator = $countableIterator;
+  }
+
+  public function getIterator(): Traversable&amp;Countable {
+    return $this-&gt;countableIterator;
+  }
+}</code></pre>
+		</section>
+		<section id="php81_misc" >
+		<ul>
+			<li>Inheritance cache (avoid relinking classes)</li>
+			<li>JIT improvements and add support for ARM64</li>
+			<li>Optimize class name resolution</li>
+		</ul>
+		</section>	</section>
+	<section>
+		<section id="php82">
+		<h1 style="text-align:center;">PHP 8.2</h1>
+		</section>
+		<section id="php82_readonly_class" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Readonly Classes</p>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/readonly_classes" target="">https://wiki.php.net/rfc/readonly_classes</a></div>
+		<pre><code data-trim style="font-size:1em;" >readonly class Test {
+  public function __construct(public string $prop) { }
+}
+$test = new Test(&quot;Hi&quot;);
+var_dump($test-&gt;prop);  // Hi
+$test-&gt;prop = &quot;foobar&quot;; // Cannot modify readonly property Test::$prop</code></pre>
+		<p class="p" style="font-size:1em;text-align:left;">Prevents dynamic properties</p>
+		<p class="p" style="font-size:1em;text-align:left;">Can't be used with untyped or static properties</p>
+		</section>
+		<section id="php82_dnf" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Disjunctive Normal Form (DNF) Types</p>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/dnf_types" target="">https://wiki.php.net/rfc/dnf_types</a></div>
+		<pre><code data-trim style="font-size:1em;" >class A { }
+class B extends A { };
+class Foo {
+    public function bar((A&amp;B)|null $entity): A&amp;B {
+        if (!$entity) $entity = new B;
+        return $entity;
+    }
+}
+$c = new Foo;
+$c-&gt;bar(new B);</code></pre>
+		<p class="p" style="font-size:0.75em;text-align:left;">8.0 Union Types X|Y</p>
+		<p class="p" style="font-size:0.75em;text-align:left;">8.1 Intersection Types X&Y</p>
+		<p class="p" style="font-size:0.75em;text-align:left;">8.2 DNF Types (X&A)|(Y&B)</p>
+		</section>
+		<section id="php82_nft" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Standalone null, false, and true types</p>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/null-false-standalone-types" target="">https://wiki.php.net/rfc/null-false-standalone-types</a></div>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/true-type" target="">https://wiki.php.net/rfc/true-type</a></div>
+		<pre><code data-trim style="font-size:1em;" >class Falsy {
+    public function alwaysFalse(): false { /* ... */ }
+
+    public function alwaysTrue():  true  { /* ... */ }
+
+    public function alwaysNull():  null  { /* ... */ }
+}</code></pre>
+		</section>
+		<section id="php82_random" >
+		<p class="p" style="font-size:1.1em;text-align:left;">New "Random" extension</p>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/rng_extension" target="">https://wiki.php.net/rfc/rng_extension</a></div>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/random_extension_improvement" target="">https://wiki.php.net/rfc/random_extension_improvement</a></div>
+		<pre><code data-trim style="font-size:1em;" >$rng = $is_production
+    ? new Random\Engine\Secure()
+    : new Random\Engine\PCG64(1234);
+
+$randomizer = new Random\Randomizer($rng);
+$randomizer-&gt;shuffleString(&#039;Testing&#039;);</code></pre>
+		<p class="p" style="font-size:0.75em;text-align:left;">Provides multiple RNG engines as opposed to just using Mersenne Twister</p>
+		</section>
+		<section id="php82_trait_constants" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Constants in Traits</p>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/constants_in_traits" target="">https://wiki.php.net/rfc/constants_in_traits</a></div>
+		<pre><code data-trim style="font-size:1em;" >trait T {
+    public const CONSTANT = 1;
+    public function bar(): int {
+        return self::CONSTANT;
+    }
+}
+
+class C {
+    use T;
+}
+
+var_dump(C::CONSTANT); // 1</code></pre>
+		</section>
+		<section id="php82_sensitive_param" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Sensitive Parameters</p>
+		<pre><code data-trim style="font-size:1em;" >class User {
+    function __construct(string $id, #[\SensitiveParameter] string $pwd) {
+        throw new \Exception(&quot;Error&quot;);
+    }
+}
+$u = new User(&#039;rasmus&#039;, &#039;very-secret&#039;);</code></pre>
+		<pre class="output" style="font-size:0.4em;">Fatal error: Uncaught Exception
+Stack trace:
+#0 /home/rasmus/c(7): User->__construct('rasmus', Object(SensitiveParameterValue))
+#1 {main}		</pre>		</section>
+		<section id="php82_ddprop" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Deprecate dynamic properties</p>
+		<div align="left" style="font-size: 0.75em; color: ; text-align: left; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://wiki.php.net/rfc/deprecate_dynamic_properties" target="">https://wiki.php.net/rfc/deprecate_dynamic_properties</a></div>
+		<pre><code data-trim style="font-size:1em;" >class User {
+    public $name;
+}
+
+#[\AllowDynamicProperties]
+class User2 { }
+
+$user = new User();
+$user-&gt;last_name = &#039;Doe&#039;; // Deprecated notice
+
+$user = new User2();
+$user-&gt;last_name = &#039;Doe&#039;; // ok
+
+$user = new stdClass();
+$user-&gt;last_name = &#039;Doe&#039;; // ok</code></pre>
+		</section>
+		<section id="php82_bite" >
+		<p class="p" style="font-size:2em;">¡Aguas!</p>
+		<ul>
+			<li style="font-size: 1em;margin-left: -2em;">Deprecated dynamic properties!!</li>
+			<li style="font-size: 0.6em;">use <font color="22AA11">Phan</font> and <font color="22AA11">#[\AllowDynamicProperties]</font></li>
+			<li style="font-size: 1em;margin-left: -2em;">Deprecated <font color="EE2211">${var}</font> string interpolation</li>
+			<li style="font-size: 0.6em;">use <font color="22AA11">{$var}</font></li>
+			<li style="font-size: 1em;margin-left: -2em;">Deprecated <font color="EE2211">utf8_encode()</font> and <font color="EE2211">utf8_decode()</font></li>
+			<li style="font-size: 0.6em;">decode: use <font color="22AA11">mb_convert_encoding($latin1, 'UTF-8', 'ISO-8859-1')</font></li>
+			<li style="font-size: 0.6em;">encode: use <font color="22AA11">mb_convert_encoding($utf8, 'ISO-8859-1', 'UTF8')</font></li>
+			<li style="font-size: 1em;margin-left: -2em;">Functions <font color="EE2211">strtolower()</font> and <font color="EE2211">strtoupper()</font> are no longer locale-sensitive</li>
+			<li style="font-size: 0.6em;">Use <font color="22AA11">mb_strtoupper()</font>/<font color="22AA11">mb_strtolower()</font> if you need locale-aware conversion</li>
+		</ul>
+		</section>	</section>
+	<section>
+		<section id="ffi">
+		<h2 style="text-align:center;">Foreign Function Interface</h2>
+		<p class="p" style="font-size:1.1em;text-align:left;">Call a libc function</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >$ffi = FFI::cdef(&quot;int sched_getcpu(void);&quot;);
+echo &quot;Running on cpu &quot; . $ffi-&gt;sched_getcpu();</code></pre>
+		</section>
+		<section id="ffi_load" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Loading and calling library functions</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >$ffi = FFI::load(&quot;php_gifenc.h&quot;);</code></pre>
+		<pre><code class="c" data-trim style="font-size:0.9em;" >#define FFI_SCOPE &quot;gifenc&quot;
+#define FFI_LIB &quot;libgifenc.so&quot;
+
+typedef struct ge_GIF {
+    uint16_t w, h;
+    int depth;
+    int fd;
+    int offset;
+    int nframes;
+    uint8_t *frame, *back;
+    uint32_t partial;
+    uint8_t buffer[0xFF];
+} ge_GIF;
+
+ge_GIF *ge_new_gif(
+    const char *fname, uint16_t width, uint16_t height,
+    uint8_t *palette, int depth, int loop);
+void ge_add_frame(ge_GIF *gif, uint16_t delay);
+void ge_close_gif(ge_GIF* gif);</code></pre>
+		</section>
+		<section id="ffi_load_example" >
+		<pre><code class="php" data-trim style="font-size:1em;" >$ffi = FFI::load(&quot;php_gifenc.h&quot;);
+
+$w = 240; $h = 180;
+$cols = $ffi-&gt;new(&quot;uint8_t[12]&quot;);
+/* 4 colours: 000000, FF0000, 00FF00, 0000FF */
+$cols[3] = 0xFF; $cols[7] = 0xFF; $cols[11] = 0xFF;
+
+$gif = $ffi-&gt;ge_new_gif(&quot;test.gif&quot;, $w, $h, $cols, 2, 0);
+for($i = 0; $i &lt; 16; $i++) {
+    for ($j = 0; $j &lt; $w*$h; $j++) {
+        $gif-&gt;frame[$j] = ($i*6 + $j) / 12 % 8;
+    }
+    $ffi-&gt;ge_add_frame($gif, 5);
+}
+$ffi-&gt;ge_close_gif($gif);</code></pre>
+		<img src="/presentations/slides/intro/test.gif" align="center" width="240" height="180">
+		</section>
+		<section id="ffi_preload" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Preloading FFI</p>
+		<p class="p" style="font-size:0.75em;text-align:left;">/etc/php8/php-fpm-fcgi.ini:</p>
+		<pre><code class="ini" data-trim style="font-size:1em;" >ffi.enable=preload
+ffi.preload=/var/www/html/FFI/*.h
+opcache.preload=/var/www/html/preload.php
+opcache.preload_user=www-data</code></pre>
+		<p class="p" style="font-size:0.75em;text-align:left;">preload.php:</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >foreach(glob(&quot;/var/www/html/FFI/*.php&quot;) as $file) {
+    include $file;
+}</code></pre>
+		<pre><code class="shell" data-trim style="font-size:0.9em;" >cpp -P -C -D&quot;__attribute__(ARGS)=&quot; /usr/include/cpuinfo.h &gt; cpuinfo-ffi.h</code></pre>
+		<p class="p" style="font-size:0.75em;text-align:left;">Edit cpuinfo-ffi.h and delete any inline code</p>
+		</section>
+		<section id="ffi_class" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Create a wrapper class</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >class CPUInfo {
+    private static ?FFI $cpu = null;
+
+    static function init() {
+        if (self::$cpu) return;
+        self::$cpu = FFI::scope(&quot;CPUINFO&quot;);
+        self::$cpu-&gt;cpuinfo_initialize();
+    }
+
+    static function name() {
+        self::init();
+        $CData = self::$cpu-&gt;cpuinfo_get_package(0);
+        return FFI::string($CData[0]-&gt;name);
+    }
+
+    static function __callStatic(string $function, array $args) {
+        self::init();
+        return self::$cpu-&gt;{&#039;cpuinfo_&#039;.$function}(...$args);
+    }
+}</code></pre>
+		</section>
+		<section id="ffi_class2" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Mapping a C struct</p>
+		<pre><code class="php" data-trim style="font-size:0.8em;" >class CPUFreq {
+    private static ?FFI $cpu = null;
+
+    static function init() {
+        if (self::$cpu) return;
+        self::$cpu = \FFI::scope(&quot;CPUFREQ&quot;);
+    }
+
+    static function __callStatic(string $function, array $args) {
+        self::init();
+        $ret = self::$cpu-&gt;{&#039;cpufreq_&#039;.$function}(...$args);
+        if ($ret instanceof FFI\CData) {
+            switch (FFI::typeof($ret)-&gt;getName()) {
+                case &#039;char*&#039;: $ret = FFI::string($ret); break;
+                case &#039;struct cpufreq_policy*&#039;:
+                    $ret = [ &#039;min&#039; =&gt; $ret-&gt;min,
+                             &#039;max&#039; =&gt; $ret-&gt;max,
+                             &#039;gov&#039; =&gt; FFI::string($ret-&gt;governor) ];
+                    break;
+            }
+        }
+        return $ret;
+    }
+}</code></pre>
+		</section>
+		<section id="ffi_cpu" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Calling it</p>
+		<pre><code class="php" data-trim style="font-size:1em;" >$cpu_name = CPUInfo::name();
+$threads = CPUInfo::get_processors_count();
+$cores = CPUInfo::get_cores_count();
+echo &quot;$cores-core $cpu_name $threads threads\n&quot;;
+
+$cpu = 0;
+while(CPUFreq::cpu_exists($cpu) == 0) {
+    $driver = CPUFreq::get_driver($cpu);
+    $policy = CPUFreq::get_policy($cpu);
+    $governor = $policy[&#039;gov&#039;];
+    $min = sprintf(&quot;%.2f&quot;, $policy[&#039;min&#039;]/1000);
+    $max = sprintf(&quot;%.2f&quot;, $policy[&#039;max&#039;]/1000);
+    echo &quot;CPU &quot; . sprintf(&quot;%02d&quot;, $cpu) .
+         &quot; $driver $governor ($min MHz - $max MHz): &quot; .
+         sprintf(&quot;%.2f&quot;, CPUFreq::get_freq_kernel($cpu)/1000) . &quot; MHz\n&quot;;
+    $cpu++;
+}</code></pre>
+		</section>
+		<section id="ffi_cpu_output" >
+		<pre><code data-trim style="font-size:0.8em;" >16-core AMD Ryzen 9 3950X 32 threads
+CPU 00 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1555.64 MHz
+CPU 01 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 3500.24 MHz
+CPU 02 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 2333.11 MHz
+CPU 03 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1555.63 MHz
+CPU 04 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 623.08 MHz
+CPU 05 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 06 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 07 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 08 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 634.24 MHz
+CPU 09 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 634.24 MHz
+CPU 10 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 592.12 MHz
+CPU 11 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 592.12 MHz
+CPU 12 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 2314.04 MHz
+CPU 13 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 14 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 15 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 921.44 MHz
+CPU 16 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1613.96 MHz
+CPU 17 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1960.96 MHz
+CPU 18 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 2330.25 MHz
+CPU 19 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1555.87 MHz
+CPU 20 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1389.00 MHz
+CPU 21 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 557.21 MHz
+CPU 22 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 23 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 24 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 622.76 MHz
+CPU 25 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 26 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 592.12 MHz
+CPU 27 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 28 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 854.47 MHz
+CPU 29 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 799.01 MHz
+CPU 30 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 642.85 MHz
+CPU 31 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 844.84 MHz</code></pre>
+		</section>	</section>
+	<section data-background-color="#000000">
+		<section id="j">
+		<img src="/presentations/slides/intro/carl1.jpg" align="center" width="533" height="800">
+		</section>
+		<section id="j1" >
+		<img src="/presentations/slides/intro/carl2.jpg" align="center" width="" height="">
+		</section>
+		<section id="j2" >
+		<img src="/presentations/slides/intro/carl_linuxtag.jpg" align="center" width="" height="">
+		</section>
+		<section id="j3" >
+		<img src="/presentations/slides/intro/tridge.jpg" align="center" width="" height="">
+<aside class="notes"><br />
+Tridge arguing with Linus<br />
+rsync, Samba, ccache, rzip<br />
+RIP BitKeeper<br />
+</aside>
+		</section>
+		<section id="j4" >
+		<img src="/presentations/slides/intro/roorkee.jpg" align="center" width="" height="">
+		</section>
+		<section id="j5" >
+		<img src="/presentations/slides/intro/arthurcclarke.jpg" align="center" width="" height="">
+<aside class="notes"><br />
+Arthur C. Clarke!<br />
+</aside>
+		</section>
+		<section id="j6" >
+		<img src="/presentations/slides/intro/carl_etsy.png" align="center" width="" height="">
+		</section>	</section>
+	<section>
+		<section id="ematter">
+		<p class="p" style="font-size:1.5em;text-align:center;">35+ years!</p>
+		<ul style="font-size:0.8em">
+			<li>Bell Northern Research - Toronto</li>
+			<li>Northern Telecom - Toronto</li>
+			<li>Digital Media Networks - Toronto</li>
+			<li>NovAtel - Calgary</li>
+			<li>Nutec Informática - Porto Alegre, Brazil</li>
+			<li>University of Toronto IT - Toronto</li>
+			<li>Bell Global Solutions - Toronto</li>
+			<li>IBM - Raleigh, NC</li>
+			<li>Linuxcare - San Francisco</li>
+			<li>Yahoo! - Sunnyvale</li>
+			<li>WePay - Palo Alto</li>
+			<li>Etsy</li>
+		</ul>
+<aside class="notes"><br />
+I was ready to retire after Yahoo!<br />
+Ad-driven balacing-act<br />
+I don't really like programming<br />
+I don't like flying either<br />
+</aside>
+		</section>
+		<section id="ematter1" >
+		<img src="/presentations/slides/intro/lovehack-white-1000.png" align="center" width="1001" height="421">
+		</section>
+		<section id="ematter2" >
+		<p class="p" style="font-size:1.8em;text-align:center;">Create more value than you capture. -Tim O'Reilly</p>
+<aside class="notes"><br />
+Etsy<br />
+</aside>
+		</section>
+		<section id="ematter3" >
+		<p class="p" style="font-size:2em;text-align:center;">Work on things that matter (to you)</p>
+		</section>	</section>
+	<section>
+		<section id="sahana0">
+		<img src="/presentations/slides/intro/slideshow_images/sahana3.png" align="center" width="1000" height="720">
+		</section>
+		<section id="sahana1" >
+		<img src="/presentations/slides/intro/slideshow_images/sahana_final.png" align="center" width="1000" height="720">
+<aside class="notes"><br />
+Can't end on a better point<br />
+</aside>
+		</section>	</section>
+	<section>
+		<section id="thank_you">
+		<p class="p" style="font-size:2em;text-align:center;">¡Gracias!</p>
+<br/>
+		<div align="center" style="font-size: 1.4em; color: ; text-align: center; margin-left: 0em; margin-right: ; margin-top: ; margin-bottom: ;"><a href=":-:url:-:" target="">http://talks.php.net/etsymex22</a></div>
+<br/>
+		<p class="p" style="font-size:1.6em;text-align:center;">Interested in joining our team?</p>
+		<p class="p" style="font-size:1.3em;text-align:center;">Please email your CV/resume to</p>
+		<p class="p" style="font-size:1.4em;text-align:center;">mexico-hiring@etsy.com</p>
+		</section>	</section>
+			</div>
+
+		</div>
+
+		<script src="/reveal.js/lib/js/head.min.js"></script>
+		<script src="/reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				width: 1024,
+				height: 768,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				transitionSpeed: 'fast',
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/highlight.min.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/reveal.js/plugin/notes/notes.js', async: true },
+					{ src: '/reveal.js/plugin/line-numbers/line-numbers.js' }
+				]
+			});
+			/* This draws the graph on the slide on a slidechanged event */
+			Reveal.addEventListener('slidechanged', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+			/* This draws the graph if we got here directly without coming from another slide */
+			Reveal.addEventListener('ready', function(event) {
+				var callback = "render_"+event.currentSlide.id;
+				if(typeof(window[callback])=="function") {
+					window[callback]();
+				}
+			} );
+		</script>
+
+	</body>
+</html>

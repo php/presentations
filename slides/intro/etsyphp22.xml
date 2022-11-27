@@ -1,0 +1,20 @@
+<slide title="" section="etsyphp">
+
+<image width="265" height="581" filename="etsy_arch.png" align="left"/>
+<blurb fontsize="2em" align="center">PHP at Etsy</blurb>
+<list>
+<bullet fontsize="1.2em" marginleft="4em" type="none">Linux, Apache, MySQL, PHP</bullet>
+<bullet fontsize="1.2em" marginleft="4em" type="none">Memcache, Gearman, StatsD, Vitess, Redis, Kafka, Varnish</bullet>
+<bullet fontsize="1.2em" marginleft="4em" type="none">GCP, Terraform</bullet>
+</list>
+<blurb fontsize="2em" align="center">API First!</blurb>
+
+<notes>
+Global, Internal Load Balancer
+Managed Instance Groups
+Many other stacks not shown, like beacons, assets, downloads
+Gearman for longer-running Asynchronous tasks
+Crons for non-request triggered
+</notes>
+
+</slide>

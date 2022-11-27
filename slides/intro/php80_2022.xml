@@ -1,0 +1,52 @@
+<slide title="" section="php80">
+
+<blurb fontsize="20em" align="center">PHP 8.0</blurb>
+
+<blurb fontsize="1.1em" align="left">Named Arguments</blurb>
+
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+htmlspecialchars($string, double_encode: false);
+]]></example>
+
+<blurb fontsize="1.1em" align="left">Constructor Property Promotion</blurb>
+
+<example fontsize="1.1em" result='0' title="" type="php"><![CDATA[<?php
+class User {
+    function __construct(public string $name, private string $pwd = "") { }
+}
+]]></example>
+
+<break lines="1" section="php80_1"/>
+
+<blurb fontsize="1.1em" align="left">Nullsafe Operator with short-circuiting</blurb>
+<example fontsize="1.1em" result='0' title="" type="php"><![CDATA[<?php
+$country = $session?->user?->getAddress(geoip())?->country;
+]]></example>
+
+<blurb fontsize="1em" align="left">Match Expression, Union Types</blurb>
+
+<example fontsize="0.85em" result='0' title="" type="php"><![CDATA[<?php
+function days_in_month(string|int $month, int $year): int {
+  $leap = $year % 400;
+    $leap = !$leap|!($leap%4)&!!($leap%100); // 👀
+
+  return match(is_string($month) ? strtolower(substr($month, 0, 3)) : $month) {
+    'apr', 4, 'jun', 6, 'sep', 9, 'nov', 11  => 30,
+    'jan', 1, 'mar', 3, 'may', 5, 'jul', 7, 'aug', 8, 'oct', 10, 'dec', 12 => 31,
+    'feb', 2 => $leap ? 29 : 28,
+    default => throw new InvalidArgumentException("Invalid month"),
+  };
+}
+]]></example>
+
+<break lines="1" section="php80_2"/>
+<blurb fontsize="1em" align="left">weakMap</blurb>
+<blurb fontsize="0.8em" align="left"> - Map objects to arbitrary values without preventing GC</blurb>
+
+<blurb fontsize="1em" align="left">Attributes</blurb>
+<blurb fontsize="0.8em" align="left"> - Structured metadata</blurb>
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+function login(int $user_id, #[\SensitiveParameter] string $pwd) { }
+]]></example>
+
+</slide>

@@ -1,0 +1,137 @@
+<slide title="" section="php82">
+
+<blurb fontsize="20em" align="center">PHP 8.2</blurb>
+
+<break lines="1" section="php82_readonly_class"/>
+<blurb fontsize="1.1em" align="left">Readonly Classes</blurb>
+<link align="left" fontsize="0.75em" href="https://wiki.php.net/rfc/readonly_classes"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+readonly class Test {
+  public function __construct(public string $prop) { }
+}
+$test = new Test("Hi");
+var_dump($test->prop);  // Hi
+$test->prop = "foobar"; // Cannot modify readonly property Test::$prop
+]]></example>
+<blurb fontsize="1em" align="left">Prevents dynamic properties</blurb>
+<blurb fontsize="1em" align="left">Can't be used with untyped or static properties</blurb>
+
+<break lines="1" section="php82_dnf"/>
+<blurb fontsize="1.1em" align="left">Disjunctive Normal Form (DNF) Types</blurb>
+<link align="left" fontsize="0.75em"  href="https://wiki.php.net/rfc/dnf_types"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+class A { }
+class B extends A { };
+class Foo {
+    public function bar((A&B)|null $entity): A&B {
+        if (!$entity) $entity = new B;
+        return $entity;
+    }
+}
+$c = new Foo;
+$c->bar(new B);
+]]></example>
+<blurb fontsize="0.75em" align="left">8.0 Union Types X|Y</blurb>
+<blurb fontsize="0.75em" align="left">8.1 Intersection Types X&amp;Y</blurb>
+<blurb fontsize="0.75em" align="left">8.2 DNF Types (X&amp;A)|(Y&amp;B)</blurb>
+
+
+<break lines="1" section="php82_nft"/>
+<blurb fontsize="1.1em" align="left">Standalone null, false, and true types</blurb>
+<link align="left" fontsize="0.75em" href="https://wiki.php.net/rfc/null-false-standalone-types"/>
+<link align="left" fontsize="0.75em" href="https://wiki.php.net/rfc/true-type"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+class Falsy {
+    public function alwaysFalse(): false { /* ... */ }
+
+    public function alwaysTrue():  true  { /* ... */ }
+
+    public function alwaysNull():  null  { /* ... */ }
+}
+]]></example>
+
+<break lines="1" section="php82_random"/>
+<blurb fontsize="1.1em" align="left">New "Random" extension</blurb>
+<link align="left" fontsize="0.75em" href="https://wiki.php.net/rfc/rng_extension"/>
+<link align="left" fontsize="0.75em" href="https://wiki.php.net/rfc/random_extension_improvement"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+$rng = $is_production
+    ? new Random\Engine\Secure()
+    : new Random\Engine\PCG64(1234);
+
+$randomizer = new Random\Randomizer($rng);
+$randomizer->shuffleString('Testing');
+]]></example>
+<blurb align="left" fontsize="0.75em">Provides multiple RNG engines as opposed to just using Mersenne Twister</blurb>
+
+<break lines="1" section="php82_trait_constants"/>
+<blurb fontsize="1.1em" align="left">Constants in Traits</blurb>
+<link align="left" fontsize="0.75em" href="https://wiki.php.net/rfc/constants_in_traits"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+trait T {
+    public const CONSTANT = 1;
+    public function bar(): int {
+        return self::CONSTANT;
+    }
+}
+
+class C {
+    use T;
+}
+
+var_dump(C::CONSTANT); // 1
+]]></example>
+
+<break lines="1" section="php82_sensitive_param"/>
+<blurb fontsize="1.1em" align="left">Sensitive Parameters</blurb>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+class User {
+    function __construct(string $id, #[\SensitiveParameter] string $pwd) {
+        throw new \Exception("Error");
+    }
+}
+$u = new User('rasmus', 'very-secret');
+]]></example>
+<example fontsize="0.4em" result='1' hide='1' title="" type=""><![CDATA[
+Fatal error: Uncaught Exception
+Stack trace:
+#0 /home/rasmus/c(7): User->__construct('rasmus', Object(SensitiveParameterValue))
+#1 {main}
+]]></example>
+
+<break lines="1" section="php82_ddprop"/>
+<blurb fontsize="1.1em" align="left">Deprecate dynamic properties</blurb>
+<link align="left" fontsize="0.75em" href="https://wiki.php.net/rfc/deprecate_dynamic_properties"/>
+<example fontsize="1em" result='0' title="" type=""><![CDATA[<?php
+class User {
+    public $name;
+}
+
+#[\AllowDynamicProperties]
+class User2 { }
+
+$user = new User();
+$user->last_name = 'Doe'; // Deprecated notice
+
+$user = new User2();
+$user->last_name = 'Doe'; // ok
+
+$user = new stdClass();
+$user->last_name = 'Doe'; // ok
+]]></example>
+
+<break lines="1" section="php82_bite"/>
+<blurb fontsize="2em">¡Aguas!</blurb>
+<list>
+    <bullet fontsize="1em" marginleft="-2em">Deprecated dynamic properties!!</bullet>
+        <bullet fontsize="0.6em" level="2">use |22AA11|Phan| and |22AA11|#[\AllowDynamicProperties]|</bullet>
+    <bullet fontsize="1em" marginleft="-2em">Deprecated |EE2211|${var}| string interpolation</bullet>
+        <bullet fontsize="0.6em" level="2">use |22AA11|{$var}|</bullet>
+    <bullet fontsize="1em" marginleft="-2em">Deprecated |EE2211|utf8_encode()| and |EE2211|utf8_decode()|</bullet>
+        <bullet fontsize="0.6em" level="2">decode: use |22AA11|mb_convert_encoding($latin1, 'UTF-8', 'ISO-8859-1')|</bullet>
+        <bullet fontsize="0.6em" level="2">encode: use |22AA11|mb_convert_encoding($utf8, 'ISO-8859-1', 'UTF8')|</bullet>
+    <bullet fontsize="1em" marginleft="-2em">Functions |EE2211|strtolower()| and |EE2211|strtoupper()| are no longer locale-sensitive</bullet>
+    <bullet fontsize="0.6em" level="2">Use |22AA11|mb_strtoupper()|/|22AA11|mb_strtolower()| if you need locale-aware conversion</bullet>
+</list>
+
+</slide>

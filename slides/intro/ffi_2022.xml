@@ -1,0 +1,193 @@
+<slide title="" section="ffi">
+<blurb fontsize="8em" align="center">Foreign Function Interface</blurb>
+<blurb fontsize="1.1em" align="left">Call a libc function</blurb>
+
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+$ffi = FFI::cdef("int sched_getcpu(void);");
+echo "Running on cpu " . $ffi->sched_getcpu();
+]]></example>
+
+<break lines="1" section="ffi_load"/>
+<blurb fontsize="1.1em" align="left">Loading and calling library functions</blurb>
+
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+$ffi = FFI::load("php_gifenc.h");
+]]></example>
+
+<example fontsize="0.9em" result='0' title="" type="c"><![CDATA[<?php
+#define FFI_SCOPE "gifenc"
+#define FFI_LIB "libgifenc.so"
+
+typedef struct ge_GIF {
+    uint16_t w, h;
+    int depth;
+    int fd;
+    int offset;
+    int nframes;
+    uint8_t *frame, *back;
+    uint32_t partial;
+    uint8_t buffer[0xFF];
+} ge_GIF;
+
+ge_GIF *ge_new_gif(
+    const char *fname, uint16_t width, uint16_t height,
+    uint8_t *palette, int depth, int loop);
+void ge_add_frame(ge_GIF *gif, uint16_t delay);
+void ge_close_gif(ge_GIF* gif);
+]]></example>
+<break lines="1" section="ffi_load_example"/>
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+$ffi = FFI::load("php_gifenc.h");
+
+$w = 240; $h = 180;
+$cols = $ffi->new("uint8_t[12]");
+/* 4 colours: 000000, FF0000, 00FF00, 0000FF */
+$cols[3] = 0xFF; $cols[7] = 0xFF; $cols[11] = 0xFF;
+
+$gif = $ffi->ge_new_gif("test.gif", $w, $h, $cols, 2, 0);
+for($i = 0; $i < 16; $i++) {
+    for ($j = 0; $j < $w*$h; $j++) {
+        $gif->frame[$j] = ($i*6 + $j) / 12 % 8;
+    }
+    $ffi->ge_add_frame($gif, 5);
+}
+$ffi->ge_close_gif($gif);
+]]></example>
+
+<image width="240" height="180" filename="test.gif" align="center"/>
+
+<break lines="1" section="ffi_preload"/>
+<blurb fontsize="1.1em" align="left">Preloading FFI</blurb>
+
+<blurb fontsize="0.75em" align="left">/etc/php8/php-fpm-fcgi.ini:</blurb>
+<example fontsize="1em" result='0' title="" type="ini"><![CDATA[
+ffi.enable=preload
+ffi.preload=/var/www/html/FFI/*.h
+opcache.preload=/var/www/html/preload.php
+opcache.preload_user=www-data
+]]></example>
+
+<blurb fontsize="0.75em" align="left">preload.php:</blurb>
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+foreach(glob("/var/www/html/FFI/*.php") as $file) {
+    include $file;
+}
+]]></example>
+
+<example fontsize="0.9em" result='0' title="" type="shell"><![CDATA[
+cpp -P -C -D"__attribute__(ARGS)=" /usr/include/cpuinfo.h > cpuinfo-ffi.h
+]]></example>
+<blurb fontsize="0.75em" align="left">Edit cpuinfo-ffi.h and delete any inline code</blurb>
+
+<break lines="1" section="ffi_class"/>
+<blurb fontsize="1.1em" align="left">Create a wrapper class</blurb>
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+class CPUInfo {
+    private static ?FFI $cpu = null;
+
+    static function init() {
+        if (self::$cpu) return;
+        self::$cpu = FFI::scope("CPUINFO");
+        self::$cpu->cpuinfo_initialize();
+    }
+
+    static function name() {
+        self::init();
+        $CData = self::$cpu->cpuinfo_get_package(0);
+        return FFI::string($CData[0]->name);
+    }
+
+    static function __callStatic(string $function, array $args) {
+        self::init();
+        return self::$cpu->{'cpuinfo_'.$function}(...$args);
+    }
+}
+]]></example>
+
+<break lines="1" section="ffi_class2"/>
+<blurb fontsize="1.1em" align="left">Mapping a C struct</blurb>
+<example fontsize="0.8em" result='0' title="" type="php"><![CDATA[<?php
+class CPUFreq {
+    private static ?FFI $cpu = null;
+
+    static function init() {
+        if (self::$cpu) return;
+        self::$cpu = \FFI::scope("CPUFREQ");
+    }
+
+    static function __callStatic(string $function, array $args) {
+        self::init();
+        $ret = self::$cpu->{'cpufreq_'.$function}(...$args);
+        if ($ret instanceof FFI\CData) {
+            switch (FFI::typeof($ret)->getName()) {
+                case 'char*': $ret = FFI::string($ret); break;
+                case 'struct cpufreq_policy*':
+                    $ret = [ 'min' => $ret->min,
+                             'max' => $ret->max,
+                             'gov' => FFI::string($ret->governor) ];
+                    break;
+            }
+        }
+        return $ret;
+    }
+}
+]]></example>
+
+<break lines="1" section="ffi_cpu"/>
+<blurb fontsize="1.1em" align="left">Calling it</blurb>
+<example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
+$cpu_name = CPUInfo::name();
+$threads = CPUInfo::get_processors_count();
+$cores = CPUInfo::get_cores_count();
+echo "$cores-core $cpu_name $threads threads\n";
+
+$cpu = 0;
+while(CPUFreq::cpu_exists($cpu) == 0) {
+    $driver = CPUFreq::get_driver($cpu);
+    $policy = CPUFreq::get_policy($cpu);
+    $governor = $policy['gov'];
+    $min = sprintf("%.2f", $policy['min']/1000);
+    $max = sprintf("%.2f", $policy['max']/1000);
+    echo "CPU " . sprintf("%02d", $cpu) .
+         " $driver $governor ($min MHz - $max MHz): " .
+         sprintf("%.2f", CPUFreq::get_freq_kernel($cpu)/1000) . " MHz\n";
+    $cpu++;
+}
+]]></example>
+<break lines="1" section="ffi_cpu_output"/>
+<example fontsize="0.8em" result='0' title="" type=""><![CDATA[
+16-core AMD Ryzen 9 3950X 32 threads
+CPU 00 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1555.64 MHz
+CPU 01 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 3500.24 MHz
+CPU 02 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 2333.11 MHz
+CPU 03 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1555.63 MHz
+CPU 04 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 623.08 MHz
+CPU 05 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 06 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 07 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 08 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 634.24 MHz
+CPU 09 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 634.24 MHz
+CPU 10 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 592.12 MHz
+CPU 11 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 592.12 MHz
+CPU 12 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 2314.04 MHz
+CPU 13 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 14 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 15 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 921.44 MHz
+CPU 16 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1613.96 MHz
+CPU 17 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1960.96 MHz
+CPU 18 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 2330.25 MHz
+CPU 19 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1555.87 MHz
+CPU 20 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 1389.00 MHz
+CPU 21 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 557.21 MHz
+CPU 22 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 23 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 24 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 622.76 MHz
+CPU 25 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 26 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 592.12 MHz
+CPU 27 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 550.00 MHz
+CPU 28 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 854.47 MHz
+CPU 29 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 799.01 MHz
+CPU 30 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 642.85 MHz
+CPU 31 amd-pstate ondemand (550.00 MHz - 4762.00 MHz): 844.84 MHz
+]]></example>
+</slide>
