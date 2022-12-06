@@ -116,7 +116,7 @@ class Test {
 ]]></example>
 
 <break lines="1" section="php81_first_class_callable"/>
-<blurb fontsize="1.1em" align="left">new expressions can be used in initializers</blurb>
+<blurb fontsize="1.1em" align="left">First-class callables</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 $fn = strlen(...);
 $fn = $this->method(...)
