@@ -34,6 +34,8 @@ pick_a_card('Spades');    // error
 ]]></example>
 
 <break lines="1" section="php81_fibers"/>
+<blurb fontsize="1.1em" align="left">Fibers</blurb>
+<blurb fontsize="0.9em" align="left">Full-stack interruptable functions</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
@@ -49,7 +51,9 @@ function await(PromiseInterface $promise, LoopInterface $loop): mixed {
 }
 ]]></example>
 
-<break lines="1" section="php81_fibers"/>
+<break lines="1" section="php81_static_var_inh"/>
+<blurb fontsize="1.1em" align="left">Change: Static Variable Inheritance</blurb>
+<blurb fontsize="0.9em" align="left">Inherited method shares parent's static vars</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class A {
   public static function counter() {
@@ -68,6 +72,7 @@ echo B::counter();
 ]]></example>
 
 <break lines="1" section="php81_never"/>
+<blurb fontsize="1.1em" align="left">No Return type</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 function redirect(string $uri): never {
   header('Location: ' . $uri);
@@ -79,6 +84,7 @@ echo "this will never be executed!";
 ]]></example>
 
 <break lines="1" section="php81_final"/>
+<blurb fontsize="1.1em" align="left">final for class constants</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class Foo {
     final public const X = "foo";
@@ -92,6 +98,7 @@ class Bar extends Foo {
 ]]></example>
 
 <break lines="1" section="php81_new_init"/>
+<blurb fontsize="1.1em" align="left">new expressions can be used in initializers</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class Test {
   public function __construct(private Logger $logger = new NullLogger) {}
@@ -109,6 +116,7 @@ class Test {
 ]]></example>
 
 <break lines="1" section="php81_first_class_callable"/>
+<blurb fontsize="1.1em" align="left">new expressions can be used in initializers</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 $fn = strlen(...);
 $fn = $this->method(...)
@@ -122,6 +130,7 @@ $fn = Closure::fromCallable([Foo::class, 'method']);
 ]]></example>
 
 <break lines="1" section="php81_pure_intersection"/>
+<blurb fontsize="1.1em" align="left">Intersection types</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 class A {
   private Traversable&Countable $countableIterator;

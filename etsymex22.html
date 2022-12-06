@@ -190,7 +190,7 @@ We have tools that compile these routes for us<br />
 		</section>
 		<section id="etsyfw2" >
 		<p class="p" style="font-size:1.4em;text-align:left;">awesome.php</p>
-		<pre><code class="php" data-trim style="font-size:1em;" >require &#039;bootstrap.php&#039;;
+		<pre><code class="php" data-trim style="font-size:1em;" >require 'bootstrap.php';
 $request  = HTTP_Request::getInstance();
 $response = HTTP_Response::getInstance();
 $controller = new Awesome_Controller();
@@ -203,13 +203,13 @@ Very little code here, just routing us to the controller<br />
 		<p class="p" style="font-size:1.4em;text-align:left;">Code/Awesome/Controller.php</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >class Awesome_Controller extends Controller_Base {
   public function doCoolThings($request, $response) {
-    $id = $request-&gt;getGet(&#039;id&#039;, 0);
+    $id = $request-&gt;getGet('id', 0);
     if (!$id) {
       $response-&gt;redirect_error(Constants::ERROR_NOT_FOUND);
       return;
     }
-    $thing = EtsyORM::getFinder(&#039;Thing&#039;)-&gt;findById($id);
-    $stuff = Api::endpoint(&#039;AwesomeStuff&#039;, [$thing-&gt;id, &#039;max&#039;=&gt;10]);
+    $thing = EtsyORM::getFinder('Thing')-&gt;findById($id);
+    $stuff = Api::endpoint('AwesomeStuff', [$thing-&gt;id, 'max'=&gt;10]);
     $this-&gt;renderViewTree(New Awesome_View($thing, $stuff));
   }
 }</code></pre>
@@ -229,12 +229,12 @@ And fan out to the API<br />
         $this-&gt;stuff = $stuff;
     }
     public function getCssFiles(): array {
-        return [ &#039;/awesome/main.scss&#039; ];
+        return [ '/awesome/main.scss' ];
     }
     public function getTemplateData(): array {
-        return [ &#039;thing_id&#039; =&gt; $this-&gt;thing-&gt;id,
-                 &#039;thing_name&#039; =&gt; $this-&gt;thing-&gt;name,
-                 &#039;stuff&#039; =&gt; $this-&gt;stuff ];
+        return [ 'thing_id' =&gt; $this-&gt;thing-&gt;id,
+                 'thing_name' =&gt; $this-&gt;thing-&gt;name,
+                 'stuff' =&gt; $this-&gt;stuff ];
     }
 }</code></pre>
 		</section>
@@ -261,9 +261,9 @@ And fan out to the API<br />
 		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ composer require --dev phan/phan</code></pre>
 		<p class="p" style="font-size:1.5em;text-align:left;">Create .phan/config.php</p>
 		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >return [
-    &#039;target_php_version&#039; =&gt; &#039;8.0&#039;,
-    &#039;directory_list&#039; =&gt; [ &#039;src/&#039; ],
-    &quot;exclude_analysis_directory_list&quot; =&gt; [ &#039;vendor/&#039; ],
+    'target_php_version' =&gt; '8.0',
+    'directory_list' =&gt; [ 'src/' ],
+    &quot;exclude_analysis_directory_list&quot; =&gt; [ 'vendor/' ],
 ];</code></pre>
 		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ ./vendor/bin/phan</code></pre>
 		</section>
@@ -283,7 +283,7 @@ Show what depends on the \Grav\Common\File\CompiledFile trait<br />
 		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan --daemonize-tcp-port default &amp;
 [1] 28610
 Listening for Phan analysis requests at tcp://127.0.0.1:4846
-Awaiting analysis requests for directory &#039;/home/rasmus/phan_demo&#039;
+Awaiting analysis requests for directory '/home/rasmus/phan_demo'
 
 $ vi src/script.php</code></pre>
 		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ phan_client -l src/script.php
@@ -311,7 +311,7 @@ which allows editor integration...<br />
 		</section>
 		<section id="spy1" >
 		<p class="p" style="font-size:1.1em;text-align:left;">Sample frequency in nanoseconds (or Hz)</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy -s 200000000 -- php -r &#039;sleep(1);&#039; 
+		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy -s 200000000 -- php -r 'sleep(1);' 
 0 sleep &lt;internal&gt;:-1
 1 &lt;main&gt; &lt;internal&gt;:-1
 
@@ -497,9 +497,9 @@ some contraints...<br />
     $leap = !$leap|!($leap%4)&amp;!!($leap%100); // 👀
 
   return match(is_string($month) ? strtolower(substr($month, 0, 3)) : $month) {
-    &#039;apr&#039;, 4, &#039;jun&#039;, 6, &#039;sep&#039;, 9, &#039;nov&#039;, 11  =&gt; 30,
-    &#039;jan&#039;, 1, &#039;mar&#039;, 3, &#039;may&#039;, 5, &#039;jul&#039;, 7, &#039;aug&#039;, 8, &#039;oct&#039;, 10, &#039;dec&#039;, 12 =&gt; 31,
-    &#039;feb&#039;, 2 =&gt; $leap ? 29 : 28,
+    'apr', 4, 'jun', 6, 'sep', 9, 'nov', 11  =&gt; 30,
+    'jan', 1, 'mar', 3, 'may', 5, 'jul', 7, 'aug', 8, 'oct', 10, 'dec', 12 =&gt; 31,
+    'feb', 2 =&gt; $leap ? 29 : 28,
     default =&gt; throw new InvalidArgumentException(&quot;Invalid month&quot;),
   };
 }</code></pre>
@@ -540,9 +540,11 @@ $test-&gt;prop = &quot;foobar&quot;; // Error</code></pre>
 
 function pick_a_card(Suit $suit) { ... }
 pick_a_card(Suit::Clubs); // ok
-pick_a_card(&#039;Spades&#039;);    // error</code></pre>
+pick_a_card('Spades');    // error</code></pre>
 		</section>
 		<section id="php81_fibers" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Fibers</p>
+		<p class="p" style="font-size:0.9em;text-align:left;">Full-stack interruptable functions</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
 
@@ -556,7 +558,9 @@ function await(PromiseInterface $promise, LoopInterface $loop): mixed {
   return Fiber::suspend();
 }</code></pre>
 		</section>
-		<section id="php81_fibers" >
+		<section id="php81_static_var_inh" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Change: Static Variable Inheritance</p>
+		<p class="p" style="font-size:0.9em;text-align:left;">Inherited method shares parent's static vars</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >class A {
   public static function counter() {
     static $i = 0;
@@ -573,15 +577,17 @@ echo B::counter();
 // PHP 8.1 outputs 1234</code></pre>
 		</section>
 		<section id="php81_never" >
+		<p class="p" style="font-size:1.1em;text-align:left;">No Return type</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >function redirect(string $uri): never {
-  header(&#039;Location: &#039; . $uri);
+  header('Location: ' . $uri);
   exit();
 }
 
-redirect(&#039;/index.html&#039;);
+redirect('/index.html');
 echo &quot;this will never be executed!&quot;;</code></pre>
 		</section>
 		<section id="php81_final" >
+		<p class="p" style="font-size:1.1em;text-align:left;">final for class constants</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >class Foo {
     final public const X = &quot;foo&quot;;
 }
@@ -593,6 +599,7 @@ class Bar extends Foo {
 // Fatal error: Bar::X cannot override final constant Foo::X</code></pre>
 		</section>
 		<section id="php81_new_init" >
+		<p class="p" style="font-size:1.1em;text-align:left;">new expressions can be used in initializers</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >class Test {
   public function __construct(private Logger $logger = new NullLogger) {}
 }
@@ -608,17 +615,19 @@ class Test {
 }</code></pre>
 		</section>
 		<section id="php81_first_class_callable" >
+		<p class="p" style="font-size:1.1em;text-align:left;">new expressions can be used in initializers</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >$fn = strlen(...);
 $fn = $this-&gt;method(...)
 $fn = Foo::method(...);
 
 // instead of
 
-$fn = Closure::fromCallable(&#039;strlen&#039;);
-$fn = Closure::fromCallable([$this, &#039;method&#039;]);
-$fn = Closure::fromCallable([Foo::class, &#039;method&#039;]);</code></pre>
+$fn = Closure::fromCallable('strlen');
+$fn = Closure::fromCallable([$this, 'method']);
+$fn = Closure::fromCallable([Foo::class, 'method']);</code></pre>
 		</section>
 		<section id="php81_pure_intersection" >
+		<p class="p" style="font-size:1.1em;text-align:left;">Intersection types</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >class A {
   private Traversable&amp;Countable $countableIterator;
 
@@ -692,7 +701,7 @@ $c-&gt;bar(new B);</code></pre>
     : new Random\Engine\PCG64(1234);
 
 $randomizer = new Random\Randomizer($rng);
-$randomizer-&gt;shuffleString(&#039;Testing&#039;);</code></pre>
+$randomizer-&gt;shuffleString('Testing');</code></pre>
 		<p class="p" style="font-size:0.75em;text-align:left;">Provides multiple RNG engines as opposed to just using Mersenne Twister</p>
 		</section>
 		<section id="php82_trait_constants" >
@@ -718,7 +727,7 @@ var_dump(C::CONSTANT); // 1</code></pre>
         throw new \Exception(&quot;Error&quot;);
     }
 }
-$u = new User(&#039;rasmus&#039;, &#039;very-secret&#039;);</code></pre>
+$u = new User('rasmus', 'very-secret');</code></pre>
 		<pre class="output" style="font-size:0.4em;">Fatal error: Uncaught Exception
 Stack trace:
 #0 /home/rasmus/c(7): User->__construct('rasmus', Object(SensitiveParameterValue))
@@ -734,13 +743,13 @@ Stack trace:
 class User2 { }
 
 $user = new User();
-$user-&gt;last_name = &#039;Doe&#039;; // Deprecated notice
+$user-&gt;last_name = 'Doe'; // Deprecated notice
 
 $user = new User2();
-$user-&gt;last_name = &#039;Doe&#039;; // ok
+$user-&gt;last_name = 'Doe'; // ok
 
 $user = new stdClass();
-$user-&gt;last_name = &#039;Doe&#039;; // ok</code></pre>
+$user-&gt;last_name = 'Doe'; // ok</code></pre>
 		</section>
 		<section id="php82_bite" >
 		<p class="p" style="font-size:2em;">¡Aguas!</p>
@@ -837,7 +846,7 @@ opcache.preload_user=www-data</code></pre>
 
     static function __callStatic(string $function, array $args) {
         self::init();
-        return self::$cpu-&gt;{&#039;cpuinfo_&#039;.$function}(...$args);
+        return self::$cpu-&gt;{'cpuinfo_'.$function}(...$args);
     }
 }</code></pre>
 		</section>
@@ -853,14 +862,14 @@ opcache.preload_user=www-data</code></pre>
 
     static function __callStatic(string $function, array $args) {
         self::init();
-        $ret = self::$cpu-&gt;{&#039;cpufreq_&#039;.$function}(...$args);
+        $ret = self::$cpu-&gt;{'cpufreq_'.$function}(...$args);
         if ($ret instanceof FFI\CData) {
             switch (FFI::typeof($ret)-&gt;getName()) {
-                case &#039;char*&#039;: $ret = FFI::string($ret); break;
-                case &#039;struct cpufreq_policy*&#039;:
-                    $ret = [ &#039;min&#039; =&gt; $ret-&gt;min,
-                             &#039;max&#039; =&gt; $ret-&gt;max,
-                             &#039;gov&#039; =&gt; FFI::string($ret-&gt;governor) ];
+                case 'char*': $ret = FFI::string($ret); break;
+                case 'struct cpufreq_policy*':
+                    $ret = [ 'min' =&gt; $ret-&gt;min,
+                             'max' =&gt; $ret-&gt;max,
+                             'gov' =&gt; FFI::string($ret-&gt;governor) ];
                     break;
             }
         }
@@ -879,9 +888,9 @@ $cpu = 0;
 while(CPUFreq::cpu_exists($cpu) == 0) {
     $driver = CPUFreq::get_driver($cpu);
     $policy = CPUFreq::get_policy($cpu);
-    $governor = $policy[&#039;gov&#039;];
-    $min = sprintf(&quot;%.2f&quot;, $policy[&#039;min&#039;]/1000);
-    $max = sprintf(&quot;%.2f&quot;, $policy[&#039;max&#039;]/1000);
+    $governor = $policy['gov'];
+    $min = sprintf(&quot;%.2f&quot;, $policy['min']/1000);
+    $max = sprintf(&quot;%.2f&quot;, $policy['max']/1000);
     echo &quot;CPU &quot; . sprintf(&quot;%02d&quot;, $cpu) .
          &quot; $driver $governor ($min MHz - $max MHz): &quot; .
          sprintf(&quot;%.2f&quot;, CPUFreq::get_freq_kernel($cpu)/1000) . &quot; MHz\n&quot;;
