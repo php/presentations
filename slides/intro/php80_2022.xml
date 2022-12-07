@@ -2,11 +2,15 @@
 
 <blurb fontsize="20em" align="center">PHP 8.0</blurb>
 
+<break lines="1" section="php80_named_args"/>
+
 <blurb fontsize="1.1em" align="left">Named Arguments</blurb>
 
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php
 htmlspecialchars($string, double_encode: false);
 ]]></example>
+
+<break lines="1" section="php80_con_prom"/>
 
 <blurb fontsize="1.1em" align="left">Constructor Property Promotion</blurb>
 
@@ -16,12 +20,14 @@ class User {
 }
 ]]></example>
 
-<break lines="1" section="php80_1"/>
+<break lines="1" section="php80_nullsafe"/>
 
 <blurb fontsize="1.1em" align="left">Nullsafe Operator with short-circuiting</blurb>
 <example fontsize="1.1em" result='0' title="" type="php"><![CDATA[<?php
 $country = $session?->user?->getAddress(geoip())?->country;
 ]]></example>
+
+<break lines="1" section="php80_match"/>
 
 <blurb fontsize="1em" align="left">Match Expression, Union Types</blurb>
 
@@ -39,10 +45,11 @@ function days_in_month(string|int $month, int $year): int {
 }
 ]]></example>
 
-<break lines="1" section="php80_2"/>
+<break lines="1" section="php80_weakmap"/>
 <blurb fontsize="1em" align="left">weakMap</blurb>
 <blurb fontsize="0.8em" align="left"> - Map objects to arbitrary values without preventing GC</blurb>
 
+<break lines="1" section="php80_attributes"/>
 <blurb fontsize="1em" align="left">Attributes</blurb>
 <blurb fontsize="0.8em" align="left"> - Structured metadata</blurb>
 <example fontsize="1em" result='0' title="" type="php"><![CDATA[<?php

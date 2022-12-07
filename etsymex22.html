@@ -375,16 +375,22 @@ some contraints...<br />
 	<section>
 		<section id="php80">
 		<h1 style="text-align:center;">PHP 8.0</h1>
+		</section>
+		<section id="php80_named_args" >
 		<p class="p" style="font-size:1.1em;text-align:left;">Named Arguments</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >htmlspecialchars($string, double_encode: false);</code></pre>
+		</section>
+		<section id="php80_con_prom" >
 		<p class="p" style="font-size:1.1em;text-align:left;">Constructor Property Promotion</p>
 		<pre><code class="php" data-trim style="font-size:1.1em;" >class User {
     function __construct(public string $name, private string $pwd = &quot;&quot;) { }
 }</code></pre>
 		</section>
-		<section id="php80_1" >
+		<section id="php80_nullsafe" >
 		<p class="p" style="font-size:1.1em;text-align:left;">Nullsafe Operator with short-circuiting</p>
 		<pre><code class="php" data-trim style="font-size:1.1em;" >$country = $session?-&gt;user?-&gt;getAddress(geoip())?-&gt;country;</code></pre>
+		</section>
+		<section id="php80_match" >
 		<p class="p" style="font-size:1em;text-align:left;">Match Expression, Union Types</p>
 		<pre><code class="php" data-trim style="font-size:0.85em;" >function days_in_month(string|int $month, int $year): int {
   $leap = $year % 400;
@@ -398,9 +404,11 @@ some contraints...<br />
   };
 }</code></pre>
 		</section>
-		<section id="php80_2" >
+		<section id="php80_weakmap" >
 		<p class="p" style="font-size:1em;text-align:left;">weakMap</p>
 		<p class="p" style="font-size:0.8em;text-align:left;"> - Map objects to arbitrary values without preventing GC</p>
+		</section>
+		<section id="php80_attributes" >
 		<p class="p" style="font-size:1em;text-align:left;">Attributes</p>
 		<p class="p" style="font-size:0.8em;text-align:left;"> - Structured metadata</p>
 		<pre><code class="php" data-trim style="font-size:1em;" >function login(int $user_id, #[\SensitiveParameter] string $pwd) { }</code></pre>
