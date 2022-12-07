@@ -261,7 +261,7 @@ And fan out to the API<br />
 		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >$ composer require --dev phan/phan</code></pre>
 		<p class="p" style="font-size:1.5em;text-align:left;">Create .phan/config.php</p>
 		<pre><code class="shell nohighlight" data-trim style="font-size:1em;" >return [
-    'target_php_version' =&gt; '8.0',
+    'target_php_version' =&gt; '8.2',
     'directory_list' =&gt; [ 'src/' ],
     &quot;exclude_analysis_directory_list&quot; =&gt; [ 'vendor/' ],
 ];</code></pre>
@@ -303,112 +303,6 @@ which allows editor integration...<br />
         <p>Your user agent does not support the HTML5 Video element.</p>
       </video>
     </div>		</section>	</section>
-	<section>
-		<section id="phpspy">
-		<h1 style="text-align:center;">phpspy</h1>
-		<p class="p" style="font-size:1.1em;text-align:center;">Low-overhead sampling profiler</p>
-		<div align="center" style="font-size: 1em; color: ; text-align: center; margin-left: ; margin-right: ; margin-top: ; margin-bottom: ;"><a href="https://github.com/adsr/phpspy" target="">https://github.com/adsr/phpspy</a></div>
-		</section>
-		<section id="spy1" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Sample frequency in nanoseconds (or Hz)</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy -s 200000000 -- php -r 'sleep(1);' 
-0 sleep &lt;internal&gt;:-1
-1 &lt;main&gt; &lt;internal&gt;:-1
-
-0 sleep &lt;internal&gt;:-1
-1 &lt;main&gt; &lt;internal&gt;:-1
-
-0 sleep &lt;internal&gt;:-1
-1 &lt;main&gt; &lt;internal&gt;:-1
-
-0 sleep &lt;internal&gt;:-1
-1 &lt;main&gt; &lt;internal&gt;:-1
-
-0 sleep &lt;internal&gt;:-1
-1 &lt;main&gt; &lt;internal&gt;:-1
-
-process_vm_readv: No such process</code></pre>
-		</section>
-		<section id="spy2" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Attach to a running process</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ sudo phpspy -r -p $(pgrep -n php-fpm)
-
-0 wp_installing /var/www/wordpress/wp-includes/load.php:944
-1 wp_load_alloptions /var/www/wordpress/wp-includes/option.php:189
-2 get_option /var/www/wordpress/wp-includes/option.php:90
-3 create_initial_taxonomies /var/www/wordpress/wp-includes/taxonomy.php:43
-4 WP_Hook::apply_filters /var/www/wordpress/wp-includes/class-wp-hook.php:286
-5 WP_Hook::do_action /var/www/wordpress/wp-includes/class-wp-hook.php:310
-6 do_action /var/www/wordpress/wp-includes/plugin.php:453
-7 &lt;main&gt; /var/www/wordpress/wp-settings.php:450
-8 &lt;main&gt; /var/www/wordpress/wp-config.php:89
-9 &lt;main&gt; /var/www/wordpress/wp-load.php:37
-10 &lt;main&gt; /var/www/wordpress/wp-blog-header.php:13
-11 &lt;main&gt; /var/www/wordpress/index.php:17
-# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -
-
-0 mysqli_query &lt;internal&gt;:-1
-1 wpdb::_do_query /var/www/wordpress/wp-includes/wp-db.php:1924
-2 wpdb::query /var/www/wordpress/wp-includes/wp-db.php:1813
-3 wpdb::get_results /var/www/wordpress/wp-includes/wp-db.php:2488
-4 _prime_comment_caches /var/www/wordpress/wp-includes/comment.php:2871
-5 WP_Comment_Query::get_comments /var/www/wordpress/wp-includes/class-wp-comment-query.php:427
-6 WP_Comment_Query::query /var/www/wordpress/wp-includes/class-wp-comment-query.php:346
-7 get_comments /var/www/wordpress/wp-includes/comment.php:226
-8 WP_Widget_Recent_Comments::widget /var/www/wordpress/wp-includes/widgets/class-wp-widget-recent-comments.php:99
-9 WP_Widget::display_callback /var/www/wordpress/wp-includes/class-wp-widget.php:372
-10 dynamic_sidebar /var/www/wordpress/wp-includes/widgets.php:743
-11 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/sidebar.php:41
-12 load_template /var/www/wordpress/wp-includes/template.php:688
-13 locate_template /var/www/wordpress/wp-includes/template.php:647
-14 get_sidebar /var/www/wordpress/wp-includes/general-template.php:110
-15 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/header.php:49
-16 load_template /var/www/wordpress/wp-includes/template.php:688
-17 locate_template /var/www/wordpress/wp-includes/template.php:647
-18 get_header /var/www/wordpress/wp-includes/general-template.php:41
-19 &lt;main&gt; /var/www/wordpress/wp-content/themes/twentyfifteen/single.php:10
-20 &lt;main&gt; /var/www/wordpress/wp-includes/template-loader.php:74
-21 &lt;main&gt; /var/www/wordpress/wp-blog-header.php:19
-22 &lt;main&gt; /var/www/wordpress/index.php:17
-# 1537119612.459615 /index.php p=1 /var/www/wordpress/index.php -</code></pre>
-		</section>
-		<section id="spy3" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Memory usage on stack frames</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ sudo phpspy -m php src/phan.php
-
-0 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
-1 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
-2 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
-3 Phan\Analysis::parseNodeInContext /home/rasmus/phan/src/Phan/Analysis.php:176
-4 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
-5 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
-6 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
-# mem 119159776 123721960
-
-0 ast\parse_code &lt;internal&gt;:-1
-1 Phan\AST\Parser::parseCode /home/rasmus/phan/src/Phan/AST/Parser.php:42
-2 Phan\Analysis::parseFile /home/rasmus/phan/src/Phan/Analysis.php:63
-3 Phan\Phan::analyzeFileList /home/rasmus/phan/src/Phan/Phan.php:94
-4 &lt;main&gt; /home/rasmus/phan/src/phan.php:1
-# mem 82471616 123721960</code></pre>
-		</section>
-		<section id="spytop" >
-		<p class="p" style="font-size:1.1em;text-align:center;">Top-like output mode </p>
-		<img src="/presentations/slides/intro/phpspy_top.gif" align="center" width="772" height="452">
-<aside class="notes"><br />
-sudo ptop<br />
-cd ~/phan<br />
-phan<br />
-</aside>
-		</section>
-		<section id="spy4" >
-		<p class="p" style="font-size:1.1em;text-align:left;">Generate a flame graph</p>
-		<pre><code class="shell nohighlight" data-trim style="font-size:0.9em;" >$ phpspy phan &gt; /tmp/output
-$ cat /tmp/output | stackcollapse-phpspy.pl | flamegraph.pl &gt; flame.svg</code></pre>
-		</section>
-		<section id="spy5" >
-		<object data="/presentations/slides/intro/phan.svg" type="image/svg+xml" align="center" width="80%" height="80%">Use a newer browser, please</object>
-		</section>	</section>
 	<section>
 		<section id="deploy">
 		<h1 style="text-align:center;">Let's deploy it!</h1>
