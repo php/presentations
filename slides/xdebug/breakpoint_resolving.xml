@@ -1,0 +1,22 @@
+<slide>
+<title>Breakpoint Resolving</title>
+
+<break lines="4"/>
+<blurb class="centre">Xdebug now finds the closest breakpoint line</blurb>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb class="big-centre">DEMO</blurb>
+</div>
+
+<div effect="fade-in">
+<break lines="5"/>
+<blurb class="centre">How does this work?</blurb>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb class="centre">Let's check the log…</blurb>
+<blurb class="big-centre">DEMO</blurb>
+</div>
+</slide>

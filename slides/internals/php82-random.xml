@@ -1,0 +1,21 @@
+<slide>
+<title>New Random extension</title>
+
+<example result="3"><![CDATA[
+<?php
+$engine = new \Random\Engine\Xoshiro256StarStar( /* 42 */ );
+$r = new \Random\Randomizer($engine);
+
+echo bin2hex( $r->getBytes( 8 ) ), "\n";
+
+echo $r->getInt(1, 100), "\n";
+echo $r->nextInt(), "\n";
+
+$fruits = [ 'red' => '🍎',  'green' => '🍏', 'pink' => '🍑' ];
+echo "Keys: ", join( ', ', $r->pickArrayKeys( $fruits, 2 ) ), "\n";
+
+echo "Salad: ", join( ', ', $r->shuffleArray( $fruits ) ), "\n";
+
+echo $r->shuffleBytes( "PHP is great!" ), "\n";
+?>]]></example>
+</slide>

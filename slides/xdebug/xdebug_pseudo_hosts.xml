@@ -1,0 +1,15 @@
+<slide>
+<title>"Smart" Host Names</title>
+<break lines="5"/>
+<blurb class="centre">Helping with the configuration madness…</blurb>
+
+<div effect="fade-in">
+<break lines="5"/>
+<blurb class="centre">%xdebug.client_host=%</blurb>
+<blurb class="big-centre">%xdebug://gateway%</blurb>
+</div>
+
+<div effect="fade-in">
+<blurb class="big-centre">%xdebug://nameserver%</blurb>
+</div>
+</slide>
