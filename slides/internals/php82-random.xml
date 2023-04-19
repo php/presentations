@@ -11,7 +11,7 @@ echo bin2hex( $r->getBytes( 8 ) ), "\n";
 echo $r->getInt(1, 100), "\n";
 echo $r->nextInt(), "\n";
 
-$fruits = [ 'red' => '🍎',  'green' => '🍏', 'pink' => '🍑' ];
+$fruits = ['red' => '🍎', 'green' => '🥝', 'yellow' => '🍌', 'purple' => '🍇'];
 echo "Keys: ", join( ', ', $r->pickArrayKeys( $fruits, 2 ) ), "\n";
 
 echo "Salad: ", join( ', ', $r->shuffleArray( $fruits ) ), "\n";

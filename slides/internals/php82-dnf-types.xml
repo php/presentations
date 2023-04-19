@@ -48,7 +48,7 @@ class Foreachy {
         $this->foreachableData = $foreachable;
     }
  
-    public function getIterator(): *array(Traversable&Countable)* {
+    public function getIterator(): *array|(Traversable&Countable)* {
         return $this->foreachableData;
     }
 }
