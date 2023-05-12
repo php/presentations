@@ -1,0 +1,37 @@
+<slide>
+<title>Collection: Add Write Handler</title>
+
+<blurb>%Zend/zend_object_handlers.c%</blurb>
+<example class="small"><![CDATA[
+@@ -26,6 +26,7 @@
+ #include "zend_objects_API.h"
+ #include "zend_object_handlers.h"
+ #include "zend_interfaces.h"
++#include "zend_collection.h"
+ #include "zend_exceptions.h"
+…
+
+@@ -1042,6 +1045,8 @@ ZEND_API void zend_std_write_dimension(zend_object *object, zval *offset, zval *
+                zend_call_known_instance_method_with_2_params(funcs->zf_offsetset, object, NULL, &tmp_offset, value);
+                OBJ_RELEASE(object);
+                zval_ptr_dtor(&tmp_offset);
++       } else if (zend_class_implements_interface(ce, zend_ce_collection)) {
++               zend_collection_add_item(object, offset, value);
+        } else {
+                zend_bad_array_access(ce);
+        }
+]]></example>
+
+<div effect="fade-in">
+<break/>
+<blurb>%Zend/zend_collection.h%</blurb>
+<example class="small"><![CDATA[
+@@ -34,6 +34,11 @@ void zend_collection_add_interfaces(zend_class_entry *ce);
+ void zend_collection_register_handlers(zend_class_entry *ce);
+ void zend_collection_register_props(zend_class_entry *ce);
+
++void zend_collection_add_item(zend_object *object, zval *offset, zval *value);
+]]></example>
+</div>
+
+</slide>

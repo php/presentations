@@ -1,0 +1,60 @@
+<slide>
+<title>Collection: Init and Storage</title>
+<!--
+<blurb>%zend_compile.c%</blurb>
+<example class="small"><![CDATA[
+                zend_compile_collection_key_type(ce, collection_key_type_ast);
+                zend_compile_collection_item_type(ce, collection_item_type_ast);
++               zend_collection_register_handlers(ce);
++               zend_collection_register_props(ce);
+        }
+
+]]></example>
+-->
+<div effect="fade-in">
+<blurb>%Zend/zend_collection.h%</blurb>
+<example class="small"><![CDATA[
+#ifndef ZEND_COLLECTION_H
+#define ZEND_COLLECTION_H
+
+#include "zend.h"
+#include <stdint.h>
+
+BEGIN_EXTERN_C()
+
+extern ZEND_API zend_object_handlers zend_collection_object_handlers;
+
+void zend_collection_register_handlers(zend_class_entry *ce);
+void zend_collection_register_props(zend_class_entry *ce);
+
+END_EXTERN_C()
+#endif /* ZEND_COLLECTION_H */
+]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>%Zend/zend_collection.c%</blurb>
+<example class="small"><![CDATA[
+#include "zend.h"
+#include "zend_API.h"
+
+void zend_collection_register_handlers(zend_class_entry *ce)
+{
+       memcpy(&zend_collection_object_handlers, &std_object_handlers, sizeof(zend_object_handlers));
+       zend_collection_object_handlers.clone_obj = NULL;
+       zend_collection_object_handlers.compare = zend_objects_not_comparable;
+       ce->default_object_handlers = &zend_collection_object_handlers;
+}
+
+void zend_collection_register_props(zend_class_entry *ce)
+{
+       zval name_default_value;
+       ZVAL_UNDEF(&name_default_value);
+       zend_type name_type = ZEND_TYPE_INIT_CODE(IS_ARRAY, 0, 0);
+       zend_declare_typed_property(ce, ZSTR_KNOWN(ZEND_STR_VALUE), &name_default_value, ZEND_ACC_PUBLIC | ZEND_ACC_R
+       ce->ce_flags |= ZEND_ACC_NO_DYNAMIC_PROPERTIES;
+}
+]]></example>
+</div>
+
+</slide>

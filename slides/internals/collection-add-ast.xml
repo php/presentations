@@ -1,0 +1,44 @@
+<slide>
+<title>Collection: Add AST Code</title>
+
+<blurb>%Zend/zend.h%</blurb>
+<example class="small"><![CDATA[
+        HashTable *backed_enum_table;
+
++       uint32_t collection_key_type;
++       zend_type collection_item_type;
+]]></example>
+
+<blurb>%Zend/zend_compile.c%</blurb>
+<example class="small"><![CDATA[
+ static void zend_compile_class_decl(znode *result, zend_ast *ast, bool toplevel) /* {{{ */
+ {
+        zend_ast_decl *decl = (zend_ast_decl *) ast;
+        zend_ast *extends_ast = decl->child[0];
+        zend_ast *implements_ast = decl->child[1];
+        zend_ast *stmt_ast = decl->child[2];
++       zend_ast *collection_key_type_ast = decl->child[3];
++       zend_ast *collection_item_type_ast = decl->child[4];
+        zend_ast *enum_backing_type_ast = decl->child[4];
+        zend_string *name, *lcname;
+        zend_class_entry *ce = zend_arena_alloc(&CG(arena), sizeof(zend_class_entry));
+@@ -8003,7 +8039,7 @@ static void zend_compile_class_decl(znode *result, zend_ast *ast, bool toplevel)
+
+        CG(active_class_entry) = ce;
+
+-       if (decl->child[3]) {
++       if (decl->child[3] && !(ce->ce_flags & ZEND_ACC_COLLECTION)) {
+                zend_compile_attributes(&ce->attributes, decl->child[3], 0, ZEND_ATTRIBUTE_TARGET_CLASS, 0);
+        }
+
+@@ -8019,6 +8055,13 @@ static void zend_compile_class_decl(znode *result, zend_ast *ast, bool toplevel)
+                zend_enum_register_props(ce);
+        }
+
++       if (ce->ce_flags & ZEND_ACC_COLLECTION) {
++               zend_compile_collection_key_type(ce, collection_key_type_ast);
++               zend_compile_collection_item_type(ce, collection_item_type_ast);
++       }
++
+]]></example>
+</slide>

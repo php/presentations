@@ -1,0 +1,26 @@
+<slide>
+<title>Collection: Add Read Handler [1]</title>
+
+<blurb>%Zend/zend_object_handlers.c%</blurb>
+<example class="small"><![CDATA[
+@@ -1019,6 +1020,8 @@ ZEND_API zval *zend_std_read_dimension(zend_object *object, zval *offset, int ty
+                        return NULL;
+                }
+                return rv;
++       } else if (zend_class_implements_interface(ce, zend_ce_collection)) {
++               return zend_collection_read_item(object, offset);
+        } else {
+                zend_bad_array_access(ce);
+                return NULL;
+]]></example>
+
+<div effect="fade-in">
+<break/>
+<blurb>%Zend/zend_collection.h%</blurb>
+<example class="small"><![CDATA[
+ void zend_collection_add_item(zend_object *object, zval *offset, zval *value);
++zval *zend_collection_read_item(zend_object *object, zval *offset);
+]]></example>
+</div>
+
+</slide>

@@ -1,0 +1,30 @@
+<slide>
+<title>Collection: Make Check Type Public</title>
+
+<blurb>%Zend/zend_execute.h%</blurb>
+<example class="small"><![CDATA[
+@@ -89,6 +89,7 @@ ZEND_API ZEND_COLD void ZEND_FASTCALL zend_invalid_class_constant_type_error(uin
+ ZEND_API ZEND_COLD void ZEND_FASTCALL zend_object_released_while_assigning_to_property_error(const zend_property_inf
+
+ ZEND_API bool zend_verify_scalar_type_hint(uint32_t type_mask, zval *arg, bool strict, bool is_internal_arg);
++ZEND_API bool zend_check_type(zend_type *type, zval *arg, void **cache_slot, zend_class_entry *scope, bool is_return_type, bool is_internal);
+ ZEND_API ZEND_COLD void zend_verify_arg_error(
+                const zend_function *zf, const zend_arg_info *arg_info, uint32_t arg_num, zval *value);
+ ZEND_API ZEND_COLD void zend_verify_return_error(
+]]></example>
+
+
+<blurb>%Zend/zend_execute.c%</blurb>
+<example class="small"><![CDATA[
+@@ -1182,7 +1182,7 @@ static zend_always_inline bool zend_check_type_slow(
+         * because this case is already checked at compile-time. */
+ }
+
+-static zend_always_inline bool zend_check_type(
++zend_always_inline bool zend_check_type(
+                zend_type *type, zval *arg, void **cache_slot, zend_class_entry *scope,
+                bool is_return_type, bool is_internal)
+ {
+]]></example>
+
+</slide>

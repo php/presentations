@@ -1,0 +1,29 @@
+<slide>
+<title>Collection: Add Interface Handlers</title>
+
+<blurb>%Zend/zend_compile.c%</blurb>
+<example class="small"><![CDATA[
+@@ -8059,6 +8059,7 @@ static void zend_compile_class_decl(znode *result, zend_ast *ast, bool toplevel)
+        if (ce->ce_flags & ZEND_ACC_COLLECTION) {
+                zend_compile_collection_key_type(ce, collection_key_type_ast);
+                zend_compile_collection_item_type(ce, collection_item_type_ast);
++               zend_collection_add_interfaces(ce);
+                zend_collection_register_handlers(ce);
+                zend_collection_register_props(ce);
+        }
+]]></example>
+
+<div effect="fade-in">
+<break/>
+<blurb>%Zend/zend_default_classes.c%</blurb>
+<example class="small"><![CDATA[
+@@ -40,4 +40,5 @@ ZEND_API void zend_register_default_classes(void)
+        zend_register_attribute_ce();
+        zend_register_enum_ce();
+        zend_register_fiber_ce();
++       zend_register_collection_ce();
+ }
+]]></example>
+</div>
+
+</slide>

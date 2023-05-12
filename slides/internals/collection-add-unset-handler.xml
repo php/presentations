@@ -1,0 +1,49 @@
+<slide>
+<title>Collection: Add Unset Handler</title>
+
+<blurb>%Zend/zend_object_handlers.c%</blurb>
+<example class="small"><![CDATA[
+@@ -1251,6 +1258,8 @@ ZEND_API void zend_std_unset_dimension(zend_object *object, zval *offset) /* {{{
+                zend_call_known_instance_method_with_1_params(funcs->zf_offsetunset, object, NULL, &tmp_offset);
+                OBJ_RELEASE(object);
+                zval_ptr_dtor(&tmp_offset);
++       } else if (zend_class_implements_interface(ce, zend_ce_collection)) {
++               zend_collection_unset_item(object, offset);
+        } else {
+                zend_bad_array_access(ce);
+        }
+]]></example>
+
+<div effect="fade-in">
+<blurb>%Zend/zend_collection.h%</blurb>
+<example class="small"><![CDATA[
+ zval *zend_collection_read_item(zend_object *object, zval *offset);
++void zend_collection_unset_item(zend_object *object, zval *offset);
+]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>%Zend/zend_collection.c%</blurb>
+<example class="small"><![CDATA[
+void zend_collection_unset_item(zend_object *object, zval *offset)
+{
+       zval rv;
+       zval *value_prop;
+       zend_class_entry *ce = object->ce;
+
+       if (!key_type_allowed(ce, offset)) {
+               return;
+       }
+
+       value_prop = zend_read_property_ex(ce, object, ZSTR_KNOWN(ZEND_STR_VALUE), true, &rv);
+
+       if (Z_TYPE_P(offset) == IS_STRING) {
+               zend_hash_del(HASH_OF(value_prop), Z_STR_P(offset));
+       } else {
+               zend_hash_index_del(HASH_OF(value_prop), Z_LVAL_P(offset));
+       }
+}
+]]></example>
+</div>
+
+</slide>

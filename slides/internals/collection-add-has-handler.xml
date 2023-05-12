@@ -1,0 +1,50 @@
+<slide>
+<title>Collection: Add Has Handler</title>
+
+<blurb>%Zend/zend_object_handlers.c%</blurb>
+<example class="small"><![CDATA[
+@@ -1068,6 +1073,8 @@ ZEND_API int zend_std_has_dimension(zend_object *object, zval *offset, int check
+                }
+                OBJ_RELEASE(object);
+                zval_ptr_dtor(&tmp_offset);
++       } else if (zend_class_implements_interface(ce, zend_ce_collection)) {
++               return zend_collection_has_item(object, offset);
+        } else {
+                zend_bad_array_access(ce);
+                return 0;
+]]></example>
+
+<div effect="fade-in">
+<blurb>%Zend/zend_collection.h%</blurb>
+<example class="small"><![CDATA[
+ void zend_collection_add_item(zend_object *object, zval *offset, zval *value);
++int zend_collection_has_item(zend_object *object, zval *offset);
+]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>%Zend/zend_collection.c%</blurb>
+<example class="small"><![CDATA[
+int zend_collection_has_item(zend_object *object, zval *offset)
+{
+       zval rv;
+       zval *value_prop;
+       zend_class_entry *ce = object->ce;
+
+       if (!key_type_allowed(ce, offset)) {
+               return false;
+       }
+
+       value_prop = zend_read_property_ex(ce, object, ZSTR_KNOWN(ZEND_STR_VALUE), true, &rv);
+       if (Z_TYPE_P(offset) == IS_STRING) {
+               return zend_hash_find(HASH_OF(value_prop), Z_STR_P(offset)) != NULL;
+       } else {
+               return zend_hash_index_find(HASH_OF(value_prop), Z_LVAL_P(offset)) != NULL;
+       }
+
+       return false;
+}
+]]></example>
+</div>
+
+</slide>

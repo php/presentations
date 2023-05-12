@@ -1,0 +1,21 @@
+<slide>
+<title>Collection: Add Write Handler Implementation [2]</title>
+
+<blurb>%Zend/zend_collection.c%</blurb>
+<example class="small"><![CDATA[
+static void create_array_if_needed(zend_class_entry *ce, zend_object *object)
+{
+       zval *value_prop = zend_read_property_ex(ce, object, ZSTR_KNOWN(ZEND_STR_VALUE), true, NULL);
+
+       if (Z_TYPE_P(value_prop) == IS_ARRAY) {
+               return;
+       }
+
+       zval new_array;
+       array_init(&new_array);
+       zend_update_property_ex(ce, object, ZSTR_KNOWN(ZEND_STR_VALUE), &new_array);
+       zval_ptr_dtor(&new_array);
+}
+]]></example>
+
+</slide>

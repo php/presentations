@@ -1,0 +1,34 @@
+<slide>
+<title>Collection: Add Interface</title>
+
+<blurb>%Zend/zend_collection.stub.php%</blurb>
+<example class="small"><![CDATA[
+<?php
+/** @generate-class-entries */
+interface Collection
+{
+}
+]]></example>
+
+<blurb>%Zend/zend_collection.h%</blurb>
+<example class="small"><![CDATA[
+ extern ZEND_API zend_object_handlers zend_collection_object_handlers;
++extern ZEND_API zend_class_entry *zend_ce_collection;
++
++void zend_register_collection_ce(void);
++void zend_collection_add_interfaces(zend_class_entry *ce);
+]]></example>
+
+<div effect="fade-in">
+<break/>
+<blurb>%Zend/zend_collection.c%</blurb>
+<example class="small"><![CDATA[
++#include "zend_collection_arginfo.h"
++#include "zend_execute.h"
+
++ZEND_API zend_class_entry *zend_ce_collection;
+ ZEND_API zend_object_handlers zend_collection_object_handlers;
+]]></example>
+</div>
+
+</slide>

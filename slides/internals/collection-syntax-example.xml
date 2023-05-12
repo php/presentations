@@ -1,0 +1,78 @@
+<slide>
+<title>Collection: Syntax</title>
+
+<div effect="fade-out">
+<example inline="2"><![CDATA[&lt;?php
+*collection* Articles(*int|string* => *Class*)
+{
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Example Usage:</blurb>
+<example><![CDATA[<?php
+collection Articles(string => Article)
+{
+}
+
+class Article
+{
+    function __construct(public string $title)
+    {
+    }
+}
+
+$c = new Articles;
+
+// OK:
+$c["nine"] = new Article("The Ninth Planet: Pluto");
+
+// Error:
+$c["six"] = "Henry VIII";
+?>]]></example>
+
+</div>
+
+<div effect="fade-in">
+<blurb>%Zend/tests/collection/collection_3.phpt%</blurb>
+<example class="small"><![CDATA[--TESTS--
+Collections: Syntax
+--FILE--
+<?php
+collection Articles(string => Article) { }
+
+class Article
+{
+    function __construct(public string $title) { }
+}
+
+$c = new Articles;
+
+// OK:
+$c["nine"] = new Article("The Ninth Planet: Pluto");
+print_r($c);
+
+// Error:
+try {
+    $c["six"] = "Henry VIII";
+} catch (Error $e) {
+    echo get_class($e), ': ', $e->getMessage(), "\n";
+}
+?>
+--EXPECT--
+Articles Object
+(
+    [value] => Array
+        (
+            [nine] => Article Object
+                (
+                    [title] => The Ninth Planet: Pluto
+                )
+        )
+)
+TypeError: Value type string does not match collection item type Article
+]]></example>
+
+</div>
+</slide>
