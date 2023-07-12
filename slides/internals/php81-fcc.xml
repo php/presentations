@@ -52,7 +52,7 @@ class Test {
     public function getPrivateMethod() {
         |bbbbbb|return [$this, 'privateMethod'];*|
         |bbbbbb|return Closure::fromCallable([$this, 'privateMethod']);|
-        *return $this->privateMethod(...);*
+        *return $this->privateMethod(...);* // new in PHP 8.1
     }
 
     private function privateMethod() {

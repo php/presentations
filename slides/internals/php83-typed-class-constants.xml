@@ -1,0 +1,36 @@
+<slide>
+<title>PHP 8.3: Typed Class Constants?</title>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+interface I {
+    const TEST = "Test";
+}
+
+class Foo implements I {
+    const TEST = [];
+}
+
+class Bar extends Foo {
+    const TEST = null;
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[&lt;?php
+interface I {
+    const *string* TEST = "Test";
+}
+
+class Foo implements I {
+    const TEST = [];
+}
+
+class Bar extends Foo {
+    const float TEST = M_PI;
+}
+?>]]></example>
+</div>
+
+</slide>

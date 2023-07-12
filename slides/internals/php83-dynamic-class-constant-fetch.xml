@@ -1,0 +1,45 @@
+<slide>
+<title>Dynamic Class Constant Fetch</title>
+
+<blurb>Looking up members' names:</blurb>
+<div effect="fade-out">
+<list>
+    <bullet>Variables: %$$foo%</bullet>
+    <bullet>Properties: %$foo->$bar%</bullet>
+    <bullet>Static properties: %Foo::${$bar}%</bullet>
+    <bullet>Methods: %$foo->{$bar}()%</bullet>
+    <bullet>Static methods: %Foo::{$bar}()%</bullet>
+    <bullet>Classes for static properties: %$foo::$bar%</bullet>
+    <bullet>Classes for static methods: %$foo::bar()%</bullet>
+    <bullet>---Class constants: %$foo::{$bar}%---</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<list>
+    <bullet>…</bullet>
+    <bullet>Class constants: %$foo::{$bar}%</bullet>
+</list>
+
+<example result="0"><![CDATA[
+<?php
+class Foo {
+    const BAR = 'bar';
+}
+$bar = 'BAR';
+
+echo Foo::{$bar}; // bar
+?>]]></example>
+
+<blurb>Also works for magic %class% constant:</blurb>
+<example result="0"><![CDATA[
+<?php
+namespace Foo;
+class Bar {}
+
+$class = 'class';
+echo Bar::{$class}; // Foo\Bar
+?>]]></example>
+
+</div>
+</slide>

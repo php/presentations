@@ -1,0 +1,28 @@
+<slide>
+<title>Readonly Amendments</title>
+
+<blurb>In PHP 8.3:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class LogEntry
+{
+    public function __construct(
+        public readonly string $title,
+        public readonly DateTimeImmutable $current,
+    ) {}
+
+    public function __clone()
+    {
+        $this->current = new DateTimeImmutable();
+    }
+}
+
+$entry = new LogEntry("PHP Sussex is great", new DateTimeImmutable());
+$newEntry = clone $entry;
+?>]]></example>
+
+<div effect="fade-in">
+<break/>
+<blurb>You can now re-assign readonly properties during %clone%</blurb>
+</div>
+
+</slide>

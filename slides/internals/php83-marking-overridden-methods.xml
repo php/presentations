@@ -1,0 +1,51 @@
+<slide>
+<title>PHP 8.3: New #[Override] Attribute</title>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+final class MyApp\Tests\MyTest extends PHPUnit\Framework\TestCase
+{
+    protected $logFile;
+
+    protected function setUp(): void
+    {
+        $this->logFile = fopen('/tmp/logfile', 'w');
+    }
+
+
+    protected function taerDown(): void
+    {
+        fclose($this->logFile);
+        unlink('/tmp/logfile');
+    }
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="1"><![CDATA[&lt;?php
+final class MyApp\Tests\MyTest extends PHPUnit\Framework\TestCase
+{
+    protected $logFile;
+
+    protected function setUp(): void
+    {
+        $this->logFile = fopen('/tmp/logfile', 'w');
+    }
+
+    *#[\Override]*
+    protected function *tearDown()*: void
+    {
+        fclose($this->logFile);
+        unlink('/tmp/logfile');
+    }
+}
+?>]]></example>
+
+<break lines="2"/>
+
+<blurb>If this attribute is added to a method, PHP validates that a method with
+the same name exists in a parent class or any of the implemented
+interfaces.</blurb>
+</div>
+</slide>
