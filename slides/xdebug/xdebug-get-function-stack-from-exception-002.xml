@@ -1,0 +1,74 @@
+<slide>
+<title>xdebug_get_function_stack() - exceptions</title>
+
+<example inline="1"><![CDATA[&lt;?php
+function exceptionHandler($exception)
+{
+    print_r(array_reverse(xdebug_get_function_stack( *['from_exception' => $exception ]* )));
+}
+
+class Elephpant
+{
+    function __construct(private string $title, private float $PIE) {}
+}
+
+class Error_Class
+{
+    public static function newError($errno = false)
+    {
+        $elephpant = new Elephpant("Bluey", M_PI);
+        $randoVar = 42;
+        throw new Exception("My Exception");
+    }
+}
+
+set_exception_handler('exceptionHandler');
+
+$e = Error_Class::newError(42);
+]]></example>
+
+<div effect="fade-in">
+<example><![CDATA[Array
+(
+    [0] => Array
+        (
+            [time] => 2.093588419
+            [memory] => 586944
+            [function] => newError
+            [type] => static
+            [class] => Error_Class
+            [file] => Standard input code
+            [line] => 24
+            [params] => Array
+                (
+                    [errno] => 42
+                )
+            [variables] => Array
+                (
+                    [errno] => 42
+                    [elephpant] => Elephpant Object
+                        (
+                            [title:Elephpant:private] => Bluey
+                            [PIE:Elephpant:private] => 3.1415926535898
+                        )
+                )
+        )
+    [1] => Array
+        (
+            [time] => 2.093500324
+            [memory] => 586560
+            [function] => {main}
+            [file] => Standard input code
+            [line] => 0
+            [params] => Array
+                (
+                )
+            [variables] => Array
+                (
+                    [e] => 
+                )
+        )
+)
+]]></example>
+</div>
+</slide>

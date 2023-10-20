@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>Debugging</topic>
+<title>Debugging Our Way Through PHP</title>
+<event>International PHP Conference</event>
+<location>Munich, Germany</location>
+<date>October 24th, 2023</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<mastodon>@derickr@phpc.social</mastodon>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/xdebug-ipc23</url>
+<joindin>https://xdebug.org</joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+Code reorganisation
+Modes
+- only do what is needed
+Reduce Configuration Options
+Code Improvements (algorithms, memory, etc)
+<!--<s lide>slides/xdebug/code-reorgnisation.xml</slide>-->
+<slide>slides/xdebug/modes.xml</slide>
+<slide>slides/xdebug/config-settings-3b.xml</slide>
+
+- xdebug_info() (demo, VS Code or PhpStorm)
+
+	- an API through xdebug_info() for mode detection (VS Code or PhpStorm)
+		'mode'
+		'extension-flags'
+
+<slide>slides/xdebug/xdebug_info.xml</slide>
+<slide>slides/xdebug/xdebug_info-2.xml</slide>
+
+- xdebug_notify() (demo, VS Code)
+
+<slide>slides/xdebug/xdebug_notify.xml</slide>
+
+  -> ticket
+
+
+<!-- FIBERS -->
+
+Fibers (https://wiki.php.net/rfc/fibers)
+<slide>slides/internals/php81-fibers.xml</slide>
+
+<slide>slides/internals/webcamp22-exercise-fibers.xml</slide>
+
+<slide>slides/xdebug/breakpoint_resolving.xml</slide>
+- breakpoint resolving (demo, PhpStorm)
+
+<slide>slides/xdebug/return_value.xml</slide>
+- return value debugging (demo, VS Code)
+
+<slide>slides/xdebug/breakpoint_not_resolving.xml</slide>
+- Xdebug will now also log a warning if an IDE attempts to set a breakpoint on
+  a file that does not exist on the file system. (demo, PhpStorm)
+
+<slide>slides/xdebug/xdebug_connect_to_client.xml</slide>
+- xdebug_connect_to_client() (demo, PhpStorm)
+
+
+<!-- LANGUAGE FEATURES -->
+
+<slide>slides/internals/php74-short-arrow-functions.xml</slide>
+
+First Class Callable (https://wiki.php.net/rfc/first_class_callable_syntax)
+<slide>slides/internals/php81-fcc.xml</slide>
+
+<slide>slides/internals/php80-union-types.xml</slide>
+<slide>slides/internals/php80-union-types-phpdoc.xml</slide>
+<slide>slides/internals/php80-union-types-new.xml</slide>
+<slide>slides/internals/php80-union-types-examples.xml</slide>
+<slide>slides/internals/php80-union-types-law.xml</slide>
+<slide>slides/internals/php81-pure-intersection.xml</slide>
+<slide>slides/internals/php82-dnf-types.xml</slide>
+
+<slide>slides/internals/php82-redact-parameters.xml</slide>
+
+
+<!-- FUTURE -->
+https://wiki.php.net/rfc/marking_overriden_methods
+<slide>slides/internals/php83-marking-overridden-methods.xml</slide>
+
+https://wiki.php.net/rfc/typed_class_constants
+<slide>slides/internals/php83-typed-class-constants.xml</slide>
+
+https://wiki.php.net/rfc/dynamic_class_constant_fetch
+<slide>slides/internals/php83-dynamic-class-constant-fetch.xml</slide>
+
+<slide>slides/xdebug/xdebug-get-function-stack-local-vars.xml</slide>
+<slide>slides/xdebug/xdebug-get-function-stack-params-as-values.xml</slide>
+<slide>slides/xdebug/xdebug-get-function-stack-from-exception.xml</slide>
+<slide>slides/xdebug/xdebug-get-function-stack-from-exception-002.xml</slide>
+
+<slide>slides/xdebug/flamegraph.xml</slide>
+<slide>slides/xdebug/xdebug33-optimisation.xml</slide>
+
+
+<slide>slides/xdebug/donate.xml</slide>
+<slide>slides/xdebug/business-support.xml</slide>
+<slide>slides/xdebug/transparency.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

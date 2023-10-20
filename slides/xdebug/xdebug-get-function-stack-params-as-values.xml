@@ -1,0 +1,30 @@
+<slide>
+<title>xdebug_get_function_stack() - parameters as values</title>
+
+<example result="1"><![CDATA[
+<?php
+class Elephpant
+{
+    function __construct(private string $title, private float $PIE) {}
+}
+
+class Error_Class
+{
+    public static function getBT()
+    {
+        $tmp = xdebug_get_function_stack( ['params_as_values' => true ] );
+        var_dump(array_reverse($tmp));
+    }
+
+    public static function newError($errno = false)
+    {
+        $elephpant = new Elephpant("Bluey", M_PI);
+        $randoVar = 42;
+        return self::getBT();
+    }
+}
+
+$e = Error_Class::newError(42);
+?>
+]]></example>
+</slide>

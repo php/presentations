@@ -1,5 +1,5 @@
 <slide>
-<title>PHP 8.3: Typed Class Constants?</title>
+<title>PHP 8.3: Typed Class Constants</title>
 
 <div effect="fade-out">
 <example><![CDATA[<?php
@@ -31,6 +31,12 @@ class Bar extends Foo {
     const float TEST = M_PI;
 }
 ?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example class="error" inline="1">
+Fatal error: Type of Foo:TEST must be compatible with I::TEST of type string
+</example>
 </div>
 
 </slide>

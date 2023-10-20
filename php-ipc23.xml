@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>PHP Internals Deep Dive</title>
+<event>IPC 2023</event>
+<location>Munich, Germany</location>
+<date>October 23th, 2023</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<mastodon>@derickr@phpc.social</mastodon>
+<url>https://derickrethans.nl/talks/php-ipc23</url>
+<joindin></joindin>
+
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/internals/title-agenda.xml</slide>
+
+<slide>slides/internals/title-stages.xml</slide>
+<!-- INTRODUCTION
+Compile stages:
+Parse script
+Create AST
+Convert to opcodes
+Run the code
+Opcache for caching
+-->
+<slide>slides/internals/stages.xml</slide>
+
+<!-- STAGES
+Parse
+- Show parser rules
+- Show "compiler" rules
+-->
+
+<slide>slides/internals/collection-syntax-example.xml</slide>
+
+<slide>slides/internals/title-parsing.xml</slide>
+<slide>slides/internals/parse-state-machine.xml</slide>
+<slide>slides/internals/parse-tokenization.xml</slide>
+
+<slide>slides/internals/collection-add-token.xml</slide>
+
+<slide>slides/internals/scanner.xml</slide>
+<slide>slides/internals/scanner-rules.xml</slide>
+
+<slide>slides/internals/collection-add-parser-rules.xml</slide>
+
+<slide>slides/internals/ast.xml</slide>
+<slide>slides/internals/ast1.xml</slide>
+<slide>slides/internals/scanner-ast.xml</slide>
+<slide>slides/internals/scanner-ast2.xml</slide>
+
+<slide>slides/internals/collection-add-ast.xml</slide>
+<slide>slides/internals/collection-add-ast-type-check.xml</slide>
+<slide>slides/internals/collection-add-ast-clean-up.xml</slide>
+
+<slide>slides/internals/collection-add-init-and-property.xml</slide>
+<slide>slides/internals/collection-hook-init-and-property.xml</slide>
+<slide>slides/internals/collection-add-interface.xml</slide>
+<slide>slides/internals/collection-add-interface-handlers.xml</slide>
+<slide>slides/internals/collection-setup-interface-handlers.xml</slide>
+<slide>slides/internals/collection-add-add-handler.xml</slide>
+<slide>slides/internals/collection-add-add-handler-implementation.xml</slide>
+<slide>slides/internals/collection-add-add-handler-implementation2.xml</slide>
+<slide>slides/internals/collection-make-check-type-public.xml</slide>
+<slide>slides/internals/collection-add-read-handler.xml</slide>
+<slide>slides/internals/collection-add-read-handler2.xml</slide>
+<slide>slides/internals/collection-add-has-handler.xml</slide>
+<slide>slides/internals/collection-add-unset-handler.xml</slide>
+
+<slide>slides/internals/bytecode0.xml</slide>
+<slide>slides/internals/bytecode½.xml</slide>
+<slide>slides/internals/bytecode1.xml</slide>
+
+<!--
+AST
+- Show AST for various control structures
+
+Opcodes
+- Show AST for the same control structures
+-->
+
+<slide>slides/internals/jumps-for.xml</slide>
+<slide>slides/internals/jumps-for-rewritten.xml</slide>
+<slide>slides/internals/jumps-do-while.xml</slide>
+<slide>slides/internals/jumps-foreach.xml</slide>
+<slide>slides/internals/jumps-complex.xml</slide>
+<slide>slides/internals/jumps-complex-dot.xml</slide>
+
+<!--
+Dead code analysis
+- Show how Xdebug does it through VLD
+-->
+<slide>slides/internals/deadcode-vld.xml</slide>
+
+<!--
+Path analysis
+- Branch and Path
+-->
+<slide>slides/xdebug/vld-path-2-paths.xml</slide>
+<slide>slides/xdebug/vld-path-4-code.xml</slide>
+<slide>slides/xdebug/vld-path-4-output.xml</slide>
+
+<slide>slides/xdebug/vld-path-3-code.xml</slide>
+<slide>slides/xdebug/vld-path-3-output.xml</slide>
+<slide>slides/xdebug/vld-path-3-paths.xml</slide>
+<slide>slides/xdebug/vld-path-4-output.xml</slide>
+
+<!-- JIT
+-->
+
+<slide>slides/internals/jit.xml</slide>
+
+<!-- Conclusion
+
+Code -> Tokens -> AST -> opcode
+
+Transformation of control structures
+
+Useful implementations 
+
+-->
+<slide>slides/internals/recap.xml</slide>
+<slide>slides/internals/recap-content.xml</slide>
+
+
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/phpinternalsnews.xml</slide>
+
+<slide>slides/mongodb/resources.xml</slide>
+
+</presentation>

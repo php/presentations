@@ -16,19 +16,24 @@ function ifthenelse( $a, $b )
 <example class="medium">
 <![CDATA[<?php
 require 'vendor/autoload.php';
+use SebastianBergmann\CodeCoverage\Filter;
+use SebastianBergmann\CodeCoverage\Driver\Selector;
+use SebastianBergmann\CodeCoverage\CodeCoverage;
+use SebastianBergmann\CodeCoverage\Report\Html\Facade as HtmlReport;
+
 include 'test.php';
 
-$coverage = new PHP_CodeCoverage;
+$filter = new Filter;
+$filter->includeFiles( [ '/test.php' ] );
 
-$coverage->start('coverage1');
-ifthenelse( true, false ); 
-$coverage->stop();
+$coverage = new CodeCoverage(
+    (new Selector)->forLineAndPathCoverage($filter),
+    $filter
+);
 
-$coverage->start('coverage2');
-ifthenelse( false, true );
-$coverage->stop();
+$coverage->start('coverage1'); ifthenelse( true, false ); $coverage->stop();
+$coverage->start('coverage2'); ifthenelse( false, true ); $coverage->stop();
 
-$writer = new PHP_CodeCoverage_Report_HTML;
-$writer->process($coverage, '/tmp/code-coverage-report');]]>
-</example>
+(new HtmlReport)->process($coverage, '/tmp/code-coverage-report');
+]]></example>
 </slide>

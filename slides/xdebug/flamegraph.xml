@@ -1,0 +1,70 @@
+<slide>
+<title>Flamegraphs</title>
+
+<div effect="fade-out">
+<example>
+xdebug.mode=trace
+xdebug.start_with_request=no
+xdebug.trace_format=3 // time=3, memory=4
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Outputs to a file:</blurb>
+<example class="small">
+{main};require;require_once;create_initial_taxonomies;__ 2574
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;wp_parse_args 1803
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;wp_parse_args 1733
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;apply_filters 2344
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;apply_filters 2434
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;array_merge 2876
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;array_merge 1723
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;array_unique 1403
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;get_taxonomy_labels;WP_Taxonomy::get_default
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;get_taxonomy_labels;_get_custom_object_label
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;get_taxonomy_labels;_get_custom_object_label
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;get_taxonomy_labels;apply_filters 2525
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;get_taxonomy_labels;array_merge 3687
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props;get_taxonomy_labels 13674
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct;WP_Taxonomy->set_props 30859
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->__construct 3997
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->add_rewrite_rules 1743
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->add_hooks;add_filter;WP_Hook->add_filter;_wp_filter_build_unique_id 1583
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->add_hooks;add_filter;WP_Hook->add_filter 5380
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->add_hooks;add_filter 4588
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;WP_Taxonomy->add_hooks 3257
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;do_action 2475
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;do_action 2524
+{main};require;require_once;create_initial_taxonomies;register_taxonomy 16131
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;get_translations_for_domain 1624
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;NOOP_Translations->translate 1513
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;apply_filters 2174
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;apply_filters 2204
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context 8876
+{main};require;require_once;create_initial_taxonomies;_x 2925
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;get_translations_for_domain 1583
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;NOOP_Translations->translate 1483
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;apply_filters 2214
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context;apply_filters 2214
+{main};require;require_once;create_initial_taxonomies;_x;translate_with_gettext_context 8777
+{main};require;require_once;create_initial_taxonomies;_x 2785
+{main};require;require_once;create_initial_taxonomies;current_theme_supports 2114
+{main};require;require_once;create_initial_taxonomies;register_taxonomy;wp_parse_args 1844
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>Convert to flamegraph:</blurb>
+<example>
+zcat /tmp/trace._.xt.gz
+    | /tmp/FlameGraph/flamegraph.pl --width=1728 --height=20 --title="WordPress"
+    > /tmp/derick/flamegraph.svg
+</example>
+<blurb>%https://github.com/brendangregg/FlameGraph%</blurb>
+</div>
+
+<div effect="fade-in">
+<iframe align="center" filename="flamegraph.svg" width="1728" height="970"/>
+</div>
+
+</slide>

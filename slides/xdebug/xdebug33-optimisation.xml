@@ -1,0 +1,14 @@
+<slide>
+<title>Xdebug 3.3 Step Debugger Optimisations</title>
+
+<div effect="fade-out">
+<blurb align="center">Do less work:</blurb>
+<image zoom="1.5" filename="xdebug33-optimisation-generic.png"/>
+</div>
+
+<div effect="fade-in">
+<blurb align="center">Do smarter work:</blurb>
+<image zoom="1.5" filename="xdebug33-optimisation-breakpoint.png"/>
+</div>
+
+</slide>
