@@ -108,11 +108,6 @@ Path analysis
 <slide>slides/xdebug/vld-path-3-paths.xml</slide>
 <slide>slides/xdebug/vld-path-4-output.xml</slide>
 
-<!-- JIT
--->
-
-<slide>slides/internals/jit.xml</slide>
-
 <!-- Conclusion
 
 Code -> Tokens -> AST -> opcode
