@@ -1,0 +1,32 @@
+<slide>
+<title>PHP 8.3: Better DateTime Exceptions</title>
+
+<list>
+	<bullet>Error
+		<list>
+			<bullet>TypeError ~(Parameter Parsing Errors)~</bullet>
+			<bullet>ValueError ~(Non-User Input Programming Errors)~</bullet>
+			<bullet>DateError ~(Corrupted Data)~
+				<list>
+					<bullet>DateObjectError ~(Non-Initialised Parents, or Wrong Comparisons)~</bullet>
+					<bullet>DateRangeError ~(Out-of-Range on 32-bit)~</bullet>
+				</list>
+			</bullet>
+		</list>
+	</bullet>
+	<bullet>Exception
+		<list>
+			<bullet>DateException
+				<list>
+					<bullet>DateInvalidTimeZoneException</bullet>
+					<bullet>DateInvalidOperationException ~(Using Relative Time For Subtraction)~</bullet>
+					<bullet>DateMalformedStringException</bullet>
+					<bullet>DateMalformedIntervalStringException</bullet>
+					<bullet>DateMalformedPeriodStringException</bullet>
+				</list>
+			</bullet>
+		</list>
+	</bullet>
+</list>
+
+</slide>

@@ -15,6 +15,7 @@
 <list>
 	<bullet>Prevents dynamic properties from being created</bullet>
 	<bullet>Can't be used if there are untyped or static properties</bullet>
+	<bullet>Inherited classes *must* also be readonly</bullet>
 </list>
 </div>
 

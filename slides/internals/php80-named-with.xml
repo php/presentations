@@ -1,6 +1,8 @@
 <slide>
 <title>Object Instantiation with Named Arguments</title>
 
+<blurb>PHP 8.0:</blurb>
+
 <example inline="1">
 &amp;lt;?php
 class Settings

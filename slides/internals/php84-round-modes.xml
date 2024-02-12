@@ -1,0 +1,22 @@
+<slide>
+<title>PHP 8.4: Rounding Modes</title>
+
+<example result="1"><![CDATA[<?php
+$modes = [
+    PHP_ROUND_CEILING, PHP_ROUND_FLOOR,
+    PHP_ROUND_AWAY_FROM_ZERO, PHP_ROUND_TOWARD_ZERO,
+];
+
+// 8.45
+foreach ($modes as $mode) {
+    echo ' ' . round(8.45, 1, $mode), " ";
+}
+echo "\n";
+
+// -8.45
+foreach ($modes as $mode) {
+    echo round(-8.45, 1, $mode), " ";
+}
+echo "\n";
+]]></example>
+</slide>

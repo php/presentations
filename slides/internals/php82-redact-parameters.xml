@@ -1,6 +1,7 @@
 <slide>
 <title>Sensitive Parameters</title>
 
+<blurb>PHP 8.2:</blurb>
 <example><![CDATA[<?php
 function logIn($userName, #[\SensitiveParameter] $password) {
     throw new \Exception('Error');

@@ -1,0 +1,27 @@
+<slide>
+<title>PHP 8.4: Parsing HTML5</title>
+
+<blurb>HTML 5 parsing, through the following new class hierachy:</blurb>
+
+<example><![CDATA[<?php
+namespace DOM {
+    abstract class Document extends DOM\Node implements DOM\ParentNode {
+        /* all properties and methods that are common and sensible for both XML
+         * & HTML documents */
+    }
+
+    final class XMLDocument extends Document {
+        /* XML specific properties and methods */
+    }
+
+    final class HTMLDocument extends Document {
+        /* HTML specific properties and methods */
+    }
+}
+
+class DOMDocument extends DOM\Document {
+    /* Keep methods, properties, and constructor the same as they are now */
+}
+?>]]></example>
+
+</slide>

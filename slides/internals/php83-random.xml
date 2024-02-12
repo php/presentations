@@ -1,0 +1,23 @@
+<slide>
+<title>PHP 8.3: Randomiser Additions</title>
+
+<example result="3"><![CDATA[
+<?php
+$r = new \Random\Randomizer();
+
+echo "Random domain name: ",
+	$r->getBytesFromString('abcdefghijklmnopqrstuvwxyz0123456789', 16),
+	".example.com\n";
+echo "Back-up Code:       ", 
+	implode('-', str_split($r->getBytesFromString('0123456789', 20), 5)),
+	"\n";
+
+printf(
+    "Random Coordinates: Lat: %+.6f Long: %+.6f",
+    $r->getFloat(-90, 90, \Random\IntervalBoundary::ClosedClosed),
+    $r->getFloat(-180, 180, \Random\IntervalBoundary::OpenClosed),
+);
+
+?>]]></example>
+</slide>
+

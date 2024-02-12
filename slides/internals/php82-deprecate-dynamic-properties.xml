@@ -1,6 +1,7 @@
 <slide>
 <title>Deprecating Dynamic Properties</title>
 
+<blurb>PHP 8.2:</blurb>
 <example>
 <![CDATA[<?php
 class ezcGraphDataSet
@@ -33,9 +34,6 @@ Deprecated: Creation of dynamic property ezcGraphDataSet::$palette is deprecated
       */
 -    protected $pallet;
 +    protected $palette;
-
-     /**
-      * Array keys
 </example>
 </div>
 

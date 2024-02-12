@@ -1,0 +1,12 @@
+<slide>
+<title>PHP 8.3: json_validate()</title>
+
+<blurb>For when you need to know JSON is valid, but don't need to parse it:</blurb>
+
+<example result="1"><![CDATA[<?php
+$valid = json_validate('{ "test": { "foo": "bar" } }');
+
+$valid = json_validate('{ "": "": "" } }');
+var_dump($valid, json_last_error(), json_last_error_msg());
+]]></example>
+</slide>

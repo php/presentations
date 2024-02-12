@@ -1,0 +1,20 @@
+<slide>
+<title>PHP 8.3: Arbitrary Static Variable Initializers</title>
+
+<example result="1"><![CDATA[<?php
+function bar() {
+    echo "bar() called\n";
+    return 1;
+}
+
+function foo() {
+    static $i = bar();
+    echo $i++, "\n";
+}
+
+echo "BEGIN\n";
+foo();
+foo();
+foo();
+]]></example>
+</slide>
