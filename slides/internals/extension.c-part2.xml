@@ -9,7 +9,7 @@ zend_module_entry geospatial_module_entry = {
     STANDARD_MODULE_HEADER,
 #endif
     "geospatial",
-    geospatial_functions,
+    ext_functions,
     PHP_MINIT(geospatial),
     NULL,
     NULL,

@@ -7,25 +7,12 @@
 #include "php.h"
 #include "php_ini.h"
 #include "ext/standard/info.h"
+
 #include "php_geospatial.h"
+#include "php_geospatial_arginfo.h"
+
 #include "Zend/zend_exceptions.h"
 #include "ext/spl/spl_exceptions.h"
-]]></example>
-
-<blurb>Argument Information:</blurb>
-<example><![CDATA[
-ZEND_BEGIN_ARG_INFO_EX(rdp_simplify_args, 0, 0, 2)
-    ZEND_ARG_INFO(0, pointsArray)
-    ZEND_ARG_INFO(0, epsilon)
-ZEND_END_ARG_INFO()
-]]></example>
-
-<blurb>List of functions:</blurb>
-<example><![CDATA[
-const zend_function_entry geospatial_functions[] = {
-    PHP_FE(rdp_simplify, rdp_simplify_args)
-    { NULL, NULL, NULL }
-};
 ]]></example>
 
 </slide>

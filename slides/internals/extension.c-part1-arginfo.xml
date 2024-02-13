@@ -1,0 +1,31 @@
+<slide>
+<title>Extension Set-Up</title>
+<subtitle>Function Definitions</subtitle>
+
+<blurb>%php_geospatial.stub.php%</blurb>
+<example><![CDATA[
+<?php
+/** @generate-function-entries */
+function rdp_simplify(array $points, float $epsilon): array {}
+]]></example>
+
+<break lines="1"/>
+<blurb>Generates %php_geospatial_arginfo.h%:</blurb>
+<example><![CDATA[
+/* This is a generated file, edit the .stub.php file instead.
+ * Stub hash: e128dccdbd9aa407d95c5b62e8000cb12d0bffa3 */
+
+ZEND_BEGIN_ARG_WITH_RETURN_TYPE_INFO_EX(arginfo_rdp_simplify, 0, 2, IS_ARRAY, 0)
+    ZEND_ARG_TYPE_INFO(0, points, IS_ARRAY, 0)
+    ZEND_ARG_TYPE_INFO(0, epsilon, IS_DOUBLE, 0)
+ZEND_END_ARG_INFO()
+
+ZEND_FUNCTION(rdp_simplify);
+
+static const zend_function_entry ext_functions[] = {
+    ZEND_FE(rdp_simplify, arginfo_rdp_simplify)
+    ZEND_FE_END
+};
+]]></example>
+
+</slide>
