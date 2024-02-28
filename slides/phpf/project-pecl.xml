@@ -1,0 +1,24 @@
+<slide>
+<title>New PECL: PIE</title>
+
+<break/>
+
+<blurb>
+The current system for distributing PHP extensions, PECL/PEAR, is outdated and
+prone to supply-chain attacks, making it unreliable for average developers.
+This leads to the creation of redundant tools and new security issues.
+</blurb>
+<break/>
+
+<blurb>
+We proposed to rewrite the PECL installer, replacing the messy pear code and
+the inefficient website.
+</blurb>
+<break/>
+
+<blurb>
+Follow the progress of the new tool 🥧PIE here:
+%https://github.com/ThePHPF/pie-design%
+</blurb>
+
+</slide>

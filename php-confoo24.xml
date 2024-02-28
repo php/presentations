@@ -24,6 +24,9 @@ https://wiki.php.net/rfc/readonly_amendments
 <slide>slides/internals/php83-readonly.xml</slide>
 
 
+https://wiki.php.net/rfc/deprecate_dynamic_properties
+<slide>slides/internals/php82-deprecate-dynamic-properties.xml</slide>
+
 Mixed Type v2
 <!-- <s lide>slides/internals/php80-mixed-types.xml</slide> -->
 
@@ -35,9 +38,10 @@ static return type
 Constructor Property Promotion
 <!-- <s lide>slides/internals/php80-cpp-without.xml</slide> -->
 <!-- <s lide>slides/internals/php80-cpp-with.xml</slide> -->
-
-<slide>slides/internals/php80-named-without.xml</slide>
-<slide>slides/internals/php80-named-with.xml</slide>
+<!--
+<sl ide>slides/internals/php80-named-without.xml</slide>
+<sl ide>slides/internals/php80-named-with.xml</slide>
+-->
 
 <!-- BIG NEW FEATURES -->
 Enumerations (https://wiki.php.net/rfc/enumerations)
@@ -77,8 +81,10 @@ https://wiki.php.net/rfc/true-type
 'true' type
 <slide>slides/internals/php82-true.xml</slide>
 
+<!--
 Pure Intersection Types (https://wiki.php.net/rfc/pure-intersection-types)
-<slide>slides/internals/php81-pure-intersection.xml</slide>
+<sl ide>slides/internals/php81-pure-intersection.xml</slide>
+-->
 
 https://wiki.php.net/rfc/dnf_types
 ? Disjunctive Normal Form Types
@@ -89,9 +95,6 @@ https://wiki.php.net/rfc/rng_extension
 
 https://wiki.php.net/rfc/randomizer_additions
 <slide>slides/internals/php83-random.xml</slide>
-
-https://wiki.php.net/rfc/deprecate_dynamic_properties
-<slide>slides/internals/php82-deprecate-dynamic-properties.xml</slide>
 
 https://wiki.php.net/rfc/redact_parameters_in_back_traces
 <slide>slides/internals/php82-redact-parameters.xml</slide>
@@ -118,9 +121,10 @@ Minor improvements:
 https://wiki.php.net/rfc/json_validate
 <slide>slides/internals/php83-json_validate.xml</slide>
 
+<!--
 https://wiki.php.net/rfc/datetime-exceptions
-<slide>slides/internals/php83-datetime-exceptions.xml</slide>
-
+<sl ide>slides/internals/php83-datetime-exceptions.xml</slide>
+-->
 
 PHP 8.4:
 

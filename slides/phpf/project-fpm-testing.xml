@@ -1,0 +1,18 @@
+<slide>
+<title>Testing Tool for FPM</title>
+
+<break/>
+
+<blurb>Currently, the PHP project's testing framework lacks more specialized
+support for the automated testing of the FastCGI Process Manager (FPM),
+especially for issues that require higher load. We propose to develop an
+FPM/SAPI testing tool that can execute all applications and set expectations on
+the produced logs and server responses. This tool will be connected with a load
+testing tool (e.g., wrk) to simulate real-world usage and load.</blurb>
+<break/>
+
+<blurb>The work has started in the %https://github.com/bukka/wst% repository with
+the plan to move it to the PHP GitHub organization when ready.</blurb>
+<break/>
+
+</slide>
