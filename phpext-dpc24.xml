@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>Writing A PHP Extension</title>
+<event>Dutch PHP Conference</event>
+<location>Amsterdam, The Netherlands</location>
+<date>March 14th, 2024</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<mastodon>@derickr@phpc.social</mastodon>
+<url>https://derickrethans.nl/talks/phpext-dpc24</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+<slide>slides/internals/extension-agenda.xml</slide>
+<slide>slides/internals/extension-agenda2.xml</slide>
+<slide>slides/internals/extension-what1.xml</slide>
+<slide>slides/internals/extension-why1.xml</slide>
+<slide>slides/internals/extension-why-wrap.xml</slide>
+<slide>slides/internals/extension-why-not-possible.xml</slide>
+<slide>slides/internals/extension-why-speed.xml</slide>
+
+<slide>slides/internals/extension-why-not1.xml</slide>
+
+<slide>slides/internals/rdp-intro.xml</slide>
+<slide>slides/internals/rdp-intro2.xml</slide>
+<slide>slides/internals/rdp-intro3.xml</slide>
+<slide>slides/internals/rdp-intro4.xml</slide>
+
+<slide>slides/internals/extension-parts.xml</slide>
+<slide>slides/internals/config.m4.xml</slide>
+<slide>slides/internals/config.w32.xml</slide>
+<slide>slides/internals/phpize.xml</slide>
+
+<slide>slides/internals/extension.h.xml</slide>
+<slide>slides/internals/extension.c-part1.xml</slide>
+<slide>slides/internals/extension.c-part1-arginfo.xml</slide>
+<slide>slides/internals/extension.c-part2.xml</slide>
+<slide>slides/internals/extension.c-part3.xml</slide>
+
+<slide>slides/internals/function.xml</slide>
+<slide>slides/internals/rdp_simplify-part1.xml</slide>
+<slide>slides/internals/rdp_simplify-zedval.xml</slide>
+<slide>slides/internals/rdp_simplify-part1b.xml</slide>
+<slide>slides/internals/rdp_simplify-convert-data.xml</slide>
+<slide>slides/internals/rdp_simplify-run-algorithm.xml</slide>
+<slide>slides/internals/rdp_simplify-php.xml</slide>
+<slide>slides/internals/rdp_simplify-c.xml</slide>
+<slide>slides/internals/rdp_simplify-return-result.xml</slide>
+<slide>slides/internals/rdp_simplify-return-scalars.xml</slide>
+<slide>slides/internals/memory-management.xml</slide>
+
+<slide>slides/internals/tests.xml</slide>
+<slide>slides/internals/rdp-test.xml</slide>
+
+<slide>slides/internals/debug.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+
+<slide>slides/internals/live-coding.xml</slide>
+<slide>slides/mongodb/resources.xml</slide>
+</presentation>
