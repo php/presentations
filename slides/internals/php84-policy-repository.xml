@@ -1,0 +1,24 @@
+<slide>
+<title>Policies and Procedures</title>
+
+<list>
+	<bullet>Information hidden away in **many** RFCs</bullet>
+	<bullet>No consolidated documentation</bullet>
+</list>
+
+
+<break lines="4"/>
+<div effect="fade-in">
+<blurb class="big-centre">%https://github.com/php/policies%</blurb>
+</div>
+
+<break lines="4"/>
+<div effect="fade-in">
+<blurb>Still to do:</blurb>
+
+<list>
+	<bullet>Rewrite documents to be statements of facts instead of intent</bullet>
+	<bullet>Figure out which information isn't written down authoritively yet</bullet>
+</list>
+</div>
+</slide>

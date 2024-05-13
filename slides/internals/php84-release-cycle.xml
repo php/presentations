@@ -1,0 +1,35 @@
+<slide>
+<title>Release Cycle Update</title>
+
+<div effect="fade-out">
+<blurb>Current:</blurb>
+
+<list>
+	<bullet>2 + 1 years of support</bullet>
+	<bullet>3 alphas, 3, betas, 6 RCs</bullet>
+	<bullet>No new minor features in beta releases</bullet>
+	<bullet>New minor features could be added during RC and bug fix releases</bullet>
+	<bullet>Support ends exactly 3 years after initial release</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<blurb>New:</blurb>
+
+<list>
+	<bullet>2 + |008800|2| years of support</bullet>
+	<bullet>3 alphas, 3, betas, |aa3333|4| RCs</bullet>
+	<bullet>|008800|New| minor features in beta releases</bullet>
+	<bullet>New minor features |aa3333|may not| be added during RC and bug fix releases</bullet>
+	<bullet>Support ends |008800|at the end of year 4| after initial release</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<blurb class="center">Effective Immediately</blurb>
+<break/>
+<image filename="timeline-2024-05.png"/>
+</div>
+
+</slide>
