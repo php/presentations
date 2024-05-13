@@ -1,17 +1,17 @@
 <slide>
 <title>Let's Get Practical</title>
 
-<blurb>*Directory:*<br/>%mkdir tutorial-geospatial &amp;&amp; cd tutorial-geospatial &amp;&amp; git init%</blurb>
-
-<blurb>*Algorithms:*<br/>%wget https://derickrethans.nl/files/dump/rdp.tgz -O /tmp/rdp.tgz%<br/><br/>%mkdir lib &amp;&amp; cd lib &amp;&amp; tar xvzf /tmp/rdp.tgz &amp;&amp; cd -%</blurb>
+<blurb>*Project Directory:*<br/>%mkdir tutorial-geospatial &amp;&amp; cd tutorial-geospatial &amp;&amp; git init%</blurb>
 
 <blurb>*Skeleton:*<br/>%php ~/dev/php/php-src.git/ext/ext_skel.php%<br/>%&#160;&#160;&#160;&#160;--ext geospatial --author "Your Name" --dir . --onlyunix%</blurb>
 
-<blurb>*Test File:*<br/>%https://derickrethans.nl/files/dump/geojson-belgium.json%</blurb>
+<blurb>*Algorithms:*<br/>%wget https://drck.me/files/dump/rdp.tgz -O /tmp/rdp.tgz%<br/><br/>%mkdir lib &amp;&amp; cd lib &amp;&amp; tar xvzf /tmp/rdp.tgz &amp;&amp; cd -%</blurb>
+
+<blurb>*Test File:*<br/>%https://drck.me/files/dump/geojson-belgium.json%</blurb>
 <break lines="2"/>
 
 <div effect="fade-in">
-<blurb>*PDF with Code as Diffs:*<br/>%https://derickrethans.nl/files/dump/tutorial-geospatial.pdf%</blurb>
+<blurb>*PDF with Code as Diffs:*<br/>%https://drck.me/files/dump/tutorial-geospatial.pdf%</blurb>
 <blurb>*GIT repository:*<br/>%https://github.com/derickr/tutorial-geospatial%</blurb>
 </div>
 
