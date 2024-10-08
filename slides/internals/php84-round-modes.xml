@@ -2,21 +2,18 @@
 <title>PHP 8.4: Rounding Modes</title>
 
 <example result="1"><![CDATA[<?php
-$modes = [
-    PHP_ROUND_CEILING, PHP_ROUND_FLOOR,
-    PHP_ROUND_AWAY_FROM_ZERO, PHP_ROUND_TOWARD_ZERO,
-];
+$values = [ -8.5, -8.45, 8.45, 8.5 ];
 
-// 8.45
-foreach ($modes as $mode) {
-    echo ' ' . round(8.45, 1, $mode), " ";
-}
-echo "\n";
+foreach (RoundingMode::cases() as $mode) {
+    printf( '%20s: ', $mode->name );
 
-// -8.45
-foreach ($modes as $mode) {
-    echo round(-8.45, 1, $mode), " ";
+    foreach ($values as $value) {
+        printf( '%5s', round($value, 1, $mode) );
+    }
+    foreach ($values as $value) {
+        printf( '%5s', round($value, 0, $mode) );
+    }
+    echo "\n";
 }
-echo "\n";
 ]]></example>
 </slide>

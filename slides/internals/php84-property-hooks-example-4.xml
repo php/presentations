@@ -1,0 +1,22 @@
+<slide>
+<title>PHP 8.4: Real Life Example with Property Hooks</title>
+
+<example><![CDATA[<?php
+class ezcMailImapTransportOptions 
+{
+    public int $listLimit {
+        set {
+            if ( $value < 0 ) {
+                throw new ValueError( "listLimit was set to <{$value}>, but must be >= 0" );
+            }
+        }
+    }
+
+    public function __construct( array $options = array() )
+    {
+        $this->listLimit = 0;
+    }
+}
+?>]]></example>
+
+</slide>

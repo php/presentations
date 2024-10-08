@@ -1,0 +1,49 @@
+<slide>
+<title>PHP 8.4: #[Deprecated] Attribute</title>
+
+<div effect="fade-out">
+<example result="3"><![CDATA[<?php
+#[\Deprecated("use test() instead", since: "2.4")]
+function test3() {
+}
+
+test3();
+?>]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example result="3"><![CDATA[<?php
+class Clazz {
+    #[\Deprecated]
+    public const OLD_WAY = 'foo';
+ 
+    #[\Deprecated("use test() instead", since: "2024-10-08")]
+    function test2() {
+    }
+}
+
+$c = new Clazz()->test2();
+echo Clazz::OLD_WAY, "\n";
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example result="3"><![CDATA[<?php
+enum MyEnum {
+    #[\Deprecated]
+    case OldCase;
+}
+
+var_dump(MyEnum::OldCase);
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<break lines="2"/>
+<list>
+    <bullet>Can be set on: Methods, Functions, Constants</bullet>
+    <bullet>The %since% parameter is a free-form string</bullet>
+    <bullet>Can also be used by PHP's internals</bullet>
+</list>
+</div>
+</slide>

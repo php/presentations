@@ -1,0 +1,16 @@
+<slide>
+<title>PHP 7.4: Typed Properties</title>
+
+<example inline="2"><![CDATA[&lt;?php
+class ezcMailImapTransportOptions 
+{
+    *public bool $uidReferencing;*
+
+    public function __construct( array $options = array() )
+    {
+        $this->uidReferencing = false;
+    }
+
+?>]]></example>
+
+</slide>

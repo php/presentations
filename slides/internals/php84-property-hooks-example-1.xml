@@ -1,0 +1,41 @@
+<slide>
+<title>PHP 7.4: Typed Properties</title>
+
+<example><![CDATA[<?php
+class ezcMailImapTransportOptions 
+{
+    protected $properties;
+
+    public function __construct( array $options = array() )
+    {
+        $this->uidReferencing = false;
+    }
+
+    public function __set( $name, $value )
+    {
+        switch ( $name ) {
+            case 'uidReferencing':
+                if ( !is_bool( $value ) ) {
+                    throw new ezcBaseValueException( $name, $value, 'bool' );
+                }
+                $this->properties[$name] = $value;
+                break;
+        }
+    }
+
+    public function __isset( $propertyName )
+    {
+        return array_key_exists( $propertyName, $this->properties );
+    }
+
+    public function __get( $propertyName )
+    {
+        if ( $this->__isset( $propertyName ) === true ) {
+            return $this->properties[$propertyName];
+        }
+        throw new ezcBasePropertyNotFoundException( $propertyName );
+    }
+}
+?>]]></example>
+
+</slide>

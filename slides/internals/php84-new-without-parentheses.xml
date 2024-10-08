@@ -1,0 +1,49 @@
+<slide>
+<title>PHP 8.4: New Without Parentheses</title>
+
+<div effect="fade-out">
+<example inline="2"><![CDATA[&lt;?php
+class Request implements Psr\Http\Message\RequestInterface
+{
+    // ...
+}
+
+$request = *(*new Request()*)*->withMethod('GET')->withUri('/hello-world');
+?>]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example><![CDATA[<?php
+class Request implements Psr\Http\Message\RequestInterface
+{
+    // ...
+}
+
+$request = new Request()->withMethod('GET')->withUri('/hello-world');
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example><![CDATA[<?php
+class MyClass extends ArrayObject
+{
+    const CONSTANT = 'constant';
+    public static $staticProperty = 'staticProperty';
+    public static function staticMethod(): string { return 'staticMethod'; }
+    public $property = 'property';
+    public function method(): string { return 'method'; }
+    public function __invoke(): string { return '__invoke'; }
+}
+
+var_dump(
+    new MyClass()::CONSTANT,        // string(8)  "constant"
+    new MyClass()::$staticProperty, // string(14) "staticProperty"
+    new MyClass()::staticMethod(),  // string(12) "staticMethod"
+    new MyClass()->property,        // string(8)  "property"
+    new MyClass()->method(),        // string(6)  "method"
+    new MyClass()(),                // string(8)  "__invoke"
+    new MyClass(['value'])[0],      // string(5)  "value"
+);
+?>]]></example>
+</div>
+</slide>

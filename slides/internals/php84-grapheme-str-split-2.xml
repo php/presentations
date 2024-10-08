@@ -1,0 +1,10 @@
+<slide>
+<title>PHP 8.4: grapheme_str_split</title>
+
+<example result="1"><![CDATA[<?php
+foreach (mb_str_split("🙇‍♂️") as $element) {
+    printf("%8s : %s\n", bin2hex($element), $element);
+}
+?>]]></example>
+
+</slide>

@@ -1,0 +1,85 @@
+<slide>
+<title>PHP 8.4: Asymmetric Visibility</title>
+
+<div effect="fade-out">
+<example inline="2"><![CDATA[&lt;?php
+class Reader
+{
+    /**
+     * @var array[Track]
+     */
+    *private array $tracks;*
+
+    function __construct( string $fileName )
+    {
+        $this->parseGpx( $fileName );
+    }
+
+    private function parseGpx( $fileName )
+    {
+        // sets $this->tracks
+    }
+
+    *public function getTracks() : array*
+    {
+        return $this->tracks;
+    }
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="2"><![CDATA[&lt;?php
+class Reader
+{
+    /**
+     * @var array[Track]
+     */
+    *public private(set)* array $tracks;
+
+    function __construct( string $fileName )
+    {
+        $this->parseGpx( $fileName );
+    }
+
+    private function parseGpx( $fileName )
+    {
+        // sets $this->tracks
+    }
+
+
+
+
+
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="2"><![CDATA[&lt;?php
+class Reader
+{
+    /**
+     * @var array[Track]
+     */
+    *private(set)* array $tracks;
+
+    function __construct( string $fileName )
+    {
+        $this->parseGpx( $fileName );
+    }
+
+    private function parseGpx( $fileName )
+    {
+        // sets $this->tracks
+    }
+
+
+
+
+
+}
+?>]]></example>
+</div>
+
+</slide>

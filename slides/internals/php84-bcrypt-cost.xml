@@ -1,0 +1,12 @@
+<slide>
+<title>PHP 8.4: BCrypt Cost</title>
+
+<blurb>PHP's default BCrypt cost for %password_hash()% is unchanged since the addition of the password hashing API in PHP 5.5 which was 11 years ago.</blurb>
+
+<list>
+    <bullet>The current cost is %10%</bullet>
+    <bullet>Increasing the cost by one, doubles the time</bullet>
+    <bullet>New cost in PHP 8.4: %12% (~less than 330ms per hash)</bullet>
+</list>
+
+</slide>

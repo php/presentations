@@ -1,0 +1,48 @@
+<slide>
+<title>PHP 8.4: Deprecate Implicit Nullability</title>
+
+<example><![CDATA[<?php
+class Rst
+{
+    public function __construct( RstOptions $options = null )
+    {
+    }
+}]]></example>
+
+<div effect="fade-in">
+<example class="error small">
+Deprecated: Rst::__construct(): Implicitly marking parameter $options as nullable is deprecated, the explicit nullable type must be used instead
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example inline="2"><![CDATA[&lt;?php
+class Rst
+{
+    public function __construct( RstOptions $options *= null* )
+    {
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="2"><![CDATA[&lt;?php
+class Rst
+{
+    public function __construct( *?*RstOptions $options = null )
+    {
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<example inline="2"><![CDATA[&lt;?php
+class Rst
+{
+    public function __construct( RstOptions*|null* $options = null )
+    {
+    }
+}]]></example>
+</div>
+
+</slide>
