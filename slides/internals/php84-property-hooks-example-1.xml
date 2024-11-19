@@ -23,18 +23,7 @@ class ezcMailImapTransportOptions
         }
     }
 
-    public function __isset( $propertyName )
-    {
-        return array_key_exists( $propertyName, $this->properties );
-    }
-
-    public function __get( $propertyName )
-    {
-        if ( $this->__isset( $propertyName ) === true ) {
-            return $this->properties[$propertyName];
-        }
-        throw new ezcBasePropertyNotFoundException( $propertyName );
-    }
+    // …
 }
 ?>]]></example>
 

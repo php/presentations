@@ -1,19 +1,22 @@
 <slide>
 <title>PHP 8.4: PDO Subclasses</title>
 
-<blurb>Each PDO driver now has it's own class, containing driver specific elements</blurb>
-<break lines="2"/>
+<blurb>Each PDO driver now has it's own class, extending %\PDO%, containing (a copy of) driver specific elements</blurb>
+<break/>
 
-<blurb>%PDODBLib%, %PDOFirebird%, %PDOOCI%, %PDOODBC% are just children, without any changes.</blurb>
-<blurb>%PDOMySQL% has %getWarningCount()% defined on it</blurb>
-<blurb>%PDOPgSQL% and %PDOSQLite% have a whole bunch of constants and methods</blurb>
-<break lines="2"/>
+<list>
+<bullet>%Pdo\Dblib%, %Pdo\Firebird%, and %Pdo\Odbc% are just children, without any changes.</bullet>
+<bullet>%Pdo\Mysql% has %getWarningCount()% defined on it</bullet>
+<bullet>%Pdo\Pgsql% and %Pdo\Sqlite% have a whole bunch of constants and methods</bullet>
+<bullet>%pdo_oci% has been moved to PECL: %https://github.com/php/pecl-database-pdo_oci%</bullet>
+</list>
+<break/>
 
 <blurb>A new factory method, %PDO::connect% returns an object representing one of the new subclasses:</blurb>
 
-<example><![CDATA[<?php
+<example inline="2"><![CDATA[&lt;?php
 $db = PDO::connect('sqlite::memory:');
-if (!$db instanceof PDOSQLite) {
-    /* ERROR ZONE */
+if (!$db instanceof Pdo\Sqlite) {
+    *// ERROR ZONE*
 }]]></example>
 </slide>
