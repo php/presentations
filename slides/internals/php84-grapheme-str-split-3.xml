@@ -1,18 +1,40 @@
 <slide>
 <title>PHP 8.4: grapheme_str_split</title>
 
-<example result="1"><![CDATA[<?php
+<div effect="fade-in">
+<example><![CDATA[<?php
 foreach (grapheme_str_split("🙇‍♂️") as $element) {
     printf("%8s : %s\n", bin2hex($element), $element);
-}
-?>]]></example>
+}]]></example>
+</div>
 
 <div effect="fade-in">
-<example result="1"><![CDATA[<?php
+<blurb>Result:</blurb>
+<example><![CDATA[
+f09f9987e2808de29982efb88f : 🙇‍♂️
+]]></example>
+</div>
+
+<div effect="fade-in">
+<break lines="1"/>
+<example><![CDATA[<?php
 foreach (grapheme_str_split("Hḁ̢̆llo 🇫🇷!") as $element) {
     printf("%20s : %s\n", bin2hex($element), $element);
-}
-?>]]></example>
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Result:</blurb>
+<example><![CDATA[
+                  48 : H
+      61cc86cca2cca5 : ḁ̢̆
+                  6c : l
+                  6c : l
+                  6f : o
+                  20 :  
+    f09f87abf09f87b7 : 🇫🇷
+                  21 : !
+]]></example>
 </div>
 
 </slide>
