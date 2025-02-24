@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>Debugging</topic>
+<title>Better Debugging with Xdebug</title>
+<event>ConFoo 2025</event>
+<location>Montréal, Canada</location>
+<date>February 27th, 2025</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@xdebug.org</email>
+<mastodon>@derickr@phpc.social</mastodon>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/xdebug-confoo25</url>
+<joindin>https://xdebug.org</joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+Code reorganisation
+Modes
+- only do what is needed
+Reduce Configuration Options
+Code Improvements (algorithms, memory, etc)
+<!--<s lide>slides/xdebug/code-reorgnisation.xml</slide>-->
+<!--< slide>slides/xdebug/modes.xml</slide>-->
+<!--<s lide>slides/xdebug/config-settings-3.xml</slide>-->
+<!--<s lide>slides/xdebug/config-settings-3b.xml</slide>-->
+<!--<s lide>slides/xdebug/xdebug-3-speedup-1.xml</slide>-->
+
+- xdebug_info() (demo, VS Code or PhpStorm)
+
+	- an API through xdebug_info() for mode detection (VS Code or PhpStorm)
+		'mode'
+		'extension-flags'
+
+<slide>slides/xdebug/xdebug_info.xml</slide>
+<slide>slides/xdebug/xdebug_info-2.xml</slide>
+
+- xdebug_notify() (demo, VS Code)
+
+<slide>slides/xdebug/xdebug_notify.xml</slide>
+
+- file_link_format (demo, PhpStorm)
+
+<!-- <s lide>slides/xdebug/xdebug_file_link_format.xml</slide>-->
+
+
+  -> ticket
+
+<!--<s lide>slides/xdebug/diagnostic-log.xml</slide> (Also console output) -->
+
+<slide>slides/xdebug/xdebug-recent-new-features.xml</slide>
+Step debugging improvements
+Step debugging improvements
+
+<slide>slides/xdebug/breakpoint_resolving.xml</slide>
+- breakpoint resolving (demo, PhpStorm)
+
+<slide>slides/xdebug/return_value.xml</slide>
+- return value debugging (demo, VS Code or PhpStorm)
+
+<slide>slides/xdebug/breakpoint_not_resolving.xml</slide>
+- Xdebug will now also log a warning if an IDE attempts to set a breakpoint on
+  a file that does not exist on the file system. (demo, PhpStorm)
+
+<slide>slides/xdebug/xdebug_connect_to_client.xml</slide>
+- xdebug_connect_to_client() (demo, PhpStorm)
+
+<slide>slides/xdebug/xdebug_pseudo_hosts.xml</slide>
+- xdebug://gateway and xdebug://nameserver (explain)
+
+<slide>slides/xdebug/xdebug-recent-new-features.xml</slide>
+
+<slide>slides/xdebug/xdebug-control-socket.xml</slide>
+
+<slide>slides/xdebug/xdebug-future-features.xml</slide>
+
+<slide>slides/xdebug/xdebug-native-path-mapping.xml</slide>
+<slide>slides/xdebug/restaurant.xml</slide>
+
+<slide>slides/xdebug/xdebug-cloud-announcement.xml</slide>
+
+<slide>slides/xdebug/donate.xml</slide>
+<slide>slides/xdebug/business-support.xml</slide>
+<slide>slides/xdebug/transparency.xml</slide>
+
+
+<!-- <s lide>slides/xdebug/phpinternalsnews.xml</slide> -->
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>
