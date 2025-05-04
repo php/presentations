@@ -1,0 +1,26 @@
+<slide>
+<title>PHP 8.5: Asymmetric Visibility for Constants</title>
+
+<blurb>Was missing in PHP 8.4, but turned out to be easy.</blurb>
+
+<example><![CDATA[<?php
+class Example
+{
+    public private(set) static string $classTitle = 'Example class';
+
+    // Implicitly public-read, just like object properties.
+    protected(set) static int $counter = 0;
+
+    public static function changeName(string $name): void
+    {
+        // From private scope, so this is allowed.
+        self::$classTitle = $name;
+    }
+}
+
+print Example::$classTitle; // Allowed.
+
+Example::$classTitle = 'Nope'; // Disallowed.
+?>]]>
+</example>
+</slide>

@@ -1,0 +1,58 @@
+<slide>
+<title>PHP 8.5: Levenstein</title>
+
+<div effect="fade-out">
+<example result="0"><![CDATA[<?php
+$myName =        'Derick';
+$notMyName =     'Derrick';
+$alsoNotMyName = 'Dirk';
+
+echo levenshtein($myName, $notMyName), "\n";
+echo levenshtein($myName, $alsoNotMyName, 100, 10, 1), "\n";
+?>]]></example>
+
+<example inline="2"><![CDATA[
+%  1%
+%|000099|0||009900|1||990000|2|%
+%┃┃┗━ deletion%
+%┃┗━━ replacement%
+%┗━━━ insertion%
+
+D|990000|er|i|009900|c|k
+Di|009900|r|k
+]]></example>
+</div>
+
+<div effect="fade-in">
+<example result="0"><![CDATA[<?php
+$flagUA = '🇺🇦';
+$flagPS = '🇵🇸';
+
+echo levenshtein($flagUA, $flagPS, 1, 10, 100), "\n";
+?>]]></example>
+</div>
+
+<div effect="fade-in">
+<example>20</example>
+
+<example inline="2"><![CDATA[
+%|cccccc|0||009900|2||000099|0|%
+%┃┃┗━ insertion%
+%┃┗━━ replacement%
+%┗━━━ deletion%
+]]></example>
+</div>
+
+<div effect="fade-in">
+<example><![CDATA[<?php
+echo bin2hex($flagUA), "\n";
+echo bin2hex($flagPS), "\n";
+?>]]></example>
+
+<example inline="2">
+f09f87|009900|ba|f09f87|009900|a6|
+f09f87|009900|b5|f09f87|009900|b8|
+</example>
+</div>
+
+</slide>

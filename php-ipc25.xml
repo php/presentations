@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>What's New in PHP 8.[45]</title>
+<event>International PHP Conference</event>
+<location>Berlin, Germany</location>
+<date>June 4th, 2025</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<mastodon>@derickr@phpc.social</mastodon>
+<url>https://derickrethans.nl/talks/php-ipc25</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+
+Syntax:
+
+https://wiki.php.net/rfc/asymmetric-visibility-v2
+<slide>slides/internals/php84-asymmetric-visibility.xml</slide>
+<slide>slides/internals/php84-asymmetric-visibility-2.xml</slide>
+
+https://wiki.php.net/rfc/static-aviz
+<slide>slides/internals/php85-asymmetric-visibility-static.xml</slide>
+
+https://wiki.php.net/rfc/property-hooks
+<slide>slides/internals/php84-property-hooks.xml</slide>
+<slide>slides/internals/php84-property-hooks-example-1.xml</slide>
+<slide>slides/internals/php84-property-hooks-example-2.xml</slide>
+<slide>slides/internals/php84-property-hooks-example-3.xml</slide>
+<slide>slides/internals/php84-property-hooks-example-4.xml</slide>
+
+https://wiki.php.net/rfc/new_without_parentheses
+<slide>slides/internals/php84-new-without-parentheses.xml</slide>
+
+https://wiki.php.net/rfc/closures_in_const_expr
+<slide>slides/internals/php85-closures-in-constant-expressions.xml</slide>
+
+https://wiki.php.net/rfc/fcc_in_const_expr
+<slide>slides/internals/php85-fcc-in-constant-expressions.xml</slide>
+
+Major additions:
+
+https://wiki.php.net/rfc/domdocument_html5_parser
+<slide>slides/internals/php84-dom-html5.xml</slide>
+
+<!--
+https://wiki.php.net/rfc/improve_callbacks_dom_and_xsl
+<sl ide>slides/internals/php84-dom-callbacks.xml</slide>
+
+https://wiki.php.net/rfc/lazy-objects
+<slide>slides/internals/php84-lazy-objects.xml</slide>
+-->
+
+https://wiki.php.net/rfc/jit-ir
+<slide>slides/internals/php80-jit.xml</slide>
+<slide>slides/internals/php84-jit.xml</slide>
+
+Minor additions:
+
+https://wiki.php.net/rfc/deprecated_attribute
+<slide>slides/internals/php84-deprecated-attribute.xml</slide>
+
+https://wiki.php.net/rfc/attributes-on-constants
+<slide>slides/internals/php85-attributes-on-constants.xml</slide>
+
+https://wiki.php.net/rfc/marking_return_value_as_important
+<slide>slides/internals/php85-nodiscard-attribute.xml</slide>
+
+https://wiki.php.net/rfc/pdo_driver_specific_subclasses
+<slide>slides/internals/php84-pdo-subclass.xml</slide>
+
+<!--
+https://wiki.php.net/rfc/new_rounding_modes_to_round_function
+<slide>slides/internals/php84-round-modes.xml</slide>
+-->
+
+https://wiki.php.net/rfc/bcrypt_cost_2023
+<slide>slides/internals/php84-bcrypt-cost.xml</slide>
+
+https://wiki.php.net/rfc/grapheme_str_split
+<slide>slides/internals/php84-grapheme-str-split.xml</slide>
+<slide>slides/internals/php84-grapheme-str-split-2.xml</slide>
+<slide>slides/internals/php84-grapheme-str-split-3.xml</slide>
+
+https://wiki.php.net/rfc/grapheme_levenshtein
+<slide>slides/internals/php85-grapheme-levenstein.xml</slide>
+<slide>slides/internals/php85-grapheme-levenstein2.xml</slide>
+
+Deprecations:
+
+https://wiki.php.net/rfc/deprecate-implicitly-nullable-types
+<slide>slides/internals/php84-deprecate-implicitly-nullable-types.xml</slide>
+
+https://wiki.php.net/rfc/unbundle_imap_pspell_oci8
+
+
+Policy:
+
+https://wiki.php.net/rfc/policy-repository
+<slide>slides/internals/php84-policy-repository.xml</slide>
+
+https://wiki.php.net/rfc/release_cycle_update
+<slide>slides/internals/php84-release-cycle.xml</slide>
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

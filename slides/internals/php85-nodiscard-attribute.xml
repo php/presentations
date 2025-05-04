@@ -1,0 +1,40 @@
+<slide>
+<title>PHP 8.5: #[NoDiscard] Attribute</title>
+
+<blurb>A new attribute for functions (%TARGET_FUNCTION%) and methods (%TARGET_METHOD%).</blurb>
+
+<blurb>It enforces that the calling function consumes the return value.</blurb>
+
+<div effect="fade-in-out">
+<example><![CDATA[<?php
+$a = new DateTimeImmutable();
+$a->setDate(2025, 5, 4);
+?>]]></example>
+
+<example class="result">
+Warning: The return value of method DateTimeImmutable::setDate()
+    should either be used or intentionally ignored by casting it as
+    (void), as DateTimeImmutable::setDate() does not modify the
+    object itself in /tmp/discard.php on line 3
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>A %(void)% cast disables it:</blurb>
+<example inline="2"><![CDATA[&lt;?php
+$a = new DateTimeImmutable();
+*(void)* $a->setDate(2025, 5, 4);
+?>]]></example>
+
+<break/>
+<blurb>You can't use %#[Discard]% when:</blurb>
+
+<list>
+    <bullet>The function is typed with %: void% or %: never%</bullet>
+    <bullet>For magic methods (including the constructor) that require %: void%, or have no return type at all</bullet>
+    <bullet>For property hooks</bullet>
+</list>
+</div>
+
+</slide>
+

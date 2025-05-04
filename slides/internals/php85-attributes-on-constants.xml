@@ -1,0 +1,54 @@
+<slide>
+<title>PHP 8.5: Attributes on Constants</title>
+
+<div effect="fade-out">
+<blurb>Since PHP 8.0, attributes can be set on:</blurb>
+
+<list>
+	<bullet>functions ~(including closures and short closures)~</bullet>
+	<bullet>classes ~(including anonymous classes), interfaces, traits~</bullet>
+	<bullet>class constants</bullet>
+	<bullet>class properties</bullet>
+	<bullet>class methods</bullet>
+	<bullet>function/method parameters</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 8.5 adds:</blurb>
+<list>
+	<bullet>non-class constants:</bullet>
+</list>
+
+<example><![CDATA[<?php
+#[\MyAttribute]
+const Example1 = 1;
+?>]]></example>
+
+</div>
+
+<div effect="fade-in">
+<blurb>Not allowed:</blurb>
+
+<example><![CDATA[<?php
+#[\MyAttribute]
+const Example2 = 2,
+    Example3 = 3;
+
+#[\MyAttribute]
+define('Example1', 1);
+?>]]></example>
+
+</div>
+
+<div effect="fade-in">
+<blurb>This also adds:</blurb>
+
+<example><![CDATA[
+\Attribute::TARGET_CONSTANT
+]]></example>
+
+</div>
+
+
+</slide>

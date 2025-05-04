@@ -1,0 +1,23 @@
+<slide>
+<title>PHP 8.5: grapheme_levenstein</title>
+
+<example result="0"><![CDATA[<?php
+$flagUA = '🇺🇦';
+$flagPS = '🇵🇸';
+
+echo grapheme_levenshtein($flagUA, $flagPS, 1, 10, 100), "\n";
+?>]]></example>
+
+<div effect="fade-in">
+<example>10</example>
+
+<example inline="2"><![CDATA[
+%|cccccc|0||009900|1||000099|0|%
+%┃┃┗━ insertion%
+%┃┗━━ replacement%
+%┗━━━ deletion%
+]]></example>
+
+</div>
+
+</slide>
