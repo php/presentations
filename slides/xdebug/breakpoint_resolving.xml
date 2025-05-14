@@ -5,12 +5,15 @@
 <blurb class="centre">Xdebug now finds the closest breakpoint line</blurb>
 
 <div effect="fade-in">
-<break lines="2"/>
+<blurb class="centre">Now also in property hooks</blurb>
+</div>
+
+<div effect="fade-in">
 <blurb class="big-centre">DEMO</blurb>
 </div>
 
 <div effect="fade-in">
-<break lines="5"/>
+<break lines="3"/>
 <blurb class="centre">How does this work?</blurb>
 </div>
 

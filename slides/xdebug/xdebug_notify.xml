@@ -2,6 +2,9 @@
 <break lines="5"/>
 <blurb class="big-centre">%xdebug_notify( mixed $data )%</blurb>
 <blurb class="centre">Send data over debugging protocol</blurb>
+<div class="fade-in">
+	<blurb class="center">New in Xdebug 3.4.2: Multiple Levels of Data</blurb>
+</div>
 
 <div effect="fade-in">
 <break lines="5"/>
