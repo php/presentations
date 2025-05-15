@@ -5,7 +5,7 @@
 	<bullet>Only works on typed properties</bullet>
 	<bullet>%set% visibility must be equal or lesser than main (%get%) visbility</bullet>
 	<bullet>Using %$obj->array[]% follows %set% visibility</bullet>
-	<bullet>Inherited properties must have the same time, and might have a wider visibility</bullet>
+	<bullet>Inherited properties must have the same type, and might have a wider visibility</bullet>
 	<bullet>%private(set)% also implies %final%</bullet>
 	<bullet>%readonly% (without %private(set)%) is analogous to %protected(set)% (+ write once semantics)</bullet>
 </list>

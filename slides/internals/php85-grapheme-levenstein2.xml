@@ -1,5 +1,5 @@
 <slide>
-<title>PHP 8.5: grapheme_levenstein</title>
+<title>PHP 8.5: grapheme_levenshtein</title>
 
 <example result="0"><![CDATA[<?php
 $flagUA = '🇺🇦';

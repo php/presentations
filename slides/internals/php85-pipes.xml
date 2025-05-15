@@ -7,7 +7,7 @@ function slugger(string $input)
     return $input
         |> \strtolower(...)
         |> fn($x) => \preg_replace('/[^a-z]/', '-', $x)
-        |> fn($x) => \trim($value, '-')
+        |> fn($x) => \trim($x, '-')
         |> fn($x) => \preg_replace('/-+/', '-', $x); 
 }
 
