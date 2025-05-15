@@ -20,12 +20,10 @@ function slugger(
 var_dump(slugger('Hello, World!')); // string(11) "hello-world"
 ?>]]></example>
 
-<div effect="fade-in">
 <list>
     <bullet>They must be %static%</bullet>
     <bullet>They may not include variables from the surrounding scope<br/>no:
 %use($foo)%, nor: short closures (%fn … =>%)</bullet>
 </list>
-</div>
 
 </slide>

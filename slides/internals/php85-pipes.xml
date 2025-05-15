@@ -1,0 +1,27 @@
+<slide>
+<title>PHP 8.5: Pipe Operator</title>
+
+<example><![CDATA[<?php
+function slugger(string $input)
+{
+    return $input
+        |> \strtolower(...)
+        |> fn($x) => \preg_replace('/[^a-z]/', '-', $x)
+        |> fn($x) => \trim($value, '-')
+        |> fn($x) => \preg_replace('/-+/', '-', $x); 
+}
+
+
+
+
+
+
+
+var_dump(slugger('Hello, World!')); // string(11) "hello-world"
+?>]]></example>
+
+<list>
+    <bullet>Still under consideration (but currently passing)</bullet>
+</list>
+
+</slide>

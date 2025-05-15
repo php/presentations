@@ -37,6 +37,9 @@ https://wiki.php.net/rfc/new_without_parentheses
 https://wiki.php.net/rfc/closures_in_const_expr
 <slide>slides/internals/php85-closures-in-constant-expressions.xml</slide>
 
+https://wiki.php.net/rfc/pipe-operator-v3
+<slide>slides/internals/php85-pipes.xml</slide>
+
 https://wiki.php.net/rfc/fcc_in_const_expr
 <slide>slides/internals/php85-fcc-in-constant-expressions.xml</slide>
 
@@ -76,8 +79,10 @@ https://wiki.php.net/rfc/new_rounding_modes_to_round_function
 <slide>slides/internals/php84-round-modes.xml</slide>
 -->
 
+<!--
 https://wiki.php.net/rfc/bcrypt_cost_2023
 <slide>slides/internals/php84-bcrypt-cost.xml</slide>
+-->
 
 https://wiki.php.net/rfc/grapheme_str_split
 <slide>slides/internals/php84-grapheme-str-split.xml</slide>
