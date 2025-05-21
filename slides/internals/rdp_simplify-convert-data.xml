@@ -3,7 +3,7 @@
 
 <div effect="fade-out">
 <example><![CDATA[
-    points = geo_hashtable_to_array(points_array TSRMLS_CC);
+    points = geo_hashtable_to_array(points_array);
     if (!points) {
         return;
     }
@@ -12,30 +12,27 @@
 
 <div effect="fade-in">
 <example inline="2"><![CDATA[
-geo_array \*geo_hashtable_to_array(zval \*array TSRMLS_DC)
+geo_array \*geo_hashtable_to_array(zval \*array)
 {
     geo_array *tmp;
-    int element_count, i = 0;
-    zval *entry;
-    double lon, lat;
+    int        i = 0, element_count;
+    zval      *entry;
+    double     lon, lat;
 
     element_count = *zend_hash_num_elements*(Z_ARRVAL_P(array));
     *tmp = geo_array_ctor(element_count);*
 
     *ZEND_HASH_FOREACH_VAL*(Z_ARRVAL_P(array), entry) {
-        if (!parse_point_pair(entry, &lon, &lat TSRMLS_CC)) {
+        if (!parse_point_pair(entry, &lon, &lat)) {
             goto failure;
         }
-
         tmp->x[i] = lon;
         tmp->y[i] = lat;
-        tmp->status[i] = 1;
-
+        tmp->status[i] = true;
         i++;
     } ZEND_HASH_FOREACH_END();
 
     return tmp;
-
 failure:
     *geo_array_dtor(tmp);*
     return NULL;

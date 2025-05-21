@@ -1,11 +1,13 @@
 <slide>
 <title>What makes up an Extension?</title>
 
-<list>
+<break lines="3"/>
+
+<ordered-list>
     <bullet>%config.m4% / %config.w32%<br/>configure options and build instructions</bullet>
     <bullet>%php_extension.h%<br/>header files and glue</bullet>
     <bullet>%extension.c%<br/>extension definition and function implementation</bullet>
     <bullet>%lib/algorithm.c%<br/>C implementation of algorithms</bullet>
     <bullet>%tests/*.phpt%<br/>Tests written in PHP</bullet>
-</list>
+</ordered-list>
 </slide>

@@ -3,8 +3,8 @@
 <subtitle>config.w32</subtitle>
 
 <blurb>Comments:</blurb>
-<example><![CDATA[
-// vim:ft=javascript
+<example inline="2"><![CDATA[
+// vim:ft=*javascript*
 ]]></example>
 
 <blurb>Configure option definition:</blurb>

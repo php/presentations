@@ -1,9 +1,15 @@
 <slide>
 <title>Building the Extension</title>
 
-<list>
+<break lines="3"/>
+
+<blurb class="quote">As easy as 1 - 2 - 3</blurb>
+
+<break lines="3"/>
+
+<ordered-list>
     <bullet>%phpize%<break/>Brings in headers and creates %configure% script</bullet>
     <bullet>%./configure%<break/>Runs system checks, and creates %Makefile%</bullet>
     <bullet>%make%<break/>Builds the extension</bullet>
-</list>
+</ordered-list>
 </slide>

@@ -6,10 +6,13 @@
 <break line="2"/>
 	<blurb class="center">*Slides*</blurb>
 	<blurb class="center">%:-:url:-:%</blurb>
-	<blurb class="center">%:-:joindin:-:%</blurb>
+
+<break line="1"/>
+	<blurb class="center">*Sites*</blurb>
+	<blurb class="center">%https://xdebug.org%</blurb>
 	<blurb class="center">%https://xdebug.cloud%</blurb>
-<break line="3"/>
-	<!--<blurb class="center">%https://phpinternals.news%</blurb>-->
-<break line="3"/>
+
+<break line="1"/>
+	<blurb class="center">*Contact*</blurb>
 	<blurb class="center">:-:speaker:-: — :-:mastodon:-: — :-:email:-:</blurb>
 </slide>

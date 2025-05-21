@@ -1,12 +1,19 @@
 <slide>
 <title>Debugging Tools</title>
 
+<div effect="fade-in">
+<break lines="2"/>
 <blurb>%gdb%</blurb>
 <blurb class="small">→ allows the inspection of programs when they're running</blurb>
 <blurb class="small">→ %export USE_ZEND_ALLOC=0%</blurb>
 <break/>
+</div>
 
+<div effect="fade-in">
+<break lines="2"/>
 <blurb>%valgrind%</blurb>
 <blurb class="small">→ tells you about memory corruption and allocation issues</blurb>
 <blurb class="small">→ %export ZEND_DONT_UNLOAD_MODULES=1%</blurb>
+</div>
+
 </slide>

@@ -1,13 +1,15 @@
 <slide>
 <title>Implementing the function</title>
 
-<list>
+<break lines="3"/>
+
+<ordered-list>
     <bullet>Parse Input Parameters</bullet>
     <bullet>Convert Data into Right Format</bullet>
     <bullet>Run Algorithm</bullet>
     <bullet>Return Result</bullet>
-</list>
+</ordered-list>
 
-<break lines="3"/>
+<break lines="6"/>
 <image filename="einstein.jpg"/>
 </slide>
