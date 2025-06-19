@@ -83,7 +83,7 @@ function processNextEvent()
     } else {{/literal}
 {if $slideNr < array_count($pres->slideFiles) - 1}
 {literal}
-        document.location = '/show2.php/{/literal}{$pres->presName}/{$slideNr + 1}{literal}';
+        document.location = '/s2/{/literal}{$pres->presName}/{$slideNr + 1}{literal}';
 {/literal}{/if}{literal}
     }
 }
@@ -92,7 +92,7 @@ function processPrevEvent()
 {
 {/literal}{if $slideNr > 0}
 {literal}
-    document.location = '/show2.php/{/literal}{$pres->presName}/{$slideNr - 1}{literal}';
+    document.location = '/s2/{/literal}{$pres->presName}/{$slideNr - 1}{literal}';
 {/literal}{/if}
 {literal}
 }
