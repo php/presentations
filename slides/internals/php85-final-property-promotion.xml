@@ -1,0 +1,72 @@
+<slide>
+<title>PHP 8.5: Final Property Promotion</title>
+
+<div effect="fade-out">
+<blurb>PHP 8.0 introduced property promotion:</blurb>
+<example inline="1">
+&amp;lt;?php
+class 🥃whisky 
+{
+    function __construct(
+        *public*    string $name,
+        *protected* Distillery $distillery,
+    ) {}
+}
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>PHP 8.4 introduced property hooks:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class User implements Named
+{
+    public function __construct(
+        private string $first,
+        private string $last,
+    ) {}
+
+    public string $fullName {
+        *get* *=>* $this->first . " " . $this->last;
+        *set {* [$this->first, $this->last] = explode(' ', $value); *}*
+    }
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>PHP 8.4 introduced property hooks and %final% properties:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class User implements Named
+{
+    public function __construct(
+        private string $first,
+        private string $last,
+    ) {}
+
+    *final* public string $fullName {
+        get => $this->first . " " . $this->last;
+        set { [$this->first, $this->last] = explode(' ', $value); }
+    }
+}
+?>]]></example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>PHP 8.5 adds %final% for promoted properties:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+class User implements Named
+{
+    public function __construct(
+        *final* ---private--- string $first,
+        *final* ---private--- string $last,
+    ) {}
+
+    final public string $fullName {
+        get => $this->first . " " . $this->last;
+        set { [$this->first, $this->last] = explode(' ', $value); }
+    }
+}
+?>]]></example>
+</div>
+
+</slide>

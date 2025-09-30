@@ -1,0 +1,33 @@
+<slide>
+<title>PHP 8.5: URL API</title>
+
+<break lines="3"/>
+<div effect="fade-out">
+<blurb class="big-centre">%parse_url()% is 💩</blurb>
+</div>
+
+<div effect="fade-in">
+<blurb class="big-centre">%Uri\WhatWg\Url::parse()%</blurb>
+<blurb class="center">embedding URLs into HTML</blurb>
+</div>
+
+<div effect="fade-in-out">
+<break lines="2"/>
+<blurb class="big-centre">%Uri\Rfc3986\Url::parse()%</blurb>
+<blurb class="center">"server to server" communication (e.g. DSN parsing or outgoing HTTP requests)</blurb>
+</div>
+
+<div effect="fade-in">
+<example result="1"><![CDATA[
+<?php
+$uri = new Uri\Rfc3986\Uri("https://www.example.com/elephpants?are=yes#great");
+echo $uri->getScheme(), "\n";
+echo $uri->getHost(), "\n";
+echo $uri->getPath(), "\n";
+echo $uri->getQuery(), "\n";
+echo $uri->getFragment(), "\n";
+]]>
+</example>
+</div>
+
+</slide>

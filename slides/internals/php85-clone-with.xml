@@ -1,0 +1,55 @@
+<slide>
+<title>PHP 8.5: Clone With</title>
+
+<div effect="fade-out">
+<blurb>Applying a ~wither~ method:</blurb>
+<example><![CDATA[<?php
+final readonly class Response {
+    public function __construct(
+        public int $statusCode,
+        public string $reasonPhrase,
+    ) {}
+ 
+    public function withStatus($code, $reasonPhrase = ''): Response
+    {
+        $values = get_object_vars($this);
+        $values['statusCode'] = $code;
+        $values['reasonPhrase'] = $reasonPhrase;
+        return new self(
+            ...$values
+        );
+    }
+}]]></example>
+<list>
+    <bullet>Only works if all properties are assignable via %__construct%</bullet>
+</list>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 8.5: Change %clone% to a function with optional arguments:</blurb>
+<example><![CDATA[<?php
+final readonly class Response {
+    public function __construct(
+        public int $statusCode,
+        public string $reasonPhrase,
+    ) {}
+ 
+    public function withStatus($code, $reasonPhrase = ''): Response
+    {
+        return clone($this, [
+            "statusCode" => $code,
+            "reasonPhrase" => $reasonPhrase,
+        ]);
+    }
+}]]></example>
+</div>
+
+<div effect="fade-in">
+<list>
+    <bullet>The magic %__clone% method will still be called (first)</bullet>
+    <bullet>Visibility, Property Hooks, and %__set% all work as expected</bullet>
+    <bullet>%readonly% is temporarily not enforced during cloning</bullet>
+</list>
+</div>
+
+</slide>

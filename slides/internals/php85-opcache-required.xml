@@ -1,0 +1,16 @@
+<slide>
+<title>OPcache is no longer optional</title>
+
+<break lines="3"/>
+<blurb class="center">
+OPcache is now always *loaded* as part of PHP as a static part.
+</blurb>
+
+<div effect="fade-in">
+<break lines="3"/>
+<blurb class="center">
+OPcache is *not* always *enabled*, you still need to make the right %php.ini% settings.
+</blurb>
+</div>
+
+</slide>

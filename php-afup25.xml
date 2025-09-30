@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>PHP</topic>
+<title>What's New in PHP 8.5</title>
+<event>Forum PHP 2025</event>
+<location>Paris, France</location>
+<date>October 9th, 2025</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@php.net</email>
+<twitter>derickr</twitter>
+<mastodon>@derickr@phpc.social</mastodon>
+<url>https://derickrethans.nl/talks/php-afup25</url>
+<joindin></joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+
+Syntax:
+
+https://wiki.php.net/rfc/closures_in_const_expr
+<slide>slides/internals/php85-closures-in-constant-expressions.xml</slide>
+
+https://wiki.php.net/rfc/fcc_in_const_expr
+<slide>slides/internals/php85-fcc-in-constant-expressions.xml</slide>
+
+https://wiki.php.net/rfc/pipe-operator-v3
+<slide>slides/internals/php85-pipes.xml</slide>
+<slide>slides/internals/php85-pipes-examples.xml</slide>
+<slide>slides/internals/php85-pipes-debug.xml</slide>
+
+https://wiki.php.net/rfc/asymmetric-visibility-v2
+<slide>slides/internals/php84-asymmetric-visibility.xml</slide>
+<slide>slides/internals/php84-asymmetric-visibility-2.xml</slide>
+
+https://wiki.php.net/rfc/static-aviz
+<slide>slides/internals/php85-asymmetric-visibility-static.xml</slide>
+
+https://wiki.php.net/rfc/final_promotion
+<slide>slides/internals/php85-final-property-promotion.xml</slide>
+
+https://wiki.php.net/rfc/clone_with_v2
+<slide>slides/internals/php85-clone-with.xml</slide>
+
+Major additions:
+
+https://wiki.php.net/rfc/url_parsing_api
+<slide>slides/internals/php85-url-parsing-api.xml</slide>
+
+https://wiki.php.net/rfc/make_opcache_required
+<slide>slides/internals/php85-opcache-required.xml</slide>
+
+
+Minor additions:
+
+Attributes:
+
+https://wiki.php.net/rfc/attributes-on-constants
+<slide>slides/internals/php85-attributes-on-constants.xml</slide>
+
+https://wiki.php.net/rfc/marking_return_value_as_important
+<slide>slides/internals/php85-nodiscard-attribute.xml</slide>
+
+https://wiki.php.net/rfc/deprecated_traits
+<slide>slides/internals/php85-deprecated-trait-attribute.xml</slide>
+
+<!--
+https://wiki.php.net/rfc/delayedtargetvalidation_attribute
+<s lide>slides/internals/php85-delayed-target-validation-attribute.xml</slide>
+-->
+
+https://wiki.php.net/rfc/error_backtraces_v2
+<slide>slides/internals/php85-error-backtraces.xml</slide>
+
+https://wiki.php.net/rfc/filter_throw_on_failure
+<slide>slides/internals/php85-filter-throw.xml</slide>
+
+https://wiki.php.net/rfc/array_first_last
+<slide>slides/internals/php85-array-first-last.xml</slide>
+
+
+Language stuff:
+https://wiki.php.net/rfc/grapheme_str_split
+<slide>slides/internals/php84-grapheme-str-split.xml</slide>
+<slide>slides/internals/php84-grapheme-str-split-2.xml</slide>
+<slide>slides/internals/php84-grapheme-str-split-3.xml</slide>
+
+https://wiki.php.net/rfc/grapheme_levenshtein
+<slide>slides/internals/php85-grapheme-levenstein.xml</slide>
+<slide>slides/internals/php85-grapheme-levenstein2.xml</slide>
+
+https://wiki.php.net/rfc/grapheme_add_locale_for_case_insensitive
+<slide>slides/internals/php85-grapheme-levenstein3.xml</slide>
+<slide>slides/internals/php85-grapheme-add-locale.xml</slide>
+
+Deprecations:
+
+Deprecations for PHP 8.5
+https://wiki.php.net/rfc/deprecations_php_8_5
+
+
+Policy:
+
+Abstain voting option for RFCs
+https://wiki.php.net/rfc/rfc_vote_abstain
+<slide>slides/internals/policy-vote-abstain.xml</slide>
+
+Recommend PIE and deprecate PECL
+https://wiki.php.net/rfc/adopt_pie_deprecate_pecl
+<slide>slides/internals/policy-adopt-pie.xml</slide>
+
+
+<slide>slides/internals/questions-new.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

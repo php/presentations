@@ -1,0 +1,68 @@
+<slide>
+<title>PHP 8.5: FILTER_THROW_ON_FAILURE</title>
+
+<div effect="fade-out">
+<blurb>Default %filter_var% behaviour:</blurb>
+<example><![CDATA[<?php
+function validateUser(string $email, string $userId, string $userName) : bool
+{
+    if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+        return false;
+    }
+    if (filter_var($userId, FILTER_VALIDATE_INT) === false) {
+        return false;
+    }
+    if (filter_var(
+        $userName, FILTER_VALIDATE_REGEXP,
+        ['options' => ['regexp' => '/^[a-z]+$/']]
+    ) === false) {
+        return false;
+    }
+    return true;
+}]]>
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>%filter_var% with %FILTER_NULL_ON_FAILURE%:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+function validateUser(string $email, string $userId, string $userName) : bool
+{
+    if (filter_var($email, FILTER_VALIDATE_EMAIL, *FILTER_NULL_ON_FAILURE*) === *null*) {
+        return false;
+    }
+    if (filter_var($userId, FILTER_VALIDATE_INT, *FILTER_NULL_ON_FAILURE*) === *null*) {
+        return false;
+    }
+    if (filter_var(
+        $userName, FILTER_VALIDATE_REGEXP,
+        ['options' => ['regexp' => '/^[a-z]+$/'], 'flags' => *FILTER_NULL_ON_FAILURE*]
+    ) === *null*) {
+        return false;
+    }
+    return true;
+}]]>
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 8.5: %filter_var% with %FILTER_THROW_ON_FAILURE%:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+function validateUser(string $email, string $userId, string $userName) : bool
+{
+    try {
+        filter_var($email, FILTER_VALIDATE_EMAIL, *FILTER_THROW_ON_FAILURE*);
+        filter_var($userId, FILTER_VALIDATE_INT, *FILTER_THROW_ON_FAILURE*);
+        filter_var(
+            $userName, FILTER_VALIDATE_REGEXP,
+            ['options' => ['regexp' => '/^[a-z]+$/'], 'flags' => *FILTER_THROW_ON_FAILURE*]
+        );
+        return true;
+    } catch (*\Filter\FilterFailedException* $e) {
+        return false;
+    }
+}]]>
+</example>
+</div>
+
+</slide>

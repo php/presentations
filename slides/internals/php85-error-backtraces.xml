@@ -1,0 +1,45 @@
+<slide>
+<title>PHP 8.5: Backtrace with Fatal Error</title>
+
+<example inline="1"><![CDATA[&lt;?php |aaaaaa|// mydatetimeclass.php|
+class MyDateTimeClass implements DateTimeInterface {}]]></example>
+
+<example inline="1"><![CDATA[&lt;?php |aaaaaa|// autoload.php|
+function autoloader(string $class) {
+    include strtolower($class) . '.php';
+}
+spl_autoload_register(autoloader(...));]]></example>
+
+<example inline="1"><![CDATA[&lt;?php |aaaaaa|// code.php|
+require 'autoload.php';
+$mdt = new MyDateTimeClass(); ]]></example>
+
+<div effect="fade-in-out">
+<blurb>PHP 8.4:</blurb>
+<example>Fatal error: DateTimeInterface can't be implemented by user classes in
+    mydatetimeclass.php on line 2</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>PHP 8.5:</blurb>
+<example>Fatal error: DateTimeInterface can't be implemented by user classes in
+    mydatetimeclass.php on line 2
+Stack trace:
+#0 autoload.php(4): include()
+#1 test.php(4): autoloader('MyDateTimeClass')
+#2 {main}</example>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP with Xdebug:</blurb>
+<example>Fatal error: DateTimeInterface can't be implemented by user classes in
+     mydatetimeclass.php on line 2
+
+Call Stack:
+    0.0002     520872   1. {main}() test.php:0
+    0.0003     523432   2. autoloader($class = 'MyDateTimeClass') test.php:4
+    0.0003     525000   3. include('mydatetimeclass.php') autoload.php:4
+</example>
+</div>
+
+</slide>

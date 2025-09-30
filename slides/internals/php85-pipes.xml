@@ -20,8 +20,4 @@ function slugger(string $input)
 var_dump(slugger('Hello, World!')); // string(11) "hello-world"
 ?>]]></example>
 
-<list>
-    <bullet>Still under consideration (but currently passing)</bullet>
-</list>
-
 </slide>

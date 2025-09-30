@@ -1,0 +1,31 @@
+<slide>
+<title>PHP 8.5: Deprecated Trait Attribute</title>
+
+<blurb>PHP 8.4 introduced the %#[Deprecated]% attribute:</blurb>
+
+<example result="0"><![CDATA[<?php
+class Clazz {
+    #[\Deprecated("use test() instead", since: "2024-10-08")]
+    function test2() {
+    }
+}
+
+$c = new Clazz()->test2();
+?>]]></example>
+
+<div effect="fade-in">
+<blurb>PHP 8.5 adds support for the attributes on *traits*:</blurb>
+
+<example result="3"><![CDATA[<?php
+#[\Deprecated]
+trait LoggingTrait
+{
+    public function log(string $message) : void
+    {
+        // Log the message
+    }
+}
+?>]]></example>
+
+</div>
+</slide>

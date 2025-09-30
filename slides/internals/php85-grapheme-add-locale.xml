@@ -1,0 +1,16 @@
+<slide>
+<title>PHP 8.5: locale parameter for other grapheme_* functions</title>
+
+<blurb class="center">
+%grapheme_strpos%, %grapheme_stripos%, %grapheme_strrpos%, %grapheme_strripos%,
+%grapheme_substr%, %grapheme_strstr%, %grapheme_stristr%
+</blurb>
+
+<example result="1"><![CDATA[<?php
+$sentence  = 'Autobahnstraße';
+$word = 'ss';
+
+var_dump(grapheme_strpos($sentence, $word));
+var_dump(grapheme_strpos($sentence, $word, locale: 'de_DE-u-ks-level1'));
+?>]]></example>
+</slide>

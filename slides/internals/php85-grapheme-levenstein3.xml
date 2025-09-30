@@ -1,0 +1,43 @@
+<slide>
+<title>PHP 8.5: grapheme_levenshtein</title>
+
+<div effect="fade-out">
+<example><![CDATA[<?php
+$normalCase = 'Hoffwn i ddŵr';
+$upperCase  = 'HOFFWN I DDŴR';
+
+echo grapheme_levenshtein($normalCase, $upperCase), "\n";
+?>]]></example>
+<example>
+10
+</example>
+
+<blurb>What if I would like it case-insensitively matched?</blurb>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 8.5 adds the %locale% argument:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+$normalCase = 'Hoffwn i ddŵr';
+$upperCase  = 'HOFFWN I DDŴR';
+
+echo grapheme_levenshtein($normalCase, $upperCase, *locale: 'cy_GB-u-ks-level2'*), "\n";
+?>]]></example>
+<example>
+0
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>Locale descriptor:</blurb>
+<example>
+cy_GB-u-ks-level2
+┳━ ┳━ ┳ ━━━━┳━━━━
+┃  ┃  ┃     ┗━━━ ks: strength, with level 2
+┃  ┃  ┗━━━━━━━━━ flag separator
+┃  ┗━━━━━━━━━━━━ region code: GB (Great Britain)
+┗━━━━━━━━━━━━━━━ language code: CY (Cymreag)
+</example>
+</div>
+
+</slide>

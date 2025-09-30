@@ -1,0 +1,73 @@
+<slide>
+<title>PHP 8.5: array_first() and array_last()</title>
+
+<div effect="fade-out">
+<blurb>PHP 7.3 added %array_key_first()% and %array_key_last()%:</blurb>
+<example><![CDATA[<?php
+$timezone = new DateTimeZone("Europe/Kyiv");
+$trans = $timezone->getTransitions();
+var_dump(array_key_first($trans), array_key_last($trans));
+]]></example>
+
+<example>
+int(0)
+int(122)
+</example>
+</div>
+
+<div effect="fade-in-out">
+<blurb>But accessing values was still "odd":</blurb>
+<example inline="1"><![CDATA[&lt;?php
+$timezone = new DateTimeZone("Europe/Kyiv");
+*$trans* = $timezone->getTransitions();
+var_dump(*$trans*[array_key_first(*$trans*)], *$trans*[array_key_last(*$trans*)]);
+]]></example>
+
+<example>
+array(5) {
+  ["ts"]=> int(-9223372036854775808)
+  ["time"]=> string(34) "-292277022657-01-27T08:29:52+00:00"
+  ["offset"]=> int(7324)
+  ["isdst"]=> bool(false)
+  ["abbr"]=> string(3) "LMT"
+}
+array(5) {
+  ["ts"]=> int(2140045200)
+  ["time"]=> string(25) "2037-10-25T01:00:00+00:00"
+  ["offset"]=> int(7200)
+  ["isdst"]=> bool(false)
+  ["abbr"]=> string(3) "EET"
+}
+</example>
+</div>
+
+<div effect="fade-in">
+<blurb>PHP 8.5 adds %array_first()% and %array_last()%:</blurb>
+<example inline="1"><![CDATA[&lt;?php
+$timezone = new DateTimeZone("Europe/Kyiv");
+*$trans* = $timezone->getTransitions();
+var_dump(*array_first*(*$trans*), *array_last*(*$trans*));
+]]></example>
+
+<example>
+array(5) {
+  ["ts"]=> int(-9223372036854775808)
+  ["time"]=> string(34) "-292277022657-01-27T08:29:52+00:00"
+  ["offset"]=> int(7324)
+  ["isdst"]=> bool(false)
+  ["abbr"]=> string(3) "LMT"
+}
+array(5) {
+  ["ts"]=> int(2140045200)
+  ["time"]=> string(25) "2037-10-25T01:00:00+00:00"
+  ["offset"]=> int(7200)
+  ["isdst"]=> bool(false)
+  ["abbr"]=> string(3) "EET"
+}
+</example>
+</div>
+
+</slide>
+
+
+
