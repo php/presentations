@@ -34,6 +34,7 @@ Code Improvements (algorithms, memory, etc)
 <slide>slides/xdebug/xdebug_info.xml</slide>
 <!-- <s lide>slides/xdebug/xdebug_info-2.xml</slide> -->
 <slide>slides/xdebug/xdebug-native-path-mapping.xml</slide>
+<slide>slides/xdebug/dbgp-breakpoint-types.xml</slide>
 <slide>slides/xdebug/xdebug-native-path-skipping.xml</slide>
 
 - xdebug_notify() (demo, VS Code)
@@ -49,7 +50,6 @@ Code Improvements (algorithms, memory, etc)
 
 <!--<s lide>slides/xdebug/diagnostic-log.xml</slide> (Also console output) -->
 
-<slide>slides/xdebug/xdebug-recent-new-features.xml</slide>
 Step debugging improvements
 Step debugging improvements
 
@@ -71,8 +71,6 @@ Step debugging improvements
 
 <!-- <s lide>slides/xdebug/xdebug_pseudo_hosts.xml</slide> -->
 - xdebug://gateway and xdebug://nameserver (explain)
-
-<slide>slides/xdebug/xdebug-recent-new-features.xml</slide>
 
 <slide>slides/xdebug/xdebug-control-socket.xml</slide>
 
