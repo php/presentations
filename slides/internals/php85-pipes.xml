@@ -1,6 +1,43 @@
 <slide>
 <title>PHP 8.5: Pipe Operator</title>
 
+<div effect="fade-out">
+<example><![CDATA[<?php
+function slugger(string $input)
+{
+    return
+        preg_replace(
+            '/-+/', '-',
+            trim(
+                preg_replace(
+                    /[^a-z]/', '-',
+                    strtolower($input)
+                ),
+                '-'
+            )
+        );
+}
+
+var_dump(slugger('Hello, World!')); // string(11) "hello-world"
+?>]]></example>
+</div>
+
+<div effect="fade-in-out">
+<example><![CDATA[<?php
+function slugger(string $input)
+{
+    $input = \strtolower($input);
+    $input = \preg_replace('/[^a-z]/', '-', $input));
+    $input = \trim($input, '-');
+    $input = \preg_replace('/-+/', '-', $input));
+    return $input;
+}
+
+var_dump(slugger('Hello, World!')); // string(11) "hello-world"
+?>]]></example>
+</div>
+
+<div effect="fade-in">
 <example><![CDATA[<?php
 function slugger(string $input)
 {
@@ -10,14 +47,23 @@ function slugger(string $input)
         |> (fn($x) => \trim($x, '-'))
         |> (fn($x) => \preg_replace('/-+/', '-', $x));
 }
-
-
-
-
-
-
-
 var_dump(slugger('Hello, World!')); // string(11) "hello-world"
 ?>]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Maybe in PHP 8.6...</blurb>
+<example><![CDATA[<?php
+function slugger(string $input)
+{
+    return $input
+        |> \strtolower(...)
+        |> \preg_replace('/[^a-z]/', '-', ?)
+        |> \trim(?, '-')
+        |> \preg_replace('/-+/', '-', ?);
+}
+var_dump(slugger('Hello, World!')); // string(11) "hello-world"
+?>]]></example>
+</div>
 
 </slide>

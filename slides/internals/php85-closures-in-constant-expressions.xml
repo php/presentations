@@ -2,28 +2,20 @@
 <title>PHP 8.5: Closures in Constant Expressions</title>
 
 <example><![CDATA[<?php
-function slugger(
-    string $input,
-    array $callbacks = [
-        static function ($value) { return \strtolower($value); },
-        static function ($value) { return \preg_replace('/[^a-z]/', '-', $value); },
-        static function ($value) { return \trim($value, '-'); },
-        static function ($value) { return \preg_replace('/-+/', '-', $value); },
-    ]
-) {
-    foreach ($callbacks as $callback) {
-        $input = $callback($input);
-    }
-    return $input;
+final class Country
+{
+	$[\Validator\Custom(static function ($countryCode) {
+		return \preg_match('/^[a-z]{2,3}$/', $countryCode);
+	})]
+	public string $countryCode;
 }
- 
-var_dump(slugger('Hello, World!')); // string(11) "hello-world"
 ?>]]></example>
 
 <list>
     <bullet>They must be %static%</bullet>
-    <bullet>They may not include variables from the surrounding scope<br/>no:
-%use($foo)%, nor: short closures (%fn … =>%)</bullet>
+    <bullet>They may not include variables from the surrounding scope.</bullet>
+	<bullet>*Forbidden:* %use($foo)%</bullet>
+	<bullet>*Forbidden:* short closures: %fn() => …%</bullet>
 </list>
 
 </slide>

@@ -2,28 +2,20 @@
 <title>PHP 8.5: First Class Callables in Constant Expressions</title>
 
 <example><![CDATA[<?php
-function slugger(
-    string $input,
-    array $callbacks = [
-        \strtolower(...),
-        static function ($value) { return \preg_replace('/[^a-z]/', '-', $value); },
-        static function ($value) { return \trim($value, '-'); },
-        static function ($value) { return \preg_replace('/-+/', '-', $value); },
-    ]
-) {
-    foreach ($callbacks as $callback) {
-        $input = $callback($input);
-    }
-    return $input;
+final class LogEntry
+{
+	public string $message;
+
+	#[\Serialize\Custom(self::myMethod(...))]
+	public string $severity;
 }
- 
-var_dump(slugger('Hello, World!')); // string(11) "hello-world"
 ?>]]></example>
 
 <div effect="fade-in">
 <list>
     <bullet>They must be free-standing functions or %static% methods</bullet>
-    <bullet>%__callStatic()% methods,<br/>or % [ClassName::class, 'methodName'](...)% is not supported</bullet>
+    <bullet>*Forbidden:* %__callStatic()% methods</bullet>
+	<bullet>*Forbidden:* %[ClassName::class, 'methodName'](...)%</bullet>
 </list>
 </div>
 

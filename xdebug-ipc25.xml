@@ -35,6 +35,10 @@ Code Improvements (algorithms, memory, etc)
 <!-- <s lide>slides/xdebug/xdebug_info-2.xml</slide> -->
 <slide>slides/xdebug/xdebug-native-path-mapping.xml</slide>
 <slide>slides/xdebug/dbgp-breakpoint-types.xml</slide>
+
+<slide>slides/xdebug/exception_value.xml</slide>
+- exception value as pseudo-variable (VS Code)
+
 <slide>slides/xdebug/xdebug-native-path-skipping.xml</slide>
 
 - xdebug_notify() (demo, VS Code)
@@ -58,9 +62,6 @@ Step debugging improvements
 
 <slide>slides/xdebug/return_value.xml</slide>
 - return value debugging (demo, VS Code or PhpStorm)
-
-<slide>slides/xdebug/exception_value.xml</slide>
-- exception value as pseudo-variable (VS Code)
 
 <!-- <s lide>slides/xdebug/breakpoint_not_resolving.xml</slide> -->
 - Xdebug will now also log a warning if an IDE attempts to set a breakpoint on

@@ -1,0 +1,29 @@
+<slide>
+<title>PHP 8.5: First Class Callables in Constant Expressions</title>
+
+<blurb class="center">Potential use case: PHPUnit data provider</blurb>
+
+<example inline="2"><![CDATA[&lt;?php
+final class MyCleverTest
+{
+    ---#[DataProvider('dataProvider')]---
+
+    *#[DataProvider(self::dataProvider(...))]*
+    public testTheThing($input, $expected) : void
+    {
+        $result = $input * $input;
+        self::assertSame($expected, $result);
+    }
+
+    private dataProvider()
+    {
+        return [
+            [ 0, 0 ],
+            [ 1, 1 ],
+            [ 2, 4 ],
+        ]
+    }
+}
+?>]]></example>
+</slide>
+
