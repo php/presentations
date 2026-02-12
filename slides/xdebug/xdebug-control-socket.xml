@@ -9,10 +9,11 @@
 <div effect="fade-in">
 	<break lines="3"/>
 	<list>
-		<bullet>Linux Only</bullet>
 		<bullet>Local System Only</bullet>
+		<bullet>Linux Support in Xdebug 3.3</bullet>
 		<bullet>Experimental Windows Support for Xdebug 3.5</bullet>
-		<bullet>IDE Support under Discussion</bullet>
+		<bullet>Support in VS Code Directly</bullet>
+		<bullet>Support in PhpStorm is in discussion</bullet>
 	</list>
 </div>
 </slide>
