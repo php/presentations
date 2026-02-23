@@ -1,0 +1,67 @@
+<slide style="title">
+<blurb class="large">Step 4: Make Stream Deck Listen for Incoming MQTT Messages</blurb>
+<break/>
+<example inline="2">
+import (
+  mqtt "github.com/eclipse/paho.mqtt.golang"
+  "github.com/spf13/viper"
+)
+
+type MqttThing struct {
+  SD          *streamdeck.StreamDeck
+  Brightness  *Brightness
+  mqtt_client mqtt.Client
+  actions     []MqttAction
+}
+
+type MqttSubscription struct {
+  Topic string `mapstructure:"topic"`
+}
+
+type MqttAction struct {
+  Topic           string `mapstructure:"topic"`
+  Value           string `mapstructure:"value"`
+  Type            string `mapstructure:"type"`
+  BrightnessLevel *int   `mapstructure:"brightnessLevel"`
+}
+
+func (p *MqttThing) onMqttMessageReceived(client mqtt.Client, message mqtt.Message) {
+  payload := string(message.Payload()[:])
+
+  for _, topic := range p.actions {
+    if topic.Topic == message.Topic() &amp;&amp; topic.Value == payload {
+      if topic.Type == "brightness" &amp;&amp; topic.BrightnessLevel != nil {
+        p.Brightness.SetBrightnessLevel(*topic.BrightnessLevel)
+      }
+    }
+  }
+}
+
+func (p *MqttThing) Init() {
+  opts := mqtt.NewClientOptions().
+    AddBroker(viper.GetString("mqtt.broker")).
+    SetClientID(viper.GetString("mqtt.clientid")).
+    SetUsername(viper.GetString("mqtt.username")).
+    SetPassword(viper.GetString("mqtt.password"))
+
+  viper.UnmarshalKey("mqtt.actions", &amp;p.actions)
+
+  opts.OnConnect = func(c mqtt.Client) {
+    var subscriptions []MqttSubscription
+    viper.UnmarshalKey("mqtt.subscriptions", &amp;subscriptions)
+
+    for _, topic := range subscriptions {
+      if token := p.mqtt_client.Subscribe(topic.Topic, byte(0), p.onMqttMessageReceived);
+       token.Wait() &amp;&amp; token.Error() != nil {
+        panic(token.Error())
+      }
+    }
+  }
+
+  p.mqtt_client = mqtt.NewClient(opts)
+  if conn_token := p.mqtt_client.Connect(); conn_token.Wait() &amp;&amp; conn_token.Error() != nil {
+    log.Warn().Err(conn_token.Error()).Msg("Cannot connect to MQTT")
+  }
+}
+</example>
+</slide>

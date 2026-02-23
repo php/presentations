@@ -1,0 +1,36 @@
+<slide background="esp32-code.png">
+<title>Step 2: Program a Micro Controller to Drive the LED Matrix</title>
+
+<div class="left-side">
+<div class="light-bg">
+<div effect="fade-in">
+<list><bullet>Arduino IDE → CLI</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>C / C++</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Connecting to WiFi</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Connecting to MQTT and Handling Messages</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Use Messages to Write Images</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Re-learn About Palettes</bullet></list>
+</div>
+</div>
+</div>
+
+<div class="right-side">
+<break lines="12"/>
+<div class="light-bg">
+<div effect="fade-in">
+<image filename="esp32-vga-palette.png"/>
+</div>
+</div>
+</div>
+
+</slide>

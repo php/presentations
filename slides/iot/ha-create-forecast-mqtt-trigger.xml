@@ -1,0 +1,23 @@
+<slide style="title">
+<blurb class="large">Step 1: Create MQTT Trigger in Home Assistant</blurb>
+<break/>
+<example>
+alias: Forecast Changes
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - weather.forecast_home
+conditions: []
+actions:
+  - action: mqtt.publish
+    metadata: {}
+    data:
+      qos: 0
+      topic: homeautomation/forecast
+      payload: "{{trigger.to_state.state}}"
+mode: single
+</example>
+
+<blurb class="center">The payload contains the new (current) state.</blurb>
+</slide>

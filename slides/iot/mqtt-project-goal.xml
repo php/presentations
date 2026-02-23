@@ -1,0 +1,19 @@
+<slide background="iot-streamdeck-obs.jpeg">
+<title>Goal: Dim the Stream Deck When I Leave The Room</title>
+
+<div effect="fade-in">
+<break lines="1"/>
+<div class="light-bg left-side">
+<image filename="iot-human-detector.jpeg" width="800"/>
+<blurb align="center">Human Detector</blurb>
+</div>
+</div>
+
+<div effect="fade-in">
+<break lines="8"/>
+<div class="light-bg right-side">
+<image filename="iot-homeassistant.jpeg" width="800"/>
+<blurb align="center">Home Assistant</blurb>
+</div>
+</div>
+</slide>

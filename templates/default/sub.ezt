@@ -1,0 +1,2 @@
+{use $node}
+<sub>{$node->nodeValue}</sub>

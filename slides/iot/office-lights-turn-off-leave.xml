@@ -1,0 +1,21 @@
+<slide>
+<title>Turn Off When Leaving</title>
+
+<div class="light-bg right-side">
+<image filename="iot-human-detector.jpeg"/>
+<blurb align="center" class="small">Human Presense Sensor</blurb>
+</div>
+
+<blurb>Standing Office Light</blurb>
+<list>
+<bullet>Turn off if you leave for 5 minutes</bullet>
+</list>
+
+<blurb>Ceiling Office Light</blurb>
+<list>
+<bullet>Turn off if nobody is in the room for more than 5 minutes</bullet>
+</list>
+
+<image filename="ha-action-turn-lights-off.png"/>
+
+</slide>

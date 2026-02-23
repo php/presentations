@@ -1,0 +1,23 @@
+<slide>
+<title>Christmas Tree</title>
+
+<div class="light-bg left-side">
+<image filename="iot-wedding-tree.jpeg"/>
+</div>
+
+<div effect="fade-in">
+<div class="light-bg right-side">
+<image filename="iot-wedding-tree-switch.jpeg"/>
+<blurb align="center">The "Easy to Reach" Switch</blurb>
+</div>
+</div>
+
+<div effect="fade-in">
+<div class="light-bg right-side">
+<break lines="2"/>
+<blurb align="center">Now Automated</blurb>
+<image filename="ha-tree-lights.png"/>
+</div>
+</div>
+
+</slide>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<presentation css="derick.css">
+<topic>IOT</topic>
+<title>Automating My House with PHP &amp; Go</title>
+<event>ConFoo 2026</event>
+<location>Montréal, Canada</location>
+<date>Feb 26th, 2026</date>
+<speaker>Derick Rethans</speaker>
+<email>derick@derickrethans.nl</email>
+<mastodon>@derickr@phpc.social</mastodon>
+<twitter>derickr</twitter>
+<url>https://derickrethans.nl/talks/iot-confoo26</url>
+<joindin>https://derickrethans.nl</joindin>
+<slide>slides/xdebug/title.xml</slide>
+<slide>slides/mongodb/me.xml</slide>
+
+Chapter 1: Plants and Trees
+=================================
+
+<slide>slides/iot/chapter-plans-and-trees.xml</slide>
+
+<slide>slides/iot/monty.xml</slide>
+<slide>slides/iot/smart-plug-1.xml</slide>
+<slide>slides/iot/home-assistant-1.xml</slide>
+<slide>slides/iot/zigbee-network.xml</slide>
+<slide>slides/iot/wishing-tree.xml</slide>
+
+Chapter 2: And Then There Was Light
+===================================
+
+<slide>slides/iot/chapter-and-then-there-was-light.xml</slide>
+
+<slide>slides/iot/varying-light.xml</slide>
+<slide>slides/iot/office-lights-goals.xml</slide>
+<slide>slides/iot/office-lights-turn-off-leave.xml</slide>
+<slide>slides/iot/office-lights-turn-off-bright-enough.xml</slide>
+<slide>slides/iot/varying-light-smoothed.xml</slide>
+<slide>slides/iot/office-lights-turn-on.xml</slide>
+<slide>slides/iot/office-lights-dim.xml</slide>
+
+<slide>slides/iot/livingroom-party.xml</slide>
+<slide>slides/iot/livingroom-ok.xml</slide>
+
+Chapter 3: Desk Control
+=======================
+
+<slide>slides/iot/chapter-desk-control.xml</slide>
+<slide>slides/iot/streamdeck.xml</slide>
+<slide>slides/iot/mqtt-project-goal.xml</slide>
+<slide>slides/iot/mqtt.xml</slide>
+<slide>slides/iot/ha-add-mqtt-integration.xml</slide>
+<slide>slides/iot/ha-create-mqtt-trigger.xml</slide>
+<slide>slides/iot/go-streamdeck-configuration.xml</slide>
+<slide>slides/iot/go-streamdeck-code.xml</slide>
+<slide>slides/iot/go-streamdeck-publish-mqtt.xml</slide>
+
+Chapter 4: Blinking Lights
+===========================
+
+<slide>slides/iot/ha-forecast.xml</slide>
+
+<slide>slides/iot/ha-create-forecast-mqtt-trigger.xml</slide>
+<slide>slides/iot/ha-program-esp32-board.xml</slide>
+<slide>slides/iot/mqtt-whats-next-esp32-board.xml</slide>
+<slide>slides/iot/ha-php-mqtt.xml</slide>
+<slide>slides/iot/ha-php-mqtt-code.xml</slide>
+<slide>slides/iot/ha-php-mqtt-result-unknown.xml</slide>
+<slide>slides/iot/ha-php-mqtt-result-rainy.xml</slide>
+<slide>slides/iot/ha-php-mqtt-code-rgb.xml</slide>
+<slide>slides/iot/ha-php-mqtt-result-sunny.xml</slide>
+<slide>slides/iot/ha-php-mqtt-lego-box-prototype.xml</slide>
+<slide>slides/iot/ha-php-mqtt-lego-box-design.xml</slide>
+<slide>slides/iot/ha-php-mqtt-next-animations.xml</slide>
+
+Chapter 5: Smart Heating?
+=========================
+
+<slide>slides/iot/chapter-smart-heating.xml</slide>
+<slide>slides/iot/ha-nest-schedule.xml</slide>
+<slide>slides/iot/ha-nest-data.xml</slide>
+<slide>slides/iot/ha-nest-data-1.xml</slide>
+<slide>slides/iot/ha-nest-data-2.xml</slide>
+<slide>slides/iot/ha-nest-data-mqtt.xml</slide>
+<slide>slides/iot/ha-nest-data-mqtt-step0.xml</slide>
+<slide>slides/iot/ha-nest-data-mqtt-step2.xml</slide>
+<slide>slides/iot/ha-nest-data-mqtt-step3.xml</slide>
+<slide>slides/iot/ha-nest-data-mqtt-result.xml</slide>
+
+
+Conclusion
+==========
+
+<slide>slides/iot/mqtt-whats-next-elephpants.xml</slide>
+<slide>slides/iot/mqtt-whats-next-lego.xml</slide>
+
+<slide>slides/mongodb/questions.xml</slide>
+<slide>slides/xdebug/resources.xml</slide>
+
+</presentation>

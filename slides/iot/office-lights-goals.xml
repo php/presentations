@@ -1,0 +1,24 @@
+<slide>
+<title>Office Lights: Goals</title>
+
+<blurb>*Standing Office Light*</blurb>
+<list>
+<bullet>Turn off if you leave for 5 minutes</bullet>
+<bullet>Turn off when it gets *bright enough*</bullet>
+<bullet>Turn on when a human enters the room and it's *darkish*</bullet>
+<bullet>Turn on when it turns *darkish* and there is a human there</bullet>
+</list>
+
+<div effect="fade-in">
+<break/>
+<blurb>*Ceiling Office Light*</blurb>
+<list>
+<bullet>Brighten when you enter the room</bullet>
+<bullet>Dim when you leave the room</bullet>
+<bullet>Turn off if nobody is in the room for more than 5 minutes</bullet>
+<bullet>Turn off when it's *bright enough*</bullet>
+<bullet>Turn on when its *darkish*</bullet>
+<bullet>Turn on when you enter the room and it is *darkish*</bullet>
+</list>
+</div>
+</slide>

@@ -1,0 +1,25 @@
+<slide style="title">
+<blurb class="large">Step 1: Create MQTT Trigger in Home Assistant</blurb>
+<break/>
+<example inline="2">
+alias: Temperature MQTT Trigger
+description: ""
+triggers:
+  - trigger: state
+    entity_id:
+      - sensor.living_room_temperature
+      *- sensor.current_temperature*
+      - binary_sensor.nest_on
+conditions: []
+actions:
+  - action: mqtt.publish
+    metadata: {}
+    data:
+      evaluate_payload: false
+      qos: 0
+      retain: false
+      topic: tempwise/{{trigger.to_state.object_id}}/state_change
+      payload: "{{trigger.from_state.state}}|{{trigger.to_state.state}}"
+mode: single
+</example>
+</slide>

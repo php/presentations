@@ -1,0 +1,21 @@
+<slide>
+<title>Turn Off When It's Bright</title>
+
+<div class="light-bg right-side">
+<image filename="iot-motion-detector.jpeg"/>
+<blurb align="center" class="small">Motion Detector</blurb>
+</div>
+
+<blurb>Standing Office Light</blurb>
+<list>
+<bullet>Turn off when it gets *bright enough*</bullet>
+</list>
+
+<blurb>Ceiling Office Light</blurb>
+<list>
+<bullet>Turn off when it's *bright enough*</bullet>
+</list>
+
+<image filename="ha-action-turn-lights-off-bright.png"/>
+
+</slide>

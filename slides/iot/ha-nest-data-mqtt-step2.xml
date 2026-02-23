@@ -1,0 +1,27 @@
+<slide style="title">
+<blurb class="large">Step 2: Create PHP Script to Import Into Database</blurb>
+<example><![CDATA[<?php
+$mqtt->subscribe('tempwise/+/state_change', function($topic, $msg, $ret, $matchWild) use ($c) {
+	if ( ! preg_match( '@^tempwise/(.*)/state_change$@', $topic, $matchedTopic)) {
+		return;
+	}
+	$topic = $matchedTopic[1];
+
+	$valueParts = explode( '|', $msg);
+	$value = array_last($valueParts);
+
+	$value = match($value) {
+		'on' => true,
+		'off' => false,
+		default => (double) $value,
+	};
+
+	$doc = [
+		'ts' => new MongoDB\BSON\UTCDateTime(),
+		't' => $topic,
+		'v' => $value,
+	];
+
+	$result = $c->insertOne($doc);
+}, 0);]]></example>
+</slide>

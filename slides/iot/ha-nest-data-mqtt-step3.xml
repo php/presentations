@@ -1,0 +1,40 @@
+<slide background="ha-nest-slope-2.jpeg">
+<title>Step 3: Calculate Heating Rate</title>
+<div class="left-side">
+<div class="light-bg">
+
+<div effect="fade-in">
+<list><bullet>Loop over all elements for %nest% events</bullet></list>
+</div>
+
+<div effect="fade-in">
+<list><bullet>Find closest livingroom temperature before and after</bullet></list>
+</div>
+
+<div effect="fade-in">
+<list><bullet>Temperature(s) at Nest on/off points:<br/>
+~ΔT~ = ΔT<sub>1</sub> - ΔT<sub>0</sub><br/>
+~Δt~ = Δt<sub>1</sub> - Δt<sub>0</sub><br/>
+~x~ = t<sub>nest</sub> - t<sub>0</sub><br/>
+~T~<sub>nest</sub> = ((x / Δt) * ΔT) + ΔT<sub>0</sub> *°C*
+</bullet></list>
+</div>
+
+<div effect="fade-in">
+<list><bullet>Rate between Nest on/off points:<br/>
+~ΔT~ = T<sub>off</sub> - T<sub>on</sub><br/>
+~Δt~ = t<sub>off</sub> - t<sub>on</sub><br/>
+
+~rate~ = ΔT / Δt *°C / second*<br/>
+</bullet></list>
+</div>
+
+<div effect="fade-in">
+<list><bullet>Average Outside Temperature:<br/>
+ΔT<sub>outside</sub> = (T<sub>outside,0</sub> + T<sub>outside,1</sub>) / 2 *°C*
+</bullet></list>
+</div>
+
+</div>
+</div>
+</slide>

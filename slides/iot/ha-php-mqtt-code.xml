@@ -1,0 +1,82 @@
+<slide>
+<title>The PHP Code</title>
+
+<div effect="fade-out">
+<blurb>Connect to MQTT Broker:</blurb>
+<example><![CDATA[
+<?php
+require 'vendor/autoload.php';
+
+$server   = '192.168.42.213';
+$port     = 1883;
+$clientId = 'mqttfun-esp32-react-on-weather';
+
+$connectionSettings = (new \PhpMqtt\Client\ConnectionSettings)
+    ->setUsername("mqtt")
+    ->setPassword("homeassistant-XXXXXXXXXXXX");
+
+$mqtt = new \PhpMqtt\Client\MqttClient($server, $port, $clientId);
+$mqtt->connect($connectionSettings);
+]]></example>
+</div>
+<div effect="fade-in-out">
+<blurb>Publish Simple Message:</blurb>
+<example><![CDATA[
+$docBrightness = [
+    'c' => 'setbrightness',
+    'b' => 20,
+];
+$mqtt->publish('esp32_lights/1', json_encode($docBrightness), 0);
+]]></example>
+</div>
+<div effect="fade-in-out">
+<blurb>Subscribe Handler:</blurb>
+<example><![CDATA[
+$mqtt->subscribe('homeautomation/forecast',
+    function ($topic, $message, $retained, $matchedWildcards) use ($sprites, $mqtt) {
+        $imageData = match ($message) {
+            'rainy' => $sprites['rainy'],
+            'sunny' => $sprites['sunny'],
+            default => $sprites['unknown'],
+        };
+
+        $mqttMessage = [
+            'c' => 'setls',
+            's' => 0,
+            'd' => $imageData,
+        ];
+        $mqtt->publish('esp32_lights/1', json_encode($mqttMessage), 0);
+    },
+    0
+);
+]]></example>
+</div>
+<div effect="fade-in-out">
+<blurb>Loop:</blurb>
+<example><![CDATA[
+$mqtt->loop(true);
+$mqtt->disconnect();
+]]></example>
+</div>
+
+<div effect="fade-in">
+<blurb>Image Definition(s):</blurb>
+<example><![CDATA[
+$sprites = [
+    …,
+    'rainy' => [
+         0, 17,   0,  23, 20,   0,  0,  0,
+         0, 18,  24,  25, 25,  25,  8, 18,
+        19, 25,  25,  25, 25,  24, 25, 23,
+        24, 25,  25,  25, 24,  24, 24, 24,
+         8, 24,  24,  24, 24,  24, 24, 22,
+         0, 55,   0,  18,  9,  55,  0,  0,
+         0,  0,  55, 176,  0, 104, 55,  0,
+         0,  0, 127,  55,  0,   0,  0, 55
+    ],
+    …
+];]]></example>
+<image filename="icons.png"/>
+</div>
+
+</slide>

@@ -1,0 +1,25 @@
+<slide style="title">
+<blurb class="large">Step 2: Create MQTT Trigger in Home Assistant</blurb>
+<break/>
+<example>
+alias: MQTT Trigger for Presence Sensor
+description: ""
+triggers:
+  - trigger: state
+	entity_id:
+	  - binary_sensor.human_detector
+conditions: []
+actions:
+  - action: mqtt.publish
+	metadata: {}
+	data:
+	  evaluate_payload: false
+	  qos: 0
+	  retain: false
+	  topic: entities/{{trigger.to_state.object_id}}/state_change
+	  payload: "{{trigger.from_state.state}}|{{trigger.to_state.state}}"
+mode: single
+</example>
+
+<blurb class="center">The payload contains the old and new state.</blurb>
+</slide>

@@ -1,0 +1,28 @@
+<slide style="title">
+<blurb class="large">Step 5: Publish to MQTT</blurb>
+<break/>
+<blurb>Configuration:</blurb>
+<example inline="2">
+HousePage:
+  - Index: 0
+    Type: mqtt-color
+    Arguments:
+     - StateId: office-lights
+     - Name: "LIGHT"
+     - PublishTopic: "homeautomation/office"
+     - ActivePublishPayload: "light"
+     - InactivePublishPayload: "dark"
+     - ActiveStateColor: "#00ff00"
+     - InactiveStateColor: "#ff0000"
+</example>
+<break/>
+
+<blurb>To publish to MQTT:</blurb>
+<example inline="2">
+mq.mqtt.mqtt_client.Publish(mq.PublishTopic, 0, false, mq.NextPublishPayload)
+</example>
+
+<break/>
+<blurb>Hooking it into the Streamdeck-Goui code was trickier…</blurb>
+
+</slide>

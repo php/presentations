@@ -1,0 +1,25 @@
+<slide style="title">
+<blurb class="large">Step 3: Set Up the MQTT Integration for Stream Deck</blurb>
+<break/>
+<example inline="2">
+    # MQTT Integration
+    mqtt:
+      broker: "tcp://192.168.42.213:1883"
+      clientid: "go-streamdeck"
+      username: "mqtt"
+      password: "homeassistant-mqtt-XXXXXXX"
+      subscriptions:
+      - topic: *"entities/+/state_change"*
+      actions:
+      - topic: *"entities/human_detector/state_change"*
+        value: *on|off*
+        *type: brightness*
+        brightnessLevel: 0
+      - topic: "entities/human_detector/state_change"
+        type: brightness
+        value: off|on
+        brightnessLevel: 1
+</example>
+
+<blurb class="center">Subscriptions vs Actions</blurb>
+</slide>

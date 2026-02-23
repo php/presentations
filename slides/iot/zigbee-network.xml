@@ -1,0 +1,15 @@
+<slide background="ha-zigbee-network.png">
+<title>Zigbee</title>
+
+<break lines="21"/>
+<div class="light-bg">
+<break lines="1"/>
+<list>
+	<bullet>Coordinator: Controls the network</bullet>
+	<bullet>Routers: Mains Powered Tech, with forwarding</bullet>
+	<bullet>End Devices: Battery Operated Sensors</bullet>
+</list>
+<break lines="1"/>
+</div>
+
+</slide>

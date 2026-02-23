@@ -1,0 +1,29 @@
+<slide>
+<title>Turn On When It's Dark</title>
+
+<div class="light-bg right-side">
+<image filename="ha-actions-turn-lights-on.png"/>
+</div>
+
+<div class="left-side">
+<blurb>Standing Office Light</blurb>
+<list>
+<bullet>Turn on when a human enters the room and it's *darkish*</bullet>
+<bullet>Turn on when it turns *darkish* and there is a human there</bullet>
+</list>
+
+<blurb>Ceiling Office Light</blurb>
+<list>
+<bullet>Turn on when its *darkish*</bullet>
+<bullet>Turn on when you enter the room and it is *darkish*</bullet>
+</list>
+<break/>
+<blurb>Needs a filter helper to provide smoothed value</blurb>
+</div>
+
+<div class="light-bg right-side">
+<image filename="ha-smooth-brightness.png"/>
+</div>
+
+</slide>
+

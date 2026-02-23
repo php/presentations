@@ -1,0 +1,58 @@
+<slide>
+<title>Image Upgrade</title>
+
+<div effect="fade-out">
+<blurb>Image Definition as RGB:</blurb>
+<example><![CDATA[
+$spritesRGB = [
+    'sunny' => [
+        0, 0, 0, 5, 3, 1, 117, 97, 42, 140, 115, 47, 140, 115, 47, 117, 98, 42, 0, 0,
+        0, 0, 0, 0, 5, 3, 1, 81, 81, 0, 245, 201, 77, 237, 193, 66, 237, 193, 66,
+        245, 201, 77, 81, 81, 0, 5, 4, 1, 116, 97, 41, 246, 202, 77, 251, 193, 58,
+        253, 173, 30, 250, 169, 26, 249, 190, 55, 245, 201, 77, 115, 96, 41, 140,
+        116, 47, 237, 193, 66, 252, 172, 30, 250, 168, 23, 248, 164, 17, 246, 162,
+        15, 237, 192, 66, 140, 116, 47, 139, 115, 47, 237, 193, 66, 250, 168, 24,
+        247, 164, 16, 245, 160, 11, 243, 158, 10, 237, 193, 66, 141, 116, 48, 116,
+        97, 42, 245, 201, 77, 248, 189, 54, 245, 161, 14, 242, 158, 9, 246, 186,
+        53, 244, 200, 77, 117, 98, 42, 5, 3, 1, 81, 81, 0, 246, 202, 77, 237, 193,
+        66, 236, 192, 66, 245, 201, 77, 81, 81, 0, 0, 0, 0, 0, 0, 0, 5, 4, 1, 117,
+        97, 42, 140, 116, 47, 140, 115, 47, 115, 95, 41, 5, 4, 1, 0, 0, 0,
+    ],
+];]]></example>
+
+<blurb>Update MQTT Client Buffer Size:</blurb>
+<example>
+- MQTTClient mqtt = MQTTClient();
++ MQTTClient mqtt = MQTTClient(1024);
+</example>
+</div>
+
+<div effect="fade-in">
+<example>
+    if (strcmp("setlsrgb", command) == 0) {
+        long start = doc["s"], current = start, counter = 0;
+        unsigned char r = 0, g = 0, b = 0;
+
+        JsonArray data = doc["d"];
+
+        for (JsonVariant item : data) {
+            unsigned char value = item;
+
+            if (counter % 3 == 0) {
+                r = value;
+            } else if (counter % 3 == 1) {
+                g = value;
+            } else {
+                b = value;
+                devices[dev].setPixelColor(current % devices[dev].numPixels(), r, g, b);
+                current++;
+            }
+
+            counter++;
+        }
+        devices[dev].show();
+    }
+</example>
+</div>
+
+</slide>

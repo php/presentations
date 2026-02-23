@@ -1,0 +1,60 @@
+<slide background="iot-streamdeck-home.jpeg">
+
+<div class="left-side">
+<break lines="8"/>
+<div class="light-bg">
+<div effect="fade-in">
+<list><bullet>Run a Shell Command</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>A Clock</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Control My Streaming Light</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>The Brightness of the Stream Deck</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Time Tracking</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Opening Other Pages</bullet></list>
+</div>
+</div>
+</div>
+
+<div effect="fade-in">
+<div class="light-bg right-side">
+<example>
+Home:
+  - Index: 0
+    Type: pages
+  - Index: 5
+    Type: clock
+    Arguments:
+      - Hue: 90
+      - ClockName: "Xdebug"
+  - Index: 10
+    Type: brightness
+    Arguments:
+      - LevelLow: 10
+      - ImageLow: "bright-000.png"
+      - LevelNormal: 50
+      - ImageNormal: "bright-050.png"
+      - LevelHigh: 90
+      - ImageHigh: "bright-100.png"
+  - Index: 11
+    Type: litra
+    Arguments:
+      - 0: "4000,25"
+      - 3: "6500,80"
+  - Index: 13
+    Type: command
+    Image: "lock.png"
+    Arguments:
+      - Command: "/home/derick/bin/obs/lock.sh"
+</example>
+</div>
+</div>
+</slide>

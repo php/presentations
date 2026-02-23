@@ -1,0 +1,28 @@
+<slide>
+<title>Step 4: Glue Between HA Forecast and ESP32</title>
+
+<div class="light-bg">
+<div effect="fade-in">
+<list><bullet>Subscribe to MQTT Topic %homeautomation/forecast%</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Figure Out Which Image to Use</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>Publish Complex Message to %esp32_lights/1%</bullet></list>
+</div>
+<div effect="fade-in">
+<break lines="2"/>
+<list><bullet>PHP is a great language for this</bullet></list>
+</div>
+<div effect="fade-in">
+<list><bullet>MQTT Client on Packagist: %php-mqtt/client%</bullet></list>
+</div>
+</div>
+
+<div effect="fade-in">
+<break lines="3"/>
+<image filename="icons.png"/>
+</div>
+
+</slide>
