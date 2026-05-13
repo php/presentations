@@ -1,0 +1,40 @@
+<slide>
+<title>Xdebug 3.6: Native Path Mapping Improvements</title>
+
+<blurb>*🗹* Add %EOF% for marking range from number to end-of-file: </blurb>
+<example inline="2">
+remote_prefix: /usr/local/www
+local_prefix: /home/derick/project
+/example.php:5-*EOF* = /example.php:8
+/aop-created.php:1-10 = /example.php:1
+/aop-created.php:11-*EOF* = /example.php:2-*EOF*
+</example>
+
+<blurb>Add %xdebug_add_source_map_directory()% function to dynamically add directories where will read mapping files from:</blurb>
+<example>
+xdebug_add_source_map_directory(__DIR__ . '/cache/templates/source-map');
+</example>
+
+<blurb>Come up with a better way to describe file/line ranges:</blurb>
+<div effect="fade-out">
+<example>
+elephpant-list-1b6ba908.php:1-20  = elephpant-list.ezt:1
+elephpant-list-1b6ba908.php:21-22 = elephpant-list.ezt:2
+elephpant-list-1b6ba908.php:23    = elephpant-list.ezt:3
+elephpant-list-1b6ba908.php:24-25 = elephpant-list.ezt:4
+</example>
+</div>
+
+<div effect="fade-in-out">
+<example>
+elephpant-list-1b6ba908.php:1-20,21-22,23,24-25  = elephpant-list.ezt:1,2,3,4
+</example>
+</div>
+
+<div effect="fade-in">
+<example inline="2">
+|777777|# elephpant-list-1b6ba908.php:1-20,21-22,23,24-25  = elephpant-list.ezt:1,2,3,4|
+  elephpant-list-1b6ba908.php:AJAAA@AA             = elephpant-list.ezt:A\@A\@A\@A\@
+</example>
+</div>
+</slide>
