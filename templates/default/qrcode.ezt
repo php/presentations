@@ -1,6 +1,9 @@
 {use $node, $pres}
+{var $size = get_attribute( $node, 'size' )}
+{if !$size}{$size = 290}{/if}
 {if str_trim( format_text( $pres, $node->nodeValue ) ) == ''}
-<img src="/qrcode.php?d=http://derickrethans.nl/talks.html"/>
+<img style="width: {$size}px; height: {$size}px" src="/qrcode.php?d=http://derickrethans.nl/talks.html"/>
 {else}
-<img src="/qrcode.php?d={raw format_text( $pres, $node->nodeValue )}"/>
+<img style="width: {$size}px; height: {$size}px" src="/qrcode.php?d={raw format_text( $pres, $node->nodeValue )}"/>
 {/if}
+</div>

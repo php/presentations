@@ -2,16 +2,18 @@
 <slide>
 	<title>About Me</title>
 
-<break lines="7"/>
-
-<image filename="../xdebug/derick-new-512x512.png" align="right" pdf-float="1" x-offset="21.3" y-offset="10" pdf-scale="0.25"/>
-
+	<image filename="../xdebug/derick-new-512x512.png" align="right" zoom="0.75" pdf-float="1" x-offset="21.3" y-offset="10" pdf-scale="0.25"/>
+	<break lines="6"/>
 	<blurb>Derick Rethans</blurb>
+
+	<image filename="../internals/php_foundation.png" align="right" zoom="0.75" pdf-float="1" x-offset="21.3" y-offset="10" pdf-scale="0.25"/>
+
 	<list>
-		<bullet>I'm European, living in London</bullet>
 		<bullet>*PHP Foundation*</bullet>
 		<bullet>*Xdebug* &amp; PHP's Date/Time support</bullet>
+		<bullet>*Infrastructure*</bullet>
 		<bullet>I ♥🌍 maps, I ♥🍺 beer, I ♥🥃  whisky</bullet>
 		<bullet>mastodon: :-:mastodon:-:</bullet>
 	</list>
+
 </slide>

@@ -1,0 +1,28 @@
+<slide>
+<title>AST is converted to bytecode (with tricks)</title>
+
+<blurb>Code:</blurb>
+<example inline="1"><![CDATA[&lt?php
+*$a* |00cc00|=| |0000cc|8| |cc00cc|+| |0000cc|42|;
+]]></example>
+
+<blurb>AST:</blurb>
+<example inline="1">0: |00cc00|AST_ASSIGN|
+    var: *AST_VAR*
+        name: "a"
+    expr: AST_BINARY_OP
+        flags: |cc00cc|BINARY_ADD (1)|
+        left: |0000cc|8|
+        right: |0000cc|42|
+</example>
+
+<blurb>Opcodes:</blurb>
+<example inline="1">
+compiled vars:  *!0 = $a*
+line     #* E I O op              operands
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    2     0  E >   EXT_STMT            
+          1        |00cc00|ASSIGN|         *!0*, 50
+    3     2      > RETURN         1
+</example>
+</slide>

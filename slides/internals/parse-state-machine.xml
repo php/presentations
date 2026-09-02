@@ -5,10 +5,10 @@
     <bullet>It's a big state machine starting with %INITIAL%</bullet>
     <bullet>States: %INITIAL%, %ST_IN_SCRIPTING%, %ST_DOUBLE_QUOTES%, %ST_NOWDOC%…</bullet>
     <bullet>Tokens can change the state:
-        <example><![CDATA[<INITIAL>"<?php"([ \t]|{NEWLINE}) {
+        <example inline="1"><![CDATA[&lt;INITIAL>*"&lt;?php"*([ \t]|{NEWLINE}) {
     HANDLE_NEWLINE(yytext[yyleng-1]);
     BEGIN(ST_IN_SCRIPTING);
-    RETURN_TOKEN(T_OPEN_TAG);
+    RETURN_TOKEN(*T_OPEN_TAG*);
 } ]]></example>
     </bullet>
     <bullet>No *meaning* is given to these tokens</bullet>

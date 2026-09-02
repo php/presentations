@@ -55,9 +55,9 @@
 
 <div effect="fade-in">
 <example inline="1">
-|0000dd|public| function |00dd00|__construct|( |0000dd|$name| )
+|0000dd|public| function |00dd00|__construct|( |0000dd|$value| )
 {
-    |00dddd|$this->name| |dd00dd|=| |ff0000|$name|
+    |00dddd|$this->property| |dd00dd|=| |ff0000|$value|
 }
 </example>
 
@@ -71,7 +71,7 @@
         0: AST_PARAM
             flags: 0
             type: null
-            name: |0000dd|"name"|
+            name: |0000dd|"value"|
             default: null
     uses: null
     stmts: AST_STMT_LIST
@@ -79,9 +79,9 @@
             var: |00dddd|AST_PROP|
                 expr: AST_VAR
                     name: |00dddd|"this"|
-                prop: |00dddd|"name"|
+                prop: |00dddd|"property"|
             expr: AST_VAR
-                name: |ff0000|"name"|
+                name: |ff0000|"value"|
     returnType: null
 </example>
 </div>

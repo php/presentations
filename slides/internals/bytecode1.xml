@@ -1,33 +1,35 @@
 <slide>
 <title>AST is converted to bytecode</title>
 
+<blurb>AST:</blurb>
 <example class="medium" inline="1">
 1: AST_METHOD
     flags: MODIFIER_PUBLIC (256)
     name: |00dd00|__construct|
     params: AST_PARAM_LIST
         0: AST_PARAM
-            name: |0000dd|"name"|
+            name: |0000dd|"value"|
     stmts: AST_STMT_LIST
         0: |dd00dd|AST_ASSIGN|
             var: |00dddd|AST_PROP|
                 expr: AST_VAR
                     name: |00dddd|"this"|
-                prop: |00dddd|"name"|
+                prop: |00dddd|"property"|
             expr: AST_VAR
-                name: |0000dd|"name"|
+                name: |0000dd|"value"|
 </example>
-<br/>
+
+<blurb>Opcodes:</blurb>
 <example class="medium" inline="1">
-compiled vars:  |0000dd|!0 = $name|
-line     #* E I O op                           fetch          ext  return  operands
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-   8     0  E >   EXT_NOP                                                  
-         1        RECV                                             |0000dd|!0|      
-  10     2        EXT_STMT                                                 
-         3        |dd00dd|ASSIGN||00dddd|_OBJ|                                               |00dddd|'name'|
-         4        |dd00dd|OP_DATA|                                                  |0000dd|!0|
-  11     5        EXT_STMT                                                 
-         6      > RETURN                                                   null
+compiled vars:  |0000dd|!0 = $value|
+line     #* E I O op                  return  operands
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   8     0  E >   EXT_NOP                     
+         1        RECV                |0000dd|!0|      
+  10     2        EXT_STMT                    
+         3        |dd00dd|ASSIGN||00dddd|_OBJ|                  |00dddd|'property'|
+         4        |dd00dd|OP_DATA|                     |0000dd|!0|
+  11     5        EXT_STMT
+         6      > RETURN                      null
 </example>
 </slide>

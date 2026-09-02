@@ -1,0 +1,36 @@
+<slide>
+<title>Example Matching</title>
+
+<div effect="fade-out">
+<blurb>Code:</blurb>
+<example inline="1"><![CDATA[*$a* |00cc00|=| |0000cc|8| |cc00cc|+| |0000cc|42|;]]></example>
+</div>
+
+<blurb>Tokens:</blurb>
+<example inline="1"><![CDATA[*T_VARIABLE $a* |cccccc|T_WS| |00cc00|"="| |cccccc|T_WS| |0000cc|T_LNUMBER 8| |cccccc|T_WS| |cc00cc|"+"| |cccccc|T_WS| |0000cc|T_LNUMBER 42| ";" ]]></example>
+
+<blurb>Rules:</blurb>
+<example inline="1"><![CDATA[
+variable:
+        *T_VARIABLE*           { $$ = zend_ast_create(*ZEND_AST_VAR*, $1); }
+scalar:
+        |0000cc|T_LNUMBER|            { $$ = $1; }
+expr:
+    |   variable |00cc00|'='| expr    { $$ = zend_ast_create(|00cc00|ZEND_AST_ASSIGN|, $1, $3); }
+    |   expr |cc00cc|'+'| expr        { $$ = zend_ast_create_binary_op(|cc00cc|ZEND_ADD|, $1, $3); }
+    |   scalar { $$ = $1; }]]>
+</example>
+
+<div effect="fade-in">
+<blurb>AST:</blurb>
+<example inline="1">0: |00cc00|AST_ASSIGN|
+    var: *AST_VAR*
+        name: "a"
+    expr: AST_BINARY_OP
+        flags: |cc00cc|BINARY_ADD (1)|
+        left: |0000cc|8|
+        right: |0000cc|42|
+</example>
+</div>
+
+</slide>
